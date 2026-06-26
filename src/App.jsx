@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
+import swooshUrl from "../nike-swoosh-logo-EE02E410_brandlogos.net.svg";
 
 // ── Tokens ─────────────────────────────────────────────────────
 const SANS = { fontFamily: "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" };
@@ -345,9 +346,7 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
     <div style={{ ...SANS, color: INK }}>
       <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
         <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
-        <svg width="30" height="13" viewBox="0 0 100 44" fill={ACCENT} aria-hidden="true" style={{ display: "block" }}>
-          <path d="M96 5 C 60 30 30 42 6 40 C 22 44 50 36 78 22 C 86 17 92 11 96 5 Z" />
-        </svg>
+        <img src={swooshUrl} alt="" aria-hidden="true" style={{ display: "block", height: 16, width: "auto" }} />
       </div>
       <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you going?</h1>
       <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
