@@ -23,7 +23,12 @@ const ADDED_TIER = { label: "Your find", chip: ["#5A4FB0", "#ECEAFB"], grad: "li
 const CITIES = ["Tokyo", "New York", "Shanghai", "Paris", "London"];
 
 const mapsUrl = (name, address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ", " + address)}`;
-const uberUrl = (name, address) => `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address)}&dropoff[nickname]=${encodeURIComponent(name)}`;
+const uberUrl = (name, address, lat, lng) => {
+  // Uber only drops a destination pin from coordinates, not a text address,
+  // so include lat/lng when we have them (live Google results always do).
+  const base = `https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[formatted_address]=${encodeURIComponent(address)}&dropoff[nickname]=${encodeURIComponent(name)}`;
+  return (lat != null && lng != null) ? `${base}&dropoff[latitude]=${lat}&dropoff[longitude]=${lng}` : base;
+};
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 const Storefront = () => (
@@ -146,11 +151,11 @@ function Rating({ rating, reviews, href }) {
   );
   return href ? <a href={href} target="_blank" rel="noreferrer" style={{ textDecoration: "none" }}>{inner}</a> : inner;
 }
-function ActionRow({ name, address }) {
+function ActionRow({ name, address, lat, lng }) {
   const pill = { ...SANS, display: "inline-flex", alignItems: "center", gap: 5, fontSize: 12.5, fontWeight: 600, textDecoration: "none", borderRadius: 999, padding: "7px 12px", border: `1px solid ${LINE}` };
   return (
     <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
-      <a href={uberUrl(name, address)} target="_blank" rel="noreferrer" style={{ ...pill, background: INK, color: "#fff", border: `1px solid ${INK}` }}><Car size={13} /> Uber here</a>
+      <a href={uberUrl(name, address, lat, lng)} target="_blank" rel="noreferrer" style={{ ...pill, background: INK, color: "#fff", border: `1px solid ${INK}` }}><Car size={13} /> Uber here</a>
       <a href={mapsUrl(name, address)} target="_blank" rel="noreferrer" style={{ ...pill, background: "#fff", color: INK }}><Navigation size={13} /> Directions</a>
     </div>
   );
@@ -187,7 +192,7 @@ function StopCard({ s, n, onConfirm, onRemove }) {
         </div>
         <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{s.why}</div>
         <AddressLine name={s.name} address={s.address} />
-        <ActionRow name={s.name} address={s.address} />
+        <ActionRow name={s.name} address={s.address} lat={s.lat} lng={s.lng} />
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 12, paddingTop: 10, borderTop: `1px solid ${LINE}` }}>
           <button onClick={onConfirm} style={{ ...editBtn, color: s.confirmed ? OPEN : MUTE }}>{s.confirmed ? <CheckCircle size={15} /> : <Check size={15} />} {s.confirmed ? "Going" : "Confirm I'm going"}</button>
           <button onClick={onRemove} style={{ ...editBtn, color: DANGER }}><Trash2 size={14} /> Remove</button>
@@ -470,7 +475,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
                       <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.lunch.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.lunch.cuisine} · {day.lunch.rating}★</div></div>
                       <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
                     </div>
-                    <AddressLine name={day.lunch.name} address={day.lunch.address} /><ActionRow name={day.lunch.name} address={day.lunch.address} />
+                    <AddressLine name={day.lunch.name} address={day.lunch.address} /><ActionRow name={day.lunch.name} address={day.lunch.address} lat={day.lunch.lat} lng={day.lunch.lng} />
                   </div>
                 ) : (
                   <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "18px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Select lunch</button>
@@ -625,7 +630,7 @@ export default function App() {
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
   const onRemoveStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.filter((s) => s.id !== id) }) }));
   const onAddStop = (c) => {
-    const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, dwell: c.dwell || 18, address: c.address, why: c.why, confirmed: false, addedByUser: true };
+    const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, confirmed: false, addedByUser: true };
     updateDay(activeDay, (d) => {
       const hasHub = d.itinerary.some((h) => h.hub === c.area);
       return { ...d, itinerary: d.itinerary.map((h, i) => (h.hub === c.area || (!hasHub && i === 0)) ? { ...h, stops: [...h.stops, stop] } : h) };
