@@ -343,8 +343,13 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
   const ready = tiers.length && start;
   return (
     <div style={{ ...SANS, color: INK }}>
-      <div style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</div>
-      <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you scouting?</h1>
+      <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+        <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
+        <svg width="30" height="13" viewBox="0 0 100 44" fill={ACCENT} aria-hidden="true" style={{ display: "block" }}>
+          <path d="M96 5 C 60 30 30 42 6 40 C 22 44 50 36 78 22 C 86 17 92 11 96 5 Z" />
+        </svg>
+      </div>
+      <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you going?</h1>
       <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
       <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 28, marginBottom: 8 }}>City</label>
       <div style={field}><MapPin size={18} color={MUTE} /><input value={city} onChange={(e) => setCity(e.target.value)} placeholder="Add a city" style={inp} /></div>
@@ -356,7 +361,7 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
         {datesLabel && <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 600 }}>{dayCount} {dayCount === 1 ? "day" : "days"}</span>}
       </button>
       {calOpen && <RangeCalendar start={start} end={end} onChange={onRange} />}
-      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>What are you reading? <span style={{ color: MUTE, fontWeight: 400 }}>· select any</span></label>
+      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>What do you want to see? <span style={{ color: MUTE, fontWeight: 400 }}>· select any</span></label>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {["aspirational", "competitor", "core"].map((k) => {
           const t = TIERS[k]; const on = tiers.includes(k);
