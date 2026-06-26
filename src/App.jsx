@@ -341,7 +341,12 @@ function MiniMap({ stops }) {
   if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
 
   const coords = pts.map((c) => `${c.lat},${c.lng}`);
-  const dirUrl = "https://www.google.com/maps/dir/" + coords.join("/");
+  // Walking directions through the whole route. Google's URL API caps
+  // intermediate waypoints at ~9, so trim if a day is unusually long.
+  const origin = coords[0];
+  const destination = coords[coords.length - 1];
+  const mids = coords.slice(1, -1).slice(0, 9);
+  const dirUrl = `https://www.google.com/maps/dir/?api=1&travelmode=walking&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}` + (mids.length ? `&waypoints=${encodeURIComponent(mids.join("|"))}` : "");
   return (
     <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
       <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
@@ -705,6 +710,53 @@ async function enrichPlace(name, city) {
   }
 }
 
+// ── Route optimization ─────────────────────────────────────────
+// Reorder stops into an efficient walking path so you don't zig-zag across a
+// neighborhood. Equirectangular distance is plenty accurate at city scale.
+const coordOf = (s) => (s && s.lat != null && s.lng != null ? { lat: s.lat, lng: s.lng } : null);
+const distLL = (a, b) => {
+  const k = Math.cos(((a.lat + b.lat) / 2) * Math.PI / 180);
+  const dx = (a.lng - b.lng) * k, dy = a.lat - b.lat;
+  return Math.sqrt(dx * dx + dy * dy);
+};
+
+// Nearest-neighbor path through items that have coordinates, trying every
+// start and keeping the shortest total. Items without coords keep their order
+// at the end. getC(item) -> {lat,lng} | null.
+function optimizeOrder(items, getC, fixedStart) {
+  const withC = items.filter((i) => getC(i));
+  const without = items.filter((i) => !getC(i));
+  if (withC.length <= 2) return items;
+  const nn = (start) => {
+    const used = new Set([start]); const order = [start]; let cur = start;
+    while (order.length < withC.length) {
+      let best = -1, bestD = Infinity;
+      for (let j = 0; j < withC.length; j++) {
+        if (used.has(j)) continue;
+        const d = distLL(getC(withC[cur]), getC(withC[j]));
+        if (d < bestD) { bestD = d; best = j; }
+      }
+      order.push(best); used.add(best); cur = best;
+    }
+    return order;
+  };
+  const total = (o) => o.reduce((sum, idx, i) => i ? sum + distLL(getC(withC[o[i - 1]]), getC(withC[idx])) : 0, 0);
+  const starts = fixedStart != null ? [0] : withC.map((_, i) => i);
+  let bestOrder = null, bestTotal = Infinity;
+  for (const s of starts) {
+    const o = nn(s);
+    const t = total(o);
+    if (t < bestTotal) { bestTotal = t; bestOrder = o; }
+  }
+  return [...bestOrder.map((i) => withC[i]), ...without];
+}
+
+const hubCentroid = (hub) => {
+  const cs = hub.stops.map(coordOf).filter(Boolean);
+  if (!cs.length) return null;
+  return { lat: cs.reduce((a, c) => a + c.lat, 0) / cs.length, lng: cs.reduce((a, c) => a + c.lng, 0) / cs.length };
+};
+
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
 async function buildLiveTrip(city, tiers, dayCount) {
@@ -713,14 +765,21 @@ async function buildLiveTrip(city, tiers, dayCount) {
   if (!days.length) throw new Error("empty-itinerary");
 
   return Promise.all(days.map(async (d, di) => {
-    const itinerary = await Promise.all((d.hubs || []).map(async (h, hi) => {
+    let itinerary = await Promise.all((d.hubs || []).map(async (h, hi) => {
       const stops = await Promise.all((h.stores || []).map(async (s) => {
         const enr = await enrichPlace(s.name, city);
         return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, dwell: 16, ...enr, confirmed: false, addedByUser: false };
       }));
-      const mins = stops.reduce((a, s) => a + (s.dwell || 16), 0);
-      return { hub: h.hub, time: fmtDuration(mins), arrive: hi === 0 ? "Start here" : `Uber from ${d.hubs[hi - 1].hub}`, stops };
+      // Reorder stops within the neighborhood into an efficient walking path.
+      return { hub: h.hub, stops: optimizeOrder(stops, coordOf) };
     }));
+    // Order the neighborhoods themselves by proximity, then label the flow.
+    itinerary = optimizeOrder(itinerary, hubCentroid, 0);
+    itinerary.forEach((h, i) => {
+      const mins = h.stops.reduce((a, s) => a + (s.dwell || 16), 0);
+      h.time = fmtDuration(mins);
+      h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
+    });
     const lunchPicks = await Promise.all((d.lunch || []).map(async (l) => {
       const enr = await enrichPlace(l.name, city);
       return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
