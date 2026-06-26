@@ -239,7 +239,7 @@ function LunchCard({ l, onSelect }) {
   );
 }
 
-function SearchSelect({ candidates, onPick, onClose, title, placeholder, note }) {
+function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, cityContext }) {
   const [q, setQ] = useState("");
   const [live, setLive] = useState(null);   // null until a live search returns
   const [loading, setLoading] = useState(false);
@@ -251,10 +251,11 @@ function SearchSelect({ candidates, onPick, onClose, title, placeholder, note })
   useEffect(() => {
     const term = q.trim();
     if (term.length < 2) { setLive(null); setLoading(false); return; }
+    const scoped = cityContext ? `${term} ${cityContext}` : term;
     let cancelled = false;
     setLoading(true);
     const t = setTimeout(() => {
-      searchPlaces(term)
+      searchPlaces(scoped)
         .then((r) => { if (!cancelled) setLive(r); })
         .catch(() => { if (!cancelled) setLive(null); })
         .finally(() => { if (!cancelled) setLoading(false); });
@@ -456,7 +457,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
       <div style={{ display: "flex", gap: 6, marginTop: 10, flexWrap: "wrap" }}>{tiers.map((k) => <span key={k} style={{ fontSize: 11.5, fontWeight: 600, color: TIERS[k].chip[0], background: TIERS[k].chip[1], borderRadius: 999, padding: "4px 10px" }}>{TIERS[k].label}</span>)}</div>
 
       {adding ? (
-        <SearchSelect candidates={day.addCandidates} title="Add a store you found" placeholder="Search a store…"
+        <SearchSelect candidates={day.addCandidates} title="Add a store you found" placeholder="Search a store…" cityContext={city}
           note={<>Pick a result and Scout pulls in its live rating, hours and address from Google — then slots it in at the best point on this day's route.</>}
           onClose={() => setAdding(false)} onPick={(c) => { onAddStop(c); setAdding(false); }} />
       ) : (
@@ -510,7 +511,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
 }
 
 // ── Lunch ──────────────────────────────────────────────────────
-function LunchScreen({ dayNum, picks, search, onBack, onSelect }) {
+function LunchScreen({ dayNum, picks, search, onBack, onSelect, city }) {
   const [searching, setSearching] = useState(false);
   return (
     <div style={{ ...SANS, color: INK }}>
@@ -518,7 +519,7 @@ function LunchScreen({ dayNum, picks, search, onBack, onSelect }) {
       <h1 style={{ fontSize: 26, fontWeight: 700, letterSpacing: -0.6, margin: "14px 0 2px" }}>Pick lunch · Day {dayNum}</h1>
       <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal near your route — special and delicious, not tourist traps.</div>
       {searching ? (
-        <SearchSelect candidates={search} title="Search a lunch spot" placeholder="Search a restaurant…"
+        <SearchSelect candidates={search} title="Search a lunch spot" placeholder="Search a restaurant…" cityContext={city}
           note={<>Pick a result and Scout pulls in its live rating, hours and address from Google, then sets it as your lunch.</>}
           onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
       ) : (
@@ -663,7 +664,7 @@ export default function App() {
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         {screen === "input" && <InputScreen {...{ city, setCity, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
-        {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} />}
+        {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} />}
       </div>
     </div>
