@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { searchPlaces, lookupCoords } from "./places";
+import { searchPlaces, lookupCoords, generateItinerary } from "./places";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
@@ -648,6 +648,69 @@ function OverviewScreen({ city, dates, tiers, trip, locked, onBack, onEditDay, o
   );
 }
 
+// Tokyo ships with a hand-curated route (the strongest demo); every other city
+// is generated live by the AI scout and enriched with Google data.
+const isCurated = (city) => !city || city.trim().toLowerCase() === "tokyo";
+
+const fmtDuration = (mins) => {
+  const h = Math.floor(mins / 60), m = mins % 60;
+  return "~" + [h ? `${h} hr` : "", m ? `${m} min` : ""].filter(Boolean).join(" ");
+};
+
+// Enrich an AI-named place with live Google details (rating, hours, address,
+// coordinates). Returns {} if Google can't find it — the card still renders.
+async function enrichPlace(name, city) {
+  try {
+    const results = await searchPlaces(`${name} ${city}`);
+    const hit = results[0];
+    if (!hit) return {};
+    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, address: hit.address, lat: hit.lat, lng: hit.lng };
+  } catch {
+    return {};
+  }
+}
+
+// Build a full trip for a non-curated city: ask the AI scout for the structure,
+// then enrich every store and lunch spot with live Google data in parallel.
+async function buildLiveTrip(city, tiers, dayCount) {
+  const data = await generateItinerary(city, tiers, dayCount);
+  const days = (data.days || []).slice(0, dayCount);
+  if (!days.length) throw new Error("empty-itinerary");
+
+  return Promise.all(days.map(async (d, di) => {
+    const itinerary = await Promise.all((d.hubs || []).map(async (h, hi) => {
+      const stops = await Promise.all((h.stores || []).map(async (s) => {
+        const enr = await enrichPlace(s.name, city);
+        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, dwell: 16, ...enr, confirmed: false, addedByUser: false };
+      }));
+      const mins = stops.reduce((a, s) => a + (s.dwell || 16), 0);
+      return { hub: h.hub, time: fmtDuration(mins), arrive: hi === 0 ? "Start here" : `Uber from ${d.hubs[hi - 1].hub}`, stops };
+    }));
+    const lunchPicks = await Promise.all((d.lunch || []).map(async (l) => {
+      const enr = await enrichPlace(l.name, city);
+      return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
+    }));
+    return { dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, addCandidates: [], itinerary };
+  }));
+}
+
+function BuildingScreen({ city }) {
+  return (
+    <div style={{ ...SANS, color: INK, textAlign: "center", padding: "80px 0" }}>
+      <div style={{ display: "inline-flex", alignItems: "center", gap: 8, justifyContent: "center" }}>
+        <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
+        <svg viewBox="0 0 413.62 144.78" width="31" height="11" aria-hidden="true" style={{ display: "block" }}>
+          <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
+        </svg>
+      </div>
+      <div style={{ width: 30, height: 30, margin: "28px auto 18px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
+      <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+      <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.4 }}>Scouting {city || "your city"}…</div>
+      <p style={{ color: MUTE, fontSize: 14, marginTop: 8, lineHeight: 1.5, maxWidth: 300, marginInline: "auto" }}>Curating the stores worth your time and pulling live ratings, hours and maps. This takes a few seconds.</p>
+    </div>
+  );
+}
+
 export default function App() {
   const [screen, setScreen] = useState("input");
   const [city, setCity] = useState("Tokyo");
@@ -672,7 +735,22 @@ export default function App() {
       itinerary: src.hubs.map((h) => ({ ...h, stops: h.stops.filter((s) => tiers.includes(s.tier)).map((s) => ({ ...s, id: slug(s.name), confirmed: false, addedByUser: false })) })),
     };
   });
-  const build = () => { setTrip(generate(Math.max(1, dayCount))); setActiveDay(0); setLocked(false); setFlash(""); setScreen("review"); };
+  const build = async () => {
+    const n = Math.max(1, dayCount);
+    setActiveDay(0); setLocked(false); setFlash("");
+    if (isCurated(city)) { setTrip(generate(n)); setScreen("review"); return; }
+    setScreen("building");
+    try {
+      const live = await buildLiveTrip(city, tiers, n);
+      setTrip(live); setScreen("review");
+    } catch {
+      // AI generation unavailable — fall back to the curated sample so the
+      // app always produces a route.
+      setTrip(generate(n)); setScreen("review");
+      setFlash("Live route for this city isn't available yet — showing a sample itinerary.");
+      setTimeout(() => setFlash(""), 6000);
+    }
+  };
 
   const updateDay = (i, fn) => setTrip((prev) => prev.map((d, idx) => (idx === i ? fn(d) : d)));
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
@@ -697,6 +775,7 @@ export default function App() {
     <div style={{ background: "#FFFFFF", minHeight: "100vh" }}>
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         {screen === "input" && <InputScreen {...{ city, setCity, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} />}
+        {screen === "building" && <BuildingScreen city={city} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} />}

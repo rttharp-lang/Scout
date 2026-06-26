@@ -14,6 +14,16 @@ export async function searchPlaces(query) {
   return Array.isArray(data.results) ? data.results : [];
 }
 
+// Ask the AI scout endpoint for a city-specific itinerary (neighborhoods +
+// real stores + tiers + why). Returns { days: [...] }; callers fall back to
+// the curated sample on error or when AI generation isn't configured.
+export async function generateItinerary(city, tiers, days) {
+  const params = new URLSearchParams({ city, tiers: tiers.join(","), days: String(days) });
+  const r = await fetch(`/api/itinerary?${params.toString()}`);
+  if (!r.ok) throw new Error(`itinerary ${r.status}`);
+  return r.json();
+}
+
 // Look up coordinates for a stop that doesn't have them (e.g. the curated
 // sample stops), reusing the same search endpoint. Results are cached per
 // name+address so each store is only ever looked up once. Returns
