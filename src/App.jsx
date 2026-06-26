@@ -346,7 +346,7 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
     <div style={{ ...SANS, color: INK }}>
       <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
         <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
-        <img src={swooshUrl} alt="" aria-hidden="true" style={{ display: "block", height: 16, width: "auto" }} />
+        <span aria-hidden="true" style={{ display: "block", height: 11, width: 31, backgroundColor: ACCENT, WebkitMaskImage: `url(${swooshUrl})`, maskImage: `url(${swooshUrl})`, WebkitMaskRepeat: "no-repeat", maskRepeat: "no-repeat", WebkitMaskSize: "contain", maskSize: "contain", WebkitMaskPosition: "center", maskPosition: "center" }} />
       </div>
       <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you going?</h1>
       <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
