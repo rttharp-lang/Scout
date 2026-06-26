@@ -19,8 +19,10 @@ export default async function handler(req, res) {
     return;
   }
 
+  // Single-character labels only (Google limit): 1–9 then A–Z for the rest.
+  const LABELS = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const markers = pairs
-    .map((p, i) => `markers=${encodeURIComponent(`color:${ACCENT}|label:${i + 1}|${p}`)}`)
+    .map((p, i) => `markers=${encodeURIComponent(`size:mid|color:${ACCENT}|label:${LABELS[i] || ""}|${p}`)}`)
     .join("&");
   const path = pairs.length > 1
     ? `&path=${encodeURIComponent(`color:${ACCENT}cc|weight:3|${pairs.join("|")}`)}`

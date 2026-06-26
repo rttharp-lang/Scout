@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { searchPlaces, lookupCoords, generateItinerary } from "./places";
+import { searchPlaces, lookupCoords, generateItinerary, searchCities } from "./places";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
@@ -15,10 +15,14 @@ const CARD_SHADOW = "0 6px 18px rgba(0,0,0,0.07)";
 
 const TIERS = {
   aspirational: { label: "Aspirational", desc: "Luxury & designer — construction, theater, top of range", chip: ["#8A6D3B", "#F3ECDD"], grad: "linear-gradient(135deg,#3a342b,#8a7a5e)" },
+  department:   { label: "Department store", desc: "Luxury & multi-brand — curation and merchandising mastery", chip: ["#6D4E8A", "#EEE8F6"], grad: "linear-gradient(135deg,#3f2f5a,#7a5fae)" },
   competitor:   { label: "Competitor", desc: "Athletic & adjacent — adidas, On, Arc'teryx, Lululemon", chip: ["#2F5D8A", "#E6EEF6"], grad: "linear-gradient(135deg,#2d4a63,#6d93ad)" },
-  core:         { label: "Core", desc: "Commercial & streetwear — value, fabric, where scale lands", chip: ["#B0472F", "#FBEAE3"], grad: "linear-gradient(135deg,#a8431f,#d98a55)" },
+  streetwear:   { label: "Streetwear", desc: "Hype, drops & local street labels — homegrown, not just global", chip: ["#2B2B2B", "#ECECEC"], grad: "linear-gradient(135deg,#2b2b2b,#5a5a5a)" },
+  underground:  { label: "Underground", desc: "Vintage, archive & concept — the insider-only deep cuts", chip: ["#7A2E3A", "#F4E3E6"], grad: "linear-gradient(135deg,#5a2029,#a35260)" },
   culture:      { label: "Culture", desc: "Lifestyle & retail-as-culture", chip: ["#3C6E63", "#E4EFEB"], grad: "linear-gradient(135deg,#2c4a42,#6f9488)" },
+  core:         { label: "Core", desc: "Commercial & value — where scale meets the high street", chip: ["#B0472F", "#FBEAE3"], grad: "linear-gradient(135deg,#a8431f,#d98a55)" },
 };
+const TIER_ORDER = ["aspirational", "department", "competitor", "streetwear", "underground", "culture", "core"];
 const ADDED_TIER = { label: "Your find", chip: ["#5A4FB0", "#ECEAFB"], grad: "linear-gradient(135deg,#4a4490,#8a82c8)" };
 const CITIES = ["Tokyo", "New York", "Shanghai", "Paris", "London"];
 
@@ -310,22 +314,23 @@ function DecorativeMap({ labels }) {
   );
 }
 
-// Resolves real coordinates for each hub (anchored at its first stop) and
-// renders a live Google static map. Falls back to the decorative map while
-// coordinates load, if too few resolve, or if the map image fails (e.g. the
-// Maps Static API isn't enabled yet).
-function MiniMap({ hubs }) {
+// Resolves coordinates for every stop on the day and renders a live Google
+// static map of the whole route. Tapping it opens Google Maps with the full
+// multi-stop route. Falls back to the decorative map while coordinates load,
+// if too few resolve, or if the map image fails (e.g. Maps Static API off).
+function MiniMap({ stops }) {
   const [pts, setPts] = useState([]);
   const [failed, setFailed] = useState(false);
-  const sig = hubs.map((h) => h.name).join("|");
+  const sig = stops.map((s) => s.name).join("|");
 
   useEffect(() => {
     let cancelled = false;
     setFailed(false);
     (async () => {
       const resolved = [];
-      for (const h of hubs.slice(0, 4)) {
-        const c = await lookupCoords(h.name, h.address);
+      for (const s of stops.slice(0, 14)) {
+        if (s.lat != null && s.lng != null) { resolved.push({ lat: s.lat, lng: s.lng }); continue; }
+        const c = await lookupCoords(s.name, s.address);
         if (c) resolved.push(c);
       }
       if (!cancelled) setPts(resolved);
@@ -333,14 +338,20 @@ function MiniMap({ hubs }) {
     return () => { cancelled = true; };
   }, [sig]);
 
-  if (failed || pts.length < 2) return <DecorativeMap labels={hubs.map((h) => h.label)} />;
+  if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
 
-  const param = pts.map((c) => `${c.lat},${c.lng}`).join(";");
+  const coords = pts.map((c) => `${c.lat},${c.lng}`);
+  const dirUrl = "https://www.google.com/maps/dir/" + coords.join("/");
   return (
-    <div style={{ borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
-      <img src={`/api/staticmap?pts=${encodeURIComponent(param)}`} alt="Route map" onError={() => setFailed(true)}
-        style={{ width: "100%", height: 170, objectFit: "cover", display: "block" }} />
-    </div>
+    <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
+      <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
+        <img src={`/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}`} alt="Route map" onError={() => setFailed(true)}
+          style={{ width: "100%", height: 190, objectFit: "cover", display: "block" }} />
+        <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.94)", color: INK, fontSize: 12, fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
+          <Navigation size={12} color={ACCENT} /> Open route in Maps
+        </div>
+      </div>
+    </a>
   );
 }
 
@@ -413,9 +424,19 @@ function RangeCalendar({ start, end, onChange }) {
 // ── Input ──────────────────────────────────────────────────────
 function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild }) {
   const [calOpen, setCalOpen] = useState(false);
+  const [citySug, setCitySug] = useState([]);
+  const [cityFocus, setCityFocus] = useState(false);
   const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
   const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
-  const ready = tiers.length && start;
+  const ready = tiers.length && start && city.trim();
+
+  useEffect(() => {
+    const term = city.trim();
+    if (!cityFocus || term.length < 2) { setCitySug([]); return; }
+    let cancel = false;
+    const t = setTimeout(() => { searchCities(term).then((r) => { if (!cancel) setCitySug(r); }); }, 250);
+    return () => { cancel = true; clearTimeout(t); };
+  }, [city, cityFocus]);
   return (
     <div style={{ ...SANS, color: INK }}>
       <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
@@ -427,7 +448,21 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
       <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you going?</h1>
       <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
       <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 28, marginBottom: 8 }}>City</label>
-      <div style={field}><MapPin size={18} color={MUTE} /><input value={city} onChange={(e) => setCity(e.target.value)} placeholder="Add a city" style={inp} /></div>
+      <div style={{ position: "relative" }}>
+        <div style={field}>
+          <MapPin size={18} color={MUTE} />
+          <input value={city} onChange={(e) => setCity(e.target.value)} onFocus={() => setCityFocus(true)} onBlur={() => setTimeout(() => setCityFocus(false), 150)} placeholder="Type any city — Shanghai, Portland, Lagos…" style={inp} />
+        </div>
+        {cityFocus && citySug.length > 0 && (
+          <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 6, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, boxShadow: CARD_SHADOW, overflow: "hidden" }}>
+            {citySug.map((c, i) => (
+              <button key={c} onMouseDown={(e) => { e.preventDefault(); setCity(c); setCitySug([]); setCityFocus(false); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 14px", display: "flex", alignItems: "center", gap: 9, fontSize: 14.5, color: INK }}>
+                <MapPin size={15} color={ACCENT} style={{ flexShrink: 0 }} /> {c}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
       <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>{CITIES.map((c) => <button key={c} onClick={() => setCity(c)} style={{ ...SANS, cursor: "pointer", fontSize: 13, padding: "6px 12px", borderRadius: 999, border: `1px solid ${city === c ? ACCENT : LINE}`, background: city === c ? ACCENT_SOFT : "#fff", color: city === c ? ACCENT : INK }}>{c}</button>)}</div>
       <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>Dates</label>
       <button onClick={() => setCalOpen((v) => !v)} style={{ ...SANS, ...field, width: "100%", cursor: "pointer", background: "#fff", textAlign: "left" }}>
@@ -438,7 +473,7 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
       {calOpen && <RangeCalendar start={start} end={end} onChange={onRange} />}
       <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>What do you want to see? <span style={{ color: MUTE, fontWeight: 400 }}>· select any</span></label>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {["aspirational", "competitor", "core"].map((k) => {
+        {TIER_ORDER.map((k) => {
           const t = TIERS[k]; const on = tiers.includes(k);
           return (
             <button key={k} onClick={() => toggleTier(k)} style={{ ...SANS, textAlign: "left", cursor: "pointer", display: "flex", alignItems: "center", gap: 12, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: 14, padding: "14px 14px" }}>
@@ -449,7 +484,7 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
         })}
       </div>
       <button onClick={onBuild} disabled={!ready} style={{ ...SANS, cursor: ready ? "pointer" : "not-allowed", width: "100%", marginTop: 24, background: ready ? ACCENT : "#E5A6A9", color: "#fff", border: "none", borderRadius: 12, padding: "15px", fontSize: 16, fontWeight: 600 }}>Build my route</button>
-      <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 12 }}>Prototype · sample route shown for Tokyo</div>
+      <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 12 }}>Type any city for a live AI-built route · Tokyo shows the curated sample</div>
     </div>
   );
 }
@@ -499,7 +534,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
       )}
       {flash && <div style={{ marginTop: 10, background: "#EAF6EE", border: `1px solid #BFE3CB`, color: "#1A6B3C", borderRadius: 10, padding: "10px 12px", fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}><CheckCircle size={15} /> {flash}</div>}
 
-      <div style={{ marginTop: 16 }}><MiniMap hubs={day.itinerary.filter((h) => h.stops.length).map((h) => ({ label: h.hub, name: h.stops[0].name, address: h.stops[0].address }))} /></div>
+      <div style={{ marginTop: 16 }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} /></div>
 
       {day.itinerary.map((h, hi) => {
         if (!h.stops.length) return null;
@@ -711,6 +746,17 @@ function BuildingScreen({ city }) {
   );
 }
 
+function BuildErrorScreen({ city, onRetry, onBack }) {
+  return (
+    <div style={{ ...SANS, color: INK, textAlign: "center", padding: "70px 0" }}>
+      <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.4 }}>Couldn't build {city || "that city"} just now</div>
+      <p style={{ color: MUTE, fontSize: 14, marginTop: 8, lineHeight: 1.5, maxWidth: 320, marginInline: "auto" }}>The scout took too long or hit a snag. This usually clears on a second try.</p>
+      <button onClick={onRetry} style={{ ...SANS, cursor: "pointer", marginTop: 22, background: ACCENT, color: "#fff", border: "none", borderRadius: 12, padding: "13px 26px", fontSize: 15, fontWeight: 600 }}>Try again</button>
+      <div><button onClick={onBack} style={{ ...SANS, cursor: "pointer", marginTop: 14, background: "none", border: "none", color: MUTE, fontSize: 14 }}>Edit trip</button></div>
+    </div>
+  );
+}
+
 export default function App() {
   const [screen, setScreen] = useState("input");
   const [city, setCity] = useState("Tokyo");
@@ -744,11 +790,8 @@ export default function App() {
       const live = await buildLiveTrip(city, tiers, n);
       setTrip(live); setScreen("review");
     } catch {
-      // AI generation unavailable — fall back to the curated sample so the
-      // app always produces a route.
-      setTrip(generate(n)); setScreen("review");
-      setFlash("Live route for this city isn't available yet — showing a sample itinerary.");
-      setTimeout(() => setFlash(""), 6000);
+      // Generation didn't complete — show a retry rather than a wrong-city route.
+      setScreen("builderror");
     }
   };
 
@@ -776,6 +819,7 @@ export default function App() {
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         {screen === "input" && <InputScreen {...{ city, setCity, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
+        {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} />}

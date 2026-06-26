@@ -14,6 +14,20 @@ export async function searchPlaces(query) {
   return Array.isArray(data.results) ? data.results : [];
 }
 
+// City autocomplete suggestions for the input screen.
+export async function searchCities(query) {
+  const q = (query || "").trim();
+  if (q.length < 2) return [];
+  try {
+    const r = await fetch(`/api/citysearch?q=${encodeURIComponent(q)}`);
+    if (!r.ok) return [];
+    const data = await r.json();
+    return Array.isArray(data.cities) ? data.cities : [];
+  } catch {
+    return [];
+  }
+}
+
 // Ask the AI scout endpoint for a city-specific itinerary (neighborhoods +
 // real stores + tiers + why). Returns { days: [...] }; callers fall back to
 // the curated sample on error or when AI generation isn't configured.

@@ -10,14 +10,19 @@ export const config = { maxDuration: 60 };
 
 const TIER_GUIDE = {
   aspirational: "Aspirational — luxury & designer flagships: construction, theatre, top of the range.",
+  department: "Department store — luxury & multi-brand department stores: curation, merchandising mastery, depachika energy.",
   competitor: "Competitor — athletic & adjacent brands (adidas, On, Arc'teryx, Lululemon, New Balance, Salomon).",
-  core: "Core — commercial & streetwear: value, fabric, scale, where culture meets the high street.",
+  streetwear: "Streetwear — hype, drops & especially LOCAL/independent street labels and homegrown brands, not just global hype names.",
+  underground: "Underground — vintage, archive, concept and insider-only stores: the deep cuts only a well-connected local would know.",
   culture: "Culture — lifestyle & retail-as-culture: concept stores, bookshops, galleries-as-retail.",
+  core: "Core — commercial & value at scale: where culture meets the high street.",
 };
 
 const SYSTEM = `You are Scout — a senior retail scout for a premium basketball apparel brand. You think like a design-led, concept-store-obsessed merchant hunting the most premium, unique, culturally and consumer-relevant apparel experiences in a city, the kind that inspire an aspirational basketball apparel line.
 
-You know the actual retail landscape of major cities: which real, currently-operating stores matter, which neighborhoods they cluster in, and why each one is worth a scout's time. You only name real stores that genuinely exist in the requested city. You group them into real, walkable neighborhoods so a day flows geographically. Each "why" is one sharp sentence on what this store teaches a premium basketball apparel brand — construction, merchandising, material, cultural signal — never generic.`;
+You know the actual retail landscape of cities worldwide — not just the obvious international flagships, but the insider spots: independent boutiques, local streetwear labels, vintage and archive stores, concept shops that only a well-connected local would point you to. That deep, in-the-know local knowledge is the whole point — favour genuine local gems over names everyone already knows. (For example, a real Shanghai scout knows places like Time New Remake, Roaring Wild, and Maison Prince — that calibre of insider pick is what matters.)
+
+You only name real, currently-operating stores that genuinely exist in the requested city. Use clean, searchable store names exactly as they're known locally — no parenthetical notes, qualifiers, or "(nearby)" hedges. Group stores into real, walkable neighborhoods so a day flows geographically. Each "why" is one sharp sentence on what this store teaches a premium basketball apparel brand — construction, merchandising, material, cultural signal — never generic.`;
 
 const SCHEMA = {
   type: "object",
@@ -48,7 +53,7 @@ const SCHEMA = {
                     required: ["name", "tier", "why"],
                     properties: {
                       name: { type: "string", description: "Real, currently-operating store name" },
-                      tier: { type: "string", enum: ["aspirational", "competitor", "core", "culture"] },
+                      tier: { type: "string", enum: ["aspirational", "department", "competitor", "streetwear", "underground", "culture", "core"] },
                       why: { type: "string", description: "One sharp sentence: what it teaches a premium basketball apparel brand" },
                     },
                   },
@@ -95,7 +100,7 @@ export default async function handler(req, res) {
 Only include these tiers:
 ${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}
 
-For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically. Add 3–4 real lunch options near that day's route. Every store and restaurant must actually exist in ${city} right now. Keep each "why" to one sharp, specific sentence.`;
+For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically. Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships. Add 3–4 real lunch options near that day's route. Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
 
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
@@ -109,7 +114,7 @@ For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tie
         model: "claude-opus-4-8",
         max_tokens: 6000,
         system: SYSTEM,
-        output_config: { format: { type: "json_schema", schema: SCHEMA }, effort: "medium" },
+        output_config: { format: { type: "json_schema", schema: SCHEMA }, effort: "low" },
         messages: [{ role: "user", content: prompt }],
       }),
     });
