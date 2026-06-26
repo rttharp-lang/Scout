@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { searchPlaces } from "./places";
+import { searchPlaces, lookupCoords } from "./places";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
@@ -160,6 +160,19 @@ function ActionRow({ name, address, lat, lng }) {
     </div>
   );
 }
+// Wraps ActionRow and, for any stop without coordinates, quietly looks them
+// up so the Uber link fills in everywhere — not just on live-found stores.
+function SmartActionRow({ name, address, lat, lng }) {
+  const [coords, setCoords] = useState(lat != null ? { lat, lng } : null);
+  useEffect(() => {
+    let cancelled = false;
+    if (lat == null && address) {
+      lookupCoords(name, address).then((c) => { if (!cancelled && c) setCoords(c); });
+    }
+    return () => { cancelled = true; };
+  }, [name, address, lat]);
+  return <ActionRow name={name} address={address} lat={coords?.lat} lng={coords?.lng} />;
+}
 function AddressLine({ name, address }) {
   return (
     <a href={mapsUrl(name, address)} target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "flex-start", gap: 5, marginTop: 9, textDecoration: "none", color: MUTE }}>
@@ -192,7 +205,7 @@ function StopCard({ s, n, onConfirm, onRemove }) {
         </div>
         <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{s.why}</div>
         <AddressLine name={s.name} address={s.address} />
-        <ActionRow name={s.name} address={s.address} lat={s.lat} lng={s.lng} />
+        <SmartActionRow name={s.name} address={s.address} lat={s.lat} lng={s.lng} />
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 12, paddingTop: 10, borderTop: `1px solid ${LINE}` }}>
           <button onClick={onConfirm} style={{ ...editBtn, color: s.confirmed ? OPEN : MUTE }}>{s.confirmed ? <CheckCircle size={15} /> : <Check size={15} />} {s.confirmed ? "Going" : "Confirm I'm going"}</button>
           <button onClick={onRemove} style={{ ...editBtn, color: DANGER }}><Trash2 size={14} /> Remove</button>
@@ -475,7 +488,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
                       <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.lunch.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.lunch.cuisine} · {day.lunch.rating}★</div></div>
                       <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
                     </div>
-                    <AddressLine name={day.lunch.name} address={day.lunch.address} /><ActionRow name={day.lunch.name} address={day.lunch.address} lat={day.lunch.lat} lng={day.lunch.lng} />
+                    <AddressLine name={day.lunch.name} address={day.lunch.address} /><SmartActionRow name={day.lunch.name} address={day.lunch.address} lat={day.lunch.lat} lng={day.lunch.lng} />
                   </div>
                 ) : (
                   <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "18px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Select lunch</button>

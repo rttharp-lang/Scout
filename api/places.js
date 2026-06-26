@@ -63,8 +63,9 @@ export default async function handler(req, res) {
   }
 }
 
-// Pull today's opening hours out of the structured response, e.g.
-// "Monday: 11:00 AM – 8:00 PM" -> "11:00 AM – 8:00 PM".
+// Pull today's opening hours out of the structured response and normalize to
+// the app's compact 24-hour style, e.g.
+// "Monday: 11:00 AM – 8:00 PM" -> "11:00–20:00".
 function hoursForToday(openingHours) {
   const lines = openingHours?.weekdayDescriptions;
   if (!Array.isArray(lines) || lines.length < 7) return "";
@@ -73,5 +74,22 @@ function hoursForToday(openingHours) {
   const idx = jsDay === 0 ? 6 : jsDay - 1;
   const line = lines[idx] || "";
   const colon = line.indexOf(":");
-  return colon >= 0 ? line.slice(colon + 1).trim() : line;
+  const times = (colon >= 0 ? line.slice(colon + 1) : line).trim();
+  return formatHours(times);
+}
+
+// Convert "10:00 AM – 9:00 PM" -> "10:00–21:00". Leaves non-time text
+// (e.g. "Closed", "Open 24 hours") untouched, and falls back to the original
+// string if there's nothing to convert.
+function formatHours(times) {
+  if (!times) return "";
+  const normalized = times
+    .replace(/[  ]/g, " ") // narrow/non-breaking spaces -> normal
+    .replace(/\b(\d{1,2}):(\d{2})\s*(AM|PM)\b/gi, (_, h, m, ap) => {
+      let hr = parseInt(h, 10) % 12;
+      if (/pm/i.test(ap)) hr += 12;
+      return String(hr).padStart(2, "0") + ":" + m;
+    })
+    .replace(/\s*[–-]\s*/g, "–"); // tidy the range dash
+  return normalized.trim();
 }
