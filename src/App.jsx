@@ -697,9 +697,13 @@ const fmtDuration = (mins) => {
 
 // Enrich an AI-named place with live Google details (rating, hours, address,
 // coordinates). Returns {} if Google can't find it — the card still renders.
-async function enrichPlace(name, city) {
+async function enrichPlace(name, area, city) {
+  // Anchor the lookup to the assigned neighborhood so an ambiguous name (a
+  // store with branches in several places) resolves to the right location —
+  // otherwise the route gets the wrong coordinates and zig-zags.
+  const query = [name, area, city].filter(Boolean).join(" ");
   try {
-    const results = await searchPlaces(`${name} ${city}`);
+    const results = await searchPlaces(query);
     const hit = results[0];
     if (!hit) return {};
     return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, address: hit.address, lat: hit.lat, lng: hit.lng };
@@ -768,7 +772,7 @@ async function buildLiveTrip(city, tiers, dayCount) {
     // so routing each neighborhood separately caused cross-town zig-zags.
     const enriched = await Promise.all((d.hubs || []).map((h, hi) =>
       Promise.all((h.stores || []).map(async (s) => {
-        const enr = await enrichPlace(s.name, city);
+        const enr = await enrichPlace(s.name, h.hub, city);
         return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: false, addedByUser: false };
       }))
     ));
