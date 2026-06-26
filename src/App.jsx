@@ -341,12 +341,10 @@ function MiniMap({ stops }) {
   if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
 
   const coords = pts.map((c) => `${c.lat},${c.lng}`);
-  // Walking directions through the whole route. Google's URL API caps
-  // intermediate waypoints at ~9, so trim if a day is unusually long.
-  const origin = coords[0];
-  const destination = coords[coords.length - 1];
-  const mids = coords.slice(1, -1).slice(0, 9);
-  const dirUrl = `https://www.google.com/maps/dir/?api=1&travelmode=walking&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}` + (mids.length ? `&waypoints=${encodeURIComponent(mids.join("|"))}` : "");
+  // Use the path form with a trailing data flag (!3e2 = walking). The ?api=1
+  // form silently drops travelmode when waypoints are present (opens in Drive);
+  // this form forces walking and has no waypoint cap.
+  const dirUrl = "https://www.google.com/maps/dir/" + coords.join("/") + "/data=!4m2!4m1!3e2";
   return (
     <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
       <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
@@ -765,16 +763,24 @@ async function buildLiveTrip(city, tiers, dayCount) {
   if (!days.length) throw new Error("empty-itinerary");
 
   return Promise.all(days.map(async (d, di) => {
-    let itinerary = await Promise.all((d.hubs || []).map(async (h, hi) => {
-      const stops = await Promise.all((h.stores || []).map(async (s) => {
+    // Enrich every store (tagged with its neighborhood), then optimize the
+    // WHOLE day as one efficient walking path. Dense-city neighborhoods overlap,
+    // so routing each neighborhood separately caused cross-town zig-zags.
+    const enriched = await Promise.all((d.hubs || []).map((h, hi) =>
+      Promise.all((h.stores || []).map(async (s) => {
         const enr = await enrichPlace(s.name, city);
-        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, dwell: 16, ...enr, confirmed: false, addedByUser: false };
-      }));
-      // Reorder stops within the neighborhood into an efficient walking path.
-      return { hub: h.hub, stops: optimizeOrder(stops, coordOf) };
-    }));
-    // Order the neighborhoods themselves by proximity, then label the flow.
-    itinerary = optimizeOrder(itinerary, hubCentroid, 0);
+        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: false, addedByUser: false };
+      }))
+    ));
+    const ordered = optimizeOrder(enriched.flat(), coordOf);
+    // Regroup consecutive stops by neighborhood so cards still show areas,
+    // but the walking order is now globally efficient across the whole day.
+    const itinerary = [];
+    ordered.forEach((s) => {
+      const last = itinerary[itinerary.length - 1];
+      if (last && last.hub === s.hub) last.stops.push(s);
+      else itinerary.push({ hub: s.hub, stops: [s] });
+    });
     itinerary.forEach((h, i) => {
       const mins = h.stops.reduce((a, s) => a + (s.dwell || 16), 0);
       h.time = fmtDuration(mins);
