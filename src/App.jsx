@@ -295,7 +295,7 @@ function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, c
   );
 }
 
-function MiniMap({ labels }) {
+function DecorativeMap({ labels }) {
   const pos = [{ x: 24, y: 58 }, { x: 50, y: 30 }, { x: 76, y: 54 }, { x: 60, y: 74 }];
   const pts = labels.slice(0, 4).map((l, i) => ({ ...pos[i], label: l }));
   return (
@@ -306,6 +306,40 @@ function MiniMap({ labels }) {
         {pts.map((p, i) => i > 0 && <line key={"l" + i} x1={pts[i - 1].x} y1={pts[i - 1].y} x2={p.x} y2={p.y} stroke={ACCENT} strokeWidth="1" strokeDasharray="2 2" />)}
         {pts.map((p, i) => <g key={i}><circle cx={p.x} cy={p.y} r="9" fill={ACCENT} opacity="0.14" /><circle cx={p.x} cy={p.y} r="4.2" fill={ACCENT} stroke="#fff" strokeWidth="1.2" /><text x={p.x} y={p.y - 7} fontSize="4.4" fill={INK} textAnchor="middle" style={{ fontWeight: 600 }}>{p.label}</text></g>)}
       </svg>
+    </div>
+  );
+}
+
+// Resolves real coordinates for each hub (anchored at its first stop) and
+// renders a live Google static map. Falls back to the decorative map while
+// coordinates load, if too few resolve, or if the map image fails (e.g. the
+// Maps Static API isn't enabled yet).
+function MiniMap({ hubs }) {
+  const [pts, setPts] = useState([]);
+  const [failed, setFailed] = useState(false);
+  const sig = hubs.map((h) => h.name).join("|");
+
+  useEffect(() => {
+    let cancelled = false;
+    setFailed(false);
+    (async () => {
+      const resolved = [];
+      for (const h of hubs.slice(0, 4)) {
+        const c = await lookupCoords(h.name, h.address);
+        if (c) resolved.push(c);
+      }
+      if (!cancelled) setPts(resolved);
+    })();
+    return () => { cancelled = true; };
+  }, [sig]);
+
+  if (failed || pts.length < 2) return <DecorativeMap labels={hubs.map((h) => h.label)} />;
+
+  const param = pts.map((c) => `${c.lat},${c.lng}`).join(";");
+  return (
+    <div style={{ borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
+      <img src={`/api/staticmap?pts=${encodeURIComponent(param)}`} alt="Route map" onError={() => setFailed(true)}
+        style={{ width: "100%", height: 170, objectFit: "cover", display: "block" }} />
     </div>
   );
 }
@@ -465,7 +499,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
       )}
       {flash && <div style={{ marginTop: 10, background: "#EAF6EE", border: `1px solid #BFE3CB`, color: "#1A6B3C", borderRadius: 10, padding: "10px 12px", fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}><CheckCircle size={15} /> {flash}</div>}
 
-      <div style={{ marginTop: 16 }}><MiniMap labels={day.itinerary.map((h) => h.hub)} /></div>
+      <div style={{ marginTop: 16 }}><MiniMap hubs={day.itinerary.filter((h) => h.stops.length).map((h) => ({ label: h.hub, name: h.stops[0].name, address: h.stops[0].address }))} /></div>
 
       {day.itinerary.map((h, hi) => {
         if (!h.stops.length) return null;
