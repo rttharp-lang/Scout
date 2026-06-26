@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { searchPlaces } from "./places";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
@@ -222,8 +223,28 @@ function LunchCard({ l, onSelect }) {
 
 function SearchSelect({ candidates, onPick, onClose, title, placeholder, note }) {
   const [q, setQ] = useState("");
+  const [live, setLive] = useState(null);   // null until a live search returns
+  const [loading, setLoading] = useState(false);
   const query = q.trim().toLowerCase();
-  const matches = query.length >= 2 ? candidates.filter((c) => c.name.toLowerCase().includes(query)).slice(0, 6) : [];
+  const sampleMatches = query.length >= 2 ? candidates.filter((c) => c.name.toLowerCase().includes(query)).slice(0, 6) : [];
+
+  // Debounced live search against Google Places; falls back to the sample set
+  // on any error or when search isn't configured.
+  useEffect(() => {
+    const term = q.trim();
+    if (term.length < 2) { setLive(null); setLoading(false); return; }
+    let cancelled = false;
+    setLoading(true);
+    const t = setTimeout(() => {
+      searchPlaces(term)
+        .then((r) => { if (!cancelled) setLive(r); })
+        .catch(() => { if (!cancelled) setLive(null); })
+        .finally(() => { if (!cancelled) setLoading(false); });
+    }, 350);
+    return () => { cancelled = true; clearTimeout(t); };
+  }, [q]);
+
+  const matches = ((live && live.length) ? live : sampleMatches).slice(0, 8);
   const inp = { ...SANS, width: "100%", border: "none", outline: "none", fontSize: 16, color: INK, background: "transparent" };
   return (
     <div style={{ border: `1px solid ${LINE}`, borderRadius: 16, background: "#fff", boxShadow: CARD_SHADOW, padding: 16, marginTop: 12 }}>
@@ -237,18 +258,19 @@ function SearchSelect({ candidates, onPick, onClose, title, placeholder, note })
       {matches.length > 0 && (
         <div style={{ border: `1px solid ${LINE}`, borderRadius: 12, marginTop: 8, overflow: "hidden" }}>
           {matches.map((c, i) => (
-            <button key={c.name} onClick={() => onPick(c)} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 12px", display: "flex", alignItems: "center", gap: 10 }}>
+            <button key={(c.placeId || c.name) + "-" + i} onClick={() => onPick(c)} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 12px", display: "flex", alignItems: "center", gap: 10 }}>
               <MapPin size={16} color={ACCENT} style={{ flexShrink: 0 }} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontSize: 14.5, fontWeight: 600, color: INK }}>{c.name}</div>
                 <div style={{ fontSize: 12, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.cuisine ? c.cuisine + " · " : ""}{c.address}</div>
               </div>
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 3, flexShrink: 0 }}><Star size={12} color={INK} fill={INK} /><span style={{ fontSize: 12.5, fontWeight: 600 }}>{c.rating}</span></span>
+              {c.rating != null && <span style={{ display: "inline-flex", alignItems: "center", gap: 3, flexShrink: 0 }}><Star size={12} color={INK} fill={INK} /><span style={{ fontSize: 12.5, fontWeight: 600 }}>{c.rating}</span></span>}
             </button>
           ))}
         </div>
       )}
-      {query.length >= 2 && matches.length === 0 && <div style={{ fontSize: 12.5, color: MUTE, marginTop: 10 }}>No matches in this sample set. The live app searches all of Google.</div>}
+      {loading && matches.length === 0 && <div style={{ fontSize: 12.5, color: MUTE, marginTop: 10 }}>Searching Google…</div>}
+      {!loading && query.length >= 2 && matches.length === 0 && <div style={{ fontSize: 12.5, color: MUTE, marginTop: 10 }}>No matches found. Try a more specific name.</div>}
       <div style={{ fontSize: 11.5, color: MUTE, marginTop: 12, lineHeight: 1.45 }}>{note}</div>
     </div>
   );
@@ -417,7 +439,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
 
       {adding ? (
         <SearchSelect candidates={day.addCandidates} title="Add a store you found" placeholder="Search a store…"
-          note={<>Pick a result and Scout pulls in its rating, hours and address — then slots it in at the best point on this day's route. <span style={{ fontStyle: "italic" }}>Prototype searches a sample set; live uses Google's full search.</span></>}
+          note={<>Pick a result and Scout pulls in its live rating, hours and address from Google — then slots it in at the best point on this day's route.</>}
           onClose={() => setAdding(false)} onPick={(c) => { onAddStop(c); setAdding(false); }} />
       ) : (
         <button onClick={() => setAdding(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 14, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Found a store online? Add it</button>
@@ -479,7 +501,7 @@ function LunchScreen({ dayNum, picks, search, onBack, onSelect }) {
       <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal near your route — special and delicious, not tourist traps.</div>
       {searching ? (
         <SearchSelect candidates={search} title="Search a lunch spot" placeholder="Search a restaurant…"
-          note={<>Pick a result and Scout pulls in its rating, hours and address, then sets it as your lunch. <span style={{ fontStyle: "italic" }}>Prototype searches a sample set; live uses Google's full search.</span></>}
+          note={<>Pick a result and Scout pulls in its live rating, hours and address from Google, then sets it as your lunch.</>}
           onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
       ) : (
         <button onClick={() => setSearching(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 16, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Have a spot in mind? Search it</button>
@@ -611,7 +633,7 @@ export default function App() {
     setFlash(`Added ${c.name} — slotted in at the best point on Day ${activeDay + 1}.`);
     setTimeout(() => setFlash(""), 5000);
   };
-  const onSelectLunch = (l) => { updateDay(activeDay, (d) => ({ ...d, lunch: l })); setScreen("review"); };
+  const onSelectLunch = (l) => { updateDay(activeDay, (d) => ({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onConfirmDay = () => {
     updateDay(activeDay, (d) => ({ ...d, confirmed: true }));
     if (activeDay < trip.length - 1) { setActiveDay(activeDay + 1); window.scrollTo(0, 0); }
