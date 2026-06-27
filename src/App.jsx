@@ -1285,7 +1285,7 @@ export default function App() {
       try { await persistTrip(); refreshTrips(); } catch {} finally { autoBusy.current = false; }
     }, 1500);
     return () => clearTimeout(autoTimer.current);
-  }, [trip, city, dates, tiers, session, currentTripId]);
+  }, [trip, city, tiers, session, currentTripId]);
 
   const onSaveTrip = async () => {
     if (!session) { signIn(); return; }
