@@ -34,7 +34,7 @@ const SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["label", "hubs", "lunch"],
+        required: ["label", "hubs", "lunch", "dinner"],
         properties: {
           label: { type: "string", description: "Short route label, e.g. 'Aoyama → Shibuya'" },
           hubs: {
@@ -74,6 +74,19 @@ const SCHEMA = {
               },
             },
           },
+          dinner: {
+            type: "array",
+            items: {
+              type: "object",
+              additionalProperties: false,
+              required: ["name", "cuisine", "why"],
+              properties: {
+                name: { type: "string", description: "Real dinner restaurant for an evening team meal in the city" },
+                cuisine: { type: "string" },
+                why: { type: "string", description: "Why it's a memorable dinner — special, design-forward or culturally telling, not a tourist trap" },
+              },
+            },
+          },
         },
       },
     },
@@ -100,7 +113,7 @@ export default async function handler(req, res) {
 Only include these tiers:
 ${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}
 
-For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically. Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships. Add 3–4 real lunch options near that day's route. Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
+For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically. Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships. Add 3–4 real lunch options near that day's route, and 3–4 real dinner options for an evening team meal in the city. Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
 
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {

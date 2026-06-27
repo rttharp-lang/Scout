@@ -416,6 +416,7 @@ function buildTripText(city, dates, tiers, trip) {
       h.stops.forEach((s) => { n += 1; out += `${n}. ${s.name}${s.confirmed ? " [confirmed]" : ""}${s.rating ? ` · ${s.rating}*` : ""}${s.hours ? ` · ${s.hours}` : ""}\n   ${s.address}\n`; });
       if (hi === firstHub && day.lunch) out += `\nLUNCH · ${day.lunch.name} (${day.lunch.cuisine}) · ${day.lunch.rating}*\n   ${day.lunch.address}\n`;
     });
+    if (day.dinner) out += `\nDINNER · ${day.dinner.name} (${day.dinner.cuisine})${day.dinner.rating ? ` · ${day.dinner.rating}*` : ""}\n   ${day.dinner.address || ""}\n`;
     out += `\n`;
   });
   return out;
@@ -597,7 +598,7 @@ function DayTabs({ trip, activeDay, onSwitch }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onConfirmStop, onRemoveStop, onAddStop, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const day = trip[activeDay];
   let n = 0;
@@ -622,6 +623,25 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         </div>
       ) : (
         <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add lunch near here</button>
+      )}
+    </div>
+  );
+
+  const dinnerBlock = (
+    <div>
+      <div style={{ fontSize: 16, fontWeight: 700, display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+        <Utensils size={17} color={ACCENT} /> Dinner <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· evening</span>
+      </div>
+      {day.dinner ? (
+        <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, background: ACCENT_SOFT, padding: "14px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
+            <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.dinner.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.dinner.cuisine}{day.dinner.rating ? ` · ${day.dinner.rating}★` : ""}</div></div>
+            <button onClick={onPickDinner} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
+          </div>
+          <AddressLine name={day.dinner.name} address={day.dinner.address} /><SmartActionRow name={day.dinner.name} address={day.dinner.address} lat={day.dinner.lat} lng={day.dinner.lng} />
+        </div>
+      ) : (
+        <button onClick={onPickDinner} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add dinner</button>
       )}
     </div>
   );
@@ -668,6 +688,8 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         );
       })}
 
+      <div style={{ marginTop: 26 }}>{dinnerBlock}</div>
+
       <div style={{ marginTop: 28, paddingTop: 18, borderTop: `1px solid ${LINE}` }}>
         <button onClick={onConfirmDay} style={{ ...SANS, cursor: "pointer", width: "100%", background: day.confirmed ? "#fff" : ACCENT, color: day.confirmed ? OPEN : "#fff", border: `1.5px solid ${day.confirmed ? OPEN : ACCENT}`, borderRadius: 12, padding: "15px", fontSize: 15.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
           {day.confirmed && <CheckCircle size={17} />} {day.confirmed ? `Day ${day.dayNum} confirmed` : `Confirm Day ${day.dayNum}`} — {isLast ? "review trip" : "next day"} <ChevronRight size={17} />
@@ -679,16 +701,17 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
 }
 
 // ── Lunch ──────────────────────────────────────────────────────
-function LunchScreen({ dayNum, picks, search, onBack, onSelect, city }) {
+function LunchScreen({ dayNum, picks, search, onBack, onSelect, city, meal = "lunch" }) {
   const [searching, setSearching] = useState(false);
+  const Meal = meal.charAt(0).toUpperCase() + meal.slice(1);
   return (
     <div style={{ ...SANS, color: INK }}>
       <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: 14, padding: 0 }}><ArrowLeft size={16} /> Back to Day {dayNum}</button>
-      <h1 style={{ fontSize: 26, fontWeight: 700, letterSpacing: -0.6, margin: "14px 0 2px" }}>Pick lunch · Day {dayNum}</h1>
-      <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal near your route — special and delicious, not tourist traps.</div>
+      <h1 style={{ fontSize: 26, fontWeight: 700, letterSpacing: -0.6, margin: "14px 0 2px" }}>Pick {meal} · Day {dayNum}</h1>
+      <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal {meal === "dinner" ? "in the city" : "near your route"} — special and delicious, not tourist traps.</div>
       {searching ? (
-        <SearchSelect candidates={search} title="Search a lunch spot" placeholder="Search a restaurant…" cityContext={city}
-          note={<>Pick a result and Scout pulls in its live rating, hours and address from Google, then sets it as your lunch.</>}
+        <SearchSelect candidates={search} title={`Search a ${meal} spot`} placeholder="Search a restaurant…" cityContext={city}
+          note={<>Pick a result and Scout pulls in its live rating, hours and address from Google, then sets it as your {meal}.</>}
           onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
       ) : (
         <button onClick={() => setSearching(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 16, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Have a spot in mind? Search it</button>
@@ -770,6 +793,13 @@ function OverviewScreen({ city, dates, tiers, trip, locked, onBack, onEditDay, o
                   </div>
                 );
               })}
+              {day.dinner && (
+                <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderTop: `1px solid #F4F4F4` }}>
+                  <div style={{ width: 22, height: 22, borderRadius: 11, flexShrink: 0, background: ACCENT_SOFT, color: ACCENT, display: "flex", alignItems: "center", justifyContent: "center" }}><Utensils size={12} /></div>
+                  <div style={{ flex: 1, minWidth: 0 }}><div style={{ fontSize: 14, fontWeight: 600 }}>{day.dinner.name}</div><div style={{ fontSize: 11.5, color: MUTE }}>Dinner · {day.dinner.cuisine}</div></div>
+                  {day.dinner.rating != null && <span style={{ display: "inline-flex", alignItems: "center", gap: 2 }}><Star size={11} color={INK} fill={INK} /><span style={{ fontSize: 12, fontWeight: 600 }}>{day.dinner.rating}</span></span>}
+                </div>
+              )}
               {!day.lunch && <div style={{ fontSize: 12, color: MUTE, marginTop: 10, fontStyle: "italic" }}>No lunch selected for this day</div>}
             </div>
           </div>
@@ -987,11 +1017,13 @@ async function buildLiveTrip(city, tiers, dayCount, hotel) {
       h.time = fmtDuration(mins);
       h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
     });
-    const lunchPicks = await Promise.all((d.lunch || []).map(async (l) => {
+    const enrichMeal = (list) => Promise.all((list || []).map(async (l) => {
       const enr = await enrichPlace(l.name, city);
       return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
     }));
-    return applyLunch({ dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, addCandidates: [], itinerary });
+    const lunchPicks = await enrichMeal(d.lunch);
+    const dinnerPicks = await enrichMeal(d.dinner);
+    return applyLunch({ dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
   }));
 }
 
@@ -1256,6 +1288,7 @@ export default function App() {
     setTimeout(() => setFlash(""), 5000);
   };
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
+  const onSelectDinner = (l) => { updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onConfirmDay = () => {
     updateDay(activeDay, (d) => ({ ...d, confirmed: true }));
     if (activeDay < trip.length - 1) { setActiveDay(activeDay + 1); window.scrollTo(0, 0); }
@@ -1270,7 +1303,7 @@ export default function App() {
         {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
@@ -1280,6 +1313,10 @@ export default function App() {
             return da - db;
           }) : (d.lunchPicks || []);
           return <LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />;
+        })()}
+        {screen === "dinner" && (() => {
+          const d = trip[activeDay];
+          return <LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} city={city} />;
         })()}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} />}
       </div>
