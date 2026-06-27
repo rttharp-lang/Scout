@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { searchPlaces, lookupCoords, generateItinerary, searchCities } from "./places";
+import { supabase, authEnabled } from "./supabase";
+import { listTrips, saveTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
@@ -425,7 +427,7 @@ function RangeCalendar({ start, end, onChange }) {
 }
 
 // ── Input ──────────────────────────────────────────────────────
-function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild }) {
+function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild, session, savedTrips, onLoadTrip, onDeleteTrip }) {
   const [calOpen, setCalOpen] = useState(false);
   const [citySug, setCitySug] = useState([]);
   const [cityFocus, setCityFocus] = useState(false);
@@ -450,6 +452,22 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
       </div>
       <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you going?</h1>
       <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
+      {session && savedTrips && savedTrips.length > 0 && (
+        <div style={{ marginTop: 24 }}>
+          <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>Your saved trips</label>
+          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {savedTrips.map((t) => (
+              <div key={t.id} style={{ display: "flex", alignItems: "center", gap: 10, border: `1px solid ${LINE}`, borderRadius: 12, padding: "11px 13px", boxShadow: CARD_SHADOW }}>
+                <button onClick={() => onLoadTrip(t)} style={{ ...SANS, cursor: "pointer", flex: 1, textAlign: "left", background: "none", border: "none", padding: 0 }}>
+                  <div style={{ fontSize: 14.5, fontWeight: 600, color: INK }}>{t.city || "Trip"}</div>
+                  <div style={{ fontSize: 12, color: MUTE, marginTop: 2 }}>{t.dates || ""}{t.dates && (t.tiers || []).length ? " · " : ""}{(t.tiers || []).map((k) => TIERS[k]?.label).filter(Boolean).join(", ")}</div>
+                </button>
+                <button onClick={() => onDeleteTrip(t.id)} aria-label="Delete trip" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4 }}><Trash2 size={15} /></button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 28, marginBottom: 8 }}>City</label>
       <div style={{ position: "relative" }}>
         <div style={field}>
@@ -604,7 +622,7 @@ function LunchScreen({ dayNum, picks, search, onBack, onSelect, city }) {
 }
 
 // ── Overview (full trip) ───────────────────────────────────────
-function OverviewScreen({ city, dates, tiers, trip, locked, onBack, onEditDay, onLock, onUnlock }) {
+function OverviewScreen({ city, dates, tiers, trip, locked, onBack, onEditDay, onLock, onUnlock, onSaveTrip, saving, session }) {
   const share = async () => {
     const text = buildTripText(city, dates, tiers, trip);
     try { if (navigator.share) { await navigator.share({ title: "Scout itinerary", text }); return; } } catch (e) {}
@@ -624,6 +642,12 @@ function OverviewScreen({ city, dates, tiers, trip, locked, onBack, onEditDay, o
 
       <h1 style={{ fontSize: 27, fontWeight: 700, letterSpacing: -0.7, margin: "16px 0 2px" }}>{city || "Tokyo"}</h1>
       <div style={{ color: MUTE, fontSize: 14 }}>{dates || ""} · {trip.length} days · {totalStops} stops · by Uber</div>
+
+      {onSaveTrip && (
+        <button onClick={onSaveTrip} disabled={saving} style={{ ...SANS, cursor: saving ? "default" : "pointer", width: "100%", marginTop: 16, background: ACCENT, color: "#fff", border: "none", borderRadius: 12, padding: "13px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+          <Check size={16} /> {saving ? "Saving…" : (session ? "Save to my trips" : "Sign in to save this trip")}
+        </button>
+      )}
 
       <div style={{ display: "flex", gap: 8, marginTop: 16 }}>
         <a href={email} style={barBtn}><Mail size={15} /> Email</a>
@@ -826,6 +850,35 @@ function BuildErrorScreen({ city, onRetry, onBack }) {
   );
 }
 
+function GoogleG() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 48 48" aria-hidden="true" style={{ display: "block" }}>
+      <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z" />
+      <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.6 6.1 29.6 4 24 4 16.3 4 9.7 8.3 6.3 14.7z" />
+      <path fill="#4CAF50" d="M24 44c5.2 0 10-2 13.6-5.2l-6.3-5.2C29.2 35.5 26.7 36 24 36c-5.3 0-9.7-3.1-11.3-7.4l-6.5 5C9.6 39.6 16.2 44 24 44z" />
+      <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.5l6.3 5.2C41.2 36.1 44 30.6 44 24c0-1.3-.1-2.3-.4-3.5z" />
+    </svg>
+  );
+}
+
+function AuthBar({ session, onSignIn, onSignOut }) {
+  if (!session) {
+    return (
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 4 }}>
+        <button onClick={onSignIn} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 7, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 999, padding: "7px 13px", fontSize: 13, fontWeight: 600, color: INK, boxShadow: CARD_SHADOW }}>
+          <GoogleG /> Sign in
+        </button>
+      </div>
+    );
+  }
+  return (
+    <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 10, marginBottom: 4 }}>
+      <span style={{ fontSize: 12.5, color: MUTE, maxWidth: 200, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</span>
+      <button onClick={onSignOut} style={{ ...SANS, cursor: "pointer", background: "none", border: `1px solid ${LINE}`, borderRadius: 999, padding: "6px 12px", fontSize: 12.5, fontWeight: 600, color: INK }}>Sign out</button>
+    </div>
+  );
+}
+
 export default function App() {
   const [screen, setScreen] = useState("input");
   const [city, setCity] = useState("Tokyo");
@@ -836,6 +889,47 @@ export default function App() {
   const [activeDay, setActiveDay] = useState(0);
   const [locked, setLocked] = useState(false);
   const [flash, setFlash] = useState("");
+  const [session, setSession] = useState(null);
+  const [savedTrips, setSavedTrips] = useState([]);
+  const [saving, setSaving] = useState(false);
+
+  // Track the Supabase auth session and load this user's saved trips.
+  useEffect(() => {
+    if (!authEnabled) return;
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const refreshTrips = () => { if (session) listTrips().then(setSavedTrips).catch(() => {}); };
+  useEffect(() => { if (session) refreshTrips(); else setSavedTrips([]); }, [session]);
+
+  const signIn = () => supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin } });
+  const signOut = () => supabase.auth.signOut();
+
+  const onSaveTrip = async () => {
+    if (!session) { signIn(); return; }
+    setSaving(true);
+    try {
+      await saveTrip({ city, dates, tiers, trip });
+      refreshTrips();
+      setFlash("Trip saved to your account.");
+      setTimeout(() => setFlash(""), 4000);
+    } catch {
+      setFlash("Couldn't save the trip — try again.");
+      setTimeout(() => setFlash(""), 4000);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const onLoadTrip = (t) => {
+    setCity(t.city); setTiers(t.tiers || []); setTrip(t.trip || []);
+    setActiveDay(0); setLocked(false); setScreen("overview"); window.scrollTo(0, 0);
+  };
+
+  const onDeleteTrip = async (id) => { try { await deleteTrip(id); refreshTrips(); } catch {} };
+
   const toggleTier = (k) => setTiers((p) => (p.includes(k) ? p.filter((x) => x !== k) : [...p, k]));
   const onRange = (s, e) => { setStartDate(s); setEndDate(e); };
   const dayCount = startDate ? (endDate ? Math.max(1, Math.min(6, daysInclusive(startDate, endDate))) : 1) : 0;
@@ -886,12 +980,13 @@ export default function App() {
   return (
     <div style={{ background: "#FFFFFF", minHeight: "100vh" }}>
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
-        {screen === "input" && <InputScreen {...{ city, setCity, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} />}
+        {authEnabled && <AuthBar session={session} onSignIn={signIn} onSignOut={signOut} />}
+        {screen === "input" && <InputScreen {...{ city, setCity, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />}
-        {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} />}
+        {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} />}
       </div>
     </div>
   );
