@@ -788,7 +788,9 @@ function OverviewScreen({ city, dates, tiers, trip, locked, onBack, onEditDay, o
 
 // Tokyo ships with a hand-curated route (the strongest demo); every other city
 // is generated live by the AI scout and enriched with Google data.
-const isCurated = (city) => !city || city.trim().toLowerCase() === "tokyo";
+// Every city — Tokyo included — is now generated live and run through the
+// scheduler. (Kept as a hook in case we ever want a curated showcase again.)
+const isCurated = () => false;
 
 const fmtDuration = (mins) => {
   const h = Math.floor(mins / 60), m = mins % 60;
