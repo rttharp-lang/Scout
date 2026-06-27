@@ -1068,23 +1068,6 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
 // Single-character static-map labels: 1–9 then A–Z, matching the card badges.
 const AREA_LABELS = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-// Build a swipeable set of street-level views down a neighborhood's retail —
-// the road with its stores along it, not a tight storefront crop. We take the
-// coordinates of several real stores in the area and look down the street from
-// each (rotating the heading so consecutive views face different ways); if only
-// a couple of stores resolved, we spin around the first to fill the strip.
-function streetViews(coords) {
-  if (!coords || !coords.length) return [];
-  const urls = coords.slice(0, 6).map((c, i) => `/api/streetview?loc=${c.lat},${c.lng}&heading=${(i * 60) % 360}&fov=90`);
-  if (urls.length < 5 && coords[0]) {
-    for (const h of [120, 200, 280]) {
-      if (urls.length >= 5) break;
-      urls.push(`/api/streetview?loc=${coords[0].lat},${coords[0].lng}&heading=${h}&fov=90`);
-    }
-  }
-  return urls;
-}
-
 // Overview map for the neighborhood picker: the hotel (green H) plus a labelled
 // pin for each neighborhood, so the scout sees where everything sits relative to
 // where they're staying. The neighborhood currently scrolled into view is
@@ -1193,15 +1176,12 @@ function NeighborhoodsScreen({ city, hotel, options, loading, selected, onToggle
               return (
                 <div key={i} ref={(el) => (cardRefs.current[i] = el)} data-idx={i}
                   style={{ border: `1.5px solid ${on ? ACCENT : (isActive ? "#d9b8ba" : LINE)}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW, scrollMarginTop: 180 }}>
-                  {/* Street-level views down the neighborhood's retail (with a
-                      fallback to store listing photos), so you read the street
-                      — big-box strip vs micro-retail — not a single shopfront. */}
+                  {/* The widest, most establishing photo from each store in the
+                      neighborhood, so you read the retail at a glance — big-box
+                      strip vs micro-retail — rather than one tight shopfront. */}
                   <div style={{ position: "relative", height: 168 }}>
-                    <PhotoStrip name={o.name} srcOf={(u) => u}
-                      loader={() => lookupAreaInfo(o.name, city).then((info) => {
-                        const sv = streetViews(info.coords);
-                        return sv.length ? sv : (info.photos || []).map((p) => `/api/photo?name=${encodeURIComponent(p)}&w=800`);
-                      })}
+                    <PhotoStrip name={o.name}
+                      loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)}
                       grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
                     <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{AREA_LABELS[i]}</div>
                     {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Selected</div>}
