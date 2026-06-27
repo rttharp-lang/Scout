@@ -606,6 +606,26 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   const allConfirmed = trip.every((d) => d.confirmed);
   const isLast = activeDay === trip.length - 1;
 
+  // Lunch sits in the route right where you'll be at ~1 PM (day.lunchAfterId).
+  const lunchBlock = (
+    <div>
+      <div style={{ fontSize: 16, fontWeight: 700, display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+        <Utensils size={17} color={ACCENT} /> Lunch <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· ~{day.lunchAt || "1:00 PM"}</span>
+      </div>
+      {day.lunch ? (
+        <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, background: ACCENT_SOFT, padding: "14px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
+            <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.lunch.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.lunch.cuisine}{day.lunch.rating ? ` · ${day.lunch.rating}★` : ""}</div></div>
+            <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
+          </div>
+          <AddressLine name={day.lunch.name} address={day.lunch.address} /><SmartActionRow name={day.lunch.name} address={day.lunch.address} lat={day.lunch.lat} lng={day.lunch.lng} />
+        </div>
+      ) : (
+        <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add lunch near here</button>
+      )}
+    </div>
+  );
+
   return (
     <div style={{ ...SANS, color: INK }}>
       <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: 14, padding: 0 }}><ArrowLeft size={16} /> Edit trip</button>
@@ -637,25 +657,13 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                 <div style={{ fontSize: 12.5, color: MUTE }}>{h.stops.length} stops · {h.time}</div>
               </div>
               <div style={{ fontSize: 12.5, color: ACCENT, marginTop: 2, marginBottom: 14, display: "flex", alignItems: "center", gap: 5 }}><Navigation size={12} /> {h.arrive}</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>{h.stops.map((s) => { n += 1; return <StopCard key={s.id} s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />; })}</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>{h.stops.map((s) => { n += 1; return (
+                <React.Fragment key={s.id}>
+                  <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
+                  {s.id === day.lunchAfterId && lunchBlock}
+                </React.Fragment>
+              ); })}</div>
             </div>
-            {hi === firstHub && (
-              <div style={{ marginTop: 24 }}>
-                <div style={{ fontSize: 19, fontWeight: 700, letterSpacing: -0.3, display: "flex", alignItems: "center", gap: 8 }}><Utensils size={18} color={ACCENT} /> Lunch</div>
-                <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2, marginBottom: 12 }}>Midday, between hubs</div>
-                {day.lunch ? (
-                  <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, background: ACCENT_SOFT, padding: "14px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-                      <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.lunch.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.lunch.cuisine} · {day.lunch.rating}★</div></div>
-                      <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
-                    </div>
-                    <AddressLine name={day.lunch.name} address={day.lunch.address} /><SmartActionRow name={day.lunch.name} address={day.lunch.address} lat={day.lunch.lat} lng={day.lunch.lng} />
-                  </div>
-                ) : (
-                  <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "18px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Select lunch</button>
-                )}
-              </div>
-            )}
           </div>
         );
       })}
@@ -905,7 +913,28 @@ function scheduleStops(stops, hotelCoord) {
   if (hotelCoord) best = run(hotelCoord);
   else for (let s = 0; s < withC.length; s++) { const r = run(coordOf(withC[s])); if (!best || r.cost < best.cost) best = r; }
 
-  return [...best.order.map((o) => ({ ...withC[o.i], eta: fmtClock(o.arriveAt) })), ...without];
+  return [...best.order.map((o) => ({ ...withC[o.i], arriveMin: o.arriveAt, eta: fmtClock(o.arriveAt) })), ...without];
+}
+
+// Position lunch at the ~1 PM point of the route: anchor it after the last stop
+// you reach by 1 PM (so it lands wherever you are mid-route), and push the
+// afternoon arrival times back by the lunch break once a lunch is chosen.
+const LUNCH_AT = 13 * 60;   // aim for ~1:00 PM
+const LUNCH_MIN = 50;       // a ~50-minute lunch
+function applyLunch(d) {
+  const flat = d.itinerary.flatMap((h) => h.stops);
+  if (!flat.length) return { ...d, lunchAfterId: null, lunchAt: fmtClock(LUNCH_AT) };
+  let anchor = flat[0];
+  for (const s of flat) if (typeof s.arriveMin === "number" && s.arriveMin <= LUNCH_AT) anchor = s;
+  if (d.lunch) {
+    let after = false;
+    flat.forEach((s) => {
+      if (s.id === anchor.id) { after = true; return; }
+      if (after && typeof s.arriveMin === "number") { s.arriveMin += LUNCH_MIN; s.eta = fmtClock(s.arriveMin); }
+    });
+  }
+  const lunchAt = fmtClock(Math.max(LUNCH_AT, (anchor.arriveMin || LUNCH_AT) + (anchor.dwell || 16)));
+  return { ...d, lunchAfterId: anchor.id, lunchAnchor: coordOf(anchor), lunchAt };
 }
 
 // Re-run the scheduler on one day's stops with a given hotel coordinate, then
@@ -923,7 +952,7 @@ function rescheduleItinerary(d, hotelCoord) {
     h.time = fmtDuration(mins);
     h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
   });
-  return { ...d, itinerary };
+  return applyLunch({ ...d, itinerary });
 }
 
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
@@ -962,7 +991,7 @@ async function buildLiveTrip(city, tiers, dayCount, hotel) {
       const enr = await enrichPlace(l.name, city);
       return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
     }));
-    return { dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, addCandidates: [], itinerary };
+    return applyLunch({ dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, addCandidates: [], itinerary });
   }));
 }
 
@@ -1226,7 +1255,7 @@ export default function App() {
     setFlash(`Added ${c.name} — route recalculated.`);
     setTimeout(() => setFlash(""), 5000);
   };
-  const onSelectLunch = (l) => { updateDay(activeDay, (d) => ({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
+  const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onConfirmDay = () => {
     updateDay(activeDay, (d) => ({ ...d, confirmed: true }));
     if (activeDay < trip.length - 1) { setActiveDay(activeDay + 1); window.scrollTo(0, 0); }
@@ -1242,7 +1271,16 @@ export default function App() {
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
-        {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />}
+        {screen === "lunch" && (() => {
+          const d = trip[activeDay];
+          const anchor = d.lunchAnchor;
+          const picks = anchor ? [...(d.lunchPicks || [])].sort((a, b) => {
+            const da = a.lat != null ? distLL(anchor, { lat: a.lat, lng: a.lng }) : Infinity;
+            const db = b.lat != null ? distLL(anchor, { lat: b.lat, lng: b.lng }) : Infinity;
+            return da - db;
+          }) : (d.lunchPicks || []);
+          return <LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />;
+        })()}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} />}
       </div>
     </div>
