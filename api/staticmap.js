@@ -24,10 +24,15 @@ export default async function handler(req, res) {
   const markers = pairs
     .map((p, i) => `markers=${encodeURIComponent(`size:mid|color:${ACCENT}|label:${LABELS[i] || ""}|${p}`)}`)
     .join("&");
-  const path = pairs.length > 1
-    ? `&path=${encodeURIComponent(`color:${ACCENT}cc|weight:3|${pairs.join("|")}`)}`
+  // Optional hotel/home base — a distinct green "H" marker and the route's start.
+  const home = (req.query.home || "").toString().trim();
+  const homeValid = /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(home);
+  const homeMarker = homeValid ? `&markers=${encodeURIComponent(`color:0x1A8A52|label:H|${home}`)}` : "";
+  const pathPts = homeValid ? [home, ...pairs] : pairs;
+  const path = pathPts.length > 1
+    ? `&path=${encodeURIComponent(`color:${ACCENT}cc|weight:3|${pathPts.join("|")}`)}`
     : "";
-  const url = `https://maps.googleapis.com/maps/api/staticmap?size=640x320&scale=2&maptype=roadmap&${markers}${path}&key=${key}`;
+  const url = `https://maps.googleapis.com/maps/api/staticmap?size=640x320&scale=2&maptype=roadmap&${markers}${homeMarker}${path}&key=${key}`;
 
   try {
     const r = await fetch(url);

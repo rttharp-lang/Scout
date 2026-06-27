@@ -249,6 +249,7 @@ function StopCard({ s, n, onConfirm, onRemove }) {
         <div style={{ display: "flex", gap: 14, marginTop: 8, flexWrap: "wrap", fontSize: 12.5, color: MUTE }}>
           <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Clock size={12.5} /> {s.hours ? <><span style={{ color: OPEN, fontWeight: 600 }}>Open</span> · {s.hours}</> : "Hours — tap Directions"}</span>
           <span style={{ display: "flex", alignItems: "center", gap: 4 }}><MapPin size={12.5} /> ~{s.dwell} min stop</span>
+          {s.eta && <span style={{ display: "flex", alignItems: "center", gap: 4, color: ACCENT, fontWeight: 600 }}><Navigation size={12.5} /> Arrive ~{s.eta}</span>}
         </div>
         <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{s.why}</div>
         <AddressLine name={s.name} address={s.address} />
@@ -361,7 +362,7 @@ function DecorativeMap({ labels }) {
 // static map of the whole route. Tapping it opens Google Maps with the full
 // multi-stop route. Falls back to the decorative map while coordinates load,
 // if too few resolve, or if the map image fails (e.g. Maps Static API off).
-function MiniMap({ stops }) {
+function MiniMap({ stops, home }) {
   const [pts, setPts] = useState([]);
   const [failed, setFailed] = useState(false);
   const sig = stops.map((s) => s.name).join("|");
@@ -384,14 +385,17 @@ function MiniMap({ stops }) {
   if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
 
   const coords = pts.map((c) => `${c.lat},${c.lng}`);
+  const homeStr = home && home.lat != null ? `${home.lat},${home.lng}` : null;
   // Use the path form with a trailing data flag (!3e2 = walking). The ?api=1
   // form silently drops travelmode when waypoints are present (opens in Drive);
-  // this form forces walking and has no waypoint cap.
-  const dirUrl = "https://www.google.com/maps/dir/" + coords.join("/") + "/data=!4m2!4m1!3e2";
+  // this form forces walking and has no waypoint cap. When a hotel is set, the
+  // route starts from it.
+  const dirUrl = "https://www.google.com/maps/dir/" + (homeStr ? [homeStr, ...coords] : coords).join("/") + "/data=!4m2!4m1!3e2";
+  const mapSrc = `/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}` + (homeStr ? `&home=${encodeURIComponent(homeStr)}` : "");
   return (
     <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
       <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
-        <img src={`/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}`} alt="Route map" onError={() => setFailed(true)}
+        <img src={mapSrc} alt="Route map" onError={() => setFailed(true)}
           style={{ width: "100%", height: 190, objectFit: "cover", display: "block" }} />
         <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.94)", color: INK, fontSize: 12, fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
           <Navigation size={12} color={ACCENT} /> Open route in Maps
@@ -468,10 +472,13 @@ function RangeCalendar({ start, end, onChange }) {
 }
 
 // ── Input ──────────────────────────────────────────────────────
-function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild, session, savedTrips, onLoadTrip, onDeleteTrip }) {
+function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild, session, savedTrips, onLoadTrip, onDeleteTrip }) {
   const [calOpen, setCalOpen] = useState(false);
   const [citySug, setCitySug] = useState([]);
   const [cityFocus, setCityFocus] = useState(false);
+  const [hq, setHq] = useState(hotel?.name || "");
+  const [hotelSug, setHotelSug] = useState([]);
+  const [hotelFocus, setHotelFocus] = useState(false);
   const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
   const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
   const ready = tiers.length && start && city.trim();
@@ -483,6 +490,14 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
     const t = setTimeout(() => { searchCities(term).then((r) => { if (!cancel) setCitySug(r); }); }, 250);
     return () => { cancel = true; clearTimeout(t); };
   }, [city, cityFocus]);
+
+  useEffect(() => {
+    const term = hq.trim();
+    if (!hotelFocus || term.length < 2) { setHotelSug([]); return; }
+    let cancel = false;
+    const t = setTimeout(() => { searchPlaces(`${term} ${city}`).then((r) => { if (!cancel) setHotelSug(r.slice(0, 5)); }).catch(() => {}); }, 300);
+    return () => { cancel = true; clearTimeout(t); };
+  }, [hq, hotelFocus, city]);
   return (
     <div style={{ ...SANS, color: INK }}>
       <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
@@ -526,6 +541,26 @@ function InputScreen({ city, setCity, start, end, onRange, datesLabel, dayCount,
         )}
       </div>
       <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>{CITIES.map((c) => <button key={c} onClick={() => setCity(c)} style={{ ...SANS, cursor: "pointer", fontSize: 13, padding: "6px 12px", borderRadius: 999, border: `1px solid ${city === c ? ACCENT : LINE}`, background: city === c ? ACCENT_SOFT : "#fff", color: city === c ? ACCENT : INK }}>{c}</button>)}</div>
+
+      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>Hotel <span style={{ color: MUTE, fontWeight: 400 }}>· your home base, sets where each day starts</span></label>
+      <div style={{ position: "relative" }}>
+        <div style={field}>
+          <MapPin size={18} color={MUTE} />
+          <input value={hq} onChange={(e) => { setHq(e.target.value); if (!e.target.value.trim()) setHotel(null); }} onFocus={() => setHotelFocus(true)} onBlur={() => setTimeout(() => setHotelFocus(false), 150)} placeholder="Search your hotel" style={inp} />
+        </div>
+        {hotelFocus && hotelSug.length > 0 && (
+          <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 6, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, boxShadow: CARD_SHADOW, overflow: "hidden" }}>
+            {hotelSug.map((r, i) => (
+              <button key={(r.placeId || r.name) + i} onMouseDown={(e) => { e.preventDefault(); setHotel({ name: r.name, address: r.address, lat: r.lat, lng: r.lng }); setHq(r.name); setHotelSug([]); setHotelFocus(false); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "10px 13px", display: "flex", alignItems: "center", gap: 9 }}>
+                <MapPin size={15} color={ACCENT} style={{ flexShrink: 0, marginTop: 2 }} />
+                <div style={{ minWidth: 0 }}><div style={{ fontSize: 14, fontWeight: 600, color: INK }}>{r.name}</div><div style={{ fontSize: 12, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.address}</div></div>
+              </button>
+            ))}
+          </div>
+        )}
+        {hotel && hotel.lat != null && <div style={{ fontSize: 12, color: OPEN, fontWeight: 600, marginTop: 6, display: "flex", alignItems: "center", gap: 4 }}><CheckCircle size={13} /> Home base set — days start from here</div>}
+      </div>
+
       <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>Dates</label>
       <button onClick={() => setCalOpen((v) => !v)} style={{ ...SANS, ...field, width: "100%", cursor: "pointer", background: "#fff", textAlign: "left" }}>
         <Calendar size={18} color={MUTE} />
@@ -568,7 +603,7 @@ function DayTabs({ trip, activeDay, onSwitch }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSwitchDay, onPickLunch, onConfirmStop, onRemoveStop, onAddStop, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onConfirmStop, onRemoveStop, onAddStop, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const day = trip[activeDay];
   let n = 0;
@@ -596,7 +631,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, onBack, onSw
       )}
       {flash && <div style={{ marginTop: 10, background: "#EAF6EE", border: `1px solid #BFE3CB`, color: "#1A6B3C", borderRadius: 10, padding: "10px 12px", fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}><CheckCircle size={15} /> {flash}</div>}
 
-      <div style={{ marginTop: 16 }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} /></div>
+      <div style={{ marginTop: 16 }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} home={hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null} /></div>
 
       {day.itinerary.map((h, hi) => {
         if (!h.stops.length) return null;
@@ -824,12 +859,65 @@ const hubCentroid = (hub) => {
   return { lat: cs.reduce((a, c) => a + c.lat, 0) / cs.length, lng: cs.reduce((a, c) => a + c.lng, 0) / cs.length };
 };
 
+// ── Time-aware scheduling ──────────────────────────────────────
+const HOTEL_DEPART_MIN = 9 * 60;   // leave the hotel ~9:00 AM
+const WALK_MIN_PER_KM = 12;        // ~5 km/h walking pace
+
+const travelMin = (a, b) => distLL(a, b) * 111 * WALK_MIN_PER_KM; // deg→km→min
+const openMin = (s) => {
+  const m = /(\d{1,2}):(\d{2})/.exec(s.hours || "");
+  return m ? parseInt(m[1], 10) * 60 + parseInt(m[2], 10) : 0; // unknown = no constraint
+};
+const fmtClock = (mins) => {
+  const h = Math.floor(mins / 60) % 24, m = Math.round(mins % 60);
+  const ap = h < 12 ? "AM" : "PM"; const hr = h % 12 === 0 ? 12 : h % 12;
+  return `${hr}:${String(m).padStart(2, "0")} ${ap}`;
+};
+
+// Greedy time-aware route: from the hotel (or, with no hotel, the best starting
+// stop), repeatedly pick the stop that minimizes walking + any wait for it to
+// open. In the morning this front-loads early-opening stores so you're
+// productive 9–11 AM; once everything's open it's just shortest-walk. Each stop
+// gets a planned arrival time.
+function scheduleStops(stops, hotelCoord) {
+  const withC = stops.filter(coordOf);
+  const without = stops.filter((s) => !coordOf(s));
+  if (withC.length <= 1) return stops;
+
+  const run = (startPos) => {
+    const remaining = withC.map((_, i) => i);
+    const order = []; let pos = startPos, time = HOTEL_DEPART_MIN, cost = 0;
+    while (remaining.length) {
+      let bestK = 0, bestScore = Infinity, bestArrive = 0;
+      remaining.forEach((idx, k) => {
+        const travel = travelMin(pos, coordOf(withC[idx]));
+        const arrive = time + travel;
+        const wait = Math.max(0, openMin(withC[idx]) - arrive);
+        const score = travel + wait;
+        if (score < bestScore) { bestScore = score; bestK = k; bestArrive = Math.max(arrive, openMin(withC[idx])); }
+      });
+      const idx = remaining[bestK];
+      order.push({ i: idx, arriveAt: bestArrive });
+      cost += bestScore; time = bestArrive + (withC[idx].dwell || 16); pos = coordOf(withC[idx]);
+      remaining.splice(bestK, 1);
+    }
+    return { order, cost };
+  };
+
+  let best;
+  if (hotelCoord) best = run(hotelCoord);
+  else for (let s = 0; s < withC.length; s++) { const r = run(coordOf(withC[s])); if (!best || r.cost < best.cost) best = r; }
+
+  return [...best.order.map((o) => ({ ...withC[o.i], eta: fmtClock(o.arriveAt) })), ...without];
+}
+
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
-async function buildLiveTrip(city, tiers, dayCount) {
+async function buildLiveTrip(city, tiers, dayCount, hotel) {
   const data = await generateItinerary(city, tiers, dayCount);
   const days = (data.days || []).slice(0, dayCount);
   if (!days.length) throw new Error("empty-itinerary");
+  const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
   return Promise.all(days.map(async (d, di) => {
     // Enrich every store (tagged with its neighborhood), then optimize the
@@ -841,7 +929,7 @@ async function buildLiveTrip(city, tiers, dayCount) {
         return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: false, addedByUser: false };
       }))
     ));
-    const ordered = optimizeOrder(enriched.flat(), coordOf);
+    const ordered = scheduleStops(enriched.flat(), hotelCoord);
     // Regroup consecutive stops by neighborhood so cards still show areas,
     // but the walking order is now globally efficient across the whole day.
     const itinerary = [];
@@ -923,6 +1011,7 @@ function AuthBar({ session, onSignIn, onSignOut }) {
 export default function App() {
   const [screen, setScreen] = useState("input");
   const [city, setCity] = useState("Tokyo");
+  const [hotel, setHotel] = useState(null);
   const [startDate, setStartDate] = useState(() => addDays(new Date(), 7));
   const [endDate, setEndDate] = useState(() => addDays(new Date(), 8));
   const [tiers, setTiers] = useState(["aspirational", "competitor", "core"]);
@@ -991,7 +1080,7 @@ export default function App() {
     if (isCurated(city)) { setTrip(generate(n)); setScreen("review"); return; }
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, tiers, n);
+      const live = await buildLiveTrip(city, tiers, n, hotel);
       setTrip(live); setScreen("review");
     } catch {
       // Generation didn't complete — show a retry rather than a wrong-city route.
@@ -1022,10 +1111,10 @@ export default function App() {
     <div style={{ background: "#FFFFFF", minHeight: "100vh" }}>
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         {authEnabled && <AuthBar session={session} onSignIn={signIn} onSignOut={signOut} />}
-        {screen === "input" && <InputScreen {...{ city, setCity, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
+        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && <LunchScreen dayNum={trip[activeDay].dayNum} picks={trip[activeDay].lunchPicks} search={trip[activeDay].lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} />}
       </div>
