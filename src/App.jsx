@@ -1092,15 +1092,47 @@ export default function App() {
   };
 
   const updateDay = (i, fn) => setTrip((prev) => prev.map((d, idx) => (idx === i ? fn(d) : d)));
-  const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
-  const onRemoveStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.filter((s) => s.id !== id) }) }));
-  const onAddStop = (c) => {
-    const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, photos: c.photos, confirmed: false, addedByUser: true };
-    updateDay(activeDay, (d) => {
-      const hasHub = d.itinerary.some((h) => h.hub === c.area);
-      return { ...d, itinerary: d.itinerary.map((h, i) => (h.hub === c.area || (!hasHub && i === 0)) ? { ...h, stops: [...h.stops, stop] } : h) };
+
+  // Re-run the scheduler on a day's remaining stops so the order, walking path,
+  // and arrival times recalibrate whenever a stop is added or removed.
+  const rescheduleDay = (d) => {
+    const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
+    const ordered = scheduleStops(d.itinerary.flatMap((h) => h.stops), hotelCoord);
+    const itinerary = [];
+    ordered.forEach((s) => {
+      const last = itinerary[itinerary.length - 1];
+      if (last && last.hub === s.hub) last.stops.push(s);
+      else itinerary.push({ hub: s.hub, stops: [s] });
     });
-    setFlash(`Added ${c.name} — slotted in at the best point on Day ${activeDay + 1}.`);
+    itinerary.forEach((h, i) => {
+      const mins = h.stops.reduce((a, s) => a + (s.dwell || 16), 0);
+      h.time = fmtDuration(mins);
+      h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
+    });
+    return { ...d, itinerary };
+  };
+
+  const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
+  const onRemoveStop = (hi, id) => updateDay(activeDay, (d) => rescheduleDay({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.filter((s) => s.id !== id) }) }));
+  const onAddStop = (c) => {
+    updateDay(activeDay, (d) => {
+      const all = d.itinerary.flatMap((h) => h.stops);
+      // Assign the added store to its nearest existing neighborhood so it groups
+      // and reschedules sensibly.
+      let hub = (d.itinerary.find((h) => h.stops.length) || {}).hub || c.area || "Your find";
+      if (c.lat != null && c.lng != null) {
+        let bestD = Infinity;
+        all.forEach((s) => {
+          if (s.lat != null && s.lng != null) {
+            const dd = distLL({ lat: c.lat, lng: c.lng }, { lat: s.lat, lng: s.lng });
+            if (dd < bestD) { bestD = dd; hub = s.hub; }
+          }
+        });
+      }
+      const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, openAt: c.openAt, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, photos: c.photos, hub, confirmed: false, addedByUser: true };
+      return rescheduleDay({ ...d, itinerary: [{ hub, stops: [...all, stop] }] });
+    });
+    setFlash(`Added ${c.name} — route recalculated.`);
     setTimeout(() => setFlash(""), 5000);
   };
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => ({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
