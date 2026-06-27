@@ -808,7 +808,7 @@ async function enrichPlace(name, area, city) {
     const results = await searchPlaces(query);
     const hit = results[0];
     if (!hit) return {};
-    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, address: hit.address, lat: hit.lat, lng: hit.lng, photos: hit.photos };
+    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, openAt: hit.openAt, address: hit.address, lat: hit.lat, lng: hit.lng, photos: hit.photos };
   } catch {
     return {};
   }
@@ -867,6 +867,7 @@ const WALK_MIN_PER_KM = 12;        // ~5 km/h walking pace
 
 const travelMin = (a, b) => distLL(a, b) * 111 * WALK_MIN_PER_KM; // deg→km→min
 const openMin = (s) => {
+  if (typeof s.openAt === "number") return s.openAt; // exact, from structured hours
   const m = /(\d{1,2}):(\d{2})/.exec(s.hours || "");
   return m ? parseInt(m[1], 10) * 60 + parseInt(m[2], 10) : 0; // unknown = no constraint
 };

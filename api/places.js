@@ -11,6 +11,7 @@ const FIELD_MASK = [
   "places.rating",
   "places.userRatingCount",
   "places.regularOpeningHours",
+  "places.utcOffsetMinutes",
   "places.location",
   "places.photos",
 ].join(",");
@@ -53,7 +54,7 @@ export default async function handler(req, res) {
       address: p.formattedAddress || "",
       rating: typeof p.rating === "number" ? Math.round(p.rating * 10) / 10 : null,
       reviews: p.userRatingCount ?? null,
-      hours: hoursForToday(p.regularOpeningHours),
+      ...hoursForToday(p.regularOpeningHours, p.utcOffsetMinutes),
       lat: p.location?.latitude ?? null,
       lng: p.location?.longitude ?? null,
       photos: (p.photos || []).slice(0, 10).map((ph) => ph.name).filter(Boolean),
@@ -65,19 +66,41 @@ export default async function handler(req, res) {
   }
 }
 
-// Pull today's opening hours out of the structured response and normalize to
-// the app's compact 24-hour style, e.g.
-// "Monday: 11:00 AM – 8:00 PM" -> "11:00–20:00".
-function hoursForToday(openingHours) {
-  const lines = openingHours?.weekdayDescriptions;
-  if (!Array.isArray(lines) || lines.length < 7) return "";
-  // weekdayDescriptions is ordered Monday..Sunday; JS getDay() is Sun..Sat.
-  const jsDay = new Date().getDay();
-  const idx = jsDay === 0 ? 6 : jsDay - 1;
-  const line = lines[idx] || "";
-  const colon = line.indexOf(":");
-  const times = (colon >= 0 ? line.slice(colon + 1) : line).trim();
-  return formatHours(times);
+const pad = (n) => String(n).padStart(2, "0");
+
+// Read today's opening hours from the STRUCTURED periods (exact open/close
+// numbers, in the store's local time via utcOffsetMinutes) — not the display
+// text, which can drop the AM/PM and make a 1 PM open look like 1 AM. Returns
+// { hours: "13:00-19:00", openAt: 780 } where openAt is minutes after midnight
+// (null when unknown/closed, so the scheduler treats it as no constraint).
+function hoursForToday(openingHours, utcOffsetMinutes) {
+  if (!openingHours) return { hours: "", openAt: null };
+  const periods = Array.isArray(openingHours.periods) ? openingHours.periods : null;
+  const offset = typeof utcOffsetMinutes === "number" ? utcOffsetMinutes : 0;
+  const day = new Date(Date.now() + offset * 60000).getUTCDay(); // place-local day, 0=Sun
+
+  if (periods && periods.length) {
+    if (periods.length === 1 && periods[0].open && !periods[0].close) {
+      return { hours: "Open 24 hours", openAt: 0 };
+    }
+    const today = periods.find((p) => p.open && p.open.day === day);
+    if (!today) return { hours: "Closed", openAt: null };
+    const o = today.open, c = today.close;
+    const openAt = o.hour * 60 + (o.minute || 0);
+    const hours = c
+      ? `${pad(o.hour)}:${pad(o.minute || 0)}–${pad(c.hour)}:${pad(c.minute || 0)}`
+      : `${pad(o.hour)}:${pad(o.minute || 0)}`;
+    return { hours, openAt };
+  }
+
+  const lines = openingHours.weekdayDescriptions;
+  if (Array.isArray(lines) && lines.length >= 7) {
+    const idx = day === 0 ? 6 : day - 1; // weekdayDescriptions is Mon..Sun
+    const line = lines[idx] || "";
+    const colon = line.indexOf(":");
+    return { hours: (colon >= 0 ? line.slice(colon + 1) : line).trim(), openAt: null };
+  }
+  return { hours: "", openAt: null };
 }
 
 // Convert "10:00 AM – 9:00 PM" -> "10:00–21:00". Leaves non-time text
