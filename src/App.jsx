@@ -371,18 +371,58 @@ function DecorativeMap({ labels }) {
 // static map of the whole route. Tapping it opens Google Maps with the full
 // multi-stop route. Falls back to the decorative map while coordinates load,
 // if too few resolve, or if the map image fails (e.g. Maps Static API off).
+// Web-Mercator projection helpers (256-px world tile), so we can compute an
+// explicit center/zoom that fits the day's stops and then place our own
+// numbered pins over the static basemap at the right pixels.
+const MAP_TILE = 256;
+const projX = (lng) => MAP_TILE * (0.5 + lng / 360);
+const projY = (lat) => {
+  const s = Math.min(Math.max(Math.sin((lat * Math.PI) / 180), -0.9999), 0.9999);
+  return MAP_TILE * (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI));
+};
+const unprojLat = (y) => {
+  const n = Math.PI - (2 * Math.PI * y) / MAP_TILE;
+  return (180 / Math.PI) * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n)));
+};
+function fitView(points, w, h, pad) {
+  const xs = points.map((p) => projX(p.lng)), ys = points.map((p) => projY(p.lat));
+  const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+  const dx = Math.max(maxX - minX, 1e-9), dy = Math.max(maxY - minY, 1e-9);
+  let zoom = Math.floor(Math.min(Math.log2((w - 2 * pad) / dx), Math.log2((h - 2 * pad) / dy), 16));
+  if (!isFinite(zoom)) zoom = 14;
+  zoom = Math.max(2, Math.min(20, zoom));
+  const cx = (minX + maxX) / 2, cy = (minY + maxY) / 2;
+  return { zoom, cx, cy, centerLat: unprojLat(cy), centerLng: (cx / MAP_TILE) * 360 - 180 };
+}
+
+const MAP_H = 190;
+
 function MiniMap({ stops, home }) {
   const [pts, setPts] = useState([]);
   const [failed, setFailed] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [w, setW] = useState(0);
+  const boxRef = useRef(null);
   const sig = stops.map((s) => s.name).join("|");
+
+  // Track the map's rendered width so the basemap request and our pin overlay
+  // share one coordinate space (recompute on resize / rotation).
+  useEffect(() => {
+    const el = boxRef.current;
+    if (!el) return;
+    const measure = () => setW(el.clientWidth);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
     setFailed(false);
     (async () => {
       const resolved = [];
-      for (const s of stops.slice(0, 14)) {
+      for (const s of stops.slice(0, 20)) {
         if (s.lat != null && s.lng != null) { resolved.push({ lat: s.lat, lng: s.lng }); continue; }
         const c = await lookupCoords(s.name, s.address);
         if (c) resolved.push(c);
@@ -394,8 +434,13 @@ function MiniMap({ stops, home }) {
 
   const coords = pts.map((c) => `${c.lat},${c.lng}`);
   const homeStr = home && home.lat != null ? `${home.lat},${home.lng}` : null;
-  const mapSrc = pts.length >= 2
-    ? `/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}` + (homeStr ? `&home=${encodeURIComponent(homeStr)}` : "")
+  const allPts = (home && home.lat != null ? [home] : []).concat(pts);
+  const view = w >= 60 && pts.length >= 2 ? fitView(allPts, w, MAP_H, 34) : null;
+
+  const mapSrc = view
+    ? `/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}` +
+      (homeStr ? `&home=${encodeURIComponent(homeStr)}` : "") +
+      `&center=${view.centerLat},${view.centerLng}&zoom=${view.zoom}&w=${Math.min(Math.round(w), 640)}&h=${MAP_H}`
     : "";
 
   // Reset load tracking whenever the image URL changes, and guard against the
@@ -410,6 +455,11 @@ function MiniMap({ stops, home }) {
 
   if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
 
+  // Pixel position of a coord within the basemap, given the chosen center/zoom.
+  const scale = view ? Math.pow(2, view.zoom) : 1;
+  const at = (p) => ({ left: w / 2 + (projX(p.lng) - view.cx) * scale, top: MAP_H / 2 + (projY(p.lat) - view.cy) * scale });
+  const dot = { position: "absolute", transform: "translate(-50%,-50%)", pointerEvents: "none", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "50%", fontWeight: 700, boxShadow: "0 1px 4px rgba(0,0,0,0.35)", border: "2px solid #fff" };
+
   // Use the path form with a trailing data flag (!3e2 = walking). The ?api=1
   // form silently drops travelmode when waypoints are present (opens in Drive);
   // this form forces walking and has no waypoint cap. When a hotel is set, the
@@ -417,11 +467,22 @@ function MiniMap({ stops, home }) {
   const dirUrl = "https://www.google.com/maps/dir/" + (homeStr ? [homeStr, ...coords] : coords).join("/") + "/data=!4m2!4m1!3e2";
   return (
     <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
-      <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW, background: "#E8EEEA" }}>
-        <img src={mapSrc} alt="Route map"
-          onError={() => setFailed(true)}
-          onLoad={(e) => { if (e.currentTarget.naturalWidth === 0) setFailed(true); else setLoaded(true); }}
-          style={{ width: "100%", height: 190, objectFit: "cover", display: "block" }} />
+      <div ref={boxRef} style={{ position: "relative", height: MAP_H, borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW, background: "#E8EEEA" }}>
+        {mapSrc && (
+          <img src={mapSrc} alt="Route map"
+            onError={() => setFailed(true)}
+            onLoad={(e) => { if (e.currentTarget.naturalWidth === 0) setFailed(true); else setLoaded(true); }}
+            style={{ width: "100%", height: MAP_H, objectFit: "cover", display: "block" }} />
+        )}
+        {/* Our own numbered pins, matching the store cards (real numbers, not
+            Google's single-character A/B fallback past 9). */}
+        {view && loaded && pts.map((p, i) => {
+          const pos = at(p);
+          return <div key={i} style={{ ...dot, ...pos, width: 22, height: 22, background: ACCENT, color: "#fff", fontSize: 11 }}>{i + 1}</div>;
+        })}
+        {view && loaded && home && home.lat != null && (
+          <div style={{ ...dot, ...at(home), width: 24, height: 24, background: "#1A8A52", color: "#fff", fontSize: 12 }}>H</div>
+        )}
         <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.94)", color: INK, fontSize: 12, fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
           <Navigation size={12} color={ACCENT} /> Open route in Maps
         </div>
