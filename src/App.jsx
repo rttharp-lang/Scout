@@ -1056,17 +1056,24 @@ function NeighborhoodsScreen({ city, options, loading, selected, onToggle, onBac
         </div>
       ) : (
         <>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 18 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 18 }}>
             {options.map((o, i) => {
               const on = selected.includes(o.name);
               return (
-                <button key={i} onClick={() => onToggle(o.name)} style={{ ...SANS, textAlign: "left", cursor: "pointer", display: "flex", alignItems: "flex-start", gap: 12, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: 14, padding: "14px" }}>
-                  <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 1, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
-                  <div>
-                    <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: -0.3, color: on ? ACCENT : INK }}>{o.name}</div>
-                    <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 2 }}>{o.blurb}</div>
+                <div key={i} style={{ border: `1.5px solid ${on ? ACCENT : LINE}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW }}>
+                  {/* Swipe through real photos of the neighborhood before choosing. */}
+                  <div style={{ position: "relative", height: 168 }}>
+                    <PhotoStrip name={o.name} address={city} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
+                    {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Selected</div>}
                   </div>
-                </button>
+                  <button onClick={() => onToggle(o.name)} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "14px" }}>
+                    <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 1, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
+                    <div>
+                      <div style={{ fontSize: 15.5, fontWeight: 700, letterSpacing: -0.3, color: on ? ACCENT : INK }}>{o.name}</div>
+                      <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 2 }}>{o.blurb}</div>
+                    </div>
+                  </button>
+                </div>
               );
             })}
           </div>
