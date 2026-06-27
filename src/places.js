@@ -80,9 +80,9 @@ export async function lookupPhotos(name, address) {
 
 // For the neighborhood-picker. One search of the stores in a neighborhood gives
 // us a representative coordinate (to place it on the overview map relative to
-// the hotel) plus a photo per store. We pick each store's WIDEST photo — the
-// landscape, establishing shots that show the storefront in context, rather
-// than the tight portrait close-ups that read as "too zoomed in." Cached.
+// the hotel) plus one photo per store. We use each store's FIRST listing photo,
+// which on Google is usually the exterior/storefront shot — a better read on
+// the retail than interior or close-up crops. Cached per neighborhood+city.
 const areaCache = new Map();
 export async function lookupAreaInfo(neighborhood, city) {
   const key = (neighborhood + "|" + city).toLowerCase();
@@ -90,18 +90,7 @@ export async function lookupAreaInfo(neighborhood, city) {
   let info = { photos: [], coord: null, coords: [] };
   try {
     const results = await searchPlaces(`clothing boutique store ${neighborhood} ${city}`);
-    const picks = [];
-    results.forEach((r) => {
-      const names = r.photos || [], dims = r.photoDims || [];
-      let best = null, bestRatio = 0;
-      names.forEach((nm, i) => {
-        const d = dims[i] || {};
-        const ratio = d.w && d.h ? d.w / d.h : 1; // wider = more establishing
-        if (ratio > bestRatio) { bestRatio = ratio; best = nm; }
-      });
-      if (best) picks.push(best);
-    });
-    info.photos = picks.slice(0, 12);
+    info.photos = results.map((r) => r.photos && r.photos[0]).filter(Boolean).slice(0, 12);
     const pts = results.filter((r) => r.lat != null && r.lng != null).map((r) => ({ lat: r.lat, lng: r.lng }));
     info.coords = pts.slice(0, 8);
     info.coord = pts[0] || null;

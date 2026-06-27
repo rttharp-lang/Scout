@@ -48,23 +48,17 @@ export default async function handler(req, res) {
     }
 
     const data = await r.json();
-    const results = (data.places || []).map((p) => {
-      // Keep photo names and their pixel dimensions aligned, so the client can
-      // prefer wider, establishing shots over tight portrait crops.
-      const photoList = (p.photos || []).slice(0, 10).filter((ph) => ph.name);
-      return {
-        placeId: p.id,
-        name: p.displayName?.text || "",
-        address: p.formattedAddress || "",
-        rating: typeof p.rating === "number" ? Math.round(p.rating * 10) / 10 : null,
-        reviews: p.userRatingCount ?? null,
-        ...hoursForToday(p.regularOpeningHours, p.utcOffsetMinutes),
-        lat: p.location?.latitude ?? null,
-        lng: p.location?.longitude ?? null,
-        photos: photoList.map((ph) => ph.name),
-        photoDims: photoList.map((ph) => ({ w: ph.widthPx ?? null, h: ph.heightPx ?? null })),
-      };
-    });
+    const results = (data.places || []).map((p) => ({
+      placeId: p.id,
+      name: p.displayName?.text || "",
+      address: p.formattedAddress || "",
+      rating: typeof p.rating === "number" ? Math.round(p.rating * 10) / 10 : null,
+      reviews: p.userRatingCount ?? null,
+      ...hoursForToday(p.regularOpeningHours, p.utcOffsetMinutes),
+      lat: p.location?.latitude ?? null,
+      lng: p.location?.longitude ?? null,
+      photos: (p.photos || []).slice(0, 10).map((ph) => ph.name).filter(Boolean),
+    }));
 
     res.status(200).json({ results });
   } catch (e) {
