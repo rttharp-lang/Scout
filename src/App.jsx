@@ -875,39 +875,20 @@ const distLL = (a, b) => {
   return Math.sqrt(dx * dx + dy * dy);
 };
 
-// Nearest-neighbor path through items that have coordinates, trying every
-// start and keeping the shortest total. Items without coords keep their order
-// at the end. getC(item) -> {lat,lng} | null.
-function optimizeOrder(items, getC, fixedStart) {
-  const withC = items.filter((i) => getC(i));
-  const without = items.filter((i) => !getC(i));
-  if (withC.length <= 2) return items;
-  const nn = (start) => {
-    const used = new Set([start]); const order = [start]; let cur = start;
-    while (order.length < withC.length) {
-      let best = -1, bestD = Infinity;
-      for (let j = 0; j < withC.length; j++) {
-        if (used.has(j)) continue;
-        const d = distLL(getC(withC[cur]), getC(withC[j]));
-        if (d < bestD) { bestD = d; best = j; }
-      }
-      order.push(best); used.add(best); cur = best;
-    }
-    return order;
-  };
-  const total = (o) => o.reduce((sum, idx, i) => i ? sum + distLL(getC(withC[o[i - 1]]), getC(withC[idx])) : 0, 0);
-  const starts = fixedStart != null ? [0] : withC.map((_, i) => i);
-  let bestOrder = null, bestTotal = Infinity;
-  for (const s of starts) {
-    const o = nn(s);
-    const t = total(o);
-    if (t < bestTotal) { bestTotal = t; bestOrder = o; }
-  }
-  return [...bestOrder.map((i) => withC[i]), ...without];
+// All orderings of a small list (used to find the best neighborhood block
+// order). Only called with a handful of neighborhoods, so the factorial cost is
+// trivial.
+function permutations(arr) {
+  if (arr.length <= 1) return [arr];
+  const res = [];
+  arr.forEach((x, i) => {
+    for (const p of permutations([...arr.slice(0, i), ...arr.slice(i + 1)])) res.push([x, ...p]);
+  });
+  return res;
 }
 
-const hubCentroid = (hub) => {
-  const cs = hub.stops.map(coordOf).filter(Boolean);
+const centroidOf = (stops) => {
+  const cs = stops.map(coordOf).filter(Boolean);
   if (!cs.length) return null;
   return { lat: cs.reduce((a, c) => a + c.lat, 0) / cs.length, lng: cs.reduce((a, c) => a + c.lng, 0) / cs.length };
 };
@@ -928,41 +909,69 @@ const fmtClock = (mins) => {
   return `${hr}:${String(m).padStart(2, "0")} ${ap}`;
 };
 
-// Greedy time-aware route: from the hotel (or, with no hotel, the best starting
-// stop), repeatedly pick the stop that minimizes walking + any wait for it to
-// open. In the morning this front-loads early-opening stores so you're
-// productive 9–11 AM; once everything's open it's just shortest-walk. Each stop
-// gets a planned arrival time.
+// Neighborhood-block route: you spend the morning in one neighborhood, the
+// early afternoon in another, the evening in a third — not ping-ponging between
+// them. So we keep each neighborhood's stops together as a contiguous block,
+// pick the block order that finishes the day earliest (least walking + waiting
+// for stores to open, which naturally front-loads early-opening areas), and
+// within each block run the time-aware greedy so you don't zig-zag inside it.
+// Each stop gets a planned arrival time.
 function scheduleStops(stops, hotelCoord) {
   const withC = stops.filter(coordOf);
   const without = stops.filter((s) => !coordOf(s));
   if (withC.length <= 1) return stops;
 
-  const run = (startPos) => {
-    const remaining = withC.map((_, i) => i);
-    const order = []; let pos = startPos, time = HOTEL_DEPART_MIN, cost = 0;
+  // Group into neighborhood blocks, preserving first-seen order as a tiebreak.
+  const blocks = [];
+  const byHub = new Map();
+  withC.forEach((s) => {
+    const key = s.hub || "·";
+    if (!byHub.has(key)) { const b = { hub: s.hub, stops: [] }; byHub.set(key, b); blocks.push(b); }
+    byHub.get(key).stops.push(s);
+  });
+
+  // Order the stops within one block by walking + opening-time, starting from
+  // the position/time you entered it; returns the placed stops and the clock +
+  // position when you leave. Carrying time across blocks keeps the day honest.
+  const placeBlock = (block, startPos, startTime) => {
+    const remaining = block.stops.slice();
+    const placed = []; let pos = startPos, time = startTime;
     while (remaining.length) {
       let bestK = 0, bestScore = Infinity, bestArrive = 0;
-      remaining.forEach((idx, k) => {
-        const travel = travelMin(pos, coordOf(withC[idx]));
+      remaining.forEach((s, k) => {
+        const travel = pos ? travelMin(pos, coordOf(s)) : 0;
         const arrive = time + travel;
-        const wait = Math.max(0, openMin(withC[idx]) - arrive);
+        const wait = Math.max(0, openMin(s) - arrive);
         const score = travel + wait;
-        if (score < bestScore) { bestScore = score; bestK = k; bestArrive = Math.max(arrive, openMin(withC[idx])); }
+        if (score < bestScore) { bestScore = score; bestK = k; bestArrive = Math.max(arrive, openMin(s)); }
       });
-      const idx = remaining[bestK];
-      order.push({ i: idx, arriveAt: bestArrive });
-      cost += bestScore; time = bestArrive + (withC[idx].dwell || 16); pos = coordOf(withC[idx]);
-      remaining.splice(bestK, 1);
+      const s = remaining.splice(bestK, 1)[0];
+      placed.push({ ...s, arriveMin: bestArrive, eta: fmtClock(bestArrive) });
+      time = bestArrive + (s.dwell || 16); pos = coordOf(s);
     }
-    return { order, cost };
+    return { placed, endPos: pos, endTime: time };
   };
 
-  let best;
-  if (hotelCoord) best = run(hotelCoord);
-  else for (let s = 0; s < withC.length; s++) { const r = run(coordOf(withC[s])); if (!best || r.cost < best.cost) best = r; }
+  const runSeq = (seq) => {
+    let pos = hotelCoord || null, time = HOTEL_DEPART_MIN;
+    const out = [];
+    for (const b of seq) {
+      const r = placeBlock(b, pos, time);
+      out.push(...r.placed); pos = r.endPos; time = r.endTime;
+    }
+    return { out, endTime: time };
+  };
 
-  return [...best.order.map((o) => ({ ...withC[o.i], arriveMin: o.arriveAt, eta: fmtClock(o.arriveAt) })), ...without];
+  // Try every block order when there are only a few neighborhoods (the usual
+  // case — max three a day); fall back to first-seen order otherwise.
+  const candidates = blocks.length <= 4 ? permutations(blocks) : [blocks];
+  let best = null;
+  for (const seq of candidates) {
+    const r = runSeq(seq);
+    if (!best || r.endTime < best.endTime) best = r;
+  }
+
+  return [...best.out, ...without];
 }
 
 // Position lunch at the ~1 PM point of the route: anchor it after the last stop
@@ -1001,7 +1010,8 @@ function rescheduleItinerary(d, hotelCoord) {
     h.time = fmtDuration(mins);
     h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
   });
-  return applyLunch({ ...d, itinerary });
+  const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || d.label;
+  return applyLunch({ ...d, itinerary, label });
 }
 
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
@@ -1013,9 +1023,9 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
   return Promise.all(days.map(async (d, di) => {
-    // Enrich every store (tagged with its neighborhood), then optimize the
-    // WHOLE day as one efficient walking path. Dense-city neighborhoods overlap,
-    // so routing each neighborhood separately caused cross-town zig-zags.
+    // Enrich every store (tagged with its neighborhood), then schedule the day
+    // as ordered neighborhood blocks — a chunk of the day per area — so the
+    // route reads morning → afternoon → evening instead of zig-zagging.
     const enriched = await Promise.all((d.hubs || []).map((h, hi) =>
       Promise.all((h.stores || []).map(async (s) => {
         const enr = await enrichPlace(s.name, h.hub, city);
@@ -1023,8 +1033,8 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
       }))
     ));
     const ordered = scheduleStops(enriched.flat(), hotelCoord);
-    // Regroup consecutive stops by neighborhood so cards still show areas,
-    // but the walking order is now globally efficient across the whole day.
+    // Regroup the scheduled stops back into their neighborhood blocks for the
+    // cards — now each neighborhood is one contiguous stretch of the day.
     const itinerary = [];
     ordered.forEach((s) => {
       const last = itinerary[itinerary.length - 1];
@@ -1042,7 +1052,10 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
     }));
     const lunchPicks = await enrichMeal(d.lunch);
     const dinnerPicks = await enrichMeal(d.dinner);
-    return applyLunch({ dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
+    // Label the day from the actual scheduled block order, so the header matches
+    // the route even when the scheduler reorders neighborhoods.
+    const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || d.label || `${city} · Day ${di + 1}`;
+    return applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
   }));
 }
 
