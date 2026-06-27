@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { searchPlaces, lookupCoords, generateItinerary, searchCities } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, generateItinerary, searchCities } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
@@ -188,17 +188,46 @@ function AddressLine({ name, address }) {
 }
 const tierColor = (s) => (s.addedByUser && !s.tier ? ADDED_TIER.chip[0] : (TIERS[s.tier] ? TIERS[s.tier].chip[0] : ADDED_TIER.chip[0]));
 
+// Swipeable gallery of a place's Google listing photos. Falls back to the
+// branded gradient + storefront illustration when there are no photos. Lazily
+// fetches photos for places that don't already carry them (curated stops).
+function PhotoStrip({ name, address, photos, grad, fallback }) {
+  const [pics, setPics] = useState(photos && photos.length ? photos : null);
+  useEffect(() => {
+    if (photos && photos.length) { setPics(photos); return; }
+    let cancelled = false;
+    if (address) lookupPhotos(name, address).then((p) => { if (!cancelled) setPics(p); });
+    return () => { cancelled = true; };
+  }, [name, address]);
+
+  const list = (pics || []).slice(0, 10);
+  if (!list.length) {
+    return <div style={{ height: "100%", background: grad, display: "flex", alignItems: "center", justifyContent: "center" }}>{fallback || <Storefront />}</div>;
+  }
+  return (
+    <>
+      <div style={{ display: "flex", height: "100%", overflowX: "auto", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
+        {list.map((nm, i) => (
+          <img key={i} src={`/api/photo?name=${encodeURIComponent(nm)}&w=800`} alt="" loading="lazy"
+            style={{ minWidth: "100%", width: "100%", height: "100%", objectFit: "cover", scrollSnapAlign: "start", display: "block" }} />
+        ))}
+      </div>
+      {list.length > 1 && <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", pointerEvents: "none", background: "rgba(0,0,0,0.5)", color: "#fff", fontSize: 10.5, fontWeight: 600, borderRadius: 999, padding: "3px 10px" }}>{list.length} photos · swipe ›</div>}
+    </>
+  );
+}
+
 function StopCard({ s, n, onConfirm, onRemove }) {
   const t = TIERS[s.tier] || ADDED_TIER;
   const editBtn = { ...SANS, cursor: "pointer", background: "none", border: "none", fontSize: 13, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 5, padding: "2px 2px" };
   return (
     <div style={{ border: `1px solid ${s.confirmed ? OPEN : LINE}`, borderRadius: 16, overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "relative", height: 110, background: t.grad, display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Storefront />
-        <div style={{ position: "absolute", top: 10, left: 10, background: "rgba(255,255,255,0.92)", color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
-        <div style={{ position: "absolute", top: 10, right: 10, background: t.chip[1], color: t.chip[0], fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{t.label}</div>
-        {s.addedByUser && <div style={{ position: "absolute", bottom: 10, left: 10, background: "rgba(255,255,255,0.92)", color: ADDED_TIER.chip[0], fontSize: 10.5, fontWeight: 700, borderRadius: 999, padding: "4px 9px" }}>Your find</div>}
-        {s.confirmed && <div style={{ position: "absolute", bottom: 10, right: 10, background: OPEN, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Going</div>}
+      <div style={{ position: "relative", height: 190 }}>
+        <PhotoStrip name={s.name} address={s.address} photos={s.photos} grad={t.grad} />
+        <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
+        <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: t.chip[1], color: t.chip[0], fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{t.label}</div>
+        {s.addedByUser && <div style={{ position: "absolute", bottom: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: ADDED_TIER.chip[0], fontSize: 10.5, fontWeight: 700, borderRadius: 999, padding: "4px 9px" }}>Your find</div>}
+        {s.confirmed && <div style={{ position: "absolute", bottom: 10, right: 10, pointerEvents: "none", background: OPEN, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Going</div>}
       </div>
       <div style={{ padding: "12px 14px 12px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
@@ -224,9 +253,9 @@ function StopCard({ s, n, onConfirm, onRemove }) {
 function LunchCard({ l, onSelect }) {
   return (
     <div style={{ border: `1px solid ${LINE}`, borderRadius: 16, overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "relative", height: 110, background: "linear-gradient(135deg,#7a5230,#caa46a)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Utensils size={34} color="#fff" style={{ opacity: 0.9 }} />
-        <div style={{ position: "absolute", top: 10, right: 10, background: "rgba(255,255,255,0.92)", color: "#7a5230", fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{l.cuisine}</div>
+      <div style={{ position: "relative", height: 170 }}>
+        <PhotoStrip name={l.name} address={l.address} photos={l.photos} grad="linear-gradient(135deg,#7a5230,#caa46a)" fallback={<Utensils size={34} color="#fff" style={{ opacity: 0.9 }} />} />
+        <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: "#7a5230", fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{l.cuisine}</div>
       </div>
       <div style={{ padding: "12px 14px 14px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
@@ -730,7 +759,7 @@ async function enrichPlace(name, area, city) {
     const results = await searchPlaces(query);
     const hit = results[0];
     if (!hit) return {};
-    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, address: hit.address, lat: hit.lat, lng: hit.lng };
+    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, address: hit.address, lat: hit.lat, lng: hit.lng, photos: hit.photos };
   } catch {
     return {};
   }
@@ -962,7 +991,7 @@ export default function App() {
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
   const onRemoveStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.filter((s) => s.id !== id) }) }));
   const onAddStop = (c) => {
-    const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, confirmed: false, addedByUser: true };
+    const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, photos: c.photos, confirmed: false, addedByUser: true };
     updateDay(activeDay, (d) => {
       const hasHub = d.itinerary.some((h) => h.hub === c.area);
       return { ...d, itinerary: d.itinerary.map((h, i) => (h.hub === c.area || (!hasHub && i === 0)) ? { ...h, stops: [...h.stops, stop] } : h) };

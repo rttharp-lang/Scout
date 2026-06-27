@@ -42,6 +42,24 @@ export async function generateItinerary(city, tiers, days) {
 // sample stops), reusing the same search endpoint. Results are cached per
 // name+address so each store is only ever looked up once. Returns
 // { lat, lng } or null; callers treat null as "no coordinates available".
+// Look up listing photos for a place that doesn't already have them (the
+// curated sample stops). Cached per name+address. Returns an array of photo
+// resource names usable with /api/photo.
+const photoCache = new Map();
+export async function lookupPhotos(name, address) {
+  const key = (name + "|" + address).toLowerCase();
+  if (photoCache.has(key)) return photoCache.get(key);
+  let photos = [];
+  try {
+    const results = await searchPlaces(`${name} ${address}`);
+    photos = results[0]?.photos || [];
+  } catch {
+    photos = [];
+  }
+  photoCache.set(key, photos);
+  return photos;
+}
+
 const coordCache = new Map();
 export async function lookupCoords(name, address) {
   const key = (name + "|" + address).toLowerCase();

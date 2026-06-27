@@ -12,6 +12,7 @@ const FIELD_MASK = [
   "places.userRatingCount",
   "places.regularOpeningHours",
   "places.location",
+  "places.photos",
 ].join(",");
 
 export default async function handler(req, res) {
@@ -55,6 +56,7 @@ export default async function handler(req, res) {
       hours: hoursForToday(p.regularOpeningHours),
       lat: p.location?.latitude ?? null,
       lng: p.location?.longitude ?? null,
+      photos: (p.photos || []).slice(0, 10).map((ph) => ph.name).filter(Boolean),
     }));
 
     res.status(200).json({ results });
