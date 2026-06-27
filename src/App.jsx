@@ -193,6 +193,7 @@ const tierColor = (s) => (s.addedByUser && !s.tier ? ADDED_TIER.chip[0] : (TIERS
 // fetches photos for places that don't already carry them (curated stops).
 function PhotoStrip({ name, address, photos, grad, fallback }) {
   const [pics, setPics] = useState(photos && photos.length ? photos : null);
+  const [active, setActive] = useState(0);
   useEffect(() => {
     if (photos && photos.length) { setPics(photos); return; }
     let cancelled = false;
@@ -204,15 +205,26 @@ function PhotoStrip({ name, address, photos, grad, fallback }) {
   if (!list.length) {
     return <div style={{ height: "100%", background: grad, display: "flex", alignItems: "center", justifyContent: "center" }}>{fallback || <Storefront />}</div>;
   }
+  const onScroll = (e) => {
+    const el = e.currentTarget;
+    const i = el.clientWidth ? Math.round(el.scrollLeft / el.clientWidth) : 0;
+    if (i !== active) setActive(i);
+  };
   return (
     <>
-      <div style={{ display: "flex", height: "100%", overflowX: "auto", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
+      <div onScroll={onScroll} style={{ display: "flex", height: "100%", overflowX: "auto", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
         {list.map((nm, i) => (
           <img key={i} src={`/api/photo?name=${encodeURIComponent(nm)}&w=800`} alt="" loading="lazy"
             style={{ minWidth: "100%", width: "100%", height: "100%", objectFit: "cover", scrollSnapAlign: "start", display: "block" }} />
         ))}
       </div>
-      {list.length > 1 && <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", pointerEvents: "none", background: "rgba(0,0,0,0.5)", color: "#fff", fontSize: 10.5, fontWeight: 600, borderRadius: 999, padding: "3px 10px" }}>{list.length} photos · swipe ›</div>}
+      {list.length > 1 && (
+        <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", pointerEvents: "none", display: "flex", gap: 5, alignItems: "center" }}>
+          {list.map((_, i) => (
+            <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: i === active ? "#fff" : "rgba(255,255,255,0.5)", transform: i === active ? "scale(1.15)" : "none", boxShadow: "0 0 2px rgba(0,0,0,0.45)", transition: "background 0.15s" }} />
+          ))}
+        </div>
+      )}
     </>
   );
 }
