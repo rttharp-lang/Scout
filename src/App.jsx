@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil, Menu, LogOut } from "lucide-react";
@@ -191,13 +191,16 @@ const tierColor = (s) => (s.addedByUser && !s.tier ? ADDED_TIER.chip[0] : (TIERS
 // Swipeable gallery of a place's Google listing photos. Falls back to the
 // branded gradient + storefront illustration when there are no photos. Lazily
 // fetches photos for places that don't already carry them (curated stops).
-function PhotoStrip({ name, address, photos, grad, fallback }) {
+function PhotoStrip({ name, address, photos, grad, fallback, loader }) {
   const [pics, setPics] = useState(photos && photos.length ? photos : null);
   const [active, setActive] = useState(0);
   useEffect(() => {
     if (photos && photos.length) { setPics(photos); return; }
     let cancelled = false;
-    if (address) lookupPhotos(name, address).then((p) => { if (!cancelled) setPics(p); });
+    // A custom loader (e.g. neighborhood storefront photos) takes precedence;
+    // otherwise look up this place's own listing photos by name + address.
+    const p = loader ? loader() : (address ? lookupPhotos(name, address) : null);
+    if (p) p.then((r) => { if (!cancelled) setPics(r); });
     return () => { cancelled = true; };
   }, [name, address]);
 
@@ -365,6 +368,7 @@ function DecorativeMap({ labels }) {
 function MiniMap({ stops, home }) {
   const [pts, setPts] = useState([]);
   const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const sig = stops.map((s) => s.name).join("|");
 
   useEffect(() => {
@@ -382,20 +386,35 @@ function MiniMap({ stops, home }) {
     return () => { cancelled = true; };
   }, [sig]);
 
-  if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
-
   const coords = pts.map((c) => `${c.lat},${c.lng}`);
   const homeStr = home && home.lat != null ? `${home.lat},${home.lng}` : null;
+  const mapSrc = pts.length >= 2
+    ? `/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}` + (homeStr ? `&home=${encodeURIComponent(homeStr)}` : "")
+    : "";
+
+  // Reset load tracking whenever the image URL changes, and guard against the
+  // iOS Safari quirk where a failed <img> fires neither onload nor onerror —
+  // leaving a blank white box. If nothing loads in time, fall back.
+  useEffect(() => {
+    if (!mapSrc) return;
+    setLoaded(false); setFailed(false);
+    const t = setTimeout(() => setLoaded((v) => { if (!v) setFailed(true); return v; }), 8000);
+    return () => clearTimeout(t);
+  }, [mapSrc]);
+
+  if (failed || pts.length < 2) return <DecorativeMap labels={stops.slice(0, 4).map((s) => s.name)} />;
+
   // Use the path form with a trailing data flag (!3e2 = walking). The ?api=1
   // form silently drops travelmode when waypoints are present (opens in Drive);
   // this form forces walking and has no waypoint cap. When a hotel is set, the
   // route starts from it.
   const dirUrl = "https://www.google.com/maps/dir/" + (homeStr ? [homeStr, ...coords] : coords).join("/") + "/data=!4m2!4m1!3e2";
-  const mapSrc = `/api/staticmap?pts=${encodeURIComponent(coords.join(";"))}` + (homeStr ? `&home=${encodeURIComponent(homeStr)}` : "");
   return (
     <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
-      <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
-        <img src={mapSrc} alt="Route map" onError={() => setFailed(true)}
+      <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW, background: "#E8EEEA" }}>
+        <img src={mapSrc} alt="Route map"
+          onError={() => setFailed(true)}
+          onLoad={(e) => { if (e.currentTarget.naturalWidth === 0) setFailed(true); else setLoaded(true); }}
           style={{ width: "100%", height: 190, objectFit: "cover", display: "block" }} />
         <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.94)", color: INK, fontSize: 12, fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
           <Navigation size={12} color={ACCENT} /> Open route in Maps
@@ -1027,10 +1046,79 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
   }));
 }
 
+// Single-character static-map labels: 1–9 then A–Z, matching the card badges.
+const AREA_LABELS = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// Overview map for the neighborhood picker: the hotel (green H) plus a labelled
+// pin for each neighborhood, so the scout sees where everything sits relative to
+// where they're staying. The neighborhood currently scrolled into view is
+// emphasised (larger accent pin) so the map tracks the list. Coordinates come
+// from the same cached lookup that supplies each card's storefront photos.
+function NeighborhoodMap({ options, city, hotel, activeIndex }) {
+  const [coords, setCoords] = useState([]);
+  const [failed, setFailed] = useState(false);
+  const sig = options.map((o) => o.name).join("|");
+  useEffect(() => {
+    let cancelled = false;
+    setFailed(false);
+    (async () => {
+      const out = new Array(options.length).fill(null);
+      await Promise.all(options.map(async (o, i) => {
+        const info = await lookupAreaInfo(o.name, city);
+        out[i] = info.coord;
+      }));
+      if (!cancelled) setCoords(out);
+    })();
+    return () => { cancelled = true; };
+  }, [sig, city]);
+
+  const resolved = options.map((o, i) => (coords[i] ? { label: AREA_LABELS[i], coord: coords[i] } : null)).filter(Boolean);
+  const skel = { height: 150, borderRadius: 14, border: `1px solid ${LINE}`, display: "flex", alignItems: "center", justifyContent: "center", color: MUTE, fontSize: 13, background: `linear-gradient(135deg, ${ACCENT_SOFT}, #eef1f0)` };
+  if (failed) return <div style={skel}>Map unavailable — pick by description below.</div>;
+  if (resolved.length < 1) return <div style={skel}><span>Mapping {city || "the city"}…</span></div>;
+
+  const m = resolved.map((r) => `${r.label},${r.coord.lat},${r.coord.lng}`).join("|");
+  const homeStr = hotel && hotel.lat != null ? `${hotel.lat},${hotel.lng}` : "";
+  const activeLabel = AREA_LABELS[activeIndex] || "";
+  const src = `/api/areamap?m=${encodeURIComponent(m)}&active=${encodeURIComponent(activeLabel)}` + (homeStr ? `&home=${encodeURIComponent(homeStr)}` : "");
+  return (
+    <div style={{ position: "relative", borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW }}>
+      <img src={src} alt="Neighborhoods map" onError={() => setFailed(true)}
+        onLoad={(e) => { if (e.currentTarget.naturalWidth === 0) setFailed(true); }}
+        style={{ width: "100%", height: 150, objectFit: "cover", display: "block", background: "#eef1f0" }} />
+      {homeStr && (
+        <div style={{ position: "absolute", bottom: 8, left: 8, pointerEvents: "none", background: "rgba(255,255,255,0.94)", color: INK, fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 9px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
+          <span style={{ width: 9, height: 9, borderRadius: "50%", background: "#1A8A52" }} /> Your hotel
+        </div>
+      )}
+    </div>
+  );
+}
+
 // Between the input screen and the build, the scout chooses which neighborhoods
-// to focus on — each with a one-line description of what it's known for — the
-// way you'd actually plan a trip. The chosen areas then guide store generation.
-function NeighborhoodsScreen({ city, options, loading, selected, onToggle, onBack, onBuild }) {
+// to focus on — each with a one-line description of what it's known for, a swipe
+// of real storefront photos from stores there (to read the retail at a glance:
+// big-box vs micro-retail), and a live position on the overview map — the way
+// you'd actually plan a trip. The chosen areas then guide store generation.
+function NeighborhoodsScreen({ city, hotel, options, loading, selected, onToggle, onBack, onBuild }) {
+  const [active, setActive] = useState(0);
+  const cardRefs = useRef([]);
+
+  // As the list scrolls, mark whichever neighborhood card sits just under the
+  // sticky map as "active" so the map can emphasise its pin.
+  useEffect(() => {
+    if (!options.length) return;
+    const io = new IntersectionObserver((entries) => {
+      const visible = entries.filter((e) => e.isIntersecting);
+      if (!visible.length) return;
+      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      const i = Number(visible[0].target.dataset.idx);
+      if (!Number.isNaN(i)) setActive(i);
+    }, { rootMargin: "-185px 0px -55% 0px", threshold: 0 });
+    cardRefs.current.forEach((el) => el && io.observe(el));
+    return () => io.disconnect();
+  }, [options.length]);
+
   return (
     <div style={{ ...SANS, color: INK }}>
       <button onClick={onBack} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, fontSize: 14, padding: 0, marginBottom: 14, display: "flex", alignItems: "center", gap: 4 }}>
@@ -1038,7 +1126,7 @@ function NeighborhoodsScreen({ city, options, loading, selected, onToggle, onBac
       </button>
       <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.6 }}>Where in {city || "the city"}?</div>
       <p style={{ color: MUTE, fontSize: 14, marginTop: 6, lineHeight: 1.5 }}>
-        Pick the neighborhoods you want to scout. We'll build the route — and find the stores — only in the areas you choose.
+        Pick the neighborhoods you want to scout. Swipe each card to see the retail, scroll to place it on the map, then choose — we'll find the stores only in the areas you pick.
       </p>
 
       {loading ? (
@@ -1056,14 +1144,23 @@ function NeighborhoodsScreen({ city, options, loading, selected, onToggle, onBac
         </div>
       ) : (
         <>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 18 }}>
+          {/* Sticky overview map: stays visible while you scroll the list, and
+              highlights the neighborhood you're currently looking at. */}
+          <div style={{ position: "sticky", top: 0, zIndex: 5, background: "#fff", paddingTop: 14, paddingBottom: 12, marginTop: 4 }}>
+            <NeighborhoodMap options={options} city={city} hotel={hotel} activeIndex={active} />
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
             {options.map((o, i) => {
               const on = selected.includes(o.name);
+              const isActive = i === active;
               return (
-                <div key={i} style={{ border: `1.5px solid ${on ? ACCENT : LINE}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW }}>
-                  {/* Swipe through real photos of the neighborhood before choosing. */}
+                <div key={i} ref={(el) => (cardRefs.current[i] = el)} data-idx={i}
+                  style={{ border: `1.5px solid ${on ? ACCENT : (isActive ? "#d9b8ba" : LINE)}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW, scrollMarginTop: 180 }}>
+                  {/* Storefront photos pulled from real stores in this neighborhood. */}
                   <div style={{ position: "relative", height: 168 }}>
-                    <PhotoStrip name={o.name} address={city} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
+                    <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
+                    <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{AREA_LABELS[i]}</div>
                     {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Selected</div>}
                   </div>
                   <button onClick={() => onToggle(o.name)} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "14px" }}>
@@ -1472,7 +1569,7 @@ export default function App() {
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
         {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
-        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}

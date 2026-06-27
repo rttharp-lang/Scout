@@ -78,6 +78,29 @@ export async function lookupPhotos(name, address) {
   return photos;
 }
 
+// For the neighborhood-picker: pull real storefront photos from actual stores
+// in the neighborhood (so you can see whether it's big-box strip malls or
+// small micro-retail), plus a representative coordinate at the heart of the
+// retail so the overview map can place the neighborhood relative to the hotel.
+// One search serves both; cached per neighborhood+city.
+const areaCache = new Map();
+export async function lookupAreaInfo(neighborhood, city) {
+  const key = (neighborhood + "|" + city).toLowerCase();
+  if (areaCache.has(key)) return areaCache.get(key);
+  let info = { photos: [], coord: null };
+  try {
+    const results = await searchPlaces(`clothing boutique store ${neighborhood} ${city}`);
+    // First photo from each of several stores → a montage of real storefronts.
+    info.photos = results.slice(0, 12).map((r) => r.photos && r.photos[0]).filter(Boolean);
+    const hit = results.find((r) => r.lat != null && r.lng != null);
+    if (hit) info.coord = { lat: hit.lat, lng: hit.lng };
+  } catch {
+    info = { photos: [], coord: null };
+  }
+  areaCache.set(key, info);
+  return info;
+}
+
 const coordCache = new Map();
 export async function lookupCoords(name, address) {
   const key = (name + "|" + address).toLowerCase();
