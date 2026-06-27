@@ -28,11 +28,29 @@ export async function searchCities(query) {
   }
 }
 
+// Ask the scout endpoint for real neighborhoods in a city, tailored to the
+// selected tiers, each with a blurb on what it's known for. The user picks
+// which to visit before the itinerary is built. Returns an array of
+// { name, blurb }; callers treat an empty array as "skip neighborhood choice".
+export async function suggestNeighborhoods(city, tiers) {
+  const params = new URLSearchParams({ city, tiers: tiers.join(",") });
+  try {
+    const r = await fetch(`/api/neighborhoods?${params.toString()}`);
+    if (!r.ok) return [];
+    const data = await r.json();
+    return Array.isArray(data.neighborhoods) ? data.neighborhoods : [];
+  } catch {
+    return [];
+  }
+}
+
 // Ask the AI scout endpoint for a city-specific itinerary (neighborhoods +
 // real stores + tiers + why). Returns { days: [...] }; callers fall back to
 // the curated sample on error or when AI generation isn't configured.
-export async function generateItinerary(city, tiers, days) {
+// `areas` (optional) constrains the route to chosen neighborhoods.
+export async function generateItinerary(city, tiers, days, areas = []) {
   const params = new URLSearchParams({ city, tiers: tiers.join(","), days: String(days) });
+  if (areas.length) params.set("areas", areas.join(","));
   const r = await fetch(`/api/itinerary?${params.toString()}`);
   if (!r.ok) throw new Error(`itinerary ${r.status}`);
   return r.json();

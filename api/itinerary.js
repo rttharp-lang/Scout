@@ -97,6 +97,7 @@ export default async function handler(req, res) {
   const city = (req.query.city || "").toString().trim();
   const tiers = (req.query.tiers || "").toString().split(",").map((t) => t.trim()).filter((t) => TIER_GUIDE[t]);
   const days = Math.max(1, Math.min(6, parseInt(req.query.days, 10) || 1));
+  const areas = (req.query.areas || "").toString().split(",").map((a) => a.trim()).filter(Boolean);
 
   if (!city) { res.status(400).json({ error: "no-city" }); return; }
   if (!tiers.length) { res.status(400).json({ error: "no-tiers" }); return; }
@@ -108,12 +109,20 @@ export default async function handler(req, res) {
     return;
   }
 
+  const areaLine = areas.length
+    ? `\n\nThe scout has chosen these neighborhoods to focus on — build the route ONLY around these, distributing them sensibly across the ${days} day(s):\n${areas.map((a) => "- " + a).join("\n")}\n`
+    : "";
+
+  const neighborhoodInstruction = areas.length
+    ? `For each day: use 2–3 of the chosen neighborhoods above, each with 4–6 real stores from the tiers above, ordered so the day flows geographically. Do not introduce neighborhoods outside the chosen list.`
+    : `For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically.`;
+
   const prompt = `Plan a ${days}-day store-scouting route in ${city}.
 
 Only include these tiers:
-${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}
+${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}${areaLine}
 
-For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically. Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships. Add 3–4 real lunch options near that day's route, and 3–4 real dinner options for an evening team meal in the city. Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
+${neighborhoodInstruction} Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships. Add 3–4 real lunch options near that day's route, and 3–4 real dinner options for an evening team meal in the city. Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
 
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {

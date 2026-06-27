@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, generateItinerary, searchCities } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil, Menu, LogOut } from "lucide-react";
@@ -987,8 +987,8 @@ function rescheduleItinerary(d, hotelCoord) {
 
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
-async function buildLiveTrip(city, tiers, dayCount, hotel) {
-  const data = await generateItinerary(city, tiers, dayCount);
+async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
+  const data = await generateItinerary(city, tiers, dayCount, areas);
   const days = (data.days || []).slice(0, dayCount);
   if (!days.length) throw new Error("empty-itinerary");
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
@@ -1025,6 +1025,58 @@ async function buildLiveTrip(city, tiers, dayCount, hotel) {
     const dinnerPicks = await enrichMeal(d.dinner);
     return applyLunch({ dayNum: di + 1, label: d.label || `${city} · Day ${di + 1}`, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
   }));
+}
+
+// Between the input screen and the build, the scout chooses which neighborhoods
+// to focus on — each with a one-line description of what it's known for — the
+// way you'd actually plan a trip. The chosen areas then guide store generation.
+function NeighborhoodsScreen({ city, options, loading, selected, onToggle, onBack, onBuild }) {
+  return (
+    <div style={{ ...SANS, color: INK }}>
+      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, fontSize: 14, padding: 0, marginBottom: 14, display: "flex", alignItems: "center", gap: 4 }}>
+        <ChevronLeft size={16} /> Edit trip
+      </button>
+      <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.6 }}>Where in {city || "the city"}?</div>
+      <p style={{ color: MUTE, fontSize: 14, marginTop: 6, lineHeight: 1.5 }}>
+        Pick the neighborhoods you want to scout. We'll build the route — and find the stores — only in the areas you choose.
+      </p>
+
+      {loading ? (
+        <div style={{ textAlign: "center", padding: "60px 0" }}>
+          <div style={{ width: 28, height: 28, margin: "0 auto 16px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
+          <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+          <div style={{ color: MUTE, fontSize: 14 }}>Finding the districts worth your time…</div>
+        </div>
+      ) : options.length === 0 ? (
+        <div style={{ textAlign: "center", padding: "40px 0" }}>
+          <p style={{ color: MUTE, fontSize: 14, lineHeight: 1.5, maxWidth: 320, marginInline: "auto" }}>
+            Couldn't pull neighborhoods for {city || "this city"} just now — we'll let the scout choose the best areas for you.
+          </p>
+          <button onClick={onBuild} style={{ ...SANS, cursor: "pointer", marginTop: 20, background: ACCENT, color: "#fff", border: "none", borderRadius: 12, padding: "13px 26px", fontSize: 15, fontWeight: 600 }}>Build my route</button>
+        </div>
+      ) : (
+        <>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 18 }}>
+            {options.map((o, i) => {
+              const on = selected.includes(o.name);
+              return (
+                <button key={i} onClick={() => onToggle(o.name)} style={{ ...SANS, textAlign: "left", cursor: "pointer", display: "flex", alignItems: "flex-start", gap: 12, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: 14, padding: "14px" }}>
+                  <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 1, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
+                  <div>
+                    <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: -0.3, color: on ? ACCENT : INK }}>{o.name}</div>
+                    <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 2 }}>{o.blurb}</div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+          <button onClick={onBuild} disabled={selected.length === 0} style={{ ...SANS, cursor: selected.length ? "pointer" : "default", marginTop: 22, width: "100%", background: selected.length ? ACCENT : LINE, color: selected.length ? "#fff" : MUTE, border: "none", borderRadius: 14, padding: "15px", fontSize: 16, fontWeight: 700 }}>
+            {selected.length ? `Build route · ${selected.length} neighborhood${selected.length > 1 ? "s" : ""}` : "Pick at least one neighborhood"}
+          </button>
+        </>
+      )}
+    </div>
+  );
 }
 
 function BuildingScreen({ city }) {
@@ -1213,6 +1265,9 @@ export default function App() {
   const [saving, setSaving] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTripId, setCurrentTripId] = useState(null);
+  const [areaOptions, setAreaOptions] = useState([]);
+  const [selectedAreas, setSelectedAreas] = useState([]);
+  const [areaLoading, setAreaLoading] = useState(false);
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -1248,7 +1303,7 @@ export default function App() {
         city, hotel, tiers, currentTripId, trip, activeDay, locked,
         start: startDate ? startDate.toISOString() : null,
         end: endDate ? endDate.toISOString() : null,
-        screen: (screen === "building" || screen === "builderror") ? "input" : screen,
+        screen: (screen === "building" || screen === "builderror" || screen === "neighborhoods") ? "input" : screen,
       }));
     } catch {}
   }, [city, hotel, tiers, startDate, endDate, trip, activeDay, locked, screen, currentTripId]);
@@ -1324,12 +1379,34 @@ export default function App() {
       itinerary: src.hubs.map((h) => ({ ...h, stops: h.stops.filter((s) => tiers.includes(s.tier)).map((s) => ({ ...s, id: slug(s.name), confirmed: false, addedByUser: false })) })),
     };
   });
+  // Step 1: from the input screen, suggest real neighborhoods for the city so
+  // the scout can choose which to spend the trip in. The chosen areas then guide
+  // store generation — the way you'd actually plan a trip.
+  const startNeighborhoods = async () => {
+    setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
+    setSelectedAreas([]); setAreaOptions([]); setAreaLoading(true);
+    setScreen("neighborhoods");
+    try {
+      const opts = await suggestNeighborhoods(city, tiers);
+      setAreaOptions(opts);
+    } catch {
+      setAreaOptions([]);
+    } finally {
+      setAreaLoading(false);
+    }
+  };
+
+  const toggleArea = (name) =>
+    setSelectedAreas((p) => (p.includes(name) ? p.filter((x) => x !== name) : [...p, name]));
+
+  // Step 2: build the live itinerary, constrained to the chosen neighborhoods
+  // (or unconstrained if the suggestions weren't available / none picked).
   const build = async () => {
     const n = Math.max(1, dayCount);
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, tiers, n, hotel);
+      const live = await buildLiveTrip(city, tiers, n, hotel, selectedAreas);
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
       setTrip(dated); setScreen("review");
     } catch {
@@ -1387,7 +1464,8 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
+        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
