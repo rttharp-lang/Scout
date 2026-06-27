@@ -191,20 +191,25 @@ const tierColor = (s) => (s.addedByUser && !s.tier ? ADDED_TIER.chip[0] : (TIERS
 // Swipeable gallery of a place's Google listing photos. Falls back to the
 // branded gradient + storefront illustration when there are no photos. Lazily
 // fetches photos for places that don't already carry them (curated stops).
-function PhotoStrip({ name, address, photos, grad, fallback, loader }) {
+function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf }) {
   const [pics, setPics] = useState(photos && photos.length ? photos : null);
   const [active, setActive] = useState(0);
+  const [broken, setBroken] = useState(() => new Set());
   useEffect(() => {
     if (photos && photos.length) { setPics(photos); return; }
     let cancelled = false;
-    // A custom loader (e.g. neighborhood storefront photos) takes precedence;
+    // A custom loader (e.g. neighborhood street views) takes precedence;
     // otherwise look up this place's own listing photos by name + address.
     const p = loader ? loader() : (address ? lookupPhotos(name, address) : null);
     if (p) p.then((r) => { if (!cancelled) setPics(r); });
     return () => { cancelled = true; };
   }, [name, address]);
 
-  const list = (pics || []).slice(0, 10);
+  // Items are either photo resource names (default) or ready-made image URLs.
+  const toSrc = srcOf || ((nm) => `/api/photo?name=${encodeURIComponent(nm)}&w=800`);
+  // Drop any image that fails to load — e.g. a street view with no imagery —
+  // so the strip never shows broken or grey placeholders.
+  const list = (pics || []).slice(0, 12).filter((nm) => !broken.has(nm));
   if (!list.length) {
     return <div style={{ height: "100%", background: grad, display: "flex", alignItems: "center", justifyContent: "center" }}>{fallback || <Storefront />}</div>;
   }
@@ -216,8 +221,9 @@ function PhotoStrip({ name, address, photos, grad, fallback, loader }) {
   return (
     <>
       <div onScroll={onScroll} style={{ display: "flex", height: "100%", overflowX: "auto", scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
-        {list.map((nm, i) => (
-          <img key={i} src={`/api/photo?name=${encodeURIComponent(nm)}&w=800`} alt="" loading="lazy"
+        {list.map((nm) => (
+          <img key={nm} src={toSrc(nm)} alt="" loading="lazy"
+            onError={() => setBroken((b) => new Set(b).add(nm))}
             style={{ minWidth: "100%", width: "100%", height: "100%", objectFit: "cover", scrollSnapAlign: "start", display: "block" }} />
         ))}
       </div>
@@ -1062,6 +1068,23 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
 // Single-character static-map labels: 1–9 then A–Z, matching the card badges.
 const AREA_LABELS = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+// Build a swipeable set of street-level views down a neighborhood's retail —
+// the road with its stores along it, not a tight storefront crop. We take the
+// coordinates of several real stores in the area and look down the street from
+// each (rotating the heading so consecutive views face different ways); if only
+// a couple of stores resolved, we spin around the first to fill the strip.
+function streetViews(coords) {
+  if (!coords || !coords.length) return [];
+  const urls = coords.slice(0, 6).map((c, i) => `/api/streetview?loc=${c.lat},${c.lng}&heading=${(i * 60) % 360}&fov=90`);
+  if (urls.length < 5 && coords[0]) {
+    for (const h of [120, 200, 280]) {
+      if (urls.length >= 5) break;
+      urls.push(`/api/streetview?loc=${coords[0].lat},${coords[0].lng}&heading=${h}&fov=90`);
+    }
+  }
+  return urls;
+}
+
 // Overview map for the neighborhood picker: the hotel (green H) plus a labelled
 // pin for each neighborhood, so the scout sees where everything sits relative to
 // where they're staying. The neighborhood currently scrolled into view is
@@ -1170,9 +1193,16 @@ function NeighborhoodsScreen({ city, hotel, options, loading, selected, onToggle
               return (
                 <div key={i} ref={(el) => (cardRefs.current[i] = el)} data-idx={i}
                   style={{ border: `1.5px solid ${on ? ACCENT : (isActive ? "#d9b8ba" : LINE)}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW, scrollMarginTop: 180 }}>
-                  {/* Storefront photos pulled from real stores in this neighborhood. */}
+                  {/* Street-level views down the neighborhood's retail (with a
+                      fallback to store listing photos), so you read the street
+                      — big-box strip vs micro-retail — not a single shopfront. */}
                   <div style={{ position: "relative", height: 168 }}>
-                    <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
+                    <PhotoStrip name={o.name} srcOf={(u) => u}
+                      loader={() => lookupAreaInfo(o.name, city).then((info) => {
+                        const sv = streetViews(info.coords);
+                        return sv.length ? sv : (info.photos || []).map((p) => `/api/photo?name=${encodeURIComponent(p)}&w=800`);
+                      })}
+                      grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
                     <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{AREA_LABELS[i]}</div>
                     {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Selected</div>}
                   </div>
