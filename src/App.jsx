@@ -904,7 +904,7 @@ export default function App() {
   const refreshTrips = () => { if (session) listTrips().then(setSavedTrips).catch(() => {}); };
   useEffect(() => { if (session) refreshTrips(); else setSavedTrips([]); }, [session]);
 
-  const signIn = () => supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin } });
+  const signIn = () => supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin, queryParams: { prompt: "select_account" } } });
   const signOut = () => supabase.auth.signOut();
 
   const onSaveTrip = async () => {
