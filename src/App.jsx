@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, generateItinerary, searchCities } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, deleteTrip } from "./trips";
-import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
+import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil, Menu, LogOut } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
 const SANS = { fontFamily: "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" };
@@ -500,13 +500,7 @@ function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, date
   }, [hq, hotelFocus, city]);
   return (
     <div style={{ ...SANS, color: INK }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-        <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
-        <svg viewBox="0 0 413.62 144.78" width="31" height="11" aria-hidden="true" style={{ display: "block" }}>
-          <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
-        </svg>
-      </div>
-      <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "26px 0 8px" }}>Where are you going?</h1>
+      <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "8px 0 8px" }}>Where are you going?</h1>
       <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
       {session && savedTrips && savedTrips.length > 0 && (
         <div style={{ marginTop: 24 }}>
@@ -914,6 +908,24 @@ function scheduleStops(stops, hotelCoord) {
   return [...best.order.map((o) => ({ ...withC[o.i], eta: fmtClock(o.arriveAt) })), ...without];
 }
 
+// Re-run the scheduler on one day's stops with a given hotel coordinate, then
+// regroup consecutive stops by neighborhood and relabel the flow.
+function rescheduleItinerary(d, hotelCoord) {
+  const ordered = scheduleStops(d.itinerary.flatMap((h) => h.stops), hotelCoord);
+  const itinerary = [];
+  ordered.forEach((s) => {
+    const last = itinerary[itinerary.length - 1];
+    if (last && last.hub === s.hub) last.stops.push(s);
+    else itinerary.push({ hub: s.hub, stops: [s] });
+  });
+  itinerary.forEach((h, i) => {
+    const mins = h.stops.reduce((a, s) => a + (s.dwell || 16), 0);
+    h.time = fmtDuration(mins);
+    h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
+  });
+  return { ...d, itinerary };
+}
+
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
 async function buildLiveTrip(city, tiers, dayCount, hotel) {
@@ -993,21 +1005,107 @@ function GoogleG() {
   );
 }
 
-function AuthBar({ session, onSignIn, onSignOut }) {
-  if (!session) {
-    return (
-      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 4 }}>
-        <button onClick={onSignIn} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 7, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 999, padding: "7px 13px", fontSize: 13, fontWeight: 600, color: INK, boxShadow: CARD_SHADOW }}>
-          <GoogleG /> Sign in
-        </button>
-      </div>
-    );
-  }
+function Logo({ size = 22 }) {
   return (
-    <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", gap: 10, marginBottom: 4 }}>
-      <span style={{ fontSize: 12.5, color: MUTE, maxWidth: 200, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</span>
-      <button onClick={onSignOut} style={{ ...SANS, cursor: "pointer", background: "none", border: `1px solid ${LINE}`, borderRadius: 999, padding: "6px 12px", fontSize: 12.5, fontWeight: 600, color: INK }}>Sign out</button>
+    <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+      <span style={{ fontSize: size, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
+      <svg viewBox="0 0 413.62 144.78" width={size * 1.4} height={size * 0.5} aria-hidden="true" style={{ display: "block" }}>
+        <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
+      </svg>
     </div>
+  );
+}
+
+// Persistent top bar on every screen: Scout logo on the left, menu on the right.
+function AppHeader({ onMenu, showMenu }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
+      <Logo />
+      {showMenu && (
+        <button onClick={onMenu} aria-label="Menu" style={{ ...SANS, cursor: "pointer", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 11, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center", color: INK, boxShadow: CARD_SHADOW }}>
+          <Menu size={20} />
+        </button>
+      )}
+    </div>
+  );
+}
+
+// Slide-in navigation: account, jump between days, change hotel, saved trips,
+// and start a new search.
+function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDay, onJumpDay, savedTrips, onLoadTrip, onNewSearch, hotel, onChangeHotel, city }) {
+  const [hq, setHq] = useState("");
+  const [hsug, setHsug] = useState([]);
+  useEffect(() => {
+    if (!open) { setHq(""); setHsug([]); }
+  }, [open]);
+  useEffect(() => {
+    const term = hq.trim();
+    if (term.length < 2) { setHsug([]); return; }
+    let cancel = false;
+    const t = setTimeout(() => { searchPlaces(`${term} ${city || ""}`).then((r) => { if (!cancel) setHsug(r.slice(0, 4)); }).catch(() => {}); }, 300);
+    return () => { cancel = true; clearTimeout(t); };
+  }, [hq]);
+  if (!open) return null;
+
+  const sectionLabel = { fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase", margin: "20px 0 8px" };
+  const row = { ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "none", border: "none", padding: "11px 0", fontSize: 15, color: INK, display: "flex", alignItems: "center", gap: 10 };
+  return (
+    <>
+      <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.4)", zIndex: 40 }} />
+      <div style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(86vw, 340px)", background: "#fff", zIndex: 41, boxShadow: "-8px 0 24px rgba(0,0,0,0.14)", display: "flex", flexDirection: "column", overflowY: "auto", padding: "22px 20px 40px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <Logo size={20} />
+          <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE }}><X size={22} /></button>
+        </div>
+
+        {session ? (
+          <div style={{ marginTop: 18 }}>
+            <div style={{ fontSize: 13, color: MUTE, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</div>
+            <button onClick={() => { onSignOut(); onClose(); }} style={{ ...row, color: DANGER, marginTop: 4 }}><LogOut size={17} /> Sign out</button>
+          </div>
+        ) : (
+          <button onClick={() => { onSignIn(); }} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 8, marginTop: 18, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 999, padding: "9px 14px", fontSize: 14, fontWeight: 600, color: INK, boxShadow: CARD_SHADOW }}><GoogleG /> Sign in with Google</button>
+        )}
+
+        {trip.length > 0 && (
+          <>
+            <div style={sectionLabel}>Jump to a day</div>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              {trip.map((d, i) => (
+                <button key={i} onClick={() => { onJumpDay(i); onClose(); }} style={{ ...SANS, cursor: "pointer", fontSize: 13.5, fontWeight: 600, padding: "8px 14px", borderRadius: 999, border: `1px solid ${i === activeDay ? ACCENT : LINE}`, background: i === activeDay ? ACCENT_SOFT : "#fff", color: i === activeDay ? ACCENT : INK }}>Day {d.dayNum}</button>
+              ))}
+            </div>
+
+            <div style={sectionLabel}>Hotel — home base</div>
+            {hotel && hotel.name && <div style={{ fontSize: 13, color: INK, marginBottom: 8 }}>{hotel.name}</div>}
+            <div style={{ position: "relative" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 11, padding: "10px 12px" }}>
+                <MapPin size={16} color={MUTE} /><input value={hq} onChange={(e) => setHq(e.target.value)} placeholder="Change hotel" style={{ ...SANS, border: "none", outline: "none", fontSize: 14.5, width: "100%", color: INK }} />
+              </div>
+              {hsug.length > 0 && (
+                <div style={{ border: `1px solid ${LINE}`, borderRadius: 11, marginTop: 6, overflow: "hidden" }}>
+                  {hsug.map((r, i) => (
+                    <button key={(r.placeId || r.name) + i} onClick={() => { onChangeHotel({ name: r.name, address: r.address, lat: r.lat, lng: r.lng }); onClose(); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "10px 12px" }}>
+                      <div style={{ fontSize: 13.5, fontWeight: 600, color: INK }}>{r.name}</div>
+                      <div style={{ fontSize: 11.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.address}</div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </>
+        )}
+
+        <div style={sectionLabel}>Trips</div>
+        <button onClick={() => { onNewSearch(); onClose(); }} style={row}><Search size={17} /> New search / change city</button>
+        {session && savedTrips.length > 0 && savedTrips.map((t) => (
+          <button key={t.id} onClick={() => { onLoadTrip(t); onClose(); }} style={{ ...row, padding: "9px 0" }}>
+            <MapPin size={16} color={ACCENT} />
+            <span style={{ minWidth: 0 }}><span style={{ fontWeight: 600 }}>{t.city || "Trip"}</span>{t.dates ? <span style={{ color: MUTE, fontSize: 12.5 }}> · {t.dates}</span> : null}</span>
+          </button>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -1025,6 +1123,7 @@ export default function App() {
   const [session, setSession] = useState(null);
   const [savedTrips, setSavedTrips] = useState([]);
   const [saving, setSaving] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Track the Supabase auth session and load this user's saved trips.
   useEffect(() => {
@@ -1095,21 +1194,13 @@ export default function App() {
 
   // Re-run the scheduler on a day's remaining stops so the order, walking path,
   // and arrival times recalibrate whenever a stop is added or removed.
-  const rescheduleDay = (d) => {
-    const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
-    const ordered = scheduleStops(d.itinerary.flatMap((h) => h.stops), hotelCoord);
-    const itinerary = [];
-    ordered.forEach((s) => {
-      const last = itinerary[itinerary.length - 1];
-      if (last && last.hub === s.hub) last.stops.push(s);
-      else itinerary.push({ hub: s.hub, stops: [s] });
-    });
-    itinerary.forEach((h, i) => {
-      const mins = h.stops.reduce((a, s) => a + (s.dwell || 16), 0);
-      h.time = fmtDuration(mins);
-      h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
-    });
-    return { ...d, itinerary };
+  const rescheduleDay = (d) => rescheduleItinerary(d, hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null);
+
+  // Change the hotel mid-trip and recalculate every day's route around it.
+  const changeHotel = (h) => {
+    setHotel(h);
+    const hc = h && h.lat != null ? { lat: h.lat, lng: h.lng } : null;
+    setTrip((prev) => prev.map((d) => rescheduleItinerary(d, hc)));
   };
 
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
@@ -1144,8 +1235,9 @@ export default function App() {
 
   return (
     <div style={{ background: "#FFFFFF", minHeight: "100vh" }}>
+      <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
-        {authEnabled && <AuthBar session={session} onSignIn={signIn} onSignOut={signOut} />}
+        <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
         {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
