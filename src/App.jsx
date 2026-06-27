@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, generateItinerary, searchCities } from "./places";
 import { supabase, authEnabled } from "./supabase";
-import { listTrips, saveTrip, deleteTrip } from "./trips";
+import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil, Menu, LogOut } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
@@ -1093,9 +1093,10 @@ function AppHeader({ onMenu, showMenu }) {
 
 // Slide-in navigation: account, jump between days, change hotel, saved trips,
 // and start a new search.
-function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDay, onJumpDay, savedTrips, onLoadTrip, onNewSearch, hotel, onChangeHotel, city }) {
+function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDay, onJumpDay, savedTrips, onLoadTrip, onDeleteTrip, onNewSearch, hotel, onChangeHotel, city }) {
   const [hq, setHq] = useState("");
   const [hsug, setHsug] = useState([]);
+  const [openTripId, setOpenTripId] = useState(null);
   useEffect(() => {
     if (!open) { setHq(""); setHsug([]); }
   }, [open]);
@@ -1130,10 +1131,12 @@ function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDa
 
         {trip.length > 0 && (
           <>
-            <div style={sectionLabel}>Jump to a day</div>
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <div style={sectionLabel}>This trip{city ? ` · ${city}` : ""}</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {trip.map((d, i) => (
-                <button key={i} onClick={() => { onJumpDay(i); onClose(); }} style={{ ...SANS, cursor: "pointer", fontSize: 13.5, fontWeight: 600, padding: "8px 14px", borderRadius: 999, border: `1px solid ${i === activeDay ? ACCENT : LINE}`, background: i === activeDay ? ACCENT_SOFT : "#fff", color: i === activeDay ? ACCENT : INK }}>Day {d.dayNum}</button>
+                <button key={i} onClick={() => { onJumpDay(i); onClose(); }} style={{ ...SANS, cursor: "pointer", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 14, fontWeight: 600, padding: "10px 12px", borderRadius: 10, border: `1px solid ${i === activeDay ? ACCENT : LINE}`, background: i === activeDay ? ACCENT_SOFT : "#fff", color: i === activeDay ? ACCENT : INK }}>
+                  <span>Day {d.dayNum}</span>{d.date ? <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>{d.date}</span> : null}
+                </button>
               ))}
             </div>
 
@@ -1157,18 +1160,42 @@ function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDa
           </>
         )}
 
-        <div style={sectionLabel}>Trips</div>
+        <div style={sectionLabel}>Your trips</div>
         <button onClick={() => { onNewSearch(); onClose(); }} style={row}><Search size={17} /> New search / change city</button>
-        {session && savedTrips.length > 0 && savedTrips.map((t) => (
-          <button key={t.id} onClick={() => { onLoadTrip(t); onClose(); }} style={{ ...row, padding: "9px 0" }}>
-            <MapPin size={16} color={ACCENT} />
-            <span style={{ minWidth: 0 }}><span style={{ fontWeight: 600 }}>{t.city || "Trip"}</span>{t.dates ? <span style={{ color: MUTE, fontSize: 12.5 }}> · {t.dates}</span> : null}</span>
-          </button>
-        ))}
+        {session ? (savedTrips.length > 0 ? savedTrips.map((t) => {
+          const days = Array.isArray(t.trip) ? t.trip : [];
+          const range = days.length ? `${days[0].date || ""}${days.length > 1 && days[days.length - 1].date ? ` – ${days[days.length - 1].date}` : ""}` : (t.dates || "");
+          const expanded = openTripId === t.id;
+          return (
+            <div key={t.id} style={{ borderBottom: `1px solid #F4F4F4` }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "10px 0" }}>
+                <button onClick={() => setOpenTripId(expanded ? null : t.id)} style={{ ...SANS, cursor: "pointer", flex: 1, textAlign: "left", background: "none", border: "none", padding: 0, display: "flex", alignItems: "center", gap: 9 }}>
+                  <ChevronRight size={16} color={MUTE} style={{ transform: expanded ? "rotate(90deg)" : "none", transition: "transform 0.15s", flexShrink: 0 }} />
+                  <span style={{ minWidth: 0 }}>
+                    <span style={{ fontSize: 15, fontWeight: 700, color: INK }}>{t.city || "Trip"}</span>
+                    <span style={{ display: "block", fontSize: 12, color: MUTE }}>{[range, `${days.length || ""} ${days.length === 1 ? "day" : "days"}`].filter(Boolean).join(" · ")}</span>
+                  </span>
+                </button>
+                <button onClick={() => onDeleteTrip(t.id)} aria-label="Delete trip" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4 }}><Trash2 size={15} /></button>
+              </div>
+              {expanded && (
+                <div style={{ paddingLeft: 25, paddingBottom: 10, display: "flex", flexDirection: "column", gap: 6 }}>
+                  {days.map((d, i) => (
+                    <button key={i} onClick={() => { onLoadTrip(t, i); onClose(); }} style={{ ...SANS, cursor: "pointer", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 10, padding: "9px 11px", fontSize: 13.5, color: INK }}>
+                      <span style={{ fontWeight: 600 }}>Day {d.dayNum}</span>{d.date ? <span style={{ fontSize: 12, color: MUTE }}>{d.date}</span> : null}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        }) : <div style={{ fontSize: 12.5, color: MUTE, padding: "8px 0" }}>No saved trips yet — build one and it auto-saves here.</div>) : null}
       </div>
     </>
   );
 }
+
+const SESSION_KEY = "scout.session.v2";
 
 export default function App() {
   const [screen, setScreen] = useState("input");
@@ -1185,6 +1212,46 @@ export default function App() {
   const [savedTrips, setSavedTrips] = useState([]);
   const [saving, setSaving] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentTripId, setCurrentTripId] = useState(null);
+  const hydrated = useRef(false);
+  const autoTimer = useRef(null);
+  const autoBusy = useRef(false);
+
+  // Restore the in-progress trip from localStorage on load, so a refresh or
+  // leaving the tab never loses your work — independent of being signed in.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(SESSION_KEY);
+      if (raw) {
+        const s = JSON.parse(raw);
+        if (s.city) setCity(s.city);
+        if (s.hotel) setHotel(s.hotel);
+        if (Array.isArray(s.tiers)) setTiers(s.tiers);
+        if (s.start) setStartDate(new Date(s.start));
+        if (s.end) setEndDate(new Date(s.end));
+        if (s.currentTripId) setCurrentTripId(s.currentTripId);
+        if (Array.isArray(s.trip) && s.trip.length) {
+          setTrip(s.trip);
+          setActiveDay(s.activeDay || 0);
+          setLocked(!!s.locked);
+          setScreen(s.screen && s.screen !== "building" && s.screen !== "builderror" ? s.screen : "review");
+        }
+      }
+    } catch {}
+    hydrated.current = true;
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated.current) return;
+    try {
+      localStorage.setItem(SESSION_KEY, JSON.stringify({
+        city, hotel, tiers, currentTripId, trip, activeDay, locked,
+        start: startDate ? startDate.toISOString() : null,
+        end: endDate ? endDate.toISOString() : null,
+        screen: (screen === "building" || screen === "builderror") ? "input" : screen,
+      }));
+    } catch {}
+  }, [city, hotel, tiers, startDate, endDate, trip, activeDay, locked, screen, currentTripId]);
 
   // Track the Supabase auth session and load this user's saved trips.
   useEffect(() => {
@@ -1200,11 +1267,31 @@ export default function App() {
   const signIn = () => supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: window.location.origin, queryParams: { prompt: "select_account" } } });
   const signOut = () => supabase.auth.signOut();
 
+  // Insert a new row or update the one this trip already maps to.
+  const persistTrip = async () => {
+    const payload = { city, dates, tiers, trip };
+    if (currentTripId) { await updateTrip(currentTripId, payload); return currentTripId; }
+    const row = await saveTrip(payload); setCurrentTripId(row.id); return row.id;
+  };
+
+  // Auto-save to the account (debounced) whenever the signed-in user's trip
+  // changes, so it's always backed up without tapping Save.
+  useEffect(() => {
+    if (!hydrated.current || !authEnabled || !session || !trip.length) return;
+    clearTimeout(autoTimer.current);
+    autoTimer.current = setTimeout(async () => {
+      if (autoBusy.current) return;
+      autoBusy.current = true;
+      try { await persistTrip(); refreshTrips(); } catch {} finally { autoBusy.current = false; }
+    }, 1500);
+    return () => clearTimeout(autoTimer.current);
+  }, [trip, city, dates, tiers, session, currentTripId]);
+
   const onSaveTrip = async () => {
     if (!session) { signIn(); return; }
     setSaving(true);
     try {
-      await saveTrip({ city, dates, tiers, trip });
+      await persistTrip();
       refreshTrips();
       setFlash("Trip saved to your account.");
       setTimeout(() => setFlash(""), 4000);
@@ -1216,12 +1303,12 @@ export default function App() {
     }
   };
 
-  const onLoadTrip = (t) => {
-    setCity(t.city); setTiers(t.tiers || []); setTrip(t.trip || []);
-    setActiveDay(0); setLocked(false); setScreen("overview"); window.scrollTo(0, 0);
+  const onLoadTrip = (t, dayIndex = 0) => {
+    setCity(t.city); setTiers(t.tiers || []); setTrip(t.trip || []); setCurrentTripId(t.id);
+    setActiveDay(dayIndex); setLocked(false); setScreen("review"); window.scrollTo(0, 0);
   };
 
-  const onDeleteTrip = async (id) => { try { await deleteTrip(id); refreshTrips(); } catch {} };
+  const onDeleteTrip = async (id) => { try { await deleteTrip(id); if (id === currentTripId) setCurrentTripId(null); refreshTrips(); } catch {} };
 
   const toggleTier = (k) => setTiers((p) => (p.includes(k) ? p.filter((x) => x !== k) : [...p, k]));
   const onRange = (s, e) => { setStartDate(s); setEndDate(e); };
@@ -1239,12 +1326,12 @@ export default function App() {
   });
   const build = async () => {
     const n = Math.max(1, dayCount);
-    setActiveDay(0); setLocked(false); setFlash("");
-    if (isCurated(city)) { setTrip(generate(n)); setScreen("review"); return; }
+    setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
       const live = await buildLiveTrip(city, tiers, n, hotel);
-      setTrip(live); setScreen("review");
+      const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
+      setTrip(dated); setScreen("review");
     } catch {
       // Generation didn't complete — show a retry rather than a wrong-city route.
       setScreen("builderror");
@@ -1297,7 +1384,7 @@ export default function App() {
 
   return (
     <div style={{ background: "#FFFFFF", minHeight: "100vh" }}>
-      <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
+      <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
         {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}

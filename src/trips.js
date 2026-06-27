@@ -24,6 +24,17 @@ export async function saveTrip({ city, dates, tiers, trip }) {
   return data;
 }
 
+export async function updateTrip(id, { city, dates, tiers, trip }) {
+  const { data, error } = await supabase
+    .from("trips")
+    .update({ city, dates, tiers, trip })
+    .eq("id", id)
+    .select(COLS)
+    .single();
+  if (error) throw error;
+  return data;
+}
+
 export async function deleteTrip(id) {
   const { error } = await supabase.from("trips").delete().eq("id", id);
   if (error) throw error;
