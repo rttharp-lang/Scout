@@ -1,0 +1,57 @@
+/* Scout Design System v1 — Phase 1 foundation (spec sections 1–2).
+   Color tokens + fluid type scale + font, applied globally. Layout, grid and
+   components are intentionally untouched in this phase. */
+
+/* Font: General Sans (Fontshare, free for commercial use) — the free
+   neo-grotesque closest to PP's Neue Montreal. Swappable via --font-sans. */
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap");
+
+:root {
+  /* ── 1. Color tokens ─────────────────────────────────────────── */
+  /* Page + surfaces — warm monochrome base */
+  --bg:                #F5F4F2;  /* warm off-white page */
+  --surface:           #EDEBE8;  /* light-gray card */
+  --surface-invert:    #0A0A0A;  /* black card (rhythm variant) */
+  --border:            #DCD8D2;  /* hairline */
+
+  /* Text */
+  --text:              #0A0A0A;
+  --text-muted:        #8E8C88;
+  --text-on-invert:    #FFFFFF;
+  --text-muted-invert: #A8A6A2;
+
+  /* Accent — ultramarine = primary */
+  --accent:            #1B2FFF;
+  --accent-press:      #1421C2;
+  --accent-ink:        #FFFFFF;
+
+  /* Pop — neon green = rare second accent */
+  --pop:               #3BFF6E;
+  --pop-ink:           #0A0A0A;
+
+  /* ── 2. Typography ───────────────────────────────────────────── */
+  --font-sans: "General Sans", "Neue Montreal", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, sans-serif;
+
+  --step-display: clamp(2.5rem, 7vw, 5.5rem);
+  --step-h1:      clamp(1.75rem, 3.5vw, 3rem);
+  --step-h2:      clamp(1.375rem, 2.5vw, 2rem);
+  --step-h3:      clamp(1.125rem, 1.6vw, 1.375rem);
+  --step-body:    clamp(0.95rem, 1vw, 1.0625rem);
+  --step-meta:    0.875rem;
+  --step-caption: 0.75rem;
+}
+
+/* Global base — type + color only. */
+html, body {
+  margin: 0;
+  background: var(--bg);
+}
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  font-size: var(--step-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

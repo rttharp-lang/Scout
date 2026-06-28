@@ -5,13 +5,16 @@ import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
-const SANS = { fontFamily: "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" };
-const INK = "#1A1A1A";
-const MUTE = "#717171";
-const LINE = "#EBEBEB";
-const ACCENT = "#2D33EB";       // ultramarine blue — primary accent
-const ACCENT_SOFT = "#ECEEFD";  // light ultramarine tint
-const NEON = "#39FF14";         // neon green — positive "pop" accents
+// Design tokens mirror the CSS custom properties in theme.css (the source of
+// truth). Kept as concrete values here because some inline styles append alpha
+// (e.g. `${ACCENT}40`), which a raw var() can't do.
+const SANS = { fontFamily: "var(--font-sans)" };
+const INK = "#0A0A0A";          // --text
+const MUTE = "#8E8C88";         // --text-muted
+const LINE = "#DCD8D2";         // --border
+const ACCENT = "#1B2FFF";       // --accent (ultramarine)
+const ACCENT_SOFT = "#E6E9FF";  // light ultramarine tint
+const NEON = "#3BFF6E";         // --pop (neon green)
 const OPEN = "#178A3C";         // readable green for open/positive text
 const DANGER = "#C0392B";
 const CARD_SHADOW = "0 6px 18px rgba(0,0,0,0.07)";
@@ -2062,7 +2065,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ background: "#FFFFFF", minHeight: "100vh" }}>
+    <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />

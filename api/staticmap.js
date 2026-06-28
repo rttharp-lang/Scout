@@ -3,7 +3,7 @@
 // server-side so the API key is never exposed. Renders the day's stops as
 // numbered pins joined by a route line, in the app's accent color.
 
-const ACCENT = "0x2D33EB"; // ultramarine
+const ACCENT = "0x1B2FFF"; // --accent (ultramarine)
 const isLatLng = (s) => /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(s);
 const clampNum = (v, lo, hi) => { const n = parseInt(v, 10); return Number.isNaN(n) ? null : Math.max(lo, Math.min(hi, n)); };
 
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     const markers = pairs
       .map((p, i) => `markers=${encodeURIComponent(`size:mid|color:${ACCENT}|label:${LABELS[i] || ""}|${p}`)}`)
       .join("&");
-    const homeMarker = homeValid ? `&markers=${encodeURIComponent(`color:0x39FF14|label:H|${home}`)}` : "";
+    const homeMarker = homeValid ? `&markers=${encodeURIComponent(`color:0x3BFF6E|label:H|${home}`)}` : "";
     url = `https://maps.googleapis.com/maps/api/staticmap?size=640x320&scale=2&maptype=roadmap&${markers}${homeMarker}${path}&key=${key}`;
   }
 

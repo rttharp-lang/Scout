@@ -6,7 +6,7 @@
 //
 //   /api/areamap?m=1,lat,lng|2,lat,lng&home=lat,lng&active=1
 
-const ACCENT = "0x2D33EB"; // ultramarine
+const ACCENT = "0x1B2FFF"; // --accent (ultramarine)
 const MUTED = "0x9AA0A6";
 
 const isLatLng = (s) => /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(s);
@@ -38,7 +38,7 @@ export default async function handler(req, res) {
   }).join("&");
 
   const home = (req.query.home || "").toString().trim();
-  const homeMarker = isLatLng(home) ? `&markers=${encodeURIComponent(`color:0x39FF14|label:H|${home}`)}` : "";
+  const homeMarker = isLatLng(home) ? `&markers=${encodeURIComponent(`color:0x3BFF6E|label:H|${home}`)}` : "";
 
   const url = `https://maps.googleapis.com/maps/api/staticmap?size=640x300&scale=2&maptype=roadmap&${markers}${homeMarker}&key=${key}`;
 
