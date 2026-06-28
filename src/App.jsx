@@ -748,15 +748,23 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onAddNeighborhood, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onAddNeighborhood, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set());
   const [hoodOpen, setHoodOpen] = useState(false);
-  const [drag, setDrag] = useState(null); // { from, startY, curY, g }
+  const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
+  const [drag, setDrag] = useState(null); // { from, startY, curY, to }
   const cardEls = useRef([]);
   const day = trip[activeDay];
   const hubCount = day.itinerary.filter((h) => h.stops.length).length;
   const lastHub = day.itinerary.length - 1;
+
+  // Estimate how much extra walking the current neighborhood order costs versus
+  // Scout's optimal order — so we can warn when a manual arrangement backtracks.
+  const hc = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
+  const flatStops = day.itinerary.flatMap((h) => h.stops);
+  const extraWalk = hubCount > 1 ? Math.round(walkMinutes(flatStops, hc) - walkMinutes(scheduleStops(flatStops, hc, false), hc)) : 0;
+  const suboptimal = extraWalk >= 6;
   const allCollapsed = hubCount > 0 && day.itinerary.every((h) => !h.stops.length || collapsed.has(h.hub));
   const toggleHub = (hub) => setCollapsed((p) => { const s = new Set(p); s.has(hub) ? s.delete(hub) : s.add(hub); return s; });
   const toggleAll = () => setCollapsed(() => (allCollapsed ? new Set() : new Set(day.itinerary.map((h) => h.hub))));
@@ -858,6 +866,16 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
 
       <div style={{ marginTop: 16 }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} home={hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null} /></div>
 
+      {suboptimal && (
+        <div style={{ marginTop: 18, background: "#FFF7E6", border: "1px solid #F2D89A", borderRadius: 12, padding: "12px 14px", display: "flex", alignItems: "flex-start", gap: 10 }}>
+          <span style={{ fontSize: 16, lineHeight: "20px" }}>⚠️</span>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontSize: 13.5, color: "#7A5A12", lineHeight: 1.45 }}>This neighborhood order backtracks — about <b>~{extraWalk} min</b> of extra walking versus the best route.</div>
+            <button onClick={onOptimizeDay} style={{ ...SANS, cursor: "pointer", marginTop: 8, background: "#fff", border: `1px solid #E0B860`, color: "#7A5A12", borderRadius: 9, padding: "7px 12px", fontSize: 13, fontWeight: 700, display: "flex", alignItems: "center", gap: 6 }}><Navigation size={13} /> Reorder optimally</button>
+          </div>
+        </div>
+      )}
+
       {hubCount > 1 && (
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 24, marginBottom: 2 }}>
           <div style={{ fontSize: 12, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase" }}>{hubCount} neighborhoods</div>
@@ -892,12 +910,21 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                 )}
               </div>
               {!isCollapsed && (
-                <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 14 }}>{h.stops.map((s) => { n += 1; return (
-                  <React.Fragment key={s.id}>
-                    <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
-                    {s.id === day.lunchAfterId && lunchBlock}
-                  </React.Fragment>
-                ); })}</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 14 }}>
+                  {h.stops.map((s) => { n += 1; return (
+                    <React.Fragment key={s.id}>
+                      <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
+                      {s.id === day.lunchAfterId && lunchBlock}
+                    </React.Fragment>
+                  ); })}
+                  {addHub === h.hub ? (
+                    <SearchSelect candidates={[]} title={`Add a store in ${h.hub}`} placeholder={`Search a store in ${h.hub}…`} cityContext={`${h.hub} ${city}`}
+                      note={<>Scout pulls in its live rating, hours and address, then slots it into {h.hub}. Confirm each store with "I'm going" or remove it.</>}
+                      onClose={() => setAddHub(null)} onPick={(c) => { onAddStop(c, h.hub); setAddHub(null); }} />
+                  ) : (
+                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${LINE}`, background: "#FAFAFA", color: MUTE, borderRadius: 12, padding: "12px", fontSize: 13.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}><Plus size={16} /> Add a store in {h.hub}</button>
+                  )}
+                </div>
               )}
             </div>
             {drag && hi === lastHub && drag.to === lastHub && insertionLine}
@@ -1111,6 +1138,20 @@ const fmtClock = (mins) => {
   const ap = h < 12 ? "AM" : "PM"; const hr = h % 12 === 0 ? 12 : h % 12;
   return `${hr}:${String(m).padStart(2, "0")} ${ap}`;
 };
+
+// Total walking minutes along a sequence of stops (from the hotel, if set).
+// Used to estimate how much extra backtracking a manual order adds vs the
+// optimal route.
+function walkMinutes(stops, hotelCoord) {
+  let total = 0, prev = hotelCoord || null;
+  stops.forEach((s) => {
+    const c = coordOf(s);
+    if (!c) return;
+    if (prev) total += travelMin(prev, c);
+    prev = c;
+  });
+  return total;
+}
 
 // Neighborhood-block route: you spend the morning in one neighborhood, the
 // early afternoon in another, the evening in a third — not ping-ponging between
@@ -1788,27 +1829,35 @@ export default function App() {
 
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
   const onRemoveStop = (hi, id) => updateDay(activeDay, (d) => rescheduleDay({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.filter((s) => s.id !== id) }) }));
-  const onAddStop = (c) => {
+  // Add a found store. With a targetHub (from a neighborhood card's "add a store
+  // here"), it goes into that neighborhood; otherwise it's assigned to the
+  // nearest existing neighborhood so it groups and reschedules sensibly.
+  const onAddStop = (c, targetHub) => {
     updateDay(activeDay, (d) => {
       const all = d.itinerary.flatMap((h) => h.stops);
-      // Assign the added store to its nearest existing neighborhood so it groups
-      // and reschedules sensibly.
-      let hub = (d.itinerary.find((h) => h.stops.length) || {}).hub || c.area || "Your find";
-      if (c.lat != null && c.lng != null) {
-        let bestD = Infinity;
-        all.forEach((s) => {
-          if (s.lat != null && s.lng != null) {
-            const dd = distLL({ lat: c.lat, lng: c.lng }, { lat: s.lat, lng: s.lng });
-            if (dd < bestD) { bestD = dd; hub = s.hub; }
-          }
-        });
+      let hub = targetHub;
+      if (!hub) {
+        hub = (d.itinerary.find((h) => h.stops.length) || {}).hub || c.area || "Your find";
+        if (c.lat != null && c.lng != null) {
+          let bestD = Infinity;
+          all.forEach((s) => {
+            if (s.lat != null && s.lng != null) {
+              const dd = distLL({ lat: c.lat, lng: c.lng }, { lat: s.lat, lng: s.lng });
+              if (dd < bestD) { bestD = dd; hub = s.hub; }
+            }
+          });
+        }
       }
       const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, openAt: c.openAt, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, photos: c.photos, hub, confirmed: false, addedByUser: true };
       return rescheduleDay({ ...d, itinerary: [{ hub, stops: [...all, stop] }] });
     });
-    setFlash(`Added ${c.name} — route recalculated.`);
+    setFlash(`Added ${c.name}${targetHub ? ` to ${targetHub}` : ""} — route recalculated.`);
     setTimeout(() => setFlash(""), 5000);
   };
+
+  // Re-optimize the day's neighborhood order (undo a manual arrangement) so the
+  // route walks the shortest sensible path again.
+  const onOptimizeDay = () => updateDay(activeDay, (d) => rescheduleItinerary(d, hotelCoord, false));
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onSelectDinner = (l) => { updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onConfirmDay = () => {
@@ -1826,7 +1875,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
