@@ -39,20 +39,21 @@ const CURATED_TIERS = ["aspirational", "streetwear", "underground", "culture"];
 const ADDED_TIER = { label: "Your find", chip: ["#5A4FB0", "#ECEAFB"], grad: "linear-gradient(135deg,#4a4490,#8a82c8)" };
 // Nike's 12 key cities, in priority order — the hero rail on the landing page.
 // `image` is a placeholder for now; swapping in a final licensed photo is a
-// single edit per row (just change the image URL).
+// single edit per row (just change the image URL). `blurb` is a short one-liner
+// shown under the hero card for the centered city.
 const CITY_RAIL = [
-  { city: "New York",    country: "USA",         image: "https://picsum.photos/seed/scout-new-york/800/1000" },
-  { city: "London",      country: "UK",          image: "https://picsum.photos/seed/scout-london/800/1000" },
-  { city: "Shanghai",    country: "China",       image: "https://picsum.photos/seed/scout-shanghai/800/1000" },
-  { city: "Beijing",     country: "China",       image: "https://picsum.photos/seed/scout-beijing/800/1000" },
-  { city: "Los Angeles", country: "USA",         image: "https://picsum.photos/seed/scout-los-angeles/800/1000" },
-  { city: "Tokyo",       country: "Japan",       image: "https://picsum.photos/seed/scout-tokyo/800/1000" },
-  { city: "Paris",       country: "France",      image: "https://picsum.photos/seed/scout-paris/800/1000" },
-  { city: "Berlin",      country: "Germany",     image: "https://picsum.photos/seed/scout-berlin/800/1000" },
-  { city: "Mexico City", country: "Mexico",      image: "https://picsum.photos/seed/scout-mexico-city/800/1000" },
-  { city: "Barcelona",   country: "Spain",       image: "https://picsum.photos/seed/scout-barcelona/800/1000" },
-  { city: "Seoul",       country: "South Korea", image: "https://picsum.photos/seed/scout-seoul/800/1000" },
-  { city: "Milan",       country: "Italy",       image: "https://picsum.photos/seed/scout-milan/800/1000" },
+  { city: "New York",    country: "USA",         blurb: "Downtown energy, global flagships, and the corner spots only locals clock.",      image: "https://picsum.photos/seed/scout-new-york/900/900" },
+  { city: "London",      country: "UK",          blurb: "Soho tailoring, East End concept stores, and market finds between the icons.",     image: "https://picsum.photos/seed/scout-london/900/900" },
+  { city: "Shanghai",    country: "China",       blurb: "Concession-era lanes, avant-garde galleries, and a fast-rising design scene.",     image: "https://picsum.photos/seed/scout-shanghai/900/900" },
+  { city: "Beijing",     country: "China",       blurb: "Hutong studios, hidden courtyards, and streetwear born in the capital's backstreets.", image: "https://picsum.photos/seed/scout-beijing/900/900" },
+  { city: "Los Angeles", country: "USA",         blurb: "Sun-bleached sprawl — Fairfax hype, Arts District concept shops, canyon-to-coast finds.", image: "https://picsum.photos/seed/scout-los-angeles/900/900" },
+  { city: "Tokyo",       country: "Japan",       blurb: "Archive grails, immaculate concept stores, and side-street shops worth the detour.", image: "https://picsum.photos/seed/scout-tokyo/900/900" },
+  { city: "Paris",       country: "France",      blurb: "Marais boutiques, Left Bank icons, and quiet ateliers behind unmarked doors.",    image: "https://picsum.photos/seed/scout-paris/900/900" },
+  { city: "Berlin",      country: "Germany",     blurb: "Raw industrial spaces, Kreuzberg labels, and a scene that rewards the curious.",   image: "https://picsum.photos/seed/scout-berlin/900/900" },
+  { city: "Mexico City", country: "Mexico",      blurb: "Roma-Condesa design, a craft revival, and color around every corner.",            image: "https://picsum.photos/seed/scout-mexico-city/900/900" },
+  { city: "Barcelona",   country: "Spain",       blurb: "Gothic-quarter workshops, Mediterranean ease, and modernist streets made for walking.", image: "https://picsum.photos/seed/scout-barcelona/900/900" },
+  { city: "Seoul",       country: "South Korea", blurb: "Hongdae youth, Hannam concept stores, and the world's sharpest street style.",     image: "https://picsum.photos/seed/scout-seoul/900/900" },
+  { city: "Milan",       country: "Italy",       blurb: "Quiet luxury, design-district showrooms, and aperitivo between the boutiques.",    image: "https://picsum.photos/seed/scout-milan/900/900" },
 ];
 
 const mapsUrl = (name, address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ", " + address)}`;
@@ -841,32 +842,56 @@ function RangeCalendar({ start, end, onChange }) {
 }
 
 // ── Input ──────────────────────────────────────────────────────
-// Large full-bleed city card for the hero rail — one representative photo, the
-// city name in big white type over a bottom gradient, like the place cards.
-// Tapping it selects the city and moves to page 2.
+// Square hero city card: full-bleed photo, city name centered (both axes) in the
+// big display size with a radial scrim so it stays legible on light photos.
+// Tapping it selects that city and moves to page 2.
 function CityCard({ c, onPick }) {
   return (
     <button onClick={() => onPick(c.city)} className="city-rail-item" aria-label={`Plan a trip to ${c.city}`}
-      style={{ ...SANS, cursor: "pointer", border: "none", padding: 0, display: "block", textAlign: "left", position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
+      style={{ ...SANS, cursor: "pointer", border: "none", padding: 0, display: "block", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={c.city} photos={c.image ? [c.image] : null} srcOf={(u) => u} grad="linear-gradient(150deg,#2b2b3a,#5b6172)" fallback={<span aria-hidden />} hideDots />
       </div>
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.72) 100%)" }} />
-      <div style={{ position: "absolute", left: 18, right: 18, bottom: 18, pointerEvents: "none" }}>
-        <div style={{ color: "#fff", fontSize: "clamp(2rem, 5.5vw, 2.6rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{c.city}</div>
-        <div style={{ color: "rgba(255,255,255,0.82)", fontSize: "var(--step-meta)", fontWeight: 600, marginTop: 4, textTransform: "uppercase", letterSpacing: 1, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{c.country}</div>
+      {/* Radial scrim keeps the centered white type legible on light photos. */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 86% 66% at 50% 47%, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.36) 100%)" }} />
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
+        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.6)" }}>{c.city}</div>
+        <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "var(--step-meta)", fontWeight: 600, marginTop: 8, textTransform: "uppercase", letterSpacing: 1.5, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{c.country}</div>
       </div>
     </button>
   );
 }
 
-// Page 1 — the landing. A hero rail of Nike's key cities (the fast path), a
-// secondary manual-entry field for anything else, and saved trips. Picking a
-// city (either way) carries it to page 2 (TripSetup).
+// Full-screen "all key cities" grid, opened from the hero. Same square cards.
+function AllCitiesModal({ onPick, onClose }) {
+  return (
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 60, background: "rgba(0,0,0,0.5)", overflowY: "auto" }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ ...SANS, color: INK, minHeight: "100%", background: "var(--bg)", padding: "20px var(--container-pad) 60px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", maxWidth: "var(--container-max)", marginInline: "auto", marginBottom: 16 }}>
+          <div style={{ fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em" }}>Key cities</div>
+          <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: INK, padding: 4, display: "flex" }}><X size={24} /></button>
+        </div>
+        <div className="scout-grid" style={{ maxWidth: "var(--container-max)", marginInline: "auto" }}>
+          {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPick} />)}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Page 1 — the landing. PP-style hero: the city card sits directly under the
+// header with NO text above it; the heading/paragraph, a per-city blurb and the
+// primary "Explore" action move BELOW the card. The card is still a swipeable
+// rail; the blurb + Explore track the centered city. "See all key cities" opens
+// the full grid; "Choose your own city" drops into manual search. Picking a city
+// any of these ways carries it to page 2 (TripSetup).
 function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip }) {
   const [q, setQ] = useState("");
   const [citySug, setCitySug] = useState([]);
   const [manualOpen, setManualOpen] = useState(false);
+  const [allOpen, setAllOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const railRef = useRef(null);
   const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
   const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
 
@@ -878,19 +903,39 @@ function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip 
     return () => { cancel = true; clearTimeout(t); };
   }, [q]);
 
+  // Track which card is centered so the blurb + Explore reflect it.
+  const onRailScroll = () => {
+    const el = railRef.current;
+    if (!el) return;
+    const center = el.scrollLeft + el.clientWidth / 2;
+    let best = 0, bestD = Infinity;
+    Array.from(el.children).forEach((ch, i) => {
+      const d = Math.abs(ch.offsetLeft + ch.offsetWidth / 2 - center);
+      if (d < bestD) { bestD = d; best = i; }
+    });
+    setActive((p) => (p === best ? p : best));
+  };
+  const current = CITY_RAIL[active] || CITY_RAIL[0];
+  const pillPrimary = { ...SANS, cursor: "pointer", width: "100%", background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700 };
+
   return (
     <div style={{ ...SANS, color: INK }}>
-      <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "8px 0 8px" }}>Where are you going?</h1>
-      <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Pick a city to scout. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the if-you-know-you-know version of the city.</p>
-
-      <div className="city-rail" style={{ marginTop: 20 }}>
+      {/* Hero card — directly under the header, nothing above it. */}
+      <div className="city-rail" ref={railRef} onScroll={onRailScroll} style={{ marginTop: 4 }}>
         {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPickCity} />)}
       </div>
 
-      {/* Secondary path: anything not in the rail. */}
-      <div style={{ marginTop: 16 }}>
+      {/* Moved text + per-city blurb + primary Explore, centered below the card. */}
+      <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 18 }}>
+        <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Pick a city to scout. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the if-you-know-you-know version of the city.</p>
+        <p style={{ color: MUTE, fontSize: 14, margin: "12px 0 0", lineHeight: 1.45, fontWeight: 500 }}>{current.blurb}</p>
+        <button onClick={() => onPickCity(current.city)} style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 7, marginTop: 16, background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "13px 30px", fontSize: 15.5, fontWeight: 700 }}>Explore {current.city} <ChevronRight size={17} /></button>
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 24 }}>
+        <button onClick={() => setAllOpen(true)} style={pillPrimary}>See all key cities</button>
         {!manualOpen ? (
-          <button onClick={() => setManualOpen(true)} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", padding: 0, color: ACCENT, fontSize: 14, fontWeight: 600 }}>Enter a different city →</button>
+          <button onClick={() => setManualOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", background: "#fff", color: INK, border: `1px solid ${LINE}`, borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15, fontWeight: 600 }}>Choose your own city</button>
         ) : (
           <div style={{ position: "relative" }}>
             <div style={field}>
@@ -928,6 +973,8 @@ function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip 
           </div>
         </div>
       )}
+
+      {allOpen && <AllCitiesModal onPick={(c) => { setAllOpen(false); onPickCity(c); }} onClose={() => setAllOpen(false)} />}
     </div>
   );
 }

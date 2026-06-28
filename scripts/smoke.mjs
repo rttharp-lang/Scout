@@ -58,7 +58,8 @@ async function main() {
     await wait(1200); // let effects run (restore, etc.)
 
     const rootText = (await page.textContent("#root")) || "";
-    const rendered = /Scout|Where are you going/i.test(rootText);
+    // Wordmark renders, and the landing hero (city rail + primary action) too.
+    const rendered = /Scout/i.test(rootText) && /See all key cities|Explore|New York/i.test(rootText);
 
     const problems = [];
     if (pageErrors.length) problems.push("Uncaught errors:\n  " + pageErrors.join("\n  "));
