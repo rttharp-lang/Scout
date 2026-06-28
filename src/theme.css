@@ -40,6 +40,19 @@
   --step-body:    clamp(0.95rem, 1vw, 1.0625rem);
   --step-meta:    0.875rem;
   --step-caption: 0.75rem;
+
+  /* ── 3. Shape ────────────────────────────────────────────────── */
+  --radius-card: 28px;
+  --radius-pill: 999px;
+  --radius-sm:   10px;
+
+  /* ── 4. Spacing & layout ─────────────────────────────────────── */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-6: 24px; --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-24: 96px;
+
+  --container-max: 1440px;
+  --container-pad: clamp(20px, 5vw, 80px);
+  --grid-gap: clamp(16px, 2vw, 24px);
 }
 
 /* Global base — type + color only. */
@@ -55,3 +68,24 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* { box-sizing: border-box; }
+
+/* ── Layout utilities (Phase 2) ───────────────────────────────── */
+.scout-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 26px var(--container-pad) 64px;
+}
+/* Reading-width column for linear/form content so it doesn't stretch wide. */
+.scout-measure { max-width: 600px; margin-inline: auto; }
+/* Wider reading column for the itinerary chrome (header, map, meals). */
+.scout-col { max-width: 760px; margin-inline: auto; }
+
+/* Responsive catalog grid: 1 → 2 → 3 columns. */
+.scout-grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px)  { .scout-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .scout-grid { grid-template-columns: repeat(3, 1fr); } }

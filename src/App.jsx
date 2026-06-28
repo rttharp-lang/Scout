@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
-import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut } from "lucide-react";
+import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
 // Design tokens mirror the CSS custom properties in theme.css (the source of
@@ -247,21 +247,37 @@ function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf }) {
   );
 }
 
+// Compact list-view row for a store (spec §5 list view).
+function StopRow({ s, n, onConfirm, onRemove }) {
+  const t = TIERS[s.tier] || ADDED_TIER;
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, border: `1px solid ${s.confirmed ? OPEN : LINE}`, background: "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
+      <div style={{ width: 26, height: 26, borderRadius: 999, flexShrink: 0, border: `1.5px solid ${tierColor(s)}`, color: tierColor(s), fontSize: 12, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ fontSize: 14.5, fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{s.name}</div>
+        <div style={{ fontSize: 12, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{t.label}{s.eta ? ` · arrive ~${s.eta}` : ""}{s.rating ? ` · ${s.rating}★` : ""}</div>
+      </div>
+      <button onClick={onConfirm} aria-label="Confirm I'm going" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: s.confirmed ? OPEN : MUTE, padding: 4, flexShrink: 0, display: "flex" }}>{s.confirmed ? <CheckCircle size={18} /> : <Check size={18} />}</button>
+      <button onClick={onRemove} aria-label="Remove" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: DANGER, padding: 4, flexShrink: 0, display: "flex" }}><Trash2 size={16} /></button>
+    </div>
+  );
+}
+
 function StopCard({ s, n, onConfirm, onRemove }) {
   const t = TIERS[s.tier] || ADDED_TIER;
   const editBtn = { ...SANS, cursor: "pointer", background: "none", border: "none", fontSize: 13, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 5, padding: "2px 2px" };
   return (
-    <div style={{ border: `1px solid ${s.confirmed ? OPEN : LINE}`, borderRadius: 16, overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "relative", height: 190 }}>
+    <div style={{ border: `1px solid ${s.confirmed ? OPEN : LINE}`, borderRadius: "var(--radius-card)", overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW, display: "flex", flexDirection: "column", height: "100%" }}>
+      <div style={{ position: "relative", aspectRatio: "4 / 3" }}>
         <PhotoStrip name={s.name} address={s.address} photos={s.photos} grad={t.grad} />
         <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
         <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: t.chip[1], color: t.chip[0], fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{t.label}</div>
         {s.addedByUser && <div style={{ position: "absolute", bottom: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: ADDED_TIER.chip[0], fontSize: 10.5, fontWeight: 700, borderRadius: 999, padding: "4px 9px" }}>Your find</div>}
         {s.confirmed && <div style={{ position: "absolute", bottom: 10, right: 10, pointerEvents: "none", background: NEON, color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Going</div>}
       </div>
-      <div style={{ padding: "12px 14px 12px" }}>
+      <div style={{ padding: "14px 16px", flex: 1, display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-          <div style={{ fontSize: 15.5, fontWeight: 600, lineHeight: 1.25 }}>{s.name}</div>
+          <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.15 }}>{s.name}</div>
           <Rating rating={s.rating} reviews={s.reviews} href={mapsUrl(s.name, s.address)} />
         </div>
         <div style={{ display: "flex", gap: 14, marginTop: 8, flexWrap: "wrap", fontSize: 12.5, color: MUTE }}>
@@ -269,10 +285,10 @@ function StopCard({ s, n, onConfirm, onRemove }) {
           <span style={{ display: "flex", alignItems: "center", gap: 4 }}><MapPin size={12.5} /> ~{s.dwell} min stop</span>
           {s.eta && <span style={{ display: "flex", alignItems: "center", gap: 4, color: ACCENT, fontWeight: 600 }}><Navigation size={12.5} /> Arrive ~{s.eta}</span>}
         </div>
-        <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{s.why}</div>
+        <div style={{ fontSize: "var(--step-meta)", color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{s.why}</div>
         <AddressLine name={s.name} address={s.address} />
         <SmartActionRow name={s.name} address={s.address} lat={s.lat} lng={s.lng} />
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 12, paddingTop: 10, borderTop: `1px solid ${LINE}` }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "auto", paddingTop: 12, borderTop: `1px solid ${LINE}` }}>
           <button onClick={onConfirm} style={{ ...editBtn, color: s.confirmed ? OPEN : MUTE }}>{s.confirmed ? <CheckCircle size={15} /> : <Check size={15} />} {s.confirmed ? "Going" : "Confirm I'm going"}</button>
           <button onClick={onRemove} style={{ ...editBtn, color: DANGER }}><Trash2 size={14} /> Remove</button>
         </div>
@@ -933,12 +949,12 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   );
 
   return (
-    <div style={{ ...SANS, color: INK }}>
-      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: 14, padding: 0 }}><ArrowLeft size={16} /> Edit trip</button>
+    <div style={{ ...SANS, color: INK, maxWidth: 980, marginInline: "auto" }}>
+      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: "var(--step-meta)", padding: 0 }}><ArrowLeft size={16} /> Edit trip</button>
       <DayTabs trip={trip} activeDay={activeDay} onSwitch={onSwitchDay} />
       <div style={{ marginTop: 14 }}>
-        <h1 style={{ fontSize: 25, fontWeight: 700, letterSpacing: -0.6, margin: 0 }}>{city || "Tokyo"} · Day {day.dayNum}</h1>
-        <div style={{ color: MUTE, fontSize: 13.5, marginTop: 3 }}>{day.label} · {total} stops</div>
+        <h1 style={{ fontSize: "var(--step-h1)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1, margin: 0 }}>{city || "Tokyo"} · Day {day.dayNum}</h1>
+        <div style={{ color: MUTE, fontSize: "var(--step-meta)", marginTop: 4 }}>{day.label} · {total} stops</div>
       </div>
       <div style={{ display: "flex", gap: 6, marginTop: 10, flexWrap: "wrap" }}>{tiers.map((k) => <span key={k} style={{ fontSize: 11.5, fontWeight: 600, color: TIERS[k].chip[0], background: TIERS[k].chip[1], borderRadius: 999, padding: "4px 10px" }}>{TIERS[k].label}</span>)}</div>
 
@@ -947,11 +963,11 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
           note={<>Pick a result and Scout pulls in its live rating, hours and address from Google — then slots it in at the best point on this day's route.</>}
           onClose={() => setAdding(false)} onPick={(c) => { onAddStop(c); setAdding(false); }} />
       ) : (
-        <button onClick={() => setAdding(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 14, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Found a store online? Add it</button>
+        <button onClick={() => setAdding(true)} style={{ ...SANS, cursor: "pointer", width: "100%", maxWidth: 560, marginInline: "auto", marginTop: 14, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Found a store online? Add it</button>
       )}
       {flash && <div style={{ marginTop: 10, background: "#EAF6EE", border: `1px solid #BFE3CB`, color: "#1A6B3C", borderRadius: 10, padding: "10px 12px", fontSize: 13, display: "flex", alignItems: "center", gap: 6 }}><CheckCircle size={15} /> {flash}</div>}
 
-      <div style={{ marginTop: 16 }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} home={hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null} /></div>
+      <div style={{ marginTop: 16, maxWidth: 760, marginInline: "auto" }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} home={hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null} /></div>
 
       {suboptimal && (
         <div style={{ marginTop: 18, background: "#FFF7E6", border: "1px solid #F2D89A", borderRadius: 12, padding: "12px 14px", display: "flex", alignItems: "flex-start", gap: 10 }}>
@@ -963,14 +979,17 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         </div>
       )}
 
-      {hubCount > 1 && (
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 24, marginBottom: 2 }}>
-          <div style={{ fontSize: 12, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase" }}>{hubCount} neighborhoods</div>
-          <button onClick={toggleAll} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", gap: 4, padding: 0 }}>
-            {allCollapsed ? <><ChevronDown size={15} /> Expand all</> : <><ChevronUp size={15} /> Collapse all</>}
-          </button>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, marginTop: 24, marginBottom: 4, paddingBottom: 12, borderBottom: `1px solid ${LINE}`, flexWrap: "wrap" }}>
+        <div style={{ fontSize: "var(--step-meta)", fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase" }}>{hubCount} neighborhood{hubCount === 1 ? "" : "s"}</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          {hubCount > 1 && (
+            <button onClick={toggleAll} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13.5, fontWeight: 600, display: "flex", alignItems: "center", gap: 4, padding: 0 }}>
+              {allCollapsed ? <><ChevronDown size={15} /> Expand all</> : <><ChevronUp size={15} /> Collapse all</>}
+            </button>
+          )}
+          <ViewToggle view={view} onView={onView} />
         </div>
-      )}
+      </div>
 
       {day.itinerary.map((h, hi) => {
         if (!h.stops.length) return null;
@@ -991,8 +1010,8 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                   {isCollapsed ? <ChevronRight size={20} /> : <ChevronDown size={20} />}
                 </button>
                 <button onClick={() => toggleHub(h.hub)} style={{ ...SANS, cursor: "pointer", textAlign: "left", flex: 1, minWidth: 0, background: "none", border: "none", padding: 0 }}>
-                  <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.3, color: INK }}>{h.hub}</div>
-                  <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2 }}>{h.stops.length} stops · {h.time}{isCollapsed ? "" : ` · ${h.arrive}`}</div>
+                  <div style={{ fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", color: INK }}>{h.hub}</div>
+                  <div style={{ fontSize: "var(--step-meta)", color: MUTE, marginTop: 2 }}>{h.stops.length} stops · {h.time}{isCollapsed ? "" : ` · ${h.arrive}`}</div>
                 </button>
                 {hubCount > 1 && (
                   <button onPointerDown={dragDown(hi)} onPointerMove={dragMove} onPointerUp={dragUp} onPointerCancel={dragUp}
@@ -1003,24 +1022,31 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                 )}
               </div>
               {!isCollapsed && (
-                <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 14 }}>
-                  {h.stops.map((s) => { n += 1; return (
-                    <React.Fragment key={s.id}>
-                      <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
-                      {s.id === day.lunchAfterId && lunchBlock}
-                    </React.Fragment>
-                  ); })}
-                  {addHub === h.hub ? (
-                    <SearchSelect candidates={[]} title={`More stores in ${h.hub}`} placeholder={`Or search a store by name…`} cityContext={`${h.hub} ${city}`}
-                      note={<>Each pick is added to {h.hub} with live rating, hours and address — confirm it with "I'm going" or remove it.</>}
-                      onSuggest={() => onSuggestStores(h.hub)} suggestLabel="Prompt 5 more" autoSuggest
-                      onClose={() => setAddHub(null)} onPick={(c) => onAddStop(c, h.hub)} />
+                <div style={{ marginTop: 16 }}>
+                  {view === "list" ? (
+                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      {h.stops.map((s) => { n += 1; return <StopRow key={s.id} s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />; })}
+                    </div>
                   ) : (
-                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: 12, padding: "12px", fontSize: 13.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}>✨ Prompt more here</button>
+                    <div className="scout-grid">
+                      {h.stops.map((s) => { n += 1; return <StopCard key={s.id} s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />; })}
+                    </div>
+                  )}
+                  {addHub === h.hub ? (
+                    <div style={{ marginTop: 12 }}>
+                      <SearchSelect candidates={[]} title={`More stores in ${h.hub}`} placeholder={`Or search a store by name…`} cityContext={`${h.hub} ${city}`}
+                        note={<>Each pick is added to {h.hub} with live rating, hours and address — confirm it with "I'm going" or remove it.</>}
+                        onSuggest={() => onSuggestStores(h.hub)} suggestLabel="Prompt 5 more" autoSuggest
+                        onClose={() => setAddHub(null)} onPick={(c) => onAddStop(c, h.hub)} />
+                    </div>
+                  ) : (
+                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 12, border: `1.5px dashed ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: "var(--radius-pill)", padding: "12px", fontSize: 13.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}>✨ Prompt more here</button>
                   )}
                 </div>
               )}
             </div>
+            {/* Lunch lands after the neighborhood where you'll be ~1 PM. */}
+            {!drag && h.stops.some((s) => s.id === day.lunchAfterId) && <div style={{ maxWidth: 560, marginInline: "auto", marginTop: 18 }}>{lunchBlock}</div>}
             {drag && hi === lastHub && drag.to === lastHub && insertionLine}
           </React.Fragment>
         );
@@ -1028,13 +1054,13 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         return block;
       })}
 
-      <button onClick={() => setHoodOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 16, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Add a neighborhood</button>
+      <button onClick={() => setHoodOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", maxWidth: 560, marginInline: "auto", marginTop: 18, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Add a neighborhood</button>
       {hoodOpen && <AddNeighborhoodModal city={city} tiers={tiers} existing={day.itinerary.map((h) => h.hub)} onClose={() => setHoodOpen(false)} onAdd={onAddNeighborhood} />}
 
-      <div style={{ marginTop: 26 }}>{dinnerBlock}</div>
+      <div style={{ marginTop: 28, maxWidth: 560, marginInline: "auto" }}>{dinnerBlock}</div>
 
-      <div style={{ marginTop: 28, paddingTop: 18, borderTop: `1px solid ${LINE}` }}>
-        <button onClick={onConfirmDay} style={{ ...SANS, cursor: "pointer", width: "100%", background: day.confirmed ? "#fff" : ACCENT, color: day.confirmed ? OPEN : "#fff", border: `1.5px solid ${day.confirmed ? OPEN : ACCENT}`, borderRadius: 12, padding: "15px", fontSize: 15.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+      <div style={{ marginTop: 28, paddingTop: 20, borderTop: `1px solid ${LINE}`, maxWidth: 560, marginInline: "auto" }}>
+        <button onClick={onConfirmDay} style={{ ...SANS, cursor: "pointer", width: "100%", background: day.confirmed ? "#fff" : ACCENT, color: day.confirmed ? OPEN : "var(--accent-ink)", border: `1.5px solid ${day.confirmed ? OPEN : ACCENT}`, borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
           {day.confirmed && <CheckCircle size={17} />} {day.confirmed ? `Day ${day.dayNum} confirmed` : `Confirm Day ${day.dayNum}`} — {isLast ? "review trip" : "next day"} <ChevronRight size={17} />
         </button>
         {allConfirmed && <button onClick={onGotoOverview} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 10, background: "none", border: "none", color: ACCENT, fontSize: 14, fontWeight: 600 }}>View full trip itinerary →</button>}
@@ -1518,25 +1544,63 @@ function NeighborhoodMap({ options, city, hotel, activeIndex }) {
   );
 }
 
+// Card view / List view toggle (spec §5). Active label + icon in --accent.
+function ViewToggle({ view, onView }) {
+  const btn = (v, Icon, label) => {
+    const on = view === v;
+    return (
+      <button onClick={() => onView(v)} aria-pressed={on} style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, background: "none", border: "none", padding: "4px 2px", fontSize: 13.5, fontWeight: 600, color: on ? ACCENT : INK }}>
+        <Icon size={16} /> {label}
+      </button>
+    );
+  };
+  return (
+    <div style={{ display: "inline-flex", alignItems: "center", gap: 16 }}>
+      {btn("card", LayoutGrid, "Card view")}
+      {btn("list", List, "List view")}
+    </div>
+  );
+}
+
+// Compact list-view row for a neighborhood (spec §5 list view).
+function HoodRow({ o, n, city, on, onToggle }) {
+  return (
+    <button onClick={onToggle} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
+      <div style={{ width: 20, height: 20, borderRadius: 6, flexShrink: 0, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</div>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: on ? ACCENT : INK }}>{o.name}</div>
+        <div style={{ fontSize: 12.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.blurb}</div>
+      </div>
+      <span style={{ fontSize: "var(--step-caption)", fontWeight: 600, color: MUTE, flexShrink: 0 }}>{n}</span>
+    </button>
+  );
+}
+
 // One neighborhood in the curated plan: swipeable storefront photos, what it's
 // known for, and a line on why an apparel team would benefit. Pre-selected;
-// tap to deselect.
-function HoodCard({ o, n, city, on, onToggle }) {
+// tap to deselect. `invert` renders the black-card rhythm variant (spec §5).
+function HoodCard({ o, n, city, on, onToggle, invert }) {
+  const bg = invert ? "var(--surface-invert)" : (on ? ACCENT_SOFT : "#fff");
+  const border = on ? ACCENT : (invert ? "var(--surface-invert)" : LINE);
+  const nameColor = on ? ACCENT : (invert ? "var(--text-on-invert)" : INK);
+  const blurbColor = invert ? "var(--text-muted-invert)" : MUTE;
+  const whyColor = invert ? "#E6E6E6" : "#3a3a3a";
+  const whyDivider = invert ? "rgba(255,255,255,0.16)" : LINE;
   return (
-    <div style={{ border: `1.5px solid ${on ? ACCENT : LINE}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "relative", height: 170 }}>
+    <div style={{ border: `1.5px solid ${border}`, borderRadius: "var(--radius-card)", overflow: "hidden", background: bg, boxShadow: CARD_SHADOW, display: "flex", flexDirection: "column" }}>
+      <div style={{ position: "relative", aspectRatio: "4 / 3" }}>
         <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
-        <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
-        {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> In plan</div>}
+        <div style={{ position: "absolute", top: 12, left: 12, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
+        {on && <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", background: ACCENT, color: "var(--accent-ink)", fontSize: "var(--step-caption)", fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> In plan</div>}
       </div>
-      <button onClick={onToggle} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "14px" }}>
-        <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 2, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
+      <button onClick={onToggle} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", flex: 1, display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "16px" }}>
+        <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 2, border: `1.5px solid ${on ? ACCENT : (invert ? "rgba(255,255,255,0.4)" : LINE)}`, background: on ? ACCENT : "transparent", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
         <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: -0.3, color: on ? ACCENT : INK }}>{o.name}</div>
-          <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 3 }}>{o.blurb}</div>
+          <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.02em", color: nameColor, lineHeight: 1.15 }}>{o.name}</div>
+          <div style={{ fontSize: "var(--step-meta)", color: blurbColor, lineHeight: 1.45, marginTop: 5 }}>{o.blurb}</div>
           {o.apparelWhy && (
-            <div style={{ fontSize: 12.5, color: "#3a3a3a", lineHeight: 1.45, marginTop: 8, paddingTop: 8, borderTop: `1px solid ${on ? "#EAD3D5" : LINE}` }}>
-              <span style={{ color: ACCENT, fontWeight: 700 }}>For the team</span> · {o.apparelWhy}
+            <div style={{ fontSize: "var(--step-meta)", color: whyColor, lineHeight: 1.45, marginTop: 10, paddingTop: 10, borderTop: `1px solid ${whyDivider}` }}>
+              <span style={{ color: invert ? NEON : ACCENT, fontWeight: 700 }}>For the team</span> · {o.apparelWhy}
             </div>
           )}
         </div>
@@ -1548,17 +1612,18 @@ function HoodCard({ o, n, city, on, onToggle }) {
 // The pre-curated, day-by-day neighborhood plan. Each day is a geographically
 // grouped set of districts in optimal order; everything is pre-selected, and the
 // scout can deselect any before building the full itinerary.
-function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggle, onBack, onBuild }) {
+function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggle, onBack, onBuild, view, onView }) {
   const totalSelected = planDays.reduce((a, d) => a + (d.neighborhoods || []).filter((h) => selected.has(h.name)).length, 0);
+  let cardIdx = 0; // running index across days, for the black-card rhythm
 
   return (
-    <div style={{ ...SANS, color: INK }}>
-      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, fontSize: 14, padding: 0, marginBottom: 14, display: "flex", alignItems: "center", gap: 4 }}>
+    <div style={{ ...SANS, color: INK, maxWidth: 1180, marginInline: "auto" }}>
+      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, fontSize: "var(--step-meta)", padding: 0, marginBottom: 16, display: "flex", alignItems: "center", gap: 4 }}>
         <ChevronLeft size={16} /> Edit trip
       </button>
-      <div style={{ fontSize: 23, fontWeight: 800, letterSpacing: -0.6 }}>Your {city || "city"} plan</div>
-      <p style={{ color: MUTE, fontSize: 14, marginTop: 6, lineHeight: 1.5 }}>
-        Scout's curated route through {city || "the city"}'s most design-led districts — grouped by day in the optimal order so you see as much of the city as possible. Swipe each, read why it matters for an apparel team, and deselect anything you'd skip.
+      <h1 style={{ fontSize: "var(--step-h1)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1, margin: 0 }}>Your {city || "city"} plan</h1>
+      <p style={{ color: MUTE, fontSize: "var(--step-body)", marginTop: 8, lineHeight: 1.5, maxWidth: 640 }}>
+        Scout's curated route through {city || "the city"}'s most design-led districts — grouped by day in the optimal order so you see as much of the city as possible. Read why each matters for an apparel team, and deselect anything you'd skip.
       </p>
 
       {loading ? (
@@ -1572,26 +1637,37 @@ function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggl
           <p style={{ color: MUTE, fontSize: 14, lineHeight: 1.5, maxWidth: 320, marginInline: "auto" }}>
             Couldn't curate a plan for {city || "this city"} just now — we'll let Scout choose the best areas as it builds.
           </p>
-          <button onClick={onBuild} style={{ ...SANS, cursor: "pointer", marginTop: 20, background: ACCENT, color: "#fff", border: "none", borderRadius: 12, padding: "13px 26px", fontSize: 15, fontWeight: 600 }}>Build my itinerary</button>
+          <button onClick={onBuild} style={{ ...SANS, cursor: "pointer", marginTop: 20, background: ACCENT, color: "var(--accent-ink)", border: "none", borderRadius: "var(--radius-pill)", padding: "14px 28px", fontSize: 15, fontWeight: 600 }}>Build my itinerary</button>
         </div>
       ) : (
         <>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 24, paddingBottom: 12, borderBottom: `1px solid ${LINE}` }}>
+            <div style={{ fontSize: "var(--step-meta)", fontWeight: 600, color: MUTE }}>{totalSelected} of {planDays.reduce((a, d) => a + (d.neighborhoods || []).length, 0)} selected</div>
+            <ViewToggle view={view} onView={onView} />
+          </div>
+
           {planDays.map((day, di) => {
             const hoods = day.neighborhoods || [];
             return (
-              <div key={di} style={{ marginTop: 26 }}>
-                <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: -0.4 }}>Day {di + 1}</div>
-                <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2, marginBottom: 14 }}>{hoods.map((h) => h.name).join(" → ")}</div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-                  {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} />)}
-                </div>
+              <div key={di} style={{ marginTop: 28 }}>
+                <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.02em" }}>Day {di + 1}</div>
+                <div style={{ fontSize: "var(--step-meta)", color: MUTE, marginTop: 2, marginBottom: 16 }}>{hoods.map((h) => h.name).join(" → ")}</div>
+                {view === "list" ? (
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {hoods.map((o, i) => <HoodRow key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} />)}
+                  </div>
+                ) : (
+                  <div className="scout-grid">
+                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} invert={(cardIdx++ % 4) === 3} />)}
+                  </div>
+                )}
               </div>
             );
           })}
-          <button onClick={onBuild} disabled={totalSelected === 0} style={{ ...SANS, cursor: totalSelected ? "pointer" : "default", marginTop: 26, width: "100%", background: totalSelected ? ACCENT : LINE, color: totalSelected ? "#fff" : MUTE, border: "none", borderRadius: 14, padding: "16px", fontSize: 16, fontWeight: 700 }}>
+          <button onClick={onBuild} disabled={totalSelected === 0} style={{ ...SANS, cursor: totalSelected ? "pointer" : "default", marginTop: 32, width: "100%", maxWidth: 420, marginInline: "auto", display: "block", background: totalSelected ? ACCENT : LINE, color: totalSelected ? "var(--accent-ink)" : MUTE, border: "none", borderRadius: "var(--radius-pill)", padding: "16px 28px", fontSize: 16, fontWeight: 700 }}>
             {totalSelected ? `Build itinerary · ${totalSelected} neighborhood${totalSelected > 1 ? "s" : ""}` : "Select at least one neighborhood"}
           </button>
-          <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 10, lineHeight: 1.5 }}>Scout fills each neighborhood with the best stores, plus a curated lunch and dinner.</div>
+          <div style={{ textAlign: "center", color: MUTE, fontSize: "var(--step-meta)", marginTop: 12, lineHeight: 1.5 }}>Scout fills each neighborhood with the best stores, plus a curated lunch and dinner.</div>
         </>
       )}
     </div>
@@ -1788,6 +1864,7 @@ export default function App() {
   const [selectedHoods, setSelectedHoods] = useState(() => new Set()); // chosen neighborhood names
   const [areaLoading, setAreaLoading] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
+  const [cardView, setCardView] = useState("card"); // "card" | "list" — catalog view mode
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -2067,13 +2144,13 @@ export default function App() {
   return (
     <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
-      <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
+      <div className="scout-container">
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
-        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} />}
+        {screen === "input" && <div className="scout-measure"><InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} /></div>}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
@@ -2082,13 +2159,13 @@ export default function App() {
             const db = b.lat != null ? distLL(anchor, { lat: b.lat, lng: b.lng }) : Infinity;
             return da - db;
           }) : (d.lunchPicks || []);
-          return <LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} onSuggest={(ex) => onSuggestMeals("lunch", ex)} city={city} />;
+          return <div className="scout-measure"><LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} onSuggest={(ex) => onSuggestMeals("lunch", ex)} city={city} /></div>;
         })()}
         {screen === "dinner" && (() => {
           const d = trip[activeDay];
-          return <LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} onSuggest={(ex) => onSuggestMeals("dinner", ex)} city={city} />;
+          return <div className="scout-measure"><LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} onSuggest={(ex) => onSuggestMeals("dinner", ex)} city={city} /></div>;
         })()}
-        {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} />}
+        {screen === "overview" && <div className="scout-col"><OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} /></div>}
       </div>
     </div>
   );
