@@ -200,7 +200,7 @@ const tierColor = (s) => (s.addedByUser && !s.tier ? ADDED_TIER.chip[0] : (TIERS
 // Swipeable gallery of a place's Google listing photos. Falls back to the
 // branded gradient + storefront illustration when there are no photos. Lazily
 // fetches photos for places that don't already carry them (curated stops).
-function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf }) {
+function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf, hideDots }) {
   const [pics, setPics] = useState(photos && photos.length ? photos : null);
   const [active, setActive] = useState(0);
   const [broken, setBroken] = useState(() => new Set());
@@ -236,7 +236,7 @@ function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf }) {
             style={{ minWidth: "100%", width: "100%", height: "100%", objectFit: "cover", scrollSnapAlign: "start", display: "block" }} />
         ))}
       </div>
-      {list.length > 1 && (
+      {list.length > 1 && !hideDots && (
         <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", pointerEvents: "none", display: "flex", gap: 5, alignItems: "center" }}>
           {list.map((_, i) => (
             <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: i === active ? "#fff" : "rgba(255,255,255,0.5)", transform: i === active ? "scale(1.15)" : "none", boxShadow: "0 0 2px rgba(0,0,0,0.45)", transition: "background 0.15s" }} />
@@ -263,35 +263,33 @@ function StopRow({ s, n, onConfirm, onRemove }) {
   );
 }
 
+// Full-bleed image card (Pangram Pangram style): photo fills the card, store
+// name large in white over the centre, the "why" small beneath. Minimal — no
+// coloured outline. Key actions (going / Uber / directions / remove) sit as
+// quiet icon buttons over the bottom of the image.
 function StopCard({ s, n, onConfirm, onRemove }) {
   const t = TIERS[s.tier] || ADDED_TIER;
-  const editBtn = { ...SANS, cursor: "pointer", background: "none", border: "none", fontSize: 13, fontWeight: 600, display: "inline-flex", alignItems: "center", gap: 5, padding: "2px 2px" };
+  const iconBtn = { ...SANS, cursor: "pointer", textDecoration: "none", background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", width: 36, height: 36, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" };
+  const meta = [s.hours ? `Open · ${s.hours}` : null, s.eta ? `Arrive ~${s.eta}` : null].filter(Boolean).join("  ·  ");
   return (
-    <div style={{ border: `1px solid ${s.confirmed ? OPEN : LINE}`, borderRadius: "var(--radius-card)", overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW, display: "flex", flexDirection: "column", height: "100%" }}>
-      <div style={{ position: "relative", aspectRatio: "4 / 3" }}>
-        <PhotoStrip name={s.name} address={s.address} photos={s.photos} grad={t.grad} />
-        <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
-        <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: t.chip[1], color: t.chip[0], fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{t.label}</div>
-        {s.addedByUser && <div style={{ position: "absolute", bottom: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: ADDED_TIER.chip[0], fontSize: 10.5, fontWeight: 700, borderRadius: 999, padding: "4px 9px" }}>Your find</div>}
-        {s.confirmed && <div style={{ position: "absolute", bottom: 10, right: 10, pointerEvents: "none", background: NEON, color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Going</div>}
+    <div style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
+      <div style={{ position: "absolute", inset: 0 }}>
+        <PhotoStrip name={s.name} address={s.address} photos={s.photos} grad={t.grad} hideDots />
       </div>
-      <div style={{ padding: "14px 16px", flex: 1, display: "flex", flexDirection: "column" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-          <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.15 }}>{s.name}</div>
-          <Rating rating={s.rating} reviews={s.reviews} href={mapsUrl(s.name, s.address)} />
-        </div>
-        <div style={{ display: "flex", gap: 14, marginTop: 8, flexWrap: "wrap", fontSize: 12.5, color: MUTE }}>
-          <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Clock size={12.5} /> {s.hours ? <><span style={{ color: OPEN, fontWeight: 600 }}>Open</span> · {s.hours}</> : "Hours — tap Directions"}</span>
-          <span style={{ display: "flex", alignItems: "center", gap: 4 }}><MapPin size={12.5} /> ~{s.dwell} min stop</span>
-          {s.eta && <span style={{ display: "flex", alignItems: "center", gap: 4, color: ACCENT, fontWeight: 600 }}><Navigation size={12.5} /> Arrive ~{s.eta}</span>}
-        </div>
-        <div style={{ fontSize: "var(--step-meta)", color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{s.why}</div>
-        <AddressLine name={s.name} address={s.address} />
-        <SmartActionRow name={s.name} address={s.address} lat={s.lat} lng={s.lng} />
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "auto", paddingTop: 12, borderTop: `1px solid ${LINE}` }}>
-          <button onClick={onConfirm} style={{ ...editBtn, color: s.confirmed ? OPEN : MUTE }}>{s.confirmed ? <CheckCircle size={15} /> : <Check size={15} />} {s.confirmed ? "Going" : "Confirm I'm going"}</button>
-          <button onClick={onRemove} style={{ ...editBtn, color: DANGER }}><Trash2 size={14} /> Remove</button>
-        </div>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
+      <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
+      {s.rating != null && <div style={{ position: "absolute", top: 13, right: 14, pointerEvents: "none", color: "#fff", fontSize: "var(--step-caption)", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}><Star size={11} fill="#fff" color="#fff" /> {s.rating}</div>}
+      {s.confirmed && <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", display: s.rating != null ? "none" : "flex", width: 24, height: 24, borderRadius: 999, background: NEON, color: INK, alignItems: "center", justifyContent: "center" }}><Check size={14} /></div>}
+      <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
+        <div style={{ color: "#fff", fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.08, textShadow: "0 2px 14px rgba(0,0,0,0.6)" }}>{s.name}</div>
+        <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.why}</div>
+      </div>
+      {meta && <div style={{ position: "absolute", left: 16, right: 16, bottom: 60, pointerEvents: "none", textAlign: "center", color: "rgba(255,255,255,0.88)", fontSize: "var(--step-caption)", textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}>{meta}</div>}
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>
+        <button onClick={onConfirm} aria-label={s.confirmed ? "Going" : "Confirm I'm going"} title={s.confirmed ? "Going" : "Confirm I'm going"} style={{ ...iconBtn, background: s.confirmed ? NEON : "rgba(15,15,15,0.5)", color: s.confirmed ? INK : "#fff" }}>{s.confirmed ? <CheckCircle size={18} /> : <Check size={18} />}</button>
+        <a href={uberUrl(s.name, s.address, s.lat, s.lng)} target="_blank" rel="noreferrer" aria-label="Uber here" title="Uber here" style={iconBtn}><Car size={16} /></a>
+        <a href={mapsUrl(s.name, s.address)} target="_blank" rel="noreferrer" aria-label="Directions" title="Directions" style={iconBtn}><Navigation size={16} /></a>
+        <button onClick={onRemove} aria-label="Remove" title="Remove" style={iconBtn}><Trash2 size={16} /></button>
       </div>
     </div>
   );
@@ -1576,35 +1574,22 @@ function HoodRow({ o, n, city, on, onToggle }) {
   );
 }
 
-// One neighborhood in the curated plan: swipeable storefront photos, what it's
-// known for, and a line on why an apparel team would benefit. Pre-selected;
-// tap to deselect. `invert` renders the black-card rhythm variant (spec §5).
-function HoodCard({ o, n, city, on, onToggle, invert }) {
-  const bg = invert ? "var(--surface-invert)" : (on ? ACCENT_SOFT : "#fff");
-  const border = on ? ACCENT : (invert ? "var(--surface-invert)" : LINE);
-  const nameColor = on ? ACCENT : (invert ? "var(--text-on-invert)" : INK);
-  const blurbColor = invert ? "var(--text-muted-invert)" : MUTE;
-  const whyColor = invert ? "#E6E6E6" : "#3a3a3a";
-  const whyDivider = invert ? "rgba(255,255,255,0.16)" : LINE;
+// Full-bleed image card (Pangram Pangram style): the photo fills the card, the
+// name sits large in white over the centre, the blurb small beneath. Minimal —
+// no coloured outline. Tap to add/remove from the plan.
+function HoodCard({ o, n, city, on, onToggle }) {
   return (
-    <div style={{ border: `1.5px solid ${border}`, borderRadius: "var(--radius-card)", overflow: "hidden", background: bg, boxShadow: CARD_SHADOW, display: "flex", flexDirection: "column" }}>
-      <div style={{ position: "relative", aspectRatio: "4 / 3" }}>
-        <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
-        <div style={{ position: "absolute", top: 12, left: 12, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
-        {on && <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", background: ACCENT, color: "var(--accent-ink)", fontSize: "var(--step-caption)", fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> In plan</div>}
+    <div onClick={onToggle} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
+      <div style={{ position: "absolute", inset: 0 }}>
+        <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad="linear-gradient(135deg,#2b2b2b,#555)" hideDots />
       </div>
-      <button onClick={onToggle} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", flex: 1, display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "16px" }}>
-        <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 2, border: `1.5px solid ${on ? ACCENT : (invert ? "rgba(255,255,255,0.4)" : LINE)}`, background: on ? ACCENT : "transparent", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
-        <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.02em", color: nameColor, lineHeight: 1.15 }}>{o.name}</div>
-          <div style={{ fontSize: "var(--step-meta)", color: blurbColor, lineHeight: 1.45, marginTop: 5 }}>{o.blurb}</div>
-          {o.apparelWhy && (
-            <div style={{ fontSize: "var(--step-meta)", color: whyColor, lineHeight: 1.45, marginTop: 10, paddingTop: 10, borderTop: `1px solid ${whyDivider}` }}>
-              <span style={{ color: invert ? NEON : ACCENT, fontWeight: 700 }}>For the team</span> · {o.apparelWhy}
-            </div>
-          )}
-        </div>
-      </button>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.08) 38%, rgba(0,0,0,0.64) 100%)" }} />
+      <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
+      <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", width: 26, height: 26, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", background: on ? "#fff" : "transparent", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.75)", boxShadow: on ? "0 2px 8px rgba(0,0,0,0.35)" : "none" }}>{on && <Check size={15} />}</div>
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", pointerEvents: "none" }}>
+        <div style={{ color: "#fff", fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.08, textShadow: "0 2px 14px rgba(0,0,0,0.55)" }}>{o.name}</div>
+        <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.45, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{o.blurb}</div>
+      </div>
     </div>
   );
 }
@@ -1614,7 +1599,6 @@ function HoodCard({ o, n, city, on, onToggle, invert }) {
 // scout can deselect any before building the full itinerary.
 function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggle, onBack, onBuild, view, onView }) {
   const totalSelected = planDays.reduce((a, d) => a + (d.neighborhoods || []).filter((h) => selected.has(h.name)).length, 0);
-  let cardIdx = 0; // running index across days, for the black-card rhythm
 
   return (
     <div style={{ ...SANS, color: INK, maxWidth: 1180, marginInline: "auto" }}>
@@ -1658,7 +1642,7 @@ function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggl
                   </div>
                 ) : (
                   <div className="scout-grid">
-                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} invert={(cardIdx++ % 4) === 3} />)}
+                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} />)}
                   </div>
                 )}
               </div>
