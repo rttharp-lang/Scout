@@ -44,6 +44,22 @@ export async function suggestNeighborhoods(city, tiers) {
   }
 }
 
+// Ask the scout for a few more real stores in one neighborhood (for the
+// "prompt more options" button), excluding ones already on the day. Returns
+// an array of { name, tier, why }; empty on error / when AI isn't configured.
+export async function suggestStores(city, tiers, area, exclude = []) {
+  const params = new URLSearchParams({ city, area, tiers: tiers.join(",") });
+  if (exclude.length) params.set("exclude", exclude.join(","));
+  try {
+    const r = await fetch(`/api/morestores?${params.toString()}`);
+    if (!r.ok) return [];
+    const data = await r.json();
+    return Array.isArray(data.stores) ? data.stores : [];
+  } catch {
+    return [];
+  }
+}
+
 // Ask the AI scout endpoint for a city-specific itinerary (neighborhoods +
 // real stores + tiers + why). Returns { days: [...] }; callers fall back to
 // the curated sample on error or when AI generation isn't configured.

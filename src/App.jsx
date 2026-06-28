@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods, suggestStores } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut } from "lucide-react";
@@ -296,12 +296,33 @@ function LunchCard({ l, onSelect }) {
   );
 }
 
-function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, cityContext }) {
+function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, cityContext, onSuggest, suggestLabel }) {
   const [q, setQ] = useState("");
   const [live, setLive] = useState(null);   // null until a live search returns
   const [loading, setLoading] = useState(false);
+  const [suggested, setSuggested] = useState(null); // AI-prompted picks
+  const [suggesting, setSuggesting] = useState(false);
+  const [picked, setPicked] = useState(() => new Set()); // added this session — hide so you can keep adding without dupes
   const query = q.trim().toLowerCase();
+  const keyOf = (c) => c.placeId || c.name;
   const sampleMatches = query.length >= 2 ? candidates.filter((c) => c.name.toLowerCase().includes(query)).slice(0, 6) : [];
+
+  const promptMore = () => {
+    setSuggesting(true);
+    Promise.resolve(onSuggest()).then((r) => setSuggested(r || [])).catch(() => setSuggested([])).finally(() => setSuggesting(false));
+  };
+  const pick = (c) => { setPicked((p) => new Set(p).add(keyOf(c))); onPick(c); };
+  // Reuse one row renderer for both search results and AI suggestions.
+  const Row = (c, i, showWhy) => (
+    <button key={keyOf(c) + "-" + i} onClick={() => pick(c)} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 12px", display: "flex", alignItems: "center", gap: 10 }}>
+      <MapPin size={16} color={ACCENT} style={{ flexShrink: 0 }} />
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div style={{ fontSize: 14.5, fontWeight: 600, color: INK }}>{c.name}</div>
+        <div style={{ fontSize: 12, color: MUTE, whiteSpace: showWhy ? "normal" : "nowrap", overflow: "hidden", textOverflow: "ellipsis", lineHeight: 1.35 }}>{showWhy && c.why ? c.why : `${c.cuisine ? c.cuisine + " · " : ""}${c.address}`}</div>
+      </div>
+      {c.rating != null ? <span style={{ display: "inline-flex", alignItems: "center", gap: 3, flexShrink: 0 }}><Star size={12} color={INK} fill={INK} /><span style={{ fontSize: 12.5, fontWeight: 600 }}>{c.rating}</span></span> : <Plus size={16} color={ACCENT} style={{ flexShrink: 0 }} />}
+    </button>
+  );
 
   // Debounced live search against Google Places; falls back to the sample set
   // on any error or when search isn't configured.
@@ -320,7 +341,8 @@ function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, c
     return () => { cancelled = true; clearTimeout(t); };
   }, [q]);
 
-  const matches = ((live && live.length) ? live : sampleMatches).slice(0, 8);
+  const matches = ((live && live.length) ? live : sampleMatches).filter((c) => !picked.has(keyOf(c))).slice(0, 8);
+  const suggestedRows = (suggested || []).filter((c) => !picked.has(keyOf(c)));
   const inp = { ...SANS, width: "100%", border: "none", outline: "none", fontSize: 16, color: INK, background: "transparent" };
   return (
     <div style={{ border: `1px solid ${LINE}`, borderRadius: 16, background: "#fff", boxShadow: CARD_SHADOW, padding: 16, marginTop: 12 }}>
@@ -333,20 +355,28 @@ function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, c
       </div>
       {matches.length > 0 && (
         <div style={{ border: `1px solid ${LINE}`, borderRadius: 12, marginTop: 8, overflow: "hidden" }}>
-          {matches.map((c, i) => (
-            <button key={(c.placeId || c.name) + "-" + i} onClick={() => onPick(c)} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 12px", display: "flex", alignItems: "center", gap: 10 }}>
-              <MapPin size={16} color={ACCENT} style={{ flexShrink: 0 }} />
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 14.5, fontWeight: 600, color: INK }}>{c.name}</div>
-                <div style={{ fontSize: 12, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.cuisine ? c.cuisine + " · " : ""}{c.address}</div>
-              </div>
-              {c.rating != null && <span style={{ display: "inline-flex", alignItems: "center", gap: 3, flexShrink: 0 }}><Star size={12} color={INK} fill={INK} /><span style={{ fontSize: 12.5, fontWeight: 600 }}>{c.rating}</span></span>}
-            </button>
-          ))}
+          {matches.map((c, i) => Row(c, i, false))}
         </div>
       )}
       {loading && matches.length === 0 && <div style={{ fontSize: 12.5, color: MUTE, marginTop: 10 }}>Searching Google…</div>}
       {!loading && query.length >= 2 && matches.length === 0 && <div style={{ fontSize: 12.5, color: MUTE, marginTop: 10 }}>No matches found. Try a more specific name.</div>}
+
+      {/* Optional: let the scout ask Scout to suggest more stores instead of typing. */}
+      {onSuggest && query.length < 2 && (
+        <>
+          <button onClick={promptMore} disabled={suggesting} style={{ ...SANS, cursor: suggesting ? "default" : "pointer", width: "100%", marginTop: 10, border: `1.5px solid ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: 12, padding: "12px", fontSize: 14, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+            {suggesting ? <><span style={{ width: 15, height: 15, border: `2.5px solid ${ACCENT}40`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} /> Asking Scout…</> : <>✨ {suggestLabel || "Prompt 5 more from Scout"}</>}
+            <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+          </button>
+          {suggestedRows.length > 0 && (
+            <div style={{ border: `1px solid ${LINE}`, borderRadius: 12, marginTop: 8, overflow: "hidden" }}>
+              {suggestedRows.map((c, i) => Row(c, i, true))}
+            </div>
+          )}
+          {suggested && suggestedRows.length === 0 && !suggesting && <div style={{ fontSize: 12.5, color: MUTE, marginTop: 10 }}>{suggested.length ? "Added — prompt again for more." : "No more to suggest right now — try searching by name."}</div>}
+        </>
+      )}
+
       <div style={{ fontSize: 11.5, color: MUTE, marginTop: 12, lineHeight: 1.45 }}>{note}</div>
     </div>
   );
@@ -904,8 +934,8 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                 {hubCount > 1 && (
                   <button onPointerDown={dragDown(hi)} onPointerMove={dragMove} onPointerUp={dragUp} onPointerCancel={dragUp}
                     aria-label="Drag to reorder" title="Drag to reorder"
-                    style={{ ...SANS, touchAction: "none", cursor: isDragged ? "grabbing" : "grab", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 9, width: 34, height: 40, display: "flex", alignItems: "center", justifyContent: "center", color: MUTE, marginLeft: 2 }}>
-                    <GripVertical size={18} />
+                    style={{ ...SANS, touchAction: "none", cursor: isDragged ? "grabbing" : "grab", background: "none", border: "none", padding: "8px 6px", display: "flex", alignItems: "center", justifyContent: "center", color: "#BDBDBD", marginLeft: 2 }}>
+                    <GripVertical size={19} />
                   </button>
                 )}
               </div>
@@ -919,8 +949,9 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                   ); })}
                   {addHub === h.hub ? (
                     <SearchSelect candidates={[]} title={`Add a store in ${h.hub}`} placeholder={`Search a store in ${h.hub}…`} cityContext={`${h.hub} ${city}`}
-                      note={<>Scout pulls in its live rating, hours and address, then slots it into {h.hub}. Confirm each store with "I'm going" or remove it.</>}
-                      onClose={() => setAddHub(null)} onPick={(c) => { onAddStop(c, h.hub); setAddHub(null); }} />
+                      note={<>Search by name, or have Scout suggest more. Each pick is added to {h.hub} with live rating, hours and address — confirm it with "I'm going" or remove it.</>}
+                      onSuggest={() => onSuggestStores(h.hub)} suggestLabel={`Prompt more in ${h.hub}`}
+                      onClose={() => setAddHub(null)} onPick={(c) => onAddStop(c, h.hub)} />
                   ) : (
                     <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${LINE}`, background: "#FAFAFA", color: MUTE, borderRadius: 12, padding: "12px", fontSize: 13.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}><Plus size={16} /> Add a store in {h.hub}</button>
                   )}
@@ -1858,6 +1889,21 @@ export default function App() {
   // Re-optimize the day's neighborhood order (undo a manual arrangement) so the
   // route walks the shortest sensible path again.
   const onOptimizeDay = () => updateDay(activeDay, (d) => rescheduleItinerary(d, hotelCoord, false));
+
+  // "Prompt more options": ask the AI scout for a few more real stores in a
+  // neighborhood (excluding ones already on the day), enriched with live Google
+  // data, for the scout to pick from. Returns candidate store objects.
+  const onSuggestStores = async (hub) => {
+    const day = trip[activeDay];
+    const existing = day ? day.itinerary.flatMap((h) => h.stops).map((s) => s.name) : [];
+    const picks = await suggestStores(city, tiers, hub, existing);
+    const fresh = picks.filter((p) => !existing.some((e) => e.toLowerCase() === p.name.toLowerCase())).slice(0, 6);
+    const enriched = await Promise.all(fresh.map(async (p) => {
+      const enr = await enrichPlace(p.name, hub, city);
+      return { name: p.name, tier: p.tier, why: p.why, ...enr };
+    }));
+    return enriched;
+  };
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onSelectDinner = (l) => { updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onConfirmDay = () => {
@@ -1875,7 +1921,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
