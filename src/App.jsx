@@ -281,7 +281,7 @@ function StopCard({ s, n, onConfirm, onRemove }) {
       {s.rating != null && <div style={{ position: "absolute", top: 13, right: 14, pointerEvents: "none", color: "#fff", fontSize: "var(--step-caption)", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}><Star size={11} fill="#fff" color="#fff" /> {s.rating}</div>}
       {s.confirmed && <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", display: s.rating != null ? "none" : "flex", width: 24, height: 24, borderRadius: 999, background: NEON, color: INK, alignItems: "center", justifyContent: "center" }}><Check size={14} /></div>}
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
-        <div style={{ color: "#fff", fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.08, textShadow: "0 2px 14px rgba(0,0,0,0.6)" }}>{s.name}</div>
+        <div style={{ color: "#fff", fontSize: "clamp(1.6rem, 5vw, 2.25rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{s.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.why}</div>
       </div>
       {meta && <div style={{ position: "absolute", left: 16, right: 16, bottom: 60, pointerEvents: "none", textAlign: "center", color: "rgba(255,255,255,0.88)", fontSize: "var(--step-caption)", textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}>{meta}</div>}
@@ -844,7 +844,7 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [hoodOpen, setHoodOpen] = useState(false);
   const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
@@ -1585,9 +1585,9 @@ function HoodCard({ o, n, city, on, onToggle }) {
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.08) 38%, rgba(0,0,0,0.64) 100%)" }} />
       <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
-      <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", width: 26, height: 26, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", background: on ? "#fff" : "transparent", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.75)", boxShadow: on ? "0 2px 8px rgba(0,0,0,0.35)" : "none" }}>{on && <Check size={15} />}</div>
+      <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", width: 28, height: 28, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "transparent", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none" }}>{on && <Check size={16} strokeWidth={3} />}</div>
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", pointerEvents: "none" }}>
-        <div style={{ color: "#fff", fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.08, textShadow: "0 2px 14px rgba(0,0,0,0.55)" }}>{o.name}</div>
+        <div style={{ color: "#fff", fontSize: "clamp(1.6rem, 5vw, 2.25rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}>{o.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.45, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{o.blurb}</div>
       </div>
     </div>
