@@ -12,9 +12,9 @@ const SANS = { fontFamily: "var(--font-sans)" };
 const INK = "#0A0A0A";          // --text
 const MUTE = "#8E8C88";         // --text-muted
 const LINE = "#DCD8D2";         // --border
-const ACCENT = "#1B2FFF";       // --accent (ultramarine)
-const ACCENT_SOFT = "#E6E9FF";  // light ultramarine tint
-const NEON = "#3BFF6E";         // --pop (neon green)
+const ACCENT = "#1A1AE5";       // --accent (electric blue)
+const ACCENT_SOFT = "#E7E7FC";  // light electric-blue tint
+const NEON = "#7FE800";         // --pop (bright lime green)
 const OPEN = "#178A3C";         // readable green for open/positive text
 const DANGER = "#C0392B";
 const CARD_SHADOW = "0 6px 18px rgba(0,0,0,0.07)";
@@ -265,14 +265,37 @@ function StopRow({ s, n, onConfirm, onRemove }) {
   );
 }
 
+// A green "going" check (top-right, like the neighborhood cards). Everything is
+// going by default; tap the check to open a small Remove / Replace / Keep going
+// menu over the card.
+function GoingControl({ name, onRemove, onReplace }) {
+  const [menu, setMenu] = useState(false);
+  const stop = (fn) => (e) => { e.stopPropagation(); e.preventDefault(); fn(); };
+  const mBtn = { ...SANS, cursor: "pointer", width: "100%", maxWidth: 220, borderRadius: "var(--radius-pill)", padding: "11px", fontSize: 14, fontWeight: 700 };
+  return (
+    <>
+      <button onClick={stop(() => setMenu(true))} aria-label="Going — tap to change" title="Going" style={{ position: "absolute", top: 12, right: 12, zIndex: 6, width: 30, height: 30, borderRadius: 999, border: "none", cursor: "pointer", background: NEON, color: "#0A0A0A", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 10px rgba(0,0,0,0.4)" }}>
+        <Check size={17} strokeWidth={3} />
+      </button>
+      {menu && (
+        <div onClick={stop(() => setMenu(false))} style={{ position: "absolute", inset: 0, zIndex: 7, background: "rgba(10,10,10,0.82)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, padding: 20 }}>
+          <div style={{ color: "#fff", fontSize: "var(--step-meta)", textAlign: "center", marginBottom: 6, maxWidth: 240 }}>Not going to {name}?</div>
+          <button onClick={stop(onRemove)} style={{ ...mBtn, background: "#fff", color: "#0A0A0A", border: "none" }}>Remove</button>
+          {onReplace && <button onClick={stop(onReplace)} style={{ ...mBtn, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.7)" }}>Replace</button>}
+          <button onClick={stop(() => setMenu(false))} style={{ ...mBtn, background: NEON, color: "#0A0A0A", border: "none" }}>Keep going</button>
+        </div>
+      )}
+    </>
+  );
+}
+
 // Full-bleed image card (Pangram Pangram style): photo fills the card, store
 // name large in white over the centre, the "why" small beneath. Minimal — no
-// coloured outline. Key actions (going / Uber / directions / remove) sit as
-// quiet icon buttons over the bottom of the image.
-function StopCard({ s, n, onConfirm, onRemove }) {
+// coloured outline. Green "going" check top-right; Uber/Directions at the bottom.
+function StopCard({ s, n, onRemove, onReplace }) {
   const t = TIERS[s.tier] || ADDED_TIER;
   const iconBtn = { ...SANS, cursor: "pointer", textDecoration: "none", background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", width: 36, height: 36, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" };
-  const meta = [s.hours ? `Open · ${s.hours}` : null, s.eta ? `Arrive ~${s.eta}` : null].filter(Boolean).join("  ·  ");
+  const meta = [s.rating != null ? `${s.rating}★` : null, s.hours ? `Open · ${s.hours}` : null, s.eta ? `Arrive ~${s.eta}` : null].filter(Boolean).join("  ·  ");
   return (
     <div style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
@@ -280,18 +303,15 @@ function StopCard({ s, n, onConfirm, onRemove }) {
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
       <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
-      {s.rating != null && <div style={{ position: "absolute", top: 13, right: 14, pointerEvents: "none", color: "#fff", fontSize: "var(--step-caption)", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}><Star size={11} fill="#fff" color="#fff" /> {s.rating}</div>}
-      {s.confirmed && <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", display: s.rating != null ? "none" : "flex", width: 24, height: 24, borderRadius: 999, background: NEON, color: INK, alignItems: "center", justifyContent: "center" }}><Check size={14} /></div>}
+      <GoingControl name={s.name} onRemove={onRemove} onReplace={onReplace} />
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{s.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.why}</div>
       </div>
       {meta && <div style={{ position: "absolute", left: 16, right: 16, bottom: 60, pointerEvents: "none", textAlign: "center", color: "rgba(255,255,255,0.88)", fontSize: "var(--step-caption)", textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}>{meta}</div>}
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>
-        <button onClick={onConfirm} aria-label={s.confirmed ? "Going" : "Confirm I'm going"} title={s.confirmed ? "Going" : "Confirm I'm going"} style={{ ...iconBtn, background: s.confirmed ? NEON : "rgba(15,15,15,0.5)", color: s.confirmed ? INK : "#fff" }}>{s.confirmed ? <CheckCircle size={18} /> : <Check size={18} />}</button>
         <a href={uberUrl(s.name, s.address, s.lat, s.lng)} target="_blank" rel="noreferrer" aria-label="Uber here" title="Uber here" style={iconBtn}><Car size={16} /></a>
         <a href={mapsUrl(s.name, s.address)} target="_blank" rel="noreferrer" aria-label="Directions" title="Directions" style={iconBtn}><Navigation size={16} /></a>
-        <button onClick={onRemove} aria-label="Remove" title="Remove" style={iconBtn}><Trash2 size={16} /></button>
       </div>
     </div>
   );
@@ -300,21 +320,21 @@ function StopCard({ s, n, onConfirm, onRemove }) {
 // Shared full-image overlay frame for restaurant cards (matches the store card):
 // photo fills the card, name large in white over the centre, cuisine·price + why
 // beneath, rating top-right, quiet icon actions over the bottom.
-function MealImageCard({ meal, actions, onClick }) {
-  const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null].filter(Boolean).join(" · ");
+function MealImageCard({ meal, actions, onClick, corner }) {
+  const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null, meal.rating != null ? `${meal.rating}★` : null].filter(Boolean).join(" · ");
   return (
     <div onClick={onClick} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW, cursor: onClick ? "pointer" : "default" }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
-      {meal.rating != null && <div style={{ position: "absolute", top: 13, right: 14, pointerEvents: "none", color: "#fff", fontSize: "var(--step-caption)", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}><Star size={11} fill="#fff" color="#fff" /> {meal.rating}</div>}
+      {corner}
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{meal.name}</div>
         {sub && <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", fontWeight: 600, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{sub}</div>}
         {meal.why && <div style={{ color: "rgba(255,255,255,0.9)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 6, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{meal.why}</div>}
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>{actions}</div>
+      {actions && <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>{actions}</div>}
     </div>
   );
 }
@@ -329,12 +349,13 @@ function LunchCard({ l, onSelect }) {
   );
 }
 
-// The chosen lunch/dinner on the review page — Change / Uber / Directions.
-function MealCard({ meal, onChange }) {
+// The chosen lunch/dinner on the review page — green "going" check (Remove /
+// Replace / Keep) top-right, Uber + Directions at the bottom.
+function MealCard({ meal, onReplace, onRemove }) {
   return (
     <MealImageCard meal={meal}
+      corner={<GoingControl name={meal.name} onRemove={onRemove} onReplace={onReplace} />}
       actions={<>
-        <button onClick={onChange} aria-label="Change" title="Change" style={{ ...mealIconBtn, padding: "0 16px", gap: 6, fontSize: 13, fontWeight: 700 }}><Pencil size={14} /> Change</button>
         <a href={uberUrl(meal.name, meal.address, meal.lat, meal.lng)} target="_blank" rel="noreferrer" aria-label="Uber here" title="Uber here" style={{ ...mealIconBtn, width: 36 }}><Car size={16} /></a>
         <a href={mapsUrl(meal.name, meal.address)} target="_blank" rel="noreferrer" aria-label="Directions" title="Directions" style={{ ...mealIconBtn, width: 36 }}><Navigation size={16} /></a>
       </>} />
@@ -840,7 +861,7 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [hoodOpen, setHoodOpen] = useState(false);
   const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
@@ -922,7 +943,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         <Utensils size={17} color={ACCENT} /> Lunch <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· ~{day.lunchAt || "1:00 PM"}</span>
       </div>
       {day.lunch ? (
-        <MealCard meal={day.lunch} onChange={onPickLunch} />
+        <MealCard meal={day.lunch} onReplace={onPickLunch} onRemove={onClearLunch} />
       ) : (
         <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add lunch near here</button>
       )}
@@ -935,7 +956,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         <Utensils size={17} color={ACCENT} /> Dinner <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· evening</span>
       </div>
       {day.dinner ? (
-        <MealCard meal={day.dinner} onChange={onPickDinner} />
+        <MealCard meal={day.dinner} onReplace={onPickDinner} onRemove={onClearDinner} />
       ) : (
         <button onClick={onPickDinner} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add dinner</button>
       )}
@@ -1023,7 +1044,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                     </div>
                   ) : (
                     <div className="scout-grid">
-                      {h.stops.map((s) => { n += 1; return <StopCard key={s.id} s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />; })}
+                      {h.stops.map((s) => { n += 1; return <StopCard key={s.id} s={s} n={n} onRemove={() => onRemoveStop(hi, s.id)} onReplace={() => { onRemoveStop(hi, s.id); setAddHub(h.hub); }} />; })}
                     </div>
                   )}
                   {addHub === h.hub ? (
@@ -1435,7 +1456,7 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
     const enriched = await Promise.all((d.hubs || []).map((h, hi) =>
       Promise.all((h.stores || []).map(async (s) => {
         const enr = await enrichPlace(s.name, h.hub, city);
-        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: false, addedByUser: false };
+        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: true, addedByUser: false };
       }))
     ));
     // The AI sometimes tags a store to the wrong neighborhood (e.g. a Brooklyn
@@ -1956,7 +1977,7 @@ export default function App() {
     return {
       dayNum: i + 1, label: src.label, lunch: null, confirmed: false,
       lunchPicks: src.lunchPicks, lunchSearch: src.lunchSearch, addCandidates: src.addCandidates,
-      itinerary: src.hubs.map((h) => ({ ...h, stops: h.stops.filter((s) => tiers.includes(s.tier)).map((s) => ({ ...s, id: slug(s.name), confirmed: false, addedByUser: false })) })),
+      itinerary: src.hubs.map((h) => ({ ...h, stops: h.stops.filter((s) => tiers.includes(s.tier)).map((s) => ({ ...s, id: slug(s.name), confirmed: true, addedByUser: false })) })),
     };
   });
   // Step 1: pre-curate a day-by-day neighborhood plan for the trip — geographically
@@ -2039,7 +2060,7 @@ export default function App() {
     const stamp = Date.now();
     const enriched = await Promise.all(stores.map(async (s, i) => {
       const enr = await enrichPlace(s.name, areaName, city);
-      return { id: `${slug(s.name)}-add-${stamp}-${i}`, name: s.name, tier: s.tier, why: s.why, hub: areaName, dwell: 16, ...enr, confirmed: false, addedByUser: false };
+      return { id: `${slug(s.name)}-add-${stamp}-${i}`, name: s.name, tier: s.tier, why: s.why, hub: areaName, dwell: 16, ...enr, confirmed: true, addedByUser: false };
     }));
     updateDay(activeDay, (d) => rescheduleItinerary({ ...d, itinerary: [...d.itinerary, { hub: areaName, stops: enriched }] }, hotelCoord, true));
     setFlash(`Added ${areaName} — ${enriched.length} stores. It's at the end; move it up to reorder.`);
@@ -2067,7 +2088,7 @@ export default function App() {
           });
         }
       }
-      const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, openAt: c.openAt, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, photos: c.photos, hub, confirmed: false, addedByUser: true };
+      const stop = { id: slug(c.name) + "-" + Date.now(), name: c.name, tier: c.tier, rating: c.rating, reviews: c.reviews, hours: c.hours, openAt: c.openAt, dwell: c.dwell || 18, address: c.address, why: c.why, lat: c.lat, lng: c.lng, photos: c.photos, hub, confirmed: true, addedByUser: true };
       return rescheduleDay({ ...d, itinerary: [{ hub, stops: [...all, stop] }] });
     });
     setFlash(`Added ${c.name}${targetHub ? ` to ${targetHub}` : ""} — route recalculated.`);
@@ -2117,6 +2138,8 @@ export default function App() {
   };
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onSelectDinner = (l) => { updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
+  const onClearLunch = () => updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: null }));
+  const onClearDinner = () => updateDay(activeDay, (d) => ({ ...d, dinner: null }));
   const onConfirmDay = () => {
     updateDay(activeDay, (d) => ({ ...d, confirmed: true }));
     if (activeDay < trip.length - 1) { setActiveDay(activeDay + 1); window.scrollTo(0, 0); }
@@ -2132,7 +2155,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;

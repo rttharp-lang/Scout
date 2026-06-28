@@ -20,13 +20,13 @@
   --text-on-invert:    #FFFFFF;
   --text-muted-invert: #A8A6A2;
 
-  /* Accent — ultramarine = primary */
-  --accent:            #1B2FFF;
-  --accent-press:      #1421C2;
+  /* Accent — electric blue = primary */
+  --accent:            #1A1AE5;
+  --accent-press:      #1414B8;
   --accent-ink:        #FFFFFF;
 
-  /* Pop — neon green = rare second accent */
-  --pop:               #3BFF6E;
+  /* Pop — bright lime green = rare second accent */
+  --pop:               #7FE800;
   --pop-ink:           #0A0A0A;
 
   /* ── 2. Typography ───────────────────────────────────────────── */
