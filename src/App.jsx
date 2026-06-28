@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
-import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Pencil, Menu, LogOut } from "lucide-react";
+import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
 const SANS = { fontFamily: "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" };
@@ -748,16 +748,50 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onMoveHub, onAddNeighborhood, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onAddNeighborhood, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set());
   const [hoodOpen, setHoodOpen] = useState(false);
+  const [drag, setDrag] = useState(null); // { from, startY, curY, g }
+  const cardEls = useRef([]);
   const day = trip[activeDay];
   const hubCount = day.itinerary.filter((h) => h.stops.length).length;
   const lastHub = day.itinerary.length - 1;
   const allCollapsed = hubCount > 0 && day.itinerary.every((h) => !h.stops.length || collapsed.has(h.hub));
   const toggleHub = (hub) => setCollapsed((p) => { const s = new Set(p); s.has(hub) ? s.delete(hub) : s.add(hub); return s; });
   const toggleAll = () => setCollapsed(() => (allCollapsed ? new Set() : new Set(day.itinerary.map((h) => h.hub))));
+
+  // Drag-to-reorder neighborhood blocks via the grip handle (pointer events =
+  // touch + mouse). `to` is the destination index in the list-without-the-dragged
+  // block — the count of OTHER cards whose midpoint is above the pointer — so it
+  // drops straight into splice. We ignore the dragged card's own (moving) rect.
+  const dragDown = (hi) => (e) => {
+    e.preventDefault();
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+    setDrag({ from: hi, startY: e.clientY, curY: e.clientY, to: hi });
+  };
+  const dragMove = (e) => {
+    setDrag((d) => {
+      if (!d) return d;
+      let to = 0;
+      day.itinerary.forEach((h, idx) => {
+        if (idx === d.from || !h.stops.length) return;
+        const el = cardEls.current[idx];
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        if (e.clientY > r.top + r.height / 2) to += 1;
+      });
+      return { ...d, curY: e.clientY, to };
+    });
+  };
+  const dragUp = () => {
+    setDrag((d) => {
+      if (d && d.to !== d.from) onReorderHub(d.from, d.to);
+      return null;
+    });
+  };
+  const insertionLine = <div style={{ height: 3, borderRadius: 2, background: ACCENT, margin: "6px 4px" }} />;
+
   let n = 0;
   const total = day.itinerary.reduce((a, h) => a + h.stops.length, 0);
   const firstHub = day.itinerary.findIndex((h) => h.stops.length > 0);
@@ -836,32 +870,38 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
       {day.itinerary.map((h, hi) => {
         if (!h.stops.length) return null;
         const isCollapsed = collapsed.has(h.hub);
+        const isDragged = drag && drag.from === hi;
         const block = (
-          <div key={hi} style={{ marginTop: 16, border: `1px solid ${LINE}`, borderRadius: 16, background: "#fff", boxShadow: CARD_SHADOW, padding: "12px 14px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <button onClick={() => toggleHub(h.hub)} aria-label={isCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 2, display: "flex" }}>
-                {isCollapsed ? <ChevronRight size={20} /> : <ChevronDown size={20} />}
-              </button>
-              <button onClick={() => toggleHub(h.hub)} style={{ ...SANS, cursor: "pointer", textAlign: "left", flex: 1, minWidth: 0, background: "none", border: "none", padding: 0 }}>
-                <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.3, color: INK }}>{h.hub}</div>
-                <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2 }}>{h.stops.length} stops · {h.time}{isCollapsed ? "" : ` · ${h.arrive}`}</div>
-              </button>
-              {hubCount > 1 && (
-                <div style={{ display: "flex", flexDirection: "column", gap: 3, marginLeft: 2 }}>
-                  <button onClick={() => onMoveHub(hi, -1)} disabled={hi === 0} aria-label="Move up" style={{ ...SANS, cursor: hi === 0 ? "default" : "pointer", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 8, width: 30, height: 26, display: "flex", alignItems: "center", justifyContent: "center", color: hi === 0 ? "#CFCFCF" : INK }}><ChevronUp size={16} /></button>
-                  <button onClick={() => onMoveHub(hi, 1)} disabled={hi === lastHub} aria-label="Move down" style={{ ...SANS, cursor: hi === lastHub ? "default" : "pointer", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 8, width: 30, height: 26, display: "flex", alignItems: "center", justifyContent: "center", color: hi === lastHub ? "#CFCFCF" : INK }}><ChevronDown size={16} /></button>
-                </div>
+          <React.Fragment key={hi}>
+            {drag && !isDragged && (hi < drag.from ? hi : hi - 1) === drag.to && insertionLine}
+            <div ref={(el) => (cardEls.current[hi] = el)} style={{ marginTop: 16, border: `1px solid ${isDragged ? ACCENT : LINE}`, borderRadius: 16, background: "#fff", boxShadow: isDragged ? "0 12px 28px rgba(0,0,0,0.18)" : CARD_SHADOW, padding: "12px 14px", transform: isDragged ? `translateY(${drag.curY - drag.startY}px) scale(1.01)` : "none", opacity: isDragged ? 0.95 : 1, position: "relative", zIndex: isDragged ? 20 : 1, transition: isDragged ? "none" : "box-shadow 0.15s" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <button onClick={() => toggleHub(h.hub)} aria-label={isCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 2, display: "flex" }}>
+                  {isCollapsed ? <ChevronRight size={20} /> : <ChevronDown size={20} />}
+                </button>
+                <button onClick={() => toggleHub(h.hub)} style={{ ...SANS, cursor: "pointer", textAlign: "left", flex: 1, minWidth: 0, background: "none", border: "none", padding: 0 }}>
+                  <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.3, color: INK }}>{h.hub}</div>
+                  <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2 }}>{h.stops.length} stops · {h.time}{isCollapsed ? "" : ` · ${h.arrive}`}</div>
+                </button>
+                {hubCount > 1 && (
+                  <button onPointerDown={dragDown(hi)} onPointerMove={dragMove} onPointerUp={dragUp} onPointerCancel={dragUp}
+                    aria-label="Drag to reorder" title="Drag to reorder"
+                    style={{ ...SANS, touchAction: "none", cursor: isDragged ? "grabbing" : "grab", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 9, width: 34, height: 40, display: "flex", alignItems: "center", justifyContent: "center", color: MUTE, marginLeft: 2 }}>
+                    <GripVertical size={18} />
+                  </button>
+                )}
+              </div>
+              {!isCollapsed && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 14 }}>{h.stops.map((s) => { n += 1; return (
+                  <React.Fragment key={s.id}>
+                    <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
+                    {s.id === day.lunchAfterId && lunchBlock}
+                  </React.Fragment>
+                ); })}</div>
               )}
             </div>
-            {!isCollapsed && (
-              <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 14 }}>{h.stops.map((s) => { n += 1; return (
-                <React.Fragment key={s.id}>
-                  <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
-                  {s.id === day.lunchAfterId && lunchBlock}
-                </React.Fragment>
-              ); })}</div>
-            )}
-          </div>
+            {drag && hi === lastHub && drag.to === lastHub && insertionLine}
+          </React.Fragment>
         );
         if (isCollapsed) n += h.stops.length; // keep numbering aligned with the map
         return block;
@@ -1719,13 +1759,13 @@ export default function App() {
     setTrip((prev) => prev.map((d) => rescheduleItinerary(d, hc, true)));
   };
 
-  // Move a whole neighborhood block up or down within the day, then recompute
-  // arrival times in that manual order (without re-optimizing block order).
-  const onMoveHub = (hi, dir) => updateDay(activeDay, (d) => {
-    const j = hi + dir;
-    if (j < 0 || j >= d.itinerary.length) return d;
+  // Drag-and-drop a whole neighborhood block from one slot to another, then
+  // recompute arrival times in that manual order (without re-optimizing it).
+  const onReorderHub = (from, to) => updateDay(activeDay, (d) => {
+    if (from === to || from < 0 || to < 0 || from >= d.itinerary.length || to >= d.itinerary.length) return d;
     const arr = [...d.itinerary];
-    [arr[hi], arr[j]] = [arr[j], arr[hi]];
+    const [moved] = arr.splice(from, 1);
+    arr.splice(to, 0, moved);
     return rescheduleItinerary({ ...d, itinerary: arr }, hotelCoord, true);
   });
 
@@ -1786,7 +1826,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onMoveHub={onMoveHub} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
