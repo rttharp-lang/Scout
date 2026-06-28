@@ -296,7 +296,7 @@ function LunchCard({ l, onSelect }) {
   );
 }
 
-function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, cityContext, onSuggest, suggestLabel }) {
+function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, cityContext, onSuggest, suggestLabel, autoSuggest }) {
   const [q, setQ] = useState("");
   const [live, setLive] = useState(null);   // null until a live search returns
   const [loading, setLoading] = useState(false);
@@ -311,6 +311,8 @@ function SearchSelect({ candidates, onPick, onClose, title, placeholder, note, c
     setSuggesting(true);
     Promise.resolve(onSuggest()).then((r) => setSuggested(r || [])).catch(() => setSuggested([])).finally(() => setSuggesting(false));
   };
+  // When opened as "Prompt more here", fetch Scout's suggestions immediately.
+  useEffect(() => { if (autoSuggest && onSuggest) promptMore(); }, []);
   const pick = (c) => { setPicked((p) => new Set(p).add(keyOf(c))); onPick(c); };
   // Reuse one row renderer for both search results and AI suggestions.
   const Row = (c, i, showWhy) => (
@@ -778,9 +780,8 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onAddNeighborhood, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
-  const [collapsed, setCollapsed] = useState(() => new Set());
   const [hoodOpen, setHoodOpen] = useState(false);
   const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
   const [drag, setDrag] = useState(null); // { from, startY, curY, to }
@@ -797,7 +798,11 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   const suboptimal = extraWalk >= 6;
   const allCollapsed = hubCount > 0 && day.itinerary.every((h) => !h.stops.length || collapsed.has(h.hub));
   const toggleHub = (hub) => setCollapsed((p) => { const s = new Set(p); s.has(hub) ? s.delete(hub) : s.add(hub); return s; });
-  const toggleAll = () => setCollapsed(() => (allCollapsed ? new Set() : new Set(day.itinerary.map((h) => h.hub))));
+  const toggleAll = () => setCollapsed((p) => {
+    const s = new Set(p);
+    day.itinerary.forEach((h) => (allCollapsed ? s.delete(h.hub) : s.add(h.hub)));
+    return s;
+  });
 
   // Drag-to-reorder neighborhood blocks via the grip handle (pointer events =
   // touch + mouse). `to` is the destination index in the list-without-the-dragged
@@ -948,12 +953,12 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                     </React.Fragment>
                   ); })}
                   {addHub === h.hub ? (
-                    <SearchSelect candidates={[]} title={`Add a store in ${h.hub}`} placeholder={`Search a store in ${h.hub}…`} cityContext={`${h.hub} ${city}`}
-                      note={<>Search by name, or have Scout suggest more. Each pick is added to {h.hub} with live rating, hours and address — confirm it with "I'm going" or remove it.</>}
-                      onSuggest={() => onSuggestStores(h.hub)} suggestLabel={`Prompt more in ${h.hub}`}
+                    <SearchSelect candidates={[]} title={`More stores in ${h.hub}`} placeholder={`Or search a store by name…`} cityContext={`${h.hub} ${city}`}
+                      note={<>Each pick is added to {h.hub} with live rating, hours and address — confirm it with "I'm going" or remove it.</>}
+                      onSuggest={() => onSuggestStores(h.hub)} suggestLabel="Prompt 5 more" autoSuggest
                       onClose={() => setAddHub(null)} onPick={(c) => onAddStop(c, h.hub)} />
                   ) : (
-                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${LINE}`, background: "#FAFAFA", color: MUTE, borderRadius: 12, padding: "12px", fontSize: 13.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}><Plus size={16} /> Add a store in {h.hub}</button>
+                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: 12, padding: "12px", fontSize: 13.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}>✨ Prompt more here</button>
                   )}
                 </div>
               )}
@@ -1668,6 +1673,8 @@ export default function App() {
   const [areaOptions, setAreaOptions] = useState([]);
   const [selectedAreas, setSelectedAreas] = useState([]);
   const [areaLoading, setAreaLoading] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
+  const allHubs = (t) => new Set((t || []).flatMap((d) => (d.itinerary || []).map((h) => h.hub)));
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -1760,6 +1767,7 @@ export default function App() {
 
   const onLoadTrip = (t, dayIndex = 0) => {
     setCity(t.city); setTiers(t.tiers || []); setTrip(t.trip || []); setCurrentTripId(t.id);
+    setCollapsed(allHubs(t.trip)); // open to the collapsed neighborhood overview
     setActiveDay(dayIndex); setLocked(false); setScreen("review"); window.scrollTo(0, 0);
   };
 
@@ -1808,7 +1816,9 @@ export default function App() {
     try {
       const live = await buildLiveTrip(city, tiers, n, hotel, selectedAreas);
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
-      setTrip(dated); setScreen("review");
+      // Land on the review page with neighborhoods collapsed — having chosen the
+      // areas, you first see your neighborhoods, then open them to see the stores.
+      setTrip(dated); setCollapsed(allHubs(dated)); setScreen("review");
     } catch {
       // Generation didn't complete — show a retry rather than a wrong-city route.
       setScreen("builderror");
@@ -1921,7 +1931,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
