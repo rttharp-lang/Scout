@@ -38,22 +38,23 @@ const TIER_ORDER = ["aspirational", "department", "competitor", "streetwear", "u
 const CURATED_TIERS = ["aspirational", "streetwear", "underground", "culture"];
 const ADDED_TIER = { label: "Your find", chip: ["#5A4FB0", "#ECEAFB"], grad: "linear-gradient(135deg,#4a4490,#8a82c8)" };
 // Nike's 12 key cities, in priority order — the hero rail on the landing page.
-// `image` is a placeholder for now; swapping in a final licensed photo is a
-// single edit per row (just change the image URL). `blurb` is a short one-liner
-// shown under the hero card for the centered city.
+// `imageUrl` is an optional per-city OVERRIDE: set it to use a hand-picked photo
+// (and skip the auto lookup); leave it "" to auto-pull a cityscape via the same
+// Places photo service the retail/restaurant cards use (biased with "skyline").
+// Drop the 12 final images in later by filling `imageUrl` — no code change.
 const CITY_RAIL = [
-  { city: "New York",    country: "USA",         blurb: "Downtown energy, global flagships, and the corner spots only locals clock.",      image: "https://picsum.photos/seed/scout-new-york/900/900" },
-  { city: "London",      country: "UK",          blurb: "Soho tailoring, East End concept stores, and market finds between the icons.",     image: "https://picsum.photos/seed/scout-london/900/900" },
-  { city: "Shanghai",    country: "China",       blurb: "Concession-era lanes, avant-garde galleries, and a fast-rising design scene.",     image: "https://picsum.photos/seed/scout-shanghai/900/900" },
-  { city: "Beijing",     country: "China",       blurb: "Hutong studios, hidden courtyards, and streetwear born in the capital's backstreets.", image: "https://picsum.photos/seed/scout-beijing/900/900" },
-  { city: "Los Angeles", country: "USA",         blurb: "Sun-bleached sprawl — Fairfax hype, Arts District concept shops, canyon-to-coast finds.", image: "https://picsum.photos/seed/scout-los-angeles/900/900" },
-  { city: "Tokyo",       country: "Japan",       blurb: "Archive grails, immaculate concept stores, and side-street shops worth the detour.", image: "https://picsum.photos/seed/scout-tokyo/900/900" },
-  { city: "Paris",       country: "France",      blurb: "Marais boutiques, Left Bank icons, and quiet ateliers behind unmarked doors.",    image: "https://picsum.photos/seed/scout-paris/900/900" },
-  { city: "Berlin",      country: "Germany",     blurb: "Raw industrial spaces, Kreuzberg labels, and a scene that rewards the curious.",   image: "https://picsum.photos/seed/scout-berlin/900/900" },
-  { city: "Mexico City", country: "Mexico",      blurb: "Roma-Condesa design, a craft revival, and color around every corner.",            image: "https://picsum.photos/seed/scout-mexico-city/900/900" },
-  { city: "Barcelona",   country: "Spain",       blurb: "Gothic-quarter workshops, Mediterranean ease, and modernist streets made for walking.", image: "https://picsum.photos/seed/scout-barcelona/900/900" },
-  { city: "Seoul",       country: "South Korea", blurb: "Hongdae youth, Hannam concept stores, and the world's sharpest street style.",     image: "https://picsum.photos/seed/scout-seoul/900/900" },
-  { city: "Milan",       country: "Italy",       blurb: "Quiet luxury, design-district showrooms, and aperitivo between the boutiques.",    image: "https://picsum.photos/seed/scout-milan/900/900" },
+  { city: "New York",    country: "USA",         imageUrl: "" },
+  { city: "London",      country: "UK",          imageUrl: "" },
+  { city: "Shanghai",    country: "China",       imageUrl: "" },
+  { city: "Beijing",     country: "China",       imageUrl: "" },
+  { city: "Los Angeles", country: "USA",         imageUrl: "" },
+  { city: "Tokyo",       country: "Japan",       imageUrl: "" },
+  { city: "Paris",       country: "France",      imageUrl: "" },
+  { city: "Berlin",      country: "Germany",     imageUrl: "" },
+  { city: "Mexico City", country: "Mexico",      imageUrl: "" },
+  { city: "Barcelona",   country: "Spain",       imageUrl: "" },
+  { city: "Seoul",       country: "South Korea", imageUrl: "" },
+  { city: "Milan",       country: "Italy",       imageUrl: "" },
 ];
 
 const mapsUrl = (name, address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ", " + address)}`;
@@ -842,24 +843,43 @@ function RangeCalendar({ start, end, onChange }) {
 }
 
 // ── Input ──────────────────────────────────────────────────────
-// Hero city card (PP-style): a large portrait photo with ALL content stacked and
-// centered ON the image — city name (big display), the one-line blurb beneath it,
-// and a white-outline "Explore <city>" button below that. A heavy dark veil keeps
-// all three legible on light photos. Tapping the card or the button → page 2.
+// Hero city card (PP-style): a square photo with two elements centered ON the
+// image — the city name (big display) and a small white-outline "Explore <city>"
+// button below it. A heavy dark veil keeps both legible on light photos. Tapping
+// the card or the button → page 2.
+//
+// Image: if `imageUrl` is set, use it directly; otherwise auto-pull a cityscape
+// via lookupPhotos("<City> skyline", …) — the same Places photo service the
+// store/restaurant cards use (cached per query). A neutral dark placeholder
+// shows while loading or if nothing resolves, so a card never renders broken.
 function CityCard({ c, onPick }) {
+  const [src, setSrc] = useState(c.imageUrl || null);
+  const [broken, setBroken] = useState(false);
+  useEffect(() => {
+    setBroken(false);
+    if (c.imageUrl) { setSrc(c.imageUrl); return; }
+    let cancel = false;
+    lookupPhotos(`${c.city} skyline`, "cityscape").then((ps) => {
+      if (cancel) return;
+      const nm = ps && ps[0];
+      setSrc(nm ? `/api/photo?name=${encodeURIComponent(nm)}&w=900` : null);
+    }).catch(() => { if (!cancel) setSrc(null); });
+    return () => { cancel = true; };
+  }, [c.city, c.imageUrl]);
+
   return (
     <div onClick={() => onPick(c.city)} className="city-rail-item" role="button" tabIndex={0} aria-label={`Plan a trip to ${c.city}`}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onPick(c.city); }}
-      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "absolute", inset: 0 }}>
-        <PhotoStrip name={c.city} photos={c.image ? [c.image] : null} srcOf={(u) => u} grad="linear-gradient(150deg,#2b2b3a,#5b6172)" fallback={<span aria-hidden />} hideDots />
-      </div>
+      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#1b1b1b", boxShadow: CARD_SHADOW }}>
+      {src && !broken
+        ? <img src={src} alt="" onError={() => setBroken(true)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        : <div style={{ position: "absolute", inset: 0, background: "linear-gradient(150deg,#1b1b1b,#3a3a3a)" }} />}
       {/* Heavy, center-weighted veil so the name + button stay legible on light photos. */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px", gap: 18 }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
-          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "9px 18px", fontSize: 13, fontWeight: 700 }}>
+          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "12px 22px", fontSize: 13, fontWeight: 400 }}>
           Explore {c.city} <ChevronRight size={15} />
         </button>
       </div>
