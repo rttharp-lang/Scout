@@ -916,25 +916,54 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   };
   const insertionLine = <div style={{ height: 3, borderRadius: 2, background: ACCENT, margin: "6px 4px" }} />;
 
-  // Connector shown between neighborhoods (and from the hotel): the estimated
-  // drive time between the two areas, in subtle italics. (Walking is only within
-  // a neighborhood; rides between specific stores happen via each store's card.)
-  const Hop = (fromCoord, toStops, label) => {
-    const to = centroidOf(toStops);
-    if (!fromCoord || !to) return null;
-    const drive = Math.round(driveMin(fromCoord, to));
-    return (
-      <div style={{ textAlign: "center", fontSize: 12.5, fontStyle: "italic", color: MUTE, margin: "14px 0 0" }}>
-        ~{drive} min drive{label ? ` to ${label}` : ""}
-      </div>
-    );
-  };
-
   let n = 0;
   const total = day.itinerary.reduce((a, h) => a + h.stops.length, 0);
   const firstHub = day.itinerary.findIndex((h) => h.stops.length > 0);
   const allConfirmed = trip.every((d) => d.confirmed);
   const isLast = activeDay === trip.length - 1;
+
+  // Phase 3 — the day as ONE ordered timeline of blocks (neighborhood | meal).
+  // Meals are siblings sitting BETWEEN neighborhoods, never nested inside one,
+  // so blocks can be reordered freely later. Lunch lands after the neighborhood
+  // you reach by ~1 PM; dinner closes the day. (3A renders meals as labeled
+  // placeholder slots; the picker UI arrives in 3B.)
+  const timeline = (() => {
+    const blocks = [];
+    let lunchPlaced = false;
+    day.itinerary.forEach((h, hi) => {
+      if (!h.stops.length) return;
+      blocks.push({ key: `hood-${hi}`, type: "neighborhood", hi, data: h });
+      if (!lunchPlaced && h.stops.some((s) => s.id === day.lunchAfterId)) {
+        blocks.push({ key: "lunch", type: "meal", meal: "lunch", at: day.lunchAt || "1:00 PM" });
+        lunchPlaced = true;
+      }
+    });
+    if (!lunchPlaced) {
+      const i = blocks.findIndex((b) => b.type === "neighborhood");
+      if (i >= 0) blocks.splice(i + 1, 0, { key: "lunch", type: "meal", meal: "lunch", at: day.lunchAt || "1:00 PM" });
+    }
+    if (blocks.some((b) => b.type === "neighborhood")) blocks.push({ key: "dinner", type: "meal", meal: "dinner", at: "Evening" });
+    return blocks;
+  })();
+
+  // A thin labeled divider marking a point on the day's clock — an arrival time
+  // for a neighborhood, or a meal slot — so the page reads top-to-bottom.
+  const TimeDivider = ({ time, label, note, accent }) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "26px 0 2px", maxWidth: 760, marginInline: "auto" }}>
+      <div style={{ flex: 1, height: 1, background: LINE }} />
+      <div style={{ display: "flex", alignItems: "baseline", gap: 7, whiteSpace: "nowrap" }}>
+        {time && <span style={{ fontSize: 12.5, fontWeight: 700, color: INK, letterSpacing: 0.2 }}>{time}</span>}
+        {label && <span style={{ fontSize: 11, fontWeight: 700, color: accent ? ACCENT : MUTE, textTransform: "uppercase", letterSpacing: 0.6 }}>{label}</span>}
+        {note && <span style={{ fontSize: 12, color: MUTE, fontStyle: "italic" }}>{note}</span>}
+      </div>
+      <div style={{ flex: 1, height: 1, background: LINE }} />
+    </div>
+  );
+  const driveNote = (fromCoord, toStops) => {
+    const to = centroidOf(toStops);
+    if (!fromCoord || !to) return null;
+    return `~${Math.round(driveMin(fromCoord, to))} min drive`;
+  };
 
   // Lunch sits in the route right where you'll be at ~1 PM (day.lunchAfterId).
   const lunchBlock = (
@@ -1006,20 +1035,32 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         </div>
       </div>
 
-      {day.itinerary.map((h, hi) => {
-        if (!h.stops.length) return null;
+      {timeline.map((b) => {
+        if (b.type === "meal") {
+          if (drag) return null; // meal slots hide during neighborhood reorder
+          const chosen = b.meal === "lunch" ? day.lunch : day.dinner;
+          return (
+            <TimeDivider key={b.key} time={b.at} accent
+              label={b.meal === "lunch" ? "Lunch" : "Dinner"}
+              note={chosen ? chosen.name : "tap to pick a spot"} />
+          );
+        }
+        const h = b.data;
+        const hi = b.hi;
         const isCollapsed = collapsed.has(h.hub);
         const isDragged = drag && drag.from === hi;
         const prevBlock = hi > 0 ? day.itinerary[hi - 1] : null;
+        const arriveClock = (h.stops.find((s) => s.eta) || {}).eta || null;
         const block = (
-          <React.Fragment key={hi}>
+          <React.Fragment key={b.key}>
             {drag && !isDragged && (hi < drag.from ? hi : hi - 1) === drag.to && insertionLine}
-            {/* How you get here: from the hotel for the first stop, or from the
-                previous neighborhood — a walk, or an Uber when far apart. */}
-            {!drag && (hi === firstHub
-              ? (hc && Hop(hc, h.stops, h.hub))
-              : (prevBlock && prevBlock.stops.length && Hop(centroidOf(prevBlock.stops), h.stops, h.hub)))}
-            <div ref={(el) => (cardEls.current[hi] = el)} style={{ marginTop: hi === firstHub ? 16 : 44, padding: isDragged ? "12px 14px" : 0, borderRadius: isDragged ? 16 : 0, background: isDragged ? "#fff" : "transparent", boxShadow: isDragged ? "0 12px 28px rgba(0,0,0,0.18)" : "none", transform: isDragged ? `translateY(${drag.curY - drag.startY}px) scale(1.01)` : "none", opacity: isDragged ? 0.97 : 1, position: "relative", zIndex: isDragged ? 20 : 1, transition: isDragged ? "none" : "box-shadow 0.15s" }}>
+            {/* When you reach this area, and how — the day's clock ticking down. */}
+            {!drag && <TimeDivider time={arriveClock}
+              label={hi === firstHub ? "Start" : null}
+              note={hi === firstHub
+                ? driveNote(hc, h.stops)
+                : driveNote(prevBlock && prevBlock.stops.length ? centroidOf(prevBlock.stops) : null, h.stops)} />}
+            <div ref={(el) => (cardEls.current[hi] = el)} style={{ marginTop: hi === firstHub ? 12 : 16, padding: isDragged ? "12px 14px" : 0, borderRadius: isDragged ? 16 : 0, background: isDragged ? "#fff" : "transparent", boxShadow: isDragged ? "0 12px 28px rgba(0,0,0,0.18)" : "none", transform: isDragged ? `translateY(${drag.curY - drag.startY}px) scale(1.01)` : "none", opacity: isDragged ? 0.97 : 1, position: "relative", zIndex: isDragged ? 20 : 1, transition: isDragged ? "none" : "box-shadow 0.15s" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <button onClick={() => toggleHub(h.hub)} style={{ ...SANS, cursor: "pointer", textAlign: "left", flex: 1, minWidth: 0, background: "none", border: "none", padding: 0 }}>
                   <div style={{ fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", color: INK }}>{h.hub}</div>
@@ -1060,8 +1101,6 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                 </div>
               )}
             </div>
-            {/* Lunch lands after the neighborhood where you'll be ~1 PM. */}
-            {!drag && h.stops.some((s) => s.id === day.lunchAfterId) && <div style={{ maxWidth: 400, marginInline: "auto", marginTop: 18 }}>{lunchBlock}</div>}
             {drag && hi === lastHub && drag.to === lastHub && insertionLine}
           </React.Fragment>
         );
@@ -1071,8 +1110,6 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
 
       <button onClick={() => setHoodOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", maxWidth: 560, marginInline: "auto", marginTop: 18, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Add a neighborhood</button>
       {hoodOpen && <AddNeighborhoodModal city={city} tiers={tiers} existing={day.itinerary.map((h) => h.hub)} onClose={() => setHoodOpen(false)} onAdd={onAddNeighborhood} />}
-
-      <div style={{ marginTop: 28, maxWidth: 400, marginInline: "auto" }}>{dinnerBlock}</div>
 
       <div style={{ marginTop: 28, paddingTop: 20, borderTop: `1px solid ${LINE}`, maxWidth: 560, marginInline: "auto" }}>
         <button onClick={onConfirmDay} style={{ ...SANS, cursor: "pointer", width: "100%", background: day.confirmed ? "#fff" : ACCENT, color: day.confirmed ? OPEN : "var(--accent-ink)", border: `1.5px solid ${day.confirmed ? OPEN : ACCENT}`, borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
