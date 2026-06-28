@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
-import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, Pencil, Menu, LogOut } from "lucide-react";
+import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, Pencil, Menu, LogOut } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
 const SANS = { fontFamily: "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" };
@@ -685,10 +685,79 @@ function DayTabs({ trip, activeDay, onSwitch }) {
   );
 }
 
+// Bottom sheet to add a whole new neighborhood to the day. Suggests districts
+// in the city (minus the ones already in the day); picking one generates and
+// adds its stores.
+function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
+  const [options, setOptions] = useState(null); // null = loading
+  const [busy, setBusy] = useState("");
+  useEffect(() => {
+    let cancelled = false;
+    suggestNeighborhoods(city, tiers).then((opts) => {
+      if (cancelled) return;
+      const taken = new Set(existing.map((e) => (e || "").toLowerCase()));
+      setOptions((opts || []).filter((o) => !taken.has(o.name.toLowerCase())));
+    }).catch(() => { if (!cancelled) setOptions([]); });
+    return () => { cancelled = true; };
+  }, []);
+
+  const pick = async (name) => {
+    setBusy(name);
+    try { await onAdd(name); onClose(); }
+    catch { setBusy(""); }
+  };
+
+  return (
+    <div onClick={busy ? undefined : onClose} style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(0,0,0,0.4)", display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ ...SANS, color: INK, width: "100%", maxWidth: 480, background: "#fff", borderRadius: "18px 18px 0 0", padding: "18px 18px 28px", maxHeight: "80vh", overflowY: "auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: -0.4 }}>Add a neighborhood</div>
+          <button onClick={onClose} disabled={!!busy} style={{ ...SANS, cursor: busy ? "default" : "pointer", background: "none", border: "none", color: MUTE, padding: 4 }}><X size={20} /></button>
+        </div>
+        <p style={{ color: MUTE, fontSize: 13.5, lineHeight: 1.45, margin: "4px 0 14px" }}>Pick another area to scout in {city}. Scout pulls in real stores there and adds them to this day.</p>
+        {options === null ? (
+          <div style={{ textAlign: "center", padding: "30px 0" }}>
+            <div style={{ width: 26, height: 26, margin: "0 auto 12px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
+            <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+            <div style={{ color: MUTE, fontSize: 13 }}>Finding more districts…</div>
+          </div>
+        ) : options.length === 0 ? (
+          <div style={{ color: MUTE, fontSize: 13.5, textAlign: "center", padding: "24px 0" }}>No more neighborhoods to suggest for {city} right now.</div>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+            {options.map((o, i) => {
+              const loading = busy === o.name;
+              return (
+                <button key={i} onClick={() => pick(o.name)} disabled={!!busy} style={{ ...SANS, textAlign: "left", cursor: busy ? "default" : "pointer", display: "flex", alignItems: "center", gap: 12, border: `1.5px solid ${loading ? ACCENT : LINE}`, background: loading ? ACCENT_SOFT : "#fff", borderRadius: 14, padding: "13px", opacity: busy && !loading ? 0.5 : 1 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 15, fontWeight: 700, color: loading ? ACCENT : INK }}>{o.name}</div>
+                    <div style={{ fontSize: 12.5, color: MUTE, lineHeight: 1.4, marginTop: 2 }}>{o.blurb}</div>
+                  </div>
+                  {loading
+                    ? <div style={{ width: 18, height: 18, flexShrink: 0, border: `2.5px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
+                    : <Plus size={18} color={ACCENT} style={{ flexShrink: 0 }} />}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onConfirmStop, onRemoveStop, onAddStop, onMoveHub, onAddNeighborhood, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => new Set());
+  const [hoodOpen, setHoodOpen] = useState(false);
   const day = trip[activeDay];
+  const hubCount = day.itinerary.filter((h) => h.stops.length).length;
+  const lastHub = day.itinerary.length - 1;
+  const allCollapsed = hubCount > 0 && day.itinerary.every((h) => !h.stops.length || collapsed.has(h.hub));
+  const toggleHub = (hub) => setCollapsed((p) => { const s = new Set(p); s.has(hub) ? s.delete(hub) : s.add(hub); return s; });
+  const toggleAll = () => setCollapsed(() => (allCollapsed ? new Set() : new Set(day.itinerary.map((h) => h.hub))));
   let n = 0;
   const total = day.itinerary.reduce((a, h) => a + h.stops.length, 0);
   const firstHub = day.itinerary.findIndex((h) => h.stops.length > 0);
@@ -755,26 +824,51 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
 
       <div style={{ marginTop: 16 }}><MiniMap stops={day.itinerary.flatMap((h) => h.stops).map((s) => ({ name: s.name, address: s.address, lat: s.lat, lng: s.lng }))} home={hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null} /></div>
 
+      {hubCount > 1 && (
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 24, marginBottom: 2 }}>
+          <div style={{ fontSize: 12, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase" }}>{hubCount} neighborhoods</div>
+          <button onClick={toggleAll} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", gap: 4, padding: 0 }}>
+            {allCollapsed ? <><ChevronDown size={15} /> Expand all</> : <><ChevronUp size={15} /> Collapse all</>}
+          </button>
+        </div>
+      )}
+
       {day.itinerary.map((h, hi) => {
         if (!h.stops.length) return null;
-        return (
-          <div key={hi}>
-            <div style={{ marginTop: 26 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                <div style={{ fontSize: 19, fontWeight: 700, letterSpacing: -0.3 }}>{h.hub}</div>
-                <div style={{ fontSize: 12.5, color: MUTE }}>{h.stops.length} stops · {h.time}</div>
-              </div>
-              <div style={{ fontSize: 12.5, color: ACCENT, marginTop: 2, marginBottom: 14, display: "flex", alignItems: "center", gap: 5 }}><Navigation size={12} /> {h.arrive}</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>{h.stops.map((s) => { n += 1; return (
+        const isCollapsed = collapsed.has(h.hub);
+        const block = (
+          <div key={hi} style={{ marginTop: 16, border: `1px solid ${LINE}`, borderRadius: 16, background: "#fff", boxShadow: CARD_SHADOW, padding: "12px 14px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <button onClick={() => toggleHub(h.hub)} aria-label={isCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 2, display: "flex" }}>
+                {isCollapsed ? <ChevronRight size={20} /> : <ChevronDown size={20} />}
+              </button>
+              <button onClick={() => toggleHub(h.hub)} style={{ ...SANS, cursor: "pointer", textAlign: "left", flex: 1, minWidth: 0, background: "none", border: "none", padding: 0 }}>
+                <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.3, color: INK }}>{h.hub}</div>
+                <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2 }}>{h.stops.length} stops · {h.time}{isCollapsed ? "" : ` · ${h.arrive}`}</div>
+              </button>
+              {hubCount > 1 && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 3, marginLeft: 2 }}>
+                  <button onClick={() => onMoveHub(hi, -1)} disabled={hi === 0} aria-label="Move up" style={{ ...SANS, cursor: hi === 0 ? "default" : "pointer", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 8, width: 30, height: 26, display: "flex", alignItems: "center", justifyContent: "center", color: hi === 0 ? "#CFCFCF" : INK }}><ChevronUp size={16} /></button>
+                  <button onClick={() => onMoveHub(hi, 1)} disabled={hi === lastHub} aria-label="Move down" style={{ ...SANS, cursor: hi === lastHub ? "default" : "pointer", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 8, width: 30, height: 26, display: "flex", alignItems: "center", justifyContent: "center", color: hi === lastHub ? "#CFCFCF" : INK }}><ChevronDown size={16} /></button>
+                </div>
+              )}
+            </div>
+            {!isCollapsed && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 14 }}>{h.stops.map((s) => { n += 1; return (
                 <React.Fragment key={s.id}>
                   <StopCard s={s} n={n} onConfirm={() => onConfirmStop(hi, s.id)} onRemove={() => onRemoveStop(hi, s.id)} />
                   {s.id === day.lunchAfterId && lunchBlock}
                 </React.Fragment>
               ); })}</div>
-            </div>
+            )}
           </div>
         );
+        if (isCollapsed) n += h.stops.length; // keep numbering aligned with the map
+        return block;
       })}
+
+      <button onClick={() => setHoodOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 16, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Add a neighborhood</button>
+      {hoodOpen && <AddNeighborhoodModal city={city} tiers={tiers} existing={day.itinerary.map((h) => h.hub)} onClose={() => setHoodOpen(false)} onAdd={onAddNeighborhood} />}
 
       <div style={{ marginTop: 26 }}>{dinnerBlock}</div>
 
@@ -985,7 +1079,7 @@ const fmtClock = (mins) => {
 // for stores to open, which naturally front-loads early-opening areas), and
 // within each block run the time-aware greedy so you don't zig-zag inside it.
 // Each stop gets a planned arrival time.
-function scheduleStops(stops, hotelCoord) {
+function scheduleStops(stops, hotelCoord, keepOrder = false) {
   const withC = stops.filter(coordOf);
   const without = stops.filter((s) => !coordOf(s));
   if (withC.length <= 1) return stops;
@@ -1032,8 +1126,10 @@ function scheduleStops(stops, hotelCoord) {
   };
 
   // Try every block order when there are only a few neighborhoods (the usual
-  // case — max three a day); fall back to first-seen order otherwise.
-  const candidates = blocks.length <= 4 ? permutations(blocks) : [blocks];
+  // case — max three a day); fall back to first-seen order otherwise. When
+  // keepOrder is set (the scout has manually arranged the neighborhoods, or
+  // we're appending one), honor the given block order instead of optimizing.
+  const candidates = (!keepOrder && blocks.length <= 4) ? permutations(blocks) : [blocks];
   let best = null;
   for (const seq of candidates) {
     const r = runSeq(seq);
@@ -1065,9 +1161,11 @@ function applyLunch(d) {
 }
 
 // Re-run the scheduler on one day's stops with a given hotel coordinate, then
-// regroup consecutive stops by neighborhood and relabel the flow.
-function rescheduleItinerary(d, hotelCoord) {
-  const ordered = scheduleStops(d.itinerary.flatMap((h) => h.stops), hotelCoord);
+// regroup consecutive stops by neighborhood and relabel the flow. keepOrder
+// preserves the current neighborhood-block order (for manual reordering / edits)
+// instead of re-optimizing which neighborhood comes first.
+function rescheduleItinerary(d, hotelCoord, keepOrder = false) {
+  const ordered = scheduleStops(d.itinerary.flatMap((h) => h.stops), hotelCoord, keepOrder);
   const itinerary = [];
   ordered.forEach((s) => {
     const last = itinerary[itinerary.length - 1];
@@ -1606,16 +1704,46 @@ export default function App() {
   };
 
   const updateDay = (i, fn) => setTrip((prev) => prev.map((d, idx) => (idx === i ? fn(d) : d)));
+  const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
-  // Re-run the scheduler on a day's remaining stops so the order, walking path,
-  // and arrival times recalibrate whenever a stop is added or removed.
-  const rescheduleDay = (d) => rescheduleItinerary(d, hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null);
+  // Re-run the scheduler on a day's remaining stops so within-neighborhood order,
+  // walking path, and arrival times recalibrate whenever a stop is added or
+  // removed — but keep the neighborhood-block order (set at build or by the scout)
+  // so editing one store doesn't reshuffle the whole day.
+  const rescheduleDay = (d) => rescheduleItinerary(d, hotelCoord, true);
 
   // Change the hotel mid-trip and recalculate every day's route around it.
   const changeHotel = (h) => {
     setHotel(h);
     const hc = h && h.lat != null ? { lat: h.lat, lng: h.lng } : null;
-    setTrip((prev) => prev.map((d) => rescheduleItinerary(d, hc)));
+    setTrip((prev) => prev.map((d) => rescheduleItinerary(d, hc, true)));
+  };
+
+  // Move a whole neighborhood block up or down within the day, then recompute
+  // arrival times in that manual order (without re-optimizing block order).
+  const onMoveHub = (hi, dir) => updateDay(activeDay, (d) => {
+    const j = hi + dir;
+    if (j < 0 || j >= d.itinerary.length) return d;
+    const arr = [...d.itinerary];
+    [arr[hi], arr[j]] = [arr[j], arr[hi]];
+    return rescheduleItinerary({ ...d, itinerary: arr }, hotelCoord, true);
+  });
+
+  // Add a whole new neighborhood to the current day: generate its stores with
+  // the AI scout, enrich them with live Google data, and append the block.
+  const onAddNeighborhood = async (areaName) => {
+    const data = await generateItinerary(city, tiers, 1, [areaName]);
+    const day0 = (data.days || [])[0];
+    const stores = (day0?.hubs || []).flatMap((h) => (h.stores || []));
+    if (!stores.length) throw new Error("no-stores");
+    const stamp = Date.now();
+    const enriched = await Promise.all(stores.map(async (s, i) => {
+      const enr = await enrichPlace(s.name, areaName, city);
+      return { id: `${slug(s.name)}-add-${stamp}-${i}`, name: s.name, tier: s.tier, why: s.why, hub: areaName, dwell: 16, ...enr, confirmed: false, addedByUser: false };
+    }));
+    updateDay(activeDay, (d) => rescheduleItinerary({ ...d, itinerary: [...d.itinerary, { hub: areaName, stops: enriched }] }, hotelCoord, true));
+    setFlash(`Added ${areaName} — ${enriched.length} stores. It's at the end; move it up to reorder.`);
+    setTimeout(() => setFlash(""), 6000);
   };
 
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
@@ -1658,7 +1786,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onMoveHub={onMoveHub} onAddNeighborhood={onAddNeighborhood} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
