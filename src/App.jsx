@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods, suggestStores } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoodPlan, suggestStores } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut } from "lucide-react";
@@ -296,6 +296,31 @@ function LunchCard({ l, onSelect }) {
         <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{l.why}</div>
         <AddressLine name={l.name} address={l.address} />
         <button onClick={() => onSelect(l)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 12, background: ACCENT, color: "#fff", border: "none", borderRadius: 11, padding: "12px", fontSize: 14.5, fontWeight: 600 }}>Select this spot</button>
+      </div>
+    </div>
+  );
+}
+
+// The chosen lunch/dinner on the review page: swipeable photos of the restaurant,
+// what it's known for, address and actions, with a Change button.
+function MealCard({ meal, onChange }) {
+  return (
+    <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW }}>
+      <div style={{ position: "relative", height: 175 }}>
+        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#7a5230,#caa46a)" fallback={<Utensils size={34} color="#fff" style={{ opacity: 0.9 }} />} />
+        {meal.cuisine && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: "#7a5230", fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{meal.cuisine}</div>}
+      </div>
+      <div style={{ padding: "13px 14px", background: ACCENT_SOFT }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 16.5, fontWeight: 700 }}>{meal.name}</div>
+            <div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{meal.cuisine}{meal.rating ? ` · ${meal.rating}★` : ""}</div>
+          </div>
+          <button onClick={onChange} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600, flexShrink: 0 }}>Change</button>
+        </div>
+        {meal.why && <div style={{ fontSize: 13, color: "#3a3a3a", lineHeight: 1.45, marginTop: 9 }}>{meal.why}</div>}
+        <AddressLine name={meal.name} address={meal.address} />
+        <SmartActionRow name={meal.name} address={meal.address} lat={meal.lat} lng={meal.lng} />
       </div>
     </div>
   );
@@ -743,8 +768,10 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
   const [busy, setBusy] = useState("");
   useEffect(() => {
     let cancelled = false;
-    suggestNeighborhoods(city, tiers).then((opts) => {
+    // Flatten a 2-day plan into a candidate list of districts to add.
+    suggestNeighborhoodPlan(city, tiers, 2).then((days) => {
       if (cancelled) return;
+      const opts = days.flatMap((d) => d.neighborhoods || []);
       const taken = new Set(existing.map((e) => (e || "").toLowerCase()));
       setOptions((opts || []).filter((o) => !taken.has(o.name.toLowerCase())));
     }).catch(() => { if (!cancelled) setOptions([]); });
@@ -880,13 +907,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         <Utensils size={17} color={ACCENT} /> Lunch <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· ~{day.lunchAt || "1:00 PM"}</span>
       </div>
       {day.lunch ? (
-        <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, background: ACCENT_SOFT, padding: "14px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-            <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.lunch.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.lunch.cuisine}{day.lunch.rating ? ` · ${day.lunch.rating}★` : ""}</div></div>
-            <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
-          </div>
-          <AddressLine name={day.lunch.name} address={day.lunch.address} /><SmartActionRow name={day.lunch.name} address={day.lunch.address} lat={day.lunch.lat} lng={day.lunch.lng} />
-        </div>
+        <MealCard meal={day.lunch} onChange={onPickLunch} />
       ) : (
         <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add lunch near here</button>
       )}
@@ -899,13 +920,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         <Utensils size={17} color={ACCENT} /> Dinner <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· evening</span>
       </div>
       {day.dinner ? (
-        <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, background: ACCENT_SOFT, padding: "14px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-            <div><div style={{ fontSize: 16, fontWeight: 700 }}>{day.dinner.name}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{day.dinner.cuisine}{day.dinner.rating ? ` · ${day.dinner.rating}★` : ""}</div></div>
-            <button onClick={onPickDinner} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Change</button>
-          </div>
-          <AddressLine name={day.dinner.name} address={day.dinner.address} /><SmartActionRow name={day.dinner.name} address={day.dinner.address} lat={day.dinner.lat} lng={day.dinner.lng} />
-        </div>
+        <MealCard meal={day.dinner} onChange={onPickDinner} />
       ) : (
         <button onClick={onPickDinner} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add dinner</button>
       )}
@@ -1346,8 +1361,8 @@ function rescheduleItinerary(d, hotelCoord, keepOrder = false) {
 
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
-async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
-  const data = await generateItinerary(city, tiers, dayCount, areas);
+async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
+  const data = await generateItinerary(city, tiers, dayCount, plan);
   const days = (data.days || []).slice(0, dayCount);
   if (!days.length) throw new Error("empty-itinerary");
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
@@ -1460,92 +1475,80 @@ function NeighborhoodMap({ options, city, hotel, activeIndex }) {
   );
 }
 
-// Between the input screen and the build, the scout chooses which neighborhoods
-// to focus on — each with a one-line description of what it's known for, a swipe
-// of real storefront photos from stores there (to read the retail at a glance:
-// big-box vs micro-retail), and a live position on the overview map — the way
-// you'd actually plan a trip. The chosen areas then guide store generation.
-function NeighborhoodsScreen({ city, hotel, options, loading, selected, onToggle, onBack, onBuild }) {
-  const [active, setActive] = useState(0);
-  const cardRefs = useRef([]);
+// One neighborhood in the curated plan: swipeable storefront photos, what it's
+// known for, and a line on why an apparel team would benefit. Pre-selected;
+// tap to deselect.
+function HoodCard({ o, n, city, on, onToggle }) {
+  return (
+    <div style={{ border: `1.5px solid ${on ? ACCENT : LINE}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW }}>
+      <div style={{ position: "relative", height: 170 }}>
+        <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
+        <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
+        {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> In plan</div>}
+      </div>
+      <button onClick={onToggle} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "14px" }}>
+        <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 2, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
+        <div style={{ minWidth: 0 }}>
+          <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: -0.3, color: on ? ACCENT : INK }}>{o.name}</div>
+          <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 3 }}>{o.blurb}</div>
+          {o.apparelWhy && (
+            <div style={{ fontSize: 12.5, color: "#3a3a3a", lineHeight: 1.45, marginTop: 8, paddingTop: 8, borderTop: `1px solid ${on ? "#EAD3D5" : LINE}` }}>
+              <span style={{ color: ACCENT, fontWeight: 700 }}>For the team</span> · {o.apparelWhy}
+            </div>
+          )}
+        </div>
+      </button>
+    </div>
+  );
+}
 
-  // As the list scrolls, mark whichever neighborhood card sits just under the
-  // sticky map as "active" so the map can emphasise its pin.
-  useEffect(() => {
-    if (!options.length) return;
-    const io = new IntersectionObserver((entries) => {
-      const visible = entries.filter((e) => e.isIntersecting);
-      if (!visible.length) return;
-      visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-      const i = Number(visible[0].target.dataset.idx);
-      if (!Number.isNaN(i)) setActive(i);
-    }, { rootMargin: "-185px 0px -55% 0px", threshold: 0 });
-    cardRefs.current.forEach((el) => el && io.observe(el));
-    return () => io.disconnect();
-  }, [options.length]);
+// The pre-curated, day-by-day neighborhood plan. Each day is a geographically
+// grouped set of districts in optimal order; everything is pre-selected, and the
+// scout can deselect any before building the full itinerary.
+function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggle, onBack, onBuild }) {
+  const totalSelected = planDays.reduce((a, d) => a + (d.neighborhoods || []).filter((h) => selected.has(h.name)).length, 0);
 
   return (
     <div style={{ ...SANS, color: INK }}>
       <button onClick={onBack} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, fontSize: 14, padding: 0, marginBottom: 14, display: "flex", alignItems: "center", gap: 4 }}>
         <ChevronLeft size={16} /> Edit trip
       </button>
-      <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.6 }}>Where in {city || "the city"}?</div>
+      <div style={{ fontSize: 23, fontWeight: 800, letterSpacing: -0.6 }}>Your {city || "city"} plan</div>
       <p style={{ color: MUTE, fontSize: 14, marginTop: 6, lineHeight: 1.5 }}>
-        Pick the neighborhoods you want to scout. Swipe each card to see the retail, scroll to place it on the map, then choose — we'll find the stores only in the areas you pick.
+        Scout's curated route through {city || "the city"}'s most design-led districts — grouped by day in the optimal order so you see as much of the city as possible. Swipe each, read why it matters for an apparel team, and deselect anything you'd skip.
       </p>
 
       {loading ? (
         <div style={{ textAlign: "center", padding: "60px 0" }}>
           <div style={{ width: 28, height: 28, margin: "0 auto 16px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
           <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
-          <div style={{ color: MUTE, fontSize: 14 }}>Finding the districts worth your time…</div>
+          <div style={{ color: MUTE, fontSize: 14 }}>Curating your {city || "city"} plan…</div>
         </div>
-      ) : options.length === 0 ? (
+      ) : planDays.length === 0 ? (
         <div style={{ textAlign: "center", padding: "40px 0" }}>
           <p style={{ color: MUTE, fontSize: 14, lineHeight: 1.5, maxWidth: 320, marginInline: "auto" }}>
-            Couldn't pull neighborhoods for {city || "this city"} just now — we'll let the scout choose the best areas for you.
+            Couldn't curate a plan for {city || "this city"} just now — we'll let Scout choose the best areas as it builds.
           </p>
-          <button onClick={onBuild} style={{ ...SANS, cursor: "pointer", marginTop: 20, background: ACCENT, color: "#fff", border: "none", borderRadius: 12, padding: "13px 26px", fontSize: 15, fontWeight: 600 }}>Build my route</button>
+          <button onClick={onBuild} style={{ ...SANS, cursor: "pointer", marginTop: 20, background: ACCENT, color: "#fff", border: "none", borderRadius: 12, padding: "13px 26px", fontSize: 15, fontWeight: 600 }}>Build my itinerary</button>
         </div>
       ) : (
         <>
-          {/* Sticky overview map: stays visible while you scroll the list, and
-              highlights the neighborhood you're currently looking at. */}
-          <div style={{ position: "sticky", top: 0, zIndex: 5, background: "#fff", paddingTop: 14, paddingBottom: 12, marginTop: 4 }}>
-            <NeighborhoodMap options={options} city={city} hotel={hotel} activeIndex={active} />
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {options.map((o, i) => {
-              const on = selected.includes(o.name);
-              const isActive = i === active;
-              return (
-                <div key={i} ref={(el) => (cardRefs.current[i] = el)} data-idx={i}
-                  style={{ border: `1.5px solid ${on ? ACCENT : (isActive ? "#d9b8ba" : LINE)}`, borderRadius: 16, overflow: "hidden", background: on ? ACCENT_SOFT : "#fff", boxShadow: CARD_SHADOW, scrollMarginTop: 180 }}>
-                  {/* The widest, most establishing photo from each store in the
-                      neighborhood, so you read the retail at a glance — big-box
-                      strip vs micro-retail — rather than one tight shopfront. */}
-                  <div style={{ position: "relative", height: 168 }}>
-                    <PhotoStrip name={o.name}
-                      loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)}
-                      grad={`linear-gradient(135deg, ${ACCENT_SOFT}, #f2f2f2)`} />
-                    <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 12, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{AREA_LABELS[i]}</div>
-                    {on && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: ACCENT, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Selected</div>}
-                  </div>
-                  <button onClick={() => onToggle(o.name)} style={{ ...SANS, textAlign: "left", cursor: "pointer", width: "100%", display: "flex", alignItems: "flex-start", gap: 12, border: "none", background: "transparent", padding: "14px" }}>
-                    <div style={{ width: 22, height: 22, borderRadius: 7, flexShrink: 0, marginTop: 1, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={14} />}</div>
-                    <div>
-                      <div style={{ fontSize: 15.5, fontWeight: 700, letterSpacing: -0.3, color: on ? ACCENT : INK }}>{o.name}</div>
-                      <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 2 }}>{o.blurb}</div>
-                    </div>
-                  </button>
+          {planDays.map((day, di) => {
+            const hoods = day.neighborhoods || [];
+            return (
+              <div key={di} style={{ marginTop: 26 }}>
+                <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: -0.4 }}>Day {di + 1}</div>
+                <div style={{ fontSize: 12.5, color: MUTE, marginTop: 2, marginBottom: 14 }}>{hoods.map((h) => h.name).join(" → ")}</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                  {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} />)}
                 </div>
-              );
-            })}
-          </div>
-          <button onClick={onBuild} disabled={selected.length === 0} style={{ ...SANS, cursor: selected.length ? "pointer" : "default", marginTop: 22, width: "100%", background: selected.length ? ACCENT : LINE, color: selected.length ? "#fff" : MUTE, border: "none", borderRadius: 14, padding: "15px", fontSize: 16, fontWeight: 700 }}>
-            {selected.length ? `Build route · ${selected.length} neighborhood${selected.length > 1 ? "s" : ""}` : "Pick at least one neighborhood"}
+              </div>
+            );
+          })}
+          <button onClick={onBuild} disabled={totalSelected === 0} style={{ ...SANS, cursor: totalSelected ? "pointer" : "default", marginTop: 26, width: "100%", background: totalSelected ? ACCENT : LINE, color: totalSelected ? "#fff" : MUTE, border: "none", borderRadius: 14, padding: "16px", fontSize: 16, fontWeight: 700 }}>
+            {totalSelected ? `Build itinerary · ${totalSelected} neighborhood${totalSelected > 1 ? "s" : ""}` : "Select at least one neighborhood"}
           </button>
+          <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 10, lineHeight: 1.5 }}>Scout fills each neighborhood with the best stores, plus a curated lunch and dinner.</div>
         </>
       )}
     </div>
@@ -1738,8 +1741,8 @@ export default function App() {
   const [saving, setSaving] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTripId, setCurrentTripId] = useState(null);
-  const [areaOptions, setAreaOptions] = useState([]);
-  const [selectedAreas, setSelectedAreas] = useState([]);
+  const [planDays, setPlanDays] = useState([]); // pre-curated day-by-day neighborhood plan
+  const [selectedHoods, setSelectedHoods] = useState(() => new Set()); // chosen neighborhood names
   const [areaLoading, setAreaLoading] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
   const hydrated = useRef(false);
@@ -1854,37 +1857,42 @@ export default function App() {
       itinerary: src.hubs.map((h) => ({ ...h, stops: h.stops.filter((s) => tiers.includes(s.tier)).map((s) => ({ ...s, id: slug(s.name), confirmed: false, addedByUser: false })) })),
     };
   });
-  // Step 1: from the input screen, suggest real neighborhoods for the city so
-  // the scout can choose which to spend the trip in. The chosen areas then guide
-  // store generation — the way you'd actually plan a trip.
+  // Step 1: pre-curate a day-by-day neighborhood plan for the trip — geographically
+  // grouped, optimal order, the design-led districts — and show it for review.
+  // Everything is pre-selected; the scout can deselect before building.
   const startNeighborhoods = async () => {
+    const n = Math.max(1, dayCount);
+    const useTiers = tiers.length ? tiers : CURATED_TIERS;
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
-    setSelectedAreas([]); setAreaOptions([]); setAreaLoading(true);
+    setPlanDays([]); setSelectedHoods(new Set()); setAreaLoading(true);
     setScreen("neighborhoods");
     try {
-      const opts = await suggestNeighborhoods(city, tiers);
-      setAreaOptions(opts);
+      const days = await suggestNeighborhoodPlan(city, useTiers, n);
+      setPlanDays(days);
+      setSelectedHoods(new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name))));
     } catch {
-      setAreaOptions([]);
+      setPlanDays([]);
     } finally {
       setAreaLoading(false);
     }
   };
 
-  const toggleArea = (name) =>
-    setSelectedAreas((p) => (p.includes(name) ? p.filter((x) => x !== name) : [...p, name]));
+  const toggleHood = (name) =>
+    setSelectedHoods((p) => { const s = new Set(p); s.has(name) ? s.delete(name) : s.add(name); return s; });
 
-  // Build the curated itinerary straight from city + hotel + dates. The AI picks
-  // the best neighborhoods and stores (default curation, or the chosen filters);
-  // no upfront neighborhood-selection step. Land on the review page with the
-  // neighborhoods expanded so you see the best of everything in optimal order.
+  // Step 2: build the full itinerary from the chosen day-by-day neighborhood
+  // plan. The AI fills the best stores into exactly those neighborhoods per day.
   const build = async () => {
     const n = Math.max(1, dayCount);
     const useTiers = tiers.length ? tiers : CURATED_TIERS;
+    // Per-day list of selected neighborhood names; drop empty days.
+    const plan = planDays
+      .map((d) => (d.neighborhoods || []).filter((h) => selectedHoods.has(h.name)).map((h) => h.name))
+      .filter((day) => day.length);
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, useTiers, n, hotel, []);
+      const live = await buildLiveTrip(city, useTiers, n, hotel, plan.length ? plan : null);
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
       setTrip(dated); setCollapsed(new Set()); setScreen("review");
     } catch {
@@ -1995,8 +2003,8 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
-        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
+        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}

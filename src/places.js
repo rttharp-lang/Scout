@@ -28,17 +28,17 @@ export async function searchCities(query) {
   }
 }
 
-// Ask the scout endpoint for real neighborhoods in a city, tailored to the
-// selected tiers, each with a blurb on what it's known for. The user picks
-// which to visit before the itinerary is built. Returns an array of
-// { name, blurb }; callers treat an empty array as "skip neighborhood choice".
-export async function suggestNeighborhoods(city, tiers) {
-  const params = new URLSearchParams({ city, tiers: tiers.join(",") });
+// Ask the scout for a pre-curated, day-by-day neighborhood plan: each day a set
+// of geographically-clustered districts (3+), with what each is known for and
+// why an apparel team would benefit. Returns an array of days, each
+// { neighborhoods: [{ name, blurb, apparelWhy }] }; empty on error.
+export async function suggestNeighborhoodPlan(city, tiers, days) {
+  const params = new URLSearchParams({ city, tiers: tiers.join(","), days: String(days) });
   try {
     const r = await fetch(`/api/neighborhoods?${params.toString()}`);
     if (!r.ok) return [];
     const data = await r.json();
-    return Array.isArray(data.neighborhoods) ? data.neighborhoods : [];
+    return Array.isArray(data.days) ? data.days : [];
   } catch {
     return [];
   }
@@ -63,10 +63,11 @@ export async function suggestStores(city, tiers, area, exclude = []) {
 // Ask the AI scout endpoint for a city-specific itinerary (neighborhoods +
 // real stores + tiers + why). Returns { days: [...] }; callers fall back to
 // the curated sample on error or when AI generation isn't configured.
-// `areas` (optional) constrains the route to chosen neighborhoods.
-export async function generateItinerary(city, tiers, days, areas = []) {
+// `plan` (optional): a per-day array of neighborhood-name arrays — fills stores
+// into exactly those neighborhoods, per day, in that order.
+export async function generateItinerary(city, tiers, days, plan = null) {
   const params = new URLSearchParams({ city, tiers: tiers.join(","), days: String(days) });
-  if (areas.length) params.set("areas", areas.join(","));
+  if (plan && plan.length) params.set("plan", JSON.stringify(plan));
   const r = await fetch(`/api/itinerary?${params.toString()}`);
   if (!r.ok) throw new Error(`itinerary ${r.status}`);
   return r.json();
