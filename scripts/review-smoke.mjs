@@ -31,7 +31,9 @@ async function main() {
     await page.goto(URL, { waitUntil: "load", timeout: 20000 });
     await wait(2000);
     const txt = (await page.textContent("#root")) || "";
-    const ok = errors.length === 0 && /SoHo|Nolita|Store A|Day 1/i.test(txt);
+    // Require a neighborhood AND a meal-rail option to render, so the timeline
+    // + MealSlot path is genuinely exercised (not just the page chrome).
+    const ok = errors.length === 0 && /SoHo|Nolita|Store A/i.test(txt) && /Pick A|Pick B/i.test(txt);
     if (!ok) {
       console.error("✗ Review smoke FAILED");
       if (errors.length) console.error("Errors:\n  " + errors.join("\n  "));

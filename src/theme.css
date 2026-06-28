@@ -89,3 +89,22 @@ body {
 }
 @media (min-width: 640px)  { .scout-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .scout-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Meal slot rail (Phase 3B): horizontal scroll-snap row of restaurant option
+   cards. One card fills the width with a ~12% sliver of the next peeking at the
+   right edge — the affordance that more options exist. (Arrow controls land in
+   3C; this is plain scroll-snap.) */
+.meal-rail {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.meal-rail::-webkit-scrollbar { display: none; }
+.meal-rail-item {
+  flex: 0 0 86%;
+  scroll-snap-align: center;
+}

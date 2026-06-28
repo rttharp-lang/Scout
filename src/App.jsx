@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
-import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List } from "lucide-react";
+import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List, Footprints } from "lucide-react";
 
 // ── Tokens ─────────────────────────────────────────────────────
 // Design tokens mirror the CSS custom properties in theme.css (the source of
@@ -320,7 +320,7 @@ function StopCard({ s, n, onRemove, onReplace }) {
 // Shared full-image overlay frame for restaurant cards (matches the store card):
 // photo fills the card, name large in white over the centre, cuisine·price + why
 // beneath, rating top-right, quiet icon actions over the bottom.
-function MealImageCard({ meal, actions, onClick, corner }) {
+function MealImageCard({ meal, actions, onClick, corner, badge }) {
   const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null, meal.rating != null ? `${meal.rating}★` : null].filter(Boolean).join(" · ");
   return (
     <div onClick={onClick} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW, cursor: onClick ? "pointer" : "default" }}>
@@ -328,6 +328,7 @@ function MealImageCard({ meal, actions, onClick, corner }) {
         <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
+      {badge && <div style={{ position: "absolute", top: 13, left: 13, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>{badge}</div>}
       {corner}
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{meal.name}</div>
@@ -349,16 +350,64 @@ function LunchCard({ l, onSelect }) {
   );
 }
 
-// The chosen lunch/dinner on the review page — green "going" check (Remove /
-// Replace / Keep) top-right, Uber + Directions at the bottom.
-function MealCard({ meal, onReplace, onRemove }) {
+// Phase 3B — a meal slot in the day timeline: a header (time · Lunch/Dinner) over
+// a horizontal rail of restaurant OPTION cards. One card fills the width with a
+// sliver of the next peeking at the right edge. Options are sorted by walking
+// distance to the neighborhoods immediately before/after the meal, each tagged
+// with a "~N min walk from <hub>" label. Tap a card to make it the going spot
+// (green --pop check); tap the check on the chosen card to clear it.
+function MealSlot({ at, meal, picks, chosen, prevHub, prevCoord, nextHub, nextCoord, onChoose, onClear, onMore }) {
+  const label = meal === "lunch" ? "Lunch" : "Dinner";
+  // Walk-distance ordering. Real coordinates drive this today; if a pick has no
+  // location we sink it to the end. (Swap travelMin for a live matrix later.)
+  const anchors = [[prevCoord, prevHub], [nextCoord, nextHub]].filter(([c]) => c);
+  const ranked = (picks || []).map((p) => {
+    const c = (p.lat != null && p.lng != null) ? { lat: p.lat, lng: p.lng } : null;
+    let walk = null, hub = prevHub || nextHub || "";
+    if (c) anchors.forEach(([coord, h]) => { const m = Math.round(travelMin(c, coord)); if (walk == null || m < walk) { walk = m; hub = h; } });
+    return { ...p, _walk: walk, _hub: hub };
+  }).sort((a, b) => (a._walk ?? 999) - (b._walk ?? 999));
+
   return (
-    <MealImageCard meal={meal}
-      corner={<GoingControl name={meal.name} onRemove={onRemove} onReplace={onReplace} />}
-      actions={<>
-        <a href={uberUrl(meal.name, meal.address, meal.lat, meal.lng)} target="_blank" rel="noreferrer" aria-label="Uber here" title="Uber here" style={{ ...mealIconBtn, width: 36 }}><Car size={16} /></a>
-        <a href={mapsUrl(meal.name, meal.address)} target="_blank" rel="noreferrer" aria-label="Directions" title="Directions" style={{ ...mealIconBtn, width: 36 }}><Navigation size={16} /></a>
-      </>} />
+    <div style={{ maxWidth: 440, marginInline: "auto", marginTop: 10 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, paddingInline: 4 }}>
+        <Utensils size={16} color={ACCENT} />
+        <span style={{ fontSize: 13, fontWeight: 700, color: INK }}>{at}</span>
+        <span style={{ fontSize: 11, fontWeight: 700, color: ACCENT, textTransform: "uppercase", letterSpacing: 0.6 }}>{label}</span>
+      </div>
+      {ranked.length ? (
+        <div className="meal-rail">
+          {ranked.map((p) => {
+            const isChosen = chosen && chosen.name === p.name;
+            const walkBadge = p._walk != null ? <><Footprints size={12} /> {p._walk} min{p._hub ? ` from ${p._hub}` : ""}</> : null;
+            const check = (
+              <button onClick={(e) => { e.stopPropagation(); if (isChosen) onClear(); else onChoose(p); }}
+                aria-label={isChosen ? "Going — tap to clear" : "Choose this spot"} title={isChosen ? "Going" : "Choose"}
+                style={{ position: "absolute", top: 12, right: 12, zIndex: 6, width: 30, height: 30, borderRadius: 999, cursor: "pointer",
+                  background: isChosen ? NEON : "rgba(15,15,15,0.45)", color: isChosen ? "#0A0A0A" : "#fff",
+                  border: isChosen ? "none" : "2px solid rgba(255,255,255,0.8)", backdropFilter: "blur(3px)",
+                  display: "flex", alignItems: "center", justifyContent: "center", boxShadow: isChosen ? "0 2px 10px rgba(0,0,0,0.4)" : "none" }}>
+                <Check size={16} strokeWidth={3} />
+              </button>
+            );
+            return (
+              <div className="meal-rail-item" key={p.name}>
+                <MealImageCard meal={p} onClick={() => (isChosen ? onClear() : onChoose(p))} corner={check} badge={walkBadge}
+                  actions={isChosen ? <>
+                    <a href={uberUrl(p.name, p.address, p.lat, p.lng)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Uber here" title="Uber here" style={{ ...mealIconBtn, width: 36 }}><Car size={16} /></a>
+                    <a href={mapsUrl(p.name, p.address)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Directions" title="Directions" style={{ ...mealIconBtn, width: 36 }}><Navigation size={16} /></a>
+                  </> : <span style={{ ...mealIconBtn, padding: "0 16px", gap: 6, fontSize: 13, fontWeight: 700 }}><Check size={14} /> Choose</span>} />
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <button onClick={onMore} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add {label.toLowerCase()} near here</button>
+      )}
+      {ranked.length > 0 && onMore && (
+        <button onClick={onMore} style={{ ...SANS, cursor: "pointer", display: "block", marginInline: "auto", marginTop: 10, background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Search more spots →</button>
+      )}
+    </div>
   );
 }
 
@@ -861,7 +910,7 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onChooseLunch, onChooseDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [hoodOpen, setHoodOpen] = useState(false);
   const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
@@ -925,8 +974,8 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   // Phase 3 — the day as ONE ordered timeline of blocks (neighborhood | meal).
   // Meals are siblings sitting BETWEEN neighborhoods, never nested inside one,
   // so blocks can be reordered freely later. Lunch lands after the neighborhood
-  // you reach by ~1 PM; dinner closes the day. (3A renders meals as labeled
-  // placeholder slots; the picker UI arrives in 3B.)
+  // you reach by ~1 PM; dinner closes the day. Each meal renders as a MealSlot
+  // (a rail of restaurant options ranked by walking distance — see 3B).
   const timeline = (() => {
     const blocks = [];
     let lunchPlaced = false;
@@ -943,6 +992,15 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
       if (i >= 0) blocks.splice(i + 1, 0, { key: "lunch", type: "meal", meal: "lunch", at: day.lunchAt || "1:00 PM" });
     }
     if (blocks.some((b) => b.type === "neighborhood")) blocks.push({ key: "dinner", type: "meal", meal: "dinner", at: "Evening" });
+    // Tag each meal with the neighborhoods immediately before/after it, so its
+    // options can be ranked by walking distance to where you actually are.
+    blocks.forEach((b, i) => {
+      if (b.type !== "meal") return;
+      const prev = [...blocks.slice(0, i)].reverse().find((x) => x.type === "neighborhood");
+      const next = blocks.slice(i + 1).find((x) => x.type === "neighborhood");
+      if (prev) { b.prevHub = prev.data.hub; b.prevCoord = centroidOf(prev.data.stops); }
+      if (next) { b.nextHub = next.data.hub; b.nextCoord = centroidOf(next.data.stops); }
+    });
     return blocks;
   })();
 
@@ -964,33 +1022,6 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
     if (!fromCoord || !to) return null;
     return `~${Math.round(driveMin(fromCoord, to))} min drive`;
   };
-
-  // Lunch sits in the route right where you'll be at ~1 PM (day.lunchAfterId).
-  const lunchBlock = (
-    <div>
-      <div style={{ fontSize: 16, fontWeight: 700, display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-        <Utensils size={17} color={ACCENT} /> Lunch <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· ~{day.lunchAt || "1:00 PM"}</span>
-      </div>
-      {day.lunch ? (
-        <MealCard meal={day.lunch} onReplace={onPickLunch} onRemove={onClearLunch} />
-      ) : (
-        <button onClick={onPickLunch} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add lunch near here</button>
-      )}
-    </div>
-  );
-
-  const dinnerBlock = (
-    <div>
-      <div style={{ fontSize: 16, fontWeight: 700, display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-        <Utensils size={17} color={ACCENT} /> Dinner <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>· evening</span>
-      </div>
-      {day.dinner ? (
-        <MealCard meal={day.dinner} onReplace={onPickDinner} onRemove={onClearDinner} />
-      ) : (
-        <button onClick={onPickDinner} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add dinner</button>
-      )}
-    </div>
-  );
 
   return (
     <div style={{ ...SANS, color: INK, maxWidth: 980, marginInline: "auto" }}>
@@ -1038,11 +1069,17 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
       {timeline.map((b) => {
         if (b.type === "meal") {
           if (drag) return null; // meal slots hide during neighborhood reorder
-          const chosen = b.meal === "lunch" ? day.lunch : day.dinner;
+          const isLunch = b.meal === "lunch";
           return (
-            <TimeDivider key={b.key} time={b.at} accent
-              label={b.meal === "lunch" ? "Lunch" : "Dinner"}
-              note={chosen ? chosen.name : "tap to pick a spot"} />
+            <div key={b.key} style={{ marginTop: 22 }}>
+              <MealSlot at={b.at} meal={b.meal}
+                picks={isLunch ? day.lunchPicks : day.dinnerPicks}
+                chosen={isLunch ? day.lunch : day.dinner}
+                prevHub={b.prevHub} prevCoord={b.prevCoord} nextHub={b.nextHub} nextCoord={b.nextCoord}
+                onChoose={isLunch ? onChooseLunch : onChooseDinner}
+                onClear={isLunch ? onClearLunch : onClearDinner}
+                onMore={isLunch ? onPickLunch : onPickDinner} />
+            </div>
           );
         }
         const h = b.data;
@@ -2175,6 +2212,10 @@ export default function App() {
   };
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onSelectDinner = (l) => { updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
+  // Inline choices from the timeline meal rail — same as above but stay on the
+  // review screen (no navigation to the full picker).
+  const onChooseLunch = (l) => updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } }));
+  const onChooseDinner = (l) => updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } }));
   const onClearLunch = () => updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: null }));
   const onClearDinner = () => updateDay(activeDay, (d) => ({ ...d, dinner: null }));
   const onConfirmDay = () => {
@@ -2192,7 +2233,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
