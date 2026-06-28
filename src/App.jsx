@@ -6,12 +6,13 @@ import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigatio
 
 // ── Tokens ─────────────────────────────────────────────────────
 const SANS = { fontFamily: "'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" };
-const INK = "#222222";
+const INK = "#1A1A1A";
 const MUTE = "#717171";
 const LINE = "#EBEBEB";
-const ACCENT = "#E1565C";
-const ACCENT_SOFT = "#FDEEEF";
-const OPEN = "#1A8A52";
+const ACCENT = "#2D33EB";       // ultramarine blue — primary accent
+const ACCENT_SOFT = "#ECEEFD";  // light ultramarine tint
+const NEON = "#39FF14";         // neon green — positive "pop" accents
+const OPEN = "#178A3C";         // readable green for open/positive text
 const DANGER = "#C0392B";
 const CARD_SHADOW = "0 6px 18px rgba(0,0,0,0.07)";
 
@@ -253,7 +254,7 @@ function StopCard({ s, n, onConfirm, onRemove }) {
         <div style={{ position: "absolute", top: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{n}</div>
         <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: t.chip[1], color: t.chip[0], fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{t.label}</div>
         {s.addedByUser && <div style={{ position: "absolute", bottom: 10, left: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: ADDED_TIER.chip[0], fontSize: 10.5, fontWeight: 700, borderRadius: 999, padding: "4px 9px" }}>Your find</div>}
-        {s.confirmed && <div style={{ position: "absolute", bottom: 10, right: 10, pointerEvents: "none", background: OPEN, color: "#fff", fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Going</div>}
+        {s.confirmed && <div style={{ position: "absolute", bottom: 10, right: 10, pointerEvents: "none", background: NEON, color: INK, fontSize: 11, fontWeight: 700, borderRadius: 999, padding: "4px 10px", display: "flex", alignItems: "center", gap: 4 }}><Check size={12} /> Going</div>}
       </div>
       <div style={{ padding: "12px 14px 12px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
@@ -546,7 +547,7 @@ function MiniMap({ stops, home }) {
           return <div key={i} style={{ ...dot, ...pos, width: 22, height: 22, background: ACCENT, color: "#fff", fontSize: 11 }}>{i + 1}</div>;
         })}
         {view && loaded && home && home.lat != null && (
-          <div style={{ ...dot, ...at(home), width: 24, height: 24, background: "#1A8A52", color: "#fff", fontSize: 12 }}>H</div>
+          <div style={{ ...dot, ...at(home), width: 24, height: 24, background: NEON, color: INK, fontSize: 12 }}>H</div>
         )}
         <div style={{ position: "absolute", bottom: 10, right: 10, background: "rgba(255,255,255,0.94)", color: INK, fontSize: 12, fontWeight: 600, borderRadius: 999, padding: "6px 12px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
           <Navigation size={12} color={ACCENT} /> Open route in Maps
@@ -1507,7 +1508,7 @@ function NeighborhoodMap({ options, city, hotel, activeIndex }) {
         style={{ width: "100%", height: 150, objectFit: "cover", display: "block", background: "#eef1f0" }} />
       {homeStr && (
         <div style={{ position: "absolute", bottom: 8, left: 8, pointerEvents: "none", background: "rgba(255,255,255,0.94)", color: INK, fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 9px", display: "flex", alignItems: "center", gap: 5, boxShadow: CARD_SHADOW }}>
-          <span style={{ width: 9, height: 9, borderRadius: "50%", background: "#1A8A52" }} /> Your hotel
+          <span style={{ width: 10, height: 10, borderRadius: "50%", background: NEON, border: `1px solid ${INK}` }} /> Your hotel
         </div>
       )}
     </div>
@@ -1598,7 +1599,7 @@ function BuildingScreen({ city }) {
   return (
     <div style={{ ...SANS, color: INK, textAlign: "center", padding: "80px 0" }}>
       <div style={{ display: "inline-flex", alignItems: "center", gap: 8, justifyContent: "center" }}>
-        <span style={{ fontSize: 22, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
+        <span style={{ fontSize: 23, fontWeight: 800, letterSpacing: -0.5, color: ACCENT, textTransform: "uppercase" }}>Scout</span>
         <svg viewBox="0 0 413.62 144.78" width="31" height="11" aria-hidden="true" style={{ display: "block" }}>
           <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
         </svg>
@@ -1635,8 +1636,8 @@ function GoogleG() {
 
 function Logo({ size = 22 }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-      <span style={{ fontSize: size, fontWeight: 700, letterSpacing: -0.5, color: ACCENT }}>Scout</span>
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <span style={{ fontSize: size * 1.04, fontWeight: 800, letterSpacing: -0.5, color: ACCENT, textTransform: "uppercase" }}>Scout</span>
       <svg viewBox="0 0 413.62 144.78" width={size * 1.4} height={size * 0.5} aria-hidden="true" style={{ display: "block" }}>
         <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
       </svg>
