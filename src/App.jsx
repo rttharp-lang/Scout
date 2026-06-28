@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List, Footprints } from "lucide-react";
@@ -843,22 +843,29 @@ function RangeCalendar({ start, end, onChange }) {
 
 // ── Input ──────────────────────────────────────────────────────
 // Square hero city card: full-bleed photo, city name centered (both axes) in the
-// big display size with a radial scrim so it stays legible on light photos.
-// Tapping it selects that city and moves to page 2.
+// big display size with a radial scrim so it stays legible on light photos, and
+// a primary "Explore <city>" button sitting on the image in its lower third.
+// Tapping the card or the button does the same thing — go to page 2 for it.
 function CityCard({ c, onPick }) {
   return (
-    <button onClick={() => onPick(c.city)} className="city-rail-item" aria-label={`Plan a trip to ${c.city}`}
-      style={{ ...SANS, cursor: "pointer", border: "none", padding: 0, display: "block", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
+    <div onClick={() => onPick(c.city)} className="city-rail-item" role="button" tabIndex={0} aria-label={`Plan a trip to ${c.city}`}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onPick(c.city); }}
+      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={c.city} photos={c.image ? [c.image] : null} srcOf={(u) => u} grad="linear-gradient(150deg,#2b2b3a,#5b6172)" fallback={<span aria-hidden />} hideDots />
       </div>
-      {/* Radial scrim keeps the centered white type legible on light photos. */}
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 86% 66% at 50% 47%, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.36) 100%)" }} />
-      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
+      {/* Radial scrim keeps the centered name AND the button legible on light photos. */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 90% 72% at 50% 52%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.22) 58%, rgba(0,0,0,0.42) 100%)" }} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: "42%", transform: "translateY(-50%)", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.6)" }}>{c.city}</div>
-        <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "var(--step-meta)", fontWeight: 600, marginTop: 8, textTransform: "uppercase", letterSpacing: 1.5, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{c.country}</div>
       </div>
-    </button>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: "15%", display: "flex", justifyContent: "center" }}>
+        <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
+          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 7, background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "12px 24px", fontSize: 14.5, fontWeight: 700, boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}>
+          Explore {c.city} <ChevronRight size={16} />
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -880,30 +887,31 @@ function AllCitiesModal({ onPick, onClose }) {
 }
 
 // Page 1 — the landing. PP-style hero: the city card sits directly under the
-// header with NO text above it; the heading/paragraph, a per-city blurb and the
-// primary "Explore" action move BELOW the card. The card is still a swipeable
-// rail; the blurb + Explore track the centered city. "See all key cities" opens
-// the full grid; "Choose your own city" drops into manual search. Picking a city
-// any of these ways carries it to page 2 (TripSetup).
-function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip }) {
+// header with NO text above it (name + Explore button live ON the card); the
+// paragraph + per-city blurb sit below, tracking the centered card. "See all key
+// cities" opens the full grid; the city write-in reuses the hotel field's live
+// place search (filtered to localities). Picking a city any way → page 2.
+function CityPicker({ onPickCity }) {
   const [q, setQ] = useState("");
   const [citySug, setCitySug] = useState([]);
-  const [manualOpen, setManualOpen] = useState(false);
+  const [cityFocus, setCityFocus] = useState(false);
   const [allOpen, setAllOpen] = useState(false);
   const [active, setActive] = useState(0);
   const railRef = useRef(null);
   const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
   const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
 
+  // City write-in reuses the SAME live place search as the hotel field
+  // (searchPlaces), filtered to localities so it returns cities, not hotels/POIs.
   useEffect(() => {
     const term = q.trim();
-    if (term.length < 2) { setCitySug([]); return; }
+    if (!cityFocus || term.length < 2) { setCitySug([]); return; }
     let cancel = false;
-    const t = setTimeout(() => { searchCities(term).then((r) => { if (!cancel) setCitySug(r); }); }, 250);
+    const t = setTimeout(() => { searchPlaces(term, { type: "locality" }).then((r) => { if (!cancel) setCitySug(r.slice(0, 6)); }).catch(() => {}); }, 300);
     return () => { cancel = true; clearTimeout(t); };
-  }, [q]);
+  }, [q, cityFocus]);
 
-  // Track which card is centered so the blurb + Explore reflect it.
+  // Track which card is centered so the blurb reflects it.
   const onRailScroll = () => {
     const el = railRef.current;
     if (!el) return;
@@ -916,7 +924,11 @@ function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip 
     setActive((p) => (p === best ? p : best));
   };
   const current = CITY_RAIL[active] || CITY_RAIL[0];
-  const pillPrimary = { ...SANS, cursor: "pointer", width: "100%", background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700 };
+  const onCityEnter = () => {
+    const hit = citySug.find((s) => s.name.toLowerCase() === q.trim().toLowerCase()) || citySug[0];
+    if (hit) onPickCity(hit.name);
+    else if (q.trim()) onPickCity(q.trim());
+  };
 
   return (
     <div style={{ ...SANS, color: INK }}>
@@ -925,54 +937,34 @@ function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip 
         {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPickCity} />)}
       </div>
 
-      {/* Moved text + per-city blurb + primary Explore, centered below the card. */}
+      {/* Moved text + per-city blurb, centered below the card. */}
       <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 18 }}>
         <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Pick a city to scout. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the if-you-know-you-know version of the city.</p>
         <p style={{ color: MUTE, fontSize: 14, margin: "12px 0 0", lineHeight: 1.45, fontWeight: 500 }}>{current.blurb}</p>
-        <button onClick={() => onPickCity(current.city)} style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 7, marginTop: 16, background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "13px 30px", fontSize: 15.5, fontWeight: 700 }}>Explore {current.city} <ChevronRight size={17} /></button>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 24 }}>
-        <button onClick={() => setAllOpen(true)} style={pillPrimary}>See all key cities</button>
-        {!manualOpen ? (
-          <button onClick={() => setManualOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", background: "#fff", color: INK, border: `1px solid ${LINE}`, borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15, fontWeight: 600 }}>Choose your own city</button>
-        ) : (
-          <div style={{ position: "relative" }}>
-            <div style={field}>
-              <Search size={18} color={MUTE} />
-              <input autoFocus value={q} onChange={(e) => setQ(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter" && q.trim()) onPickCity(q.trim()); }}
-                placeholder="Type any city — Portland, Lagos, Bangkok…" style={inp} />
-            </div>
-            {citySug.length > 0 && (
-              <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 6, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, boxShadow: CARD_SHADOW, overflow: "hidden" }}>
-                {citySug.map((c, i) => (
-                  <button key={c} onClick={() => onPickCity(c)} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 14px", display: "flex", alignItems: "center", gap: 9, fontSize: 14.5, color: INK }}>
-                    <MapPin size={15} color={ACCENT} style={{ flexShrink: 0 }} /> {c}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
+        <button onClick={() => setAllOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700 }}>See all key cities</button>
 
-      {session && savedTrips && savedTrips.length > 0 && (
-        <div style={{ marginTop: 28 }}>
-          <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>Your saved trips</label>
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {savedTrips.map((t) => (
-              <div key={t.id} style={{ display: "flex", alignItems: "center", gap: 10, border: `1px solid ${LINE}`, borderRadius: 12, padding: "11px 13px", boxShadow: CARD_SHADOW }}>
-                <button onClick={() => onLoadTrip(t)} style={{ ...SANS, cursor: "pointer", flex: 1, textAlign: "left", background: "none", border: "none", padding: 0 }}>
-                  <div style={{ fontSize: 14.5, fontWeight: 600, color: INK }}>{t.city || "Trip"}</div>
-                  <div style={{ fontSize: 12, color: MUTE, marginTop: 2 }}>{t.dates || ""}{t.dates && (t.tiers || []).length ? " · " : ""}{(t.tiers || []).map((k) => TIERS[k]?.label).filter(Boolean).join(", ")}</div>
-                </button>
-                <button onClick={() => onDeleteTrip(t.id)} aria-label="Delete trip" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4 }}><Trash2 size={15} /></button>
-              </div>
-            ))}
+        {/* Write-in city search — same live autocomplete as the hotel field. */}
+        <div style={{ position: "relative" }}>
+          <div style={field}>
+            <Search size={18} color={MUTE} />
+            <input value={q} onChange={(e) => setQ(e.target.value)} onFocus={() => setCityFocus(true)} onBlur={() => setTimeout(() => setCityFocus(false), 150)}
+              onKeyDown={(e) => { if (e.key === "Enter") onCityEnter(); }} placeholder="Search a city…" style={inp} />
           </div>
+          {cityFocus && citySug.length > 0 && (
+            <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 6, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, boxShadow: CARD_SHADOW, overflow: "hidden" }}>
+              {citySug.map((c, i) => (
+                <button key={(c.placeId || c.name) + i} onMouseDown={(e) => { e.preventDefault(); onPickCity(c.name); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "10px 13px", display: "flex", alignItems: "center", gap: 9 }}>
+                  <MapPin size={15} color={ACCENT} style={{ flexShrink: 0, marginTop: 2 }} />
+                  <div style={{ minWidth: 0 }}><div style={{ fontSize: 14.5, fontWeight: 600, color: INK }}>{c.name}</div><div style={{ fontSize: 12, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.address}</div></div>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      </div>
 
       {allOpen && <AllCitiesModal onPick={(c) => { setAllOpen(false); onPickCity(c); }} onClose={() => setAllOpen(false)} />}
     </div>
@@ -2515,7 +2507,7 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div className="scout-container">
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <div className="scout-measure"><CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} /></div>}
+        {screen === "input" && <div className="scout-measure"><CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} /></div>}
         {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}

@@ -3,11 +3,16 @@
 // like the app's store objects. Callers should treat a thrown error or an
 // empty array as "fall back to the sample set".
 
-export async function searchPlaces(query) {
+// Live place search powering the hotel field. Pass { type: "locality" } to get
+// city/town results only (reusing the same endpoint + data, just filtered) —
+// this is what the city write-in uses, so hotel and city search share one path.
+export async function searchPlaces(query, { type } = {}) {
   const q = (query || "").trim();
   if (q.length < 2) return [];
 
-  const r = await fetch(`/api/places?q=${encodeURIComponent(q)}`);
+  const params = new URLSearchParams({ q });
+  if (type) params.set("type", type);
+  const r = await fetch(`/api/places?${params.toString()}`);
   if (!r.ok) throw new Error(`places ${r.status}`);
 
   const data = await r.json();

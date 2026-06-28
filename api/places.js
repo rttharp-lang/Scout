@@ -8,6 +8,7 @@ const FIELD_MASK = [
   "places.id",
   "places.displayName",
   "places.formattedAddress",
+  "places.types",
   "places.rating",
   "places.userRatingCount",
   "places.regularOpeningHours",
@@ -52,10 +53,11 @@ export default async function handler(req, res) {
     }
 
     const data = await r.json();
-    const results = (data.places || []).map((p) => ({
+    let results = (data.places || []).map((p) => ({
       placeId: p.id,
       name: p.displayName?.text || "",
       address: p.formattedAddress || "",
+      types: Array.isArray(p.types) ? p.types : [],
       rating: typeof p.rating === "number" ? Math.round(p.rating * 10) / 10 : null,
       reviews: p.userRatingCount ?? null,
       ...hoursForToday(p.regularOpeningHours, p.utcOffsetMinutes),
@@ -64,6 +66,18 @@ export default async function handler(req, res) {
       price: PRICE[p.priceLevel] || null,
       photos: (p.photos || []).slice(0, 10).map((ph) => ph.name).filter(Boolean),
     }));
+
+    // Optional type filter (e.g. type=locality for the city search). Text Search
+    // can't restrict to address types like "locality", so we filter the results
+    // by their returned `types` — a city query then never returns hotels/POIs.
+    // "locality" maps to the common city/town forms so legit cities still surface.
+    const wantType = (req.query.type || "").toString().trim();
+    if (wantType === "locality") {
+      const CITY_TYPES = new Set(["locality", "administrative_area_level_3", "administrative_area_level_2", "postal_town"]);
+      results = results.filter((r2) => r2.types.some((t) => CITY_TYPES.has(t)));
+    } else if (wantType) {
+      results = results.filter((r2) => r2.types.includes(wantType));
+    }
 
     res.status(200).json({ results });
   } catch (e) {
