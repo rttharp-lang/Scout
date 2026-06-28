@@ -14,7 +14,11 @@ const FIELD_MASK = [
   "places.utcOffsetMinutes",
   "places.location",
   "places.photos",
+  "places.priceLevel",
 ].join(",");
+
+// Google's price-level enum → number of $ (1–4); unknown/free → null.
+const PRICE = { PRICE_LEVEL_INEXPENSIVE: 1, PRICE_LEVEL_MODERATE: 2, PRICE_LEVEL_EXPENSIVE: 3, PRICE_LEVEL_VERY_EXPENSIVE: 4 };
 
 export default async function handler(req, res) {
   const query = (req.query.q || "").toString().trim();
@@ -57,6 +61,7 @@ export default async function handler(req, res) {
       ...hoursForToday(p.regularOpeningHours, p.utcOffsetMinutes),
       lat: p.location?.latitude ?? null,
       lng: p.location?.longitude ?? null,
+      price: PRICE[p.priceLevel] || null,
       photos: (p.photos || []).slice(0, 10).map((ph) => ph.name).filter(Boolean),
     }));
 

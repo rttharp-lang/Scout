@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoodPlan, suggestStores } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut } from "lucide-react";
@@ -289,8 +289,9 @@ function LunchCard({ l, onSelect }) {
           <div style={{ fontSize: 15.5, fontWeight: 600 }}>{l.name}</div>
           <Rating rating={l.rating} reviews={l.reviews} href={mapsUrl(l.name, l.address)} />
         </div>
-        <div style={{ display: "flex", gap: 14, marginTop: 8, fontSize: 12.5, color: MUTE, flexWrap: "wrap" }}>
-          <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Clock size={12.5} /> <span style={{ color: OPEN, fontWeight: 600 }}>Open</span> · {l.hours}</span>
+        <div style={{ fontSize: 12.5, color: MUTE, marginTop: 3 }}>{l.cuisine}{l.price ? ` · ${"$".repeat(l.price)}` : ""}</div>
+        <div style={{ display: "flex", gap: 14, marginTop: 6, fontSize: 12.5, color: MUTE, flexWrap: "wrap" }}>
+          {l.hours && <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Clock size={12.5} /> <span style={{ color: OPEN, fontWeight: 600 }}>Open</span> · {l.hours}</span>}
           <a href={mapsUrl(l.name, l.address)} target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: 4, color: ACCENT, textDecoration: "none", fontWeight: 600 }}><ExternalLink size={12.5} /> Reviews</a>
         </div>
         <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{l.why}</div>
@@ -314,7 +315,7 @@ function MealCard({ meal, onChange }) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
           <div style={{ minWidth: 0 }}>
             <div style={{ fontSize: 16.5, fontWeight: 700 }}>{meal.name}</div>
-            <div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{meal.cuisine}{meal.rating ? ` · ${meal.rating}★` : ""}</div>
+            <div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{meal.cuisine}{meal.price ? ` · ${"$".repeat(meal.price)}` : ""}{meal.rating ? ` · ${meal.rating}★` : ""}</div>
           </div>
           <button onClick={onChange} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600, flexShrink: 0 }}>Change</button>
         </div>
@@ -1039,23 +1040,42 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
 }
 
 // ── Lunch ──────────────────────────────────────────────────────
-function LunchScreen({ dayNum, picks, search, onBack, onSelect, city, meal = "lunch" }) {
+function LunchScreen({ dayNum, picks, search, onBack, onSelect, onSuggest, city, meal = "lunch" }) {
   const [searching, setSearching] = useState(false);
-  const Meal = meal.charAt(0).toUpperCase() + meal.slice(1);
+  const [more, setMore] = useState([]);     // extra AI-prompted picks
+  const [loadingMore, setLoadingMore] = useState(false);
+
+  const seen = new Set();
+  const all = [...picks, ...more].filter((l) => { const k = (l.name || "").toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; });
+
+  const promptMore = () => {
+    setLoadingMore(true);
+    Promise.resolve(onSuggest(all.map((l) => l.name))).then((r) => setMore((m) => [...m, ...(r || [])])).catch(() => {}).finally(() => setLoadingMore(false));
+  };
+
   return (
     <div style={{ ...SANS, color: INK }}>
       <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: 14, padding: 0 }}><ArrowLeft size={16} /> Back to Day {dayNum}</button>
       <h1 style={{ fontSize: 26, fontWeight: 700, letterSpacing: -0.6, margin: "14px 0 2px" }}>Pick {meal} · Day {dayNum}</h1>
-      <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal {meal === "dinner" ? "in the city" : "near your route"} — special and delicious, not tourist traps.</div>
+      <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal {meal === "dinner" ? "where the day wraps up" : "near your route"} — beautiful, delicious, and worth the story.</div>
+
+      <div style={{ fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.6, marginTop: 22 }}>SCOUT'S PICKS</div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 12 }}>{all.map((l, i) => <LunchCard key={(l.name || i) + "-" + i} l={l} onSelect={onSelect} />)}</div>
+
+      <button onClick={promptMore} disabled={loadingMore} style={{ ...SANS, cursor: loadingMore ? "default" : "pointer", width: "100%", marginTop: 14, border: `1.5px solid ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 15, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+        {loadingMore ? <><span style={{ width: 15, height: 15, border: `2.5px solid ${ACCENT}40`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} /> Finding more…</> : <>✨ Prompt 5 more {meal} spots</>}
+        <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+      </button>
+
       {searching ? (
-        <SearchSelect candidates={search} title={`Search a ${meal} spot`} placeholder="Search a restaurant…" cityContext={city}
-          note={<>Pick a result and Scout pulls in its live rating, hours and address from Google, then sets it as your {meal}.</>}
-          onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
+        <div style={{ marginTop: 12 }}>
+          <SearchSelect candidates={search} title={`Search a ${meal} spot`} placeholder="Search a restaurant by name…" cityContext={city}
+            note={<>Scout pulls in its live rating, hours and address, then sets it as your {meal}.</>}
+            onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
+        </div>
       ) : (
-        <button onClick={() => setSearching(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 16, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Have a spot in mind? Search it</button>
+        <button onClick={() => setSearching(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 10, background: "none", border: "none", color: MUTE, fontSize: 13.5, fontWeight: 600, padding: "6px" }}>Have a specific place in mind? Search it</button>
       )}
-      <div style={{ fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.6, marginTop: 24 }}>OUR PICKS</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 12 }}>{picks.map((l, i) => <LunchCard key={i} l={l} onSelect={onSelect} />)}</div>
     </div>
   );
 }
@@ -1178,7 +1198,7 @@ async function enrichPlace(name, area, city) {
     const results = await searchPlaces(query);
     const hit = results[0];
     if (!hit) return {};
-    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, openAt: hit.openAt, address: hit.address, lat: hit.lat, lng: hit.lng, photos: hit.photos };
+    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, openAt: hit.openAt, address: hit.address, lat: hit.lat, lng: hit.lng, price: hit.price, photos: hit.photos };
   } catch {
     return {};
   }
@@ -1990,6 +2010,29 @@ export default function App() {
     }));
     return enriched;
   };
+  // "Prompt more" for meals: ask Scout for more real lunch/dinner spots near the
+  // day's route (excluding ones already offered), enriched with live Google data
+  // (rating, hours, price, photos). Returns candidate meal cards.
+  const onSuggestMeals = async (meal, extraExclude = []) => {
+    const d = trip[activeDay];
+    if (!d) return [];
+    let area = "";
+    if (meal === "dinner") {
+      const last = d.itinerary[d.itinerary.length - 1];
+      area = last ? last.hub : "";
+    } else {
+      const anchorStop = d.itinerary.flatMap((h) => h.stops).find((s) => s.id === d.lunchAfterId);
+      area = anchorStop ? anchorStop.hub : (d.itinerary[0] ? d.itinerary[0].hub : "");
+    }
+    const offered = (meal === "dinner" ? d.dinnerPicks : d.lunchPicks) || [];
+    const exclude = [...offered.map((p) => p.name), ...extraExclude];
+    const picks = await suggestMeals(city, area, meal, exclude);
+    const fresh = picks.filter((p) => !exclude.some((e) => e.toLowerCase() === p.name.toLowerCase())).slice(0, 6);
+    return Promise.all(fresh.map(async (p) => {
+      const enr = await enrichPlace(p.name, area, city);
+      return { name: p.name, cuisine: p.cuisine, why: p.why, ...enr };
+    }));
+  };
   const onSelectLunch = (l) => { updateDay(activeDay, (d) => rescheduleDay({ ...d, lunch: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onSelectDinner = (l) => { updateDay(activeDay, (d) => ({ ...d, dinner: { cuisine: "Restaurant", ...l } })); setScreen("review"); };
   const onConfirmDay = () => {
@@ -2016,11 +2059,11 @@ export default function App() {
             const db = b.lat != null ? distLL(anchor, { lat: b.lat, lng: b.lng }) : Infinity;
             return da - db;
           }) : (d.lunchPicks || []);
-          return <LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} city={city} />;
+          return <LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} onSuggest={(ex) => onSuggestMeals("lunch", ex)} city={city} />;
         })()}
         {screen === "dinner" && (() => {
           const d = trip[activeDay];
-          return <LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} city={city} />;
+          return <LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} onSuggest={(ex) => onSuggestMeals("dinner", ex)} city={city} />;
         })()}
         {screen === "overview" && <OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} />}
       </div>

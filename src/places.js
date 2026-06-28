@@ -60,6 +60,23 @@ export async function suggestStores(city, tiers, area, exclude = []) {
   }
 }
 
+// Ask the scout for a few more real restaurants for a meal near an area (for the
+// "prompt more" button on the lunch/dinner picker), excluding ones already
+// offered. Returns an array of { name, cuisine, why }; empty on error.
+export async function suggestMeals(city, area, meal, exclude = []) {
+  const params = new URLSearchParams({ city, meal });
+  if (area) params.set("area", area);
+  if (exclude.length) params.set("exclude", exclude.join(","));
+  try {
+    const r = await fetch(`/api/morefood?${params.toString()}`);
+    if (!r.ok) return [];
+    const data = await r.json();
+    return Array.isArray(data.restaurants) ? data.restaurants : [];
+  } catch {
+    return [];
+  }
+}
+
 // Ask the AI scout endpoint for a city-specific itinerary (neighborhoods +
 // real stores + tiers + why). Returns { days: [...] }; callers fall back to
 // the curated sample on error or when AI generation isn't configured.
