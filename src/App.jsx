@@ -1956,7 +1956,7 @@ function Logo({ size = 24 }) {
   return (
     <div style={{ display: "inline-flex", alignItems: "flex-start", gap: "0.12em", fontSize: size }}>
       <span style={{ fontFamily: "var(--font-wordmark)", fontSize: "1em", fontWeight: 400, letterSpacing: "-0.01em", color: ACCENT, textTransform: "uppercase", lineHeight: 1 }}>Scout</span>
-      <svg viewBox="0 0 413.62 144.78" aria-hidden="true" style={{ display: "block", height: "0.5em", width: "auto", transform: "translateY(0.06em)" }}>
+      <svg viewBox="0 0 413.62 144.78" aria-hidden="true" style={{ display: "block", height: "0.62em", width: "auto", transform: "translateY(0.06em)" }}>
         <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
       </svg>
     </div>
