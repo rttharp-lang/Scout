@@ -15,7 +15,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const stop = (id, name) => ({ id, name, tier: "underground", why: "A sharp one-liner about why this store matters.", hub: "SoHo", dwell: 16, rating: 4.5, reviews: 120, hours: "10:00–19:00", openAt: 600, address: "123 Spring St, New York", lat: 40.723, lng: -74.001, price: 2, photos: [], confirmed: false, addedByUser: false, arriveMin: 600, eta: "10:00 AM" });
 const meal = (name) => ({ name, cuisine: "Modern bistro", price: 3, why: "A beautiful room with a story.", rating: 4.6, address: "1 Mott St, New York", lat: 40.72, lng: -73.997, photos: [] });
-const day = (dayNum) => ({ dayNum, label: "SoHo → Nolita", date: "Jul 1", confirmed: false, lunch: meal("Lunch Spot"), dinner: meal("Dinner Spot"), lunchPicks: [meal("Pick A")], lunchSearch: [], dinnerPicks: [meal("Pick B")], dinnerSearch: [], addCandidates: [], lunchAfterId: "a", lunchAt: "1:00 PM", lunchAnchor: null, itinerary: [ { hub: "SoHo", time: "~1 hr", arrive: "Start here", stops: [stop("a", "Store A"), stop("b", "Store B")] }, { hub: "Nolita", time: "~50 min", arrive: "From SoHo", stops: [stop("c", "Store C")] } ] });
+const day = (dayNum) => ({ dayNum, label: "SoHo → Nolita", date: "Jul 1", confirmed: false, lunch: meal("Pick A"), dinner: meal("Dinner Spot"), lunchPicks: [meal("Pick A"), meal("Pick A2")], lunchSearch: [], dinnerPicks: [meal("Pick B"), meal("Pick B2")], dinnerSearch: [], addCandidates: [], lunchAfterId: "a", lunchAt: "1:00 PM", lunchAnchor: null, itinerary: [ { hub: "SoHo", time: "~1 hr", arrive: "Start here", stops: [stop("a", "Store A"), stop("b", "Store B")] }, { hub: "Nolita", time: "~50 min", arrive: "From SoHo", stops: [stop("c", "Store C")] } ] });
 const session = { city: "New York", tiers: ["underground", "streetwear"], trip: [day(1), day(2)], activeDay: 0, locked: false, screen: "review", hotel: { name: "Hotel", address: "X", lat: 40.71, lng: -74.0 } };
 
 async function main() {
@@ -31,9 +31,9 @@ async function main() {
     await page.goto(URL, { waitUntil: "load", timeout: 20000 });
     await wait(2000);
     const txt = (await page.textContent("#root")) || "";
-    // Require a neighborhood AND a meal-rail option to render, so the timeline
-    // + MealSlot path is genuinely exercised (not just the page chrome).
-    const ok = errors.length === 0 && /SoHo|Nolita|Store A/i.test(txt) && /Pick A|Pick B/i.test(txt);
+    // Require a neighborhood, a meal option, AND the "X of Y spots" counter to
+    // render, so the timeline + MealSlot arrow-nav path is genuinely exercised.
+    const ok = errors.length === 0 && /SoHo|Nolita|Store A/i.test(txt) && /Pick A|Pick B/i.test(txt) && /of \d+ spots/i.test(txt);
     if (!ok) {
       console.error("✗ Review smoke FAILED");
       if (errors.length) console.error("Errors:\n  " + errors.join("\n  "));

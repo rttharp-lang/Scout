@@ -202,7 +202,7 @@ const tierColor = (s) => (s.addedByUser && !s.tier ? ADDED_TIER.chip[0] : (TIERS
 // Swipeable gallery of a place's Google listing photos. Falls back to the
 // branded gradient + storefront illustration when there are no photos. Lazily
 // fetches photos for places that don't already carry them (curated stops).
-function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf, hideDots }) {
+function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf, hideDots, bars }) {
   const [pics, setPics] = useState(photos && photos.length ? photos : null);
   const [active, setActive] = useState(0);
   const [broken, setBroken] = useState(() => new Set());
@@ -238,7 +238,16 @@ function PhotoStrip({ name, address, photos, grad, fallback, loader, srcOf, hide
             style={{ minWidth: "100%", width: "100%", height: "100%", objectFit: "cover", scrollSnapAlign: "start", display: "block" }} />
         ))}
       </div>
-      {list.length > 1 && !hideDots && (
+      {list.length > 1 && bars && (
+        // Stories-style segmented bar at the TOP — shows PHOTO position, kept
+        // visually distinct from the "X of Y spots" restaurant counter below.
+        <div style={{ position: "absolute", top: 10, left: 12, right: 12, pointerEvents: "none", display: "flex", gap: 4 }}>
+          {list.map((_, i) => (
+            <span key={i} style={{ flex: 1, height: 3, borderRadius: 2, background: i === active ? "#fff" : "rgba(255,255,255,0.4)", boxShadow: "0 0 2px rgba(0,0,0,0.4)", transition: "background 0.2s" }} />
+          ))}
+        </div>
+      )}
+      {list.length > 1 && !hideDots && !bars && (
         <div style={{ position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)", pointerEvents: "none", display: "flex", gap: 5, alignItems: "center" }}>
           {list.map((_, i) => (
             <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: i === active ? "#fff" : "rgba(255,255,255,0.5)", transform: i === active ? "scale(1.15)" : "none", boxShadow: "0 0 2px rgba(0,0,0,0.45)", transition: "background 0.15s" }} />
@@ -320,15 +329,15 @@ function StopCard({ s, n, onRemove, onReplace }) {
 // Shared full-image overlay frame for restaurant cards (matches the store card):
 // photo fills the card, name large in white over the centre, cuisine·price + why
 // beneath, rating top-right, quiet icon actions over the bottom.
-function MealImageCard({ meal, actions, onClick, corner, badge }) {
+function MealImageCard({ meal, actions, onClick, corner, badge, bars, overlay, topInset }) {
   const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null, meal.rating != null ? `${meal.rating}★` : null].filter(Boolean).join(" · ");
   return (
     <div onClick={onClick} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW, cursor: onClick ? "pointer" : "default" }}>
       <div style={{ position: "absolute", inset: 0 }}>
-        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots />
+        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots bars={bars} />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
-      {badge && <div style={{ position: "absolute", top: 13, left: 13, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>{badge}</div>}
+      {badge && <div style={{ position: "absolute", top: topInset || 13, left: 13, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>{badge}</div>}
       {corner}
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{meal.name}</div>
@@ -336,6 +345,7 @@ function MealImageCard({ meal, actions, onClick, corner, badge }) {
         {meal.why && <div style={{ color: "rgba(255,255,255,0.9)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 6, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{meal.why}</div>}
       </div>
       {actions && <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>{actions}</div>}
+      {overlay}
     </div>
   );
 }
@@ -350,12 +360,18 @@ function LunchCard({ l, onSelect }) {
   );
 }
 
-// Phase 3B — a meal slot in the day timeline: a header (time · Lunch/Dinner) over
-// a horizontal rail of restaurant OPTION cards. One card fills the width with a
-// sliver of the next peeking at the right edge. Options are sorted by walking
+// Phase 3B/3C — a meal slot in the day timeline: a header (time · Lunch/Dinner)
+// over a single restaurant OPTION card. The options are sorted by walking
 // distance to the neighborhoods immediately before/after the meal, each tagged
-// with a "~N min walk from <hub>" label. Tap a card to make it the going spot
-// (green --pop check); tap the check on the chosen card to clear it.
+// with a "~N min from <hub>" label. Tap the card (or its check) to make it the
+// going spot (green --pop check); tap the check again to clear it.
+//
+// DUAL-AXIS (3C): two horizontal systems kept strictly apart so they never
+// fight. SWIPE moves through THIS restaurant's photos only (PhotoStrip, with a
+// Stories-style segmented bar at the top). ARROWS — lower-left / lower-right
+// caret buttons flanking the card edges, with an "X of Y spots" counter between
+// them — move between restaurants. Advancing a spot remounts the card (key on
+// the active name) so its photos reset to the first.
 function MealSlot({ at, meal, picks, chosen, prevHub, prevCoord, nextHub, nextCoord, onChoose, onClear, onMore }) {
   const label = meal === "lunch" ? "Lunch" : "Dinner";
   // Walk-distance ordering. Real coordinates drive this today; if a pick has no
@@ -368,43 +384,76 @@ function MealSlot({ at, meal, picks, chosen, prevHub, prevCoord, nextHub, nextCo
     return { ...p, _walk: walk, _hub: hub };
   }).sort((a, b) => (a._walk ?? 999) - (b._walk ?? 999));
 
+  // Active restaurant index — start on the chosen spot if there is one.
+  const [idx, setIdx] = useState(() => {
+    const i = ranked.findIndex((p) => chosen && chosen.name === p.name);
+    return i >= 0 ? i : 0;
+  });
+  const safe = Math.min(idx, Math.max(0, ranked.length - 1));
+  const go = (e, dir) => { e.stopPropagation(); setIdx((i) => Math.max(0, Math.min(ranked.length - 1, i + dir))); };
+  const arrow = (dir, disabled) => ({ ...SANS, position: "absolute", bottom: 14, [dir < 0 ? "left" : "right"]: 12, zIndex: 6,
+    width: 38, height: 38, borderRadius: 999, cursor: disabled ? "default" : "pointer", opacity: disabled ? 0.35 : 1,
+    background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" });
+
+  const header = (
+    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, paddingInline: 4 }}>
+      <Utensils size={16} color={ACCENT} />
+      <span style={{ fontSize: 13, fontWeight: 700, color: INK }}>{at}</span>
+      <span style={{ fontSize: 11, fontWeight: 700, color: ACCENT, textTransform: "uppercase", letterSpacing: 0.6 }}>{label}</span>
+    </div>
+  );
+
+  if (!ranked.length) {
+    return (
+      <div style={{ maxWidth: 440, marginInline: "auto", marginTop: 10 }}>
+        {header}
+        <button onClick={onMore} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add {label.toLowerCase()} near here</button>
+      </div>
+    );
+  }
+
+  const p = ranked[safe];
+  const isChosen = chosen && chosen.name === p.name;
+  const walkBadge = p._walk != null ? <><Footprints size={12} /> {p._walk} min{p._hub ? ` from ${p._hub}` : ""}</> : null;
+  const check = (
+    <button onClick={(e) => { e.stopPropagation(); if (isChosen) onClear(); else onChoose(p); }}
+      aria-label={isChosen ? "Going — tap to clear" : "Choose this spot"} title={isChosen ? "Going" : "Choose"}
+      style={{ position: "absolute", top: 24, right: 12, zIndex: 6, width: 30, height: 30, borderRadius: 999, cursor: "pointer",
+        background: isChosen ? NEON : "rgba(15,15,15,0.45)", color: isChosen ? "#0A0A0A" : "#fff",
+        border: isChosen ? "none" : "2px solid rgba(255,255,255,0.8)", backdropFilter: "blur(3px)",
+        display: "flex", alignItems: "center", justifyContent: "center", boxShadow: isChosen ? "0 2px 10px rgba(0,0,0,0.4)" : "none" }}>
+      <Check size={16} strokeWidth={3} />
+    </button>
+  );
+
+  // Spot navigation lives in the bottom corners; the counter says "spots" so it
+  // reads as moving between restaurants, distinct from the photo bar up top.
+  const nav = (
+    <>
+      {ranked.length > 1 && (
+        <>
+          <button onClick={(e) => go(e, -1)} disabled={safe === 0} aria-label="Previous spot" style={arrow(-1, safe === 0)}><ChevronLeft size={20} /></button>
+          <button onClick={(e) => go(e, 1)} disabled={safe === ranked.length - 1} aria-label="Next spot" style={arrow(1, safe === ranked.length - 1)}><ChevronRight size={20} /></button>
+        </>
+      )}
+      {isChosen && (
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 62, display: "flex", justifyContent: "center", gap: 8, zIndex: 5 }}>
+          <a href={uberUrl(p.name, p.address, p.lat, p.lng)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Uber here" title="Uber here" style={{ ...mealIconBtn, width: 34, height: 34 }}><Car size={15} /></a>
+          <a href={mapsUrl(p.name, p.address)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Directions" title="Directions" style={{ ...mealIconBtn, width: 34, height: 34 }}><Navigation size={15} /></a>
+        </div>
+      )}
+      {ranked.length > 1 && (
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 24, textAlign: "center", pointerEvents: "none", zIndex: 5, color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}>{safe + 1} of {ranked.length} spots</div>
+      )}
+    </>
+  );
+
   return (
     <div style={{ maxWidth: 440, marginInline: "auto", marginTop: 10 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, paddingInline: 4 }}>
-        <Utensils size={16} color={ACCENT} />
-        <span style={{ fontSize: 13, fontWeight: 700, color: INK }}>{at}</span>
-        <span style={{ fontSize: 11, fontWeight: 700, color: ACCENT, textTransform: "uppercase", letterSpacing: 0.6 }}>{label}</span>
-      </div>
-      {ranked.length ? (
-        <div className="meal-rail">
-          {ranked.map((p) => {
-            const isChosen = chosen && chosen.name === p.name;
-            const walkBadge = p._walk != null ? <><Footprints size={12} /> {p._walk} min{p._hub ? ` from ${p._hub}` : ""}</> : null;
-            const check = (
-              <button onClick={(e) => { e.stopPropagation(); if (isChosen) onClear(); else onChoose(p); }}
-                aria-label={isChosen ? "Going — tap to clear" : "Choose this spot"} title={isChosen ? "Going" : "Choose"}
-                style={{ position: "absolute", top: 12, right: 12, zIndex: 6, width: 30, height: 30, borderRadius: 999, cursor: "pointer",
-                  background: isChosen ? NEON : "rgba(15,15,15,0.45)", color: isChosen ? "#0A0A0A" : "#fff",
-                  border: isChosen ? "none" : "2px solid rgba(255,255,255,0.8)", backdropFilter: "blur(3px)",
-                  display: "flex", alignItems: "center", justifyContent: "center", boxShadow: isChosen ? "0 2px 10px rgba(0,0,0,0.4)" : "none" }}>
-                <Check size={16} strokeWidth={3} />
-              </button>
-            );
-            return (
-              <div className="meal-rail-item" key={p.name}>
-                <MealImageCard meal={p} onClick={() => (isChosen ? onClear() : onChoose(p))} corner={check} badge={walkBadge}
-                  actions={isChosen ? <>
-                    <a href={uberUrl(p.name, p.address, p.lat, p.lng)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Uber here" title="Uber here" style={{ ...mealIconBtn, width: 36 }}><Car size={16} /></a>
-                    <a href={mapsUrl(p.name, p.address)} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} aria-label="Directions" title="Directions" style={{ ...mealIconBtn, width: 36 }}><Navigation size={16} /></a>
-                  </> : <span style={{ ...mealIconBtn, padding: "0 16px", gap: 6, fontSize: 13, fontWeight: 700 }}><Check size={14} /> Choose</span>} />
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <button onClick={onMore} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add {label.toLowerCase()} near here</button>
-      )}
-      {ranked.length > 0 && onMore && (
+      {header}
+      <MealImageCard key={p.name} meal={p} onClick={() => (isChosen ? onClear() : onChoose(p))}
+        corner={check} badge={walkBadge} bars topInset={24} overlay={nav} />
+      {onMore && (
         <button onClick={onMore} style={{ ...SANS, cursor: "pointer", display: "block", marginInline: "auto", marginTop: 10, background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Search more spots →</button>
       )}
     </div>
