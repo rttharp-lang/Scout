@@ -110,3 +110,23 @@ body {
 
 /* Nav slide-out field on the electric-blue panel: white placeholder. */
 .nav-input::placeholder { color: rgba(255, 255, 255, 0.6); }
+
+/* Hero city rail (Phase 5): horizontal scroll-snap row of large city cards.
+   One card ~84% wide on mobile with a peek of the next; ~3 visible on desktop.
+   No arrows — swipe/scroll, same mechanics as the in-app carousels. */
+.city-rail {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.city-rail::-webkit-scrollbar { display: none; }
+.city-rail-item {
+  flex: 0 0 84%;
+  scroll-snap-align: start;
+}
+@media (min-width: 640px)  { .city-rail-item { flex-basis: 46%; } }
+@media (min-width: 1024px) { .city-rail-item { flex-basis: 31%; } }

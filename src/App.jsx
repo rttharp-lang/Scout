@@ -37,7 +37,23 @@ const TIER_ORDER = ["aspirational", "department", "competitor", "streetwear", "u
 // stops every product manager already knows) unless the user opts into filters.
 const CURATED_TIERS = ["aspirational", "streetwear", "underground", "culture"];
 const ADDED_TIER = { label: "Your find", chip: ["#5A4FB0", "#ECEAFB"], grad: "linear-gradient(135deg,#4a4490,#8a82c8)" };
-const CITIES = ["Tokyo", "New York", "Shanghai", "Paris", "London"];
+// Nike's 12 key cities, in priority order — the hero rail on the landing page.
+// `image` is a placeholder for now; swapping in a final licensed photo is a
+// single edit per row (just change the image URL).
+const CITY_RAIL = [
+  { city: "New York",    country: "USA",         image: "https://picsum.photos/seed/scout-new-york/800/1000" },
+  { city: "London",      country: "UK",          image: "https://picsum.photos/seed/scout-london/800/1000" },
+  { city: "Shanghai",    country: "China",       image: "https://picsum.photos/seed/scout-shanghai/800/1000" },
+  { city: "Beijing",     country: "China",       image: "https://picsum.photos/seed/scout-beijing/800/1000" },
+  { city: "Los Angeles", country: "USA",         image: "https://picsum.photos/seed/scout-los-angeles/800/1000" },
+  { city: "Tokyo",       country: "Japan",       image: "https://picsum.photos/seed/scout-tokyo/800/1000" },
+  { city: "Paris",       country: "France",      image: "https://picsum.photos/seed/scout-paris/800/1000" },
+  { city: "Berlin",      country: "Germany",     image: "https://picsum.photos/seed/scout-berlin/800/1000" },
+  { city: "Mexico City", country: "Mexico",      image: "https://picsum.photos/seed/scout-mexico-city/800/1000" },
+  { city: "Barcelona",   country: "Spain",       image: "https://picsum.photos/seed/scout-barcelona/800/1000" },
+  { city: "Seoul",       country: "South Korea", image: "https://picsum.photos/seed/scout-seoul/800/1000" },
+  { city: "Milan",       country: "Italy",       image: "https://picsum.photos/seed/scout-milan/800/1000" },
+];
 
 const mapsUrl = (name, address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ", " + address)}`;
 const uberUrl = (name, address, lat, lng) => {
@@ -825,39 +841,79 @@ function RangeCalendar({ start, end, onChange }) {
 }
 
 // ── Input ──────────────────────────────────────────────────────
-function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild, session, savedTrips, onLoadTrip, onDeleteTrip }) {
-  const [calOpen, setCalOpen] = useState(false);
-  const [filtersOpen, setFiltersOpen] = useState(false);
+// Large full-bleed city card for the hero rail — one representative photo, the
+// city name in big white type over a bottom gradient, like the place cards.
+// Tapping it selects the city and moves to page 2.
+function CityCard({ c, onPick }) {
+  return (
+    <button onClick={() => onPick(c.city)} className="city-rail-item" aria-label={`Plan a trip to ${c.city}`}
+      style={{ ...SANS, cursor: "pointer", border: "none", padding: 0, display: "block", textAlign: "left", position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
+      <div style={{ position: "absolute", inset: 0 }}>
+        <PhotoStrip name={c.city} photos={c.image ? [c.image] : null} srcOf={(u) => u} grad="linear-gradient(150deg,#2b2b3a,#5b6172)" fallback={<span aria-hidden />} hideDots />
+      </div>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.72) 100%)" }} />
+      <div style={{ position: "absolute", left: 18, right: 18, bottom: 18, pointerEvents: "none" }}>
+        <div style={{ color: "#fff", fontSize: "clamp(2rem, 5.5vw, 2.6rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{c.city}</div>
+        <div style={{ color: "rgba(255,255,255,0.82)", fontSize: "var(--step-meta)", fontWeight: 600, marginTop: 4, textTransform: "uppercase", letterSpacing: 1, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{c.country}</div>
+      </div>
+    </button>
+  );
+}
+
+// Page 1 — the landing. A hero rail of Nike's key cities (the fast path), a
+// secondary manual-entry field for anything else, and saved trips. Picking a
+// city (either way) carries it to page 2 (TripSetup).
+function CityPicker({ onPickCity, session, savedTrips, onLoadTrip, onDeleteTrip }) {
+  const [q, setQ] = useState("");
   const [citySug, setCitySug] = useState([]);
-  const [cityFocus, setCityFocus] = useState(false);
-  const [hq, setHq] = useState(hotel?.name || "");
-  const [hotelSug, setHotelSug] = useState([]);
-  const [hotelFocus, setHotelFocus] = useState(false);
+  const [manualOpen, setManualOpen] = useState(false);
   const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
   const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
-  const ready = start && city.trim();
 
   useEffect(() => {
-    const term = city.trim();
-    if (!cityFocus || term.length < 2) { setCitySug([]); return; }
+    const term = q.trim();
+    if (term.length < 2) { setCitySug([]); return; }
     let cancel = false;
     const t = setTimeout(() => { searchCities(term).then((r) => { if (!cancel) setCitySug(r); }); }, 250);
     return () => { cancel = true; clearTimeout(t); };
-  }, [city, cityFocus]);
+  }, [q]);
 
-  useEffect(() => {
-    const term = hq.trim();
-    if (!hotelFocus || term.length < 2) { setHotelSug([]); return; }
-    let cancel = false;
-    const t = setTimeout(() => { searchPlaces(`${term} ${city}`).then((r) => { if (!cancel) setHotelSug(r.slice(0, 5)); }).catch(() => {}); }, 300);
-    return () => { cancel = true; clearTimeout(t); };
-  }, [hq, hotelFocus, city]);
   return (
     <div style={{ ...SANS, color: INK }}>
       <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "8px 0 8px" }}>Where are you going?</h1>
-      <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>City, hotel, dates — that's it. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them. The if-you-know-you-know version of the city.</p>
+      <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Pick a city to scout. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the if-you-know-you-know version of the city.</p>
+
+      <div className="city-rail" style={{ marginTop: 20 }}>
+        {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPickCity} />)}
+      </div>
+
+      {/* Secondary path: anything not in the rail. */}
+      <div style={{ marginTop: 16 }}>
+        {!manualOpen ? (
+          <button onClick={() => setManualOpen(true)} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", padding: 0, color: ACCENT, fontSize: 14, fontWeight: 600 }}>Enter a different city →</button>
+        ) : (
+          <div style={{ position: "relative" }}>
+            <div style={field}>
+              <Search size={18} color={MUTE} />
+              <input autoFocus value={q} onChange={(e) => setQ(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter" && q.trim()) onPickCity(q.trim()); }}
+                placeholder="Type any city — Portland, Lagos, Bangkok…" style={inp} />
+            </div>
+            {citySug.length > 0 && (
+              <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 6, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, boxShadow: CARD_SHADOW, overflow: "hidden" }}>
+                {citySug.map((c, i) => (
+                  <button key={c} onClick={() => onPickCity(c)} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 14px", display: "flex", alignItems: "center", gap: 9, fontSize: 14.5, color: INK }}>
+                    <MapPin size={15} color={ACCENT} style={{ flexShrink: 0 }} /> {c}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
       {session && savedTrips && savedTrips.length > 0 && (
-        <div style={{ marginTop: 24 }}>
+        <div style={{ marginTop: 28 }}>
           <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>Your saved trips</label>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {savedTrips.map((t) => (
@@ -872,25 +928,36 @@ function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, date
           </div>
         </div>
       )}
-      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 28, marginBottom: 8 }}>City</label>
-      <div style={{ position: "relative" }}>
-        <div style={field}>
-          <MapPin size={18} color={MUTE} />
-          <input value={city} onChange={(e) => setCity(e.target.value)} onFocus={() => setCityFocus(true)} onBlur={() => setTimeout(() => setCityFocus(false), 150)} placeholder="Type any city — Shanghai, Portland, Lagos…" style={inp} />
-        </div>
-        {cityFocus && citySug.length > 0 && (
-          <div style={{ position: "absolute", zIndex: 5, left: 0, right: 0, marginTop: 6, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 12, boxShadow: CARD_SHADOW, overflow: "hidden" }}>
-            {citySug.map((c, i) => (
-              <button key={c} onMouseDown={(e) => { e.preventDefault(); setCity(c); setCitySug([]); setCityFocus(false); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "11px 14px", display: "flex", alignItems: "center", gap: 9, fontSize: 14.5, color: INK }}>
-                <MapPin size={15} color={ACCENT} style={{ flexShrink: 0 }} /> {c}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-      <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>{CITIES.map((c) => <button key={c} onClick={() => setCity(c)} style={{ ...SANS, cursor: "pointer", fontSize: 13, padding: "6px 12px", borderRadius: 999, border: `1px solid ${city === c ? ACCENT : LINE}`, background: city === c ? ACCENT_SOFT : "#fff", color: city === c ? ACCENT : INK }}>{c}</button>)}</div>
+    </div>
+  );
+}
 
-      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>Hotel <span style={{ color: MUTE, fontWeight: 400 }}>· your home base, sets where each day starts</span></label>
+// Page 2 — for the chosen city: hotel, dates, and the tier filters, then build.
+function TripSetup({ city, hotel, setHotel, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild, onBack }) {
+  const [calOpen, setCalOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [hq, setHq] = useState(hotel?.name || "");
+  const [hotelSug, setHotelSug] = useState([]);
+  const [hotelFocus, setHotelFocus] = useState(false);
+  const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
+  const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
+  const ready = start && city.trim();
+
+  useEffect(() => {
+    const term = hq.trim();
+    if (!hotelFocus || term.length < 2) { setHotelSug([]); return; }
+    let cancel = false;
+    const t = setTimeout(() => { searchPlaces(`${term} ${city}`).then((r) => { if (!cancel) setHotelSug(r.slice(0, 5)); }).catch(() => {}); }, 300);
+    return () => { cancel = true; clearTimeout(t); };
+  }, [hq, hotelFocus, city]);
+
+  return (
+    <div style={{ ...SANS, color: INK }}>
+      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: "var(--step-meta)", padding: 0 }}><ArrowLeft size={16} /> Change city</button>
+      <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "14px 0 6px" }}>Your trip to {city}</h1>
+      <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Set your home base and dates — then Scout builds the route. Adjust what's included with filters below.</p>
+
+      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 24, marginBottom: 8 }}>Hotel <span style={{ color: MUTE, fontWeight: 400 }}>· your home base, sets where each day starts</span></label>
       <div style={{ position: "relative" }}>
         <div style={field}>
           <MapPin size={18} color={MUTE} />
@@ -919,7 +986,7 @@ function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, date
       <button onClick={onBuild} disabled={!ready} style={{ ...SANS, cursor: ready ? "pointer" : "not-allowed", width: "100%", marginTop: 26, background: ready ? ACCENT : "#E5A6A9", color: "#fff", border: "none", borderRadius: 12, padding: "16px", fontSize: 16.5, fontWeight: 700 }}>Curate my trip</button>
       <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 10, lineHeight: 1.5 }}>We curate the best concept, archive and independent stores — and skip the department stores and big brands everyone already knows.</div>
 
-      {/* Optional: take control of what's included via the existing tier filters. */}
+      {/* Tier filters (moved to page 2): take control of what's included. */}
       <div style={{ marginTop: 22, borderTop: `1px solid ${LINE}`, paddingTop: 18 }}>
         <button onClick={() => setFiltersOpen((v) => !v)} style={{ ...SANS, cursor: "pointer", width: "100%", background: "none", border: "none", padding: 0, display: "flex", alignItems: "center", justifyContent: "space-between", color: INK }}>
           <span style={{ fontSize: 14, fontWeight: 600 }}>Want to curate your own? Use filters</span>
@@ -2146,7 +2213,7 @@ export default function App() {
         city, hotel, tiers, currentTripId, trip, activeDay, locked,
         start: startDate ? startDate.toISOString() : null,
         end: endDate ? endDate.toISOString() : null,
-        screen: (screen === "building" || screen === "builderror" || screen === "neighborhoods") ? "input" : screen,
+        screen: (screen === "building" || screen === "builderror" || screen === "neighborhoods" || screen === "setup") ? "input" : screen,
       }));
     } catch {}
   }, [city, hotel, tiers, startDate, endDate, trip, activeDay, locked, screen, currentTripId]);
@@ -2401,11 +2468,12 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div className="scout-container">
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <div className="scout-measure"><InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} /></div>}
-        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} view={cardView} onView={setCardView} />}
+        {screen === "input" && <div className="scout-measure"><CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} /></div>}
+        {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
-        {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("setup")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("setup")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
