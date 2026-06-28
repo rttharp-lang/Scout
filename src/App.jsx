@@ -1952,12 +1952,12 @@ function GoogleG() {
 // caps (~0.5em) and top-aligned so it rides along the cap line rather than
 // floating in the middle. Live text (swappable via --font-wordmark), not an
 // image. Single source of truth — reused everywhere the brand appears.
-function Logo({ size = 24 }) {
+function Logo({ size = 24, color = ACCENT }) {
   return (
     <div style={{ display: "inline-flex", alignItems: "flex-start", gap: "0.12em", fontSize: size }}>
-      <span style={{ fontFamily: "var(--font-wordmark)", fontSize: "1em", fontWeight: 400, letterSpacing: "-0.01em", color: ACCENT, textTransform: "uppercase", lineHeight: 1 }}>Scout</span>
+      <span style={{ fontFamily: "var(--font-wordmark)", fontSize: "1em", fontWeight: 400, letterSpacing: "-0.01em", color, textTransform: "uppercase", lineHeight: 1 }}>Scout</span>
       <svg viewBox="0 0 413.62 144.78" aria-hidden="true" style={{ display: "block", height: "0.68em", width: "auto", transform: "translateY(0.06em)" }}>
-        <path fill={ACCENT} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
+        <path fill={color} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
       </svg>
     </div>
   );
@@ -1969,8 +1969,8 @@ function AppHeader({ onMenu, showMenu }) {
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
       <Logo />
       {showMenu && (
-        <button onClick={onMenu} aria-label="Menu" style={{ ...SANS, cursor: "pointer", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 11, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center", color: INK, boxShadow: CARD_SHADOW }}>
-          <Menu size={20} />
+        <button onClick={onMenu} aria-label="Menu" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", boxShadow: "none", padding: 11, margin: -11, display: "flex", alignItems: "center", justifyContent: "center", color: INK }}>
+          <Menu size={22} />
         </button>
       )}
     </div>
@@ -1995,49 +1995,56 @@ function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDa
   }, [hq]);
   if (!open) return null;
 
-  const sectionLabel = { fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase", margin: "20px 0 8px" };
-  const row = { ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "none", border: "none", padding: "11px 0", fontSize: 15, color: INK, display: "flex", alignItems: "center", gap: 10 };
+  // Nav is a chromeless slide-out on an electric-blue field: white body text,
+  // electric-green (--pop) for active/selected + icons/arrows, white at low
+  // opacity for muted labels, borders and field text.
+  const W = "#fff", WMUTE = "rgba(255,255,255,0.72)", WLINE = "rgba(255,255,255,0.18)", SIGNOUT = "#FFB0B0";
+  const sectionLabel = { fontSize: 11.5, fontWeight: 700, color: WMUTE, letterSpacing: 0.5, textTransform: "uppercase", margin: "20px 0 8px" };
+  const row = { ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "none", border: "none", padding: "11px 0", fontSize: 15, color: W, display: "flex", alignItems: "center", gap: 10 };
   return (
     <>
       <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.4)", zIndex: 40 }} />
-      <div style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(86vw, 340px)", background: "#fff", zIndex: 41, boxShadow: "-8px 0 24px rgba(0,0,0,0.14)", display: "flex", flexDirection: "column", overflowY: "auto", padding: "22px 20px 40px" }}>
+      <div style={{ position: "fixed", top: 0, right: 0, bottom: 0, width: "min(86vw, 340px)", background: ACCENT, zIndex: 41, boxShadow: "-8px 0 24px rgba(0,0,0,0.22)", display: "flex", flexDirection: "column", overflowY: "auto", padding: "22px 20px 40px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Logo size={20} />
-          <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE }}><X size={22} /></button>
+          <Logo size={20} color={W} />
+          <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: W }}><X size={22} /></button>
         </div>
 
         {session ? (
           <div style={{ marginTop: 18 }}>
-            <div style={{ fontSize: 13, color: MUTE, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</div>
-            <button onClick={() => { onSignOut(); onClose(); }} style={{ ...row, color: DANGER, marginTop: 4 }}><LogOut size={17} /> Sign out</button>
+            <div style={{ fontSize: 13, color: WMUTE, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</div>
+            <button onClick={() => { onSignOut(); onClose(); }} style={{ ...row, color: SIGNOUT, marginTop: 4 }}><LogOut size={17} /> Sign out</button>
           </div>
         ) : (
-          <button onClick={() => { onSignIn(); }} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 8, marginTop: 18, background: "#fff", border: `1px solid ${LINE}`, borderRadius: 999, padding: "9px 14px", fontSize: 14, fontWeight: 600, color: INK, boxShadow: CARD_SHADOW }}><GoogleG /> Sign in with Google</button>
+          <button onClick={() => { onSignIn(); }} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 8, marginTop: 18, background: "#fff", border: "none", borderRadius: 999, padding: "9px 14px", fontSize: 14, fontWeight: 600, color: INK, boxShadow: "0 2px 10px rgba(0,0,0,0.18)" }}><GoogleG /> Sign in with Google</button>
         )}
 
         {trip.length > 0 && (
           <>
             <div style={sectionLabel}>This trip{city ? ` · ${city}` : ""}</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-              {trip.map((d, i) => (
-                <button key={i} onClick={() => { onJumpDay(i); onClose(); }} style={{ ...SANS, cursor: "pointer", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 14, fontWeight: 600, padding: "10px 12px", borderRadius: 10, border: `1px solid ${i === activeDay ? ACCENT : LINE}`, background: i === activeDay ? ACCENT_SOFT : "#fff", color: i === activeDay ? ACCENT : INK }}>
-                  <span>Day {d.dayNum}</span>{d.date ? <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 500 }}>{d.date}</span> : null}
-                </button>
-              ))}
+              {trip.map((d, i) => {
+                const on = i === activeDay;
+                return (
+                  <button key={i} onClick={() => { onJumpDay(i); onClose(); }} style={{ ...SANS, cursor: "pointer", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: 14, fontWeight: 600, padding: "10px 12px", borderRadius: 10, border: `1px solid ${on ? NEON : WLINE}`, background: on ? "rgba(127,232,0,0.14)" : "transparent", color: on ? NEON : W }}>
+                    <span>Day {d.dayNum}</span>{d.date ? <span style={{ fontSize: 12.5, color: on ? NEON : WMUTE, fontWeight: 500 }}>{d.date}</span> : null}
+                  </button>
+                );
+              })}
             </div>
 
             <div style={sectionLabel}>Hotel — home base</div>
-            {hotel && hotel.name && <div style={{ fontSize: 13, color: INK, marginBottom: 8 }}>{hotel.name}</div>}
+            {hotel && hotel.name && <div style={{ fontSize: 13, color: W, marginBottom: 8 }}>{hotel.name}</div>}
             <div style={{ position: "relative" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 11, padding: "10px 12px" }}>
-                <MapPin size={16} color={MUTE} /><input value={hq} onChange={(e) => setHq(e.target.value)} placeholder="Change hotel" style={{ ...SANS, border: "none", outline: "none", fontSize: 14.5, width: "100%", color: INK }} />
+              <div style={{ display: "flex", alignItems: "center", gap: 8, border: `1px solid ${WLINE}`, borderRadius: 11, padding: "10px 12px" }}>
+                <MapPin size={16} color={WMUTE} /><input className="nav-input" value={hq} onChange={(e) => setHq(e.target.value)} placeholder="Change hotel" style={{ ...SANS, border: "none", outline: "none", background: "transparent", fontSize: 14.5, width: "100%", color: W }} />
               </div>
               {hsug.length > 0 && (
-                <div style={{ border: `1px solid ${LINE}`, borderRadius: 11, marginTop: 6, overflow: "hidden" }}>
+                <div style={{ border: `1px solid ${WLINE}`, borderRadius: 11, marginTop: 6, overflow: "hidden" }}>
                   {hsug.map((r, i) => (
-                    <button key={(r.placeId || r.name) + i} onClick={() => { onChangeHotel({ name: r.name, address: r.address, lat: r.lat, lng: r.lng }); onClose(); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "#fff", border: "none", borderTop: i ? `1px solid ${LINE}` : "none", padding: "10px 12px" }}>
-                      <div style={{ fontSize: 13.5, fontWeight: 600, color: INK }}>{r.name}</div>
-                      <div style={{ fontSize: 11.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.address}</div>
+                    <button key={(r.placeId || r.name) + i} onClick={() => { onChangeHotel({ name: r.name, address: r.address, lat: r.lat, lng: r.lng }); onClose(); }} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", background: "transparent", border: "none", borderTop: i ? `1px solid ${WLINE}` : "none", padding: "10px 12px" }}>
+                      <div style={{ fontSize: 13.5, fontWeight: 600, color: W }}>{r.name}</div>
+                      <div style={{ fontSize: 11.5, color: WMUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.address}</div>
                     </button>
                   ))}
                 </div>
@@ -2047,35 +2054,35 @@ function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDa
         )}
 
         <div style={sectionLabel}>Your trips</div>
-        <button onClick={() => { onNewSearch(); onClose(); }} style={row}><Search size={17} /> New search / change city</button>
+        <button onClick={() => { onNewSearch(); onClose(); }} style={row}><Search size={17} color={NEON} /> New search / change city</button>
         {session ? (savedTrips.length > 0 ? savedTrips.map((t) => {
           const days = Array.isArray(t.trip) ? t.trip : [];
           const range = days.length ? `${days[0].date || ""}${days.length > 1 && days[days.length - 1].date ? ` – ${days[days.length - 1].date}` : ""}` : (t.dates || "");
           const expanded = openTripId === t.id;
           return (
-            <div key={t.id} style={{ borderBottom: `1px solid #F4F4F4` }}>
+            <div key={t.id} style={{ borderBottom: `1px solid ${WLINE}` }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "10px 0" }}>
                 <button onClick={() => setOpenTripId(expanded ? null : t.id)} style={{ ...SANS, cursor: "pointer", flex: 1, textAlign: "left", background: "none", border: "none", padding: 0, display: "flex", alignItems: "center", gap: 9 }}>
-                  <ChevronRight size={16} color={MUTE} style={{ transform: expanded ? "rotate(90deg)" : "none", transition: "transform 0.15s", flexShrink: 0 }} />
+                  <ChevronRight size={16} color={NEON} style={{ transform: expanded ? "rotate(90deg)" : "none", transition: "transform 0.15s", flexShrink: 0 }} />
                   <span style={{ minWidth: 0 }}>
-                    <span style={{ fontSize: 15, fontWeight: 700, color: INK }}>{t.city || "Trip"}</span>
-                    <span style={{ display: "block", fontSize: 12, color: MUTE }}>{[range, `${days.length || ""} ${days.length === 1 ? "day" : "days"}`].filter(Boolean).join(" · ")}</span>
+                    <span style={{ fontSize: 15, fontWeight: 700, color: W }}>{t.city || "Trip"}</span>
+                    <span style={{ display: "block", fontSize: 12, color: WMUTE }}>{[range, `${days.length || ""} ${days.length === 1 ? "day" : "days"}`].filter(Boolean).join(" · ")}</span>
                   </span>
                 </button>
-                <button onClick={() => onDeleteTrip(t.id)} aria-label="Delete trip" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4 }}><Trash2 size={15} /></button>
+                <button onClick={() => onDeleteTrip(t.id)} aria-label="Delete trip" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: W, padding: 4 }}><Trash2 size={15} /></button>
               </div>
               {expanded && (
                 <div style={{ paddingLeft: 25, paddingBottom: 10, display: "flex", flexDirection: "column", gap: 6 }}>
                   {days.map((d, i) => (
-                    <button key={i} onClick={() => { onLoadTrip(t, i); onClose(); }} style={{ ...SANS, cursor: "pointer", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#fff", border: `1px solid ${LINE}`, borderRadius: 10, padding: "9px 11px", fontSize: 13.5, color: INK }}>
-                      <span style={{ fontWeight: 600 }}>Day {d.dayNum}</span>{d.date ? <span style={{ fontSize: 12, color: MUTE }}>{d.date}</span> : null}
+                    <button key={i} onClick={() => { onLoadTrip(t, i); onClose(); }} style={{ ...SANS, cursor: "pointer", textAlign: "left", display: "flex", justifyContent: "space-between", alignItems: "center", background: "transparent", border: `1px solid ${WLINE}`, borderRadius: 10, padding: "9px 11px", fontSize: 13.5, color: W }}>
+                      <span style={{ fontWeight: 600 }}>Day {d.dayNum}</span>{d.date ? <span style={{ fontSize: 12, color: WMUTE }}>{d.date}</span> : null}
                     </button>
                   ))}
                 </div>
               )}
             </div>
           );
-        }) : <div style={{ fontSize: 12.5, color: MUTE, padding: "8px 0" }}>No saved trips yet — build one and it auto-saves here.</div>) : null}
+        }) : <div style={{ fontSize: 12.5, color: WMUTE, padding: "8px 0" }}>No saved trips yet — build one and it auto-saves here.</div>) : null}
       </div>
     </>
   );

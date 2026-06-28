@@ -107,3 +107,6 @@ body {
 }
 @media (min-width: 640px)  { .scout-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .scout-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Nav slide-out field on the electric-blue panel: white placeholder. */
+.nav-input::placeholder { color: rgba(255, 255, 255, 0.6); }
