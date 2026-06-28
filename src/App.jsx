@@ -304,20 +304,20 @@ function GoingControl({ name, onRemove, onReplace }) {
 function StopCard({ s, n, onRemove, onReplace }) {
   const t = TIERS[s.tier] || ADDED_TIER;
   const iconBtn = { ...SANS, cursor: "pointer", textDecoration: "none", background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", width: 36, height: 36, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" };
-  const meta = [s.rating != null ? `${s.rating}★` : null, s.hours ? `Open · ${s.hours}` : null, s.eta ? `Arrive ~${s.eta}` : null].filter(Boolean).join("  ·  ");
+  // Number, rating and arrival ride together in a pill at the TOP of the card.
+  const meta = [String(n).padStart(2, "0"), s.rating != null ? `${s.rating}★` : null, s.eta ? `arrive ~${s.eta}` : null].filter(Boolean).join("  ·  ");
   return (
     <div style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={s.name} address={s.address} photos={s.photos} grad={t.grad} hideDots />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
-      <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
+      <div style={{ position: "absolute", top: 12, left: 12, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>{meta}</div>
       <GoingControl name={s.name} onRemove={onRemove} onReplace={onReplace} />
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{s.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.why}</div>
       </div>
-      {meta && <div style={{ position: "absolute", left: 16, right: 16, bottom: 60, pointerEvents: "none", textAlign: "center", color: "rgba(255,255,255,0.88)", fontSize: "var(--step-caption)", textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}>{meta}</div>}
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>
         <a href={uberUrl(s.name, s.address, s.lat, s.lng)} target="_blank" rel="noreferrer" aria-label="Uber here" title="Uber here" style={iconBtn}><Car size={16} /></a>
         <a href={mapsUrl(s.name, s.address)} target="_blank" rel="noreferrer" aria-label="Directions" title="Directions" style={iconBtn}><Navigation size={16} /></a>
@@ -326,18 +326,98 @@ function StopCard({ s, n, onRemove, onReplace }) {
   );
 }
 
+// Replace mode for a store card: when you un-going a stop and pick "Replace",
+// the card turns into an arrow-toggle carousel of ~5 OTHER stores in the SAME
+// neighborhood, ranked by how close they sit to the store you're swapping out.
+// Swipe still moves photos; the carets move between candidates; selecting one
+// works exactly like choosing a restaurant. "Keep" backs out and restores the
+// original. (n keeps the card's route number while you browse.)
+function StoreReplaceCard({ origin, n, alts, loading, onSelect, onCancel }) {
+  const [idx, setIdx] = useState(0);
+  const list = alts || [];
+  const safe = Math.min(idx, Math.max(0, list.length - 1));
+  const go = (e, dir) => { e.stopPropagation(); setIdx((i) => Math.max(0, Math.min(list.length - 1, i + dir))); };
+  const arrow = (dir, disabled) => ({ ...SANS, position: "absolute", bottom: 14, [dir < 0 ? "left" : "right"]: 12, zIndex: 6,
+    width: 38, height: 38, borderRadius: 999, cursor: disabled ? "default" : "pointer", opacity: disabled ? 0.35 : 1,
+    background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" });
+  const frame = { position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW };
+  const keepBtn = (
+    <button onClick={(e) => { e.stopPropagation(); onCancel(); }} aria-label={`Keep ${origin.name}`} title={`Keep ${origin.name}`}
+      style={{ ...SANS, position: "absolute", top: 12, right: 12, zIndex: 7, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(15,15,15,0.6)", backdropFilter: "blur(3px)", border: "none", color: "#fff", fontSize: 12, fontWeight: 700, padding: "6px 11px", borderRadius: 999 }}>
+      <X size={13} /> Keep
+    </button>
+  );
+
+  if (loading || !alts) {
+    return (
+      <div style={frame}>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,#1b1b1b,#3a3a3a)" }} />
+        {keepBtn}
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, color: "#fff", textAlign: "center", padding: 24 }}>
+          <div style={{ fontSize: 13.5, fontWeight: 600 }}>Finding spots near {origin.name}…</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>same neighborhood, close by</div>
+        </div>
+      </div>
+    );
+  }
+  if (!list.length) {
+    return (
+      <div style={frame}>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg,#1b1b1b,#3a3a3a)" }} />
+        {keepBtn}
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10, color: "#fff", textAlign: "center", padding: 24 }}>
+          <div style={{ fontSize: 13.5, fontWeight: 600 }}>No nearby alternatives found</div>
+          <button onClick={(e) => { e.stopPropagation(); onCancel(); }} style={{ ...SANS, cursor: "pointer", background: NEON, color: "#0A0A0A", border: "none", borderRadius: 999, padding: "9px 16px", fontSize: 13, fontWeight: 700 }}>Keep {origin.name}</button>
+        </div>
+      </div>
+    );
+  }
+
+  const c = list[safe];
+  const oc = (origin && origin.lat != null) ? { lat: origin.lat, lng: origin.lng } : null;
+  const away = (oc && c.lat != null) ? Math.round(travelMin(oc, { lat: c.lat, lng: c.lng })) : null;
+  const t = TIERS[c.tier] || ADDED_TIER;
+  const meta = [c.rating != null ? `${c.rating}★` : null, away != null ? `~${away} min away` : null].filter(Boolean).join("  ·  ");
+  return (
+    <div key={c.name} style={frame}>
+      <div style={{ position: "absolute", inset: 0 }}>
+        <PhotoStrip name={c.name} address={c.address} photos={c.photos} grad={t.grad} hideDots bars />
+      </div>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.08) 34%, rgba(0,0,0,0.74) 100%)" }} />
+      {meta && <div style={{ position: "absolute", top: 24, left: 12, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999 }}>{meta}</div>}
+      {keepBtn}
+      <div style={{ position: "absolute", left: 0, right: 0, top: "44%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
+        <div style={{ color: "rgba(255,255,255,0.85)", fontSize: 10.5, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", marginBottom: 6 }}>Replacing {origin.name}</div>
+        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{c.name}</div>
+        {c.why && <div style={{ color: "rgba(255,255,255,0.9)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{c.why}</div>}
+      </div>
+      <button onClick={(e) => { e.stopPropagation(); onSelect(c); }} style={{ ...SANS, position: "absolute", left: "50%", transform: "translateX(-50%)", bottom: 60, zIndex: 6, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, background: NEON, color: "#0A0A0A", border: "none", borderRadius: 999, padding: "10px 18px", fontSize: 13.5, fontWeight: 700, boxShadow: "0 2px 12px rgba(0,0,0,0.4)" }}><Check size={15} strokeWidth={3} /> Use this spot</button>
+      {list.length > 1 && <>
+        <button onClick={(e) => go(e, -1)} disabled={safe === 0} aria-label="Previous option" style={arrow(-1, safe === 0)}><ChevronLeft size={20} /></button>
+        <button onClick={(e) => go(e, 1)} disabled={safe === list.length - 1} aria-label="Next option" style={arrow(1, safe === list.length - 1)}><ChevronRight size={20} /></button>
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 24, textAlign: "center", pointerEvents: "none", zIndex: 5, color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.6)" }}>{safe + 1} of {list.length} nearby</div>
+      </>}
+    </div>
+  );
+}
+
 // Shared full-image overlay frame for restaurant cards (matches the store card):
 // photo fills the card, name large in white over the centre, cuisine·price + why
 // beneath, rating top-right, quiet icon actions over the bottom.
 function MealImageCard({ meal, actions, onClick, corner, badge, bars, overlay, topInset }) {
-  const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null, meal.rating != null ? `${meal.rating}★` : null].filter(Boolean).join(" · ");
+  // Rating lives in the top meta pill (with the walk badge), not the centre.
+  const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null].filter(Boolean).join(" · ");
   return (
     <div onClick={onClick} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW, cursor: onClick ? "pointer" : "default" }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots bars={bars} />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
-      {badge && <div style={{ position: "absolute", top: topInset || 13, left: 13, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", gap: 5, background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>{badge}</div>}
+      {(meal.rating != null || badge) && <div style={{ position: "absolute", top: topInset || 13, left: 13, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
+        {meal.rating != null && <span>{meal.rating}★</span>}
+        {meal.rating != null && badge && <span style={{ opacity: 0.5 }}>·</span>}
+        {badge}
+      </div>}
       {corner}
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{meal.name}</div>
@@ -959,11 +1039,27 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onChooseLunch, onChooseDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBack, onSwitchDay, onPickLunch, onPickDinner, onChooseLunch, onChooseDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onReplaceStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [hoodOpen, setHoodOpen] = useState(false);
   const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
+  const [replace, setReplace] = useState(null); // { hi, id, hub, origin, alts, loading }
   const [drag, setDrag] = useState(null); // { from, startY, curY, to }
+
+  // Enter replace mode for a store: fetch ~5 stores in the same neighborhood and
+  // rank them by closeness to the store being swapped out.
+  const startReplace = (hi, id, origin, hub) => {
+    setReplace({ hi, id, hub, origin, alts: null, loading: true });
+    Promise.resolve(onSuggestStores(hub)).then((cands) => {
+      const oc = origin.lat != null ? { lat: origin.lat, lng: origin.lng } : null;
+      const ranked = oc ? [...(cands || [])].sort((a, b) => {
+        const da = a.lat != null ? distLL(oc, { lat: a.lat, lng: a.lng }) : Infinity;
+        const db = b.lat != null ? distLL(oc, { lat: b.lat, lng: b.lng }) : Infinity;
+        return da - db;
+      }) : (cands || []);
+      setReplace((r) => (r && r.id === id ? { ...r, alts: ranked.slice(0, 5), loading: false } : r));
+    }).catch(() => setReplace((r) => (r && r.id === id ? { ...r, alts: [], loading: false } : r)));
+  };
   const cardEls = useRef([]);
   const day = trip[activeDay];
   const hubCount = day.itinerary.filter((h) => h.stops.length).length;
@@ -1171,7 +1267,10 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                     </div>
                   ) : (
                     <div className="scout-grid">
-                      {h.stops.map((s) => { n += 1; return <StopCard key={s.id} s={s} n={n} onRemove={() => onRemoveStop(hi, s.id)} onReplace={() => { onRemoveStop(hi, s.id); setAddHub(h.hub); }} />; })}
+                      {h.stops.map((s) => { n += 1; const num = n; return (replace && replace.id === s.id)
+                        ? <StoreReplaceCard key={s.id} origin={replace.origin} n={num} alts={replace.alts} loading={replace.loading}
+                            onSelect={(c) => { onReplaceStop(hi, s.id, c); setReplace(null); }} onCancel={() => setReplace(null)} />
+                        : <StopCard key={s.id} s={s} n={num} onRemove={() => onRemoveStop(hi, s.id)} onReplace={() => startReplace(hi, s.id, s, h.hub)} />; })}
                     </div>
                   )}
                   {addHub === h.hub ? (
@@ -2192,6 +2291,9 @@ export default function App() {
 
   const onConfirmStop = (hi, id) => updateDay(activeDay, (d) => ({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id === id ? { ...s, confirmed: !s.confirmed } : s) }) }));
   const onRemoveStop = (hi, id) => updateDay(activeDay, (d) => rescheduleDay({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.filter((s) => s.id !== id) }) }));
+  // Swap a store for a nearby alternative in place (keeps its id/position, then
+  // reschedules so arrival times and the map update).
+  const onReplaceStop = (hi, id, c) => updateDay(activeDay, (d) => rescheduleDay({ ...d, itinerary: d.itinerary.map((h, i) => i !== hi ? h : { ...h, stops: h.stops.map((s) => s.id !== id ? s : { ...s, name: c.name, tier: c.tier ?? s.tier, why: c.why, rating: c.rating, reviews: c.reviews, hours: c.hours, openAt: c.openAt, address: c.address, lat: c.lat, lng: c.lng, photos: c.photos, dwell: c.dwell || s.dwell || 16, confirmed: true, addedByUser: true }) }) }));
   // Add a found store. With a targetHub (from a neighborhood card's "add a store
   // here"), it goes into that neighborhood; otherwise it's assigned to the
   // nearest existing neighborhood so it groups and reschedules sensibly.
@@ -2282,7 +2384,7 @@ export default function App() {
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("input")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("input")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
