@@ -1019,19 +1019,19 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
             {!drag && (hi === firstHub
               ? (hc && Hop(hc, h.stops, h.hub))
               : (prevBlock && prevBlock.stops.length && Hop(centroidOf(prevBlock.stops), h.stops, h.hub)))}
-            <div ref={(el) => (cardEls.current[hi] = el)} style={{ marginTop: 16, border: `1px solid ${isDragged ? ACCENT : LINE}`, borderRadius: 16, background: "#fff", boxShadow: isDragged ? "0 12px 28px rgba(0,0,0,0.18)" : CARD_SHADOW, padding: "12px 14px", transform: isDragged ? `translateY(${drag.curY - drag.startY}px) scale(1.01)` : "none", opacity: isDragged ? 0.95 : 1, position: "relative", zIndex: isDragged ? 20 : 1, transition: isDragged ? "none" : "box-shadow 0.15s" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <button onClick={() => toggleHub(h.hub)} aria-label={isCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 2, display: "flex" }}>
-                  {isCollapsed ? <ChevronRight size={20} /> : <ChevronDown size={20} />}
-                </button>
+            <div ref={(el) => (cardEls.current[hi] = el)} style={{ marginTop: hi === firstHub ? 16 : 44, padding: isDragged ? "12px 14px" : 0, borderRadius: isDragged ? 16 : 0, background: isDragged ? "#fff" : "transparent", boxShadow: isDragged ? "0 12px 28px rgba(0,0,0,0.18)" : "none", transform: isDragged ? `translateY(${drag.curY - drag.startY}px) scale(1.01)` : "none", opacity: isDragged ? 0.97 : 1, position: "relative", zIndex: isDragged ? 20 : 1, transition: isDragged ? "none" : "box-shadow 0.15s" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <button onClick={() => toggleHub(h.hub)} style={{ ...SANS, cursor: "pointer", textAlign: "left", flex: 1, minWidth: 0, background: "none", border: "none", padding: 0 }}>
                   <div style={{ fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", color: INK }}>{h.hub}</div>
                   <div style={{ fontSize: "var(--step-meta)", color: MUTE, marginTop: 2 }}>{h.stops.length} stops · {h.time}{isCollapsed ? "" : ` · ${h.arrive}`}</div>
                 </button>
+                <button onClick={() => toggleHub(h.hub)} aria-label={isCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4, display: "flex" }}>
+                  {isCollapsed ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+                </button>
                 {hubCount > 1 && (
                   <button onPointerDown={dragDown(hi)} onPointerMove={dragMove} onPointerUp={dragUp} onPointerCancel={dragUp}
                     aria-label="Drag to reorder" title="Drag to reorder"
-                    style={{ ...SANS, touchAction: "none", cursor: isDragged ? "grabbing" : "grab", background: "none", border: "none", padding: "8px 6px", display: "flex", alignItems: "center", justifyContent: "center", color: "#BDBDBD", marginLeft: 2 }}>
+                    style={{ ...SANS, touchAction: "none", cursor: isDragged ? "grabbing" : "grab", background: "none", border: "none", padding: "8px 4px", display: "flex", alignItems: "center", justifyContent: "center", color: "#BDBDBD" }}>
                     <GripVertical size={19} />
                   </button>
                 )}
