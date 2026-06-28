@@ -14,7 +14,8 @@ const PORT = 4174, URL = `http://localhost:${PORT}/`;
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const stop = (id, name) => ({ id, name, tier: "underground", why: "A sharp one-liner about why this store matters.", hub: "SoHo", dwell: 16, rating: 4.5, reviews: 120, hours: "10:00–19:00", openAt: 600, address: "123 Spring St, New York", lat: 40.723, lng: -74.001, price: 2, photos: [], confirmed: false, addedByUser: false, arriveMin: 600, eta: "10:00 AM" });
-const day = (dayNum) => ({ dayNum, label: "SoHo → Nolita", date: "Jul 1", confirmed: false, lunch: null, dinner: null, lunchPicks: [], lunchSearch: [], dinnerPicks: [], dinnerSearch: [], addCandidates: [], lunchAfterId: "a", lunchAt: "1:00 PM", lunchAnchor: null, itinerary: [ { hub: "SoHo", time: "~1 hr", arrive: "Start here", stops: [stop("a", "Store A"), stop("b", "Store B")] }, { hub: "Nolita", time: "~50 min", arrive: "From SoHo", stops: [stop("c", "Store C")] } ] });
+const meal = (name) => ({ name, cuisine: "Modern bistro", price: 3, why: "A beautiful room with a story.", rating: 4.6, address: "1 Mott St, New York", lat: 40.72, lng: -73.997, photos: [] });
+const day = (dayNum) => ({ dayNum, label: "SoHo → Nolita", date: "Jul 1", confirmed: false, lunch: meal("Lunch Spot"), dinner: meal("Dinner Spot"), lunchPicks: [meal("Pick A")], lunchSearch: [], dinnerPicks: [meal("Pick B")], dinnerSearch: [], addCandidates: [], lunchAfterId: "a", lunchAt: "1:00 PM", lunchAnchor: null, itinerary: [ { hub: "SoHo", time: "~1 hr", arrive: "Start here", stops: [stop("a", "Store A"), stop("b", "Store B")] }, { hub: "Nolita", time: "~50 min", arrive: "From SoHo", stops: [stop("c", "Store C")] } ] });
 const session = { city: "New York", tiers: ["underground", "streetwear"], trip: [day(1), day(2)], activeDay: 0, locked: false, screen: "review", hotel: { name: "Hotel", address: "X", lat: 40.71, lng: -74.0 } };
 
 async function main() {

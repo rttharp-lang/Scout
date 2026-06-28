@@ -18,6 +18,8 @@ const NEON = "#3BFF6E";         // --pop (neon green)
 const OPEN = "#178A3C";         // readable green for open/positive text
 const DANGER = "#C0392B";
 const CARD_SHADOW = "0 6px 18px rgba(0,0,0,0.07)";
+// Big specimen-style card title — ~48px on phone, up to ~56px on desktop.
+const CARD_TITLE = "clamp(3rem, 10vw, 3.5rem)";
 
 const TIERS = {
   aspirational: { label: "Aspirational", desc: "Luxury & designer — construction, theater, top of range", chip: ["#8A6D3B", "#F3ECDD"], grad: "linear-gradient(135deg,#3a342b,#8a7a5e)" },
@@ -281,7 +283,7 @@ function StopCard({ s, n, onConfirm, onRemove }) {
       {s.rating != null && <div style={{ position: "absolute", top: 13, right: 14, pointerEvents: "none", color: "#fff", fontSize: "var(--step-caption)", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}><Star size={11} fill="#fff" color="#fff" /> {s.rating}</div>}
       {s.confirmed && <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", display: s.rating != null ? "none" : "flex", width: 24, height: 24, borderRadius: 999, background: NEON, color: INK, alignItems: "center", justifyContent: "center" }}><Check size={14} /></div>}
       <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
-        <div style={{ color: "#fff", fontSize: "clamp(1.6rem, 5vw, 2.25rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{s.name}</div>
+        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{s.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.why}</div>
       </div>
       {meta && <div style={{ position: "absolute", left: 16, right: 16, bottom: 60, pointerEvents: "none", textAlign: "center", color: "rgba(255,255,255,0.88)", fontSize: "var(--step-caption)", textShadow: "0 1px 6px rgba(0,0,0,0.55)" }}>{meta}</div>}
@@ -295,53 +297,47 @@ function StopCard({ s, n, onConfirm, onRemove }) {
   );
 }
 
-function LunchCard({ l, onSelect }) {
+// Shared full-image overlay frame for restaurant cards (matches the store card):
+// photo fills the card, name large in white over the centre, cuisine·price + why
+// beneath, rating top-right, quiet icon actions over the bottom.
+function MealImageCard({ meal, actions, onClick }) {
+  const sub = [meal.cuisine, meal.price ? "$".repeat(meal.price) : null].filter(Boolean).join(" · ");
   return (
-    <div style={{ border: `1px solid ${LINE}`, borderRadius: 16, overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "relative", height: 170 }}>
-        <PhotoStrip name={l.name} address={l.address} photos={l.photos} grad="linear-gradient(135deg,#7a5230,#caa46a)" fallback={<Utensils size={34} color="#fff" style={{ opacity: 0.9 }} />} />
-        <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: "#7a5230", fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{l.cuisine}</div>
+    <div onClick={onClick} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW, cursor: onClick ? "pointer" : "default" }}>
+      <div style={{ position: "absolute", inset: 0 }}>
+        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots />
       </div>
-      <div style={{ padding: "12px 14px 14px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-          <div style={{ fontSize: 15.5, fontWeight: 600 }}>{l.name}</div>
-          <Rating rating={l.rating} reviews={l.reviews} href={mapsUrl(l.name, l.address)} />
-        </div>
-        <div style={{ fontSize: 12.5, color: MUTE, marginTop: 3 }}>{l.cuisine}{l.price ? ` · ${"$".repeat(l.price)}` : ""}</div>
-        <div style={{ display: "flex", gap: 14, marginTop: 6, fontSize: 12.5, color: MUTE, flexWrap: "wrap" }}>
-          {l.hours && <span style={{ display: "flex", alignItems: "center", gap: 4 }}><Clock size={12.5} /> <span style={{ color: OPEN, fontWeight: 600 }}>Open</span> · {l.hours}</span>}
-          <a href={mapsUrl(l.name, l.address)} target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: 4, color: ACCENT, textDecoration: "none", fontWeight: 600 }}><ExternalLink size={12.5} /> Reviews</a>
-        </div>
-        <div style={{ fontSize: 13.5, color: "#3a3a3a", marginTop: 9, lineHeight: 1.45 }}>{l.why}</div>
-        <AddressLine name={l.name} address={l.address} />
-        <button onClick={() => onSelect(l)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 12, background: ACCENT, color: "#fff", border: "none", borderRadius: 11, padding: "12px", fontSize: 14.5, fontWeight: 600 }}>Select this spot</button>
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
+      {meal.rating != null && <div style={{ position: "absolute", top: 13, right: 14, pointerEvents: "none", color: "#fff", fontSize: "var(--step-caption)", fontWeight: 600, display: "flex", alignItems: "center", gap: 3, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}><Star size={11} fill="#fff" color="#fff" /> {meal.rating}</div>}
+      <div style={{ position: "absolute", left: 0, right: 0, top: "46%", transform: "translateY(-50%)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
+        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}>{meal.name}</div>
+        {sub && <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", fontWeight: 600, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{sub}</div>}
+        {meal.why && <div style={{ color: "rgba(255,255,255,0.9)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 6, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{meal.why}</div>}
       </div>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, display: "flex", justifyContent: "center", gap: 8 }}>{actions}</div>
     </div>
   );
 }
 
-// The chosen lunch/dinner on the review page: swipeable photos of the restaurant,
-// what it's known for, address and actions, with a Change button.
+const mealIconBtn = { ...SANS, cursor: "pointer", textDecoration: "none", background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", height: 36, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" };
+
+// Picker card (lunch/dinner options) — tap to choose.
+function LunchCard({ l, onSelect }) {
+  return (
+    <MealImageCard meal={l} onClick={() => onSelect(l)}
+      actions={<span style={{ ...mealIconBtn, padding: "0 18px", gap: 6, fontSize: 13.5, fontWeight: 700 }}><Check size={15} /> Select</span>} />
+  );
+}
+
+// The chosen lunch/dinner on the review page — Change / Uber / Directions.
 function MealCard({ meal, onChange }) {
   return (
-    <div style={{ border: `1.5px solid ${ACCENT}`, borderRadius: 16, overflow: "hidden", background: "#fff", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "relative", height: 175 }}>
-        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#7a5230,#caa46a)" fallback={<Utensils size={34} color="#fff" style={{ opacity: 0.9 }} />} />
-        {meal.cuisine && <div style={{ position: "absolute", top: 10, right: 10, pointerEvents: "none", background: "rgba(255,255,255,0.92)", color: "#7a5230", fontSize: 11, fontWeight: 600, borderRadius: 999, padding: "4px 10px" }}>{meal.cuisine}</div>}
-      </div>
-      <div style={{ padding: "13px 14px", background: ACCENT_SOFT }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8 }}>
-          <div style={{ minWidth: 0 }}>
-            <div style={{ fontSize: 16.5, fontWeight: 700 }}>{meal.name}</div>
-            <div style={{ fontSize: 12.5, color: MUTE, marginTop: 1 }}>{meal.cuisine}{meal.price ? ` · ${"$".repeat(meal.price)}` : ""}{meal.rating ? ` · ${meal.rating}★` : ""}</div>
-          </div>
-          <button onClick={onChange} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600, flexShrink: 0 }}>Change</button>
-        </div>
-        {meal.why && <div style={{ fontSize: 13, color: "#3a3a3a", lineHeight: 1.45, marginTop: 9 }}>{meal.why}</div>}
-        <AddressLine name={meal.name} address={meal.address} />
-        <SmartActionRow name={meal.name} address={meal.address} lat={meal.lat} lng={meal.lng} />
-      </div>
-    </div>
+    <MealImageCard meal={meal}
+      actions={<>
+        <button onClick={onChange} aria-label="Change" title="Change" style={{ ...mealIconBtn, padding: "0 16px", gap: 6, fontSize: 13, fontWeight: 700 }}><Pencil size={14} /> Change</button>
+        <a href={uberUrl(meal.name, meal.address, meal.lat, meal.lng)} target="_blank" rel="noreferrer" aria-label="Uber here" title="Uber here" style={{ ...mealIconBtn, width: 36 }}><Car size={16} /></a>
+        <a href={mapsUrl(meal.name, meal.address)} target="_blank" rel="noreferrer" aria-label="Directions" title="Directions" style={{ ...mealIconBtn, width: 36 }}><Navigation size={16} /></a>
+      </>} />
   );
 }
 
@@ -1044,7 +1040,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
               )}
             </div>
             {/* Lunch lands after the neighborhood where you'll be ~1 PM. */}
-            {!drag && h.stops.some((s) => s.id === day.lunchAfterId) && <div style={{ maxWidth: 560, marginInline: "auto", marginTop: 18 }}>{lunchBlock}</div>}
+            {!drag && h.stops.some((s) => s.id === day.lunchAfterId) && <div style={{ maxWidth: 400, marginInline: "auto", marginTop: 18 }}>{lunchBlock}</div>}
             {drag && hi === lastHub && drag.to === lastHub && insertionLine}
           </React.Fragment>
         );
@@ -1055,7 +1051,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
       <button onClick={() => setHoodOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", maxWidth: 560, marginInline: "auto", marginTop: 18, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Add a neighborhood</button>
       {hoodOpen && <AddNeighborhoodModal city={city} tiers={tiers} existing={day.itinerary.map((h) => h.hub)} onClose={() => setHoodOpen(false)} onAdd={onAddNeighborhood} />}
 
-      <div style={{ marginTop: 28, maxWidth: 560, marginInline: "auto" }}>{dinnerBlock}</div>
+      <div style={{ marginTop: 28, maxWidth: 400, marginInline: "auto" }}>{dinnerBlock}</div>
 
       <div style={{ marginTop: 28, paddingTop: 20, borderTop: `1px solid ${LINE}`, maxWidth: 560, marginInline: "auto" }}>
         <button onClick={onConfirmDay} style={{ ...SANS, cursor: "pointer", width: "100%", background: day.confirmed ? "#fff" : ACCENT, color: day.confirmed ? OPEN : "var(--accent-ink)", border: `1.5px solid ${day.confirmed ? OPEN : ACCENT}`, borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
@@ -1082,28 +1078,30 @@ function LunchScreen({ dayNum, picks, search, onBack, onSelect, onSuggest, city,
   };
 
   return (
-    <div style={{ ...SANS, color: INK }}>
-      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: 14, padding: 0 }}><ArrowLeft size={16} /> Back to Day {dayNum}</button>
-      <h1 style={{ fontSize: 26, fontWeight: 700, letterSpacing: -0.6, margin: "14px 0 2px" }}>Pick {meal} · Day {dayNum}</h1>
-      <div style={{ color: MUTE, fontSize: 14, lineHeight: 1.4 }}>Curated for a memorable team meal {meal === "dinner" ? "where the day wraps up" : "near your route"} — beautiful, delicious, and worth the story.</div>
+    <div style={{ ...SANS, color: INK, maxWidth: 980, marginInline: "auto" }}>
+      <button onClick={onBack} style={{ ...SANS, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, background: "none", border: "none", color: INK, fontSize: "var(--step-meta)", padding: 0 }}><ArrowLeft size={16} /> Back to Day {dayNum}</button>
+      <h1 style={{ fontSize: "var(--step-h1)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.1, margin: "14px 0 2px" }}>Pick {meal} · Day {dayNum}</h1>
+      <div style={{ color: MUTE, fontSize: "var(--step-body)", lineHeight: 1.4, maxWidth: 600 }}>Curated for a memorable team meal {meal === "dinner" ? "where the day wraps up" : "near your route"} — beautiful, delicious, and worth the story.</div>
 
-      <div style={{ fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.6, marginTop: 22 }}>SCOUT'S PICKS</div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 12 }}>{all.map((l, i) => <LunchCard key={(l.name || i) + "-" + i} l={l} onSelect={onSelect} />)}</div>
+      <div style={{ fontSize: "var(--step-caption)", fontWeight: 700, color: MUTE, letterSpacing: 0.6, marginTop: 24 }}>SCOUT'S PICKS</div>
+      <div className="scout-grid" style={{ marginTop: 12 }}>{all.map((l, i) => <LunchCard key={(l.name || i) + "-" + i} l={l} onSelect={onSelect} />)}</div>
 
-      <button onClick={promptMore} disabled={loadingMore} style={{ ...SANS, cursor: loadingMore ? "default" : "pointer", width: "100%", marginTop: 14, border: `1.5px solid ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: 14, padding: "14px", fontSize: 15, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-        {loadingMore ? <><span style={{ width: 15, height: 15, border: `2.5px solid ${ACCENT}40`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} /> Finding more…</> : <>✨ Prompt 5 more {meal} spots</>}
-        <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
-      </button>
+      <div style={{ maxWidth: 560, marginInline: "auto" }}>
+        <button onClick={promptMore} disabled={loadingMore} style={{ ...SANS, cursor: loadingMore ? "default" : "pointer", width: "100%", marginTop: 18, border: `1.5px solid ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 15, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+          {loadingMore ? <><span style={{ width: 15, height: 15, border: `2.5px solid ${ACCENT}40`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} /> Finding more…</> : <>✨ Prompt 5 more {meal} spots</>}
+          <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+        </button>
 
-      {searching ? (
-        <div style={{ marginTop: 12 }}>
-          <SearchSelect candidates={search} title={`Search a ${meal} spot`} placeholder="Search a restaurant by name…" cityContext={city}
-            note={<>Scout pulls in its live rating, hours and address, then sets it as your {meal}.</>}
-            onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
-        </div>
-      ) : (
-        <button onClick={() => setSearching(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 10, background: "none", border: "none", color: MUTE, fontSize: 13.5, fontWeight: 600, padding: "6px" }}>Have a specific place in mind? Search it</button>
-      )}
+        {searching ? (
+          <div style={{ marginTop: 12 }}>
+            <SearchSelect candidates={search} title={`Search a ${meal} spot`} placeholder="Search a restaurant by name…" cityContext={city}
+              note={<>Scout pulls in its live rating, hours and address, then sets it as your {meal}.</>}
+              onClose={() => setSearching(false)} onPick={(c) => onSelect(c)} />
+          </div>
+        ) : (
+          <button onClick={() => setSearching(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 10, background: "none", border: "none", color: MUTE, fontSize: 13.5, fontWeight: 600, padding: "6px" }}>Have a specific place in mind? Search it</button>
+        )}
+      </div>
     </div>
   );
 }
@@ -1587,7 +1585,7 @@ function HoodCard({ o, n, city, on, onToggle }) {
       <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
       <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", width: 28, height: 28, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "transparent", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none" }}>{on && <Check size={16} strokeWidth={3} />}</div>
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", pointerEvents: "none" }}>
-        <div style={{ color: "#fff", fontSize: "clamp(1.6rem, 5vw, 2.25rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}>{o.name}</div>
+        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}>{o.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.45, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{o.blurb}</div>
       </div>
     </div>
@@ -2143,11 +2141,11 @@ export default function App() {
             const db = b.lat != null ? distLL(anchor, { lat: b.lat, lng: b.lng }) : Infinity;
             return da - db;
           }) : (d.lunchPicks || []);
-          return <div className="scout-measure"><LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} onSuggest={(ex) => onSuggestMeals("lunch", ex)} city={city} /></div>;
+          return <LunchScreen dayNum={d.dayNum} picks={picks} search={d.lunchSearch} onBack={() => setScreen("review")} onSelect={onSelectLunch} onSuggest={(ex) => onSuggestMeals("lunch", ex)} city={city} />;
         })()}
         {screen === "dinner" && (() => {
           const d = trip[activeDay];
-          return <div className="scout-measure"><LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} onSuggest={(ex) => onSuggestMeals("dinner", ex)} city={city} /></div>;
+          return <LunchScreen meal="dinner" dayNum={d.dayNum} picks={d.dinnerPicks || []} search={d.dinnerSearch || []} onBack={() => setScreen("review")} onSelect={onSelectDinner} onSuggest={(ex) => onSuggestMeals("dinner", ex)} city={city} />;
         })()}
         {screen === "overview" && <div className="scout-col"><OverviewScreen {...{ city, dates, tiers, trip, locked }} onBack={() => setScreen("review")} onEditDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} onLock={() => setLocked(true)} onUnlock={() => setLocked(false)} onSaveTrip={authEnabled ? onSaveTrip : null} saving={saving} session={session} /></div>}
       </div>
