@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, searchCities, suggestNeighborhoods } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
@@ -402,19 +402,21 @@ function MiniMap({ stops, home }) {
   const [failed, setFailed] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [w, setW] = useState(0);
-  const boxRef = useRef(null);
+  const roRef = useRef(null);
   const sig = stops.map((s) => s.name).join("|");
 
-  // Track the map's rendered width so the basemap request and our pin overlay
-  // share one coordinate space (recompute on resize / rotation).
-  useEffect(() => {
-    const el = boxRef.current;
-    if (!el) return;
-    const measure = () => setW(el.clientWidth);
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(el);
-    return () => ro.disconnect();
+  // Measure the map's rendered width via a callback ref so it fires whenever the
+  // box actually mounts — the box only appears once stops resolve, so a plain
+  // mount effect would miss it. Keeps the basemap request and our pin overlay in
+  // one coordinate space, and re-measures on resize / rotation.
+  const setBox = useCallback((el) => {
+    if (roRef.current) { roRef.current.disconnect(); roRef.current = null; }
+    if (el) {
+      setW(el.clientWidth);
+      const ro = new ResizeObserver(() => setW(el.clientWidth));
+      ro.observe(el);
+      roRef.current = ro;
+    }
   }, []);
 
   useEffect(() => {
@@ -467,7 +469,7 @@ function MiniMap({ stops, home }) {
   const dirUrl = "https://www.google.com/maps/dir/" + (homeStr ? [homeStr, ...coords] : coords).join("/") + "/data=!4m2!4m1!3e2";
   return (
     <a href={dirUrl} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none" }}>
-      <div ref={boxRef} style={{ position: "relative", height: MAP_H, borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW, background: "#E8EEEA" }}>
+      <div ref={setBox} style={{ position: "relative", height: MAP_H, borderRadius: 14, overflow: "hidden", border: `1px solid ${LINE}`, boxShadow: CARD_SHADOW, background: "#E8EEEA" }}>
         {mapSrc && (
           <img src={mapSrc} alt="Route map"
             onError={() => setFailed(true)}
