@@ -452,7 +452,7 @@ function LunchCard({ l, onSelect }) {
 // caret buttons flanking the card edges, with an "X of Y spots" counter between
 // them — move between restaurants. Advancing a spot remounts the card (key on
 // the active name) so its photos reset to the first.
-function MealSlot({ at, meal, picks, chosen, prevHub, prevCoord, nextHub, nextCoord, onChoose, onClear, onMore }) {
+function MealSlot({ meal, picks, chosen, prevHub, prevCoord, nextHub, nextCoord, onChoose, onClear, onMore }) {
   const label = meal === "lunch" ? "Lunch" : "Dinner";
   // Walk-distance ordering. Real coordinates drive this today; if a pick has no
   // location we sink it to the end. (Swap travelMin for a live matrix later.)
@@ -475,20 +475,9 @@ function MealSlot({ at, meal, picks, chosen, prevHub, prevCoord, nextHub, nextCo
     width: 38, height: 38, borderRadius: 999, cursor: disabled ? "default" : "pointer", opacity: disabled ? 0.35 : 1,
     background: "rgba(15,15,15,0.5)", border: "none", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(3px)" });
 
-  const header = (
-    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, paddingInline: 4 }}>
-      <Utensils size={16} color={ACCENT} />
-      <span style={{ fontSize: 13, fontWeight: 700, color: INK }}>{at}</span>
-      <span style={{ fontSize: 11, fontWeight: 700, color: ACCENT, textTransform: "uppercase", letterSpacing: 0.6 }}>{label}</span>
-    </div>
-  );
-
   if (!ranked.length) {
     return (
-      <div style={{ maxWidth: 440, marginInline: "auto", marginTop: 10 }}>
-        {header}
-        <button onClick={onMore} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add {label.toLowerCase()} near here</button>
-      </div>
+      <button onClick={onMore} style={{ ...SANS, cursor: "pointer", width: "100%", border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: 16, padding: "16px", fontSize: 15, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Utensils size={17} /> Add {label.toLowerCase()} near here</button>
     );
   }
 
@@ -529,8 +518,7 @@ function MealSlot({ at, meal, picks, chosen, prevHub, prevCoord, nextHub, nextCo
   );
 
   return (
-    <div style={{ maxWidth: 440, marginInline: "auto", marginTop: 10 }}>
-      {header}
+    <div>
       <MealImageCard key={p.name} meal={p} onClick={() => (isChosen ? onClear() : onChoose(p))}
         corner={check} badge={walkBadge} bars topInset={24} overlay={nav} />
       {onMore && (
@@ -1071,11 +1059,15 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   const flatStops = day.itinerary.flatMap((h) => h.stops);
   const extraWalk = hubCount > 1 ? Math.round(routeMinutes(flatStops, hc) - routeMinutes(scheduleStops(flatStops, hc, false), hc)) : 0;
   const suboptimal = extraWalk >= 8;
-  const allCollapsed = hubCount > 0 && day.itinerary.every((h) => !h.stops.length || collapsed.has(h.hub));
+  // Collapse keys cover BOTH neighborhoods (by hub) and the meal slots (lunch +
+  // dinner exist whenever the day has stops), so collapse-all hits everything.
+  const mealKeys = hubCount > 0 ? ["meal:lunch", "meal:dinner"] : [];
+  const collapseKeys = [...day.itinerary.filter((h) => h.stops.length).map((h) => h.hub), ...mealKeys];
+  const allCollapsed = collapseKeys.length > 0 && collapseKeys.every((k) => collapsed.has(k));
   const toggleHub = (hub) => setCollapsed((p) => { const s = new Set(p); s.has(hub) ? s.delete(hub) : s.add(hub); return s; });
   const toggleAll = () => setCollapsed((p) => {
     const s = new Set(p);
-    day.itinerary.forEach((h) => (allCollapsed ? s.delete(h.hub) : s.add(h.hub)));
+    collapseKeys.forEach((k) => (allCollapsed ? s.delete(k) : s.add(k)));
     return s;
   });
 
@@ -1202,7 +1194,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, marginTop: 24, marginBottom: 4, paddingBottom: 12, borderBottom: `1px solid ${LINE}`, flexWrap: "wrap" }}>
         <div style={{ fontSize: "var(--step-meta)", fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase" }}>{hubCount} neighborhood{hubCount === 1 ? "" : "s"}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          {hubCount > 1 && (
+          {collapseKeys.length > 1 && (
             <button onClick={toggleAll} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: ACCENT, fontSize: 13.5, fontWeight: 600, display: "flex", alignItems: "center", gap: 4, padding: 0 }}>
               {allCollapsed ? <><ChevronDown size={15} /> Expand all</> : <><ChevronUp size={15} /> Collapse all</>}
             </button>
@@ -1215,15 +1207,37 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         if (b.type === "meal") {
           if (drag) return null; // meal slots hide during neighborhood reorder
           const isLunch = b.meal === "lunch";
+          const mkey = `meal:${b.meal}`;
+          const mealCollapsed = collapsed.has(mkey);
+          const label = isLunch ? "Lunch" : "Dinner";
+          const picks = isLunch ? day.lunchPicks : day.dinnerPicks;
+          const chosen = isLunch ? day.lunch : day.dinner;
+          const count = (picks || []).length;
+          const sub = chosen ? `Going · ${chosen.name}` : (count ? `${count} option${count === 1 ? "" : "s"}` : "tap to add a spot");
           return (
-            <div key={b.key} style={{ marginTop: 22 }}>
-              <MealSlot at={b.at} meal={b.meal}
-                picks={isLunch ? day.lunchPicks : day.dinnerPicks}
-                chosen={isLunch ? day.lunch : day.dinner}
-                prevHub={b.prevHub} prevCoord={b.prevCoord} nextHub={b.nextHub} nextCoord={b.nextCoord}
-                onChoose={isLunch ? onChooseLunch : onChooseDinner}
-                onClear={isLunch ? onClearLunch : onClearDinner}
-                onMore={isLunch ? onPickLunch : onPickDinner} />
+            <div key={b.key} style={{ marginTop: 22, maxWidth: 440, marginInline: "auto" }}>
+              {/* Same header + chevron + collapse behavior as a neighborhood. */}
+              <div style={{ display: "flex", alignItems: "center", gap: 10, paddingInline: 4 }}>
+                <button onClick={() => toggleHub(mkey)} style={{ ...SANS, cursor: "pointer", flex: 1, minWidth: 0, textAlign: "left", background: "none", border: "none", padding: 0, display: "flex", alignItems: "center", gap: 8 }}>
+                  <Utensils size={16} color={ACCENT} style={{ flexShrink: 0 }} />
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.01em", color: INK }}>{b.at} · {label}</div>
+                    <div style={{ fontSize: "var(--step-meta)", color: MUTE, marginTop: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{sub}</div>
+                  </div>
+                </button>
+                <button onClick={() => toggleHub(mkey)} aria-label={mealCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4, display: "flex" }}>
+                  {mealCollapsed ? <ChevronDown size={20} /> : <ChevronUp size={20} />}
+                </button>
+              </div>
+              {!mealCollapsed && (
+                <div style={{ marginTop: 12 }}>
+                  <MealSlot meal={b.meal} picks={picks} chosen={chosen}
+                    prevHub={b.prevHub} prevCoord={b.prevCoord} nextHub={b.nextHub} nextCoord={b.nextCoord}
+                    onChoose={isLunch ? onChooseLunch : onChooseDinner}
+                    onClear={isLunch ? onClearLunch : onClearDinner}
+                    onMore={isLunch ? onPickLunch : onPickDinner} />
+                </div>
+              )}
             </div>
           );
         }
@@ -1281,7 +1295,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
                         onClose={() => setAddHub(null)} onPick={(c) => onAddStop(c, h.hub)} />
                     </div>
                   ) : (
-                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 12, border: `1.5px dashed ${ACCENT}`, background: ACCENT_SOFT, color: ACCENT, borderRadius: "var(--radius-pill)", padding: "12px", fontSize: 13.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 7 }}>✨ Prompt more here</button>
+                    <button onClick={() => setAddHub(h.hub)} style={{ ...SANS, cursor: "pointer", display: "block", marginInline: "auto", marginTop: 12, background: "none", border: "none", color: ACCENT, fontSize: 13, fontWeight: 600 }}>Search more spots →</button>
                   )}
                 </div>
               )}
