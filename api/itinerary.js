@@ -68,9 +68,9 @@ const SCHEMA = {
               additionalProperties: false,
               required: ["name", "cuisine", "why"],
               properties: {
-                name: { type: "string", description: "Real restaurant near the day's route" },
+                name: { type: "string", description: "Real lunch restaurant within a short walk of the day's route, around 1–2 PM" },
                 cuisine: { type: "string" },
-                why: { type: "string", description: "Why it's a memorable team meal, not a tourist trap" },
+                why: { type: "string", description: "Why it's a delicious, design-led, aesthetically beautiful lunch — the kind that makes the day feel special, not a tourist trap" },
               },
             },
           },
@@ -81,9 +81,9 @@ const SCHEMA = {
               additionalProperties: false,
               required: ["name", "cuisine", "why"],
               properties: {
-                name: { type: "string", description: "Real dinner restaurant for an evening team meal in the city" },
+                name: { type: "string", description: "Real dinner restaurant near where the day's route ends" },
                 cuisine: { type: "string" },
-                why: { type: "string", description: "Why it's a memorable dinner — special, design-forward or culturally telling, not a tourist trap" },
+                why: { type: "string", description: "Why it's an unforgettable dinner — a great view, beautiful ambience, modern and unique; the kind of place people tell stories about. Local gem over Michelin box-ticking." },
               },
             },
           },
@@ -122,7 +122,11 @@ export default async function handler(req, res) {
 Only include these tiers:
 ${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}${areaLine}
 
-${neighborhoodInstruction} Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships. Add 3–4 real lunch options near that day's route, and 3–4 real dinner options for an evening team meal in the city. Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
+${neighborhoodInstruction} Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships.
+
+Dining is part of the journey, not an afterthought — curate it with the same taste. Add 3–4 real lunch options within a short walk of where the route sits around 1–2 PM (so the team isn't crossing the city to eat) — delicious, design-led, beautiful rooms. Add 3–4 real dinner options near where the day's route ends — unforgettable spots with a view or beautiful ambience, modern and unique, the kind of place people tell stories about; favour a local gem over a Michelin box-tick. Order both lists best-first.
+
+Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
 
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {

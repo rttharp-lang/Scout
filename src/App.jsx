@@ -25,6 +25,11 @@ const TIERS = {
   core:         { label: "Core", desc: "Commercial & value — where scale meets the high street", chip: ["#B0472F", "#FBEAE3"], grad: "linear-gradient(135deg,#a8431f,#d98a55)" },
 };
 const TIER_ORDER = ["aspirational", "department", "competitor", "streetwear", "underground", "culture", "core"];
+// Default curation: the inspiring, insider, design-led picks — concept stores,
+// underground/archive, local streetwear, designer flagships. We deliberately
+// skip department stores, athletic competitors and commercial/core (the obvious
+// stops every product manager already knows) unless the user opts into filters.
+const CURATED_TIERS = ["aspirational", "streetwear", "underground", "culture"];
 const ADDED_TIER = { label: "Your find", chip: ["#5A4FB0", "#ECEAFB"], grad: "linear-gradient(135deg,#4a4490,#8a82c8)" };
 const CITIES = ["Tokyo", "New York", "Shanghai", "Paris", "London"];
 
@@ -595,6 +600,7 @@ function RangeCalendar({ start, end, onChange }) {
 // ── Input ──────────────────────────────────────────────────────
 function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, datesLabel, dayCount, tiers, toggleTier, onBuild, session, savedTrips, onLoadTrip, onDeleteTrip }) {
   const [calOpen, setCalOpen] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [citySug, setCitySug] = useState([]);
   const [cityFocus, setCityFocus] = useState(false);
   const [hq, setHq] = useState(hotel?.name || "");
@@ -602,7 +608,7 @@ function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, date
   const [hotelFocus, setHotelFocus] = useState(false);
   const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
   const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
-  const ready = tiers.length && start && city.trim();
+  const ready = start && city.trim();
 
   useEffect(() => {
     const term = city.trim();
@@ -622,7 +628,7 @@ function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, date
   return (
     <div style={{ ...SANS, color: INK }}>
       <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: "8px 0 8px" }}>Where are you going?</h1>
-      <p style={{ color: MUTE, fontSize: 15, margin: 0 }}>A few inputs. We build each day's route, timing, and the stops worth your time.</p>
+      <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>City, hotel, dates — that's it. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them. The if-you-know-you-know version of the city.</p>
       {session && savedTrips && savedTrips.length > 0 && (
         <div style={{ marginTop: 24 }}>
           <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>Your saved trips</label>
@@ -683,20 +689,32 @@ function InputScreen({ city, setCity, hotel, setHotel, start, end, onRange, date
         {datesLabel && <span style={{ fontSize: 12.5, color: MUTE, fontWeight: 600 }}>{dayCount} {dayCount === 1 ? "day" : "days"}</span>}
       </button>
       {calOpen && <RangeCalendar start={start} end={end} onChange={onRange} />}
-      <label style={{ display: "block", fontSize: 13, fontWeight: 600, marginTop: 22, marginBottom: 8 }}>What do you want to see? <span style={{ color: MUTE, fontWeight: 400 }}>· select any</span></label>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {TIER_ORDER.map((k) => {
-          const t = TIERS[k]; const on = tiers.includes(k);
-          return (
-            <button key={k} onClick={() => toggleTier(k)} style={{ ...SANS, textAlign: "left", cursor: "pointer", display: "flex", alignItems: "center", gap: 12, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: 14, padding: "14px 14px" }}>
-              <div style={{ width: 24, height: 24, borderRadius: 7, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: `1.5px solid ${on ? ACCENT : "#C9C9C9"}`, background: on ? ACCENT : "#fff" }}>{on && <Check size={15} color="#fff" />}</div>
-              <div><div style={{ fontSize: 15.5, fontWeight: 600 }}>{t.label}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 2, lineHeight: 1.35 }}>{t.desc}</div></div>
-            </button>
-          );
-        })}
+      <button onClick={onBuild} disabled={!ready} style={{ ...SANS, cursor: ready ? "pointer" : "not-allowed", width: "100%", marginTop: 26, background: ready ? ACCENT : "#E5A6A9", color: "#fff", border: "none", borderRadius: 12, padding: "16px", fontSize: 16.5, fontWeight: 700 }}>Curate my trip</button>
+      <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 10, lineHeight: 1.5 }}>We curate the best concept, archive and independent stores — and skip the department stores and big brands everyone already knows.</div>
+
+      {/* Optional: take control of what's included via the existing tier filters. */}
+      <div style={{ marginTop: 22, borderTop: `1px solid ${LINE}`, paddingTop: 18 }}>
+        <button onClick={() => setFiltersOpen((v) => !v)} style={{ ...SANS, cursor: "pointer", width: "100%", background: "none", border: "none", padding: 0, display: "flex", alignItems: "center", justifyContent: "space-between", color: INK }}>
+          <span style={{ fontSize: 14, fontWeight: 600 }}>Want to curate your own? Use filters</span>
+          {filtersOpen ? <ChevronUp size={18} color={MUTE} /> : <ChevronDown size={18} color={MUTE} />}
+        </button>
+        {filtersOpen && (
+          <>
+            <p style={{ fontSize: 12.5, color: MUTE, lineHeight: 1.45, margin: "10px 0 12px" }}>By default Scout includes the design-led, insider picks. Adjust what you want — add department stores or competitor brands, or narrow to just the underground.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {TIER_ORDER.map((k) => {
+                const t = TIERS[k]; const on = tiers.includes(k);
+                return (
+                  <button key={k} onClick={() => toggleTier(k)} style={{ ...SANS, textAlign: "left", cursor: "pointer", display: "flex", alignItems: "center", gap: 12, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: 14, padding: "14px 14px" }}>
+                    <div style={{ width: 24, height: 24, borderRadius: 7, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", border: `1.5px solid ${on ? ACCENT : "#C9C9C9"}`, background: on ? ACCENT : "#fff" }}>{on && <Check size={15} color="#fff" />}</div>
+                    <div><div style={{ fontSize: 15.5, fontWeight: 600 }}>{t.label}</div><div style={{ fontSize: 12.5, color: MUTE, marginTop: 2, lineHeight: 1.35 }}>{t.desc}</div></div>
+                  </button>
+                );
+              })}
+            </div>
+          </>
+        )}
       </div>
-      <button onClick={onBuild} disabled={!ready} style={{ ...SANS, cursor: ready ? "pointer" : "not-allowed", width: "100%", marginTop: 24, background: ready ? ACCENT : "#E5A6A9", color: "#fff", border: "none", borderRadius: 12, padding: "15px", fontSize: 16, fontWeight: 600 }}>Build my route</button>
-      <div style={{ textAlign: "center", color: MUTE, fontSize: 12, marginTop: 12 }}>Type any city for a live AI-built route · Tokyo shows the curated sample</div>
     </div>
   );
 }
@@ -1367,8 +1385,30 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, areas = []) {
     // Label the day from the actual scheduled block order, so the header matches
     // the route even when the scheduler reorders neighborhoods.
     const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || d.label || `${city} · Day ${di + 1}`;
-    return applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
+
+    // Curate the day fully: auto-pick the best lunch near the ~1 PM point of the
+    // route, and the best dinner near where the day wraps up. The scout can still
+    // change either. Run applyLunch once to find the lunch anchor, then again
+    // with the chosen lunch so the afternoon times shift for the break.
+    const base = applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
+    const lunchPick = nearestPick(lunchPicks, base.lunchAnchor);
+    const lastBlock = itinerary[itinerary.length - 1];
+    const lastStop = lastBlock && lastBlock.stops[lastBlock.stops.length - 1];
+    const dinnerPick = nearestPick(dinnerPicks, coordOf(lastStop)) || dinnerPicks[0] || null;
+    return applyLunch({ ...base, lunch: lunchPick ? { ...lunchPick } : null, dinner: dinnerPick ? { ...dinnerPick } : null });
   }));
+}
+
+// Pick the meal option closest to a coordinate (the lunch anchor, or where the
+// day ends for dinner); falls back to the first option when there are no coords.
+function nearestPick(picks, coord) {
+  if (!picks || !picks.length) return null;
+  if (!coord) return picks[0];
+  return [...picks].sort((a, b) => {
+    const da = a.lat != null ? distLL(coord, { lat: a.lat, lng: a.lng }) : Infinity;
+    const db = b.lat != null ? distLL(coord, { lat: b.lat, lng: b.lng }) : Infinity;
+    return da - db;
+  })[0];
 }
 
 // Single-character static-map labels: 1–9 then A–Z, matching the card badges.
@@ -1686,9 +1726,9 @@ export default function App() {
   const [screen, setScreen] = useState("input");
   const [city, setCity] = useState("Tokyo");
   const [hotel, setHotel] = useState(null);
-  const [startDate, setStartDate] = useState(() => addDays(new Date(), 7));
-  const [endDate, setEndDate] = useState(() => addDays(new Date(), 8));
-  const [tiers, setTiers] = useState(["aspirational", "competitor", "core"]);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
+  const [tiers, setTiers] = useState(CURATED_TIERS);
   const [trip, setTrip] = useState([]);
   const [activeDay, setActiveDay] = useState(0);
   const [locked, setLocked] = useState(false);
@@ -1702,7 +1742,6 @@ export default function App() {
   const [selectedAreas, setSelectedAreas] = useState([]);
   const [areaLoading, setAreaLoading] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
-  const allHubs = (t) => new Set((t || []).flatMap((d) => (d.itinerary || []).map((h) => h.hub)));
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -1795,7 +1834,7 @@ export default function App() {
 
   const onLoadTrip = (t, dayIndex = 0) => {
     setCity(t.city); setTiers(t.tiers || []); setTrip(t.trip || []); setCurrentTripId(t.id);
-    setCollapsed(allHubs(t.trip)); // open to the collapsed neighborhood overview
+    setCollapsed(new Set()); // open with neighborhoods expanded
     setActiveDay(dayIndex); setLocked(false); setScreen("review"); window.scrollTo(0, 0);
   };
 
@@ -1835,18 +1874,19 @@ export default function App() {
   const toggleArea = (name) =>
     setSelectedAreas((p) => (p.includes(name) ? p.filter((x) => x !== name) : [...p, name]));
 
-  // Step 2: build the live itinerary, constrained to the chosen neighborhoods
-  // (or unconstrained if the suggestions weren't available / none picked).
+  // Build the curated itinerary straight from city + hotel + dates. The AI picks
+  // the best neighborhoods and stores (default curation, or the chosen filters);
+  // no upfront neighborhood-selection step. Land on the review page with the
+  // neighborhoods expanded so you see the best of everything in optimal order.
   const build = async () => {
     const n = Math.max(1, dayCount);
+    const useTiers = tiers.length ? tiers : CURATED_TIERS;
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, tiers, n, hotel, selectedAreas);
+      const live = await buildLiveTrip(city, useTiers, n, hotel, []);
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
-      // Land on the review page with neighborhoods collapsed — having chosen the
-      // areas, you first see your neighborhoods, then open them to see the stores.
-      setTrip(dated); setCollapsed(allHubs(dated)); setScreen("review");
+      setTrip(dated); setCollapsed(new Set()); setScreen("review");
     } catch {
       // Generation didn't complete — show a retry rather than a wrong-city route.
       setScreen("builderror");
@@ -1955,7 +1995,7 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "26px 18px 56px" }}>
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
+        {screen === "input" && <InputScreen {...{ city, setCity, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={build} session={session} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} />}
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} options={areaOptions} loading={areaLoading} selected={selectedAreas} onToggle={toggleArea} onBack={() => setScreen("input")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("input")} />}
