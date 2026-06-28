@@ -850,18 +850,17 @@ function CityCard({ c, onPick }) {
   return (
     <div onClick={() => onPick(c.city)} className="city-rail-item" role="button" tabIndex={0} aria-label={`Plan a trip to ${c.city}`}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onPick(c.city); }}
-      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
+      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={c.city} photos={c.image ? [c.image] : null} srcOf={(u) => u} grad="linear-gradient(150deg,#2b2b3a,#5b6172)" fallback={<span aria-hidden />} hideDots />
       </div>
-      {/* Heavy, center-weighted veil so name + blurb + button all stay legible. */}
+      {/* Heavy, center-weighted veil so the name + button stay legible on light photos. */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
-      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px", gap: 16 }}>
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px", gap: 18 }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
-        <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-body)", lineHeight: 1.45, maxWidth: 360, textShadow: "0 1px 10px rgba(0,0,0,0.7)" }}>{c.blurb}</div>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
-          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 7, marginTop: 4, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "12px 26px", fontSize: 14.5, fontWeight: 700 }}>
-          Explore {c.city} <ChevronRight size={16} />
+          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "9px 18px", fontSize: 13, fontWeight: 700 }}>
+          Explore {c.city} <ChevronRight size={15} />
         </button>
       </div>
     </div>
@@ -937,12 +936,12 @@ function CityPicker({ onPickCity }) {
         {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPickCity} />)}
       </div>
 
-      {/* Pagination dots — one per city, active filled. */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 7, marginTop: 14 }}>
+      {/* Pagination dots — small, tight, compact centered cluster. */}
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 4, marginTop: 14 }}>
         {CITY_RAIL.map((c, i) => (
           <button key={c.city} onClick={() => goTo(i)} aria-label={`Go to ${c.city}`}
-            style={{ ...SANS, cursor: "pointer", background: "none", border: "none", padding: 4, display: "flex" }}>
-            <span style={{ width: 7, height: 7, borderRadius: 999, background: i === active ? INK : "rgba(10,10,10,0.2)", transition: "background 0.15s" }} />
+            style={{ ...SANS, cursor: "pointer", background: "none", border: "none", padding: "5px 2px", display: "flex" }}>
+            <span style={{ width: 6, height: 6, borderRadius: 999, background: i === active ? INK : "rgba(10,10,10,0.2)", transition: "background 0.15s" }} />
           </button>
         ))}
       </div>
