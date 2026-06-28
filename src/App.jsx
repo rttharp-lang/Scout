@@ -790,12 +790,12 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
   const hubCount = day.itinerary.filter((h) => h.stops.length).length;
   const lastHub = day.itinerary.length - 1;
 
-  // Estimate how much extra walking the current neighborhood order costs versus
+  // Estimate how much extra travel the current neighborhood order costs versus
   // Scout's optimal order — so we can warn when a manual arrangement backtracks.
   const hc = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
   const flatStops = day.itinerary.flatMap((h) => h.stops);
-  const extraWalk = hubCount > 1 ? Math.round(walkMinutes(flatStops, hc) - walkMinutes(scheduleStops(flatStops, hc, false), hc)) : 0;
-  const suboptimal = extraWalk >= 6;
+  const extraWalk = hubCount > 1 ? Math.round(routeMinutes(flatStops, hc) - routeMinutes(scheduleStops(flatStops, hc, false), hc)) : 0;
+  const suboptimal = extraWalk >= 8;
   const allCollapsed = hubCount > 0 && day.itinerary.every((h) => !h.stops.length || collapsed.has(h.hub));
   const toggleHub = (hub) => setCollapsed((p) => { const s = new Set(p); s.has(hub) ? s.delete(hub) : s.add(hub); return s; });
   const toggleAll = () => setCollapsed((p) => {
@@ -834,6 +834,28 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
     });
   };
   const insertionLine = <div style={{ height: 3, borderRadius: 2, background: ACCENT, margin: "6px 4px" }} />;
+
+  // Connector shown between neighborhoods (and from the hotel): a short walk, or
+  // — when areas are far apart — a tappable Uber with an estimated ride time.
+  const Hop = (fromCoord, toStop, label) => {
+    const to = coordOf(toStop);
+    if (!fromCoord || !to) return null;
+    const walk = Math.round(travelMin(fromCoord, to));
+    if (walk <= WALK_OK_MIN) {
+      return (
+        <div style={{ textAlign: "center", fontSize: 12.5, color: MUTE, margin: "12px 0 2px", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
+          <Navigation size={12} /> ~{walk} min walk{label ? ` to ${label}` : ""}
+        </div>
+      );
+    }
+    const drive = Math.round(driveMin(fromCoord, to));
+    return (
+      <a href={uberUrl(toStop.name, toStop.address, toStop.lat, toStop.lng)} target="_blank" rel="noreferrer"
+        style={{ ...SANS, display: "flex", alignItems: "center", justifyContent: "center", gap: 7, textDecoration: "none", margin: "12px auto 2px", width: "fit-content", background: INK, color: "#fff", borderRadius: 999, padding: "8px 15px", fontSize: 12.5, fontWeight: 600 }}>
+        <Car size={14} /> Too far to walk — Uber{label ? ` to ${label}` : ""} · ~{drive} min
+      </a>
+    );
+  };
 
   let n = 0;
   const total = day.itinerary.reduce((a, h) => a + h.stops.length, 0);
@@ -905,7 +927,7 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         <div style={{ marginTop: 18, background: "#FFF7E6", border: "1px solid #F2D89A", borderRadius: 12, padding: "12px 14px", display: "flex", alignItems: "flex-start", gap: 10 }}>
           <span style={{ fontSize: 16, lineHeight: "20px" }}>⚠️</span>
           <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 13.5, color: "#7A5A12", lineHeight: 1.45 }}>This neighborhood order backtracks — about <b>~{extraWalk} min</b> of extra walking versus the best route.</div>
+            <div style={{ fontSize: 13.5, color: "#7A5A12", lineHeight: 1.45 }}>This neighborhood order backtracks — about <b>~{extraWalk} min</b> of extra travel versus the best route.</div>
             <button onClick={onOptimizeDay} style={{ ...SANS, cursor: "pointer", marginTop: 8, background: "#fff", border: `1px solid #E0B860`, color: "#7A5A12", borderRadius: 9, padding: "7px 12px", fontSize: 13, fontWeight: 700, display: "flex", alignItems: "center", gap: 6 }}><Navigation size={13} /> Reorder optimally</button>
           </div>
         </div>
@@ -924,9 +946,15 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onBac
         if (!h.stops.length) return null;
         const isCollapsed = collapsed.has(h.hub);
         const isDragged = drag && drag.from === hi;
+        const prevBlock = hi > 0 ? day.itinerary[hi - 1] : null;
         const block = (
           <React.Fragment key={hi}>
             {drag && !isDragged && (hi < drag.from ? hi : hi - 1) === drag.to && insertionLine}
+            {/* How you get here: from the hotel for the first stop, or from the
+                previous neighborhood — a walk, or an Uber when far apart. */}
+            {!drag && (hi === firstHub
+              ? (hc && h.stops[0] && Hop(hc, h.stops[0], null))
+              : (prevBlock && prevBlock.stops.length && h.stops[0] && Hop(coordOf(prevBlock.stops[prevBlock.stops.length - 1]), h.stops[0], h.hub)))}
             <div ref={(el) => (cardEls.current[hi] = el)} style={{ marginTop: 16, border: `1px solid ${isDragged ? ACCENT : LINE}`, borderRadius: 16, background: "#fff", boxShadow: isDragged ? "0 12px 28px rgba(0,0,0,0.18)" : CARD_SHADOW, padding: "12px 14px", transform: isDragged ? `translateY(${drag.curY - drag.startY}px) scale(1.01)` : "none", opacity: isDragged ? 0.95 : 1, position: "relative", zIndex: isDragged ? 20 : 1, transition: isDragged ? "none" : "box-shadow 0.15s" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <button onClick={() => toggleHub(h.hub)} aria-label={isCollapsed ? "Expand" : "Collapse"} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 2, display: "flex" }}>
@@ -1164,6 +1192,13 @@ const HOTEL_DEPART_MIN = 9 * 60;   // leave the hotel ~9:00 AM
 const WALK_MIN_PER_KM = 12;        // ~5 km/h walking pace
 
 const travelMin = (a, b) => distLL(a, b) * 111 * WALK_MIN_PER_KM; // deg→km→min
+const kmBetween = (a, b) => distLL(a, b) * 111;
+const WALK_OK_MIN = 15;             // beyond this between areas, suggest a ride
+// Rough driving estimate between far-apart areas: straight-line × a road factor,
+// ~22 km/h city average, plus a few minutes' pickup wait.
+const driveMin = (a, b) => (kmBetween(a, b) * 1.4) / 22 * 60 + 4;
+// Realistic travel between two points: walk when close, otherwise drive/ride.
+const transitMin = (a, b) => { const w = travelMin(a, b); return w <= WALK_OK_MIN ? w : driveMin(a, b); };
 const openMin = (s) => {
   if (typeof s.openAt === "number") return s.openAt; // exact, from structured hours
   const m = /(\d{1,2}):(\d{2})/.exec(s.hours || "");
@@ -1175,16 +1210,16 @@ const fmtClock = (mins) => {
   return `${hr}:${String(m).padStart(2, "0")} ${ap}`;
 };
 
-// Total walking minutes along a sequence of stops (from the hotel, if set).
-// Used to estimate how much extra backtracking a manual order adds vs the
-// optimal route.
-function walkMinutes(stops, hotelCoord) {
-  let total = 0, prev = hotelCoord || null;
+// Total realistic travel minutes along an ordered sequence of stops (from the
+// hotel, if set): walking within a neighborhood, driving/riding between them.
+// Used to estimate how much extra time a manual order adds vs the optimal route.
+function routeMinutes(stops, hotelCoord) {
+  let total = 0, prev = hotelCoord || null, prevHub = null;
   stops.forEach((s) => {
     const c = coordOf(s);
     if (!c) return;
-    if (prev) total += travelMin(prev, c);
-    prev = c;
+    if (prev) total += (s.hub !== prevHub ? transitMin(prev, c) : travelMin(prev, c));
+    prev = c; prevHub = s.hub;
   });
   return total;
 }
@@ -1218,8 +1253,11 @@ function scheduleStops(stops, hotelCoord, keepOrder = false) {
     const placed = []; let pos = startPos, time = startTime;
     while (remaining.length) {
       let bestK = 0, bestScore = Infinity, bestArrive = 0;
+      // The first stop of a block is the leg from the hotel or the previous
+      // neighborhood — use realistic transit (ride if far); within the block, walk.
+      const entry = placed.length === 0;
       remaining.forEach((s, k) => {
-        const travel = pos ? travelMin(pos, coordOf(s)) : 0;
+        const travel = !pos ? 0 : (entry ? transitMin(pos, coordOf(s)) : travelMin(pos, coordOf(s)));
         const arrive = time + travel;
         const wait = Math.max(0, openMin(s) - arrive);
         const score = travel + wait;
