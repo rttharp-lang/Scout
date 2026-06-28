@@ -842,26 +842,25 @@ function RangeCalendar({ start, end, onChange }) {
 }
 
 // ── Input ──────────────────────────────────────────────────────
-// Square hero city card: full-bleed photo, city name centered (both axes) in the
-// big display size with a radial scrim so it stays legible on light photos, and
-// a primary "Explore <city>" button sitting on the image in its lower third.
-// Tapping the card or the button does the same thing — go to page 2 for it.
+// Hero city card (PP-style): a large portrait photo with ALL content stacked and
+// centered ON the image — city name (big display), the one-line blurb beneath it,
+// and a white-outline "Explore <city>" button below that. A heavy dark veil keeps
+// all three legible on light photos. Tapping the card or the button → page 2.
 function CityCard({ c, onPick }) {
   return (
     <div onClick={() => onPick(c.city)} className="city-rail-item" role="button" tabIndex={0} aria-label={`Plan a trip to ${c.city}`}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onPick(c.city); }}
-      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
+      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={c.city} photos={c.image ? [c.image] : null} srcOf={(u) => u} grad="linear-gradient(150deg,#2b2b3a,#5b6172)" fallback={<span aria-hidden />} hideDots />
       </div>
-      {/* Radial scrim keeps the centered name AND the button legible on light photos. */}
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 90% 72% at 50% 52%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.22) 58%, rgba(0,0,0,0.42) 100%)" }} />
-      <div style={{ position: "absolute", left: 0, right: 0, top: "42%", transform: "translateY(-50%)", textAlign: "center", padding: "0 22px", pointerEvents: "none" }}>
-        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.6)" }}>{c.city}</div>
-      </div>
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: "15%", display: "flex", justifyContent: "center" }}>
+      {/* Heavy, center-weighted veil so name + blurb + button all stay legible. */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px", gap: 16 }}>
+        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
+        <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-body)", lineHeight: 1.45, maxWidth: 360, textShadow: "0 1px 10px rgba(0,0,0,0.7)" }}>{c.blurb}</div>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
-          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 7, background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "12px 24px", fontSize: 14.5, fontWeight: 700, boxShadow: "0 4px 16px rgba(0,0,0,0.35)" }}>
+          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 7, marginTop: 4, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "12px 26px", fontSize: 14.5, fontWeight: 700 }}>
           Explore {c.city} <ChevronRight size={16} />
         </button>
       </div>
@@ -923,24 +922,34 @@ function CityPicker({ onPickCity }) {
     });
     setActive((p) => (p === best ? p : best));
   };
-  const current = CITY_RAIL[active] || CITY_RAIL[0];
   const onCityEnter = () => {
     const hit = citySug.find((s) => s.name.toLowerCase() === q.trim().toLowerCase()) || citySug[0];
     if (hit) onPickCity(hit.name);
     else if (q.trim()) onPickCity(q.trim());
   };
+  // Scroll the carousel to a given city (dot tap).
+  const goTo = (i) => { const el = railRef.current; if (el && el.children[i]) el.scrollTo({ left: el.children[i].offsetLeft, behavior: "smooth" }); };
 
   return (
     <div style={{ ...SANS, color: INK }}>
-      {/* Hero card — directly under the header, nothing above it. */}
+      {/* Hero card — directly under the header, nothing above it. One at a time. */}
       <div className="city-rail" ref={railRef} onScroll={onRailScroll} style={{ marginTop: 4 }}>
         {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPickCity} />)}
       </div>
 
-      {/* Moved text + per-city blurb, centered below the card. */}
-      <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 18 }}>
+      {/* Pagination dots — one per city, active filled. */}
+      <div style={{ display: "flex", justifyContent: "center", gap: 7, marginTop: 14 }}>
+        {CITY_RAIL.map((c, i) => (
+          <button key={c.city} onClick={() => goTo(i)} aria-label={`Go to ${c.city}`}
+            style={{ ...SANS, cursor: "pointer", background: "none", border: "none", padding: 4, display: "flex" }}>
+            <span style={{ width: 7, height: 7, borderRadius: 999, background: i === active ? INK : "rgba(10,10,10,0.2)", transition: "background 0.15s" }} />
+          </button>
+        ))}
+      </div>
+
+      {/* Supporting paragraph, centered below the card. (Blurb now lives on the card.) */}
+      <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 16 }}>
         <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Pick a city to scout. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the if-you-know-you-know version of the city.</p>
-        <p style={{ color: MUTE, fontSize: 14, margin: "12px 0 0", lineHeight: 1.45, fontWeight: 500 }}>{current.blurb}</p>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 24 }}>
