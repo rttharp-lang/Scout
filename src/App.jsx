@@ -1379,6 +1379,21 @@ function rescheduleItinerary(d, hotelCoord, keepOrder = false) {
   return applyLunch({ ...d, itinerary, label });
 }
 
+// Drop stores whose resolved location is a clear geographic outlier within their
+// neighborhood — usually an AI mis-tag (a shop in another area/borough). We use
+// the median position of the block (robust to the outlier itself) and drop
+// anything beyond a relative-or-1.5km limit. Only applied with enough stores to
+// judge, and never drops more than a third of a block.
+function dropHubOutliers(stores) {
+  const withC = stores.filter((s) => s.lat != null && s.lng != null);
+  if (withC.length < 4) return stores;
+  const med = (arr) => { const a = [...arr].sort((x, y) => x - y); return a[Math.floor(a.length / 2)]; };
+  const center = { lat: med(withC.map((s) => s.lat)), lng: med(withC.map((s) => s.lng)) };
+  const limit = Math.max(1.5, med(withC.map((s) => kmBetween(center, { lat: s.lat, lng: s.lng }))) * 2.2);
+  const kept = stores.filter((s) => s.lat == null || kmBetween(center, { lat: s.lat, lng: s.lng }) <= limit);
+  return kept.length >= Math.ceil(stores.length * 0.67) ? kept : stores;
+}
+
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
 async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
@@ -1397,7 +1412,11 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
         return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: false, addedByUser: false };
       }))
     ));
-    const ordered = scheduleStops(enriched.flat(), hotelCoord);
+    // The AI sometimes tags a store to the wrong neighborhood (e.g. a Brooklyn
+    // shop placed in the Lower East Side); once Google resolves its real
+    // coordinates it sits far from the rest of the block and warps the route.
+    // Drop those geographic outliers within each neighborhood.
+    const ordered = scheduleStops(enriched.map(dropHubOutliers).flat(), hotelCoord);
     // Regroup the scheduled stops back into their neighborhood blocks for the
     // cards — now each neighborhood is one contiguous stretch of the day.
     const itinerary = [];
