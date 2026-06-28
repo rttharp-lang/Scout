@@ -6,12 +6,17 @@
    neo-grotesque closest to PP's Neue Montreal. Swappable via --font-sans. */
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap");
 
-/* Wordmark face: Archivo (Google Fonts) — a grotesque with a real width axis.
-   Width is pinned to its max (125) while the FULL weight axis (100..900) is
-   delivered as a variable range, so font-variation-settings can drive the true
-   Black ceiling instead of falling back to a lighter master. Swappable later
-   via --font-wordmark (e.g. Monument Extended) — see the token below. */
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,100..900&display=swap");
+/* Wordmark face: Druk Wide Heavy (licensed), self-hosted. The file is already
+   ultra-heavy but its internal subfamily is "Regular", so it ships only a 400
+   instance — the wordmark MUST be set at font-weight 400 (900 would trigger
+   faux-bold or a fallback). Swappable via --font-wordmark below. */
+@font-face {
+  font-family: "Druk Wide Heavy";
+  src: url("/fonts/DrukWide-Heavy.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* ── 1. Color tokens ─────────────────────────────────────────── */
@@ -40,10 +45,11 @@
   --font-sans: "General Sans", "Neue Montreal", -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, sans-serif;
   /* Heavy, extended display face for the SCOUT wordmark only.
-     ONE-LINE SWAP: to switch faces (e.g. a licensed Monument Extended Black or
-     Druk Wide Super), add its @font-face above and change ONLY this value — no
-     markup edits needed. The wordmark always reads from this token. */
-  --font-wordmark: "Archivo", var(--font-sans);
+     ONE-LINE SWAP: to switch faces, add the new @font-face above and change
+     ONLY this value — no markup edits needed. The wordmark reads from this
+     token. (Druk Wide Heavy ships a single 400 instance — set the wordmark at
+     font-weight 400, not 900.) */
+  --font-wordmark: "Druk Wide Heavy", sans-serif;
 
   --step-display: clamp(2.5rem, 7vw, 5.5rem);
   --step-h1:      clamp(1.75rem, 3.5vw, 3rem);
