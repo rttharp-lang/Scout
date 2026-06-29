@@ -116,8 +116,8 @@ export default async function handler(req, res) {
     : "";
 
   const neighborhoodInstruction = plan
-    ? `For each day, create one hub per chosen neighborhood (in the given order), each with 4–6 real stores from the tiers above.`
-    : `For each day: 2–3 real neighborhoods, each with 4–6 real stores from the tiers above, ordered so the day flows geographically.`;
+    ? `For each day, create one hub per chosen neighborhood (in the given order), each with exactly 4 real stores from the tiers above.`
+    : `For each day: 2–3 real neighborhoods, each with 4 real stores from the tiers above, ordered so the day flows geographically.`;
 
   const prompt = `Plan a ${days}-day store-scouting route in ${city}.
 
@@ -126,7 +126,7 @@ ${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}${planLine}
 
 ${neighborhoodInstruction} Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships.
 
-Dining is part of the journey, not an afterthought — curate it with the same taste. Add 3–4 real lunch options within a short walk of where the route sits around 1–2 PM (so the team isn't crossing the city to eat) — delicious, design-led, beautiful rooms. Add 3–4 real dinner options near where the day's route ends — unforgettable spots with a view or beautiful ambience, modern and unique, the kind of place people tell stories about; favour a local gem over a Michelin box-tick. Order both lists best-first.
+Dining is part of the journey, not an afterthought — curate it with the same taste. Add 3 real lunch options within a short walk of where the route sits around 1–2 PM (so the team isn't crossing the city to eat) — delicious, design-led, beautiful rooms. Add 3 real dinner options near where the day's route ends — unforgettable spots with a view or beautiful ambience, modern and unique, the kind of place people tell stories about; favour a local gem over a Michelin box-tick. Order both lists best-first.
 
 Every store and restaurant must actually exist in ${city} right now, named cleanly with no parentheticals. Keep each "why" to one sharp, specific sentence.`;
 
@@ -140,7 +140,7 @@ Every store and restaurant must actually exist in ${city} right now, named clean
       },
       body: JSON.stringify({
         model: "claude-opus-4-8",
-        max_tokens: 6000,
+        max_tokens: 4000,
         system: SYSTEM,
         output_config: { format: { type: "json_schema", schema: SCHEMA }, effort: "low" },
         messages: [{ role: "user", content: prompt }],
