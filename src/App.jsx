@@ -876,11 +876,14 @@ function CityCard({ c, onPick }) {
         : <div style={{ position: "absolute", inset: 0, background: "linear-gradient(150deg,#1b1b1b,#3a3a3a)" }} />}
       {/* Heavy, center-weighted veil so the name + button stay legible on light photos. */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
-      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px", gap: 18 }}>
+      {/* City name centered in the card; the Explore button sits near the bottom edge. */}
+      <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 26, display: "flex", justifyContent: "center" }}>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
-          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6, background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "12px 22px", fontSize: 13, fontWeight: 400 }}>
-          Explore {c.city} <ChevronRight size={15} />
+          style={{ ...SANS, cursor: "pointer", display: "inline-flex", alignItems: "center", background: "transparent", color: "#fff", border: "1.5px solid rgba(255,255,255,0.9)", borderRadius: "var(--radius-pill)", padding: "8px 16px", fontSize: 12.5, fontWeight: 400 }}>
+          Explore {c.city}
         </button>
       </div>
     </div>
@@ -971,9 +974,15 @@ function CityPicker({ onPickCity }) {
         <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Pick a city to scout. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the if-you-know-you-know version of the city.</p>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 24 }}>
-        <button onClick={() => setAllOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700 }}>See all key cities</button>
+      <button onClick={() => setAllOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 24, background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700 }}>See all key cities</button>
 
+      {/* Secondary entry: write in any other city. */}
+      <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 30 }}>
+        <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: 0 }}>Going somewhere else?</h1>
+        <p style={{ color: MUTE, fontSize: 15, margin: "8px 0 0", lineHeight: 1.45 }}>City, hotel, dates — that's it. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them. The if-you-know-you-know version of the city.</p>
+      </div>
+
+      <div style={{ marginTop: 14 }}>
         {/* Write-in city search — same live autocomplete as the hotel field. */}
         <div style={{ position: "relative" }}>
           <div style={field}>
