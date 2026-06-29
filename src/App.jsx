@@ -852,7 +852,7 @@ function RangeCalendar({ start, end, onChange }) {
 // via lookupPhotos("<City> skyline", …) — the same Places photo service the
 // store/restaurant cards use (cached per query). A neutral dark placeholder
 // shows while loading or if nothing resolves, so a card never renders broken.
-function CityCard({ c, onPick }) {
+function CityCard({ c, onPick, titleSize = "clamp(2.75rem, 9vw, 9rem)" }) {
   const [src, setSrc] = useState(c.imageUrl || null);
   const [broken, setBroken] = useState(false);
   useEffect(() => {
@@ -878,7 +878,7 @@ function CityCard({ c, onPick }) {
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
       {/* City name centered in the card; the Explore button sits near the bottom edge. */}
       <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px" }}>
-        <div style={{ color: "#fff", fontSize: "clamp(2.75rem, 9vw, 7rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
+        <div style={{ color: "#fff", fontSize: titleSize, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 26, display: "flex", justifyContent: "center" }}>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
@@ -900,7 +900,7 @@ function AllCitiesModal({ onPick, onClose }) {
           <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: INK, padding: 4, display: "flex" }}><X size={24} /></button>
         </div>
         <div className="scout-grid" style={{ maxWidth: "var(--container-max)", marginInline: "auto" }}>
-          {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPick} />)}
+          {CITY_RAIL.map((c) => <CityCard key={c.city} c={c} onPick={onPick} titleSize={CARD_TITLE} />)}
         </div>
       </div>
     </div>
@@ -969,6 +969,8 @@ function CityPicker({ onPickCity }) {
         ))}
       </div>
 
+      {/* Everything below the hero stays in the ~600px reading measure. */}
+      <div className="scout-measure">
       {/* Supporting paragraph, centered below the card. (Blurb now lives on the card.) */}
       <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 16 }}>
         <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Scout curates the best independent retail, the most beautiful places to eat, and optimizes the route between them — the IYKYK version of every city.</p>
@@ -1001,6 +1003,7 @@ function CityPicker({ onPickCity }) {
             </div>
           )}
         </div>
+      </div>
       </div>
 
       {allOpen && <AllCitiesModal onPick={(c) => { setAllOpen(false); onPickCity(c); }} onClose={() => setAllOpen(false)} />}
@@ -2544,7 +2547,7 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div className="scout-container">
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <div className="scout-measure"><CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} /></div>}
+        {screen === "input" && <CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} />}
         {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
         {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
