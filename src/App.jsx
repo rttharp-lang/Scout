@@ -971,7 +971,7 @@ function CityPicker({ onPickCity }) {
 
       {/* Supporting paragraph, centered below the card. (Blurb now lives on the card.) */}
       <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 16 }}>
-        <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Scout curates the best independent retail, the most beautiful places to eat, and the routes between them — the curated, local, IYKYK version of every city.</p>
+        <p style={{ color: MUTE, fontSize: 15, margin: 0, lineHeight: 1.45 }}>Scout curates the best independent retail, the most beautiful places to eat, and optimized routes between them — the local, IYKYK version of every city.</p>
       </div>
 
       <button onClick={() => setAllOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", marginTop: 24, background: ACCENT, color: "#fff", border: "none", borderRadius: "var(--radius-pill)", padding: "15px", fontSize: 15.5, fontWeight: 700 }}>See all key cities</button>
