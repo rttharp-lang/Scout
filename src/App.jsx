@@ -979,7 +979,6 @@ function CityPicker({ onPickCity }) {
       {/* Secondary entry: write in any other city. */}
       <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 30 }}>
         <h1 style={{ fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: 0 }}>Going somewhere else?</h1>
-        <p style={{ color: MUTE, fontSize: 15, margin: "8px 0 0", lineHeight: 1.45 }}>City, hotel, dates — that's it. Scout curates the best independent retail, the most beautiful places to eat, and the routes between them. The if-you-know-you-know version of the city.</p>
       </div>
 
       <div style={{ marginTop: 14 }}>
