@@ -870,7 +870,7 @@ function CityCard({ c, onPick }) {
   return (
     <div onClick={() => onPick(c.city)} className="city-rail-item" role="button" tabIndex={0} aria-label={`Plan a trip to ${c.city}`}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onPick(c.city); }}
-      style={{ ...SANS, cursor: "pointer", position: "relative", aspectRatio: "1 / 1", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#1b1b1b", boxShadow: CARD_SHADOW }}>
+      style={{ ...SANS, cursor: "pointer", position: "relative", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#1b1b1b", boxShadow: CARD_SHADOW }}>
       {src && !broken
         ? <img src={src} alt="" onError={() => setBroken(true)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         : <div style={{ position: "absolute", inset: 0, background: "linear-gradient(150deg,#1b1b1b,#3a3a3a)" }} />}
@@ -878,7 +878,7 @@ function CityCard({ c, onPick }) {
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
       {/* City name centered in the card; the Explore button sits near the bottom edge. */}
       <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px" }}>
-        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.02, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
+        <div style={{ color: "#fff", fontSize: "clamp(2.75rem, 9vw, 7rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.0, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 26, display: "flex", justifyContent: "center" }}>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}

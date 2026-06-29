@@ -125,4 +125,11 @@ body {
 .city-rail-item {
   flex: 0 0 100%;
   scroll-snap-align: center;
+  aspect-ratio: 1 / 1; /* square by default (mobile hero + the all-cities grid) */
+}
+/* On tablet/desktop the hero card expands to a wide landscape rectangle that
+   fills the content column. (Scoped to the rail so the all-cities grid stays
+   square.) */
+@media (min-width: 640px) {
+  .city-rail .city-rail-item { aspect-ratio: 16 / 9; }
 }
