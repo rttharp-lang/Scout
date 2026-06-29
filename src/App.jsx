@@ -1826,8 +1826,29 @@ function dropHubOutliers(stores) {
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
 async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
-  const data = await generateItinerary(city, tiers, dayCount, plan);
-  const days = (data.days || []).slice(0, dayCount);
+  // Generate the day structure. When the scout has picked neighborhoods per day
+  // (the normal flow), generate EACH day on its own serverless request, in
+  // parallel — a single multi-day Claude call was exceeding /api/itinerary's
+  // 60s limit and failing 3-day builds. One retry per day for resilience; keep
+  // whichever days come back. Without a plan we keep the single call (each day
+  // needs distinct neighborhoods, which one combined request reasons about).
+  let days;
+  if (plan && plan.length) {
+    const genDay = async (hoods) => {
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          const d = await generateItinerary(city, tiers, 1, [hoods]);
+          if (d && Array.isArray(d.days) && d.days[0]) return d.days[0];
+        } catch {}
+      }
+      return null;
+    };
+    const perDay = await Promise.all(plan.slice(0, dayCount).map(genDay));
+    days = perDay.filter(Boolean);
+  } else {
+    const data = await generateItinerary(city, tiers, dayCount, null);
+    days = (data.days || []).slice(0, dayCount);
+  }
   if (!days.length) throw new Error("empty-itinerary");
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
