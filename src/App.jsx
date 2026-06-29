@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupAreaInfo, generateItinerary, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupCityscape, lookupAreaInfo, generateItinerary, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List, Footprints } from "lucide-react";
@@ -848,10 +848,11 @@ function RangeCalendar({ start, end, onChange }) {
 // button below it. A heavy dark veil keeps both legible on light photos. Tapping
 // the card or the button → page 2.
 //
-// Image: if `imageUrl` is set, use it directly; otherwise auto-pull a cityscape
-// via lookupPhotos("<City> skyline", …) — the same Places photo service the
-// store/restaurant cards use (cached per query). A neutral dark placeholder
-// shows while loading or if nothing resolves, so a card never renders broken.
+// Image: if `imageUrl` is set, use it directly; otherwise auto-pull a wide
+// cityscape via lookupCityscape() — the same Places photo service the store/
+// restaurant cards use, with a skyline-biased query and a landscape-photo
+// preference, cached per city. A neutral dark placeholder shows while loading
+// or if nothing resolves, so a card never renders broken.
 function CityCard({ c, onPick, titleSize = "clamp(4rem, 16vw, 16rem)" }) {
   const [src, setSrc] = useState(c.imageUrl || null);
   const [broken, setBroken] = useState(false);
@@ -859,10 +860,9 @@ function CityCard({ c, onPick, titleSize = "clamp(4rem, 16vw, 16rem)" }) {
     setBroken(false);
     if (c.imageUrl) { setSrc(c.imageUrl); return; }
     let cancel = false;
-    lookupPhotos(`${c.city} skyline`, "cityscape").then((ps) => {
+    lookupCityscape(c.city).then((nm) => {
       if (cancel) return;
-      const nm = ps && ps[0];
-      setSrc(nm ? `/api/photo?name=${encodeURIComponent(nm)}&w=900` : null);
+      setSrc(nm ? `/api/photo?name=${encodeURIComponent(nm)}&w=1200` : null);
     }).catch(() => { if (!cancel) setSrc(null); });
     return () => { cancel = true; };
   }, [c.city, c.imageUrl]);

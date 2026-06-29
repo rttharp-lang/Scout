@@ -65,6 +65,10 @@ export default async function handler(req, res) {
       lng: p.location?.longitude ?? null,
       price: PRICE[p.priceLevel] || null,
       photos: (p.photos || []).slice(0, 10).map((ph) => ph.name).filter(Boolean),
+      // Photo names + pixel dimensions, so callers can prefer wide/landscape
+      // shots (e.g. the hero cityscape cards). `places.photos` in the field mask
+      // already carries widthPx/heightPx.
+      photoMeta: (p.photos || []).slice(0, 10).map((ph) => ({ name: ph.name, w: ph.widthPx || null, h: ph.heightPx || null })).filter((x) => x.name),
     }));
 
     // Optional type filter (e.g. type=locality for the city search). Text Search

@@ -102,6 +102,40 @@ export async function generateItinerary(city, tiers, days, plan = null) {
 // Look up listing photos for a place that doesn't already have them (the
 // curated sample stops). Cached per name+address. Returns an array of photo
 // resource names usable with /api/photo.
+// Find a recognizable wide CITYSCAPE photo for a hero city card. Reuses the
+// same place search the store cards use, with a skyline-biased query, and
+// prefers a landscape (wide) photo from the top results — a vertical street
+// view fits the wide card poorly. Returns a photo resource name (use with
+// /api/photo) or null. Cached per city for the session.
+const cityscapeCache = new Map();
+export async function lookupCityscape(city) {
+  const key = (city || "").trim().toLowerCase();
+  if (!key) return null;
+  if (cityscapeCache.has(key)) return cityscapeCache.get(key);
+  let chosen = null;
+  try {
+    const results = await searchPlaces(`${city} downtown skyline cityscape`);
+    // Prefer a clearly-landscape photo (≥1.4:1) from the most relevant results.
+    for (const r of results.slice(0, 6)) {
+      const wide = (r.photoMeta || []).find((p) => p.w && p.h && p.w / p.h >= 1.4);
+      if (wide) { chosen = wide.name; break; }
+    }
+    // Else any landscape-ish (≥1:1), else just the first available photo.
+    if (!chosen) {
+      for (const r of results.slice(0, 6)) {
+        const ok = (r.photoMeta || []).find((p) => p.w && p.h && p.w >= p.h);
+        if (ok) { chosen = ok.name; break; }
+      }
+    }
+    if (!chosen) {
+      const first = results.find((r) => (r.photos || []).length);
+      chosen = first ? first.photos[0] : null;
+    }
+  } catch { chosen = null; }
+  cityscapeCache.set(key, chosen);
+  return chosen;
+}
+
 const photoCache = new Map();
 export async function lookupPhotos(name, address) {
   const key = (name + "|" + address).toLowerCase();
