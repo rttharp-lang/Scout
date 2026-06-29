@@ -18,6 +18,17 @@
   font-display: swap;
 }
 
+/* Display face: Druk Heavy (normal width, weight 900), self-hosted. Used for
+   headings — the hero city name + section headers — via --font-display. */
+@font-face {
+  font-family: "Druk Heavy";
+  src: url("/fonts/DrukHeavy.woff2") format("woff2"),
+       url("/fonts/DrukHeavy.woff")  format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ── 1. Color tokens ─────────────────────────────────────────── */
   /* Page + surfaces — warm monochrome base */
@@ -50,6 +61,9 @@
      token. (Druk Wide Heavy ships a single 400 instance — set the wordmark at
      font-weight 400, not 900.) */
   --font-wordmark: "Druk Wide Heavy", sans-serif;
+  /* Normal-width Druk Heavy for display headings (hero city name, section
+     headers). Falls back to the wide cut, then sans. */
+  --font-display: "Druk Heavy", "Druk Wide Heavy", sans-serif;
 
   --step-display: clamp(2.5rem, 7vw, 5.5rem);
   --step-h1:      clamp(1.75rem, 3.5vw, 3rem);
