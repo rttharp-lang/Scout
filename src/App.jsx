@@ -852,7 +852,7 @@ function RangeCalendar({ start, end, onChange }) {
 // via lookupPhotos("<City> skyline", …) — the same Places photo service the
 // store/restaurant cards use (cached per query). A neutral dark placeholder
 // shows while loading or if nothing resolves, so a card never renders broken.
-function CityCard({ c, onPick, titleSize = "clamp(3.1rem, 10vw, 10rem)" }) {
+function CityCard({ c, onPick, titleSize = "clamp(4rem, 16vw, 16rem)" }) {
   const [src, setSrc] = useState(c.imageUrl || null);
   const [broken, setBroken] = useState(false);
   useEffect(() => {
@@ -878,7 +878,7 @@ function CityCard({ c, onPick, titleSize = "clamp(3.1rem, 10vw, 10rem)" }) {
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 100% 92% at 50% 50%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.46) 70%, rgba(0,0,0,0.55) 100%)" }} />
       {/* City name centered in the card; the Explore button sits near the bottom edge. */}
       <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "0 28px" }}>
-        <div style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: titleSize, fontWeight: 700, letterSpacing: "-0.015em", lineHeight: 1.0, textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
+        <div className="city-card-name" style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: titleSize, fontWeight: 700, textTransform: "uppercase", letterSpacing: "-0.02em", lineHeight: 0.85, textWrap: "balance", textShadow: "0 2px 18px rgba(0,0,0,0.65)" }}>{c.city}</div>
       </div>
       <div style={{ position: "absolute", left: 0, right: 0, bottom: 26, display: "flex", justifyContent: "center" }}>
         <button onClick={(e) => { e.stopPropagation(); onPick(c.city); }}
@@ -980,7 +980,7 @@ function CityPicker({ onPickCity }) {
 
       {/* Secondary entry: write in any other city. */}
       <div style={{ textAlign: "center", maxWidth: 460, marginInline: "auto", marginTop: 30 }}>
-        <h1 style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.1, margin: 0 }}>Going somewhere else?</h1>
+        <h1 style={{ fontFamily: "var(--font-sans)", fontSize: 30, fontWeight: 700, letterSpacing: -0.8, lineHeight: 1.1, margin: 0 }}>Going somewhere else?</h1>
         <p style={{ color: MUTE, fontSize: 15, margin: "8px 0 0", lineHeight: 1.45 }}>Pick a different city to scout.</p>
       </div>
 
