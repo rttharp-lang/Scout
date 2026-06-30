@@ -14,7 +14,9 @@ const TIER_GUIDE = {
   core: "commercial & value at scale",
 };
 
-const SYSTEM = `You are Scout — a senior retail scout for a premium basketball apparel brand with deep, in-the-know knowledge of a city's retail geography. You only name real, currently-operating stores that genuinely exist in the requested neighborhood, using clean searchable names (no parentheticals). Favour insider local gems over names everyone already knows.`;
+const SYSTEM = `You are the most discerning apparel retail editor — at the level of a Hypebeast or Highsnobiety senior editor — curating apparel destinations for an industry insider. Every store you name MUST be APPAREL-FOCUSED (clothing, footwear, apparel-driven concept/multi-brand stores ONLY — NEVER markets, souvenir/trinket shops, electronics, homeware, beauty-only, bookstores or galleries), LEADING not generic (only spots a knowledgeable insider would route to — no mall basics, no chains for the sake of it), and REAL and currently operating with clean searchable names (no parentheticals).
+
+Match this quality bar and taste — in New York that's the level of Dover Street Market, Patron of the New, Bluegreen in SoHo, and Kith — applied to EVERY city, including non-major markets. Vary the types (vintage, multi-brand, concept, streetwear, luxury). If the neighborhood has few true destinations, return FEWER high-quality ones rather than padding with mediocre stores.`;
 
 const SCHEMA = {
   type: "object",
@@ -26,11 +28,12 @@ const SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["name", "tier", "why"],
+        required: ["name", "tier", "category", "why"],
         properties: {
-          name: { type: "string", description: "Real, currently-operating store name in the neighborhood" },
+          name: { type: "string", description: "Real, currently-operating APPAREL store name in the neighborhood" },
           tier: { type: "string", enum: ["aspirational", "department", "competitor", "streetwear", "underground", "culture", "core"] },
-          why: { type: "string", description: "One sharp sentence: what it teaches a premium basketball apparel brand" },
+          category: { type: "string", enum: ["vintage", "multi-brand", "concept", "streetwear", "luxury"], description: "Editorial type tag" },
+          why: { type: "string", description: "One sharp editor's-take sentence on why this apparel store is worth the trip" },
         },
       },
     },
@@ -49,7 +52,7 @@ export default async function handler(req, res) {
 
   const focus = tiers.length ? tiers.map((t) => TIER_GUIDE[t]).join(", ") : "premium, culturally relevant apparel";
   const excludeLine = exclude.length ? `\n\nDo NOT include any of these, which are already on the list:\n${exclude.map((e) => "- " + e).join("\n")}` : "";
-  const prompt = `Suggest up to 6 more real stores in ${area}, ${city} worth a retail scout's time, focused on: ${focus}. They must actually exist in ${area} right now. Favour insider local picks a connected scout would know.${excludeLine}`;
+  const prompt = `Name up to 6 of the BEST real apparel retail destinations in ${area}, ${city} — the ones a Hypebeast/Highsnobiety editor would actually route an insider to, focused on: ${focus}. Apparel only (clothing, footwear, apparel-driven concept/multi-brand) — NO markets, souvenir/trinket shops, electronics, homeware, beauty-only or bookstores. They must actually exist in ${area} right now. Vary the types and tag each store's category (vintage / multi-brand / concept / streetwear / luxury). Return fewer than 6 if there genuinely aren't 6 worth the trip — never pad with mediocre stores.${excludeLine}`;
 
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {

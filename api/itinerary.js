@@ -18,11 +18,18 @@ const TIER_GUIDE = {
   core: "Core — commercial & value at scale: where culture meets the high street.",
 };
 
-const SYSTEM = `You are Scout — a senior retail scout for a premium basketball apparel brand. You think like a design-led, concept-store-obsessed merchant hunting the most premium, unique, culturally and consumer-relevant apparel experiences in a city, the kind that inspire an aspirational basketball apparel line.
+const SYSTEM = `You are the most discerning apparel retail editor — a senior editor at the level of Hypebeast or Highsnobiety, curating a shopping/scouting route for an industry insider building a premium apparel line. You recommend the BEST apparel retail destinations in a city: leading luxury, streetwear, concept, vintage and multi-brand stores.
 
-You know the actual retail landscape of cities worldwide — not just the obvious international flagships, but the insider spots: independent boutiques, local streetwear labels, vintage and archive stores, concept shops that only a well-connected local would point you to. That deep, in-the-know local knowledge is the whole point — favour genuine local gems over names everyone already knows. (For example, a real Shanghai scout knows places like Time New Remake, Roaring Wild, and Maison Prince — that calibre of insider pick is what matters.)
+EVERY store you name MUST be:
+- APPAREL-FOCUSED — clothing, footwear, and apparel-driven concept/multi-brand stores ONLY. NEVER general markets, souvenir or trinket shops, electronics, homeware/home goods, furniture, beauty-only, bookstores, galleries, or any non-apparel retail.
+- LEADING, NOT GENERIC — only destinations a knowledgeable industry insider would actually route to. No mall basics and no chains for the sake of it; a flagship that genuinely matters is fine, a generic outpost is not. Favour genuine local gems and insider picks over names everyone already knows.
+- REAL and currently operating, named cleanly and searchably (no parentheticals, qualifiers or "(nearby)" hedges).
 
-You only name real, currently-operating stores that genuinely exist in the requested city. Use clean, searchable store names exactly as they're known locally — no parenthetical notes, qualifiers, or "(nearby)" hedges. Group stores into real, walkable neighborhoods so a day flows geographically. Each "why" is one sharp sentence on what this store teaches a premium basketball apparel brand — construction, merchandising, material, cultural signal — never generic.`;
+Across a neighborhood, VARY the types — mix vintage, multi-brand, concept, streetwear and luxury so the route has range, not five of the same thing.
+
+QUALITY BAR — match this calibre and taste. In New York that means the level of Dover Street Market, Patron of the New (a more forward Dover Street), Bluegreen in SoHo (considered, "capital" clothing), and Kith. Apply this SAME editorial taste to EVERY city — including non-major markets like Las Vegas — finding the genuine best apparel retail there, not filler. If a place has few true destinations, name FEWER high-quality ones rather than padding with mediocre stores.
+
+Group stores into real, walkable neighborhoods so a day flows geographically. Each "why" is one sharp editor's-take sentence on what makes this store worth the trip for a premium apparel brand — construction, merchandising, material, cultural signal — never generic.`;
 
 const SCHEMA = {
   type: "object",
@@ -50,11 +57,12 @@ const SCHEMA = {
                   items: {
                     type: "object",
                     additionalProperties: false,
-                    required: ["name", "tier", "why"],
+                    required: ["name", "tier", "category", "why"],
                     properties: {
-                      name: { type: "string", description: "Real, currently-operating store name" },
+                      name: { type: "string", description: "Real, currently-operating APPAREL store name" },
                       tier: { type: "string", enum: ["aspirational", "department", "competitor", "streetwear", "underground", "culture", "core"] },
-                      why: { type: "string", description: "One sharp sentence: what it teaches a premium basketball apparel brand" },
+                      category: { type: "string", enum: ["vintage", "multi-brand", "concept", "streetwear", "luxury"], description: "Editorial type tag" },
+                      why: { type: "string", description: "One sharp editor's-take sentence on why this apparel store is worth the trip" },
                     },
                   },
                 },
@@ -116,15 +124,15 @@ export default async function handler(req, res) {
     : "";
 
   const neighborhoodInstruction = plan
-    ? `For each day, create one hub per chosen neighborhood (in the given order), each with exactly 4 real stores from the tiers above.`
-    : `For each day: 2–3 real neighborhoods, each with 4 real stores from the tiers above, ordered so the day flows geographically.`;
+    ? `For each day, create one hub per chosen neighborhood (in the given order), each with the 4 best real APPAREL stores in it (give 3 only if the neighborhood genuinely doesn't have 4 worth routing to).`
+    : `For each day: 2–3 real neighborhoods, each with the 4 best real APPAREL stores in it, ordered so the day flows geographically.`;
 
   const prompt = `Plan a ${days}-day store-scouting route in ${city}.
 
 Only include these tiers:
 ${tiers.map((t) => "- " + TIER_GUIDE[t]).join("\n")}${planLine}
 
-${neighborhoodInstruction} Lean into insider local picks a connected scout in ${city} would know — independent boutiques, local labels, vintage and concept stores — not only international flagships.
+${neighborhoodInstruction} Apparel only — clothing, footwear and apparel-driven concept/multi-brand stores; absolutely NO markets, souvenir/trinket shops, electronics, homeware, beauty-only, or bookstores. Lean into the insider apparel picks a connected ${city} editor would route to — independent boutiques, local labels, vintage, concept and the multi-brand destinations that matter — not generic flagships, and tag each store's category (vintage / multi-brand / concept / streetwear / luxury).
 
 Dining is part of the journey, not an afterthought — curate it with the same taste. Add 3 real lunch options within a short walk of where the route sits around 1–2 PM (so the team isn't crossing the city to eat) — delicious, design-led, beautiful rooms. Add 3 real dinner options near where the day's route ends — unforgettable spots with a view or beautiful ambience, modern and unique, the kind of place people tell stories about; favour a local gem over a Michelin box-tick. Order both lists best-first.
 

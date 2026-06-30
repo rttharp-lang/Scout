@@ -1859,7 +1859,7 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
     const enriched = await Promise.all((d.hubs || []).map((h, hi) =>
       Promise.all((h.stores || []).map(async (s) => {
         const enr = await enrichPlace(s.name, h.hub, city);
-        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: true, addedByUser: false };
+        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, category: s.category, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: true, addedByUser: false };
       }))
     ));
     // The AI sometimes tags a store to the wrong neighborhood (e.g. a Brooklyn
@@ -1982,35 +1982,43 @@ function ViewToggle({ view, onView }) {
   );
 }
 
-// Compact list-view row for a neighborhood (spec §5 list view).
-function HoodRow({ o, n, city, on, onToggle }) {
+// Compact list-view row for a neighborhood. Tap the row to preview its store
+// list; tap the checkbox to add/remove it from the plan.
+function HoodRow({ o, n, city, on, onToggle, onOpen }) {
   return (
-    <button onClick={onToggle} style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
-      <div style={{ width: 20, height: 20, borderRadius: 6, flexShrink: 0, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</div>
+    <div onClick={() => onOpen()} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") onOpen(); }}
+      style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
+      <button onClick={(e) => { e.stopPropagation(); onToggle(); }} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
+        style={{ ...SANS, cursor: "pointer", width: 22, height: 22, padding: 0, borderRadius: 6, flexShrink: 0, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</button>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: on ? ACCENT : INK }}>{o.name}</div>
         <div style={{ fontSize: 12.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.blurb}</div>
       </div>
-      <span style={{ fontSize: "var(--step-caption)", fontWeight: 600, color: MUTE, flexShrink: 0 }}>{n}</span>
-    </button>
+      <span style={{ fontSize: 12, fontWeight: 600, color: ACCENT, flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 2 }}>Stores <ChevronRight size={14} /></span>
+    </div>
   );
 }
 
 // Full-bleed image card (Pangram Pangram style): the photo fills the card, the
 // name sits large in white over the centre, the blurb small beneath. Minimal —
 // no coloured outline. Tap to add/remove from the plan.
-function HoodCard({ o, n, city, on, onToggle }) {
+function HoodCard({ o, n, city, on, onToggle, onOpen }) {
   return (
-    <div onClick={onToggle} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
+    <div onClick={() => onOpen()} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") onOpen(); }}
+      style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad="linear-gradient(135deg,#2b2b2b,#555)" hideDots />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.08) 38%, rgba(0,0,0,0.64) 100%)" }} />
       <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
-      <div style={{ position: "absolute", top: 12, right: 12, pointerEvents: "none", width: 28, height: 28, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "transparent", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none" }}>{on && <Check size={16} strokeWidth={3} />}</div>
+      <button onClick={(e) => { e.stopPropagation(); onToggle(); }} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
+        style={{ ...SANS, cursor: "pointer", position: "absolute", top: 12, right: 12, zIndex: 2, width: 28, height: 28, borderRadius: 999, padding: 0, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "rgba(15,15,15,0.35)", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none", backdropFilter: "blur(2px)" }}>{on && <Check size={16} strokeWidth={3} />}</button>
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", pointerEvents: "none" }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}>{o.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.45, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{o.blurb}</div>
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, pointerEvents: "none", display: "flex", justifyContent: "center" }}>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "rgba(15,15,15,0.5)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 11px", borderRadius: 999 }}>Tap to preview stores <ChevronRight size={13} /></span>
       </div>
     </div>
   );
@@ -2019,8 +2027,21 @@ function HoodCard({ o, n, city, on, onToggle }) {
 // The pre-curated, day-by-day neighborhood plan. Each day is a geographically
 // grouped set of districts in optimal order; everything is pre-selected, and the
 // scout can deselect any before building the full itinerary.
-function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggle, onBack, onBuild, view, onView }) {
+function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, onToggle, onBack, onBuild, view, onView }) {
   const totalSelected = planDays.reduce((a, d) => a + (d.neighborhoods || []).filter((h) => selected.has(h.name)).length, 0);
+  // Tap a neighborhood to preview its curated store list before committing. We
+  // fetch the AI-curated apparel stores on demand and cache them per hood.
+  const [preview, setPreview] = useState(null); // the hood object being previewed
+  const [storeCache, setStoreCache] = useState({}); // hubName -> { loading, stores }
+  const openPreview = (o) => {
+    setPreview(o);
+    if (!storeCache[o.name]) {
+      setStoreCache((c) => ({ ...c, [o.name]: { loading: true, stores: [] } }));
+      suggestStores(city, tiers && tiers.length ? tiers : CURATED_TIERS, o.name, [])
+        .then((s) => setStoreCache((c) => ({ ...c, [o.name]: { loading: false, stores: s || [] } })))
+        .catch(() => setStoreCache((c) => ({ ...c, [o.name]: { loading: false, stores: [] } })));
+    }
+  };
 
   return (
     <div style={{ ...SANS, color: INK, maxWidth: 1180, marginInline: "auto" }}>
@@ -2060,11 +2081,11 @@ function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggl
                 <div style={{ fontSize: "var(--step-meta)", color: MUTE, marginTop: 2, marginBottom: 16 }}>{hoods.map((h) => h.name).join(" → ")}</div>
                 {view === "list" ? (
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {hoods.map((o, i) => <HoodRow key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} />)}
+                    {hoods.map((o, i) => <HoodRow key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} onOpen={() => openPreview(o)} />)}
                   </div>
                 ) : (
                   <div className="scout-grid">
-                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} />)}
+                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} onOpen={() => openPreview(o)} />)}
                   </div>
                 )}
               </div>
@@ -2076,6 +2097,64 @@ function NeighborhoodsScreen({ city, hotel, planDays, loading, selected, onToggl
           <div style={{ textAlign: "center", color: MUTE, fontSize: "var(--step-meta)", marginTop: 12, lineHeight: 1.5 }}>Scout fills each neighborhood with the best stores, plus a curated lunch and dinner.</div>
         </>
       )}
+      {preview && (
+        <NeighborhoodPreview hood={preview} city={city} data={storeCache[preview.name]} selected={selected.has(preview.name)}
+          onToggle={() => onToggle(preview.name)} onClose={() => setPreview(null)} />
+      )}
+    </div>
+  );
+}
+
+// Lightweight bottom-sheet preview of a neighborhood's curated store list, shown
+// when you tap a neighborhood card — so you can vet the picks (name · category ·
+// the editor's take) before adding it to the plan.
+function NeighborhoodPreview({ hood, city, data, selected, onToggle, onClose }) {
+  const { loading, stores } = data || { loading: true, stores: [] };
+  const catChip = (cat) => cat ? <span style={{ fontSize: 10.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.4, color: ACCENT, background: ACCENT_SOFT, borderRadius: 999, padding: "2px 8px", whiteSpace: "nowrap", flexShrink: 0 }}>{cat}</span> : null;
+  return (
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 60, background: "rgba(0,0,0,0.45)", display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+      <div onClick={(e) => e.stopPropagation()} style={{ ...SANS, color: INK, width: "100%", maxWidth: 520, background: "#fff", borderRadius: "18px 18px 0 0", maxHeight: "85vh", display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "18px 20px 12px", borderBottom: `1px solid ${LINE}` }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
+            <div style={{ minWidth: 0 }}>
+              <div style={{ fontSize: 19, fontWeight: 800, letterSpacing: -0.3 }}>{hood.name}</div>
+              {hood.blurb && <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.4, marginTop: 3 }}>{hood.blurb}</div>}
+            </div>
+            <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4, flexShrink: 0 }}><X size={20} /></button>
+          </div>
+          <div style={{ fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase", marginTop: 10 }}>Curated apparel stores{!loading && stores.length ? ` · ${stores.length}` : ""}</div>
+        </div>
+
+        <div style={{ overflowY: "auto", padding: "6px 20px 14px" }}>
+          {loading ? (
+            <div style={{ textAlign: "center", padding: "34px 0" }}>
+              <div style={{ width: 24, height: 24, margin: "0 auto 12px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
+              <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
+              <div style={{ color: MUTE, fontSize: 13 }}>Curating {hood.name}'s best apparel stores…</div>
+            </div>
+          ) : stores.length === 0 ? (
+            <div style={{ color: MUTE, fontSize: 13.5, textAlign: "center", padding: "28px 12px", lineHeight: 1.5 }}>No standout apparel destinations surfaced here — Scout will still pull the best it can find when you build.</div>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              {stores.map((s, i) => (
+                <div key={s.name + i} style={{ padding: "12px 0", borderTop: i ? `1px solid ${LINE}` : "none" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                    <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em" }}>{s.name}</span>
+                    {catChip(s.category)}
+                  </div>
+                  {s.why && <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 3 }}>{s.why}</div>}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div style={{ padding: "12px 20px calc(16px + env(safe-area-inset-bottom))", borderTop: `1px solid ${LINE}` }}>
+          <button onClick={() => { onToggle(); onClose(); }} style={{ ...SANS, cursor: "pointer", width: "100%", border: selected ? `1.5px solid ${ACCENT}` : "none", background: selected ? "#fff" : ACCENT, color: selected ? ACCENT : "#fff", borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 15, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+            {selected ? <><Check size={17} /> In your plan — tap to remove</> : <><Plus size={17} /> Add {hood.name} to plan</>}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -2522,7 +2601,7 @@ export default function App() {
     const fresh = picks.filter((p) => !existing.some((e) => e.toLowerCase() === p.name.toLowerCase())).slice(0, 6);
     const enriched = await Promise.all(fresh.map(async (p) => {
       const enr = await enrichPlace(p.name, hub, city);
-      return { name: p.name, tier: p.tier, why: p.why, ...enr };
+      return { name: p.name, tier: p.tier, category: p.category, why: p.why, ...enr };
     }));
     return enriched;
   };
@@ -2570,7 +2649,7 @@ export default function App() {
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
         {screen === "input" && <CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} />}
         {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
-        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} tiers={tiers} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("setup")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("setup")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
