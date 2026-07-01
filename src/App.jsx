@@ -1986,78 +1986,52 @@ function ViewToggle({ view, onView }) {
   );
 }
 
-// Compact list-view row. Tap the row to flip between the blurb and the curated
-// store list (preloaded — instant); tap the checkbox to add/remove from the plan.
+// Static list-view row: name, one-line description, and the curated store list
+// as a horizontal bulleted row beneath. The checkbox toggles the plan.
 function HoodRow({ o, n, city, on, onToggle, stores }) {
-  const [flipped, setFlipped] = useState(false);
   const list = stores || [];
   return (
-    <div onClick={() => setFlipped((f) => !f)} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f); }}
-      style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", display: "flex", alignItems: flipped ? "flex-start" : "center", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
-      <button onClick={(e) => { e.stopPropagation(); onToggle(); }} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
-        style={{ ...SANS, cursor: "pointer", width: 22, height: 22, padding: 0, borderRadius: 6, flexShrink: 0, marginTop: flipped ? 1 : 0, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</button>
+    <div style={{ ...SANS, width: "100%", textAlign: "left", display: "flex", alignItems: "flex-start", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "11px 12px" }}>
+      <button onClick={() => onToggle()} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
+        style={{ ...SANS, cursor: "pointer", width: 22, height: 22, padding: 0, borderRadius: 6, flexShrink: 0, marginTop: 1, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</button>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: on ? ACCENT : INK }}>{o.name}</div>
-        {flipped ? (
-          list.length ? (
-            <div style={{ marginTop: 4, display: "flex", flexDirection: "column", gap: 2 }}>
-              {list.map((s, i) => <div key={s.name + i} style={{ fontSize: 13, fontWeight: 600, color: INK }}>{s.name}</div>)}
-            </div>
-          ) : (
-            <div style={{ fontSize: 12.5, color: MUTE, fontStyle: "italic", marginTop: 2 }}>{stores ? "No standout stores here" : "Curating stores…"}</div>
-          )
-        ) : (
-          <div style={{ fontSize: 12.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.blurb}</div>
+        <div style={{ fontSize: 12.5, color: MUTE, lineHeight: 1.4, marginTop: 1 }}>{o.blurb}</div>
+        {list.length > 0 && (
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: INK, lineHeight: 1.5, marginTop: 6 }}>{list.map((s) => s.name).join("  •  ")}</div>
         )}
       </div>
-      <span style={{ fontSize: 12, fontWeight: 600, color: ACCENT, flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 2, marginTop: flipped ? 1 : 0 }}>{flipped ? "Hide" : <>Stores <ChevronRight size={14} /></>}</span>
     </div>
   );
 }
 
-// Full-bleed image card. Tapping the card FLIPS it in place (a quick cross-fade)
-// over the same photo: front = the big neighborhood name; back = the curated
-// store-name list (the same stores that build the itinerary, preloaded — instant,
-// no fetch on tap). The check toggles add/remove from the plan.
+// Static neighborhood card: photo with the name at top, its one-line
+// description under it, and the curated store list as a horizontal, bullet-
+// separated row across the bottom (wraps to a second row as needed). Everything
+// shows at once — no tap, no flip. Only the check (top-right) toggles the plan.
 function HoodCard({ o, n, city, on, onToggle, stores }) {
-  const [flipped, setFlipped] = useState(false);
   const list = stores || [];
-  const fade = { transition: "opacity 0.22s ease", pointerEvents: "none" };
   return (
-    <div onClick={() => setFlipped((f) => !f)} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f); }}
-      style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
+    <div style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad="linear-gradient(135deg,#2b2b2b,#555)" hideDots />
       </div>
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.08) 38%, rgba(0,0,0,0.64) 100%)" }} />
-      {/* Extra veil on the back so the store list stays legible on light photos. */}
-      <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.5)", opacity: flipped ? 1 : 0, ...fade }} />
-      <div style={{ position: "absolute", top: 14, left: 16, zIndex: 2, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
-      <button onClick={(e) => { e.stopPropagation(); onToggle(); }} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
+      {/* Veil dark enough at top and bottom to keep all three text zones legible. */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.72) 100%)" }} />
+      <div style={{ position: "absolute", top: 14, left: 16, zIndex: 2, pointerEvents: "none", color: "rgba(255,255,255,0.8)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
+      <button onClick={() => onToggle()} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
         style={{ ...SANS, cursor: "pointer", position: "absolute", top: 12, right: 12, zIndex: 3, width: 28, height: 28, borderRadius: 999, padding: 0, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "rgba(15,15,15,0.35)", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none", backdropFilter: "blur(2px)" }}>{on && <Check size={16} strokeWidth={3} />}</button>
 
-      {/* FRONT — neighborhood name + blurb */}
-      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", opacity: flipped ? 0 : 1, ...fade }}>
-        <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}>{o.name}</div>
-        <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.45, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{o.blurb}</div>
-      </div>
-
-      {/* BACK — curated store names */}
-      <div style={{ position: "absolute", inset: 0, zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "46px 20px 40px", opacity: flipped ? 1 : 0, ...fade, overflow: "hidden" }}>
-        <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: 0.8, textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: 12 }}>{o.name} · stores</div>
-        {list.length ? (
-          <div style={{ display: "flex", flexDirection: "column", gap: 9, maxWidth: "100%" }}>
-            {list.map((s, i) => (
-              <div key={s.name + i} style={{ color: "#fff", fontSize: "clamp(1rem, 2.4vw, 1.25rem)", fontWeight: 700, letterSpacing: "-0.01em", lineHeight: 1.12, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.name}</div>
-            ))}
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "46px 18px 16px", pointerEvents: "none" }}>
+        <div>
+          <div style={{ color: "#fff", fontSize: "clamp(1.5rem, 4.5vw, 1.9rem)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.08, textShadow: "0 2px 14px rgba(0,0,0,0.6)" }}>{o.name}</div>
+          <div style={{ color: "rgba(255,255,255,0.82)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 6, textShadow: "0 1px 8px rgba(0,0,0,0.65)", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{o.blurb}</div>
+        </div>
+        {list.length > 0 && (
+          <div style={{ color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: 600, lineHeight: 1.55, marginTop: 12, textShadow: "0 1px 8px rgba(0,0,0,0.7)", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+            {list.map((s) => s.name).join("  •  ")}
           </div>
-        ) : (
-          <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "var(--step-meta)", fontStyle: "italic" }}>{stores ? "No standout stores here" : "Curating stores…"}</div>
         )}
-      </div>
-
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, zIndex: 2, pointerEvents: "none", display: "flex", justifyContent: "center" }}>
-        <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "rgba(15,15,15,0.5)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 11px", borderRadius: 999 }}>{flipped ? "Tap to flip back" : <>Tap to see stores <ChevronRight size={13} /></>}</span>
       </div>
     </div>
   );
@@ -2067,7 +2041,11 @@ function HoodCard({ o, n, city, on, onToggle, stores }) {
 // grouped set of districts in optimal order; everything is pre-selected, and the
 // scout can deselect any before building the full itinerary.
 function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, hoodStores, onToggle, onBack, onBuild, view, onView }) {
-  const totalSelected = planDays.reduce((a, d) => a + (d.neighborhoods || []).filter((h) => selected.has(h.name)).length, 0);
+  // Only show neighborhoods that actually have curated stores (drop the empties).
+  const hasStores = (name) => ((hoodStores || {})[name] || []).length > 0;
+  const visibleHoods = planDays.flatMap((d) => (d.neighborhoods || []).filter((h) => hasStores(h.name)));
+  const totalSelected = visibleHoods.filter((h) => selected.has(h.name)).length;
+  const totalCount = visibleHoods.length;
 
   return (
     <div style={{ ...SANS, color: INK, maxWidth: 1180, marginInline: "auto" }}>
@@ -2083,7 +2061,7 @@ function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, 
         <div style={{ textAlign: "center", padding: "60px 0" }}>
           <div style={{ width: 28, height: 28, margin: "0 auto 16px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
           <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
-          <div style={{ color: MUTE, fontSize: 14 }}>Curating your {city || "city"} plan…</div>
+          <div style={{ color: MUTE, fontSize: 14 }}>Curating your {city || "city"} plan and its stores…</div>
         </div>
       ) : planDays.length === 0 ? (
         <div style={{ textAlign: "center", padding: "40px 0" }}>
@@ -2095,12 +2073,13 @@ function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, 
       ) : (
         <>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 24, paddingBottom: 12, borderBottom: `1px solid ${LINE}` }}>
-            <div style={{ fontSize: "var(--step-meta)", fontWeight: 600, color: MUTE }}>{totalSelected} of {planDays.reduce((a, d) => a + (d.neighborhoods || []).length, 0)} selected</div>
+            <div style={{ fontSize: "var(--step-meta)", fontWeight: 600, color: MUTE }}>{totalSelected} of {totalCount} selected</div>
             <ViewToggle view={view} onView={onView} />
           </div>
 
           {planDays.map((day, di) => {
-            const hoods = day.neighborhoods || [];
+            const hoods = (day.neighborhoods || []).filter((h) => hasStores(h.name));
+            if (!hoods.length) return null;
             return (
               <div key={di} style={{ marginTop: 28 }}>
                 <div style={{ fontSize: "var(--step-h3)", fontWeight: 700, letterSpacing: "-0.02em" }}>Day {di + 1}</div>
@@ -2451,14 +2430,17 @@ export default function App() {
       const days = await suggestNeighborhoodPlan(city, useTiers, n);
       setPlanDays(days);
       setSelectedHoods(new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name))));
-      // Preload each neighborhood's curated stores NOW (bounded concurrency), so
-      // the card flip is an instant read and the build reuses the same list —
-      // one shared source, no fetch on tap. Populate per-hood as each resolves.
+      // Generate every neighborhood's curated stores ONCE, up front (bounded
+      // concurrency), and WAIT for them — so the whole set shows a single load
+      // state, then every card renders complete with its stores already attached.
+      // The build reuses this exact map: one shared source, no per-card fetch.
       const hoods = [...new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name)))];
-      mapLimit(hoods, 5, async (name) => {
-        try { const s = await suggestStores(city, useTiers, name, []); setHoodStores((m) => ({ ...m, [name]: s || [] })); }
-        catch { setHoodStores((m) => ({ ...m, [name]: [] })); }
+      const acc = {};
+      await mapLimit(hoods, 6, async (name) => {
+        try { acc[name] = (await suggestStores(city, useTiers, name, [])) || []; }
+        catch { acc[name] = []; }
       });
+      setHoodStores(acc);
     } catch {
       setPlanDays([]);
     } finally {
