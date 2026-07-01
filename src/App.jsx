@@ -1825,50 +1825,32 @@ function dropHubOutliers(stores) {
 
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
-async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
-  // Generate the day structure. When the scout has picked neighborhoods per day
-  // (the normal flow), generate EACH day on its own serverless request, in
-  // parallel — a single multi-day Claude call was exceeding /api/itinerary's
-  // 60s limit and failing 3-day builds. One retry per day for resilience; keep
-  // whichever days come back. Without a plan we keep the single call (each day
-  // needs distinct neighborhoods, which one combined request reasons about).
-  let days;
-  if (plan && plan.length) {
-    const genDay = async (hoods) => {
-      for (let attempt = 0; attempt < 2; attempt++) {
-        try {
-          const d = await generateItinerary(city, tiers, 1, [hoods]);
-          if (d && Array.isArray(d.days) && d.days[0]) return d.days[0];
-        } catch {}
-      }
-      return null;
-    };
-    const perDay = await Promise.all(plan.slice(0, dayCount).map(genDay));
-    days = perDay.filter(Boolean);
-  } else {
-    const data = await generateItinerary(city, tiers, dayCount, null);
-    days = (data.days || []).slice(0, dayCount);
-  }
-  if (!days.length) throw new Error("empty-itinerary");
+// Run an async fn over items with bounded concurrency (a worker pool sharing one
+// iterator) — used to preload per-neighborhood stores without firing a dozen AI
+// calls at once.
+async function mapLimit(items, limit, fn) {
+  const iter = items.entries();
+  const worker = async () => { for (const [i, item] of iter) await fn(item, i); };
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+}
+
+async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStores = null) {
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
-  return Promise.all(days.map(async (d, di) => {
-    // Enrich every store (tagged with its neighborhood), then schedule the day
-    // as ordered neighborhood blocks — a chunk of the day per area — so the
-    // route reads morning → afternoon → evening instead of zig-zagging.
-    const enriched = await Promise.all((d.hubs || []).map((h, hi) =>
+  // Turn a day's neighborhood store lists + raw meal lists into the enriched,
+  // scheduled day the review screen renders. `hubs` = [{ hub, stores:
+  // [{name,tier,category,why}] }]. Shared by the curated and fallback paths.
+  const assembleDay = async (di, hubs, lunchRaw, dinnerRaw, lunchArea, dinnerArea, fallbackLabel) => {
+    // Enrich each store (anchored to its neighborhood) with live Google data.
+    const enriched = await Promise.all((hubs || []).map((h, hi) =>
       Promise.all((h.stores || []).map(async (s) => {
         const enr = await enrichPlace(s.name, h.hub, city);
         return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, category: s.category, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: true, addedByUser: false };
       }))
     ));
-    // The AI sometimes tags a store to the wrong neighborhood (e.g. a Brooklyn
-    // shop placed in the Lower East Side); once Google resolves its real
-    // coordinates it sits far from the rest of the block and warps the route.
-    // Drop those geographic outliers within each neighborhood.
+    // Drop geographic outliers (a store the AI mis-tagged to the wrong area),
+    // then schedule into ordered neighborhood blocks so the day flows.
     const ordered = scheduleStops(enriched.map(dropHubOutliers).flat(), hotelCoord);
-    // Regroup the scheduled stops back into their neighborhood blocks for the
-    // cards — now each neighborhood is one contiguous stretch of the day.
     const itinerary = [];
     ordered.forEach((s) => {
       const last = itinerary[itinerary.length - 1];
@@ -1880,27 +1862,49 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null) {
       h.time = fmtDuration(mins);
       h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
     });
-    const enrichMeal = (list) => Promise.all((list || []).map(async (l) => {
-      const enr = await enrichPlace(l.name, city);
+    const enrichMeal = (list, area) => Promise.all((list || []).map(async (l) => {
+      const enr = await enrichPlace(l.name, area, city);
       return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
     }));
-    const lunchPicks = await enrichMeal(d.lunch);
-    const dinnerPicks = await enrichMeal(d.dinner);
-    // Label the day from the actual scheduled block order, so the header matches
-    // the route even when the scheduler reorders neighborhoods.
-    const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || d.label || `${city} · Day ${di + 1}`;
-
-    // Curate the day fully: auto-pick the best lunch near the ~1 PM point of the
-    // route, and the best dinner near where the day wraps up. The scout can still
-    // change either. Run applyLunch once to find the lunch anchor, then again
-    // with the chosen lunch so the afternoon times shift for the break.
+    const lunchPicks = await enrichMeal(lunchRaw, lunchArea);
+    const dinnerPicks = await enrichMeal(dinnerRaw, dinnerArea);
+    const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || fallbackLabel || `${city} · Day ${di + 1}`;
+    // Auto-pick the best lunch near the ~1 PM point and dinner near the day's end.
     const base = applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
     const lunchPick = nearestPick(lunchPicks, base.lunchAnchor);
     const lastBlock = itinerary[itinerary.length - 1];
     const lastStop = lastBlock && lastBlock.stops[lastBlock.stops.length - 1];
     const dinnerPick = nearestPick(dinnerPicks, coordOf(lastStop)) || dinnerPicks[0] || null;
     return applyLunch({ ...base, lunch: lunchPick ? { ...lunchPick } : null, dinner: dinnerPick ? { ...dinnerPick } : null });
-  }));
+  };
+
+  if (plan && plan.length) {
+    // CURATED PATH — reuse the SAME per-neighborhood stores curated on the
+    // neighborhoods screen (the exact list shown on the card flip), fetching any
+    // that weren't preloaded. Meals are generated per day. No /api/itinerary
+    // call, so there's no multi-day timeout and one shared store source.
+    const storesFor = async (hoodName) => {
+      const cached = hoodStores && hoodStores[hoodName];
+      if (cached && cached.length) return cached;
+      try { return await suggestStores(city, tiers, hoodName, []); } catch { return []; }
+    };
+    return Promise.all(plan.slice(0, dayCount).map(async (hoodNames, di) => {
+      const hubs = await Promise.all(hoodNames.map(async (name) => ({ hub: name, stores: await storesFor(name) })));
+      const lunchArea = hoodNames[Math.floor((hoodNames.length - 1) / 2)] || hoodNames[0];
+      const dinnerArea = hoodNames[hoodNames.length - 1] || hoodNames[0];
+      const [lunchRaw, dinnerRaw] = await Promise.all([
+        suggestMeals(city, lunchArea, "lunch", []).catch(() => []),
+        suggestMeals(city, dinnerArea, "dinner", []).catch(() => []),
+      ]);
+      return assembleDay(di, hubs, lunchRaw, dinnerRaw, lunchArea, dinnerArea, hoodNames.join(" → "));
+    }));
+  }
+
+  // NO-PLAN FALLBACK — one combined generation (only when the plan failed to load).
+  const data = await generateItinerary(city, tiers, dayCount, null);
+  const days = (data.days || []).slice(0, dayCount);
+  if (!days.length) throw new Error("empty-itinerary");
+  return Promise.all(days.map((d, di) => assembleDay(di, d.hubs, d.lunch, d.dinner, null, null, d.label)));
 }
 
 // Pick the meal option closest to a coordinate (the lunch anchor, or where the
@@ -1982,43 +1986,78 @@ function ViewToggle({ view, onView }) {
   );
 }
 
-// Compact list-view row for a neighborhood. Tap the row to preview its store
-// list; tap the checkbox to add/remove it from the plan.
-function HoodRow({ o, n, city, on, onToggle, onOpen }) {
+// Compact list-view row. Tap the row to flip between the blurb and the curated
+// store list (preloaded — instant); tap the checkbox to add/remove from the plan.
+function HoodRow({ o, n, city, on, onToggle, stores }) {
+  const [flipped, setFlipped] = useState(false);
+  const list = stores || [];
   return (
-    <div onClick={() => onOpen()} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") onOpen(); }}
-      style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", display: "flex", alignItems: "center", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
+    <div onClick={() => setFlipped((f) => !f)} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f); }}
+      style={{ ...SANS, cursor: "pointer", width: "100%", textAlign: "left", display: "flex", alignItems: flipped ? "flex-start" : "center", gap: 14, border: `1px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT_SOFT : "#fff", borderRadius: "var(--radius-sm)", padding: "10px 12px" }}>
       <button onClick={(e) => { e.stopPropagation(); onToggle(); }} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
-        style={{ ...SANS, cursor: "pointer", width: 22, height: 22, padding: 0, borderRadius: 6, flexShrink: 0, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</button>
+        style={{ ...SANS, cursor: "pointer", width: 22, height: 22, padding: 0, borderRadius: 6, flexShrink: 0, marginTop: flipped ? 1 : 0, border: `1.5px solid ${on ? ACCENT : LINE}`, background: on ? ACCENT : "#fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{on && <Check size={13} />}</button>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: on ? ACCENT : INK }}>{o.name}</div>
-        <div style={{ fontSize: 12.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.blurb}</div>
+        {flipped ? (
+          list.length ? (
+            <div style={{ marginTop: 4, display: "flex", flexDirection: "column", gap: 2 }}>
+              {list.map((s, i) => <div key={s.name + i} style={{ fontSize: 13, fontWeight: 600, color: INK }}>{s.name}</div>)}
+            </div>
+          ) : (
+            <div style={{ fontSize: 12.5, color: MUTE, fontStyle: "italic", marginTop: 2 }}>{stores ? "No standout stores here" : "Curating stores…"}</div>
+          )
+        ) : (
+          <div style={{ fontSize: 12.5, color: MUTE, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.blurb}</div>
+        )}
       </div>
-      <span style={{ fontSize: 12, fontWeight: 600, color: ACCENT, flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 2 }}>Stores <ChevronRight size={14} /></span>
+      <span style={{ fontSize: 12, fontWeight: 600, color: ACCENT, flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 2, marginTop: flipped ? 1 : 0 }}>{flipped ? "Hide" : <>Stores <ChevronRight size={14} /></>}</span>
     </div>
   );
 }
 
-// Full-bleed image card (Pangram Pangram style): the photo fills the card, the
-// name sits large in white over the centre, the blurb small beneath. Minimal —
-// no coloured outline. Tap to add/remove from the plan.
-function HoodCard({ o, n, city, on, onToggle, onOpen }) {
+// Full-bleed image card. Tapping the card FLIPS it in place (a quick cross-fade)
+// over the same photo: front = the big neighborhood name; back = the curated
+// store-name list (the same stores that build the itinerary, preloaded — instant,
+// no fetch on tap). The check toggles add/remove from the plan.
+function HoodCard({ o, n, city, on, onToggle, stores }) {
+  const [flipped, setFlipped] = useState(false);
+  const list = stores || [];
+  const fade = { transition: "opacity 0.22s ease", pointerEvents: "none" };
   return (
-    <div onClick={() => onOpen()} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter") onOpen(); }}
+    <div onClick={() => setFlipped((f) => !f)} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setFlipped((f) => !f); }}
       style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
         <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => info.photos)} grad="linear-gradient(135deg,#2b2b2b,#555)" hideDots />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.08) 38%, rgba(0,0,0,0.64) 100%)" }} />
-      <div style={{ position: "absolute", top: 14, left: 16, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
+      {/* Extra veil on the back so the store list stays legible on light photos. */}
+      <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.5)", opacity: flipped ? 1 : 0, ...fade }} />
+      <div style={{ position: "absolute", top: 14, left: 16, zIndex: 2, pointerEvents: "none", color: "rgba(255,255,255,0.85)", fontSize: "var(--step-caption)", fontWeight: 600, textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}>{String(n).padStart(2, "0")}</div>
       <button onClick={(e) => { e.stopPropagation(); onToggle(); }} aria-label={on ? `Remove ${o.name}` : `Add ${o.name}`}
-        style={{ ...SANS, cursor: "pointer", position: "absolute", top: 12, right: 12, zIndex: 2, width: 28, height: 28, borderRadius: 999, padding: 0, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "rgba(15,15,15,0.35)", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none", backdropFilter: "blur(2px)" }}>{on && <Check size={16} strokeWidth={3} />}</button>
-      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", pointerEvents: "none" }}>
+        style={{ ...SANS, cursor: "pointer", position: "absolute", top: 12, right: 12, zIndex: 3, width: 28, height: 28, borderRadius: 999, padding: 0, display: "flex", alignItems: "center", justifyContent: "center", background: on ? NEON : "rgba(15,15,15,0.35)", color: "#0A0A0A", border: on ? "none" : "1.5px solid rgba(255,255,255,0.8)", boxShadow: on ? "0 2px 10px rgba(0,0,0,0.4)" : "none", backdropFilter: "blur(2px)" }}>{on && <Check size={16} strokeWidth={3} />}</button>
+
+      {/* FRONT — neighborhood name + blurb */}
+      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "24px 22px", opacity: flipped ? 0 : 1, ...fade }}>
         <div style={{ color: "#fff", fontSize: CARD_TITLE, fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.06, textShadow: "0 2px 16px rgba(0,0,0,0.55)" }}>{o.name}</div>
         <div style={{ color: "rgba(255,255,255,0.92)", fontSize: "var(--step-meta)", lineHeight: 1.45, marginTop: 10, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{o.blurb}</div>
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, pointerEvents: "none", display: "flex", justifyContent: "center" }}>
-        <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "rgba(15,15,15,0.5)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 11px", borderRadius: 999 }}>Tap to preview stores <ChevronRight size={13} /></span>
+
+      {/* BACK — curated store names */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "46px 20px 40px", opacity: flipped ? 1 : 0, ...fade, overflow: "hidden" }}>
+        <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: 0.8, textTransform: "uppercase", color: "rgba(255,255,255,0.65)", marginBottom: 12 }}>{o.name} · stores</div>
+        {list.length ? (
+          <div style={{ display: "flex", flexDirection: "column", gap: 9, maxWidth: "100%" }}>
+            {list.map((s, i) => (
+              <div key={s.name + i} style={{ color: "#fff", fontSize: "clamp(1rem, 2.4vw, 1.25rem)", fontWeight: 700, letterSpacing: "-0.01em", lineHeight: 1.12, textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>{s.name}</div>
+            ))}
+          </div>
+        ) : (
+          <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "var(--step-meta)", fontStyle: "italic" }}>{stores ? "No standout stores here" : "Curating stores…"}</div>
+        )}
+      </div>
+
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 14, zIndex: 2, pointerEvents: "none", display: "flex", justifyContent: "center" }}>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "rgba(15,15,15,0.5)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 11px", borderRadius: 999 }}>{flipped ? "Tap to flip back" : <>Tap to see stores <ChevronRight size={13} /></>}</span>
       </div>
     </div>
   );
@@ -2027,21 +2066,8 @@ function HoodCard({ o, n, city, on, onToggle, onOpen }) {
 // The pre-curated, day-by-day neighborhood plan. Each day is a geographically
 // grouped set of districts in optimal order; everything is pre-selected, and the
 // scout can deselect any before building the full itinerary.
-function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, onToggle, onBack, onBuild, view, onView }) {
+function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, hoodStores, onToggle, onBack, onBuild, view, onView }) {
   const totalSelected = planDays.reduce((a, d) => a + (d.neighborhoods || []).filter((h) => selected.has(h.name)).length, 0);
-  // Tap a neighborhood to preview its curated store list before committing. We
-  // fetch the AI-curated apparel stores on demand and cache them per hood.
-  const [preview, setPreview] = useState(null); // the hood object being previewed
-  const [storeCache, setStoreCache] = useState({}); // hubName -> { loading, stores }
-  const openPreview = (o) => {
-    setPreview(o);
-    if (!storeCache[o.name]) {
-      setStoreCache((c) => ({ ...c, [o.name]: { loading: true, stores: [] } }));
-      suggestStores(city, tiers && tiers.length ? tiers : CURATED_TIERS, o.name, [])
-        .then((s) => setStoreCache((c) => ({ ...c, [o.name]: { loading: false, stores: s || [] } })))
-        .catch(() => setStoreCache((c) => ({ ...c, [o.name]: { loading: false, stores: [] } })));
-    }
-  };
 
   return (
     <div style={{ ...SANS, color: INK, maxWidth: 1180, marginInline: "auto" }}>
@@ -2081,11 +2107,11 @@ function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, 
                 <div style={{ fontSize: "var(--step-meta)", color: MUTE, marginTop: 2, marginBottom: 16 }}>{hoods.map((h) => h.name).join(" → ")}</div>
                 {view === "list" ? (
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {hoods.map((o, i) => <HoodRow key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} onOpen={() => openPreview(o)} />)}
+                    {hoods.map((o, i) => <HoodRow key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} stores={hoodStores[o.name]} onToggle={() => onToggle(o.name)} />)}
                   </div>
                 ) : (
                   <div className="scout-grid">
-                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} onToggle={() => onToggle(o.name)} onOpen={() => openPreview(o)} />)}
+                    {hoods.map((o, i) => <HoodCard key={o.name + i} o={o} n={i + 1} city={city} on={selected.has(o.name)} stores={hoodStores[o.name]} onToggle={() => onToggle(o.name)} />)}
                   </div>
                 )}
               </div>
@@ -2097,64 +2123,6 @@ function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, 
           <div style={{ textAlign: "center", color: MUTE, fontSize: "var(--step-meta)", marginTop: 12, lineHeight: 1.5 }}>Scout fills each neighborhood with the best stores, plus a curated lunch and dinner.</div>
         </>
       )}
-      {preview && (
-        <NeighborhoodPreview hood={preview} city={city} data={storeCache[preview.name]} selected={selected.has(preview.name)}
-          onToggle={() => onToggle(preview.name)} onClose={() => setPreview(null)} />
-      )}
-    </div>
-  );
-}
-
-// Lightweight bottom-sheet preview of a neighborhood's curated store list, shown
-// when you tap a neighborhood card — so you can vet the picks (name · category ·
-// the editor's take) before adding it to the plan.
-function NeighborhoodPreview({ hood, city, data, selected, onToggle, onClose }) {
-  const { loading, stores } = data || { loading: true, stores: [] };
-  const catChip = (cat) => cat ? <span style={{ fontSize: 10.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.4, color: ACCENT, background: ACCENT_SOFT, borderRadius: 999, padding: "2px 8px", whiteSpace: "nowrap", flexShrink: 0 }}>{cat}</span> : null;
-  return (
-    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 60, background: "rgba(0,0,0,0.45)", display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-      <div onClick={(e) => e.stopPropagation()} style={{ ...SANS, color: INK, width: "100%", maxWidth: 520, background: "#fff", borderRadius: "18px 18px 0 0", maxHeight: "85vh", display: "flex", flexDirection: "column" }}>
-        <div style={{ padding: "18px 20px 12px", borderBottom: `1px solid ${LINE}` }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
-            <div style={{ minWidth: 0 }}>
-              <div style={{ fontSize: 19, fontWeight: 800, letterSpacing: -0.3 }}>{hood.name}</div>
-              {hood.blurb && <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.4, marginTop: 3 }}>{hood.blurb}</div>}
-            </div>
-            <button onClick={onClose} aria-label="Close" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", color: MUTE, padding: 4, flexShrink: 0 }}><X size={20} /></button>
-          </div>
-          <div style={{ fontSize: 11.5, fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase", marginTop: 10 }}>Curated apparel stores{!loading && stores.length ? ` · ${stores.length}` : ""}</div>
-        </div>
-
-        <div style={{ overflowY: "auto", padding: "6px 20px 14px" }}>
-          {loading ? (
-            <div style={{ textAlign: "center", padding: "34px 0" }}>
-              <div style={{ width: 24, height: 24, margin: "0 auto 12px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
-              <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
-              <div style={{ color: MUTE, fontSize: 13 }}>Curating {hood.name}'s best apparel stores…</div>
-            </div>
-          ) : stores.length === 0 ? (
-            <div style={{ color: MUTE, fontSize: 13.5, textAlign: "center", padding: "28px 12px", lineHeight: 1.5 }}>No standout apparel destinations surfaced here — Scout will still pull the best it can find when you build.</div>
-          ) : (
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              {stores.map((s, i) => (
-                <div key={s.name + i} style={{ padding: "12px 0", borderTop: i ? `1px solid ${LINE}` : "none" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                    <span style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em" }}>{s.name}</span>
-                    {catChip(s.category)}
-                  </div>
-                  {s.why && <div style={{ fontSize: 13, color: MUTE, lineHeight: 1.45, marginTop: 3 }}>{s.why}</div>}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div style={{ padding: "12px 20px calc(16px + env(safe-area-inset-bottom))", borderTop: `1px solid ${LINE}` }}>
-          <button onClick={() => { onToggle(); onClose(); }} style={{ ...SANS, cursor: "pointer", width: "100%", border: selected ? `1.5px solid ${ACCENT}` : "none", background: selected ? "#fff" : ACCENT, color: selected ? ACCENT : "#fff", borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 15, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
-            {selected ? <><Check size={17} /> In your plan — tap to remove</> : <><Plus size={17} /> Add {hood.name} to plan</>}
-          </button>
-        </div>
-      </div>
     </div>
   );
 }
@@ -2357,6 +2325,7 @@ export default function App() {
   const [areaLoading, setAreaLoading] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
   const [cardView, setCardView] = useState("card"); // "card" | "list" — catalog view mode
+  const [hoodStores, setHoodStores] = useState({}); // hubName -> curated store list (preloaded; shared by the card flip + the build)
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -2476,12 +2445,20 @@ export default function App() {
     const n = Math.max(1, dayCount);
     const useTiers = tiers.length ? tiers : CURATED_TIERS;
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
-    setPlanDays([]); setSelectedHoods(new Set()); setAreaLoading(true);
+    setPlanDays([]); setSelectedHoods(new Set()); setHoodStores({}); setAreaLoading(true);
     setScreen("neighborhoods");
     try {
       const days = await suggestNeighborhoodPlan(city, useTiers, n);
       setPlanDays(days);
       setSelectedHoods(new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name))));
+      // Preload each neighborhood's curated stores NOW (bounded concurrency), so
+      // the card flip is an instant read and the build reuses the same list —
+      // one shared source, no fetch on tap. Populate per-hood as each resolves.
+      const hoods = [...new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name)))];
+      mapLimit(hoods, 5, async (name) => {
+        try { const s = await suggestStores(city, useTiers, name, []); setHoodStores((m) => ({ ...m, [name]: s || [] })); }
+        catch { setHoodStores((m) => ({ ...m, [name]: [] })); }
+      });
     } catch {
       setPlanDays([]);
     } finally {
@@ -2504,7 +2481,7 @@ export default function App() {
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, useTiers, n, hotel, plan.length ? plan : null);
+      const live = await buildLiveTrip(city, useTiers, n, hotel, plan.length ? plan : null, hoodStores);
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
       setTrip(dated); setCollapsed(new Set()); setScreen("review");
     } catch {
@@ -2649,7 +2626,7 @@ export default function App() {
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
         {screen === "input" && <CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} />}
         {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
-        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} tiers={tiers} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
+        {screen === "neighborhoods" && <NeighborhoodsScreen city={city} tiers={tiers} hotel={hotel} planDays={planDays} loading={areaLoading} selected={selectedHoods} hoodStores={hoodStores} onToggle={toggleHood} onBack={() => setScreen("setup")} onBuild={build} view={cardView} onView={setCardView} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("setup")} />}
         {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onBack={() => setScreen("setup")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
