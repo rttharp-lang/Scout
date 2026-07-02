@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupCityscape, lookupAreaInfo, generateItinerary, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupCityscape, lookupAreaInfo, generateItinerary, generateTripCuration, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List, Footprints } from "lucide-react";
@@ -1825,22 +1825,20 @@ function dropHubOutliers(stores) {
 
 // Build a full trip for a non-curated city: ask the AI scout for the structure,
 // then enrich every store and lunch spot with live Google data in parallel.
-// Run an async fn over items with bounded concurrency (a worker pool sharing one
-// iterator) — used to preload per-neighborhood stores without firing a dozen AI
-// calls at once.
-async function mapLimit(items, limit, fn) {
-  const iter = items.entries();
-  const worker = async () => { for (const [i, item] of iter) await fn(item, i); };
-  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
-}
-
-async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStores = null) {
+async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStores = null, dining = null) {
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
-  // Turn a day's neighborhood store lists + raw meal lists into the enriched,
+  // Hydrate a raw meal list ({name, cuisine, neighborhood, why}) with live
+  // Google details, anchored to each restaurant's own neighborhood.
+  const enrichMealList = (list) => Promise.all((list || []).map(async (l) => {
+    const enr = await enrichPlace(l.name, l.neighborhood, city);
+    return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
+  }));
+
+  // Turn a day's neighborhood store lists + ENRICHED meal lists into the
   // scheduled day the review screen renders. `hubs` = [{ hub, stores:
   // [{name,tier,category,why}] }]. Shared by the curated and fallback paths.
-  const assembleDay = async (di, hubs, lunchRaw, dinnerRaw, lunchArea, dinnerArea, fallbackLabel) => {
+  const assembleDay = async (di, hubs, lunchPicks, dinnerPicks, fallbackLabel) => {
     // Enrich each store (anchored to its neighborhood) with live Google data.
     const enriched = await Promise.all((hubs || []).map((h, hi) =>
       Promise.all((h.stores || []).map(async (s) => {
@@ -1862,12 +1860,6 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStor
       h.time = fmtDuration(mins);
       h.arrive = i === 0 ? "Start here" : `From ${itinerary[i - 1].hub}`;
     });
-    const enrichMeal = (list, area) => Promise.all((list || []).map(async (l) => {
-      const enr = await enrichPlace(l.name, area, city);
-      return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
-    }));
-    const lunchPicks = await enrichMeal(lunchRaw, lunchArea);
-    const dinnerPicks = await enrichMeal(dinnerRaw, dinnerArea);
     const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || fallbackLabel || `${city} · Day ${di + 1}`;
     // Auto-pick the best lunch near the ~1 PM point and dinner near the day's end.
     const base = applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
@@ -1879,32 +1871,45 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStor
   };
 
   if (plan && plan.length) {
-    // CURATED PATH — reuse the SAME per-neighborhood stores curated on the
-    // neighborhoods screen (the exact list shown on the card flip), fetching any
-    // that weren't preloaded. Meals are generated per day. No /api/itinerary
-    // call, so there's no multi-day timeout and one shared store source.
+    // CURATED PATH — everything comes from the single curation payload: stores
+    // from hoodStores (the exact lists shown on the neighborhood cards), dining
+    // from the payload's citywide lunch/dinner (enriched ONCE and shared across
+    // days — nearestPick still anchors lunch to the ~1 PM point and dinner to
+    // where each day ends). No further AI calls during the build.
     const storesFor = async (hoodName) => {
       const cached = hoodStores && hoodStores[hoodName];
       if (cached && cached.length) return cached;
       try { return await suggestStores(city, tiers, hoodName, []); } catch { return []; }
     };
+    let cityLunch = null, cityDinner = null;
+    if (dining && ((dining.lunch || []).length || (dining.dinner || []).length)) {
+      [cityLunch, cityDinner] = await Promise.all([enrichMealList(dining.lunch), enrichMealList(dining.dinner)]);
+    }
     return Promise.all(plan.slice(0, dayCount).map(async (hoodNames, di) => {
       const hubs = await Promise.all(hoodNames.map(async (name) => ({ hub: name, stores: await storesFor(name) })));
-      const lunchArea = hoodNames[Math.floor((hoodNames.length - 1) / 2)] || hoodNames[0];
-      const dinnerArea = hoodNames[hoodNames.length - 1] || hoodNames[0];
-      const [lunchRaw, dinnerRaw] = await Promise.all([
-        suggestMeals(city, lunchArea, "lunch", []).catch(() => []),
-        suggestMeals(city, dinnerArea, "dinner", []).catch(() => []),
-      ]);
-      return assembleDay(di, hubs, lunchRaw, dinnerRaw, lunchArea, dinnerArea, hoodNames.join(" → "));
+      let lunchPicks = cityLunch ? [...cityLunch] : null;
+      let dinnerPicks = cityDinner ? [...cityDinner] : null;
+      if (!lunchPicks || !dinnerPicks) {
+        // Resilience: payload carried no dining — fall back to per-day meal
+        // suggestions near the route (the pre-payload behavior).
+        const lunchArea = hoodNames[Math.floor((hoodNames.length - 1) / 2)] || hoodNames[0];
+        const dinnerArea = hoodNames[hoodNames.length - 1] || hoodNames[0];
+        const [lr, dr] = await Promise.all([
+          suggestMeals(city, lunchArea, "lunch", []).catch(() => []),
+          suggestMeals(city, dinnerArea, "dinner", []).catch(() => []),
+        ]);
+        lunchPicks = lunchPicks || await enrichMealList(lr.map((x) => ({ ...x, neighborhood: lunchArea })));
+        dinnerPicks = dinnerPicks || await enrichMealList(dr.map((x) => ({ ...x, neighborhood: dinnerArea })));
+      }
+      return assembleDay(di, hubs, lunchPicks, dinnerPicks, hoodNames.join(" → "));
     }));
   }
 
-  // NO-PLAN FALLBACK — one combined generation (only when the plan failed to load).
+  // NO-PLAN FALLBACK — one combined generation (only when the payload failed).
   const data = await generateItinerary(city, tiers, dayCount, null);
   const days = (data.days || []).slice(0, dayCount);
   if (!days.length) throw new Error("empty-itinerary");
-  return Promise.all(days.map((d, di) => assembleDay(di, d.hubs, d.lunch, d.dinner, null, null, d.label)));
+  return Promise.all(days.map(async (d, di) => assembleDay(di, d.hubs, await enrichMealList(d.lunch), await enrichMealList(d.dinner), d.label)));
 }
 
 // Pick the meal option closest to a coordinate (the lunch anchor, or where the
@@ -2061,7 +2066,7 @@ function NeighborhoodsScreen({ city, tiers, hotel, planDays, loading, selected, 
         <div style={{ textAlign: "center", padding: "60px 0" }}>
           <div style={{ width: 28, height: 28, margin: "0 auto 16px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
           <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
-          <div style={{ color: MUTE, fontSize: 14 }}>Curating your {city || "city"} plan and its stores…</div>
+          <div style={{ color: MUTE, fontSize: 14 }}>Curating {city || "your city"} — neighborhoods, stores, dining and experiences. One pass, worth the wait…</div>
         </div>
       ) : planDays.length === 0 ? (
         <div style={{ textAlign: "center", padding: "40px 0" }}>
@@ -2304,7 +2309,8 @@ export default function App() {
   const [areaLoading, setAreaLoading] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
   const [cardView, setCardView] = useState("card"); // "card" | "list" — catalog view mode
-  const [hoodStores, setHoodStores] = useState({}); // hubName -> curated store list (preloaded; shared by the card flip + the build)
+  const [hoodStores, setHoodStores] = useState({}); // hubName -> curated store list (from the single curation payload; shared by cards + the build)
+  const [tripExtras, setTripExtras] = useState(null); // { dining: {lunch,dinner}, experiences } from the same payload (Stage 2 renders experiences)
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -2424,23 +2430,24 @@ export default function App() {
     const n = Math.max(1, dayCount);
     const useTiers = tiers.length ? tiers : CURATED_TIERS;
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
-    setPlanDays([]); setSelectedHoods(new Set()); setHoodStores({}); setAreaLoading(true);
+    setPlanDays([]); setSelectedHoods(new Set()); setHoodStores({}); setTripExtras(null); setAreaLoading(true);
     setScreen("neighborhoods");
     try {
-      const days = await suggestNeighborhoodPlan(city, useTiers, n);
+      // ONE generation pass returns the whole trip payload — neighborhoods with
+      // their stores, dining, experiences. The user waits once; everything after
+      // this reads from the cached payload (places APIs only hydrate details).
+      const data = await generateTripCuration(city, useTiers, n, hotel, datesLabel);
+      // Empty-neighborhood filter: a neighborhood with no qualifying stores
+      // never renders; drop days that end up empty.
+      const days = (data.days || [])
+        .map((d) => ({ neighborhoods: (d.neighborhoods || []).filter((h) => (h.stores || []).length) }))
+        .filter((d) => d.neighborhoods.length);
+      const storeMap = {};
+      days.forEach((d) => d.neighborhoods.forEach((h) => { storeMap[h.name] = h.stores; }));
       setPlanDays(days);
-      setSelectedHoods(new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name))));
-      // Generate every neighborhood's curated stores ONCE, up front (bounded
-      // concurrency), and WAIT for them — so the whole set shows a single load
-      // state, then every card renders complete with its stores already attached.
-      // The build reuses this exact map: one shared source, no per-card fetch.
-      const hoods = [...new Set(days.flatMap((d) => (d.neighborhoods || []).map((h) => h.name)))];
-      const acc = {};
-      await mapLimit(hoods, 6, async (name) => {
-        try { acc[name] = (await suggestStores(city, useTiers, name, [])) || []; }
-        catch { acc[name] = []; }
-      });
-      setHoodStores(acc);
+      setHoodStores(storeMap);
+      setSelectedHoods(new Set(days.flatMap((d) => d.neighborhoods.map((h) => h.name))));
+      setTripExtras({ dining: data.dining || null, experiences: data.experiences || [] });
     } catch {
       setPlanDays([]);
     } finally {
@@ -2463,7 +2470,7 @@ export default function App() {
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, useTiers, n, hotel, plan.length ? plan : null, hoodStores);
+      const live = await buildLiveTrip(city, useTiers, n, hotel, plan.length ? plan : null, hoodStores, tripExtras && tripExtras.dining);
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
       setTrip(dated); setCollapsed(new Set()); setScreen("review");
     } catch {

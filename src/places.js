@@ -33,6 +33,19 @@ export async function searchCities(query) {
   }
 }
 
+// ONE-pass trip curation: a single structured payload with day-grouped
+// neighborhoods (each carrying its curated stores), citywide dining, and
+// date-aware experiences. Called once on trip submit and cached in app state;
+// throws on failure so the caller can fall back.
+export async function generateTripCuration(city, tiers, days, hotel, dates) {
+  const params = new URLSearchParams({ city, tiers: tiers.join(","), days: String(days) });
+  if (hotel && hotel.name) params.set("hotel", hotel.name);
+  if (dates) params.set("dates", dates);
+  const r = await fetch(`/api/tripcuration?${params.toString()}`);
+  if (!r.ok) throw new Error(`tripcuration ${r.status}`);
+  return r.json();
+}
+
 // Ask the scout for a pre-curated, day-by-day neighborhood plan: each day a set
 // of geographically-clustered districts (3+), with what each is known for and
 // why an apparel team would benefit. Returns an array of days, each
