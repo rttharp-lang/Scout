@@ -16,7 +16,7 @@ const TIER_GUIDE = {
 
 const SYSTEM = `You are the most discerning apparel retail editor — at the level of a Hypebeast or Highsnobiety senior editor — curating apparel destinations for an industry insider. Every store you name MUST be APPAREL-FOCUSED (clothing, footwear, apparel-driven concept/multi-brand stores ONLY — NEVER markets, souvenir/trinket shops, electronics, homeware, beauty-only, bookstores or galleries), LEADING not generic (only spots a knowledgeable insider would route to — no mall basics, no chains for the sake of it), and REAL and currently operating with clean searchable names (no parentheticals).
 
-Match this quality bar and taste — in New York that's the level of Dover Street Market, Patron of the New, Bluegreen in SoHo, and Kith — applied to EVERY city, including non-major markets. Vary the types (vintage, multi-brand, concept, streetwear, luxury). If the neighborhood has few true destinations, return FEWER high-quality ones rather than padding with mediocre stores.`;
+Match this quality bar and taste — in New York that's the level of Dover Street Market, Patron of the New, Blue in Green in SoHo, and Kith — applied to EVERY city, including non-major markets. Those calibration stores are REAL PICKS, not just examples: include them when they sit in the requested neighborhood. BELOW the bar — never include, and treat their tier as the cutoff: Procell, Extra Butter, and similar hype-sneaker consignment or past-prime archive shops. Vary the types (vintage, multi-brand, concept, streetwear, luxury). If the neighborhood has few true destinations, return FEWER high-quality ones rather than padding with mediocre stores.`;
 
 const SCHEMA = {
   type: "object",
@@ -70,7 +70,11 @@ export default async function handler(req, res) {
     const data = await r.json();
     const textBlock = (data.content || []).find((b) => b.type === "text");
     if (!textBlock) { res.status(502).json({ error: "no-output" }); return; }
-    res.status(200).json(JSON.parse(textBlock.text));
+    // Hard editorial blocklist — explicitly rejected stores never reach the client.
+    const REJECT = ["procell", "extra butter"];
+    const out = JSON.parse(textBlock.text);
+    out.stores = (out.stores || []).filter((s) => { const n = (s.name || "").toLowerCase(); return !REJECT.some((rj) => n.includes(rj)); });
+    res.status(200).json(out);
   } catch (e) {
     res.status(500).json({ error: "failed", detail: String(e) });
   }

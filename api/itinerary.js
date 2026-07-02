@@ -27,7 +27,7 @@ EVERY store you name MUST be:
 
 Across a neighborhood, VARY the types — mix vintage, multi-brand, concept, streetwear and luxury so the route has range, not five of the same thing.
 
-QUALITY BAR — match this calibre and taste. In New York that means the level of Dover Street Market, Patron of the New (a more forward Dover Street), Bluegreen in SoHo (considered, "capital" clothing), and Kith. Apply this SAME editorial taste to EVERY city — including non-major markets like Las Vegas — finding the genuine best apparel retail there, not filler. If a place has few true destinations, name FEWER high-quality ones rather than padding with mediocre stores.
+QUALITY BAR — match this calibre and taste. In New York that means the level of Dover Street Market, Patron of the New (a more forward Dover Street), Blue in Green in SoHo (considered, Kapital-grade clothing), and Kith. Those calibration stores are REAL PICKS, not just examples — include them when their neighborhood is on the route. BELOW the bar — never include: Procell, Extra Butter, and similar hype-sneaker consignment or past-prime archive shops. Apply this SAME editorial taste to EVERY city — including non-major markets like Las Vegas — finding the genuine best apparel retail there, not filler. If a place has few true destinations, name FEWER high-quality ones rather than padding with mediocre stores.
 
 Group stores into real, walkable neighborhoods so a day flows geographically. Each "why" is one sharp editor's-take sentence on what makes this store worth the trip for a premium apparel brand — construction, merchandising, material, cultural signal — never generic.`;
 
