@@ -125,6 +125,44 @@ body {
 /* Nav slide-out field on the electric-blue panel: white placeholder. */
 .nav-input::placeholder { color: rgba(255, 255, 255, 0.6); }
 
+/* Trip Hub rails (PP-style). `.hub-rail` is horizontal at every width (the
+   neighborhoods rail): square cards with a peek on mobile, wide 16/9 cards on
+   desktop. `.hub-stack` is a vertical stack of square cards on mobile that
+   becomes a wide 16/9 carousel with peek at >=1024px (Shopping / Food /
+   Events). Dots for the stacks only show at desktop widths, where they
+   actually scroll. */
+.hub-rail {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.hub-rail::-webkit-scrollbar { display: none; }
+.hub-rail > * {
+  flex: 0 0 86%;
+  scroll-snap-align: center;
+  aspect-ratio: 1 / 1;
+}
+.hub-stack { display: flex; flex-direction: column; gap: 14px; }
+.hub-stack > * { aspect-ratio: 1 / 1; }
+@media (min-width: 1024px) {
+  .hub-rail > * { flex-basis: 72%; aspect-ratio: 16 / 9; }
+  .hub-stack {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .hub-stack::-webkit-scrollbar { display: none; }
+  .hub-stack > * { flex: 0 0 72%; scroll-snap-align: center; aspect-ratio: 16 / 9; }
+}
+.hub-dots { display: flex; justify-content: center; align-items: center; gap: 4px; margin-top: 12px; }
+.hub-dots-desktop { display: none; }
+@media (min-width: 1024px) { .hub-dots-desktop { display: flex; } }
+
 /* Hero city carousel (PP-style): ONE full-width card visible at a time — no peek
    of the next. Swipe to change city; position is shown by the dots below. */
 .city-rail {
