@@ -1173,7 +1173,7 @@ function AddNeighborhoodModal({ city, tiers, existing, onClose, onAdd }) {
 }
 
 // ── Review (per day) ───────────────────────────────────────────
-function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, experiences, onRemoveExp, onBack, onSwitchDay, onPickLunch, onPickDinner, onChooseLunch, onChooseDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onReplaceStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
+function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, onRemoveExp, onBack, onSwitchDay, onPickLunch, onPickDinner, onChooseLunch, onChooseDinner, onClearLunch, onClearDinner, onConfirmStop, onRemoveStop, onReplaceStop, onAddStop, onReorderHub, onOptimizeDay, onSuggestStores, onAddNeighborhood, collapsed, setCollapsed, view, onView, onConfirmDay, onGotoOverview }) {
   const [adding, setAdding] = useState(false);
   const [hoodOpen, setHoodOpen] = useState(false);
   const [addHub, setAddHub] = useState(null); // neighborhood currently adding a store to
@@ -1456,11 +1456,11 @@ function ReviewScreen({ city, dates, tiers, trip, activeDay, flash, hotel, exper
       <button onClick={() => setHoodOpen(true)} style={{ ...SANS, cursor: "pointer", width: "100%", maxWidth: 560, marginInline: "auto", marginTop: 18, border: `1.5px dashed ${ACCENT}`, background: "#fff", color: ACCENT, borderRadius: "var(--radius-pill)", padding: "14px", fontSize: 14.5, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Plus size={17} /> Add a neighborhood</button>
       {hoodOpen && <AddNeighborhoodModal city={city} tiers={tiers} existing={day.itinerary.map((h) => h.hub)} onClose={() => setHoodOpen(false)} onAdd={onAddNeighborhood} />}
 
-      {/* Experiences the scout opted into on the Trip Hub — carried with the trip. */}
-      {experiences && experiences.length > 0 && (
+      {/* Experiences the scout opted into on the Trip Hub — organized onto this day. */}
+      {(day.experiences || []).length > 0 && (
         <div style={{ marginTop: 30, maxWidth: 560, marginInline: "auto" }}>
-          <div style={{ fontSize: "var(--step-meta)", fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase", paddingBottom: 10, borderBottom: `1px solid ${LINE}` }}>Experiences</div>
-          {experiences.map((e) => (
+          <div style={{ fontSize: "var(--step-meta)", fontWeight: 700, color: MUTE, letterSpacing: 0.5, textTransform: "uppercase", paddingBottom: 10, borderBottom: `1px solid ${LINE}` }}>Experiences · this day</div>
+          {day.experiences.map((e) => (
             <div key={e.name} style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "12px 0", borderBottom: `1px solid ${LINE}` }}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontSize: 15, fontWeight: 700 }}>{e.name}{e.neighborhood ? <span style={{ fontSize: 12, color: MUTE, fontWeight: 600 }}> · {e.neighborhood}</span> : null}</div>
@@ -1839,9 +1839,13 @@ function dropHubOutliers(stores) {
   return kept.length >= Math.ceil(stores.length * 0.67) ? kept : stores;
 }
 
-// Build a full trip for a non-curated city: ask the AI scout for the structure,
-// then enrich every store and lunch spot with live Google data in parallel.
-async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStores = null, dining = null, prefs = null) {
+// The ONE organization pass. Takes the hub's selected items (flat stores with
+// neighborhood metadata + opted-in experiences), hydrates them with live Google
+// data, then does days/neighborhoods/order together: distributes selections
+// across the trip's dates balancing load, clusters each day geographically by
+// neighborhood, and sequences each day (walking order, lunch ~1 PM, dinner in
+// the evening, experiences attached to their day). No picks regenerate here.
+async function buildLiveTrip(city, tiers, dayCount, hotel, selection = null, dining = null, prefs = null) {
   const hotelCoord = hotel && hotel.lat != null ? { lat: hotel.lat, lng: hotel.lng } : null;
 
   // Hydrate a raw meal list ({name, cuisine, neighborhood, why}) with live
@@ -1851,20 +1855,12 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStor
     return { name: l.name, cuisine: l.cuisine, why: l.why, ...enr };
   }));
 
-  // Turn a day's neighborhood store lists + ENRICHED meal lists into the
-  // scheduled day the review screen renders. `hubs` = [{ hub, stores:
-  // [{name,tier,category,why}] }]. Shared by the curated and fallback paths.
-  const assembleDay = async (di, hubs, lunchPicks, dinnerPicks, fallbackLabel) => {
-    // Enrich each store (anchored to its neighborhood) with live Google data.
-    const enriched = await Promise.all((hubs || []).map((h, hi) =>
-      Promise.all((h.stores || []).map(async (s) => {
-        const enr = await enrichPlace(s.name, h.hub, city);
-        return { id: `${slug(s.name)}-${di}-${hi}`, name: s.name, tier: s.tier, category: s.category, why: s.why, hub: h.hub, dwell: 16, ...enr, confirmed: true, addedByUser: false };
-      }))
-    ));
-    // Drop geographic outliers (a store the AI mis-tagged to the wrong area),
-    // then schedule into ordered neighborhood blocks so the day flows.
-    const ordered = scheduleStops(enriched.map(dropHubOutliers).flat(), hotelCoord);
+  // Turn one day's ENRICHED per-neighborhood store groups + ENRICHED meal lists
+  // into the scheduled day the review screen renders.
+  const assembleDay = async (di, hoodGroups, lunchPicks, dinnerPicks, fallbackLabel, experiences) => {
+    // Drop geographic outliers (a store mis-tagged to the wrong area), then
+    // schedule into ordered neighborhood blocks so the day flows.
+    const ordered = scheduleStops(hoodGroups.map((g) => dropHubOutliers(g)).flat(), hotelCoord);
     const itinerary = [];
     ordered.forEach((s) => {
       const last = itinerary[itinerary.length - 1];
@@ -1878,7 +1874,7 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStor
     });
     const label = itinerary.map((h) => h.hub).filter(Boolean).join(" → ") || fallbackLabel || `${city} · Day ${di + 1}`;
     // Auto-pick the best lunch near the ~1 PM point and dinner near the day's end.
-    const base = applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], itinerary });
+    const base = applyLunch({ dayNum: di + 1, label, lunch: null, dinner: null, confirmed: false, lunchPicks, lunchSearch: lunchPicks, dinnerPicks, dinnerSearch: dinnerPicks, addCandidates: [], experiences: experiences || [], itinerary });
     // The hub's explicit meal choices win; otherwise fall back to proximity.
     const lunchPick = (prefs && prefs.lunch && lunchPicks.find((m) => m.name === prefs.lunch)) || nearestPick(lunchPicks, base.lunchAnchor);
     const lastBlock = itinerary[itinerary.length - 1];
@@ -1887,46 +1883,89 @@ async function buildLiveTrip(city, tiers, dayCount, hotel, plan = null, hoodStor
     return applyLunch({ ...base, lunch: lunchPick ? { ...lunchPick } : null, dinner: dinnerPick ? { ...dinnerPick } : null });
   };
 
-  if (plan && plan.length) {
-    // CURATED PATH — everything comes from the single curation payload: stores
-    // from hoodStores (the exact lists shown on the neighborhood cards), dining
-    // from the payload's citywide lunch/dinner (enriched ONCE and shared across
-    // days — nearestPick still anchors lunch to the ~1 PM point and dinner to
-    // where each day ends). No further AI calls during the build.
-    const storesFor = async (hoodName) => {
-      const cached = hoodStores && hoodStores[hoodName];
-      if (cached && cached.length) return cached;
-      try { return await suggestStores(city, tiers, hoodName, []); } catch { return []; }
-    };
-    let cityLunch = null, cityDinner = null;
+  // Enrich a raw store (from the curation payload or the fallback generation).
+  const enrichStore = async (s, hood, i) => {
+    const enr = await enrichPlace(s.name, hood, city);
+    return { id: `${slug(s.name)}-${i}`, name: s.name, tier: s.tier, category: s.category, why: s.why, hub: hood, dwell: 16, ...enr, confirmed: true, addedByUser: false };
+  };
+
+  if (selection && selection.stores && selection.stores.length) {
+    // (Hydrate) every selected store, in parallel.
+    const enriched = await Promise.all(selection.stores.map((s, i) => enrichStore(s, s.hood || s.neighborhood || "Around town", i)));
+
+    // (b) NEIGHBORHOODS: group by the neighborhood metadata; centroid per group.
+    const byHood = new Map();
+    enriched.forEach((s) => { const k = s.hub || "Around town"; if (!byHood.has(k)) byHood.set(k, []); byHood.get(k).push(s); });
+    const hoodBlocks = [...byHood.entries()].map(([hub, stops]) => ({ hub, stops, c: centroidOf(stops) }));
+
+    // Chain the neighborhoods by proximity (greedy nearest-neighbor from the
+    // hotel) so a contiguous split of the chain keeps each day clustered.
+    const chain = [];
+    const remaining = [...hoodBlocks];
+    let cur = hotelCoord || (remaining.find((h) => h.c) || {}).c || null;
+    while (remaining.length) {
+      let bi = 0;
+      if (cur) {
+        let bd = Infinity;
+        remaining.forEach((h, i) => { const d = h.c ? distLL(cur, h.c) : Infinity; if (d < bd) { bd = d; bi = i; } });
+      }
+      const [h] = remaining.splice(bi, 1);
+      chain.push(h);
+      if (h.c) cur = h.c;
+    }
+
+    // (a) DAYS: contiguous balanced partition of the chain into ≤ dayCount
+    // groups, targeting an even number of stops per day.
+    const total = enriched.length;
+    const k = Math.max(1, Math.min(dayCount, chain.length));
+    const target = total / k;
+    const groups = [];
+    let g = [], acc = 0;
+    chain.forEach((h, idx) => {
+      g.push(h); acc += h.stops.length;
+      const hoodsLeft = chain.length - idx - 1;
+      const groupsLeft = k - groups.length - 1;
+      if (groups.length < k - 1 && acc >= target && hoodsLeft >= groupsLeft) { groups.push(g); g = []; acc = 0; }
+    });
+    if (g.length) groups.push(g);
+
+    // Dining: enriched ONCE citywide, shared across days (each day still picks
+    // lunch near its ~1 PM point / dinner near its end, prefs winning).
+    let cityLunch = [], cityDinner = [];
     if (dining && ((dining.lunch || []).length || (dining.dinner || []).length)) {
       [cityLunch, cityDinner] = await Promise.all([enrichMealList(dining.lunch), enrichMealList(dining.dinner)]);
     }
-    return Promise.all(plan.slice(0, dayCount).map(async (hoodNames, di) => {
-      const hubs = await Promise.all(hoodNames.map(async (name) => ({ hub: name, stores: await storesFor(name) })));
-      let lunchPicks = cityLunch ? [...cityLunch] : null;
-      let dinnerPicks = cityDinner ? [...cityDinner] : null;
-      if (!lunchPicks || !dinnerPicks) {
-        // Resilience: payload carried no dining — fall back to per-day meal
-        // suggestions near the route (the pre-payload behavior).
-        const lunchArea = hoodNames[Math.floor((hoodNames.length - 1) / 2)] || hoodNames[0];
-        const dinnerArea = hoodNames[hoodNames.length - 1] || hoodNames[0];
-        const [lr, dr] = await Promise.all([
-          suggestMeals(city, lunchArea, "lunch", []).catch(() => []),
-          suggestMeals(city, dinnerArea, "dinner", []).catch(() => []),
-        ]);
-        lunchPicks = lunchPicks || await enrichMealList(lr.map((x) => ({ ...x, neighborhood: lunchArea })));
-        dinnerPicks = dinnerPicks || await enrichMealList(dr.map((x) => ({ ...x, neighborhood: dinnerArea })));
-      }
-      return assembleDay(di, hubs, lunchPicks, dinnerPicks, hoodNames.join(" → "));
-    }));
+
+    // Experiences: attach each to the day containing its neighborhood; anything
+    // unmatched goes to the lightest day.
+    const dayExps = groups.map(() => []);
+    const norm = (x) => (x || "").toLowerCase().trim();
+    (selection.experiences || []).forEach((e) => {
+      let di = groups.findIndex((gr) => gr.some((h) => {
+        const a = norm(h.hub), b = norm(e.neighborhood);
+        return a && b && (a === b || a.includes(b) || b.includes(a));
+      }));
+      if (di < 0) { di = 0; dayExps.forEach((a, i) => { if (a.length < dayExps[di].length) di = i; }); }
+      dayExps[di].push(e);
+    });
+
+    // (c) ORDER: assemble each day (walking order via the scheduler, lunch ~1 PM,
+    // dinner in the evening, experiences carried on the day).
+    return Promise.all(groups.map((gr, di) =>
+      assembleDay(di, gr.map((h) => h.stops), [...cityLunch], [...cityDinner], gr.map((h) => h.hub).join(" → "), dayExps[di])
+    ));
   }
 
-  // NO-PLAN FALLBACK — one combined generation (only when the payload failed).
+  // NO-SELECTION FALLBACK — one combined generation (only when the payload failed).
   const data = await generateItinerary(city, tiers, dayCount, null);
   const days = (data.days || []).slice(0, dayCount);
   if (!days.length) throw new Error("empty-itinerary");
-  return Promise.all(days.map(async (d, di) => assembleDay(di, d.hubs, await enrichMealList(d.lunch), await enrichMealList(d.dinner), d.label)));
+  return Promise.all(days.map(async (d, di) => {
+    const hoodGroups = await Promise.all((d.hubs || []).map((h, hi) =>
+      Promise.all((h.stores || []).map((s, si) => enrichStore(s, h.hub, `${di}-${hi}-${si}`)))
+    ));
+    return assembleDay(di, hoodGroups, await enrichMealList(d.lunch), await enrichMealList(d.dinner), d.label, []);
+  }));
 }
 
 // Pick the meal option closest to a coordinate (the lunch anchor, or where the
@@ -2009,29 +2048,14 @@ function ViewToggle({ view, onView }) {
 }
 
 // ── Trip Hub ───────────────────────────────────────────────────
-// One page rendered entirely from the single curation payload: a neighborhoods
-// rail, then Shopping, Food & Restaurants, and Events & Experiences sections.
-// Selections here ARE the itinerary inputs — nothing regenerates on a tap.
-
-// Per-city image de-dupe for neighborhood cards: each hood claims one lead photo
-// so no two cards in the same city surface the same image.
-const hoodImgClaims = new Map(); // cityKey -> { byHood: Map, used: Set }
-function claimHoodPhotos(city, hood, photos) {
-  const key = (city || "").toLowerCase();
-  let c = hoodImgClaims.get(key);
-  if (!c) { c = { byHood: new Map(), used: new Set() }; hoodImgClaims.set(key, c); }
-  const list = photos || [];
-  if (c.byHood.has(hood)) {
-    const p = c.byHood.get(hood);
-    return p ? [p, ...list.filter((x) => x !== p)] : list;
-  }
-  const pick = list.find((p) => !c.used.has(p)) || list[0] || null;
-  if (pick) { c.byHood.set(hood, pick); c.used.add(pick); }
-  return pick ? [pick, ...list.filter((p) => p !== pick && !c.used.has(p))] : list;
-}
+// One page rendered entirely from the single curation payload: three horizontal
+// sections — Shopping, Food & Restaurants, Events & Experiences. Neighborhoods
+// are metadata on each card (the organization pass clusters by them), not
+// something the user picks. Selections here ARE the itinerary inputs — nothing
+// regenerates on a tap.
 
 // Scroll-snap rail with the small tight dot cluster. `dotsDesktopOnly` hides the
-// dots below 1024px (where .hub-stack renders as a vertical list, not a rail).
+// dots below 1024px on rails that only need them at desktop widths.
 function HubRail({ className, dotsDesktopOnly, children }) {
   const ref = useRef(null);
   const [active, setActive] = useState(0);
@@ -2074,31 +2098,26 @@ function HubCheck({ on, label, onToggle }) {
   );
 }
 
-// Neighborhood card in the hub rail: photo, NAME in the display face, one-line
-// description, and the curated store names bulleted across the bottom — all
-// visible at once. Sizing (square mobile / 16:9 desktop) comes from the rail CSS.
-function HubHoodCard({ o, city, on, onToggle, stores }) {
-  const list = stores || [];
+// A hub section: header row (title + running "N selected" + See all/Collapse),
+// with the cards as a horizontal rail by default, expanding IN PLACE to a
+// vertical stack (phone) / 2–3 column grid (desktop). Selection state lives in
+// the cards' shared props, so it carries between the two modes automatically.
+function HubSection({ title, count, selectedLabel, expanded, onToggleExpand, children }) {
   return (
-    <div onClick={onToggle} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onToggle(); }}
-      style={{ position: "relative", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
-      <div style={{ position: "absolute", inset: 0 }}>
-        <PhotoStrip name={o.name} loader={() => lookupAreaInfo(o.name, city).then((info) => claimHoodPhotos(city, o.name, info.photos))} grad="linear-gradient(135deg,#2b2b2b,#555)" hideDots />
-      </div>
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.72) 100%)" }} />
-      <HubCheck on={on} label={on ? `Remove ${o.name}` : `Add ${o.name}`} onToggle={onToggle} />
-      <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "18px 18px 16px", pointerEvents: "none" }}>
-        <div style={{ paddingRight: 44 }}>
-          <div style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "clamp(1.6rem, 5vw, 2.4rem)", fontWeight: 400, textTransform: "uppercase", letterSpacing: "-0.01em", lineHeight: 0.95, textShadow: "0 2px 14px rgba(0,0,0,0.6)" }}>{o.name}</div>
-          <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "var(--step-meta)", lineHeight: 1.4, marginTop: 8, textShadow: "0 1px 8px rgba(0,0,0,0.65)", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{o.blurb}</div>
+    <section style={{ marginTop: 40 }}>
+      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, marginBottom: 14 }}>
+        <div style={{ minWidth: 0 }}>
+          <h2 style={{ fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", margin: 0 }}>{title}</h2>
+          {selectedLabel && <div style={{ color: MUTE, fontSize: "var(--step-meta)", marginTop: 3 }}>{selectedLabel}</div>}
         </div>
-        {list.length > 0 && (
-          <div style={{ color: "rgba(255,255,255,0.92)", fontSize: 12, fontWeight: 600, lineHeight: 1.55, textShadow: "0 1px 8px rgba(0,0,0,0.7)", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
-            {list.map((s) => s.name).join("  •  ")}
-          </div>
-        )}
+        <button onClick={onToggleExpand} style={{ ...SANS, cursor: "pointer", background: "none", border: "none", padding: 0, color: ACCENT, fontSize: 13.5, fontWeight: 600, flexShrink: 0, display: "inline-flex", alignItems: "center", gap: 4 }}>
+          {expanded ? <>Collapse <ChevronUp size={15} /></> : <>See all ({count}) <ChevronDown size={15} /></>}
+        </button>
       </div>
-    </div>
+      {expanded
+        ? <div className="hub-grid">{children}</div>
+        : <HubRail className="hub-rail" dotsDesktopOnly>{children}</HubRail>}
+    </section>
   );
 }
 
@@ -2129,9 +2148,10 @@ function HubPickCard({ name, take, tags = [], badge, hood, city, on, onToggle })
   );
 }
 
-// The Trip Hub page. Rendered after the single generation; replaces the old
-// day-grouped neighborhood list.
-function TripHubScreen({ city, datesLabel, hotel, loading, planDays, hoodStores, extras, selHoods, onToggleHood, selStores, onToggleStore, selLunch, onLunch, selDinner, onDinner, selExps, onToggleExp, onBack, onBuild }) {
+// The Trip Hub page: three compact horizontal sections with in-place expand,
+// and a sticky Build Itinerary button carrying the live selection count.
+function TripHubScreen({ city, datesLabel, hotel, loading, planDays, hoodStores, extras, selStores, onToggleStore, selLunch, onLunch, selDinner, onDinner, selExps, onToggleExp, onBack, onBuild }) {
+  const [open, setOpen] = useState({}); // sectionKey -> expanded (independent)
   const hoods = planDays.flatMap((d) => d.neighborhoods || []);
   const stores = hoods.flatMap((h) => ((hoodStores || {})[h.name] || []).map((s) => ({ ...s, hood: h.name })));
   const dining = (extras && extras.dining) || { lunch: [], dinner: [] };
@@ -2140,29 +2160,25 @@ function TripHubScreen({ city, datesLabel, hotel, loading, planDays, hoodStores,
     ...(dining.dinner || []).map((m) => ({ ...m, meal: "Dinner" })),
   ];
   const exps = (extras && extras.experiences) || [];
-  const hoodSel = hoods.filter((h) => selHoods.has(h.name)).length;
-  const canBuild = hoodSel > 0 && stores.some((s) => selStores.has(s.name) && selHoods.has(s.hood));
-
-  const sectionHead = (title, note) => (
-    <div style={{ marginTop: 40, marginBottom: 14 }}>
-      <h2 style={{ fontSize: "var(--step-h2)", fontWeight: 700, letterSpacing: "-0.02em", margin: 0 }}>{title}</h2>
-      {note && <div style={{ color: MUTE, fontSize: "var(--step-meta)", marginTop: 3 }}>{note}</div>}
-    </div>
-  );
+  const storeSel = stores.filter((s) => selStores.has(s.name)).length;
+  const mealSel = (selLunch ? 1 : 0) + (selDinner ? 1 : 0);
+  const totalSel = storeSel + mealSel + selExps.size;
+  const canBuild = storeSel > 0;
+  const flip = (k) => setOpen((p) => ({ ...p, [k]: !p[k] }));
 
   if (loading) {
     return (
       <div style={{ ...SANS, color: INK, textAlign: "center", padding: "70px 0" }}>
         <div style={{ width: 28, height: 28, margin: "0 auto 16px", border: `3px solid ${LINE}`, borderTopColor: ACCENT, borderRadius: "50%", animation: "scoutspin 0.8s linear infinite" }} />
         <style>{"@keyframes scoutspin{to{transform:rotate(360deg)}}"}</style>
-        <div style={{ color: MUTE, fontSize: 14, maxWidth: 340, marginInline: "auto", lineHeight: 1.5 }}>Curating {city || "your city"} — neighborhoods, stores, dining and experiences. One pass, worth the wait…</div>
+        <div style={{ color: MUTE, fontSize: 14, maxWidth: 340, marginInline: "auto", lineHeight: 1.5 }}>Curating {city || "your city"} — stores, dining and experiences. One pass, worth the wait…</div>
       </div>
     );
   }
-  if (!hoods.length) {
+  if (!stores.length) {
     return (
       <div style={{ ...SANS, color: INK, textAlign: "center", padding: "40px 0" }}>
-        <p style={{ color: MUTE, fontSize: 14, lineHeight: 1.5, maxWidth: 320, marginInline: "auto" }}>Couldn't curate {city || "this city"} just now — we'll let Scout choose the best areas as it builds.</p>
+        <p style={{ color: MUTE, fontSize: 14, lineHeight: 1.5, maxWidth: 320, marginInline: "auto" }}>Couldn't curate {city || "this city"} just now — we'll let Scout choose the best spots as it builds.</p>
         <button onClick={onBuild} style={{ ...SANS, cursor: "pointer", marginTop: 20, background: ACCENT, color: "var(--accent-ink)", border: "none", borderRadius: "var(--radius-pill)", padding: "14px 28px", fontSize: 15, fontWeight: 600 }}>Build my itinerary</button>
       </div>
     );
@@ -2178,45 +2194,40 @@ function TripHubScreen({ city, datesLabel, hotel, loading, planDays, hoodStores,
         {[datesLabel, hotel && hotel.name].filter(Boolean).join(" · ") || "Your trip"}
       </div>
 
-      {sectionHead("Neighborhoods", "Swipe through the districts — everything below is grouped from these. Tap to include or skip.")}
-      <HubRail className="hub-rail">
-        {hoods.map((o) => <HubHoodCard key={o.name} o={o} city={city} on={selHoods.has(o.name)} onToggle={() => onToggleHood(o.name)} stores={hoodStores[o.name]} />)}
-      </HubRail>
-
-      {sectionHead("Shopping", "The curated list — pre-selected. Deselect anything you'd skip.")}
-      <HubRail className="hub-stack" dotsDesktopOnly>
+      <HubSection title="Shopping" count={stores.length} selectedLabel={`${storeSel} selected`} expanded={!!open.shop} onToggleExpand={() => flip("shop")}>
         {stores.map((s) => (
           <HubPickCard key={s.hood + s.name} name={s.name} take={s.why} tags={[s.category]} hood={s.hood} city={city}
             on={selStores.has(s.name)} onToggle={() => onToggleStore(s.name)} />
         ))}
-      </HubRail>
+      </HubSection>
 
-      {meals.length > 0 && sectionHead("Food & Restaurants", "Top lunch and dinner are pre-selected — tap another to switch.")}
       {meals.length > 0 && (
-        <HubRail className="hub-stack" dotsDesktopOnly>
+        <HubSection title="Food & Restaurants" count={meals.length} selectedLabel={`${mealSel} selected`} expanded={!!open.food} onToggleExpand={() => flip("food")}>
           {meals.map((m) => (
             <HubPickCard key={m.meal + m.name} name={m.name} take={m.why} tags={[m.meal, m.cuisine]} hood={m.neighborhood} city={city}
               on={m.meal === "Lunch" ? selLunch === m.name : selDinner === m.name}
               onToggle={() => (m.meal === "Lunch" ? onLunch(m.name) : onDinner(m.name))} />
           ))}
-        </HubRail>
+        </HubSection>
       )}
 
-      {exps.length > 0 && sectionHead("Events & Experiences", "Optional — recommended, not presumed. Opt in to add them to your trip.")}
       {exps.length > 0 && (
-        <HubRail className="hub-stack" dotsDesktopOnly>
+        <HubSection title="Events & Experiences" count={exps.length} selectedLabel={`${selExps.size} selected`} expanded={!!open.exp} onToggleExpand={() => flip("exp")}>
           {exps.map((e, i) => (
             <HubPickCard key={e.name} name={e.name} take={e.why} badge={i === 0}
               tags={[e.category, e.during ? "On during your trip" : null]} hood={e.neighborhood} city={city}
               on={selExps.has(e.name)} onToggle={() => onToggleExp(e.name)} />
           ))}
-        </HubRail>
+        </HubSection>
       )}
 
-      <button onClick={onBuild} disabled={!canBuild} style={{ ...SANS, cursor: canBuild ? "pointer" : "default", marginTop: 40, width: "100%", maxWidth: 420, marginInline: "auto", display: "block", background: canBuild ? ACCENT : LINE, color: canBuild ? "var(--accent-ink)" : MUTE, border: "none", borderRadius: "var(--radius-pill)", padding: "16px 28px", fontSize: 16, fontWeight: 700 }}>
-        {canBuild ? `Build itinerary · ${hoodSel} neighborhood${hoodSel > 1 ? "s" : ""}` : "Select at least one neighborhood"}
-      </button>
-      <div style={{ textAlign: "center", color: MUTE, fontSize: "var(--step-meta)", marginTop: 12, lineHeight: 1.5 }}>Your selections become the itinerary — routes, times and maps included.</div>
+      {/* Sticky primary action — always reachable while selecting. */}
+      <div style={{ position: "sticky", bottom: 14, zIndex: 30, marginTop: 40, display: "flex", justifyContent: "center", pointerEvents: "none" }}>
+        <button onClick={onBuild} disabled={!canBuild} style={{ ...SANS, pointerEvents: "auto", cursor: canBuild ? "pointer" : "default", width: "100%", maxWidth: 420, background: canBuild ? ACCENT : LINE, color: canBuild ? "var(--accent-ink)" : MUTE, border: "none", borderRadius: "var(--radius-pill)", padding: "16px 28px", fontSize: 16, fontWeight: 700, boxShadow: "0 10px 28px rgba(0,0,0,0.22)" }}>
+          {canBuild ? `Build Itinerary · ${totalSel}` : "Select at least one store"}
+        </button>
+      </div>
+      <div style={{ textAlign: "center", color: MUTE, fontSize: "var(--step-meta)", marginTop: 14, lineHeight: 1.5 }}>One pass organizes your picks into days, clustered by neighborhood and ordered by time — lunch midday, dinner in the evening.</div>
     </div>
   );
 }
@@ -2472,8 +2483,7 @@ export default function App() {
   const [saving, setSaving] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentTripId, setCurrentTripId] = useState(null);
-  const [planDays, setPlanDays] = useState([]); // pre-curated day-by-day neighborhood plan
-  const [selectedHoods, setSelectedHoods] = useState(() => new Set()); // chosen neighborhood names
+  const [planDays, setPlanDays] = useState([]); // curated neighborhoods (metadata for clustering — not user-selected)
   const [areaLoading, setAreaLoading] = useState(false);
   const [collapsed, setCollapsed] = useState(() => new Set()); // collapsed neighborhood blocks on the review page
   const [cardView, setCardView] = useState("card"); // "card" | "list" — catalog view mode
@@ -2483,8 +2493,7 @@ export default function App() {
   const [selectedStores, setSelectedStores] = useState(() => new Set()); // store names in the plan
   const [selLunch, setSelLunch] = useState(null);   // chosen lunch name (single-select)
   const [selDinner, setSelDinner] = useState(null); // chosen dinner name (single-select)
-  const [selectedExps, setSelectedExps] = useState(() => new Set()); // opted-in experiences
-  const [chosenExps, setChosenExps] = useState([]); // experiences carried onto the built trip
+  const [selectedExps, setSelectedExps] = useState(() => new Set()); // opted-in experiences (attached per-day at build)
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -2506,7 +2515,6 @@ export default function App() {
           setTrip(s.trip);
           setActiveDay(s.activeDay || 0);
           setLocked(!!s.locked);
-          if (Array.isArray(s.chosenExps)) setChosenExps(s.chosenExps);
           setScreen(s.screen && s.screen !== "building" && s.screen !== "builderror" ? s.screen : "review");
         }
       }
@@ -2524,8 +2532,9 @@ export default function App() {
       const sm = {};
       days.forEach((d) => d.neighborhoods.forEach((h) => { sm[h.name] = h.stores; }));
       if (m.city) setCity(m.city);
+      if (m.start) setStartDate(new Date(m.start));
+      if (m.end) setEndDate(new Date(m.end));
       setPlanDays(days); setHoodStores(sm);
-      setSelectedHoods(new Set(days.flatMap((d) => d.neighborhoods.map((h) => h.name))));
       setSelectedStores(new Set(days.flatMap((d) => d.neighborhoods.flatMap((h) => h.stores.map((s) => s.name)))));
       setSelLunch(m.dining?.lunch?.[0]?.name || null);
       setSelDinner(m.dining?.dinner?.[0]?.name || null);
@@ -2539,13 +2548,13 @@ export default function App() {
     if (!hydrated.current) return;
     try {
       localStorage.setItem(SESSION_KEY, JSON.stringify({
-        city, hotel, tiers, currentTripId, trip, activeDay, locked, chosenExps,
+        city, hotel, tiers, currentTripId, trip, activeDay, locked,
         start: startDate ? startDate.toISOString() : null,
         end: endDate ? endDate.toISOString() : null,
         screen: (screen === "building" || screen === "builderror" || screen === "neighborhoods" || screen === "setup") ? "input" : screen,
       }));
     } catch {}
-  }, [city, hotel, tiers, startDate, endDate, trip, activeDay, locked, screen, currentTripId, chosenExps]);
+  }, [city, hotel, tiers, startDate, endDate, trip, activeDay, locked, screen, currentTripId]);
 
   // Track the Supabase auth session and load this user's saved trips.
   useEffect(() => {
@@ -2626,7 +2635,7 @@ export default function App() {
     const n = Math.max(1, dayCount);
     const useTiers = tiers.length ? tiers : CURATED_TIERS;
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
-    setPlanDays([]); setSelectedHoods(new Set()); setHoodStores({}); setTripExtras(null); setAreaLoading(true);
+    setPlanDays([]); setHoodStores({}); setTripExtras(null); setAreaLoading(true);
     setScreen("neighborhoods");
     try {
       // ONE generation pass returns the whole trip payload — neighborhoods with
@@ -2642,9 +2651,8 @@ export default function App() {
       days.forEach((d) => d.neighborhoods.forEach((h) => { storeMap[h.name] = h.stores; }));
       setPlanDays(days);
       setHoodStores(storeMap);
-      // Pre-selections: all recommended neighborhoods + their stores, and the
-      // top lunch + top dinner. Experiences start unselected (opt-in).
-      setSelectedHoods(new Set(days.flatMap((d) => d.neighborhoods.map((h) => h.name))));
+      // Pre-selections: the curated stores plus the top lunch + top dinner.
+      // Experiences start unselected (opt-in).
       setSelectedStores(new Set(days.flatMap((d) => d.neighborhoods.flatMap((h) => h.stores.map((s) => s.name)))));
       setSelLunch(data.dining?.lunch?.[0]?.name || null);
       setSelDinner(data.dining?.dinner?.[0]?.name || null);
@@ -2657,8 +2665,6 @@ export default function App() {
     }
   };
 
-  const toggleHood = (name) =>
-    setSelectedHoods((p) => { const s = new Set(p); s.has(name) ? s.delete(name) : s.add(name); return s; });
   const toggleStore = (name) =>
     setSelectedStores((p) => { const s = new Set(p); s.has(name) ? s.delete(name) : s.add(name); return s; });
   const toggleExp = (name) =>
@@ -2668,24 +2674,23 @@ export default function App() {
   const pickLunch = (name) => setSelLunch((p) => (p === name ? null : name));
   const pickDinner = (name) => setSelDinner((p) => (p === name ? null : name));
 
-  // Step 2: build the full itinerary from the Trip Hub selections — the selected
-  // stores/meals/experiences ARE the inputs; nothing regenerates here.
+  // Step 2: the ONE organization pass — the selected stores/meals/experiences
+  // ARE the inputs. buildLiveTrip hydrates them, distributes across the dates,
+  // clusters by neighborhood metadata and orders each day. Nothing regenerates.
   const build = async () => {
     const n = Math.max(1, dayCount);
     const useTiers = tiers.length ? tiers : CURATED_TIERS;
-    // Per-hood store lists filtered to the selected stores; hoods left with no
-    // selected stores drop out of the plan entirely (never regenerate to refill).
-    const storesSel = {};
-    Object.entries(hoodStores).forEach(([h, list]) => { storesSel[h] = (list || []).filter((s) => selectedStores.has(s.name)); });
-    const plan = planDays
-      .map((d) => (d.neighborhoods || []).filter((h) => selectedHoods.has(h.name) && (storesSel[h.name] || []).length).map((h) => h.name))
-      .filter((day) => day.length);
-    const exps = (tripExtras?.experiences || []).filter((e) => selectedExps.has(e.name));
-    setChosenExps(exps);
+    const storesSel = [];
+    planDays.forEach((d) => (d.neighborhoods || []).forEach((h) =>
+      ((hoodStores[h.name] || [])).forEach((s) => { if (selectedStores.has(s.name)) storesSel.push({ ...s, hood: h.name }); })
+    ));
+    const expsSel = (tripExtras?.experiences || []).filter((e) => selectedExps.has(e.name));
     setActiveDay(0); setLocked(false); setFlash(""); setCurrentTripId(null);
     setScreen("building");
     try {
-      const live = await buildLiveTrip(city, useTiers, n, hotel, plan.length ? plan : null, storesSel, tripExtras && tripExtras.dining, { lunch: selLunch, dinner: selDinner });
+      const live = await buildLiveTrip(city, useTiers, n, hotel,
+        storesSel.length ? { stores: storesSel, experiences: expsSel } : null,
+        tripExtras && tripExtras.dining, { lunch: selLunch, dinner: selDinner });
       const dated = live.map((d, i) => ({ ...d, date: startDate ? fmtShort(addDays(startDate, i)) : "" }));
       setTrip(dated); setCollapsed(new Set()); setScreen("review");
     } catch {
@@ -2830,10 +2835,10 @@ export default function App() {
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
         {screen === "input" && <CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} />}
         {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
-        {screen === "neighborhoods" && <TripHubScreen city={city} datesLabel={datesLabel} hotel={hotel} loading={areaLoading} planDays={planDays} hoodStores={hoodStores} extras={tripExtras} selHoods={selectedHoods} onToggleHood={toggleHood} selStores={selectedStores} onToggleStore={toggleStore} selLunch={selLunch} onLunch={pickLunch} selDinner={selDinner} onDinner={pickDinner} selExps={selectedExps} onToggleExp={toggleExp} onBack={() => setScreen("setup")} onBuild={build} />}
+        {screen === "neighborhoods" && <TripHubScreen city={city} datesLabel={datesLabel} hotel={hotel} loading={areaLoading} planDays={planDays} hoodStores={hoodStores} extras={tripExtras} selStores={selectedStores} onToggleStore={toggleStore} selLunch={selLunch} onLunch={pickLunch} selDinner={selDinner} onDinner={pickDinner} selExps={selectedExps} onToggleExp={toggleExp} onBack={() => setScreen("setup")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
         {screen === "builderror" && <BuildErrorScreen city={city} onRetry={build} onBack={() => setScreen("setup")} />}
-        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} experiences={chosenExps} onRemoveExp={(name) => setChosenExps((p) => p.filter((e) => e.name !== name))} onBack={() => setScreen("setup")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
+        {screen === "review" && <ReviewScreen {...{ city, dates, tiers, trip, activeDay, flash, hotel }} onRemoveExp={(name) => updateDay(activeDay, (d) => ({ ...d, experiences: (d.experiences || []).filter((e) => e.name !== name) }))} onBack={() => setScreen("setup")} onSwitchDay={(i) => { setActiveDay(i); window.scrollTo(0, 0); }} onPickLunch={() => setScreen("lunch")} onPickDinner={() => setScreen("dinner")} onChooseLunch={onChooseLunch} onChooseDinner={onChooseDinner} onClearLunch={onClearLunch} onClearDinner={onClearDinner} onConfirmStop={onConfirmStop} onRemoveStop={onRemoveStop} onReplaceStop={onReplaceStop} onAddStop={onAddStop} onReorderHub={onReorderHub} onOptimizeDay={onOptimizeDay} onSuggestStores={onSuggestStores} onAddNeighborhood={onAddNeighborhood} collapsed={collapsed} setCollapsed={setCollapsed} view={cardView} onView={setCardView} onConfirmDay={onConfirmDay} onGotoOverview={() => setScreen("overview")} />}
         {screen === "lunch" && (() => {
           const d = trip[activeDay];
           const anchor = d.lunchAnchor;
