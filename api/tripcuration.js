@@ -6,7 +6,11 @@
 // the AI already named — never to source the lists. Anthropic key stays
 // server-side (ANTHROPIC_API_KEY).
 
-export const config = { maxDuration: 300 };
+// 60s is the known-deployable ceiling on this project (Hobby without Fluid
+// Compute fails the whole build above it). The payload sizes below are tuned to
+// fit one generation inside it; if Fluid Compute is enabled on the Vercel
+// project this can go to 300 and the counts can grow.
+export const config = { maxDuration: 60 };
 
 const TIER_GUIDE = {
   aspirational: "Aspirational — luxury & designer flagships: construction, theatre, top of the range.",
@@ -131,9 +135,9 @@ export default async function handler(req, res) {
 ${focus}
 
 Return ONE payload with:
-1. DAYS — for each of the ${days} day(s): 2–3 real neighborhoods (clustered geographically within the day; different days cover different parts of the city), each with its 3–4 best qualifying apparel stores. Fewer stores is fine when only fewer are truly leading; omit any neighborhood that has no qualifying stores.
-2. DINING — 4 lunch options and 4 dinner options across the city, near where the retail routes run, each ordered best-first.
-3. EXPERIENCES — 4–6 experiences/events worth an insider's time${dates ? ` during ${dates}` : ""}, ordered best-first (the FIRST is your single editor's pick). Set "during" to true only for things actually on during the dates.
+1. DAYS — for each of the ${days} day(s): 2–3 real neighborhoods (clustered geographically within the day; different days cover different parts of the city), each with its 3 best qualifying apparel stores (a 4th only when it truly clears the bar; fewer when only fewer are leading; omit any neighborhood that has no qualifying stores).
+2. DINING — 3 lunch options and 3 dinner options across the city, near where the retail routes run, each ordered best-first.
+3. EXPERIENCES — 4–5 experiences/events worth an insider's time${dates ? ` during ${dates}` : ""}, ordered best-first (the FIRST is your single editor's pick). Set "during" to true only for things actually on during the dates.
 
 Every place must exist in ${city} right now. Keep every "why" to one sharp sentence.`;
 
@@ -143,7 +147,7 @@ Every place must exist in ${city} right now. Keep every "why" to one sharp sente
       headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
       body: JSON.stringify({
         model: "claude-opus-4-8",
-        max_tokens: 8000,
+        max_tokens: 6000,
         system: SYSTEM,
         output_config: { format: { type: "json_schema", schema: SCHEMA }, effort: "low" },
         messages: [{ role: "user", content: prompt }],
