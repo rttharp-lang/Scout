@@ -29,7 +29,21 @@ RETAIL (apparel-first, hard rule): only clothing/footwear/apparel destinations �
 
 DINING (lunch + dinner): the spots locals and industry people actually eat — standout independents, chef-driven rooms, iconic institutions that still deliver, quietly-great neighborhood gems. NO tourist traps, NO hotel-lobby defaults, NO chains, NO "highest-rated app filler." Lunch picks suit a midday route break; dinner picks suit a memorable evening. Vary cuisine, price, format.
 
-EXPERIENCES/EVENTS: culturally relevant things happening or worth doing during THESE dates — gallery/museum shows, archives, design destinations, courts/sport culture, music, markets worth it, studio/showroom visits. Insider-grade, not tourist checklist. Use the trip dates to prefer what's actually on.
+EXPERIENCES/EVENTS — curate the unique, iconic, only-here experiences that a visiting team would bond over and talk about for years. The calibration examples, which define the bar exactly:
+- NYC: the Comedy Cellar — an epic, iconic night out, intimate, legendary, something you can't do anywhere else.
+- LA: a Dodgers game — big, communal, quintessentially of that city.
+Match that register in every city: the legendary comedy room, the iconic ballpark or court, the historic music venue or jazz basement, the late-night institution, the one-of-a-kind spectacle locals are proud of, the reservation-worthy experience people plan trips around.
+
+Selection tests — every pick must pass ALL THREE:
+1. ICONIC & UNIQUE TO THIS CITY: it defines the city or exists nowhere else in this form. If it could be in any city (a generic museum, an observation deck, a standard gallery), it fails.
+2. EXPERIENTIAL, NOT OBSERVATIONAL: a night out, a game, a show, a scene — the team is IN it, not walking past exhibits. Prefer live/communal energy over quiet viewing. (A specific landmark exhibition can qualify ONLY if it's a genuinely major, of-the-moment cultural event during these dates — not permanent-collection filler.)
+3. GREAT FOR A GROUP: works for a team of colleagues — shared table, shared crowd, shared story. Bonding potential is a hard requirement.
+
+USE THE TRIP DATES: prefer what's actually on — the home game during their stay, the show that week, the run of a legendary night. Tag date-specific picks with when they're on.
+
+MIX the energy across the list: one big communal event (sport/arena), one intimate legendary room (comedy/jazz/music), one late-night or food-adjacent institution, one only-here wildcard. 4-6 picks, each with a one-line editor's take that says WHY this is the night (sell it like an insider would).
+
+EXCLUDE: generic museums and galleries, hop-on tourist activities, observation decks, walking tours, anything that reads like the first page of a tourist guide. If the city genuinely lacks a category, return fewer — never pad with generic attractions.
 
 NEIGHBORHOODS: only include neighborhoods that genuinely contain curated picks. A neighborhood with no qualifying stores must not appear. Group each day's neighborhoods so they cluster geographically, and make different days cover different parts of the city.
 
@@ -102,13 +116,14 @@ const SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["name", "neighborhood", "category", "why", "during"],
+        required: ["name", "neighborhood", "category", "why", "during", "when"],
         properties: {
-          name: { type: "string", description: "Real venue, show or event" },
+          name: { type: "string", description: "Real venue, show, game or event" },
           neighborhood: { type: "string" },
-          category: { type: "string", description: "e.g. gallery, museum, archive, design, sport, music, market, studio" },
-          why: { type: "string", description: "One-line editor's take" },
+          category: { type: "string", description: "e.g. comedy, sport, music, jazz, late-night, show, wildcard" },
+          why: { type: "string", description: "One-line editor's take — sell WHY this is the night, like an insider would" },
           during: { type: "boolean", description: "true only if it is actually on during the trip dates" },
+          when: { type: "string", description: "When it's on during the trip, e.g. 'Sat night' or 'Jul 11' — empty string if not date-specific" },
         },
       },
     },
@@ -148,7 +163,7 @@ ${focus}
 Return ONE payload with:
 1. DAYS — for each of the ${days} day(s): 2–3 real neighborhoods (clustered geographically within the day; different days cover different parts of the city), each with its 3 best qualifying apparel stores (a 4th only when it truly clears the bar; fewer when only fewer are leading; omit any neighborhood that has no qualifying stores).
 2. DINING — 3 lunch options and 3 dinner options across the city, near where the retail routes run, each ordered best-first.
-3. EXPERIENCES — 4–5 experiences/events worth an insider's time${dates ? ` during ${dates}` : ""}, ordered best-first (the FIRST is your single editor's pick). Set "during" to true only for things actually on during the dates.
+3. EXPERIENCES — 4–6 picks per the EXPERIENCES/EVENTS standard${dates ? ` during ${dates}` : ""}, ordered best-first (the FIRST is your single editor's pick). Set "during" true and fill "when" only for things actually on during the dates.
 
 Every place must exist in ${city} right now. Keep every "why" to one sharp sentence.`;
 

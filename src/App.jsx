@@ -2215,7 +2215,7 @@ function TripHubScreen({ city, datesLabel, hotel, loading, planDays, hoodStores,
         <HubSection title="Events & Experiences" count={exps.length} selectedLabel={`${selExps.size} selected`} expanded={!!open.exp} onToggleExpand={() => flip("exp")}>
           {exps.map((e, i) => (
             <HubPickCard key={e.name} name={e.name} take={e.why} badge={i === 0}
-              tags={[e.category, e.during ? "On during your trip" : null]} hood={e.neighborhood} city={city}
+              tags={[e.category, e.when || (e.during ? "On during your trip" : null)]} hood={e.neighborhood} city={city}
               on={selExps.has(e.name)} onToggle={() => onToggleExp(e.name)} />
           ))}
         </HubSection>
