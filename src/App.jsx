@@ -919,8 +919,8 @@ function CityPicker({ onPickCity }) {
   const [allOpen, setAllOpen] = useState(false);
   const [active, setActive] = useState(0);
   const railRef = useRef(null);
-  const field = { display: "flex", alignItems: "center", gap: 8, border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px", boxShadow: CARD_SHADOW };
-  const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%" };
+  const field = { display: "flex", alignItems: "center", gap: 8, background: "var(--surface)", border: `1px solid ${LINE}`, borderRadius: 12, padding: "12px 14px" };
+  const inp = { ...SANS, border: "none", outline: "none", fontSize: 16, color: INK, width: "100%", background: "transparent" };
 
   // City write-in reuses the SAME live place search as the hotel field
   // (searchPlaces), filtered to localities so it returns cities, not hotels/POIs.
@@ -989,7 +989,7 @@ function CityPicker({ onPickCity }) {
         <div style={{ position: "relative" }}>
           <div style={field}>
             <Search size={18} color={MUTE} />
-            <input value={q} onChange={(e) => setQ(e.target.value)} onFocus={() => setCityFocus(true)} onBlur={() => setTimeout(() => setCityFocus(false), 150)}
+            <input className="flat-input" value={q} onChange={(e) => setQ(e.target.value)} onFocus={() => setCityFocus(true)} onBlur={() => setTimeout(() => setCityFocus(false), 150)}
               onKeyDown={(e) => { if (e.key === "Enter") onCityEnter(); }} placeholder="Search a city…" style={inp} />
           </div>
           {cityFocus && citySug.length > 0 && (
@@ -2833,7 +2833,7 @@ export default function App() {
       <NavDrawer open={menuOpen} onClose={() => setMenuOpen(false)} session={session} onSignIn={signIn} onSignOut={signOut} trip={trip} activeDay={activeDay} onJumpDay={(i) => { setActiveDay(i); setScreen("review"); window.scrollTo(0, 0); }} savedTrips={savedTrips} onLoadTrip={onLoadTrip} onDeleteTrip={onDeleteTrip} onNewSearch={() => setScreen("input")} hotel={hotel} onChangeHotel={changeHotel} city={city} />
       <div className="scout-container">
         <AppHeader onMenu={() => setMenuOpen(true)} showMenu />
-        {screen === "input" && <CityPicker onPickCity={(c) => { setCity(c); setScreen("setup"); window.scrollTo(0, 0); }} />}
+        {screen === "input" && <CityPicker onPickCity={(c) => { setCity(c); setHotel(null); setStartDate(null); setEndDate(null); setScreen("setup"); window.scrollTo(0, 0); }} />}
         {screen === "setup" && <div className="scout-measure"><TripSetup {...{ city, hotel, setHotel, start: startDate, end: endDate, onRange, datesLabel, dayCount, tiers, toggleTier }} onBuild={startNeighborhoods} onBack={() => { setScreen("input"); window.scrollTo(0, 0); }} /></div>}
         {screen === "neighborhoods" && <TripHubScreen city={city} datesLabel={datesLabel} hotel={hotel} loading={areaLoading} planDays={planDays} hoodStores={hoodStores} extras={tripExtras} selStores={selectedStores} onToggleStore={toggleStore} selLunch={selLunch} onLunch={pickLunch} selDinner={selDinner} onDinner={pickDinner} selExps={selectedExps} onToggleExp={toggleExp} onBack={() => setScreen("setup")} onBuild={build} />}
         {screen === "building" && <BuildingScreen city={city} />}
