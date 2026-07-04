@@ -149,14 +149,36 @@ export async function lookupCityscape(city) {
   return chosen;
 }
 
+// True when a Places result plausibly IS the queried venue — not just the top
+// text-search hit (which can be a concert stage for a store name, etc.).
+// Normalized containment either way, or >=60% of the query's tokens appearing
+// in the result name ("Kith" ~ "Kith SoHo", "Blue in Green" ~ "Blue in Green Soho").
+export function placeNameMatches(query, resultName) {
+  const norm = (s) => (s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+  const q = norm(query), r = norm(resultName);
+  if (!q || !r) return false;
+  if (q === r) return true;
+  // Containment only counts from the start, at a word boundary: "Kith" matches
+  // "Kith SoHo" but NOT "Madison Nomad Hotel" for the query "Nomad".
+  if (r.startsWith(q + " ") || q.startsWith(r + " ")) return true;
+  // Multi-word names: enough of the query's tokens must appear in the result.
+  const qt = q.split(" ").filter((t) => t.length > 1);
+  if (qt.length < 2) return false;
+  return qt.filter((t) => r.includes(t)).length / qt.length >= 0.6;
+}
+
 const photoCache = new Map();
 export async function lookupPhotos(name, address) {
   const key = (name + "|" + address).toLowerCase();
   if (photoCache.has(key)) return photoCache.get(key);
   let photos = [];
   try {
+    // Venue photos must come from a result that actually IS this venue — if the
+    // search resolves to something else, return none (the caller shows a neutral
+    // card with the name) rather than an unrelated image.
     const results = await searchPlaces(`${name} ${address}`);
-    photos = results[0]?.photos || [];
+    const hit = results.find((r) => placeNameMatches(name, r.name));
+    photos = hit ? hit.photos || [] : [];
   } catch {
     photos = [];
   }

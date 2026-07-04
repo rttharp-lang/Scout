@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { searchPlaces, lookupCoords, lookupPhotos, lookupCityscape, lookupAreaInfo, generateItinerary, generateTripCuration, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
+import { searchPlaces, lookupCoords, lookupPhotos, lookupCityscape, lookupAreaInfo, placeNameMatches, generateItinerary, generateTripCuration, suggestNeighborhoodPlan, suggestStores, suggestMeals } from "./places";
 import { supabase, authEnabled } from "./supabase";
 import { listTrips, saveTrip, updateTrip, deleteTrip } from "./trips";
 import { Star, Clock, MapPin, Check, CheckCircle, ArrowLeft, Calendar, Navigation, Car, Utensils, Mail, Share2, Printer, ExternalLink, Plus, Minus, Trash2, X, Search, Lock, ChevronLeft, ChevronRight, ChevronUp, ChevronDown, GripVertical, Pencil, Menu, LogOut, LayoutGrid, List, Footprints } from "lucide-react";
@@ -428,7 +428,7 @@ function MealImageCard({ meal, actions, onClick, corner, badge, bars, overlay, t
   return (
     <div onClick={onClick} style={{ position: "relative", aspectRatio: "4 / 5", borderRadius: "var(--radius-card)", overflow: "hidden", background: "#111", boxShadow: CARD_SHADOW, cursor: onClick ? "pointer" : "default" }}>
       <div style={{ position: "absolute", inset: 0 }}>
-        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(135deg,#5a3b22,#caa46a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots bars={bars} />
+        <PhotoStrip name={meal.name} address={meal.address} photos={meal.photos} grad="linear-gradient(150deg,#1b1b1b,#3a3a3a)" fallback={<Utensils size={42} color="#fff" style={{ opacity: 0.85 }} />} hideDots bars={bars} />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.36) 0%, rgba(0,0,0,0.06) 34%, rgba(0,0,0,0.72) 100%)" }} />
       {(meal.rating != null || badge) && <div style={{ position: "absolute", top: topInset || 13, left: 13, zIndex: 5, pointerEvents: "none", display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(15,15,15,0.55)", backdropFilter: "blur(3px)", color: "#fff", fontSize: 11.5, fontWeight: 600, padding: "5px 10px", borderRadius: 999, textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}>
@@ -1641,9 +1641,13 @@ async function enrichPlace(name, area, city) {
   const query = [name, area, city].filter(Boolean).join(" ");
   try {
     const results = await searchPlaces(query);
-    const hit = results[0];
+    // Prefer the first result that actually IS this place; else keep the top
+    // hit for address/coords but never take its photos (an unverified hit's
+    // photos can be a completely unrelated venue).
+    const hit = results.find((r) => placeNameMatches(name, r.name)) || results[0];
     if (!hit) return {};
-    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, openAt: hit.openAt, address: hit.address, lat: hit.lat, lng: hit.lng, price: hit.price, photos: hit.photos };
+    const verified = placeNameMatches(name, hit.name);
+    return { rating: hit.rating, reviews: hit.reviews, hours: hit.hours, openAt: hit.openAt, address: hit.address, lat: hit.lat, lng: hit.lng, price: hit.price, photos: verified ? hit.photos : [] };
   } catch {
     return {};
   }
@@ -2129,7 +2133,7 @@ function HubPickCard({ name, take, tags = [], badge, hood, city, on, onToggle })
     <div onClick={onToggle} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onToggle(); }}
       style={{ position: "relative", borderRadius: "var(--radius-card)", overflow: "hidden", cursor: "pointer", background: "#111", boxShadow: CARD_SHADOW }}>
       <div style={{ position: "absolute", inset: 0 }}>
-        <PhotoStrip name={name} loader={() => lookupPhotos(name, `${hood || ""} ${city}`)} grad="linear-gradient(135deg,#2b2b3a,#5b6172)" hideDots />
+        <PhotoStrip name={name} loader={() => lookupPhotos(name, `${hood || ""} ${city}`)} grad="linear-gradient(150deg,#1b1b1b,#3a3a3a)" hideDots />
       </div>
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg, rgba(0,0,0,0.46) 0%, rgba(0,0,0,0.18) 36%, rgba(0,0,0,0.7) 100%)" }} />
       <div style={{ position: "absolute", top: 12, left: 12, right: 48, zIndex: 2, display: "flex", gap: 6, flexWrap: "wrap", pointerEvents: "none" }}>
