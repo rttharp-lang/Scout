@@ -247,6 +247,63 @@ input[type=range]:focus-visible{outline:2.5px solid var(--blue); outline-offset:
 .gap-row .st{font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2); text-align:right}
 .gap-row.closed .st{color:var(--blue-ink)}
 
+
+/* ============ LINE ARCHITECTURE ============ */
+.lgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:10px}
+.lcard{text-align:left; font:inherit; cursor:pointer; background:var(--surface); color:var(--ink);
+  border:1.5px solid var(--line); border-radius:12px; padding:16px; transition:.13s}
+.lcard:hover{border-color:var(--blue); transform:translateY(-2px)}
+.lcard:focus-visible{outline:2.5px solid var(--blue); outline-offset:3px}
+.lcard[aria-pressed="true"]{background:var(--blue); border-color:var(--blue); color:var(--on-blue)}
+.lcard[aria-pressed="true"] .lc-code,.lcard[aria-pressed="true"] .lc-opp{color:var(--on-blue); opacity:.85}
+.lc-code{font-size:10px; letter-spacing:.16em; color:var(--ink-2); display:block}
+.lc-nm{font-family:'Druk','Arial Narrow',sans-serif; font-weight:800; text-transform:uppercase; font-size:17px; line-height:.95; display:block; margin:9px 0 11px}
+.lc-price{font-family:'DrukWide','Arial Black',sans-serif; font-size:25px; line-height:1; display:block}
+.lc-opp{font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2); margin-top:10px; display:block}
+
+.brief{margin-top:22px; border:1.5px solid var(--ink); border-radius:16px; padding:clamp(20px,2.6vw,34px)}
+.brief-hd{display:flex; flex-wrap:wrap; gap:16px 30px; justify-content:space-between; align-items:flex-start;
+  border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:26px}
+.brief-hd h3{font-size:clamp(24px,3.6vw,42px)}
+.brief-price{text-align:right}
+.brief-price .p{font-family:'DrukWide','Arial Black',sans-serif; font-size:clamp(30px,4.4vw,52px); line-height:.9; color:var(--blue-ink)}
+.brief-price .p2{font-size:12px; color:var(--ink-2); margin-top:6px}
+.bsec{margin-top:34px}
+.bsec > .eyebrow{display:block; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid var(--line)}
+
+/* price ladder */
+.ladder{position:relative; height:172px; margin:28px 0 6px; min-width:600px}
+.lad-axis{position:absolute; left:0; right:0; top:86px; height:1.5px; background:var(--line-2)}
+.lad-tick{position:absolute; top:86px; width:1px; height:6px; background:var(--line-2)}
+.lad-tlab{position:absolute; top:96px; font-size:9.5px; color:var(--ink-3); transform:translateX(-50%); opacity:.75}
+.lad-m{position:absolute; top:79px; width:15px; height:15px; transform:translate(-50%,0); border-radius:2px;
+  background:var(--ground); border:1.5px solid var(--ink-2)}
+.lad-m.ours{width:21px;height:21px;top:76px;border-radius:50%;background:var(--blue);border:3px solid var(--ground);
+  box-shadow:0 0 0 2px var(--blue)}
+.lad-l{position:absolute; font-size:10.5px; transform:translateX(-50%); text-align:center; width:118px; color:var(--ink-2); line-height:1.25}
+.lad-l.up{top:34px}
+.lad-l.dn{top:118px}
+.lad-l.ours{color:var(--blue-ink); font-weight:600; top:2px}
+.lad-l b{display:block; font-family:ui-monospace,Menlo,monospace; color:var(--ink)}
+.lad-l.ours b{color:var(--blue-ink)}
+
+.make{width:100%; border-collapse:collapse; font-size:14px}
+.make th,.make td{text-align:left; vertical-align:top; padding:13px 16px 13px 0; border-bottom:1px solid var(--line)}
+.make th{width:132px; font-weight:400; font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-2); white-space:nowrap}
+.make td b{font-weight:600}
+.make .wy{display:block; color:var(--ink-2); font-size:12.5px; margin-top:5px}
+
+.feat{display:flex; flex-direction:column; gap:0}
+.frow{display:grid; grid-template-columns:1.1fr 1.5fr auto; gap:20px; padding:15px 0; border-bottom:1px solid var(--line); align-items:start; font-size:13.5px}
+@media(max-width:760px){.frow{grid-template-columns:1fr; gap:7px}}
+.frow .fn{font-weight:600}
+.frow .fw{color:var(--ink-2)}
+.frow .ft{font-size:10px; letter-spacing:.08em; color:var(--blue-ink); white-space:nowrap; font-family:ui-monospace,Menlo,monospace}
+.openq{background:var(--surface); border-radius:12px; padding:20px 22px; margin-top:30px}
+.openq ul{margin:10px 0 0; padding-left:18px; font-size:13.5px; color:var(--ink-2)}
+.openq li{margin-bottom:7px}
+.openq li b{color:var(--ink); font-weight:600}
+
 @media(prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
 </style>
 
@@ -361,6 +418,18 @@ input[type=range]:focus-visible{outline:2.5px solid var(--blue); outline-offset:
   <div class="risk med"><span class="lv">Medium</span><h4>Silhouette direction unknown</h4><p>The culture agent was rejected outright — its sources contradicted each other on baggy versus tailored. We may engineer excellent fit into a silhouette that is moving.</p></div>
   <div class="risk med"><span class="lv">Medium</span><h4>Every source is public</h4><p>Outside the 2028 anchors, competitors can read all of this. Timing advantage is close to zero, and adidas is already investing behind basketball.</p></div>
 </div>
+</section>
+
+
+<!-- ============ LINE ARCHITECTURE ============ -->
+<section id="line">
+<div class="sec-head">
+  <div class="eyebrow">Orchestrator B &nbsp;/&nbsp; Line architecture</div>
+  <h2 class="dw h-sec" style="margin-top:12px">Six briefs you could hand to design</h2>
+  <p class="deck">The macro layer says where to play. This is the tactical layer: a price, the ladder that justifies it, the make that the use case forces, and a reason for every feature. Select a brief.</p>
+</div>
+<div class="lgrid" id="lgrid" role="group" aria-label="Product line briefs"></div>
+<div class="brief" id="brief" aria-live="polite"></div>
 </section>
 
 <!-- ============ GAPS ============ -->
@@ -631,6 +700,169 @@ function wcalc(){
   }).join("");
 }
 pick(0);
+
+
+/* ---------------- LINE ARCHITECTURE ---------------- */
+var LINES=[
+{code:"WB-01",nm:"Outdoor Court Short",opp:"Worldball Innovation",price:"$50",sub:"≈ ¥349 · SP28 · Future",
+ consumer:"Outdoor player, 16–28. Greater China lead, global carryover.",
+ lad:{max:90,ours:50,ourLab:"Our target",
+   pts:[["adidas Badge of Sport",35,"dn"],["UA mid basketball",45,"up"],["Nike DNA 10″ knit",50,"dn"],["Nike DNA 6″ woven",60,"up"],["UA premium",65,"dn"],["Jordan Statement authentic",80,"up"]]},
+ why:"Outdoor forces woven. In our own line woven currently costs $60 — above where this consumer buys, and well above where Anta and Li-Ning anchor the mass tier in China. Pricing at $50 puts woven durability at the price of our own knit 10″ short and $10 under our own woven, which is the only position that makes durability the default rather than the upgrade. Below $45 the laser-perforation and reinforcement package stops being affordable; above $55 we are asking the outdoor consumer to pay an indoor premium for a product the indoor consumer never needed.",
+ make:[["Fabric","<b>4-way stretch plain-weave polyester, 12–15% elastane, ~155 GSM</b><span class='wy'>Woven resists asphalt abrasion; knit snags and pills on outdoor surfaces. The elastane buys back the range of motion a woven normally costs you — which is why it is stretch-woven and not simply woven.</span>"],
+   ["Ventilation","<b>Laser-cut perforation zones, outer thigh and lower back</b><span class='wy'>Not mesh inserts. Mesh is the first component to fail outdoors, and a mesh panel on an abrasion-led product contradicts the reason the body is woven.</span>"],
+   ["Seams","<b>Bartack reinforcement at side seam and seat; bonded hem</b><span class='wy'>Seat and side seam take the load on concrete. A bonded hem removes exposed stitching at the most-abraded edge.</span>"],
+   ["Finish","<b>DWR</b><span class='wy'>Outdoor courts are played wet, early and late. This is a playability feature, not a weather feature.</span>"],
+   ["Length","<b>7″ inseam</b><span class='wy'>Shorter than the 10–11″ indoor standard. Outdoor play runs hotter and the shorter break reduces fabric contact when sliding.</span>"],
+   ["Carry","<b>Secure zip pocket, both sides</b><span class='wy'>No locker room. Phone and keys stay on the player, and that is a hard requirement rather than a nice-to-have.</span>"]],
+ feat:[["Stretch-woven body","Abrasion resistance is the defining outdoor need and the one thing our indoor line does not deliver.","Worldball anchor"],
+   ["Perforation over mesh","Removes the known failure point while keeping the airflow the heat demands.","F-06.1 · make logic"],
+   ["Reinforced seat and side","Targets where outdoor garments actually fail rather than adding general weight.","Make logic"],
+   ["Zip carry","Outdoor play has no storage. Untested internally.","Judgment"],
+   ["$50 / ¥349","Woven durability at knit price. Under our own woven, above the mass tier.","F-06.1 · ladder"]],
+ open:["<b>The China price ladder is unverified.</b> Every competitor price on the ladder above is US retail — local Anta, Li-Ning and Tmall price architecture could not be reached in this run, and it is the number that decides whether ¥349 is right.",
+   "<b>Margin at $50 is unknown.</b> Stretch-woven with laser perforation and bartack reinforcement is a more expensive make than the knit short it prices against. This may not clear at $50.",
+   "<b>The 7″ inseam is a judgment call</b> with no consumer data behind it. Silhouette preference was the domain the skeptic rejected outright."]},
+
+{code:"WB-02",nm:"Outdoor Wind Layer",opp:"Worldball Innovation",price:"$75",sub:"≈ ¥529 · FA28 · Future",
+ consumer:"Outdoor player extending the season. Greater China and EMEA.",
+ lad:{max:140,ours:75,ourLab:"Our target",
+   pts:[["Mass-tier woven jacket",45,"dn"],["adidas mid layer",70,"up"],["Nike Therma knit",85,"dn"],["Premium performance shell",110,"up"]]},
+ why:"Outdoor play is season-limited by wind, not temperature, and the layer that solves it is the one piece the indoor lineplan has no reason to carry. $75 sits above the mass-tier woven jacket that dominates the Chinese outdoor court and below our own Therma knit, positioning it as purpose-built rather than as a warm-up garment brought outside. It is also the highest-value unit in this brief set, which matters when 98% of the lineplan is built for a consumer who is 20% of players.",
+ make:[["Fabric","<b>Ripstop woven shell, ~90 GSM, elastane-free; stretch-woven side panels</b><span class='wy'>Ripstop stops a snag becoming a tear, which is the failure mode on fences and outdoor benches. Stretch is placed only where the shooting motion needs it.</span>"],
+   ["Ventilation","<b>Laser perforation under arm and centre back</b><span class='wy'>A wind layer that cannot dump heat gets taken off and left on the sideline.</span>"],
+   ["Finish","<b>DWR, wind-resistant face</b><span class='wy'>Wind is the actual season-limiting variable outdoors.</span>"],
+   ["Pack","<b>Packs into its own pocket</b><span class='wy'>The player arrives on foot or by transit, not by car.</span>"]],
+ feat:[["Wind-first, not warmth-first","Targets the real constraint on outdoor season length.","Worldball anchor"],
+   ["Ripstop","Matches the failure mode outdoors rather than general durability.","Make logic"],
+   ["Packable","Carried, not driven. Follows the same logic as the zip pocket.","Judgment"],
+   ["$75","Above the mass-tier shell, below our own Therma. Purpose-built, not repurposed.","Ladder · judgment"]],
+ open:["<b>The competitor set here is weakly evidenced.</b> The mass-tier and premium anchors are directional, not observed prices — treat this ladder as a shape, not a source.",
+   "<b>No sizing exists for outdoor layering</b> in either the internal anchors or public data. This brief is the least-supported of the six.",
+   "<b>Season logic is assumed.</b> Whether outdoor play in the target markets is wind-limited or temperature-limited was not established in this run."]},
+
+{code:"WR-01",nm:"Standard Issue Short",opp:"Womens Revolution",price:"$55",sub:"Authentic tier $85 · SP28 · Standard Issue",
+ consumer:"Female basketball fan-participant, 14–28. US lead, Canada attaches.",
+ lad:{max:100,ours:55,ourLab:"Our core tier",
+   pts:[["Entry women's short",30,"dn"],["Nike DNA equivalent",50,"up"],["Nike DNA woven",60,"dn"],["Authentic swingman",80,"up"]]},
+ why:"The core tier prices at $55 rather than matching the $50 men's equivalent because the women's block is a real cost — new patterns, new grading, and lower volume per SKU — and because the consumer is buying a fit correction, not a colourway. It stays below our own $60 woven so it does not read as a premium for being women's product, which is the trap this category has fallen into before. The $85 authentic tier anchors against the $79.99 swingman we already sell.",
+ make:[["Block","<b>Women's pattern block. Not graded down from men's.</b><span class='wy'>The entire concept. Waist-to-hip shaping through the seat, rise set for a women's torso, and a side seam that runs straight instead of pulling forward.</span>"],
+   ["Waistband","<b>Contoured no-roll, narrower than the men's equivalent</b><span class='wy'>Directly targets the documented complaint that the waistband oversizes when the short is cut long.</span>"],
+   ["Length","<b>Re-proportioned 5″ and 7″ inseam options</b><span class='wy'>Not a scaled 10–11″ men's inseam. Length and waist were reported together as one problem because on a men's block they are one problem.</span>"],
+   ["Fabric","<b>Double-weave stretch, ~170 GSM</b><span class='wy'>Enough body to hold the engineered shape. A light knit would give the fit back on the first wear.</span>"]],
+ feat:[["Women's pattern block","The one documented physical product defect anywhere in this run.","F-13.5"],
+   ["Contoured waistband","Targets the specific reported complaint, not a general fit claim.","F-13.5"],
+   ["Re-proportioned inseam","Length and waist are the same defect on a men's block.","F-13.5"],
+   ["$55 core / $85 authentic","Below our own woven; authentic anchored to the observed $79.99.","F-06.1 · ladder"],
+   ["Wholesale-led launch","Wholesale grew while Direct fell; Dick's named the category unprompted.","F-07.1 · F-13.4"]],
+ open:["<b>Margin is the gating unknown.</b> A women's-specific block means new patterns, new grading and more SKUs at lower volume. This is the query that decides whether the concept proceeds at all.",
+   "<b>The fit evidence is nine years old.</b> Pattern geometry is a physical constant, but the player complaints behind it date to 2016 and need refreshing against current returns coding.",
+   "<b>Cannibalisation is unassessed.</b> Overlap with existing women's training and sportswear is unknown — the catalog domain was cut."]},
+
+{code:"WR-02",nm:"Standard Issue Jersey",opp:"Womens Revolution",price:"$45",sub:"Authentic tier $80 · SP28 · Standard Issue",
+ consumer:"Female basketball fan-participant, 14–28. Fan-first, court-capable.",
+ lad:{max:100,ours:45,ourLab:"Our core tier",
+   pts:[["Entry women's tank",28,"dn"],["Replica jersey",55,"up"],["Authentic swingman",80,"dn"]]},
+ why:"Prices under the replica tier deliberately. The evidence says this demand is fan-led rather than participation-led, so the volume unit has to sit where a fan buys — and the fan buying a WNBA jersey today is choosing between a $28 tank that fits badly and a $55 replica cut for a man. $45 takes that middle with a garment that actually fits, and the $80 authentic tier serves the collector without dragging the core price up.",
+ make:[["Block","<b>Women's block. Shoulder spec'd 14–15″ against the unisex 17–18″.</b><span class='wy'>The single largest dimensional error in the current garment and the direct cause of the gaping armhole.</span>"],
+   ["Armhole","<b>Re-cut and raised</b><span class='wy'>On a men's shoulder the armhole sits wide and low, which is why it gapes on a women's frame. Narrowing the shoulder without re-cutting the armhole fixes nothing.</span>"],
+   ["Torso","<b>Shortened 1–2″</b><span class='wy'>Targets the reported front ride-up, which is a length problem being read as a fit problem.</span>"],
+   ["Fabric","<b>Engineered knit, body-mapped ventilation</b><span class='wy'>Knit is right here — this garment is not abrasion-led and needs drape.</span>"]],
+ feat:[["14–15″ shoulder","Corrects the largest dimensional error in the current unisex garment.","F-13.5"],
+   ["Re-cut armhole","Fixes the actual cause of gaping rather than the symptom.","F-13.5"],
+   ["Shortened torso","Targets reported front ride-up.","F-13.5"],
+   ["$45 core","Sits under replica, where a fan-led buyer actually transacts.","F-10.3 × F-13.1"],
+   ["Expansion-market colourways","Portland and Toronto are dated 2026 demand with no installed base.","F-13.3"]],
+ open:["<b>Licensing and lead times are unknown.</b> The expansion-market opportunity is speed-limited, and no capacity data was available in this run.",
+   "<b>The fan-led read is an inference.</b> It resolves a real contradiction in the data, but it is a judgment about cause, and it drives this entire price position.",
+   "<b>No elasticity data exists</b> anywhere in this run. $45 is a shelf-position argument, not a demand curve."]},
+
+{code:"UY-01",nm:"Youth Graphic Tee",opp:"Uniform of Youth",price:"$35",sub:"SP28 · Tees",
+ consumer:"Gen Z and Alpha, US-led. Family and self-purchase.",
+ lad:{max:70,ours:35,ourLab:"Our target",
+   pts:[["Fast-fashion graphic",18,"dn"],["Mass-brand tee",28,"up"],["Our current tee",30,"dn"],["Premium streetwear tee",55,"up"]]},
+ why:"Half the business is already tees and shorts, so this is the highest-volume unit in the set and the one where a price move is felt fastest. $35 holds a $5 premium over our current tee, which is defensible only if the graphic and hand justify it — teen clothing is the top wallet priority for the first time since 2014, and we lead the segment, but smaller brands are taking share, which is what a price move without a product move produces.",
+ make:[["Fabric","<b>Midweight cotton-rich jersey, ~190 GSM, garment-washed</b><span class='wy'>Hand is the purchase trigger at this price. A lighter tee reads cheap in the hand regardless of the graphic.</span>"],
+   ["Fit","<b>Boxy, dropped shoulder</b><span class='wy'>Flagged as judgment. This is exactly the call the culture agent was rejected for being unable to support.</span>"],
+   ["Graphic","<b>Placement print, court-culture led</b><span class='wy'>The reason for the price premium. If the graphic does not carry it, the $5 is not there.</span>"]],
+ feat:[["$35 at +$5 over current","Only defensible if graphic and hand carry it.","F-14.1 · anchor"],
+   ["Heavier hand","The purchase trigger at this price is tactile, not visual.","Judgment"],
+   ["Boxy fit","<b>Unsupported.</b> Silhouette direction was rejected at the skeptic layer.","Judgment"]],
+ open:["<b>This brief is the weakest of the six and should be treated as a placeholder.</b> Its central decisions — silhouette and graphic direction — sit exactly where the culture agent was rejected for contradictory sourcing.",
+   "<b>No dollar size exists</b> for youth basketball apparel in either the internal anchors or public sources.",
+   "<b>A $5 increase on 50% of the business is a large exposure</b> to hang on a judgment call with no consumer data behind it."]},
+
+{code:"WR-03",nm:"Expansion Team Kit",opp:"Womens Revolution",price:"$45–90",sub:"Fast-turn · 2026 season · Standard Issue",
+ consumer:"Portland and Toronto fans. First-time league consumers in Canada.",
+ lad:{max:100,ours:60,ourLab:"Kit blended",
+   pts:[["Tee",35,"dn"],["Short",55,"up"],["Jersey core",45,"dn"],["Authentic",85,"up"]]},
+ why:"Not a price argument — a timing one. Two franchises arrive on a fixed 2026 schedule with no installed merchandise base, and Toronto brings an entire country of first-time league consumers. The constraint reported on women's basketball is speed to market, not demand. This brief deliberately trades range for turn: a narrow kit that lands on schedule beats a complete one that lands late.",
+ make:[["Range","<b>Four units only — tee, short, jersey, warm-up layer</b><span class='wy'>Deliberately narrow. Range is what makes a programme miss its date.</span>"],
+   ["Blocks","<b>Reuses the WR-01 and WR-02 blocks unchanged</b><span class='wy'>The pattern investment is already made. This programme should add colour and identity, not new engineering.</span>"],
+   ["Channel","<b>Wholesale-led, Dick's-anchored</b><span class='wy'>Wholesale is the channel currently growing, and it is where the category was named a strength.</span>"]],
+ feat:[["Four units, no more","Range is the enemy of the date. The date is the opportunity.","F-13.3"],
+   ["Shared blocks","No new engineering; carries the fit correction for free.","F-13.5"],
+   ["Wholesale-led","Follows the channel that grew $1.6B while Direct fell.","F-07.1"],
+   ["Dated to the 2026 season","Fixed, scheduled demand rather than forecast demand.","F-13.3"]],
+ open:["<b>Lead times are the whole risk and they are unknown.</b> If the programme cannot land on schedule it has no reason to exist.",
+   "<b>Licensing rights are not visible</b> in public data.",
+   "<b>This depends entirely on WR-01 and WR-02 proceeding.</b> If the block investment is not made, this brief has nothing to reuse."]}
+];
+
+var lg=document.getElementById("lgrid"), bf=document.getElementById("brief");
+LINES.forEach(function(L,i){
+  var b=document.createElement("button");
+  b.type="button"; b.className="lcard"; b.setAttribute("aria-pressed","false");
+  b.innerHTML='<span class="lc-code mono">'+L.code+'</span><span class="lc-nm">'+L.nm+'</span>'+
+    '<span class="lc-price">'+L.price+'</span><span class="lc-opp">'+L.opp+'</span>';
+  b.addEventListener("click",function(){showBrief(i)});
+  lg.appendChild(b);
+});
+
+function ladder(L){
+  var d=L.lad, h='<div class="ladder"><div class="lad-axis"></div>';
+  for(var v=0;v<=d.max;v+=(d.max>100?25:20)){
+    var x=v/d.max*100;
+    h+='<span class="lad-tick" style="left:'+x+'%"></span><span class="lad-tlab mono" style="left:'+x+'%">$'+v+'</span>';
+  }
+  d.pts.forEach(function(p){
+    var x=p[1]/d.max*100;
+    h+='<span class="lad-m" style="left:'+x+'%"></span>'+
+       '<span class="lad-l '+p[2]+'" style="left:'+x+'%"><b>$'+p[1]+'</b>'+p[0]+'</span>';
+  });
+  var ox=d.ours/d.max*100;
+  h+='<span class="lad-m ours" style="left:'+ox+'%"></span>'+
+     '<span class="lad-l ours" style="left:'+ox+'%"><b>'+L.price+'</b>'+d.ourLab+'</span>';
+  return h+'</div>';
+}
+
+function showBrief(i){
+  var L=LINES[i];
+  Array.prototype.forEach.call(lg.children,function(el,j){el.setAttribute("aria-pressed",j===i?"true":"false")});
+  bf.innerHTML=
+   '<div class="brief-hd"><div><div class="eyebrow mono">'+L.code+' &nbsp;·&nbsp; '+L.opp+'</div>'+
+     '<h3 class="dw" style="margin-top:10px">'+L.nm+'</h3>'+
+     '<div style="font-size:13px;color:var(--ink-2);margin-top:10px;max-width:52ch">'+L.consumer+'</div></div>'+
+     '<div class="brief-price"><div class="p">'+L.price+'</div><div class="p2 mono">'+L.sub+'</div></div></div>'+
+
+   '<div class="bsec"><span class="eyebrow">Why this price</span>'+
+     '<div style="overflow-x:auto">'+ladder(L)+'</div>'+
+     '<p style="font-size:14.5px;max-width:82ch;margin:22px 0 0">'+L.why+'</p></div>'+
+
+   '<div class="bsec"><span class="eyebrow">The make — what the use case forces</span>'+
+     '<div class="tablewrap"><table class="make">'+
+     L.make.map(function(m){return '<tr><th>'+m[0]+'</th><td>'+m[1]+'</td></tr>'}).join("")+
+     '</table></div></div>'+
+
+   '<div class="bsec"><span class="eyebrow">Feature set — and the reason for each</span>'+
+     '<div class="feat">'+L.feat.map(function(f){
+       return '<div class="frow"><span class="fn">'+f[0]+'</span><span class="fw">'+f[1]+'</span><span class="ft">'+f[2]+'</span></div>';
+     }).join("")+'</div></div>'+
+
+   '<div class="openq"><span class="eyebrow" style="color:var(--red)">What this brief does not know</span><ul>'+
+     L.open.map(function(o){return '<li>'+o+'</li>'}).join("")+'</ul></div>';
+}
+showBrief(0);
 
 /* ---------------- GAPS ---------------- */
 var GAPS=[
