@@ -1,0 +1,1009 @@
+<title>BB_2.0 Intelligence Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --blue:#0029FF;
+  --blue-deep:#0020C8;
+  --blue-ghost:#0024E0;
+  --ink:#000000;
+  --paper:#FFFFFF;
+  --surface:#F3F4F8;
+  --surface-2:#E9EBF2;
+  --rule:#D5D8E2;
+  --muted:#676C7D;
+  --verified:#0029FF;
+  --plausible:#7A8092;
+  --rejected:#D91F11;
+  --maxw:1560px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+p{margin:0}
+button{font-family:inherit;color:inherit}
+
+/* ---------- page furniture ---------- */
+.slide{
+  position:relative;
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:64px 92px 76px;
+  border-bottom:1px solid var(--rule);
+}
+.slide--blue{background:var(--blue);color:var(--paper);border-bottom:none}
+.slide--ink{background:var(--ink);color:var(--paper);border-bottom:none}
+
+.rail{
+  display:flex;justify-content:space-between;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:44px;
+}
+.slide--blue .rail,.slide--ink .rail{color:rgba(255,255,255,.72)}
+
+.crop{position:absolute;width:20px;height:20px;border-color:var(--ink);opacity:.85}
+.slide--blue .crop,.slide--ink .crop{border-color:var(--paper);opacity:.6}
+.crop.tl{top:26px;left:26px;border-left:1.5px solid;border-top:1.5px solid}
+.crop.tr{top:26px;right:26px;border-right:1.5px solid;border-top:1.5px solid}
+.crop.bl{bottom:26px;left:26px;border-left:1.5px solid;border-bottom:1.5px solid}
+.crop.br{bottom:26px;right:26px;border-right:1.5px solid;border-bottom:1.5px solid}
+
+.vlabel{
+  position:absolute;left:30px;top:50%;
+  transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;
+  font-family:"IBM Plex Mono",monospace;
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+}
+.vlabel--r{left:auto;right:30px;transform:translateY(-50%);color:var(--muted);font-weight:400}
+.slide--blue .vlabel--r,.slide--ink .vlabel--r{color:rgba(255,255,255,.6)}
+
+/* ---------- type ---------- */
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--blue);font-weight:600;margin-bottom:14px;
+}
+.slide--blue .eyebrow,.slide--ink .eyebrow{color:rgba(255,255,255,.75)}
+.title{
+  font-family:"Archivo Black",Impact,sans-serif;
+  font-size:clamp(34px,4.4vw,62px);
+  line-height:.94;letter-spacing:-.022em;text-transform:uppercase;
+}
+.deck{
+  font-size:clamp(15px,1.35vw,21px);
+  line-height:1.42;max-width:96ch;margin-top:18px;color:var(--ink);
+}
+.slide--blue .deck,.slide--ink .deck{color:rgba(255,255,255,.9)}
+.chead{
+  font-family:"Anton",Impact,sans-serif;
+  color:var(--blue);
+  font-size:clamp(24px,2.5vw,38px);
+  line-height:.98;letter-spacing:.005em;text-transform:uppercase;
+}
+.slide--ink .chead{color:#4D6BFF}
+.mono{font-family:"IBM Plex Mono",monospace}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;overflow:hidden;padding:72px 92px 60px}
+.hero-mid{position:relative;flex:1;display:grid;place-items:center;min-height:340px}
+.hero-ghost{
+  position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  font-family:"Archivo Black",Impact,sans-serif;
+  font-size:clamp(58px,11.5vw,176px);line-height:.84;letter-spacing:-.035em;
+  color:var(--blue-ghost);text-transform:uppercase;pointer-events:none;user-select:none;
+  padding:0 60px;
+}
+.hero-core{position:relative;text-align:center;grid-area:1/1}
+.swoosh{width:96px;height:auto;fill:var(--paper);margin:0 auto 14px;display:block}
+.wordmark{
+  font-family:"Archivo Black",Impact,sans-serif;
+  font-size:clamp(30px,3.6vw,50px);letter-spacing:.06em;color:var(--paper);
+}
+.hero-sub{
+  position:relative;text-align:center;padding-top:26px;
+  font-size:14px;line-height:1.5;color:rgba(255,255,255,.88);
+}
+.hero-stats{
+  position:relative;display:flex;gap:0;justify-content:center;flex-wrap:wrap;
+  margin-top:0;border-top:1px solid rgba(255,255,255,.28);
+}
+.hstat{padding:22px 34px;border-right:1px solid rgba(255,255,255,.28);text-align:left;min-width:150px}
+.hstat:last-child{border-right:none}
+.hstat b{display:block;font-family:"Archivo Black",sans-serif;font-size:34px;line-height:1;color:var(--paper)}
+.hstat span{display:block;margin-top:7px;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+
+/* ---------- engine / agents ---------- */
+.pipe{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:stretch;margin-top:38px}
+.pipe-col{padding:0 22px}
+.pipe-col:first-child{padding-left:0}
+.pipe-col:last-child{padding-right:0}
+.pipe-arrow{display:flex;align-items:center;color:var(--blue);font-size:26px;padding:0 4px}
+.pipe-h{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:12px;
+  padding-bottom:8px;border-bottom:1.5px solid var(--ink);
+}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.agent{
+  text-align:left;background:var(--surface);border:1.5px solid var(--rule);
+  border-radius:9px;padding:11px 12px;cursor:pointer;transition:.13s;
+  display:flex;flex-direction:column;gap:5px;
+}
+.agent:hover{border-color:var(--blue);background:var(--paper)}
+.agent[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:var(--paper)}
+.agent .aid{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--blue);font-weight:600}
+.agent[aria-pressed="true"] .aid{color:rgba(255,255,255,.85)}
+.agent .anm{font-family:"Anton",sans-serif;font-size:16px;line-height:1;text-transform:uppercase;letter-spacing:.01em}
+.agent .amt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--muted)}
+.agent[aria-pressed="true"] .amt{color:rgba(255,255,255,.75)}
+.agent--skep{background:var(--paper);border-style:dashed}
+.agent--orch{grid-column:1/-1}
+
+.adetail{
+  margin-top:30px;border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+}
+.adetail-l{padding:26px 30px;border-right:1.5px solid var(--ink)}
+.adetail-r{padding:26px 30px;background:var(--surface)}
+.adetail h3{font-family:"Anton",sans-serif;font-size:30px;text-transform:uppercase;line-height:1;color:var(--blue)}
+.owns{font-size:14.5px;color:var(--muted);margin-top:9px;line-height:1.45}
+.flist{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:11px}
+.flist li{display:flex;gap:11px;font-size:14.5px;line-height:1.45}
+.tag{
+  flex:none;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.09em;
+  padding:3px 6px;border-radius:4px;height:fit-content;margin-top:2px;font-weight:600;
+  border:1px solid currentColor;
+}
+.t-fact{color:var(--blue)}
+.t-pattern{color:#4A5568}
+.t-hyp{color:var(--plausible)}
+.killhead{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rejected);font-weight:600;margin-bottom:12px}
+.kill{border-left:2.5px solid var(--rejected);padding:2px 0 2px 13px;margin-bottom:13px;font-size:13.5px;line-height:1.42}
+.kill b{display:block;font-weight:700;margin-bottom:2px}
+.kill span{color:var(--muted)}
+
+/* ---------- generic cards ---------- */
+.cols{display:grid;gap:26px;margin-top:38px}
+.c3{grid-template-columns:repeat(3,1fr)}
+.c2{grid-template-columns:repeat(2,1fr)}
+.c4{grid-template-columns:repeat(4,1fr)}
+.card{border:1.5px solid var(--rule);border-radius:12px;padding:24px;background:var(--paper)}
+.card--fill{background:var(--surface);border-color:var(--surface-2)}
+.card p{font-size:14.5px;line-height:1.5;color:var(--muted);margin-top:10px}
+.card .chead{margin-bottom:2px}
+
+.assets{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;border-top:2px solid var(--paper)}
+.asset{padding:24px 26px 26px;border-right:1px solid rgba(255,255,255,.25)}
+.asset:last-child{border-right:none}
+.asset .an{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.6)}
+.asset h4{font-family:"Anton",sans-serif;font-size:23px;line-height:1.02;text-transform:uppercase;margin:9px 0 10px;color:var(--paper)}
+.asset p{font-size:13.5px;line-height:1.46;color:rgba(255,255,255,.82)}
+
+/* ---------- opportunity cycler ---------- */
+.cyc-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:30px}
+.chip{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;
+  padding:7px 12px;border-radius:20px;border:1.5px solid var(--rule);
+  background:var(--paper);cursor:pointer;transition:.12s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--blue);color:var(--blue)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.navbtn{
+  width:38px;height:38px;border-radius:50%;border:1.5px solid var(--ink);
+  background:var(--paper);cursor:pointer;font-size:16px;line-height:1;
+  display:grid;place-items:center;transition:.12s;flex:none;
+}
+.navbtn:hover{background:var(--ink);color:var(--paper)}
+
+.opp{margin-top:26px;border:2px solid var(--ink);border-radius:14px;overflow:hidden}
+.opp-top{padding:30px 34px 26px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:34px;border-bottom:1.5px solid var(--ink)}
+.opp-name{font-family:"Archivo Black",sans-serif;font-size:clamp(26px,3vw,42px);line-height:.96;text-transform:uppercase;letter-spacing:-.015em}
+.opp-idx{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--blue);font-weight:600;margin-bottom:10px}
+.opp-line{font-size:16.5px;line-height:1.45;margin-top:14px;max-width:62ch}
+.verdict{border:1.5px solid var(--ink);border-radius:10px;padding:16px 18px;height:fit-content}
+.verdict .vk{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.verdict .vv{font-family:"Anton",sans-serif;font-size:30px;line-height:1;text-transform:uppercase;margin-top:5px}
+.v-invest{color:var(--blue)}
+.v-explore{color:var(--ink)}
+.v-watch{color:var(--plausible)}
+.v-reject{color:var(--rejected)}
+.scorebar{height:7px;border-radius:4px;background:var(--surface-2);margin-top:14px;overflow:hidden}
+.scorebar i{display:block;height:100%;background:var(--blue);border-radius:4px}
+.vmeta{display:flex;justify-content:space-between;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);margin-top:7px}
+
+.opp-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.field{padding:22px 26px;border-right:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule)}
+.field:nth-child(3n){border-right:none}
+.fk{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:9px}
+.fv{font-size:14.5px;line-height:1.48}
+.fv ul{margin:0;padding-left:17px}
+.fv li{margin-bottom:5px}
+.field--warn .fk{color:var(--rejected)}
+.field--wide{grid-column:span 2}
+
+.stack{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.spill{
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.06em;font-weight:600;
+  padding:4px 8px;border-radius:5px;background:var(--blue);color:var(--paper);
+}
+.spill--sk{background:var(--ink)}
+.spill--deck{background:var(--rejected)}
+
+/* ---------- model ---------- */
+.model{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:0;margin-top:34px;border:2px solid var(--ink);border-radius:14px;overflow:hidden}
+.model-in{padding:26px 28px;border-right:2px solid var(--ink);background:var(--surface)}
+.model-out{padding:26px 30px}
+.ctrl{margin-bottom:20px}
+.ctrl label{display:flex;justify-content:space-between;align-items:baseline;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.ctrl label b{font-size:15px;color:var(--ink);letter-spacing:0;font-weight:600}
+input[type=range]{width:100%;accent-color:var(--blue);cursor:pointer;height:20px}
+.bignum{font-family:"Archivo Black",sans-serif;font-size:clamp(40px,6vw,76px);line-height:.92;letter-spacing:-.03em;color:var(--blue)}
+.bignum-k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.waterfall{margin-top:26px;display:flex;flex-direction:column;gap:11px}
+.wrow{display:grid;grid-template-columns:170px 1fr 96px;gap:14px;align-items:center;font-size:13.5px}
+.wrow .wl{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.wtrack{height:22px;background:var(--surface);border-radius:4px;overflow:hidden}
+.wtrack i{display:block;height:100%;border-radius:4px;transition:width .2s ease}
+.wv{text-align:right;font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+.disclaim{margin-top:24px;padding:15px 17px;border:1.5px dashed var(--rejected);border-radius:9px;font-size:13px;line-height:1.45;color:var(--ink)}
+.disclaim .dh{color:var(--rejected);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;display:block;margin-bottom:5px;font-weight:600}
+.anchors{display:flex;gap:8px 38px;flex-wrap:wrap;margin-top:22px;padding-top:17px;border-top:1px solid var(--rule)}
+.anchor{padding:4px 0}
+.anchor b{display:block;font-family:"Archivo Black",sans-serif;font-size:20px;line-height:1}
+.anchor span{display:block;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+
+/* ---------- expression cards ---------- */
+.xgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:36px}
+.xcard{border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--ink);color:var(--paper)}
+.xhead{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.22)}
+.xhead .xl{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.62)}
+.xhead .xt{font-family:"Archivo Black",sans-serif;font-size:19px;letter-spacing:.02em;text-align:center;text-transform:uppercase}
+.xquad{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.18);gap:1px}
+.xq{background:var(--ink);padding:16px 20px 18px}
+.xq h5{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.16em;color:#5E7BFF;margin:0 0 8px;font-weight:600}
+.xq p{font-size:13px;line-height:1.44;color:rgba(255,255,255,.86);margin:0}
+.xq ul{margin:0;padding-left:15px;font-size:13px;line-height:1.46;color:rgba(255,255,255,.86)}
+.xq li{margin-bottom:4px}
+.xq--wide{grid-column:1/-1}
+
+/* ---------- portfolio chart ---------- */
+.rank{margin-top:34px;display:flex;flex-direction:column;gap:6px}
+.rrow{display:grid;grid-template-columns:34px minmax(0,250px) 1fr 84px;gap:14px;align-items:center;padding:7px 0;border-bottom:1px solid var(--rule)}
+.rrow .ri{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+.rrow .rn{font-weight:600;font-size:14.5px;line-height:1.25}
+.rtrack{height:20px;background:var(--surface);border-radius:3px;overflow:hidden}
+.rtrack i{display:block;height:100%;border-radius:3px}
+.rstat{display:flex;justify-content:flex-end;align-items:center;gap:7px}
+.dot{width:9px;height:9px;border-radius:50%;flex:none}
+.rstat span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.09em;font-weight:600}
+
+/* ---------- gate ---------- */
+.gate{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border:2px solid var(--paper);border-radius:12px;overflow:hidden}
+.gcol{padding:26px 28px;border-right:1px solid rgba(255,255,255,.3)}
+.gcol:last-child{border-right:none}
+.gcol h4{font-family:"Anton",sans-serif;font-size:24px;text-transform:uppercase;line-height:1;color:var(--paper);margin-bottom:14px}
+.gcol ul{margin:0;padding-left:16px;font-size:14px;line-height:1.5;color:rgba(255,255,255,.86)}
+.gcol li{margin-bottom:10px}
+.gstop{
+  display:inline-flex;align-items:center;gap:11px;margin-top:34px;
+  border:2px solid var(--paper);border-radius:30px;padding:12px 22px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+}
+
+.foot{
+  max-width:var(--maxw);margin:0 auto;padding:26px 92px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted);
+}
+.foot svg{width:44px;fill:var(--ink)}
+
+@media (max-width:1100px){
+  .slide,.hero{padding-left:44px;padding-right:44px}
+  .foot{padding-left:44px;padding-right:44px}
+  .vlabel{display:none}
+  .pipe{grid-template-columns:1fr;gap:18px}
+  .pipe-arrow{transform:rotate(90deg);justify-content:center;padding:0}
+  .pipe-col{padding:0}
+  .adetail,.opp-top,.model{grid-template-columns:1fr}
+  .adetail-l{border-right:none;border-bottom:1.5px solid var(--ink)}
+  .model-in{border-right:none;border-bottom:2px solid var(--ink)}
+  .c3,.c4,.c2,.xgrid,.assets,.gate,.opp-grid{grid-template-columns:1fr}
+  .asset,.gcol,.field{border-right:none}
+  .rrow{grid-template-columns:28px 1fr 70px}
+  .rrow .rtrack{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+:focus-visible{outline:2.5px solid var(--blue);outline-offset:2px}
+.slide--blue :focus-visible,.slide--ink :focus-visible{outline-color:#fff}
+</style>
+
+<!-- ================= HERO ================= -->
+<section class="hero slide--blue">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="hero-mid">
+    <div class="hero-ghost" aria-hidden="true"><div>PRODUCT</div><div>INTELLIGENCE</div></div>
+    <div class="hero-core">
+    <svg class="swoosh" viewBox="0 0 413.62 144.78" aria-hidden="true"><path fill="currentColor" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" transform="translate(-49.19 -183.61)"/></svg>
+      <div class="wordmark">BB _ 2.0 ENGINE</div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><b>7</b><span>Specialist agents</span></div>
+    <div class="hstat"><b>4</b><span>Skeptic agents</span></div>
+    <div class="hstat"><b>33</b><span>Opportunities raised</span></div>
+    <div class="hstat"><b>19</b><span>Killed or reframed</span></div>
+    <div class="hstat"><b>17</b><span>Ranked</span></div>
+    <div class="hstat"><b>3</b><span>Recommended</span></div>
+  </div>
+  <div class="hero-sub">
+    A working model of the Pre-Brief moment — research that defines the opportunity<br>
+    before design is briefed. Category shown: <b>Basketball Shorts</b>.
+  </div>
+</section>
+
+<!-- ================= THE ENGINE ================= -->
+<section class="slide">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel">Part 1: Process</div>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Pre-Brief · Research · Define the opportunity</div>
+  <h2 class="title">Nine agents, one argument</h2>
+  <p class="deck">Seven specialists research in parallel, each owning one domain and forbidden from ranking outside it. Four skeptics then try to destroy their work. Only what survives reaches synthesis. <b>Select an agent to see what it owns, what it concluded, and what was taken away from it.</b></p>
+
+  <div class="pipe">
+    <div class="pipe-col">
+      <div class="pipe-h">01 — Fan out · Specialists</div>
+      <div class="agrid" id="specialists"></div>
+    </div>
+    <div class="pipe-arrow" aria-hidden="true">→</div>
+    <div class="pipe-col">
+      <div class="pipe-h">02 — Verify · Skeptics</div>
+      <div class="agrid" id="skeptics"></div>
+    </div>
+    <div class="pipe-arrow" aria-hidden="true">→</div>
+    <div class="pipe-col">
+      <div class="pipe-h">03 — Synthesize · Orchestration</div>
+      <div class="agrid" id="orchs"></div>
+    </div>
+  </div>
+
+  <div class="adetail" id="adetail"></div>
+</section>
+
+<!-- ================= WHAT THE SKEPTICS KILLED ================= -->
+<section class="slide slide--ink">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 1: Process · Verification</div>
+  <h2 class="title" style="color:#fff">The layer that earns the trust</h2>
+  <p class="deck">A research engine that only confirms is worse than no engine. These are findings the specialists called their strongest — killed before they could reach a brief. Every one was a claim a confident PLM could have carried into a room.</p>
+
+  <div class="cols c3">
+    <div class="card" style="background:#111;border-color:#333">
+      <div class="chead">Four corpora were one</div>
+      <p style="color:rgba(255,255,255,.82)">Consumer called Nike Icon sheerness a PATTERN across four retailers. Bazaarvoice syndicates brand reviews to 2,300+ retailers — likely one corpus counted three times. One cited page carries <b style="color:#fff">3 ratings and 1 review</b>. No base rate was ever set.</p>
+    </div>
+    <div class="card" style="background:#111;border-color:#333">
+      <div class="chead">The tier wasn't empty</div>
+      <p style="color:rgba(255,255,255,.82)">Marketplace claimed no premium rung above $60. The <b style="color:#fff">LeBron 8" lists at $90</b>. And it inverts: that short runs −37% plus a stackable 25%. The tier isn't missing — <b style="color:#fff">it can't hold price</b>.</p>
+    </div>
+    <div class="card" style="background:#111;border-color:#333">
+      <div class="chead">A year-blind index</div>
+      <p style="color:rgba(255,255,255,.82)">"Nike apparel fell 7%" matched no year. Apparel <b style="color:#fff">grew to $13.4B from $13.0B</b>. The skeptic reproduced the cause: asked for FY26, the search index returns FY25 filings as FY26.</p>
+    </div>
+  </div>
+  <div class="cols c3" style="margin-top:22px">
+    <div class="card" style="background:#111;border-color:#333">
+      <div class="chead">50 grams of force</div>
+      <p style="color:rgba(255,255,255,.82)">The wet-cling paper is real and quoted correctly — but 48.94 cN is <b style="color:#fff">0.489 N</b>, on artificial skin, perception tested on the forearm. Comfort relevance verified. <b style="color:#fff">Performance relevance rejected.</b></p>
+    </div>
+    <div class="card" style="background:#111;border-color:#333">
+      <div class="chead">One voice, not two</div>
+      <p style="color:rgba(255,255,255,.82)">Product and Design "independently" found body-mapped mesh. Both read Nike marketing, five years apart. Counted as corroboration it would have inflated confidence. <b style="color:#fff">Count the capability once.</b></p>
+    </div>
+    <div class="card" style="background:#111;border-color:#333">
+      <div class="chead">Participation, not fandom</div>
+      <p style="color:rgba(255,255,255,.82)">Four agents built women's cases on merch growth — one 2024 figure counted four times. Girls' US high-school participation <b style="color:#fff">fell 432,833 → 395,708</b> through the boom. Shorts are a participation purchase.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MACRO ================= -->
+<section class="slide slide--blue">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 2: Output · Macro</div>
+  <h2 class="title">Four assets. Never joined.</h2>
+  <p class="deck">The macro finding is not a gap in the line. It is a gap between capabilities Nike already owns — each verified, each shipping, none of them connected inside a single basketball short.</p>
+
+  <div class="assets">
+    <div class="asset">
+      <div class="an">Asset 01 · Verified</div>
+      <h4>Aero-FIT</h4>
+      <p>Mesh zones that "lift fabric off the skin, reducing cling even when the material is saturated" — via high-crimp yarn and stitch structure, not a coating. Shipping in basketball, running and football.</p>
+    </div>
+    <div class="asset">
+      <div class="an">Asset 02 · Verified</div>
+      <h4>A visible aperture language</h4>
+      <p>In running, the lighter mesh zones are "intentionally visible to show where the extra breathability lives." Nike has already made the engineering the graphic — on a short, in another sport.</p>
+    </div>
+    <div class="asset">
+      <div class="an">Asset 03 · Verified</div>
+      <h4>Body-mapped women's mesh</h4>
+      <p>WNBA venting placed by digital body maps of female sweat and cling zones, built because athletes were rolling waistbands to hack fit. April 2021. Never carried into consumer product.</p>
+    </div>
+    <div class="asset">
+      <div class="an">Asset 04 · Verified</div>
+      <h4>Stature-graded proportion</h4>
+      <p>The 2026 Women's Basketball team catalogue publishes 6.25" inseam, 21.5" hip width, +1"/+2"/−0.75" stature grading. The team channel engineers proportion. The consumer channel sells inches.</p>
+    </div>
+  </div>
+
+  <div class="cols c2" style="margin-top:40px">
+    <div class="card" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.32)">
+      <div class="chead" style="color:#fff">The claim is aimed at the wrong metric</div>
+      <p style="color:rgba(255,255,255,.9)">The literature says the failure athletes feel when soaked is <b>adhesion</b> — and that wicking, drying and air-permeability metrics do not explain it. Nike leads Aero-FIT with "&gt;2x airflow," a transport metric, and publishes no number at all for the anti-cling claim that is the mechanically interesting one. The technology is right. The frame is wrong.</p>
+    </div>
+    <div class="card" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.32)">
+      <div class="chead" style="color:#fff">Growth is real; price-holding is not</div>
+      <p style="color:rgba(255,255,255,.9)">Nike grew apparel units in FY26 with flat ASP, "offset primarily by higher discounts." Basketball grew double digits — in North America only. Meanwhile a permanent "Sale Under $25 Basketball Shorts" page runs on Nike.com, and markdown depth tracks <b>door, not product</b>. No new product solves that.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPPORTUNITY CYCLER ================= -->
+<section class="slide">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel">Part 2: Output</div>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 2: Output · The formal opportunity</div>
+  <h2 class="title">Cycle the portfolio</h2>
+  <p class="deck">Each opportunity is a synthesis across domains — the evidence stack shows which agents contributed and which skeptic cleared it. Contradictory evidence is carried on the face of the card, not buried.</p>
+
+  <div class="cyc-bar">
+    <button class="navbtn" id="prev" aria-label="Previous opportunity">←</button>
+    <button class="navbtn" id="next" aria-label="Next opportunity">→</button>
+    <div id="chips" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+  </div>
+
+  <div class="opp" id="opp" aria-live="polite"></div>
+</section>
+
+<!-- ================= MARKET MODEL ================= -->
+<section class="slide">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel">Part 2: Output</div>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 2: Output · Sizing</div>
+  <h2 class="title">Size it as you build it</h2>
+  <p class="deck">Syndicated market sizing for this category is unusable — one firm's five-year increment exceeds another firm's entire market. So this is not a forecast. It is a <b>scenario model</b> built bottoms-up from anchors we can actually defend, with every assumption exposed as a control you set.</p>
+
+  <div class="model">
+    <div class="model-in">
+      <div class="bignum-k">Opportunity</div>
+      <div style="font-family:'Anton',sans-serif;font-size:24px;text-transform:uppercase;line-height:1;margin-bottom:22px" id="mOpp">The Cling Standard</div>
+      <div class="ctrl">
+        <label for="s1">Reachable players <b><span id="v1"></span>M</b></label>
+        <input type="range" id="s1" min="5" max="488" step="1">
+      </div>
+      <div class="ctrl">
+        <label for="s2">Shorts per player / yr <b><span id="v2"></span></b></label>
+        <input type="range" id="s2" min="0.2" max="3" step="0.1">
+      </div>
+      <div class="ctrl">
+        <label for="s3">Nike capture <b><span id="v3"></span>%</b></label>
+        <input type="range" id="s3" min="1" max="40" step="0.5">
+      </div>
+      <div class="ctrl">
+        <label for="s4">ASP <b>$<span id="v4"></span></b></label>
+        <input type="range" id="s4" min="20" max="120" step="1">
+      </div>
+      <div class="ctrl">
+        <label for="s5">Full-price realization <b><span id="v5"></span>%</b></label>
+        <input type="range" id="s5" min="35" max="100" step="1">
+      </div>
+      <button class="chip" id="reset" style="width:100%;text-align:center;padding:10px">Reset to opportunity defaults</button>
+    </div>
+
+    <div class="model-out">
+      <div class="bignum-k">Modelled annual net revenue</div>
+      <div class="bignum num" id="out">$0</div>
+      <div style="font-size:13.5px;color:var(--muted);margin-top:10px" id="outUnits"></div>
+
+      <div class="waterfall">
+        <div class="wrow"><span class="wl">Reachable players</span><div class="wtrack"><i id="w1" style="background:var(--surface-2)"></i></div><span class="wv" id="t1"></span></div>
+        <div class="wrow"><span class="wl">Annual demand</span><div class="wtrack"><i id="w2" style="background:#B9C0D6"></i></div><span class="wv" id="t2"></span></div>
+        <div class="wrow"><span class="wl">Nike units</span><div class="wtrack"><i id="w3" style="background:#5E7BFF"></i></div><span class="wv" id="t3"></span></div>
+        <div class="wrow"><span class="wl">Net revenue</span><div class="wtrack"><i id="w4" style="background:var(--blue)"></i></div><span class="wv" id="t4"></span></div>
+        <div class="wrow"><span class="wl">Lost to markdown</span><div class="wtrack"><i id="w5" style="background:var(--rejected)"></i></div><span class="wv" id="t5"></span></div>
+      </div>
+
+      <div class="disclaim">
+        <span class="dh">Read this before quoting a number</span>
+        This model multiplies five assumptions. It has no proprietary sell-through behind it and it is not a forecast — it is a way to see which assumption the opportunity actually rests on. Move <b>Nike capture</b> and <b>full-price realization</b> first: on every opportunity in this portfolio, those two dominate, and only internal data can set them.
+      </div>
+
+      <div class="anchors">
+        <div class="anchor"><b>488M</b><span>Global players · BB_2.0 deck</span></div>
+        <div class="anchor"><b>300M</b><span>GC participants · deck</span></div>
+        <div class="anchor"><b>1M</b><span>Outdoor courts, GC · deck</span></div>
+        <div class="anchor"><b>5%</b><span>Lineplan built for outdoor · deck</span></div>
+        <div class="anchor"><b>$13.4B</b><span>Nike Brand apparel FY26 · verified</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STYLE LEVEL ================= -->
+<section class="slide">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel">Part 2: Output</div>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 2: Output · Micro · Style level</div>
+  <h2 class="title">Four expressions, and what each must ship</h2>
+  <p class="deck">Macro opportunity becomes product only when it has a silhouette, a price tier and a feature set someone can build. These are written in the Consumer Expression format — with the feature set required to win the shelf back, not a mood.</p>
+  <div class="xgrid" id="xgrid"></div>
+</section>
+
+<!-- ================= PORTFOLIO RANK ================= -->
+<section class="slide">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel">Part 3: Decision</div>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 3: Decision · Portfolio</div>
+  <h2 class="title">Everything on one scale</h2>
+  <p class="deck">All seventeen surviving opportunities scored across consumer need, whitespace, commercial potential, differentiation, cultural relevance, basketball authenticity, right-to-win, evidence strength, scalability and risk. Nothing was forced into a category to fill it.</p>
+  <div class="rank" id="rank"></div>
+</section>
+
+<!-- ================= GATE ================= -->
+<section class="slide slide--ink">
+  <i class="crop tl"></i><i class="crop tr"></i><i class="crop bl"></i><i class="crop br"></i>
+  <div class="vlabel vlabel--r">Keep It Tight / Concept</div>
+  <div class="rail"><span>Nike Basketball</span><span>Apparel</span></div>
+
+  <div class="eyebrow">Part 3: Decision · Human gate</div>
+  <h2 class="title" style="color:#fff">The machine stops here</h2>
+  <p class="deck">The engine expands and sharpens the inputs around the brief. It does not make the call. Below is the honest division of labour on the three recommended opportunities.</p>
+
+  <div class="gate">
+    <div class="gcol">
+      <h4>What the machine knows</h4>
+      <ul>
+        <li>Aero-FIT exists, is verified clause by clause, ships in three sports, and claims cling reduction under saturation through yarn and stitch structure.</li>
+        <li>Nike's team channel publishes stature-graded specs. The consumer channel does not.</li>
+        <li>Athletes have rolled waistbands and tucked hems for a decade, from independent sources.</li>
+        <li>The $90 short discounts at the same rate as the $30 short.</li>
+      </ul>
+    </div>
+    <div class="gcol">
+      <h4>What the machine believes</h4>
+      <ul>
+        <li>That the marketing frame is wrong rather than the technology — and that a published cling standard would be an ownable axis.</li>
+        <li>That consumers select inseam blind, and that this costs something.</li>
+        <li>That a decade-old hack is a designable unmet need rather than a preference.</li>
+        <li>That franchise discipline outranks new product. It cannot prove this.</li>
+      </ul>
+    </div>
+    <div class="gcol">
+      <h4>What only you decide</h4>
+      <ul>
+        <li>Whether to open a measurement axis competitors can then test you against.</li>
+        <li>Whether a <b>comfort</b> claim — all the science supports — carries weight in a performance vocabulary.</li>
+        <li>Whether inseam is a fit variable or an identity declaration. The evidence genuinely splits, and the two readings demand opposite products.</li>
+        <li>Whether extending Aero-FIT off the Sabrina signature dilutes it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gstop">■ Stopped · No brief written · No opportunity selected</div>
+</section>
+
+<div class="foot">
+  <span>Concept prototype · Not an official product</span>
+  <svg viewBox="0 0 413.62 144.78" aria-hidden="true"><path d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" transform="translate(-49.19 -183.61)"/></svg>
+  <span>BB _ 2.0 · Pre-Brief Engine</span>
+</div>
+
+<script>
+/* ============ AGENTS ============ */
+const AGENTS=[
+ {id:"01",nm:"Consumer",kind:"s",meta:"20 searches",owns:"Reviews, returns, surveys, sentiment, complaints, unmet needs and behavioural signals.",
+  find:[["PATTERN","Inseam is sold as an absolute number with no body reference. The consumer self-selects blind, and inseam is the one fit variable a drawcord cannot rescue."],
+        ["FACT","Elite women players told Nike a single fit block is insufficient and named <b>the hip</b> as the divergent measurement — asking for two distinct cuts. The source is 2016."],
+        ["PATTERN","The value multipack is a different purchase occasion — household replenishment — and ships zip pockets as standard, making them table stakes at the low end and absent at the top."],
+        ["FACT","adidas shipped an adaptive wheelchair basketball uniform on entirely new seated pattern blocks, drafting the seated kit first and deriving the standing kit from it."]],
+  kills:[["Nike Icon sheerness as a PATTERN","Syndicated reviews, one page with 3 ratings, no base rate established."],
+         ["Apparel return-rate benchmarks","Built on fitted garments — dresses, denim, leggings. A drawcord loose short is the opposite case."],
+         ["\"Nike is thin in big &amp; tall\"","Falsified. Nike.com runs the category; Kohl's carries Icon 11\" to 4XL Tall."]]},
+ {id:"02",nm:"Marketplace",kind:"s",meta:"22 searches",owns:"Competitive landscape, growth, assortment, distribution, pricing ladders and share.",
+  find:[["FACT","Nike Brand apparel FY26 <b>grew to $13.4B from $13.0B, +2% CN</b> — units up, ASP flat, \"offset primarily by higher discounts.\""],
+        ["FACT","Amazon's $20–50 band holds <b>1,671 basketball-shorts products</b> — half the assortment — and Amazon takes 17.8% of US clothing spend."],
+        ["FACT","Nike Direct fell 8% with digital down a tenth straight quarter, while wholesale grew — but decelerated to +1% CN by Q4."],
+        ["PATTERN","Syndicated category sizing is unusable. One firm's five-year increment exceeds another's entire market."]],
+  kills:[["\"Apparel shrank 7% on −8% units\"","Matched no year. The −8% belongs to FY25 footwear. Root cause: a year-blind search index on the 10-K."],
+         ["\"The premium tier is empty\"","LeBron 8\" lists at $90. And it inverts — the tier can't hold price."],
+         ["adidas apparel +20%","That was Q4 only. Full year was +15%."]]},
+ {id:"03",nm:"Product",kind:"s",meta:"41 searches",owns:"Attributes, materials, construction, fit, features, franchise history and launch cadence.",
+  find:[["FACT","<b>Aero-FIT</b>: paired open/closed elliptical mesh zones, Nike's first elite apparel from 100% textile waste. Basketball debut on Sabrina 4 — jersey <b>and</b> shorts. Every clause verified verbatim."],
+        ["FACT","Three incompatible line logics in one house: DNA ladders by <b>length</b>, Jordan Diamond by <b>weave</b>, NBA by <b>technology</b>. Trading up in DNA gets you more fabric, not better fabric."],
+        ["PATTERN","Basketball's waistband is \"elastic with drawcord\" almost universally. Every exception — AeroSwift, Janji, Nike Pro — comes from outside basketball."],
+        ["FACT","Nike Forward's principle of eliminating trims so a garment can be recycled has never reached a basketball short, while the premium tier adds zips and snaps."]],
+  kills:[["\"Nike withholds women's inseams\"","The 2026 team catalogue publishes 6.25\" inseam and 21.5\" hip width."],
+         ["\"No price ladder obtainable\"","One search returned eight rungs, $34 to $95."],
+         ["\"Aero-FIT is an unexploited asset\"","It ships in running this fall — four styles including a men's short — and in football kits."]]},
+ {id:"04",nm:"Commercial",kind:"s",meta:"17 searches",owns:"Sell-through proxies, markdown depth, margin, inventory and historical performance.",
+  find:[["FACT","FY26 was margin repair, not growth — and the reported gain is a <b>$986M tariff refund</b>. Ex-tariff, margin fell."],
+        ["FACT","Nike.com runs a <b>permanent</b> \"Sale Under $25 Basketball Shorts\" page."],
+        ["FACT","The $90 LeBron discounts at the same rate as the $30 Icon. Depth tracks <b>door, not product</b> — four Foot Locker items across three franchises cluster at −18% to −25%."],
+        ["HYPOTHESIS","Basketball grows in North America while its shorts clear at depth. No public source reconciles this — the best internal question in the study."]],
+  kills:[["Markdown → over-investment in long inseams","Nine of 13 observations came from clearance pages — selection on the dependent variable. The 11\" carried the shallowest cut."],
+         ["\"6-inch is under-supplied\"","Pure absence-of-evidence. Structurally void."],
+         ["adidas basketball as \"the only declining category\"","Golf −10%, US sports −4%."]]},
+ {id:"05",nm:"Cultural",kind:"s",meta:"14 searches",owns:"Basketball culture, athlete behaviour, streetball, fashion, social and search behaviour.",
+  find:[["FACT","Team uniforms are specified <b>6–9 months ahead</b>. Televised inseams are a lagging procurement indicator, not a taste signal — this should be a standing rule for the engine."],
+        ["PATTERN","Athletes have modified the garment for 10+ years — rolling the waistband, and in the women's game tucking the hem under the compression layer. Two independent sources."],
+        ["FACT","Eric Emanuel holds <b>$98–$128</b> on a technically unremarkable mesh short, for a decade — partnered with adidas. Nike owns the technology and the athletes; a small brand owns the ceiling."],
+        ["FACT","FOURTEEN holds all FIBA 3x3 global events through the LA28 build."]],
+  kills:[["The short-shorts revival as a taste signal","n=1. The equipment manager orders one length for stockroom simplification; the same article's Duke example runs the other way."],
+         ["Women's shorts whitespace","Falsified — Sabrina 4 Aero-FIT shorts shipped 17 Jul 2026."],
+         ["Trend figures from content farms","Flagged by the agent itself and excluded."]]},
+ {id:"06",nm:"Athlete",kind:"s",meta:"14 searches",owns:"How basketball is played across environments, climates, player types and levels.",
+  find:[["FACT","Basketball sweat rates of 0.95±0.42 L/h, and 1.4–1.6 L/h in college game play. <b>The wet state is the normal state.</b>"],
+        ["FACT","Baker 2017: <b>0.35±0.36 kg of sweat trapped in on-court uniforms</b> — a 14.1% underestimation of whole-body loss."],
+        ["FACT","Compression's performance benefit is null across 19 RCTs — and it measurably <b>reduces</b> hip abduction ROM, 12.6°→10.2°."],
+        ["PATTERN","No purpose-built outdoor basketball short was found from any brand — while outdoor balls and outsoles are established categories. The consumer education is already done."],
+        ["FACT","Mass scales ~1.30× guard-to-center while stature scales only ~1.08×. Girth grows far faster than length."]],
+  kills:[["\"No study measures apparel restriction of ROM\"","A basketball-specific 2020 study exists — n=20, five garment conditions."],
+         ["The adhesion effect as a performance claim","0.489 N on artificial skin, forearm perception. Comfort verified, performance rejected."],
+         ["\"+32% summer sweat rate\"","Male-only. Females went 687→680 mL/h — measured indoors at 17–27°C."]]},
+ {id:"07",nm:"Design",kind:"s",meta:"7 searches",owns:"Silhouette, proportion, material, construction, detail, graphics and aesthetic direction.",
+  find:[["FACT","<b>Nike Team already grades inseam by stature.</b> Nobody markets it."],
+        ["FACT","The WNBA body-mapped mesh programme exists — built because athletes were hacking fit."],
+        ["PATTERN","The waistband is simultaneously the least-designed component and the best real estate: it sits at the height of nearly every broadcast crop, and it is the one part athletes physically modify."],
+        ["HYPOTHESIS","Leg opening, not inseam, is the undifferentiated variable. Inseam is exhausted — culture owns it and consumers read it as a size choice."]],
+  kills:[["Whitespace at 5\" and at high rise","Nike already has three 5\" SKUs; adidas merchandises a high-rise basketball filter."],
+         ["\"Invisible innovation cannot become trade dress\"","adidas holds 24 registrations and a $305M award on three stripes — visible, functionless, defensible."],
+         ["Report-wide evidence level","Rated ~25–30% evidenced. Two commissioned sections undelivered. No invented specs found."]]},
+ {id:"A",nm:"Consumer &amp; Culture",kind:"k",meta:"Audits 01 · 05",owns:"Adversarial audit of Consumer and Cultural. Tests sample bias, hype versus sustained behaviour, and duplicated signals.",
+  find:[["FACT","Found the number nobody else did: girls' US high-school basketball participation <b>fell 432,833 → 395,708</b> through the women's boom."],
+        ["PATTERN","Four agents cited one 2024 merchandise figure as four independent signals."],
+        ["FACT","Retrieved the review counts Consumer called unretrievable — one cited page carries 3 ratings and 1 review."]],
+  kills:[["Icon sheerness, returns benchmarks, big &amp; tall, women's whitespace, the inseam trend signal","Five specialist findings destroyed, four of them load-bearing."]]},
+ {id:"B",nm:"The Numbers",kind:"k",meta:"Audits 02 · 04",owns:"Forensic audit of every financial figure. Tests false precision and unverifiable numbers.",
+  find:[["FACT","Nike apparel <b>grew</b> — and the corrected read is better: volume bought with discount, which independently corroborates the clearance story."],
+        ["FACT","Demonstrated the year-blind index defect reproducibly. Any un-reverified Nike figure may be year-shifted."],
+        ["PATTERN","Markdown depth tracks door, not product — a site-wide promo was read as four demand signals."]],
+  kills:[["The empty premium tier, the −7% apparel figure, the inseam markdown inference, the UA/Puma shelf prize","Including the specialist's own self-declared \"single largest fact in the domain.\""]]},
+ {id:"C",nm:"Product &amp; Design",kind:"k",meta:"Audits 03 · 07",owns:"Audit of product specs and design assertion. Tests invented specs and opinion dressed as evidence.",
+  find:[["FACT","Found that Aero-FIT ships in <b>three sports</b>, and that Nike's running copy already makes the mesh zones intentionally visible — the disproof of two agents at once, and the template for both."],
+        ["FACT","Verified the team catalogue's stature grading, and dated the Flynn quote to April 2021."],
+        ["FACT","DRYV patent is real and live: US 8,769,716, into the 2030s."]],
+  kills:[["Four whitespace claims, the invisibility thesis, and the false corroboration between Product and Design","Ruled decisively: one voice, not two."]]},
+ {id:"D",nm:"The Science",kind:"k",meta:"Audits 06",owns:"Audit of the scientific claims, where one overreached paper can propagate into a product decision.",
+  find:[["FACT","Ruled the Aero-FIT mechanism genuine — a load-area-ratio intervention, the exact peer-reviewed lever. <b>The problem is the frame, not the technology.</b>"],
+        ["FACT","Closed a gap the specialist could not: Baker 2017 trapped-sweat figures."],
+        ["PATTERN","Named the claims that would fail substantiation — a legal constraint, not a preference."]],
+  kills:[["The adhesion effect as performance, the ROM void, the tropical sweat argument, the wheelchair-to-defender leap","The specialist's own #1 opportunity was built on a void its sibling had shown occupied."]]},
+ {id:"OO",nm:"Opportunity",kind:"o",meta:"Cross-domain synthesis",owns:"Clusters surviving findings and finds intersections no specialist could see alone.",
+  find:[["PATTERN","Nike owns the anti-cling mechanism and markets it with the wrong metric — visible only by crossing product, science and marketing copy."],
+        ["PATTERN","Two fit philosophies run in one house: the team channel engineers proportion, the consumer channel sells inches."],
+        ["PATTERN","A decade of unbroken hacking at one component — the only unmet need with true independent corroboration."],
+        ["PATTERN","The premium tier is not empty; it cannot hold price. This inverts a product gap into a franchise-discipline problem."]],
+  kills:[["Every whitespace claim that was tested, failed","A methodological finding about the engine itself: budget-limited search reliably manufactures false whitespace. Every future claim needs a confirmatory scan."]]},
+ {id:"PO",nm:"Portfolio",kind:"o",meta:"Ranking · 10 criteria",owns:"Compares all opportunities against one another and assigns the investment posture.",
+  find:[["FACT","17 opportunities ranked. 3 INVEST, 4 EXPLORE, 6 WATCH, 4 REJECT — no category filled to a target."],
+        ["PATTERN","The three INVEST opportunities share a property: none requires inventing a capability. All three connect assets that already exist."],
+        ["HYPOTHESIS","Six of the blocking questions are internal and answerable in an afternoon. The disciplined path is to answer them before selecting."]],
+  kills:[["Four opportunities rejected outright","IP-blocked, falsified premise, falsified premise, and a prize of $100–120M globally — a rounding error."]]}
+];
+
+const specW=document.getElementById("specialists"),skepW=document.getElementById("skeptics"),orchW=document.getElementById("orchs");
+AGENTS.forEach((a,i)=>{
+  const b=document.createElement("button");
+  b.className="agent"+(a.kind==="k"?" agent--skep":"")+(a.kind==="o"?" agent--orch":"");
+  b.setAttribute("aria-pressed","false");
+  b.innerHTML=`<span class="aid">${a.kind==="s"?"AGENT "+a.id:a.kind==="k"?"SKEPTIC "+a.id:"ORCHESTRATOR"}</span><span class="anm">${a.nm}</span><span class="amt">${a.meta}</span>`;
+  b.onclick=()=>select(i);
+  (a.kind==="s"?specW:a.kind==="k"?skepW:orchW).appendChild(b);
+});
+function select(i){
+  document.querySelectorAll(".agent").forEach((el,j)=>el.setAttribute("aria-pressed",j===i?"true":"false"));
+  const a=AGENTS[i];
+  document.getElementById("adetail").innerHTML=`
+    <div class="adetail-l">
+      <h3>${a.nm}</h3>
+      <p class="owns">${a.owns}</p>
+      <ul class="flist">${a.find.map(f=>`<li><span class="tag t-${f[0]==="FACT"?"fact":f[0]==="PATTERN"?"pattern":"hyp"}">${f[0]}</span><span>${f[1]}</span></li>`).join("")}</ul>
+    </div>
+    <div class="adetail-r">
+      <div class="killhead">${a.kind==="s"?"Taken away by the skeptics":a.kind==="k"?"What this skeptic destroyed":"What did not survive"}</div>
+      ${a.kills.map(k=>`<div class="kill"><b>${k[0]}</b><span>${k[1]}</span></div>`).join("")}
+    </div>`;
+}
+select(0);
+
+/* ============ OPPORTUNITIES ============ */
+const OPPS=[
+{id:"O1",name:"The Cling Standard",verdict:"INVEST",score:43,conf:"Medium-High",
+ line:"Make wet-state cling a measured, named, published performance axis — and validate the platform Nike already ships against it. This invents nothing.",
+ consumer:"The high-frequency player, indoor and outdoor, in any climate. Global; acute in hot-humid markets.",
+ jtbd:"\"Stop the short sticking to and dragging on my legs once I'm soaked.\"",
+ idea:"A validation-and-transfer programme, not a new fabric. Establish a thigh-scale wet adhesion protocol, benchmark Dri-FIT against Aero-FIT and competitors, then re-frame the basketball claim from airflow to anti-cling and extend the platform off the signature capsule.",
+ why:"The platform is already in three sports and already in basketball. The running application already ships the visible aperture language. The science naming the mechanism is current, and no competitor markets on it.",
+ feat:["Aero-FIT open/closed elliptical zoning","High-crimp yarn and stitch structure — not a coating, so it survives wash","Zone placement mapped to thigh and seat, where wetted contact area is greatest","Visible aperture gradient carried over from the running expression","A published cling number — the thing no competitor has"],
+ price:"$60–75, consistent with the verified ladder. Only works if held out of the markdown cadence.",
+ role:"Franchise-level performance statement. Wholesale-weighted, where MSRP currently holds better than DTC.",
+ stack:[["03",1],["02",1],["06",1],["C",0],["D",0]],
+ contra:"Fibers &amp; Polymers 2023 finds thin polyester jerseys with excellent wicking exhibit <b>low</b> wet cling. If that holds at garment scale the problem is smaller than framed and partly already solved. Settle in a lab before tooling. The adhesion effect size is a bench-specimen force; garment-scale magnitude is unknown.",
+ true:"That garment-scale wet adhesion is perceptible enough to drive preference; that Aero-FIT measurably beats Dri-FIT on it; that its cost structure reaches below signature price points.",
+ unknown:"The garment-scale force. Whether reduced cling drives purchase or only satisfaction. Claim discipline is binding: comfort only — a performance claim here would fail substantiation.",
+ m:{pop:60,rate:1.1,cap:12,asp:68,fp:78}},
+
+{id:"O2",name:"Fit by Body, Not by Inch",verdict:"INVEST",score:42,conf:"Medium",
+ line:"Move the stature-based proportion system Nike already uses in its team channel into the consumer line — and market it.",
+ consumer:"Every consumer currently guessing between 5\", 6\", 8\", 10\" and 11\" — acutely players at the extremes of basketball's exceptional body range.",
+ jtbd:"\"Give me the short that hits where I want on my leg, the first time, without having to know what 8 inches looks like on a body my height.\"",
+ idea:"Re-express the consumer length ladder as stature-referenced rather than absolute-inch, using the grading logic already published in the 2026 Women's Basketball team catalogue. Decouple girth from length in the grade rule.",
+ why:"The engineering exists and is paid for. No consumer basketball brand markets proportion this way. Inseam is exhausted as a differentiator — but how you choose an inseam is not.",
+ feat:["Stature-referenced navigation replacing absolute inches","Independent thigh-girth grading — mass scales 1.30× while stature scales 1.08×","Published inseam and hip-width specs in consumer copy, matching the institutional channel","Cheapest expression is a navigation and copy change on existing SKUs"],
+ price:"Platform change, not a price tier. Should propagate across the range, entry points included.",
+ role:"Line architecture and digital navigation as much as product.",
+ stack:[["07",1],["01",1],["06",1],["C",0]],
+ contra:"The returns-based rationale is <b>dead</b> — do not justify this on return rates; those benchmarks come from fitted garments. And Cultural argues consumers read inseam as an identity declaration, not a fit variable. If so, this solves a problem the consumer does not experience as one.",
+ true:"That inseam confusion actually costs conversion; that consumers prefer a body-referenced choice to a number they already recognise.",
+ unknown:"Nike's own returns coding split by inseam versus waist versus hip. This is the single highest-value internal query in the study and it decides the opportunity outright.",
+ m:{pop:90,rate:1.3,cap:14,asp:44,fp:74}},
+
+{id:"O3",name:"The Engineered Waistband",verdict:"INVEST",score:41,conf:"Medium-High need",
+ line:"Design the one component athletes have been visibly modifying for a decade, and make it the garment's signature.",
+ consumer:"All serious players; most acute in the women's game, where hem-tucking under the compression layer compounds the waistband hack.",
+ jtbd:"\"Let me set where this sits and how tight it is, and have it stay there for four quarters — without rolling it myself.\"",
+ idea:"Replace the anonymous 1.5–2\" elastic tunnel with a structural band carrying real, legible rise and cinch adjustment. Nike has already built adjustable rise into the WNBA programme for exactly this reason.",
+ why:"Ten years of unbroken hacking, independently sourced, is the strongest unmet-need signal that survived the audit — and it sits at the height of nearly every broadcast crop.",
+ feat:["Adjustable rise, engineered rather than rolled","A cinch mechanism that holds through four quarters","A band that does not roll in the defensive stance","A hem that terminates where women athletes currently tuck it to","Component vocabulary already exists: AeroSwift perforated elastic in mesh, Nike Pro's flat band"],
+ price:"Platform component. Strongest first as a flagship differentiator alongside the Cling Standard.",
+ role:"Potential tactile signature — the component analogue to what Flyknit did for footwear construction.",
+ stack:[["05",1],["07",1],["01",1],["03",1],["C",0]],
+ contra:"Hardware at the waist is a pressure point under a jersey and a snag risk, adding cost and weight to a garment whose virtue is that it is a rectangle of mesh. And no evidence exists that players would <b>buy</b> a solution rather than keep hacking — the hack is free and it works.",
+ true:"That the hack signals dissatisfaction rather than preference; that a mechanism survives contact play and washing.",
+ unknown:"Whether rolling is a fit correction or a style choice. These require opposite products, and nothing in this study distinguishes them.",
+ m:{pop:70,rate:1.2,cap:11,asp:58,fp:76}},
+
+{id:"O4",name:"Discount-Immune Franchise",verdict:"EXPLORE",score:36,conf:"Medium",
+ line:"The largest commercial finding in the study — and the one no new product solves. If Nike cannot hold price on the $90 short it already sells, a new $70 franchise repeats the problem at a new price point.",
+ consumer:"Internal. This is a franchise-architecture and merchandising decision before it is a consumer one.",
+ jtbd:"\"Give me a reason this short is worth full price in week 12, not just week 1.\"",
+ idea:"Define which basketball franchises are held out of the promotional cadence entirely, and what product truth earns that protection. Aero-FIT is the first candidate because it is the only verified differentiator in the line.",
+ why:"Nike grew apparel units in FY26 with flat ASP explicitly offset by higher discounts. A permanent sub-$25 basketball shorts page runs on Nike.com. Markdown depth tracks door, not product — meaning the promo calendar, not the assortment, is setting realized price.",
+ feat:["A named held-price tier with published rules","Differentiation that survives a spec sheet — not colour or logo","Channel discipline: wholesale currently holds MSRP better than DTC","Franchise count reduction before franchise addition"],
+ price:"Not a price point — a price <b>policy</b>.",
+ role:"Precondition for every other opportunity in this portfolio.",
+ stack:[["04",1],["02",1],["B",0]],
+ contra:"The evidence is observational and public. Nine of thirteen markdown observations came from clearance pages, so depth is not measured against a baseline. The direction is corroborated by Nike's own disclosure language, but the magnitude is not established.",
+ true:"That discounting is a policy choice rather than a demand response; that a held-price tier survives a soft quarter.",
+ unknown:"Full-price sell-through and weeks-of-supply by franchise, eight quarters, with a markdown control. Nothing public can substitute.",
+ m:{pop:45,rate:1.0,cap:16,asp:72,fp:92}},
+
+{id:"O5",name:"The Outdoor-Spec Short",verdict:"EXPLORE",score:36,conf:"Medium",
+ line:"Basketball already taught the consumer that outdoor needs different equipment — through the ball and the outsole. Apparel never showed up.",
+ consumer:"Outdoor pickup and community players in high-UV, high-abrasion markets. US blacktop; Greater China, where the deck counts 300M participants and 1M outdoor courts.",
+ jtbd:"\"Let me play a three-hour outdoor run, dive for a ball, and have the short survive the season.\"",
+ idea:"A distinct outdoor construction — the apparel equivalent of the outdoor ball and the outdoor outsole, categories consumers already understand and already pay a premium for.",
+ why:"Your own lineplan is 5% built for outdoor against a participation base that is majority outdoor in the largest markets. No purpose-built outdoor basketball short was found from any brand.",
+ feat:["UV-stabilised elastane — UV kills exactly the fibre a deep-squat pattern needs","Abrasion-reinforced seat and outer-hip zones","Elevated tear strength and soil-tolerant colour and print","Secured on-body carriage — outdoor pickup has no locker room","Hem geometry that tolerates surface contact"],
+ price:"Premium to core mesh, below flagship — but must be steeply localised.",
+ role:"Category-defining entry SKU in Asia-Pacific growth markets.",
+ stack:[["06",1],["05",1],["01",1],["deck",2]],
+ contra:"The absence-of-competition finding rests on a single query — and every whitespace claim in this study that was tested, failed. The tropical sweat-rate support was falsified: that data was male-only and measured indoors. And the need is highest exactly where willingness-to-pay is lowest.",
+ true:"That outdoor players will pay the premium outdoor durability costs; that the absence of competitors is a blind spot rather than a failed market.",
+ unknown:"A dedicated confirmatory competitive scan. ASEAN and Greater China retail pricing — none was retrievable.",
+ m:{pop:150,rate:0.9,cap:8,asp:52,fp:70}},
+
+{id:"O6",name:"Women's, Culture First",verdict:"EXPLORE",score:36,conf:"Medium",
+ line:"Fandom is compounding while participation contracts. The women's opportunity is real — but it is a culture opportunity wearing a performance costume.",
+ consumer:"The women's-basketball-culture consumer, who substantially does not play — plus the participant base, which is shrinking in the US even as the audience grows.",
+ jtbd:"\"Let me wear the game I love, in something that doesn't read as a shrunk men's short.\"",
+ idea:"Lead with the culture expression rather than the performance ladder, while carrying the verified team-channel proportion engineering into whatever ships.",
+ why:"Viewership, attendance, merch and media rights are all compounding. But shorts are a participation purchase and jerseys are a fandom purchase — and the participation line is going the other way.",
+ feat:["Proportion engineering carried from the team catalogue, not derived from men's","A hem that terminates where athletes currently tuck it","Colour and graphic cadence from the tunnel vocabulary, not the men's team line","Merchandised as basketball, not as women's training"],
+ price:"Parity with men's basketball equivalents. Pricing at parity is itself the statement.",
+ role:"Cultural credibility ahead of volume.",
+ stack:[["05",1],["01",1],["02",1],["A",0]],
+ contra:"Four agents built on one 2024 merchandise figure counted as four signals. US girls' high-school participation fell 432,833 → 395,708 through the boom. And the whitespace was falsified — Sabrina 4 Aero-FIT shorts already shipped.",
+ true:"That culture consumption converts to shorts rather than to fleece and tees; that the participation decline is US-specific rather than global.",
+ unknown:"Fresh women's fit sessions — the best fit evidence is from 2016 while the demand evidence is from 2026. Cutting a pattern on ten-year-old anthropometrics is the risk.",
+ m:{pop:35,rate:1.4,cap:18,asp:50,fp:80}},
+
+{id:"O7",name:"Designed to Be Recycled",verdict:"EXPLORE",score:32,conf:"Medium",
+ line:"The category competes on recycled input while designing against recyclability. Nike Forward already proved the more consequential move.",
+ consumer:"Institutional buyers first — teams, leagues, schools — where end-of-life volume is concentrated and take-back is administratively feasible.",
+ jtbd:"\"Buy kit that has a real end-of-life answer, not a percentage on a hangtag.\"",
+ idea:"A mono-material polyester short with no elastane, no zips and no bonded trims, following Nike Forward's stated principle and positioned for the Syre circular-polyester supply now under contract.",
+ why:"Recycled content is table stakes and undifferentiating. The Syre partnership explicitly targets core performance lines, which means basketball shorts will have to answer a circularity question their current trim strategy fails.",
+ feat:["Single-polymer construction throughout, including waistband and drawcord","Bonded or ultrasonic seams and laser-cut raw hems — no stitching, no binding","A take-back path built into the institutional channel","Process converted into aesthetic, as Forward already proved"],
+ price:"Not retrievable from public evidence. No mono-material sportswear pricing was obtainable.",
+ role:"Institutional and credibility play before consumer volume.",
+ stack:[["03",1],["07",1]],
+ contra:"Circularity may cost the four-way stretch the category now assumes — POINT 3 ships 4-way, Jordan Woven Diamond runs 12% spandex, and the biomechanics argue elastane is what makes the squat work. Consumer willingness to pay is entirely unretrieved.",
+ true:"That a mono-material short with no elastane can deliver basketball's range of motion; that institutional buyers will pay for end-of-life.",
+ unknown:"Whether circularity costs mobility. This is a materials-lab question, answerable before any commercial commitment.",
+ m:{pop:25,rate:1.6,cap:9,asp:46,fp:88}}
+];
+
+const AGENTNAMES={"01":"Consumer","02":"Marketplace","03":"Product","04":"Commercial","05":"Cultural","06":"Athlete","07":"Design","A":"Skeptic A","B":"Skeptic B","C":"Skeptic C","D":"Skeptic D","deck":"BB_2.0 deck"};
+let cur=0;
+
+const chips=document.getElementById("chips");
+OPPS.forEach((o,i)=>{
+  const c=document.createElement("button");
+  c.className="chip";c.setAttribute("aria-pressed","false");
+  c.textContent=o.id+" · "+o.name;
+  c.onclick=()=>show(i);
+  chips.appendChild(c);
+});
+
+function show(i){
+  cur=i;const o=OPPS[i];
+  [...chips.children].forEach((c,j)=>c.setAttribute("aria-pressed",j===i?"true":"false"));
+  const vclass={INVEST:"v-invest",EXPLORE:"v-explore",WATCH:"v-watch",REJECT:"v-reject"}[o.verdict];
+  document.getElementById("opp").innerHTML=`
+   <div class="opp-top">
+     <div>
+       <div class="opp-idx">Opportunity ${o.id} · ${i+1} of ${OPPS.length}</div>
+       <h3 class="opp-name">${o.name}</h3>
+       <p class="opp-line">${o.line}</p>
+     </div>
+     <div class="verdict">
+       <div class="vk">Portfolio posture</div>
+       <div class="vv ${vclass}">${o.verdict}</div>
+       <div class="scorebar"><i style="width:${(o.score/50*100).toFixed(0)}%"></i></div>
+       <div class="vmeta"><span>Score ${o.score}/50</span><span>Confidence ${o.conf}</span></div>
+     </div>
+   </div>
+   <div class="opp-grid">
+     <div class="field"><div class="fk">Target consumer</div><div class="fv">${o.consumer}</div></div>
+     <div class="field"><div class="fk">Job to be done</div><div class="fv">${o.jtbd}</div></div>
+     <div class="field"><div class="fk">Why now</div><div class="fv">${o.why}</div></div>
+     <div class="field field--wide"><div class="fk">Product idea</div><div class="fv">${o.idea}</div></div>
+     <div class="field"><div class="fk">Evidence stack</div><div class="fv"><div class="stack">${o.stack.map(s=>`<span class="spill${s[1]===0?" spill--sk":s[1]===2?" spill--deck":""}">${AGENTNAMES[s[0]]}</span>`).join("")}</div></div></div>
+     <div class="field field--wide"><div class="fk">Key features required to win</div><div class="fv"><ul>${o.feat.map(f=>`<li>${f}</li>`).join("")}</ul></div></div>
+     <div class="field"><div class="fk">Price &amp; marketplace role</div><div class="fv"><b>${o.price}</b><br><span style="color:var(--muted)">${o.role}</span></div></div>
+     <div class="field field--warn field--wide"><div class="fk">⚠ Contradictory evidence — carried, not resolved</div><div class="fv">${o.contra}</div></div>
+     <div class="field"><div class="fk">What would need to be true</div><div class="fv">${o.true}</div></div>
+     <div class="field field--wide" style="border-bottom:none"><div class="fk">What we still don't know</div><div class="fv">${o.unknown}</div></div>
+     <div class="field" style="border-bottom:none;border-right:none"><div class="fk">Sizing</div><div class="fv"><button class="chip" id="sizeBtn" style="border-color:var(--blue);color:var(--blue)">Model this opportunity ↓</button></div></div>
+   </div>`;
+  document.getElementById("sizeBtn").onclick=()=>{loadModel(i);document.getElementById("mOpp").scrollIntoView({behavior:"smooth",block:"center"});};
+}
+document.getElementById("prev").onclick=()=>show((cur-1+OPPS.length)%OPPS.length);
+document.getElementById("next").onclick=()=>show((cur+1)%OPPS.length);
+show(0);
+
+/* ============ MODEL ============ */
+const S=[1,2,3,4,5].map(n=>document.getElementById("s"+n));
+const V=[1,2,3,4,5].map(n=>document.getElementById("v"+n));
+let modelIdx=0;
+function loadModel(i){
+  modelIdx=i;const m=OPPS[i].m;
+  document.getElementById("mOpp").textContent=OPPS[i].name;
+  S[0].value=m.pop;S[1].value=m.rate;S[2].value=m.cap;S[3].value=m.asp;S[4].value=m.fp;
+  calc();
+}
+function fmt(n){
+  if(n>=1e9)return "$"+(n/1e9).toFixed(2)+"B";
+  if(n>=1e6)return "$"+(n/1e6).toFixed(0)+"M";
+  return "$"+Math.round(n).toLocaleString();
+}
+function fmtU(n){
+  if(n>=1e6)return (n/1e6).toFixed(1)+"M";
+  if(n>=1e3)return (n/1e3).toFixed(0)+"K";
+  return Math.round(n).toLocaleString();
+}
+function calc(){
+  const pop=+S[0].value,rate=+S[1].value,cap=+S[2].value,asp=+S[3].value,fp=+S[4].value;
+  V[0].textContent=pop;V[1].textContent=rate.toFixed(1);V[2].textContent=cap.toFixed(1);V[3].textContent=asp;V[4].textContent=fp;
+  const players=pop*1e6, demand=players*rate, units=demand*(cap/100), gross=units*asp, net=gross*(fp/100), lost=gross-net;
+  document.getElementById("out").textContent=fmt(net);
+  document.getElementById("outUnits").textContent=`${fmtU(units)} units at $${asp} · ${fmt(lost)} left on the table to markdown`;
+  const max=Math.max(players,1);
+  const set=(id,val,ref)=>document.getElementById(id).style.width=Math.max(1.5,Math.min(100,val/ref*100))+"%";
+  set("w1",players,players);set("w2",demand,Math.max(players,demand));set("w3",units,demand);
+  set("w4",net,gross);set("w5",lost,gross);
+  document.getElementById("t1").textContent=fmtU(players);
+  document.getElementById("t2").textContent=fmtU(demand);
+  document.getElementById("t3").textContent=fmtU(units);
+  document.getElementById("t4").textContent=fmt(net);
+  document.getElementById("t5").textContent=fmt(lost);
+}
+S.forEach(s=>s.addEventListener("input",calc));
+document.getElementById("reset").onclick=()=>loadModel(modelIdx);
+loadModel(0);
+
+/* ============ EXPRESSIONS ============ */
+const X=[
+{label:"HEAT",title:"OPEN AIR",tier:"$$$",
+ example:"The Aero-FIT aperture map made visible — open cells over quad and side-seam heat zones closing progressively to solid at waistband and hem. The gradient is a picture of the athlete's thermal load.",
+ consumer:"High-frequency player, indoor and outdoor, hot-humid markets first. Buys shoes at $150 and has nothing above $60 to wear with them.",
+ marketplace:"$60–75. Above the verified $55–60 ceiling, below footwear spend. Held out of the promo cadence or it lands at $45 in a season.",
+ classification:"Performance flagship · men's and women's · 6\"/8\"/10\"",
+ features:["Open/closed elliptical mesh zoning","High-crimp yarn structure, not a coating","Zone map validated on wet adhesion, not only on wicking","Published cling number — the competitive moat","Comfort claim only; performance language fails substantiation"]},
+{label:"GRIP",title:"SET RISE",tier:"$$",
+ example:"The waistband rebuilt as the signature component — a structural external band with legible rise and cinch adjustment, replacing the anonymous elastic tunnel athletes have been rolling for a decade.",
+ consumer:"All serious players; most acute in the women's game, where hem-tucking under the compression layer compounds the hack.",
+ marketplace:"Platform component propagating across the range. Strongest launched alongside the flagship rather than alone.",
+ classification:"Platform · all tiers · unisex block",
+ features:["Engineered adjustable rise","Cinch that holds four quarters","Non-rolling band in the defensive stance","Hem terminating where athletes currently tuck","Snag and pressure-point clearance under a jersey"]},
+{label:"BLACKTOP",title:"OUTDOOR SPEC",tier:"$$",
+ example:"The apparel answer to the outdoor ball and the outdoor outsole. Reinforced where asphalt actually destroys a garment — seat, outer hip, hem — with the wear pattern used as the graphic.",
+ consumer:"Outdoor pickup and community players. US blacktop, and Greater China's 300M participants across 1M outdoor courts.",
+ marketplace:"Premium to core mesh, steeply localised. The need is highest exactly where willingness-to-pay is lowest — this is the open commercial question.",
+ classification:"Purpose-built outdoor · men's · 8\"/10\"",
+ features:["UV-stabilised elastane — UV kills the fibre the squat needs","Abrasion zoning at seat and outer hip","Elevated tear strength, soil-tolerant colour","Secured on-body carriage — no locker room outdoors","Hem geometry that survives surface contact"]},
+{label:"PROPORTION",title:"TRUE LENGTH",tier:"$$",
+ example:"The team channel's stature grading brought to the consumer — length chosen by body, not by a number. Published inseam and hip specs where today there is only an inch.",
+ consumer:"Everyone currently guessing between 5\" and 11\", acutely at the extremes of basketball's exceptional body range.",
+ marketplace:"Platform change, not a tier. Cheapest expression is navigation and copy on SKUs that already exist.",
+ classification:"Line architecture · all genders · full ladder",
+ features:["Stature-referenced ladder replacing absolute inches","Thigh girth graded independently of length","Published inseam and hip width in consumer copy","Grade rule decoupled — mass scales 1.30×, stature 1.08×","Gate on internal returns coding before cutting a pattern"]}
+];
+document.getElementById("xgrid").innerHTML=X.map(x=>`
+<div class="xcard">
+  <div class="xhead"><span class="xl">${x.label}</span><span class="xt">${x.title}</span><span class="xl">${x.tier}</span></div>
+  <div class="xquad">
+    <div class="xq"><h5>Example</h5><p>${x.example}</p></div>
+    <div class="xq"><h5>Consumer</h5><p>${x.consumer}</p></div>
+    <div class="xq"><h5>Marketplace</h5><p>${x.marketplace}</p></div>
+    <div class="xq"><h5>Classification</h5><p>${x.classification}</p></div>
+    <div class="xq xq--wide"><h5>Feature set required to win</h5><ul>${x.features.map(f=>`<li>${f}</li>`).join("")}</ul></div>
+  </div>
+</div>`).join("");
+
+/* ============ RANK ============ */
+const RANK=[
+["The Cling Standard",43,"INVEST"],["Fit by Body, Not by Inch",42,"INVEST"],["The Engineered Waistband",41,"INVEST"],
+["Discount-Immune Franchise",36,"EXPLORE"],["The Outdoor-Spec Short",36,"EXPLORE"],["Women's, Culture First",36,"EXPLORE"],
+["Designed to Be Recycled",32,"EXPLORE"],["Two Named Silhouettes",32,"WATCH"],["$100+ Archive Tier",32,"WATCH"],
+["3x3 / Tournament-Day Short",29,"WATCH"],["SE Asia Climate Fork",28,"WATCH"],["Integrated Liner System",28,"WATCH"],
+["Hand-Drying Moisture Panel",27,"REJECT"],["Core Durability Spec Floor",23,"WATCH"],
+["Take UA/Puma Vacated Shelf",21,"REJECT"],["Fill the \"Empty\" $55–85 Tier",19,"REJECT"],["Big &amp; Tall Inseam Extension",18,"REJECT"]
+];
+const VC={INVEST:"var(--blue)",EXPLORE:"#1B1B1B",WATCH:"var(--plausible)",REJECT:"var(--rejected)"};
+document.getElementById("rank").innerHTML=RANK.map((r,i)=>`
+<div class="rrow">
+  <span class="ri num">${String(i+1).padStart(2,"0")}</span>
+  <span class="rn">${r[0]}</span>
+  <div class="rtrack"><i style="width:${(r[1]/50*100).toFixed(0)}%;background:${VC[r[2]]}"></i></div>
+  <span class="rstat"><i class="dot" style="background:${VC[r[2]]}"></i><span>${r[2]}</span></span>
+</div>`).join("");
+</script>
