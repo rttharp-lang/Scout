@@ -1,0 +1,766 @@
+{
+  "agent_id": "A02",
+  "agent_name": "Marketplace Intelligence",
+  "domain": "Competitive landscape, market growth, assortment, distribution, pricing architecture and market share for basketball shorts globally",
+  "research_narrative": "I approached this as a PLM would: first size the category and its regional growth, then read the scoreboards of the incumbents and challengers, then walk the price ladder from Temu to Lululemon, and finally look for markets and consumer groups where demand signals outrun supply. I ran 34 distinct WebSearch queries across market reports (Technavio/Research and Markets, Grand View, market.us, Ken Research, 6Wresearch), company results (Nike FY26 10-K and Q4 release, Li-Ning, Anta, 361 Degrees, New Balance, Under Armour/Curry), retailer assortments (Foot Locker, Dick's, Amazon best sellers, Temu, Fanatics/Mitchell & Ness, Titan 22, Zalora, adidas.com.ph), DTC brands (Hoop Culture, Overtime, ballaholic), and non-US markets (Greater China, Japan, Korea, Philippines, Europe, Australia, Mexico/Brazil/India, Africa). A material limitation: every WebFetch I attempted (roughly 60 URLs across nike.com, sec.gov, sgbonline, footlocker, dickssportinggoods, lululemon, mitchellandness, adidas, underarmour, blhlc.com, hoopculture.com, cnbc, wwd, and even Wikipedia) was blocked by the network egress proxy, and the session's shared WebSearch budget was exhausted before I could run a planned third wave of price-ladder queries (Japan yen, Philippines peso, Mexico, Brazil, Korea, Europe EUR). Every evidence item below therefore rests on search-result snippets and summaries returned for URLs I actually retrieved, not on full page reads; I have set confidence to Medium at best and flagged inferred or background-knowledge items explicitly. The PLM team should treat the numbers as leads to verify against the primary pages.\n\nWhat surprised me most was the China paradox. Every market report says Asia-Pacific is the fastest-growing basketball apparel region and China has more than 300 million players, and the China sportswear market is growing at 8 percent plus. Yet Nike's Greater China revenue fell 13 percent currency-neutral in FY26 with apparel units down 8 percent, and Li-Ning, the domestic basketball leader, reported basketball retail sales down 19 percent in 2025 with deeper discounting in its direct channel. Growth in participation is not translating into growth in the branded performance basketball category; running is taking the wallet. That reframes Worldball: the whitespace is not 'more basketball shorts in China' but a product that is differentiated enough (outdoor durability, price-value) to escape the discount spiral that Li-Ning and Nike are both caught in.\n\nThe second surprise was how polarized the price ladder has become. Amazon's best-seller list is dominated by unbranded labels (NORTHYARD, BALENNZ, Amazon Essentials at roughly 4 dollars a pair in a two-pack), while premium entrants (Lululemon mesh basketball shorts, Curry 6.5-inch shorts at 90 dollars list) are being cleared at 40 to 50 percent off. The 45 to 50 dollar mainstream tier (Nike DNA, New Balance 7-inch mesh) sits between commoditization from below and promotional erosion from above.\n\nThird, women's basketball demand is exploding (college women's basketball apparel up 361 percent year on year, Shopify fan-accessory sales more than doubling at the 2025 WNBA tip-off, Homage doubling WNBA sales) but the performance-shorts supply I could find is thin: Nike's Sabrina 4 apparel with Aero-FIT arrived only in July 2026 and adidas markets Candace Parker shorts as gender-neutral. Fan merchandise is capturing the surge, performance shorts are not.\n\nWhat I could not find: any report that isolates basketball shorts as a segment (all data is basketball apparel or sports shorts), any reliable Circana sell-through data on shorts, brand share data for shorts specifically, credible price ladders for Japan, Korea, Mexico, Brazil or India, and any resale (StockX/GOAT) data on basketball shorts. Korea and Africa returned only generic report snippets.\n\nFrom evidence to opportunities: I mapped each demand signal against the supply and price evidence. Where demand is growing and supply is either absent (women's performance shorts), promo-dependent (China basketball), commoditized (youth multi-packs) or captured by non-performance brands (retro swingman, local streetball labels), I framed an opportunity with a price position anchored to the retrieved price points. I have not ranked these against other domains; that is for the portfolio agents.",
+  "top_signals": [
+    {
+      "id": "A02-S1",
+      "title": "Basketball apparel is a mid-single-digit growth category; APAC (China, Philippines) is the fastest-growing region",
+      "finding": "Multiple syndicated reports converge on 5-6.5% CAGR for global basketball apparel: Technavio/Research and Markets forecast USD 6.32-6.53B of incremental growth over 2024/25-2030 at 6.4-6.5% CAGR; Verified Market Reports sizes it at USD 4.19B (2024) to USD 6.62B (2033), 5.3% CAGR. Asia-Pacific is consistently named the fastest-growing region with China and the Philippines as key drivers; Europe basketball gear is slower at 4.9% CAGR (Grand View, 2025-2030). No report isolates basketball shorts as a segment; the broader sports-shorts market is sized at USD 10.19B (2025) growing 3.9% CAGR.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Research and Markets - Basketball Apparel Market Size, Competitors & Forecast (search snippet)",
+          "url": "https://www.researchandmarkets.com/report/basketball-wear",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Basketball apparel buyers, all segments",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The global basketball apparel market is forecasted to grow by USD 6.53 billion during 2025-2030, accelerating at a CAGR of 6.4% during the forecast period."
+        },
+        {
+          "source": "Technavio - Basketball Apparel Market Size to Grow by USD 6.32 Billion from 2024 to 2029 (search snippet)",
+          "url": "https://www.technavio.com/report/basketball-apparel-market-industry-analysis",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Basketball apparel market",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The Basketball Apparel market is expected to grow at a CAGR of 6.5% during 2025-2029 ... APAC is emerging as the highest-growth region, propelled by increasing sports participation rates in countries such as China, Japan, South Korea, and Australia."
+        },
+        {
+          "source": "Intel Market Research - Basketball Apparel Market Outlook 2026-2034 (search snippet)",
+          "url": "https://www.intelmarketresearch.com/basketball-apparel-market-34671",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Asia-Pacific",
+          "consumer_or_market": "Basketball apparel consumers in China and Philippines",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Asia-Pacific represents the fastest-growing basketball apparel market, with China and the Philippines as key drivers. Rising middle-class populations and NBA popularity fuel demand for both performance and lifestyle basketball apparel."
+        },
+        {
+          "source": "WiseGuy Reports - Sports Shorts Market Size, Trends & Forecast 2035 (search snippet)",
+          "url": "https://www.wiseguyreports.com/reports/sports-shorts-market",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "All sports shorts buyers (basketball is one sub-segment)",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "The Sports Shorts Market was valued at USD 10.19 Billion in 2025 and is projected to grow to USD 15 Billion by 2035, at a CAGR of 3.9%."
+        }
+      ],
+      "consumer_groups": "All basketball apparel buyers; APAC performance and lifestyle consumers",
+      "implication": "Shorts growth will come from region and segment mix (APAC, women, youth), not from category tailwind alone; a PLM should plan share-taking product rather than rely on market lift, and should note that shorts-specific sizing must be built internally because no syndicated source isolates it."
+    },
+    {
+      "id": "A02-S2",
+      "title": "Nike is losing Greater China share while the China sportswear market grows 8%+ and domestic brands post double-digit gains",
+      "finding": "Nike FY26 (ended 31 May 2026) Greater China revenue was USD 5,847M, down 11% reported / 13% currency-neutral, with apparel at USD 1,535M down 7% currency-neutral on unit declines of 8% (ASP +1pt). Meanwhile the China sportswear market is estimated at USD 84B in 2025 growing 8.43% CAGR, Anta's revenue rose 14.3% (latest results headline) after taking the #1 share position at 23.0% in 2024, and 361 Degrees posted 11% revenue growth for 2025 with e-commerce up 35-40% in Q1 2025. Reports explicitly attribute Nike's China weakness to local brands gaining ground.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "NIKE, Inc. Form 10-K FY2026 (search snippet)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000088/nke-20260531.htm",
+          "source_date": "2026-05-31",
+          "data_type": "SEC filing",
+          "geography": "Greater China",
+          "consumer_or_market": "Nike Greater China revenue and apparel",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Greater China ... total revenues of $5,847 million in fiscal 2026, down 11% on a reported basis and down 13% on a currency-neutral basis ... Apparel revenues in Greater China were $1,535 million ... unit sales of apparel decreasing 8%, while higher average selling price per unit contributed approximately 1 percentage point."
+        },
+        {
+          "source": "Just Style - Nike's sales remain flat as China weakness drags on annual results (search snippet)",
+          "url": "https://www.just-style.com/news/nike-fy26-result-sales/",
+          "source_date": "2026-06",
+          "data_type": "news article",
+          "geography": "Greater China / Global",
+          "consumer_or_market": "Nike shoppers in China",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "The Greater China region generates approximately 15% of Nike's total annual sales ... local brands gaining ground at Nike's expense as shoppers gravitate away from the American label."
+        },
+        {
+          "source": "Ken Research - China Sportswear Market Growth Analysis & Trends to 2030 (search snippet)",
+          "url": "https://www.kenresearch.com/industry-reports/china-sports-wear-market",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "China",
+          "consumer_or_market": "China sportswear consumers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The China Sportswear Market is worth USD 84,000 million in 2025 and is growing at a CAGR of 8.43% to reach USD 148,000 million by 2032."
+        },
+        {
+          "source": "ANTA Sports IR - ANTA Sports' Revenue Increases by 14.3% / Achieves Another Record High (search snippets)",
+          "url": "https://ir.anta.com/en/news_detail.php?id=153056",
+          "source_date": "unknown",
+          "data_type": "company press release",
+          "geography": "China",
+          "consumer_or_market": "Anta Group",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "ANTA Sports' Revenue Increases by 14.3% ... For 2024, overall revenue increased by 13.6% year-on-year to RMB70.83 billion. The Group's market share in the Chinese sportswear market increased to 23.0% in 2024, taking the top spot."
+        }
+      ],
+      "consumer_groups": "Greater China performance and lifestyle basketball consumers; Tmall/JD shoppers",
+      "implication": "The Worldball China opportunity is a share-recovery problem against Anta, Li-Ning and 361, not a greenfield. Product must win on a dimension domestic brands are not owning (outdoor durability, fit, or price-value) and be distributed through the channels where domestic brands are growing fastest (e-commerce up 35-40% at 361)."
+    },
+    {
+      "id": "A02-S3",
+      "title": "Basketball is the weakest category at China's basketball leader: Li-Ning basketball retail sales fell 19% in 2025 amid discounting",
+      "finding": "Li-Ning's 2025 revenue grew 3.2% to RMB 29,598M, but basketball (17% of mix) saw retail sales decline 19%, apparel fell 3.4% in H1 2025, and DTC revenue and gross margin were hurt by 'intense competition, deeper discounting'. Running became the top growth engine. Li-Ning cited proactive inventory control in basketball. This indicates the branded performance-basketball segment in China is saturated and promotional, even as participation is high.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Sporting Goods Intelligence - Li Ning 2025 results: profit beat, revenue up 3.2% (search snippet)",
+          "url": "https://www.sgieurope.com/financial-results/li-ning-profit-beats-estimates-and-shares-rally/120161.article",
+          "source_date": "2026-03",
+          "data_type": "earnings coverage",
+          "geography": "China",
+          "consumer_or_market": "Li-Ning basketball and apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball, which accounts for 17 percent of the mix, declined 19 percent in retail sales ... The Group's revenue amounted to RMB29,598 million, representing an increase of 3.2% compared with 2024."
+        },
+        {
+          "source": "BigGo Finance - Li-Ning's 2025 Revenue Nears 30 Billion Yuan, Running Category Becomes Top Growth Engine, Basketball Business Under Pressure (search snippet)",
+          "url": "https://finance.biggo.com/news/HMY2D50BNZYCTTDv_5xD",
+          "source_date": "2026-03",
+          "data_type": "news article",
+          "geography": "China",
+          "consumer_or_market": "Li-Ning category mix",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "The traditionally strong basketball business saw a 19% decline in retail sales due to market weakness and the company's proactive inventory control."
+        },
+        {
+          "source": "KrASIA - With profits down, Li-Ning leans on core sports to weather a slower market (search snippet)",
+          "url": "https://kr-asia.com/with-profits-down-li-ning-leans-on-core-sports-to-weather-a-slower-market",
+          "source_date": "2025",
+          "data_type": "news article",
+          "geography": "China",
+          "consumer_or_market": "Li-Ning DTC channel",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Apparel sales declined 3.4% in the first half of 2025. The group attributed the decline in direct-to-consumer (DTC) channel revenue and gross margin to intense competition, deeper discounting, and store adjustments."
+        }
+      ],
+      "consumer_groups": "China performance basketball players; Li-Ning core consumers",
+      "implication": "Do not size the China outdoor opportunity off participation alone; the current branded basketball offer is over-inventoried and price-eroded. A Nike outdoor short must carry a reason-to-buy (durability, heat management, fit system) that justifies full price rather than joining the discount fight."
+    },
+    {
+      "id": "A02-S4",
+      "title": "The price ladder is polarizing: sub-USD 10 unbranded at the bottom, USD 45-50 branded core, USD 78-90 premium that only sells at 40-50% off",
+      "finding": "Amazon's best-seller list for men's basketball/athletic shorts is dominated by unbranded labels (NORTHYARD, BALENNZ, Soothfeel, G Gradual, Amazon Essentials) with Amazon Essentials 2-packs at USD 7.97 and 5-packs at USD 26.59; Temu lists 10-inch mesh zip-pocket basketball shorts. Branded core sits at USD 45-50 (Nike DNA Dri-FIT in 6/8/10-inch; New Balance Basketball 7-inch Mesh at USD 50, on sale USD 37.50 at Foot Locker). Premium entrants are heavily promoted: Curry 6.5-inch shorts USD 90 list cut to USD 48 (47% off) and Lululemon mesh basketball shorts marketed 'under $50' on sale.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Slickdeals - Amazon Essentials Men's Athletic Basketball Gym Performance Tech Loose-Fit Training Shorts Pack of 2 $7.97 (search snippet)",
+          "url": "https://slickdeals.net/f/19209160-amazon-essentials-men-s-athletic-basketball-gym-performance-tech-loose-fit-training-shorts-pack-of-2-7-97",
+          "source_date": "unknown",
+          "data_type": "deal listing",
+          "geography": "United States",
+          "consumer_or_market": "Value-seeking US online shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Amazon Essentials men's athletic basketball gym performance tech loose fit training shorts pack of 2 $7.97; Ultra Performance 5-pack $26.59; Barjneel 2-pack from $10.39"
+        },
+        {
+          "source": "Amazon Best Sellers - Best Men's Basketball Shorts (search snippet)",
+          "url": "https://www.amazon.com/Best-Sellers-Sports-Outdoors-Mens-Basketball-Shorts/zgbs/sporting-goods/2420035011",
+          "source_date": "unknown",
+          "data_type": "retailer best-seller list",
+          "geography": "United States",
+          "consumer_or_market": "US Amazon shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Popular brands ... include NORTHYARD Men's Athletic Running Shorts, BALENNZ Mens Athletic Shorts, Soothfeel Men's Running Shorts, Amazon Essentials Men's Athletic Basketball Gym Shorts, and G Gradual ... NY Threads and CRZ YOGA."
+        },
+        {
+          "source": "Men's Journal - Under Armour's Curry Shorts Are Now Under $50 (search snippet)",
+          "url": "https://www.mensjournal.com/shopping/under-armour-curry-shorts-sale",
+          "source_date": "2025",
+          "data_type": "news article / deal coverage",
+          "geography": "United States",
+          "consumer_or_market": "Under Armour Curry Brand shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The Curry 6.5-Inch Shorts are on sale at Under Armour for $48, a 47% discount from their original price of $90, as part of Under Armour's Summer Sale Event."
+        },
+        {
+          "source": "Foot Locker - Men's Basketball Shorts category (search snippet)",
+          "url": "https://www.footlocker.com/category/sport/basketball/mens/clothing/shorts.html",
+          "source_date": "unknown",
+          "data_type": "retailer product listing",
+          "geography": "United States",
+          "consumer_or_market": "Foot Locker basketball shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Brands like Jordan, Nike, Under Armour, and New Balance ... New Balance Basketball 7\" Mesh Shorts on sale for $37.50, reduced from $50.00."
+        }
+      ],
+      "consumer_groups": "US value shoppers; mainstream branded buyers; premium athleisure buyers",
+      "implication": "USD 45-50 is the contested core and is being squeezed from below by USD 4-per-pair private label and from above by discounted USD 78-90 product. Full-price integrity requires visible differentiation (fabric, fit system, durability) or a multi-pack/value construct that meets Amazon Essentials on convenience without racing to its price."
+    },
+    {
+      "id": "A02-S5",
+      "title": "Inseam architecture is splitting: performance is going shorter (6-7 in.) while lifestyle/retro is going longer (9 in.+)",
+      "finding": "Nike's DNA franchise ladders 6/8/10-inch for men and 5-inch for boys; New Balance leads with 7-inch mesh; Curry's shorts are 6.5-inch and Under Armour's playbook says Curry wears 7-9-inch; Lululemon offers 8 and 9-inch. Hibbett's trend guidance says retro shorts lean 9-inch-plus while modern takes are 7-inch or shorter, and that '90s/'00s vintage basketball shorts were among the hottest looks of 2025. Mitchell & Ness Swingman shorts are stocked across Fanatics, NBA Store and DXL (big and tall).",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Hibbett - Retro Basketball Shorts: Why They're Back & How to Style (search snippet)",
+          "url": "https://www.hibbett.com/blog-expert-advice/retro-basketball-shorts-how-to-style.html",
+          "source_date": "2025",
+          "data_type": "retailer editorial",
+          "geography": "United States",
+          "consumer_or_market": "Youth and young-adult lifestyle shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Y2K trends including '90s and '00s favorites made up some of the hottest looks of 2025 ... Retro shorts lean longer (with a 9\" or longer inseam), while more modern takes balance movement and breathability with a 7\" inseam or shorter."
+        },
+        {
+          "source": "Nike.com - Nike DNA Men's Dri-FIT 6\"/8\"/10\" Basketball Shorts product and review pages (search snippet)",
+          "url": "https://www.nike.com/t/dna-mens-dri-fit-8-basketball-shorts-jVkw9d",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Nike basketball performance buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "The shorts come in different inseam lengths (6\", 8\", and 10\") and feature side pockets and a zippered utility pocket large enough to keep a phone secure ... Boys' Dri-FIT DNA 5\" Basketball Shorts (Dick's)."
+        },
+        {
+          "source": "Under Armour Playbook - 10 Things to Look for in Basketball Shorts (search snippet)",
+          "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/",
+          "source_date": "unknown",
+          "data_type": "brand editorial",
+          "geography": "United States",
+          "consumer_or_market": "Performance basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Many modern performance shorts now sport a shorter cut, typically ranging from 7 to 9 inches ... Steph Curry wears shorts in the 7- to 9-inch inseam range."
+        },
+        {
+          "source": "Fanatics - Mitchell & Ness Shorts (search snippet)",
+          "url": "https://www.fanatics.com/mitchell-and-ness-shorts/br-451078+d-86119074+z-9887-3857182604",
+          "source_date": "unknown",
+          "data_type": "retailer product listing",
+          "geography": "United States",
+          "consumer_or_market": "NBA fan / lifestyle shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Vancouver Grizzlies 1996/97 Hardwood Classics Fadeaway Reload 3.0 Swingman Shorts, Philadelphia 76ers 1996/97 versions, Golden State Warriors 75th Anniversary Swingman Shorts ... Whether you're relaxing at home or playing a game of pick-up ball."
+        }
+      ],
+      "consumer_groups": "Performance players (shorter); Gen Z lifestyle and NBA-fan shoppers (longer retro)",
+      "implication": "A single 8-inch 'compromise' short serves neither pole well. The line plan should hold a clear 5-7-inch performance ladder and a distinct 9-11-inch heritage/lifestyle ladder, merchandised and priced separately (performance in sport channels, heritage against Mitchell & Ness in fan and lifestyle doors)."
+    },
+    {
+      "id": "A02-S6",
+      "title": "Women's basketball demand has exploded but branded women's performance shorts supply remains thin and late",
+      "finding": "Women's college basketball apparel sales in 2024-25 were 361% above the prior academic year, surpassing men's; Shopify stores saw sports-fan accessory sales up 101.5% YoY at the May 2025 WNBA tip-off; Homage's WNBA sales doubled YoY in May 2025 after a 900% jump in early 2024. On the product side, Nike's Sabrina 4 apparel collection (July 2026) is described as the first time Aero-FIT cooling is used in basketball jersey and shorts, and adidas positions Candace Parker shorts as gender-neutral. Women's basketball shorts categories exist at Foot Locker, Dick's and adidas, but no search surfaced a dedicated women's-fit performance basketball short franchise comparable to men's DNA.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Shopify Blog - The WNBA Isn't Just Having a Moment, It's a Major Growth Opportunity for Small Businesses (search snippet)",
+          "url": "https://www.shopify.com/blog/wnba-drives-sales",
+          "source_date": "2025",
+          "data_type": "platform data / blog",
+          "geography": "United States",
+          "consumer_or_market": "WNBA fans buying merchandise online",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "When the 2025 WNBA season tipped off in May, Shopify reports that stores saw sales of sports fan accessories more than double (up 101.5% year over year) ... Homage saw its WNBA product sales jump 900% in early 2024, and in May 2025, its WNBA sales were double what they were a year prior."
+        },
+        {
+          "source": "Boston 25 News / Shopify syndication - WNBA growth opportunity (search snippet)",
+          "url": "https://www.boston25news.com/news/wnba-isnt-just-having-moment-its-major-growth-opportunity-small-businesses/QJSR7DVNNBOZBPJ2SINSP2F45U/",
+          "source_date": "2025",
+          "data_type": "news article",
+          "geography": "United States",
+          "consumer_or_market": "Women's college basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Women's basketball apparel during 2024-2025 was 361% higher than the previous academic year, surpassing men's basketball."
+        },
+        {
+          "source": "Nike.com - Nike Sabrina 4 release info (search snippet)",
+          "url": "https://www.nike.com/a/nike-sabrina-4-release-info",
+          "source_date": "2026-07",
+          "data_type": "product launch page",
+          "geography": "Global / United States",
+          "consumer_or_market": "Women's performance basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike introduced Aero-FIT cooling technology in Sabrina Ionescu's signature jersey and shorts for the first time in basketball wear, with the apparel collection including her signature jersey and shorts plus versatile pieces designed for training, travel and recovery."
+        },
+        {
+          "source": "adidas US - Women's Candace Parker Basketball Gear (search snippet)",
+          "url": "https://www.adidas.com/us/candace_parker-women-basketball",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "adidas offers Candace Parker women's basketball apparel including gender-neutral tank tops and shorts."
+        }
+      ],
+      "consumer_groups": "Women and girls who play; women's basketball fans; college and WNBA communities",
+      "implication": "The revenue surge is being captured by fan merchandise (jerseys, tees, small DTC brands), not by performance shorts. A women's-fit performance short franchise with a clear inseam ladder and a fan-crossover colorway program is whitespace that Nike's Sabrina/A'One platforms can anchor before adidas or New Balance do."
+    },
+    {
+      "id": "A02-S7",
+      "title": "Distribution is swinging back to wholesale and physical retail; Nike Digital has declined for 10 straight quarters",
+      "finding": "Nike's wholesale revenue grew 4% in both Q4 and full-year FY26 while Nike Digital sales fell for the tenth consecutive quarter; Jordan Streetwear sell-through remains challenged, hurting discounting and future order books. New Balance, the fastest-growing scaled competitor, opened 80 new doors in 2025 and passed USD 1B in owned retail. Retailers themselves are the shorts merchants: Foot Locker (Jordan/Nike/UA/NB), Dick's (Nike/UA/Jordan, with inseam and clearance filters), Fanatics/NBA Store (Mitchell & Ness, Lululemon), Titan 22 in the Philippines, Rebel in Australia, KICKZ in Europe.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Digital Commerce 360 - Nike Digital sales fall for 10th straight quarter in fiscal Q4 2026 (search snippet)",
+          "url": "https://www.digitalcommerce360.com/article/nike-digital-sales/",
+          "source_date": "2026-06",
+          "data_type": "news article",
+          "geography": "Global",
+          "consumer_or_market": "Nike channel mix",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike Digital sales fall for 10th straight quarter in fiscal Q4 2026 ... Nike's wholesale revenue overall grew 4% for both Q4 and the full fiscal year."
+        },
+        {
+          "source": "Sportico - Nike's Jordan Brand Revenue Declines 16% During Fiscal Year (search snippet)",
+          "url": "https://www.sportico.com/business/commerce/2025/nike-jordan-brand-revenue-declines-1234858242/",
+          "source_date": "2025",
+          "data_type": "news article",
+          "geography": "Global",
+          "consumer_or_market": "Jordan Brand consumers and wholesale partners",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Jordan Brand revenue declined 16% for the fiscal year ending May 2025 to $7.3 billion ... sell-through remains challenged in Jordan Streetwear, impacting both current discounting and future order books."
+        },
+        {
+          "source": "SGB Media - New Balance Eyes $10B in 2026 as Revenues Surge 19 Percent in 2025 (search snippet)",
+          "url": "https://sgbonline.com/new-balance-revenues-surge-19-percent-in-2025-on-path-to-reach-10b-in-2026/",
+          "source_date": "2026",
+          "data_type": "news article",
+          "geography": "Global",
+          "consumer_or_market": "New Balance",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Global apparel and owned retail each surpassed $1 billion for the first time ... an aggressive store-opening plan that saw 80 new doors opened globally in 2025 alone."
+        }
+      ],
+      "consumer_groups": "Wholesale shoppers at Foot Locker/Dick's/JD/Fanatics; regional specialty retailers",
+      "implication": "Shorts line plans should be built for wholesale sell-through (clear inseam and price ladder, retailer exclusives, replenishable core) rather than app-exclusive drops; Jordan streetwear over-distribution is a cautionary tale for lifestyle shorts."
+    },
+    {
+      "id": "A02-S8",
+      "title": "Challenger momentum: New Balance (+19% to USD 9.2B, apparel >USD 1B, Cooper Flagg), 361 Degrees global signature (Jokic), and Curry leaving Under Armour",
+      "finding": "New Balance grew 19% in 2025 to USD 9.2B with North America +20% and Europe +30%, apparel over USD 1B, and signed 2025 #1 NBA pick Cooper Flagg; its 7-inch mesh basketball short is already in Foot Locker. 361 Degrees launched Nikola Jokic (JOKER2) and Aaron Gordon (AG6) signature product globally and grew revenue 11% in 2025. Curry Brand's Under Armour partnership ended in November 2025, unsettling one of the few scaled signature-athlete apparel lines and leaving Curry-inspired shorts on clearance.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "WWD - New Balance Global Sales Reached $9.2 Billion in 2025 (search snippet)",
+          "url": "https://wwd.com/footwear-news/shoe-industry-news/new-balance-global-sales-2025-sneakers-apparel-1238615804/",
+          "source_date": "2026",
+          "data_type": "news article",
+          "geography": "Global",
+          "consumer_or_market": "New Balance",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "New Balance achieved annual global sales of $9.2 billion in 2025, representing a 19 percent rise from 2024 levels ... North America up 20 percent and Europe up 30 percent ... Cooper Flagg becoming the number-one draft pick of the NBA."
+        },
+        {
+          "source": "TipRanks - 361 Degrees International sees strong Q1 2025 sales growth and product innovation (search snippet)",
+          "url": "https://www.tipranks.com/news/company-announcements/361-degrees-international-sees-strong-q1-2025-sales-growth-and-product-innovation",
+          "source_date": "2025-04",
+          "data_type": "company announcement coverage",
+          "geography": "China / Global",
+          "consumer_or_market": "361 Degrees",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "In Q1 2025, 361 Degrees' core brand and kids brand achieved 10%-15% growth, with e-commerce seeing 35%-40% growth ... launched signature footwear globally for NBA players Nikola Jokic (the JOKER2) and Aaron Gordon (the AG6)."
+        },
+        {
+          "source": "Sporting Goods Intelligence - 361 Degrees posts 11% revenue growth (search snippet)",
+          "url": "https://www.sgieurope.com/financial-results/361-degrees-posts-11-revenue-growth/120247.article",
+          "source_date": "2026-03",
+          "data_type": "earnings coverage",
+          "geography": "China",
+          "consumer_or_market": "361 Degrees",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "361 Degrees posts 11% revenue growth (2025 annual results)"
+        },
+        {
+          "source": "Wikipedia - Curry Brand (search snippet)",
+          "url": "https://en.wikipedia.org/wiki/Curry_Brand",
+          "source_date": "unknown",
+          "data_type": "encyclopedia entry",
+          "geography": "United States",
+          "consumer_or_market": "Curry Brand consumers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Curry Brand was launched by NBA star Stephen Curry in November 2020 as a sub-brand of Under Armour, until their partnership ended in November 2025."
+        }
+      ],
+      "consumer_groups": "Core hoopers following signature athletes; Europe and North America wholesale shoppers",
+      "implication": "New Balance is the competitor to watch in USD 45-50 performance shorts in North America and Europe; the Curry/UA split creates a temporary vacuum in signature guard-driven short-inseam product that Nike (Ja, Sabrina, A'ja) and adidas (Edwards) can fill."
+    },
+    {
+      "id": "A02-S9",
+      "title": "Australia is a fast-growing, under-contested basketball market: 1.3M players, female participation +25% since 2022, NBL attendance 1.09M, Champion as on-court partner",
+      "finding": "Basketball Australia reports about 1.3 million players, second among team sports nationally, with female participation up 25% since 2022. The NBL's 2025-26 season drew total attendance of 1,093,048 (average 6,665). Champion has been the NBL's on-court apparel partner since 2020 with an extension through at least 2025, and Australians are described as among the world's biggest buyers of official NBA merchandise (sold via Rebel).",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Basketball.com.au - Boom! 1.3 million Aussies play the game we all love (search snippet)",
+          "url": "https://www.basketball.com.au/news/basketball-participation-in-australia-in-2025-boast-one-million-three-hundred-thousands-players",
+          "source_date": "2025",
+          "data_type": "governing body news release",
+          "geography": "Australia",
+          "consumer_or_market": "Australian basketball participants",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "About 1.3 million players are now hitting courts across Australia, with female participation increasing by 25% since 2022. The sport's remarkable growth places it second among team participation sports nationwide."
+        },
+        {
+          "source": "Wikipedia - 2025-26 NBL season (search snippet)",
+          "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_NBL_season",
+          "source_date": "2026",
+          "data_type": "encyclopedia entry",
+          "geography": "Australia",
+          "consumer_or_market": "NBL fans",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The 2025-26 season showed strong engagement, with a total attendance of 1,093,048 and an average attendance of 6,665."
+        },
+        {
+          "source": "SportBusiness - NBL signs up Champion as apparel provider; Ragtrader - Champion extends three year contract (search snippets)",
+          "url": "https://www.sportbusiness.com/news/nbl-signs-up-champion-as-apparel-provider/",
+          "source_date": "2020-03 (extension reported 2023-07; potentially outdated)",
+          "data_type": "news article",
+          "geography": "Australia",
+          "consumer_or_market": "NBL on-court apparel",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Champion has been the official on-court apparel partner of the National Basketball League (NBL) since 2020 ... Champion's iconic 'C' logo will remain present on all NBL jerseys and on-court apparel until at least 2025."
+        }
+      ],
+      "consumer_groups": "Australian youth and female players; NBL and NBA fans in Australia",
+      "implication": "APLA growth is not only Philippines; Australia combines rising participation (especially female and youth) with a league apparel partner that is not a performance-basketball leader, leaving room for Nike performance shorts in Rebel/JD/Foot Locker Australia doors. The Champion deal status beyond 2025 should be verified."
+    },
+    {
+      "id": "A02-S10",
+      "title": "Kids/youth is projected as the fastest-growing basketball apparel segment, but branded youth shorts compete against USD 4 multi-packs",
+      "finding": "Syndicated reports project the kids segment to grow fastest (children's basketball apparel CAGR 6.8% 2023-2030; youth participation up 23% since 2020) driven by school programs and AAU with high replacement frequency. Nike's youth entry is the Boys' Dri-FIT DNA 5-inch short at Dick's; Hoop Culture sells youth 3Ball shorts DTC; but the Amazon best-seller list shows the youth/value shopper defaulting to unbranded 2- and 5-packs.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Market Research Intellect - Basketball Clothes Market (search snippet)",
+          "url": "https://www.marketresearchintellect.com/product/global-basketball-clothes-market-size-and-forecast/",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Children's basketball apparel",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "The global market for children's basketball apparel is experiencing robust growth, projected to expand at a CAGR of 6.8% from 2023-2030. The Kids segment is projected to grow at the fastest rate."
+        },
+        {
+          "source": "Dataintelo - Basketball Sportswear Market Report (search snippet)",
+          "url": "https://dataintelo.com/report/basketball-sportswear-market",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Youth basketball participants",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Youth basketball participation has surged by over 23 percent since 2020 ... School basketball programs and AAU circuits create substantial demand for youth basketball apparel ... high replacement frequency."
+        },
+        {
+          "source": "Dick's Sporting Goods - Nike Boys' Dri-FIT DNA 5\" Basketball Shorts (search snippet)",
+          "url": "https://www.dickssportinggoods.com/p/nike-boys-dri-fit-dna-5-basketball-shorts-24nikbbnkdfdn24shbsk/24nikbbnkdfdn24shbsk",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Boys' basketball shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike Boys' Dri-FIT DNA 5\" Basketball Shorts | Dick's Sporting Goods"
+        }
+      ],
+      "consumer_groups": "Kids and teens (AAU, school, rec); parents as purchasers",
+      "implication": "Uniform of Youth needs a value construct (2-pack, team-color core, durable knit) at a price parents accept for a fast-outgrown item, sold where parents shop (Dick's, Amazon, JD), rather than a single-unit premium youth short."
+    },
+    {
+      "id": "A02-S11",
+      "title": "Local culture brands are filling the lifestyle-streetball whitespace in Japan and the Philippines that global brands leave open",
+      "finding": "Tokyo's ballaholic (founded 2010) is described as one of Japan's most influential basketball labels, runs the TOKYO STREETBALL CLASSIC 2025 series, collaborates with ASICS, and is stocked by Europe's KICKZ; B.League is StarNgage's #1 sports brand in Japan. In the Philippines, local labels Delta Sportswear, Ugat Clothing and The Jersey Nation sell Filipino-heritage basketball shorts alongside Nike/adidas/Anta at Titan 22 and Zalora. Japan sports apparel grows 5.28% CAGR (2025-2032).",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Sneaker Freaker - ballaholic and ASICS Reveal STREETMOVE Vol.0 (search snippet)",
+          "url": "https://www.sneakerfreaker.com/performance/releases/asics-ballaholic-unpre-ars-low-3-streetmove-vol-0-price-buy-release-date",
+          "source_date": "2025",
+          "data_type": "news article",
+          "geography": "Japan",
+          "consumer_or_market": "Japanese streetball / lifestyle basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "ballaholic was founded in Tokyo in 2010 and has grown into one of Japan's most influential basketball labels, operating at the intersection of sport, fashion, and culture."
+        },
+        {
+          "source": "ballaholic - TOKYO STREETBALL CLASSIC Series 2025 collection (search snippet)",
+          "url": "https://blhlc.com/collections/tokyo-streetball-classic-series-2025",
+          "source_date": "2025",
+          "data_type": "brand product page",
+          "geography": "Japan",
+          "consumer_or_market": "Tokyo streetball community",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "TOKYO STREETBALL CLASSIC Series 2025 - ballaholic (collection page); ballaholic also stocked at KICKZ Online Shop (Europe)."
+        },
+        {
+          "source": "Ugat Clothing - Basketball Shorts; The Jersey Nation - Philippines Heritage Basketball Shorts; Delta Sportswear Philippines (search snippets)",
+          "url": "https://www.ugatclothing.com/basketball-shorts",
+          "source_date": "unknown",
+          "data_type": "brand product pages",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino basketball lifestyle consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Ugat Clothing offers Filipino-themed basketball shorts celebrating Philippine basketball culture; The Jersey Nation provides heritage-inspired basketball shorts with Philippine cultural elements; Delta Sportswear is a local manufacturer producing basketball jerseys and shorts."
+        },
+        {
+          "source": "Fortune Business Insights - Japan Sports Apparel Market (search snippet)",
+          "url": "https://www.fortunebusinessinsights.com/japan-sports-apparel-market-110181",
+          "source_date": "unknown",
+          "data_type": "market report",
+          "geography": "Japan",
+          "consumer_or_market": "Japan sports apparel market",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The Japan sports apparel market is projected to register a CAGR of 5.28% throughout the forecast period of 2025-2032."
+        }
+      ],
+      "consumer_groups": "Streetball and lifestyle hoopers in Japan, Philippines and Europe specialty retail",
+      "implication": "Global brands sell performance and NBA licensed product; locally coded streetball shorts (city, court, league identity) are owned by small labels. A market-by-market 'Worldball' capsule with local court identity could take this space at a premium, distributed through specialty (Titan 22, KICKZ, atmos)."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A02-T1",
+      "title": "China participation is huge and the market grows 8%+, but branded basketball is shrinking and discounting",
+      "description": "Reports cite 300M+ players and an 8.4% CAGR China sportswear market, yet Nike Greater China fell 13% currency-neutral with apparel units down 8%, and Li-Ning basketball retail sales fell 19% with deeper DTC discounting. Participation growth is not converting into branded performance-basketball demand; running and domestic value brands are capturing wallet. Any outdoor China short must escape the discount spiral rather than add inventory to it.",
+      "signal_ids": ["A02-S1", "A02-S2", "A02-S3"]
+    },
+    {
+      "id": "A02-T2",
+      "title": "Premium list prices vs. promotional reality vs. USD 4 commoditization",
+      "description": "Curry shorts list at USD 90 but sell at USD 48; Lululemon basketball shorts are marketed 'under $50' on sale; New Balance USD 50 shorts sit at USD 37.50 in Foot Locker; Amazon best sellers are unbranded 2-packs at USD 7.97. The USD 45-50 branded core is squeezed from both sides, and consumers are being trained to wait for 40-50% off.",
+      "signal_ids": ["A02-S4", "A02-S7"]
+    },
+    {
+      "id": "A02-T3",
+      "title": "Performance wants shorter; lifestyle wants longer",
+      "description": "Performance guidance and player behavior push toward 6-7 inch inseams (Curry 6.5 in., New Balance 7 in., Nike DNA 6 in.), while the hottest 2025 lifestyle look is the 9-inch-plus retro Swingman. A single mid-length short serves neither; the assortment must split into two ladders with different channels and price logic.",
+      "signal_ids": ["A02-S5"]
+    },
+    {
+      "id": "A02-T4",
+      "title": "Women's demand surge vs. thin, late performance-shorts supply",
+      "description": "Women's basketball merchandise is up triple digits (361% college apparel, Shopify +101.5%, Homage 2x) but the growth is flowing to jerseys, tees and small DTC labels. Nike's first Aero-FIT women's basketball shorts arrived only in July 2026 and adidas markets its women's signature shorts as gender-neutral. Demand exists; a dedicated women's-fit performance short ladder does not.",
+      "signal_ids": ["A02-S6"]
+    },
+    {
+      "id": "A02-T5",
+      "title": "DTC/digital ambition vs. wholesale reality",
+      "description": "Nike Digital has fallen for ten straight quarters while wholesale grew 4% in FY26; New Balance's growth is door-led (80 new stores, owned retail over USD 1B). Jordan Streetwear over-distribution hurt sell-through and order books. Membership/app-exclusive shorts drops are misaligned with where the volume is now moving.",
+      "signal_ids": ["A02-S7", "A02-S8"]
+    },
+    {
+      "id": "A02-T6",
+      "title": "Global brand scale vs. local streetball identity",
+      "description": "Global brands win on performance and NBA licensing, but the culturally rooted lifestyle short in Tokyo (ballaholic), Manila (Ugat, Jersey Nation) and Australia (Champion NBL on-court) is owned by local or non-core players. Nike's scale is an advantage in performance and a handicap in local authenticity unless product is deliberately localized.",
+      "signal_ids": ["A02-S9", "A02-S11"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A02-O1",
+      "name": "Worldball Outdoor Short for Greater China (full-price value tier vs. Anta/Li-Ning)",
+      "target_consumer": "Male and female recreational players aged 16-30 in Greater China who play on outdoor concrete/asphalt courts and currently buy Li-Ning, Anta or 361 at RMB 100-200, or discounted Nike",
+      "job_to_be_done": "Give me a short that survives outdoor courts (abrasion, heat, dust, phone/keys) at a price that feels fair without waiting for a 40% promotion",
+      "product_problem": "Nike's China basketball apparel is losing units (-8%) to domestic brands, and the whole branded basketball segment is in a discount spiral (Li-Ning basketball -19%). Existing Nike shorts are indoor-derived and priced above domestic value without a visible outdoor reason-to-buy.",
+      "proposed_solution": "A dedicated outdoor franchise: abrasion-resistant knit with reinforced hem/seat panels, secure zip phone pocket, lightweight heat-management mesh, 6-7 in. and 9 in. inseams, colorways tied to city court culture, priced as a stable everyday price point rather than a promo-driven list price.",
+      "key_features": [
+        "Abrasion-reinforced hem and seat panel for concrete courts",
+        "Zip phone pocket sized for large Chinese-market phones",
+        "Aero-style heat-management mesh for summer outdoor play",
+        "Two inseams (7 in. performance, 9 in. streetball) with a wide waist size run",
+        "Everyday stable price with limited promotional cadence",
+        "Tmall/JD and multi-brand sports-store distribution, not app-exclusive"
+      ],
+      "price_position": "RMB 229-299 (approx. USD 32-42) everyday price, value-core tier positioned just above Li-Ning/Anta mainstream (RMB 100-200) and below Nike's current China list; not discounted below RMB 199",
+      "evidence_signal_ids": ["A02-S1", "A02-S2", "A02-S3", "A02-S4"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What are the actual Tmall/JD shelf prices and sell-through rates for Li-Ning, Anta and Nike basketball shorts in 2025-26, and does an 'outdoor durability' claim move purchase intent among Chinese outdoor players more than price alone? (No China price ladder could be retrieved this session.)"
+    },
+    {
+      "id": "A02-O2",
+      "name": "Women's-fit performance basketball short franchise (Sabrina/A'One anchored)",
+      "target_consumer": "Girls and women aged 13-30 who play organized or pickup basketball, plus women's-basketball fans who want on-court authentic product rather than unisex or fan merch",
+      "job_to_be_done": "Let me play in a short that is cut for me, in lengths I choose, from the athletes I follow, and that I can also wear off court",
+      "product_problem": "Women's basketball demand is up triple digits but supply is fan merchandise and gender-neutral shorts; the first Aero-FIT women's basketball shorts arrived only July 2026 and there is no women's equivalent of the men's DNA 6/8/10 ladder.",
+      "proposed_solution": "A women's-fit franchise with a 4/5/7 in. inseam ladder, optional brief liner, higher-rise waistband with internal drawcord, Aero-FIT cooling at the signature tier, and a fan-crossover colorway program timed to WNBA and college seasons.",
+      "key_features": [
+        "Women's block pattern (waist-to-hip ratio, higher rise) rather than graded-down men's fit",
+        "Inseam ladder 4 in. / 5 in. / 7 in.",
+        "Optional removable or built-in brief liner",
+        "Signature tier with Aero-FIT cooling (Sabrina, A'ja Wilson)",
+        "Season-timed WNBA/college colorways for fan crossover",
+        "Wholesale-first at Dick's, Foot Locker women's basketball walls and Fanatics"
+      ],
+      "price_position": "USD 40-45 core tier; USD 60-70 signature/Aero-FIT tier (mid to premium); avoid the USD 90 list-then-47%-off pattern",
+      "evidence_signal_ids": ["A02-S4", "A02-S5", "A02-S6", "A02-S7"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What share of the women's basketball merchandise surge is performance apparel versus fan apparel, and what inseam and liner preferences do female players report? (Sell-through by product type could not be retrieved.)"
+    },
+    {
+      "id": "A02-O3",
+      "name": "Uniform of Youth multi-pack: branded 2-pack youth short at a parent price",
+      "target_consumer": "Parents buying for players aged 8-15 in school, rec and AAU programs in the US, Australia and Philippines, who currently default to Amazon Essentials/unbranded multi-packs",
+      "job_to_be_done": "Kit my kid for the season with shorts that last, match team colors, and don't cost USD 40 each for something outgrown in a year",
+      "product_problem": "Kids is projected as the fastest-growing segment, but Nike's youth offer is a single USD 30-ish 5-inch short while the youth/value shopper buys USD 4-per-pair 2- and 5-packs on Amazon; there is no branded bridge between commodity packs and premium single units.",
+      "proposed_solution": "A durable team-color youth short (5 in. and 7 in.) sold as a 2-pack with contrasting or team colorways, reinforced hem, secure pocket, and family-friendly pricing merchandised in wholesale doors and Amazon.",
+      "key_features": [
+        "2-pack construct with team-color core (black/navy/red/royal/white)",
+        "5 in. (boys/girls) and 7 in. (older youth) inseams",
+        "Reinforced hem and knee-area abrasion for outdoor play",
+        "Secure zip pocket",
+        "Extended youth size run with adjustable waist",
+        "Distributed via Dick's, Foot Locker, Rebel (AU), Titan 22 (PH) and Amazon"
+      ],
+      "price_position": "USD 40-45 per 2-pack (USD 20-22 per short), value-core tier; roughly 2.5x Amazon Essentials per unit but under a single Nike youth short today",
+      "evidence_signal_ids": ["A02-S4", "A02-S9", "A02-S10"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Will a branded multi-pack cannibalize the single-unit youth short or expand household penetration, and what is the youth sell-through by inseam at Dick's? (Retailer page data was blocked.)"
+    },
+    {
+      "id": "A02-O4",
+      "name": "Nike Basketball Heritage 'long' short to compete with Mitchell & Ness Swingman in lifestyle and fan doors",
+      "target_consumer": "Gen Z and millennial lifestyle shoppers (16-30) buying retro 9-inch-plus basketball shorts for streetwear, fan and pickup use, in the US, Europe (KICKZ, Zalando) and Australia (NBA merch heavy)",
+      "job_to_be_done": "Give me the '90s/'00s basketball look with real fabric and fit that I can wear on the street and still hoop in",
+      "product_problem": "The Y2K retro shorts trend is owned by Mitchell & Ness Swingman via Fanatics/NBA Store/DXL; Nike's performance shorts trend shorter, and Jordan Streetwear over-distribution damaged sell-through, leaving Nike Basketball without a clean heritage-length lifestyle short.",
+      "proposed_solution": "A 10-11 in. heritage mesh short with woven team-style side panels and embroidered Nike Basketball heritage marks (non-NBA-licensed to avoid channel conflict), in a controlled wholesale distribution with retailer exclusives.",
+      "key_features": [
+        "10-11 in. inseam, wide leg opening, retro dazzle or heavy mesh",
+        "Embroidered heritage graphics and side-panel color blocking",
+        "Woven waistband with external drawcord",
+        "Big & tall extension (DXL-type demand)",
+        "Controlled drops and retailer exclusives to protect sell-through",
+        "Positioned in lifestyle/fan doors, not the performance wall"
+      ],
+      "price_position": "USD 60-70 (mid-premium), at or slightly below Mitchell & Ness Swingman shorts; EUR 60-70 in Europe",
+      "evidence_signal_ids": ["A02-S5", "A02-S7", "A02-S8"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What are Mitchell & Ness Swingman shorts' current price points and sell-through, and is the retro trend still rising in 2026 or already peaking? (Fanatics/Mitchell & Ness pages could not be fetched.)"
+    },
+    {
+      "id": "A02-O5",
+      "name": "APLA local-court capsules (Manila, Tokyo, Sydney) sold through specialty partners",
+      "target_consumer": "Streetball and lifestyle hoopers aged 16-28 in the Philippines, Japan and Australia who buy local labels (Ugat, Jersey Nation, ballaholic) or NBA merch for identity, and Nike for performance",
+      "job_to_be_done": "Let me rep my city's courts and league with a short that is authentic to where I play, not a generic global drop",
+      "product_problem": "Global brands are absent from the locally coded lifestyle short; small labels and Champion (NBL) occupy it; Australia participation is 1.3M with female +25% and Asia-Pacific is the fastest-growing region, yet Nike's assortment there is a mirror of the US line.",
+      "proposed_solution": "Market-specific capsules co-created with local streetball organizers (e.g., Tokyo streetball tournaments, Manila barangay leagues, Australian NBL1/community leagues) in 7 in. and 9 in. lengths, sold through Titan 22, atmos/KICKZ and Rebel with limited quantities.",
+      "key_features": [
+        "City/court identity graphics co-designed with local organizers",
+        "Two inseams (7 in. performance, 9 in. street)",
+        "Lightweight heat-management mesh for tropical play (Manila) and durable knit for outdoor concrete",
+        "Specialty-retailer exclusives (Titan 22, atmos, KICKZ, Rebel)",
+        "Women's and youth sizes in the same capsule to ride participation growth",
+        "Limited, replenishable core colorways to avoid clearance"
+      ],
+      "price_position": "PHP 1,995-2,495 (approx. USD 35-44) in the Philippines; JPY 7,000-9,000 (approx. USD 47-60) in Japan; AUD 75-90 in Australia; mid-premium tier above local labels, at Nike core",
+      "evidence_signal_ids": ["A02-S1", "A02-S9", "A02-S11"],
+      "confidence": "Low",
+      "key_unanswered_question": "What are the actual shelf prices and volumes of ballaholic, Ugat and Champion NBL shorts versus Nike in each market, and does Nike Philippines/Japan already run local capsules that I could not see? (Titan 22, blhlc.com and adidas.com.ph pages could not be fetched; price positions here are analyst estimates, not retrieved data.)"
+    }
+  ],
+  "sources": [
+    {"source": "Research and Markets - Basketball Apparel Market Size, Competitors & Forecast", "url": "https://www.researchandmarkets.com/report/basketball-wear", "date": "unknown", "contribution": "Global basketball apparel growth USD 6.53B 2025-2030, 6.4% CAGR (snippet)"},
+    {"source": "Technavio - Basketball Apparel Market 2024-2029", "url": "https://www.technavio.com/report/basketball-apparel-market-industry-analysis", "date": "unknown", "contribution": "USD 6.32B growth 2024-2029, 6.5% CAGR; APAC highest growth (snippet)"},
+    {"source": "Intel Market Research - Basketball Apparel Market Outlook 2026-2034", "url": "https://www.intelmarketresearch.com/basketball-apparel-market-34671", "date": "unknown", "contribution": "APAC fastest growing; China and Philippines key drivers (snippet)"},
+    {"source": "WiseGuy Reports - Sports Shorts Market", "url": "https://www.wiseguyreports.com/reports/sports-shorts-market", "date": "unknown", "contribution": "Sports shorts market USD 10.19B 2025, 3.9% CAGR (snippet)"},
+    {"source": "Verified Market Reports - Basketball Apparel Market", "url": "https://www.verifiedmarketreports.com/product/basketball-apparel-market/", "date": "unknown", "contribution": "USD 4.19B 2024 to 6.62B 2033, 5.3% CAGR (snippet)"},
+    {"source": "Grand View Research - Basketball Gear Market Report 2025-2030", "url": "https://www.grandviewresearch.com/industry-analysis/basketball-gear-market-report", "date": "unknown", "contribution": "Europe basketball gear CAGR 4.9% 2025-2030 (snippet)"},
+    {"source": "NIKE, Inc. Form 10-K FY2026", "url": "https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000088/nke-20260531.htm", "date": "2026-05-31", "contribution": "Greater China revenue USD 5,847M -13% c-n; apparel USD 1,535M, units -8% (snippet)"},
+    {"source": "CNBC - Nike (NKE) Q4 2026 earnings", "url": "https://www.cnbc.com/2026/06/30/nike-nke-q4-2026-earnings.html", "date": "2026-06-30", "contribution": "FY26 revenue USD 46.4B flat; net income USD 3.11B (snippet)"},
+    {"source": "Just Style - Nike's sales remain flat as China weakness drags on annual results", "url": "https://www.just-style.com/news/nike-fy26-result-sales/", "date": "2026-06", "contribution": "China ~15% of sales; local brands gaining at Nike's expense (snippet)"},
+    {"source": "Nike Newsroom - Fiscal 2026 Q4 and Full Year Results", "url": "https://about.nike.com/en/newsroom/releases/nike-inc-reports-fiscal-2026-fourth-quarter-and-full-year-results", "date": "2026-06-30", "contribution": "Corroborating release (fetch blocked; used search listing only)"},
+    {"source": "Digital Commerce 360 - Nike Digital sales fall for 10th straight quarter", "url": "https://www.digitalcommerce360.com/article/nike-digital-sales/", "date": "2026-06", "contribution": "Digital down 10 quarters; wholesale +4% FY26 (snippet)"},
+    {"source": "Sportico - Nike's Jordan Brand Revenue Declines 16%", "url": "https://www.sportico.com/business/commerce/2025/nike-jordan-brand-revenue-declines-1234858242/", "date": "2025", "contribution": "Jordan FY25 revenue USD 7.3B -16%; Jordan Streetwear sell-through challenged (snippet)"},
+    {"source": "Ken Research - China Sportswear Market", "url": "https://www.kenresearch.com/industry-reports/china-sports-wear-market", "date": "unknown", "contribution": "China sportswear USD 84B 2025, 8.43% CAGR (snippet)"},
+    {"source": "6Wresearch - China Basketball Market Outlook", "url": "https://www.6wresearch.com/industry-report/china-basketball-market-outlook", "date": "unknown", "contribution": "China basketball growth 8.76% 2025 easing to 6.63% by 2029 (snippet)"},
+    {"source": "Dataintelo - Basketball Sportswear Market Report", "url": "https://dataintelo.com/report/basketball-sportswear-market", "date": "unknown", "contribution": "China 300M+ players; youth participation +23% since 2020; LatAm steady (snippet)"},
+    {"source": "ANTA Sports IR - Revenue Increases by 14.3%", "url": "https://ir.anta.com/en/news_detail.php?id=153056", "date": "unknown", "contribution": "Anta revenue +14.3% headline (snippet)"},
+    {"source": "ANTA Sports IR - Record High Revenue 2024", "url": "https://ir.anta.com/en/news_detail.php?id=144313", "date": "2025-03", "contribution": "2024 revenue RMB 70.83B +13.6%; 23.0% China share #1 (snippet)"},
+    {"source": "Sporting Goods Intelligence - Li Ning 2025 results", "url": "https://www.sgieurope.com/financial-results/li-ning-profit-beats-estimates-and-shares-rally/120161.article", "date": "2026-03", "contribution": "Li-Ning revenue RMB 29,598M +3.2%; basketball 17% of mix, retail -19% (snippet)"},
+    {"source": "BigGo Finance - Li-Ning 2025 revenue, basketball under pressure", "url": "https://finance.biggo.com/news/HMY2D50BNZYCTTDv_5xD", "date": "2026-03", "contribution": "Basketball -19% due to market weakness and inventory control (snippet)"},
+    {"source": "KrASIA - Li-Ning leans on core sports", "url": "https://kr-asia.com/with-profits-down-li-ning-leans-on-core-sports-to-weather-a-slower-market", "date": "2025", "contribution": "Apparel -3.4% H1 2025; DTC discounting (snippet)"},
+    {"source": "Sporting Goods Intelligence - 361 Degrees posts 11% revenue growth", "url": "https://www.sgieurope.com/financial-results/361-degrees-posts-11-revenue-growth/120247.article", "date": "2026-03", "contribution": "361 Degrees 2025 revenue +11% (headline)"},
+    {"source": "TipRanks - 361 Degrees Q1 2025 sales growth", "url": "https://www.tipranks.com/news/company-announcements/361-degrees-international-sees-strong-q1-2025-sales-growth-and-product-innovation", "date": "2025-04", "contribution": "Core +10-15%, e-commerce +35-40%; Jokic/Gordon signature global launch (snippet)"},
+    {"source": "WWD - New Balance Global Sales Reached $9.2 Billion in 2025", "url": "https://wwd.com/footwear-news/shoe-industry-news/new-balance-global-sales-2025-sneakers-apparel-1238615804/", "date": "2026", "contribution": "USD 9.2B +19%; NA +20%, Europe +30%; Cooper Flagg (snippet)"},
+    {"source": "SGB Media - New Balance Eyes $10B in 2026", "url": "https://sgbonline.com/new-balance-revenues-surge-19-percent-in-2025-on-path-to-reach-10b-in-2026/", "date": "2026", "contribution": "Apparel and owned retail each >USD 1B; 80 new doors (snippet)"},
+    {"source": "Wikipedia - Curry Brand", "url": "https://en.wikipedia.org/wiki/Curry_Brand", "date": "unknown", "contribution": "UA/Curry partnership ended November 2025 (snippet)"},
+    {"source": "Men's Journal - Under Armour's Curry Shorts Are Now Under $50", "url": "https://www.mensjournal.com/shopping/under-armour-curry-shorts-sale", "date": "2025", "contribution": "Curry 6.5-inch shorts USD 90 list, USD 48 sale (47% off) (snippet)"},
+    {"source": "Under Armour - 10 Things to Look for in Basketball Shorts", "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/", "date": "unknown", "contribution": "7-9 in. modern performance inseams; Curry 7-9 in. (snippet)"},
+    {"source": "Hibbett - Retro Basketball Shorts: Why They're Back", "url": "https://www.hibbett.com/blog-expert-advice/retro-basketball-shorts-how-to-style.html", "date": "2025", "contribution": "Y2K retro trend; 9 in.+ retro vs 7 in. or shorter modern (snippet)"},
+    {"source": "Nike.com - Nike DNA Men's Dri-FIT 8\" Basketball Shorts", "url": "https://www.nike.com/t/dna-mens-dri-fit-8-basketball-shorts-jVkw9d", "date": "unknown", "contribution": "DNA franchise 6/8/10 in. inseams, zip pocket (snippet)"},
+    {"source": "Dick's Sporting Goods - Nike Boys' Dri-FIT DNA 5\" Basketball Shorts", "url": "https://www.dickssportinggoods.com/p/nike-boys-dri-fit-dna-5-basketball-shorts-24nikbbnkdfdn24shbsk/24nikbbnkdfdn24shbsk", "date": "unknown", "contribution": "Youth 5-inch DNA short existence; reviews 'great price' (snippet)"},
+    {"source": "Foot Locker - Men's Basketball Shorts", "url": "https://www.footlocker.com/category/sport/basketball/mens/clothing/shorts.html", "date": "unknown", "contribution": "Brand mix Jordan/Nike/UA/NB; NB 7\" Mesh USD 50 to 37.50 (snippet)"},
+    {"source": "Dick's Sporting Goods - Men's Basketball Shorts", "url": "https://www.dickssportinggoods.com/f/basketball-shorts-for-mens-5495-225620", "date": "unknown", "contribution": "Brand mix Nike/UA/Jordan; clearance category (snippet)"},
+    {"source": "Amazon Best Sellers - Men's Basketball Shorts", "url": "https://www.amazon.com/Best-Sellers-Sports-Outdoors-Mens-Basketball-Shorts/zgbs/sporting-goods/2420035011", "date": "unknown", "contribution": "Unbranded labels dominate best sellers (snippet)"},
+    {"source": "Slickdeals - Amazon Essentials basketball shorts 2-pack $7.97", "url": "https://slickdeals.net/f/19209160-amazon-essentials-men-s-athletic-basketball-gym-performance-tech-loose-fit-training-shorts-pack-of-2-7-97", "date": "unknown", "contribution": "Value floor USD 7.97 per 2-pack; 5-pack USD 26.59 (snippet)"},
+    {"source": "Temu - Men's basketball shorts with zipper pockets 10-inch", "url": "https://www.temu.com/-mens-basketball-shorts-with-zipper-pockets-10inch--shorts-lightweight-mesh-running-sports-shorts-g-601099591602661.html", "date": "unknown", "contribution": "Temu 10-inch mesh zip-pocket listing exists (listing title only)"},
+    {"source": "GeeLark - Temu vs Shein 2025", "url": "https://www.geelark.com/blog/temu-vs-shein/", "date": "2025", "contribution": "Shein adds ~2,000 items daily; Temu quality inconsistency (snippet)"},
+    {"source": "Lululemon - Basketball Gym Shorts / Mesh Basketball Gym Shorts", "url": "https://shop.lululemon.com/a/basketball-gym-shorts-0adz05a", "date": "unknown", "contribution": "8 and 9 in. relaxed mesh basketball shorts (snippet)"},
+    {"source": "Billboard - Lululemon Sale: Mesh Basketball Shorts Under $50", "url": "https://www.billboard.com/culture/product-recommendations/lululemon-basketball-shorts-shop-online-1235927820/", "date": "unknown", "contribution": "Lululemon basketball shorts promoted under USD 50 on sale (title)"},
+    {"source": "Fanatics - Mitchell & Ness Shorts", "url": "https://www.fanatics.com/mitchell-and-ness-shorts/br-451078+d-86119074+z-9887-3857182604", "date": "unknown", "contribution": "Swingman shorts assortment; lifestyle positioning (snippet)"},
+    {"source": "DXL - Mitchell & Ness NBA Swingman Shorts Big + Tall", "url": "https://www.dxl.com/p/mitchell-ness-nba-swingman-shorts-g9868", "date": "unknown", "contribution": "Big and tall demand for retro shorts (listing)"},
+    {"source": "Shopify Blog - WNBA drives sales", "url": "https://www.shopify.com/blog/wnba-drives-sales", "date": "2025", "contribution": "Fan accessories +101.5% at 2025 tip-off; Homage 2x (snippet)"},
+    {"source": "Boston 25 News - WNBA growth opportunity", "url": "https://www.boston25news.com/news/wnba-isnt-just-having-moment-its-major-growth-opportunity-small-businesses/QJSR7DVNNBOZBPJ2SINSP2F45U/", "date": "2025", "contribution": "Women's college basketball apparel +361% (snippet)"},
+    {"source": "Nike.com - Nike Sabrina 4 release info", "url": "https://www.nike.com/a/nike-sabrina-4-release-info", "date": "2026-07", "contribution": "First Aero-FIT basketball jersey and shorts (snippet)"},
+    {"source": "adidas US - Women's Candace Parker Basketball Gear", "url": "https://www.adidas.com/us/candace_parker-women-basketball", "date": "unknown", "contribution": "Gender-neutral shorts positioning (snippet)"},
+    {"source": "adidas US - Anthony Edwards Foundation Shorts", "url": "https://www.adidas.com/us/anthony-edwards-foundation-shorts/KC1612.html", "date": "unknown", "contribution": "Lightweight woven, zip pockets, performance-to-lifestyle positioning (snippet)"},
+    {"source": "PUMA EU - Basketball Shorts", "url": "https://eu.puma.com/de/en/sports/basketball/basketball-apparel/basketball-shorts", "date": "unknown", "contribution": "Puma offers short and knee-length basketball shorts in Europe (snippet)"},
+    {"source": "Basketball.com.au - 1.3 million Aussies play", "url": "https://www.basketball.com.au/news/basketball-participation-in-australia-in-2025-boast-one-million-three-hundred-thousands-players", "date": "2025", "contribution": "1.3M players; female +25% since 2022 (snippet)"},
+    {"source": "Wikipedia - 2025-26 NBL season", "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_NBL_season", "date": "2026", "contribution": "Attendance 1,093,048; avg 6,665 (snippet)"},
+    {"source": "SportBusiness - NBL signs up Champion as apparel provider", "url": "https://www.sportbusiness.com/news/nbl-signs-up-champion-as-apparel-provider/", "date": "2020-03 (potentially outdated)", "contribution": "Champion NBL on-court apparel partner since 2020, extended to at least 2025 (snippet)"},
+    {"source": "Ragtrader - Champion extends three year contract in Australia", "url": "https://www.ragtrader.com.au/news/champion-extends-three-year-contract-in-australia", "date": "2023-07", "contribution": "Extension through 2025 (snippet)"},
+    {"source": "Rebel Sport - NBL Jerseys & Teamwear", "url": "https://www.rebelsport.com.au/fangear/nbl", "date": "unknown", "contribution": "Australian retail channel for NBL merchandise (listing)"},
+    {"source": "Sneaker Freaker - ballaholic and ASICS STREETMOVE Vol.0", "url": "https://www.sneakerfreaker.com/performance/releases/asics-ballaholic-unpre-ars-low-3-streetmove-vol-0-price-buy-release-date", "date": "2025", "contribution": "ballaholic profile and ASICS collaboration (snippet)"},
+    {"source": "ballaholic - TOKYO STREETBALL CLASSIC Series 2025", "url": "https://blhlc.com/collections/tokyo-streetball-classic-series-2025", "date": "2025", "contribution": "Local streetball capsule model in Japan (listing)"},
+    {"source": "KICKZ - Ballaholic brand page", "url": "https://www.kickz.com/en/brands/Ballaholic/c/47301", "date": "unknown", "contribution": "European specialty distribution of Japanese streetball label (listing)"},
+    {"source": "StarNgage - Top 100 Basketball Brands of Japan 2026", "url": "https://starngage.com/app/global/brand/ranking/japan/basketball", "date": "2026", "contribution": "B.League #1 sports brand; atmos, JBA, Champion Japan ranked (snippet)"},
+    {"source": "Fortune Business Insights - Japan Sports Apparel Market", "url": "https://www.fortunebusinessinsights.com/japan-sports-apparel-market-110181", "date": "unknown", "contribution": "Japan sports apparel CAGR 5.28% 2025-2032 (snippet)"},
+    {"source": "Ugat Clothing - Basketball Shorts", "url": "https://www.ugatclothing.com/basketball-shorts", "date": "unknown", "contribution": "Filipino-themed local basketball shorts (listing)"},
+    {"source": "The Jersey Nation - Philippines Heritage Basketball Shorts", "url": "https://www.thejerseynation.com/products/philippines-basketball-shorts", "date": "unknown", "contribution": "Heritage-inspired Philippine shorts (listing)"},
+    {"source": "Delta Sportswear Philippines - Basketball", "url": "https://deltasportswear.com.ph/collections/jersey-sets-pre-designed-by-delta", "date": "unknown", "contribution": "Local manufacturer of jerseys and shorts (listing)"},
+    {"source": "Titan 22 - Men's collection", "url": "https://titan22.com/collections/mens", "date": "unknown", "contribution": "Philippines specialty retailer carrying Nike basketball apparel incl. shorts (snippet)"},
+    {"source": "Zalora Philippines - Basketball category", "url": "https://www.zalora.com.ph/c/sports/shop-by-activity/basketball/c-10477/scat-10544", "date": "unknown", "contribution": "Online multi-brand channel in Philippines (listing)"},
+    {"source": "Hoop Culture - 3Ball Hoop Shorts (youth)", "url": "https://hoopculture.com/products/youth-3ball-hoop-shorts", "date": "unknown", "contribution": "DTC youth shorts, HC Lite fabric, 5cm elastic band; 10 years in business (snippet)"},
+    {"source": "Overtime Shop - Adult Basketball & Athletic Shorts", "url": "https://shop.overtime.tv/collections/shorts", "date": "unknown", "contribution": "Media-brand DTC shorts assortment (mesh, OTE team) (snippet)"},
+    {"source": "StockX - Big Facts 2025 report (PR Newswire)", "url": "https://www.prnewswire.com/news-releases/stockx-rolls-out-latest-big-facts-report-revealing-top-resale-trends-in-2025-302612724.html", "date": "2025-11-12", "contribution": "Performance basketball resale strong (Ja 3, A'One, Kobe 6 +100%); no shorts data (snippet)"},
+    {"source": "Market Research Intellect - Basketball Clothes Market", "url": "https://www.marketresearchintellect.com/product/global-basketball-clothes-market-size-and-forecast/", "date": "unknown", "contribution": "Children's basketball apparel CAGR 6.8% (snippet)"},
+    {"source": "Circana / SGB - footwear and apparel category notes", "url": "https://sgbonline.com/circana-footwear-sales-slide-in-q1-performance-sees-gains/", "date": "2025", "contribution": "March 2025 declining categories incl. active pants, tees, basketball-inspired footwear (snippet; no shorts data)"}
+  ]
+}

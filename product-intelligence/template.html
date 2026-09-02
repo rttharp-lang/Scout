@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basketball Shorts Intelligence</title>
+<link rel="icon" href="data:,">
+<style>
+/*{{FONT_CSS}}*/
+:root{
+  --paper:#FFFFFF; --ink:#0A0A0A; --ink-2:#2E2E2E; --mute:#6B6B6B; --line:#D8D8D8; --panel:#EDEDED; --panel-2:#F5F5F5;
+  --blue:#1A1AE5; --blue-deep:#1111B8; --blue-soft:#E9E9FC; --grey:#9A9A9A;
+  --font-wide:"Druk Wide Heavy","Arial Black",Impact,sans-serif;
+  --font-cond:"Druk Heavy","Arial Narrow",Impact,sans-serif;
+  --font-body:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --pad:clamp(20px,4vw,56px);
+  --gap:clamp(16px,2.4vw,36px);
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+p{margin:0 0 .8em}
+p:last-child{margin-bottom:0}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+ul{margin:0;padding-left:1.1em}
+li{margin:0 0 .35em}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:500;border-bottom:1px solid var(--ink)}
+.tbl{overflow-x:auto;max-width:100%}
+.num{font-variant-numeric:tabular-nums}
+
+/* ── nav ─────────────────────────────────────────── */
+.nav{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--ink);display:flex;align-items:center;gap:24px;padding:10px var(--pad);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.nav .brand{font-family:var(--font-wide);font-size:13px;letter-spacing:0;text-transform:none;text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav .brand svg{height:12px;width:auto}
+.nav .links{display:flex;gap:18px;margin-left:auto;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.nav .links::-webkit-scrollbar{display:none}
+.nav .brand{white-space:nowrap}
+@media(max-width:700px){.nav{gap:14px;padding:10px 16px}.nav .status{display:none}.nav .brand span{display:none}}
+.nav .links a{text-decoration:none;color:var(--mute);padding:4px 0;border-bottom:2px solid transparent}
+.nav .links a:hover,.nav .links a.on{color:var(--ink);border-color:var(--blue)}
+.nav .status{color:var(--blue);font-weight:500}
+
+/* ── slide ───────────────────────────────────────── */
+.slide{position:relative;background:var(--paper);padding:calc(var(--pad) * .9) var(--pad) var(--pad);border-bottom:1px solid var(--line)}
+.slide.black{background:var(--ink);color:#fff}
+.slide.blue{background:var(--blue);color:#fff}
+.marks i{position:absolute;width:12px;height:12px;border-color:currentColor;border-style:solid;border-width:0;opacity:.8}
+.marks i:nth-child(1){top:10px;left:10px;border-top-width:1px;border-left-width:1px}
+.marks i:nth-child(2){top:10px;right:10px;border-top-width:1px;border-right-width:1px}
+.marks i:nth-child(3){bottom:10px;left:10px;border-bottom-width:1px;border-left-width:1px}
+.marks i:nth-child(4){bottom:10px;right:10px;border-bottom-width:1px;border-right-width:1px}
+.chrome{display:flex;justify-content:space-between;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.slide.black .chrome,.slide.blue .chrome{color:rgba(255,255,255,.7)}
+.chrome.top{margin:-8px 0 26px}
+.chrome.bottom{margin-top:34px;align-items:center}
+.chrome.bottom svg{height:11px;width:auto;fill:currentColor}
+.side{position:absolute;top:50%;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);white-space:nowrap;display:none}
+.side.left{left:8px;transform:translateX(-50%) rotate(-90deg)}
+.side.right{right:8px;transform:translateX(50%) rotate(90deg)}
+@media(min-width:1100px){.side{display:block}}
+.headline{font-family:var(--font-wide);font-size:clamp(22px,3.1vw,52px);line-height:1.02;text-transform:uppercase;letter-spacing:-.005em}
+.dek{font-size:clamp(15px,1.25vw,19px);line-height:1.35;margin:10px 0 0;max-width:1100px;color:var(--ink-2)}
+.slide.black .dek,.slide.blue .dek{color:rgba(255,255,255,.85)}
+.body{margin-top:clamp(22px,2.6vw,40px)}
+.sub{font-family:var(--font-cond);color:var(--blue);text-transform:uppercase;font-size:clamp(24px,2.3vw,38px);line-height:.94;letter-spacing:.005em;margin:0 0 10px}
+.sub.ink{color:var(--ink)}
+.sub.white{color:#fff}
+.sub.small{font-size:clamp(18px,1.6vw,26px)}
+.eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.eyebrow b{color:var(--blue);font-weight:500}
+.label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:500}
+.measure{max-width:72ch}
+.cols{display:grid;gap:var(--gap)}
+.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cols-2-1{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.cols-1-2{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
+@media(max-width:980px){.cols-3,.cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.cols-2,.cols-3,.cols-4,.cols-2-1,.cols-1-2{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--panel);padding:18px 20px}
+.panel-2{background:var(--panel-2);padding:18px 20px}
+.frame{border:1px solid var(--ink);padding:18px 20px}
+.blackblock{background:var(--ink);color:#fff;padding:22px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between}
+.blackblock .big{font-family:var(--font-cond);text-transform:uppercase;font-size:clamp(30px,3vw,46px);line-height:.9;text-wrap:balance}
+.blackblock .idx{font-family:var(--font-wide);font-size:12px;color:rgba(255,255,255,.6)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--ink);line-height:1.3;white-space:nowrap;font-weight:500}
+.chip.fill{background:var(--ink);color:#fff}
+.chip.blue{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip.outline-blue{border-color:var(--blue);color:var(--blue)}
+.chip.grey{background:var(--panel);border-color:var(--panel);color:var(--mute)}
+.chip.strike{text-decoration:line-through;color:var(--mute);border-color:var(--line)}
+.chip.dash{border-style:dashed}
+.chip.ghost{border-color:var(--line);color:var(--mute)}
+.chip.ok{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip.warn{border-color:var(--ink)}
+.chip.bad{background:var(--ink);color:#fff}
+.sig{font-family:var(--font-body);font-size:11px;letter-spacing:.06em;text-decoration:none;color:var(--blue);border-bottom:1px solid var(--blue-soft);white-space:nowrap}
+.sig:hover{border-color:var(--blue)}
+.kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px 18px;align-items:start}
+.kv dt{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.kv dd{margin:0}
+@media(max-width:600px){.kv{grid-template-columns:minmax(0,1fr)}.kv dt{padding-top:6px}}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat .n{font-family:var(--font-wide);font-size:clamp(26px,2.6vw,40px);line-height:1;color:var(--blue)}
+.stat .n.ink{color:var(--ink)}
+.stat .l{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--blue);font-weight:500}
+.btn:hover{background:var(--blue-deep)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--panel)}
+.slide.black .btn.ghost{color:#fff;border-color:#fff}
+.slide.black .btn.ghost:hover{background:rgba(255,255,255,.12)}
+.link{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--blue-soft)}
+.link:hover{border-color:var(--blue)}
+details{border-top:1px solid var(--line);padding:10px 0}
+details summary{cursor:pointer;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:500;list-style:none;display:flex;gap:8px;align-items:center}
+details summary::before{content:"+";font-family:var(--font-wide);font-size:12px}
+details[open] summary::before{content:"–"}
+details summary::-webkit-details-marker{display:none}
+details .inner{padding-top:12px}
+.narrative{white-space:pre-line;max-width:78ch;color:var(--ink-2)}
+.muted{color:var(--mute)}
+.small{font-size:13px}
+.tiny{font-size:12px}
+hr.rule{border:0;border-top:1px solid var(--ink);margin:26px 0}
+
+/* cover */
+.cover{background:var(--blue);color:#fff;position:relative;padding:var(--pad);min-height:min(78vh,760px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.cover .tone{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.cover .tone span{font-family:var(--font-wide);text-transform:uppercase;font-size:clamp(34px,8.2vw,158px);line-height:.88;color:var(--blue-deep);text-align:center;letter-spacing:-.01em;white-space:nowrap}
+.cover .mid{position:relative;text-align:center;margin:auto;display:flex;flex-direction:column;align-items:center;gap:14px}
+.cover .mid svg{height:28px;width:auto;fill:#fff}
+.cover .mid .code{font-family:var(--font-wide);font-size:clamp(20px,2.4vw,34px);letter-spacing:.02em}
+.cover .foot{position:relative;text-align:center;font-size:12.5px;line-height:1.45;max-width:640px;margin:0 auto;color:rgba(255,255,255,.9)}
+.cover .chrome{color:rgba(255,255,255,.7);position:relative}
+
+/* timeline */
+.timeline{position:relative;margin:26px 0 12px}
+.timeline .track{position:absolute;left:0;right:0;top:19px;height:1px;background:var(--ink)}
+.timeline ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;position:relative}
+.timeline .pill{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;font-family:var(--font-wide);font-size:15px;height:38px;min-width:64px;padding:0 16px;border-radius:999px}
+.timeline .pill.stop{background:var(--ink)}
+.timeline .box{margin-top:14px;background:var(--panel);border:1px solid var(--blue);border-radius:14px;padding:14px 12px;min-height:150px}
+.timeline .box.stop{border-color:var(--ink)}
+.timeline .box .t{font-family:var(--font-cond);color:var(--blue);text-transform:uppercase;font-size:22px;line-height:.95;margin-bottom:6px}
+.timeline .box.stop .t{color:var(--ink)}
+.timeline .box .d{font-size:12px;color:var(--ink-2)}
+.timeline .box .c{font-size:11px;color:var(--mute);margin-top:8px;letter-spacing:.06em}
+@media(max-width:1100px){.timeline ol{grid-template-columns:repeat(4,minmax(0,1fr))}.timeline .track{display:none}}
+@media(max-width:600px){.timeline ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* portfolio */
+.portfolio{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(max-width:1000px){.portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.portfolio{grid-template-columns:minmax(0,1fr)}}
+.portfolio.mini{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pcol .bar{font-family:var(--font-wide);font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
+.pcol .bar .cnt{font-family:var(--font-body);font-size:11px;letter-spacing:.14em}
+.pcol.invest .bar{background:var(--blue);color:#fff}
+.pcol.explore .bar{background:var(--ink);color:#fff}
+.pcol.watch .bar{background:var(--grey);color:#fff}
+.pcol.reject .bar{background:var(--panel);color:var(--mute)}
+.pcol .def{font-size:11.5px;color:var(--mute);padding:10px 2px 12px;min-height:56px}
+.pcol .cards{display:flex;flex-direction:column;gap:12px}
+.ocard{display:block;text-decoration:none;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;transition:transform .15s ease,border-color .15s ease}
+.ocard:hover{transform:translateY(-2px);border-color:var(--blue)}
+.pcol.invest .ocard{border-color:var(--blue);background:var(--panel)}
+.pcol.explore .ocard{border-color:var(--ink)}
+.pcol.reject .ocard{border-style:dashed}
+.ocard .rk{font-family:var(--font-wide);font-size:11px;color:var(--mute);display:flex;justify-content:space-between}
+.ocard .nm{font-family:var(--font-cond);text-transform:uppercase;font-size:24px;line-height:.95;margin:8px 0 8px;color:var(--ink)}
+.pcol.invest .ocard .nm{color:var(--blue)}
+.ocard .th{font-size:12.5px;color:var(--ink-2)}
+.ocard .ft{display:flex;gap:14px;margin-top:12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.ocard .ft b{color:var(--ink);font-weight:500}
+.empty{font-size:12px;color:var(--mute);border:1px dashed var(--line);padding:14px;border-radius:14px}
+
+/* scores */
+.score{display:grid;grid-template-columns:190px minmax(0,1fr) 34px;gap:10px;align-items:center;font-size:12.5px;padding:5px 0;border-bottom:1px solid var(--line)}
+.score .track{position:relative;height:14px;background:var(--panel)}
+.score .fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue)}
+.score .dot{position:absolute;top:50%;width:8px;height:8px;border-radius:50%;background:#fff;border:1.5px solid var(--ink);transform:translate(-50%,-50%)}
+.score .v{font-family:var(--font-wide);font-size:12px;text-align:right}
+@media(max-width:600px){.score{grid-template-columns:110px minmax(0,1fr) 30px}}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--mute);margin-top:10px;align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:5px}
+.conf{display:flex;gap:6px;align-items:flex-end}
+.conf .step{flex:1;text-align:center}
+.conf .step .n{font-family:var(--font-wide);font-size:clamp(22px,2.2vw,34px);line-height:1}
+.conf .step .l{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.conf .arrow{font-size:18px;color:var(--mute);padding-bottom:10px}
+
+/* signals */
+.signal{border-top:1px solid var(--ink);padding:16px 0 18px}
+.signal .head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between}
+.signal .ttl{font-family:var(--font-cond);text-transform:uppercase;font-size:22px;line-height:.95;color:var(--ink)}
+.signal .ttl .id{color:var(--blue);margin-right:8px}
+.signal .finding{margin-top:8px;max-width:80ch}
+.signal .meta{font-size:12.5px;color:var(--mute);margin-top:6px}
+.signal .skep{margin-top:10px;padding:10px 12px;background:var(--panel-2);font-size:13px;border-left:3px solid var(--ink)}
+.signal .skep.rej{border-left-color:var(--grey);color:var(--mute)}
+.signal .skep.ok{border-left-color:var(--blue)}
+.ev{margin-top:10px}
+.agent-tile{display:block;text-decoration:none;border:1px solid var(--line);padding:16px;background:var(--paper);transition:border-color .15s ease}
+.agent-tile:hover{border-color:var(--blue)}
+.agent-tile .code{font-family:var(--font-wide);font-size:11px;color:var(--mute)}
+.agent-tile .nm{font-family:var(--font-cond);color:var(--blue);text-transform:uppercase;font-size:26px;line-height:.92;margin:8px 0}
+.agent-tile .d{font-size:12.5px;color:var(--ink-2);min-height:54px}
+.agent-tile .cnt{display:flex;gap:12px;margin-top:10px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.agent-tile .cnt b{color:var(--ink);font-weight:500}
+.gate{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+@media(max-width:900px){.gate{grid-template-columns:minmax(0,1fr)}}
+.gate .col .h{font-family:var(--font-cond);text-transform:uppercase;font-size:clamp(22px,2vw,32px);line-height:.94;padding-bottom:10px;border-bottom:2px solid currentColor;margin-bottom:12px}
+.gate .col.k .h{color:var(--blue)}
+.gate .col.b .h{color:var(--ink)}
+.gate .col.d .h{color:var(--ink)}
+.gate .col.d{background:var(--panel);padding:16px}
+.gate li{margin-bottom:10px;font-size:13.5px}
+.stopbar{display:flex;align-items:center;gap:18px;background:var(--ink);color:#fff;padding:14px 18px;margin-bottom:22px}
+.stopbar .s{font-family:var(--font-wide);font-size:20px;letter-spacing:.04em}
+.stopbar .t{font-size:13px;color:rgba(255,255,255,.85)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.filters select,.filters input{font:inherit;font-size:13px;padding:8px 10px;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:0}
+.filters input{min-width:240px}
+.kill .out{font-weight:500}
+.crumb{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+.crumb a{color:var(--blue);text-decoration:none}
+.toc{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:16px}
+.toc a{color:var(--mute);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.toc a:hover{color:var(--blue);border-color:var(--blue)}
+.footer{padding:28px var(--pad);font-size:12px;color:var(--mute);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.footer svg{height:12px;fill:var(--ink)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script id="pie-data" type="application/json">{{DATA_JSON}}</script>
+<script>
+(function(){
+const DATA = JSON.parse(document.getElementById('pie-data').textContent);
+const app = document.getElementById('app');
+const SWOOSH = '<svg viewBox="0 0 413.62 144.78" aria-hidden="true"><path d="M413.62,0,111,128.86Q73.38,144.78,47.8,144.78q-29,0-42-20.27-8.2-13-4.83-33.06T18.8,48.74Q30.91,30.4,58.42.48A105.53,105.53,0,0,0,44.91,32.33q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z"/></svg>';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const SIG = new Map(); const AG = new Map(); const AGID = new Map();
+DATA.specialists.forEach(a => { AG.set(a.key, a); AGID.set(a.agent_id, a); a.top_signals.forEach(s => SIG.set(s.id, Object.assign({}, s, {agent:a}))); });
+const OPP = new Map(DATA.opportunities.map(o => [o.id, o]));
+const CATS = [['INVEST','Highest-confidence opportunities deserving development.'],['EXPLORE','Promising opportunities requiring additional research or prototyping.'],['WATCH','Weak signals that could become meaningful.'],['REJECT','Opportunities where evidence does not justify investment.']];
+const CRIT = [['consumer_need','Consumer need'],['market_whitespace','Market whitespace'],['commercial_potential','Commercial potential'],['product_differentiation','Product differentiation'],['cultural_relevance','Cultural relevance'],['basketball_authenticity','Basketball authenticity'],['nike_right_to_win','Nike right-to-win'],['evidence_strength','Strength of evidence'],['scalability','Scalability'],['risk','Risk (5 = low)']];
+const S = DATA.stats;
+const pad2 = n => String(n).padStart(2,'0');
+const agentCode = a => pad2(parseInt(a.agent_id.replace(/\D/g,''),10) || 0) + '_' + a.label.toUpperCase();
+
+function chip(text, cls){ return '<span class="chip ' + (cls||'') + '">' + esc(text) + '</span>'; }
+function verdictChip(v){ v = v || 'UNREVIEWED'; const cls = v === 'VERIFIED' ? 'blue' : v === 'REJECTED' ? 'strike' : v.indexOf('PLAUSIBLE') === 0 ? 'warn' : 'ghost'; return chip(v === 'PLAUSIBLE - NEEDS VALIDATION' ? 'Plausible · needs validation' : v, cls); }
+function classChip(c){ return chip(c, c === 'FACT' ? 'fill' : c === 'PATTERN' ? '' : 'dash'); }
+function catChip(c){ return chip(c || 'UNRANKED', c === 'INVEST' ? 'blue' : c === 'EXPLORE' ? 'fill' : c === 'WATCH' ? 'grey' : c === 'REJECT' ? 'strike' : 'ghost'); }
+function sigRef(id){ const s = SIG.get(id); if(!s) return '<span class="sig muted">' + esc(id) + '</span>'; return '<a class="sig" href="#/agent/' + s.agent.key + '/' + esc(id) + '" title="' + esc(s.title) + '">' + esc(id) + '</a>'; }
+function sigRefs(ids){ return (ids||[]).map(sigRef).join(' '); }
+function list(items, fn){ return '<ul>' + (items||[]).map(i => '<li>' + (fn ? fn(i) : esc(i)) + '</li>').join('') + '</ul>'; }
+function chrome(part){ return '<div class="marks"><i></i><i></i><i></i><i></i></div><div class="chrome top"><span>Nike Basketball</span><span>Apparel</span></div><span class="side left">' + esc(part) + '</span><span class="side right">Keep It Tight / Nike Internal Use Only</span>'; }
+function chromeBottom(){ return '<div class="chrome bottom"><span>Apparel</span>' + SWOOSH + '<span>Nike Basketball</span></div>'; }
+function slide(o){ return '<section class="slide ' + (o.cls||'') + '" id="' + esc(o.id||'') + '">' + chrome(o.part||'') + '<h2 class="headline">' + esc(o.title) + '</h2>' + (o.dek ? '<p class="dek">' + o.dek + '</p>' : '') + '<div class="body">' + o.body + '</div>' + chromeBottom() + '</section>'; }
+function evidenceTable(ev){ if(!ev || !ev.length) return ''; return '<div class="tbl ev"><table><thead><tr><th>Source</th><th>Date</th><th>Data type</th><th>Geography</th><th>Consumer / market</th><th>Conf.</th><th>Nature</th><th>Excerpt</th></tr></thead><tbody>' + ev.map(e => '<tr><td>' + (e.url ? '<a class="link" href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.source) + '</a>' : esc(e.source)) + '</td><td class="num">' + esc(e.source_date) + '</td><td>' + esc(e.data_type) + '</td><td>' + esc(e.geography) + '</td><td>' + esc(e.consumer_or_market) + '</td><td>' + esc(e.confidence) + '</td><td>' + esc(e.evidence_nature) + '</td><td class="tiny">' + esc(e.excerpt) + '</td></tr>').join('') + '</tbody></table></div>'; }
+function signalBlock(s, a){
+  const rej = s.verdict === 'REJECTED';
+  return '<article class="signal" id="' + esc(s.id) + '"><div class="head"><div class="ttl"><span class="id">' + esc(s.id) + '</span>' + esc(s.title) + '</div><div class="chips">' + classChip(s.classification) + (s.original_classification && s.original_classification !== s.classification ? chip('was ' + s.original_classification, 'ghost') : '') + verdictChip(s.verdict) + '</div></div>'
+    + '<p class="finding">' + esc(s.finding) + '</p><div class="meta"><b>Consumer groups:</b> ' + esc(s.consumer_groups) + ' · <b>Implication:</b> ' + esc(s.implication) + '</div>'
+    + evidenceTable(s.evidence)
+    + (s.skeptic_reasoning ? '<div class="skep ' + (rej ? 'rej' : s.verdict === 'VERIFIED' ? 'ok' : '') + '"><b>Skeptic:</b> ' + esc(s.skeptic_reasoning) + (s.tests_failed && s.tests_failed.length ? ' <span class="muted">Tests failed: ' + esc(s.tests_failed.join(', ')) + '.</span>' : '') + (s.validation_needed ? '<br><b>Validation needed:</b> ' + esc(s.validation_needed) : '') + (s.counter_evidence && s.counter_evidence.length ? '<br><b>Counter-evidence:</b> ' + s.counter_evidence.map(c => esc(c.finding) + ' <span class="muted">(' + (c.url ? '<a class="link" href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.source) + '</a>' : esc(c.source)) + ', ' + esc(c.source_date) + ')</span>').join('; ') : '') + '</div>' : '')
+    + (a ? '<div class="tiny muted" style="margin-top:8px">From <a class="link" href="#/agent/' + a.key + '">' + esc(a.agent_id + ' ' + a.agent_name) + '</a></div>' : '')
+    + '</article>';
+}
+
+// ── overview ───────────────────────────────────────
+function overview(){
+  const P = DATA.portfolio, SM = DATA.summary, SY = DATA.synthesis, AU = DATA.audit;
+  let h = '';
+  h += '<section class="cover" id="top"><div class="tone"><span>Basketball<br>Shorts</span></div><div class="chrome top"><span>Nike Basketball</span><span>Apparel</span></div><div class="mid">' + SWOOSH + '<div class="code">PIE _ 1.0</div></div><div class="foot">Product Intelligence Engine, dynamic-workflow proof-of-concept. Seven specialist agents, independent skeptics, cross-domain orchestration and a ranked opportunity portfolio for the global basketball shorts market. Generated ' + esc(DATA.generated) + '. The engine stops at the human decision gate.</div><div class="chrome bottom" style="margin-top:20px"><span>Apparel</span><span>Nike Basketball</span></div></section>';
+
+  // executive summary
+  const ex = SM ? SM.executive_summary.split(/\n\n+/).map(p => '<p>' + esc(p) + '</p>').join('') : '<p class="muted">Executive summary is produced in the final phase.</p>';
+  h += slide({ id:'summary', part:'Part 1: Summary', title:'Executive opportunity summary', dek:'What the engine found, the portfolio call, and what still needs a human decision.', body:
+    '<div class="cols cols-2-1"><div class="measure">' + ex + (SM ? '<details><summary>Market framing</summary><div class="inner narrative">' + esc(SM.market_framing) + '</div></details><details><summary>How to read confidence</summary><div class="inner narrative">' + esc(SM.how_to_read_confidence) + '</div></details>' : '') + '</div>'
+    + '<div><div class="stats"><div class="stat panel"><span class="n">' + S.signals + '</span><span class="l">Signals surfaced</span></div><div class="stat panel"><span class="n">' + S.verified + '</span><span class="l">Verified by skeptics</span></div><div class="stat panel"><span class="n ink">' + S.plausible + '</span><span class="l">Plausible · needs validation</span></div><div class="stat panel"><span class="n ink">' + S.rejected + '</span><span class="l">Rejected</span></div><div class="stat panel"><span class="n">' + S.evidence_items + '</span><span class="l">Evidence items traced</span></div><div class="stat panel"><span class="n">' + S.sources + '</span><span class="l">Distinct sources</span></div><div class="stat panel"><span class="n ink">' + S.synthesized + '</span><span class="l">Cross-domain opportunities</span></div><div class="stat panel"><span class="n ink">' + S.agents_total_run + '</span><span class="l">Agent runs</span></div></div>'
+    + '<div class="portfolio mini" style="margin-top:14px">' + CATS.map(([c]) => '<div class="pcol ' + c.toLowerCase() + '"><div class="bar"><span>' + c + '</span><span class="cnt num">' + S[c.toLowerCase()] + '</span></div></div>').join('') + '</div></div></div>' });
+
+  // three most consequential
+  if (P && P.three_most_consequential) {
+    h += slide({ id:'three', part:'Part 1: Summary', title:'Three opportunities that matter most', dek:'Why each surfaced, which domains converged, and what makes it consequential. Click through for the full dossier.', body:
+      '<div class="cols cols-3">' + P.three_most_consequential.map((t, i) => { const o = OPP.get(t.id); const cat = o && o.portfolio ? o.portfolio.category : ''; return '<div><a href="#/opportunity/' + esc(t.id) + '" style="text-decoration:none"><div class="blackblock"><div class="idx">' + pad2(i+1) + ' / ' + esc(t.id) + (cat ? ' · ' + esc(cat) : '') + '</div><div class="big">' + esc(t.name) + '</div></div></a><h3 class="sub" style="margin-top:16px">' + esc(o && o.portfolio ? 'Rank ' + o.portfolio.rank + ' · ' + o.portfolio.confidence_score + '/100' : t.id) + '</h3><p class="small"><b>Why it surfaced.</b> ' + esc(t.why_it_surfaced) + '</p><p class="small"><b>Domains that converged.</b> ' + esc(t.which_domains_converged) + '</p><p class="small"><b>Why it is consequential.</b> ' + esc(t.what_makes_it_consequential) + '</p><a class="btn" href="#/opportunity/' + esc(t.id) + '">Open dossier</a></div>'; }).join('') + '</div>' });
+  }
+
+  // pipeline
+  const steps = [
+    ['Fan out', 'Seven specialist agents research independently: consumer, marketplace, product, commercial, culture, athlete, design.', S.agents + ' agents · live web research'],
+    ['Evidence rule', 'Every finding carries source, date, data type, geography, consumer, confidence and nature; classified FACT / PATTERN / HYPOTHESIS.', S.evidence_items + ' evidence items · ' + S.facts + ' F / ' + S.patterns + ' P / ' + S.hypotheses + ' H'],
+    ['Specialist output', 'Top signals, tensions and 3-5 domain opportunities per agent. No cross-domain ranking.', S.signals + ' signals · ' + S.domain_opportunities + ' domain opportunities'],
+    ['Skeptic', 'An independent skeptic attacks each specialist, then a cross-dataset auditor checks duplicates, contradictions and bias.', S.verified + ' verified · ' + S.plausible + ' plausible · ' + S.rejected + ' rejected'],
+    ['Orchestrator', 'Three lenses (convergence, non-obvious, whitespace) find intersections; a synthesis agent merges them.', (DATA.lenses.length || 0) + ' lenses · ' + (SY ? SY.cross_domain_patterns.length : 0) + ' patterns'],
+    ['Development', 'Each opportunity is defined in full, then red-teamed by a challenger.', S.synthesized + ' dossiers · ' + DATA.opportunities.filter(o => o.challenge).length + ' red teams'],
+    ['Portfolio', 'Three rankers score ten criteria; a chair reconciles into INVEST / EXPLORE / WATCH / REJECT.', (DATA.rankers.length || 0) + ' rankers · ' + (P ? P.disagreements.length : 0) + ' disagreements kept'],
+    ['Human gate', 'STOP. The machine states what it knows, what it believes, and what only a human can decide.', DATA.opportunities.filter(o => o.gate).length + ' gates open'],
+  ];
+  h += slide({ id:'method', part:'Part 2: Process', title:'How the engine worked', dek:'A graph, not a summary: fan out, verify, connect, develop, rank, stop. Every node is an independent agent with its own evidence trail.', body:
+    '<div class="timeline"><div class="track"></div><ol>' + steps.map((s, i) => '<li><span class="pill' + (i === 7 ? ' stop' : '') + '">' + (i+1) + '</span><div class="box' + (i === 7 ? ' stop' : '') + '"><div class="t">' + esc(s[0]) + '</div><div class="d">' + esc(s[1]) + '</div><div class="c num">' + esc(s[2]) + '</div></div></li>').join('') + '</ol></div>'
+    + '<div class="legend">' + chip('FACT','fill') + ' directly supported by evidence &nbsp; ' + chip('PATTERN') + ' supported by multiple signals &nbsp; ' + chip('HYPOTHESIS','dash') + ' plausible, requires validation &nbsp;|&nbsp; ' + verdictChip('VERIFIED') + ' ' + verdictChip('PLAUSIBLE - NEEDS VALIDATION') + ' ' + verdictChip('REJECTED') + '</div>' });
+
+  // portfolio
+  h += slide({ id:'portfolio', part:'Part 3: Portfolio', title:'Ranked opportunity portfolio', dek: P ? esc(P.narrative.split(/\n\n+/)[0]) : 'Ranking is produced in the final phase.', body:
+    '<div class="portfolio">' + CATS.map(([c, def]) => { const items = DATA.opportunities.filter(o => o.portfolio && o.portfolio.category === c); return '<div class="pcol ' + c.toLowerCase() + '"><div class="bar"><span>' + c + '</span><span class="cnt num">' + items.length + '</span></div><div class="def">' + esc(def) + '</div><div class="cards">' + (items.length ? items.map(oppCard).join('') : '<div class="empty">No opportunity placed here. Categories were not forced.</div>') + '</div></div>'; }).join('') + '</div>'
+    + (DATA.opportunities.some(o => !o.portfolio) ? '<h3 class="sub small" style="margin-top:28px">Not yet ranked</h3><div class="cols cols-4">' + DATA.opportunities.filter(o => !o.portfolio).map(oppCard).join('') + '</div>' : '')
+    + (P ? '<hr class="rule"><div class="cols cols-2"><div><h3 class="sub small">Where the rankers disagreed</h3><p class="tiny muted">Preserved, not averaged. PLM director, commercial planner and design director scored independently.</p>' + list(P.disagreements, d => '<b>' + esc(d.id) + '.</b> ' + esc(d.description) + ' <span class="muted">Resolution: ' + esc(d.resolution) + '</span>') + '</div><div><h3 class="sub small">Portfolio observations</h3>' + list(P.portfolio_observations) + '</div></div>' : '') });
+
+  // cross-domain patterns
+  if (SY) {
+    h += slide({ id:'patterns', part:'Part 3: Portfolio', title:'Cross-domain patterns', dek:'Where independent domains reinforce the same signal, and where unrelated signals combine into something no single specialist could see.', body:
+      '<div class="cols cols-3">' + SY.cross_domain_patterns.map(p => '<div class="frame"><div class="eyebrow"><b>' + esc(p.id) + '</b> · ' + esc(p.strength) + '</div><h3 class="sub small">' + esc(p.title) + '</h3><p class="small">' + esc(p.description) + '</p><div class="chips" style="margin-bottom:8px">' + p.domains.map(d => chip(d,'ghost')).join('') + '</div><div class="tiny">' + sigRefs(p.signal_ids) + '</div><div class="tiny muted" style="margin-top:8px">Feeds: ' + p.feeds_opportunities.map(id => OPP.has(id) ? '<a class="link" href="#/opportunity/' + esc(id) + '">' + esc(id) + '</a>' : esc(id)).join(', ') + '</div></div>').join('') + '</div>'
+      + '<details style="margin-top:22px"><summary>Synthesis narrative</summary><div class="inner narrative">' + esc(SY.narrative) + '</div></details>'
+      + DATA.lenses.map(l => '<details><summary>Orchestrator lens: ' + esc(l.lens) + '</summary><div class="inner"><div class="narrative">' + esc(l.narrative) + '</div><div class="tbl" style="margin-top:12px"><table><thead><tr><th>Candidate</th><th>Thesis</th><th>Intersection</th><th>Why hard to see</th></tr></thead><tbody>' + l.candidates.map(c => '<tr><td><b>' + esc(c.id) + '</b><br>' + esc(c.name) + '</td><td>' + esc(c.thesis) + '</td><td class="tiny">' + esc(c.intersection) + '<br>' + sigRefs(c.contributing_signal_ids) + '</td><td class="tiny">' + esc(c.why_hard_to_see) + '</td></tr>').join('') + '</tbody></table></div></div></details>').join('')
+      + (SY.dropped_candidates && SY.dropped_candidates.length ? '<details><summary>Candidates dropped at synthesis</summary><div class="inner">' + list(SY.dropped_candidates, d => '<b>' + esc(d.candidate_ids.join(', ')) + '</b> — ' + esc(d.reason)) + '</div></details>' : '') });
+  }
+
+  // specialists
+  h += slide({ id:'specialists', part:'Part 4: Evidence', title:'Specialist intelligence', dek:'Seven domains researched independently and in parallel. Every agent returned its top signals, tensions and opportunities, then faced an independent skeptic. Click an agent to read its research and thinking.', body:
+    '<div class="cols cols-4">' + DATA.specialists.map(a => { const v = a.top_signals.filter(s => s.verdict === 'VERIFIED').length, r = a.top_signals.filter(s => s.verdict === 'REJECTED').length; return '<a class="agent-tile" href="#/agent/' + a.key + '"><div class="code">' + esc(agentCode(a)) + '</div><div class="nm">' + esc(a.agent_name) + '</div><div class="d">' + esc(a.domain) + '</div><div class="cnt"><span><b>' + a.top_signals.length + '</b> signals</span><span><b>' + v + '</b> verified</span><span><b>' + r + '</b> rejected</span><span><b>' + a.opportunities.length + '</b> opps</span></div></a>'; }).join('') + '</div>'
+    + (AU ? '<hr class="rule"><div class="cols cols-3"><div><h3 class="sub small">Cross-dataset audit</h3><p class="small">' + esc(AU.narrative.split(/\n\n+/)[0]) + '</p></div><div><h3 class="sub small">Geographic bias</h3><p class="small">' + esc(AU.geographic_bias.assessment) + '</p><p class="tiny muted">Share by region: ' + esc(AU.geographic_bias.estimated_share_of_evidence_by_region) + '. Underrepresented: ' + esc(AU.geographic_bias.underrepresented_markets.join(', ')) + '.</p></div><div><h3 class="sub small">Hype versus sustained</h3>' + list(AU.hype_vs_sustained, x => '<b>' + esc(x.topic) + '</b> ' + chip(x.durability, x.durability === 'sustained' ? 'blue' : x.durability === 'hype' ? 'strike' : 'ghost') + ' <span class="small">' + esc(x.assessment) + '</span>') + '</div></div>' : '') });
+
+  // contradictions + gaps
+  const contras = (AU ? AU.contradictory_datasets : []);
+  const specContras = DATA.specialists.flatMap(a => (a.skeptic && a.skeptic.preserved_contradictions || []).map(c => Object.assign({agent:a.agent_id}, c)));
+  h += slide({ id:'gaps', part:'Part 4: Evidence', title:'Contradictory evidence and research gaps', dek:'Disagreement is preserved, not averaged. Gaps are what the engine could not settle from public evidence.', body:
+    '<div class="cols cols-2"><div><h3 class="sub small">Contradictory datasets</h3>' + (contras.length ? contras.map(c => '<div class="frame" style="margin-bottom:12px"><b>' + esc(c.title) + '</b><div class="small" style="margin-top:6px"><b>A</b> ' + esc(c.side_a.claim) + ' <span class="tiny">' + sigRefs(c.side_a.signal_ids) + '</span></div><div class="small"><b>B</b> ' + esc(c.side_b.claim) + ' <span class="tiny">' + sigRefs(c.side_b.signal_ids) + '</span></div><div class="tiny muted" style="margin-top:6px">' + esc(c.assessment) + ' <b>Would resolve it:</b> ' + esc(c.what_would_resolve_it) + '</div></div>').join('') : '<p class="muted small">Produced by the cross-dataset audit.</p>')
+    + (specContras.length ? '<details><summary>Contradictions preserved by the per-domain skeptics</summary><div class="inner">' + list(specContras, c => '<b>' + esc(c.agent) + ' · ' + esc(c.title) + '</b> ' + esc(c.description) + ' <span class="tiny">' + sigRefs(c.signal_ids) + '</span>') + '</div></details>' : '') + '</div>'
+    + '<div><h3 class="sub small">Research gaps</h3>' + (SM ? '<div class="tbl"><table><thead><tr><th>Gap</th><th>Why it matters</th><th>Affects</th><th>How to close</th></tr></thead><tbody>' + SM.research_gaps.map(g => '<tr><td><b>' + esc(g.gap) + '</b></td><td class="tiny">' + esc(g.why_it_matters) + '</td><td class="tiny">' + g.affects_opportunities.map(id => OPP.has(id) ? '<a class="link" href="#/opportunity/' + esc(id) + '">' + esc(id) + '</a>' : esc(id)).join(', ') + '</td><td class="tiny">' + esc(g.how_to_close) + ' <span class="muted">(' + esc(g.owner_suggestion) + ')</span></td></tr>').join('') + '</tbody></table></div><details><summary>Recommended validation sequence</summary><div class="inner">' + list(SM.recommended_validation_sequence) + '</div></details>' : '<p class="muted small">Consolidated in the final phase.</p>') + '</div></div>' });
+
+  // human gate
+  const ranked = DATA.opportunities.filter(o => o.gate);
+  h += slide({ id:'gate', part:'Part 5: Decision', title:'Human decision gate', dek:'The engine has stopped. No product briefing or concept development proceeds until the PLM / Design team selects an opportunity. For each: what the machine knows, what it believes, and what only a human can decide.', body:
+    '<div class="stopbar"><span class="s">STOP</span><span class="t">Ranked portfolio presented. Awaiting human selection. Nothing below is a product decision.</span></div>'
+    + (ranked.length ? '<div class="cols cols-2">' + ranked.map(o => '<div class="frame"><div class="eyebrow"><b>' + esc(o.id) + '</b> · Rank ' + esc(o.portfolio ? o.portfolio.rank : '–') + ' · ' + catChip(o.portfolio && o.portfolio.category) + '</div><h3 class="sub small"><a href="#/opportunity/' + esc(o.id) + '#gate" style="text-decoration:none;color:inherit">' + esc(o.name) + '</a></h3><div class="cols cols-3" style="gap:14px"><div><div class="label" style="color:var(--blue)">Knows</div><div class="tiny">' + esc(o.gate.what_the_machine_knows[0].statement) + '</div></div><div><div class="label">Believes</div><div class="tiny">' + esc(o.gate.what_the_machine_believes[0].statement) + '</div></div><div><div class="label">Human decides</div><div class="tiny">' + esc(o.gate.what_the_human_must_decide[0].decision) + '</div></div></div><div style="margin-top:12px"><a class="btn ghost" href="#/opportunity/' + esc(o.id) + '#gate">Full decision gate</a></div></div>').join('') + '</div>' : '<p class="muted">Decision gates are produced in the final phase.</p>') });
+
+  h += '<div class="footer"><span>' + SWOOSH + '</span><span>Product Intelligence Engine · Basketball Apparel · Evidence from public web sources retrieved by AI agents on ' + esc(DATA.generated) + '; no Nike internal data. Human judgment required before any product decision.</span><span>{{REPORT_LINK}}<a class="link" href="#/evidence">Full evidence trace</a></span></div>';
+  return h;
+}
+function oppCard(o){ const p = o.portfolio, ch = o.challenge; return '<a class="ocard" href="#/opportunity/' + esc(o.id) + '"><div class="rk"><span>' + (p ? 'Rank ' + p.rank : 'Unranked') + '</span><span>' + esc(o.id) + '</span></div><div class="nm">' + esc(o.name) + '</div><div class="th">' + esc(o.thesis) + '</div><div class="ft">' + (p ? '<span>Score <b class="num">' + esc(p.overall) + '</b></span><span>Confidence <b class="num">' + esc(p.confidence_score) + '</b></span>' : (ch ? '<span>Red-team conf. <b class="num">' + esc(ch.adjusted_confidence_score) + '</b></span>' : '')) + '<span><b>' + o.domains_reinforcing.length + '</b> domains</span></div></a>'; }
+
+// ── opportunity dossier ────────────────────────────
+function dossier(id){
+  const o = OPP.get(id); if(!o) return notFound('Opportunity ' + id);
+  const d = o.development, c = o.challenge, p = o.portfolio, g = o.gate;
+  let h = '<div class="slide" style="padding-bottom:0;border:0"><div class="crumb"><a href="#/">Overview</a> / <a href="#/#portfolio">Portfolio</a> / ' + esc(o.id) + '</div></div>';
+  h += slide({ part:'Opportunity dossier', title:o.name, dek: esc(o.thesis), body:
+    '<div class="cols cols-2-1"><div><div class="chips" style="margin-bottom:14px">' + catChip(p && p.category) + (p ? chip('Rank ' + p.rank, 'ghost') : '') + chip(o.id, 'ghost') + o.domains_reinforcing.map(x => chip(x, 'outline-blue')).join('') + '</div><dl class="kv"><dt>Intersection</dt><dd>' + esc(o.intersection) + '</dd><dt>Target consumer</dt><dd>' + esc(d ? d.target_consumer : o.target_consumer) + '</dd><dt>Why hard to see</dt><dd>' + esc(o.why_hard_to_see) + '</dd><dt>Origin</dt><dd class="small">Lenses: ' + esc(o.lens_origins.join(', ')) + '. ' + esc(o.distinctness_note) + '</dd></dl></div>'
+    + '<div class="panel"><div class="label" style="margin-bottom:10px">Confidence (0-100)</div><div class="conf">' + [['Developer', d && d.confidence_score], ['After red team', c && c.adjusted_confidence_score], ['Portfolio chair', p && p.confidence_score]].map((x, i) => (i ? '<span class="arrow">→</span>' : '') + '<div class="step"><div class="n num">' + (x[1] == null ? '–' : esc(x[1])) + '</div><div class="l">' + x[0] + '</div></div>').join('') + '</div>' + (p ? '<hr class="rule" style="margin:14px 0"><div class="stat"><span class="n num">' + esc(p.overall) + '</span><span class="l">Overall score · ' + esc(p.category) + '</span></div><p class="small" style="margin-top:8px">' + esc(p.why_this_category) + '</p>' : '') + '</div></div>'
+    + '<div class="toc"><a href="#def">Definition</a><a href="#evidence">Evidence stack</a><a href="#scores">Scores</a><a href="#redteam">Red team</a><a href="#unknowns">Unknowns</a><a href="#gate">Human gate</a><a href="#thinking">Engine thinking</a></div>' });
+
+  if (d) {
+    h += slide({ id:'def', part:'Opportunity dossier', title:'Opportunity definition', dek:'What we would make, for whom, why it should exist, what it should cost, and why Nike should invest.', body:
+      '<dl class="kv"><dt>Opportunity</dt><dd>' + esc(d.opportunity) + '</dd><dt>Target consumer</dt><dd>' + esc(d.target_consumer) + '</dd><dt>Consumer problem / job to be done</dt><dd>' + esc(d.consumer_problem_jtbd) + '</dd><dt>Product idea</dt><dd>' + esc(d.product_idea) + '</dd><dt>Why now</dt><dd>' + esc(d.why_now) + '</dd><dt>Target price</dt><dd><b>' + esc(d.target_price.currency + ' ' + d.target_price.msrp) + '</b> · ' + esc(d.target_price.tier) + '<div class="small muted">' + esc(d.target_price.rationale) + ' ' + esc(d.target_price.regional_notes) + '</div></dd><dt>Market / distribution role</dt><dd>' + esc(d.market_distribution_role) + '</dd><dt>Nike right to win</dt><dd>' + esc(d.nike_right_to_win) + '</dd></dl>'
+      + '<hr class="rule"><div class="cols cols-2-1"><div><h3 class="sub small">Key features and benefits</h3><div class="tbl"><table><thead><tr><th>Feature</th><th>Benefit</th><th>Signals</th></tr></thead><tbody>' + d.key_features_benefits.map(f => '<tr><td><b>' + esc(f.feature) + '</b></td><td>' + esc(f.benefit) + '</td><td>' + sigRefs(f.supporting_signal_ids) + '</td></tr>').join('') + '</tbody></table></div></div>'
+      + '<div><h3 class="sub small">Competitive reference points</h3>' + (d.competitive_reference_points && d.competitive_reference_points.length ? '<div class="tbl"><table><thead><tr><th>Brand</th><th>Product</th><th>Price</th><th>Note</th></tr></thead><tbody>' + d.competitive_reference_points.map(x => '<tr><td>' + esc(x.brand) + '</td><td>' + esc(x.product) + '</td><td class="num">' + esc(x.price) + '</td><td class="tiny">' + esc(x.note) + '</td></tr>').join('') + '</tbody></table></div>' : '<p class="muted small">None recorded.</p>') + '</div></div>' });
+
+    // evidence stack
+    const stack = d.evidence_stack.map(e => { const a = AGID.get(e.agent_id) || DATA.specialists.find(x => x.agent_name === e.agent_name); const sigs = e.signal_ids.map(sid => SIG.get(sid)).filter(Boolean); return '<div class="signal" style="border-top:2px solid var(--ink)"><div class="head"><div><div class="eyebrow"><b>' + esc(e.agent_id) + '</b> · ' + esc(e.agent_name) + '</div><h3 class="sub small">' + esc(e.contribution) + '</h3></div>' + chip('Evidence ' + e.evidence_strength, e.evidence_strength === 'strong' ? 'blue' : e.evidence_strength === 'weak' ? 'ghost' : '') + '</div>' + (sigs.length ? sigs.map(s => signalBlock(s, null)).join('') : '<p class="muted small">' + esc(e.signal_ids.join(', ')) + '</p>') + (a ? '<details><summary>' + esc(a.agent_id) + ' research narrative (the agent\'s thinking)</summary><div class="inner narrative">' + esc(a.research_narrative) + '</div><div class="tiny" style="margin-top:8px"><a class="link" href="#/agent/' + a.key + '">Open the full ' + esc(a.agent_name) + ' report</a></div></details>' : '') + '</div>'; }).join('');
+    const contra = o.contradicting_signal_ids.map(sid => SIG.get(sid)).filter(Boolean);
+    h += slide({ id:'evidence', part:'Opportunity dossier', title:'Evidence stack', dek:'Which specialist agents contributed, the signals they found, every evidence item behind them, and the skeptic\'s verdict on each.', body:
+      stack + '<hr class="rule"><h3 class="sub small">Contradictory evidence</h3>' + (d.contradictory_evidence.length ? list(d.contradictory_evidence, x => chip(x.severity, x.severity === 'high' ? 'bad' : x.severity === 'medium' ? 'warn' : 'ghost') + ' ' + esc(x.description) + ' <span class="tiny">' + sigRefs(x.signal_ids) + '</span>') : '<p class="muted small">None recorded by the developer.</p>') + (contra.length ? '<details><summary>Signals the synthesis flagged as contradicting this opportunity</summary><div class="inner">' + contra.map(s => signalBlock(s, s.agent)).join('') + '</div></details>' : '') });
+  } else {
+    h += slide({ id:'def', part:'Opportunity dossier', title:'Opportunity definition', dek:'Development pending.', body:'<div class="cols cols-2"><div><h3 class="sub small">Contributing signals</h3>' + o.contributing_signal_ids.map(sid => SIG.get(sid)).filter(Boolean).map(s => signalBlock(s, s.agent)).join('') + '</div></div>' });
+  }
+
+  // scores
+  if (p || o.ranker_scores.length) {
+    const rows = CRIT.map(([k, label]) => { const f = p ? p.final_scores[k] : null; return '<div class="score"><span>' + esc(label) + '</span><div class="track">' + (f != null ? '<div class="fill" style="width:' + (f/5*100) + '%"></div>' : '') + o.ranker_scores.map(r => '<span class="dot" style="left:' + (r.criteria[k]/5*100) + '%" title="' + esc(r.persona + ': ' + r.criteria[k]) + '"></span>').join('') + '</div><span class="v num">' + (f != null ? esc(f) : '–') + '</span></div>'; }).join('');
+    h += slide({ id:'scores', part:'Opportunity dossier', title:'Portfolio scores', dek:'Ten criteria, 1 to 5. Blue bar is the chair\'s final score; dots are the three independent rankers.', body:
+      '<div class="cols cols-2-1"><div>' + rows + '<div class="legend"><span><i style="background:var(--blue)"></i>Chair final</span><span><i style="border:1.5px solid var(--ink);border-radius:50%;background:#fff"></i>Individual rankers</span></div></div>'
+      + '<div>' + (p ? '<div class="panel" style="margin-bottom:14px"><div class="label">Chair rationale</div><p class="small" style="margin-top:6px">' + esc(p.rationale) + '</p><div class="label" style="margin-top:10px">Key dependency</div><p class="small" style="margin-top:6px">' + esc(p.key_dependency) + '</p></div>' : '') + o.ranker_scores.map(r => '<div class="frame" style="margin-bottom:10px"><div class="eyebrow">' + esc(r.persona) + ' · ' + catChip(r.category) + ' · <span class="num">' + esc(r.overall) + '</span></div><p class="tiny">' + esc(r.rationale) + '</p><p class="tiny muted"><b>Biggest risk:</b> ' + esc(r.biggest_risk) + '</p></div>').join('') + '</div></div>' });
+  }
+
+  // red team
+  if (c) {
+    h += slide({ id:'redteam', part:'Opportunity dossier', title:'Red-team challenge', dek:'An adversarial agent tried to kill the opportunity. ' + (c.survives ? 'It survived.' : 'It did not survive.') + ' Adjusted confidence ' + esc(c.adjusted_confidence_score) + '/100.', body:
+      '<div class="cols cols-2-1"><div><div class="tbl kill"><table><thead><tr><th>Angle</th><th>Argument</th><th>Evidence</th><th>Outcome</th></tr></thead><tbody>' + c.kill_attempts.map(k => '<tr><td><b>' + esc(k.angle) + '</b></td><td class="small">' + esc(k.argument) + '</td><td class="tiny">' + esc(k.evidence) + '</td><td>' + chip(k.outcome, k.outcome === 'fatal' ? 'bad' : k.outcome === 'weakens' ? 'warn' : 'blue') + '</td></tr>').join('') + '</tbody></table></div>'
+      + (c.additional_contradictory_evidence.length ? '<h3 class="sub small" style="margin-top:22px">Additional contradictory evidence</h3>' + list(c.additional_contradictory_evidence, x => chip(x.severity, x.severity === 'high' ? 'bad' : x.severity === 'medium' ? 'warn' : 'ghost') + ' ' + esc(x.finding) + ' <span class="tiny muted">' + (x.url ? '<a class="link" href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.source) + '</a>' : esc(x.source)) + ', ' + esc(x.source_date) + '</span>') : '') + '</div>'
+      + '<div><div class="panel"><div class="label">Strongest counterargument</div><p style="margin-top:6px">' + esc(c.strongest_counterargument) + '</p><div class="label" style="margin-top:12px">Adjustment rationale</div><p class="small" style="margin-top:6px">' + esc(c.adjustment_rationale) + '</p></div><h3 class="sub small" style="margin-top:18px">Validation plan</h3><div class="tbl"><table><thead><tr><th>Question</th><th>Method</th><th>Who</th><th>Cost / time</th></tr></thead><tbody>' + c.validation_plan.map(v => '<tr><td>' + esc(v.question) + '</td><td class="tiny">' + esc(v.method) + '</td><td class="tiny">' + esc(v.who) + '</td><td class="tiny">' + esc(v.cost_time) + '</td></tr>').join('') + '</tbody></table></div></div></div>' });
+  }
+
+  if (d) {
+    h += slide({ id:'unknowns', part:'Opportunity dossier', title:'What would need to be true', dek:'And what we still don\'t know.', body:'<div class="cols cols-2"><div><h3 class="sub small">What would need to be true</h3>' + list(d.what_would_need_to_be_true) + '</div><div><h3 class="sub small">What we still don\'t know</h3>' + list(d.what_we_still_dont_know) + '</div></div>' });
+  }
+
+  if (g) {
+    h += slide({ id:'gate', part:'Part 5: Decision', title:'Human decision gate', dek:'The engine stops here. Selecting this opportunity is a human call.', body:
+      '<div class="stopbar"><span class="s">STOP</span><span class="t">' + esc(g.do_not_proceed_note) + '</span></div><div class="gate"><div class="col k"><div class="h">What the machine knows</div><ul>' + g.what_the_machine_knows.map(k => '<li>' + classChip(k.classification) + ' ' + esc(k.statement) + ' <span class="tiny">' + sigRefs(k.signal_ids) + '</span></li>').join('') + '</ul></div><div class="col b"><div class="h">What the machine believes</div><ul>' + g.what_the_machine_believes.map(b => '<li>' + esc(b.statement) + ' <span class="tiny muted">Basis: ' + esc(b.basis) + ' · confidence ' + esc(b.confidence) + '</span></li>').join('') + '</ul></div><div class="col d"><div class="h">What the human must decide</div><ul>' + g.what_the_human_must_decide.map(x => '<li><b>' + esc(x.decision) + '</b><br><span class="tiny">' + chip(x.judgment_type, 'ghost') + ' ' + esc(x.why_machine_cannot) + '</span></li>').join('') + '</ul></div></div><p class="small" style="margin-top:18px"><b>If selected:</b> ' + esc(g.if_selected_next_step) + '</p>' });
+  }
+
+  // engine thinking
+  const lensCands = DATA.lenses.flatMap(l => l.candidates.filter(cd => o.lens_origins.indexOf(cd.id) >= 0).map(cd => Object.assign({lens:l.lens}, cd)));
+  h += slide({ id:'thinking', part:'Opportunity dossier', title:'How the engine got here', dek:'The orchestrators\' reasoning, the developer\'s judgment calls, and the challenger\'s method, in their own words.', body:
+    (lensCands.length ? '<h3 class="sub small">Orchestrator candidates that became this opportunity</h3>' + lensCands.map(cd => '<div class="frame" style="margin-bottom:10px"><div class="eyebrow"><b>' + esc(cd.id) + '</b> · ' + esc(cd.lens) + '</div><b>' + esc(cd.name) + '</b><p class="small">' + esc(cd.thesis) + '</p><p class="tiny"><b>Intersection:</b> ' + esc(cd.intersection) + '<br><b>Why Nike:</b> ' + esc(cd.why_nike) + '<br><b>Why hard to see:</b> ' + esc(cd.why_hard_to_see) + '<br><b>Risks:</b> ' + esc(cd.risks) + '</p><div class="tiny">' + sigRefs(cd.contributing_signal_ids) + '</div></div>').join('') : '')
+    + (d ? '<details open><summary>Developer narrative</summary><div class="inner narrative">' + esc(d.narrative) + '</div></details>' : '')
+    + (c ? '<details><summary>Challenger narrative</summary><div class="inner narrative">' + esc(c.narrative) + '</div></details>' : '')
+    + '<details><summary>All contributing signals</summary><div class="inner">' + o.contributing_signal_ids.map(sid => SIG.get(sid)).filter(Boolean).map(s => signalBlock(s, s.agent)).join('') + '</div></details>' });
+  return h;
+}
+
+// ── agent page ─────────────────────────────────────
+function agentPage(key){
+  const a = AG.get(key); if(!a) return notFound('Agent ' + key);
+  const sk = a.skeptic;
+  let h = '<div class="slide" style="padding-bottom:0;border:0"><div class="crumb"><a href="#/">Overview</a> / <a href="#/#specialists">Specialists</a> / ' + esc(a.agent_id) + '</div></div>';
+  const v = a.top_signals.filter(s => s.verdict === 'VERIFIED').length, pl = a.top_signals.filter(s => s.verdict.indexOf('PLAUSIBLE') === 0).length, r = a.top_signals.filter(s => s.verdict === 'REJECTED').length;
+  h += slide({ part:'Specialist agent', title: agentCode(a), dek: esc(a.domain), body:
+    '<div class="cols cols-2-1"><div><h3 class="sub">Research narrative</h3><div class="narrative">' + esc(a.research_narrative) + '</div></div><div><div class="stats"><div class="stat panel"><span class="n">' + a.top_signals.length + '</span><span class="l">Signals</span></div><div class="stat panel"><span class="n">' + v + '</span><span class="l">Verified</span></div><div class="stat panel"><span class="n ink">' + pl + '</span><span class="l">Plausible</span></div><div class="stat panel"><span class="n ink">' + r + '</span><span class="l">Rejected</span></div><div class="stat panel"><span class="n ink">' + a.opportunities.length + '</span><span class="l">Domain opps</span></div><div class="stat panel"><span class="n ink">' + a.sources.length + '</span><span class="l">Sources</span></div></div><div class="toc"><a href="#signals">Signals</a><a href="#tensions">Tensions</a><a href="#opps">Opportunities</a><a href="#skeptic">Skeptic</a><a href="#sources">Sources</a></div></div></div>' });
+  h += slide({ id:'signals', part:'Specialist agent', title:'Top signals', dek:'The most consequential findings in this domain, each with its evidence and the independent skeptic\'s verdict. Rejected signals are shown struck through and did not move forward.', body: a.top_signals.map(s => signalBlock(s, null)).join('') });
+  h += slide({ id:'tensions', part:'Specialist agent', title:'Tensions', dek:'Contradictions, unmet needs and mismatches discovered in this domain.', body:'<div class="cols cols-3">' + a.tensions.map(t => '<div class="frame"><div class="eyebrow"><b>' + esc(t.id) + '</b></div><h3 class="sub small">' + esc(t.title) + '</h3><p class="small">' + esc(t.description) + '</p><div class="tiny">' + sigRefs(t.signal_ids) + '</div></div>').join('') + '</div>' });
+  h += slide({ id:'opps', part:'Specialist agent', title:'Domain opportunities', dek:'Proposed from this domain\'s evidence alone, before cross-domain synthesis. Not ranked against other domains.', body:'<div class="cols cols-2">' + a.opportunities.map(o => '<div class="frame" id="' + esc(o.id) + '"><div class="head" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="eyebrow"><b>' + esc(o.id) + '</b> · confidence ' + esc(o.confidence) + '</div>' + verdictChip(o.verdict) + '</div><h3 class="sub small">' + esc(o.name) + '</h3><dl class="kv small"><dt>Target consumer</dt><dd>' + esc(o.target_consumer) + '</dd><dt>Job to be done</dt><dd>' + esc(o.job_to_be_done) + '</dd><dt>Product problem</dt><dd>' + esc(o.product_problem) + '</dd><dt>Proposed solution</dt><dd>' + esc(o.proposed_solution) + '</dd><dt>Key features</dt><dd>' + list(o.key_features) + '</dd><dt>Price position</dt><dd>' + esc(o.price_position) + '</dd><dt>Evidence</dt><dd>' + sigRefs(o.evidence_signal_ids) + '</dd><dt>Open question</dt><dd>' + esc(o.key_unanswered_question) + '</dd></dl>' + (o.skeptic_reasoning ? '<div class="skep' + (o.verdict === 'REJECTED' ? ' rej' : o.verdict === 'VERIFIED' ? ' ok' : '') + '" style="margin-top:12px;padding:10px 12px;background:var(--panel-2);font-size:13px;border-left:3px solid var(--ink)"><b>Skeptic:</b> ' + esc(o.skeptic_reasoning) + '<br><b>Weakest assumption:</b> ' + esc(o.weakest_assumption) + '<br><b>Validation:</b> ' + esc(o.validation_needed) + '</div>' : '') + '</div>').join('') + '</div>' });
+  if (sk) h += slide({ id:'skeptic', part:'Verification', title:'Skeptic report', dek:'An independent agent tried to disprove every finding above: weak, outdated or duplicated evidence, sample and geographic bias, hype versus sustained behavior, assumptions presented as facts.', body:'<div class="cols cols-2-1"><div><h3 class="sub small">Method</h3><div class="narrative">' + esc(sk.method_narrative) + '</div></div><div><div class="panel"><div class="label">Biggest miss</div><p style="margin-top:6px">' + esc(sk.biggest_miss) + '</p></div>' + (sk.preserved_contradictions.length ? '<h3 class="sub small" style="margin-top:18px">Preserved contradictions</h3>' + list(sk.preserved_contradictions, c => '<b>' + esc(c.title) + '</b> ' + esc(c.description) + ' <span class="tiny">' + sigRefs(c.signal_ids) + '</span>') : '') + '</div></div>' });
+  h += slide({ id:'sources', part:'Specialist agent', title:'Sources consulted', dek: a.sources.length + ' sources retrieved during research.', body:'<div class="tbl"><table><thead><tr><th>Source</th><th>Date</th><th>Contribution</th></tr></thead><tbody>' + a.sources.map(s => '<tr><td>' + (s.url ? '<a class="link" href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.source) + '</a>' : esc(s.source)) + '</td><td class="num">' + esc(s.date) + '</td><td class="tiny">' + esc(s.contribution) + '</td></tr>').join('') + '</tbody></table></div>' });
+  return h;
+}
+
+// ── evidence trace ─────────────────────────────────
+function evidencePage(){
+  const agents = DATA.specialists.map(a => '<option value="' + esc(a.agent_id) + '">' + esc(a.agent_id + ' ' + a.agent_name) + '</option>').join('');
+  let h = '<div class="slide" style="padding-bottom:0;border:0"><div class="crumb"><a href="#/">Overview</a> / Evidence trace</div></div>';
+  h += slide({ part:'Part 4: Evidence', title:'Full evidence trace', dek: DATA.evidence.length + ' evidence items across ' + S.signals + ' signals. Every row carries source, date, data type, geography, consumer represented, confidence and whether it is quantitative, qualitative or inferred.', body:
+    '<div class="filters"><select id="f-agent"><option value="">All agents</option>' + agents + '</select><select id="f-verdict"><option value="">All verdicts</option><option>VERIFIED</option><option>PLAUSIBLE - NEEDS VALIDATION</option><option>REJECTED</option></select><select id="f-class"><option value="">All classifications</option><option>FACT</option><option>PATTERN</option><option>HYPOTHESIS</option></select><select id="f-nature"><option value="">All natures</option><option>quantitative</option><option>qualitative</option><option>inferred</option></select><input id="f-text" type="search" placeholder="Filter by source, geography, signal…"></div><div class="tiny muted" id="f-count"></div><div class="tbl" id="ev-table"></div>' });
+  setTimeout(bindEvidence, 0);
+  return h;
+}
+function bindEvidence(){
+  const g = id => document.getElementById(id); const els = ['f-agent','f-verdict','f-class','f-nature','f-text'].map(g); if (els.some(e => !e)) return;
+  const draw = () => {
+    const [ag, vd, cl, na, tx] = els.map(e => e.value.toLowerCase());
+    const rows = DATA.evidence.filter(e => (!ag || e.agent_id.toLowerCase() === ag) && (!vd || e.verdict.toLowerCase() === vd) && (!cl || e.classification.toLowerCase() === cl) && (!na || e.evidence_nature.toLowerCase() === na) && (!tx || (e.source + ' ' + e.geography + ' ' + e.signal_title + ' ' + e.signal_id + ' ' + e.consumer_or_market + ' ' + e.data_type + ' ' + e.excerpt).toLowerCase().indexOf(tx) >= 0));
+    g('f-count').textContent = rows.length + ' of ' + DATA.evidence.length + ' evidence items';
+    g('ev-table').innerHTML = '<table><thead><tr><th>Agent</th><th>Signal</th><th>Class</th><th>Verdict</th><th>Source</th><th>Date</th><th>Data type</th><th>Geography</th><th>Consumer / market</th><th>Conf.</th><th>Nature</th></tr></thead><tbody>' + rows.map(e => '<tr><td>' + esc(e.agent_id) + '</td><td>' + sigRef(e.signal_id) + ' <span class="tiny">' + esc(e.signal_title) + '</span></td><td>' + classChip(e.classification) + '</td><td>' + verdictChip(e.verdict) + '</td><td>' + (e.url ? '<a class="link" href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.source) + '</a>' : esc(e.source)) + '</td><td class="num">' + esc(e.source_date) + '</td><td class="tiny">' + esc(e.data_type) + '</td><td class="tiny">' + esc(e.geography) + '</td><td class="tiny">' + esc(e.consumer_or_market) + '</td><td>' + esc(e.confidence) + '</td><td class="tiny">' + esc(e.evidence_nature) + '</td></tr>').join('') + '</tbody></table>';
+  };
+  els.forEach(e => e.addEventListener('input', draw)); draw();
+}
+function notFound(what){ return slide({ part:'', title:'Not found', dek: esc(what) + ' is not in this run.', body:'<a class="btn" href="#/">Back to overview</a>' }); }
+
+// ── router ─────────────────────────────────────────
+function nav(route){
+  const on = r => route.indexOf(r) === 0 ? ' class="on"' : '';
+  return '<nav class="nav"><a class="brand" href="#/">' + SWOOSH + 'PIE_1.0<span> · Basketball Shorts</span></a><div class="links"><a href="#/#summary"' + (route === '/' ? ' class="on"' : '') + '>Overview</a><a href="#/#portfolio">Portfolio</a><a href="#/#specialists"' + on('/agent') + '>Specialists</a><a href="#/evidence"' + on('/evidence') + '>Evidence</a><a href="#/#gate">Decision gate</a></div><span class="status">Human gate open</span></nav>';
+}
+function render(){
+  const raw = (location.hash || '#/').slice(1);
+  const parts = raw.split('#'); const route = parts[0] || '/'; const anchor = parts[1] || '';
+  const seg = route.split('/').filter(Boolean);
+  let page;
+  if (seg[0] === 'opportunity') page = dossier(seg[1]);
+  else if (seg[0] === 'agent') page = agentPage(seg[1]);
+  else if (seg[0] === 'evidence') page = evidencePage();
+  else page = overview();
+  app.innerHTML = nav(route) + page;
+  const target = anchor || (seg[0] === 'agent' && seg[2]) || '';
+  const el = target && document.getElementById(target);
+  if (el) el.scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', render);
+render();
+})();
+</script>
+</body>
+</html>

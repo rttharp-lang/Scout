@@ -1,0 +1,673 @@
+{
+  "agent_id": "A06",
+  "agent_name": "Athlete / Performance Intelligence",
+  "domain": "How basketball is actually played across environments, climates, player types and competition levels, and what that demands of shorts",
+  "research_narrative": "I approached this as a performance-first question: what does the body do in a basketball game, what does the environment do to the body, and where does a pair of shorts either help or get in the way. I ran roughly 32 distinct WebSearch queries across biomechanics (lateral movement counts, jump counts, hip range of motion), thermal physiology (sweat rates by level and setting), rulebooks (FIBA 2024, NFHS 2025-26, FIBA 3x3, youth league guidance), storage behaviour at pickup, tights/compression layering, padded shorts, durability, UV exposure, and regional playing conditions in Greater China, the Philippines, India, the UAE, Australia, Brazil, Mexico, Japan/Korea, Africa and England. \n\nAn important caveat for the PLM team: the session's network egress proxy returned 403 on every WebFetch and curl attempt (GSSI, PubMed/PMC, FIBA PDFs, Nike.com reviews, Dick's, McDavid, Ateneo, Manila Bulletin, Wikipedia and about 30 other hosts). I therefore could not read any primary page in full; every evidence excerpt below comes from the WebSearch result summaries of those pages, and I have capped confidence at Medium and marked evidence_nature accordingly. The session search budget was also exhausted before I could run sweat-show-through, WBGT/court-surface and Sport England outdoor-court queries. Those are gaps I name in each opportunity's unanswered question.\n\nWhat surprised me most was how quantitatively brutal the movement profile is: up to 450 lateral movements and 42-56 jumps per game, with an activity change every 2-4 seconds and roughly a third of actions being lateral shuffles. Combined with sweat rates of about 1 L/h in practice and 1.4-1.6 L/h in competition, the short is not a garment that sits still; it is repeatedly loaded in deep hip abduction and flexion while saturating. The second surprise was how clearly the rulebooks split the market: FIBA requires shorts to end at or above the knee with all compression garments in one team colour, NFHS restricts tights to black/white/beige/jersey colour, and youth leagues cap length at one inch below the knee. None of that touches pickup. The third was climate: Guangzhou July highs of 34-37C, a Gurgaon court surface above 50C in May with users self-regulating to morning and evening, Abu Dhabi guidance to play early or late, and an Ateneo project warning that Philippine outdoor basketball culture is 'clearly at stake' under rising temperatures. Outdoor play in the biggest participation markets is drifting to dawn and dusk, which changes what the short must do (dry fast, protect skin at midday, be seen at night) versus the indoor product.\n\nWhat I could not find: any peer-reviewed data on shorts-specific failure (seam, pocket, hem) in outdoor play; any measured sweat-rate data from outdoor courts in Guangzhou, Manila or Delhi; any survey quantifying how many pickup players carry a phone on-body during games; and any women-specific biomechanics of shorts fit. Nike's own WNBA size chart telling women to order by hip measurement is the strongest fit signal I found, and it is indirect.\n\nMy reasoning from evidence to opportunities was to look for places where two verified constraints collide. Rules-compliant competition shorts cannot carry pockets or knee-length hems, yet elite players almost universally layer 3/4 tights under them, so a linerless, layer-ready competition short is an honest product. Pickup players need storage, but open pockets spill and zip pockets are too small for modern phones, so an outdoor utility short with a phone-sized internal zip pocket and abrasion panels is a second. Falls on asphalt plus the adoption of padded compression (with reported wash-durability failures) suggest a padded outdoor short. Women's hip-first sizing and youth growth-spurt sizing both point to waistband and length adjustability that the drawstring alone does not solve. I have kept price positions in local currency where the market is non-US and flagged every opportunity as Medium or Low confidence because no primary source was read this session.",
+  "top_signals": [
+    {
+      "id": "A06-S1",
+      "title": "Basketball is a lateral-shuffle and jump sport: ~450 lateral movements and 42-56 jumps per game, activity change every 2-4 s",
+      "finding": "Systematic-review data summarised in search results state basketball shows the highest frequency of lateral movement among multi-directional team sports (up to 450 per game), requires 42-56 jumps per game, and athletes change activity 500-3000 times per game, or once every 2-4 seconds. Roughly 31% of game actions are lateral shuffling, and a 2025 elite-youth study describes position-specific most-demanding scenarios. Shorts are therefore loaded repeatedly in deep hip abduction and flexion, not in a running gait.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "PubMed - Activity Demands During Multi-Directional Team Sports: A Systematic Review",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28801751/",
+          "source_date": "unknown",
+          "data_type": "academic paper (abstract via search summary)",
+          "geography": "Global (multi-sport review)",
+          "consumer_or_market": "Competitive basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "basketball reported the highest frequency of lateral movement (up to 450 per game), and basketball requires 42-56 jumps per game ... change activity between 500 and 3000 times over the course of a competition, or once every 2-4 seconds"
+        },
+        {
+          "source": "University of Toronto thesis - Investigation Of Modern Basketball Movement Demands",
+          "url": "https://utoronto.scholaris.ca/server/api/core/bitstreams/c613dd72-86c1-479f-9dc6-6e567a8ab6cc/content",
+          "source_date": "unknown",
+          "data_type": "academic thesis (via search summary)",
+          "geography": "Canada / North America",
+          "consumer_or_market": "Competitive basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "basketball players spend approximately 31% of game actions shuffling laterally"
+        },
+        {
+          "source": "PMC - Exploring the most demanding scenarios in elite youth basketball across playing positions and time windows",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12490299/",
+          "source_date": "2025",
+          "data_type": "academic paper (via search summary)",
+          "geography": "Europe (elite youth)",
+          "consumer_or_market": "Elite youth basketball players by position",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball is a multi-directional sport that has high lateral and vertical demands, and athletes are required to accelerate, decelerate, change direction, jump, and shuffle"
+        }
+      ],
+      "consumer_groups": "All on-court players; most acute for guards (lateral shuffle volume) and bigs (jump/landing volume)",
+      "implication": "Fit testing must be done in a defensive lateral stance and at jump-landing hip flexion, not standing. Hem, liner and waistband must not bind or ride in abduction; a hem that clears the knee in a low stance and a gusset or articulated liner are performance features, not styling."
+    },
+    {
+      "id": "A06-S2",
+      "title": "Sweat load is ~1 L/h in practice and 1.4-1.6 L/h in competition; the uniform itself traps measurable sweat",
+      "finding": "GSSI normative data give basketball a whole-body sweating rate of 0.95 +/- 0.42 L/h; elite male youth show ~1.0-1.4 L/h in training and ~1.6 L/h in competition, and male college players ~1.4-1.6 L/h in games. A 2022 IJSNEM study of 53 NBA G League players validated on-court sweat patches, and a PMC paper specifically measured sweat trapped in basketball uniforms. All of this is indoor data; no outdoor-court sweat data surfaced.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Gatorade Sports Science Institute - Normative Data For Sweating Rate ... An Update And Analysis By Sport",
+          "url": "https://www.gssiweb.org/en/research/Article/normative-data-for-sweating-rate-sweat-sodium-concentration-and-sweat-sodium-loss-in-athletes-an-update-and-analysis-by-sport",
+          "source_date": "unknown",
+          "data_type": "sports-science review (via search summary)",
+          "geography": "US (mostly)",
+          "consumer_or_market": "Trained basketball athletes",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball players have a whole-body sweating rate (WBSR) of 0.95 +/- 0.42 L/h ... lower sweat losses than American football (1.51 +/- 0.70 L/h)"
+        },
+        {
+          "source": "GSSI SSE-165 Hydration Science And Strategies For Basketball",
+          "url": "https://www.gssiweb.org/sports-science-exchange/article/sse-165-hydration-science-and-strategies-for-basketball",
+          "source_date": "unknown",
+          "data_type": "sports-science review (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Elite youth and college basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Elite male youth players showed mean sweating rates of approximately 1.0-1.4 L/h during training and ~1.6 L/h during competition; male college players during game play ~1.4-1.6 L/h"
+        },
+        {
+          "source": "IJSNEM 32(5) - Sweating Rate and Sweat Chloride of Elite Male Basketball Players Measured With a Wearable Microfluidic Device",
+          "url": "https://journals.humankinetics.com/view/journals/ijsnem/32/5/article-p342.xml",
+          "source_date": "2022",
+          "data_type": "academic paper (via search summary)",
+          "geography": "US (NBA G League)",
+          "consumer_or_market": "53 male NBA development league players",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "involving 53 male NBA development league players"
+        },
+        {
+          "source": "PMC - Trapped sweat in basketball uniforms and the effect on sweat loss estimates",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5617937/",
+          "source_date": "unknown",
+          "data_type": "academic paper (title only via search)",
+          "geography": "US",
+          "consumer_or_market": "Basketball players in uniform",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Trapped sweat in basketball uniforms and the effect on sweat loss estimates"
+        }
+      ],
+      "consumer_groups": "All players; heaviest for competition-level males and anyone playing outdoors in hot-humid climates",
+      "implication": "A short should be specified against a 1.5 L/h whole-body sweat load for 40-60 minutes: fabric dry-time, waistband wet-weight gain, and drawstring slip when saturated are measurable specs. Outdoor hot-market loads are likely higher but unverified (see A06-S5)."
+    },
+    {
+      "id": "A06-S3",
+      "title": "Rulebooks split the market: competition shorts must end at/above the knee with colour-matched compression; pickup is unregulated",
+      "finding": "FIBA 2024 rules (as summarised) require shorts to end above or at the knee, shirts tucked in, and all arm/leg compression garments, undershirts and undershorts in the same solid colour team-wide. NFHS 2025-26 permits tights and sleeves only in white, black, beige or jersey colour, identical across teammates, with one manufacturer logo on compression shorts. Youth-league guidance says shorts may not extend more than one inch below the knee. FIBA 3x3 requires shorts to match the shirt's dominant colour front and back. None of these bodies governs pickup or outdoor play.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "FIBA 2024 Official Basketball Rules (PDF)",
+          "url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf",
+          "source_date": "2024",
+          "data_type": "rulebook (via search summary)",
+          "geography": "Global (FIBA)",
+          "consumer_or_market": "FIBA-sanctioned competition players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Shorts must end above the knee or at the knee ... all their arm and leg compression garments including undershirts and undershorts ... of the same solid colour ... all players must tuck their shirts into their playing shorts"
+        },
+        {
+          "source": "Diocese of Cleveland 2025-2026 High School Basketball Rules (NFHS-based)",
+          "url": "https://www.ccdocle.org/files/assets/2025-26highschoolbasketballrulesfinal.pdf",
+          "source_date": "2025",
+          "data_type": "rulebook (via search summary)",
+          "geography": "US (high school)",
+          "consumer_or_market": "US high-school players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "sleeves/tights shall be black, white, beige or the predominant color of the uniform and the same color sleeves/tights shall be worn by all teammates"
+        },
+        {
+          "source": "Wooter - Ultimate Guide to Custom Youth Basketball Uniforms",
+          "url": "https://wooter.com/articles/ultimate-guide-to-custom-youth-basketball-uniforms/",
+          "source_date": "unknown",
+          "data_type": "industry guide (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Youth league teams and parents",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Many basketball leagues require that shorts not extend more than one inch below the knee"
+        },
+        {
+          "source": "FIBA 3x3 Official Rules - Short Version (PDF)",
+          "url": "https://fiba3x3.com/docs/FIBA-3x3-Basketball-Rules-Short.pdf",
+          "source_date": "unknown",
+          "data_type": "rulebook (via search summary)",
+          "geography": "Global (FIBA 3x3)",
+          "consumer_or_market": "3x3 competition players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Shorts must be of the same dominant colour front and back as the shirts"
+        }
+      ],
+      "consumer_groups": "HS, club/AAU, college, FIBA and 3x3 competition players versus pickup/outdoor players",
+      "implication": "One short cannot serve both worlds. Competition product must be knee-clearing and pocket-free with compression colour systems; pickup/outdoor product is free to add storage, longer hems, reflectivity and UPF. Line plans should be built as two explicit families."
+    },
+    {
+      "id": "A06-S4",
+      "title": "Storage is the unsolved pickup problem: open pockets spill, zip pockets are too small for large phones, and pro shorts have none",
+      "finding": "Industry and retailer content converge on the same complaint: open side pockets are convenient but a phone 'can slip out when you sit or jump'; zippered pockets lock items in but 'are often smaller, so larger phones may not fit easily'; pockets can 'catch fingers, tug during play, or just get in the way'. Nike's own DNA shorts answer with side pockets plus 'a zippered utility pocket large enough to keep a phone secure', and the Sabrina shorts use side pockets plus a snap cargo pocket. No source quantified how many pickup players carry a phone on-body.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Healong Sport - Types of Pockets in Basketball Shorts and When You Need Them",
+          "url": "https://healongsport.com/info-detail/types-of-pockets-in-basketball-shorts-%E2%80%94-and-when-you-need-them",
+          "source_date": "unknown",
+          "data_type": "manufacturer guide (via search summary)",
+          "geography": "Global / China manufacturer",
+          "consumer_or_market": "Recreational and pickup players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Open side pockets ... won't secure your items during active play - your phone can slip out when you sit or jump ... professional basketball shorts ... usually have zero pockets"
+        },
+        {
+          "source": "Keap Athletics - Basketball shorts with pockets",
+          "url": "https://keapathletics.com/pages/basketball-shorts-with-pockets",
+          "source_date": "unknown",
+          "data_type": "brand page (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Pickup players",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "pockets can catch fingers, tug during play, or just get in the way ... a flapping pocket is the last thing you want"
+        },
+        {
+          "source": "Just Love Basketball - 13 Best Basketball Shorts with Pockets, 2026",
+          "url": "https://justlovebasketball.com/best-basketball-shorts-with-pockets/",
+          "source_date": "2026",
+          "data_type": "product review roundup (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Recreational players buying online",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Zippered pockets ... are often smaller, so larger phones may not fit easily ... 11-inch inseams ... though pocket dimensions may be tight for larger phones"
+        },
+        {
+          "source": "Nike DNA Men's Dri-FIT 6 in Basketball Shorts product page",
+          "url": "https://www.nike.com/t/dna-mens-dri-fit-6-basketball-shorts-R65pLfb2",
+          "source_date": "unknown",
+          "data_type": "product page (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Nike basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "waistband with drawstring and side pockets to carry essentials, plus a zippered utility pocket large enough to keep a phone secure"
+        }
+      ],
+      "consumer_groups": "Pickup and outdoor players (all genders, 16-40), commuters to courts without lockers; especially Greater China and SEA half-court players",
+      "implication": "Storage should be engineered, not appended: an internal zip pocket sized for 6.7 in phones placed where it does not bounce or catch fingers, a key loop, and pocket bags that do not flap. Quantify phone-carry behaviour at court level before committing."
+    },
+    {
+      "id": "A06-S5",
+      "title": "Outdoor heat is pushing play to dawn and dusk in the largest participation markets",
+      "finding": "Guangzhou July highs are 34-37C with extremes above 38C; Shenzhen sits at ~32C days and ~27C nights with July-August the worst humidity-temperature combination. A Gurgaon (India) outdoor court in May shows surface temperature above 50C, with 11am-5pm sessions 'genuinely uncomfortable and potentially unsafe' and users self-regulating to morning and evening. UAE guidance is to play early morning or evening. Ateneo's Klim@Basketbol project (2025) says rising temperatures put the Philippine outdoor basketball culture 'clearly at stake'. China has ~300M occasional players and the game is 'mainly played outdoors on a half-court'.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "China Highlights - Guangzhou Weather in July",
+          "url": "https://www.chinahighlights.com/guangzhou/weather/july.htm",
+          "source_date": "unknown",
+          "data_type": "climate reference (via search summary)",
+          "geography": "Guangzhou, Greater China",
+          "consumer_or_market": "Outdoor players in South China",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "daytime high temperatures usually ranging from 34 to 37C (93-99F), with extremes reaching over 38C"
+        },
+        {
+          "source": "Stark Sports - Indoor vs Outdoor Basketball Court Cost India 2026",
+          "url": "https://www.starksports.in/blog/indoor-vs-outdoor-basketball-court-cost-india",
+          "source_date": "2026",
+          "data_type": "industry blog (via search summary)",
+          "geography": "Gurgaon / India",
+          "consumer_or_market": "Indian outdoor court users",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "A Gurgaon outdoor court in May has a surface temperature above 50C, with sessions between 11 am and 5 pm in summer being genuinely uncomfortable and potentially unsafe. Most users self-regulate to morning and evening hours"
+        },
+        {
+          "source": "Ateneo de Manila University - Klim@Basketbol",
+          "url": "https://www.ateneo.edu/features/2025/07/01/klimabasketbol",
+          "source_date": "2025-07-01",
+          "data_type": "university feature / research project (via search summary)",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino outdoor and barangay players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "with rising temperatures, this culture of outdoor basketball for both children and amateur players is clearly at stake"
+        },
+        {
+          "source": "SportSurge (Alibaba) - How Many People Play Basketball in the World",
+          "url": "https://sportssurge.alibaba.com/basketball/how-many-people-play-basketball-in-the-world",
+          "source_date": "unknown",
+          "data_type": "market article (via search summary)",
+          "geography": "Greater China",
+          "consumer_or_market": "Chinese occasional players",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "China has the highest number of basketball participants, estimated at over 300 million occasional players ... mainly played outdoors on a half-court with a fast pace"
+        }
+      ],
+      "consumer_groups": "Outdoor pickup players in Greater China, India, SEA, Gulf; youth and adult; disproportionately the Worldball priority consumer",
+      "implication": "The outdoor short's use case is a 27-32C, high-humidity evening or a 30C+ morning, not an air-conditioned gym. Specify for fastest dry-time, lowest fabric weight and wet cling, and consider night visibility. Midday UPF matters for tournaments but everyday outdoor play is shifting away from midday."
+    },
+    {
+      "id": "A06-S6",
+      "title": "Compression tights under shorts are near-universal at elite level and increasingly padded; shorts are a top layer, not a base layer",
+      "finding": "Search summaries report 'nearly every player in the starting lineup' of teams such as the Celtics, Bucks, Mavs and Suns wears leg compression, usually three-quarter or full length, citing warmth, injury prevention and protection from floor burns and collisions; the practice traces to Jerry Stackhouse's knee pain. Padded options (McDavid HEX thigh, hip and tailbone pads) are marketed for basketball, but a customer reports 'after the first wash the padding bundled up'.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Compression Athlete - Your Complete Guide to Basketball Compression Tights (2026)",
+          "url": "https://www.compressionathlete.com/post/basketball-compression-tights-guide",
+          "source_date": "2026",
+          "data_type": "industry guide (via search summary)",
+          "geography": "US / NBA",
+          "consumer_or_market": "Elite and aspirational players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nearly every player in the starting lineup of major teams like the Celtics, Bucks, Mavs, and Suns are wearing some form of leg compression gear"
+        },
+        {
+          "source": "Interbasket - Why Basketball Players Wear Tights",
+          "url": "https://www.interbasket.net/news/why-basketball-players-wear-tights/37817/",
+          "source_date": "unknown",
+          "data_type": "news/feature (via search summary)",
+          "geography": "US / NBA",
+          "consumer_or_market": "NBA players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "According to Jerry Stackhouse, the originator of tights in the NBA, they helped alleviate knee pain ... players choosing three-quarter compression pants because they give support and coverage exactly where it is needed"
+        },
+        {
+          "source": "McDavid HEX Basketball Compression Short With Thigh Pads (Amazon listing)",
+          "url": "https://www.amazon.com/McDavid-Short-Contoured-Around-Thigh/dp/B00XP25MEO",
+          "source_date": "unknown",
+          "data_type": "consumer reviews (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Amateur players and parents buying protective shorts",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Basketball is pretty rough so these protect on some of the falls he takes ... After the first wash the padding bundled up and can't straighten the cubes out"
+        }
+      ],
+      "consumer_groups": "HS, club, college and pro players; masters players managing knees; parents of youth players",
+      "implication": "For competition and serious training, the built-in brief liner is redundant and adds heat over tights; a linerless short with an interior waistband grip that does not slide over slick tights is a real need. Padding that survives laundering is an open durability problem worth owning."
+    },
+    {
+      "id": "A06-S7",
+      "title": "Outdoor courts add reflected UV and multi-hour tournament exposure; UPF shorts exist but are rare and Nike's is 6 inches",
+      "finding": "Concrete and asphalt reflect 2-15% of UV, tournament days stack 4-6+ hours across 3-5 games, and heavy sweating cuts sunscreen effectiveness to 40-80 minutes. ARPANSA treats UPF 50+ as the standard for outdoor activity, and an Australian guide notes UPF arm sleeves are 'culturally accepted' while UPF shorts are 'less common'. Nike already sells a DNA UV 6 in Woven short, i.e. UPF at the shortest inseam and least thigh coverage.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "UV-Blocker - Sun Protection for Basketball: The Complete Court Safety Guide",
+          "url": "https://uv-blocker.com/blogs/sun-protection/sun-protection-for-basketball",
+          "source_date": "unknown",
+          "data_type": "brand guide (via search summary)",
+          "geography": "US / Australia",
+          "consumer_or_market": "Outdoor tournament players",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Concrete and asphalt can reflect 2% to 15% of UV radiation ... Tournament days can stack 4 to 6+ hours of cumulative exposure across 3 to 5 games ... reducing its effectiveness to 40-80 minutes ... some brands offer shorts with UPF protection for thigh coverage"
+        },
+        {
+          "source": "ARPANSA - Australian sun protective clothing standard",
+          "url": "https://www.arpansa.gov.au/our-services/testing-and-calibration/ultraviolet-services/labelling-sun-protective-clothing/au-standard",
+          "source_date": "unknown",
+          "data_type": "government standard (via search summary)",
+          "geography": "Australia",
+          "consumer_or_market": "Australian outdoor sport participants",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "UPF 50+ rating to be the gold standard for sun protection"
+        },
+        {
+          "source": "Dick's Sporting Goods - Nike Men's Dri-FIT DNA UV 6 in Woven Basketball Shorts",
+          "url": "https://www.dickssportinggoods.com/p/nike-mens-dri-fit-dna-uv-6-woven-basketball-shorts-23nikmmnkdfwvndn6apb/23nikmmnkdfwvndn6apb",
+          "source_date": "unknown",
+          "data_type": "product page (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Nike basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike Men's Dri-FIT DNA UV 6'' Woven Basketball Shorts"
+        }
+      ],
+      "consumer_groups": "Outdoor tournament and 3x3 players in Australia, Philippines, Southern US, Gulf, South China; youth in day-long tournaments",
+      "implication": "UPF is a cheap, verifiable outdoor spec that Nike has only applied at 6 in. A 7-9 in UPF 40-50 woven outdoor short covers the thigh where sunscreen fails fastest, and pairs with the culturally accepted sleeve."
+    },
+    {
+      "id": "A06-S8",
+      "title": "Durability failures cluster at mesh snagging, seam fraying and pads, and are called out even on premium Nike Dri-FIT",
+      "finding": "Manufacturer guidance says entry-level mesh frays at seams after 30+ washes, pro-grade fabric should survive 30,000+ abrasion rubs, and microfiber blends snag less than open mesh. The same industry source states that 'quality control issues with fabric snagging and fraying mean the long-term value is limited given the premium price for some popular brands like Nike Dri-FIT shorts'. Padded shorts show wash failures (A06-S6). No source quantified outdoor asphalt-fall failure rates.",
+      "classification": "HYPOTHESIS",
+      "evidence": [
+        {
+          "source": "Alibaba Product Insights - The Fundamentals of Fabric For Basketball Shorts",
+          "url": "https://www.alibaba.com/product-insights/fabric-for-basketball-shorts.html",
+          "source_date": "unknown",
+          "data_type": "B2B industry article (via search summary)",
+          "geography": "Global / China manufacturing",
+          "consumer_or_market": "Apparel buyers and consumers",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Pro-grade basketball fabric should withstand over 30,000 rubs without pilling ... Entry-level mesh shorts have thinner fabric where seams may fray after 30+ washes ... Quality control issues with fabric snagging and fraying mean the long-term value is limited given the premium price for some popular brands like Nike Dri-FIT shorts"
+        },
+        {
+          "source": "Makitape Fabric - How to Choose Basketball Shorts Fabric: GSM and Durability",
+          "url": "https://makitapefabric.com/how-to-choose-basketball-shorts-fabric-a-technical-guide-to-gsm-durability/",
+          "source_date": "unknown",
+          "data_type": "fabric supplier guide (via search summary)",
+          "geography": "Global / China manufacturing",
+          "consumer_or_market": "Apparel brands",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Microfiber blends use thousands of tiny, tightly woven filaments that are much harder to snag than traditional yarns"
+        },
+        {
+          "source": "Walmart - Russell Athletic Men's Ripstop Woven Basketball Shorts",
+          "url": "https://www.walmart.com/ip/Russell-Athletic-Men-s-Ripstop-Woven-Basketball-Shorts-Sizes-S-XL/5424058711",
+          "source_date": "unknown",
+          "data_type": "product listing (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Value-tier consumers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Russell Athletic Men's Ripstop Woven Basketball Shorts"
+        }
+      ],
+      "consumer_groups": "Outdoor and high-frequency players (3+ sessions/week) in all markets; value-conscious buyers in China, India, Philippines",
+      "implication": "Outdoor shorts should be tested to an abrasion standard (e.g. Martindale rub count) and wash-cycle seam integrity, with ripstop or microfiber wovens and reinforced hem/hip panels. Publishing a durability claim would differentiate against snag-prone mesh."
+    },
+    {
+      "id": "A06-S9",
+      "title": "Women's shorts are sized by hip, which leaves the waist under-controlled; Nike's own guidance says order by hip measurement",
+      "finding": "Nike's WNBA/women's basketball shorts size chart tells buyers whose waist and hip fall in different sizes to 'order according to your hip measurement'. The Sabrina short uses a woven front with a knit back and a 'loose, stretchy fit', and Nike advises those used to men's styles to size up. Reviewers praise the Sabrina length as 'perfect for basketball'. I found no independent quantitative data on women's basketball shorts fit complaints; this is a gap.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Nike - Women's Basketball Shorts Size Chart (WNBA shorts)",
+          "url": "https://www.nike.com/size-fit/wnba-shorts",
+          "source_date": "unknown",
+          "data_type": "size chart (via search summary)",
+          "geography": "US / global e-commerce",
+          "consumer_or_market": "Women buying Nike basketball shorts",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "If your body measurements for hips and waist correspond to different sizes, you should order according to your hip measurement"
+        },
+        {
+          "source": "Nike - Sabrina Basketball Shorts product page",
+          "url": "https://www.nike.com/t/sabrina-basketball-shorts-MH3WkB",
+          "source_date": "unknown",
+          "data_type": "product page (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "Women's basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "woven front paired with a knit back ... loose, stretchy fit ... side pockets and a snap cargo pocket ... If you typically wear men's styles, you should size up"
+        },
+        {
+          "source": "Nike AU - Reviews: Sabrina Dri-FIT Reversible Basketball Shorts",
+          "url": "https://www.nike.com/au/t/sabrina-dri-fit-reversible-basketball-shorts-6btDv1rT/reviews",
+          "source_date": "unknown",
+          "data_type": "consumer reviews (via search summary)",
+          "geography": "Australia",
+          "consumer_or_market": "Women buying Sabrina shorts",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "the shorts are perfect for basketball because of the length"
+        }
+      ],
+      "consumer_groups": "Women and girls playing basketball, particularly those who previously wore men's shorts",
+      "implication": "Hip-first sizing implies waist slack that the drawstring must absorb; an internal adjustable/elastic waistband with a higher rise at the back and the Sabrina knit-back construction is the pattern to extend across the women's line. Validate with fit-mapping before scaling."
+    },
+    {
+      "id": "A06-S10",
+      "title": "Youth is the largest and fastest-growing base, and growth spurts push parents to size up against a one-inch-below-knee rule",
+      "finding": "Sport England's Active Lives (2024-25 academic year, published December 2025) shows nearly 1.1 million under-16s playing weekly (741,600 boys, 328,800 girls) versus 344,000 adults playing twice per 28 days; SFIA reports basketball as the most popular US team sport across all ages with ~7% growth in 2024. Sizing guides tell parents of players 'nearing a growth spurt' to size up and rely on highly elasticised waistbands with a strong cord tie 'allowing room for growth', while leagues cap length at one inch below the knee.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Basketball England - Sport England Active Lives survey shows adult basketball participation remains steady",
+          "url": "https://basketballengland.co.uk/news/sport-england-active-lives-survey-shows-adult-basketball-participation-remains-steady",
+          "source_date": "2025-12",
+          "data_type": "survey report (via search summary)",
+          "geography": "England",
+          "consumer_or_market": "English youth and adult players",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "nearly 1.1 million were playing basketball every week, with the gender split being 741,600 boys and 328,800 girls ... over 344,000 adults playing basketball at least twice in a 28-day period"
+        },
+        {
+          "source": "SGB Media - SFIA: Sports Participation Gains Moderate in 2025",
+          "url": "https://sgbonline.com/sfia-sees-sports-participation-gains-moderate-in-2025/",
+          "source_date": "2026",
+          "data_type": "market report summary (via search summary)",
+          "geography": "US",
+          "consumer_or_market": "US participants age 6+",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "basketball is the most popular team sport among all age groups that the SFIA documented ... Basketball saw an increase of nearly 7% or higher ... in 2024"
+        },
+        {
+          "source": "Vortex Basketball - Choosing the Right Size for Your Child",
+          "url": "https://www.vortexbasketball.com/news/youth-basketball-uniforms-how-to-know-what-size-to-buy-for-your-child",
+          "source_date": "unknown",
+          "data_type": "sizing guide (via search summary)",
+          "geography": "US / Australia",
+          "consumer_or_market": "Parents of youth players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "For players at the upper end of a size range or those nearing a growth spurt, sizing up is a good idea ... waistbands are highly elasticized with a strong cord tie, allowing room for growth"
+        }
+      ],
+      "consumer_groups": "Youth 8-16 (Uniform of Youth), parents, school and club programmes in England, US and China",
+      "implication": "A youth short that accommodates one growth-spurt season without violating the knee rule (adjustable hem or internal length system) and an adjustable waistband beyond a cord tie would reduce the size-up compromise that leaves waists slipping and hems too long."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A06-T1",
+      "title": "Competition rules forbid what pickup players want",
+      "description": "FIBA, NFHS and youth leagues require knee-clearing, pocket-free shorts with colour-matched compression, while the pickup and outdoor consumer needs storage for phone and keys, longer or shorter length by preference, and visibility or UPF features. The same silhouette cannot satisfy both, yet most line plans sell one 'basketball short' to everyone.",
+      "signal_ids": ["A06-S3", "A06-S4", "A06-S7"]
+    },
+    {
+      "id": "A06-T2",
+      "title": "Built-in liners fight the tights that most serious players already wear",
+      "description": "Elite and aspirational players layer 3/4 tights under shorts for support and floor-burn protection, making the sewn-in brief liner redundant and hotter, while outdoor hot-market players who do not wear tights still need a liner or gusset. Shorts also slide over slick tights, so the waistband problem changes with layering.",
+      "signal_ids": ["A06-S6", "A06-S2", "A06-S5"]
+    },
+    {
+      "id": "A06-T3",
+      "title": "Pockets are demanded and resented at the same time",
+      "description": "Players want a place for a phone and keys, but open pockets spill on jumps, zip pockets are too small for 6.7-inch phones, and pocket bags catch fingers on crossovers. The storage feature that sells the short at the rack is the one most likely to annoy on court.",
+      "signal_ids": ["A06-S4", "A06-S1"]
+    },
+    {
+      "id": "A06-T4",
+      "title": "Heat pushes outdoor play to night, but UV features are built for midday",
+      "description": "In Guangzhou, Gurgaon, Manila and Abu Dhabi outdoor players self-regulate to dawn and dusk, when the shorts need fast dry-time, low cling in 27-32C humidity and some visibility; UPF and sun-protection features only pay off in daytime tournaments. An outdoor short has to choose its hours or carry both.",
+      "signal_ids": ["A06-S5", "A06-S7"]
+    },
+    {
+      "id": "A06-T5",
+      "title": "Abrasion durability wants heavier fabric; heat wants the lightest",
+      "description": "Outdoor asphalt and 30,000-rub durability targets push toward ripstop wovens and reinforced panels, while 1.5 L/h sweat loads in 30C+ humidity push toward the lightest, most open fabric. Mesh is the light answer and the snag-prone one.",
+      "signal_ids": ["A06-S8", "A06-S2", "A06-S5"]
+    },
+    {
+      "id": "A06-T6",
+      "title": "Both women and growing youth are told to size up, and the drawstring is asked to fix the waist",
+      "description": "Women are told to size by hip and youth parents to size up for growth, so in both groups the waist is systematically under-fitted and the hem over-long. The cord tie is treated as the fix, but it is also the component most reported to slip when saturated.",
+      "signal_ids": ["A06-S9", "A06-S10", "A06-S2"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A06-O1",
+      "name": "Outdoor Half-Court Utility Short (Worldball)",
+      "target_consumer": "Male and female pickup players 16-35 in Greater China, Philippines, India and the Gulf who play evening 3-on-3/4-on-4 half-court on asphalt or acrylic and arrive by bike, scooter or transit with phone and keys on-body",
+      "job_to_be_done": "Let me play a two-hour evening run in 28-32C humidity with my phone and keys secured, without the shorts clinging, snagging, or shredding when I hit the asphalt",
+      "product_problem": "Current basketball shorts are indoor products: mesh that snags and frays, open pockets that spill on jumps, zip pockets too small for modern phones, and no abrasion protection where players fall",
+      "proposed_solution": "A 7-inch (women's 5/7-inch) lightweight ripstop woven outdoor short with reinforced hip and hem panels, an internal zip phone pocket sized for a 6.7-inch phone positioned high on the hip to eliminate bounce, a key loop, UPF 40+, low-profile reflective trims for night courts, and a linerless option",
+      "key_features": [
+        "Ripstop or microfiber woven body ~110-130 gsm tested to a published abrasion rub count",
+        "Internal zip pocket sized 6.7 in phone, high-hip placement, non-flapping pocket bag",
+        "Reinforced abrasion panels at hip and hem",
+        "UPF 40+ fabric and reflective hem/side trims for dusk and night play",
+        "Wet-grip internal waistband to limit drawstring slip when saturated",
+        "Linerless and lined versions"
+      ],
+      "price_position": "CNY 399-499 / USD 55-70 / PHP 2,500-3,200; mid-premium, above Nike DNA core, below signature-athlete shorts",
+      "evidence_signal_ids": ["A06-S4", "A06-S5", "A06-S7", "A06-S8", "A06-S1"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What share of Greater China and SEA pickup players actually carry a phone on-body during play versus courtside, and at what price does an outdoor-specific short beat the lifestyle-priced shorts they already wear?"
+    },
+    {
+      "id": "A06-O2",
+      "name": "Layer-Ready Competition Short",
+      "target_consumer": "HS, club/AAU, college and semi-pro players (male and female) who wear 3/4 compression tights under their shorts",
+      "job_to_be_done": "Give me a rule-compliant game short that does not double up on my tights, does not slide down over them, and clears my knee in a defensive stance",
+      "product_problem": "Sewn-in brief liners are redundant and hot over tights, waistbands slide on slick compression fabric, and hems catch at the knee in deep lateral stances",
+      "proposed_solution": "A linerless 8-9 inch knee-clearing competition short with a silicone-grip internal waistband, articulated side seams and gusset for lateral abduction, FIBA/NFHS-compliant clean panel, and a compression-colour system sold alongside in black, white, beige and team colours",
+      "key_features": [
+        "Linerless construction with soft internal facing",
+        "Silicone or textured grip inside the waistband to hold over tights",
+        "Gusseted crotch and articulated side seams tested in defensive stance",
+        "Hem that ends above the knee across sizes to satisfy FIBA/NFHS/youth rules",
+        "Matching 3/4 tights in rule-compliant colours as a system",
+        "Single-logo placement compliant with NFHS"
+      ],
+      "price_position": "USD 45-60 (team pricing USD 35-45); core-to-mid tier",
+      "evidence_signal_ids": ["A06-S6", "A06-S3", "A06-S1", "A06-S2"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What proportion of HS/club players below the NBA actually wear tights every game, and does a linerless short cannibalise Nike's higher-margin lined game shorts?"
+    },
+    {
+      "id": "A06-O3",
+      "name": "Padded Outdoor Short with Wash-Stable Protection",
+      "target_consumer": "Outdoor and masters (35+) players and youth in contact-heavy outdoor leagues (Philippine barangay leagues, Chinese village games, US park runs) who fall on asphalt or concrete",
+      "job_to_be_done": "Protect my hips and thighs when I hit the ground outdoors without wearing a separate padded girdle that bunches after washing",
+      "product_problem": "Padded compression shorts exist (McDavid HEX) but are a separate hot layer, and reviewers report padding bundling after the first wash; no mainstream basketball short integrates protection",
+      "proposed_solution": "An outdoor short with low-profile, removable or laminated hip/thigh pads that survive 50 wash cycles, built on a durable woven shell so the player needs only one layer",
+      "key_features": [
+        "Laminated or pocketed low-profile hip and thigh pads with 50-wash durability claim",
+        "Abrasion-resistant woven shell with reinforced seat",
+        "Linerless so it can be worn over tights or alone",
+        "7-8 inch inseam with knee clearance",
+        "Ventilated pad zones to limit heat build-up"
+      ],
+      "price_position": "USD 75-90 / CNY 549-649; premium tier",
+      "evidence_signal_ids": ["A06-S6", "A06-S8", "A06-S5"],
+      "confidence": "Low",
+      "key_unanswered_question": "How frequent and how injurious are falls in outdoor pickup versus indoor play, and will players accept any added weight or heat for protection in hot markets?"
+    },
+    {
+      "id": "A06-O4",
+      "name": "Women's Hip-Fit Adjustable Short",
+      "target_consumer": "Women and girls 14-30 playing school, club and pickup basketball who currently size by hip or buy men's shorts",
+      "job_to_be_done": "Fit my hips without a waist that gaps or a hem that hangs too long, and keep the short in place through a full game",
+      "product_problem": "Nike's own sizing guidance tells women to order by hip when waist and hip conflict, leaving the waist under-fitted and dependent on a drawstring; length options are limited relative to men's",
+      "proposed_solution": "Extend the Sabrina woven-front/knit-back construction into a core women's short with an internal adjustable elastic waistband (not only a cord), higher back rise, and 5-inch and 7-inch inseam options with a secure snap or zip pocket",
+      "key_features": [
+        "Knit back panel for hip room with woven front for structure",
+        "Internal adjustable elastic waistband plus flat drawstring",
+        "Higher back rise to prevent gapping in low stance",
+        "5 in and 7 in inseams, knee-clearing for competition",
+        "Secure snap or zip pocket for phone at pickup"
+      ],
+      "price_position": "USD 50-60 / CNY 349-429; mid tier, at parity with men's DNA",
+      "evidence_signal_ids": ["A06-S9", "A06-S1", "A06-S4"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Is waist gap or hem length the bigger fit complaint among women players, and does an adjustable waistband beat simply adding more size and length options?"
+    },
+    {
+      "id": "A06-O5",
+      "name": "Youth Grow-With-Me Short",
+      "target_consumer": "Boys and girls 9-15 and their parents, in school and club programmes in England, US and China, where a growth spurt happens mid-season",
+      "job_to_be_done": "Buy one pair of shorts that fits at the start and end of a growth season and still passes the one-inch-below-knee rule",
+      "product_problem": "Parents size up for growth, which creates waist slip and over-long hems now; leagues cap length, so sizing up can be non-compliant",
+      "proposed_solution": "A youth short with an internal adjustable waistband and a length-adjust system (interior snap or fold hem) that shifts inseam by about 1.5 inches, so the short stays rule-compliant across a growth spurt",
+      "key_features": [
+        "Internal button-elastic adjustable waistband",
+        "Interior snap or fold hem giving ~1.5 in of inseam adjustment",
+        "Durable woven or microfiber fabric for high wash counts",
+        "Optional secure pocket for school-day carry",
+        "Sold in two-year size bands"
+      ],
+      "price_position": "USD 30-35 / GBP 25-28 / CNY 199-249; entry-to-core tier",
+      "evidence_signal_ids": ["A06-S10", "A06-S3", "A06-S8"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Will parents pay a premium for growth adjustability over simply buying two cheaper pairs, and does adjustable hem hardware survive youth laundering?"
+    }
+  ],
+  "sources": [
+    {"source": "PubMed - Activity Demands During Multi-Directional Team Sports: A Systematic Review", "url": "https://pubmed.ncbi.nlm.nih.gov/28801751/", "date": "unknown", "contribution": "Lateral movements up to 450/game, 42-56 jumps/game, activity change every 2-4 s (via search summary)"},
+    {"source": "U Toronto thesis - Investigation Of Modern Basketball Movement Demands", "url": "https://utoronto.scholaris.ca/server/api/core/bitstreams/c613dd72-86c1-479f-9dc6-6e567a8ab6cc/content", "date": "unknown", "contribution": "31% of game actions are lateral shuffling"},
+    {"source": "PMC - Most demanding scenarios in elite youth basketball", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12490299/", "date": "2025", "contribution": "Multi-directional, position-specific demands"},
+    {"source": "PMC - Comparison of multidirectional jump performance and lower limb passive ROM soccer vs basketball", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7790370/", "date": "unknown", "contribution": "Basketball players show smaller hip flexion with flexed knee ROM than soccer players"},
+    {"source": "GSSI - Normative sweating data by sport", "url": "https://www.gssiweb.org/en/research/Article/normative-data-for-sweating-rate-sweat-sodium-concentration-and-sweat-sodium-loss-in-athletes-an-update-and-analysis-by-sport", "date": "unknown", "contribution": "Basketball WBSR 0.95 +/- 0.42 L/h"},
+    {"source": "GSSI SSE-165 Hydration Science and Strategies for Basketball", "url": "https://www.gssiweb.org/sports-science-exchange/article/sse-165-hydration-science-and-strategies-for-basketball", "date": "unknown", "contribution": "Youth 1.0-1.4 L/h training, 1.6 L/h competition; college 1.4-1.6 L/h"},
+    {"source": "IJSNEM 32(5) sweat patch study G League", "url": "https://journals.humankinetics.com/view/journals/ijsnem/32/5/article-p342.xml", "date": "2022", "contribution": "53 G League players, on-court sweat measurement"},
+    {"source": "PMC - Trapped sweat in basketball uniforms", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5617937/", "date": "unknown", "contribution": "Existence of uniform-trapped sweat measurement"},
+    {"source": "FIBA Official Basketball Rules 2024 PDF", "url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2024-v10a.pdf", "date": "2024", "contribution": "Shorts at/above knee; compression garments same colour; shirts tucked"},
+    {"source": "Diocese of Cleveland 2025-26 HS Basketball Rules (NFHS)", "url": "https://www.ccdocle.org/files/assets/2025-26highschoolbasketballrulesfinal.pdf", "date": "2025", "contribution": "Tights/sleeves colour restrictions, same across teammates"},
+    {"source": "Team Insight - NFHS Issues New Basketball Uniform Rules", "url": "https://www.formula4media.com/articles/nfhs-issues-new-basketball-uniform-rules", "date": "unknown", "contribution": "Rule 3-5-6 undershirt colour; single logo on compression shorts"},
+    {"source": "FIBA 3x3 Official Rules Short Version", "url": "https://fiba3x3.com/docs/FIBA-3x3-Basketball-Rules-Short.pdf", "date": "unknown", "contribution": "Shorts same dominant colour as shirt front and back"},
+    {"source": "FIBA 3x3 Pro-Teams Official Uniforms 2026 Guidelines", "url": "https://fiba3x3.com/docs/fiba-3x3-professional-mens-circuit-uniforms-guidelines.pdf", "date": "2026", "contribution": "Commercial signage colour rules on shorts"},
+    {"source": "Wooter - Ultimate Guide to Custom Youth Basketball Uniforms", "url": "https://wooter.com/articles/ultimate-guide-to-custom-youth-basketball-uniforms/", "date": "unknown", "contribution": "Shorts not more than one inch below knee in many leagues"},
+    {"source": "Vortex Basketball - Choosing the Right Size for Your Child", "url": "https://www.vortexbasketball.com/news/youth-basketball-uniforms-how-to-know-what-size-to-buy-for-your-child", "date": "unknown", "contribution": "Size up for growth spurts; elasticised waist with cord tie"},
+    {"source": "Healong Sport - Types of Pockets in Basketball Shorts", "url": "https://healongsport.com/info-detail/types-of-pockets-in-basketball-shorts-%E2%80%94-and-when-you-need-them", "date": "unknown", "contribution": "Open pockets spill on jumps; pro shorts have no pockets"},
+    {"source": "Keap Athletics - Basketball shorts with pockets", "url": "https://keapathletics.com/pages/basketball-shorts-with-pockets", "date": "unknown", "contribution": "Pockets catch fingers and flap during play"},
+    {"source": "Just Love Basketball - 13 Best Basketball Shorts with Pockets 2026", "url": "https://justlovebasketball.com/best-basketball-shorts-with-pockets/", "date": "2026", "contribution": "Zip pockets too small for large phones; 11 in inseams"},
+    {"source": "Nike DNA Men's Dri-FIT 6 in Basketball Shorts", "url": "https://www.nike.com/t/dna-mens-dri-fit-6-basketball-shorts-R65pLfb2", "date": "unknown", "contribution": "Side pockets plus zip utility pocket sized for phone"},
+    {"source": "Dick's - Nike Dri-FIT DNA UV 6 in Woven Basketball Shorts", "url": "https://www.dickssportinggoods.com/p/nike-mens-dri-fit-dna-uv-6-woven-basketball-shorts-23nikmmnkdfwvndn6apb/23nikmmnkdfwvndn6apb", "date": "unknown", "contribution": "Nike already sells a UV short at 6 in inseam"},
+    {"source": "Nike WNBA shorts size chart", "url": "https://www.nike.com/size-fit/wnba-shorts", "date": "unknown", "contribution": "Order by hip measurement when waist and hip differ"},
+    {"source": "Nike Sabrina Basketball Shorts product page", "url": "https://www.nike.com/t/sabrina-basketball-shorts-MH3WkB", "date": "unknown", "contribution": "Woven front/knit back, snap cargo pocket, size-up guidance"},
+    {"source": "Nike AU Sabrina Reversible Shorts reviews", "url": "https://www.nike.com/au/t/sabrina-dri-fit-reversible-basketball-shorts-6btDv1rT/reviews", "date": "unknown", "contribution": "Reviewer praise for length"},
+    {"source": "Compression Athlete - Basketball Compression Tights Guide 2026", "url": "https://www.compressionathlete.com/post/basketball-compression-tights-guide", "date": "2026", "contribution": "Near-universal leg compression among NBA starters"},
+    {"source": "Interbasket - Why Basketball Players Wear Tights", "url": "https://www.interbasket.net/news/why-basketball-players-wear-tights/37817/", "date": "unknown", "contribution": "Stackhouse origin; 3/4 length preference"},
+    {"source": "Hoopsbasket - Why Do Basketball Players Wear Tights 2026 Guide", "url": "https://www.hoopsbasket.com/blogs/hoops-basketball/leg-sleeves-tights-a-basketball-essential", "date": "2026", "contribution": "Benefits claimed: warmth, injury prevention, floor-burn protection"},
+    {"source": "Amazon - McDavid HEX padded compression shorts", "url": "https://www.amazon.com/McDavid-Short-Contoured-Around-Thigh/dp/B00XP25MEO", "date": "unknown", "contribution": "Padding bundled after first wash; protects on falls"},
+    {"source": "McDavid HEX Basketball Compression Short With Thigh Pads", "url": "https://www.mcdavidusa.com/products/hex-basketball-compression-short-with-thigh-pads-black", "date": "unknown", "contribution": "Product exists with thigh/hip/tailbone pad variants"},
+    {"source": "China Highlights - Guangzhou Weather in July", "url": "https://www.chinahighlights.com/guangzhou/weather/july.htm", "date": "unknown", "contribution": "July highs 34-37C, extremes over 38C"},
+    {"source": "Climates to Travel - Shenzhen climate", "url": "https://www.climatestotravel.com/climate/china/shenzhen", "date": "unknown", "contribution": "32C days, 27C nights in July"},
+    {"source": "Stark Sports - Indoor vs Outdoor Basketball Court Cost India 2026", "url": "https://www.starksports.in/blog/indoor-vs-outdoor-basketball-court-cost-india", "date": "2026", "contribution": "Gurgaon court surface above 50C in May; users self-regulate to morning/evening"},
+    {"source": "Ateneo de Manila - Klim@Basketbol", "url": "https://www.ateneo.edu/features/2025/07/01/klimabasketbol", "date": "2025-07-01", "contribution": "Rising temperatures threaten outdoor basketball culture in the Philippines"},
+    {"source": "Manila Bulletin - Taking big risks in ligang labas", "url": "https://mb.com.ph/2024/11/14/taking-big-risks-in-ligang-labas", "date": "2024-11-14", "contribution": "Barangay/outside league context in the Philippines"},
+    {"source": "Courts of the World - Philippines", "url": "https://www.courtsoftheworld.com/philippines/", "date": "unknown", "contribution": "2,000+ courts listed in the Philippines"},
+    {"source": "Courts of the World - China", "url": "https://www.courtsoftheworld.com/china/", "date": "unknown", "contribution": "300+ courts listed in China"},
+    {"source": "SportSurge (Alibaba) - How many people play basketball in the world", "url": "https://sportssurge.alibaba.com/basketball/how-many-people-play-basketball-in-the-world", "date": "unknown", "contribution": "China ~300M occasional players, mainly outdoor half-court"},
+    {"source": "Decathlon United Media - Basketball in China", "url": "https://www.decathlon-united.media/media/sportfolios/basketball-in-china.html", "date": "unknown", "contribution": "4-on-4 half-court culture, public courts in every neighbourhood"},
+    {"source": "Xinhua - China's village basketball games go viral", "url": "https://english.news.cn/20230329/9ba0f5f68e80415293d6917fba8b8adf/c.html", "date": "2023-03-29", "contribution": "Taipan Village games 20,000+ spectators, 100M+ online views (older, flagged)"},
+    {"source": "Property Finder - Basketball courts in Abu Dhabi", "url": "https://www.propertyfinder.ae/blog/basketball-court-in-abu-dhabi/", "date": "unknown", "contribution": "Play early morning or evening in UAE heat; Zayed Sports City outdoor 3x3 courts"},
+    {"source": "UV-Blocker - Sun Protection for Basketball", "url": "https://uv-blocker.com/blogs/sun-protection/sun-protection-for-basketball", "date": "unknown", "contribution": "Court UV reflection 2-15%; 4-6+ hour tournament exposure; sunscreen 40-80 min with sweat"},
+    {"source": "ARPANSA - Australian sun protective clothing standard", "url": "https://www.arpansa.gov.au/our-services/testing-and-calibration/ultraviolet-services/labelling-sun-protective-clothing/au-standard", "date": "unknown", "contribution": "UPF 50+ gold standard"},
+    {"source": "Cancer Council Australia - SunSmart sporting events", "url": "https://www.cancer.org.au/cancer-information/causes-and-prevention/sun-safety/be-sunsmart/sunsmart-sporting-events", "date": "unknown", "contribution": "Sun protection required across high-participation months"},
+    {"source": "Alibaba Product Insights - Fabric for Basketball Shorts", "url": "https://www.alibaba.com/product-insights/fabric-for-basketball-shorts.html", "date": "unknown", "contribution": "30,000 rub target; entry mesh frays after 30+ washes; Nike Dri-FIT snagging remark"},
+    {"source": "Makitape Fabric - GSM and durability guide", "url": "https://makitapefabric.com/how-to-choose-basketball-shorts-fabric-a-technical-guide-to-gsm-durability/", "date": "unknown", "contribution": "Microfiber snag resistance"},
+    {"source": "Walmart - Russell Athletic Ripstop Woven Basketball Shorts", "url": "https://www.walmart.com/ip/Russell-Athletic-Men-s-Ripstop-Woven-Basketball-Shorts-Sizes-S-XL/5424058711", "date": "unknown", "contribution": "Ripstop woven exists at value tier"},
+    {"source": "Basketball England - Active Lives participation", "url": "https://basketballengland.co.uk/news/sport-england-active-lives-survey-shows-adult-basketball-participation-remains-steady", "date": "2025-12", "contribution": "344,000 adults; ~1.1M under-16s weekly; 741,600 boys / 328,800 girls"},
+    {"source": "SGB Media - SFIA participation 2025", "url": "https://sgbonline.com/sfia-sees-sports-participation-gains-moderate-in-2025/", "date": "2026", "contribution": "Basketball most popular team sport all ages; ~7% growth 2024"},
+    {"source": "SFIA 2026 Topline Participation Report release", "url": "https://sfia.org/resources/participation-hits-new-high-but-majority-of-americans-not-yet-meeting-recommended-guidelines-of-150-minutes-of-weekly-activity-sfias-2026-topline-report-finds/", "date": "2026", "contribution": "250M Americans active in 2025; core 158.8M"},
+    {"source": "Opportunity International - NBA Africa new courts Rwanda and Kenya", "url": "https://opportunity.org/news/press-releases/nba-africa-and-opportunity-international-unveil-new-basketball-courts", "date": "2025-05", "contribution": "Outdoor court builds; NBA Africa 1,000-court commitment; Jr. NBA 170,000 youth"},
+    {"source": "Atlas Obscura - Oaxaca basketball Copa Benito Juarez", "url": "https://www.atlasobscura.com/articles/oaxaca-basketball-copa-benito-juarez", "date": "unknown", "contribution": "300+ indigenous teams in five-day outdoor tournament at altitude"},
+    {"source": "Netshoes - Basquete de Rua", "url": "https://www.netshoes.com.br/especiais/basquete/curiosidades-e-cultura-bas/basquete-de-rua-bas-cur", "date": "unknown", "contribution": "Street basketball grew in plazas and parks of Sao Paulo and Rio, boosted by 3x3"},
+    {"source": "Accio - basketball short trends 2025", "url": "https://www.accio.com/business/basketball-short-trends", "date": "2025", "contribution": "Mesh, compression and oversized styles trend"}
+  ]
+}

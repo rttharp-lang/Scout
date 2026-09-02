@@ -1,0 +1,831 @@
+{
+  "agent_id": "A04",
+  "agent_name": "Commercial Intelligence",
+  "domain": "Sales, margin, bookings, inventory, rebuy, productivity and historical product performance for basketball shorts and adjacent categories (global)",
+  "research_narrative": "I set out to answer four questions with public proxies for data Nike holds internally: where basketball-shorts demand is already proven, what correlates with commercial success, where Nike is over-invested, and where demand is going uncaptured. My plan was to triangulate company filings (Nike, adidas, Puma, Under Armour, Anta, Li-Ning), retailer commentary (Dick's/Foot Locker), marketplace sell-through proxies (Amazon best-seller ranks, Foot Locker/Walmart product and review pages, StockX), and China e-commerce rankings (Tmall 618), then read the primary pages for detail.\n\nWhat actually happened constrains how much weight the PLM team should put on this file. I ran 15 distinct web searches spanning Nike, adidas, Puma, UA, Anta, Li-Ning, Dick's/Foot Locker, Amazon, Circana/inseam trends, StockX, Japan, the Philippines, Europe/Decathlon, team dealers, women's basketball, China outdoor participation and Nike's 2025 price actions. After that the session-wide search budget was exhausted by sibling agents. I then attempted more than 45 page fetches (Nike IR, SEC 10-K, adidas-group.com, Anta IR, Li-Ning results, Dick's 8-K, Amazon best-seller lists, Nike.com and Walmart review pages, StockX, Titan 22, Technavio, Statista, Tmall coverage) and every single host was rejected by the network egress policy; a curl probe confirmed only GitHub is reachable. Every evidence item below therefore rests on the text and figures returned in the search results themselves, not on the primary page. I have set confidence to Medium at best (High only where the figure is a headline company-reported number echoed by multiple outlets) and I have not invented any figure that was not returned.\n\nWhat surprised me. First, the divergence inside performance basketball: Nike says Performance grew mid-single digits in FY26 led by Running, Football and Basketball while Sportswear and Jordan streetwear were challenged; in the same window adidas basketball fell 21% in Q2 2026 even as its apparel rose 35%, Under Armour is exiting Curry Brand with a total basketball business of only $100-120M, and Puma calls basketball one of its few growing apparel pockets. Basketball apparel is a scale game and Nike plus Chinese domestics (Li-Ning basketball +5% in H1 2026, Anta core apparel units +35%) are the only ones growing. Second, the retail evidence points to the volume assortment being commoditized while the category grows: Nike DNA 8-inch shorts marked from $65 to $48.75 at Foot Locker, Icon shorts reviews at Walmart and Nike.com describing paper-thin, see-through fabric and seam holes after one wash, and Amazon's basketball-shorts volume led by Amazon Essentials, BOOJO 7-packs, NORTHYARD and Soothfeel with running-short features (zip pockets, 5-9 inch inseams). Third, the June 2025 price action exempted every product under $100, all kids product and all Jordan product, which means the basketball shorts ladder ($30-$65) absorbed tariff and input inflation without list-price relief; that is a plausible root cause of the fabric-weight complaints and the markdown depth. Fourth, China: Nike Greater China apparel fell to $1,535M in FY26 (units -8%), Q4 GC revenue -17%, while China's sports participation climbed from 30.9% (2018) to 49.6% (2024), Anta holds about 23% share and adidas grew GC 15% in Q2 2026 on local creation. Demand is not the problem; Nike's assortment and marketplace are.\n\nWhat I could not find: any public shorts-level sell-through, margin or rebuy data; Tmall/JD basketball-shorts rankings; StockX apparel premiums for Nike/Jordan game shorts beyond generic listings; Japan, Korea, Philippines, Mexico, Brazil, India or Africa basketball-shorts price and volume data; Circana category numbers for athletic shorts; team-dealer shorts unit volumes. These are gaps, not absence of demand, and I list the internal datasets to pull in the implications.\n\nHow I reasoned to opportunities: I looked for places where an external demand signal was strong and a Nike-specific capture failure was visible. That yields (1) a China outdoor court short built and priced locally, (2) a women's game short beyond the single Sabrina style, (3) a quality-and-margin reset of the core Icon/DNA franchise to cut markdown dependence, (4) a team/club sublimated short through BSN-type dealers, and (5) a shorter-inseam hybrid short with the feature set Amazon volume proves. I did not rank these against other domains.",
+  "top_signals": [
+    {
+      "id": "A04-S1",
+      "title": "Performance basketball is one of Nike's few growth engines while Sportswear and Jordan streetwear stall",
+      "finding": "Nike's FY26 results (year ended 31 May 2026, revenue $46.4B, flat reported / -2% currency-neutral) describe the Performance business growing mid-single digits led by Running, Football and Basketball, while Sportswear and Jordan streetwear remained challenged. Total NIKE Brand apparel grew 4% currency-neutral with units +2% and ASP contributing ~2 points. Wholesale ($27.5B, +6% reported) is growing while Nike Direct ($17.7B, -6%) shrinks, so basketball shorts must win in wholesale doors.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "CNBC - Nike (NKE) Q4 2026 earnings (via WebSearch result summary)",
+          "url": "https://www.cnbc.com/2026/06/30/nike-nke-q4-2026-earnings.html",
+          "source_date": "2026-06-30",
+          "data_type": "earnings call / news article",
+          "geography": "Global",
+          "consumer_or_market": "Nike Inc. total business",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Q4 revenue was $11.0 billion, down 1% reported and 4% currency-neutral... Performance business grew mid-single digits, led by Running, Football, and Basketball, while Sportswear and Jordan streetwear remained challenged."
+        },
+        {
+          "source": "TradingView - NIKE, Inc. FY 2026 10-K Summary (via WebSearch result summary)",
+          "url": "https://www.tradingview.com/news/tradingview:2ed2aea9fde1e:0-nike-inc-fy-2026-revenue-46-4b-eps-2-1-10-k-summary/",
+          "source_date": "unknown",
+          "data_type": "10-K summary",
+          "geography": "Global",
+          "consumer_or_market": "NIKE Brand apparel",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Apparel revenues increased 4% on a currency-neutral basis, with unit sales increasing 2%, while higher ASP per unit contributed approximately 2 percentage points... Wholesale revenues were $27.5 billion, up 6 percent... NIKE Direct revenues were $17.7 billion, down 6 percent."
+        },
+        {
+          "source": "SEC EDGAR - NIKE, Inc. Form 10-K FY2026 (listed in WebSearch results; page itself blocked by egress proxy)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000088/nke-20260531.htm",
+          "source_date": "2026-07",
+          "data_type": "10-K filing",
+          "geography": "Global",
+          "consumer_or_market": "Nike Inc.",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "NIKE Brand revenues were primarily impacted by declines in Greater China and EMEA, partially offset by growth in North America (North America +5% currency-neutral)."
+        }
+      ],
+      "consumer_groups": "All basketball consumers; especially US wholesale shoppers (Dick's, Foot Locker) where Nike growth is concentrated",
+      "implication": "Basketball is earning investment inside Nike's Sport Offense, but the bet must be built for wholesale sell-through, not Nike Direct. Pull internal: FY25-FY26 basketball apparel revenue by franchise (Icon, DNA, Standard Issue, Sabrina, Kids), by channel, with full-price sell-through and markdown rate by SKU."
+    },
+    {
+      "id": "A04-S2",
+      "title": "Greater China apparel is shrinking in units for Nike while China basketball demand and domestic rivals grow",
+      "finding": "Nike Greater China apparel revenue was $1,535M in FY26 vs $1,616M in FY25 (-5% reported, -7% currency-neutral, units -8%, ASP +1pt); Q4 FY26 Greater China revenue fell 17% (Direct -14%, wholesale -19%, EBIT -20%) under a multi-quarter marketplace reset that management expects to remain a revenue headwind through FY27. In the same period Li-Ning's basketball category grew 5% (H1 2026), Anta core brand revenue rose 4.8% with apparel lines such as Storm Mecha surpassing 2M units (+~35%), Anta holds ~23% of China sportswear, and adidas grew Greater China 15% in Q2 2026 crediting local sourcing and design.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Yahoo Finance - Nike Inc (NKE) Q4 2026 Earnings Call Highlights (via WebSearch result summary)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nike-inc-nke-q4-2026-050043032.html",
+          "source_date": "unknown",
+          "data_type": "earnings call summary",
+          "geography": "Greater China",
+          "consumer_or_market": "Nike Greater China",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Greater China apparel revenues were $1,535 million in fiscal 2026, down 5% from $1,616 million in fiscal 2025... unit sales of apparel decreasing 8%... Greater China revenue declined 17% (Nike Direct -14%, wholesale -19%, EBIT -20%)."
+        },
+        {
+          "source": "Investing.com - Li Ning H1 2026 slides (via WebSearch result summary)",
+          "url": "https://uk.investing.com/news/company-news/li-ning-h1-2026-slides-margin-gains-offset-by-weak-demand-cut-outlook-93CH-4843142",
+          "source_date": "2026-08",
+          "data_type": "interim results / earnings slides",
+          "geography": "China",
+          "consumer_or_market": "Li-Ning consumers, China",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Revenue reached RMB 15,235 million in the first half of 2026, up 2.8%... gross profit margin 50.9%... basketball showed stronger momentum with 5% growth... sports casual (27% of mix) increased 13%, training declined 3%."
+        },
+        {
+          "source": "ANTA Sports IR - Revenue Grows 12.9% to RMB43.51 Billion (via WebSearch result summary; page blocked)",
+          "url": "https://ir.anta.com/en/news_detail.php?id=167844",
+          "source_date": "2026-08",
+          "data_type": "interim results press release",
+          "geography": "China",
+          "consumer_or_market": "Anta Group / Anta brand consumers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Revenue increased 12.9% year-on-year to RMB43.51 billion for the six months ended 30 June 2026... core Anta brand rose 4.8% to RMB 17.8 billion... apparel sales of products including Storm Mecha surpassed two million units, an increase of nearly 35%."
+        },
+        {
+          "source": "adidas Group press release - adidas grows top line 14% and achieves record sales in Q2 (via WebSearch result summary; page blocked)",
+          "url": "https://www.adidas-group.com/en/media/press-releases/adidas-grows-top-line-14percent-and-achieves-record-sales-in-q2",
+          "source_date": "unknown",
+          "data_type": "earnings press release",
+          "geography": "Greater China / Global",
+          "consumer_or_market": "adidas Greater China",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Greater China accelerated to 15% growth in Q2 and 16% for the first half, with DTC channels up 22-27%... 'the business is in much better shape there now' due to the policy of sourcing and developing locally."
+        }
+      ],
+      "consumer_groups": "Greater China basketball players (outdoor/street and indoor), China youth",
+      "implication": "The China unit decline is a capture failure, not a demand failure. Any China basketball short must be created and priced locally (adidas proof point) and sold through a cleaned-up wholesale marketplace. Pull internal: GC basketball shorts units and full-price sell-through by city tier, by channel (Tmall/JD/Douyin/wholesale/NSO), and GC line-plan outdoor SKU count vs. outdoor participation."
+    },
+    {
+      "id": "A04-S3",
+      "title": "Competitor basketball apparel is consolidating: adidas -21%, Under Armour exiting Curry, Puma growing off a tiny base",
+      "finding": "adidas basketball declined 21% in Q2 2026 even as total apparel rose 35% currency-neutral on World Cup demand. Under Armour's entire global basketball business including Curry Brand is guided at $100-120M for FY26, apparel fell 2% to $3.4B, the company cut 25% of SKUs and is separating from Stephen Curry (final Curry 13 in Feb 2026, apparel through Oct 2026). Puma's H1 2026 sales fell 5.2% currency-adjusted with apparel -1.8%, yet its FY25 report listed Basketball among the growing apparel pockets alongside Training and Motorsports.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Investing.com - Adidas Q2 2026 slides: World Cup fuels record sales, margins pressured (via WebSearch result summary)",
+          "url": "https://www.investing.com/news/company-news/adidas-q2-2026-slides-world-cup-fuels-record-sales-margins-pressured-93CH-4825654",
+          "source_date": "unknown",
+          "data_type": "earnings slides summary",
+          "geography": "Global",
+          "consumer_or_market": "adidas basketball / apparel",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Apparel revenues increased 35% on a currency-neutral basis in the second quarter... basketball declined 21% in Q2."
+        },
+        {
+          "source": "Sportico - Under Armour Anticipates Hit From Curry Brand Exit, Narrows Focus (via WebSearch result summary)",
+          "url": "https://www.sportico.com/business/commerce/2026/under-armour-curry-brand-exit-impact-1234898859/",
+          "source_date": "2026",
+          "data_type": "news article",
+          "geography": "Global / US",
+          "consumer_or_market": "Under Armour basketball",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Under Armour's total global basketball business, including the Curry brand, will generate between $100 million and $120 million in fiscal 2026."
+        },
+        {
+          "source": "Sporting Goods Intelligence - Under Armour fiscal 2026 results (via WebSearch result summary)",
+          "url": "https://www.sgieurope.com/financial-results/under-armour-plunges-19-as-outlook-disappoints/121081.article",
+          "source_date": "2026",
+          "data_type": "financial results article",
+          "geography": "Global",
+          "consumer_or_market": "Under Armour",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "fiscal 2026 revenue of $5 billion with a new CFO, a Curry brand exit and 25% SKU cuts. Apparel declined 2 percent to $3.4 billion."
+        },
+        {
+          "source": "PUMA corporate news - Q2 2026 reflects reset measures and softer demand (via WebSearch result summary; page blocked)",
+          "url": "https://about.puma.com/en/newsroom/corporate-news/2026/31-07-2026-puma-q2-2026-reflects-reset-measures-and-softer-demand",
+          "source_date": "2026-07-31",
+          "data_type": "earnings press release",
+          "geography": "Global",
+          "consumer_or_market": "Puma apparel",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Sales in the first half of 2026 were down 5.2% (currency-adjusted)... Apparel was down 1.8% to EUR 1,098.4 million... (FY25 apparel) decline in Sportstyle and Teamsports, partially offset by growth in Training, Basketball and Motorsports."
+        }
+      ],
+      "consumer_groups": "Performance basketball players in North America and Europe; Curry Brand loyalists now unaffiliated",
+      "implication": "Western competitors are retreating from performance basketball apparel; the share-of-shelf opportunity in Dick's/Foot Locker/JD is real but the category is small in absolute terms (UA's whole basketball business is ~2% of its revenue). Nike should size the incremental shelf and the displaced Curry apparel consumer rather than assume category growth."
+    },
+    {
+      "id": "A04-S4",
+      "title": "US athletic apparel marketplace turned increasingly promotional in summer 2026; Foot Locker comps negative",
+      "finding": "Dick's Sporting Goods (13 weeks ended 1 Aug 2026) reported net sales of $5.59B (+53% with Foot Locker), Dick's-banner comps +4.9% helped by the FIFA World Cup, but Foot Locker comps -3.6% with the FY outlook cut to flat to -2%. Executive chairman Ed Stack said conditions across portions of the athletic footwear and apparel marketplace 'became increasingly promotional' as the quarter progressed. Nike's own FY26 commentary cited elevated promotions and markdowns weighing on profitability, EMEA Digital -24%, and inventory flat year on year.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "CNBC - Dick's Sporting Goods (DKS) earnings Q2 2026 (via WebSearch result summary)",
+          "url": "https://www.cnbc.com/2026/08/25/dicks-sporting-goods-dks-earnings-q2-2026.html",
+          "source_date": "2026-08-25",
+          "data_type": "earnings news article",
+          "geography": "United States",
+          "consumer_or_market": "US sporting goods retail (Dick's + Foot Locker)",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "lowered its outlook for Foot Locker amid what it called a 'challenging athletic footwear and apparel marketplace'... conditions across portions of the athletic footwear and apparel marketplace became increasingly promotional."
+        },
+        {
+          "source": "Just Style - Dick's cuts 2026 outlook as Foot Locker drags down Q2 earnings (via WebSearch result summary)",
+          "url": "https://www.just-style.com/news/dicks-q2-fy26-result/",
+          "source_date": "2026-08",
+          "data_type": "news article",
+          "geography": "United States",
+          "consumer_or_market": "Dick's / Foot Locker shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "net sales of $5.59 billion, a 53% increase... Dick's brand comparable store sales +4.9%... Foot Locker comparable sales declined by 3.6%... full-year outlook for Foot Locker flat to down 2%."
+        },
+        {
+          "source": "Yahoo Finance - Nike Inc (NKE) Q4 2026 Earnings Call Highlights (via WebSearch result summary)",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nike-inc-nke-q4-2026-050043032.html",
+          "source_date": "unknown",
+          "data_type": "earnings call summary",
+          "geography": "Global / EMEA",
+          "consumer_or_market": "Nike",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Inventory was flat versus the prior year... EMEA revenue fell 6% with Nike Digital down 24%, working through heightened inventory, elevated promotions... promotions and markdowns across the marketplace remain elevated and continue to weigh on profitability."
+        }
+      ],
+      "consumer_groups": "US mall/sneaker-store shoppers (Foot Locker), US suburban families (Dick's)",
+      "implication": "Any new shorts program launching SS28 into US wholesale will meet a promotional floor; success characteristics are differentiated product with a reason to pay full price and tight buys. Pull internal: FY26 basketball shorts markdown rate and weeks-of-supply by wholesale partner, and Foot Locker vs Dick's sell-through by franchise."
+    },
+    {
+      "id": "A04-S5",
+      "title": "Women's basketball is the clearest proven, under-assorted demand pocket at US retail",
+      "finding": "In Dick's Q1 2026 (first full quarter owning Foot Locker, which contributed $1.79B), management called out women's basketball among the quarter's stronger categories, citing Sabrina Ionescu and A'ja Wilson as demand drivers across both banners. Aggregated reporting puts WNBA merchandise sales at Dick's +233% year over year and WNBAStore.com/flagship sales +601% vs 2023. At retail, Nike's women's basketball short offer visible in results is essentially one style (Sabrina Dri-FIT short with woven-knit panels, side pockets, snap cargo) and Sabrina tees are already marked to $15.97-$28.97 at Dick's.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Retail TouchPoints - Dick's Sporting Goods Reports Q1 Growth, Details Foot Locker 'Fast Break' Progress (via WebSearch result summary)",
+          "url": "https://www.retailtouchpoints.com/news/dicks-sporting-goods-reports-q1-growth-details-foot-locker-fast-break-progress/619701/",
+          "source_date": "2026-05",
+          "data_type": "earnings news article",
+          "geography": "United States",
+          "consumer_or_market": "Dick's / Foot Locker shoppers, women's basketball fans and players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Foot Locker contributed $1.79 billion in net sales in Q1 2026... Women's basketball was among the quarter's stronger categories. Executive Chairman Ed Stack cited athlete endorsers including Sabrina Ionescu and A'ja Wilson as drivers of demand across both the Dick's and Foot Locker businesses."
+        },
+        {
+          "source": "Accio - WNBA jersey sales numbers trend 2025 insights (aggregator; via WebSearch result summary)",
+          "url": "https://www.accio.com/business/wnba-jersey-sales-numbers-trend",
+          "source_date": "2025",
+          "data_type": "market summary / aggregator",
+          "geography": "United States",
+          "consumer_or_market": "WNBA merchandise buyers",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Sales at Dick's Sporting Goods rose by 233% year-over-year... Online sales at WNBAStore.com and the flagship New York City location increased by 601% compared to 2023."
+        },
+        {
+          "source": "Dick's Sporting Goods - Sabrina Ionescu Apparel category page (via WebSearch result summary)",
+          "url": "https://www.dickssportinggoods.com/a/sabrina-ionescu-apparel-0bfz01a.html",
+          "source_date": "unknown",
+          "data_type": "retailer product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike Sabrina Dri-FIT Basketball T-Shirts priced at $15.97 - $28.97."
+        },
+        {
+          "source": "Hibbett - Nike Women's Sabrina Basketball Shorts Dri-FIT (via WebSearch result summary)",
+          "url": "https://www.hibbett.com/nike-womens-sabrina-basketball-shorts/1112I.html",
+          "source_date": "unknown",
+          "data_type": "retailer product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Dri-FIT fabric and mixed woven-knit panels for mobility, with a loose fit featuring side pockets and snap cargo."
+        }
+      ],
+      "consumer_groups": "Women and girls who play (high school, college, rec) and WNBA fans; 'Women's Revolution' priority space",
+      "implication": "Demand is proven at the retailer level but the shorts assortment is a single athlete-led style and the tees are already discounted, suggesting the current women's line is too thin and/or too fan-skewed. Pull internal: women's basketball shorts units, size-curve fill, and rebuy by door for FY25-FY26; Sabrina franchise sell-through by style."
+    },
+    {
+      "id": "A04-S6",
+      "title": "Nike's core men's shorts franchises are selling at ~25% markdown and drawing durability complaints",
+      "finding": "Foot Locker lists the Nike Dri-FIT DNA 8-inch short at $65 reduced to $48.75 (25% off) while reviews there are 5.0/5, praising breathability and the zippered phone pocket but flagging that it runs small/short. The lower-tier Dri-FIT Icon short (6/8/11 inch) carries repeated complaints on Walmart and Nike.com: 'paper-thin', see-through, snags and pills, holes in seams after one wear and wash, and 'the worst quality product' the reviewer bought from Nike, alongside praise for the below-knee length and loose fit. Nike DNA also appears as a resale item on eBay.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Foot Locker - Nike Dri-FIT DNA 8 Inch Shorts - Men's (via WebSearch result summary)",
+          "url": "https://www.footlocker.com/product/model/nike-dri-fit-dna-8-inch-shorts/424826.html",
+          "source_date": "unknown",
+          "data_type": "retailer product page and consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Men's basketball shorts buyers at Foot Locker",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "prices dropped from $65 to $48.75... 5.0 out of 5 star average... zippered utility pocket large enough to keep a phone secure... some customers report sizing inconsistencies, noting the shorts run small or feel too short."
+        },
+        {
+          "source": "Walmart - Customer reviews for Nike Men's Dri-Fit Icon Basketball Shorts (via WebSearch result summary)",
+          "url": "https://www.walmart.com/reviews/product/629066800",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Value-channel men's basketball shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "fabric is paper-thin, snags easily, and tears or pills after minimal wear or washing... see-through... holes appearing in seams across the legs after wearing once and washing once... 'the worst quality product' they'd bought from Nike."
+        },
+        {
+          "source": "Nike.com - Reviews: Nike Dri-FIT Icon Men's Basketball Shorts (via WebSearch result summary; page blocked)",
+          "url": "https://www.nike.com/t/dri-fit-icon-mens-basketball-shorts-2c8F76/reviews",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Nike.com shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "some customers praise the below-the-knee length, loose fit, and breathable material... customers rate these shorts as running large."
+        }
+      ],
+      "consumer_groups": "Men 16-35 buying core Nike basketball shorts at Foot Locker, Walmart, Dick's, Macy's, Kohl's",
+      "implication": "The volume franchise (Icon) is being cost-engineered into quality complaints while the step-up franchise (DNA) is clearing at 25% off; both erode full-price productivity. Success correlates here with pocket security, breathability and length; failure correlates with fabric weight. Pull internal: Icon/DNA return rates and reasons, fabric GSM changes FY23-FY26, and margin after markdown by SKU."
+    },
+    {
+      "id": "A04-S7",
+      "title": "Amazon basketball-shorts volume is owned by sub-brand multipacks with running-short features",
+      "finding": "Amazon best-seller and sales-analytics listings for basketball shorts are led by Amazon Essentials Athletic Basketball Gym Shorts, BOOJO 5- and 7-pack athletic shorts, NORTHYARD and Soothfeel running shorts with zipper pockets; the leading ASIN is reported at ~10K monthly unit sales with the next two at ~5K and ~4K. The winning feature set is quick-dry, lightweight, moisture-wicking fabric, zipper pockets, elastic drawstring waist, and inseam choice across 5, 7, 9 inches and longer. Nike does not appear in the returned best-seller summary.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "ASInsight - Best Selling Basketball Shorts: Top 10 Ranked by Real Sales 2026 (via WebSearch result summary; page blocked)",
+          "url": "https://www.asinsight.com/report/US/basketball-shorts",
+          "source_date": "2026",
+          "data_type": "marketplace sales analytics",
+          "geography": "United States (Amazon.com)",
+          "consumer_or_market": "Amazon basketball shorts buyers",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "ASIN B08JGBB9N1 currently leads the basketball shorts market with 10K monthly sales, followed closely by B0CRHF41F7 with 5K monthly sales and B0DMM3GHBC with 4K monthly sales. The BOOJO 5 Pack Athletic Gym Mens Shorts is among the top sellers."
+        },
+        {
+          "source": "Amazon Best Sellers - Best Men's Athletic Shorts (via WebSearch result summary; page blocked)",
+          "url": "https://www.amazon.com/Best-Sellers-Men's-Athletic-Shorts/zgbs/fashion/1046660",
+          "source_date": "2026-09",
+          "data_type": "marketplace best-seller rank",
+          "geography": "United States",
+          "consumer_or_market": "Amazon men's athletic shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Popular options include the Soothfeel Men's Running Shorts with Zipper Pockets, Amazon Essentials Men's Athletic Basketball Gym Shorts, NORTHYARD Men's Athletic Running Shorts, and the BOOJO 7 Pack Mens Athletic Shorts... quick-dry technology, zipper pockets, lightweight materials... inseam lengths (5\", 7\", 9\", and longer)."
+        }
+      ],
+      "consumer_groups": "Price-sensitive US men (gym, rec ball, lounge) buying online; Gen Z multipack buyers",
+      "implication": "The mass market has redefined 'basketball shorts' as a versatile athletic short with secure pockets and inseam choice. Nike's 8-11 inch, single-inseam-per-style, $40-65 ladder leaves the 5-7 inch and sub-$30 tiers to private label. Pull internal: Nike.com and Amazon (if applicable) basketball shorts unit share by inseam and price band; cross-category migration from basketball to training/running shorts."
+    },
+    {
+      "id": "A04-S8",
+      "title": "Nike's June 2025 US price increases exempted everything under $100, all kids and all Jordan product",
+      "finding": "Nike's price action effective 1 June 2025 raised adult apparel and equipment by $2-$10 and footwear $100-150 by $5 / above $150 by $10, but explicitly left any product under $100, all kids' product and all Jordan apparel and accessories at existing prices. Since essentially the entire basketball shorts ladder sits under $100, the category absorbed tariff and input-cost inflation with no list-price relief, which is consistent with the markdown depth and fabric complaints in A04-S6.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "CNBC - Nike to increase prices on footwear, apparel amid tariffs (via WebSearch result summary)",
+          "url": "https://www.cnbc.com/2025/05/21/nike-price-increases-tariffs.html",
+          "source_date": "2025-05-21",
+          "data_type": "news article",
+          "geography": "United States",
+          "consumer_or_market": "Nike US consumers",
+          "confidence": "High",
+          "evidence_nature": "quantitative",
+          "excerpt": "prices for Nike apparel and equipment for adults increasing between $2 and $10... no increases on any kids' products... no price increases for any Jordan product, whether apparel or accessories; and any product under $100 remained at current price points."
+        },
+        {
+          "source": "Supply Chain Dive - Nike fights $1B tariff hit with sourcing shifts, price hikes (via WebSearch result summary)",
+          "url": "https://www.supplychaindive.com/news/nike-1b-tariff-sourcing-price-hikes/752159/",
+          "source_date": "2025",
+          "data_type": "news article",
+          "geography": "United States / Global sourcing",
+          "consumer_or_market": "Nike Inc.",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike fights $1B tariff hit with sourcing shifts, price hikes."
+        }
+      ],
+      "consumer_groups": "All US basketball shorts buyers; kids and Jordan buyers specifically protected",
+      "implication": "Shorts margin is structurally squeezed: list prices frozen, costs up, marketplace promotional. A new short must either earn a >$100-adjacent premium tier with visible innovation or be engineered to protect margin at $40-50 without visible quality loss. Pull internal: landed-cost and gross-margin trend by shorts SKU FY24-FY26 and tariff exposure by sourcing country."
+    },
+    {
+      "id": "A04-S9",
+      "title": "Team-dealer / uniform channel is a stable, growing B2B pool for basketball shorts that Nike reaches through BSN",
+      "finding": "Varsity Brands generates over $2.3B annual revenue, roughly two-thirds from BSN Sports (one profile lists BSN at $633M, a discrepancy to verify), with 2025 revenue and EBITDA up about 8% and 10% helped by tariff-driven order pull-forward; BSN distributes Nike, adidas, Under Armour, Puma and Lululemon to teams at every level and booked ~$75M in club/select-team sales, an entry into a ~$5B segment. 2026 visibility is described as less certain.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Youth Sports Business Report - Inside Varsity Brands: The $4.8 Billion Dallas Empire (via WebSearch result summary; page blocked)",
+          "url": "https://youthsportsbusinessreport.com/inside-varsity-brands-the-4-8-billion-dallas-empire-serving-millions-of-youth-athletes/",
+          "source_date": "unknown",
+          "data_type": "news / business profile",
+          "geography": "United States",
+          "consumer_or_market": "US school, club and select team programs",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "over $2.3 billion in annual revenue, two-thirds from BSN Sports... BSN distributes name brands like Nike, Adidas, Under Armour, Puma, and Lululemon to teams in every sport at every level... $75 million in club and select team sales last year, representing entry into a $5 billion market segment."
+        },
+        {
+          "source": "Yahoo Finance - Varsity Brands Gets a Boost From Ratings Agencies (via WebSearch result summary)",
+          "url": "https://finance.yahoo.com/news/varsity-brands-gets-boost-ratings-130000995.html",
+          "source_date": "unknown",
+          "data_type": "news article / credit rating commentary",
+          "geography": "United States",
+          "consumer_or_market": "Varsity Brands / BSN Sports",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Varsity's revenue and EBITDA grew approximately 8 percent and 10 percent in 2025... made more predictable by accelerated customer orders in response to tariff concerns, but 2026 remains less certain."
+        }
+      ],
+      "consumer_groups": "High-school, AAU/club and select basketball teams (Uniform of Youth priority space)",
+      "implication": "Uniform shorts are a bookings-led, low-markdown channel that grows with youth participation regardless of mall promotions. Pull internal: Nike Team Sports basketball shorts bookings, fill rate, and reorder frequency via BSN and other dealers; sublimated vs stock uniform mix; girls' team shorts demand."
+    },
+    {
+      "id": "A04-S10",
+      "title": "Inseam and silhouette are shifting shorter and more tailored in the broader shorts market; basketball lengths are counter-trend off court",
+      "finding": "Trade and brand commentary for 2025-2026 describes 5-inch inseams moving from specialty to mainstream, 3-4 inch lengths gaining traction in 2025, and a Spring 2026 shift away from oversized baggy silhouettes toward movement, utility and a more tailored aesthetic; men's athletic shorts search interest was moderate (index 55, June 2025). Nike's basketball line is anchored at 6/8/10/11 inch (DNA, Icon) while Amazon volume spans 5-9 inch. No Circana category sales data was retrievable.",
+      "classification": "HYPOTHESIS",
+      "evidence": [
+        {
+          "source": "NORTHYARD blog - What Are Popular Shorts Right Now? Top 5 Men's Styles for Spring 2026 (via WebSearch result summary; page blocked)",
+          "url": "https://www.northyard.com/blogs/news/what-are-popular-shorts-right-now-the-top-5-men-s-styles-for-spring-2026",
+          "source_date": "2026",
+          "data_type": "brand blog / trend commentary",
+          "geography": "United States",
+          "consumer_or_market": "Men's athletic shorts buyers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "The biggest trend in men's shorts this year is the shorter inseam, with 5-inch lengths moving from a specialty item to a mainstream staple... a significant shift away from oversized, baggy silhouettes toward gear that emphasizes movement, utility, and a more tailored aesthetic."
+        },
+        {
+          "source": "Accio - 2025 Men's Shorts Trends (aggregator; via WebSearch result summary)",
+          "url": "https://www.accio.com/business/mens_shorts_trends",
+          "source_date": "2025",
+          "data_type": "market summary / aggregator",
+          "geography": "Global / United States",
+          "consumer_or_market": "Men's shorts buyers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "inseam lengths of 3-4 inches gained traction in 2025... Men's athletic shorts maintained moderate interest, reaching 55 in June 2025."
+        }
+      ],
+      "consumer_groups": "Men 18-35 wearing shorts off-court; Gen Z lifestyle buyers",
+      "implication": "Basketball shorts' off-court wearability, historically a volume multiplier, may be eroding as the lifestyle inseam shortens. Validate with internal Nike.com data on inseam mix (6 vs 8 vs 10/11 inch) trend FY24-FY26 before committing SS28 length ladders."
+    },
+    {
+      "id": "A04-S11",
+      "title": "China e-commerce leadership has flipped: adidas beat Nike in Tmall 618 2026 and domestics hold the sneaker share",
+      "finding": "Tmall's 618 2026 results (released 21 June 2026) show adidas ahead of Nike in the rankings; Anta and Li-Ning together account for ~28% of China sneaker sales, Anta holds ~23% of China sportswear share in 2026, China accounts for only ~15% of Nike revenue, and China's sports footwear and apparel industry still grew 7.38% in 2025 with the population participation rate at 49.6% (2024). Basketball is also cited as gaining younger share from football in 2026.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Marketing to China - Tmall 618 2026: What the Rankings Tell You (via WebSearch result summary; page blocked)",
+          "url": "https://marketingtochina.com/tmall-618-2026-what-the-rankings-tell-you-about-chinas-market-right-now/",
+          "source_date": "2026-06",
+          "data_type": "market commentary on platform rankings",
+          "geography": "China",
+          "consumer_or_market": "Tmall shoppers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "The 2026 Tmall 618 results were released on June 21, covering the full promotional cycle across 14 categories. Adidas beat Nike in the 2026 618 rankings."
+        },
+        {
+          "source": "CKGSB Knowledge - The fall of Nike: How Anta took the throne (via WebSearch result summary; page blocked)",
+          "url": "https://english.ckgsb.edu.cn/knowledge/article/the-fall-of-nike-how-anta-took-the-throne/",
+          "source_date": "unknown",
+          "data_type": "business-school analysis article",
+          "geography": "China",
+          "consumer_or_market": "China sportswear consumers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike's sales in China have continued to decline, including a 21% drop in Q2 of 2025. The China market now accounts for only 15% of the brand's total revenue, while domestic rivals such as Anta and Li-Ning... now account for 28% of all sneaker sales in China."
+        },
+        {
+          "source": "Ken Research - China Sportswear Market Share, Companies & Trends Report 2026-2032 (via WebSearch result summary; page blocked)",
+          "url": "https://www.kenresearch.com/industry-reports/china-sports-wear-market",
+          "source_date": "2026",
+          "data_type": "market report",
+          "geography": "China",
+          "consumer_or_market": "China sportswear market",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "The sports footwear and apparel industry in China experienced 7.38% growth in 2025... China's sports participation rate has surged from 30.9% in 2018 to 49.6% in 2024... Anta holds 23% of China's sportswear market share in 2026."
+        }
+      ],
+      "consumer_groups": "Greater China consumers across tiers; China youth basketball players",
+      "implication": "The China opportunity for shorts is large but Nike will have to win on locally created, locally priced product in a market where domestic brands set the value benchmark. Pull internal: Tmall/JD/Douyin basketball shorts price-band share, Nike GC basketball shorts ASP vs Anta/Li-Ning equivalents, and outdoor SKU sell-through in tier 2-4 cities."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A04-T1",
+      "title": "Basketball grows at Nike, but the shorts franchises that carry the volume are being commoditized",
+      "description": "Nike reports Performance (incl. Basketball) growing mid-single digits and StockX calls performance basketball a Nike strength, yet the two core shorts franchises show the opposite: DNA clearing at 25% off at Foot Locker and Icon drawing 'paper-thin, holes after one wash' reviews. Growth is coming from footwear and athlete stories while the shorts that should monetise it are losing full-price productivity.",
+      "signal_ids": ["A04-S1", "A04-S6", "A04-S8"]
+    },
+    {
+      "id": "A04-T2",
+      "title": "China basketball demand is rising while Nike's China apparel units fall",
+      "description": "Participation reached 49.6% of the population, the sportswear industry grew 7.38% in 2025, Li-Ning basketball grew 5% and Anta apparel units +35%, yet Nike GC apparel units fell 8% and Q4 GC revenue fell 17%. adidas grew GC 15% on local creation, which shows the gap is Nike's assortment, price and marketplace, not the consumer. The line plan being ~5% outdoor against ~300M participants (brief context) sits inside this same mismatch.",
+      "signal_ids": ["A04-S2", "A04-S11"]
+    },
+    {
+      "id": "A04-T3",
+      "title": "Mass-market 'basketball shorts' have become a $10-per-unit versatile athletic short; Nike's ladder starts at ~$40",
+      "description": "Amazon volume is led by 5- and 7-packs from Amazon Essentials, BOOJO, NORTHYARD and Soothfeel with zip pockets and 5-9 inch inseams, and lifestyle inseams are shortening. Nike's basketball shorts are single-inseam styles at 8-11 inches priced $40-65 with June 2025 price increases frozen below $100. Nike cannot chase the multipack price, but it is also absent from the feature and inseam set the volume buyer has voted for.",
+      "signal_ids": ["A04-S7", "A04-S10", "A04-S8"]
+    },
+    {
+      "id": "A04-T4",
+      "title": "Women's basketball is the strongest retail demand call-out, but the women's shorts offer is a single athlete style already on markdown",
+      "description": "Dick's names women's basketball a stronger category and WNBA merchandise growth is in the hundreds of percent, yet the visible Nike women's basketball short is the Sabrina style alone and Sabrina tees are already at $15.97 at Dick's. Fan demand (jerseys) is being conflated with player demand (game shorts), and the player side looks under-assorted.",
+      "signal_ids": ["A04-S5", "A04-S4"]
+    },
+    {
+      "id": "A04-T5",
+      "title": "Wholesale is growing while Direct shrinks, but wholesale is where promotions are deepest",
+      "description": "Nike wholesale +6% vs Direct -6% means the SS28 shorts line will be judged in Dick's and Foot Locker doors, where Ed Stack reports an 'increasingly promotional' athletic apparel marketplace and Foot Locker comps are -3.6%. Nike's own EMEA Digital is -24% on elevated promotions. The channel Nike is leaning into is the channel least able to hold price on undifferentiated shorts.",
+      "signal_ids": ["A04-S1", "A04-S4"]
+    },
+    {
+      "id": "A04-T6",
+      "title": "Competitor retreat creates shelf space but also signals a small category",
+      "description": "adidas basketball -21%, UA basketball at $100-120M and exiting Curry, Puma growing basketball only off a tiny base. Retailers will give Nike more basketball shelf, but the same data says performance basketball apparel is a niche in absolute dollars; over-investing in SKU count to fill freed shelf risks the inventory and markdown problems Nike is still working through.",
+      "signal_ids": ["A04-S3", "A04-S4"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A04-O1",
+      "name": "China-created outdoor court short (Worldball GC)",
+      "target_consumer": "Greater China men 15-30 playing on the ~1M outdoor courts, tier 1-4 cities, currently buying Li-Ning / Anta at RMB 150-300",
+      "job_to_be_done": "Survive concrete courts, heat and daily washing while looking like a real basketball short, at a price that beats domestic brands on value rather than logo",
+      "product_problem": "Nike GC apparel units fell 8% in FY26 while participation and domestic basketball lines grew; the GC line plan is ~5% outdoor and priced/created for a global indoor consumer, so the outdoor player has no reason to choose Nike over Anta or Li-Ning",
+      "proposed_solution": "A locally designed, locally sourced outdoor short (abrasion-resistant knit panels at hem and seat, deeper zip phone pocket, quick-dry mesh) created by the GC Sport Offense team, priced against Anta/Li-Ning mid-tier, launched via Tmall/JD/Douyin plus cleaned-up wholesale",
+      "key_features": [
+        "Abrasion-resistant double-knit at hem/seat for concrete courts",
+        "Full-depth zip phone pocket that stays secure in play",
+        "Quick-dry lightweight mesh body (heat, humidity)",
+        "Local fit block and 7-9 inch inseam options",
+        "China-specific colour and court-culture graphics",
+        "Local sourcing to protect margin and speed"
+      ],
+      "price_position": "RMB 249-349 (approx. USD 35-49); mid tier, at or just above Anta/Li-Ning core and below Nike's imported DNA equivalent",
+      "evidence_signal_ids": ["A04-S2", "A04-S11", "A04-S6"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What is Nike GC's current full-price sell-through and ASP on basketball shorts versus Anta/Li-Ning equivalents by city tier, and can a locally created short hit target margin at RMB 249-349?"
+    },
+    {
+      "id": "A04-O2",
+      "name": "Women's game short line beyond Sabrina",
+      "target_consumer": "US and global women and girls 13-30 who play organized or pick-up basketball, plus WNBA-driven new entrants",
+      "job_to_be_done": "A basketball short that fits a woman's body, has real pockets, and is available in more than one athlete story and length",
+      "product_problem": "Retail demand for women's basketball is the strongest call-out at Dick's/Foot Locker, but the visible Nike shorts offer is a single Sabrina style and the tees are already marked down, indicating a thin, fan-skewed assortment that misses the player",
+      "proposed_solution": "A two-to-three style women's game short family (5, 7 and 9 inch), athlete-led across Sabrina, A'ja Wilson and a team-neutral core, with women's-specific rise and waistband, sized to a full curve and bought for replenishment",
+      "key_features": [
+        "Women's-specific rise and wide, non-roll waistband",
+        "Three inseams (5/7/9 inch) in one fit block",
+        "Secure zip pocket sized for a phone",
+        "Dri-FIT mesh with woven side panel for mobility",
+        "Athlete colourways timed to WNBA season",
+        "Girls' grading in the same chassis"
+      ],
+      "price_position": "USD 40-55 (core at $40, athlete editions at $55); mid to mid-premium tier",
+      "evidence_signal_ids": ["A04-S5", "A04-S4", "A04-S1"],
+      "confidence": "Medium",
+      "key_unanswered_question": "How much of the women's basketball growth at Dick's/Foot Locker is fan apparel (jerseys) versus performance shorts, and what are current women's basketball shorts units, size-curve fill and rebuy rates by door?"
+    },
+    {
+      "id": "A04-O3",
+      "name": "Core shorts quality-and-margin reset (Icon/DNA)",
+      "target_consumer": "Men 16-35 in North America and EMEA buying Nike basketball shorts at Dick's, Foot Locker, Walmart, JD, Kohl's",
+      "job_to_be_done": "Buy a Nike short that lasts a season and feels worth the ticket, without waiting for a 25% markdown",
+      "product_problem": "List prices under $100 were frozen in June 2025 while costs rose; the volume franchise (Icon) now draws 'paper-thin / holes after one wash' reviews and the step-up franchise (DNA) is clearing at $48.75 from $65, so full-price productivity and brand trust are both eroding",
+      "proposed_solution": "Re-engineer the two-franchise core: restore fabric weight and seam construction on Icon at $40-45 with a tighter colour/inseam buy, and give DNA a visible reason to hold $65 (pocket system, better mesh) with lower initial buys and planned reorders instead of markdown",
+      "key_features": [
+        "Fabric GSM and seam spec restored to pre-cost-down level on Icon",
+        "One hero inseam (8 inch) plus one long (10/11 inch) per franchise, fewer colourways",
+        "Secure zip pocket on both tiers",
+        "Reorder-driven inventory model with wholesale partners",
+        "Durability claim backed by wash-test data on hangtag"
+      ],
+      "price_position": "USD 40-45 (Icon, core tier) and USD 65 (DNA, mid-premium tier) held at full price",
+      "evidence_signal_ids": ["A04-S6", "A04-S8", "A04-S4", "A04-S7"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What are Icon/DNA return rates, fabric GSM history, and margin after markdown by SKU FY24-FY26, and does restoring fabric weight pay back through lower markdown and returns?"
+    },
+    {
+      "id": "A04-O4",
+      "name": "Team and club sublimated short through team dealers",
+      "target_consumer": "US high-school, AAU/club and select basketball programs (boys and girls) ordering through BSN Sports and other dealers",
+      "job_to_be_done": "Outfit a whole roster in matching, durable, quickly delivered game shorts every season with reliable reorder sizing",
+      "product_problem": "Team bookings are a stable, low-markdown pool (Varsity/BSN growing ~8% in 2025, $5B club segment) but Nike's stock team short and lead times are undifferentiated against adidas/UA dealer programs; girls' team shorts are under-served",
+      "proposed_solution": "A Nike team basketball short platform with a stock-plus-sublimation option, fast replenishment, boys/girls/adult grading in one chassis, sold through BSN and similar dealers with bookings visibility feeding SS28 supply",
+      "key_features": [
+        "Stock body with sublimated side-panel option",
+        "Boys, girls, men's and women's grading on one chassis",
+        "Durable knit for multi-season use",
+        "Guaranteed reorder window and size availability",
+        "Team-dealer pricing tiers and bundle with jersey"
+      ],
+      "price_position": "USD 30-45 per unit at team-dealer price (core tier), reversible/sublimated at USD 45-55",
+      "evidence_signal_ids": ["A04-S9", "A04-S1"],
+      "confidence": "Low",
+      "key_unanswered_question": "What are Nike Team Sports basketball shorts bookings, fill rates and reorder frequency through BSN and other dealers, and what share of club/select team business do adidas and UA currently hold?"
+    },
+    {
+      "id": "A04-O5",
+      "name": "Short-inseam hybrid basketball/training short with secure pockets",
+      "target_consumer": "Men and Gen Z 16-30 in the US, Europe and Australia who play pick-up ball and train, and who buy shorts online where 5-7 inch zip-pocket styles dominate",
+      "job_to_be_done": "One short for pick-up, gym and the walk home that holds a phone and keys and matches the shorter, tailored silhouette they wear",
+      "product_problem": "Amazon volume proves demand for 5-9 inch, zip-pocket, quick-dry shorts, and the lifestyle inseam is shortening, but Nike basketball shorts are 8-11 inch single-inseam styles; the shorter, utility-led buyer defaults to running/training shorts or private label",
+      "proposed_solution": "A Nike Basketball 5 and 7 inch short with a lined or unlined option, zip pockets on both sides, lightweight mesh, and a basketball-specific wide-leg opening, positioned under the DNA franchise and merchandised with training",
+      "key_features": [
+        "5 and 7 inch inseams alongside the existing 8 inch",
+        "Dual zip pockets sized for phone and keys",
+        "Lightweight quick-dry mesh with wide leg opening",
+        "Optional brief liner for training crossover",
+        "Colour-blocked to read as basketball, not running"
+      ],
+      "price_position": "USD 35-45; core to mid tier",
+      "evidence_signal_ids": ["A04-S7", "A04-S10", "A04-S8"],
+      "confidence": "Low",
+      "key_unanswered_question": "Does Nike.com and wholesale sell-through data show shorter inseams gaining share within basketball, or does the 5-7 inch buyer already sit in Nike Training/Running and this would cannibalise?"
+    }
+  ],
+  "sources": [
+    {
+      "source": "CNBC - Nike (NKE) Q4 2026 earnings",
+      "url": "https://www.cnbc.com/2026/06/30/nike-nke-q4-2026-earnings.html",
+      "date": "2026-06-30",
+      "contribution": "Q4/FY26 revenue, Performance vs Sportswear commentary, basketball as growth driver (via search summary; page blocked)"
+    },
+    {
+      "source": "Yahoo Finance - Nike Inc (NKE) Q4 2026 Earnings Call Highlights",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nike-inc-nke-q4-2026-050043032.html",
+      "date": "unknown",
+      "contribution": "Greater China apparel $1,535M (-5%), GC revenue -17%, inventory flat, EMEA Digital -24%, promotions elevated"
+    },
+    {
+      "source": "TradingView - NIKE FY2026 10-K Summary",
+      "url": "https://www.tradingview.com/news/tradingview:2ed2aea9fde1e:0-nike-inc-fy-2026-revenue-46-4b-eps-2-1-10-k-summary/",
+      "date": "unknown",
+      "contribution": "Apparel +4% c-n, units +2%, ASP +2pts; wholesale $27.5B vs Direct $17.7B"
+    },
+    {
+      "source": "SEC EDGAR - NIKE Form 10-K FY2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000088/nke-20260531.htm",
+      "date": "2026-07",
+      "contribution": "Geographic drivers (GC and EMEA declines, NA +5%); primary page blocked, cited via search summary"
+    },
+    {
+      "source": "Sporting Goods Intelligence - Nike Q3 FY26 results",
+      "url": "https://www.sgieurope.com/financial-results/nike-q3-beats-estimates-but-stock-falls-on-china-outlook/120352.article",
+      "date": "2026-03",
+      "contribution": "GC cleanup expected to remain a revenue headwind through FY27; sell-through struggling"
+    },
+    {
+      "source": "ANTA Sports IR - H1 2026 results release",
+      "url": "https://ir.anta.com/en/news_detail.php?id=167844",
+      "date": "2026-08",
+      "contribution": "Revenue +12.9% to RMB43.51B, Anta brand +4.8%, Storm Mecha apparel >2M units (+35%)"
+    },
+    {
+      "source": "Inside Retail Asia - Anta Sports revenue rises 12.9 per cent in first half",
+      "url": "https://insideretail.asia/2026/08/28/anta-sports-revenue-rises-12-9-per-cent-in-first-half/",
+      "date": "2026-08-28",
+      "contribution": "Corroborating Anta H1 2026 brand splits (FILA +6.1%, other brands +44.2%)"
+    },
+    {
+      "source": "Investing.com - Li Ning H1 2026 slides",
+      "url": "https://uk.investing.com/news/company-news/li-ning-h1-2026-slides-margin-gains-offset-by-weak-demand-cut-outlook-93CH-4843142",
+      "date": "2026-08",
+      "contribution": "Li-Ning revenue +2.8%, GPM 50.9%, basketball +5%, sports casual +13%, training -3%"
+    },
+    {
+      "source": "Malay Mail - Li Ning Company Limited Announces 2026 Interim Results",
+      "url": "https://www.malaymail.com/news/money/mediaoutreach/2026/08/20/li-ning-company-limited-announces-2026-interim-results/482176",
+      "date": "2026-08-20",
+      "contribution": "Li-Ning interim results date and headline figures"
+    },
+    {
+      "source": "Retail TouchPoints - Dick's Q1 2026 growth, Foot Locker Fast Break",
+      "url": "https://www.retailtouchpoints.com/news/dicks-sporting-goods-reports-q1-growth-details-foot-locker-fast-break-progress/619701/",
+      "date": "2026-05",
+      "contribution": "Foot Locker $1.79B; women's basketball among stronger categories; Ionescu / Wilson demand drivers"
+    },
+    {
+      "source": "CNBC - Dick's Sporting Goods (DKS) earnings Q2 2026",
+      "url": "https://www.cnbc.com/2026/08/25/dicks-sporting-goods-dks-earnings-q2-2026.html",
+      "date": "2026-08-25",
+      "contribution": "'Increasingly promotional' athletic apparel marketplace; Foot Locker outlook cut"
+    },
+    {
+      "source": "Just Style - Dick's cuts 2026 outlook as Foot Locker drags down Q2",
+      "url": "https://www.just-style.com/news/dicks-q2-fy26-result/",
+      "date": "2026-08",
+      "contribution": "Net sales $5.59B, Dick's comps +4.9%, Foot Locker comps -3.6%, FY guide flat to -2%"
+    },
+    {
+      "source": "Investing.com - Adidas Q2 2026 slides",
+      "url": "https://www.investing.com/news/company-news/adidas-q2-2026-slides-world-cup-fuels-record-sales-margins-pressured-93CH-4825654",
+      "date": "unknown",
+      "contribution": "adidas apparel +35% c-n, basketball -21% in Q2 2026"
+    },
+    {
+      "source": "adidas Group - Q2 2026 press release",
+      "url": "https://www.adidas-group.com/en/media/press-releases/adidas-grows-top-line-14percent-and-achieves-record-sales-in-q2",
+      "date": "unknown",
+      "contribution": "Greater China +15% in Q2 / +16% H1, DTC +22-27%, local sourcing and development"
+    },
+    {
+      "source": "Sportico - Under Armour Anticipates Hit From Curry Brand Exit",
+      "url": "https://www.sportico.com/business/commerce/2026/under-armour-curry-brand-exit-impact-1234898859/",
+      "date": "2026",
+      "contribution": "UA total basketball business $100-120M FY26"
+    },
+    {
+      "source": "Sporting Goods Intelligence - Under Armour fiscal 2026 results",
+      "url": "https://www.sgieurope.com/financial-results/under-armour-plunges-19-as-outlook-disappoints/121081.article",
+      "date": "2026",
+      "contribution": "UA revenue $5B, apparel -2% to $3.4B, 25% SKU cut"
+    },
+    {
+      "source": "PR Newswire - Under Armour and Stephen Curry agree to Curry Brand separation",
+      "url": "https://www.prnewswire.com/news-releases/under-armour-and-stephen-curry-agree-to-curry-brand-separation-302615067.html",
+      "date": "2025-11",
+      "contribution": "Curry 13 final shoe Feb 2026; apparel through Oct 2026"
+    },
+    {
+      "source": "PUMA - Q2 2026 corporate news",
+      "url": "https://about.puma.com/en/newsroom/corporate-news/2026/31-07-2026-puma-q2-2026-reflects-reset-measures-and-softer-demand",
+      "date": "2026-07-31",
+      "contribution": "H1 2026 sales -5.2% c-a, apparel -1.8%; basketball listed among growing apparel pockets in FY25"
+    },
+    {
+      "source": "Amazon Best Sellers - Best Men's Athletic Shorts",
+      "url": "https://www.amazon.com/Best-Sellers-Men's-Athletic-Shorts/zgbs/fashion/1046660",
+      "date": "2026-09",
+      "contribution": "Best-seller brands (Soothfeel, Amazon Essentials, NORTHYARD, BOOJO) and winning feature set"
+    },
+    {
+      "source": "ASInsight - Best Selling Basketball Shorts ranked by real sales 2026",
+      "url": "https://www.asinsight.com/report/US/basketball-shorts",
+      "date": "2026",
+      "contribution": "Leading ASIN ~10K monthly sales; BOOJO 5-pack among top sellers"
+    },
+    {
+      "source": "Foot Locker - Nike Dri-FIT DNA 8 Inch Shorts product page",
+      "url": "https://www.footlocker.com/product/model/nike-dri-fit-dna-8-inch-shorts/424826.html",
+      "date": "unknown",
+      "contribution": "$65 to $48.75 markdown, 5.0 rating, pocket/fit feedback"
+    },
+    {
+      "source": "Walmart - Nike Dri-FIT Icon Basketball Shorts customer reviews",
+      "url": "https://www.walmart.com/reviews/product/629066800",
+      "date": "unknown",
+      "contribution": "Durability complaints: paper-thin, see-through, seam holes after one wash"
+    },
+    {
+      "source": "Nike.com - Dri-FIT Icon Men's Basketball Shorts reviews",
+      "url": "https://www.nike.com/t/dri-fit-icon-mens-basketball-shorts-2c8F76/reviews",
+      "date": "unknown",
+      "contribution": "Praise for below-knee length and loose fit; runs large"
+    },
+    {
+      "source": "Dick's Sporting Goods - Sabrina Ionescu apparel page",
+      "url": "https://www.dickssportinggoods.com/a/sabrina-ionescu-apparel-0bfz01a.html",
+      "date": "unknown",
+      "contribution": "Sabrina tees at $15.97-$28.97 (markdown signal)"
+    },
+    {
+      "source": "Hibbett - Nike Women's Sabrina Basketball Shorts",
+      "url": "https://www.hibbett.com/nike-womens-sabrina-basketball-shorts/1112I.html",
+      "date": "unknown",
+      "contribution": "Women's short construction: woven-knit panels, side pockets, snap cargo"
+    },
+    {
+      "source": "Accio - WNBA jersey sales numbers trend 2025",
+      "url": "https://www.accio.com/business/wnba-jersey-sales-numbers-trend",
+      "date": "2025",
+      "contribution": "Dick's WNBA sales +233% YoY; WNBAStore +601% vs 2023 (aggregator, low confidence)"
+    },
+    {
+      "source": "CNBC - Nike to increase prices on footwear, apparel amid tariffs",
+      "url": "https://www.cnbc.com/2025/05/21/nike-price-increases-tariffs.html",
+      "date": "2025-05-21",
+      "contribution": "June 2025 price increase detail and exemptions (under $100, kids, Jordan)"
+    },
+    {
+      "source": "Supply Chain Dive - Nike fights $1B tariff hit",
+      "url": "https://www.supplychaindive.com/news/nike-1b-tariff-sourcing-price-hikes/752159/",
+      "date": "2025",
+      "contribution": "$1B tariff cost exposure context"
+    },
+    {
+      "source": "Youth Sports Business Report - Inside Varsity Brands",
+      "url": "https://youthsportsbusinessreport.com/inside-varsity-brands-the-4-8-billion-dallas-empire-serving-millions-of-youth-athletes/",
+      "date": "unknown",
+      "contribution": "Varsity >$2.3B revenue, BSN share, $75M club sales into $5B segment, Nike distributed"
+    },
+    {
+      "source": "Yahoo Finance - Varsity Brands Gets a Boost From Ratings Agencies",
+      "url": "https://finance.yahoo.com/news/varsity-brands-gets-boost-ratings-130000995.html",
+      "date": "unknown",
+      "contribution": "2025 revenue +8%, EBITDA +10%, tariff pull-forward, 2026 uncertainty"
+    },
+    {
+      "source": "NORTHYARD blog - Popular men's shorts styles Spring 2026",
+      "url": "https://www.northyard.com/blogs/news/what-are-popular-shorts-right-now-the-top-5-men-s-styles-for-spring-2026",
+      "date": "2026",
+      "contribution": "5-inch inseam mainstream; shift from baggy to tailored/utility"
+    },
+    {
+      "source": "Accio - 2025 Men's Shorts Trends",
+      "url": "https://www.accio.com/business/mens_shorts_trends",
+      "date": "2025",
+      "contribution": "3-4 inch inseams gaining; athletic shorts interest index 55 (June 2025)"
+    },
+    {
+      "source": "Marketing to China - Tmall 618 2026 rankings",
+      "url": "https://marketingtochina.com/tmall-618-2026-what-the-rankings-tell-you-about-chinas-market-right-now/",
+      "date": "2026-06",
+      "contribution": "adidas beat Nike in Tmall 618 2026 rankings"
+    },
+    {
+      "source": "CKGSB Knowledge - The fall of Nike: How Anta took the throne",
+      "url": "https://english.ckgsb.edu.cn/knowledge/article/the-fall-of-nike-how-anta-took-the-throne/",
+      "date": "unknown",
+      "contribution": "Nike China -21% Q2 2025, China 15% of Nike revenue, Anta+Li-Ning 28% of sneaker sales"
+    },
+    {
+      "source": "Ken Research - China Sportswear Market Report 2026-2032",
+      "url": "https://www.kenresearch.com/industry-reports/china-sports-wear-market",
+      "date": "2026",
+      "contribution": "China industry +7.38% in 2025, participation 49.6% (2024), Anta 23% share"
+    },
+    {
+      "source": "FashionUnited - StockX's predictions for 2026",
+      "url": "https://fashionunited.com/news/fashion/stockxs-predictions-for-2026-nikes-comeback-and-sports-events-dominate/2026011369978",
+      "date": "2026-01-13",
+      "contribution": "Nike momentum on resale 'fuelled by a strong Jordan Brand and continued dominance in performance basketball'"
+    },
+    {
+      "source": "Technavio - Basketball Apparel Market analysis",
+      "url": "https://www.technavio.com/report/basketball-apparel-market-industry-analysis",
+      "date": "unknown",
+      "contribution": "Basketball apparel market +$6.32B 2024-2029 at 6.5% CAGR (market-report estimate, low confidence)"
+    }
+  ]
+}

@@ -1,0 +1,640 @@
+{
+  "agent_id": "A01",
+  "agent_name": "Consumer Intelligence",
+  "domain": "Consumer research, reviews, returns, surveys, sentiment, complaints, unmet needs and behavioral signals for basketball shorts (global)",
+  "research_narrative": "I approached this as a PLM would: start from the consumer's job, then look for where product reviews, surveys and forum chatter show love, friction and gaps. I ran 24 distinct web searches across brand (Nike DNA, Jordan Diamond, Under Armour Curry, adidas, Puma, AND1, Russell, Li-Ning, Anta), region (Greater China in Chinese, Japan in Japanese, Korea, Philippines, Europe/Australia, India/Africa/Brazil/Mexico), consumer group (teens via Piper Sandler, women/WNBA, girls and parents, older rec players, lifestyle wearers), feature (pockets, liners, inseam, see-through, durability) and channel (Nike.com reviews, Walmart reviews, Amazon, Dick's, JD Sports, Trustpilot, Reddit). I then attempted more than 40 WebFetch calls to read primary pages (Nike.com review pages, Walmart/Amazon/Dick's reviews, Piper Sandler releases, Who What Wear, Under Armour's buying guide, Statista, Kakaku.com Japan rankings, Zhihu, Philippine brand sites, market reports, Wikipedia). Every single fetch was blocked by the network egress proxy, and the session's shared WebSearch budget was exhausted before I could run a final round on Chinese e-commerce reviews, Korean 3x3 culture and Nike's FY26 earnings commentary. I want the PLM team to read this file with that limitation in front of them: all evidence below comes from search-result snippets, not page bodies. Where a snippet printed a date I recorded it; where it did not I wrote 'unknown'. I did not invent star distributions, prices or quotes I could not see, which is why several signals carry Medium or Low confidence and why the star-rating and returns-reason work I was asked for is thinner than I wanted.\n\nWhat surprised me. First, how completely 'fit inconsistency' dominates the sentiment on Nike/Jordan shorts: for the same Jordan Dri-FIT Sport Diamond short, reviewers say it runs big, runs small, runs true and runs long. That is not a product defect so much as a grading/communication failure, and it is the kind of thing that drives online returns and the Trustpilot complaints about 30-day windows. Second, the pocket is simultaneously the most-advertised feature (Nike's DNA copy leads with 'a zippered utility pocket large enough to keep a phone secure during the game'; UA Curry leads with zipped back pockets) and the reported failure point (a February 2025 Walmart review of the Nike Icon short says it rips when hands go in the pockets). Third, the basketball short is now a women's fashion object: Who What Wear's 2025 piece frames athletic shorts as replacing bike shorts, with Emily Ratajkowski and Zoe Kravitz wearing long basketball shorts with flats and kitten heels, while Piper Sandler recorded a 13-point drop in Nike mindshare among teen females in spring 2025 and market reports put women's basketball sportswear above 12% CAGR. Demand is moving toward women faster than Nike's female mindshare. Fourth, the macro picture split: Circana shows basketball footwear down 11% in 2025 and down to about 4% of US footwear sales from 13% five years ago, yet apparel and shorts are described as having 'transcended the court'. Shorts are the lifestyle entry point when the shoe is not.\n\nOn Greater China I found strong contextual support for the Worldball brief: roughly 300 million players, basketball the favourite sport of about 22% of the population, more than 1.1 million basketball courts (Statista, Dec 2022, so slightly dated), and Nike's own June 2025 S.T. Flare, its first China-specific performance shoe, explicitly built after studying outdoor court surfaces for durability. The consumer reasoning behind the shoe (outdoor abrasion, heat, price sensitivity) applies directly to shorts, but I could not retrieve a single Chinese consumer review of a basketball short, so the outdoor-short opportunity remains a hypothesis built on adjacent evidence. Domestic brands lead the practical basketball rankings on 'value plus tech' with RMB200-300 entry products, which sets the price ceiling for any Nike outdoor entry.\n\nWhat I could not find: Nike.com star distributions and review text; any WNBA player or amateur women's review specifically about hip/waist grading; Reddit thread text (search engines returned Walmart listings instead); Japanese and Korean consumer voice beyond the existence of a Kakaku.com ranking; any returns-reason dataset; Nike China shorts prices. Each of these is listed as an unanswered question on the opportunities.\n\nHow I reasoned to opportunities: I paired each recurring frustration (pocket failure, inconsistent grading, length mismatch for women and girls, value-pack replenishment by parents) with a demand signal (China outdoor scale, women's growth, teen mindshare erosion, lifestyle wearing) and only proposed products where both a pain and a pull were visible in the evidence. I did not rank across domains.",
+  "top_signals": [
+    {
+      "id": "A01-S1",
+      "title": "Teens still rank Nike #1 in apparel, but female teen mindshare fell sharply in 2025 before stabilizing",
+      "finding": "Piper Sandler's spring 2025 Taking Stock With Teens survey (6,455 teens) put Nike's mindshare at 49% of all teens, down year over year, with a 13-point drop among females. The fall 2025 survey (50th edition, 10,000+ teens) still ranked Nike the top clothing brand ahead of Hollister and Brandy Melville, with coverage describing Nike's erosion as 'stabilizing'. Teens self-reported annual spending of $2,388 in spring 2025.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Piper Sandler / Business Wire - 49th Taking Stock With Teens (search snippet)",
+          "url": "https://www.businesswire.com/news/home/20250409407391/en/Piper-Sandler-Completes-49th-Semi-Annual-Taking-Stock-With-Teens-Survey",
+          "source_date": "2025-04-09",
+          "data_type": "survey",
+          "geography": "United States",
+          "consumer_or_market": "US teens (avg ~16 yrs), 6,455 respondents",
+          "confidence": "High",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike's mindshare among all teens stood at 49%, but saw a year-over-year decrease, with a significant 13-point drop among females... teens self-reported annual spending at $2,388"
+        },
+        {
+          "source": "Piper Sandler - 50th Semi-Annual Teen Survey (search snippet)",
+          "url": "https://www.pipersandler.com/news/piper-sandler-completes-50th-semi-annual-teen-survey",
+          "source_date": "2025-10",
+          "data_type": "survey",
+          "geography": "United States",
+          "consumer_or_market": "US teens, 10,000+ respondents",
+          "confidence": "High",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike continues to dominate as the top clothing brand for teens with Hollister ranking number two and Brandy Melville a distant third among upper income teens"
+        },
+        {
+          "source": "SGB Media - Piper Sandler teen survey: Nike's erosion stabilizing (search snippet)",
+          "url": "https://sgbonline.com/piper-sandler-teen-survey-finds-on-overtaking-hoka-in-popularity-nikes-erosion-stabilizing/",
+          "source_date": "2025-10",
+          "data_type": "news article",
+          "geography": "United States",
+          "consumer_or_market": "US teens",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike's Erosion Stabilizing"
+        }
+      ],
+      "consumer_groups": "Youth / high school (13-18), especially teen girls; parents buying for teens",
+      "implication": "Uniform of Youth cannot be a boys' line. The mindshare Nike lost is disproportionately female; a youth shorts program needs a girls'/women's-fit story, not a unisex assumption."
+    },
+    {
+      "id": "A01-S2",
+      "title": "Sizing inconsistency is the single most repeated complaint on Nike and Jordan shorts",
+      "finding": "For the same Jordan Dri-FIT Sport Diamond short, reviewers across Amazon, Dick's, Champs and Nike.com report that it 'runs big', 'runs small, size up', 'true to size' and 'runs slightly longer than expected'. Trustpilot reviewers of Nike describe 'poor sizing and poor quality control' and refund friction when a too-small pair was exchanged. JD Sports lists the Nike Dri-FIT DNA 8-inch short at 4.0/5 from 13 reviews, notably below Puma Liga Core at 4.8/5 (6 ratings, 'true to size').",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Web search aggregation of Jordan Dri-FIT Sport Diamond shorts reviews (Amazon, Dick's, Champs, Nike.com)",
+          "url": "https://www.amazon.com/Jordan-Dri-FIT-Diamond-FB7580-687-X-Large/dp/B0CY2Z62H9",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Adult men buying Jordan lifestyle/performance shorts",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "The quality is pretty good which is expected from the Jordan brand, another thing that is expected is they run big... some reviewers report that they run small and recommend sizing up... others true to size... one reviewer mentioned they run slightly longer than expected"
+        },
+        {
+          "source": "Trustpilot - Nike reviews (search snippet)",
+          "url": "https://ca.trustpilot.com/review/www.nike.com",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "Canada / UK / global",
+          "consumer_or_market": "Nike.com direct shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "shorts they purchased were too small and still had tags on, and when they ordered a larger pair, Nike still wouldn't refund... 'poor sizing and poor quality control'"
+        },
+        {
+          "source": "JD Sports men's shorts listing (search snippet)",
+          "url": "https://www.jdsports.com/plp/mens-shorts",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Sneaker/athletic retail shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike Dri-FIT DNA 8 Inch Shorts have an average customer rating of 4 out of 5 stars from 13 reviews... Puma Liga Core Shorts have a 4.8 out of 5 stars rating from 6 ratings... true to size"
+        }
+      ],
+      "consumer_groups": "Adult rec players, lifestyle wearers, online/DTC buyers; parents buying gifts (return-window complaints)",
+      "implication": "Grading and fit communication (waist, hip, rise, inseam by size) is a cheaper fix than new fabric and directly reduces returns. Any new short should ship with a single, consistent block and explicit inseam labelling."
+    },
+    {
+      "id": "A01-S3",
+      "title": "The pocket is both the headline feature and the reported failure point",
+      "finding": "Nike's own DNA product copy leads with 'a zippered utility pocket large enough to keep a phone secure during the game', and Under Armour's Curry 6.5-inch short is marketed on front open pockets plus zippered back pockets with four-way stretch, earning a 'near-perfect rating' at under $50. Yet a February 2025 Walmart review of the Nike Dri-FIT Icon short says the shorts are 'poor quality and rip easily when putting hands in pockets', and a Trustpilot reviewer complained a GBP 50 pair felt like a GBP 10 pair.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Nike.com - Nike DNA Men's Dri-FIT 8\" Basketball Shorts product copy (search snippet)",
+          "url": "https://www.nike.com/t/dna-mens-dri-fit-8-basketball-shorts-jVkw9d",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Nike core basketball shorts buyers",
+          "confidence": "High",
+          "evidence_nature": "qualitative",
+          "excerpt": "Side pockets let you carry around your essentials, and a zippered utility pocket is large enough to keep a phone secure during the game"
+        },
+        {
+          "source": "Walmart - Customer reviews for Nike Men's Dri-FIT Icon Basketball Shorts AJ3914-010 (search snippet)",
+          "url": "https://www.walmart.com/reviews/product/690324738",
+          "source_date": "2025-02",
+          "data_type": "consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Value-channel Nike buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Some customers reported in February 2025 that Nike Icon Basketball Shorts are of poor quality and rip easily when putting hands in pockets"
+        },
+        {
+          "source": "Men's Journal - Under Armour Curry shorts sale (search snippet)",
+          "url": "https://www.mensjournal.com/shopping/under-armour-curry-shorts-sale",
+          "source_date": "unknown",
+          "data_type": "news article / shopping",
+          "geography": "United States",
+          "consumer_or_market": "Adult men, performance-lifestyle",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Under Armour Curry shorts have a near-perfect rating... 'fit very well'... Curry 6.5-Inch Shorts include front open pockets, zippered back pockets... water-resistant... four-way stretch... Now Under $50"
+        }
+      ],
+      "consumer_groups": "All on-court players who carry a phone; outdoor/streetball players with no locker; adult rec players",
+      "implication": "A phone-secure, bounce-free pocket is table stakes, but pocket-bag construction and bartack durability are where Nike is losing trust. Pocket engineering (bonded bag, reinforced opening, low-bounce placement) is a defensible spec claim."
+    },
+    {
+      "id": "A01-S4",
+      "title": "Inseam is fragmenting shorter and is now a merchandising axis in its own right",
+      "finding": "Nike now sells the DNA short in 6\", 8\" and 10\" lengths, DNA Academy in 8\" and 11\", Standard Issue practice mesh at 5\", boys' DNA at 5\", Jordan Sport at 9\", while the Icon short persists at 11\" (sold as 'unisex' on ASOS). Under Armour's Curry short is 6.5\". Buying guides describe the 2026 trend as 'shorter, more athletic cuts, typically falling mid-thigh or just above the knee' with a 'slightly more tailored, though still relaxed' fit, and cite Steph Curry at 7-9\" and a 7\" guard vs 9\" post-player split.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Nike.com review-page listing for DNA 6\"/8\"/10\", DNA Academy 8\"/11\", Big Kids 5\" (search result titles)",
+          "url": "https://www.nike.com/t/dna-mens-dri-fit-6-basketball-shorts-R65pLfb2/reviews",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Nike basketball shorts assortment",
+          "confidence": "High",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike DNA Men's Dri-FIT 6\" / 8\" / 10\" Basketball Shorts; Nike DNA Academy Men's Dri-FIT 8\" / 11\"; Nike DNA Big Kids' (Boys') Dri-FIT 5\""
+        },
+        {
+          "source": "Anarchy Label - Best Basketball Shorts 2026 (search snippet)",
+          "url": "https://www.anarchylabel.com/basketball-shorts-2026/",
+          "source_date": "2026",
+          "data_type": "buying guide",
+          "geography": "United States / global",
+          "consumer_or_market": "General basketball shorts buyers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "As of 2026, shorter, more athletic cuts are popular, typically falling mid-thigh or just above the knee... leans towards a slightly more tailored, though still relaxed, fit"
+        },
+        {
+          "source": "Under Armour - 10 Things to Look for in Basketball Shorts (search snippet)",
+          "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/",
+          "source_date": "unknown",
+          "data_type": "brand buying guide",
+          "geography": "United States",
+          "consumer_or_market": "Performance basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "A 7-inch inseam might be ideal for a guard focused on speed, while a 9-inch inseam offers more coverage for a post player. Steph Curry wears shorts in the 7- to 9-inch inseam range"
+        },
+        {
+          "source": "ASOS - Nike Basketball Icon Plus 11 inch unisex shorts (search result title)",
+          "url": "https://www.asos.com/nike-basketball/nike-basketball-icon-plus-11-inch-unisex-shorts-in-red/prd/204574698",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United Kingdom / Europe",
+          "consumer_or_market": "Fashion e-commerce shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike Basketball Icon Plus 11 inch unisex shorts in red"
+        }
+      ],
+      "consumer_groups": "Lifestyle/Gen Z wearers and guards (shorter); post players, older players and conservative markets (longer); women (5-7\")",
+      "implication": "Do not pick one inseam. Treat length as a size dimension (5/7/9 or 6/8/10) on a shared block, and stop labelling 11\" men's cuts 'unisex'."
+    },
+    {
+      "id": "A01-S5",
+      "title": "Basketball shorts have become a women's fashion object while women's basketball demand compounds",
+      "finding": "Who What Wear (2025) frames athletic/basketball shorts as 'the sporty shorts trend replacing bike shorts', citing Emily Ratajkowski in a long red pair with flats and Zoe Kravitz styling a pair with kitten heels and a Saint Laurent bag. On the performance side, market reports put women's basketball sportswear growth above 12.5% CAGR, and WNBA data show attendance up 48% and WNBAStore.com plus flagship store sales up 60% from 2023 to 2024. Meanwhile search results for women's basketball shorts return almost entirely product listings, not reviews, indicating thin consumer voice.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Who What Wear - The Sporty Shorts Trend That's Replacing Bike Shorts in 2025 (search snippet)",
+          "url": "https://www.whowhatwear.com/fashion/athleisure/athletic-shorts-outfit-trend",
+          "source_date": "2025",
+          "data_type": "news article (fashion)",
+          "geography": "United States",
+          "consumer_or_market": "Women 18-35 fashion consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Emily Ratajkowski wearing a long red pair with flats, and Zoe Kravitz dressing up a pair with kitten heels and a Saint Laurent leather bag during a night out in New York"
+        },
+        {
+          "source": "Dataintelo - Basketball Sportswear Market report (search snippet)",
+          "url": "https://dataintelo.com/report/basketball-sportswear-market",
+          "source_date": "2025",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Women's basketball sportswear segment",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "The women's basketball sportswear segment is experiencing accelerated growth exceeding 12.5% CAGR, driven by... the WNBA, EuroLeague Women, and emerging professional structures in Asia"
+        },
+        {
+          "source": "Sportsverse Substack - How Can Basketball Get Its Bounce Back in Fashion? (search snippet)",
+          "url": "https://sportsverse.substack.com/p/how-can-basketball-get-its-bounce",
+          "source_date": "unknown",
+          "data_type": "news article / newsletter",
+          "geography": "United States",
+          "consumer_or_market": "WNBA fans and merchandise buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "The WNBA saw its highest total attendance in 22 years, with a 48% increase from the previous season... online sales at WNBAStore.com and the flagship New York City location increased by 60% (from 2023 to 2024)"
+        }
+      ],
+      "consumer_groups": "Women 16-35: players, WNBA fans, fashion/lifestyle wearers; teen girls",
+      "implication": "Women's Revolution has two distinct jobs: a true women's-block performance short and a styled 'long basketball short' lifestyle piece. Neither is served by relabelling men's cuts."
+    },
+    {
+      "id": "A01-S6",
+      "title": "Basketball footwear is shrinking while basketball apparel/shorts ride athleisure",
+      "finding": "Circana reports basketball shoe sales fell 11% in 2025, and NPD data cited in the same coverage put basketball sneakers at about 4% of US footwear sales versus 13% five years earlier. By contrast, market coverage describes basketball apparel at roughly 28% of the basketball market with 'moisture-wicking shorts' having 'transcended the court to become staple items in everyday streetwear', and Technavio projects basketball apparel growth of USD 6.32B from 2024-2029.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Sportsverse Substack citing Circana/NPD (search snippet)",
+          "url": "https://sportsverse.substack.com/p/how-can-basketball-get-its-bounce",
+          "source_date": "unknown",
+          "data_type": "news article citing Circana data",
+          "geography": "United States",
+          "consumer_or_market": "US basketball footwear buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball shoe sales declined by 11 percent in 2025 according to market research by Circana... five years ago basketball sneakers accounted for 13 percent of US sales; they're down to about 4 percent today"
+        },
+        {
+          "source": "Verified Market Research - Basketball Market Report 2025-2033 (search snippet)",
+          "url": "https://www.verifiedmarketresearch.com/product/basketball-market/",
+          "source_date": "2025",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Basketball apparel buyers",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball apparel accounts for approximately 28% of the basketball market share... moisture-wicking shorts have transcended the court to become staple items in everyday streetwear"
+        },
+        {
+          "source": "Technavio - Basketball Apparel Market (search snippet)",
+          "url": "https://www.technavio.com/report/basketball-apparel-market-industry-analysis",
+          "source_date": "2025",
+          "data_type": "market report",
+          "geography": "Global",
+          "consumer_or_market": "Basketball apparel market",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball Apparel Market Size to Grow by USD 6.32 Billion from 2024 to 2029"
+        }
+      ],
+      "consumer_groups": "Pro-inspired lifestyle wearers, Gen Z, adult rec players",
+      "implication": "Shorts are the volume entry point into basketball for consumers who are not buying basketball shoes. The lifestyle wearer's needs (looks, length, pocket, off-court comfort) deserve their own product logic rather than being a by-product of on-court specs."
+    },
+    {
+      "id": "A01-S7",
+      "title": "Greater China outdoor play is enormous and Nike has already validated 'built for Chinese outdoor courts' at the footwear level",
+      "finding": "Basketball is China's favourite sport for about 22% of people with an estimated 300 million players, and Statista counted more than 1.1 million basketball courts as of December 2022 (potentially outdated). In June 2025 Nike released the S.T. Flare, its first China-only performance basketball shoe, stating it 'studied the unique environments of basketball courts across China' to meet the 'durability, traction and comfort needs of players who train and compete outdoors'. Domestic brands Li-Ning and Anta topped practical basketball shoe rankings above Nike and adidas on the strength of value-for-money ('性价比') plus in-house tech, with entry products at RMB 200-300.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Marketing to China - Most Popular Sports in China 2026 (search snippet)",
+          "url": "https://marketingtochina.com/chinese-sports-market-most-popular-sports-in-china/",
+          "source_date": "2026",
+          "data_type": "market report / article",
+          "geography": "China",
+          "consumer_or_market": "Chinese sports participants",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Basketball is China's most popular sport by favorite share, with roughly 22% naming it their favorite and an estimated 300 million players"
+        },
+        {
+          "source": "Statista - China number of ball game courts by category 2022 (search snippet)",
+          "url": "https://www.statista.com/statistics/1199252/china-number-of-ball-game-courts-by-category/",
+          "source_date": "2022-12",
+          "data_type": "statistical dataset",
+          "geography": "China",
+          "consumer_or_market": "Public sports infrastructure",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "As of December 2022, basketball courts ranked first in terms of numbers among ball game courts in China, amounting to more than 1.1 million"
+        },
+        {
+          "source": "Sole Retriever - China-exclusive Nike S.T. Flare (search snippet)",
+          "url": "https://www.soleretriever.com/news/articles/china-exclusive-outdoor-basketball-shoe-nike-st-flare-release-date-june-2025",
+          "source_date": "2025-06",
+          "data_type": "news article",
+          "geography": "China",
+          "consumer_or_market": "Chinese outdoor basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike created a performance basketball shoe specifically catering to the Chinese market for the first time in Nike's history, the S.T. Flare. Nike studied the unique environments of basketball courts across China and built the shoe to meet the durability, traction and comfort needs of players who train and compete outdoors"
+        },
+        {
+          "source": "Sina Finance / Jiemian - 国产品牌争夺运动鞋王 (search snippet)",
+          "url": "https://finance.sina.com.cn/jjxw/2025-01-22/doc-inefvuvx6961731.shtml",
+          "source_date": "2025-01-22",
+          "data_type": "news article",
+          "geography": "China",
+          "consumer_or_market": "Chinese basketball consumers, e-commerce behaviour data",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "李宁和安踏凭借伽马射线暴和欧文一代分别位列实战球鞋榜的第一和第二位，领先于耐克和阿迪达斯... 国产品牌目前的优势就是性价比和高科技兼具... 用两三百就可以拿下的基础产品"
+        }
+      ],
+      "consumer_groups": "Greater China outdoor / streetball players, youth and adult; price-sensitive value buyers",
+      "implication": "The consumer logic Nike used for the S.T. Flare (abrasion, heat, outdoor durability, China-specific build) has not been applied to shorts, where the line plan is ~5% outdoor. A China-built outdoor short is the obvious apparel companion, but it must land near the RMB 200-300 domestic value band to matter."
+    },
+    {
+      "id": "A01-S8",
+      "title": "Girls and women are offered short inseams by default; parents push back, while retailers claim long inseams do not sell",
+      "finding": "A Today.com parenting piece quotes a retailer saying it 'would no longer order shorts with longer than a three-inch inseam because those longer styles simply don't sell', and a mother describing her 14-year-old's class shorts as 'booty shorts'. Uniform supplier size charts set the women's basketball standard at a 7-inch inseam (5\" or 6\" on request) versus 10-11 inches for men's basketball shorts. The article date is not visible and may be older than 2024, so treat the retailer quote as potentially outdated.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Today.com - Who wears short shorts? Your daughter... in P.E. class (search snippet)",
+          "url": "https://www.today.com/parents/who-wears-short-shorts-your-daughter-p-e-class-1c9183042",
+          "source_date": "unknown",
+          "data_type": "news article",
+          "geography": "United States",
+          "consumer_or_market": "Parents of teen girls; apparel retailers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "one retailer stating confidentially that it would no longer order shorts with longer than a three-inch inseam because those longer styles simply don't sell... commonly referred to as 'booty shorts'"
+        },
+        {
+          "source": "Imperial Point - Basketball Uniform Size Charts (search snippet)",
+          "url": "https://theimperialpoint.com/basketball-uniform-size-charts/",
+          "source_date": "unknown",
+          "data_type": "product page / size chart",
+          "geography": "United States",
+          "consumer_or_market": "Team uniform buyers (schools, clubs)",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "women's basketball shorts have a standard 7-inch inseam, with 5-inch or 6-inch inseams available upon request... basketball shorts run 10-11 inch inseams"
+        }
+      ],
+      "consumer_groups": "Teen girls, women players, parents buying for daughters, school/club uniform buyers",
+      "implication": "There is a coverage gap between what girls'/women's ranges default to (3-7\") and what many parents and players want (7-9\"). Offering a women's-block short at 7\" and 9\" is a low-risk way to capture both the modest-coverage and the 'long basketball short' fashion demand."
+    },
+    {
+      "id": "A01-S9",
+      "title": "Parents and value buyers replenish in multipacks and up to 5XL, a behaviour Nike's single-unit premium does not serve",
+      "finding": "Amazon's best-seller listings for youth basketball shorts are dominated by 5-packs (e.g., Real Essentials 'Boys' Dry Fit Basketball Shorts' 5-pack in sizes 4-18 with inseams graded 6\" to 8\" for knee-length coverage) and Walmart's adult results by 5-packs (Liloak 9\" 5-pack) and AND1 All Court shorts 'up to 5XL', which one reviewer called 'affordable and cultural' versus Nike or adidas. Trustpilot complaints include a parent unable to return GBP 45 shorts bought for a son's birthday after the 30-day window.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Amazon - Real Essentials 5 Pack Boys' Dry Fit Basketball Shorts (search result)",
+          "url": "https://www.amazon.com/5-Pack-Dry-Fit-Athletic-Basketball-Pockets/dp/B0844JSHRJ",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Parents buying for boys 4-18",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "5 Pack: Boys' Dry Fit Basketball Shorts for Youth Kids Teens... sizes 4-18 with inseams graded 6\" to 8\" by size for knee length coverage"
+        },
+        {
+          "source": "Walmart - AND1 Men's Active All Court Basketball Shorts up to 5XL (search result)",
+          "url": "https://www.walmart.com/ip/489473192",
+          "source_date": "unknown",
+          "data_type": "product page / consumer review",
+          "geography": "United States",
+          "consumer_or_market": "Value-channel adult men incl. plus sizes",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "AND1 Men's Active All Court Basketball Shorts, up to 5XL... described as 'affordable and cultural' by a reviewer"
+        },
+        {
+          "source": "Trustpilot - Nike reviews (search snippet)",
+          "url": "https://www.trustpilot.com/review/www.nikestore.com",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "United Kingdom",
+          "consumer_or_market": "Parents buying Nike shorts as gifts",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "A customer who bought GBP 45 shorts for their son's birthday reported that when they tried to return them, they were told the 30-day return window had closed"
+        }
+      ],
+      "consumer_groups": "Parents of 4-18 year olds; value-tier adult men; plus-size players",
+      "implication": "Youth replenishment is a pack-and-grade behaviour. A Nike 2-pack or 'grow-with-me' graded-inseam youth short could win the parent without racing Amazon to the bottom on price."
+    },
+    {
+      "id": "A01-S10",
+      "title": "Emerging markets build their own basketball-shorts culture around local identity, not global brand specs",
+      "finding": "In the Philippines, Ugat Clothing sells 'premium basketball shorts tailored for Filipinos', Know The Culture builds a Cebu basketball-culture streetwear brand, LGR Sportswear (Manila, since 1988) makes official league uniforms and Kings of the Court PH (12+ years of events) sells basketball-centric apparel; Etsy hosts a dedicated 'Philippine basketball shorts' market. Market coverage names China, the Philippines and Nigeria as the fastest-growing basketball participation markets and reports Indian participation up 34% from 2019 to 2025 with federation investment in grassroots programs.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Ugat Clothing - Basketball Shorts (search snippet)",
+          "url": "https://www.ugatclothing.com/basketball-shorts",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino basketball players and fans",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "premium basketball shorts tailored for Filipinos, celebrating the passion, talent, and unique basketball culture of the Philippines"
+        },
+        {
+          "source": "Keeta.ph - From the Court to the Streets: basketball-inspired streetwear brand (search snippet)",
+          "url": "https://keeta.ph/from-the-court-to-the-streets-how-this-basketball-inspired-streetwear-brand-took-over-the-fashion-game/",
+          "source_date": "unknown",
+          "data_type": "news article",
+          "geography": "Philippines (Cebu)",
+          "consumer_or_market": "Filipino youth streetwear buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Know The Culture is a clothing brand influenced by the vibrant basketball culture in the Philippines, particularly focused on the province of Cebu"
+        },
+        {
+          "source": "Verified Market Research - Basketball Market Report (search snippet)",
+          "url": "https://www.verifiedmarketresearch.com/product/basketball-market/",
+          "source_date": "2025",
+          "data_type": "market report",
+          "geography": "Global (China, Philippines, Nigeria)",
+          "consumer_or_market": "Basketball participants in growth markets",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Basketball continues to gain popularity worldwide, especially in countries like China, the Philippines, and Nigeria"
+        },
+        {
+          "source": "SkyQuest / Dataintelo basketball market coverage (search snippet)",
+          "url": "https://www.skyquestt.com/report/basketball-market",
+          "source_date": "2025",
+          "data_type": "market report",
+          "geography": "India",
+          "consumer_or_market": "Indian youth basketball participants",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "participation rates increasing by 34 percent between 2019 and 2025"
+        }
+      ],
+      "consumer_groups": "Filipino, Chinese, Nigerian and Indian outdoor/league players; diaspora fans; youth",
+      "implication": "Worldball is not one product. Local heritage graphics, league/barangay identity and value pricing (PHP/RMB/INR) are what local brands compete on; Nike can license its performance block to local storytelling rather than exporting a US design."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A01-T1",
+      "title": "The pocket sells the short and breaks the short",
+      "description": "Nike, Under Armour and value brands all lead with zip/phone pockets, and players want to carry a phone on outdoor courts with no lockers. Yet the pocket opening is the reported rip point on the Nike Icon short and phone bounce remains an unsolved annoyance in play. Consumers are buying the feature and then discovering its cost.",
+      "signal_ids": ["A01-S3", "A01-S7"]
+    },
+    {
+      "id": "A01-T2",
+      "title": "Shorter and tailored for fashion vs. longer coverage for players, parents and older bodies",
+      "description": "Trend guides and Gen Z styling push 5-7\" tailored cuts, and retailers claim long girls' shorts do not sell, while post players, parents of teen girls and uniform buyers still want 7-11\" coverage. A single inseam per style forces one group to compromise, and 11\" men's cuts labelled 'unisex' compromise everyone.",
+      "signal_ids": ["A01-S4", "A01-S8", "A01-S5"]
+    },
+    {
+      "id": "A01-T3",
+      "title": "Women's demand is compounding faster than Nike's female mindshare or women's-specific product",
+      "description": "WNBA store sales +60%, women's basketball sportswear >12% CAGR and celebrities wearing long basketball shorts as fashion coincide with a 13-point drop in Nike mindshare among teen females and a search landscape where women's basketball shorts appear as product listings with almost no review voice. The demand is there; the fit-specific product conversation is not.",
+      "signal_ids": ["A01-S1", "A01-S5", "A01-S8"]
+    },
+    {
+      "id": "A01-T4",
+      "title": "China outdoor scale vs. Nike's indoor-built, premium-priced shorts",
+      "description": "Roughly 300M players and 1.1M courts, most of them outdoor, sit against a Nike shorts line plan that is ~5% outdoor and priced above the RMB 200-300 band in which Li-Ning and Anta win on '性价比'. Nike proved it can localize for outdoor durability with the S.T. Flare shoe, but has not done so in shorts.",
+      "signal_ids": ["A01-S7", "A01-S9"]
+    },
+    {
+      "id": "A01-T5",
+      "title": "Lifestyle demand grows as basketball performance credibility (footwear) shrinks",
+      "description": "Basketball shoes are down 11% and to ~4% of US footwear, while shorts ride athleisure. The risk is that basketball shorts become a fashion commodity where Walmart 5-packs and AND1 'affordable and cultural' win on price and Nike's performance story stops justifying a USD 45-55 ticket. Nike must decide whether the short leads with court proof or with style.",
+      "signal_ids": ["A01-S6", "A01-S9", "A01-S4"]
+    },
+    {
+      "id": "A01-T6",
+      "title": "Fit variance undermines the DTC/online model consumers now use to buy shorts",
+      "description": "The same Jordan short is reported as running big, small, true and long; Trustpilot complaints centre on sizing plus refund friction; parents miss 30-day windows. Nike's push to sell shorts online collides with a product whose grading consumers cannot predict.",
+      "signal_ids": ["A01-S2", "A01-S9"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A01-O1",
+      "name": "Court-Proof Outdoor Short (Greater China first)",
+      "target_consumer": "Greater China outdoor/streetball players aged 14-30 who play on concrete and asphalt courts in heat, carry a phone, and currently default to Li-Ning/Anta at RMB 200-300",
+      "job_to_be_done": "Play outdoors for hours in heat without the shorts tearing, sagging with sweat, or losing my phone and keys",
+      "product_problem": "Nike's basketball shorts are built and priced for indoor play; the pocket opening is a reported rip point; the line is ~5% outdoor while the market is overwhelmingly outdoor and value-driven",
+      "proposed_solution": "A China-developed outdoor short that applies the S.T. Flare logic to apparel: abrasion-resistant woven or double-knit panels at hem and seat, reinforced bonded zip phone pocket placed at the side seam to limit bounce, high-wicking open-mesh upper panels, and a sweat-stable waistband, sold at a value-performance price",
+      "key_features": [
+        "Abrasion-tested hem/seat panels (concrete slide test claim)",
+        "Bonded, bartacked zip phone pocket engineered against rip and bounce",
+        "Quick-dry open mesh with sweat-stable, non-sag waistband",
+        "8\" and 10\" inseams on one block, Asia-fit grading",
+        "Court/city storytelling with CHBL and local outdoor courts",
+        "RMB 199-299 retail (entry-performance tier, parity with domestic value band)"
+      ],
+      "price_position": "RMB 199-299 (approx. USD 28-42); entry-performance / value tier below current Dri-FIT DNA positioning",
+      "evidence_signal_ids": ["A01-S7", "A01-S3", "A01-S9"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What do Chinese outdoor players actually complain about in shorts on Tmall/JD/Xiaohongshu reviews (durability, sweat, price, length), and can Nike hit RMB 199-299 with a reinforced pocket at acceptable margin?"
+    },
+    {
+      "id": "A01-O2",
+      "name": "Women's-Block Basketball Short in 5\"/7\"/9\"",
+      "target_consumer": "Women and teen girls 14-30 who play (school, club, rec) or wear basketball shorts as lifestyle, and who are currently offered men's/unisex cuts or 3-5\" 'athletic' shorts",
+      "job_to_be_done": "Get a basketball short that fits my waist and hips, gives me the coverage I choose, and has a real pocket",
+      "product_problem": "Women's demand is growing (>12% CAGR claims, WNBA sales +60%) but the product conversation is empty; girls' ranges default short, men's cuts are labelled 'unisex', and Nike lost 13 points of teen-female mindshare",
+      "proposed_solution": "A dedicated women's block (waist-to-hip ratio graded for women, higher rise option) offered in three inseams on the same pattern, with the same phone-secure pocket as the men's line and a styled 'long' 9\" colourway program aimed at the off-court trend",
+      "key_features": [
+        "Women's-specific grading (hip, rise), not a downsized men's block",
+        "Choice of 5\", 7\" and 9\" inseam within one style",
+        "Zip phone pocket and secure key loop identical to men's spec",
+        "Non-see-through lightweight knit with soft-hand liner-free option",
+        "Colour/print program co-designed with WNBA and women's college athletes",
+        "USD 45-60 core tier"
+      ],
+      "price_position": "USD 45-60 (core performance tier, parity with men's Dri-FIT DNA)",
+      "evidence_signal_ids": ["A01-S1", "A01-S5", "A01-S8", "A01-S4"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Do women players actually prefer a women's-graded block over men's cuts (some deliberately buy men's for length/looseness), and which inseam sells most in each channel?"
+    },
+    {
+      "id": "A01-O3",
+      "name": "Youth Grow-Grade 2-Pack Short",
+      "target_consumer": "Parents of boys and girls aged 6-14 in the US, Europe and Greater China who replenish basketball shorts in packs several times a year",
+      "job_to_be_done": "Buy shorts my kid will wear for school, practice and play that survive washing and pockets full of stuff, without paying full-price singles every growth spurt",
+      "product_problem": "Parents buy 5-packs from Real Essentials or AND1 for value and size range; Nike sells premium singles with return-window friction and inconsistent sizing",
+      "proposed_solution": "A Nike youth DNA-style short sold as a 2-pack (two colours) with inseams graded 5\"-8\" by size for consistent knee coverage, reinforced pockets, a printed inside size/inseam guide and a 60-day fit guarantee",
+      "key_features": [
+        "2-pack in complementary colours",
+        "Inseam graded by size (5\" to 8\") for consistent proportion",
+        "Reinforced, bartacked side pockets",
+        "Clear size/inseam labelling and extended fit-return window",
+        "Same block across boys' and girls' with girls'-specific waist option",
+        "USD 55-65 for two (USD 27-33 each; mid tier)"
+      ],
+      "price_position": "USD 55-65 per 2-pack (mid tier; above Amazon 5-packs, below two full-price singles)",
+      "evidence_signal_ids": ["A01-S9", "A01-S2", "A01-S1"],
+      "confidence": "Low",
+      "key_unanswered_question": "Will parents pay roughly 2x Amazon's per-unit price for Nike durability and brand, and does a 2-pack cannibalize full-price youth singles?"
+    },
+    {
+      "id": "A01-O4",
+      "name": "Street-Length Lifestyle Short (6-7\", tailored)",
+      "target_consumer": "Gen Z and young-adult lifestyle wearers (men and women, 16-30) in the US, Japan/Korea and Europe who wear basketball shorts off-court with sneakers, flats or heels and are not buying basketball shoes",
+      "job_to_be_done": "Wear a basketball short that reads as intentional fashion, holds my phone without a bulge, and still works for a pickup run",
+      "product_problem": "Nike's core shorts are cut for court proportions (8-11\"), and the fashion trend has moved to shorter, tailored mid-thigh cuts; the lifestyle buyer is being served by AND1 'cultural' value shorts and multipacks",
+      "proposed_solution": "A 6-7\" tailored-relaxed knit short with a clean hem, hidden flat zip pocket, heavier hand and premium colour/print, positioned in Nike Sportswear/Jordan lifestyle with a performance-credible fabric story",
+      "key_features": [
+        "6-7\" inseam, slightly tapered, clean hem",
+        "Hidden flat zip pocket sized for a phone, low-bounce placement",
+        "Heavier double-knit or woven with structure for off-court",
+        "Unisex colour program with true men's and women's grading",
+        "Retro/heritage graphics tied to local courts (Worldball)",
+        "USD 60-75 premium lifestyle tier"
+      ],
+      "price_position": "USD 60-75 (premium lifestyle tier)",
+      "evidence_signal_ids": ["A01-S4", "A01-S5", "A01-S6"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Is the shorter tailored trend durable beyond 2026 or a fashion cycle, and does a lifestyle short erode the performance credibility of the basketball line?"
+    },
+    {
+      "id": "A01-O5",
+      "name": "Worldball Local-Identity Short (Philippines pilot)",
+      "target_consumer": "Filipino outdoor and barangay-league players and fans aged 15-35 who buy from Ugat, Know The Culture and KOTC for local identity at local prices",
+      "job_to_be_done": "Rep my city/league/heritage on the court in a short that survives daily outdoor play and costs what I can afford",
+      "product_problem": "Local brands own the identity story and price point; Nike's basketball shorts are imported designs at import prices",
+      "proposed_solution": "A Nike performance block (from A01-O1) licensed to local design collaborators for regional heritage graphics, released around league and streetball events, priced in the local value-performance band",
+      "key_features": [
+        "Shared outdoor-durable block with reinforced pocket",
+        "Local co-designed graphics (city, league, heritage)",
+        "Event/league drop calendar (KOTC-style)",
+        "Longer 9-10\" option for conservative/league use",
+        "PHP 1,500-2,200 retail"
+      ],
+      "price_position": "PHP 1,500-2,200 (approx. USD 26-38); value-performance tier",
+      "evidence_signal_ids": ["A01-S10", "A01-S7"],
+      "confidence": "Low",
+      "key_unanswered_question": "How large is the Filipino consumer's willingness to pay for Nike over local brands at a 20-40% premium, and do local collaborators strengthen or dilute the Nike basketball identity?"
+    }
+  ],
+  "sources": [
+    {"source": "Business Wire - Piper Sandler 49th Taking Stock With Teens", "url": "https://www.businesswire.com/news/home/20250409407391/en/Piper-Sandler-Completes-49th-Semi-Annual-Taking-Stock-With-Teens-Survey", "date": "2025-04-09", "contribution": "Nike 49% teen mindshare, 13-point female drop, $2,388 spend, 6,455 sample (via search snippet; fetch blocked)"},
+    {"source": "Piper Sandler - 50th Semi-Annual Teen Survey", "url": "https://www.pipersandler.com/news/piper-sandler-completes-50th-semi-annual-teen-survey", "date": "2025-10", "contribution": "Nike still #1 clothing brand fall 2025, 10,000+ teens (snippet)"},
+    {"source": "SGB Media - Piper Sandler teen survey, Nike erosion stabilizing", "url": "https://sgbonline.com/piper-sandler-teen-survey-finds-on-overtaking-hoka-in-popularity-nikes-erosion-stabilizing/", "date": "2025-10", "contribution": "Erosion stabilizing framing (snippet)"},
+    {"source": "Nike.com - Nike DNA Men's Dri-FIT 8\" Basketball Shorts", "url": "https://www.nike.com/t/dna-mens-dri-fit-8-basketball-shorts-jVkw9d", "date": "unknown", "contribution": "Product copy on zippered utility phone pocket, mesh/knit construction (snippet)"},
+    {"source": "Nike.com - DNA 6\" reviews page (and 8\"/10\"/Academy/Kids listings)", "url": "https://www.nike.com/t/dna-mens-dri-fit-6-basketball-shorts-R65pLfb2/reviews", "date": "unknown", "contribution": "Evidence of 5\"/6\"/8\"/10\"/11\" inseam assortment (result titles only; page blocked)"},
+    {"source": "Amazon - Jordan Dri-FIT Sport Diamond Shorts FB7580-687", "url": "https://www.amazon.com/Jordan-Dri-FIT-Diamond-FB7580-687-X-Large/dp/B0CY2Z62H9", "date": "unknown", "contribution": "Contradictory fit reports (runs big/small/true/long) (snippet)"},
+    {"source": "Dick's Sporting Goods - Jordan Men's Dri-FIT Sport Mesh Diamond Shorts", "url": "https://www.dickssportinggoods.com/p/jordan-mens-dri-fit-sport-mesh-diamond-shorts-24jdnmmjdfsprtdmnmaaa/24jdnmmjdfsprtdmnmaaa", "date": "unknown", "contribution": "Fit and feature descriptions (snippet)"},
+    {"source": "Walmart - Nike Dri-FIT Icon Basketball Shorts AJ3914-010 reviews", "url": "https://www.walmart.com/reviews/product/690324738", "date": "2025-02", "contribution": "Rip-at-pocket durability complaint Feb 2025 (snippet)"},
+    {"source": "Trustpilot - Nike.com reviews (CA)", "url": "https://ca.trustpilot.com/review/www.nike.com", "date": "unknown", "contribution": "Sizing, quality control and refund complaints (snippet)"},
+    {"source": "Trustpilot - nikestore.com reviews", "url": "https://www.trustpilot.com/review/www.nikestore.com", "date": "unknown", "contribution": "GBP 45 shorts gift return-window complaint; GBP 50 vs GBP 10 quality complaint (snippet)"},
+    {"source": "JD Sports - Men's shorts listing", "url": "https://www.jdsports.com/plp/mens-shorts", "date": "unknown", "contribution": "Nike DNA 8\" 4.0/5 (13 reviews) vs Puma Liga Core 4.8/5 (6) (snippet)"},
+    {"source": "Men's Journal - Under Armour Curry shorts under $50", "url": "https://www.mensjournal.com/shopping/under-armour-curry-shorts-sale", "date": "unknown", "contribution": "UA Curry 6.5\" features, near-perfect rating, under $50 (snippet)"},
+    {"source": "Under Armour - 10 Things to Look for in Basketball Shorts", "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/", "date": "unknown", "contribution": "7\" guard vs 9\" post inseam guidance; Curry 7-9\" (snippet)"},
+    {"source": "Anarchy Label - Best Basketball Shorts 2026", "url": "https://www.anarchylabel.com/basketball-shorts-2026/", "date": "2026", "contribution": "Claim of shorter, tailored 2026 trend (snippet; low confidence)"},
+    {"source": "ASOS - Nike Basketball Icon Plus 11 inch unisex shorts", "url": "https://www.asos.com/nike-basketball/nike-basketball-icon-plus-11-inch-unisex-shorts-in-red/prd/204574698", "date": "unknown", "contribution": "11\" Icon sold as unisex in UK/EU (result title)"},
+    {"source": "Who What Wear - Sporty shorts trend replacing bike shorts 2025", "url": "https://www.whowhatwear.com/fashion/athleisure/athletic-shorts-outfit-trend", "date": "2025", "contribution": "Women's fashion adoption of long basketball shorts, celebrity styling (snippet)"},
+    {"source": "Sportsverse Substack - How Can Basketball Get Its Bounce Back in Fashion?", "url": "https://sportsverse.substack.com/p/how-can-basketball-get-its-bounce", "date": "unknown", "contribution": "Circana -11% basketball shoes 2025; NPD 13%->4% share; WNBA +48% attendance, +60% store sales (snippet)"},
+    {"source": "Dataintelo - Basketball Sportswear Market", "url": "https://dataintelo.com/report/basketball-sportswear-market", "date": "2025", "contribution": "Women's segment >12.5% CAGR claim (snippet; low confidence)"},
+    {"source": "Verified Market Research - Basketball Market 2025-2033", "url": "https://www.verifiedmarketresearch.com/product/basketball-market/", "date": "2025", "contribution": "Apparel ~28% of basketball market; China/Philippines/Nigeria growth; shorts as streetwear (snippet)"},
+    {"source": "Technavio - Basketball Apparel Market", "url": "https://www.technavio.com/report/basketball-apparel-market-industry-analysis", "date": "2025", "contribution": "USD 6.32B growth 2024-2029 (snippet)"},
+    {"source": "SkyQuest - Basketball Market", "url": "https://www.skyquestt.com/report/basketball-market", "date": "2025", "contribution": "India participation +34% 2019-2025 (snippet; low confidence)"},
+    {"source": "Marketing to China - Most Popular Sports in China 2026", "url": "https://marketingtochina.com/chinese-sports-market-most-popular-sports-in-china/", "date": "2026", "contribution": "22% favourite share, ~300M players (snippet)"},
+    {"source": "Statista - China ball game courts by category 2022", "url": "https://www.statista.com/statistics/1199252/china-number-of-ball-game-courts-by-category/", "date": "2022-12", "contribution": ">1.1M basketball courts (snippet; potentially outdated)"},
+    {"source": "Sole Retriever - China-exclusive Nike S.T. Flare June 2025", "url": "https://www.soleretriever.com/news/articles/china-exclusive-outdoor-basketball-shoe-nike-st-flare-release-date-june-2025", "date": "2025-06", "contribution": "Nike's stated outdoor-court durability rationale for China-only product (snippet)"},
+    {"source": "Hypebeast - Nike Basketball China Exclusive ST Flare", "url": "https://hypebeast.com/2025/5/nike-basketball-china-exclusive-st-flare-release-info", "date": "2025-05", "contribution": "Corroborating S.T. Flare release (result title only)"},
+    {"source": "House of Heat - Nike Basketball CHBL 2026 PEs", "url": "https://houseofheat.co/nike/nike-basketball-chbl-pe-collection-2026", "date": "2026", "contribution": "Nike CHBL grassroots investment 2025-26 (snippet)"},
+    {"source": "Sina Finance / Jiemian - 国产品牌争夺运动鞋王", "url": "https://finance.sina.com.cn/jjxw/2025-01-22/doc-inefvuvx6961731.shtml", "date": "2025-01-22", "contribution": "Li-Ning/Anta lead practical rankings on value+tech; RMB 200-300 entry (snippet)"},
+    {"source": "Today.com - Who wears short shorts? Your daughter in P.E. class", "url": "https://www.today.com/parents/who-wears-short-shorts-your-daughter-p-e-class-1c9183042", "date": "unknown", "contribution": "Retailer 3\" inseam claim; parent 'booty shorts' quote (snippet; possibly outdated)"},
+    {"source": "Imperial Point - Basketball Uniform Size Charts", "url": "https://theimperialpoint.com/basketball-uniform-size-charts/", "date": "unknown", "contribution": "Women's 7\" standard (5\"/6\" on request) vs men's 10-11\" (snippet)"},
+    {"source": "Amazon - Real Essentials 5 Pack Boys' Dry Fit Basketball Shorts", "url": "https://www.amazon.com/5-Pack-Dry-Fit-Athletic-Basketball-Pockets/dp/B0844JSHRJ", "date": "unknown", "contribution": "Multipack youth replenishment, graded 6-8\" inseams (result)"},
+    {"source": "Walmart - AND1 Men's Active All Court Basketball Shorts up to 5XL", "url": "https://www.walmart.com/ip/489473192", "date": "unknown", "contribution": "'Affordable and cultural' review, 5XL range (snippet)"},
+    {"source": "Walmart - Liloak 5 Pack 9\" Basketball Shorts", "url": "https://www.walmart.com/ip/18378353077", "date": "2025", "contribution": "Adult value multipack behaviour (result)"},
+    {"source": "Walmart - Russell Athletic 8\" Printed Basketball Shorts", "url": "https://www.walmart.com/ip/14803771950", "date": "unknown", "contribution": "8\" inseam, 1 zip + 1 side pocket at value tier (snippet)"},
+    {"source": "Ugat Clothing - Basketball Shorts", "url": "https://www.ugatclothing.com/basketball-shorts", "date": "unknown", "contribution": "'Tailored for Filipinos' positioning (snippet)"},
+    {"source": "Keeta.ph - Basketball-inspired streetwear brand (Know The Culture)", "url": "https://keeta.ph/from-the-court-to-the-streets-how-this-basketball-inspired-streetwear-brand-took-over-the-fashion-game/", "date": "unknown", "contribution": "Cebu basketball-culture brand (snippet)"},
+    {"source": "Wikipedia - LGR Sportswear", "url": "https://en.wikipedia.org/wiki/LGR_Sportswear", "date": "unknown", "contribution": "Manila uniform maker since 1988 (snippet)"},
+    {"source": "Kings of the Court PH", "url": "https://kingsofthecourtph.com/", "date": "unknown", "contribution": "12+ years basketball events with basketball apparel (snippet)"},
+    {"source": "Etsy - Philippine basketball shorts market", "url": "https://www.etsy.com/market/philippine_basketball_shorts", "date": "unknown", "contribution": "Existence of a dedicated heritage-shorts market (result)"},
+    {"source": "Kakaku.com - バスケットボールパンツ人気ランキング 2026年8月", "url": "https://kakaku.com/ranking/sports-wear/0009_0038/0017/", "date": "2026-08", "contribution": "Japan ranking exists; content not retrievable (fetch blocked) - flagged as gap"}
+  ]
+}

@@ -1,0 +1,967 @@
+{
+  "agent_id": "A05",
+  "agent_name": "Cultural + Trend Intelligence",
+  "domain": "Basketball culture, athlete behavior, streetball, fashion, social media, search behavior, emerging aesthetics and adjacent cultural signals for the global basketball shorts market",
+  "research_narrative": "I approached this as a cultural scout rather than a sales analyst: the brief asked what is changing before it shows up in sell-through, so I searched by scene (tunnel fashion, WNBA and Unrivaled, streetball and pro-am, CunBA, Philippine leagues, Japan and Korea, Australia's NBL, BAL, 3x3), by silhouette (short inseams, jorts, retro mesh, wide-cut), by platform (TikTok, Pinterest, Google Trends), by collab (NOCTA, Travis Scott, Kith, Corteiz, BAPE x Mitchell & Ness), and by under-served groups (modest and hijab-wearing athletes, taller women). I ran 31 distinct searches before the shared session budget was exhausted.\n\nThe most important caveat: the network egress proxy blocked every WebFetch I attempted (roughly 60 URLs across news, league, brand, retailer and encyclopedia domains), so I could not read a single primary page. Every evidence item therefore rests on the dated result summaries and snippets that the search tool returned, which I have labelled as such and capped at Medium confidence (Low for aggregator pages like Accio). Numbers such as the WNBA's 3.15M attendance, BAL's 140,000 cumulative fans, the NBL's 1,229,604 attendance and Unrivaled's 200% ticket-revenue growth were reported consistently in those summaries, but a PLM should verify them against the cited pages before relying on them.\n\nWhat surprised me most was the shape of the women's story. Attendance, viewership and merchandise all set records in 2025, retailers describe a supply desert, and Pinterest's 2026 data shows fans converting fandom into outfits (WNBA game outfits +70%, female jersey outfit +494%). Yet the retail answer is still the jersey. Shorts, the other half of the wardrobe, barely appear. At the same time, the sharpest fit complaint I found was in the opposite direction from fashion: Brittney Griner and a Minnesota Muslim girls' team both want more coverage, while the pro fashion wave keeps cutting shorts shorter. That is the clearest unmet product need in my domain.\n\nThe second surprise was Unrivaled: ticket revenue up over 200%, a record 21,490 crowd, and yet TV viewership down. Combined with CunBA's 100M online viewers watching amateurs on rural outdoor courts, and Quai 54 filling Roland-Garros, the pattern is that basketball culture is growing where people gather and play rather than where broadcasts are measured. Product demand will follow that geography.\n\nThird, the silhouette story is not one trend but two. On-court, elite players are shorter and slimmer, to the point of hiring seamstresses. Off-court, Gen Z is in wide-cut, retro mesh and jorts. The same person wears both. A single compromise fit will disappoint both, so I framed opportunities as distinct silhouettes rather than one modern cut.\n\nWhat I could not find: reliable, dated Google Trends indices from a source I could read (the Accio figures are unverified); any pricing for NOCTA, Travis Scott or Corteiz shorts; hard participation numbers for Philippine liga or Korean streetball; concrete evidence of soccer shorts being adopted by hoopers (searches returned nothing substantive); primary data on Chinese outdoor participation or court counts; and any Nike-specific SS26 shorts silhouette news. I also could not read Complex, Hypebeast or GQ tunnel coverage in full, so my fashion signals are lighter on named garments than I would like.\n\nReasoning to opportunities: I took the strongest FACT-level signals (women's demand and supply gap; CunBA's scale and spread; global event growth) and paired each with a documented behavioural gap (length alteration, coverage need, lifestyle-vs-court duality, jersey-only fan retail). The Women's Length-System short addresses the tension between short-shorts fashion and coverage needs directly. The Archive Mesh Two-Way short attacks the space Mitchell & Ness occupies with an asset Nike already owns. The CunBA Court Short is the cultural entry to the outdoor Greater China priority. The Game-Day short and the Tournament Capsule convert live-event growth into lower-body product. I have deliberately kept confidence at Medium or Low; these are hypotheses to validate with primary reads and consumer work, not conclusions.",
+  "top_signals": [
+    {
+      "id": "A05-S1",
+      "title": "Women's basketball demand has outrun the merchandise supply chain",
+      "finding": "The 2025 WNBA season drew 3.15M fans (+34% YoY, 11,148 average, an all-time high) and the expansion Golden State Valkyries sold out all 22 home games at 18,064 average; ESPN's full season averaged 1.2M viewers (+5%). Retail followed: Fanatics reported selling 5x the WNBA merchandise of the prior year and Dick's WNBA sales rose 233% YoY, while Front Office Sports describes the ~$4B US women's sports merch market as a 'supply desert'. Pinterest's Summer 2026 report shows 'WNBA game outfits' +70% and 'female jersey outfit' +494%, i.e. fandom is converting into everyday dress.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "SportsPro - WNBA 2025 season in numbers",
+          "url": "https://www.sportspro.com/insights/features/wnba-2025-season-review-tv-viewership-attendances-sponsorship-valuations/",
+          "source_date": "2025-10",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "WNBA fans / women's basketball market",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "attendance total of 3.15 million fans for games in 2025, up 34% on the previous year. An average of 11,148 fans attended each game"
+        },
+        {
+          "source": "Just Women's Sports - Valkyries break attendance record",
+          "url": "https://justwomenssports.com/reads/2025-expansion-team-golden-state-valkyries-break-wnba-attendance-record/",
+          "source_date": "2025-09",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States (Bay Area)",
+          "consumer_or_market": "WNBA fans",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "selling out all 22 of their home games... averaged 18,064 fans for each home game"
+        },
+        {
+          "source": "Front Office Sports - The $4 Billion Women's Sports Merch Market Is a Supply Desert",
+          "url": "https://frontofficesports.com/womens-sports-merchandise-market-4-billion/",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "Women's sports fans / apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Fanatics... sold five times as much WNBA merchandise as it had this time last year... Sales at... Dick's Sporting Goods also rose by 233% year-over-year... estimated $4 billion in the U.S. alone"
+        },
+        {
+          "source": "Pinterest Summer 2026 Trend Report (via Pinterest Newsroom / FashionUnited)",
+          "url": "https://newsroom.pinterest.com/news/summer-trend-report-2026/",
+          "source_date": "2026-05",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Global (600M+ MAU)",
+          "consumer_or_market": "Pinterest users, skewing women / Gen Z",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "'WNBA game outfits' (+70%)... 'female jersey outfit' +494%... 'Angel Reese basketball' (+96 percent)"
+        }
+      ],
+      "consumer_groups": "Women fans and players 16-35; girls' youth; WNBA/Unrivaled/NCAA followers; female style-setters",
+      "implication": "The women's shorts line should be sized to demand that is measured in fan-conversion rates, not last year's sell-through. Demand exists for shorts that read as 'game-day identity' off-court as much as for court performance; the supply gap is a first-mover window."
+    },
+    {
+      "id": "A05-S2",
+      "title": "Elite hoopers keep shortening and tailoring their shorts by hand, ahead of what uniform suppliers issue",
+      "finding": "Tyler Herro had a Heat seamstress cut shorts shorter than the team's standard issue; players (LeBron, Jalen Green, Jordan Poole, Kelly Oubre) roll waistbands or order custom inseams to get a thigh-reveal silhouette. College men and women are using 'more nuanced, subtle techniques for achieving a slimmer, shorter look'. The reference standard remains 9-inch inseam men's / 6-inch women's, so the on-court preference is running ahead of stock specs. Note several sources date to 2017-2021; the 2025 blog coverage confirms the trend persists but the freshest primary quotes are older.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Yahoo Sports - Who wears short shorts? The Heat and a growing number in the NBA",
+          "url": "https://sports.yahoo.com/wears-short-shorts-heat-growing-103000565.html",
+          "source_date": "2021-03",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States (NBA)",
+          "consumer_or_market": "NBA players (Miami Heat)",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Tyler Herro asked... equipment manager Rob Pimental for shorts shorter than the Heat's standard offering, and a seamstress was called in... 'I've been wearing short shorts since middle school'"
+        },
+        {
+          "source": "KICKZ blog - The evolution of basketball shorts: short shorts vs. long shorts",
+          "url": "https://www.kickz.com/en/blog/the-evolution-of-basketball-shorts-short-shorts-vs-long-shorts",
+          "source_date": "unknown",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Europe (DE retailer, global audience)",
+          "consumer_or_market": "Hoopers / sneaker-culture consumers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "short shorts are making a comeback in the NBA, with players like LeBron, Jalen Green, Jordan Poole, and Kelly Oubre adopting them again, especially amongst the younger generation"
+        },
+        {
+          "source": "USA Today via PressReader - Short shorts get leg up",
+          "url": "https://www.pressreader.com/usa/usa-today-us-edition/20170309/282419874050922",
+          "source_date": "2017-03-09",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States (NCAA)",
+          "consumer_or_market": "College men's and women's players",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "a growing number of men's and women's players are employing more nuanced, subtle techniques for achieving a slimmer, shorter look to their shorts"
+        },
+        {
+          "source": "Under Armour Playbook - 10 Things to Look for in Basketball Shorts",
+          "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/",
+          "source_date": "unknown",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "Recreational hoopers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Women's basketball shorts have a standard 6\" inseam, while men's basketball shorts have a standard 9\" inseam"
+        }
+      ],
+      "consumer_groups": "Pro and college players; style-conscious male hoopers 16-28; women players following the same cut",
+      "implication": "Offer inseam as a deliberate choice (e.g., 5/7/9-inch men's) rather than a single 9-inch default; the alteration behavior is a direct unmet spec. Length choice is also a self-expression cue, so it belongs on the product page and hangtag."
+    },
+    {
+      "id": "A05-S3",
+      "title": "Retro mesh 'swingman' shorts are the lifestyle uniform of Gen Z and Gen Alpha",
+      "finding": "Hibbett's 2025 style guide says vintage shorts drawing on late-80s to 00s NBA designs (lightweight mesh, striped Swingman details) are 'back' and embraced by Gen Z and Gen Alpha; BAPE x Mitchell & Ness dropped an FW25 NBA capsule (Nets, Suns, Lakers, Knicks). Complex's 2025 best-dressed list credits Jalen Williams' tunnel look to 90s/early-2000s nostalgia. Search summaries (Accio, low-confidence aggregator) claim 'mesh basketball shorts' is the highest-volume basketball-shorts query with an August 2025 peak and a December 2025 global index peak of 99 for 'basketball shorts'.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Hibbett - Retro Basketball Shorts: Why They're Back & How to Style",
+          "url": "https://www.hibbett.com/blog-expert-advice/retro-basketball-shorts-how-to-style.html",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "Gen Z / Gen Alpha streetwear buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "vintage shorts taking inspiration from NBA-era designs from the late '80s through the '00s, featuring lightweight mesh fabric and striped Swingman designs... Gen Z and Gen Alpha are embracing these retro styles"
+        },
+        {
+          "source": "Hypebeast - BAPE x Mitchell & Ness NBA Collection",
+          "url": "https://hypebeast.com/2025/11/bape-mitchell-ness-nba-collaboration-fw25-collection-release-info",
+          "source_date": "2025-11",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Global (US/JP streetwear)",
+          "consumer_or_market": "Streetwear collectors",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Fall/Winter 2025 collection... Swingman jerseys and apparel featuring BAPE's signature CAMO... Brooklyn Nets, Phoenix Suns, Los Angeles Lakers and New York Knicks"
+        },
+        {
+          "source": "Complex - The 25 Best-Dressed NBA Players Right Now",
+          "url": "https://www.complex.com/style/a/mike-destefano/the-25-best-dressed-nba-players-right-now",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "NBA players as style influencers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Jalen Williams' wardrobe is built on nostalgia... rare vintage tees, Ruff Ryders leather vests, Southpole hoodies"
+        },
+        {
+          "source": "Accio (AI sourcing aggregator) - basketball short trends 2025",
+          "url": "https://www.accio.com/business/basketball-short-trends",
+          "source_date": "2025",
+          "data_type": "aggregator trend page citing Google Trends (unverified)",
+          "geography": "Global",
+          "consumer_or_market": "Online shoppers",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "'mesh basketball shorts' consistently generate the highest search volume... peak in August 2025... significant peak of 99 in December 2025"
+        }
+      ],
+      "consumer_groups": "Gen Z / Gen Alpha males and females 13-25; sneaker/streetwear collectors; Japan and US collab buyers",
+      "implication": "Nike's own archive (late-80s/90s Swingman-era Nike NBA and Jordan shorts) is a lifestyle asset. A heavyweight-mesh, striped, 9-11-inch retro short that still meets court spec would sit where Mitchell & Ness has been unchallenged."
+    },
+    {
+      "id": "A05-S4",
+      "title": "'Sport as identity' dressing is spreading beyond fans, led by women and by wide-cut silhouettes",
+      "finding": "Pinterest's Summer 2026 report (600M+ MAU) says sport is moving 'from a spectator moment to an entire aesthetic', with a new athletic everyday uniform built on wide-cut silhouettes and sporty basics, jerseys as going-out wear, and female athletes as a new class of style stars. Who What Wear reports sporty athletic shorts replacing bike shorts for women in 2025. In Korea, 'blokecore' is spreading among millennials/Gen Z and pro teams (e.g., Pro-Specs x LG Sakers, LG Twins x Bloomingtale) are releasing fashion-collab kit.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "FashionUnited - Pinterest trend report: sport to shape summer 2026",
+          "url": "https://fashionunited.uk/news/fashion/pinterest-trend-report-sport-to-shape-summer-2026-far-beyond-the-playing-field/2026052688265",
+          "source_date": "2026-05-26",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Global",
+          "consumer_or_market": "Pinterest users / fashion consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "a new athletic everyday uniform focusing on wide-cut silhouettes, personalised denim looks and sporty basics that are establishing themselves off the field"
+        },
+        {
+          "source": "Who What Wear - The Sporty Shorts Trend That's Replacing Bike Shorts in 2025",
+          "url": "https://www.whowhatwear.com/fashion/athleisure/athletic-shorts-outfit-trend",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "Women 20-35 fashion consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "The Sporty Shorts Trend That's Replacing Bike Shorts in 2025"
+        },
+        {
+          "source": "The Korea Times - 'Blokecore' gains popularity among millennials, Gen Zers",
+          "url": "https://www.koreatimes.co.kr/lifestyle/trends/20250330/blokecore-gains-popularity-among-among-millennials-gen-zers",
+          "source_date": "2025-03-30",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "South Korea",
+          "consumer_or_market": "Korean millennials / Gen Z",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "local professional sports teams have unveiled new kits for the season with collaborations with fashion brands, with Pro-Specs extending its sponsorship... LG Sakers... LG Twins also partnered with local design studio Bloomingtale"
+        }
+      ],
+      "consumer_groups": "Women 18-35 (US, Korea, Europe); Gen Z men adopting wide-cut sportswear; K-fashion followers across Asia",
+      "implication": "A basketball short can be sold as an all-occasion garment if the cut (wider leg, longer rise) and colour story follow fashion cadence, not just uniform cadence. Korea and Japan are the test markets for fashion-collab team kit."
+    },
+    {
+      "id": "A05-S5",
+      "title": "China's CunBA village basketball is the largest grassroots outdoor basketball phenomenon on earth and it is still spreading",
+      "finding": "CunBA began as a decades-old annual tournament in Taipan village, Guizhou; images went viral in July 2022 and Xinhua reports collective online viewership above 100 million. Players are amateurs playing outdoors for prizes like platters of roast meat, and the appeal is authenticity. In 2025 the format spread: a Northeast Four Provinces Rural Basketball League concluded in Heilongjiang and Yiwu (Zhejiang) launched its own CunBA. This is outdoor, rural/lower-tier, and largely served by domestic brands.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Xinhua - China's village basketball games go viral, benefiting local communities",
+          "url": "https://english.news.cn/20230329/9ba0f5f68e80415293d6917fba8b8adf/c.html",
+          "source_date": "2023-03-29",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "China (Guizhou)",
+          "consumer_or_market": "Rural Chinese basketball players and viewers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "collective online viewership of CunBA competitions has topped 100 million"
+        },
+        {
+          "source": "Made in China Journal - The Viral Success of Chinese Village Basketball",
+          "url": "https://madeinchinajournal.com/2024/10/29/the-viral-success-of-chinese-village-basketball/",
+          "source_date": "2024-10-29",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "China",
+          "consumer_or_market": "Rural players / online audience",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "In July 2022... images of a tournament held in Taipan Village went viral on the Chinese internet... athletes... are all amateurs, and the prizes are simple platters of roast meat"
+        },
+        {
+          "source": "The Standard (HK) - China's village basketball league a slam dunk",
+          "url": "https://www.thestandard.com.hk/sports-updates/article/206773/Chinas-village-basketball-league-a-slam-dunk",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "China (Heilongjiang, Zhejiang)",
+          "consumer_or_market": "Rural / county-level players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "In 2025, the Northeast Four Provinces Rural Basketball League concluded in Heilongjiang Province, and Yiwu City in Zhejiang Province also launched its own CunBA tournament"
+        }
+      ],
+      "consumer_groups": "Rural and lower-tier-city Chinese men 16-40; youth in Guizhou/Guangxi/Northeast; spectators who travel to tournaments",
+      "implication": "Worldball Innovation for Greater China should be designed from the CunBA court outward: concrete surfaces, heat, long tournament days, phone security, and a cultural code that prizes authenticity over premium branding. Local brands own this today; Nike's ~5% outdoor line plan is the gap."
+    },
+    {
+      "id": "A05-S6",
+      "title": "Live basketball spectacle is growing on every continent, and streetball is being institutionalised into stadium events",
+      "finding": "Quai 54 (Paris) moved to Roland-Garros' Suzanne-Lenglen court on July 5-6 2025 and is already scheduled for July 10-12 2026; BAL 2025 hit a record 140,000+ cumulative attendance and 2.74M YouTube views (+69%); Australia's NBL 2025-26 drew 1,229,604 fans (+9.9%) with 58 sellouts and a 60,000-crowd NBA game in Melbourne; Japan's B1 runs 26 teams; the Philippines' MPBL runs 30 teams (Mar 8-Sep 30 2025); India passed 100M unique NBA viewers; FIBA 3x3 expands LA 2028 to 12+12 teams. The Drew League streamed June 28-Aug 10 2025 for its 53rd year.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Sortiraparis - Quai 54 2025 moves to Roland-Garros",
+          "url": "https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/articles/73462-quai-54-2025-the-world-streetball-tournament-moves-to-roland-garros",
+          "source_date": "2025-07",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "France (Paris)",
+          "consumer_or_market": "European streetball players and fans",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "returned to Paris on July 5 and 6, 2025, at the legendary Roland-Garros Stadium, on the Suzanne-Lenglen court"
+        },
+        {
+          "source": "FIBA - 2025 Basketball Africa League season by the numbers",
+          "url": "https://www.fiba.basketball/en/news/2025-basketball-africa-league-season-by-the-numbers",
+          "source_date": "2025-06",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Africa (Senegal, Rwanda, South Africa, Morocco)",
+          "consumer_or_market": "African basketball fans",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "record cumulative attendance of over 140,000... 2,739,498 views on the league's YouTube channel this season (+69% year-over-year)"
+        },
+        {
+          "source": "NBL - NBL smashes records across attendance, broadcast and digital",
+          "url": "https://www.nbl.com.au/news/nbl-smashes-records-across-attendance-broadcast-and-digital",
+          "source_date": "2026-02",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Australia / New Zealand",
+          "consumer_or_market": "NBL fans",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "1,229,604 fans attending 178 matches, up 9.9 per cent on last year's total of 1,119,286... 58 games were sold out"
+        },
+        {
+          "source": "FIBA 3x3 - How to qualify for 3x3 basketball at LA 2028",
+          "url": "https://fiba3x3.com/en/news/2025/fiba-reveals-how-to-qualify-for-3x3-basketball-at-la-2028-olympics.html",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Global",
+          "consumer_or_market": "3x3 national federations / players",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Los Angeles 2028 Olympics, 3x3 basketball is set to feature an expanded roster of 12 men's and 12 women's teams... 170 federations were eligible for 3x3 basketball, up from 158"
+        }
+      ],
+      "consumer_groups": "Fans and players in France, Africa, Australia, Japan, Philippines, India; 3x3 competitive players; streetball tourists",
+      "implication": "Tournament-city capsules (Paris/Roland-Garros, Dakar/Kigali, Melbourne, Manila) are now bankable moments for limited shorts drops; the shorts must be playable in 3x3/outdoor formats, where the game actually happens."
+    },
+    {
+      "id": "A05-S7",
+      "title": "Unrivaled shows in-person demand decoupling from TV: attendance and revenue up sharply while viewership slips",
+      "finding": "Unrivaled expanded a year early to 8 clubs (adding Breeze BC and Hive BC) for 2026 because it beat financial, viewership and player-demand projections; 2026 ticket revenue rose more than 200%, with a professional women's regular-season record crowd of 21,490 in Philadelphia and a Brooklyn sellout. Yet the 2026 semifinals averaged 213,000 viewers (playoffs -9%) and prime-time openers averaged 175,000 vs a 208,000 2025 regular-season average.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Just Women's Sports - Unrivaled reports 2026 attendance, revenue boosts while viewership falls",
+          "url": "https://justwomenssports.com/reads/unrivaled-basketball-reports-2026-attendance-revenue-boosts-while-viewership-falls/",
+          "source_date": "2026-03",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball fans (live vs broadcast)",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "ticket sales in 2026, garnering a more than 200% increase over its debut season... record crowd of 21,490 fans in Philadelphia... semifinals averaged 213,000 viewers with overall playoff viewership down 9%"
+        },
+        {
+          "source": "ESPN - Unrivaled adding two teams for 2026, bringing total to 8",
+          "url": "https://africa.espn.com/wnba/story/_/id/46213791/unrivaled-adding-two-teams-2026-bringing-total-8",
+          "source_date": "2025",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States",
+          "consumer_or_market": "Women's pro basketball",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "expansion came a year earlier than originally planned because the league outperformed its projections financially as well as in viewership numbers and player demand"
+        }
+      ],
+      "consumer_groups": "Women's basketball attendees; Gen Z women; Miami/Philadelphia/Brooklyn event-goers",
+      "implication": "Product demand around women's hoops is event- and identity-driven, so in-arena and tour-stop retail (plus 'what to wear to the game' content) matters more than broadcast-linked marketing. Shorts designed as game-day fits can ride this."
+    },
+    {
+      "id": "A05-S8",
+      "title": "A coverage-first minority of women hoopers is being ignored by the short-shorts wave",
+      "finding": "Brittney Griner: 'Short shorts are not for everybody... I got a lot of leg. I need to cover it up a little bit.' A Minnesota community team of young Muslim girls designed their own uniforms (leggings, knee-length tunics, velcro hijabs) after struggling to play in skirts; in France, Basket Pour Toutes fights the hijab ban in basketball. Nike's Pro Hijab (2018) proved the modest-sport market but there is no matching lower-body basketball product.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Swish Appeal - Nike's new and improved WNBA uniforms",
+          "url": "https://www.swishappeal.com/2018/5/1/17305038/2018-wnba-hoops-happenings-womens-basketball-nike-uniforms-breanna-stewart-wild-feminist-sue-bird",
+          "source_date": "2018-05-01",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States (WNBA)",
+          "consumer_or_market": "WNBA players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Short shorts are not for everybody. I'm not trying to wear capris, but I got a lot of leg. I need to cover it up a little bit"
+        },
+        {
+          "source": "WardheerNews - Muslim girls design their own basketball uniforms, including velcro hijabs",
+          "url": "https://wardheernews.com/muslim-girls-design-their-own-basketball-uniforms-including-velcro-hijabs/",
+          "source_date": "unknown",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "United States (Minnesota)",
+          "consumer_or_market": "Muslim girls youth basketball",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "uniforms include bright breathable fabrics, leggings instead of skirts, knee-length tunics, and hijabs with velcro"
+        },
+        {
+          "source": "Al Jazeera - Basket Pour Toutes: fighting France's sports and Olympics hijab ban",
+          "url": "https://www.aljazeera.com/sports/2024/6/13/basket-pour-toutes-fighting-against-frances-sports-and-olympics-hijab-ban",
+          "source_date": "2024-06-13",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "France",
+          "consumer_or_market": "Muslim women basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Basket Pour Toutes: Fighting against France's sports and Olympics hijab ban"
+        }
+      ],
+      "consumer_groups": "Taller/longer-legged women players; Muslim girls and women in US, France, UK, Southeast Asia, Africa; modest-dressing athletes",
+      "implication": "Women's Revolution should include a longer (9-11 inch) women's-pattern short and an integrated short-over-legging system; this is both an inclusion story and a distinct fit need that the 6-inch standard does not meet."
+    },
+    {
+      "id": "A05-S9",
+      "title": "Baggy, wide-cut and jorts are back, and basketball shorts are being styled as part of the same 'hooper' wardrobe",
+      "finding": "2025 jorts coverage describes baggy fits and 90s/Y2K nostalgia, with basketball shorts and jorts styled together under a 'hoopers' streetwear aesthetic; Culture Kings merchandises basketball shorts alongside cargos and jorts. Pinterest's 2026 report flags wide-cut silhouettes and personalised denim as the athletic everyday uniform. Search interest is broader than the label: 'denim shorts' far outweighs 'jorts' globally.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Accio - Are Jorts in Style for 2025?",
+          "url": "https://www.accio.com/business/are-jorts-in-style-2025-trend",
+          "source_date": "2025",
+          "data_type": "aggregator trend page (unverified)",
+          "geography": "Global",
+          "consumer_or_market": "Streetwear consumers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "baggy fits, 90s and Y2K nostalgia, and a general shift away from tight, fitted silhouettes... basketball shorts and jorts being styled together as part of 'hoopers' fashion"
+        },
+        {
+          "source": "Culture Kings US - Men's Bottoms (Cargos, Jorts, Sweat Pants, Basketball Shorts)",
+          "url": "https://www.culturekings.com/collections/mens-bottoms",
+          "source_date": "2026",
+          "data_type": "retailer category page (search listing)",
+          "geography": "Australia / United States",
+          "consumer_or_market": "Streetwear men 16-30",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Men's Bottoms | Cargos, Jorts, Sweat Pants, Basketball Shorts & More"
+        },
+        {
+          "source": "Pinterest Summer 2026 Trend Report via FashionUnited",
+          "url": "https://fashionunited.uk/news/fashion/pinterest-trend-report-sport-to-shape-summer-2026-far-beyond-the-playing-field/2026052688265",
+          "source_date": "2026-05-26",
+          "data_type": "web search result summary (primary page blocked by egress proxy)",
+          "geography": "Global",
+          "consumer_or_market": "Pinterest users",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "wide-cut silhouettes, personalised denim looks and sporty basics"
+        }
+      ],
+      "consumer_groups": "Streetwear men and women 16-28 in US, Australia, UK, Japan; skate/hoop crossover",
+      "implication": "A wide-leg, longer-rise 'baggy' basketball short (10-12 inch, heavier fabric, dropped pocket bags) and a denim-look or denim-blend hoop short are credible lifestyle extensions; they should be treated as a separate silhouette from the tailored short-inseam court product."
+    },
+    {
+      "id": "A05-S10",
+      "title": "Collab and creator basketball shorts have become cultural objects with their own resale markets",
+      "finding": "The Nike x NOCTA Basketball Short (100% polyester knit mesh, zip pockets) trades on StockX; Nike Air Jordan x Travis Scott shorts are stocked at Kith; Corteiz and Kith shorts have StockX resale categories; hooper lifestyle labels (Hoop Culture 'for the dynamic bucket getter', Overtime 'Hoopers Hoop') sell shorts direct. The basketball short is now a canvas for artists and creator brands, not only a uniform component. Prices could not be verified this session.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "NOCTA - Black Basketball Shorts product page (search listing)",
+          "url": "https://www.nocta.com/products/basketball-short-black",
+          "source_date": "unknown",
+          "data_type": "product page (search listing)",
+          "geography": "Global (US/UK/CA)",
+          "consumer_or_market": "Drake/NOCTA fans, streetwear buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "made of 100% polyester knit mesh with zipper pockets"
+        },
+        {
+          "source": "StockX - Nike x NOCTA Basketball Shorts Black (SS22)",
+          "url": "https://stockx.com/nike-x-nocta-basketball-shorts-black",
+          "source_date": "2022",
+          "data_type": "resale marketplace listing (search listing)",
+          "geography": "Global",
+          "consumer_or_market": "Resale buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike x NOCTA Basketball Shorts Black Men's - SS22"
+        },
+        {
+          "source": "Kith - Nike Air Jordan x Travis Scott Short - Medium Olive",
+          "url": "https://kith.com/products/nike-air-jordan-x-travis-scott-short-medium-olive",
+          "source_date": "2025",
+          "data_type": "product page (search listing)",
+          "geography": "United States",
+          "consumer_or_market": "Sneaker/collab buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "polyester fabric, elasticated waistbands with drawstrings, embroidered Jumpman logos, and pocket details"
+        },
+        {
+          "source": "Hoop Culture - Shorts collection",
+          "url": "https://hoopculture.com/collections/shorts",
+          "source_date": "unknown",
+          "data_type": "brand collection page (search listing)",
+          "geography": "United States",
+          "consumer_or_market": "Youth/AAU hoopers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "basketball shorts are designed for the dynamic bucket getter"
+        }
+      ],
+      "consumer_groups": "Sneaker and collab collectors 16-35; Drake/Travis Scott fandoms; AAU/high-school hoopers buying hooper-identity brands",
+      "implication": "Limited, creator-coded shorts drops generate resale heat that halo the core line; build a repeatable 'shorts-first' collab format (tournament, artist, city) rather than treating shorts as a jersey add-on."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A05-T1",
+      "title": "Short-shorts wave vs coverage-first women",
+      "description": "Pro and college hoopers are cutting shorts shorter (S2) and the women's standard is already 6 inches, yet Griner-type players and modest-dressing Muslim athletes want more coverage (S8). A single women's length cannot serve both; the line needs a length range, and marketing that does not equate 'short' with 'modern'.",
+      "signal_ids": [
+        "A05-S2",
+        "A05-S8"
+      ]
+    },
+    {
+      "id": "A05-T2",
+      "title": "Explosive women's demand vs a supply chain built around jerseys",
+      "description": "Women's basketball attendance, viewership and merch grew 34%-500% (S1, S7) but the retail response is jersey-led; Pinterest data shows fans want game-day outfits, not just replica tops. Shorts are the missing lower-body half of the fan-to-court wardrobe.",
+      "signal_ids": [
+        "A05-S1",
+        "A05-S7",
+        "A05-S4"
+      ]
+    },
+    {
+      "id": "A05-T3",
+      "title": "Live and participatory growth vs flat screen audiences",
+      "description": "Unrivaled ticket revenue rose 200%+ while TV viewership slipped (S7); CunBA's 100M viewers watch amateurs on outdoor courts (S5); streetball moved into Roland-Garros (S6). Demand is generated where people play and gather, but sports-apparel marketing and sell-in still key off broadcast moments.",
+      "signal_ids": [
+        "A05-S7",
+        "A05-S5",
+        "A05-S6"
+      ]
+    },
+    {
+      "id": "A05-T4",
+      "title": "Two opposite silhouettes are both 'in': tailored short-inseam vs baggy retro/jorts",
+      "description": "On court the elite look is shorter and slimmer (S2); off court the lifestyle look is long, wide, retro mesh and jorts (S3, S9). The same consumer wears both for different occasions, so a single 'modern fit' compromise pleases neither.",
+      "signal_ids": [
+        "A05-S2",
+        "A05-S3",
+        "A05-S9"
+      ]
+    },
+    {
+      "id": "A05-T5",
+      "title": "China's outdoor grassroots surge vs a line plan and brand posture built for indoor/premium",
+      "description": "CunBA's authenticity-driven, roast-meat-prize culture (S5) is far from the collab/resale premium coding that drives Western hype (S10). Nike's ~5% outdoor line plan in Greater China and domestic brands' ownership of grassroots courts mean Nike is culturally and product-wise under-present where the game is played.",
+      "signal_ids": [
+        "A05-S5",
+        "A05-S10",
+        "A05-S6"
+      ]
+    },
+    {
+      "id": "A05-T6",
+      "title": "Performance spec vs lounge/all-day wear",
+      "description": "Mesh basketball shorts are being bought as loungewear and 'sporty shorts replacing bike shorts' (S3, S4), where softness, pockets and colour matter more than moisture management. Performance-only construction (slick polyester, minimal pockets) undercuts the all-day use case that is driving search volume.",
+      "signal_ids": [
+        "A05-S3",
+        "A05-S4"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A05-O1",
+      "name": "Women's Length-System Court Short (4 / 7 / 10 inch, women's pattern)",
+      "target_consumer": "Women and girls 14-35 who play (school, rec, 3x3, WNBA-inspired) across US, Europe, Australia, plus modest-dressing athletes in France/UK/Southeast Asia",
+      "job_to_be_done": "Let me hoop in the length that fits my body and my values without altering men's shorts or settling for one 6-inch default",
+      "product_problem": "The women's basketball short is a single 6-inch standard; taller, longer-legged and modest players need more coverage while fashion-forward players want shorter, and both currently alter or buy men's product",
+      "proposed_solution": "One women's-specific block engineered in three inseams with identical waistband, rise and pocket architecture, plus an optional integrated compression liner and legging-compatible hem",
+      "key_features": [
+        "Three inseams (approx. 4, 7, 10 inch) on one women's pattern",
+        "Higher back rise and contoured waistband for female hip-to-waist ratio",
+        "Secure zip phone pocket",
+        "Optional built-in liner; 10-inch version tested with leggings and hijab-compatible layering",
+        "Team-colour and WNBA/Unrivaled-inspired colour blocking for game-day wear"
+      ],
+      "price_position": "USD 45-65 (mid-premium performance); modest 10-inch variant same price to avoid an 'inclusion tax'",
+      "evidence_signal_ids": [
+        "A05-S1",
+        "A05-S2",
+        "A05-S8",
+        "A05-S4"
+      ],
+      "confidence": "Medium",
+      "key_unanswered_question": "What share of women's shorts purchases currently default to men's product for length, and does a 10-inch women's option cannibalise or expand the franchise?"
+    },
+    {
+      "id": "A05-O2",
+      "name": "Archive Mesh Two-Way Short (retro swingman look, real court spec)",
+      "target_consumer": "Gen Z / Gen Alpha males and females 13-25 in US, Japan, Australia, UK who buy Mitchell & Ness-style throwbacks and wear basketball shorts as daily/lounge wear",
+      "job_to_be_done": "Give me the 90s NBA look I wear all day, that I can also actually hoop in",
+      "product_problem": "Throwback mesh shorts (Mitchell & Ness, BAPE collabs) are lifestyle-only and heavy; Nike's court shorts are technical and lack archive codes; consumers buy two products",
+      "proposed_solution": "Heavyweight open-hole mesh 9-11 inch short built on Nike's own late-80s/90s NBA and Jordan archive striping and hem patches, with a modern moisture-wicking liner and drop-in phone pocket",
+      "key_features": [
+        "Archive-accurate side stripes and hem woven patch",
+        "Heavyweight yet breathable double-knit mesh",
+        "Wide-leg silhouette with longer rise",
+        "Hidden zip phone pocket plus deep hand pockets for all-day wear",
+        "Seasonal city/team colourways timed to tunnel and tournament moments"
+      ],
+      "price_position": "USD 60-80 (premium lifestyle); collab versions USD 90-120",
+      "evidence_signal_ids": [
+        "A05-S3",
+        "A05-S9",
+        "A05-S10"
+      ],
+      "confidence": "Medium",
+      "key_unanswered_question": "Do lifestyle throwback buyers value playability enough to pay a premium over Mitchell & Ness (or are they purely fit-and-look buyers)?"
+    },
+    {
+      "id": "A05-O3",
+      "name": "CunBA Court Short for Greater China outdoor play",
+      "target_consumer": "Men 16-40 and youth in China's lower-tier cities and rural counties (Guizhou, Guangxi, Northeast) who play and attend village/county tournaments on outdoor concrete courts",
+      "job_to_be_done": "Get me through a full day of outdoor tournament play in heat and dust, with my phone safe, in something that looks like it belongs on the village court",
+      "product_problem": "Nike's Greater China line is ~5% outdoor; existing shorts are indoor-tuned (slick, thin, weak pockets) and culturally coded as premium/foreign, while Li-Ning/Anta own the grassroots court",
+      "proposed_solution": "Abrasion-resistant, quick-dry outdoor short with UV-stable colour, reinforced hem and seat, deep secure zip pocket, and a design language co-created with CunBA-linked communities and local artists",
+      "key_features": [
+        "Abrasion-resistant textured knit with reinforced seat/hem",
+        "Deep zip phone pocket with sweat barrier",
+        "UV-stable dyes and sun-durable colour",
+        "Wide waistband and drawcord for all-day wear",
+        "Regional artwork/colour capsules (e.g., Guizhou Miao/Dong patterns) and tournament tie-ins"
+      ],
+      "price_position": "RMB 299-399 (accessible premium, above Li-Ning core, below Nike collab)",
+      "evidence_signal_ids": [
+        "A05-S5",
+        "A05-S6"
+      ],
+      "confidence": "Medium",
+      "key_unanswered_question": "Will a rural/grassroots audience that prizes authenticity accept a Nike-branded product, and what is the actual price ceiling on lower-tier courts?"
+    },
+    {
+      "id": "A05-O4",
+      "name": "Game-Day Women's Fan-to-Court Short",
+      "target_consumer": "Women 18-35 attending WNBA, Unrivaled, NCAA and NBL games (US, Australia) who search 'WNBA game outfits' and want team-identity pieces beyond a jersey",
+      "job_to_be_done": "Give me something to wear to the game (and after) that shows my team and player without being a replica jersey",
+      "product_problem": "Women's fan retail is jersey-led and in a supply desert; there is no lower-body product that reads as team identity and works in the arena, on the street and on the court",
+      "proposed_solution": "A 5-7 inch women's mesh or woven short with team/player colour stories, tonal wordmarks and a relaxed wide leg, released on tour-stop and playoff cadence and sold in-arena and online",
+      "key_features": [
+        "Team and player colour stories (not full replica graphics)",
+        "Wide-leg relaxed fit to pair with jersey or crop",
+        "Soft-hand mesh comfortable for hours of sitting and walking",
+        "Deep pockets for phone and ticket",
+        "Tour-stop capsule drops (Philadelphia, Brooklyn, Bay Area, Melbourne)"
+      ],
+      "price_position": "USD 50-70 (premium fan apparel)",
+      "evidence_signal_ids": [
+        "A05-S1",
+        "A05-S7",
+        "A05-S4"
+      ],
+      "confidence": "Medium",
+      "key_unanswered_question": "How much of women's fan spend goes to non-jersey apparel today, and do fans want player-linked product or team-linked product?"
+    },
+    {
+      "id": "A05-O5",
+      "name": "Global Streetball Tournament Capsule Short (Quai 54 / Drew / BAL / 3x3)",
+      "target_consumer": "Players and fans 16-30 in Paris, Los Angeles, Dakar/Kigali, Manila, Melbourne and Tokyo who attend or follow streetball and 3x3 events",
+      "job_to_be_done": "Let me own the piece from the tournament that actually gets worn to play in the half-court game",
+      "product_problem": "Tournament merch is largely tees and hoodies; 3x3/streetball demands a short that is quick-dry, pocketed and outdoor-tough, and city-coded product has been jersey-centric",
+      "proposed_solution": "A single tough outdoor 3x3 short platform reskinned per tournament city with local artists, released on-site and via SNKRS-style drops, with player-issue versions for Quai 54 teams and BAL clubs",
+      "key_features": [
+        "Quick-dry, abrasion-resistant outdoor knit",
+        "7-inch and 9-inch options for men, women's-pattern version",
+        "City/tournament artwork and dated hem patch",
+        "Secure zip pocket",
+        "Drop cadence aligned to Quai 54 (July), Drew (Jun-Aug), BAL (Apr-Jun), 3x3 World Tour"
+      ],
+      "price_position": "USD 75-95 / EUR 70-90 (premium limited)",
+      "evidence_signal_ids": [
+        "A05-S6",
+        "A05-S10",
+        "A05-S5"
+      ],
+      "confidence": "Low",
+      "key_unanswered_question": "Do tournament attendees actually buy shorts on-site at premium prices, or is demand concentrated online post-event among non-attendees?"
+    }
+  ],
+  "sources": [
+    {
+      "source": "SportsPro - WNBA 2025 season in numbers",
+      "url": "https://www.sportspro.com/insights/features/wnba-2025-season-review-tv-viewership-attendances-sponsorship-valuations/",
+      "date": "2025-10",
+      "contribution": "2025 WNBA attendance 3.15M, +34%, 11,148 average"
+    },
+    {
+      "source": "Just Women's Sports - Valkyries attendance record",
+      "url": "https://justwomenssports.com/reads/2025-expansion-team-golden-state-valkyries-break-wnba-attendance-record/",
+      "date": "2025-09",
+      "contribution": "22 sellouts, 18,064 average"
+    },
+    {
+      "source": "ESPN Press Room - WNBA viewership records",
+      "url": "https://espnpressroom.com/us/press-releases/2025/10/espns-monumental-wnba-season-sets-new-viewership-records/",
+      "date": "2025-10",
+      "contribution": "1.2M average full season +5%; regular season 1.3M +6%"
+    },
+    {
+      "source": "Front Office Sports - $4B women's sports merch supply desert",
+      "url": "https://frontofficesports.com/womens-sports-merchandise-market-4-billion/",
+      "date": "2025",
+      "contribution": "Fanatics 5x WNBA merch; Dick's +233%; $4B market"
+    },
+    {
+      "source": "Pinterest Newsroom - Summer 2026 Trend Report",
+      "url": "https://newsroom.pinterest.com/news/summer-trend-report-2026/",
+      "date": "2026-05",
+      "contribution": "WNBA game outfits +70%, female jersey outfit +494%, Angel Reese basketball +96%"
+    },
+    {
+      "source": "FashionUnited - Pinterest trend report sport summer 2026",
+      "url": "https://fashionunited.uk/news/fashion/pinterest-trend-report-sport-to-shape-summer-2026-far-beyond-the-playing-field/2026052688265",
+      "date": "2026-05-26",
+      "contribution": "Wide-cut silhouettes, athletic everyday uniform, female athletes as style stars"
+    },
+    {
+      "source": "Yahoo Sports - Who wears short shorts? The Heat",
+      "url": "https://sports.yahoo.com/wears-short-shorts-heat-growing-103000565.html",
+      "date": "2021-03",
+      "contribution": "Tyler Herro seamstress, rolling waistbands, custom inseams"
+    },
+    {
+      "source": "KICKZ blog - evolution of basketball shorts",
+      "url": "https://www.kickz.com/en/blog/the-evolution-of-basketball-shorts-short-shorts-vs-long-shorts",
+      "date": "unknown",
+      "contribution": "Players named in short-shorts comeback"
+    },
+    {
+      "source": "USA Today via PressReader - Short shorts get leg up",
+      "url": "https://www.pressreader.com/usa/usa-today-us-edition/20170309/282419874050922",
+      "date": "2017-03-09",
+      "contribution": "College men and women shortening shorts (older source)"
+    },
+    {
+      "source": "Under Armour Playbook - 10 things to look for in basketball shorts",
+      "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/",
+      "date": "unknown",
+      "contribution": "Standard inseams 6 inch women / 9 inch men"
+    },
+    {
+      "source": "Hibbett - Retro basketball shorts",
+      "url": "https://www.hibbett.com/blog-expert-advice/retro-basketball-shorts-how-to-style.html",
+      "date": "2025",
+      "contribution": "Retro swingman mesh adopted by Gen Z / Gen Alpha"
+    },
+    {
+      "source": "Hypebeast - BAPE x Mitchell & Ness NBA FW25",
+      "url": "https://hypebeast.com/2025/11/bape-mitchell-ness-nba-collaboration-fw25-collection-release-info",
+      "date": "2025-11",
+      "contribution": "FW25 throwback capsule, four teams"
+    },
+    {
+      "source": "Complex - 25 best-dressed NBA players",
+      "url": "https://www.complex.com/style/a/mike-destefano/the-25-best-dressed-nba-players-right-now",
+      "date": "2025",
+      "contribution": "Jalen Williams nostalgia, Booker minimalism, LeBron/LV"
+    },
+    {
+      "source": "Accio - basketball short trends 2025",
+      "url": "https://www.accio.com/business/basketball-short-trends",
+      "date": "2025",
+      "contribution": "Unverified Google Trends claims: mesh basketball shorts top query, Dec 2025 peak 99"
+    },
+    {
+      "source": "Accio - Are jorts in style 2025",
+      "url": "https://www.accio.com/business/are-jorts-in-style-2025-trend",
+      "date": "2025",
+      "contribution": "Baggy/Y2K jorts styled with basketball shorts; denim shorts search dominates jorts"
+    },
+    {
+      "source": "Culture Kings US - Men's bottoms",
+      "url": "https://www.culturekings.com/collections/mens-bottoms",
+      "date": "2026",
+      "contribution": "Retail merchandising of basketball shorts alongside jorts/cargos"
+    },
+    {
+      "source": "Who What Wear - Sporty shorts replacing bike shorts",
+      "url": "https://www.whowhatwear.com/fashion/athleisure/athletic-shorts-outfit-trend",
+      "date": "2025",
+      "contribution": "Women's athletic shorts trend"
+    },
+    {
+      "source": "The Korea Times - Blokecore",
+      "url": "https://www.koreatimes.co.kr/lifestyle/trends/20250330/blokecore-gains-popularity-among-among-millennials-gen-zers",
+      "date": "2025-03-30",
+      "contribution": "Korean Gen Z sport-fashion, Pro-Specs x LG Sakers kit collabs"
+    },
+    {
+      "source": "Statista - KBL attendance",
+      "url": "https://www.statista.com/statistics/910245/south-korea-cumulative-kbl-basketball-game-attendance/",
+      "date": "2024",
+      "contribution": "KBL 2023 attendance more than double 2022"
+    },
+    {
+      "source": "Xinhua - village basketball goes viral",
+      "url": "https://english.news.cn/20230329/9ba0f5f68e80415293d6917fba8b8adf/c.html",
+      "date": "2023-03-29",
+      "contribution": "CunBA online viewership >100M"
+    },
+    {
+      "source": "Made in China Journal - viral success of village basketball",
+      "url": "https://madeinchinajournal.com/2024/10/29/the-viral-success-of-chinese-village-basketball/",
+      "date": "2024-10-29",
+      "contribution": "Taipan origins, July 2022 virality, amateur ethos"
+    },
+    {
+      "source": "The Standard HK - village basketball league a slam dunk",
+      "url": "https://www.thestandard.com.hk/sports-updates/article/206773/Chinas-village-basketball-league-a-slam-dunk",
+      "date": "2025",
+      "contribution": "2025 spread to Northeast Four Provinces league and Yiwu"
+    },
+    {
+      "source": "Sortiraparis - Quai 54 2025 at Roland-Garros",
+      "url": "https://www.sortiraparis.com/en/what-to-do-in-paris/sport-wellness/articles/73462-quai-54-2025-the-world-streetball-tournament-moves-to-roland-garros",
+      "date": "2025-07",
+      "contribution": "July 5-6 2025, Suzanne-Lenglen court"
+    },
+    {
+      "source": "Project X Paris - Quai 54 2025 recap",
+      "url": "https://www.projectxparis.com/en/blogs/le-radar/quai-54-ce-qu-il-faut-retenir-de-cette-edition-2025",
+      "date": "2025-07",
+      "contribution": "La Fusion won men's, Der Stamm women's, Nadir Hifi MVP"
+    },
+    {
+      "source": "Quai 54 official",
+      "url": "https://quai54.com/en",
+      "date": "2026",
+      "contribution": "2026 dates July 10-12"
+    },
+    {
+      "source": "Quai 54 on X",
+      "url": "https://x.com/quai54wsc/status/1807693056080060907",
+      "date": "2024-06",
+      "contribution": "12,000 fans claim, 21 years"
+    },
+    {
+      "source": "FIBA - 2025 BAL season by the numbers",
+      "url": "https://www.fiba.basketball/en/news/2025-basketball-africa-league-season-by-the-numbers",
+      "date": "2025-06",
+      "contribution": "140,000+ attendance, 2.74M YouTube views +69%, merchandise highs"
+    },
+    {
+      "source": "NBL - records across attendance, broadcast, digital",
+      "url": "https://www.nbl.com.au/news/nbl-smashes-records-across-attendance-broadcast-and-digital",
+      "date": "2026-02",
+      "contribution": "1,229,604 fans +9.9%, 58 sellouts, ESPN +20%"
+    },
+    {
+      "source": "Ministry of Sport - NBL regular season growth 20%",
+      "url": "https://ministryofsport.com/nbl-shatters-records-as-regular-season-growth-surges-20-per-cent/",
+      "date": "2026-02",
+      "contribution": "NBA Melbourne 60,000 crowd, EuroLeague tournament"
+    },
+    {
+      "source": "FIBA 3x3 - LA 2028 qualification",
+      "url": "https://fiba3x3.com/en/news/2025/fiba-reveals-how-to-qualify-for-3x3-basketball-at-la-2028-olympics.html",
+      "date": "2025",
+      "contribution": "12+12 teams at LA 2028"
+    },
+    {
+      "source": "FIBA - team reward program for 3x3 growth",
+      "url": "https://about.fiba.basketball/en/news/fiba-launches-innovative-team-reward-program-to-continue-global-growth-of-3x3-Basketball",
+      "date": "2025",
+      "contribution": "170 federations eligible, 15 World Tour cities, Women's Series 50M impressions"
+    },
+    {
+      "source": "BallerTV - The Drew League 2025",
+      "url": "https://www.ballertv.com/events/the-drew-league",
+      "date": "2025",
+      "contribution": "June 28-Aug 10 2025 coverage"
+    },
+    {
+      "source": "Drew League official",
+      "url": "https://drewleague.com/",
+      "date": "2026",
+      "contribution": "53 years, apparel and collabs"
+    },
+    {
+      "source": "Wikipedia - 2025 MPBL season",
+      "url": "https://en.wikipedia.org/wiki/2025_MPBL_season",
+      "date": "2025",
+      "contribution": "30 teams, Mar 8-Sep 30 2025"
+    },
+    {
+      "source": "AliExpress wiki - Philippine jersey design",
+      "url": "https://www.aliexpress.com/s/wiki-ssr/article/philippine-jersey-design",
+      "date": "unknown",
+      "contribution": "Barangay reversible jersey customization, Facebook template sharing"
+    },
+    {
+      "source": "Wikipedia - 2025-26 B1 League season",
+      "url": "https://en.wikipedia.org/wiki/2025%E2%80%9326_B1_League_season",
+      "date": "2025",
+      "contribution": "26 B1 teams, October 2025 start"
+    },
+    {
+      "source": "Hoops Without Borders - Basketball in Japan",
+      "url": "https://www.hoopswithoutborders.com/2025/10/30/basketball-in-japan/",
+      "date": "2025-10-30",
+      "contribution": "Urban basketball scene tied to fashion/music in Tokyo, Osaka"
+    },
+    {
+      "source": "OnCourt Online - global popularity of basketball in numbers",
+      "url": "https://oncourt.online/blog/basketball/the-global-popularity-of-basketball-in-numbers/",
+      "date": "unknown",
+      "contribution": "India 100M unique viewers; Mexico Capitanes; youth growth in Brazil/Mexico"
+    },
+    {
+      "source": "Just Women's Sports - Unrivaled 2026 attendance/revenue up, viewership down",
+      "url": "https://justwomenssports.com/reads/unrivaled-basketball-reports-2026-attendance-revenue-boosts-while-viewership-falls/",
+      "date": "2026-03",
+      "contribution": "200%+ ticket revenue, 21,490 crowd, 213,000 semis, -9%"
+    },
+    {
+      "source": "ESPN - Unrivaled adding two teams",
+      "url": "https://africa.espn.com/wnba/story/_/id/46213791/unrivaled-adding-two-teams-2026-bringing-total-8",
+      "date": "2025",
+      "contribution": "Early expansion rationale"
+    },
+    {
+      "source": "Yahoo - Unrivaled opener viewership",
+      "url": "https://sports.yahoo.com/articles/unrivaled-viewership-season-opener-drops-231605608.html",
+      "date": "2026-01",
+      "contribution": "175,000 vs 208,000 prior average"
+    },
+    {
+      "source": "Swish Appeal - Nike WNBA uniforms 2018",
+      "url": "https://www.swishappeal.com/2018/5/1/17305038/2018-wnba-hoops-happenings-womens-basketball-nike-uniforms-breanna-stewart-wild-feminist-sue-bird",
+      "date": "2018-05-01",
+      "contribution": "Griner quote on coverage (older source)"
+    },
+    {
+      "source": "WardheerNews - Muslim girls design own uniforms",
+      "url": "https://wardheernews.com/muslim-girls-design-their-own-basketball-uniforms-including-velcro-hijabs/",
+      "date": "unknown",
+      "contribution": "Leggings, knee-length tunics, velcro hijabs"
+    },
+    {
+      "source": "Al Jazeera - Basket Pour Toutes",
+      "url": "https://www.aljazeera.com/sports/2024/6/13/basket-pour-toutes-fighting-against-frances-sports-and-olympics-hijab-ban",
+      "date": "2024-06-13",
+      "contribution": "France hijab ban in basketball"
+    },
+    {
+      "source": "NOCTA - Black Basketball Shorts",
+      "url": "https://www.nocta.com/products/basketball-short-black",
+      "date": "unknown",
+      "contribution": "100% polyester knit mesh, zip pockets"
+    },
+    {
+      "source": "StockX - Nike x NOCTA Basketball Shorts Black",
+      "url": "https://stockx.com/nike-x-nocta-basketball-shorts-black",
+      "date": "2022",
+      "contribution": "Resale market existence, SS22"
+    },
+    {
+      "source": "Kith - Nike Air Jordan x Travis Scott Short",
+      "url": "https://kith.com/products/nike-air-jordan-x-travis-scott-short-medium-olive",
+      "date": "2025",
+      "contribution": "Collab short construction details"
+    },
+    {
+      "source": "StockX - Corteiz shorts",
+      "url": "https://stockx.com/brands/corteiz?category=shorts",
+      "date": "2026",
+      "contribution": "Corteiz shorts resale category"
+    },
+    {
+      "source": "Hoop Culture - Shorts",
+      "url": "https://hoopculture.com/collections/shorts",
+      "date": "unknown",
+      "contribution": "Hooper-identity DTC shorts"
+    },
+    {
+      "source": "Overtime shop - Hoopers Hoop",
+      "url": "https://shop.overtime.tv/collections/hoopers-hoop",
+      "date": "unknown",
+      "contribution": "Creator-media brand shorts line"
+    },
+    {
+      "source": "Softies PJs - loungewear trends 2025",
+      "url": "https://www.softiespjs.com/blogs/news/top-loungewear-trends-to-relax-in",
+      "date": "2025",
+      "contribution": "Day-jamas / lounge crossover context"
+    }
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "agent_id": "A07",
+  "agent_name": "Design Intelligence",
+  "domain": "Product-creation and design lens on the global basketball shorts market: silhouettes, proportions, materials, constructions, details, graphics, aesthetics, and where function can become visual identity.",
+  "research_narrative": "I approached this as a design director would: first map the platform-level material stories Nike and competitors are actually shipping, then the silhouette and proportion signals coming from the street, then the detail language (pockets, zips, badges, waistbands), then the regional streetball vocabularies that Nike's global line largely ignores. I ran 24 distinct web searches across brands (Nike, Jordan, adidas, Puma, Anta, Li-Ning, Lululemon, NOCTA, Martine Rose, Willy Chavarria, Eric Emanuel, ballaholic), regions (Greater China, Japan, Korea, Philippines, Australia), consumer groups (women, youth, outdoor hoopers) and features (inseam, UPF, reversibility, jacquard, Aero-FIT, Aerogami).\n\nTwo hard constraints shaped what I could verify. First, every WebFetch I attempted (nike.com, about.nike.com, hypebeast.com, forbes.com, si.com, kith.com, blhlc.com, puma.com, stockx.com, reddit.com, even wikipedia) was blocked by the network egress proxy, so I could not read any primary page in full. Second, the session-wide web search budget (200 calls shared with the other specialists) ran out after my 24th query, cutting off planned searches on Anta KAI apparel, Chinese outdoor court culture, Korean and Australian labels, and Reddit complaint threads. Every evidence item below therefore rests on search-result snippets returned by the search tool from the cited URL, not on full-page reads. I have capped confidence at Medium for snippet-only evidence, marked undated pages as 'unknown', and used URL-embedded dates where they exist. I also read the 18-page internal Nike Basketball Apparel BB_2.0 deck that the orchestrator placed in the scratchpad; I cite it as internal context (no URL) because it is neither a web retrieval nor background knowledge.\n\nWhat surprised me most is how invisible Nike's own innovation is at the shorts level. Aero-FIT (announced October 2025) is a genuinely big story: more than twice the airflow of legacy Nike materials, made entirely from textile waste, debuting on World Cup kits and then extending across sports. Aerogami's sweat-reactive vents exist and the internal Outdoor brief already pins 'Wet Weather Solution / Aerogami' on its product-implications page. Yet the basketball shorts that search results surface are Dri-FIT Icon, DNA 'vintage hoops look' with striped waistbands, and 6-inch reversibles. The most design-forward Nike-adjacent shorts in market are collaborations (Martine Rose jacquard-knit at about USD 115; NOCTA engineered knit mesh with silicone graphics and rubberized badges). That is a gap a PLM can act on: function is not yet a visual identity in Nike basketball shorts.\n\nThe second surprise was the proportion split. Foot Locker now runs a dedicated '5 Inch Basketball Shorts' category, Nike is shipping 6-inch DNA, LeBron and Kobe shorts, and blog coverage frames 5-inch as a comeback; at the same time baggy jorts, Willy Chavarria's 'Long Short' and 11-inch value 2-packs anchor the opposite pole. The middle (9-10 inch) is where the commodity sits. This argues for designing at the poles, not the middle.\n\nThird, the most emotionally rich shorts in the search set came from local streetball cultures rather than global brands: ballaholic in Tokyo ('clothes you can wear for daily life as well as hooping, which is why our shorts have pockets'), Li-Ning's BadFive 'in the paint and on the pavement', Ugat Clothing's Philippine-flag 'Watawat' short and The Jersey Nation's fully embroidered Philippines heritage short. Pockets, place, and pride are the shared codes; Nike's tonal-logo minimalism does not speak them.\n\nWhat I could not find: any quantitative consumer data on inseam preference for female hoopers (only size-chart defaults of 6 inch with 5 inch on request), any verified spec for adidas Crazy Lite shorts weight, any Anta or Li-Ning 2025 outdoor short spec sheet, any runway (Vogue Runway) coverage explicitly of basketball shorts, and any Reddit complaint corpus. These are the first things a follow-up pass should retrieve once egress is opened.\n\nReasoning to opportunities: I combined (a) Nike's unshipped material platforms, (b) the inseam polarisation, (c) the reversible/hybrid construction pattern, (d) the internal Outdoor and Women's briefs, and (e) the local-culture streetball codes. Each opportunity takes one function (airflow, weather, pockets-for-daily-life, women's fit) and asks how that function can be made visible so the short looks like nothing else on the court. I deliberately did not rank them against other domains.",
+  "top_signals": [
+    {
+      "id": "A07-S1",
+      "title": "Aero-FIT is Nike's new performance-apparel platform and it has not yet been expressed in a basketball short",
+      "finding": "Nike announced Aero-FIT in October 2025 as its best cooling system to date, described as more than twice as effective at creating airflow as legacy Nike materials and as the first elite performance apparel made from 100 percent textile waste via chemical recycling. It debuts on 2026 World Cup football kits 'before extending across Nike's sport-led product strategy'. Search results for Nike basketball shorts still surface Dri-FIT Icon and DNA styles; the only Aero-FIT basketball short surfaced was a Sabrina Ionescu short at USD 75.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Footy Headlines - All-New Nike Aero-FIT Kit Technology Revealed",
+          "url": "https://www.footyheadlines.com/2025/10/all-new-nike-aero-fit-kit-technology-revealed-debut-in-2026-world-cup.html",
+          "source_date": "2025-10",
+          "data_type": "news article (search snippet)",
+          "geography": "Global",
+          "consumer_or_market": "Nike performance apparel, football first",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "more than twice as effective at creating airflow than legacy Nike materials ... will make its global debut in the football kits ... before extending across Nike's sport-led product strategy"
+        },
+        {
+          "source": "Forbes - Nike's New Aero-FIT Apparel Is A Tech Play For A Warmer World",
+          "url": "https://www.forbes.com/sites/anishasircar/2025/10/24/nikes-new-aero-fit-apparel-is-a-tech-play-for-a-warmer-world/",
+          "source_date": "2025-10-24",
+          "data_type": "news article (search snippet)",
+          "geography": "Global",
+          "consumer_or_market": "Nike performance apparel",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Nike's first elite performance apparel made entirely from textile waste, utilizing advanced chemical recycling"
+        },
+        {
+          "source": "NIKE, Inc. Newsroom - Nike Unveils Aero-FIT Performance Apparel Innovation",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-aero-fit-official-images",
+          "source_date": "2025-10",
+          "data_type": "press release (search snippet only; page fetch blocked)",
+          "geography": "Global",
+          "consumer_or_market": "Nike athletes",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Designed to move more air between skin and fabric, Aero-FIT supports sweating efficiency while helping athletes stay dry"
+        },
+        {
+          "source": "Nike.com - Sabrina Ionescu Shorts category (search snippet)",
+          "url": "https://www.nike.com/w/sabrina-ionescu-shorts-2h3kpz38fphz3glsmz3k7dg",
+          "source_date": "unknown",
+          "data_type": "product listing (search snippet only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "Women's / unisex basketball",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "Sabrina Ionescu-branded Nike Aero-FIT Basketball Shorts priced at $75"
+        }
+      ],
+      "consumer_groups": "Serious hoopers in hot climates (Greater China south, Southeast Asia, US South), performance-led men and women 16-30",
+      "implication": "The PLM has an unshipped platform with a quantifiable claim (2x airflow, 100% textile waste). The design brief should make the airflow architecture visible (mapped knit zones, perforation gradients) rather than hiding it under a generic mesh, so the short reads as Aero-FIT at ten metres."
+    },
+    {
+      "id": "A07-S2",
+      "title": "Aerogami adaptive venting exists at Nike and is already named in the internal Outdoor brief, but only as a jacket in market",
+      "finding": "Nike Aerogami uses moisture-reactive vents that open when they sense sweat and close when dry; it launched on the Run Division jacket. The internal SS28 Outdoor brief page titled 'Product Implications' shows a 'Wet Weather Solution / Aerogami' tile alongside classifications, materials, construction and breathability details. No Aerogami short or basketball garment appeared in any search result.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "New Atlas - Nike Aerogami running jacket vents open automatically when you sweat",
+          "url": "https://newatlas.com/outdoors/nike-aerogami-jacket-auto-vents-when-you-sweat-to-cool-down-the-run/",
+          "source_date": "unknown",
+          "data_type": "news article (search snippet)",
+          "geography": "Global",
+          "consumer_or_market": "Runners (Nike Run Division)",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "moisture-reactive vents that autonomously open and close upon sensing sweat ... cooling performance that doesn't require slowing down or yanking on zippers"
+        },
+        {
+          "source": "Nike Basketball Apparel BB_2.0 deck (internal context provided to the engine; scratchpad/pdf p18 'Outdoor: Research with more specificity')",
+          "url": "",
+          "source_date": "unknown",
+          "data_type": "internal strategy deck",
+          "geography": "Greater China (Beijing, Shanghai, Guangzhou, Seoul immersion)",
+          "consumer_or_market": "Outdoor hoopers, Greater China",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Product Implications tile reads 'WET WEATHER SOLUTION / AEROGAMI'; page notes 'LINEPLAN: 5% BUILT FOR OUTDOOR; GC EX: 300 MILLION PARTICIPANTS | 1 MILLION OUTDOOR COURTS' and 'Precipitation x Temps' charts for Beijing, Shanghai, Guangzhou"
+        }
+      ],
+      "consumer_groups": "Outdoor hoopers in humid, rainy Greater China cities (Guangzhou, Shanghai) and comparable climates (Manila, Jakarta)",
+      "implication": "A reactive-vent short would be the first visibly 'alive' basketball short: vents that change state are both a function and a graphic. Validation needed on whether the Aerogami laminate survives abrasion on concrete and repeated washing."
+    },
+    {
+      "id": "A07-S3",
+      "title": "Premiumised mesh: jacquard knit, silicone graphics and rubberised badges are the elevated-short codes of 2025-26",
+      "finding": "Nike x Martine Rose 2025 shorts use a premium jacquard-knit fabric with an all-over Swoosh-globe design, zip pockets and 'MRS' branding at around USD 115, released globally 30 October 2025. Nike x NOCTA basketball shorts are engineered knit mesh with zipper pockets and grey silicone graphics; the Lightweight version is water-resistant with rubberised Nike and NOCTA badges. Eric Emanuel's mesh-short business reportedly reached USD 2.8M in 2024 online sales (+20-50% YoY) on satin, velvet and high-quality mesh with camo-washed, neon and collegiate treatments.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "NIKE, Inc. Newsroom - Nike and Martine Rose Expand Their Sporting Universe Into the World of Gaming",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-martine-rose-sport-gaming-collection-official-images",
+          "source_date": "2025-10",
+          "data_type": "press release (search snippet only; page fetch blocked)",
+          "geography": "Global",
+          "consumer_or_market": "Fashion-led sport consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "premium jacquard-knit fabric, featuring an all-over Nike x Martine Rose Swoosh globe design ... zip pockets, 'MRS' branding ... available globally October 30"
+        },
+        {
+          "source": "StockX - Nike x Martine Rose Football Shorts University Red (FW25)",
+          "url": "https://stockx.com/nike-x-martine-rose-football-shorts-university-red",
+          "source_date": "2025",
+          "data_type": "resale product page (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Resale / collab consumers",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "prices around $115 retail"
+        },
+        {
+          "source": "NOCTA - Lightweight Basketball Shorts In Black / White Basketball Shorts",
+          "url": "https://www.nocta.com/products/lightweight-basketball-shorts-black",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet only; page fetch blocked)",
+          "geography": "Global",
+          "consumer_or_market": "Streetwear / Drake-led consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "polyester engineered knit mesh with zipper pockets and grey silicone graphics ... Lightweight ... water-resistant material and feature rubberized Nike and NOCTA logo badges"
+        },
+        {
+          "source": "Accio - Why Eric Emanuel Shorts Are Top Sellers: 2025 Trends & Insights",
+          "url": "https://www.accio.com/business/eric-emmanuel-shorts-top-seller",
+          "source_date": "unknown",
+          "data_type": "market commentary (search snippet; secondary, unverified)",
+          "geography": "United States",
+          "consumer_or_market": "Luxury streetwear mesh shorts",
+          "confidence": "Low",
+          "evidence_nature": "quantitative",
+          "excerpt": "annual sales on its online store reaching $2.8 million in 2024, a 20-50% increase from the previous year"
+        }
+      ],
+      "consumer_groups": "Fashion-led men 18-30, tunnel-fit and streetwear consumers in US, UK, Japan, Korea",
+      "implication": "The elevated basketball short has a settled detail grammar: jacquard branding instead of print, silicone or rubberised badges instead of embroidery, zip pockets, and a ~USD 100-120 price ceiling. Nike's inline line does not participate; its premium expressions live only in collabs."
+    },
+    {
+      "id": "A07-S4",
+      "title": "Proportion has split to the poles: 5-6 inch on-court shorts versus baggy, long and denim silhouettes off-court",
+      "finding": "Foot Locker runs a dedicated '5 Inch Basketball Shorts' category and Nike has 6-inch DNA UV Woven, LeBron DNA 6-inch 3-in-1 and Kobe 6-inch Standard Issue reversible shorts; blog coverage frames the 5-inch inseam as 'making a serious comeback'. At the same time, baggy jorts are described as a bold comeback in men's streetwear powered by 90s and Y2K nostalgia, adidas x Willy Chavarria sells a 'Long Short', and 11-inch inseam 2-packs anchor the value end. A 2026 guide says casual basketball shorts lean 'slightly more tailored, though still relaxed'.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Foot Locker - 5 Inch Basketball Shorts category",
+          "url": "https://www.footlocker.com/buy/5-inch-basketball-shorts-0atz08a",
+          "source_date": "unknown",
+          "data_type": "retailer category page (search result)",
+          "geography": "United States",
+          "consumer_or_market": "Basketball retail shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "5 Inch Basketball Shorts | Foot Locker (dedicated category page exists)"
+        },
+        {
+          "source": "Nike.com - Nike DNA Men's Dri-FIT 6\" UV Woven Basketball Shorts; LeBron DNA Men's 6\" 3-in-1 Basketball Shorts",
+          "url": "https://www.nike.com/t/lebron-dna-mens-6-3-in-1-basketball-shorts-6B4LBV",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "Nike Basketball men's",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "LeBron DNA Men's 6\" 3-in-1 Basketball Shorts; Nike DNA Men's Dri-FIT 6\" UV Woven Basketball Shorts; Kobe ... Men's 6\" Nike Dri-FIT Standard Issue Reversible Basketball Shorts"
+        },
+        {
+          "source": "Northyard - Are 5 Inch Shorts Still in Style? Why the 5 Inch Inseam Is Trending",
+          "url": "https://www.northyard.com/blogs/shorts/are-5-inch-shorts-still-in-style-why-the-5-inch-inseam-is-trending",
+          "source_date": "unknown",
+          "data_type": "brand blog (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Men's athletic/casual shorts",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "The 5-inch inseam shorts is a trend that's making a serious comeback"
+        },
+        {
+          "source": "Boring Monday - Baggy Jorts Man 2025: Streetwear Re-Cut Denim",
+          "url": "https://boringmonday.co/magazine/fashion/baggy-jorts-man",
+          "source_date": "2025",
+          "data_type": "fashion editorial (search snippet)",
+          "geography": "Global / US",
+          "consumer_or_market": "Gen Z men's streetwear",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Baggy jorts ... making a bold comeback in men's streetwear ... a new generation that values oversized proportions as a rebellion against traditional tailoring"
+        }
+      ],
+      "consumer_groups": "On-court hoopers (5-7 inch), Gen Z lifestyle wearers (long, baggy, denim-coded), value shoppers (11 inch)",
+      "implication": "Design at the poles, not the 9-10 inch middle where commodity sits. A short-inseam performance short and a long, wide, drop-crotch lifestyle short can share a fabric and graphic story while looking like two different objects."
+    },
+    {
+      "id": "A07-S5",
+      "title": "Reversible and multi-way construction is becoming the default hybrid for youth and signature lines",
+      "finding": "Puma Hoops x E.T. Men's Reversible Basketball Shorts, Nike Kobe 6-inch Standard Issue Reversible, LeBron DNA 6-inch 3-in-1, and the Sabrina 3 collection's unisex 'reversible short and top' all appeared in search results; a trend summary lists 'hybrid styles (e.g., reversible shorts) dominating athleisure'. Reversibility doubles graphic surface without doubling SKUs and maps directly to the pick-up-game light/dark team problem.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "PUMA - Hoops x E.T. Men's Reversible Basketball Shorts",
+          "url": "https://us.puma.com/us/en/pd/hoops-x-et-mens-reversible-basketball-shorts/633105",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "Puma Hoops lifestyle consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Hoops x E.T. Men's Reversible Basketball Shorts ... starry graphics, retro color palettes"
+        },
+        {
+          "source": "NIKE, Inc. Newsroom - Nike and Sabrina Ionescu Innovate for All Hoopers With the Sabrina 3 Signature Collection",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-sabrina-3-official-images-sabrina-ionescu",
+          "source_date": "2025-07",
+          "data_type": "press release (search snippet only; page fetch blocked)",
+          "geography": "Global",
+          "consumer_or_market": "Women's / unisex basketball",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "third signature collection of Dri-FIT apparel includes a unisex pant, hoodie, full-zip sweatshirt, and reversible short and top"
+        },
+        {
+          "source": "Accio - 2025 Basketball Short Shorts Trend",
+          "url": "https://www.accio.com/business/basketball_short_shorts_trend",
+          "source_date": "unknown",
+          "data_type": "market commentary (search snippet; secondary)",
+          "geography": "Global",
+          "consumer_or_market": "Athleisure",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Retro-inspired designs and hybrid styles (e.g., reversible shorts) are dominating athleisure"
+        }
+      ],
+      "consumer_groups": "Youth and high-school hoopers, signature-athlete fans, pick-up players",
+      "implication": "Treat reversibility as a canvas: one face performance-plain, the other face local-court graphic or treated colour. The construction also solves 'shirts vs skins' at the run and gives Uniform of Youth a two-in-one value story."
+    },
+    {
+      "id": "A07-S6",
+      "title": "Women's basketball shorts are designed as unisex or licensed generics; heritage textile texture is the one distinctive women's design cue found",
+      "finding": "The Sabrina 3 collection is positioned as unisex/gender-neutral, with design motifs referencing Romanian heritage 'through textures that take cues from embroidery and textile work'. Licensed WNBA shorts (Ultra Game) are described as loose-fit poly-mesh with two side pockets. Custom uniform size charts default women's shorts to a 6-inch inseam with 5-inch on request; a gym-shorts guide says most active women's sweet spot is 3-7 inches. Puma has a named creative director for women's basketball (June Ambrose).",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "NIKE, Inc. Newsroom - Sabrina 3 Signature Collection",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-sabrina-3-official-images-sabrina-ionescu",
+          "source_date": "2025-07",
+          "data_type": "press release (search snippet only; page fetch blocked)",
+          "geography": "Global",
+          "consumer_or_market": "Women's basketball / unisex",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "design motifs reference her Romanian heritage, particularly through textures that take cues from embroidery and textile work ... gender-neutral performance and lifestyle pieces"
+        },
+        {
+          "source": "Amazon - Ultra Game WNBA Official Womens Teamplayer Basketball Shorts",
+          "url": "https://www.amazon.com/Ultra-Game-Official-Teamplayer-Basketball/dp/B0DPJDHD9Z",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "WNBA fans, women",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "two side pockets and a loose fit for unrestricted movement ... moisture-wicking poly-mesh fabric"
+        },
+        {
+          "source": "Imperial Point - Basketball Uniform Size Charts",
+          "url": "https://theimperialpoint.com/basketball-uniform-size-charts/",
+          "source_date": "unknown",
+          "data_type": "manufacturer size chart (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Team uniform buyers, women's teams",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Women's basketball shorts have a standard 6\" inseam, with 5\" inseams available upon request"
+        },
+        {
+          "source": "Wikipedia - June Ambrose",
+          "url": "https://en.wikipedia.org/wiki/June_Ambrose",
+          "source_date": "unknown",
+          "data_type": "encyclopedia entry (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Puma women's basketball",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "June Ambrose is currently the creative director of women's basketball for Puma"
+        }
+      ],
+      "consumer_groups": "Female hoopers 14-30 (high school, college, WNBA fans), Women's Revolution consumer",
+      "implication": "Women's shorts are under-designed as objects: fit defaults are copied from men's charts and graphics from team licences. Texture-led surface (jacquard, embroidery-derived knit) plus a women's-specific 5 and 7 inch block with a rise option is open territory; the internal WNBA brief's 'Treated Color' and 'Sun Faded Dye' expressions point the same way."
+    },
+    {
+      "id": "A07-S7",
+      "title": "Retro 'vintage hoops' codes are the default lifestyle language across price tiers, which raises the derivative risk for Nike",
+      "finding": "Nike's own DNA shorts are described as having 'a striped waistband with drawstring paired with trim at the hems for a vintage hoops look'. TikTok Shop lists '2026 Trendy Streetwear Basketball Shorts, Vintage #32 Creativity Handwriting Print'. Eric Emanuel's 2025 arrivals are 'nostalgic collegiate designs that describe the era of the 90s'; Puma x E.T. uses 'retro color palettes'. Trend summaries repeat 'retro-inspired designs making a comeback, echoing styles from the 90s'.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Nike.com - Nike DNA Men's Dri-FIT 6\" UV Woven Basketball Shorts",
+          "url": "https://www.nike.com/t/dna-mens-dri-fit-6-uv-woven-basketball-shorts-B2w7Jt",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "Nike Basketball men's",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "striped waistband with drawstring paired with trim at the hems for a vintage hoops look"
+        },
+        {
+          "source": "TikTok Shop - 2026 Trendy Streetwear Basketball Shorts, Vintage #32 Creativity Handwriting Print",
+          "url": "https://shop.tiktok.com/us/pdp/2026-trendy-streetwear-basketball-shorts-vintage-print/1732281829578085005",
+          "source_date": "unknown",
+          "data_type": "marketplace listing (search result)",
+          "geography": "United States",
+          "consumer_or_market": "TikTok Shop Gen Z shoppers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "2026 Trendy Streetwear Basketball Shorts, Vintage #32 Creativity Handwriting Print, Mesh Sportswear"
+        },
+        {
+          "source": "Eric Emanuel Shorts 2025: New Arrivals (unofficial site)",
+          "url": "https://ericemanuelsshop.com/eric-emanuel-shorts-2025-new-arrivals-why-theyre-a-must-have/",
+          "source_date": "2025",
+          "data_type": "blog / reseller page (search snippet; low reliability)",
+          "geography": "United States",
+          "consumer_or_market": "Luxury streetwear",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "camo-washed designs, neon-embellished models, and nostalgic collegiate designs that describe the era of the 90s basketball style"
+        }
+      ],
+      "consumer_groups": "Lifestyle wearers across tiers: TikTok Shop value shoppers to Eric Emanuel buyers",
+      "implication": "Retro is saturated from USD 15 to USD 150. Nike should not lead with vintage waistband stripes; the differentiated move is to make new function visible (S1, S2, S8) or to root graphics in specific places (S9) rather than generic 90s nostalgia."
+    },
+    {
+      "id": "A07-S8",
+      "title": "Outdoor function (UV, water resistance, abrasion, secure pockets) exists only as scattered features, mostly from non-basketball brands",
+      "finding": "Nike's DNA 6-inch is a 'UV Woven' short; L.L.Bean sells a 7-inch UPF 50+ basketball short; Coolibar's UPF 50+ Outpace Sport Shorts 2.0 (quick-dry 3Ddri fabric, side pockets, bonus zip back pocket) are recommended for basketball; NOCTA's Lightweight basketball short is water-resistant; Jordan 23 Engineered shorts use water-repellent fabric of at least 75% recycled nylon with zip pockets; Lululemon License to Train is abrasion-resistant with deep zip pockets. None of these combines UV, water and abrasion protection into one basketball-specific design language.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Amazon - Coolibar UPF 50+ Men's Outpace Sport Shorts 2.0",
+          "url": "https://www.amazon.com/Coolibar-Mens-Outpace-Sport-Shorts/dp/B078QCH83B",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Sun-protective sportswear buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Recommended for outdoor sports activities including fitness, basketball ... 3Ddri fabric is quick-dry ... optimally placed side pockets, plus a bonus zip secure pocket in back"
+        },
+        {
+          "source": "L.L.Bean - Basketball Shorts",
+          "url": "https://www.llbean.com/buy/basketball-shorts",
+          "source_date": "unknown",
+          "data_type": "retailer product listing (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Outdoor-lifestyle shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "quick-drying ... training shorts with a 7\" inseam and UPF 50+ protection"
+        },
+        {
+          "source": "Amazon - Jordan 23 Engineered Utility Mens Active Shorts",
+          "url": "https://www.amazon.com/Jordan-Engineered-Utility-Active-Shorts/dp/B08GYDVFSP",
+          "source_date": "unknown",
+          "data_type": "product page (search snippet)",
+          "geography": "United States",
+          "consumer_or_market": "Jordan lifestyle consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "water-repellent material made of at least 75% recycled nylon fibers ... two zip pockets, a rear zip pocket with '23 Engineered' patch"
+        },
+        {
+          "source": "That Fit Friend - Lululemon License to Train Short Review",
+          "url": "https://thatfitfriend.com/lululemon-license-to-train-short-review/",
+          "source_date": "unknown",
+          "data_type": "consumer review (search snippet only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "Training / lifting consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "abrasion-resistant shell with good mobility ... deep zip pockets for training"
+        }
+      ],
+      "consumer_groups": "Outdoor hoopers in Greater China, Southeast Asia, Australia, US Sun Belt; Worldball Innovation consumer",
+      "implication": "The functional ingredients for an outdoor basketball short already exist across Nike (UV woven, Aerogami, 23 Engineered water-repellent nylon) and adjacent brands. The design job is to compose them into one legible system: visible abrasion panels, reactive vents, a UV-rated woven and a secure pocket that together look unmistakably 'outdoor court'."
+    },
+    {
+      "id": "A07-S9",
+      "title": "Local streetball cultures design shorts around pockets, place and pride; global brands do not",
+      "finding": "Tokyo's ballaholic (founded 2004) states its concept is 'clothes that you can wear for daily life as well as hooping, which is why our shorts have pockets', and runs a TOKYO STREETBALL CLASSIC Series 2025. Li-Ning's BadFive is 'Li-Ning's iconic streetball series, made to stand out in the paint and on the pavement', with shorts using colour blocking and lettering in a loose straight-leg fit. In the Philippines, Ugat Clothing's 'Watawat' short is a full print of the flag with cultural images, and The Jersey Nation sells a fully embroidered Philippines heritage short.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "ballaholic Global Online Shop / TOKYO STREETBALL CLASSIC Series 2025",
+          "url": "https://blhlc.com/collections/tokyo-streetball-classic-series-2025",
+          "source_date": "2025",
+          "data_type": "brand site (search snippet only; page fetch blocked)",
+          "geography": "Japan",
+          "consumer_or_market": "Tokyo streetball community",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "clothes that you can wear for daily life as well as hooping, which is why our shorts have pockets ... 'play with style' ALLDAY ALLNIGHT EVERYWHERE ANYWHERE"
+        },
+        {
+          "source": "CourtSide Melbourne - LI-NING BADFIVE V; Anto Sports - Li-Ning Badfive Basketball Shorts",
+          "url": "https://antosports.com/products/li-ning-badfive-basketball-shorts",
+          "source_date": "unknown",
+          "data_type": "retailer product pages (search snippets)",
+          "geography": "China / Australia retail",
+          "consumer_or_market": "Chinese streetball consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Li-Ning's iconic streetball series, made to stand out in the paint and on the pavement ... color blocking and lettering patterns, sporty style, loose fit with straight legs"
+        },
+        {
+          "source": "Ugat Clothing - Watawat 'Flag' Basketball Shorts",
+          "url": "https://www.ugatclothing.com/product-page/watawat-basketball-shorts",
+          "source_date": "unknown",
+          "data_type": "brand product page (search snippet)",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino hoopers and diaspora",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Watawat (Tagalog word for flags), featuring a full print of the Philippine flag with images representing Philippine culture"
+        },
+        {
+          "source": "The Jersey Nation - Philippines Heritage Basketball Shorts",
+          "url": "https://www.thejerseynation.com/products/philippines-basketball-shorts",
+          "source_date": "unknown",
+          "data_type": "brand product page (search snippet)",
+          "geography": "Philippines / diaspora",
+          "consumer_or_market": "Filipino basketball fans",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "premium quality Philippines Heritage Basketball Shorts with full embroidery"
+        }
+      ],
+      "consumer_groups": "Streetball communities in Tokyo, Manila, Shanghai/Beijing/Guangzhou, plus diaspora; Uniform of Youth and Worldball consumers",
+      "implication": "Nike's global short speaks tonal-logo minimalism; the courts speak place. A city-series graphic programme (court-line maps, local typography, flag-derived colour) on a pocketed play/live short is the most direct route to feeling native rather than imported."
+    },
+    {
+      "id": "A07-S10",
+      "title": "Technical utility ('engineered') is Jordan's and adidas' shorts design language; adidas paired its Harden Vol 9 with lightweight 'Crazy Lite' shorts",
+      "finding": "Jordan 23 Engineered shorts carry 'Jumpman logo and 23 Engineered for Flight text on the left leg, two zip pockets, a rear zip pocket with 23 Engineered patch, and translucent coverage on the bottom', in variants from water-repellent recycled nylon to heavyweight French terry with woven overlays. adidas launched 'Crazy Lite Shorts' alongside the Harden Vol 9 'Hell Cat' and markets Harden gear as AEROREADY shorts with the Harden logo; the Harden Vol 10 is framed as a 'bold and polarizing design evolution' for SS26.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Kith - Jordan 23 Engineered Short Quartz/Green; Shiekh - Jordan 23 Engineered Shorts",
+          "url": "https://kith.com/products/joat9785-333",
+          "source_date": "unknown",
+          "data_type": "retailer product page (search snippet only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "Jordan lifestyle consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Jumpman logo and '23 Engineered for Flight' text on the left leg, two zip pockets, a rear zip pocket with '23 Engineered' patch, and translucent coverage on the bottom"
+        },
+        {
+          "source": "Sports Illustrated FanNation - Adidas Debuts Harden Vol 9 'Hell Cat' & Crazy Lite Shorts",
+          "url": "https://www.si.com/fannation/sneakers/news/adidas-debuts-harden-vol-9-hell-cat-crazy-lite-shorts",
+          "source_date": "unknown",
+          "data_type": "news article (search result title only; page fetch blocked)",
+          "geography": "United States",
+          "consumer_or_market": "adidas Basketball / Harden fans",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "Adidas Debuts Harden Vol 9 'Hell Cat' & Crazy Lite Shorts"
+        },
+        {
+          "source": "Sole Retriever - The adidas Harden Vol. 10 Debuts Spring/Summer 2026",
+          "url": "https://www.soleretriever.com/news/articles/adidas-harden-vol-10-debut-release-date-spring-summer-2026",
+          "source_date": "unknown",
+          "data_type": "news article (search snippet)",
+          "geography": "Global",
+          "consumer_or_market": "adidas Basketball signature consumers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "bold and polarizing design evolution that captures the spirit of James on and off the court"
+        }
+      ],
+      "consumer_groups": "Signature-athlete fans, techwear-leaning men 18-30",
+      "implication": "Zip-pocket utility with a stamped 'engineered' wordmark is already owned by Jordan; Nike Basketball needs a different functional signature (airflow architecture, reactive vents, abrasion mapping) rather than another cargo/zip-pocket short."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A07-T1",
+      "title": "Short-inseam performance versus long, baggy lifestyle proportion",
+      "description": "On-court demand is moving to 5-7 inch (Foot Locker 5-inch category, Nike 6-inch DNA/LeBron/Kobe) while off-court youth demand is moving to oversized, long and denim-coded silhouettes (baggy jorts, Chavarria 'Long Short', 11-inch value packs). A single 'basketball short' cannot serve both; a shared fabric and graphic system across two deliberately different blocks can.",
+      "signal_ids": ["A07-S4", "A07-S7"]
+    },
+    {
+      "id": "A07-T2",
+      "title": "Hoopers want pockets for daily life; performance design treats pockets as compromise",
+      "description": "ballaholic builds pockets into every short because players wear them all day; Coolibar, Lululemon, Jordan 23 Engineered and NOCTA all sell zip pockets. Yet on-court performance shorts in Nike's inline (Icon, DNA) are framed around lightness and vintage looks, and pockets are not part of the story. The unmet need is a pocket that is secure and flat enough to play in, and visible enough to be a design signature.",
+      "signal_ids": ["A07-S9", "A07-S8", "A07-S10"]
+    },
+    {
+      "id": "A07-T3",
+      "title": "Nike's innovation narrative (Aero-FIT, Aerogami) versus what basketball shorts actually look like",
+      "description": "Nike is publicly claiming twice-the-airflow, textile-waste fabrics and sweat-reactive vents, but basketball shorts in market lead with striped waistbands and 'vintage hoops looks', and the most design-forward Nike shorts are Martine Rose and NOCTA collaborations. Innovation is invisible where the consumer buys most often.",
+      "signal_ids": ["A07-S1", "A07-S2", "A07-S3", "A07-S7"]
+    },
+    {
+      "id": "A07-T4",
+      "title": "Outdoor is the stated priority but outdoor cues are borrowed from run and outdoor brands, not basketball",
+      "description": "The internal Outdoor brief maps Greater China climate and states the line plan is only 5% built for outdoor, yet the UPF, water-resistant and abrasion features in market come from L.L.Bean, Coolibar, Lululemon and Jordan lifestyle rather than from a basketball-specific design language. A short that borrows hiking or trail-running codes will read as a training short, not a court short.",
+      "signal_ids": ["A07-S2", "A07-S8"]
+    },
+    {
+      "id": "A07-T5",
+      "title": "Unisex convenience versus women-specific fit and expression",
+      "description": "Nike's most visible women's basketball apparel (Sabrina 3) is positioned as gender-neutral, and licensed WNBA shorts are generic poly-mesh, while uniform size charts and gym-short guides suggest women's preferences cluster at 5-7 inches with different rise needs. Unisex expands reach but risks leaving the Women's Revolution consumer without a short designed for her body or her aesthetic.",
+      "signal_ids": ["A07-S6", "A07-S5"]
+    },
+    {
+      "id": "A07-T6",
+      "title": "Global tonal minimalism versus local pride graphics",
+      "description": "Philippine flag full-prints, Tokyo streetball series and BadFive lettering show that streetball communities want shorts that name their place. Nike's global inline short is deliberately placeless. Localised graphics risk fragmentation and inventory complexity; placeless graphics risk irrelevance on the courts that Worldball Innovation targets.",
+      "signal_ids": ["A07-S9", "A07-S7"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A07-O1",
+      "name": "Aero-FIT Court Short with visible airflow architecture",
+      "target_consumer": "Performance-first hoopers 16-30 in hot, humid markets (Guangzhou, Manila, Jakarta, US Sun Belt), male and female",
+      "job_to_be_done": "Stay dry and cool through a two-hour run or tournament day and be seen wearing the newest Nike technology",
+      "product_problem": "Nike's flagship cooling platform (2x airflow, 100% textile waste) has no basketball short, and current Nike basketball shorts look identical to decade-old mesh shorts",
+      "proposed_solution": "The first Aero-FIT basketball short, where the engineered airflow map is the graphic: body-mapped knit density gradients and laser-cut perforation fields that visibly open over high-heat zones (inner thigh, lower back), offered in 5-inch and 7-inch blocks with a women's-specific 5-inch block",
+      "key_features": [
+        "Aero-FIT engineered knit with visible density gradient (open over heat zones, closed over hip and seat)",
+        "100% textile-waste recycled polyester with a tonal 'made from textile waste' hem mark instead of a hype logo",
+        "5-inch and 7-inch men's blocks; 5-inch women's block with a slightly higher rise",
+        "Flat bonded side pocket sized for a phone, seam-free on the inside face",
+        "Lightweight bonded waistband with internal drawcord to keep the outside clean",
+        "Colour: heat-map tonal colourways rather than team stripes"
+      ],
+      "price_position": "USD 85-95 (premium performance tier, above Dri-FIT Icon at roughly USD 40-50 and at parity with the Sabrina Aero-FIT short at USD 75 plus a design premium); CNY 599-699 in Greater China",
+      "evidence_signal_ids": ["A07-S1", "A07-S4", "A07-S7"],
+      "confidence": "Medium",
+      "key_unanswered_question": "When does Aero-FIT actually become available to Basketball Apparel after the 2026 World Cup football exclusivity, and can the knit be engineered with visible density gradients without losing the airflow claim?"
+    },
+    {
+      "id": "A07-O2",
+      "name": "Worldball Weather Short (outdoor Greater China)",
+      "target_consumer": "Outdoor hoopers 15-28 on public courts in Guangzhou, Shanghai, Beijing and Seoul, playing in sun, humidity and sudden rain",
+      "job_to_be_done": "Play on concrete in sun and drizzle without getting burned, soaked or shredded, in a short that looks like it belongs on an outdoor court",
+      "product_problem": "Nike's line plan is only about 5% built for outdoor; UV, water and abrasion features exist only piecemeal in run, trail and lifestyle products, none of which read as basketball",
+      "proposed_solution": "A woven outdoor court short that composes existing Nike ingredients into one legible system: UV-rated laser-perforated woven shell, water-repellent recycled nylon (23 Engineered lineage) with a visible abrasion panel at the outer hip and hem where players slide and sit on concrete, and a sweat-reactive Aerogami vent strip that changes state visibly",
+      "key_features": [
+        "UPF 50+ laser-perforated woven shell in 7-inch and 9-inch blocks",
+        "Contrast abrasion panel at outer hip and back hem as the visual signature",
+        "Aerogami-derived reactive vent at the inner thigh (validation required)",
+        "Water-repellent finish with drain eyelets in the pocket bags",
+        "Secure zip pocket for phone and court fees, positioned flat on the back yoke",
+        "Treated / sun-faded colour that ages visibly with outdoor use, per the internal expression pages"
+      ],
+      "price_position": "CNY 499-599 (approx. USD 70-85), premium tier for Greater China outdoor; positioned above Li-Ning BadFive shorts and below collaboration pricing",
+      "evidence_signal_ids": ["A07-S2", "A07-S8", "A07-S9"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Does the Aerogami vent laminate survive concrete abrasion and 50 wash cycles, and do Greater China outdoor players prioritise rain protection over sun protection (the climate charts suggest both, but no consumer data was retrievable)?"
+    },
+    {
+      "id": "A07-O3",
+      "name": "City Series reversible play/live short (Uniform of Youth)",
+      "target_consumer": "Streetball youth 14-22 in Tokyo, Manila, Shanghai, Seoul, Los Angeles and Paris who wear the same short to the court, school and the mall",
+      "job_to_be_done": "Own one short that plays, walks and posts well, and that says where I hoop",
+      "product_problem": "Global Nike shorts are placeless and pocket-light; local labels (ballaholic, Ugat, BadFive) win on pockets and place but lack Nike's fabric and distribution",
+      "proposed_solution": "A reversible engineered-mesh short with pockets on both faces: one face a clean tonal performance side, the other a city-specific graphic derived from local court markings, typography and flag-derived colour, released as numbered city drops",
+      "key_features": [
+        "Reversible engineered knit mesh with mirrored pocket bags so pockets work on both faces",
+        "City graphic face: court-line maps, local script wordmarks, flag-derived colour blocking",
+        "6-inch youth/short block and 9-inch long block sharing one graphic system",
+        "Exposed elastic waistband with city code woven into the elastic",
+        "Silicone-print Swoosh (no embroidery) so both faces stay flat against skin"
+      ],
+      "price_position": "USD 55-65 (JPY 8,800-9,900; PHP 2,800-3,300), core-plus tier: above Dri-FIT Icon, below collaboration pricing, at parity with ballaholic",
+      "evidence_signal_ids": ["A07-S5", "A07-S9", "A07-S4", "A07-S6"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Will city-specific graphics create inventory fragmentation that outweighs local relevance, and which cities are large enough to justify a dedicated drop?"
+    },
+    {
+      "id": "A07-O4",
+      "name": "Women's Revolution textured short with a women's block",
+      "target_consumer": "Female hoopers 14-30 (high school, college, rec league) and WNBA-culture consumers in the US, Australia and Western Europe",
+      "job_to_be_done": "Wear a basketball short that fits a woman's hip and rise, looks intentional, and does not read as a shrunken men's short or a team-licence generic",
+      "product_problem": "Women's basketball shorts default to men's-derived 6-inch blocks and licensed poly-mesh; the only distinctive women's design cue found (Sabrina 3 heritage-textile texture) sits inside a unisex collection",
+      "proposed_solution": "A women's-specific 5-inch and 7-inch short with a higher back rise and contoured waistband, surfaced with a jacquard texture derived from embroidery and textile motifs (Sabrina precedent) and offered in treated-colour and sun-faded dye stories from the internal WNBA expression pages",
+      "key_features": [
+        "Women's-specific block: 5-inch and 7-inch inseams, higher back rise, contoured waistband with no front drawcord bow",
+        "Jacquard-knit texture as the graphic, tonal Swoosh",
+        "Reversible option: textured face and plain face",
+        "Treated colour and sun-faded dye colourways",
+        "Hidden waistband phone pocket"
+      ],
+      "price_position": "USD 65-75 (premium core tier, aligned with the Sabrina Aero-FIT short at USD 75)",
+      "evidence_signal_ids": ["A07-S6", "A07-S5", "A07-S1"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What inseam and rise do female hoopers actually prefer on-court versus off-court? No survey data was retrievable; the 105-athlete WNBA council focus groups referenced in the internal deck should be mined for this."
+    },
+    {
+      "id": "A07-O5",
+      "name": "Nike Basketball premium jacquard court short (inline, not collab)",
+      "target_consumer": "Fashion-led men and women 18-30 in the US, UK, Japan and Korea who currently buy Eric Emanuel, NOCTA or Martine Rose shorts",
+      "job_to_be_done": "Buy an elevated basketball short with real fabric and detail quality from Nike without waiting for a collaboration drop",
+      "product_problem": "Nike's premium shorts language (jacquard knit, silicone graphics, rubberised badges, zip pockets) exists only in collaborations at about USD 115; the inline line has no product in the USD 90-120 space",
+      "proposed_solution": "An inline premium court short in heavyweight jacquard-knit mesh with tonal all-over pattern, silicone Swoosh, rubberised woven label and zip pockets, in a long 9-inch wide-leg block for lifestyle and a 6-inch block for play",
+      "key_features": [
+        "Heavyweight jacquard-knit mesh with tonal all-over pattern (court lines, not logos)",
+        "Silicone graphics and rubberised badge, no embroidery",
+        "Zip side pockets with garage-style flat zips",
+        "9-inch wide-leg and 6-inch blocks",
+        "Seasonal treated-colour capsules"
+      ],
+      "price_position": "USD 100-120 (premium lifestyle tier, at parity with Nike x Martine Rose at about USD 115 and Eric Emanuel)",
+      "evidence_signal_ids": ["A07-S3", "A07-S7", "A07-S4"],
+      "confidence": "Low",
+      "key_unanswered_question": "Does an inline Nike short at USD 100+ sell without a collaborator's name attached, or is the premium entirely a function of scarcity and co-branding?"
+    }
+  ],
+  "sources": [
+    {"source": "Footy Headlines - Nike 2026 Aero-FIT tech leak", "url": "https://www.footyheadlines.com/2025/09/nike-2026-aero-fit-tech.html", "date": "2025-09", "contribution": "Aero-FIT naming and World Cup debut timing"},
+    {"source": "Footy Headlines - All-New Nike Aero-FIT Kit Technology Revealed", "url": "https://www.footyheadlines.com/2025/10/all-new-nike-aero-fit-kit-technology-revealed-debut-in-2026-world-cup.html", "date": "2025-10", "contribution": "2x airflow claim; rollout across sport-led strategy"},
+    {"source": "Hypebeast - NIKE, Inc. Sport Offense Innovation Announcement", "url": "https://hypebeast.com/2025/10/nike-inc-sport-offense-innovation-announcement-info", "date": "2025-10", "contribution": "Context for Nike's October 2025 innovation announcements (snippet only)"},
+    {"source": "NIKE, Inc. Newsroom - Aero-FIT official images", "url": "https://about.nike.com/en/newsroom/releases/nike-aero-fit-official-images", "date": "2025-10", "contribution": "Aero-FIT airflow and sweating-efficiency description"},
+    {"source": "Forbes - Nike's New Aero-FIT Apparel", "url": "https://www.forbes.com/sites/anishasircar/2025/10/24/nikes-new-aero-fit-apparel-is-a-tech-play-for-a-warmer-world/", "date": "2025-10-24", "contribution": "100% textile waste / chemical recycling claim"},
+    {"source": "SoccerBible - Nike Reveal Aero-FIT", "url": "https://www.soccerbible.com/news/2025/10/nike-reveal-aero-fit-performance-apparel-its-coolest-innovation-yet/", "date": "2025-10", "contribution": "Corroborates Aero-FIT cooling positioning"},
+    {"source": "Nike.com - Nike Aerogami", "url": "https://www.nike.com/a/nike-aerogami", "date": "unknown", "contribution": "Aerogami adaptable ventilation description"},
+    {"source": "New Atlas - Nike Aerogami jacket", "url": "https://newatlas.com/outdoors/nike-aerogami-jacket-auto-vents-when-you-sweat-to-cool-down-the-run/", "date": "unknown", "contribution": "Moisture-reactive vent mechanism"},
+    {"source": "NIKE, Inc. Newsroom - Sabrina 3 Signature Collection", "url": "https://about.nike.com/en/newsroom/releases/nike-sabrina-3-official-images-sabrina-ionescu", "date": "2025-07", "contribution": "Unisex reversible short; Romanian textile texture cue"},
+    {"source": "Design Scene - Nike and Sabrina Ionescu Launch the Sabrina 3 on July 24", "url": "https://www.designscene.net/2025/07/sabrina-3.html", "date": "2025-07", "contribution": "Sabrina 3 launch date and apparel list"},
+    {"source": "Nike.com - Sabrina Ionescu Shorts", "url": "https://www.nike.com/w/sabrina-ionescu-shorts-2h3kpz38fphz3glsmz3k7dg", "date": "unknown", "contribution": "Aero-FIT basketball short at USD 75"},
+    {"source": "Wikipedia - June Ambrose", "url": "https://en.wikipedia.org/wiki/June_Ambrose", "date": "unknown", "contribution": "Puma women's basketball creative director"},
+    {"source": "Amazon - Ultra Game WNBA Teamplayer Shorts", "url": "https://www.amazon.com/Ultra-Game-Official-Teamplayer-Basketball/dp/B0DPJDHD9Z", "date": "unknown", "contribution": "Licensed women's short construction (poly-mesh, side pockets)"},
+    {"source": "Imperial Point - Basketball Uniform Size Charts", "url": "https://theimperialpoint.com/basketball-uniform-size-charts/", "date": "unknown", "contribution": "Women's default 6-inch inseam, 5-inch on request"},
+    {"source": "Vitality - What Length Gym Shorts Should You Be Wearing", "url": "https://shopvitality.com/blogs/vitality-blog/guide-to-choose-gym-shorts-length", "date": "unknown", "contribution": "Women's 3-7 inch sweet spot claim"},
+    {"source": "Sports Illustrated FanNation - Adidas Harden Vol 9 Hell Cat & Crazy Lite Shorts", "url": "https://www.si.com/fannation/sneakers/news/adidas-debuts-harden-vol-9-hell-cat-crazy-lite-shorts", "date": "unknown", "contribution": "Existence of adidas Crazy Lite shorts"},
+    {"source": "Sole Retriever - adidas Harden Vol. 10 SS26", "url": "https://www.soleretriever.com/news/articles/adidas-harden-vol-10-debut-release-date-spring-summer-2026", "date": "unknown", "contribution": "Harden Vol 10 'polarizing' design positioning"},
+    {"source": "adidas US - Harden Graphic Shorts", "url": "https://www.adidas.com/us/harden-graphic-shorts/IU2801.html", "date": "unknown", "contribution": "AEROREADY Harden logo shorts"},
+    {"source": "NIKE, Inc. Newsroom - Nike x Martine Rose Sport Gaming collection", "url": "https://about.nike.com/en/newsroom/releases/nike-martine-rose-sport-gaming-collection-official-images", "date": "2025-10", "contribution": "Jacquard-knit shorts, zip pockets, Oct 30 2025 release"},
+    {"source": "StockX - Nike x Martine Rose Football Shorts University Red", "url": "https://stockx.com/nike-x-martine-rose-football-shorts-university-red", "date": "2025", "contribution": "Approximate USD 115 retail"},
+    {"source": "Martine Rose - Nike x Martine Rose 2025", "url": "https://www.martine-rose.com/pages/nike-x-martine-rose-2025", "date": "2025", "contribution": "Collection reference (snippet only)"},
+    {"source": "NOCTA - Lightweight Basketball Shorts Black", "url": "https://www.nocta.com/products/lightweight-basketball-shorts-black", "date": "unknown", "contribution": "Water-resistant, rubberised badges"},
+    {"source": "NOCTA - White Basketball Shorts", "url": "https://www.nocta.com/products/basketball-short-white", "date": "unknown", "contribution": "Engineered knit mesh, silicone graphics, zip pockets"},
+    {"source": "GOAT - Nike x NOCTA Basketball Shorts Black", "url": "https://www.goat.com/apparel/nike-x-nocta-basketball-shorts-black-no-22bb33-bk-01", "date": "unknown", "contribution": "100% polyester knit mesh with zipper pockets"},
+    {"source": "Accio - Eric Emanuel shorts top seller", "url": "https://www.accio.com/business/eric-emmanuel-shorts-top-seller", "date": "unknown", "contribution": "USD 2.8M 2024 online sales claim (unverified secondary)"},
+    {"source": "Vocal Media - Eric Emanuel Shorts: Sportswear and High Fashion", "url": "https://vocal.media/lifehack/eric-emanuel-shorts-the-intersection-of-sportswear-and-high-fashion-upcw70up5", "date": "unknown", "contribution": "Satin, velvet, high-quality mesh materials"},
+    {"source": "Eric Emanuel Shorts 2025 New Arrivals (unofficial)", "url": "https://ericemanuelsshop.com/eric-emanuel-shorts-2025-new-arrivals-why-theyre-a-must-have/", "date": "2025", "contribution": "Camo-washed, neon, collegiate 90s treatments (low reliability)"},
+    {"source": "Remezcla - Willy Chavarria x Adidas LA-inspired All-Star collection", "url": "https://remezcla.com/culture/willy-chavarria-x-adidas-debut-la-inspired-collection-all-star-weekend/", "date": "unknown", "contribution": "Collared basketball jerseys and shorts on cowboys and cowgirls"},
+    {"source": "END. - adidas x Willy Chavarria Long Short", "url": "https://www.endclothing.com/us/adidas-x-willy-chavarria-long-short-jw1443.html", "date": "unknown", "contribution": "Existence of a 'Long Short' silhouette"},
+    {"source": "END. - adidas x Willy Chavarria 2 Pack Short", "url": "https://www.endclothing.com/us/adidas-x-willy-chavarria-2-pack-short-kd9355.html", "date": "unknown", "contribution": "Cotton jersey, embroidered Trefoil, minimal branding"},
+    {"source": "Foot Locker - 5 Inch Basketball Shorts", "url": "https://www.footlocker.com/buy/5-inch-basketball-shorts-0atz08a", "date": "unknown", "contribution": "Dedicated 5-inch category exists"},
+    {"source": "Northyard - Why the 5 Inch Inseam Is Trending", "url": "https://www.northyard.com/blogs/shorts/are-5-inch-shorts-still-in-style-why-the-5-inch-inseam-is-trending", "date": "unknown", "contribution": "5-inch comeback framing"},
+    {"source": "Northyard - Average basketball shorts length", "url": "https://www.northyard.com/blogs/shorts/what-is-the-average-basketball-shorts-length-9-or-10-inches", "date": "unknown", "contribution": "7-11 inch typical range; 11 inch at/below knee"},
+    {"source": "Nike.com - Nike DNA Men's Dri-FIT 6\" UV Woven Basketball Shorts", "url": "https://www.nike.com/t/dna-mens-dri-fit-6-uv-woven-basketball-shorts-B2w7Jt", "date": "unknown", "contribution": "6-inch UV woven; striped waistband vintage hoops look"},
+    {"source": "Nike.com - LeBron DNA Men's 6\" 3-in-1 Basketball Shorts", "url": "https://www.nike.com/t/lebron-dna-mens-6-3-in-1-basketball-shorts-6B4LBV", "date": "unknown", "contribution": "6-inch 3-in-1 construction"},
+    {"source": "Nike.com - Kobe Bryant Basketball Shorts", "url": "https://www.nike.com/w/kobe-bryant-basketball-shorts-38fphz3glsmzayaee", "date": "unknown", "contribution": "Kobe 6-inch Standard Issue reversible"},
+    {"source": "Nike.com - Nike Dri-FIT Icon Men's Basketball Shorts", "url": "https://www.nike.com/t/dri-fit-icon-mens-basketball-shorts-2c8F76", "date": "unknown", "contribution": "Baseline inline short: loose fit, knit, sweat-wicking"},
+    {"source": "Anarchy Label - Best Basketball Shorts 2026", "url": "https://www.anarchylabel.com/basketball-shorts-2026/", "date": "unknown", "contribution": "'Slightly more tailored though relaxed' 2026 fit claim"},
+    {"source": "Accio - 2025 Basketball Short Shorts Trend", "url": "https://www.accio.com/business/basketball_short_shorts_trend", "date": "unknown", "contribution": "Retro and reversible hybrid trend claims"},
+    {"source": "Boring Monday - Baggy Jorts Man 2025", "url": "https://boringmonday.co/magazine/fashion/baggy-jorts-man", "date": "2025", "contribution": "Baggy jorts comeback framing"},
+    {"source": "Boring Monday - Basketball Streetwear", "url": "https://boringmonday.co/magazine/lifestyles/basketball-streetwear", "date": "unknown", "contribution": "Tunnel fashion, SGA, Gen Z fit checks"},
+    {"source": "TikTok Shop - 2026 Trendy Streetwear Basketball Shorts Vintage #32", "url": "https://shop.tiktok.com/us/pdp/2026-trendy-streetwear-basketball-shorts-vintage-print/1732281829578085005", "date": "unknown", "contribution": "Value-tier vintage graphic short"},
+    {"source": "Walmart - Alive 2-Pack Basketball Shorts 11 Inch Inseam", "url": "https://www.walmart.com/ip/Alive-Men-s-Shorts-2-Pack-Basketball-Shorts-11-Inch-Inseam/839358314", "date": "unknown", "contribution": "11-inch value multipack anchor"},
+    {"source": "PUMA - Hoops x E.T. Men's Reversible Basketball Shorts", "url": "https://us.puma.com/us/en/pd/hoops-x-et-mens-reversible-basketball-shorts/633105", "date": "unknown", "contribution": "Reversible construction, retro palette"},
+    {"source": "ballaholic - TOKYO STREETBALL CLASSIC Series 2025", "url": "https://blhlc.com/collections/tokyo-streetball-classic-series-2025", "date": "2025", "contribution": "Tokyo streetball series; pockets-for-daily-life concept"},
+    {"source": "ballaholic Global Online Shop", "url": "https://blhlc.com/", "date": "unknown", "contribution": "Founded 2004 Tokyo; 'play with style' positioning"},
+    {"source": "Trend Hunter - ASICS x ballaholic", "url": "https://www.trendhunter.com/trends/ballaholics", "date": "unknown", "contribution": "ballaholic collaboration reference"},
+    {"source": "CourtSide Melbourne - Li-Ning BADFIVE V", "url": "https://www.courtsidemelbourne.com/products/badfive-v", "date": "unknown", "contribution": "BadFive 'paint and pavement' streetball positioning"},
+    {"source": "Anto Sports - Li-Ning Badfive Basketball Shorts", "url": "https://antosports.com/products/li-ning-badfive-basketball-shorts", "date": "unknown", "contribution": "Colour blocking, lettering, loose straight-leg fit"},
+    {"source": "Ugat Clothing - Watawat Flag Basketball Shorts", "url": "https://www.ugatclothing.com/product-page/watawat-basketball-shorts", "date": "unknown", "contribution": "Philippine flag full-print short"},
+    {"source": "The Jersey Nation - Philippines Heritage Basketball Shorts", "url": "https://www.thejerseynation.com/products/philippines-basketball-shorts", "date": "unknown", "contribution": "Fully embroidered heritage short"},
+    {"source": "adidas Philippines - Gilas Pilipinas", "url": "https://www.adidas.com.ph/gilas", "date": "unknown", "contribution": "Gilas fanwear: bold graphics plus 3-Stripes"},
+    {"source": "Kith - Jordan 23 Engineered Short Quartz/Green", "url": "https://kith.com/products/joat9785-333", "date": "unknown", "contribution": "23 Engineered detail language"},
+    {"source": "Amazon - Jordan 23 Engineered Utility Active Shorts", "url": "https://www.amazon.com/Jordan-Engineered-Utility-Active-Shorts/dp/B08GYDVFSP", "date": "unknown", "contribution": "Water-repellent 75% recycled nylon; zip pockets"},
+    {"source": "That Fit Friend - Lululemon License to Train Short Review", "url": "https://thatfitfriend.com/lululemon-license-to-train-short-review/", "date": "unknown", "contribution": "Abrasion-resistant shell, deep zip pockets"},
+    {"source": "L.L.Bean - Basketball Shorts", "url": "https://www.llbean.com/buy/basketball-shorts", "date": "unknown", "contribution": "7-inch UPF 50+ basketball short"},
+    {"source": "Amazon - Coolibar UPF 50+ Outpace Sport Shorts 2.0", "url": "https://www.amazon.com/Coolibar-Mens-Outpace-Sport-Shorts/dp/B078QCH83B", "date": "unknown", "contribution": "UPF 50+, quick-dry, zip back pocket, recommended for basketball"},
+    {"source": "Under Armour - 10 Things to Look for in Basketball Shorts", "url": "https://www.underarmour.com/en-us/t/playbooks/basketball/10-things-to-look-for-in-basketball-shorts/", "date": "unknown", "contribution": "7-11 inch inseam guidance"},
+    {"source": "Nike Basketball Apparel BB_2.0 deck (internal context; scratchpad/pdf p01-p18)", "url": "", "date": "unknown", "contribution": "SS28 priorities, GC outdoor 5% line plan, Aerogami wet-weather tile, Treated Color / Sun Faded Dye / Studded Gemstones expression pages, 105-athlete WNBA and 45-athlete GC immersions"}
+  ]
+}

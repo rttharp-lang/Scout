@@ -1,0 +1,653 @@
+{
+  "agent_id": "A03",
+  "agent_name": "Product Intelligence",
+  "domain": "Existing Nike and competitive basketball shorts: attributes, materials, construction, fit, features, pricing, launch history",
+  "research_narrative": "I approached this as a line-plan audit: what is on the wall today at Nike, Jordan, adidas, Under Armour, Puma, New Balance, lululemon, Overtime, Li-Ning, Anta, Peak and 361, and where the specs, prices and consumer language diverge. I ran 30 distinct WebSearch queries across brand, region (US, Japan, Philippines, Greater China, Europe retailers), consumer group (women, youth, outdoor), feature (inseam, pockets, liner, cooling tech, recycled content) and price. Then the environment fought back: the session-wide WebSearch budget hit its 200-call cap mid-run, and the egress proxy returned 403 for every consumer web host I tried (nike.com, about.nike.com, adidas.com, puma.com, lululemon, Dick's, Foot Locker, Amazon, Walmart, kakaku.com, Zhihu, Lazada, sec.gov, investors.nike.com and 30+ others). I verified this with the proxy status endpoint rather than assuming. As a result, every evidence item below comes from search-result snippets and page titles I actually retrieved, not from full product pages, and I have lowered confidence accordingly; I did not get review text beyond a handful of quoted lines, and I never saw fabric weights except Puma's 245 gsm. Where I lean on my own background (for example, what Nike's Icon short costs at full price), I label it unverified.\n\nWhat surprised me first was inseam geography. Nike Japan's own listing surfaced 6-inch styles (DF Woven Icon 6IN, DF 6IN Short Street, DF DNA 6IN NAOS) as the visible models, while the US retail conversation is still 8, 9, 10 and 11 inches, and adidas Legends ships in 7, 9 and 11. Foot Locker and Hibbett now run dedicated 5-inch basketball shorts categories, Overtime sells a 5-inch mesh short, lululemon's Zeroed In Linerless is a 5-inch product marketed for basketball, and Nike's own Kobe line is 6 inches. That is a real bifurcation, not a fad claim from one blog.\n\nSecond surprise: pockets have become the battleground feature. Puma's LaMelo shorts (245 gsm mesh, 100% recycled, about $70) and adidas' Anthony Edwards Foundation short lead with zip pockets; lululemon adds a hidden coin and phone sleeve plus a zip side pocket; a Li-Ning Wade 'Dry Ultra' short is listed with zippers. Nike DNA, Icon, Fly Crossover and Jordan Diamond are still described with side or hand pockets. At the same time a whole content genre argues for pocketless shorts for safety in competition. Nobody in the set I could see is solving both.\n\nThird: cooling technology has moved to the top of Nike's ladder. Nike's Aero-FIT press release claims more than double the airflow of legacy apparel, debuting in 2026 federation football kits and then extending across sport; Nike.com already shows Aero-FIT Basketball Shorts at $75, above the DNA at $65, Sabrina at $65, Standard Issue reversible around $55-65, Fly Crossover at $50 and Kobe 6-inch at $45. Aerogami's moisture-reactive vents and Dri-FIT ADV's zonal mapping sit behind it. Meanwhile Nike's FY2026 annual report shows apparel at $13.4B, up 2% currency-neutral with units up only 1% and ASP contributing about a point, so growth is coming from price, not more shorts.\n\nFourth: in Greater China the domestic brands sell explicitly to the outdoor player. Li-Ning's Wade shorts carry AT Dry, UPF 50+ and 4-way stretch; Anta's 2025 spring-summer quick-dry five-fen (knee-length) short is marketed for outdoor running and basketball with slant pockets; Peak's Wending series is a loose quick-dry summer short. I could not find a Nike basketball short with an explicit UPF or abrasion claim in any snippet, which is a hypothesis-level gap rather than a proven one.\n\nWhat I could not find: reliable full-price data for Nike core styles in China, Japan or the Philippines (Nike PH only shows price bands under PHP 3,000 and PHP 3,000-6,000); fabric weights for anything but Puma; verbatim consumer complaints at scale (Reddit is blocked); women's-specific fit complaints beyond a single Sabrina review; any New Balance, 361 or Peak shorts specs; sell-through or share data.\n\nReasoning to opportunities: I only proposed products where at least two independent signals converge. Outdoor-spec shorts for Greater China combine the domestic-brand UPF/quick-dry pattern, the UA 'durable textured knit' durability claim, the secure-pocket pattern and Nike's flat unit growth. A 6-inch court-to-street short follows the Japan 6IN listing, the 5-inch retail categories and the Kobe 6-inch precedent. A women's-block short follows Sabrina's hybrid woven/knit construction, the 'size up if you wear men's' guidance and the reversible-with-pockets-one-side review. A competition-legal stow pocket answers the pocket tension directly. Every opportunity carries an explicit unanswered question that a PLM must test with real product pages and consumers before committing.",
+  "top_signals": [
+    {
+      "id": "A03-S1",
+      "title": "Inseam is bifurcating: 5-6 inch styles now sit beside 9-11 inch, with Japan listing 6 inch as the visible Nike basketball short",
+      "finding": "Nike Japan's official men's basketball shorts listing surfaces 6-inch models (DF Woven Icon 6IN, DF 6IN Short Street, DF DNA 6IN NAOS) as the popular styles, while US retail still centres on 8-11 inches (Nike DNA 8 and 10, Jordan Diamond 9, adidas Legends 7/9/11, UA Baseline 10). Foot Locker and Hibbett run dedicated '5 inch basketball shorts' categories, Overtime sells a 5-inch mesh basketball short, lululemon markets a 5-inch linerless short toward basketball, and Nike's Kobe line ships at 6 inches. Length is no longer one convention.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Kakaku.com search listing 'ナイキ バスケットボール パンツ' (via WebSearch snippet)",
+          "url": "https://search.kakaku.com/%E3%83%8A%E3%82%A4%E3%82%AD%20%E3%83%90%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB%20%E3%83%91%E3%83%B3%E3%83%84/",
+          "source_date": "unknown",
+          "data_type": "price-comparison listing",
+          "geography": "Japan",
+          "consumer_or_market": "Japanese men's basketball shorts shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Popular Nike basketball shorts available in Japan for 2025 include models such as the DF Woven Icon 6IN Short, DF 6IN Short Street, and DF DNA 6IN Short NAOS"
+        },
+        {
+          "source": "Foot Locker category page '5 Inch Basketball Shorts' (via WebSearch snippet)",
+          "url": "https://www.footlocker.com/buy/5-inch-basketball-shorts-0atz08a",
+          "source_date": "unknown",
+          "data_type": "retailer category page",
+          "geography": "United States",
+          "consumer_or_market": "US athletic retail shoppers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Men's 5-inch basketball shorts are making a comeback for their agility-enhancing fit"
+        },
+        {
+          "source": "adidas Legends 3-Stripes 7\" and 11\" Basketball Shorts, Macy's; adidas 9\" inseam listing, Amazon (via WebSearch snippet)",
+          "url": "https://www.macys.com/shop/product/adidas-mens-legends-3-stripes-7-basketball-shorts?ID=19467392",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "US men's basketball shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "The shorts are available with a 7-inch inseam, and also come in an 11-inch inseam option"
+        },
+        {
+          "source": "Kobe Men's 6\" Nike Dri-FIT Standard Issue Reversible Basketball Shorts, Nike.com (via WebSearch snippet)",
+          "url": "https://www.nike.com/t/kobe-mens-6-dri-fit-standard-issue-reversible-basketball-shorts-tt35sB",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Nike signature-line buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Kobe Men's 6\" Nike Dri-FIT Standard Issue Reversible Basketball Shorts"
+        }
+      ],
+      "consumer_groups": "Youth and Gen Z hoopers, Japan/Korea style-led players, women, lifestyle wearers; traditional 9-11 inch buyers in US pickup and team settings",
+      "implication": "A single-inseam franchise leaves share on the table. Nike should plan explicit length tiers (5/6, 7/8, 10) per franchise and per region, and treat 6 inch as a core Japan/Korea and women's length rather than a Kobe-only accent."
+    },
+    {
+      "id": "A03-S2",
+      "title": "Secure (zip / hidden) pockets are the feature signature brands and premium entrants lead with; Nike core still lists open side pockets",
+      "finding": "Puma's LaMelo Ball shorts (Rare Reserve, Miami, Alien Skin) are spec'd with zip pockets, 245 gsm mesh and 100% recycled content at about $70; adidas' Anthony Edwards Foundation short leads with zip pockets; lululemon's Zeroed In adds hidden coin and phone sleeves plus a zippered side pocket; a Li-Ning Wade 'Dry Ultra' short is sold 'with zippers'. Nike DNA, Icon, Fly Crossover and Jordan Diamond snippets describe side or hand pockets. Only Sabrina adds a snap cargo pocket.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "PUMA x LAMELO BALL Rare Reserve Men's Basketball Shorts, PUMA US (via WebSearch snippet)",
+          "url": "https://us.puma.com/us/en/pd/puma-x-lamelo-ball-rare-reserve-mens-basketball-shorts/627896",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Signature-line basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "100% recycled material (excluding trims and decorations), relaxed fit, 245 gsm, above knee length, and side zip pockets ... Prices are typically around $70"
+        },
+        {
+          "source": "Anthony Edwards - Shorts, adidas US (via WebSearch snippet)",
+          "url": "https://www.adidas.com/us/anthony_edwards-shorts",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Signature-line basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "cut loose from lightweight woven fabric, fit comfortably snug around the waist, and feature zip pockets to keep your essentials secure"
+        },
+        {
+          "source": "Zeroed In Linerless Short 5\", lululemon (via WebSearch snippet)",
+          "url": "https://shop.lululemon.com/p/men-shorts/Zeroed-In-Linerless-Short-5-MD/_/prod11720290",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States / Canada",
+          "consumer_or_market": "Premium athleisure training buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "streamlined hand pockets with hidden coin and phone sleeves, a zippered side pocket, a waistband drawcord that can be worn inside or out, and side slits at the hem"
+        },
+        {
+          "source": "Nike DNA Men's Dri-FIT 10\" Basketball Shorts, Dick's Sporting Goods (via WebSearch snippet)",
+          "url": "https://www.dickssportinggoods.com/p/nike-mens-dri-fit-dna-10-basketball-shorts-24nikmmnkdfdn10nsapb/24nikmmnkdfdn10nsapb",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Nike core basketball shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "basketball silhouette with side vents ... lightweight sweat-wicking mesh face with a smooth interior"
+        }
+      ],
+      "consumer_groups": "Outdoor and pickup players carrying phones and keys, commuters, lifestyle wearers; competitive/team players who want nothing in the pocket",
+      "implication": "Secure storage has become a hygiene feature at $60-70. Nike core franchises (DNA, Icon) risk looking under-featured versus Puma and adidas signature shorts at the same price; a Nike-owned secure-pocket solution that stays league-safe is a white space."
+    },
+    {
+      "id": "A03-S3",
+      "title": "Nike's basketball short price ladder now spans $45 to $75, with Aero-FIT creating a new top rung",
+      "finding": "Retrieved listings show Kobe Dri-FIT 6\" at $45 (sale $34.97), Fly Crossover women's around $50 (sale $31.99), Standard Issue reversible about $55-65 on the secondary market, Nike Dri-FIT basketball shorts and Sabrina at $65, and new Aero-FIT Basketball Shorts at $75 on Nike.com. Puma LaMelo sits at about $70 and lululemon Zeroed In Linerless at $49 on promotion. Heavy discounting (Kobe -22%, Fly Crossover -36%, Nike Dri-FIT -34%) suggests the $65 rung is being cleared by markdown.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Kobe Dri-FIT 6\" Basketball Shorts, Nike.com and related Kobe listings (via WebSearch snippet)",
+          "url": "https://www.nike.com/t/kobe-dri-fit-6-basketball-shorts-kp4jVw",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Nike signature-line buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike Men's Dri-FIT Basketball Shorts are priced at $42.97 (on sale from $65), and the Kobe Dri-FIT 6\" Basketball Shorts are available for $34.97 (on sale from $45)"
+        },
+        {
+          "source": "Nike Aero-FIT collection, Nike.com (via WebSearch snippet)",
+          "url": "https://www.nike.com/w/nike-nike-aero-fit-50r7yz7yfbz9kaxez9q9kx",
+          "source_date": "unknown",
+          "data_type": "product listing",
+          "geography": "United States",
+          "consumer_or_market": "Premium performance basketball buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike Aero-FIT Basketball Shorts are priced at $75 and appear to be available as a new release on Nike.com"
+        },
+        {
+          "source": "Sabrina Dri-FIT Reversible Basketball Shorts, Nike.com (via WebSearch snippet)",
+          "url": "https://www.nike.com/t/sabrina-dri-fit-reversible-basketball-shorts-6BODccEy",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "priced at $65 on Nike.com"
+        },
+        {
+          "source": "Nike Fly Crossover Basketball Short - Women's, Als.com (via WebSearch snippet)",
+          "url": "https://www.als.com/nike-fly-crossover-basketball-short-womens-10409449/p",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Prices generally range around $50.00 with sales prices available (like $31.99 with 36% off at ALS.com)"
+        }
+      ],
+      "consumer_groups": "All Nike basketball short buyers in North America; price-sensitive youth and outdoor players most affected by the $65-75 tier",
+      "implication": "The $65 core rung is under markdown pressure while the top rung moves to $75. The PLM should define what earns $65 versus $45 (secure pocket, cooling, durability) rather than relying on Dri-FIT alone, and consider a defensible $50-55 outdoor/volume rung."
+    },
+    {
+      "id": "A03-S4",
+      "title": "Cooling is Nike's chosen innovation vector: Aero-FIT (claimed >2x airflow), Aerogami vents and Dri-FIT ADV zonal mapping",
+      "finding": "Nike's Aero-FIT release describes it as the pinnacle expression of cooling technology, channelling more than double the airflow of legacy Nike athletic apparel, debuting in 2026 federation football kits and then extending across the sport-led product strategy; Aero-FIT Basketball Shorts are already listed at $75. Aerogami adds moisture-reactive vents that open and close, and Dri-FIT ADV uses thermal mapping and zonal breathability. Basketball shorts are becoming a vehicle for thermoregulation claims rather than only wicking.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Nike Unveils Aero-FIT Performance Apparel Innovation, NIKE, Inc. newsroom (via WebSearch snippet)",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-aero-fit-official-images",
+          "source_date": "unknown",
+          "data_type": "press release",
+          "geography": "Global",
+          "consumer_or_market": "Nike performance apparel athletes",
+          "confidence": "High",
+          "evidence_nature": "quantitative",
+          "excerpt": "capable of channeling more than double the airflow of legacy Nike athletic apparel ... global debut in the football kits Nike federations will wear during the biggest sport moment of 2026 before extending across Nike's sport-led product strategy"
+        },
+        {
+          "source": "Nike Unveils Aerogami, Nike.com (via WebSearch snippet)",
+          "url": "https://www.nike.com/a/nike-aerogami",
+          "source_date": "unknown",
+          "data_type": "brand innovation page",
+          "geography": "Global",
+          "consumer_or_market": "Nike performance apparel athletes",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "moisture-reactive vents that open and close autonomously based on sweat detection, providing adaptive ventilation"
+        },
+        {
+          "source": "Nike Apparel Technologies: Performance Meets Innovation (1990-2024), Tennis Express blog (via WebSearch snippet)",
+          "url": "https://tennisexpress.com/blogs/news/nike-apparel-technologies-performance-meets-innovation",
+          "source_date": "2024",
+          "data_type": "retailer blog / tech timeline",
+          "geography": "Global",
+          "consumer_or_market": "Performance apparel buyers",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "The 2024 iteration of Dri-FIT ADV integrates advanced thermal mapping and zonal breathability"
+        }
+      ],
+      "consumer_groups": "Elite and serious players, hot-climate outdoor players (Greater China summer, Philippines, India), premium buyers",
+      "implication": "Cooling is credible and owned by Nike, but currently priced at $75 and validated on football. The PLM question is how fast Aero-FIT/Aerogami logic trickles into a $50-60 outdoor basketball short for hot-climate volume markets."
+    },
+    {
+      "id": "A03-S5",
+      "title": "Recycled content is now table stakes across every competitor and no longer differentiates a basketball short",
+      "finding": "Puma LaMelo shorts claim 100% recycled material (excluding trims), Jordan Dri-FIT Sport Diamond claims 100% recycled polyester fibres, adidas Legends claims at least 70% recycled, and Nike Fly Crossover claims at least 75% recycled polyester. Every major shorts franchise retrieved carries a recycled claim; none of the retrieved consumer feedback mentions it as a purchase reason.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Jordan Dri-FIT Sport Diamond Shorts, Foot Locker (via WebSearch snippet)",
+          "url": "https://www.footlocker.com/product/model/jordan-dri-fit-sport-diamond-shorts/390853.html",
+          "source_date": "unknown",
+          "data_type": "product page with consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Jordan Brand apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "100% recycled polyester fibers provide eco-conscious fashion, hand pockets offer space to stash essentials ... average customer rating of 4 out of 5 stars from 70 reviews"
+        },
+        {
+          "source": "adidas Legends 3-Stripes Basketball Shorts, adidas US (via WebSearch snippet)",
+          "url": "https://www.adidas.com/us/legends-3-stripes-basketball-shorts/JI7576.html",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "adidas basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "AEROREADY to keep you dry ... slightly loose fit ... made with at least 70% recycled materials"
+        },
+        {
+          "source": "Nike Dri-FIT Fly Crossover Women's Basketball Shorts, Amazon (via WebSearch snippet)",
+          "url": "https://www.amazon.com/Nike-Dri-FIT-Crossover-Womens-Basketball/dp/B0D5SJH4TF",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "made from at least 75% recycled polyester, are wider through the legs and hips, with a secure and comfortable waist and an optimal inseam length"
+        }
+      ],
+      "consumer_groups": "All basketball short buyers; ESG-motivated buyers in Europe",
+      "implication": "Do not spend innovation budget or hangtag real estate on recycled percentage as a lead claim; keep it as a compliance baseline and lead with fit, storage, cooling or durability."
+    },
+    {
+      "id": "A03-S6",
+      "title": "Women's shorts are getting real construction differentiation (Sabrina hybrid woven/knit, snap cargo, plus sizes) but fit guidance still references men's sizing",
+      "finding": "Nike's Sabrina Dri-FIT short pairs a woven front with a knit back, a loose stretchy fit, side pockets and a snap cargo pocket at $65, with a plus-size SKU (FB8427); the reversible version puts pockets on only one side. A verified reviewer wrote they are 'not super short, but long enough to play hard'. Nike's own guidance says 'if you typically wear men's styles, size up', and the WNBA size chart offers tall sizes 2 inches longer. Fly Crossover is cut wider through legs and hips with elongated hem vents at about $50.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Nike Women's Sabrina Basketball Shorts Dri-FIT, Hibbett (via WebSearch snippet)",
+          "url": "https://www.hibbett.com/nike-womens-sabrina-basketball-shorts/1112I.html",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "A woven front pairs with a knit back so you can move through every pass, pivot, and play, while a loose, stretchy fit keeps motion effortless ... Side pockets and a snap cargo pocket"
+        },
+        {
+          "source": "Reviews: Sabrina Dri-FIT Reversible Basketball Shorts, Nike.com (via WebSearch snippet)",
+          "url": "https://www.nike.com/t/sabrina-dri-fit-reversible-basketball-shorts-6BODccEy/reviews",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Women's basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "They are not super short, but long enough to play hard ... the reversible shorts have pockets on only one side ... If you typically wear men's styles, size up for the right fit"
+        },
+        {
+          "source": "Sabrina Dri-FIT Basketball Shorts (Plus Size) FB8427-325, Amazon (via WebSearch snippet)",
+          "url": "https://www.amazon.com/Sabrina-Dri-FIT-Basketball-Honeydew-FB8427-325/dp/B0CY5TTDDT",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Plus-size women's basketball players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Sabrina Dri-FIT Basketball Shorts (Plus Size) (Cargo Khaki/Honeydew/Oil Green, FB8427-325)"
+        },
+        {
+          "source": "Women's Basketball Shorts - Size Chart (WNBA Shorts Fit Guide), Nike (via WebSearch snippet)",
+          "url": "https://www.nike.com/size-fit/wnba-shorts",
+          "source_date": "unknown",
+          "data_type": "size guide",
+          "geography": "United States / Global",
+          "consumer_or_market": "Women's basketball players and fans",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "some shorts are available in different lengths, with tall sizes being 2\" (5cm approx.) longer than regular fit"
+        }
+      ],
+      "consumer_groups": "Women's players (high school, college, WNBA fans, recreational), plus-size and tall women",
+      "implication": "Sabrina proves women will pay $65 for women-specific construction. The line still lacks a clear women's-block story on length options and pocket symmetry; a two-length, women's-graded franchise with secure pockets on both sides is a credible Women's Revolution product."
+    },
+    {
+      "id": "A03-S7",
+      "title": "Greater China domestic brands sell shorts on outdoor claims (UPF 50+, quick-dry, knee-length) at low price points; no Nike outdoor-specific short surfaced",
+      "finding": "Li-Ning's Wade shorts are marketed with AT Dry base tech, UPF 50+ UV protection, 4-way stretch and moisture wicking, with loose-fit styles discounted to about EUR 20 from EUR 49 on European Li-Ning resellers. Anta's 2025 spring-summer line includes a lightweight quick-dry five-fen (knee-length) short explicitly for outdoor running and basketball with slant pockets, plus Kyrie Irving series knit game shorts; Peak's Wending series is a loose quick-dry summer basketball short. None of the retrieved Nike basketball short snippets mentions UPF, abrasion or outdoor use.",
+      "classification": "PATTERN",
+      "evidence": [
+        {
+          "source": "Dwyane Wade Li-Ning Basketball Quick-drying Shorts, Anto Sports; Li-Ning Wade shorts, ShopNings (via WebSearch snippet)",
+          "url": "https://antosports.com/products/dwyane-wade-li-ning-basketball-quick-drying-shorts",
+          "source_date": "unknown",
+          "data_type": "product page (reseller)",
+          "geography": "Greater China (exported product), Europe resellers",
+          "consumer_or_market": "Chinese-brand basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "quick drying, lightweight, elastic waistband, inner drawstring, and include Li Ning's AT Dry base tech with UPF 50+ UV Sun Protection, 4-Way Stretch, and Moisture Wicking"
+        },
+        {
+          "source": "Li Ning Wade Men's Loose Fit Basketball Shorts, ShopNings (via WebSearch snippet)",
+          "url": "https://www.shopnings.com/li-ning-wade-men-s-loose-fit-basketball-shorts/",
+          "source_date": "unknown",
+          "data_type": "product page (reseller)",
+          "geography": "Europe (Li-Ning reseller)",
+          "consumer_or_market": "Chinese-brand basketball apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "available at a special price of EUR 20.00 (reduced from EUR 49.00)"
+        },
+        {
+          "source": "JD.com listing page 运动长裤篮球裤价格报价行情 and Chinese search results for Anta/Peak 2025 shorts (via WebSearch snippet)",
+          "url": "https://www.jd.com/jiage/13182f5f58ae09009d32.html",
+          "source_date": "unknown",
+          "data_type": "e-commerce listing",
+          "geography": "Greater China",
+          "consumer_or_market": "Chinese outdoor and casual basketball players",
+          "confidence": "Low",
+          "evidence_nature": "qualitative",
+          "excerpt": "安踏推出了2025春夏季的轻薄透气速干五分裤，设计用于户外跑步和篮球运动，具有基础黑色款和斜插口袋设计 ... 匹克推出了'问鼎系列'篮球速干短裤，针对夏季设计，具有宽松剪裁、吸湿排汗、透气轻薄等特点"
+        },
+        {
+          "source": "ANTA KAI Logo Game Shorts, ANTA US (via WebSearch snippet)",
+          "url": "https://anta.com/products/anta-kai-logo-game-shorts",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States / Greater China brand",
+          "consumer_or_market": "Kyrie Irving signature buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "ANTA KAI Logo Game Shorts deliver lightweight comfort and court-ready performance, featuring Kyrie's signature style"
+        }
+      ],
+      "consumer_groups": "Greater China outdoor players (approximately 300M participants per brief), hot-climate outdoor players in Southeast Asia, value-tier buyers in Europe buying Chinese brands",
+      "implication": "Domestic brands own the outdoor vocabulary (UV, quick-dry, knee-length, low price). A Nike Worldball short needs explicit outdoor proof points (UPF rating, abrasion test, quick-dry time) and a China-relevant price to compete rather than a re-coloured DNA."
+    },
+    {
+      "id": "A03-S8",
+      "title": "Durability is claimed only at value tier (UA Baseline 'durable textured knit', Overtime double-layer mesh); premium shorts claim lightness instead",
+      "finding": "Under Armour's Baseline 10-inch short is described as 'durable textured knit fabric that is tough but breathable' with mesh hand pockets; Overtime's mesh shorts are 'double-layered' 100% polyester with side pockets and an inner drawstring. Nike DNA is sold on 'lightweight sweat-wicking mesh face with a smooth interior' and Jordan Diamond on 'light, air mesh'. Retrieved Jordan Diamond reviews (4/5 from 70) flag sizing that 'runs small' rather than durability, but no premium short positions abrasion resistance for concrete courts.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Under Armour Baseline 10-inch Short, Amazon (via WebSearch snippet)",
+          "url": "https://www.amazon.com/Under-Armour-UA-Baseline-10/dp/B0D91B895W",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Value-tier basketball shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "mesh hand pockets with a 10\" inseam ... durable textured knit fabric that is tough but breathable, and the material wicks sweat and dries fast"
+        },
+        {
+          "source": "Overtime Mesh Shorts, shop.overtime.tv (via WebSearch snippet)",
+          "url": "https://shop.overtime.tv/products/ot-solid-mesh-shorts-adult-sand",
+          "source_date": "unknown",
+          "data_type": "product page",
+          "geography": "United States",
+          "consumer_or_market": "Gen Z basketball-culture buyers",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "mesh basketball shorts are double-layered and made of 100% Polyester with features like an O logo print, side pockets, and drawstrings at the inner waistband"
+        },
+        {
+          "source": "Jordan Dri-FIT Sport Diamond Shorts reviews, Foot Locker (via WebSearch snippet)",
+          "url": "https://www.footlocker.com/product/model/jordan-dri-fit-sport-diamond-shorts/390853.html",
+          "source_date": "unknown",
+          "data_type": "consumer reviews",
+          "geography": "United States",
+          "consumer_or_market": "Jordan Brand apparel buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "average customer rating of 4 out of 5 stars from 70 reviews ... some customers reporting that they run small and recommending sizing up"
+        }
+      ],
+      "consumer_groups": "Outdoor and asphalt-court players, youth who wear shorts daily, value buyers",
+      "implication": "There is no premium 'built for concrete' basketball short. Durability (abrasion, pilling, snag resistance) is an unclaimed performance benefit Nike could own for Worldball, provided it can be proven with a test standard."
+    },
+    {
+      "id": "A03-S9",
+      "title": "Nike apparel growth is price-led, not unit-led: FY2026 apparel $13.4B, +2% currency-neutral, units +1%, ASP contributing about 1 point",
+      "finding": "Nike's FY2026 annual report states Nike Brand apparel revenues were $13.4 billion versus $13.0 billion in FY2025, currency-neutral growth of 2%, with unit sales up 1% and higher average selling price per unit contributing approximately 1 percentage point. Total revenue was $46.4 billion versus $46.3 billion. Basketball apparel is not broken out, but the category is operating in a flat-unit environment where new shorts must win on trade-up or new occasions rather than a rising tide.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "NIKE, Inc. Form ARS FY2026, SEC EDGAR (via WebSearch snippet)",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000320187/000130817926000376/nke015577-ars.pdf",
+          "source_date": "2026",
+          "data_type": "annual report",
+          "geography": "Global",
+          "consumer_or_market": "Nike Brand apparel",
+          "confidence": "High",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike Brand apparel revenues were $13.4 billion in fiscal 2026 compared to $13.0 billion in fiscal 2025, with currency-neutral growth of 2%. Unit sales of apparel increased 1%, while higher average selling price per unit contributed approximately 1 percentage point"
+        },
+        {
+          "source": "NIKE, Inc. Form 10-K FY2025, SEC EDGAR (via WebSearch snippet)",
+          "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000047/nke-20250531.htm",
+          "source_date": "2025-05-31",
+          "data_type": "annual filing",
+          "geography": "Global",
+          "consumer_or_market": "NIKE, Inc.",
+          "confidence": "High",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike's revenues were $46.4 billion in fiscal 2026 compared to $46.3 billion in fiscal 2025 ... a 9.84% revenue decline during fiscal 2025 compared to 2024"
+        }
+      ],
+      "consumer_groups": "All Nike apparel consumers; investment committee context",
+      "implication": "New shorts must be justified by incremental occasions (outdoor, women's, youth) or by ASP-accretive features, not by assumed category growth. Discounted $65 core styles are evidence that ASP without new benefit does not hold."
+    },
+    {
+      "id": "A03-S10",
+      "title": "Philippines and Southeast Asia price realities: Nike PH basketball shorts sit in sub-PHP 3,000 and PHP 3,000-6,000 bands while local brands and marketplaces undercut",
+      "finding": "Nike PH's men's basketball shorts page filters into 'under PHP 3,000' and 'PHP 3,000-6,000' bands; adidas PH sells lightweight performance shorts; Puma sells an official Philippines 2025 federation short; local maker Delta Sportswear sells basketball shorts and compression shorts for pro and collegiate teams; Lazada and Facebook Marketplace list large volumes of generic mesh shorts. The market is basketball-obsessed but price-fragmented with a strong local team-uniform channel.",
+      "classification": "FACT",
+      "evidence": [
+        {
+          "source": "Men's Basketball Shorts, Nike PH (via WebSearch snippet)",
+          "url": "https://www.nike.com/ph/w/mens-basketball-shorts-38fphz3glsmznik1",
+          "source_date": "unknown",
+          "data_type": "product listing",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino basketball shorts buyers",
+          "confidence": "Medium",
+          "evidence_nature": "quantitative",
+          "excerpt": "Nike offers basketball shorts in the Philippines with price ranges under PHP 3,000 and PHP 3,000 - 6,000"
+        },
+        {
+          "source": "BASKETBALL - Delta Sportswear Philippines (via WebSearch snippet)",
+          "url": "https://deltasportswear.com.ph/collections/jersey-sets-pre-designed-by-delta",
+          "source_date": "unknown",
+          "data_type": "local brand catalogue",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino team and league players",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "Delta Sportswear Philippines offers basketball shorts and signature compression shorts, including merchandise for professional teams like ALAB Pilipinas and various collegiate teams"
+        },
+        {
+          "source": "Philippines 2025 Shorts Men, PUMA PH (via WebSearch snippet)",
+          "url": "https://ph.puma.com/ph/en/pd/philippines-2025-shorts-men/783474.html",
+          "source_date": "2025",
+          "data_type": "product page",
+          "geography": "Philippines",
+          "consumer_or_market": "Filipino national-team fans",
+          "confidence": "Medium",
+          "evidence_nature": "qualitative",
+          "excerpt": "PUMA offers official Philippines 2025 shorts featuring the PFF badge and sleek design"
+        }
+      ],
+      "consumer_groups": "Filipino recreational, barangay-league and collegiate players; Southeast Asian hot-climate outdoor players",
+      "implication": "A Worldball outdoor short for Southeast Asia needs a sub-PHP 2,000 (about $35) expression to matter at volume; the team/league channel (compression liner plus loose short) is a local convention worth studying."
+    }
+  ],
+  "tensions": [
+    {
+      "id": "A03-T1",
+      "title": "Secure pockets for outdoor life versus pocketless for competition safety",
+      "description": "Premium and signature shorts (Puma LaMelo, adidas AE, lululemon, Li-Ning Wade) lead with zip and hidden pockets because players carry phones to outdoor courts, while a parallel content genre argues for pocketless shorts for safety and league conformity. Nike core shorts sit in the middle with open side pockets that satisfy neither: not secure enough for a phone, not flat enough for competition.",
+      "signal_ids": ["A03-S2", "A03-S7", "A03-S8"]
+    },
+    {
+      "id": "A03-T2",
+      "title": "Short-inseam wave versus the 9-11 inch hoops convention",
+      "description": "Japan lists 6-inch Nike styles as the popular models, US retailers have built 5-inch basketball categories, lululemon and Overtime sell 5-inch, and Kobe is 6-inch; yet Nike's volume franchises (DNA 8/10, Icon), adidas Legends 11 and UA Baseline 10 still anchor long. Style-led and youth buyers pull short while team, tall and traditional players pull long; a single global length spec cannot serve both.",
+      "signal_ids": ["A03-S1", "A03-S6"]
+    },
+    {
+      "id": "A03-T3",
+      "title": "Innovation priced up ($75 Aero-FIT) while the growth markets price down (Li-Ning EUR 20, PH sub-3,000)",
+      "description": "Nike's most compelling new benefit, adaptive cooling, arrives at $75 and above the $65 core rung that is already being marked down 30%+. The outdoor consumers in Greater China and Southeast Asia who would most value cooling and quick-dry are being served by Li-Ning, Anta and Peak at a fraction of the price, with explicit UPF and outdoor claims Nike does not make.",
+      "signal_ids": ["A03-S3", "A03-S4", "A03-S7", "A03-S10"]
+    },
+    {
+      "id": "A03-T4",
+      "title": "Everyone claims recycled; nobody at premium claims durable",
+      "description": "Recycled content (70-100%) is universal across Nike, Jordan, adidas and Puma and has stopped differentiating, while durability for concrete courts is claimed only by value-tier UA Baseline and Overtime. Premium shorts sell lightness, which for outdoor players can read as fragility. The sustainability story that would actually land for an outdoor player is a short that lasts.",
+      "signal_ids": ["A03-S5", "A03-S8"]
+    },
+    {
+      "id": "A03-T5",
+      "title": "Women-specific construction exists, but fit guidance and pocket layout still borrow from men's product",
+      "description": "Sabrina demonstrates genuine women's construction (woven front, knit back, snap cargo, plus sizes) and earns $65, yet Nike still tells women to 'size up if you typically wear men's styles', puts reversible pockets on only one side, and offers length only via tall sizing. Women's demand is validated; the women's product system is not yet complete.",
+      "signal_ids": ["A03-S6", "A03-S1"]
+    },
+    {
+      "id": "A03-T6",
+      "title": "Flat unit growth versus a line plan that adds features at the top",
+      "description": "Nike apparel units grew 1% in FY2026 with ASP doing the rest, while the shorts line adds a $75 rung and discounts the $65 rung. Feature escalation at the top does not create new occasions; the incremental unit is more likely to come from outdoor, women's and youth entries at $45-55 that the current premium-first innovation cadence does not prioritise.",
+      "signal_ids": ["A03-S9", "A03-S3", "A03-S4"]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "A03-O1",
+      "name": "Nike Worldball Outdoor Short (concrete-court spec)",
+      "target_consumer": "Greater China and Southeast Asia outdoor players aged 16-30 who play on cement or acrylic courts several times a week in summer heat and carry a phone and keys",
+      "job_to_be_done": "Play long outdoor sessions in heat and sun without the short snagging, pilling, or fading, and without worrying about my phone, at a price that lets me own two pairs",
+      "product_problem": "Nike's DNA/Icon shorts are lightweight indoor-mesh products with open pockets and no UV, quick-dry-time or abrasion claims, while Li-Ning, Anta and Peak sell UPF 50+ quick-dry knee-length shorts for outdoor play at far lower prices",
+      "proposed_solution": "A purpose-built outdoor short with a textured, abrasion-tested knit face, UPF 50+ rating, published quick-dry time, one zip phone pocket on the hip and one flat drop-in pocket, offered in 7-inch and 9-inch lengths, launched first in Greater China with Aero-FIT-derived ventilation zones scaled to cost",
+      "key_features": [
+        "Abrasion-resistant textured knit (target: pass Martindale abrasion at a level Nike can publish) rather than open sports mesh",
+        "UPF 50+ and stated quick-dry time on the hangtag",
+        "Zip phone pocket on the right hip that lies flat when empty; left side flat drop-in pocket",
+        "Two inseams (7 in and 9 in) with side vents scaled to length",
+        "Ventilation zones behind the knee and at the waistband inspired by Aero-FIT mapping",
+        "Dark, heat-stable colourways tested for UV fade"
+      ],
+      "price_position": "CNY 299-399 (about USD 41-55) in Greater China; PHP 1,795-2,295 in the Philippines; USD 55 in the US. Mid-tier, positioned under Aero-FIT ($75) and at or below DNA ($65)",
+      "evidence_signal_ids": ["A03-S7", "A03-S8", "A03-S2", "A03-S4", "A03-S3", "A03-S10"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Will Chinese outdoor players pay a CNY 100-150 premium over Li-Ning/Anta for Nike outdoor-specific proof points, or is the outdoor purchase driven primarily by price and brand familiarity? Requires China consumer testing and a verified price ladder that I could not retrieve."
+    },
+    {
+      "id": "A03-O2",
+      "name": "Nike 6-inch Court-to-Street Short (Japan/Korea and youth lead)",
+      "target_consumer": "Style-led players and youth aged 14-24 in Japan, Korea and urban US who wear basketball shorts all day and prefer a shorter, cleaner silhouette",
+      "job_to_be_done": "Look current off the court and still play in the same short without it feeling like a gym-shorts compromise",
+      "product_problem": "Nike's 6-inch expression is limited to the Kobe signature line and Japan-only styles; the 5-6 inch demand is being served by lululemon Zeroed In, Overtime and generic 5-inch shorts, while Nike volume franchises are 8-10 inch",
+      "proposed_solution": "A DNA-derived 6-inch linerless short with a hidden phone sleeve and a woven-front/knit-back hybrid, sold as a core global length tier across DNA and Icon with a Japan/Korea-first launch and a boys' grade",
+      "key_features": [
+        "6-inch inseam with 2-inch side vents so it still plays",
+        "Hidden internal phone sleeve plus one zip pocket (lululemon-style storage at Nike price)",
+        "Woven front for structure, knit back for stretch (Sabrina construction applied to men's and youth)",
+        "Internal drawcord that can be worn in or out",
+        "Linerless, with an optional matching compression tight for team use"
+      ],
+      "price_position": "USD 50 (JPY 7,700; KRW 69,000): core tier, below DNA 8-inch at $65 and equal to Fly Crossover",
+      "evidence_signal_ids": ["A03-S1", "A03-S2", "A03-S3", "A03-S6"],
+      "confidence": "Medium",
+      "key_unanswered_question": "Is the 5-6 inch basketball short a durable youth and Japan/Korea behaviour or a 2024-2026 fashion cycle that will swing long again? Needs sell-through data on Kobe 6-inch and Nike JP 6IN styles versus 8/10-inch."
+    },
+    {
+      "id": "A03-O3",
+      "name": "Women's-block performance short in two lengths (Women's Revolution)",
+      "target_consumer": "Women who play competitively or recreationally (high school, college, adult leagues, pickup), including plus and tall sizes, who currently buy Sabrina, Fly Crossover or men's small shorts",
+      "job_to_be_done": "Get a short graded on a women's body with the length I choose, pockets that work on both sides, and enough coverage to play hard",
+      "product_problem": "Nike's women's shorts are either men's-derived (size-up guidance) or a single signature length; the reversible Sabrina has pockets on only one side and length choice exists only via tall sizing",
+      "proposed_solution": "A women's-graded franchise short in 5-inch and 7-inch lengths, woven-front/knit-back, secure pockets on both faces of a reversible or a single-face version with zip plus snap cargo, extended size run through plus and tall, priced at the Sabrina rung",
+      "key_features": [
+        "Women's-specific grade rule (hip-to-waist ratio) so no 'size up from men's' guidance is needed",
+        "Two inseams (5 in and 7 in) in every colour, not only tall sizing",
+        "Snap cargo pocket plus zip pocket, mirrored on both sides",
+        "Woven front / knit back hybrid with elongated hem vents",
+        "Size run XS to 3X plus tall"
+      ],
+      "price_position": "USD 60-65 (Sabrina rung); premium-core tier",
+      "evidence_signal_ids": ["A03-S6", "A03-S1", "A03-S2", "A03-S3"],
+      "confidence": "Medium",
+      "key_unanswered_question": "What share of women's basketball short purchases are currently men's or boys' product, and would a two-length women's franchise cannibalise Sabrina/A'ja signature volume or expand it? Needs Nike sales mix and women's fit-test data."
+    },
+    {
+      "id": "A03-O4",
+      "name": "Competition-legal stow pocket short (team and pickup crossover)",
+      "target_consumer": "High school, club and adult-league players in the US and Europe who practise and play in the same short and travel to outdoor runs with a phone",
+      "job_to_be_done": "Keep my phone and keys secure walking to and warming up at the court, then play a sanctioned game with nothing that can catch a finger or violate rules",
+      "product_problem": "Zip pockets (Puma, adidas AE) solve storage but add hardware that competitive contexts dislike; pocketless shorts solve safety but force players to leave phones unsecured; Nike open side pockets do neither well",
+      "proposed_solution": "An internal, zipper-free stow pocket in the waistband or inner hip that closes with a bonded hook or magnetic flap, lies completely flat when empty, and is invisible from the outside, applied to DNA/Icon and a Standard Issue reversible",
+      "key_features": [
+        "Internal flat stow pocket at the hip with bonded magnetic or hook closure, no external zip",
+        "External side pocket eliminated or reduced to a drop-in mesh sleeve",
+        "Reversible option with the stow pocket accessible from both faces",
+        "9-inch inseam as the team default with 7-inch option",
+        "Recycled-content baseline kept but not the lead claim"
+      ],
+      "price_position": "USD 55-60; core-plus tier, between Kobe 6-inch ($45) and DNA ($65)",
+      "evidence_signal_ids": ["A03-S2", "A03-S8", "A03-S5", "A03-S9"],
+      "confidence": "Low",
+      "key_unanswered_question": "Do competition rules (NFHS, FIBA, NCAA) actually restrict pockets on shorts, or is 'pocketless for safety' a consumer belief rather than a rule? I could not retrieve rulebooks in this session; a stow-pocket design is only worth engineering if hardware-free storage matters to teams."
+    }
+  ],
+  "sources": [
+    {"source": "Nike DNA Men's Dri-FIT 10\" Basketball Shorts, Dick's Sporting Goods (search snippet)", "url": "https://www.dickssportinggoods.com/p/nike-mens-dri-fit-dna-10-basketball-shorts-24nikmmnkdfdn10nsapb/24nikmmnkdfdn10nsapb", "date": "unknown", "contribution": "DNA 10-inch construction: side vents, mesh face, smooth interior"},
+    {"source": "Nike DNA Men's Dri-FIT 8\" Basketball Shorts, Nike.com (search snippet)", "url": "https://www.nike.com/t/dna-mens-dri-fit-8-basketball-shorts-jVkw9d", "date": "unknown", "contribution": "Existence of 8-inch DNA option"},
+    {"source": "Kobe Dri-FIT 6\" Basketball Shorts, Nike.com (search snippet)", "url": "https://www.nike.com/t/kobe-dri-fit-6-basketball-shorts-kp4jVw", "date": "unknown", "contribution": "Kobe 6-inch price $45 (sale $34.97); Nike Dri-FIT shorts $65 (sale $42.97)"},
+    {"source": "Kobe Men's 6\" Nike Dri-FIT Standard Issue Reversible Basketball Shorts, Nike.com (search snippet)", "url": "https://www.nike.com/t/kobe-mens-6-dri-fit-standard-issue-reversible-basketball-shorts-tt35sB", "date": "unknown", "contribution": "6-inch reversible Standard Issue in Kobe line"},
+    {"source": "Nike Standard Issue Reversible Shorts, eBay (search snippet)", "url": "https://www.ebay.com/shop/nike-standard-issue-reversible-shorts?_nkw=nike+standard+issue+reversible+shorts", "date": "unknown", "contribution": "Secondary-market prices $55-65 for Standard Issue reversible"},
+    {"source": "Nike Aero-FIT collection listing, Nike.com (search snippet)", "url": "https://www.nike.com/w/nike-nike-aero-fit-50r7yz7yfbz9kaxez9q9kx", "date": "unknown", "contribution": "Aero-FIT Basketball Shorts priced at $75"},
+    {"source": "Nike Unveils Aero-FIT Performance Apparel Innovation, NIKE, Inc. newsroom (search snippet)", "url": "https://about.nike.com/en/newsroom/releases/nike-aero-fit-official-images", "date": "unknown", "contribution": "Aero-FIT >2x airflow claim, 2026 football debut then cross-sport rollout"},
+    {"source": "Nike Unveils Aerogami, Nike.com (search snippet)", "url": "https://www.nike.com/a/nike-aerogami", "date": "unknown", "contribution": "Aerogami moisture-reactive vents"},
+    {"source": "Nike Apparel Technologies 1990-2024, Tennis Express blog (search snippet)", "url": "https://tennisexpress.com/blogs/news/nike-apparel-technologies-performance-meets-innovation", "date": "2024", "contribution": "Dri-FIT ADV 2024 thermal mapping / zonal breathability description"},
+    {"source": "Jordan Dri-FIT Sport Diamond Shorts, Foot Locker (search snippet)", "url": "https://www.footlocker.com/product/model/jordan-dri-fit-sport-diamond-shorts/390853.html", "date": "unknown", "contribution": "4/5 rating from 70 reviews, 100% recycled polyester, hand pockets, runs small"},
+    {"source": "Jordan Men's Dri-FIT Sport 9'' Diamond Shorts, Dick's Sporting Goods (search snippet)", "url": "https://www.dickssportinggoods.com/p/jordan-mens-dri-fit-sport-9-diamond-shorts-25jormbaskmjdfspt9gok/25jormbaskmjdfspt9gok", "date": "unknown", "contribution": "Jordan Diamond 9-inch inseam"},
+    {"source": "adidas Legends 3-Stripes 7\" Basketball Shorts, Macy's (search snippet)", "url": "https://www.macys.com/shop/product/adidas-mens-legends-3-stripes-7-basketball-shorts?ID=19467392", "date": "unknown", "contribution": "adidas Legends 7-inch and 11-inch inseam options"},
+    {"source": "adidas Legends 3-Stripes Basketball Shorts JI7576, adidas US (search snippet)", "url": "https://www.adidas.com/us/legends-3-stripes-basketball-shorts/JI7576.html", "date": "unknown", "contribution": "AEROREADY, slightly loose fit, at least 70% recycled"},
+    {"source": "adidas 3-Stripes Basketball Shorts 9\" inseam, Amazon (search snippet)", "url": "https://www.amazon.com/adidas-Basketball-Legends-3-Stripes-Shorts/dp/B0DJZCC6HW", "date": "unknown", "contribution": "adidas 9-inch inseam variant"},
+    {"source": "Anthony Edwards - Shorts, adidas US (search snippet)", "url": "https://www.adidas.com/us/anthony_edwards-shorts", "date": "unknown", "contribution": "AE shorts: lightweight woven, loose cut, zip pockets"},
+    {"source": "Under Armour Baseline 10-inch Short, Amazon (search snippet)", "url": "https://www.amazon.com/Under-Armour-UA-Baseline-10/dp/B0D91B895W", "date": "unknown", "contribution": "Durable textured knit, mesh hand pockets, 10-inch"},
+    {"source": "PUMA x LAMELO BALL Rare Reserve Men's Basketball Shorts, PUMA US (search snippet)", "url": "https://us.puma.com/us/en/pd/puma-x-lamelo-ball-rare-reserve-mens-basketball-shorts/627896", "date": "unknown", "contribution": "245 gsm, 100% recycled, relaxed fit, above knee, side zip pockets, ~$70"},
+    {"source": "Puma x LaMelo Ball Miami Men's Basketball Shorts, ShopSimon (search snippet)", "url": "https://shop.simon.com/products/puma-x-lamelo-ball-miami-mens-basketball-shorts", "date": "unknown", "contribution": "Same 245 gsm / zip pocket spec confirmed on second style"},
+    {"source": "Zeroed In Linerless Short 5\", lululemon (search snippet)", "url": "https://shop.lululemon.com/p/men-shorts/Zeroed-In-Linerless-Short-5-MD/_/prod11720290", "date": "unknown", "contribution": "Hidden coin/phone sleeves, zip side pocket, in/out drawcord, side slits"},
+    {"source": "lululemon Zeroed In Linerless Shorts 5\" $49 deal, Slickdeals (search snippet)", "url": "https://slickdeals.net/f/18445228-lululemon-zeroed-in-linerless-shorts-5-multiple-colors-free-shipping-49", "date": "unknown", "contribution": "Promotional price $49 for 5-inch linerless"},
+    {"source": "Lululemon Sale: Mesh Basketball Shorts Under $50, Billboard (search snippet)", "url": "https://www.billboard.com/culture/product-recommendations/lululemon-basketball-shorts-shop-online-1235927820/", "date": "unknown", "contribution": "lululemon positioning mesh shorts toward basketball"},
+    {"source": "Editor-Tested lululemon Men's Shorts Review, PureWow (search snippet)", "url": "https://www.purewow.com/fashion/lululemon-mens-shorts-review", "date": "unknown", "contribution": "Zeroed In listed among top lululemon styles for comfort and fit"},
+    {"source": "5 Inch Basketball Shorts category, Foot Locker (search snippet)", "url": "https://www.footlocker.com/buy/5-inch-basketball-shorts-0atz08a", "date": "unknown", "contribution": "Retailer-level 5-inch basketball category exists"},
+    {"source": "Mens 5 Inch Basketball Shorts, Hibbett (search snippet)", "url": "https://www.hibbett.com/shop/mens-5-inch-basketball-shorts.html", "date": "unknown", "contribution": "Second retailer with 5-inch basketball category"},
+    {"source": "Are 5 Inch Shorts Still in Style?, Northyard blog (search snippet)", "url": "https://www.northyard.com/blogs/shorts/are-5-inch-shorts-still-in-style-why-the-5-inch-inseam-is-trending", "date": "unknown", "contribution": "Trend commentary on 5-inch inseam (low-confidence brand blog)"},
+    {"source": "Overtime Mesh Shorts, shop.overtime.tv (search snippet)", "url": "https://shop.overtime.tv/products/ot-solid-mesh-shorts-adult-sand", "date": "unknown", "contribution": "Double-layer 100% polyester mesh, side pockets, inner drawstring"},
+    {"source": "OVERTIME Basketball mesh shorts 5\" inseam listing, eBay DE (search snippet)", "url": "https://www.ebay.de/itm/187769580475", "date": "unknown", "contribution": "Overtime 5-inch inseam short exists"},
+    {"source": "Kakaku.com listing ナイキ バスケットボール パンツ (search snippet)", "url": "https://search.kakaku.com/%E3%83%8A%E3%82%A4%E3%82%AD%20%E3%83%90%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88%E3%83%9C%E3%83%BC%E3%83%AB%20%E3%83%91%E3%83%B3%E3%83%84/", "date": "unknown", "contribution": "Japan popular Nike models are 6IN (Icon, Street, DNA NAOS)"},
+    {"source": "Nike JP men's basketball shorts listing (search snippet)", "url": "https://www.nike.com/jp/w/mens-basketball-shorts-38fphz3glsmznik1", "date": "unknown", "contribution": "Nike Japan official range description"},
+    {"source": "Nike Women's Sabrina Basketball Shorts, Hibbett (search snippet)", "url": "https://www.hibbett.com/nike-womens-sabrina-basketball-shorts/1112I.html", "date": "unknown", "contribution": "Sabrina woven front / knit back, snap cargo pocket, loose stretchy fit"},
+    {"source": "Sabrina Dri-FIT Reversible Basketball Shorts reviews, Nike.com (search snippet)", "url": "https://www.nike.com/t/sabrina-dri-fit-reversible-basketball-shorts-6BODccEy/reviews", "date": "unknown", "contribution": "Review quote on length; pockets on one side; size-up guidance; $65"},
+    {"source": "Sabrina Dri-FIT Basketball Shorts Plus Size FB8427, Amazon (search snippet)", "url": "https://www.amazon.com/Sabrina-Dri-FIT-Basketball-Honeydew-FB8427-325/dp/B0CY5TTDDT", "date": "unknown", "contribution": "Plus-size Sabrina SKU exists"},
+    {"source": "Women's Basketball Shorts Size Chart (WNBA), Nike (search snippet)", "url": "https://www.nike.com/size-fit/wnba-shorts", "date": "unknown", "contribution": "Tall sizes 2 inches longer"},
+    {"source": "Nike Dri-FIT Fly Crossover Women's Basketball Shorts, Amazon (search snippet)", "url": "https://www.amazon.com/Nike-Dri-FIT-Crossover-Womens-Basketball/dp/B0D5SJH4TF", "date": "unknown", "contribution": "75% recycled, wider legs/hips, elongated hem vents"},
+    {"source": "Nike Fly Crossover Basketball Short Women's, Als.com (search snippet)", "url": "https://www.als.com/nike-fly-crossover-basketball-short-womens-10409449/p", "date": "unknown", "contribution": "Fly Crossover ~$50, sale $31.99"},
+    {"source": "Dwyane Wade Li-Ning Basketball Quick-drying Shorts, Anto Sports (search snippet)", "url": "https://antosports.com/products/dwyane-wade-li-ning-basketball-quick-drying-shorts", "date": "unknown", "contribution": "AT Dry, UPF 50+, 4-way stretch, inner drawstring"},
+    {"source": "Li Ning Wade Men's Loose Fit Basketball Shorts, ShopNings (search snippet)", "url": "https://www.shopnings.com/li-ning-wade-men-s-loose-fit-basketball-shorts/", "date": "unknown", "contribution": "EUR 20 from EUR 49 pricing"},
+    {"source": "Li-Ning Wade Dry Ultra shorts with zippers, eBay (search snippet)", "url": "https://www.ebay.com/itm/296645511927", "date": "unknown", "contribution": "Li-Ning Wade short with zip pockets"},
+    {"source": "Li-Ning Wade Men's Breathable Basketball Competition Shorts AAPM021, ChinaSportShop (search snippet)", "url": "https://www.chinasportshop.com/li-ning-wade-men-s-breathable-basketball-competition-shorts-aapm021", "date": "2025", "contribution": "Competition-grade Wade short listing (currency of $389 / $291.75 snippet unclear, treated as low confidence)"},
+    {"source": "ANTA KAI Logo Game Shorts, ANTA US (search snippet)", "url": "https://anta.com/products/anta-kai-logo-game-shorts", "date": "unknown", "contribution": "Kyrie signature game short positioning"},
+    {"source": "Basketball / Men, ANTA Philippines (search snippet)", "url": "https://www.anta.ph/collections/basketball-men", "date": "unknown", "contribution": "Anta retail presence in the Philippines"},
+    {"source": "JD.com 篮球裤 price listing (search snippet)", "url": "https://www.jd.com/jiage/13182f5f58ae09009d32.html", "date": "unknown", "contribution": "Anta 2025 SS quick-dry outdoor five-fen short; Peak Wending quick-dry short (Chinese-language snippet)"},
+    {"source": "361 AG6 Aaron Gordon Signature Basketball Shoes Official Launch, 361sport.com (search snippet)", "url": "https://361sport.com/blogs/news/361-ag6-aaron-gordon-signature-basketball-shoes-official-launch", "date": "2025-12-22", "contribution": "361 US launch cadence and $99 price for footwear; no shorts found"},
+    {"source": "The KAWHI V Marks a New Era of Athlete-Led Design, New Balance newsroom (search snippet)", "url": "https://newbalance.newsmarket.com/latest-news/the-kawhi-v-marks-a-new-era-of-athlete-led-design-in-new-balance-basketball/s/983c4775-5a82-40e0-94cb-1d50fcb4e8c5", "date": "unknown", "contribution": "Kawhi V capsule includes tapered performance shorts"},
+    {"source": "Men's Basketball Shorts, Nike PH (search snippet)", "url": "https://www.nike.com/ph/w/mens-basketball-shorts-38fphz3glsmznik1", "date": "unknown", "contribution": "PH price bands under PHP 3,000 and PHP 3,000-6,000"},
+    {"source": "Delta Sportswear Philippines basketball collection (search snippet)", "url": "https://deltasportswear.com.ph/collections/jersey-sets-pre-designed-by-delta", "date": "unknown", "contribution": "Local team-uniform channel with compression shorts"},
+    {"source": "Philippines 2025 Shorts Men, PUMA PH (search snippet)", "url": "https://ph.puma.com/ph/en/pd/philippines-2025-shorts-men/783474.html", "date": "2025", "contribution": "Puma federation short in PH"},
+    {"source": "Best Basketball Shorts With Pockets, Ballislife (search snippet)", "url": "https://ballislife.com/best-basketball-shorts-with-pockets-buy-them-here/", "date": "unknown", "contribution": "Consumer-media demand for pocketed basketball shorts"},
+    {"source": "Best Pocketless Basketball Shorts for Peak Performance and Safety, Stick & Bat (search snippet)", "url": "https://stickandbat.com/best-basketball-shorts-with-no-pockets/", "date": "unknown", "contribution": "Counter-argument: pocketless for safety (low-confidence blog)"},
+    {"source": "Nike Men's Dry Icon Basketball Shorts, Walmart (search snippet)", "url": "https://www.walmart.com/ip/Nike-Men-s-Dry-Icon-Basketball-Shorts/617777290", "date": "unknown", "contribution": "Icon side pockets; single review 'long and very light weight'"},
+    {"source": "NIKE, Inc. Form ARS FY2026, SEC EDGAR (search snippet)", "url": "https://www.sec.gov/Archives/edgar/data/0000320187/000130817926000376/nke015577-ars.pdf", "date": "2026", "contribution": "Apparel $13.4B, +2% cn, units +1%, ASP ~1pt"},
+    {"source": "NIKE, Inc. Form 10-K FY2025, SEC EDGAR (search snippet)", "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000047/nke-20250531.htm", "date": "2025-05-31", "contribution": "Revenue context FY2025 vs FY2026"}
+  ]
+}
