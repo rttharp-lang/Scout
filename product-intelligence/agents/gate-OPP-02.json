@@ -1,0 +1,141 @@
+{
+  "id": "OPP-02",
+  "what_the_machine_knows": [
+    {
+      "statement": "Nike already ships the garment this opportunity proposes to create. The DNA Men's Dri-FIT 6\" UV Woven (FN2659) carries UVA/UVB protection, side pockets, a phone-sized zip pocket and a rebound-durability claim, and is merchandised on Nike AU, IN, MY, ID and JP and at Rebel Sport, Hibbett and Dick's. Three research domains independently wrote those same features up as unowned white space from the same un-run catalogue query. This is capture and findability, not invention - which shrinks the prize from a new occasion to trade-up.",
+      "signal_ids": ["A03-S7", "A06-S4", "A07-S8", "A02-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Heat load in outdoor basketball is corroborated by three evidence pools that share no source: peer-reviewed physiology measuring 0.00-1.33 kg of sweat trapped in a basketball uniform and a 0.95 +/- 0.42 L/h whole-body sweating rate (A06-S2, VERIFIED); documented institutional behaviour change, with Philippine athletic meets moved off the 9am-3pm window from 2024 after one provincial meet recorded more heat-related than sports-related injuries and Gurgaon court surfaces above 50C (A06-S5); and a competitor's multi-season commercial platform in Li-Ning's Wade UPF 50+ / AT Dry line, running consistently Spring 2023 through 2025 (A03-S7). This is PAT-11 and it is the strongest cross-domain corroboration in the whole evidence base.",
+      "signal_ids": ["A06-S2", "A06-S5", "A03-S7", "A03-S4", "A01-S7"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "The proposed moat is not a first. AATCC Test Method 183 already provides for measuring UV transmittance with specimens in either the dry OR WET status, and ASTM D6603 already conditions labelled specimens (40 launderings plus simulated solar exposure) and explicitly documents that stretching fabric decreases UPF by increasing optical porosity. Coolibar already markets 'blocks 98% of UVA/UVB rays - wet or dry'. 'UPF 50+ certified wet and stretched' is therefore a purchasable, off-the-shelf test election that Li-Ning or Anta can answer in one test cycle - a basketball-category merchandising first, not a defensible asset.",
+      "signal_ids": ["A06-S7", "A03-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The shelves the brief itself names contradict the price. Foot Locker shows Nike Dri-FIT DNA 8\" marked from USD 65.00 to USD 32.50 (50% off, twice the 25% the spec used as its empirical ceiling) and DNA 6\" from USD 50.00 to USD 37.50. Rebel Sport - the named lead door in the named best-evidenced lead market - lists the exact UV Woven SKU at AUD 44.99 against an AUD 75-80 ask. USD 55 is a 47% step and AUD 75-80 a 67-78% step over what the same garment transacts at on the same rack.",
+      "signal_ids": ["A04-S6", "A02-S4", "A04-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The full feature composition is already commoditised at private-label price. NORTHYARD - an Amazon private label already named in the marketplace file - ships UPF 50+, a 5/7/9 inch inseam ladder (plus a 10/7/5 variant), unlined construction, quick-dry, four-way stretch, zip pockets and reflective strips in one SKU with 'Basketball' in the title, ranking in Amazon Best Sellers for Men's Athletic Shorts. The composition A07-S8 called unowned has been answered by a brand with no design team.",
+      "signal_ids": ["A07-S8", "A02-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The channel logic is verified and unambiguous: Nike wholesale grew in both Q4 and full-year FY26 while Nike Digital declined for a tenth consecutive quarter, and performance basketball is one of Nike's few growth engines. A rack-legible outdoor short with no product copy to read is a wholesale product, and Nike already owns rack space at every door this franchise needs - Dick's, Foot Locker, Hibbett, Rebel, JD AU, Titan 22.",
+      "signal_ids": ["A02-S7", "A04-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike has already made and marketed this exact consumer argument one category over: the S.T. Flare, released June 2025 as Nike's first China-only performance basketball shoe, explicitly built after studying Chinese outdoor courts for durability, traction and heat. It launched at approximately RMB 899 (USD 125) - premium, not value - so the same signal that supports the strategic precedent argues against the RMB 279-299 value-tier recommendation.",
+      "signal_ids": ["A01-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The lead market named by the SS28 priority space is a contracting branded segment for Nike. Greater China apparel units fell 8% in FY26 and Q4 FY26 GC revenue fell 12% reported / 17% currency-neutral to USD 1.30B; adidas beat Nike in Tmall 618 2026. There is not one retrieved Chinese price or sell-through datum anywhere in the base, and the file holds an unreconciled contradiction on whether Li-Ning basketball is falling (-19%, 2025) or recovering (+5%, H1 2026) - same company, adjacent periods, opposite direction, both VERIFIED.",
+      "signal_ids": ["A04-S2", "A02-S2", "A02-S3", "A04-S11"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Two execution constraints are established and were not in the brief. ARPANSA grants the UPF Certification Trade Mark only where a sample of the same type, quality AND COLOUR has been tested, and pale shades rate lowest - which makes per-colourway certification economically incompatible with the seasonal per-market local-graphic strategy the same brief proposes (the core palette includes 'stone'). Separately, Nike defines Dri-FIT UV at platform level as 'minimum UPF 30' and prints no numeric UPF and no certification mark on FN2659 in any market including Australia, so printing a number is a global claims-policy reversal across the whole Dri-FIT UV range, not a hangtag change - on an 86% polyester / 14% spandex elastic woven, the substrate most exposed to the stretch effect.",
+      "signal_ids": ["A06-S7", "A03-S5"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Scalability is the highest on the board and is not contested by anyone. This is the only candidate that is genuinely multi-region and multi-season on day one - GC, APLA, the Gulf, the US Sun Belt and Australia - on a garment already in the doors it needs, with essentially zero incremental inventory liability. All three orchestrator lenses scored it 5 and the red team conceded execution risk is unusually low.",
+      "signal_ids": ["A02-S1", "A02-S7", "A04-S1"],
+      "classification": "PATTERN"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The binding constraint is findability, not function - i.e. the reason seven researchers with a live catalogue could not find FN2659 is the same reason a consumer at a Foot Locker rack cannot, and naming plus a legible spec block is worth more than any feature added to the garment.",
+      "basis": "Inference from a real observation (four independent domains missed a shipping SKU; A02-S7 verifies the channel has swung to wholesale where there is no PDP; A07-S9 shows Li-Ning, BadFive and ballaholic print function and place on the outside of the garment while Nike speaks tonal minimalism). Nobody has measured rack legibility or search behaviour anywhere in the base. This is the load-bearing assumption of the entire de-scoped programme and it is a HYPOTHESIS.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The certification programme should not be funded as a moat. Its residual value is marketing legibility inside basketball, not physical protection or exclusivity - and the underlying physics may already favour the incumbent fabric.",
+      "basis": "AATCC 183 and ASTM D6603 remove primacy; peer-reviewed testing of 34 polyester sportswear fabrics (Aguilera et al. 2023) found over 75% already rate UPF 40-50+ untreated and that moisture SIGNIFICANTLY INCREASED protection factors by over 20% - the opposite of the thesis that spawned the feature. The genuinely open variable narrows to biaxial thigh strain, which ASTM already discusses. All three portfolio rankers and the challenger converged on refusing the certification.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The USD 55 / AUD 75-80 price step does not exist and pursuing it would convert this from a productivity move into a margin risk. At best the franchise holds current band and earns its return on units and full-price sell-through rather than ASP.",
+      "basis": "Live retrievals of the realised prices on the same garment in the same doors; the audit's finding that no price in the base is anchored to a retrieved page and three incompatible Nike ladders coexist; the observable clearing band of USD 29-69; syndicated (low-rigour, directional only) research that UPF garments already carry a 25-40% premium with 41% of buyers citing cost as the barrier and ~42% not knowing what UPF means.",
+      "confidence": "High"
+    },
+    {
+      "statement": "UV is the legible, certifiable expression of a heat need rather than the need itself, and the primary use occasion may not be a sunny one. If everyday play has genuinely moved to dawn and dusk in the priority markets, dry-time, low wet cling, fabric weight and night visibility outrank UPF, and UPF matters mainly for multi-hour weekend tournaments.",
+      "basis": "A06-S5 documents the dawn/dusk shift in Guangzhou, Shenzhen, Gurgaon, the UAE and the Philippines; open sun-protection literature retrieved by the challenger states pickup games 'often take place between 10am and 4pm'. The base and the open literature disagree and the disagreement is preserved, not averaged. Compounding it: melanoma epidemiology puts the trunk at ~45.1% of male cases and the thigh - the one region a short already covers - is neither the highest-exposure nor the highest-risk site for a male 15-35 target, while A06-S7 itself records UPF sleeves as culturally accepted and UPF shorts as not.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "This is a franchise EXTENSION that replaces rather than adds unless the ladder is planned explicitly against the DNA 6\". A named 9\" hero five dollars above an incumbent carrying the same UV, pocket and durability claims most likely produces a split buy, not a trade-up.",
+      "basis": "The brief concedes the prize is trade-up and findability; Nike apparel growth is already price-led with units +1% (A03-S9, VERIFIED) and GC apparel units -8% (A04-S2, VERIFIED), which is the pattern that produced the current markdown depth. No inseam sell-through split by door type exists anywhere in the base, in any market.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "Australia is the better proof market than Greater China for SS28, even though SS28 priority points at GC - highest UPF literacy, the standard the claim is written against, and the best-evidenced market in the file - but Australia's read may not generalise to where the volume actually is.",
+      "basis": "A02-S9 (VERIFIED) and A06-S7 on Australian UPF literacy and the ARPANSA scheme; against it, Australia has roughly 800 courts against China's 1.1M+, an indoor-club orientation, an inverted season, no Nike basketball rights (iAthletic for the Boomers and Opals, Champion for the NBL), and the trade press states directly that Australia is no test market. Recorded as unresolved in the portfolio, not settled here.",
+      "confidence": "Low"
+    },
+    {
+      "statement": "The most valuable free action attached to this opportunity is the eight-quarter Nike AU sell-through pull by inseam, gender, price and door from Rebel (~163 doors), JD AU and Foot Locker AU that the portfolio folded in from OPP-04. It returns the dataset an Australia-first launch programme would have taken eighteen months to produce, this quarter, at no cost and no inventory risk.",
+      "basis": "Chair resolution D-06: all three rankers agreed the OPP-04 proving-ground mechanism is arithmetically void because the SS28 buy closes around the month an Australian range would land, and all three agreed the pull is the right residual action. Whether it happens now depends on an owner being named.",
+      "confidence": "High"
+    },
+    {
+      "statement": "There is no demand evidence that anyone pays a premium for an outdoor basketball short - for Nike, Li-Ning, Anta or anyone. The entire demand case is inferred from participation, physiology and a competitor's assortment decision.",
+      "basis": "The developer's own confidence rationale and the challenger both state it explicitly: zero sell-through, zero conversion, zero search-volume and zero consumer-research evidence in 58 signals. The nearest proxy category - all sun-protective clothing, every garment type, every sport - is sized at roughly USD 1.4B by 2030 by syndicated research, immaterial against Nike apparel at USD 13.4B; treat that sizing as directional only.",
+      "confidence": "High"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Is 'make what we already ship findable' a legitimate use of an SS28 line-review slot and the Worldball Innovation narrative - or is it line-plan housekeeping that should happen anyway and be funded from assortment, with the innovation budget spent on something that creates newness?",
+      "judgment_type": "strategy / creative ambition",
+      "why_machine_cannot": "The engine can establish that the productivity return is high and the incremental inventory liability near zero, and that the newness is near zero (differentiation 2, whitespace 2). It cannot decide what a season is FOR. Whether SS28 is a year to compound distribution on an existing block or a year that must produce a story is a chair's judgement about the brand's momentum, and the three orchestrator lenses split on exactly this - the PLM director and commercial planner voted INVEST, the design director voted EXPLORE because the challenger removed the only thing making it a franchise rather than a fix (D-05)."
+    },
+    {
+      "decision": "What does this franchise get called, and does Nike have a name worth spending? The brief's heritage route is a factual error - 'Blacktop' was Reebok's 1991 streetball line; Nike's outdoor lineage is Air Raid, Air Raid II, Air Darwin and Ndestrukt, all footwear and all unproven as apparel franchise names. The fallback, 'Nike DNA Outdoor', inherits shelf space but no meaning.",
+      "judgment_type": "brand context / product taste / organizational knowledge",
+      "why_machine_cannot": "Naming is the entire mechanism of this opportunity - if findability is the constraint, the name IS the product decision - and it is the one thing no dataset can produce. The machine can rule the Reebok mark out and confirm what the Nike archive holds; it cannot judge whether Air Raid can carry apparel, whether Nike Basketball wants to spend a heritage asset here, or what a name has to feel like on a rack in Manila. Trademark clearance and archive equity also live in organisational knowledge the engine has no access to."
+    },
+    {
+      "decision": "Lead market: Greater China as the SS28 scale bet, or Australia and the Philippines as proof markets first? SS28 priority points at GC; the evidence base holds not one Chinese price or sell-through datum, an unreconciled Li-Ning -19%/+5% contradiction, GC apparel units -8% and a market where adidas is winning on locally created product.",
+      "judgment_type": "strategy / organizational knowledge",
+      "why_machine_cannot": "The evidence genuinely points both ways and the audit forbade averaging - a value entry tier and a premium durability story need different products, different margins and different channels. The decisive inputs are internal and organisational: whether Greater China has the local creation and sourcing capability standing today to run the adidas mechanism rather than a translated global line, and whether the region's leadership will carry a franchise into a contracting segment. Neither is in any dataset the engine can reach."
+    },
+    {
+      "decision": "Price posture: hold at or near the current band (approximately USD 45-50 / AUD 45-55 / PHP 1,995) and earn the return on units and full-price sell-through, or attempt a step and accept the markdown risk the live shelves already demonstrate?",
+      "judgment_type": "strategy / organizational knowledge",
+      "why_machine_cannot": "The engine has established what the garment transacts at today and that no price in the base is anchored to sell-through. It cannot see Nike's list-versus-realised ASP, markdown allowances by partner, tariff absorption or margin box, and it cannot weigh what holding price signals to wholesale partners in a marketplace that turned promotional in summer 2026. That is a commercial judgement made with first-party data the engine has none of."
+    },
+    {
+      "decision": "Does the wet-and-stretched certification get funded at all - and if so, as a moat, as a marketing asset, or as an option exercised only if a market proves someone pays for it?",
+      "judgment_type": "strategy / brand context",
+      "why_machine_cannot": "The engine can show the claim is a purchasable test election and that ARPANSA's per-colour rule collides with the local-graphic strategy. It cannot decide whether Nike wants to be the brand that publishes numbers in this category, which is a positioning choice with spillover across the whole Dri-FIT UV platform, nor whether Legal will reverse a standing global posture of not printing a UPF rating. That gate is an internal legal and brand-governance call, and it is time-pressured by the EU Empowering Consumers Directive applying 27 September 2026."
+    },
+    {
+      "decision": "Inseam architecture: is the 9\" a knee-clearing outdoor performance length or a lifestyle coverage length, and does the ladder go 5/7/9 as proposed while the existing block runs 6/8/10/11 with the LONGEST inseam at the LOWEST price?",
+      "judgment_type": "product taste / organizational knowledge",
+      "why_machine_cannot": "The base contains no unit share by inseam in any market - the auditor flagged this as absent from seven specialist files, three skeptic rounds and the audit, and the specialists contradict each other on direction (A07-S4 argues the poles, A02-S5's own source says 7-9 inches, Nike's live ladder is continuous). Fit-block proportion and where a hem sits in a low defensive stance are design judgements made on a body, not in a dataset."
+    },
+    {
+      "decision": "Who owns this, and does the organisation fund the cheap half? The programme only works if it is booked against the SS28 assortment as a naming, laddering and legibility action - if it is handed to a development budget, Nike ends up paying per-colourway test cost for a feature a private label already ships at a price the shelf has already refused.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Ownership, budget line and the discipline to keep a de-scoped programme de-scoped are organisational facts. The engine has watched three specialist domains independently propose a product Nike already ships; it has no visibility into which function would take this on or whether a merchandising action survives contact with a development calendar. This is the portfolio's stated key dependency for OPP-02."
+    },
+    {
+      "decision": "Is the sun story on the wrong garment? If the high-exposure zones in basketball are the ones clothing does not reach and UPF sleeves are already culturally accepted while UPF shorts are not, the category-correct UPF hero may be a top or sleeve Nike already sells.",
+      "judgment_type": "product taste / brand context",
+      "why_machine_cannot": "The engine can lay out the epidemiology, the exposure zones and A06-S7's own note on cultural acceptance. It cannot decide what a basketball consumer will read as credible or as try-hard on a leg versus an arm, or whether Nike Basketball wants a sun story at all. That is taste, and it is exactly the judgement the design chair was spawned to make and did not resolve."
+    }
+  ],
+  "if_selected_next_step": "If the human PLM / Design team selects OPP-02, their call would be to commission the de-scoped programme only - name and ladder FN2659 (add a knee-clearing 9\" and a boys' 5\", extend the women's block, build the COURT RATED legibility system, hold price) against the SS28 assortment rather than a development budget, with the two free reads run first: Nike's list-versus-realised ASP and markdown by SKU, inseam and region for eight quarters, and the eight-quarter Nike AU sell-through pull from Rebel, JD AU and Foot Locker AU that OPP-04 was folded into.",
+  "do_not_proceed_note": "DO NOT PROCEED. No product briefing, concept development, fit-block work, certification testing, naming exploration or supplier engagement may begin on OPP-02 until a human PLM / Design decision-maker has selected it. This gate is a decision package, not an approval: the opportunity carries a chair composite of 55.5 and a red-team-adjusted confidence of 40, down from 62, with three of its load-bearing assertions - the certification moat, the price step and the feature-composition novelty - broken by live retrieval. It survives only in the de-scoped form above, and every price and every inseam in this file is unanchored to first-party data. The three named non-funded items - the wet-and-stretched certification programme, the USD 55 / AUD 75-80 price rung and per-colourway test election - must not be reinstated by implication if this is selected."
+}

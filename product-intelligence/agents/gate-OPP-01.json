@@ -1,0 +1,143 @@
+{
+  "id": "OPP-01",
+  "name": "Like-Colored",
+  "portfolio_category": "REJECT",
+  "portfolio_rank": 7,
+  "overall_score": 30.0,
+  "confidence_at_development": 52,
+  "confidence_after_challenge": 26,
+  "red_team_verdict": "survives = false (the only opportunity the red team declared dead); unanimous REJECT across all three rankers",
+  "what_the_machine_knows": [
+    {
+      "statement": "NFHS Rule 3-4-5 requires uniform bottoms to be like-coloured while permitting teammates to wear different STYLES (shorts, skirts, pants) without a state-association accommodation request, and its published rationale is explicitly about making it easier for coaches and ADs to address individual athlete needs WHEN ORDERING UNIFORMS. It dates to the 2023-24 rules cycle (announced 15 May 2023), NOT 2025-26 as the synthesis claimed - the development agent broke its own why-now and the challenger independently re-confirmed the date from NFHS and KHSAA sources.",
+      "signal_ids": ["A06-S3"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "NFHS regulates tights as a separate accessory class keyed to the JERSEY - permitted only in white, black, beige or the predominant jersey colour, identical across teammates - so the legally binding colour pairs are short-to-pant and jersey-to-tight. The spec's headline engineering tolerance (dE <= 1.0 short-to-tight), which it calls 'the entire product', is therefore engineered against a pair no cited rule regulates, and for most rosters the compliant tight is black, white or beige.",
+      "signal_ids": ["A06-S3"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The trade channel was explicitly briefed on the rule change: the National Sporting Goods Association published a dealer-facing article in 2023 titled 'Player Uniforms, Apparel Impacted by High School Basketball Rules Changes for 2023-24'. Three full ordering cycles have therefore passed with the rule known to dealers and no evident stock product from any brand.",
+      "signal_ids": ["A06-S3"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Basketball is a lateral-load sport - up to roughly 450 lateral movements and 42-56 jumps per game, 31% of game actions lateral shuffling, an activity change every 2-4 seconds - confirmed against a Sports Medicine 2017 systematic review and a 2022 MDPI study of 140 professional and collegiate players. This is the best-evidenced signal in all 58 and it survived both its skeptic and the red team untouched; it makes 'validate fit in a defensive stance, not standing' a spec rather than a preference.",
+      "signal_ids": ["A06-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike's own closest existing garment, the Pro Dri-FIT Men's 3/4-Length Tight, lists at USD 37 and street-prices USD 26.97-32.00 - at or BELOW the USD 30-36 team-dealer NET the spec proposes. A no-minimum custom supplier also exists (custom basketball leggings from USD 47.88, no minimums, free US shipping), so neither the price argument nor the minimum-order switching argument holds as written against the USD 41.99 / 8-unit Hoops King ceiling the spec set.",
+      "signal_ids": ["A06-S3", "A04-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The addressable ROSTER base is real and countable - 540,704 boys and 356,240 girls in US high-school basketball (NFHS 2024-25 participation survey) - but the addressable NEED (the subset of athletes wanting a bottom other than the team short) has never been counted by anyone in this base or in anything the pipeline could reach. The spec's own what_we_still_dont_know concedes it.",
+      "signal_ids": ["A04-S9", "A05-S8", "A02-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The channel signal carrying the entire commercial thesis contains NO basketball-shorts data of any kind. Its revenue base is contradicted (Moody's ~USD 2.7B for the twelve months to September 2025 against the USD 2.3B youth-sports-blog figure), an unresolved USD 633M BSN discrepancy sits in the file, and neither the USD 75M club/select figure nor the USD 5B segment size could be corroborated anywhere. Nike's own realised markdown rate on team-channel basketball bottoms is unknown to this analysis.",
+      "signal_ids": ["A04-S9", "A04-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike's channel mix has genuinely inverted - FY26 wholesale USD 27.5B up 6% against Nike Direct USD 17.7B down 6%, with Nike Digital down for ten consecutive quarters - so a bookings-led dealer programme is directionally aligned with where Nike's business is moving. This is the strongest structural fact supporting the opportunity and it is independently reproduced on both sides.",
+      "signal_ids": ["A04-S1", "A02-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "PATTERN across the pipeline: the systemic failure of all seven specialists, flagged identically by all seven skeptics, was proposing product Nike already ships. OPP-01 is the clearest instance - four converging sources indicate Nike Team Sports already structures basketball Bottoms as Shorts / Pants / Tights & Capris, BSN already lists the Nike Pro 3/4 Length Tight as a team SKU, that tight already ships in Team Navy / Team Royal / Team Maroon, and Nike Team Sports already publishes a cross-style stock colour chart. Under Armour closes the same door from the competitor side with stock team colourways plus custom team leggings.",
+      "signal_ids": ["A04-S9", "A06-S3", "A02-S4"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "Coverage is currently priced as cheapness on Nike's own ladder: the longest and most size-inclusive men's SKU (DNA Academy 11 inch, incl. Big & Tall) is also the cheapest at roughly USD 37, while the 6 inch sits at USD 65 and the 10 inch discounts around 38%. A USD 45-50 retail Roster Short would land between the 11 inch and Standard Issue 8 inch and below every women's basketball short Nike sells (USD 55-80).",
+      "signal_ids": ["A02-S4", "A02-S5", "A03-S6"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "No price anywhere in this evidence base is anchored to a retrieved Nike price file, in any geography, and three mutually incompatible Nike price ladders coexist in the base. Every price and every inseam figure in this brief is unanchored.",
+      "signal_ids": ["A02-S4", "A02-S5", "A04-S8"],
+      "classification": "FACT"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The opportunity as specified is not new product - it is a merchandising page Nike never built plus a make-quality standard Nike should have written anyway. The next dollar would buy SKUs Nike already sells, at team-dealer net prices above its own street price for the nearest existing piece.",
+      "basis": "Challenger kill attempts 1, 4 and 6 all returned 'fatal' on this axis, converging from four independent sources (Nike Team Sports category tree, BSN product titles, Nike Pro HyperCool team colourways, NTS cross-style colour chart), plus the spec's own admission in competitive_reference_points that 'the gap between this SKU and the opportunity is merchandising, colour library and channel, not capability'.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "Three ordering cycles of dealer-briefed silence is more likely a market verdict than an unnoticed whitespace - i.e. brands judged their existing bottoms ranges already adequate to the rule.",
+      "basis": "The NSGA briefed dealers in 2023; the NFHS rationale explicitly anticipated the ordering behaviour; and Nike, adidas and Under Armour all already carry stock team-colour compression and full team bottoms categories. This is an inference to the most economical explanation, not an observation - nobody has asked a coach or a dealer.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "If the compliant tight for most teams is black, white or beige, the twelve-colour tight library at the heart of the SKU matrix is legally unusable for the majority of rosters, and even a HIGH sub-elite layering rate would generate demand for a black tight Nike already sells at USD 37 rather than for a colour programme.",
+      "basis": "Challenger kill attempt 2 read against A06-S3's own tights-colour clause. Rated 'weakens' rather than 'fatal' because the NFHS interpretation has not been requested in writing; the spec acknowledges the clause in one sentence and then builds the opposite architecture.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The layering premise the tight SKUs depend on is unmeasured rather than contested - no basketball-specific prevalence figure exists at high-school, club or college level anywhere in the reachable literature. If sub-elite prevalence is below roughly 10% of a roster, the system collapses to a short.",
+      "basis": "A06-S6's 'nearly every starter' claim traces to an annually re-dated SEO guide; the only quantitative survey (BMC, n=512) is 88.1% endurance athletes, running-dominant; the auditor reclassified the basketball-population claim to HYPOTHESIS.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The liner economics are where the P&L most likely breaks. The lined short must remain in the line for non-layering players, so the linerless short is an ADDITIONAL SKU, the liner deletion funds nothing, and SKU count rises in a programme whose entire pitch is order-form simplicity.",
+      "basis": "The development agent found this itself and flagged it at medium severity as 'the single most likely place the P&L breaks'; the challenger rated the feasibility attack 'survives' but only because the colour capability is feasible-and-therefore-not-differentiating.",
+      "confidence": "High"
+    },
+    {
+      "statement": "One genuine residue survives the kill: no major brand appears to stock a LOOSE full-length basketball GAME PANT on the short's block - the single silhouette Rule 3-4-5 most directly legalised - and the underlying coverage / modest-dress need is rated SUSTAINED by the auditor despite stale evidence (Griner 2014, Asiya prototypes 2015). Paired with a knee-clearing size-grade certification and a printed 20-wash seam-and-shrinkage spec, that is a team-catalogue merchant's ticket, not an SS28 line slot.",
+      "basis": "Challenger's own narrative and adjustment_rationale; A05-S8 auditor rating; A01-S3 and A04-S6 supply the only reproducible consumer complaint in 58 signals (Icon+ 6 inch at 3.9 stars, 67% recommending across 64 reviews).",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The kill itself is less certain than the score implies. The central finding rests on search-snippet reads of six egress-blocked domains (niketeam.nike.com, bsnsports.com, midwaysports.com, elevationsports.com, nsga.org, mhsaa.com) - four independent snippets agree and 'Team Navy / Team Royal / Team Maroon' is hard to produce by accident, but not one page was retrieved.",
+      "basis": "Challenger's stated limit on his own attack, repeated in the chair's rationale: 'a ten-minute direct look at the Nike Team Sports and BSN catalogues could move this more than anything else in this ranking.'",
+      "confidence": "High"
+    },
+    {
+      "statement": "The programme has zero exposure to SS28's named priority geography and unverified legality in its only named secondary market. Greater China is explicitly assigned no role; Australia is FIBA-aligned and FIBA's multiple-styles position is unconfirmed (assets.fiba.basketball was egress-blocked); France's hijab ban makes the modest-dress leg a non-market in federated play there.",
+      "basis": "Challenger kill attempt 9; A02-S9, A03-S5, A05-S8, A04-S2, A02-S2. Whether that matters is a strategy call, not an evidence question - the SS28 spaces were given as context, not constraints.",
+      "confidence": "High"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Whether to spend ten minutes opening niketeam.nike.com and the BSN Sports catalogue directly before accepting or overturning this REJECT. The entire kill - and therefore the rank-7 placement - rests on snippet reads of egress-blocked domains that a human with an unrestricted connection and a dealer login can settle definitively.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "The machine is egress-blocked from every one of the six domains its own kill depends on. It cannot retrieve the pages, and it has no dealer credentials, no access to Nike Team Sports SKU exports, dealer nets, size grades or FY24-FY26 units. This is the one input that could move the decision more than anything else in the ranking and it is unavailable to the engine by construction."
+    },
+    {
+      "decision": "Whether the surviving residue - one loose full-length game pant on the short's block, a knee-clearing size-grade certification, and a printed 20-wash seam-and-shrinkage spec - is routed to the team-catalogue merchant as a ticket, folded into OPP-08 and the OPP-07 women's block work as an input, or dropped entirely.",
+      "judgment_type": "product taste / organizational knowledge",
+      "why_machine_cannot": "This is a question about how Nike's own line-planning, team-sports and consumer-retail organisations divide work and absorb small inputs. Nothing in 58 signals describes Nike's internal ownership boundaries, and the machine cannot know whether a single-silhouette catalogue addition is a five-minute conversation or a nine-month programme inside this organisation."
+    },
+    {
+      "decision": "Whether serving coverage-first and modest-dressing athletes is a commercial decision at all, or a brand-values commitment Nike makes regardless of whether the need is ever sized. The evidence base has never sized this population in any market, and the incumbent serving it (Asiya, roughly a decade of product, Muslim-owned and woman-owned) makes 'does a Nike entry read as service or as displacement' a live question.",
+      "judgment_type": "brand context / creative ambition",
+      "why_machine_cannot": "This is a values and brand-posture judgement with no numerator. The machine can establish that the need is sustained and unsized (A05-S8) and that an incumbent exists; it cannot decide what Nike owes a consumer it has not counted, nor how a Nike entry would land culturally against a community-founded incumbent."
+    },
+    {
+      "decision": "Whether the enabling rule (A06-S3) - primary, dated, independently re-verified, and the best-evidenced material in the base - is worth carrying forward as an INPUT to other briefs even though the opportunity built on it is dead. The chair recommends routing it into OPP-08 and the OPP-07 block work; that routing is a portfolio call, not an evidence call.",
+      "judgment_type": "strategy",
+      "why_machine_cannot": "The engine stops at the gate and cannot commit work to other briefs. Whether a compliance fact earns space inside a coverage-first or women's-block programme depends on those programmes' own scope decisions, which are also awaiting human selection."
+    },
+    {
+      "decision": "Whether a product that 'produces no image' can survive Nike's own line-review process - the development agent's explicit warning was that this must be funded BEFORE it is ever presented visually, or it will lose the room to anything with a hero shot.",
+      "judgment_type": "organizational knowledge / product taste",
+      "why_machine_cannot": "How Nike's line reviews actually adjudicate architecture plays against hero product is institutional behaviour no dataset in this pipeline observes. The machine can flag the risk; only people who have sat in those rooms can price it."
+    },
+    {
+      "decision": "Whether to accept the chair's unanimous REJECT of the SS28 line slot at all, or to re-open it as a narrow EXPLORE gated on the catalogue check. All three rankers voted REJECT, but on a confidence score of 20 - the second-lowest on the board - built on unretrieved pages.",
+      "judgment_type": "strategy / intuition",
+      "why_machine_cannot": "The machine has already recorded the disagreement between its own kill and its own uncertainty about that kill; resolving 'low score, low confidence' into an act-or-drop decision is a risk-appetite judgement, and appetite is not in the evidence."
+    }
+  ],
+  "if_selected_next_step": "If the human PLM / Design team overrides the REJECT and selects OPP-01, the first and only funded action should be the human's call to open the Nike Team Sports and BSN Sports basketball catalogues directly (plus the adidas Team and Under Armour Team equivalents) and export every bottoms SKU with colourway list, dealer net, size grade and FY24-FY26 units - 1-2 days, effectively zero incremental cost - because that single check decides whether this is a product opportunity or a merchandising ticket, and nothing else in the validation plan should be commissioned before it returns.",
+  "do_not_proceed_note": "The engine STOPS here. No product briefing, concept development, design work, costing, sampling, colour trial, dealer conversation or SS28 line-plan entry may proceed on OPP-01 - or on any other opportunity in this portfolio - until a human PLM / Design decision-maker selects an opportunity. OPP-01 in particular carries a REJECT at rank 7 with a red-team verdict of survives=false and an adjusted confidence of 26, and its central kill is itself unverified against retrieved pages; do not treat either the rejection or the residue as settled, and do not present any figure in this brief as a confirmed Nike price, inseam or market size."
+}

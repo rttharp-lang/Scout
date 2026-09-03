@@ -1,0 +1,185 @@
+{
+  "id": "OPP-07",
+  "name": "The Other Half",
+  "portfolio_category": "INVEST",
+  "portfolio_rank": 1,
+  "confidence": {
+    "at_development": 61,
+    "after_red_team": 41,
+    "chair_confidence_score": 58,
+    "note": "The red team took 20 points off and the chair still ranked it first at 68.8. That gap is the decision: highest-ranked item, mid-range confidence. Rank and confidence disagree here on purpose - rank measures the value of the demand pool and Nike's exclusivity, confidence measures how well-evidenced the PRODUCT conclusion is."
+  },
+  "what_the_machine_knows": [
+    {
+      "statement": "Women's basketball demand is durable rather than spiky: 2026 was a third consecutive record WNBA season on a per-game basis (approx. 11,381 average across 59 games, vs 10,986 in 2025 and 9,807 in 2024), the All-Star Game drew 19,783 at the United Center and outdrew the NBA's for the first time, and the league reported 73 million unique viewers at the halfway point - achieved with Caitlin Clark sidelined for much of the season, which stress-tests the single-athlete concentration risk in the field.",
+      "signal_ids": ["A05-S1", "A05-S7", "A04-S5", "A01-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Live women's basketball event retail converts at the till at a measurable scale: Unrivaled's Philadelphia stop on 30 January 2026 drew 21,490 (a professional women's regular-season record) and generated roughly USD 1M in tickets plus USD 400,000 in merchandise in one night, with season ticket revenue +204% and tickets sold +249%. A05-S7 is VERIFIED.",
+      "signal_ids": ["A05-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The labour risk that was live when the source files were written has cleared: a seven-year WNBA CBA covering 2026-2032 has been ratified with the 2026 team salary cap at approximately USD 7.0M, up roughly fivefold and adjusting annually with revenue. A line planned to a women's basketball calendar now has a seven-year calendar.",
+      "signal_ids": ["A04-S5", "A05-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The opportunity's own stated kill condition is already met, in the wrong direction. The brief says 'if the fixture change cannot be secured, the product should not be made, because the fixture IS the opportunity' - but a dedicated Ladies WNBA Shorts fixture already exists at the largest fan retailer, inside the same storefront as the jerseys, and is stocked substantially with Nike product: Legends Flow Mesh USD 74.99, Legends Relaxed Fit Fleece USD 74.99, 2026 On-Court Dri-FIT Victory USD 84.99, Logowoman Team 13 Crossover USD 49.99, Team 13 Tri-Blend 8in biker USD 79.99; Nike's own WNBA pages carry Victory knee-length USD 85, Basketball Fleece USD 75, Crossover WNBA USD 60; and Rebel Fanwear shorts have been in fan doors since 8 May 2026. CAVEAT ON EVIDENCE GRADE: every retail domain was egress-blocked in the challenge session, so all of these are search-result summaries, not retrieved product pages - confirmable by one buyer walking one Dick's fan wall in an afternoon.",
+      "signal_ids": ["A03-S6", "A03-S4", "A02-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike is not entering an empty category. Nike already ships ISoFly, Crossover, Fly Crossover, Sabrina, Sabrina 4 Aero-FIT, WNBA Victory and WNBA Rebel Fanwear women's shorts, plus a plus-size Sabrina SKU (FB8427), and the Caitlin Clark apparel collection already pairs a logo tee with a logo short. Three specialist opportunities in this pipeline claimed the women's category was empty and all three were rejected on audit for exactly this reason.",
+      "signal_ids": ["A03-S6", "A03-S4", "A07-S6"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The proposed USD 65-75 rung is contradicted on BOTH walls. Nike's own Sabrina Dri-FIT Reversible at a USD 65 list was observed clearing at USD 42.97; the fan wall the brief uses as its higher anchor is itself discounting 25-45% with codes (Logowoman Crossover USD 34.97 from USD 49.99; Tri-Blend biker USD 55.99 from USD 79.99; On-Court Victory USD 45.49-64.99 from USD 84.99). The fan fixture raises the LIST ticket, not the realised take.",
+      "signal_ids": ["A03-S6", "A04-S4", "A03-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "There is no rising tide to price into: Nike FY2026 apparel was USD 13.4B, +2% currency-neutral on units +1%, with ASP contributing about 1 point sourced from product mix and already partially offset by higher discounts and channel mix - against roughly USD 1.5B of annualised tariff cost and 120bp of FY26 gross-margin headwind. In a +1% unit environment a fourth women's fan short is substitutional unless it demonstrably adds a buyer.",
+      "signal_ids": ["A03-S9", "A04-S8", "A04-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The channel is moving toward the doors this product needs: Nike wholesale grew 4% in Q4 and full-year FY26 while Nike Digital declined for a tenth consecutive quarter, and the retailer that now owns both Dick's and Foot Locker publicly attributed a basketball recovery to women's basketball across both banners on his own earnings call, describing the buyer as 'boys and girls, young men and women'. A02-S7 is VERIFIED; A04-S5's surviving content is the dated first-party quote, not its numbers.",
+      "signal_ids": ["A02-S7", "A04-S5", "A04-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike's licence position on both halves of the outfit is exclusive: it designs and supplies the WNBA on-court uniform including the 2026 Rebel Edition programme, holds Sabrina and A'ja Wilson signature lines, adds Caitlin Clark, and put Aero-FIT on a women's-athlete-led signature short and jersey first (17 July 2026). Mitchell & Ness holds a retro fan bottom at USD 80 with no current on-court top; Fanatics distributes at scale but does not design the block; adidas and Puma hold no WNBA on-court licence.",
+      "signal_ids": ["A03-S4", "A03-S6", "A07-S6", "A05-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike's standing with this exact consumer is falling, not rising. Piper Sandler spring 2025 (n=6,455 teens) showed a 13-point drop in female mindshare with female share under 40% for the first time since 2020; the widely-quoted 49% is FOOTWEAR mindshare while teen APPAREL mindshare is 26%; fall-2025 coverage attributed the subsequent stabilisation to the MALE upper-income bracket while stating share among girls was still declining. The spring 2026 wave exists and was never consulted.",
+      "signal_ids": ["A01-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "PATTERN across five domains that share no source: culture (A05-S7 verified event economics, A05-S4 platform search behaviour, A05-S1 supply-chain read), commercial (A04-S5 a retailer chairman's first-party call-out), marketplace (A02-S9 registry participation in a second country with no connection to any US league; A02-S7 verified wholesale swing), consumer (A01-S1 a large teen panel) and product (A03-S6 the actual reported use occasion of an existing SKU) all point the same direction on DEMAND and the opposite direction on the PRODUCT conclusion three specialists drew from it. This is the only signal in the whole pipeline the cross-dataset audit made STRONGER rather than weaker.",
+      "signal_ids": ["A05-S7", "A05-S4", "A05-S1", "A04-S5", "A02-S9", "A02-S7", "A01-S1", "A03-S6"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "PATTERN: the evidence base cannot answer the question this opportunity turns on. There is no first-party Nike commercial data anywhere in the base - no shorts unit share by inseam, no realised ASP, no markdown rate by door, no size-curve fill, no return reasons, in any geography, for either gender - and no measurement anywhere of bottoms as a share of women's basketball fan merchandise. Public-web queries on the question surface Accio (an Alibaba AI B2B sourcing engine) SEO pages, the same laundering path the audit identified behind A04-S5's struck numbers.",
+      "signal_ids": ["A04-S8", "A02-S7", "A04-S5", "A05-S1"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "PATTERN: the cultural attribution is pan-sport, not basketball. The strongest term in the base is 'female jersey outfit' at +494% - a TOPS term - and the same Pinterest Summer 2026 report shows 'Formula 1 aesthetic outfit' +483%, 'Brazil jersey outfit women' +302% and 'baddie tracksuit outfit' +276%, all growth rates on undisclosed absolute bases, on a female-skewing search-and-save index rather than purchase data. The cross-dataset auditor's instruction was explicit: preserve the general sport-as-fashion finding and DISCARD the basketball-specific inference.",
+      "signal_ids": ["A05-S4", "A05-S1"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "PATTERN: the evidence base is one country. Roughly 48% of surviving signals are US-primary and closer to 70% once US-derived 'Global' signals are attributed. Europe is the primary market of zero signals here, Latin America of none; A02-S9 (Australia) is the only registry-grade non-US evidence and it measures PARTICIPATION, not fan merchandise. Greater China is excluded at launch by the brief's own reasoning (GC -13% currency-neutral in FY26, apparel units -8%, Topsports ceasing Nike online sales by January 2027, and not one retrieved Chinese price in the base).",
+      "signal_ids": ["A02-S9", "A02-S2", "A04-S2", "A02-S7"],
+      "classification": "PATTERN"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The demand pool is real and the fixture premise is dead, so what remains of OPP-07 is a BLOCK-AND-PROPORTION input - a women's high-rise, untapered, jersey-tucking block - routed into programmes Nike is already funding (Clark, A'One, Sabrina, Rebel Edition), not a new franchise. This is also where the cross-dataset auditor sent the analogous residual of the rejected A01-O2.",
+      "basis": "The one claim the red team never attacked is that none of the incumbent Nike women's fan shorts - Legends Flow Mesh, On-Court Victory, Logowoman Crossover, Rebel Fanwear, Sabrina - is built on a high-rise jersey-tucking women's block, while every other pillar of the brief (fixture, price, novelty) was falsified. All three orchestrator lenses and the challenger converged on the same de-scoped shape.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The USD 65 core / USD 75 drop rung should not be carried forward at all. It should be costed to survive at USD 50-55, and no price should be treated as a recommendation until Nike's internal list-vs-realised ASP and markdown rate by door are pulled.",
+      "basis": "The rung's only support was a comparison-set argument that the fan wall realises higher prices; the fan wall discounts 25-45% with codes, the same or worse than the USD 42.97-from-USD-65 Sabrina markdown the brief itself calls its most important price fact. Three mutually incompatible Nike price ladders coexist in the base and not one price was confirmed against a retrieved page (A03-S9, A04-S4, audit).",
+      "confidence": "High"
+    },
+    {
+      "statement": "The two decisive tests are free and internal, and they are BETTER instruments than the ones the brief proposed: (1) Rebel Fanwear short and Caitlin Clark short weekly sell-through by door and by size, full-year FY26 rather than a snapshot, plus jersey-plus-bottom basket analysis; (2) bottoms as a share of women's basketball fan merchandise units. The brief's proposed instrument - splitting the Unrivaled Philadelphia USD 400,000 night by category - is n=1 at a privately-held two-season league to whose category receipts Nike has no stated contractual right.",
+      "basis": "Rebel Fanwear (8 May 2026) is the closest live in-market test of this exact thesis, Nike owns the number, and it appears in none of seven specialist files. The challenger's validation plan and the chair's key dependency independently name the same two pulls.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The strongest single first-party commercial signal in this stack argues against the brief's central construction decision. If the volume buyer is materially cross-gender, the right product is a UNISEX fan block offered in a women's size run - which Nike already ships (Legends Relaxed Fit Fleece, Logowoman Team 13 reversible, both listed unisex) - not a women's-graded block. This fork is deliberately NOT closed anywhere in the pipeline.",
+      "basis": "Ed Stack, Dick's Q1 2026 call, first full quarter owning Foot Locker: 'boys and girls, young men and women are buying that product' (A04-S5). The brief places this in what_we_still_dont_know while simultaneously building the whole product on a women's-specific block. Recorded as portfolio disagreement D-09.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The jersey-outfit-implies-a-bottom inference is the load-bearing hypothesis of the entire opportunity and it is unobserved. The competing reading - that this is a general athletic-shorts fashion cycle in which the buyer pairs the jersey with any short she likes and a jersey-matched bottom earns no premium - is actively supported by the reported success of DENIM shorts and bedazzled shirts at the Indiana Fever and Golden State Valkyries, a fan-lifestyle purchase with no matching logic at all.",
+      "basis": "A05-S4 and A05-S1 read literally argue for tops; the Klarna / Sports Innovation Lab 'Rep Her' evidence the brief leans on measures merchandise AVAILABILITY and STOCK (60%+ did not buy because product was out of stock; 79% cite variety/availability/quality gaps) and is headlined on shirts, containing no bottoms-versus-tops evidence. If anything it argues for deeper buys of what already exists.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "This is the only surviving item that sits squarely inside a named SS28 priority space (Women's Revolution) - and it does not serve Worldball Innovation at all, should exclude Greater China at launch, and serves Uniform of Youth only incidentally. It should be presented that way rather than stretched to cover spaces it does not cover.",
+      "basis": "The brief says so explicitly and the audit's geographic-bias finding supports it. Portfolio observation: only OPP-07 sits inside a named space; the two highest-confidence items (OPP-03 at 62, OPP-08 at 50) sit outside all three by their own admission.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The supply-desert first-mover window is closing or already closed. The founding '1 piece of women's merchandise for every 9 men's' statistic dates to July 2024 and is being re-quoted as current, while the fan-bottoms slot visibly filled between May 2026 and today. An SS28 delivery arrives 18-24 months after the gap was identified - as a fast-follower into its own category.",
+      "basis": "ASI Central July 2024 framing vs the 2026 Fanatics/Nike/WNBAStore assortment; Nike's own three women's signature apparel programmes plus Rebel Fanwear plus two 2026 expansion clubs plus a wave of women's-sports DTC labels are filling it in real time.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "Cannibalisation, not market creation, is the likeliest commercial outcome if this is funded as a franchise: a new women's fan short would split demand three ways against Clark, Sabrina and Rebel Edition programmes already funded, in a +1% unit environment, and would land in the middle of a USD 60-85 rung Nike already occupies across mesh, fleece and knee-length.",
+      "basis": "A03-S9 unit growth; the Nike WNBA fan assortment at USD 60-85; the portfolio-level observation that four of eight briefs propose product against the same rail and that any two funded without an explicit adjacency plan buy the same demand twice.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The brief's execution spec is heavier than its evidence can carry and should not survive into any funded scope as written: two inseams x two fabric faces x XS-3X-plus-tall x a four-colour core x jersey-matched Rebel and All-Star drops x one event-exclusive colourway per Unrivaled tour stop, on a garment costed to survive at USD 55, with three separate bonding operations and a 200-230 g/m2 target that has no measured baseline anywhere.",
+      "basis": "The spec concedes nobody has established the GSM of any current Nike basketball short. Event-exclusive colourways at a two-season startup league's arena volumes are a minimum-order-quantity problem. This also contradicts A02-S7's own VERIFIED conclusion, which the brief cites approvingly: build shorts line plans for wholesale sell-through with a replenishable core rather than drops.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The 7-inch / 9-inch ladder is a designer's judgement, not an evidence-backed length decision, in either direction. Inseam direction is unresolved across the entire pipeline (D-08) and unit share by inseam appears nowhere in seven specialist files, three skeptic rounds or the audit, in any market.",
+      "basis": "A05-S8 is classified HYPOTHESIS and rests on one athlete quote plus two modest-dress stories; A01-S8, A01-S4 and A05-O1's '6-inch standard' premise were all REJECTED on sourcing; A07-S6's women-default-to-6-inch note is a manufacturing convention, not a preference.",
+      "confidence": "High"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Whether 'the other half of a Nike jersey' is a proposition Nike wants to own as a stated design idea at all - or whether, now that the fixture premise is falsified, the residue is too small to be worth a Council slot in the one named SS28 priority space.",
+      "judgment_type": "creative ambition / brand context",
+      "why_machine_cannot": "The machine can establish that the fixture is already built and stocked with three Nike shorts, and that none of them is built on a high-rise jersey-tucking block. It cannot judge whether that remaining gap is a proposition worth a brand's ambition or a proportion revision worth a line-plan footnote. That is a question about what Nike wants to be seen making, and nothing in 58 signals measures it."
+    },
+    {
+      "decision": "Women's-graded block versus unisex fan block in a women's size run. The pipeline deliberately left this fork open (disagreement D-09).",
+      "judgment_type": "product taste / organizational knowledge",
+      "why_machine_cannot": "The single strongest first-party commercial signal in the stack (Ed Stack: 'boys and girls, young men and women') argues unisex; the brief, the challenger and two of three rankers assume women's-graded. There is no data in the base on either side, and averaging the two would produce a garment nobody specified. Only someone who has seen Nike's own fit-block architecture, pattern library and grading economics can weigh what a second block actually costs the organisation."
+    },
+    {
+      "decision": "Whether to spend the SS28 line slot on Women's Revolution at all, given that the machine's own top-ranked item is a de-scoped input rather than a franchise, and that the two highest-CONFIDENCE items on the board (OPP-03 at 62, OPP-08 at 50) sit outside all three priority spaces.",
+      "judgment_type": "strategy",
+      "why_machine_cannot": "This is a weighting choice between newness and certainty, and the pipeline preserved rather than resolved it (D-07): on the commercial planner's weights OPP-03 wins; on the design director's, OPP-07 wins by 25 points; on the chair's, by 9.8. Anyone re-weighting toward certainty legitimately reverses the top two. The machine cannot know what the SS28 line review needs to be able to show."
+    },
+    {
+      "decision": "Whether Nike's falling standing with this exact consumer (teen female mindshare -13 points, apparel mindshare 26%, share among girls still declining) is a reason to invest harder here or a reason not to lead with this consumer in SS28.",
+      "judgment_type": "brand context / strategy",
+      "why_machine_cannot": "The same fact reads both ways and the evidence cannot arbitrate: it is either the problem this opportunity exists to fix, or evidence that Nike will not win a fan-fashion occasion with a cohort that is currently moving away from it. The spring 2026 Piper Sandler wave exists and was never consulted, so even the current level is stale. Which reading to act on is a brand-health call held by people who know what else is being done for this consumer."
+    },
+    {
+      "decision": "Whether the fixture and adjacency ask - product hanging beside the jersey in a fan door, held for a full season - can actually be secured from Dick's and Foot Locker, and at what cost to other Nike asks in the same account conversation.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "The machine can read that the fan fixture exists and is occupied by Nike product. It cannot know what the account team's current leverage is, what was traded to get the existing placement, or what a fixture request costs against everything else on the joint business plan. That knowledge is in the account team's head and in no dataset."
+    },
+    {
+      "decision": "Whether to confirm the red team's kill shots before acting on them. Every retail fact in the challenge is a search-result summary from an egress-blocked domain; the challenger says so and says the confirmation is one buyer walking one Dick's fan wall in an afternoon.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "The machine cannot retrieve the pages and cannot walk the wall. It can only flag that the case for de-scoping - which is the difference between funding a franchise and funding an input - rests on evidence of the same grade the audit warned about, and that the cheapest correction is physical, not analytical."
+    },
+    {
+      "decision": "How much price erosion Nike is willing to accept to be present in this occasion - i.e. whether a women's fan bottom costed to live at USD 50-55 is a business worth having, or whether the right answer is deeper buys of the shorts already in the fixture.",
+      "judgment_type": "strategy / product taste",
+      "why_machine_cannot": "The machine has no realised ASP, no markdown rate by door, and no cost sheet. It can prove the USD 65-75 rung is contradicted on both walls; it cannot compute the floor at which this remains a business, and the Klarna 'out of stock' finding gives a genuinely competing answer (buy the existing assortment deeper) that only a merchant can weigh against a new make."
+    },
+    {
+      "decision": "Whether to route the surviving block work into an existing programme (Clark / A'One / Sabrina / Rebel Edition) or hold it as its own line item - and, if routed, who owns it.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Both the challenger and the cross-dataset auditor recommend routing it as an input to existing programmes. Whether an input actually gets built when it belongs to someone else's brief is a question about how this organisation behaves, not about the evidence."
+    },
+    {
+      "decision": "Whether an occasion this US-specific should sit in a global SS28 line at all, given the base is roughly 70% US-derived, Europe is the primary market of zero signals, and Greater China - the stated Worldball priority - is excluded here by the brief's own reasoning.",
+      "judgment_type": "strategy / organizational knowledge",
+      "why_machine_cannot": "The machine has named the geographic inversion but cannot correct it: it holds no European women's-basketball apparel read and no Chinese price or sell-through datum. Whether a US-led programme is an acceptable use of a global line slot is a portfolio judgement about where Nike's next dollar of growth has to come from."
+    }
+  ],
+  "if_selected_next_step": "If the human PLM / Design team selects OPP-07, their call is to commission the two free internal pulls first - Rebel Fanwear and Caitlin Clark shorts sell-through (weekly, by door and by size, full-year FY26, with jersey-plus-bottom basket analysis) and the bottoms share of women's basketball fan merchandise units - alongside a one-afternoon physical fan-wall audit to confirm the red team's egress-blocked retrieval, before any block development, tooling, price file or SKU matrix is authorised.",
+  "do_not_proceed_note": "The engine stops here. No product briefing, concept development, block work, pricing, SKU architecture or Council material may proceed on OPP-07 until a human PLM / Design owner selects it. Three specific things must NOT be carried forward if it is selected: the USD 65-75 price rung (contradicted on both walls and unanchored by the audit's own instruction), the fixture ask (the fixture is already built and already stocked with Nike product - the opportunity's own stated kill condition is met in the wrong direction), and the six-dimensional SKU matrix. The women's-graded versus unisex block fork (D-09) and the inseam direction (D-08) are recorded as unresolved and must not be silently decided by whoever picks this up. A ranking of first is not an approval, and a red-teamed confidence of 41 is not a mandate."
+}

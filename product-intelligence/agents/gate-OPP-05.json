@@ -1,0 +1,146 @@
+{
+  "id": "OPP-05",
+  "what_the_machine_knows": [
+    {
+      "statement": "EU Directive (EU) 2024/825 (EmpCo) applies from 27 September 2026 - roughly three weeks after this analysis - across all 27 member states, with no transition period for products already on the market and fines up to 4% of annual turnover in the relevant member state. It bans generic environmental claims and self-created sustainability labels. The red team searched specifically for a delay, an omnibus carve-out or a postponement and found none; it also found that many member states missed the 26 March 2026 transposition deadline, so day-one national enforcement will be patchy. This is the single cleanest why-now in the whole portfolio and it holds.",
+      "signal_ids": ["A03-S5", "RT-OPP-05-EMPCO-DATE"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The instrument that would have FORCED substantiation - the Green Claims Directive - was withdrawn in June 2025 over SME-burden concerns. What survives, EmpCo, amends the Unfair Commercial Practices Directive to PROHIBIT unsubstantiated claims. It is a prohibition regime, not a substantiation regime: nothing in EU law obliges any brand to publish a number, so the cheapest compliant response is to delete the sentence. The regulation therefore produces an industry floor, not a Nike asymmetry. This is retrieved red-team web evidence, not a digest signal, and it inverts the opportunity's central moat claim.",
+      "signal_ids": ["RT-OPP-05-GREENCLAIMS-WITHDRAWN", "A03-S5"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Every competitor basketball short documented in the base carries exactly the claim language EmpCo targets: Jordan Diamond '100% recycled polyester fibers... eco-conscious fashion', adidas Legends 'at least 70% recycled materials', Nike Fly Crossover 'at least 75% recycled polyester'. Separately, only 26% of the 110+ Textile Exchange Polyester Challenge signatories, Nike included, met the 2025 recycled-polyester target - recycled content is an unmet pledge, not an achieved baseline. A03-S5's own conclusion is not to spend hangtag real estate on recycled percentage.",
+      "signal_ids": ["A03-S5"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The product content of Continental is already carried, at higher confidence, by two other opportunities in this same portfolio, and the spec disclosed none of the overlap. OPP-03 'Twenty Washes' (development confidence 60) already specifies a published 20-home-launder ISO 6330 / AATCC 135 dimensional-stability and seam-strength standard on the hangtag with test date, already bartacks pocket mouths and hem stress points, already demotes recycled content to a compliance line citing the same 27 September 2026 EmpCo date, is already ~70/30 wholesale-weighted, and already names UK/Germany/France as its second lead-market tier. OPP-02 'Found Outdoors' (development confidence 62) already owns the UPF/outdoor claim on the live Nike DNA UV Woven FN2659. Strip both out and Continental's disclosed incremental content is a franchise name, a European palette, a jacquard waistband and a EUR ladder the spec itself calls an analyst estimate.",
+      "signal_ids": ["RT-OPP-05-DUPLICATION", "A03-S7", "A06-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike's EMEA business is the region where its promotional damage is actually measured: EMEA revenue -6% with Nike Digital -24% while working through heightened inventory, elevated promotions and markdowns, with the CFO stating marketplace conditions are unlikely to improve through at least H1 FY2027. In parallel, Nike apparel units grew only +1% with ASP growth coming from mix and already eroded by discounts. Both are VERIFIED from Nike's own disclosure / FY2026 10-K. The proposal is a governed EUR 35 markdown floor in exactly that region.",
+      "signal_ids": ["A04-S4", "A03-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The channel read the brief rests on is VERIFIED and points the way the brief says: Nike Digital has fallen for ten consecutive quarters (-12% in Q4 FY26) while wholesale grew 4% for both the quarter and the full year, and the European doors that merchandise basketball shorts are identifiable in the base (KICKZ, Zalando, JD Sports Europe), with KICKZ demonstrably stocking a culturally-coded Tokyo streetball label (ballaholic). New Balance grew 19% globally to USD 9.2B in 2025 with Europe +30% and 80 new doors - but that is a whole-company, all-category figure and is NOT evidence about basketball apparel.",
+      "signal_ids": ["A02-S7", "A02-S11", "A02-S8", "A07-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Europe is the evidence base's single largest hole. The cross-dataset audit found Europe/EMEA is the primary market of under 2% of surviving signals and never once a signal's primary market, entering only as a regulation (EmpCo), a discount channel (Li-Ning clearing at EUR 20 from EUR 49 via a reseller), a door list (KICKZ, Zalando) and a negative number (EMEA Digital -24%). It instructed, before ranking, that a minimum viable European read be commissioned. That instruction originates outside this brief and is not self-serving.",
+      "signal_ids": ["AUDIT-GEOBIAS", "A02-S1", "A03-S7", "A04-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The two European data points the base does contain both point AGAINST the brief. The only European market growth number is Grand View putting European basketball gear at 4.9% CAGR - explicitly the SLOWEST region named (and itself part of a report-mill family the skeptic demolished as one Technavio report in four vintages, so a bad number pointing the wrong way rather than a good number pointing the right way). The only registry-grade European youth participation figure is Sport England Active Lives 2024-25 showing a significant 1% DECREASE in weekly under-16 basketball players in England, against Germany's DBB at +5.26% - two federations, opposite directions, no third in the base.",
+      "signal_ids": ["A02-S1", "AUDIT-GEOBIAS"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "The brief's founding assertion that 'no European consumer voice exists anywhere in this base' - stated three separate times - is false against its own corpus. Two Trustpilot observations about Nike shorts sit in surviving.json, one explicitly geography-tagged 'United Kingdom': a GBP 50 pair that 'felt like a GBP 10 pair', and a GBP 45 pair bought for a son's birthday with a returns-window complaint. Both are negative, and GBP 45-50 is roughly EUR 52-58. Caveat carried honestly: undated search snippets, not confirmed as basketball shorts specifically, and no European Nike PDP could be retrieved (nike.com and zalando.de egress-blocked).",
+      "signal_ids": ["A01-S3", "A01-S9", "RT-OPP-05-GBP-ANCHOR"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The UV pillar is largely free and partly unverifiable. 100% polyester technical sportswear already tests at UPF 40-50+ untreated, so a certified dry UPF 50+ claim differentiates nothing on its own; and half of the signal the brief leans on was killed by its own skeptic - Nike already ships a basketball short with UVA/UVB protection, a zippered phone-sized pocket, dual side pockets and a woven face (DNA 6-inch UV Woven, FN2659). FIBA additionally requires shorts to end above the knee, which caps the legal club length. Nobody in seven specialist files audited Nike's existing EMEA basketball assortment at all.",
+      "signal_ids": ["A06-S7", "A03-S7", "A06-S4", "A06-S3"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Not one European price for a Nike basketball short was ever retrieved from an actual page. The single EUR anchor - the TEAM25 Basketball Stock Short at KICKZ, EUR 29.95 - is a search-result snippet from an egress-blocked page, and it is a TEAM STOCK short, i.e. the entry rung rather than the core. Below it sit Li-Ning Wade clearing at EUR 20 from EUR 49 through a European reseller and Decathlon's own-brand Tarmak SH500 at GBP 5.99 on sale - a European retailer's own brand, structurally more durable price pressure than a tariff-exposed import. The audit's blunt finding applies portfolio-wide: no first-party Nike commercial data anywhere in the base, no price confirmed against a retrieved page, three mutually incompatible Nike price ladders coexisting.",
+      "signal_ids": ["A02-S5", "A03-S7", "AUDIT-EVIDENCE-QUALITY"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The portfolio chair placed OPP-05 last of eight at overall 28.3 with the lowest confidence on the board (22), scoring product_differentiation 1 - the lowest single criterion score given to anything in the portfolio. Development confidence was 34, the lowest at development; the red team cut it to 24 and returned survives=true only for the research gate, explicitly not for the garment ('It does not survive as a product spec, a franchise, a price position or an SS28 line slot'). The evidence stack is six moderate items and one weak - not a single strong. Two of three rankers voted REJECT; the PLM director voted EXPLORE and was overridden, recorded as disagreement D-03 rather than averaged.",
+      "signal_ids": ["PORTFOLIO-RANK-8", "RT-OPP-05-VERDICT", "D-03"],
+      "classification": "FACT"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The moat inverts: differentiating on EmpCo is differentiating against silence. Because the EU deliberately kept the prohibition instrument and dropped the substantiation one, adidas, Puma and Under Armour each clear the bar by deleting one line of hangtag copy at approximately zero cost. Nike would spend a franchise, a 27-jurisdiction claims architecture and a legal review to be loud in a market where being quiet just became the cheapest compliant posture - and the base contains no evidence, in any geography, that a published claim has ever sold a basketball short.",
+      "basis": "Red-team retrieval of the June 2025 Green Claims withdrawal plus EmpCo's UCPD-amending prohibition structure; A03-S5's own conclusion to demote recycled percentage; the audit's resolution that percentage-on-a-hangtag is commoditised; and the total absence in the base of any claim-to-purchase evidence (A03-S5's absent-review-mention inference was invalidated as correlation-as-causation).",
+      "confidence": "High"
+    },
+    {
+      "statement": "EUR 45 is probably a DE-RATING of existing European business rather than a new mid-core rung. The brief anchors it at ~1.5x a EUR 29.95 team stock short - the entry rung, the wrong comparator. If the two UK Trustpilot observations (GBP 45-50, ~EUR 52-58) approximate Nike's live European consumer price, Continental would sit BELOW the existing core and trade it down. That is permanent margin destruction dressed as market entry, in the region with Nike's deepest measured promotional pressure.",
+      "basis": "A01-S3 and A01-S9 Trustpilot snippets versus the single KICKZ snippet; A04-S4 EMEA -6% / Digital -24%; A03-S9 apparel ASP from mix already eroded by discounts. HYPOTHESIS-grade on both sides - the snippets are undated and not confirmed as basketball shorts, and no European PDP was ever retrieved.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "Funding Continental would mean buying the same demand twice, at lower confidence. Its durability spec, claims architecture, EmpCo rationale, wholesale-first channel logic, UV pillar and European lead markets are all pre-existing in OPP-03 (60) and OPP-02 (62). It is best read not as an eighth opportunity but as a REGIONAL EXPRESSION of OPP-03 with OPP-02's UV claim attached - which is why it belongs inside OPP-03's European tier rather than beside it in a ranking.",
+      "basis": "Direct red-team read of dev-OPP-03.json and dev-OPP-02.json against the Continental spec; the portfolio's own cannibalisation observation that four of eight briefs propose product against the same DNA/Icon rail.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The flagship unowned claim may not be publishable as specified. The wet-state UPF figure is the only genuinely differentiated claim left once A06-S7 establishes the dry claim is nearly free on polyester - but EN 13758-1/-2 and AS/NZS 4399 appear to specify dry-state testing only, with no accredited European method for UPF at saturation. If so, the wet figure could only be published against a Nike-authored protocol, which is precisely the self-created-standard posture EmpCo forecloses, and the UV pillar collapses to a certificate on a commodity property.",
+      "basis": "Red-team analyst reading of the standards, explicitly flagged as HYPOTHESIS because eur-lex and standards texts were egress-blocked; A06-S7 counter-evidence on untreated polyester UPF. Resolvable by a one-week materials-lab work order (EUR 15-30k).",
+      "confidence": "Low"
+    },
+    {
+      "statement": "The lead-market tiering is data-availability bias, not market prioritisation. Germany leads because a POSITIVE registry number happened to be findable there (DBB +5.26% to 288,444); England is demoted to a Tier 3 specialty-only test despite carrying the base's LARGEST European participation figure (~1.1M weekly under-16 players), whose only fault is that its direction is -1%. Selecting lead markets on the sign of the one number you found is not a market plan.",
+      "basis": "Red-team comparison of the two figures, with the honest caveat that they are not like-for-like metrics (weekly participation versus club registration) and that the England figure's signal attribution is contested (it sits under rejected signal A06-S10 and is carried by the audit under A02-S1).",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The research gate is correct but NOT cheap, and the brief overstates both its cheapness and the blind spot behind it. The marketplace specialist's own narrative shows it already ran a 'Europe/Decathlon' search and got almost nothing back - which reframes the diagnosis from 'nobody looked at Europe' (an analyst blind spot, fixable with a literature scan) to 'Europe was looked at and yielded almost no public evidence' (a data-availability problem, fixable only with paid syndicated panel and primary work, roughly EUR 120-200k for panel access alone).",
+      "basis": "Red-team read of the specialist research narrative in surviving.json; the red team's own inability to retrieve any European page (nike.com, zalando.de, kickz.com, decathlon.co.uk, basketball-bund.de, euroleaguebasketball.net all egress-blocked).",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The genuine finding underneath the rejected garment is real and must not be rejected with it: Europe is Nike's second geography carrying under 2% of the evidence, against a EuroLeague at a fourth consecutive attendance record of 3,251,706 (+8%) and TV viewership up 82% to 122.8M. But note the same pattern the red team found in OPP-07's Pinterest terms - a spectating record is not a playing record, and the only European registry number for the organised club layer this brief targets points DOWN. Continental may be reading a fan-apparel signal as a shorts signal.",
+      "basis": "Audit geographic-bias finding plus developer-retrieved EuroLeague figures (retrieved 2026-09-03, host pages later egress-blocked and not independently re-verified); the audit's own resolution that core organised participation is the weakest layer of the participation story and 'negative in England'.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The 7-inch/9-inch bracket is not a sophisticated hedge against a measured uncertainty - it is bracketing an ABSENCE of measurement, and it doubles SKU count and inventory fragmentation to do it, in the region the brief itself identifies as having Nike's deepest markdown pressure. Unit share by inseam appears nowhere in seven specialist files, three skeptic rounds or the audit, in any market (portfolio disagreement D-08, carried forward unresolved).",
+      "basis": "Audit evidence_base_quality ('no unit mix by inseam'); D-08's explicit ruling that no opportunity may be built on a length assumption until that pull exists.",
+      "confidence": "Medium"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Whether the machine's rejection is itself the error - i.e. whether Nike should CREATE in Europe as a matter of strategy even though the evidence base cannot see into Europe. The chair rejected a Europe-created franchise partly because no European evidence exists; a human may reasonably read that same absence as the reason to plant a flag rather than the reason not to.",
+      "judgment_type": "strategy / organizational knowledge",
+      "why_machine_cannot": "The machine can only reject on absence of evidence, which is not evidence of absence. It has no access to Nike's EMEA P&L, its geographic creation strategy, or whether EMEA creation authority for basketball apparel exists at all - the brief lists that authority as a what-would-need-to-be-true and nothing in the base establishes it either way."
+    },
+    {
+      "decision": "Whether a published, testable spec is a brand proposition Nike wants to own at all - a credibility-led rather than heat-led identity. Continental's product idea is deliberately un-hyped: no athlete, no graphic, credibility as the story. The machine can show the regulation no longer forces rivals to answer it; it cannot judge whether Nike wants to make truthfulness a design language.",
+      "judgment_type": "brand context / creative ambition",
+      "why_machine_cannot": "There is zero evidence in 58 signals, in any market, that a published claim drives a shorts purchase - the base is silent in BOTH directions, not negative. Whether to lead with a spec panel is a brand-identity bet no dataset here can settle, and the machine's own precedent knowledge (transparency-led apparel propositions) could not be verified this session and is explicitly not evidence."
+    },
+    {
+      "decision": "Whether to accept 'a regional expression of OPP-03' as the right home for Europe, or whether Europe deserves its own owner, budget line and creation brief. The machine folded Continental into OPP-03's European tier on grounds of duplication; that is an organisational design decision as much as a product one.",
+      "judgment_type": "organizational knowledge / strategy",
+      "why_machine_cannot": "The machine cannot know how Nike's EMEA and Global apparel organisations actually split creation authority, budget and line-plan slots, nor whether a European tier inside a US-led make-standard programme would ever receive real attention. Folding it in is only correct if someone in EMEA owns it."
+    },
+    {
+      "decision": "Whether EUR 45 is above or below Nike's live European core - and therefore whether the pricing objection is fatal or backwards. The machine's price case rests on two undated Trustpilot snippets against one blocked-page KICKZ snippet.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Nobody in this pipeline retrieved a single European Nike price page; a merchant with the EMEA price file answers this in ten minutes and it may reverse the machine's most consequential price finding in either direction."
+    },
+    {
+      "decision": "Whether the EmpCo legal review and the European read are commissioned regardless of this rejection - and who owns them. The chair elevated both to portfolio-level mandated actions independent of any brief; that elevation only happens if a human assigns it.",
+      "judgment_type": "organizational knowledge / strategy",
+      "why_machine_cannot": "The machine can name the deadline (27 September 2026, roughly three weeks out) and the cost bands, but cannot allocate legal counsel, panel-purchase budget or an EMEA insights owner, and cannot know what compliance work is already in flight elsewhere in Nike."
+    },
+    {
+      "decision": "Whether a governed EUR 35 markdown floor is a commitment Nike EMEA could actually honour for two seasons - and whether anyone would sign for it. The machine can show Nike's recent behaviour does not support it; it cannot know whether leadership would commit.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Markdown governance is a commercial-leadership commitment, not a product spec. The machine sees only the outcome (EMEA Digital -24% on elevated promotions) and has no visibility into buy-depth discipline, account terms, or who has authority to hold a floor."
+    },
+    {
+      "decision": "Whether the residue is worth carrying forward at all, and in which form - the EmpCo-compliant claims architecture as an EMEA-wide asset, the European colour vocabulary, or nothing. The machine rejected the franchise and named two pieces worth elevating; a human decides whether anything else in the spec is worth keeping.",
+      "judgment_type": "product taste / creative ambition",
+      "why_machine_cannot": "Judging whether a European colour vocabulary or a jacquard spec waistband is a real design idea or a decoration is aesthetic judgment. The machine scored differentiation 1 on content grounds and has no basis to evaluate whether the execution could be good."
+    }
+  ],
+  "if_selected_next_step": "If the human PLM / Design team overrides the REJECT and selects OPP-05, the first move is the human's call to make, and the pipeline's recommendation is that it be the one un-run, free, internal query that determines whether there is any European gap at all - Nike's own live EMEA basketball shorts assortment, SKU count, inseam mix, EUR/GBP price ladder by market, realised ASP and full-price sell-through - paired with a same-day rack walk of three KICKZ doors and one JD Sports Europe, before any garment, price rung or claims architecture is briefed, because that single pull decides whether EUR 45 is a new rung or a de-rating and whether Nike already ships a European expression of this product.",
+  "do_not_proceed_note": "The engine STOPS here. No product briefing, concept development, design work, tech pack, costing, buyer conversation or deck may proceed on OPP-05 until a human PLM / Design owner explicitly selects it - and this item is REJECT, ranked 8 of 8, at confidence 22, the lowest on the board, with product_differentiation scored 1 (the lowest single criterion score in the portfolio) and three fatal red-team kills. Two of three rankers voted REJECT; the PLM director voted EXPLORE on the grounds that the ask IS a cheap research gate, and the chair upheld his substantive point while rejecting the vehicle - recorded as disagreement D-03 and NOT averaged. Selecting it means overriding that. Three cautions travel with any override. First, the moat runs backwards: the EU withdrew the substantiation instrument in June 2025 and kept the prohibition instrument, so every competitor complies by deleting one sentence at zero cost, and no evidence in any market shows a published claim ever sold a basketball short - never present the EmpCo asymmetry as a finding. Second, this is a duplicate: OPP-03 already publishes the 20-wash ISO 6330 standard and cites the same EmpCo date and the same UK/Germany/France markets, and OPP-02 already owns the UV claim on a short Nike ships today (FN2659) - funding both buys the same demand twice, at lower confidence here. Third, every price and every length in this brief is unanchored; not one European price page was ever retrieved, the sole EUR anchor is a search snippet from a blocked page and is the entry rung, and the base's only European consumer voice (two GBP 45-50 Trustpilot items) suggests EUR 45 may sit BELOW Nike's existing European core. Separately and independently of this decision: the two pieces the chair elevated to portfolio-level actions happen regardless - the EmpCo legal and hangtag/PDP review, time-critical at roughly three weeks out and required for OPP-02 and OPP-03 anyway, and the minimum viable European read the cross-dataset audit instructed before ranking. The genuine finding underneath - Europe as Nike's second geography holding under 2% of the evidence, against a EuroLeague at a fourth consecutive attendance record - must not be rejected along with the franchise."
+}

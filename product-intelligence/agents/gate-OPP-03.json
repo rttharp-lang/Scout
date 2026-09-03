@@ -1,0 +1,141 @@
+{
+  "id": "OPP-03",
+  "what_the_machine_knows": [
+    {
+      "statement": "A durability failure mode - seams opening and shrinkage/opacity loss after one to a few home washes - reproduces on Nike core basketball shorts across two Icon inseams and three independent retail venues: the Walmart Icon corpus ('holes in the seams across the legs' after one wear and one wash), Dick's Icon+ 6 inch at 3.9 stars with 67% of 64 reviewers recommending, and - found by the red team while trying to kill it - the Dick's Icon 11 inch listing ('falling apart after being worn and washed one time', 'completely see through'). This is the only reproducible consumer finding in the 58-signal base, and it survived a direct venue-artifact attack.",
+      "signal_ids": ["A01-S3", "A04-S6", "A01-S2"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "Nike Brand apparel grew 2% currency-neutral in FY2026 on units +1%, with ASP contributing about one point driven by product MIX and already partly eroded by higher discounts and channel mix. There is no unit tailwind in apparel and no demonstrated pricing power - so full-price productivity on an existing unit pool, not volume or list price, is where apparel margin can move. This is audited filing material, the strongest verified item in the product file.",
+      "signal_ids": ["A03-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Distribution has swung back to wholesale: Nike Digital declined for a tenth consecutive quarter while wholesale grew ~4%. A replenishable core carrying a rack-legible spec, sold 70/30 wholesale, is the channel-correct construct; an app-exclusive or Nike-Direct-led expression is not.",
+      "signal_ids": ["A02-S7", "A04-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Compression worn under the short is explicitly rules-legal at any length under FIBA provided the team matches colour, and the 2025-26 NFHS change permits multiple like-coloured bottom styles - so the layered wear pattern this programme assumes is rules-safe, and a sewn-in brief liner is redundant for the layering player. Prevalence of that layering BELOW the elite level is unmeasured (the only survey found, n=512, was 88.1% endurance athletes).",
+      "signal_ids": ["A06-S3", "A06-S6"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "A basketball uniform traps 0.00-1.33 kg of sweat during play, over a wider range than treadmill running, and basketball's normative whole-body sweat rate is 0.95 +/- 0.42 L/h (competition sub-population 1.4-1.6 L/h). Peer-reviewed with named samples. Consequence: any durability fix that answers with added fabric mass is in direct tension with the wet-state physics of the garment, and the engineering target (sport mean vs competitive tail) is a choice, not a finding.",
+      "signal_ids": ["A06-S2", "A06-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The claim environment changes inside the SS28 window and it cuts both ways. The EU Empowering Consumers Directive applies from 27 September 2026, retiring generic/uncertified environmental claims across every competitor at once - and making unsubstantiated DURABILITY claims specifically sanctionable. France's environmental-cost display becomes compulsory for textiles from October 2026 with a durability coefficient (0.67-1.45) that third parties may compute and publish if the brand does not. EMEA also already carries a two-year statutory legal guarantee for conformity defects.",
+      "signal_ids": ["A03-S5"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Durability is not empty claim space. Nike's own DNA copy already claims it ('lightweight-yet-durable', 'built for the grind', 'stand up to even the toughest rebound battles'), reinforced-seam language runs through the mid and value tiers (UA Baseline, AND1, Russell), Decathlon already guarantees two years and publishes minimum guaranteed uses for some products, and contract-sourcing guidance treats 140-180 GSM performance mesh as holding shape after 100+ washes. The move available is to SUBSTANTIATE a claim Nike already makes, not to open a new one - a smaller prize on a larger legal surface, and the reason '20 washes' anchors low.",
+      "signal_ids": ["A03-S5", "A04-S6"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "Every scaled precedent for an open-ended make guarantee on machine-washed basics was retracted: L.L.Bean ended its lifetime guarantee in 2018 after policy-violating returns doubled to ~15% of returns at a cost near USD 250M, REI capped at one year in 2013, Dr Martens dropped 'For Life' in 2018; US return fraud/abuse ran ~15.14% of returns and USD 103B in 2024 against apparel return rates of 20-30%.",
+      "signal_ids": ["A04-S6"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The observable price ladder is lower and softer than this pipeline originally assumed, and every price in it is directional only - no price anywhere in the base was confirmed against a retrieved page, because every retail host was egress-blocked to the specialists and to the developer alike. Directionally: Icon listed USD 30 (seen at USD 18.97), Icon 11 inch USD 35 (USD 28.97), DNA 8 inch USD 65 marked to USD 32.50 at Foot Locker on 2026-09-03 - a 50% cut, twice the 25% depth recorded a year earlier - with New Balance's 7 inch mesh short USD 50 to USD 25 on the same shelf. All markdown observations were taken in peak end-of-summer shorts clearance.",
+      "signal_ids": ["A04-S6", "A02-S4", "A04-S4"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "No basketball-shorts-level unit, sell-through, markdown or returns data exists anywhere in the evidence base, in any geography; no fabric GSM, BOM or supplier-change history establishes that any cost-down ever occurred; and every consumer datapoint is United States. The causal story behind the opportunity (a price freeze forced a fabric cost-down which produced the complaints) is reverse-engineered from reviews, and its first link has itself been superseded by Nike's surgical price increases through FY26 against USD 1.5B annualised tariff cost and ~120bp of FY26 gross-margin headwind.",
+      "signal_ids": ["A04-S6", "A04-S8", "A02-S4"],
+      "classification": "FACT"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The defect is real but the business case as written is booked at the wrong level of the P&L. The 'whole business case' sentence - moving the DNA 8 inch from a 50% to a 20% markdown recovers roughly USD 19 per unit - is a RETAIL markdown on a RETAIL price inside a programme the spec itself weights 70/30 to wholesale. Nike realises wholesale price and recovers retailer markdown only through negotiated markdown allowances, margin-protection and chargebacks (partial and negotiated, not pass-through) while carrying 100% of the BOM increment, the bespoke 20-cycle test and a per-lot QA gate. We believe a meaningful share of that USD 19 accrues to Dick's and Foot Locker rather than to Nike; nobody has quoted the recovery rate.",
+      "basis": "Red-team kill attempt 1 (economics), unrebutted; trade literature on markdown allowances and chargebacks; the spec's own stated 70/30 wholesale mix; the chair adopted this as the gate condition in portfolio.json.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The '20W' badge as specified should not ship in any form. It anchors below the 100+ washes that contract sourcing already treats as normal for team mesh, it expires inside the brief's own job story (a school/AAU season is 20-30 weeks of weekly washing), and printing a number in the season EmpCo makes unsubstantiated durability claims sanctionable converts existing puffery into an implied warranty across tens of millions of units - at a moment when France will publish a regulated durability coefficient for the whole category whether Nike prints anything or not.",
+      "basis": "Red-team kill attempts 2, 3 and 6; EmpCo and France environmental-cost display dates; contract-sourcing GSM guidance. All three rankers and the chair concurred; the chair killed the badge outright.",
+      "confidence": "High"
+    },
+    {
+      "statement": "Roughly half the diagnosis is probably not a make problem at all. 100% polyester shrinks only about 2-5% and only above ~60C water or high dryer heat, so the residual headroom a heat-set finish can buy is small and much of the reported shrinkage is plausibly a high-heat-drying artifact no construction spec can reach. A claim benched at AATCC 135 controlled conditions (usual reported cycle count: three) will not reproduce in the complainant's dryer - which would break trust with exactly the consumers it targets. The SEAM-FAILURE half of the diagnosis survives this cleanly; the shrinkage half does not.",
+      "basis": "Red-team kill attempt 4 (fabric physics) with polyester shrinkage sources and AATCC 135 reporting convention; no counter-evidence in the base.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The programme is probably directionally right and is unusually cheap to falsify. Every decisive test uses data Nike already owns - warranty and returns defect codes, BOM and GSM history FY23-FY26, the eight-quarter markdown and allowance file, a colourway terminal-markdown count - obtainable in two to four weeks for well under USD 25k each, against a programme that changes no silhouette, adds no SKU, opens no market and asks for no price increase. That cost asymmetry, not the strength of the diagnosis, is what earns it a place on the board; a council can approve the validation without approving the product.",
+      "basis": "Developer confidence rationale (60) and challenger adjustment (48); validation plan items 1, 2 and 7 are all internal-data pulls with published stop conditions.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The funding source named in the original thesis may not exist. Liner deletion was the synthesised funding mechanism, but nobody in seven domains costed the liner or established that the target SKUs carry one - Nike copy on the same day described DNA styles as unlined AND as 'Lined', and Nike operates a standing 'Basketball Unlined Shorts' navigation filter, so lining varies by SKU. We believe colourway rationalisation (fewer cores, carried deeper, replenishment with a guaranteed reorder window) is the honest funding route, and liner deletion is at best a conditional cost lever.",
+      "basis": "Developer's own live checks and explicit demotion of the mechanism, flagged as a material departure from the synthesis; contradictory-evidence item rated severity high.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "Applied uniformly across both franchises at held prices, this flattens the ladder it is meant to defend. DNA's stated reason to exist above Icon is already durability; publishing one identical make standard across a USD 30 short and a USD 50-65 short leaves a mesh face and a zip pocket to carry a USD 30 delta, and removes the durability headroom a future premium expression (Aero-FIT, Sabrina, signature) would want to claim. This argues for tiered specification rather than a single published standard - a design and merchandising call the pipeline never made.",
+      "basis": "Red-team kill attempt 8 (cannibalisation), reasoned from Nike's own DNA copy and the spec's own price ladder; the developer's counter (a premium tier is not credible on a failing core) is equally unevidenced.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "This may be the right programme addressed to the wrong council. As written it changes no silhouette, adds no length, adds no SKU, opens no market and asks for no price - it is executed by Materials, Sourcing and Quality, not by PLM. It defers Greater China (no Worldball), is explicitly men's and boys' (no Women's Revolution), and is a make standard rather than a youth assortment (no Uniform of Youth). It sits outside all three SS28 priority spaces by its own construction. The design director ranked it FIFTH for exactly this reason (cultural relevance 1, differentiation 2 on his board) while the commercial planner ranked it FIRST; that disagreement (D-02) is a weighting difference between chairs, not a factual one, and has been preserved rather than averaged.",
+      "basis": "Red-team kill attempt 11 (strategic fit), the spec's own description of itself, and recorded disagreement D-02 in portfolio.json.",
+      "confidence": "High"
+    },
+    {
+      "statement": "The manufacturing consistency, not the idea, is the hard part - and it is the part the base cannot price. A 20-cycle protocol is roughly 7x the normal AATCC 135 run per specimen, per colourway, per size break, per production lot, enforced through tier-2 contract factories Nike does not own, on a USD 30 garment in a year carrying USD 1.5B of annualised tariff cost and ~120bp of gross-margin headwind. The spec concedes this in its own right-to-win section and offers no cost estimate.",
+      "basis": "Red-team kill attempt 9 (execution/manufacturing); AATCC 135 reporting convention; tariff and margin disclosures.",
+      "confidence": "Medium"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Whether Nike Basketball Apparel should spend an SS28 decision cycle on line-plan productivity at all, rather than on newness. The machine can say this consumes no line slot and carries the portfolio's highest confidence (62 chair / 48 post-challenge); it cannot say whether a brand in a turnaround should give its scarce PLM attention to fixing what it already sells.",
+      "judgment_type": "strategy",
+      "why_machine_cannot": "This is a portfolio-posture question about what Nike Basketball is for in SS28. The engine's three rankers split hard on it (commercial planner first, PLM second, design director fifth) and the split traces entirely to how many of 100 points a chair puts on differentiation and cultural relevance. There is no evidence that adjudicates a weighting preference - only a taste for what a season should say."
+    },
+    {
+      "decision": "Whether to accept the de-scoped version (silent make fix, no badge, no guarantee, funded by colourway rationalisation, price held) or to insist on a consumer-facing expression. The machine has killed the '20W' badge and the season-long guarantee on evidence; what it cannot decide is whether a fix nobody can see is worth doing at all, or whether Nike's brand only earns a return on quality it is allowed to say out loud.",
+      "judgment_type": "brand context",
+      "why_machine_cannot": "The value of an unspoken quality improvement is a brand-equity judgment on a time horizon no dataset in this base covers. The one instrument that could inform it - a badged-vs-unbadged in-door A/B plus conjoint - costs USD 150-250k and a full season, and would have to be authorised by the same decision it is meant to inform."
+    },
+    {
+      "decision": "Whether to apply one make standard across Icon and DNA, or to tier it and preserve durability as DNA's reason to exist above Icon. The machine can state the tension (DNA already sells on durability; a uniform published standard leaves a mesh face and a zip pocket to carry a USD 30 delta) but cannot resolve it.",
+      "judgment_type": "product taste",
+      "why_machine_cannot": "Resolving it requires a view on what a franchise ladder should mean to a consumer standing at a rack, and on what headroom Nike wants to reserve for Aero-FIT and signature expressions later. The base holds no unit split by franchise, inseam, channel or region - so 'the franchise that carries the units' is itself an untested assumption - and no evidence exists either way on how consumers read a shared spec badge across price rungs."
+    },
+    {
+      "decision": "How much of the diagnosis Nike is willing to own before knowing the answer. The machine has established that seam failure reproduces across three venues and two SKUs, and separately that shrinkage is plausibly a customer high-heat-drying artifact. Deciding whether to fix seams now on that reproduction, or to hold until returns defect codes and a GSM/BOM history come back, is a risk-appetite call.",
+      "judgment_type": "intuition",
+      "why_machine_cannot": "The engine can quantify the cost of waiting (weeks, tens of thousands of dollars) but not the cost of another season of 'the worst quality product I've ever bought and worn from Nike' sitting on a Dick's page. Nobody has established a benchmark for what a normal recommend rate is on a USD 30 mesh short, so whether 3.9 stars and 67% is a crisis or category-normal is currently an impression, not a finding."
+    },
+    {
+      "decision": "Whether Nike wants to be the brand that publishes a durability number in a market that is about to publish one for it. France's mandated durability coefficient arrives from October 2026 and third parties may compute and publish it if the brand does not; EmpCo makes an unsubstantiated durability claim sanctionable from 27 September 2026. Getting ahead of a regulated score, matching it, or staying silent is a positioning choice with legal consequences.",
+      "judgment_type": "brand context",
+      "why_machine_cannot": "This is a claims-posture decision across 27 jurisdictions that trades reputational leadership against implied-warranty exposure on tens of millions of units. It requires Nike Global Legal, EMEA Regulatory Affairs and a brand view on how Nike wants to be seen when the coefficient publishes - none of which is an evidence question, and the review itself is time-critical at roughly three weeks out."
+    },
+    {
+      "decision": "Whether Nike's wholesale partners will co-operate rather than pocket the benefit. The machine has shown the recovery is booked at retail level in a wholesale-weighted programme; the human must decide whether to open the markdown-allowance conversation with Dick's and Foot Locker at all, and on what terms - and whether partners will honour or resent administering any make promise.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Trade terms, allowance recovery rates and account relationship history are first-party commercial knowledge held inside Nike NA Wholesale Finance and account management. None of it exists in the evidence base, and no public source can substitute for what a merchant knows about how a specific partner behaves."
+    },
+    {
+      "decision": "Whether a 20-plus-cycle seam and dimensional-stability spec can actually be enforced through tier-2 factories Nike does not own, and at what cost - and therefore whether Sourcing and Quality can carry this in the same year as USD 1.5B of annualised tariff cost. If not, the badge question is moot and so is the programme.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Factory capability, per-lot QA cost, and Sourcing's appetite in this specific year are internal operational facts the engine has no access to. The spec itself concedes that consistency, not the idea, is the moat, and offers no cost estimate for it."
+    },
+    {
+      "decision": "Which market leads, and whether deferring Greater China is acceptable. The spec leads US, then UK/Germany/France, then Japan/Australia, and defers GC explicitly on marketplace grounds (apparel units -8%, revenue -13% cn, Topsports stopping online sales by January 2027). SS28 priorities point at Greater China.",
+      "judgment_type": "strategy",
+      "why_machine_cannot": "Every consumer datapoint in this base is United States; EMEA, Nike's second geography, has not one signal in which it is the primary market, and there is no Chinese price or sell-through datum anywhere in the base. Choosing a lead market against SS28 stated priority is a strategic bet the evidence cannot arbitrate."
+    }
+  ],
+  "if_selected_next_step": "If the PLM / Design team selects OPP-03, the first and only funded step is their call to commission the two-to-three-week internal gate before any product work begins: re-model the recovery at Nike REALISED wholesale revenue with the actual markdown-allowance and chargeback rates for Icon and DNA by partner over eight quarters, run in parallel with the FY24-FY26 returns/warranty defect-code pull and the FY23-FY26 GSM and BOM history - with the stop condition published in advance (no realised-revenue multiple over incremental cost, no defect-code elevation against the Nike apparel benchmark, or no specification drift and no bench failure means the programme stops there).",
+  "do_not_proceed_note": "Do not brief this, develop concepts, commission artwork, or place it in an SS28 line review on the strength of this gate. Three things in it are not established and one is actively wrong as written: nobody has shown that any fabric GSM or construction cost-down ever occurred (the entire causal story is reverse-engineered from consumer reviews and may simply be false); nobody has counted or costed the sewn-in liner that the original thesis nominated as the funding source, and it may not exist on the target SKUs; there is no benchmark anywhere in the base for what a normal review score is on a USD 30 mesh short, so 'weak quality perception' is an impression rather than a measurement; and the USD 19-per-unit recovery that the spec itself calls 'the whole business case' is a retail markdown booked into a 70/30 wholesale programme, so an unknown and probably minority share of it is Nike's. The '20W' badge and the season-long make guarantee are both killed and must not be carried forward in any deck - printing a number below the 100+ washes contract sourcing treats as normal, in the season EmpCo makes unsubstantiated durability claims sanctionable, converts existing puffery into an implied warranty across tens of millions of units. Preserved disagreement that must travel with any onward decision (D-02): the commercial planner ranked this FIRST and the design director ranked it FIFTH, because it builds no identity, recruits no athlete, tells no story a consumer repeats, and sits outside all three SS28 priority spaces by its own admission; that is a weighting difference between chairs and has not been averaged away. Nothing here has been validated against Nike first-party commercial data, because none exists anywhere in this pipeline."
+}

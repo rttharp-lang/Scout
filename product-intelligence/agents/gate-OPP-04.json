@@ -1,0 +1,133 @@
+{
+  "id": "OPP-04",
+  "name": "Southern Court",
+  "portfolio_category": "WATCH",
+  "portfolio_rank": 6,
+  "overall": 41.8,
+  "confidence_at_development": 61,
+  "confidence_after_challenge": 38,
+  "one_line": "Real market, wrong programme: the best-verified non-US evidence in the base attached to a proving-ground mechanism that is arithmetically void on the SS28 calendar.",
+  "what_the_machine_knows": [
+    {
+      "statement": "Australian basketball participation is registry-scale and independently corroborated on two different instruments: roughly 1.3M players (second among team sports) with 450,000+ women and girls, alongside NBL 2025-26 attendance of 1,231,796, +9%, 63 sell-outs and a third consecutive million-plus season. The audit's only correction to the attendance figure was that it had been UNDERSTATED, and the NBL27 dates (19 Sep 2026 to 14 Feb 2027) verify exactly. This is the highest-verification non-US material in the 58-signal base.",
+      "signal_ids": ["A02-S9", "A05-S6"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The competitive shelf in performance basketball is retreating, on VERIFIED corporate disclosure: adidas basketball -21% in the quarter, Under Armour's whole basketball business guided at USD 100-120M with Curry apparel available only through October 2026, Puma basketball a residual. The NBL's own on-court apparel partner is Champion, whose Australian shorts wall tops out at AUD 61.95 - below Nike's existing UPF short. New Balance (+19% to USD 9.2B, apparel past USD 1B, 80 new doors, already at the 7-inch inseam in Foot Locker) is the counter-moving exception that dates the window.",
+      "signal_ids": ["A04-S3", "A02-S8", "A02-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike already ships the garment this brief proposes to create, into the exact Australian doors it names. The DNA 6-inch UV Woven (FN2659) carries UVA/UVB protection, side pockets, a phone-secure zip pocket and an abrasion claim, and is stocked at Rebel (~163 stores) at AUD 69.99 - the same price the brief recommends for its new core. Nike also runs a continuous 6/8/10/11-inch DNA ladder through Rebel, JD Sports AU (68 stores) and Foot Locker AU, and the DNA 8-inch is discounted to AUD 34.99 from AUD 59.99 on that same rack. Four specialist domains independently declared this a white space, which measures a capture failure rather than a gap.",
+      "signal_ids": ["A03-S7", "A02-S4", "A02-S7", "A04-S6"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The proposed differentiator - UPF certified in both dry-unstretched and wet-stretched states - is not a first. AS/NZS 4399 rates dry unstretched fabric and requires the label warning about wet and stretched performance; wet/stretched testing is a known optional laboratory protocol, and Australian brands already market the claim (Sheila: UPF 50+ 'wet or dry'; Sun2Sea: 50+ UPF 'WetnDry'). Separately, the audit downgraded the underlying UV signal on two grounds: concrete/asphalt albedo of 2-15% is among the LOWEST of outdoor surfaces, and untreated 100% polyester technical sportswear already tests UPF 40-50+ dry.",
+      "signal_ids": ["A06-S7", "A03-S7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nike holds no Australian basketball rights position. Champion holds the NBL on-court contract through NBL26-27; iAthletic has supplied Basketball Australia's Boomers, Opals, Rollers, Gliders and junior teams for over five years and launched new national-team uniforms in August 2026; Foot Locker - a retailer, not Nike - holds a major Boomers sponsorship. The brief's women's-colourway / She Hoops platform is therefore not merely unevidenced, it is occupied by incumbents.",
+      "signal_ids": ["A02-S9", "A04-S3"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "There is no shorts commercial data for Australia - or for any geography - anywhere in this base: not one unit, sell-through, realised price or markdown rate. The AUD prices in the brief are search summaries; Rebel Sport and ARPANSA pages were both egress-blocked. The cross-dataset audit is explicit that not one price in the whole base was confirmed against a retrieved page and that three mutually incompatible Nike ladders coexist. Consequently the Australian shorts pool cannot be sized at all - AUD 5M and AUD 50M are both consistent with what is known.",
+      "signal_ids": ["A02-S1", "A02-S4", "A03-S9"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Across the pipeline the systemic pattern is that specialists propose product Nike already ships, and OPP-04 is an instance of it: the same FN2659 SKU closed independently declared white spaces in three other briefs. The pattern's practical consequence here is that the Australian ask is cheaper than written (live inventory, live doors) and newer-sounding than it is (a hangtag, a naming and an inseam extension on a shipped garment).",
+      "signal_ids": ["A03-S7", "A06-S4", "A02-S4"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "Nike's apparel pricing environment does not support the AUD 79.99 step: apparel grew 2% currency-neutral on units +1% with the ASP gain coming from mix and already partly eroded by discounts, the US marketplace turned increasingly promotional with elevated markdowns cited, and the premium shorts tier is observed clearing only at 25-50% off. The nearest full-price competitor to the proposed rung is Nike's own marked-down DNA 8-inch two pegs along the same Australian rack.",
+      "signal_ids": ["A03-S9", "A04-S4", "A04-S8", "A04-S6"],
+      "classification": "PATTERN"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The proving-ground mechanism - land Australia first and read a full season of sell-through BEFORE the global SS28 buy commits - cannot fire. On Nike's futures model the SS28 buy closes roughly August-October 2027 against Feb-Apr 2028 delivery, with line-lock a year earlier; the brief's own plan lands Australian product Sep/Oct 2027 and reads it Dec 2027-Feb 2028. The read arrives one to five months after the buy closes, and the Australian range must itself be committed before it can prove anything. It can only steer SS29. All three portfolio rankers independently reached this conclusion.",
+      "basis": "Red-team kill attempt rated FATAL, reconciling the brief's own stated launch/read calendar against a standard wholesale futures timeline; the SS28 calendar itself was supplied by the cross-dataset audit and appears in none of the seven specialist files, so the dates it rests on are themselves unconfirmed.",
+      "confidence": "High"
+    },
+    {
+      "statement": "Remove the timing mechanism and the brief fails its own test. The spec states in its own words that 'the case for a 1.3M-player market against a claimed 300M one cannot be scale, and evidence-quality alone is not a reason to spend.' With the timeline gone, evidence quality is the only argument left standing - which is why the machine ranks this WATCH rather than EXPLORE despite giving it evidence_strength 4, the highest non-US score awarded anywhere in the portfolio.",
+      "basis": "The developed spec's own kill condition, applied after the challenge removed the mechanism; converged on by the PLM director (46.8 WATCH) and design director (44.8 WATCH).",
+      "confidence": "High"
+    },
+    {
+      "statement": "The same dataset this programme is bought for can be obtained this quarter, for free, without committing a unit: pull eight quarters of Nike AU and wholesale sell-through for basketball shorts by inseam, gender block, list and realised price, door, markdown rate, size-curve fill and return reason, from Rebel, JD AU, Foot Locker AU and Nike AU on the DNA and UV Woven ladder already selling there. That is A02-S9's own validation ask. It returns eighteen months sooner with no inventory risk and no early line-lock, which is why the chair folded the residue into OPP-02 as a phone call rather than a programme.",
+      "basis": "Challenger's strongest counterargument and validation plan item 2; adopted verbatim by all three portfolio rankers. It is a belief, not a fact, because retailer sell-through sharing is the gating item and no one has confirmed Rebel or JD AU will release it.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The wet-state UPF lab test is a coin-flip the programme loses on either face if it is treated as a franchise mark rather than a gate. If protection holds at 50+, the claim is honest but unremarkable and duplicates what untreated polyester already does; if it collapses, Nike has certified a weakness on a garment it currently sells. The likelier branch is 'true but unremarkable'. Run it as a decision gate before any mark, name or price step, not as the reason to launch.",
+      "basis": "Audit downgrade of A06-S7 (albedo 2-15%, polyester already UPF 40-50+ dry) plus the challenger's finding that AS/NZS 4399 already contemplates the wet/stretched protocol and Australian brands already market it. The failure-mode framing is the developer's own, honestly disclosed.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The +25% female participation growth may not be a real trend line. The Australian Sports Commission moved AusPlay from telephone (~20,000 interviews) to online panel (~40,000) in July 2023, states the phone series has ENDED and warns 2023-24-onward results are not directly comparable to 2015-2023. Either the +25% crosses that discontinuity, or it comes from Basketball Australia registrations and is being reported alongside an AusPlay headcount - two instruments, one number. Note also that 1.3M is an at-least-once-in-twelve-months count of which roughly 47% is informal play, so the retail-buying pool is materially smaller than the headline.",
+      "basis": "Challenger finding against A02-S9. Nobody in three skeptic rounds or the audit tested the series break - every audit correction to A02-S9 ran in the signal's favour, which is precisely why it went unexamined.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The sun job may not map to a short in this specific market. Cancer Council Australia recommends long pants and cover-as-much-skin-as-possible, sells UPF50+ activewear including shorts itself, and reported three-quarter leg cover among adults sits around 29%; Solbari, Sun2Sea and Coolibar already serve the need. A06-S7's own note that UPF shorts are 'less common' in Australia while UPF sleeves are 'culturally accepted' reads at least as plausibly as revealed preference as it does as white space, and nothing in this base distinguishes the two.",
+      "basis": "Challenger retrievals plus the developer's own disclosed unknown; no purchase-intent test for a sun claim on a court short exists in any market.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "Even a clean Australian read may not generalise to where OPP-02's volume actually is. Australia's UPF literacy, price level, retail structure, indoor-club orientation, roughly 800 courts (against China's 1.1M+) and inverted season are all distinctive; APLA apparel is USD 1,629M flat across roughly 40 countries and the trade press states directly that Australia is no test market. Which findings transfer to Greater China, SEA, the Gulf or the US Sun Belt has been established by nobody.",
+      "basis": "Challenger generalisation attack plus the developer's own disclosed unknown; the geography comparison rests on the audit, and the base contains not one Chinese price or sell-through datum, so the alternative is unevidenced too.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "A 3-5 SKU single-market buy split four ways (two genders, three inseams, two price points, multiple doors) has no statistical power to produce the read it is being bought for, even if the calendar worked. This objection was raised in the challenge and is unaddressed anywhere in the spec.",
+      "basis": "Challenger kill attempt rated 'weakens'; no cell-size or power calculation exists in the file.",
+      "confidence": "Medium"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Whether the Australian evidence advantage is worth a slot at all, or whether Nike should spend into the poorly-evidenced 300M-player Greater China market that SS28's Worldball priority actually names. This is the portfolio's headline contradiction and it was deliberately preserved, not resolved: 1.3M verified by a national registry and an audited league release against a 300M figure traceable to a 2019 NBA public-relations estimate, assembled entirely from non-Chinese sources with no Tmall, JD, Douyin or Xiaohongshu datapoint and no retrieved Chinese price.",
+      "judgment_type": "strategy",
+      "why_machine_cannot": "The machine can rank evidence quality but cannot decide whether a well-evidenced small market outranks a badly-evidenced large one. That trade is a risk appetite and a statement about what Nike is willing to bet without proof - a Consumer Council judgment, and the developed spec says so explicitly."
+    },
+    {
+      "decision": "Whether the SS28 calendar dates the whole kill rests on are the real ones. The machine's fatal finding is arithmetic performed on a futures timeline supplied by the cross-dataset audit, not by any specialist file, and never confirmed against Nike's actual APLA line-lock, sample-review, futures-close and delivery dates.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "These calendars are internal and were never retrievable in this pipeline. If APLA's real dates differ materially, the load-bearing kill weakens and OPP-04 returns as a live EXPLORE - so a person who knows the seasonal calendar can overturn this gate in one meeting, and only a person can."
+    },
+    {
+      "decision": "Whether Nike is willing to enter a market where it holds no rights position at all - no NBL on-court (Champion), no national teams (iAthletic since 2021, new uniforms August 2026), no Boomers sponsorship (Foot Locker) - and whether participation-and-fandom-led entry without an on-court surround is an acceptable brand posture for Basketball in a Tier-2 market.",
+      "judgment_type": "brand context",
+      "why_machine_cannot": "The machine scored right-to-win 2 on the rights facts, but whether Nike Basketball plays in a country it does not dress is a brand-positioning stance, not a scoring output. It also depends on rights-negotiation intelligence - Champion's and iAthletic's contract terms and renewal windows - that exists nowhere in this base."
+    },
+    {
+      "decision": "Whether the Australian sell-through pull is worth commissioning at all, and if so whether it belongs to OPP-02's owner as an instrumented lead door or to a standing Australian programme. The chair decided it is a phone call folded into OPP-02; the commercial planner voted EXPLORE and would make it a programme (disagreement D-06, preserved unresolved).",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "Whether the account teams at Rebel and JD AU will actually release door-level sell-through, what it costs in relationship capital, and who inside APLA owns the ask are facts about the organisation and its trading relationships. Nothing in 58 signals speaks to them, and the machine's own confidence on the pull's feasibility is only Medium."
+    },
+    {
+      "decision": "Whether an honest but unremarkable wet-state UPF result is still worth owning as a Nike-first published measurement. The machine judges the likeliest branch to be 'holds at 50+, changes nothing commercially', and treats that as a reason to kill the mark.",
+      "judgment_type": "creative ambition",
+      "why_machine_cannot": "Whether being the brand that publishes a number nobody else publishes builds equity even when the number is boring is a taste-and-ambition call about how Nike wants to argue for product truth. There is no evidence in any market that a published claim has ever sold a basketball short, and the absence of evidence cannot settle an ambition question."
+    },
+    {
+      "decision": "Whether Australia's participation growth in the female cohort - 450,000+ women and girls on the back of She Hoops - is strategically interesting enough to pursue on intuition, given that the machine cannot connect it to a single shorts unit and that WNBL and club team-order channels may absorb most of the bottoms demand before it reaches a retail shelf.",
+      "judgment_type": "intuition",
+      "why_machine_cannot": "The base contains participation counts and zero conversion evidence, and the conversion question - does a growing player pool buy performance shorts at retail - is exactly the one Nike Greater China already answered badly (apparel units -8% while participation grew). Reading whether Australia behaves differently is a merchant's feel, not an inference the data supports."
+    },
+    {
+      "decision": "Whether the linerless construction decision ships regardless of this gate's outcome. Three disciplines want the sewn-in brief deleted and rules permit it, and the deletion is what funds the seam and dimensional-stability work - but layering prevalence outside elite play is a hypothesis, and if it is low, consumers read the deletion as cheapening rather than as performance.",
+      "judgment_type": "product taste",
+      "why_machine_cannot": "How a consumer reads a removed liner - upgrade or cost-out - is a product-taste and brand-perception judgment. The machine can cite the physiology (0.00-1.33 kg of trapped sweat) and the rules clearance, but cannot predict the read, and the cheap test it proposes (broadcast coding and a court-side count) has not been run."
+    }
+  ],
+  "if_selected_next_step": "If the human PLM / Design team overrides the WATCH and selects OPP-04, the first and only next step is the human's call to confirm the actual APLA SS28 line-lock and futures-close dates against a September/October 2027 Australian delivery - because if that read genuinely lands after the buy closes, the programme has no rationale and should be re-aimed at SS29 or replaced by the free eight-quarter Nike AU sell-through pull; everything else in the brief is downstream of that one calendar page.",
+  "do_not_proceed_note": "The engine stops here. No product briefing, concept development, design work, costing, sampling, naming, hangtag copy or Australian buy may proceed on OPP-04 until a human PLM / Design decision-maker explicitly selects it. This gate is the machine's WATCH position with its disagreements preserved, not a recommendation to build: the chair's decision was that there is no dollar to spend here and that the valuable residue - the Australian sell-through pull - belongs to OPP-02's owner as a phone call, while the commercial planner's EXPLORE vote at 54.0 remains on the record unaveraged (D-06). Nothing in this document is a FACT unless labelled so with signal ids; the AUD prices, the SS28 calendar arithmetic and the wet-UPF failure-mode reasoning are all HYPOTHESIS or unverified retrieval and must not be repeated as findings. If this is selected, it should be selected as a demoted, rescoped SS29 item on live inventory - not as the AUD 79.99 franchise, the world-first wet-rated mark, the six-to-nine-month early line-lock or the Basketball Australia / She Hoops platform, all of which failed direct test."
+}

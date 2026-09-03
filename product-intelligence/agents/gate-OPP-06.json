@@ -1,0 +1,137 @@
+{
+  "id": "OPP-06",
+  "what_the_machine_knows": [
+    {
+      "statement": "Nike holds the FIBA product partnership - official FIBA product partner across apparel, footwear and equipment for senior men's, women's and youth flagship national-team competitions, with the 2019, 2023 and 2027 FIBA Basketball World Cups named explicitly. Doha 2027 (27 Aug - 12 Sep 2027, 32 teams, four arenas, first single-city and first Middle East edition) therefore sits INSIDE existing Nike rights. This was the development spec's own declared highest-value unknown and the red team resolved it in the opportunity's favour. FACT as retrieved; it is red-team retrieval (insidethegames.biz / basketball.ca / WearTesters, checked 3 Sep 2026, host pages egress-blocked), not a digest signal, and it has not been confirmed against a contract.",
+      "signal_ids": ["RT-OPP-06-RIGHTS", "AUDIT-CALENDAR"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The rights Nike does NOT hold are the ones the programme sells as its destination. The Nike-FIBA agreement runs 2017-2027 with no renewal or extension found; FIBA appointed Swiss brand FOURTEEN as official apparel supplier for ALL FIBA 3x3 global events from the 2026 season; at LA28 Fanatics holds merchandise, licensing and venue retail (including Team USA), Ralph Lauren is an Official Outfitter, and Nike's Team USA role is on-field gear; and FIBA World Cup event merchandise runs through an appointed global master licensee (IMG in 2023, on-site at all venues plus host-country fan shops). This voids the SS28 VALLEY leg, the 3x3 hero framing and the ~20% event/in-arena channel line as specified. FACT as retrieved (red-team, checked 3 Sep 2026).",
+      "signal_ids": ["RT-OPP-06-RIGHTS", "RT-OPP-06-FOURTEEN", "RT-OPP-06-FANATICS", "RT-OPP-06-IMG"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The borrowed mechanism has a Nike-specific disconfirmation. adidas grew apparel +35% currency-neutral in Q2 2026 on FIFA World Cup kit demand in the same quarter its basketball fell 21% (A04-S3, VERIFIED) - but that lift came with EUR 212M of incremental World Cup marketing and with kit rights adidas owns, and Nike guided the Paris 2024 Olympic quarter DOWN about 10%, reported as its first Olympic-quarter decline since at least Sydney 2000 against an average +9.9% lift in prior Olympic quarters, with Olympic product in 8,000+ doors. The correctly stated mechanism is not 'a date pulls full price'; it is 'owning the kit of the teams people are watching, plus marketing spend, pulls full price'.",
+      "signal_ids": ["A04-S3", "RT-OPP-06-PARIS2024"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The environment the programme is designed to beat is real and dated. Nike FY26 apparel USD 13.4B, +2% currency-neutral on units +1% - growth is price-and-mix, not pricing power (A03-S9, VERIFIED); the US athletic marketplace turned increasingly promotional in summer 2026 (A04-S4, VERIFIED, with the audit's caveat that it is a one-quarter, one-banner, footwear-led read); Nike's core shorts franchises are clearing at roughly 25% off, DNA 8 in. USD 65 to USD 48.75 (A04-S6); and the growing channels are wholesale and physical, against ten consecutive quarters of Nike Digital decline (A02-S7, A04-S1, VERIFIED).",
+      "signal_ids": ["A03-S9", "A04-S4", "A04-S6", "A02-S7", "A04-S1"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The moment is an order of magnitude smaller than its football analogue. The 2023 FIBA World Cup drew 700,665 spectators across 92 games in total - roughly 64% of one Australian NBL season (1,093,048; A02-S9, VERIFIED) - which at a 1-2% attach is under 15,000 shorts sold at the event itself. Qatar's ENTIRE sports market across all sports is put at roughly USD 955M (2024), and visible community basketball in Doha is substantially expatriate (Pinoy Basketball Qatar, 37th season), pointing the first drop at the consumer whose price band A03-S10 puts under PHP 3,000 (~USD 52) against a USD 70 hero. Event-site retail is a rounding error; the volume case rests entirely on a wholesale pull in 32 home markets that this base does not measure for basketball.",
+      "signal_ids": ["A05-S6", "A02-S9", "A05-S7", "A03-S10", "RT-OPP-06-QATAR"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "The product content is thinner than the spec claims, and the price ladder is unanchored. Nike introduced Aero-FIT to basketball on 17 July 2026 with the Sabrina 4 collection - jersey AND shorts, listed at USD 75 - which falsifies the right-to-win line that Nike 'has not routed Aero-FIT to basketball shorts' (and independently corroborates the A03-S4 price the auditor flagged as a possible search echo); Nike's DNA 6 in. UV Woven (FN2659) already ships UVA/UVB protection, side pockets and a phone-sized zip pocket, leaving thigh coverage and pocket placement as the residual. Meanwhile the cross-dataset audit found three mutually incompatible Nike price ladders in this base with NOT ONE price confirmed against a retrieved page, and the spec's own USD 55 anchor - the Nike USMNT 2026 Home Stadium Replica Short - is showing at USD 44.00 with a code (away version USD 34.99) in the launch year of a home World Cup. USD 55/70/85 is an ordering, not a level.",
+      "signal_ids": ["A03-S4", "A06-S7", "A06-S4", "A02-S4", "RT-OPP-06-AEROFIT", "RT-OPP-06-USMNT", "AUDIT-C7"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Nothing anywhere in 58 surviving signals observes a consumer buying basketball SHORTS around a national-team moment. The development spec grades A01's contribution 'weak' and says so in its own words; the strongest fan-fashion term in the base is 'female jersey outfit' at +494%, a TOPS term, sitting alongside 'F1 aesthetic outfit' +483% and 'Brazil jersey outfit women' +302%, which the auditor instructed be discarded as basketball evidence. The demand assumption under the entire programme is inferred from a competitor's football financials.",
+      "signal_ids": ["A05-S4", "A01-S2", "A01-S3", "AUDIT-C14"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "Stripped of its date and its cartography, OPP-06 is product content already on this board: COURT 7 in. (colour-matched short + compression set on A06-S3) is OPP-01 Like-Colored, which the portfolio REJECTED; SESSION 9 in. (UPF, storage, hot-market outdoor) is OPP-02 Found Outdoors, an INVEST; STAND 11 in. (wide, long fan bottom in event and extended-size doors) is OPP-07 The Other Half and OPP-08 Full Range. Its unique content is a calendar and a graphic direction. The portfolio records this as a quiet cannibalisation risk: funding it alongside the others buys the same demand twice into the same doors in eighteen months.",
+      "signal_ids": ["A06-S3", "A06-S7", "A05-S4", "PORTFOLIO-CANNIBALISATION"],
+      "classification": "PATTERN"
+    },
+    {
+      "statement": "The moment-anchored, place-named basketball shorts capsule is not an unowned mechanism at Nike Inc. Jordan Brand ships Quai 54 annually - the 2026 edition released in July in Paris with full basketball kits, jerseys and shorts - and the OPP-06 spec names 'France around Quai 54 at Roland-Garros in July' as one of its own lead markets. Externally the same occasion is already filled: Mitchell & Ness launched an official LA28 collection through its Fanatics licensee relationship and an LA28 x NBA All-Star Swingman Mesh Short is already listed at retail, carrying Games marks a Nike TRANSIT short would not have, roughly two years early.",
+      "signal_ids": ["RT-OPP-06-QUAI54", "RT-OPP-06-MITCHELLNESS", "A05-S3", "A02-S5"],
+      "classification": "FACT"
+    },
+    {
+      "statement": "Ranked 5 of 8, category EXPLORE, composite 44.3, confidence 40 - and it is the widest disagreement in the exercise (D-04): the design director ranked it SECOND at 68.8, the commercial planner SIXTH at 45.6 with a WATCH vote, the PLM director between them at 50.0. The chair kept the commercial planner's scalability 2 and risk 2 and the design director's differentiation 3, scoped it to Doha alone, and killed LA28 on rights rather than on evidence. Development confidence 57 was cut to 39 by the red team, which nevertheless returned survives=true, DEMOTED and RESCOPED.",
+      "signal_ids": ["PORTFOLIO-D04", "CHALLENGE-OPP-06"],
+      "classification": "FACT"
+    }
+  ],
+  "what_the_machine_believes": [
+    {
+      "statement": "The sequencing in the brief is inverted. Doha is not a cheap pilot for a bigger LA28 buy - it is a closing rights window that must be used or lost, while LA28 is somebody else's licence. On that reading the correct object is a single FA27 Doha activation on an existing chassis (Aero-FIT or DNA), not a two-drop TRANSIT programme.",
+      "basis": "Red-team retrieval that the FIBA agreement runs 2017-2027 with no renewal found, set against the Fanatics / Ralph Lauren / FOURTEEN rights map at LA28. Both legs of the inference rest on absence of a found renewal announcement, which is weaker than a contract read.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "TRANSIT as a numbered-drop CHASSIS rather than a one-off event graphic is the genuinely new idea in this brief, and it is a brand-architecture idea rather than a product one. It is why differentiation scored 3 rather than 2. But its stated justification - that the chassis must survive into the 2029 U19 and 2031 cycles - fails on the same expiring rights, so the chassis has to be re-argued on something other than FIBA continuity if it is to be kept.",
+      "basis": "Chair rationale in portfolio.json D-04 plus the challenge's rights finding; no evidence in the base that a numbered-drop chassis has ever performed in basketball apparel.",
+      "confidence": "Low"
+    },
+    {
+      "statement": "A dated moment probably still is the scarcest full-price mechanism available to this category in a +2%-revenue, +1%-unit business - but only in the rights-and-marketing-dependent form, i.e. Nike selling federation product it actually makes, in the home markets of teams people are watching, with matched marketing. As a graphics story without marks it most likely collapses toward the inline USD 45-50 core, which is where every observable Nike shelf in this base is already clearing.",
+      "basis": "A04-S3 read together with the Paris 2024 disconfirmation and the USMNT replica short discounting in its own moment year; the spec's own concession that without marks the price ladder collapses.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The heat-performance story that justifies the SESSION hero has no venue in Doha. The World Cup is played in four air-conditioned arenas; the genuinely heat-exposed venue is the OUTDOOR LA28 3x3 site at Sepulveda Basin - which is FOURTEEN's apparel property, not Nike's. So the performance argument and the rights argument point at opposite legs of the programme.",
+      "basis": "Audit contradiction 8 (heat/sweat evidence is indoor, North American, overwhelmingly male; basketball's normative sweat rate 0.95 +/- 0.42 L/h is NOT high by sport norms), plus red-team venue and FOURTEEN retrievals. A06-S2's garment-trapped-sweat measurement (0.00-1.33 kg) remains a genuinely testable spec anchor independent of this programme.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The gate the programme calls its best feature is probably ceremonial. A Doha drop on shelf Jul-Sep 2027 returns a week-8 full-price read around Oct-Nov 2027, which is roughly when SS28 wholesale books must be written - so the 'eleven months' claim is likely a few weeks wide, possibly zero.",
+      "basis": "Red-team arithmetic against the FIBA event dates and the LA28 3x3 dates. Note the SS28 calendar itself appears in NONE of seven specialist files and was supplied by the cross-dataset audit, so every date here is unconfirmed context, not evidence.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The most likely honest shape of this item is a marketing calendar and colour-up story layered on products already funded (OPP-02's outdoor short, OPP-07/08's fan bottoms) rather than a third of a line plan - which would make it a go-to-market asset with real value and no incremental line slot.",
+      "basis": "The portfolio-duplication kill attempt, which the chair accepted, plus the portfolio observation that four of eight briefs propose product against the same DNA/Icon rail. This is an interpretation of line architecture, not a measured finding.",
+      "confidence": "Medium"
+    },
+    {
+      "statement": "The Gulf leg is the least-supported geography on the entire board. The base holds essentially zero Gulf evidence beyond one UAE property blog, and this is the one programme that schedules its first drop into it - so any Doha commercial assumption is currently a guess that a local merchant, not this pipeline, has to price.",
+      "basis": "Audit geographic-bias section and the spec's own regional notes; corroborated rather than resolved by the Qatar market-size and expat-league retrievals.",
+      "confidence": "High"
+    }
+  ],
+  "what_the_human_must_decide": [
+    {
+      "decision": "Whether to spend a closing rights window at all. Nike's FIBA partnership covers Doha 2027 and appears to lapse afterwards with no renewal found. Using it is a use-it-or-lose-it call about what the last year of a property is worth to Nike Basketball - which may be worth more as a relationship and renewal argument than as units.",
+      "judgment_type": "strategy / organizational knowledge",
+      "why_machine_cannot": "The machine cannot read the contract, cannot know whether renewal is in negotiation, and cannot value a rights relationship. It found the term and the absence of a renewal announcement in public sources only - absence of announcement is not absence of renewal."
+    },
+    {
+      "decision": "Whether TRANSIT-as-chassis is a brand architecture Nike wants to own for the next decade, independent of FIBA. The machine scored it differentiation 3 because a numbered-drop chassis is a real construct rather than feature stacking - but there is no evidence anywhere in the base that such a chassis performs in basketball apparel.",
+      "judgment_type": "creative ambition / brand context",
+      "why_machine_cannot": "This is an act of brand invention judged against Nike's existing naming architecture and the sister-brand property (Quai 54) already occupying the adjacent space. No dataset can adjudicate whether Nike Basketball should own a recurring dated chassis; it is a taste and ambition call."
+    },
+    {
+      "decision": "Whether a moment programme without marks is a Nike-worthy product or a graphics exercise. The rights map says Doha carries federation product Nike makes; LA28 does not. A PLM has to decide whether an unlicensed, place-anchored short at USD 70-85 is something Nike should put its name on next to a Games-marked Mitchell & Ness swingman at USD 80-94.",
+      "judgment_type": "product taste / brand context",
+      "why_machine_cannot": "The machine can establish who holds which licence and what the shelf prices are; it cannot judge whether Nike's own brand equity substitutes for an event mark in a consumer's hand. That is a brand-authority judgment with no measurable proxy in this base."
+    },
+    {
+      "decision": "Whether to accept portfolio duplication, or fold OPP-06 into the funded items as a calendar and colour-up. Strip the date and COURT is the REJECTED OPP-01, SESSION is OPP-02, STAND is OPP-07/08. Someone must decide whether the moment justifies the same doors buying the same silhouettes twice in eighteen months.",
+      "judgment_type": "product taste / organizational knowledge",
+      "why_machine_cannot": "The machine has no line plan, no door-level buy history and no view of how Nike's merchandising organisation actually adjudicates capsule-versus-inline adjacency. It can only observe that the product content overlaps."
+    },
+    {
+      "decision": "Whether the internal history is disqualifying, and who is willing to go look. The single cheapest kill test on this board is how Nike's own Paris 2024, 2023 FIBA World Cup and Quai 54 basketball capsules actually cleared - split BOTTOMS versus tops, week-8 full-price rate, markdown depth. Nike owns that data; this pipeline has none of it.",
+      "judgment_type": "organizational knowledge",
+      "why_machine_cannot": "No first-party Nike commercial data exists anywhere in this evidence base - the audit's blunt finding. The machine cannot obtain it and cannot honestly forecast around it; only someone inside can pull it, and only a human can decide whether a markdown history kills the idea or reflects a badly-executed prior capsule."
+    },
+    {
+      "decision": "Whether wholesale will book a non-replenishable, hard-expiry dated capsule at all - and whether Nike wants to ask. Dick's, Foot Locker, JD, KICKZ, Rebel and Titan 22 buy replenishable core; the machine scored risk 2 and scalability 2 precisely because a capsule with no reorder path is the worst inventory shape in the file.",
+      "judgment_type": "organizational knowledge / strategy",
+      "why_machine_cannot": "Buyer appetite is relationship information held by key-account sales leads. It cannot be inferred from any signal in this base, and asking the question itself spends account credibility that only a human can decide to spend."
+    },
+    {
+      "decision": "Whether the LA28 / VALLEY leg is truly dead, or whether Nike's Team USA on-field position and existing LA28 relationships open a route the public record does not show. The machine killed it on rights, not on evidence - and it did so from search-result summaries with the host pages egress-blocked.",
+      "judgment_type": "organizational knowledge / strategy",
+      "why_machine_cannot": "Licence carve-outs, on-field-versus-retail boundaries and pending negotiations are invisible to public retrieval. The machine's kill is as strong as its sources, and its sources were blocked pages read through search snippets."
+    },
+    {
+      "decision": "Whether Doha is a market or a stage. Qatar's whole sports economy is roughly USD 955M, visible community basketball is substantially expatriate at a sub-USD 52 price band, and the base has essentially no Gulf evidence. Someone has to decide whether the drop is a commercial buy or a brand activation whose payoff is presence in the Middle East's first World Cup.",
+      "judgment_type": "strategy / brand context",
+      "why_machine_cannot": "The machine can size the attendance and the market but cannot value brand presence at a first-ever regional moment, nor weigh it against Nike's broader Gulf ambitions - which are organizational strategy it has no visibility into."
+    }
+  ],
+  "if_selected_next_step": "If the human PLM / Design team selects OPP-06, the first move is the human's call to make, and the pipeline's recommendation is that it be two zero-cost internal reads run THIS QUARTER before any development spend - (1) Sports Marketing and Legal on exactly what the FIBA partnership permits at Doha 2027 and whether it extends past 2027, and (2) a Merchandising pull of how Nike's Paris 2024, 2023 FIBA World Cup and Quai 54 basketball capsules cleared, split bottoms versus tops at week-8 full price - with the LA28 / VALLEY leg carried in no deck and the USD 55/70/85 ladder treated as an ordering until a merchant confirms live retails."
+  ,
+  "do_not_proceed_note": "The engine STOPS here. No product briefing, concept development, design work, tech pack, costing, buyer conversation or deck may proceed on OPP-06 until a human PLM / Design owner explicitly selects it. This item is EXPLORE, ranked 5 of 8, at confidence 40 after the red team cut it from 57 - it survives DEMOTED and RESCOPED to the Doha leg alone, and it is the only item on this board with an external clock, which is a reason to DECIDE this quarter, not a licence to start. Three cautions travel with any selection: every price and every length in this brief is unanchored to a retrieved page (the audit found three mutually incompatible Nike price ladders and confirmed none), the entire consumer premise - that anyone buys basketball SHORTS at a national-team moment - is a HYPOTHESIS inferred from a competitor's football financials and must never be presented as a finding, and the rights kills against LA28 rest on search snippets from egress-blocked hosts and must be re-verified internally before they are used to close a door. The disagreement is preserved, not averaged: the design director ranked this SECOND, the commercial planner SIXTH and voted WATCH, and the chair sat at rank 5 EXPLORE - a human re-weighting toward cultural relevance and brand architecture would legitimately move it up, and one weighting toward inventory shape would legitimately move it down."
+}
