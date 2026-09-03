@@ -1,0 +1,399 @@
+{
+  "lens": "Whitespace and Right-to-Win: opportunities defined by markets, moments, occasions, channels and price rungs that no strong player serves, crossed with demand that is already proven and assets only Nike owns.",
+  "narrative": "Applying a whitespace lens to this base means first accepting that the obvious whitespace is gone. Between them the seven specialists proposed a UV outdoor short, a secure-storage short, a heritage 11-inch short, a women's inseam ladder and an Aero-FIT basketball short. Nike ships all five (A03-S7, A06-S4, A07-S8, A03-S6, A03-S4). The cross-dataset audit is right that this is one un-run catalogue query counted four times. Genuine whitespace here is therefore not 'a product nobody makes'. It is a market nobody looked at, a moment nobody planned for, an occasion a rule change just created, a channel that prices differently, and rungs of the ladder where extended sizing and durability proof do not exist at full price.\n\nFour kinds survive contact with the audit.\n\nGeography. Roughly three quarters of the base is US-derived. Europe, Nike's second geography, has no signal where it is the primary market, yet Li-Ning's multi-year Wade UPF 50+ platform already clears at about EUR 20 through European resellers (A03-S7), ballaholic reaches Europe through KICKZ (A02-S11), and Nike's own EMEA Digital is -24% (A04-S4). Australia has the best evidence-to-attention ratio in the whole file - about 1.3M players, female participation +25%, NBL attendance 1.23M with 63 sellouts - and a league on-court partner, Champion, that is not a performance-basketball brand (A02-S9). Both are whitespace by neglect, not by absence of demand.\n\nCalendar. The SS28 selling season contains the FIBA World Cup (Qatar, Aug-Sep 2027) and LA28. No specialist mentioned either. The mechanism is already proven inside this dataset, by a competitor: adidas apparel grew 35% currency-neutral in a quarter on World Cup demand while its basketball fell 21% (A04-S3). In a marketplace Ed Stack calls increasingly promotional (A04-S4), a dated national-team moment is the most reliable full-price argument available, and Nike holds the US Olympic outfitting rights.\n\nRules. NFHS Rule 3-4-5 for 2025-26 permits teammates to wear multiple styles of like-coloured uniform bottoms, and FIBA's official interpretation legalises compression undershorts at any length provided the team matches colour (A06-S3). That is the only genuinely new constraint change in 58 signals, and it opens an occasion - a matched, orderable team bottoms system - that no brand sells today, reachable through the low-markdown team-dealer channel (A04-S9).\n\nLadder. Nike's live ladder is inverted: the longest short, the DNA Academy 11-inch including Big and Tall, is the cheapest at about USD 37, while the 10-inch clears at roughly 38% off (A02-S4). Extended sizing exists only at the bottom rung and mostly in men's, though Sabrina carries a plus SKU (A03-S6) and AND1 runs to 5XL (A01-S9). Durability is claimed by value brands while premium sells lightness (A03-S5, A04-S6). And the commodity floor beneath Nike is rising, not falling, under a roughly 53.5% duty stack (A04-S8).\n\nRight to win is what separates these from a startup's wish list. Each candidate leans on an asset a rival cannot rent: wholesale doors growing while Direct shrinks (A02-S7, A04-S1), a competitor field in retreat (A04-S3, A02-S8), the team-dealer channel (A04-S9), the S.T. Flare local-build precedent (A01-S7), and a live women's assortment with the Sabrina and Caitlin Clark platforms behind it (A03-S4, A03-S6).\n\nTwo contradictions are preserved, not averaged: whether Greater China is a value or a premium play (A01-S7 against A02-S3), and whether inseam demand is polarising or the middle is the business (A07-S4 against A02-S5). No price in this portfolio is anchored to a retrieved page or to sell-through; none should be read as a recommendation.",
+  "patterns": [
+    {
+      "id": "P-WHITESPACE-1",
+      "title": "Europe is the largest unexamined market in the file - and Chinese value brands are already retailing there",
+      "description": "Nike's second-largest geography does not appear as the primary market in a single surviving signal. It enters the analysis only as a compliance risk (EU Empowering Consumers Directive applying 27 September 2026, A03-S5), a markdown line (EMEA Digital -24%, A04-S4), a set of doors (KICKZ, Zalando, A02-S7) and a discount channel - Li-Ning's Wade UPF 50+ / AT Dry platform, a sustained multi-year outdoor programme, clears at roughly EUR 20 from EUR 49 through European resellers (A03-S7). Meanwhile a Tokyo streetball label reaches Europe through KICKZ distribution (A02-S11) and the only European sizing datapoint anywhere is a 4.9% CAGR from a syndicated gear report (A02-S1). This is whitespace by neglect: a market with real doors, an incoming regulation that penalises vague claims and rewards substantiated ones, and an incumbent value threat already on the shelf, none of which any of the seven domains examined. The cross-dataset audit independently records EuroLeague setting a fourth consecutive attendance record; that evidence sits outside the signal base and must be pulled before sizing.",
+      "domains": [
+        "marketplace",
+        "product",
+        "commercial",
+        "culture"
+      ],
+      "signal_ids": [
+        "A02-S1",
+        "A02-S7",
+        "A02-S11",
+        "A03-S5",
+        "A03-S7",
+        "A04-S4"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "id": "P-WHITESPACE-2",
+      "title": "The SS28 season contains the two largest basketball moments of the cycle and nobody planned for them - while a competitor's own numbers prove the mechanism works",
+      "description": "Not one of the seven files mentions the FIBA World Cup (Qatar, 27 August-12 September 2027) or LA28, both of which fall inside the SS28 development and selling window. The mechanism is nonetheless proven inside this very dataset, by a rival: adidas apparel grew 35% currency-neutral in a quarter on World Cup demand while its basketball category fell 21% in the same quarter (A04-S3). That matters precisely because the single best-evidenced commercial finding in the base is that the US wholesale marketplace turned increasingly promotional and undifferentiated shorts will not hold price (A04-S4), and because Nike's growth channel is now wholesale rather than Direct (A02-S7, A04-S1). Event-led demand is separately visible at small scale and full price: Unrivaled's Philadelphia night produced roughly USD 1M in tickets and USD 400,000 in merchandise (A05-S7), Quai 54 drew about 20,000 over two days at Roland-Garros with a Jordan capsule already attached (A05-S6), and the NBL delivered 63 sellouts (A02-S9). A dated moment is the most reliable answer to a promotional floor, and it is the one lever nobody pulled.",
+      "domains": [
+        "commercial",
+        "culture",
+        "marketplace"
+      ],
+      "signal_ids": [
+        "A04-S3",
+        "A04-S4",
+        "A04-S1",
+        "A02-S7",
+        "A05-S6",
+        "A05-S7",
+        "A02-S9"
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "P-WHITESPACE-3",
+      "title": "A rule change created a new product occasion in the largest youth competition system, and no brand sells into it",
+      "description": "NFHS Rule 3-4-5 for 2025-26 now permits teammates on the same team to wear multiple STYLES of uniform bottoms - shorts, pants, skirts - provided they are like-coloured and logo-compliant, introduced explicitly so religious and personal accommodations no longer need a permission request; FIBA's official interpretation separately confirms compression undershorts are legal at any length provided the team matches colour (A06-S3). Three distinct consumer needs converge on that opening and each was previously argued through much weaker inference: coverage-first and modest-dressing players (A05-S8), players who already layer three-quarter tights and find the sewn-in brief liner redundant (A06-S6), and women sized hip-first whose length and waist options are constrained (A06-S9). The route to market is the one channel in the base that is bookings-led and low-markdown rather than promotional - team dealers such as BSN inside Varsity, growing about 8% in 2025 (A04-S9). This is the only genuinely new, verified, dated constraint change in the entire evidence base, and no competitor product answers it.",
+      "domains": [
+        "athlete",
+        "culture",
+        "commercial",
+        "consumer"
+      ],
+      "signal_ids": [
+        "A06-S3",
+        "A06-S6",
+        "A06-S9",
+        "A05-S8",
+        "A04-S9",
+        "A02-S9"
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "P-WHITESPACE-4",
+      "title": "The outdoor short is not missing - it is unfindable, single-length, and absent from the markets that need it",
+      "description": "Four separate domains claimed an outdoor, UV, storage or abrasion white space (A03-S7, A06-S4, A06-S7, A07-S8). All four are closed by one SKU: the Nike DNA 6-inch UV Woven (FN2659) carries UVA/UVB protection, side pockets, a zippered utility pocket sized to hold a phone, and a woven face marketed to survive rebound battles - and it is cited by A01-S3 as the headline pocket feature while A06-S4 and A07-S8 argue the same features are absent. So the real pattern is commercial, not technical: a product that exists in the US and Japan at roughly USD 45-55 was invisible to seven diligent researchers, exists at only the shortest inseam, and is absent from the Greater China outdoor conversation where Li-Ning's Wade UPF 50+ platform runs across style codes from Spring 2023 to 2025 at about RM 99.50 (A03-S7) and where Nike's own S.T. Flare proved the local-build logic in footwear at RMB 899 (A01-S7). Heat is a documented, institutionally recognised constraint in these markets - Philippine athletic meets moved away from 9am-3pm from 2024 (A06-S5) - and the genuinely unasked question is what saturation does to UV protection in a garment that traps up to 1.33 kg of sweat (A06-S7, A06-S2).",
+      "domains": [
+        "product",
+        "athlete",
+        "consumer",
+        "design"
+      ],
+      "signal_ids": [
+        "A03-S7",
+        "A06-S4",
+        "A06-S7",
+        "A07-S8",
+        "A01-S3",
+        "A01-S7",
+        "A06-S5",
+        "A06-S2"
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "P-WHITESPACE-5",
+      "title": "Every Western competitor is retreating from performance basketball apparel at the exact moment wholesale becomes Nike's growth channel",
+      "description": "adidas basketball fell 21% in Q2 2026, Under Armour's entire global basketball business including Curry Brand is guided at USD 100-120M with a Curry separation completing (apparel available only through October 2026), and Puma's basketball growth is a residual pocket with basketball absent from its stated strategic priorities (A04-S3, A02-S8). The one riser is New Balance: +19% to USD 9.2B, apparel past USD 1B, 80 new doors, Cooper Flagg signed, and a 7-inch mesh basketball short already sitting in Foot Locker (A02-S8). Simultaneously Nike's own channel mix inverted - wholesale +4-6% against Direct -6%, with Nike Digital down for a tenth consecutive quarter (A02-S7, A04-S1). Physical shelf is opening in the doors that are growing. The countervailing fact must travel with the claim: the freed space is small in absolute dollars, and retailers are promotional (A04-S4), so this is a share-of-shelf and full-price-productivity opportunity, not a category-growth one.",
+      "domains": [
+        "marketplace",
+        "commercial"
+      ],
+      "signal_ids": [
+        "A04-S3",
+        "A02-S8",
+        "A02-S7",
+        "A04-S1",
+        "A04-S4",
+        "A02-S9"
+      ],
+      "strength": "strong"
+    },
+    {
+      "id": "P-WHITESPACE-6",
+      "title": "The price ladder is inverted, and extended sizing plus durability proof exist only at the bottom of it",
+      "description": "Nike's live men's ladder runs roughly USD 37-65 with the LONGEST short - DNA Academy 11-inch, Big and Tall included - at the LOWEST price, and the 10-inch discounting about 38% (A02-S4). Extended sizing therefore reaches the consumer almost exclusively at the cheapest, least differentiated rung, and the competitive reference points for size inclusion are value brands: AND1 to 5XL, described by a reviewer as 'affordable and cultural' versus Nike or adidas (A01-S9), and Mitchell & Ness swingman shorts stocked at DXL big-and-tall (A02-S5). Women's plus exists but as a single SKU inside a signature line (A03-S6). Durability is the same shape: premium sells lightness while durability claims sit at value tier, even as Nike's own volume franchise shows 3.9 stars and only 67% recommending across 64 reviews at Dick's (A04-S6) and reproducible complaints are seam failure and post-wash shrinkage rather than pockets (A01-S3, A01-S2). Meanwhile the floor beneath is rising, not falling: the US de minimis exemption ended, apparel carries roughly a 53.5% duty stack, and Nike is absorbing an estimated USD 1.5B tariff cost while already taking apparel price increases (A04-S8).",
+      "domains": [
+        "marketplace",
+        "commercial",
+        "consumer",
+        "product"
+      ],
+      "signal_ids": [
+        "A02-S4",
+        "A02-S5",
+        "A01-S9",
+        "A01-S2",
+        "A01-S3",
+        "A03-S6",
+        "A04-S6",
+        "A04-S8",
+        "A03-S9"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "id": "P-WHITESPACE-7",
+      "title": "Women's demand is proven and jersey-led; the lower body is the unserved half of the wardrobe, not the unserved half of the line",
+      "description": "The demand is real and now durable rather than a spike: a third consecutive record WNBA season with a settled CBA, Unrivaled ticket revenue +204% and tickets +249% with a professional women's regular-season record crowd of 21,490 and USD 400,000 of merchandise in one night (A05-S7, A05-S1), and a first-party retailer call-out from Ed Stack that the basketball business is coming back built around women's basketball, bought by 'boys and girls, young men and women' (A04-S5). What is false is the 'empty category' framing: Nike ships a live women's bottoms assortment including a 5-inch Crossover, ISoFly, Fly Crossover, WNBA fanwear shorts and Sabrina, and put Aero-FIT on a women's-athlete-led signature short first (A03-S6, A03-S4). The whitespace that survives is narrower and different: the supply chain converts fandom into tops. The strongest search term in the Pinterest data is 'female jersey outfit' at +494% (A05-S4, A05-S1) - an argument for jerseys - and reviewers report wearing Sabrina at home more than on court (A03-S6). The unserved job is a women's-block lower half designed as game-day dress rather than as a game short, merchandised beside the jersey.",
+      "domains": [
+        "culture",
+        "commercial",
+        "product",
+        "consumer"
+      ],
+      "signal_ids": [
+        "A05-S1",
+        "A05-S7",
+        "A05-S4",
+        "A04-S5",
+        "A03-S6",
+        "A03-S4",
+        "A01-S5"
+      ],
+      "strength": "moderate"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "C-WHITESPACE-1",
+      "name": "Continental",
+      "thesis": "A Europe-first basketball shorts programme - one 7-inch performance block and one 9-inch city block, built to a substantiated-claims standard the EU Empowering Consumers Directive rewards - taking the doors (KICKZ, Zalando, club retail) where Chinese value brands and local streetball labels are already selling and Nike has never fielded a European basketball apparel plan.",
+      "intersection": "Marketplace (unexamined geography with live doors) x Product (regulation-grade claim architecture) x Culture (locally coded streetball retail already reaching Europe)",
+      "contributing_signal_ids": [
+        "A02-S1",
+        "A02-S7",
+        "A02-S11",
+        "A03-S5",
+        "A03-S7",
+        "A04-S4",
+        "A02-S8"
+      ],
+      "domains": [
+        "marketplace",
+        "product",
+        "commercial",
+        "culture"
+      ],
+      "target_consumer": "European club, school and pickup players 15-30 in Germany, Spain, Greece, Turkey, Lithuania and Serbia, plus the specialty-retail streetwear buyer who already shops KICKZ and Zalando; secondarily the European value buyer currently picking up discounted Li-Ning Wade product at about EUR 20.",
+      "why_nike": "Nike's own EMEA Digital is -24% while its wholesale channel grows (A04-S4, A02-S7), so Europe is the geography where Nike most needs a full-price wholesale story and already has the doors. The EmpCo directive applying from 27 September 2026 (A03-S5) converts vague recycled-percentage hangtags into legal exposure for everyone - Nike is one of the few players with the testing infrastructure and textile-to-textile material story (Aero-FIT's 100% textile waste, A03-S4) to turn a compliance burden into a claim advantage rather than a cost. New Balance grew Europe 30% (A02-S8), proving the region responds to a committed challenger.",
+      "why_hard_to_see": "A PLM sitting in Beaverton sees Europe as an execution region, not a creation region; every research input in this programme is US-derived, so Europe never generates a brief. It also enters the file only as negatives - a markdown number and a regulation - which reads as a reason to avoid rather than a reason to build. The single strongest European fact, that a Chinese competitor's sustained outdoor platform is already clearing at EUR 20 in European reseller channels, appears inside a signal filed under Greater China (A03-S7).",
+      "risks": "There is no European consumer evidence anywhere in this base - not one price, review, participation figure or sell-through number - so this is currently unfalsifiable and must not be sized before a minimum viable European read (EuroLeague/Basketball England/DBB participation plus KICKZ and Zalando sell-through). EMEA is promotional and Nike's digital business there is contracting. EmpCo compliance may raise cost rather than create advantage if legal takes a defensive posture. Fragmenting graphics by country creates inventory complexity the base already flags (A07-S9 territory).",
+      "contradicting_signal_ids": [
+        "A04-S4",
+        "A02-S1",
+        "A03-S5"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-2",
+      "name": "Like-Colored",
+      "thesis": "A rules-legal team bottoms SYSTEM - a knee-clearing linerless short, a long bottom and a matched-colour compression tight and legging, orderable together in team colours with compliant logo placement - built for the occasion NFHS Rule 3-4-5 created in 2025-26 and sold through the bookings-led team-dealer channel rather than the promotional retail floor.",
+      "intersection": "Athlete/rules (a new, verified, dated constraint change) x Commercial (a low-markdown B2B channel) x Culture (coverage-first and modest-dress players who previously had to request permission)",
+      "contributing_signal_ids": [
+        "A06-S3",
+        "A06-S6",
+        "A06-S9",
+        "A05-S8",
+        "A04-S9",
+        "A02-S9",
+        "A04-S5"
+      ],
+      "domains": [
+        "athlete",
+        "commercial",
+        "culture",
+        "consumer"
+      ],
+      "target_consumer": "US high-school and club programme buyers - coaches and athletic directors ordering rosters through BSN and other dealers - and through them the players the rule was written for: girls' and women's teams, Muslim and coverage-first athletes, and the large layering population who wear three-quarter tights under a game short. Secondary: Australian club programmes where female participation is up 25% (A02-S9).",
+      "why_nike": "This is a system sale, and systems are where scale wins: it needs a matched colour standard across four garment types, a compliant single-logo placement, guaranteed reorder windows, and a dealer network that can book a roster. Nike reaches that channel through BSN inside Varsity (A04-S9), owns the colour and fabric platforms, and has the athlete credibility (Sabrina, A'ja Wilson, Caitlin Clark) that makes a girls' programme choose the system (A04-S5, A03-S4). FIBA's interpretation that compression undershorts are legal at any length with team colour match (A06-S3) makes the same system exportable to federated play outside the US.",
+      "why_hard_to_see": "The trigger is a single line in an NFHS rules-change release - a document apparel PLMs do not read, and one the athlete specialist missed by using a diocesan PDF as a proxy. The opportunity is an assortment architecture, not a hero product, so it produces no image for a line review. And it lives in the team channel, which is usually treated as a supply obligation rather than a creation space. The three consumer needs it serves were each argued elsewhere from much weaker evidence (a 2014 quote, an SEO compression guide, a boilerplate sizing sentence), so the strong version was never assembled.",
+      "risks": "Prevalence is the killer unknown: the share of sub-elite players who actually wear tights every game is entirely unmeasured, and the only real survey (n=512) is 88.1% endurance athletes (A06-S6). Core youth participation growth is contradicted - SFIA shows flag football as the only growing team sport for ages 6-17 and Sport England records a 1% decrease in weekly under-16 basketball (A02-S1 cluster). Varsity/BSN is consolidating under a KKR-backed buyer, which changes Nike's negotiating position (A04-S9). France's hijab ban makes it a non-market for federated play (A05-S8). A linerless SKU may cannibalise higher-margin lined game shorts.",
+      "contradicting_signal_ids": [
+        "A06-S6",
+        "A02-S1",
+        "A04-S9",
+        "A05-S8"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-3",
+      "name": "Doha to LA",
+      "thesis": "A moment-led shorts programme engineered against the two dated events inside the SS28 window - the FIBA World Cup in Qatar (August-September 2027) and LA28 - using national-team and host-city codes to create the full-price reason-to-buy that a promotional wholesale marketplace otherwise denies a basketball short.",
+      "intersection": "Commercial (a proven full-price mechanism in a promotional marketplace) x Culture (event and live-spectacle demand) x Marketplace (wholesale is the growth channel and needs bookable stories)",
+      "contributing_signal_ids": [
+        "A04-S3",
+        "A04-S4",
+        "A04-S1",
+        "A02-S7",
+        "A05-S6",
+        "A05-S7",
+        "A02-S9"
+      ],
+      "domains": [
+        "commercial",
+        "culture",
+        "marketplace"
+      ],
+      "target_consumer": "Fan-and-player crossover buyers 14-34 in the US around LA28 and in the Gulf, Europe and Asia around FIBA 2027; national-team followers who buy replica lower-body for the first time; and event attendees buying on site, where full price holds - Unrivaled's Philadelphia night produced about USD 400,000 of merchandise (A05-S7).",
+      "why_nike": "Nike is an Official Outfitter of the US Olympic and Paralympic Team and holds federation relationships no competitor can rent, in a Games hosted in its home market. The mechanism is already proven inside this dataset by adidas: apparel +35% currency-neutral in one quarter on World Cup demand, while its basketball fell 21% (A04-S3) - adidas monetised the moment in football because it had the rights; Nike holds the equivalent rights in basketball. Wholesale, now Nike's growth channel (A02-S7, A04-S1), buys against dated moments better than against seasonal basics, which directly answers the promotional floor Ed Stack describes (A04-S4). Jordan already runs a Quai 54 capsule each edition (A05-S6), so the event-capsule muscle exists.",
+      "why_hard_to_see": "PLM calendars run on seasons; federation calendars run on qualification cycles, and no one owns the join. All seven specialists missed both events. The proof of the mechanism sits in a competitor's FOOTBALL numbers inside a signal about competitor retreat, so it reads as a fact about adidas rather than a playbook for Nike. And the Gulf, where the World Cup lands, has essentially zero evidence in the base, so the market that most needs the plan looks empty rather than unstudied.",
+      "risks": "Event-led buys are single-shot and unforgiving: a mistimed buy in an already promotional marketplace becomes markdown. The base contains no merchandise-revenue-per-event data for any basketball event, only attendance (A05-S6), and BAL's entire record season drew roughly nine NBL games' worth of people, so absolute scale outside Australia and the US is unproven. Quai 54's 2026 venue is reported as changing, so forward event plans need organiser confirmation (A05-S6). Nike's CFO has said marketplace conditions are unlikely to improve through at least H1 FY2027 (A04-S1). National-team product can cannibalise inline core rather than adding occasions.",
+      "contradicting_signal_ids": [
+        "A05-S6",
+        "A04-S4",
+        "A04-S1"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-4",
+      "name": "Found Outdoors",
+      "thesis": "Turn the DNA UV Woven from an invisible single-length SKU into Nike's outdoor basketball franchise - extend it to 7-inch and 9-inch, take it into Greater China, Southeast Asia, Australia and the Gulf, and give it the one proof point nobody in the category has: a UPF rating verified when the garment is saturated, not only when dry.",
+      "intersection": "Product (an existing SKU, unmerchandised) x Athlete (an unasked physiological question - UV protection under saturation) x Consumer/Marketplace (the outdoor markets where the competitive price is set)",
+      "contributing_signal_ids": [
+        "A03-S7",
+        "A06-S7",
+        "A06-S4",
+        "A07-S8",
+        "A01-S3",
+        "A01-S7",
+        "A06-S5",
+        "A06-S2"
+      ],
+      "domains": [
+        "product",
+        "athlete",
+        "consumer",
+        "design",
+        "marketplace"
+      ],
+      "target_consumer": "Outdoor and half-court players 15-35 in Greater China, the Philippines, India, Australia and the Gulf who play on concrete and asphalt in heat, carry a phone with no locker, and currently buy Li-Ning Wade or Anta quick-dry product; plus Australian tournament players and parents, where UPF 50+ is an established consumer standard (A06-S7).",
+      "why_nike": "The product already exists (FN2659: UVA/UVB protection, side pockets, a zippered phone-secure pocket, a woven face marketed to survive rebound battles), so the investment is a length extension, a distribution decision and a test protocol rather than an innovation programme (A03-S7, A01-S3). Nike has already proved it will build China-specific outdoor product and can charge for it - the S.T. Flare launched at RMB 899 with an XDR outsole and reinforced high-wear zones, and that reinforced-zone logic is directly transferable to apparel (A01-S7). Nike also runs a dedicated outdoor section on nike.com.cn (A03-S7). No competitor has published a wet-state UV claim; the peer-reviewed literature says untreated polyester already tests UPF 40-50+ dry and that moisture changes it (A06-S7), which makes the saturated claim the only defensible version - and it is testable to AS/NZS 4399 or EN 13758-2 cheaply.",
+      "why_hard_to_see": "It presents as a merchandising failure, so no product owner claims it: four separate domains looked at the same shipped SKU and wrote it up as a gap (A03-S7, A06-S4, A06-S7, A07-S8), which pushes the organisation's instinct toward inventing rather than distributing. The genuinely open question - what saturation does to UV protection in a garment that traps up to 1.33 kg of sweat (A06-S2, A06-S7) - sits in the intersection of a physiology paper and a textile paper that no single specialist read together.",
+      "risks": "Greater China is Nike's worst region (apparel units -8%) and its route to market is narrowing - Topsports, Nike's largest GC retail partner, is set to stop selling Nike online by January 2027 (A04-S2). The price answer is genuinely contested: A01-S7 concludes RMB 199-299 from the same S.T. Flare precedent that launched at RMB 899. Concrete albedo of 2-15% is among the lowest of outdoor surfaces, so 'reflected UV' is a weak story (A06-S7). If polyester already rates 40-50+ dry, the dry claim is near-free and non-differentiating. And the claim that outdoor play is shifting to dawn and dusk is sourced to sales blogs, not measurement (A06-S5).",
+      "contradicting_signal_ids": [
+        "A06-S7",
+        "A01-S7",
+        "A04-S2",
+        "A06-S5",
+        "A02-S3"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-5",
+      "name": "Southern Court",
+      "thesis": "Make Australia the pilot market for a female-led performance shorts ladder, because it is the only non-US geography in this base with verified compounding participation, a competitor vacuum on-court, and doors Nike already sells through.",
+      "intersection": "Marketplace (an uncontested, verified growth market) x Culture (a league and event calendar that sells out) x Product (an existing women's block plus the one UPF claim consumers there actually recognise)",
+      "contributing_signal_ids": [
+        "A02-S9",
+        "A02-S7",
+        "A05-S6",
+        "A03-S6",
+        "A06-S7",
+        "A04-S3"
+      ],
+      "domains": [
+        "marketplace",
+        "culture",
+        "product",
+        "commercial"
+      ],
+      "target_consumer": "Australian women and girls 13-30 - more than 450,000 female participants and rising 25% since 2022 on the back of She Hoops - plus the club and school players inside an approximately 1.3 million-player base, buying through Rebel, JD and Foot Locker Australia; secondarily NBL fans across 63 sellouts a season.",
+      "why_nike": "The on-court league partner is Champion, not a performance-basketball leader (A02-S9), and every Western performance-basketball competitor is retreating (A04-S3), so the shelf is genuinely open. Nike already has the doors through wholesale, the channel that is growing (A02-S7), and already ships the women's blocks (ISoFly, Crossover 5-inch, Fly Crossover, Sabrina) that this ladder would extend rather than invent (A03-S6). Australia is also the one market where a UPF claim has established consumer meaning through ARPANSA's UPF 50+ standard (A06-S7), which makes it the right first market for the wet-state UV proof in C-WHITESPACE-4.",
+      "why_hard_to_see": "Australia is a small line inside APLA and never generates a global brief; it supports exactly one signal in 58 and no dedicated opportunity, so the portfolio's attention flows to China, which is larger and far less evidenced. The demand detail that makes the case - 150,000 players unable to participate for lack of court space, and female participation past 450,000 - surfaced only in a skeptic's correction, not in the original signal.",
+      "risks": "It is one market and one signal; a single national participation dataset cannot carry a global line. Absolute revenue is small relative to the US and Greater China, so it competes badly for capacity in a flat-unit environment (A03-S9). Champion's NBL agreement runs through NBL26 and its term beyond that is unknown (A02-S9). No Australian price, ASP or sell-through data exists anywhere in the base, so any AUD price is an analyst estimate.",
+      "contradicting_signal_ids": [
+        "A03-S9",
+        "A02-S9",
+        "A04-S4"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-6",
+      "name": "The Other Half",
+      "thesis": "Build the women's game-day LOWER half - a women's-block mesh short designed and merchandised as an outfit piece beside the jersey, not as a game short - because the demand that is now proven across three seasons is converting into tops while the shorts sit on the performance wall.",
+      "intersection": "Culture (fandom-as-dress, jersey-led) x Commercial (a first-party retailer demand call-out) x Product (a live women's assortment aimed at the wrong occasion)",
+      "contributing_signal_ids": [
+        "A05-S1",
+        "A05-S7",
+        "A05-S4",
+        "A04-S5",
+        "A03-S6",
+        "A01-S5",
+        "A02-S7"
+      ],
+      "domains": [
+        "culture",
+        "commercial",
+        "product",
+        "consumer"
+      ],
+      "target_consumer": "Women and girls 16-35 in the US who follow the WNBA, Unrivaled and NCAA and dress the fandom daily - and, per Ed Stack's own words, the cross-gender buyer: 'boys and girls, young men and women are buying that product' (A04-S5). Bought in fan doors and at events, not on the performance wall.",
+      "why_nike": "Nike already owns both ends and has never joined them: the WNBA on-court and fanwear licence (Victory and Rebel Fanwear shorts), the women's blocks (ISoFly, Crossover, Fly Crossover), the two signature platforms driving the demand (Sabrina 4 with Aero-FIT, Caitlin Clark at retail 1 October 2026) (A03-S6, A03-S4). The demand is durable rather than a spike - a third consecutive record season with a settled CBA, Unrivaled ticket revenue +204%, and USD 400,000 of merchandise in one Philadelphia night (A05-S7, A05-S1). Nobody else can put an athlete's own short beside her jersey in a fan door.",
+      "why_hard_to_see": "Three domains read the same 2024 WNBA press release and concluded the women's shorts category was empty, which is false - so the correct move (retarget the occasion) looks like the incorrect move (create the category) and gets rejected on the audit. The clue that the gap is lower-body-in-fan-doors rather than a missing product is buried in a contradiction: the strongest Pinterest term is 'female jersey outfit' at +494% (A05-S4), and Sabrina reviewers report wearing the short at home more than on court (A03-S6). Both were treated as reasons to doubt the women's case rather than as a redirection of it.",
+      "risks": "The sport-as-fashion wave is pan-sport, not basketball-led - the same Pinterest report shows Formula 1 aesthetic +483% and Brazil jersey outfit women +302% - and percentage growth on unknown bases cannot rank terms (A05-S4). Demand is concentrated in a small number of athletes. Sabrina tees were already marked to USD 15.97-28.97 at Dick's, so fan lower-body may markdown the same way (A04-S5). A fan-coded short may cannibalise the existing performance women's assortment rather than adding an occasion (A03-S6). The Unrivaled merchandise figure has never been split by category, which is the cheapest test available.",
+      "contradicting_signal_ids": [
+        "A05-S4",
+        "A03-S6",
+        "A04-S5",
+        "A05-S1"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-7",
+      "name": "Twenty Washes",
+      "thesis": "Own durability as the one premium claim nobody at premium makes: a core basketball short sold on a published, third-party-verifiable wash-and-seam specification, aimed squarely at the reproducible complaint (seams and shrinkage after one wash) rather than the imagined one (pockets).",
+      "intersection": "Commercial (full-price productivity in a promotional marketplace) x Consumer (a mis-diagnosed failure mode) x Athlete (lateral loading is why basketball seams fail differently)",
+      "contributing_signal_ids": [
+        "A04-S6",
+        "A01-S3",
+        "A01-S2",
+        "A02-S4",
+        "A04-S8",
+        "A03-S5",
+        "A06-S1",
+        "A03-S9"
+      ],
+      "domains": [
+        "commercial",
+        "consumer",
+        "athlete",
+        "product"
+      ],
+      "target_consumer": "Men and women 16-35 buying core Nike basketball shorts at Dick's, Foot Locker, Walmart, Kohl's and Amazon, and the parents replenishing for them - the buyer who is currently trained to wait for 25-40% off and who reports holes in seams after one wear and one wash.",
+      "why_nike": "Nike is the only player with the returns and warranty data to diagnose this properly (defect codes split by pocket-area failure, seam failure and post-wash dimensional change) and the testing capability to publish a claim against it. It also has the strongest reason to act: apparel growth is price-led with units up 1% and the ASP gain coming from mix, already partly eroded by discounts (A03-S9), and the volume franchise carries 3.9 stars with 67% recommending across 64 reviews at Dick's (A04-S6). Durability is also the sustainability story that actually lands - a short that lasts - at exactly the moment EmpCo makes generic recycled-percentage claims a legal exposure in Europe (A03-S5).",
+      "why_hard_to_see": "The failure mode was mis-diagnosed inside the base: the consumer domain built a pocket-engineering recommendation on one unverified snippet, while the reproducible complaints in the same review corpus are seams and shrinkage (A01-S3, A01-S2). The one usable quality datapoint - 67% recommend across 64 reviews - was found by a skeptic, not a specialist. And a quality reset reads as a cost line, not a product line, so it has no natural sponsor in a line review.",
+      "risks": "Nobody has established that fabric GSM ever changed - the entire cost-down narrative is reverse-engineered from reviews, and if GSM is unchanged the recommended fix is wrong and expensive (A04-S6). The premise that sub-USD 100 list prices are frozen is superseded: Nike has since taken apparel price increases of about 3% while absorbing an estimated USD 1.5B tariff cost (A04-S8). The Walmart sample behind the loudest complaints is roughly three reviews. A published durability claim invites third-party testing and legal exposure if it fails. And a third explanation - fit or expectation being reported as quality - has been tested by nobody (A01-S2).",
+      "contradicting_signal_ids": [
+        "A04-S6",
+        "A04-S8",
+        "A01-S2",
+        "A01-S3"
+      ]
+    },
+    {
+      "id": "C-WHITESPACE-8",
+      "name": "Full Range",
+      "thesis": "Break the ladder inversion: offer extended sizing (through 3X/5XL and tall) and the long inseam at the TOP of the range rather than only at the USD 37 rung, so the plus, tall and big-and-tall player can buy a performance short instead of a value multipack.",
+      "intersection": "Marketplace (an inverted price ladder) x Consumer (a size-excluded buyer served only by value brands) x Product (blocks and plus SKUs that already exist but are not laddered)",
+      "contributing_signal_ids": [
+        "A02-S4",
+        "A02-S5",
+        "A01-S9",
+        "A03-S6",
+        "A06-S9",
+        "A02-S7",
+        "A04-S8"
+      ],
+      "domains": [
+        "marketplace",
+        "consumer",
+        "product",
+        "commercial"
+      ],
+      "target_consumer": "Plus, tall and big-and-tall players and lifestyle wearers - adult men currently buying AND1 'up to 5XL' and describing it as affordable and cultural, women sized hip-first whose waist is left to a drawcord, and the big-and-tall retro buyer served today by Mitchell & Ness at DXL.",
+      "why_nike": "The blocks and SKUs already exist and are simply mis-laddered: Nike sells an 11-inch DNA Academy including Big and Tall at about USD 37, Sabrina carries a plus SKU (FB8427), and Nike's own women's guidance is hip-first sizing (A02-S4, A03-S6, A06-S9). Nike also has the wholesale doors that carry extended-size assortments and is now growing in exactly that channel (A02-S7). No performance competitor is contesting this space - the incumbents are value brands and a licensed heritage label (A01-S9, A02-S5) - and the rising duty stack is weakening the value competitors that own it (A04-S8).",
+      "why_hard_to_see": "Size extension is treated as a size-curve decision made after the line is set, not as a whitespace with its own price and product logic, so it never surfaces as an opportunity. The evidence is also scattered across three domains as three unrelated observations: a value-brand review, a big-and-tall retailer listing, and a plus-size style number inside a signature line. Seen together they say the same thing - Nike serves extended sizes only where margin is thinnest.",
+      "risks": "There is no unit, sell-through or size-curve-fill data for extended sizes anywhere in the base, so demand is inferred from competitor listings rather than measured. Size extension multiplies SKUs and inventory risk in a company still working through markdown and flat inventory (A04-S4). The multipack observation behind the value read is an undated listing impression, not market data (A01-S9). Whether the long inseam is a lifestyle or a coverage purchase is unresolved, and the inseam-direction contradiction (A07-S4 vs A02-S5) sits directly underneath this proposal.",
+      "contradicting_signal_ids": [
+        "A01-S9",
+        "A07-S4",
+        "A02-S5",
+        "A04-S4"
+      ]
+    }
+  ]
+}

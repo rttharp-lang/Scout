@@ -1,0 +1,699 @@
+{
+  "narrative": "Seen all at once, the seven domains are not seven independent reads of the basketball shorts market. They are roughly four underlying source-pools, re-cut seven ways, plus one genuinely strong layer nobody built on.\n\nThe four pools: (1) audited company and league disclosure - Nike's FY2026 10-K and Q4 call, Li-Ning, ANTA, adidas, Puma, Under Armour, New Balance, Dick's/Foot Locker, NBL, WNBA, Unrivaled, EuroLeague. This is the strongest material in the base and it is cross-verified, but it describes the company and the sport, never the shorts. (2) Syndicated market reports, which the audit shows are largely ONE vendor: I confirmed directly that Technavio has serially re-released the same basketball apparel report as $4.58B, $5.93B (2023-2028), $5.93B (2024-2028) and $6.32B (2024-2029), and that the 'independent' Research and Markets $6.53B is the next vintage of the same franchise. Three domains (A01-S6, A02-S1, A04-S3) cite this as convergence. It is one estimate counted four times. (3) A cluster of AI-generated and SEO commerce content - Accio (Alibaba's B2B sourcing engine), anarchylabel, northyard, compressionathlete, ericemanuelsshop, plus one Sportsverse Substack guest post of 14 April 2026 that alone supplies the WNBA numbers in A01-S5 AND the Circana/NPD footwear numbers in A01-S6. My own searches for the Circana '-11% basketball footwear' and '4% of US footwear' figures again returned nothing at source; Circana's published 2025-2026 reporting says the opposite, that performance footwear led industry growth at +6% dollars. (4) Nike's own product copy and retailer listing pages, which appear as evidence FOR a gap in one domain and as counter-evidence AGAINST the same gap in another.\n\nThe strong layer nobody built on is the physiology, biomechanics and rules evidence in A06 (S1, S2, S3). It is the only peer-reviewed, named-sample, dated material in 58 surviving signals, and it survived attack essentially intact - and it is the layer with the fewest opportunities hanging off it.\n\nThe most consequential cross-domain finding is that the same handful of numbers is doing an enormous amount of work. The WNBA's own 'Record-Setting 2024 Season' press release - one league marketing document, about a season two years old, measured against a pre-Caitlin-Clark 2023 base - is the quantitative spine of the women's opportunity in THREE domains (A01-S5, A04-S5, A05-S1), where it appears variously as +48%, +60%, +601% and +233%. It should be counted once, and in fact it should be replaced: my search found that the 2026 WNBA season set records (league-wide attendance +16%, an All-Star crowd of 19,783 that outdrew the NBA's, 73 million unique viewers at the halfway mark) AND that the CBA that the skeptics correctly flagged as a live risk has been settled, with the team salary cap raised roughly fivefold to about $7.0M. That materially changes the women's case: it converts it from 'explosive 2024 spike on a soft base, with labour risk' to a third consecutive year of growth under a new labour agreement. This is the one place where the audit makes a signal stronger rather than weaker.\n\nThe second cross-domain finding is that the same rebuttal appears in all seven skeptic reports, phrased seven different ways: no specialist audited Nike's live line. A01 proposed a women's programme Nike ships in four weeks; A02 proposed a heritage 11-inch short and a women's inseam ladder Nike already sells; A03 missed the DNA 6\" UV Woven (FN2659) and the DNA 4\" 2-in-1; A05 missed the WNBA Rebel Edition shorts and the Caitlin Clark line; A06 built a storage opportunity on a gap its own fourth citation closes; A07 proposed inventing Aero-FIT basketball shorts seven weeks after Nike shipped them. I verified two of these directly. The Nike DNA 6\" UV Woven (FN2659) product copy states UVA and UVB protection, side pockets, 'a zippered utility pocket large enough to keep a phone secure during the game', and a woven face that 'stands up to even the toughest rebound battles' - that single SKU is the counter-evidence to the outdoor gap (A03-S7), the storage gap (A06-S4), the UPF gap (A06-S7) and the composed-outdoor-system gap (A07-S8), all four at once. And Nike's own newsroom confirms the Sabrina 4 collection (17 July 2026) introduced Aero-FIT to basketball for the first time, on a signature jersey and shorts, using open and closed mesh zones - the exact mechanism A07 proposed as new. This is not four independent white spaces. It is one un-run catalogue query, counted four times.\n\nThe third finding is geographic. Roughly half the surviving evidence is United States, about a seventh is Greater China but sourced almost entirely from outside China (European and US resellers, a JD price aggregator, 2023 state media about one Guizhou village, and a 2019 NBA public-relations estimate of 300 million players), and Europe - Nike's second geography - has not one signal where it is the primary market. My search found EuroLeague set its fourth consecutive attendance record in 2025-26 at 3.25 million, +8%, with global TV viewership up 82% to 122.8 million. None of that is in any file. Neither is Latin America, at all. Neither is the SS28 calendar: the FIBA World Cup runs in Qatar from 27 August to 12 September 2027 and the LA28 Games open 14 July 2028, inside the SS28 selling season, in Nike's home market - and the Gulf, where the World Cup lands, has zero evidence in the base beyond a UAE property blog.\n\nWhat should the orchestrator take from this? Three things. The company-and-sport context is solid and should be trusted. The product-level evidence - what a basketball short costs, how many sell at each inseam, in which market, and why they come back - does not exist anywhere in this base, in any geography, which means every price position and every length recommendation in every opportunity is currently unanchored. And the contradictions that matter most (basketball growing vs shrinking; inseams shorter vs longer; China value-tier vs premium; pockets vs seams as the failure mode; frozen prices vs Nike's actual +3% apparel increase) all resolve against the same dataset Nike already owns and has not been asked for.",
+  "duplicated_signal_clusters": [
+    {
+      "title": "The Technavio basketball-apparel report franchise: one vendor, four vintages, presented as multi-source convergence",
+      "signal_ids": ["A02-S1", "A01-S6", "A04-S3"],
+      "shared_basis": "I verified directly on technavio.com and PR Newswire that the same Technavio basketball apparel report has been serially re-released as USD 4.58B, USD 5.93B (2023-2028), USD 5.93B (2024-2028) and USD 6.32B (2024-2029), and that Infiniti Research (Technavio's parent research house) publishes the same study as 'Global Basketball Apparel Market 2025-2029'. The Research and Markets USD 6.53B (2025-2030) figure that A02-S1 treats as an independent second source is the next vintage of the same franchise. The remaining 'corroborating' sources (Verified Market Reports, market.us, Dataintelo, WiseGuy, Market Research Intellect, SkyQuest) are SEO report resellers whose absolute 2024-2026 bases disagree by roughly 2x (USD 3.8B to USD 6.27B) for the same category.",
+      "treatment": "Count once, as a single vendor estimate of unknown methodology - not as convergence, and not as a sizing basis. Strike the CAGR from all downstream sizing. What survives across all three signals is A02's own conclusion, which the skeptic correctly elevated: no syndicated source isolates basketball SHORTS, so shorts sizing must be built internally from Nike sell-through plus national participation registries. Any deck that shows '5-6.5% CAGR, multiple sources converge' is showing one number four times."
+    },
+    {
+      "title": "The Sportsverse Substack guest post (14 April 2026): one secondary document supplying two 'independent' signals in one domain",
+      "signal_ids": ["A01-S5", "A01-S6"],
+      "shared_basis": "Both signals' quantitative spines trace to the same guest post by James Davis (SQR EYE Studio founder, ex-Highsnobiety) of 14 April 2026: the WNBA merchandise and attendance figures in S5, and the Circana 'basketball footwear -11% in 2025' plus NPD '13% to about 4% of US footwear' figures in S6. Neither the specialist nor the domain skeptic could locate the Circana figures at source. I searched independently and also could not: Circana's own published 2025 and Q1/H1 2026 releases describe performance footwear as the industry's growth engine (+6% dollars) with running, clogs and boots leading, and US footwear holding steady at about USD 90 billion. No Circana release reproduces the -11% or the 4% share.",
+      "treatment": "Collapse to one source and strip both numbers. A01-S6 must lose its FACT classification. The 'shorts are the lifestyle entry point because the basketball shoe is dead' framing (A01-T5) rests entirely on the weaker side of a contradiction with Nike's own FY26 disclosure that basketball grew. Treat the whole footwear-collapse narrative as unsupported until the Circana Retail Tracking series is bought at source."
+    },
+    {
+      "title": "The WNBA 'Record-Setting 2024 Season' press release: one league marketing document, three domains, four different numbers",
+      "signal_ids": ["A01-S5", "A04-S5", "A05-S1"],
+      "shared_basis": "All three domains' women's quantification derives from the WNBA's own September 2024 season-review release plus its Fanatics/Dick's derivatives: attendance +48%, WNBAStore.com and NYC flagship combined +601% versus 2023, Dick's WNBA merchandise +233%, Fanatics 5x. A01-S5 renders the +601% as +60% (an order-of-magnitude transcription error), A04-S5 sources it through Accio (an Alibaba AI sourcing engine) and dates it 2025, and A05-S1 presents it as 2025-versus-2024 growth. It is one 2024 document about a 2023 base, arriving in a September 2026 brief through three different laundering paths.",
+      "treatment": "Count once, and replace rather than merely deduplicate. My search found the current read: the 2026 WNBA season posted record attendance (+16% league-wide), an All-Star crowd of 19,783 that outdrew the NBA's for the first time, 73 million unique viewers at the halfway mark, merchandise growth reported around +600% on a multi-year base, and - critically - a settled 2026 CBA raising the team salary cap from roughly USD 1.5M to about USD 7.0M. Use 2026 figures with an explicit base year. This is the one cluster where deduplication strengthens the case rather than weakening it."
+    },
+    {
+      "title": "Accio (Alibaba's AI B2B sourcing engine) and the AI/SEO commerce-content farm layer",
+      "signal_ids": ["A05-S3", "A05-S9", "A07-S3", "A07-S5", "A07-S7", "A04-S5"],
+      "shared_basis": "One AI-generated content source underpins the quantitative or distinctive claim in at least five surviving signals across two domains: the 'mesh basketball shorts is the highest-volume query / August 2025 peak / December 2025 index of 99' numbers (A05-S3), the 'basketball shorts and jorts styled together as hoopers fashion' claim that exists nowhere else (A05-S9), the Eric Emanuel 'USD 2.8M in 2024, +20-50%' figure (A07-S3, A07-S7), the 'hybrid reversible styles dominating athleisure' trend claim (A07-S5), and the WNBA merchandise figures as A04-S5 retrieved them. A07 alone reuses one Accio page across three signals. The same family surfaced unprompted in my own searching: participation figures returned from sportssurge.alibaba.com and alibaba.com/product-insights, confirming this content is pervasive in exactly this query space.",
+      "treatment": "Strike entirely - do not count once, count zero. Accio auto-generates trend pages from Alibaba marketplace data and cites Google Trends without a verifiable pull; it is simultaneously marketplace-listings-as-market-data and AI-generated SEO. Every number sourced to it must be removed rather than discounted. The qualitative claims it uniquely carries (the 'hoopers wardrobe' styling co-occurrence) have no other source and must be re-evidenced by social listening or dropped. The same rule should extend to anarchylabel, northyard, compressionathlete (an annually re-dated SEO guide) and ericemanuelsshop (an unofficial site EE's holding company is litigating against)."
+    },
+    {
+      "title": "'300 million Chinese basketball players': one 2019 NBA public-relations estimate, recycled across four domains and the brief itself",
+      "signal_ids": ["A01-S7", "A02-S1", "A05-S5", "A06-S5"],
+      "shared_basis": "The figure traces to a 2019 statement by NBA deputy commissioner Mark Tatum to Reuters describing occasional players, recycled unchanged since 2018. A01-S7 sources it to marketingtochina.com (a marketing agency blog), A06-S5 to an Alibaba-hosted content page, A02 through report-mill summaries, and A05-S5's CunBA framing assumes it. Four domains present it as four corroborations of Chinese participation scale; it is one seven-year-old league marketing estimate with no measurement behind it. The same pattern applies to the CunBA viewership number: my search returned 100 million (Xinhua, March 2023), 800 million (aggregated media claim) and 1 billion (CGTN) for the same event - the figure inflates across retellings, which is evidence of amplification, not of reach.",
+      "treatment": "Count once and label as a league PR estimate, never as measured participation. Where China scale is load-bearing (every Worldball opportunity), replace with CBA/General Administration of Sport registration data or the 49.6% all-sport participation figure with its correct caveat that it is not basketball-specific. The Statista >1.1M courts series (updated 2020-2024) is the more defensible scale anchor and should carry the argument instead."
+    },
+    {
+      "title": "Nike's FY2026 10-K and Q4 earnings call: one filing read independently by four domains, risking four-fold confirmation of one sentence",
+      "signal_ids": ["A02-S2", "A02-S7", "A03-S9", "A04-S1", "A04-S2", "A04-S8"],
+      "shared_basis": "Six surviving signals across three domains rest on the same primary document set (FY26 10-K, Q4 FY26 release and call). This is not a defect - it is the best-verified material in the base, and multiple agents reproducing it verbatim is reassuring. The duplication risk is interpretive: 'Performance grew mid-single digits led by Running, Football and Basketball' appears in A04-S1 as evidence basketball earns apparel investment, in A01's contradiction as evidence basketball is not shrinking, and in A02-S2 as the China backdrop. It is one sentence, it is footwear-weighted (Kobe alone is roughly 37% of signature basketball shoe sales on StockX), and Nike does not disclose basketball apparel - let alone shorts - separately anywhere in the filing.",
+      "treatment": "Merge into a single 'Nike company facts, FY2026' block cited once, with an explicit rider that it contains no basketball-apparel and no shorts-level disclosure. Do not let four separate citations of the same sentence read as four independent confirmations that a shorts investment is warranted. Also fix A03-S9's citation, which points at the FY2025 10-K (nke-20250531.htm) for FY2026 figures; the correct document is nke-20260531.htm."
+    },
+    {
+      "title": "The Nike DNA product page: one PDP used as evidence for a gap in three domains and against the same gap in three others",
+      "signal_ids": ["A01-S3", "A03-S7", "A06-S4", "A07-S8", "A07-S7"],
+      "shared_basis": "The Nike DNA shorts product copy is the single most reused artefact in the base, and it is cited on both sides. A01-S3 uses it to establish that the phone pocket is the headline feature; A06-S4 lists it as its fourth citation while arguing storage is unsolved; A07-S7 quotes its 'vintage hoops look' line while A07-S8 argues outdoor function is scattered and absent. I verified the DNA 6\" UV Woven (FN2659) directly across Nike.com, Amazon and Rakuten: it carries UVA and UVB protection, side pockets, 'a zippered utility pocket large enough to keep a phone secure during the game', and 'a smooth, stretchy woven material [that] stands up to even the toughest rebound battles'. That one SKU is simultaneously the UV feature, the secure-storage feature, the abrasion story and the outdoor claim.",
+      "treatment": "Count once, and treat it as a settled fact about the incumbent product rather than as separate signals. It should become the internal benchmark for every outdoor/storage/UV opportunity, not the foil. The surviving question is not whether Nike has this product - it does - but why a SKU with UV, a phone-secure zip pocket and a durability claim, sold in the US and Japan at roughly USD 45-55, was invisible to seven diligent researchers and is absent from the China outdoor conversation. That is a merchandising and marketing question, not a product-gap question."
+    },
+    {
+      "title": "Local-identity streetball labels: one 'these brands exist' observation counted as three domain findings",
+      "signal_ids": ["A01-S10", "A02-S11", "A07-S9"],
+      "shared_basis": "Three domains independently surface the same short list - ballaholic (Tokyo), Ugat Clothing and The Jersey Nation (Manila), Delta Sportswear, Know The Culture, Li-Ning BadFive - and draw the same conclusion, that local labels own place-coded product while global brands are placeless. The existence claims are verified (I confirmed ballaholic's ASICS partnership is a seventh collaboration with genuine co-development, and Ugat's Watawat short at USD 55 in premium heavyweight mesh). What is duplicated is not just the source set but the analytical error: all three domains offer existence proof and none offers a single revenue, unit, door-count or share figure for any of these brands, one of which (Ugat) is an unfunded micro-business per its own Tracxn profile.",
+      "treatment": "Merge into one finding: 'culturally-coded streetball labels exist in Tokyo, Manila and China, are credible, and are unmeasured'. Count the evidence once and the gap once. Do not let three domains' agreement read as triangulation - it is one observation made three times from overlapping sources, and it is contradicted in one direction by Nike's own S.T. Flare and nike.com.cn outdoor section, which show Nike does build market-specific basketball product in Asia."
+    },
+    {
+      "title": "Sabrina product evidence: one press release and one PDP behind two domains' women's findings",
+      "signal_ids": ["A03-S6", "A07-S5", "A07-S6"],
+      "shared_basis": "The Sabrina 3 press release and the Sabrina Dri-FIT short PDP supply the primary evidence for A03-S6 (women's construction differentiation), A07-S5 (reversibility as an emerging default) and A07-S6 (women's shorts are unisex/generic). A07 uses the same Sabrina 3 release as primary evidence in two consecutive signals that draw opposite implications - that reversibility is a trend, and that women's product is under-designed. Both are also partly superseded by the same newer event: Nike's Sabrina 4 collection (17 July 2026), which I verified put Aero-FIT on a women's-athlete-led signature short and jersey before the rest of basketball.",
+      "treatment": "Merge into one 'Nike women's basketball bottoms, current state' finding built on an actual SKU count (ISoFly 6.5\"/7\", Crossover Dri-FIT 5\", Fly Crossover, Swoosh Fly Crossover, Team 31 Fly Crossover, Sabrina, Sabrina 4 Aero-FIT, WNBA Victory and Rebel Fanwear shorts, plus the Caitlin Clark line at retail 1 October 2026), not on press releases. The 'women get only unisex or licensed generics' framing does not survive that count and should not be carried into any opportunity."
+    },
+    {
+      "title": "The Hibbett retro style guide (2025): one retailer commerce blog carrying the retro-length thesis in three domains",
+      "signal_ids": ["A02-S5", "A05-S3", "A01-S5"],
+      "shared_basis": "The same Hibbett 2025 retro-basketball-shorts style guide - a retailer's own commerce content written to sell shorts - supplies the '9 inches or longer is retro, 7 inches or shorter is modern' spec split and the 'Gen Z and Gen Alpha have embraced vintage' claim across A02's inseam architecture, A05's swingman signal, and A01's inseam-direction contradiction. The celebrities the page actually names in retrieved text are Adam Sandler and Harry Styles, which is not Gen Z or Gen Alpha evidence.",
+      "treatment": "Count once and reclassify as merchandising opinion, not consumer behaviour. The usable residue is the concrete spec split (retro 9\"+, modern 7\"-), which is a useful vocabulary. The demand claim attached to it has no unit, search-volume or sell-through evidence anywhere in the base and must not be treated as corroborated simply because three domains cite the same blog."
+    }
+  ],
+  "contradictory_datasets": [
+    {
+      "title": "Is basketball growing or shrinking? One newsletter says structural collapse; Nike's own filing and Circana's own releases say growth",
+      "side_a": {
+        "signal_ids": ["A01-S6"],
+        "claim": "Basketball footwear fell 11% in 2025 and basketball sneakers have collapsed from about 13% of US footwear five years ago to roughly 4% today, so shorts are the surviving lifestyle entry point into the category."
+      },
+      "side_b": {
+        "signal_ids": ["A04-S1", "A02-S2", "A03-S9"],
+        "claim": "Nike's FY2026 disclosure states that global football and basketball grew while Sportswear declined double digits, and Circana's own 2025 and 2026 releases describe performance footwear as the industry's growth engine, up 6% in dollars, with US footwear holding at about USD 90 billion."
+      },
+      "assessment": "These are not equally weighted. Side A traces entirely to one Substack guest post of 14 April 2026 and I could not reproduce either figure in Circana's newsroom, in SGB, in WWD footwear coverage or in any GlobeNewswire release - my independent search returned Circana reporting that contradicts it. Side B is an audited filing plus the named research firm's own publications. But Side B is also not a clean win for a shorts investment: Nike's basketball growth is footwear-weighted (Kobe alone is roughly 37% of signature basketball shoe sales on StockX) and Nike discloses no basketball apparel line, so 'basketball grew' cannot carry an apparel bet on its own. Do not average these into 'basketball is mixed'. Side A should be suspended pending source verification; Side B should be used only for what it actually says.",
+      "what_would_resolve_it": "Buy the Circana Retail Tracking basketball series at source: US dollar and unit sales for basketball footwear AND basketball apparel, 2019-2026, with basketball's share of total footwear. In parallel, pull Nike's internal FY25-FY26 basketball apparel revenue split from basketball footwear, and within apparel the shorts franchise. If the -11% and 4% hold at source, A01-S6 returns as FACT; if not, the entire 'the shoe is dead so the short is the entry point' logic in A01-T5 must be struck."
+    },
+    {
+      "title": "Inseam direction: performance is going shorter, lifestyle is going longer, and Nike's own ladder says the middle is the business",
+      "side_a": {
+        "signal_ids": ["A07-S4", "A02-S5"],
+        "claim": "Proportion has split to the poles - a 5-7 inch on-court short (Foot Locker 5-inch category, Nike 6-inch DNA/LeBron/Kobe, Curry 6.5\", New Balance 7\") against long, baggy, denim-coded lifestyle silhouettes - so Nike should design at the poles and abandon the 9-10 inch middle."
+      },
+      "side_b": {
+        "signal_ids": ["A05-S3", "A05-S9", "A02-S5"],
+        "claim": "The hottest lifestyle look is the 9-inch-plus retro Swingman in heavy mesh, Hibbett's guidance is that retro runs 9 inches or longer, Nike's own DNA copy sells a 'vintage hoops look', and 2026 coverage has slouchy mesh basketball shapes trending because the longer line gives them more polish."
+      },
+      "assessment": "There is a third position that both sides ignore and that is currently the best-evidenced: Nike ships a continuous, fully-merchandised 6/8/10/11-inch ladder with pockets at every length, with the longest inseam (DNA Academy 11\", including Big and Tall) at the LOWEST price (~USD 37) - the opposite of a premium-short-inseam architecture. The Foot Locker '5 Inch Basketball Shorts' page that anchors Side A is an auto-generated attribute facet sitting alongside '5 Inch Athletic', '5 Inch Workout' and '6\"' facets, not a merchandising bet. Side B's long pole is partly evidenced by garments that are not basketball shorts (denim jorts, an adidas Originals woven twill 'Long Short'). And 2026 fashion coverage simultaneously names micro shorts a top summer trend and calls certain silhouettes already outdated. The honest reading is that the churn IS the finding - two opposite silhouettes are genuinely co-current for the same consumer on different occasions - and that nobody in this base has a single unit of sell-through evidence about which way basketball shorts specifically are moving.",
+      "what_would_resolve_it": "Unit share by inseam, last 6-8 quarters, from Nike DTC plus at least two wholesale partners (Dick's, Foot Locker), split men's/women's and performance door vs lifestyle door, by region. Add a Google Trends export for '9 inch basketball shorts' vs '7 inch' vs '5 inch' over 24 months for US/JP/AU/CN. If 8-10 inch is still the majority of units, 'design at the poles' is a design preference dressed as a market read and must not drive line architecture."
+    },
+    {
+      "title": "Greater China: a huge growing market with a value price floor, or a contracting branded segment where Nike's own precedent was premium",
+      "side_a": {
+        "signal_ids": ["A01-S7", "A02-S1"],
+        "claim": "China has roughly 300 million players and more than 1.1 million courts, the sportswear market is USD 84B growing 8.4%, domestic brands win on value at RMB 200-300, and a Nike outdoor short must land near that band to matter."
+      },
+      "side_b": {
+        "signal_ids": ["A02-S2", "A02-S3", "A04-S2", "A04-S11"],
+        "claim": "Nike Greater China fell 13% currency-neutral in FY26 with apparel units -8%; Li-Ning basketball retail sales fell 19% in 2025 with sports casual -9% amid deeper discounting; the ANTA namesake brand - the actual basketball competitor - grew only 3.7% while its parent's growth came from acquired premium and outdoor brands (+59.2%); ANTA's China share fell from 23.0% (2024) to 21.8% (2025); and Nike's own China outdoor product, the S.T. Flare, launched at RMB 899 (~USD 125), premium not value."
+      },
+      "assessment": "The three largest branded players do not aggregate to an 8% market and none of them is growing in basketball, so 'huge participation plus huge growth' is close to the inverse of what the company data shows: a contracting branded basketball segment inside a growing general sportswear market. But Side B contains its own unresolved contradiction that the domains never reconciled - A02-S3 has Li-Ning basketball down 19% (FY2025) while A04-S2 has Li-Ning basketball UP 5% (H1 2026). Same company, adjacent periods, opposite direction. That may be a genuine inflection after inventory clearing, or a base effect, and it is the single most decision-relevant unknown in the China case. Separately, the pricing question argues both ways at once inside one signal: A01-S7 concludes value tier from the same S.T. Flare precedent that launched at RMB 899. Do not average to a mid-price compromise - the two strategies (value entry tier vs premium durability story) require different products, different margins and different channels.",
+      "what_would_resolve_it": "Three pulls. (1) Tmall/JD/Douyin category price-band share and GMV for basketball shorts, 2024 vs 2025 vs 2026, for Nike, Li-Ning, ANTA and 361 - none of which exists anywhere in this base. (2) Li-Ning basketball category retail sales for FY2025 and FY2026 full year, to establish whether the -19% inflected to +5% or whether H1 2026 is a soft-base artefact. (3) Nike's own Greater China sell-through and ASP on the DNA UV Woven, which is the direct test of whether Nike is losing the outdoor player or simply not merchandising the product it already has. Also model the Topsports online exit (Nike's largest GC retail partner stops selling online by January 2027), which breaks the route to market every China opportunity assumes."
+    },
+    {
+      "title": "Women's basketball: a 2024 spike on a soft base with labour risk, or a third straight year of compounding growth under a new CBA",
+      "side_a": {
+        "signal_ids": ["A05-S1", "A04-S5", "A01-S5"],
+        "claim": "Attendance +34%, merchandise +601% at WNBAStore, +233% at Dick's, Fanatics 5x, and women's basketball is the strongest demand call-out at US retail - the supply chain has not caught up."
+      },
+      "side_b": {
+        "signal_ids": ["A05-S7", "A05-S1"],
+        "claim": "The growth numbers are one 2024 league marketing release measured against a pre-Caitlin-Clark 2023 base; the +34% is mostly a schedule artefact (286 games vs ~240, so per-game growth was ~13%); demand is concentrated in one athlete who was sidelined much of 2026; and the CBA expired 31 October 2025 with extensions lapsing and a 98% strike authorisation vote."
+      },
+      "assessment": "This is the one contradiction where new evidence resolves in favour of the optimistic side, and the orchestrator should see that clearly. My search found that the 2026 WNBA season posted record attendance (+16% league-wide), an All-Star crowd of 19,783 that outdrew the NBA's for the first time, and 73 million unique viewers at the halfway mark - and that the CBA was settled, raising the team salary cap roughly fivefold from about USD 1.5M to about USD 7.0M with revenue sharing. The labour risk that was live when these files were written has cleared. Unrivaled independently corroborates the demand shape with fully verified numbers (ticket revenue +204%, tickets sold +249%, a 21,490 Philadelphia crowd that generated about USD 1M in tickets and USD 400,000 in merchandise in one night). What does NOT survive is Side A's specific numbers, which are two years stale and mis-transcribed, and its product premise: Nike already ships a women's basketball bottoms assortment (ISoFly 6.5\"/7\", Crossover 5\", Fly Crossover, WNBA Victory and Rebel Fanwear shorts, Sabrina, Sabrina 4 Aero-FIT) with the Caitlin Clark line - shorts included, all ages - at retail on 1 October 2026. So the demand is real and sustained; the 'empty category' framing is false.",
+      "what_would_resolve_it": "Nothing further is needed on demand durability - three consecutive record seasons plus a signed CBA settles it. What is needed is the product read: split women's basketball revenue into fan/jersey versus performance bottoms, with size-curve fill and rebuy by door; get the Unrivaled Philadelphia USD 400,000 merchandise split by category (jersey vs tee vs bottoms), which would test the fan-to-court shorts thesis directly and cheaply; and count the live women's basketball shorts SKUs at Nike.com, Dick's, Foot Locker and Hibbett against men's before any 'under-assorted' claim enters a brief."
+    },
+    {
+      "title": "The durability failure mode: pocket construction, or seams and shrinkage",
+      "side_a": {
+        "signal_ids": ["A01-S3"],
+        "claim": "The pocket is the reported rip point - shorts 'rip easily when putting hands in pockets' - so pocket-bag construction and bartack durability are where Nike is losing trust and where a defensible spec claim sits."
+      },
+      "side_b": {
+        "signal_ids": ["A01-S2", "A04-S6"],
+        "claim": "Direct retrieval of the same Walmart Icon review corpus surfaces seams falling apart after one wash, holes in the seams across the legs after one wear and one wash, shrinkage and 'paper-thin' fabric - with the extraction explicitly noting no ripped-pocket complaints, and one reviewer praising pocket depth. Dick's shows Nike Dri-FIT Icon+ 6\" at 3.9 stars with 67% recommending across 64 reviews."
+      },
+      "assessment": "Both cannot be the primary defect and they imply entirely different engineering investments: bonded pocket bags and bartacks versus fabric weight, seam construction and dimensional stability after laundering. Side B has the better sample (n=64 at Dick's with a genuinely weak 67% recommend rate, versus a single undated snippet on Side A) and the more coherent mechanism. But note that Side B's own causal story - that a June 2025 sub-USD-100 price freeze forced a fabric cost-down - is correlation dressed as mechanism and nobody has established that GSM changed at all. If GSM is unchanged, the recommended fix is wrong and expensive. Preserve both, and note that a third possibility (a fit or expectation problem being reported as a quality problem) has been tested by nobody.",
+      "what_would_resolve_it": "Nike's own warranty and returns data: defect codes on basketball shorts returns split by pocket-area failure vs seam failure vs post-wash dimensional change, FY24-FY26, plus the fabric GSM change history by season for Icon and DNA. Add a 20-wash shrinkage and seam-strength test on DNA and Icon against AND1, Russell, UA Baseline and adidas Crazy Lite. This is cheap, Nike already owns most of it, and it decides whether A04-O3's quality reset is a real programme or a reverse-engineered guess."
+    },
+    {
+      "title": "Storage, UV and outdoor function: an unowned white space, or a SKU Nike already ships",
+      "side_a": {
+        "signal_ids": ["A06-S4", "A07-S8", "A03-S7"],
+        "claim": "Open pockets spill and zip pockets are too small for large phones; outdoor function (UV, water resistance, abrasion, secure storage) exists only as scattered features mostly from non-basketball brands; domestic Chinese brands own the outdoor vocabulary and no Nike outdoor-specific short surfaced."
+      },
+      "side_b": {
+        "signal_ids": ["A06-S4", "A07-S8", "A03-S7"],
+        "claim": "The counter-evidence inside those same three signals shows the Nike DNA 6\" UV Woven (FN2659) carrying UVA/UVB protection, side pockets, a zippered utility pocket sized to hold a phone, and a woven face marketed as standing up to the toughest rebound battles - and nike.com.cn operates a dedicated outdoor section with sun-protection and quick-dry product, while adidas merchandises standing Outdoor Basketball and Reflective Shorts collections."
+      },
+      "assessment": "I verified Side B directly across Nike.com, Amazon and Rakuten: the FN2659 copy states all four features. This contradiction sits INSIDE three signals rather than between domains, which is why it was never resolved - each specialist reasoned from the absence of a term in its own search snippets to the absence of a product in the market, in a session where every consumer web host was blocked. Under that constraint the only defensible conclusion is 'not found', never 'does not exist'. The white space is therefore much narrower than three opportunities assume. What genuinely survives is the engineering tension the domains captured well (A01-T1, A06-T3, A07-T2): the same pocket that sells the short at the rack is the one most likely to annoy on court - and that is a hypothesis to test, not an established gap. There is also a real and unasked question underneath: peer-reviewed testing shows 100% polyester technical sportswear already rates UPF 40-50+ untreated, so a UPF claim on a polyester short may be describing what the fabric already does, while what nobody has tested is what saturation does to UV protection in a garment that traps up to 1.33 kg of sweat.",
+      "what_would_resolve_it": "Two cheap things. (1) A live SKU-and-feature audit of Nike basketball bottoms in every market, run before any opportunity is written - this single query would have prevented four white-space claims across four domains. (2) The review and returns teardown for the pocketed DNA styles: is the zip pocket praised or complained about, and what share of returns cite it? Plus AS/NZS 4399 or EN 13758-2 UPF testing of current styles dry AND at realistic saturation, which converts UPF from a label into either a spec or a non-story."
+    },
+    {
+      "title": "Nike's shorts prices are frozen under USD 100 - except Nike has since raised apparel prices 3%",
+      "side_a": {
+        "signal_ids": ["A04-S8"],
+        "claim": "Nike's 1 June 2025 US price action explicitly exempted all product under USD 100, all kids' product and all Jordan apparel, so the entire basketball shorts ladder absorbed tariff and input-cost inflation with no list-price relief - which structurally squeezes shorts margin and explains the markdown depth and fabric complaints."
+      },
+      "side_b": {
+        "signal_ids": ["A04-S8", "A02-S4"],
+        "claim": "That was a snapshot 15 months before this brief and has been superseded: Nike's expected gross incremental tariff cost rose from about USD 1B to USD 1.5B with the FY26 gross-margin headwind revised from ~75bp to 120bp, and Nike has continued taking 'surgical price increases' - apparel prices up 3% and footwear up 1%, with more flowing through the first half of fiscal 2026 - while facing a proposed US class action over tariff pricing."
+      },
+      "assessment": "I verified Side B independently: the USD 1.5B figure, the 120bp headwind, the +3% apparel / +1% footwear increases and the class action all reproduce. Side A's exemption is a real, correctly-sourced fact about one day in June 2025; the error is treating it as a standing condition through SS28. The consequence is not cosmetic - A04-O3's entire pricing recommendation (hold Icon at USD 40-45 and DNA at USD 65 by restoring fabric weight) depends on which is true, and so does the margin arithmetic behind every other opportunity's price position. Note also that no specialist in seven domains used the word 'tariff' at all; the entire cost side of the business entered this analysis only through the skeptics.",
+      "what_would_resolve_it": "Pull the actual FY26 and FY27 US price file for basketball shorts, SKU by SKU, alongside landed cost and gross margin FY24-FY26 with tariff exposure by sourcing country. If surgical increases have already been taken on shorts, the margin-squeeze premise changes and the 'earn a premium tier or engineer to protect USD 40-50' framing must be rebuilt."
+    },
+    {
+      "title": "Three mutually incompatible Nike price ladders, none of them from a retrieved page",
+      "side_a": {
+        "signal_ids": ["A02-S4"],
+        "claim": "USD 45-50 is the contested branded core, squeezed from below by USD 4-per-pair private label and from above by discounted USD 78-90 premium product."
+      },
+      "side_b": {
+        "signal_ids": ["A02-S4", "A03-S4", "A07-S3", "A07-S10"],
+        "claim": "The observable ladder is wider and lower: Nike DNA 6\" USD 65, Standard Issue 8\" USD 55, DNA 10\" USD 50 marked to USD 30.97, DNA Academy 11\" USD 37 including Big and Tall; adidas' 2025 hero Crazy Lite short starts at USD 50; Nike's Sabrina 4 Aero-FIT basketball short sits at the top; a Nike LeBron short lists at USD 105 and clears at USD 68.97."
+      },
+      "assessment": "Every one of these numbers is an LLM-generated search-result summary - the A03 skeptic verified that all retail hosts were blocked for both the specialist and the reviewer, and specifically warned that some figures (the USD 75 Aero-FIT basketball short most likely among them) may be the search engine echoing the query language back. My own search confirmed the Sabrina 4 Aero-FIT shorts exist and launched 17 July 2026 but did NOT independently confirm the USD 75 price. Meanwhile A07 prices its opportunities at USD 85-120 against a category whose observable clearing prices are USD 29-69. Do not average the three ladders into a consensus; treat the ladder as unknown. This is the single largest unforced gap in the base, because every opportunity in the portfolio carries a price and not one of them is anchored to a retrieved page, let alone to sell-through.",
+      "what_would_resolve_it": "Nike's internal list-vs-realised ASP and markdown rate for the shorts class by inseam, by region, for the last eight quarters - plus one week of third-party retail price tracking (Edited, DataWeave) covering Nike, adidas, Under Armour, New Balance, Mitchell & Ness and Amazon private label on BASKETBALL shorts specifically, not athletic shorts. Until that exists, no price in any opportunity should be treated as a recommendation."
+    },
+    {
+      "title": "Design to the sport's normative sweat rate, or to its competitive tail",
+      "side_a": {
+        "signal_ids": ["A06-S2"],
+        "claim": "Specify the short against a 1.5 L/h whole-body sweat load for 40-60 minutes, using elite youth competition (~1.6 L/h) and male college game data (1.4-1.6 L/h)."
+      },
+      "side_b": {
+        "signal_ids": ["A06-S2"],
+        "claim": "Baker et al. 2019 (n=1303, absorbent patch) puts basketball's normative whole-body sweating rate at 0.95 +/- 0.42 L/h - level with soccer (0.94) and well below American football (1.51). Basketball is not a high-sweat sport by normative standards."
+      },
+      "assessment": "Both datasets are credible and they measure different things: a cross-sport normative mean versus a high-intensity competitive sub-population. This is a design choice being presented as a finding, and it has real cost consequences - engineering the whole line to the competitive tail implies different fabric weight, dry-time and price targets than engineering to the sport mean. Neither should win by default. Separately, the genuinely actionable garment-level number sits unused in the same signal: Baker 2017 measured 0.00-1.33 kg of sweat trapped IN basketball uniforms, rising with intensity and with a wider range than treadmill running. That is the number a shorts spec should be written against, and no domain used it. Note also that every measurement in this cluster is indoor, North American and overwhelmingly male, and is being leaned on to justify hot-humid outdoor Asian and Gulf product.",
+      "what_would_resolve_it": "Decide explicitly and record the decision: sport mean or competitive tail. Then run garment wet-weight gain and drip-dry time on candidate fabrics against the Baker trapped-sweat protocol rather than against a whole-body rate. And commission sweat-rate measurement from outdoor courts at 30C+ and high humidity in Guangzhou, Manila or Delhi - every number currently in hand comes from an air-conditioned North American gym."
+    },
+    {
+      "title": "Cooling technology in basketball: a roadmap item, or shipped seven weeks before the analysis",
+      "side_a": {
+        "signal_ids": ["A03-S4", "A07-S2"],
+        "claim": "Aero-FIT is validated on football and priced at USD 75; the PLM question is how fast it trickles into a USD 50-60 outdoor basketball short. Aerogami exists but only as a jacket, so a reactive-vent short would be the first visibly 'alive' basketball short."
+      },
+      "side_b": {
+        "signal_ids": ["A03-S4", "A07-S2"],
+        "claim": "Nike's own newsroom states the Sabrina 4 signature collection (17 July 2026) introduced Aero-FIT to basketball for the first time, on a signature jersey AND shorts, using open and closed mesh zones that move air across the body and lift fabric off the skin."
+      },
+      "assessment": "I verified Side B against Nike's newsroom and multiple regional Nike pages: the Sabrina 4 collection released 17 July 2026 with the first Aero-FIT cooling apparel for basketball, jersey and shorts. The platform gap is closed; the scaling question is open. Note what that does to the strategic reading - Nike put its most advanced cooling platform on a WOMEN'S athlete-led signature short first, before the rest of basketball, which cuts directly against A07-S6's framing that women's basketball shorts are unisex or licensed generics. Aerogami is a genuinely different case and should not be merged with it: it is a June 2023 technology that in three years has appeared on nothing but the Run Division jacket, and A07 reads that absence as opportunity when the equally available reading is that Nike has already tried and declined to extend it on cost or durability grounds. I could not confirm the USD 75 price for the Sabrina 4 short independently, so that figure remains unverified.",
+      "what_would_resolve_it": "Internal: the Aero-FIT basketball roadmap - which SKUs, at what cost, in which seasons, at what price, and what the Sabrina 4 short's sell-through looks like in its first quarter. And a materials-engineering answer from Nike ATG on why Aerogami has not been extended in three years: if the answer is laminate cost or abrasion durability, A07-O2's signature feature is dead and that opportunity must be rebuilt on UV plus abrasion alone."
+    },
+    {
+      "title": "Compression layering: near-universal at elite level, or unmeasured everywhere the volume is",
+      "side_a": {
+        "signal_ids": ["A06-S6"],
+        "claim": "Nearly every player in the starting lineups of teams like the Celtics, Bucks, Mavs and Suns wears leg compression, usually three-quarter or full length, so the sewn-in brief liner is redundant and a linerless short with a grip waistband is a real need."
+      },
+      "side_b": {
+        "signal_ids": ["A06-S6"],
+        "claim": "The only quantitative prevalence survey found (BMC Sports Sci Med Rehabil, n=512) reports 56.8% using compression garments always/often in training and 72.9% in competition - but 88.1% of respondents were endurance athletes with running dominant, and the leading motivation was re-injury prevention, not warmth or floor-burn protection. No basketball-specific prevalence figure exists in the reachable literature."
+      },
+      "assessment": "The elite claim is believable on visual observation but its source is an annually re-dated SEO guide (a 2025 and a 2026 version of the same article exist), so the 2026 date confers no currency. The decisive problem is population: A06-O2 targets high school, club and college players, and prevalence in that population is not merely contested, it is entirely unmeasured. Treat elite prevalence and sub-elite prevalence as two separate unknowns rather than assuming the first implies the second. There is one genuinely useful and verified fact adjacent to this that nobody used: the FIBA official interpretation that compression undershorts are legal and may be worn at ANY length provided the team matches colour - which makes a 3/4 tight under a game short explicitly rules-safe.",
+      "what_would_resolve_it": "Broadcast coding, which is cheap and definitive: count tights-wearing across a sample of NBA, WNBA, EuroLeague, NCAA and US high-school/AAU games, by length (3/4, full, none), and report prevalence by level. That one study either licenses A06-O2 or kills it. Separately, lab-test padding wash-durability rather than citing a single Amazon review."
+    },
+    {
+      "title": "The US marketplace is 'increasingly promotional' - except the retailer who said it attributed it to footwear at one banner",
+      "side_a": {
+        "signal_ids": ["A04-S4"],
+        "claim": "Ed Stack said conditions across portions of the athletic footwear and apparel marketplace became increasingly promotional, Foot Locker comps were -3.6% with the FY outlook cut, and Nike cited elevated promotions and markdowns with EMEA Digital -24% - so any SS28 shorts programme will meet a promotional floor."
+      },
+      "side_b": {
+        "signal_ids": ["A04-S4"],
+        "claim": "Stack attributed the damage specifically to Foot Locker's greater exposure to legacy footwear silhouettes and dependence on launch and retro product, while the Dick's banner itself delivered broad-based growth across categories including apparel with comps of +4.9% - and Foot Locker US comps were +6% in Q1 2026 before -3.6% in Q2."
+      },
+      "assessment": "A footwear-and-retro problem at one banner over one quarter is being generalised into an apparel pricing floor two years out. The two-quarter swing (+6% then -3.6%) argues strongly against reading Q2 as a settled structural condition for an SS28 buy. But do not flip to the optimistic side either: Nike's own FY26 commentary on elevated promotions and flat inventory is company-level and real, and the CFO said sell-through continues to struggle with marketplace conditions unlikely to improve through at least H1 FY2027. The resolution is that neither the pessimistic nor the optimistic read is about basketball shorts, because nobody has looked at basketball shorts.",
+      "what_would_resolve_it": "Nike's internal markdown rate and weeks-of-supply for basketball shorts by wholesale partner across FY25-FY26, full-year rather than an August snapshot (August is when shorts always clear). Plus Foot Locker vs Dick's sell-through by shorts franchise. That converts a retailer's footwear commentary into an actual apparel pricing condition, or shows it never applied."
+    },
+    {
+      "title": "Recycled content: a commoditised dead claim, or an escalating compliance and innovation vector",
+      "side_a": {
+        "signal_ids": ["A03-S5"],
+        "claim": "Every major shorts franchise carries a 70-100% recycled claim and none of the retrieved consumer feedback mentions it as a purchase reason, so recycled percentage should be demoted to a compliance baseline and should not lead."
+      },
+      "side_b": {
+        "signal_ids": ["A03-S5", "A03-S4"],
+        "claim": "Nike's own Aero-FIT - its pinnacle apparel innovation - leads on being the first elite performance apparel made from 100% textile waste; only 26% of the 110+ Textile Exchange Polyester Challenge signatories including Nike actually met the 2025 recycled-polyester target, so it is an unmet pledge not an achieved baseline; and the EU Empowering Consumers Directive applies from 27 September 2026, banning generic and uncertified environmental claims."
+      },
+      "assessment": "Both readings are true at different layers and should be carried as such: percentage-on-a-hangtag is commoditised and should not lead a basketball short, while material-source innovation (the shift from bottle-derived rPET to textile-to-textile recycling) is where Nike is actively escalating at the top of its own line. The layer nobody addressed is legal: EmpCo applies within weeks of this analysis, which converts hangtag and PDP claim language on any short sold in Europe from a marketing question into a compliance exposure. The 'consumers do not mention it in reviews therefore it does not drive purchase' inference is also correlation-as-causation off a tiny biased sample; reviews systematically under-report sustainability motives that appear in stated-preference research.",
+      "what_would_resolve_it": "A conjoint or stated-vs-revealed preference test on recycled content as a purchase driver for basketball shorts by region (EU and Greater China especially), rather than inferring from absent review mentions. And, more urgently, a legal read of current basketball shorts hangtag and PDP claim language against EmpCo before 27 September 2026 - that deadline is three weeks from the date of this audit."
+    },
+    {
+      "title": "Youth basketball: a surging fastest-growing segment, or flat core participation with a declining European read",
+      "side_a": {
+        "signal_ids": ["A04-S9", "A02-S1"],
+        "claim": "Youth and kids are the fastest-growing segment; the team-dealer and club channel is a stable, growing, low-markdown pool (Varsity/BSN growing ~8% in 2025) that grows with youth participation regardless of mall promotions, and APAC youth is the growth engine."
+      },
+      "side_b": {
+        "signal_ids": ["A02-S1"],
+        "claim": "SFIA and Project Play - the methodologically documented US datasets - report flag football as the only team sport with growth in regular participation among children aged 6-17 between 2019 and 2024, with basketball's post-Paris lift around 7% and concentrated in CASUAL participation; and Sport England Active Lives 2024-25 records a significant 1% DECREASE in weekly under-16 basketball players in England."
+      },
+      "assessment": "These are not the same story and must not be merged into 'youth is growing'. Casual youth basketball participation is healthy; core (regular, organised) participation growth - which is what the team-dealer channel and the uniform business actually monetise - is contradicted in the US and negative in England. The distinction matters enormously for A04-O4 and A02-O3, because a multipack or a team-dealer programme is sized off core participation while a lifestyle youth short is sized off casual. Note also that A04-S9 contains no basketball-shorts data of any kind and that its revenue base is contradicted (Moody's ~USD 2.7B vs the USD 2.3B cited), with the USD 75M club figure and USD 5B segment size unfindable in any source.",
+      "what_would_resolve_it": "SFIA 2025 and 2026 topline participation by sport split casual vs core, the next Sport England Active Lives release, and equivalent national registries for China (CBA-affiliated youth leagues), Australia (AusPlay, already in hand and positive) and the Philippines (SBP/DepEd). Then Nike Team Sports basketball shorts bookings, fill rate and reorder frequency through BSN and other dealers - which would also settle whether Nike's existing team short is competitively weak, a claim currently asserted with zero evidence against a catalogue BSN publishes."
+    },
+    {
+      "title": "Sport-as-fashion is real, but the data behind it is not basketball's",
+      "side_a": {
+        "signal_ids": ["A05-S4", "A05-S1"],
+        "claim": "Pinterest's Summer 2026 report shows 'WNBA game outfits' +70% and 'female jersey outfit' +494%, sport moving from a spectator moment to an entire aesthetic - so fandom is converting into everyday dress and basketball shorts can be sold as an all-occasion garment."
+      },
+      "side_b": {
+        "signal_ids": ["A05-S4"],
+        "claim": "The same Pinterest report shows 'Formula 1 aesthetic outfit' +483%, 'Brazil jersey outfit women' +302% and 'baddie tracksuit outfit' +276%. Motorsport and football terms are growing at comparable or higher rates, percentage growth on unknown bases cannot rank them, and it is a platform's own marketing report measuring search-and-save on a female-skewing pinboard - a leading indicator, not purchase."
+      },
+      "assessment": "The aesthetic wave is credible and verified across two independent outlets. Attributing it to basketball, and building a basketball shorts line against it, is not supported - and the strongest term in the dataset (+494%) is for JERSEY outfits, which argues for tops, the opposite of the shorts inference drawn from it. This matters because A05-T2 ('the supply chain is jersey-led and shorts are the missing lower-body half') uses jersey-search growth as evidence that consumers want shorts. Preserve the general finding (sportswear-as-fashion is broad and real) and discard the basketball-specific inference.",
+      "what_would_resolve_it": "Get the underlying Pinterest term list ranked by ABSOLUTE volume rather than percentage growth, and compare basketball terms against football and F1 terms on the same base - a +494% on a tiny base is not a market. Then triangulate with actual women's non-jersey sportswear sell-through in the US, Korea and Australia before treating any of it as a basketball shorts demand signal."
+    }
+  ],
+  "geographic_bias": {
+    "assessment": "The evidence base is a United States study with a China narrative assembled almost entirely from non-Chinese sources, and it is being used to plan a line whose stated priority space is global outdoor play. Counting the 58 surviving signals by their declared primary geography: roughly 28 are United States, about 8 are Greater China, 2 Philippines, 2 Japan, 1-2 Australia, 1 France (as an event venue), and roughly 16 are labelled 'Global' - but most of those 'Global' signals are either Nike corporate financials, syndicated report-mill aggregates, or US-derived observations generalised without a second market. So the honest read is that about three quarters of the base is US-derived, and that almost every non-US signal is either a company disclosure or an existence proof rather than a consumer read.\n\nThe Greater China share is weaker than its 14% suggests, because it is geographically displaced at source. A03-S7's conclusions about Chinese outdoor players rest on European and US reseller pages (shopnings, antosports, chinasportshop, yoybuy) and a JD price-aggregator page, not on Chinese first-party or consumer data. A05-S5's CunBA evidence is one Xinhua datapoint from March 2023 about one Guizhou village, recycled by every downstream outlet since. A01-S7 and A06-S5's participation scale is a 2019 NBA public-relations estimate. A02-O1 and A04-O1 both concede that no China price ladder could be retrieved at all. There is not one Tmall, JD, Douyin or Xiaohongshu datapoint, not one Chinese-language consumer review, and not one Chinese price in the entire base. Every China opportunity carries an RMB price recommendation and none of them has a Chinese price observation behind it.\n\nThere is also a timing problem that compounds the geography problem: the SS28 season contains the two largest global basketball moments of the cycle - the FIBA World Cup in Qatar from 27 August to 12 September 2027, and the LA28 Games opening 14 July 2028 in Nike's home market - and neither appears anywhere in seven files. The Gulf, where the World Cup lands, has essentially zero evidence in the base beyond a UAE property-listing blog cited in A06-S5.",
+    "estimated_share_of_evidence_by_region": "United States ~48% of surviving signals as primary geography (and closer to ~70% once 'Global' signals that are US-derived observations or US-centric company reads are attributed); Greater China ~14% but sourced overwhelmingly from outside China (European/US resellers, a JD aggregator, 2023 state media on one village, a 2019 NBA PR estimate); 'Global' labels ~28%, of which the majority are Nike/competitor corporate financials or syndicated report-mill aggregates rather than market-specific evidence; Japan ~3% (two signals, both about one label, ballaholic, plus a contested kakaku.com ranking); Philippines ~3% (both existence proofs of micro-brands, no share or price data); Australia ~3% (one signal, but the best-verified non-US market evidence in the entire base); Europe/EMEA under 2% and never as a primary market - Europe appears only as a regulatory constraint (EU EmpCo), a discount channel (Li-Ning at EUR 20 via resellers), a set of doors (KICKZ, Zalando) and a negative number (EMEA Digital -24%); Latin America 0%; Middle East/Gulf ~0% (one property-listing blog); Africa ~1% (one BAL attendance figure, used as scale-calibration counter-evidence); India ~1% (one court-surface-temperature blog and one report-mill participation percentage).",
+    "underrepresented_markets": [
+      "Europe / EMEA - the single largest hole. Nike's second-largest geography has no signal where it is the primary market. My search found EuroLeague set its fourth consecutive attendance record in 2025-26 at 3.25 million spectators, +8%, with global TV viewership up 82% to 122.8 million across the first 25 rounds and league revenue around EUR 125M, +9%; a proposed NBA Europe league is in progress; Germany, Spain, Greece, Turkey, Lithuania and Serbia are core basketball nations. None of this is anywhere in the base. Europe enters the analysis only as a compliance risk and a markdown number.",
+      "Latin America - completely absent. Brazil, Argentina, Mexico, Puerto Rico and the Dominican Republic have deep basketball cultures, hot-climate outdoor play that matches the Worldball thesis precisely, and no evidence at all in seven domains.",
+      "Middle East / Gulf - the FIBA World Cup runs in Qatar 27 August to 12 September 2027, inside the SS28 development window and the primary LA28 qualifying route, across Doha, Al Rayyan, Lusail and Al Wakrah. The region's only appearance in the entire base is a UAE property-listing blog asserting people play in the early morning. A06-O1 nonetheless targets Gulf players.",
+      "India - appears only as a report-mill percentage (+34% participation 2019-2025, untraceable to any federation) and one Gurgaon court-surface-temperature blog. NBA India passed 100 million unique viewers per A05-S6, and that is the extent of it. No participation registry, no retail, no price, no consumer voice.",
+      "Africa - one signal (A05-S6, BAL at 140,000 cumulative attendance and 2.74M YouTube views), used mainly to calibrate down. Nigeria is named a fastest-growing market only through a report mill. No product, price or channel evidence for any African market.",
+      "Greater China as a source of evidence rather than a subject of it - China is the second-most-cited geography and the least-directly-evidenced. No Tmall/JD/Douyin data, no Xiaohongshu or Chinese review corpus, no Chinese-language primary sources, no retrieved Chinese price. Every China price recommendation in the portfolio is an analyst estimate.",
+      "Korea and Canada - Korea appears once (A05-S4, blokecore, and the named collabs are a basketball club kit and a baseball club kit, neither a basketball short). Canada does not appear at all despite a strong basketball market and NBA presence."
+    ],
+    "implication": "Three consequences the orchestrator must act on. First, any opportunity framed as 'Worldball' or 'global' is currently unfalsifiable outside the United States: the non-US evidence consists of company financials, four micro-brand existence proofs, one Australian participation dataset and one 2023 Chinese village tournament. Second, the China opportunities - which are the largest share of the portfolio - carry specific RMB price points derived entirely from non-Chinese sources, in Nike's worst-performing region (GC revenue -13% currency-neutral, digital -29%, EBIT -20%), with the route to market narrowing (Topsports stops selling Nike online by January 2027). Those price points should be treated as unfounded, not as estimates. Third, the largest verified non-US growth signals in the whole space - EuroLeague's fourth straight attendance record and Australia's 1.3 million players with female participation +25% - are respectively absent and confined to a single signal, which means the portfolio may be over-weighting the market it can least easily win (China) and under-weighting the two it is already positioned in. Before the portfolio is ranked, commission a minimum viable read on Europe (EuroLeague/Basketball England/DBB participation plus KICKZ and Zalando sell-through) and on the FIBA 2027 and LA28 calendar, because both change the SS28 buy shape and neither has been considered."
+  },
+  "hype_vs_sustained": [
+    {
+      "topic": "Women's basketball demand and its conversion into apparel",
+      "signal_ids": ["A05-S1", "A05-S7", "A04-S5", "A01-S5"],
+      "assessment": "Sustained, and stronger than the files show. The skeptics were right that the specific numbers are a 2024 league press release on a pre-Clark 2023 base, and right that the +34% attendance headline was mostly a schedule artefact (~+13% per game). But my search resolves the durability question in favour of the trend: the 2026 season posted record attendance (+16% league-wide), an All-Star crowd of 19,783 that outdrew the NBA's for the first time, and 73 million unique viewers at the halfway mark - a third consecutive year of growth - and the CBA risk the skeptics correctly flagged has been settled, with the team salary cap raised roughly fivefold. Unrivaled independently corroborates with fully verified figures (ticket revenue +204%, tickets sold +249%, one night in Philadelphia generating ~USD 1M in tickets and USD 400,000 in merchandise). The single-athlete concentration risk is real but has now been tested: Caitlin Clark was sidelined for much of 2026 and the league still grew. What is NOT sustained is the claim that the category is empty - Nike ships a live women's bottoms assortment and the Caitlin Clark line hits retail 1 October 2026.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Retro / swingman / heavy-mesh long shorts as a lifestyle uniform",
+      "signal_ids": ["A05-S3", "A05-S9", "A02-S5"],
+      "assessment": "Unclear, and weaker than three domains assume. The entire quantitative spine (highest-volume query, August 2025 peak, December 2025 index of 99) is Accio-generated and must be struck. What remains is one retailer style guide, one BAPE x Mitchell & Ness collab, a Complex citation that is actually about vintage tees and hoodies rather than shorts, and a Culture Kings navigation menu. Against durability: contemporaneous 2026 coverage names micro shorts a top summer trend while other 2026 coverage lists certain silhouettes as already outdated - churn, not a settled direction. No sales, unit or share data for Mitchell & Ness swingman shorts exists in any source either agent could reach. The look is genuinely present in the market; its trajectory in 2026 is unknown and its size has never been measured.",
+      "durability": "unclear"
+    },
+    {
+      "topic": "The short-inseam (5-7\") performance wave",
+      "signal_ids": ["A07-S4", "A02-S5"],
+      "assessment": "Unclear. The player-behaviour half has real support - named NBA players wearing noticeably shorter shorts with stated reasons - but the market half rests on a Foot Locker auto-generated attribute facet mistaken for a merchandising bet, and on SEO commerce blogs. A02's own cited source (Under Armour Playbook) says modern performance shorts run 7 to 9 inches, contradicting its own headline. Nike's live ladder runs 6 to 11 inches continuously with the longest length at the lowest price. A style movement among elite players is not the same thing as a demand shift in the volume business, and nobody has unit data either way.",
+      "durability": "unclear"
+    },
+    {
+      "topic": "Cooling and thermoregulation as Nike's basketball innovation vector (Aero-FIT)",
+      "signal_ids": ["A03-S4", "A07-S2"],
+      "assessment": "Sustained, and already in market. Aero-FIT is independently corroborated by Forbes, SoccerBible, Footy Headlines, Fibre2Fashion and House of Heat, announced October 2025, quantified at more than double the airflow of legacy Nike apparel and 238% more breathable than 2024 Dri-FIT ADV shirts, developed with heat-mapping and motion data, and Nike's first elite performance apparel made from 100% textile waste. I verified that it reached basketball on 17 July 2026 with the Sabrina 4 signature jersey and shorts, using open and closed mesh zones. This is a multi-season platform with football, running and now basketball applications and a stated intent to extend across the sport-led product strategy. The open questions are scaling economics and price, not durability of the trend.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Aerogami reactive venting specifically",
+      "signal_ids": ["A07-S2"],
+      "assessment": "Hype, or at least stalled. Unveiled June 2023, shipped on the Run Division jacket (women's July 2023, men's fall 2023), and in three years it has appeared on nothing else - Nike's own Aerogami page still describes only that jacket, and searches for 2025-2026 expansion return nothing beyond the 2023 launch coverage. A07 reads three years of non-extension as white space; the equally available and more probable reading is that the laminate does not survive the cost, abrasion or wash requirements of a short. It should not be treated as an available technology until ATG says otherwise.",
+      "durability": "hype"
+    },
+    {
+      "topic": "Recycled content as a product claim",
+      "signal_ids": ["A03-S5"],
+      "assessment": "Sustained as a compliance and material-innovation requirement; not sustained as a differentiator. Every major shorts franchise carries a 70-100% recycled claim, so the percentage has stopped selling. But only 26% of the 110+ Textile Exchange Polyester Challenge signatories including Nike met the 2025 target, so it is an unmet pledge rather than an achieved baseline; Nike leads its pinnacle product (Aero-FIT) on 100% textile waste; the competitive frontier has moved from bottle-derived rPET to textile-to-textile recycling; and the EU Empowering Consumers Directive applies from 27 September 2026, making generic and uncertified claims a legal exposure rather than a marketing choice. Both readings are true at different layers and both must be carried.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "CunBA / Chinese village basketball as a cultural entry point",
+      "signal_ids": ["A05-S5"],
+      "assessment": "Hype in its current evidence state. Every retrievable datapoint is 2023-2024 vintage - my own search for 2025 and 2026 figures returned nothing but 2023 material. Worse, the viewership number inflates across retellings: Xinhua's 100 million (March 2023) becomes 800 million in aggregated media claims and 1 billion at CGTN, for the same event. That spread is evidence of media amplification, not of measured reach. The phenomenon is real and the RMB 2.3 billion 2023 local tourism figure is a genuine commercial datapoint the specialist missed, but 'still spreading' rests on a single sentence about Heilongjiang and Yiwu. And the space is not open: Li-Ning sent Jimmy Butler to Taipan village in July 2023 as a funded athlete activation, with NBA China and Kuaishou producing the livestream. Do not build a 2028 line against a 2023 media peak with an incumbent already activated.",
+      "durability": "hype"
+    },
+    {
+      "topic": "Streetball institutionalised into stadium events and a global live calendar",
+      "signal_ids": ["A05-S6", "A02-S9", "A05-S7"],
+      "assessment": "Sustained but small, and the absolute scale must travel with the claim. The NBL figures verify verbatim (1,229,604 across 178 matches, +9.9%, 58 sellouts, a third consecutive million-plus season, and the NBL's own release puts 2025-26 at 1,231,796). BAL verifies verbatim (140,000+ attendance across four countries, 2,739,498 YouTube views, +69%). Quai 54 verifies for 2025 at Roland-Garros with about 20,000 across two days - but its 2026 return is reported as the Centre sportif Emile-Anthoine, not Roland-Garros, so the forward-looking claim in A05-S6 is unverified and must be corrected before any drop is planned against it. The calibration that matters: BAL's entire record season drew roughly nine NBL games' worth of people. 'Growing on every continent' is true; 'bankable moments for limited shorts drops' does not follow outside Australia without merchandise-revenue-per-event data.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Local streetball labels owning place-coded product (ballaholic, Ugat, BadFive)",
+      "signal_ids": ["A07-S9", "A02-S11", "A01-S10"],
+      "assessment": "Sustained as a cultural pattern, unproven as a market. Durability is genuinely established for the Japan case: the ASICS x ballaholic partnership is a seventh collaboration described by both sides as structural co-creation, launching February 2026 in Japan, Hong Kong and globally, with KICKZ distribution in Europe - that is a multi-year relationship, not a moment. Li-Ning's BadFive platform is also current: I confirmed the BADFIVE 6 is a Summer 2026 street-basketball release explicitly engineered for asphalt, concrete and plastic courts, and BadFive shorts exist in quick-dry polyester. Ugat's Watawat short is verified at USD 55 in premium heavyweight mesh. What has never been measured, in any of the three domains that assert it, is share: not one revenue, unit, door-count or price-volume figure exists for any of these labels, and one of them is an unfunded micro-business. The pattern is durable; the opportunity is unsized.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Sport-as-fashion / 'sport as identity' dressing",
+      "signal_ids": ["A05-S4", "A05-S1"],
+      "assessment": "Sustained as a broad phenomenon, not as a basketball phenomenon. The Pinterest Summer 2026 figures verify against two independent outlets and the platform has 600M+ MAU, so this is a legitimate leading indicator. But the same report shows Formula 1 aesthetic outfit +483% and Brazil jersey outfit women +302% against WNBA game outfits +70%, so the wave is pan-sport and motorsport and football are growing at comparable or higher rates. It is also a search-and-save index on a female-skewing pinboard, not purchase behaviour, and its strongest term is for jerseys - tops, not bottoms. Carry the general finding; drop the basketball attribution.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Collab and creator basketball shorts as cultural objects with resale markets",
+      "signal_ids": ["A05-S10", "A07-S3"],
+      "assessment": "Hype as stated, because the load-bearing claim has zero evidence. Every citation is a product page, a brand collection page or a StockX catalogue entry - and a StockX page proves a SKU was catalogued, not that a resale market exists. There is not one price, premium-over-retail, sale volume or bid/ask datapoint anywhere; the specialist concedes prices could not be verified. The NOCTA citation is an SS22 product, four years old. Related: the Eric Emanuel 'USD 2.8M in 2024, +20-50%' figure must be struck entirely - it traces to Accio and AI-generated net-worth pages, the growth band is incoherent as a reported statistic, and no trade source corroborates it for a brand Highsnobiety calls 'the king of shorts' that collaborates with adidas and New Era and runs trademark litigation. What IS live and verified is the partnership itself: NOCTA x Nike shipped a Cardinal Stock SS26 collection, a Venezia FC kit collaboration and a Kevin Durant Fall 2026 capsule entering Nike Basketball.",
+      "durability": "hype"
+    },
+    {
+      "topic": "Greater China outdoor play as a product use case",
+      "signal_ids": ["A01-S7", "A03-S7", "A06-S5"],
+      "assessment": "Sustained as a use case, contested as a commercial premise. The durability evidence is good: Li-Ning's Wade UPF 50+ / AT Dry platform runs across consistent style codes from Spring 2023 through 2025, which defeats a seasonal-fad objection, and I confirmed Li-Ning's BADFIVE 6 as a Summer 2026 outdoor/street release. Nike's own S.T. Flare (June 2025, XDR outsole, reinforced high-wear zones, engineered for concrete, asphalt and rubber) is verified from Nike's newsroom. Ateneo's Klim@Basketbol (July 2025) documents actual institutional behaviour change - CVIRAA moved meets away from 9am-3pm from 2024, and the 2024 Negros Occidental meet recorded more heat-related than sports-related injuries. That is real and durable. What is NOT sustained is the commercial framing built on it: that outdoor is unserved (Nike ships the DNA UV Woven and runs a nike.com.cn outdoor section), that the price must be RMB 199-299 (Nike's own China outdoor precedent was RMB 899), and that play is shifting to dawn and dusk (sourced to a court-builder's sales blog, a UAE property listing and a travel climate page - none of which measures when anyone plays).",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Compression tights worn under shorts as a layering norm",
+      "signal_ids": ["A06-S6"],
+      "assessment": "Unclear. Plausible at NBA level on visual observation, but the source is an annually re-dated SEO guide and the only real prevalence survey (n=512) is 88.1% endurance athletes with running dominant. For the population the opportunity actually targets - high school, club and college - prevalence is not contested, it is entirely unmeasured. One genuinely durable and verified fact sits next to it and should be used instead: FIBA's official interpretation that compression undershorts are legal at any length provided the team matches colour, which makes a layered system explicitly rules-safe.",
+      "durability": "unclear"
+    },
+    {
+      "topic": "The sub-USD 10 multipack commodity floor",
+      "signal_ids": ["A02-S4", "A01-S9"],
+      "assessment": "Emerging in the opposite direction to how it is described - the floor is rising, not holding. The evidence for it is 2024-vintage and impressionistic (Amazon best-seller-listing impressions with no rank, unit figure or date, and the named products in A02's own excerpt are running shorts from a general athletic list, not basketball). Meanwhile the US de minimis exemption for China and Hong Kong ended 2 May 2025, apparel now carries roughly a 53.5% combined duty stack, and Temu and Shein US audiences fell 62% and 47% and remain about 30% below pre-tariff baseline as of April 2026. The pressure from below is real but measurably weaker in 2026 than the analysis describes, while the pressure on Nike's own cost base is far greater than described - I verified Nike's expected gross incremental tariff cost at USD 1.5B with a 120bp FY26 gross-margin headwind and apparel prices already up 3%.",
+      "durability": "emerging"
+    },
+    {
+      "topic": "Reversible and multi-way short construction",
+      "signal_ids": ["A07-S5"],
+      "assessment": "Sustained, but as a decades-old category convention rather than a trend. The products are real (Puma Hoops x E.T., Nike Sabrina 3 reversible short and top, Kobe Standard Issue Reversible, LeBron DNA 3-in-1), but Puma also sells a plain non-collab inline reversible basketball short, and reversibles are a long-standing practice-and-scrimmage norm. The only 'trend' assertion behind the signal is an Accio page reused across three A07 signals. The cost logic (double the graphic surface without doubling SKUs) still holds on its own merits and should be argued as an economics case, never sold internally as an emerging trend.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "The swing back to wholesale and physical retail",
+      "signal_ids": ["A02-S7", "A04-S1"],
+      "assessment": "Sustained as a fact, over-generalised as a structure. Independently confirmed: Nike Digital declined year over year for a tenth consecutive quarter in fiscal Q4 2026 (-12% in the quarter) while wholesale grew 4% in both Q4 and the full year on USD 6.6B of Q4 wholesale revenue; New Balance opened 80 new doors in 2025 and passed USD 1B in owned retail. Ten quarters is a trend, not a blip. But the framing risks correlation-as-causation: this is substantially a deliberate Nike strategy under a new CEO correcting an over-promoted digital business, plus a different company's door-led strategy - not necessarily an industry-wide structural swing. And the implication for shorts specifically is untested, because a USD 37-65 replenishable basic can have a very different channel mix from footwear.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Basketball footwear's structural collapse as the reason shorts matter",
+      "signal_ids": ["A01-S6"],
+      "assessment": "Hype - and the most confidently stated, least supported claim in the entire base. Classified FACT on two numbers that trace to a single Substack guest post and that neither the domain skeptic nor I could locate in Circana's newsroom, in GlobeNewswire, in SGB or in WWD. My independent search returned Circana reporting the opposite: performance footwear led industry growth in 2025 with dollars up 6%, and US footwear held steady at about USD 90 billion. The 'NPD' attribution also suggests a legacy figure predating the 2022 NPD-Circana merger. Nike's own FY2026 disclosure that basketball grew is direct counter-evidence in the same period.",
+      "durability": "hype"
+    },
+    {
+      "topic": "Coverage-first and modest-dress demand for longer women's bottoms",
+      "signal_ids": ["A05-S8"],
+      "assessment": "Sustained as a human need with stale evidence and a newly opened, better route. The Griner quote is from a May 2014 Mother Jones interview, and the Minnesota Muslim girls' uniform story is the Asiya / Cedar-Riverside project whose prototypes date to 2015 and whose sport hijabs launched in 2017 - two of three evidence items describe events from 2014-2017 presented as a live 2026 gap. The whitespace claim is contradicted twice, by Asiya's decade of modest basketball product and by Nike's own 11-inch DNA Academy marketed for extra coverage plus a 9-inch women's option. France's hijab ban in federated play makes it a non-market rather than a market. What makes this MORE actionable than the file argues is a fact the domain missed: NFHS Rule 3-4-5 for 2025-26 now permits teammates to wear multiple STYLES of uniform bottoms - shorts, pants, skirts - provided they are like-coloured, introduced explicitly so religious and personal accommodations no longer require a permission request. That is a verified, dated, current, rules-created opening, and it is the only genuinely new constraint change in the entire evidence base.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "Australia as a growth market",
+      "signal_ids": ["A02-S9"],
+      "assessment": "Sustained and the best-verified non-US market evidence in the base. Approximately 1.3 million players, second among team participation sports nationally, female participation up 25% since 2022 to more than 450,000 women and girls driven by the She Hoops programme, an estimated 150,000 players unable to participate for lack of court space, NBL 2025-26 attendance of 1,231,796 (+9% year on year, 6,908 average, 63 sellouts, third consecutive million-plus season), and Champion confirmed as on-court partner through NBL26. Every correction the skeptic made ran in the signal's favour. This is the market with the strongest evidence-to-attention ratio in the whole portfolio and it currently supports one signal and no dedicated opportunity.",
+      "durability": "sustained"
+    },
+    {
+      "topic": "European basketball momentum (absent from the base, flagged here)",
+      "signal_ids": ["A02-S1"],
+      "assessment": "Sustained, and entirely unexamined by any of the seven domains - which is why it is flagged here against the only signal that mentions Europe at all. My search found EuroLeague set a fourth consecutive regular-season attendance record in 2025-26 at 3.25 million spectators, +8% year on year (and +17% on 2024 levels), with global TV viewership up 82% to 122.8 million across the first 25 rounds, 1.49 billion video views on owned platforms, and league revenue around EUR 125 million, +9%. A proposed NBA Europe league is progressing. The only European datapoint in the entire surviving base is a 4.9% CAGR from a syndicated gear report. Europe is Nike's second geography and it has been analysed as a compliance risk and a markdown line.",
+      "durability": "sustained"
+    }
+  ],
+  "evidence_base_quality": {
+    "strengths": [
+      "Audited corporate disclosure is strong, current and independently cross-verified by multiple agents: Nike FY2026 (revenue USD 46.4B, apparel USD 13.4B at +2% cn with units +1%, Greater China USD 5,847M at -13% cn with apparel units -8%, Digital down for a tenth consecutive quarter, wholesale +4%), Li-Ning, ANTA, adidas, Puma, Under Armour, New Balance, Dick's and Foot Locker. Several skeptics reproduced 10-K language verbatim. This layer can be trusted.",
+      "The physiology, biomechanics and rules layer (A06-S1, A06-S2, A06-S3) is the only peer-reviewed, named-sample, dated evidence in 58 signals and it survived attack essentially intact - Sports Medicine 2017 for lateral movement and jump counts, MDPI Sports 2022 (n=140) corroborating the 31% lateral-shuffle figure independently, Baker et al. 2019 (n=1303) for sweat normative data, Baker 2017 for trapped sweat in basketball uniforms specifically, and primary FIBA and NFHS rule text. It is also the layer with the fewest opportunities built on it.",
+      "League and event operational data verified against primary releases, with corrections that mostly strengthened the signals: NBL attendance (the league's own 1,231,796 exceeding the Wikipedia figure cited), BAL (140,000+ and 2,739,498 YouTube views, +69%), Unrivaled (ticket revenue +204%, tickets +249%, and a Philadelphia night generating ~USD 1M in tickets plus USD 400,000 in merchandise), Basketball Australia and AusPlay participation.",
+      "Product-existence claims are generally accurate where they are positive. Where a specialist said a product or a brand exists, it usually does - ballaholic, Ugat, Know The Culture, Asiya, Li-Ning Wade UPF, adidas Crazy Lite, Nike DNA UV Woven, Sabrina and its plus-size SKU. The failures are almost entirely in the negative direction, in claims that something does NOT exist.",
+      "The skeptic layer is itself a first-class asset. It caught source-laundering (Accio, Sportsverse, report mills), metric substitution (49% footwear mindshare reported as apparel mindshare, a 23-point error), order-of-magnitude transcription errors (+60% vs the published +601%), base effects (+34% attendance that is +13% per game), stale dating (2014 quotes, 2019 collections, 2023 tournaments presented as current), and category errors (a Philippine FOOTBALL kit cited as basketball pricing evidence, running shorts cited as basketball best-sellers). Seven independent 'biggest miss' findings converge on one systemic fault, which is itself a reliable meta-finding.",
+      "Honest disclosure of environmental limits. The A03 skeptic verified that every consumer and retail web host was blocked for both the specialist and the reviewer, and said so explicitly rather than papering over it. Several specialists correctly flagged their own gaps (no shorts-specific market sizing exists; no quantitative women's fit data was found; no phone-carry behaviour was measured). That candour is what makes this audit possible."
+    ],
+    "weaknesses": [
+      "There is no first-party Nike commercial data anywhere in the base. No sell-through, no unit mix by inseam, no markdown rate by SKU, no return rates or return reasons, no realised ASP, no size-curve fill, no repeat-purchase interval, no channel split for the shorts class. Every price position and every length recommendation in every opportunity across seven domains is therefore unanchored - and the same three or four internal pulls would resolve most of the portfolio's open questions at once.",
+      "Not one price, spec or review claim in the entire base was confirmed against a retrieved product page. All retail hosts were blocked for every agent, so the price architecture is built from search-result summaries, and at least one figure (the USD 75 Aero-FIT basketball short) appears to be the search engine echoing the query language back. Three mutually incompatible Nike price ladders coexist in the base and none of them came from a page.",
+      "Report mills and AI content farms are load-bearing in six of seven domains: the Technavio franchise (verified as one report in four vintages), Verified Market Research, Dataintelo, SkyQuest, market.us, WiseGuy, Market Research Intellect, plus Accio (Alibaba's AI B2B sourcing engine, reused across five signals in two domains), anarchylabel, northyard, compressionathlete (an annually re-dated SEO guide), and ericemanuelsshop (an unofficial site the brand is litigating against). Category sizing estimates from these sources disagree by roughly 2x for the same year and category.",
+      "Marketplace listings are repeatedly treated as market data: Amazon best-seller impressions with no rank or unit figures, Foot Locker auto-generated inseam facets read as a merchandising strategy, TikTok Shop listings as cultural evidence, Lazada volume impressions, StockX catalogue pages as proof of a resale market, and a retailer navigation menu as a styling signal.",
+      "Consumer voice is thin, biased and tiny where it exists. Review samples of n=3 (Walmart Icon) carry franchise-level quality conclusions; Trustpilot, a complaint-selected venue, is read as sentiment; a single reviewer quote supports a women's fit finding; and the one genuinely usable consumer datapoint in the base (Dick's Icon+ 6\" at 3.9 stars with 67% recommending across 64 reviews) was found by a skeptic, not a specialist.",
+      "Systematic absence-of-evidence-as-evidence. 'No Nike UPF short exists', 'no Aero-FIT basketball short exists', 'women's length choice exists only via tall sizing', 'pockets are not part of Nike's story', 'Nike has no heritage-length short', 'tournament merch is largely tees and hoodies' - all six are false, and all six would have been caught by a single query against Nike's own catalogue. Under a documented condition where no product page could be opened, the only defensible conclusion was 'not found', never 'does not exist'.",
+      "Pervasive time-base drift. 2024 WNBA figures used as current in 2026; a 2019 Jordan 23 Engineered collection presented as current competitive design language; a 2014 Griner interview as a current athlete voice; 2015-2017 Asiya prototypes as a live gap; 2023 CunBA coverage as 'still spreading'; a 2019 NBA public-relations estimate as participation; a 2022 SS NOCTA product as evidence of a resale market; a June 2025 price action as a standing condition through SS28.",
+      "No non-Western primary consumer input at all. The entire Worldball thesis - the largest share of the portfolio - contains zero Chinese, Japanese, Filipino, Indian or European consumer voices, zero Chinese-language sources, zero Tmall/JD/Douyin/Xiaohongshu data and zero retrieved local prices, while carrying specific RMB, PHP, JPY and AUD price recommendations.",
+      "The cost side of the business is entirely absent from specialist work. The word 'tariff' appears nowhere in A02's output, in a year when the US de minimis exemption ended, apparel from China carries roughly a 53.5% duty stack, Nike is absorbing an estimated USD 1.5B annualised tariff cost with a 120bp gross-margin headwind, and Nike has already raised apparel prices 3%. Every price position was set without a landed-cost input.",
+      "The SS28 calendar is missing from all seven files. The FIBA World Cup runs in Qatar 27 August-12 September 2027 and the LA28 Games open 14 July 2028 in Nike's home market, inside the SS28 selling season, with Nike an Official Outfitter of the US Olympic and Paralympic Team. A04's own evidence shows the mechanism working for a competitor in an adjacent sport - adidas apparel +35% in a quarter on World Cup demand while its basketball fell 21% - and never applied it.",
+      "Duplicate-as-corroboration is the base's most dangerous structural flaw. Where three domains agree, they are usually reading the same document. The women's case, the market-size case, the China participation case, the retro-length case and the local-labels case are each one source agreed with three times, and each currently reads to a decision-maker as triangulation."
+    ],
+    "quant_vs_qual_balance": "Roughly 30% of the base is hard, verifiable quantitative evidence - audited filings, league releases, peer-reviewed studies with named samples, and primary rulebooks - and essentially all of it describes the company, the sport, the athlete's body or the rules, not the product. Another ~20% is quantitative in appearance only: syndicated report-mill CAGRs and market sizes, Accio-generated trend indices, platform search-growth percentages on undisclosed bases, and league marketing percentages on soft base years. That fifth of the base should be treated as zero, not as weak evidence, because it carries false precision into decks. The remaining ~50% is qualitative and observational - product copy, retailer listings and facets, review snippets, trend blogs, style guides, brand interviews - and it is doing most of the work behind the product-level conclusions.\n\nThe imbalance that matters is not quant-versus-qual in aggregate; it is that the quantitative strength and the decision needs sit in different places. The base can tell you precisely what Nike earned, how many people attended an NBL game, how many lateral movements a professional guard makes and how much sweat a uniform traps. It cannot tell you a single thing, in any market, about how many basketball shorts sell, at what inseam, at what realised price, through which door, to whom, or why they come back. The one category the entire programme is about is the one category with no quantitative evidence at all. Every opportunity therefore rests on a qualitative gap claim plus an unanchored price - and where those gap claims have been checked against Nike's live catalogue, most have failed. The correction is not more research; it is four internal pulls (shorts units and ASP by inseam and region; markdown and full-price sell-through by SKU; returns coded by reason; women's and youth size-curve fill and rebuy) which between them would resolve more open questions than the seven domains resolved in total."
+  },
+  "signal_adjustments": [
+    {
+      "signal_id": "A01-S6",
+      "action": "downgrade",
+      "note": "Remove the FACT classification and strike both numbers. The Circana -11% basketball footwear and NPD 13%-to-4% share figures trace to a single Substack guest post (14 Apr 2026) that also supplies A01-S5's WNBA numbers; my independent search of Circana's own releases returned the opposite direction (performance footwear +6% dollars in 2025, US footwear steady at ~USD 90B), and Nike's FY26 filing says basketball grew. The 'shorts are the entry point because the shoe is dead' logic in A01-T5 must not be carried forward."
+    },
+    {
+      "signal_id": "A01-S5",
+      "action": "merge",
+      "note": "Merge the quantitative half into a single WNBA-commercial finding shared with A04-S5 and A05-S1 - all three are the WNBA's own 2024 season-review release. Correct +60% to the published +601% and re-base to 2026 (attendance +16%, All-Star 19,783 outdrawing the NBA, 73M unique viewers, CBA settled with the cap raised ~5x). Keep the qualitative half (basketball shorts as a women's fashion object) intact - it is the strongest thing in A01 and it survived the durability test across two seasons."
+    },
+    {
+      "signal_id": "A04-S5",
+      "action": "merge",
+      "note": "Same WNBA release, laundered through Accio and mis-dated to 2025. Drop the +233% and +601% as A04 evidence. What survives and is genuinely valuable is Ed Stack's first-party Q1 2026 call quote - 'the basketball business is coming back in a really big fashion and really built around the women's basketball business... boys and girls, young men and women are buying that product' - which is stronger than the numbers it was attached to and describes cross-gender demand, reframing the opportunity."
+    },
+    {
+      "signal_id": "A05-S1",
+      "action": "merge",
+      "note": "Merge with A01-S5 and A04-S5 as one WNBA-commercial finding, but raise its durability rating on new evidence: the 2026 season is a third consecutive record and the CBA risk has cleared. Correct the average attendance (10,954-10,986, not 11,148) and present per-game growth (~+13%) alongside the +34% total, which is largely a 286-vs-240 schedule artefact."
+    },
+    {
+      "signal_id": "A02-S1",
+      "action": "downgrade",
+      "note": "Strip the CAGR entirely. I verified that Technavio has serially re-released this report as USD 4.58B, USD 5.93B (2023-2028), USD 5.93B (2024-2028) and USD 6.32B (2024-2029), and that the Research and Markets USD 6.53B is the same franchise's next vintage - one vendor counted twice, presented as convergence. Keep only A02's own conclusion, which the skeptic correctly elevated: no syndicated source isolates basketball shorts, so shorts sizing must be built internally."
+    },
+    {
+      "signal_id": "A01-S7",
+      "action": "flag",
+      "note": "Split into two. The outdoor-China consumer logic is the best-evidenced item in A01 and should be strengthened with the S.T. Flare spec detail the specialist missed (XDR extra-durable outsole distinct from US releases, reinforced zones in high-wear areas - the apparel-transferable insight). But the value-price conclusion is contradicted by the very product it is built on: the S.T. Flare launched at RMB 899. Label the 300M participants figure as a 2019 NBA PR estimate, merged with A02, A05-S5 and A06-S5's uses of the same number."
+    },
+    {
+      "signal_id": "A02-S2",
+      "action": "merge",
+      "note": "Merge with A04-S11 - they are the same China story counted twice, and only the Tmall 618 ranking is genuinely new (and it is a retro-lifestyle-sneaker fact, not a basketball one). Keep the Nike decline as FACT. Downgrade the competitive half: ANTA's +14.3% is the H1 headline not the annual (+13.3%), the ANTA namesake brand that actually competes in basketball grew only 3.7%, the group's growth came from acquired premium/outdoor brands (+59.2%), and ANTA's China share fell from 23.0% (2024) to 21.8% (2025)."
+    },
+    {
+      "signal_id": "A04-S11",
+      "action": "merge",
+      "note": "Fold into A02-S2. The Anta 23% share figure is a 2024 number presented as 2026 and is directionally wrong (2025 is 21.8%, down). The CKGSB '21% drop in Q2 2025' for Nike China corresponds to no verifiable Nike Greater China figure and should not be quoted. The 49.6% participation rate is all-sport, not basketball."
+    },
+    {
+      "signal_id": "A02-S3",
+      "action": "flag",
+      "note": "Keep as the strongest China signal - Li-Ning basketball retail -19% in 2025 is confirmed from five independent directions and strengthened by the detail that sports casual also fell 9% while running and badminton grew. But flag the unresolved conflict with A04-S2, which reports Li-Ning basketball UP 5% in H1 2026. Same company, adjacent periods, opposite direction. That is the most decision-relevant unknown in the China case and must not be averaged."
+    },
+    {
+      "signal_id": "A04-S2",
+      "action": "flag",
+      "note": "Figures verified. Two corrections to carry: the Q4 Greater China -17% is currency-neutral (reported was -12%), and the 49.6% is all-sport participation, not basketball. Strike the causal inference that adidas grew China 15% because it creates and sources locally - its Tmall 618 win is attributed to retro lifestyle silhouettes while adidas basketball fell 21% globally in the same quarter. Add the Topsports exit (Nike's largest GC retail partner stops selling Nike online by January 2027), which breaks the route to market every China opportunity assumes."
+    },
+    {
+      "signal_id": "A02-S4",
+      "action": "downgrade",
+      "note": "Keep the directional hypothesis (a widening gap between commodity and premium); strike every specific number. The 'USD 45-50 branded core' does not describe Nike, whose live ladder spans ~USD 37-65 with ~38% markdowns on the 10-inch; the sub-USD-10 floor comes off a general men's ATHLETIC shorts best-seller list (NORTHYARD, Soothfeel, G Gradual are running shorts); the Curry USD 90-to-48 datapoint is a summer 2025 sale event predating the UA separation; and the floor itself is rising under a ~53.5% duty stack with Temu and Shein US audiences ~30% below pre-tariff baseline."
+    },
+    {
+      "signal_id": "A02-S5",
+      "action": "merge",
+      "note": "Merge with A07-S4 into one inseam-architecture finding and downgrade both. A02's own cited source (UA Playbook) says performance shorts run 7-9 inches, contradicting its headline; Nike's live range is 6-11 inches continuously with the DNA Academy 11\" at USD 37 including Big and Tall, so the 'commodity middle' is an active, fully-merchandised part of the line. The two-ladder recommendation may still be right but is not established by this evidence."
+    },
+    {
+      "signal_id": "A07-S4",
+      "action": "merge",
+      "note": "Merge with A02-S5. The Foot Locker '5 Inch Basketball Shorts' page is an auto-generated attribute facet sitting alongside '5 Inch Athletic', '5 Inch Workout' and '6\"' facets - a filter artifact, not a merchandising bet. The long pole is evidenced by garments that are not basketball shorts (denim jorts, an adidas Originals woven twill 'Long Short'). Keep the verified player-behaviour observation (named NBA players wearing shorter shorts, with stated reasons); drop 'design at the poles' until inseam sell-through exists."
+    },
+    {
+      "signal_id": "A03-S4",
+      "action": "flag",
+      "note": "Uphold the technology claim - it is the best-sourced item in the base and independently corroborated by Forbes, SoccerBible, Footy Headlines and others, with the additional detail that Aero-FIT is quantified at 238% more breathable than 2024 Dri-FIT ADV and is Nike's first elite apparel from 100% textile waste. But the 'basketball application unproven' framing is now superseded: I verified that Nike's Sabrina 4 collection (17 July 2026) introduced Aero-FIT to basketball on a signature jersey and shorts. The USD 75 price remains unconfirmed by any retrieved page and should not be quoted as fact."
+    },
+    {
+      "signal_id": "A07-S2",
+      "action": "downgrade",
+      "note": "Aerogami is a June 2023 technology (not undated) that in three years has appeared on nothing but the Run Division jacket; Nike's own Aerogami page still describes only that jacket. Read three years of non-extension as evidence against feasibility at a shorts cost target, not as white space. The 'already named in the internal Outdoor brief' half carries no URL and is unverifiable externally, so it cannot support an external-facing claim. A07-O2's signature feature should be treated as unavailable until ATG confirms otherwise."
+    },
+    {
+      "signal_id": "A03-S7",
+      "action": "merge",
+      "note": "Merge with A06-S4, A06-S7 and A07-S8 into one 'outdoor/storage/UV: what Nike already ships' finding. Uphold the Li-Ning half - the Wade UPF 50+ / AT Dry platform is corroborated across consistent style codes from Spring 2023 to 2025 (a sustained platform, not a seasonal item) at RM 99.50 in Malaysia, confirming the price gap. Reject the second half: I verified the Nike DNA 6\" UV Woven (FN2659) copy directly - UVA/UVB protection, side pockets, a zippered utility pocket sized for a phone, and a woven face that 'stands up to even the toughest rebound battles'. Also note that the China conclusions rest on European and US reseller pages, not Chinese sources."
+    },
+    {
+      "signal_id": "A06-S4",
+      "action": "merge",
+      "note": "Merge into the same outdoor/storage finding and downgrade from PATTERN to HYPOTHESIS. There is no consumer evidence in the signal - the four sources are a Chinese OEM marketing page, a pocketed-shorts brand's own page, a forward-dated SEO affiliate roundup and Nike's own product copy - and the specialist concedes nobody quantified phone-carry behaviour. The signal is contradicted by its own fourth citation. What survives is the engineering tension (the pocket that sells the short annoys on court), which is worth testing, not asserting."
+    },
+    {
+      "signal_id": "A07-S8",
+      "action": "merge",
+      "note": "Merge into the same finding. The load-bearing sentence - 'none of these combines UV, water and abrasion protection into one basketball-specific design language' - is an absence-of-evidence claim made under a documented condition where every page fetch was blocked. Nike's DNA UV Woven already combines UV, secure pocketing and a woven durability claim in one inline basketball short. Also date the Jordan 23 Engineered evidence correctly: it launched July 2019 and cannot describe 2026 competitive design language."
+    },
+    {
+      "signal_id": "A06-S7",
+      "action": "downgrade",
+      "note": "The individual facts check out but the framing does not survive context. Concrete and asphalt UV albedo of 2-15% is among the LOWEST of outdoor surfaces (snow 50-88%, water 25-30%, sand 15-18%, grass under 10%), so 'outdoor courts add reflected UV' is true and nearly irrelevant in magnitude. Peer-reviewed testing shows 100% polyester technical sportswear already rates UPF 40-50+ untreated, so a UPF 40+ claim may describe what the fabric already does. Redirect to the genuinely open question the same paper raises and nobody asked: what saturation does to UV protection in a garment that traps up to 1.33 kg of sweat."
+    },
+    {
+      "signal_id": "A01-S3",
+      "action": "downgrade",
+      "note": "Split the signal. The feature half is verified independently and should be kept (DNA copy: side pockets plus a zippered utility pocket that fits a phone, unlined, 100% polyester, side vents, 8-inch inseam, and a striped waistband for a 'vintage hoops look' the specialist did not register). The failure half does not hold: direct retrieval of the same Walmart Icon corpus surfaces seams and shrinkage, not pockets, with the extraction explicitly noting no ripped-pocket complaints and one reviewer praising pocket depth. Redirect the spec claim from pocket engineering to seam construction and shrink control."
+    },
+    {
+      "signal_id": "A01-S2",
+      "action": "downgrade",
+      "note": "Reclassify from PATTERN to HYPOTHESIS. This is base-rate neglect: every apparel product with more than a handful of reviews contains 'runs big', 'runs small' and 'true to size' simultaneously, and there is no benchmark, no returns-reason data and no star distribution. The JD Sports comparison (4.0/5 from 13 reviews vs 4.8/5 from 6 ratings) cannot support 'notably below' and must not be repeated downstream. The underlying hypothesis is reasonable and cheap to test with data Nike already owns."
+    },
+    {
+      "signal_id": "A04-S6",
+      "action": "flag",
+      "note": "Keep the one genuinely useful datapoint - Dick's Nike Dri-FIT Icon+ 6\" at 3.9 stars with 67% recommending across 64 reviews, which is a real quality signal from a real sample and which incidentally proves the Icon franchise already exists at 6 inches. Discard the Walmart n~3 sample as 'repeated complaints', and treat the single Foot Locker markdown snapshot as an end-of-summer-season observation rather than structural erosion. The causal story that a June 2025 price freeze forced a fabric cost-down is unestablished; if GSM did not change, A04-O3 collapses."
+    },
+    {
+      "signal_id": "A04-S8",
+      "action": "downgrade",
+      "note": "Verified as of 1 June 2025 but superseded and US-only. I confirmed Nike's tariff exposure rose from ~USD 1B to USD 1.5B with the FY26 gross-margin headwind revised from ~75bp to 120bp, that Nike has continued taking surgical price increases with apparel up 3% and footwear up 1%, and that Nike faces a proposed US class action over tariff pricing. 'List prices frozen through SS28' is an assumption, not a finding, and A04-O3's pricing recommendation depends entirely on it."
+    },
+    {
+      "signal_id": "A05-S5",
+      "action": "downgrade",
+      "note": "Reclassify to HYPOTHESIS with a currency warning. My independent search returned nothing but 2023-2024 material for CunBA, and the viewership figure inflates across retellings from Xinhua's 100 million to 800 million to CGTN's 1 billion for the same event. Add the two things the specialist missed: RMB 2.3 billion in 2023 local tourism revenue (a far stronger commercial datapoint), and Li-Ning's funded activation with Jimmy Butler in Taipan village in July 2023 - the space is already occupied, not open."
+    },
+    {
+      "signal_id": "A05-S3",
+      "action": "flag",
+      "note": "Strike every Accio-derived number (highest-volume query, August 2025 peak, December 2025 index of 99). What remains is one retailer commerce blog whose named celebrities are Adam Sandler and Harry Styles, one BAPE collab, and a Complex citation that is about vintage tees and hoodies rather than shorts. Keep the one usable artefact: the concrete spec split (retro 9\"+, modern 7\"-). No sales or share data exists for Mitchell & Ness swingman shorts anywhere."
+    },
+    {
+      "signal_id": "A05-S9",
+      "action": "downgrade",
+      "note": "Strike the Accio and Culture Kings items - the Accio page uniquely carries the signal's distinctive claim (basketball shorts and jorts styled together as 'hoopers' fashion) and it exists nowhere else, while a retailer navigation menu is not a cultural signal. Pinterest is being asked to support a claim it does not make. Independent 2026 coverage confirms baggy and jorts are live but simultaneously names micro shorts a top trend - the churn is the finding, and 'baggy is back' is half the picture."
+    },
+    {
+      "signal_id": "A05-S4",
+      "action": "flag",
+      "note": "Keep as evidence that sportswear-as-fashion is broad and real; strike the basketball attribution. The same Pinterest report shows F1 aesthetic outfit +483% and Brazil jersey outfit women +302% against WNBA game outfits +70%, and its strongest term (+494%) is for JERSEY outfits, which argues for tops rather than shorts. Percentage growth on unknown bases cannot rank terms. It is a search-and-save index on a female-skewing platform, a leading indicator rather than purchase evidence."
+    },
+    {
+      "signal_id": "A05-S8",
+      "action": "flag",
+      "note": "Keep the need, replace the evidence, and upgrade the route. Two of three evidence items are 2014-2017 (a May 2014 Mother Jones Griner interview; the Asiya/Cedar-Riverside prototypes from 2015 with hijabs launched 2017), and the whitespace claim is contradicted by Asiya's decade of modest basketball product and by Nike's own 11-inch DNA Academy marketed for extra coverage. France's hijab ban makes it a non-market for federated play, not a market. Replace all of it with the 2025-26 NFHS Rule 3-4-5 change permitting multiple STYLES of uniform bottoms among teammates - verified, dated, current, and the only genuinely new constraint change in the entire base."
+    },
+    {
+      "signal_id": "A05-S10",
+      "action": "downgrade",
+      "note": "Reclassify to HYPOTHESIS. Every citation is a product page, brand collection page or StockX catalogue entry, and StockX lists effectively everything - a catalogue page proves a SKU exists, not that a resale market does. There is not one price, premium-over-retail, sale volume or bid/ask datapoint, and the NOCTA citation is an SS22 product. The premise that the partnership is live and basketball-directed does hold (NOCTA x Nike Cardinal Stock SS26, Venezia FC kits, a Kevin Durant Fall 2026 capsule entering Nike Basketball)."
+    },
+    {
+      "signal_id": "A07-S3",
+      "action": "flag",
+      "note": "Strike the Eric Emanuel USD 2.8M / +20-50% figure entirely - it traces to Accio and AI-generated net-worth pages, the growth band is incoherent as a statistic, and no trade source corroborates it for a brand that collaborates with adidas and New Era and runs trademark litigation. Also flag the category error: the Nike x Martine Rose pieces are FOOTBALL shorts being used as evidence about basketball shorts. The USD 115 price and the 'water-resistant with rubberised badges' NOCTA claim are unverified."
+    },
+    {
+      "signal_id": "A07-S5",
+      "action": "downgrade",
+      "note": "Keep the products, drop 'becoming the default'. Reversible basketball shorts are a decades-old practice-and-scrimmage convention - Puma sells a plain non-collab inline reversible style alongside the E.T. one - so this is a standing category norm read as an emerging trend. The only trend assertion behind it is an Accio page A07 reuses across S3, S5 and S7. The Sabrina 3 citation is also the primary evidence in S6, so S5 and S6 partly rest on one press release. The cost logic survives on its own merits."
+    },
+    {
+      "signal_id": "A07-S6",
+      "action": "merge",
+      "note": "Merge with A03-S6 into one 'Nike women's basketball bottoms, current state' finding built on an actual SKU count rather than press releases. The 'unisex or licensed generics' framing does not survive: Nike ships ISoFly 6.5\"/7\" (designed for wider hips and legs), Crossover Dri-FIT 5\", Fly Crossover, Team 31 Fly Crossover, WNBA Victory and Rebel Fanwear shorts, and put Aero-FIT on a women's-athlete-led signature short first (Sabrina 4, 17 July 2026), with the Caitlin Clark line at retail 1 October 2026. The 6-inch-default evidence is one team-uniform supplier's manufacturing convention, not consumer preference."
+    },
+    {
+      "signal_id": "A03-S6",
+      "action": "merge",
+      "note": "Merge with A07-S6. The product facts hold and the reversible-with-pockets-on-one-side defect is the best small observation in A03 - specific, real and actionable. But the FACT classification rests on a single review quote (n=1), and one structural premise is wrong: Nike sells a Women's Crossover Dri-FIT 5\" basketball short, so length choice does not exist only via tall sizing. Note the review evidence that customers wear Sabrina at home more than on court, which reframes what the USD 65 willingness-to-pay actually proves."
+    },
+    {
+      "signal_id": "A06-S9",
+      "action": "downgrade",
+      "note": "Remove the FACT classification. 'Order according to your hip measurement' is Nike's generic women's-bottoms boilerplate, identical on the Women's Bottoms and Women's Numeric charts and standard across the industry - it says nothing about basketball. The chain from that sentence to 'the waist is systematically under-fitted' to 'an internal adjustable waistband is the answer' has no evidence at any link, and the specialist itself concedes it found no quantitative women's fit-complaint data. Keep only the verified construction facts (woven front, knit back, size-up guidance)."
+    },
+    {
+      "signal_id": "A06-S6",
+      "action": "downgrade",
+      "note": "Reclassify to HYPOTHESIS for the population that matters. The 'nearly every starter' claim comes from an annually re-dated SEO guide (2025 and 2026 versions of the same article exist), and the only real prevalence survey (n=512) is 88.1% endurance athletes with re-injury prevention as the leading motivation. A06-O2 targets high school, club and college players, where prevalence is entirely unmeasured. Add the verified FIBA interpretation that compression undershorts are legal at any length with team colour matching - a stronger foundation than the prevalence claim."
+    },
+    {
+      "signal_id": "A06-S2",
+      "action": "flag",
+      "note": "Record an explicit design decision rather than presenting one as a finding: 0.95 +/- 0.42 L/h is basketball's normative whole-body rate (Baker 2019, n=1303, level with soccer and well below American football at 1.51), while 1.4-1.6 L/h is a high-intensity competitive sub-case. Specifying the whole line to the tail is a choice with cost consequences. Elevate the unused and more actionable number: Baker 2017 measured 0.00-1.33 kg of sweat trapped in basketball uniforms, rising with intensity. All data is indoor, North American and male."
+    },
+    {
+      "signal_id": "A06-S5",
+      "action": "downgrade",
+      "note": "Split. The heat half holds and is stronger than claimed - Ateneo's Klim@Basketbol (July 2025) documents CVIRAA moving meets away from 9am-3pm since 2024 and the 2024 Negros Occidental meet recording more heat-related than sports-related injuries, which is institutional behaviour change rather than inference, and the 50C surface figure is physically credible. The behaviour half does not hold: 'play is drifting to dawn and dusk' is sourced to a court-construction company's sales blog, a UAE property-listing blog and a travel climate page, none of which measures when anyone plays. Merge the 300M figure into the single NBA-PR-estimate citation."
+    },
+    {
+      "signal_id": "A06-S3",
+      "action": "flag",
+      "note": "Three claims of unequal standing bundled as one. The FIBA leg is verified and stricter than reported (shorts must end ABOVE the knee, not above or at), plus the missed official interpretation that compression undershorts are legal at any length. The NFHS leg must be rebuilt: the specialist used a Diocese of Cleveland PDF as a proxy and missed Rule 3-4-5 (multiple styles of uniform bottoms now permitted among teammates) and the Rule 3-5-6 undershirt revision. The youth 'not more than one inch below the knee' cap is one uniform-vendor claim repeated verbatim across four vendor sites and appears in no rulebook - and it directly contradicts the FIBA rule cited in the same signal."
+    },
+    {
+      "signal_id": "A03-S10",
+      "action": "downgrade",
+      "note": "Reclassify and strip the price recommendation. The lead evidence is a description of Nike PH's website price-FILTER facets, which are fixed navigation controls carrying no information about the assortment's actual price distribution. The Puma evidence is a category error - the 'Philippines 2025 Shorts' with the PFF badge is a Philippine FOOTBALL Federation national-team kit (though it does yield one real datapoint: PHP 2,500). The derived sub-PHP 2,000 price point has no empirical basis and must be treated as an untested assumption."
+    },
+    {
+      "signal_id": "A04-S9",
+      "action": "downgrade",
+      "note": "Contains no basketball-shorts data of any kind, yet is classified FACT. The revenue base is contradicted by a better source (Moody's ~USD 2.7B for the twelve months to September 2025 vs the USD 2.3B youth-sports-blog estimate), A04's own file flags an unresolved USD 633M BSN discrepancy, and neither the USD 75M club/select figure nor the USD 5B segment size could be corroborated anywhere. Keep only the verified growth figures (Varsity revenue and EBITDA up ~8% and ~10% in 2025, helped by tariff-driven order pull-forward, with 2026 less certain) and the KKR consolidation, which changes Nike's negotiating position."
+    },
+    {
+      "signal_id": "A01-S9",
+      "action": "downgrade",
+      "note": "Listing impressions treated as market data: 'Amazon best-seller listings are dominated by 5-packs' is asserted with no rank, unit figure or date. The Trustpilot 30-day return complaint is geographically misattributed - Nike's US window is 60 days and framed as a wear trial; ~30 days is an international/UK policy artefact - so it cannot support a US-facing product feature. The AND1 'affordable and cultural' quote is one anonymous review. The pack-and-grade hypothesis is plausible and needs POS data plus a willingness-to-pay test before it becomes a product."
+    },
+    {
+      "signal_id": "A01-S10",
+      "action": "merge",
+      "note": "Merge with A02-S11 and A07-S9 into one verified 'local streetball labels exist and are unmeasured' finding. The brands are real (Ugat founded 2014 and unfunded per Tracxn; Know The Culture a genuine Cebu brand), which makes existence a FACT. What is not evidenced is that four micro-businesses constitute a market pattern - no revenue, unit, price or share data for any. The India +34% and 'Philippines/Nigeria fastest-growing' figures come from report mills with no traceable primary source and should be struck."
+    },
+    {
+      "signal_id": "A02-S11",
+      "action": "merge",
+      "note": "Merge into the same local-labels finding. The Japan half is genuinely durable and should carry the argument: the ASICS x ballaholic relationship is a seventh collaboration with structural co-development, launching February 2026 across Japan, Hong Kong and globally, with KICKZ distribution in Europe. The Philippines half is listing-level only. The premise that global brands leave the space open is contradicted by Nike's own China-exclusive S.T. Flare. The Japan 5.28% CAGR is another single reseller report and the StarNgage 'B.League #1' item is a social-follower ranking, not commercial data."
+    },
+    {
+      "signal_id": "A07-S9",
+      "action": "none",
+      "note": "The signal that survives its own domain's review intact and the one A07 finding not built on a 'Nike does not do X' claim. Keep as VERIFIED with two corrections: ballaholic dates to 2012 per the founder's own account (SOMECITY 2007), not 2004, and the Li-Ning 'stand out in the paint and on the pavement' line is BadFive footwear copy, not shorts copy. Ugat's Watawat short at USD 55 in premium heavyweight mesh is a usable construction and price benchmark. Note that the pockets insight is framed by the founder as a historical founding rationale ('back then'), not a present-day gap."
+    },
+    {
+      "signal_id": "A02-S7",
+      "action": "merge",
+      "note": "Merge the Nike channel facts with A04-S1 - both read the same FY26 disclosure. Numbers independently confirmed (Digital down a tenth consecutive quarter, -12% in Q4; wholesale +4% for Q4 and the year on USD 6.6B; FY26 flat at USD 46.4B). Two riders: the Jordan -16% datapoint is fiscal 2025, a year stale; and 'distribution is swinging back to wholesale' risks correlation-as-causation, since this is substantially a deliberate Nike strategy plus a different company's door-led growth, not a proven industry structure. Check the channel split for the shorts class specifically before acting."
+    },
+    {
+      "signal_id": "A04-S1",
+      "action": "flag",
+      "note": "Every number reproduced independently and the signal as written is sound. Flag the step it takes quietly: Nike does not disclose basketball apparel separately, and the visible basketball momentum is footwear-led (Kobe alone is ~37% of signature basketball shoe sales on StockX). 'Basketball grew mid-single digits' is a footwear-weighted statement and must not be quoted as evidence for a shorts investment. Add the CFO's caution that sell-through continues to struggle and marketplace conditions are unlikely to improve through at least H1 FY2027."
+    },
+    {
+      "signal_id": "A02-S8",
+      "action": "flag",
+      "note": "All three legs verified, and the Wikipedia citation for the Curry separation should be replaced with the Under Armour Form 8-K of 13 November 2025. But better sourcing corrects the conclusion: Curry retains sole ownership of Curry Brand and is seeking a new retail partner, the Curry 13 ships February 2026, and Curry Brand apparel remains available through October 2026 - so the 'temporary vacuum in signature guard-driven short-inseam product' is not open now, opens no earlier than late 2026, and may be filled by Curry Brand under a new partner rather than by Nike."
+    },
+    {
+      "signal_id": "A02-S9",
+      "action": "none",
+      "note": "The best-verified non-US market signal in the entire base, and every skeptic correction ran in its favour. Replace the Wikipedia attendance figure with the NBL's own 1,231,796 (+9%, 6,908 average, 63 sellouts, third consecutive million-plus season). Champion's status resolves in the signal's favour - still the NBL's on-court partner through NBL26. Add the detail that sharpens the demand case: an estimated 150,000 Australian players unable to participate for lack of court space, and female participation past 450,000 driven by She Hoops. This market currently supports one signal and no dedicated opportunity, which is a portfolio-weighting error."
+    },
+    {
+      "signal_id": "A04-S4",
+      "action": "flag",
+      "note": "Confirmed almost verbatim, but the qualifier that undercuts the implication is under-reported: Ed Stack attributed the promotional damage specifically to Foot Locker's exposure to legacy footwear silhouettes and launch/retro product, while the Dick's banner delivered broad-based growth across categories including apparel at +4.9% comps - and Foot Locker US comps were +6% in Q1 2026 before -3.6% in Q2. A footwear-and-retro problem at one banner over one quarter should not be generalised into an apparel pricing floor two years out."
+    },
+    {
+      "signal_id": "A04-S3",
+      "action": "flag",
+      "note": "All four competitor legs independently confirmed and correctly classified as PATTERN. Two riders: Puma's stated forward priorities are Football, Running, Training and Sportstyle with basketball absent, so its FY25 basketball apparel growth is a residual rather than a commitment; and the fiscal calendars do not align (Nike FY26 ends May 2026, UA FY26 ends March 2026, adidas and Puma are calendar-year), so 'in the same window' is looser than it reads. The market-size arithmetic attached to this signal is irreconcilable and should be dropped, not reconciled."
+    },
+    {
+      "signal_id": "A05-S6",
+      "action": "flag",
+      "note": "The strongest signal in A05 and it survives intact - NBL, BAL and Quai 54 2025 all verify verbatim, with an attendance figure the specialist missed (roughly 20,000 across two days at Roland-Garros, EUR 700,000+ production cost, 24 teams). Two corrections: Quai 54's 2026 edition is reported as returning to the Centre sportif Emile-Anthoine rather than Roland-Garros with no confirmed dates, so correct that before planning any drop against it; and carry the scale calibration - BAL's entire record season drew roughly nine NBL games' worth of people."
+    },
+    {
+      "signal_id": "A05-S7",
+      "action": "none",
+      "note": "Fully verified and strengthened by two independent sources. Ticket revenue +204% and tickets sold +249% versus the inaugural season, a professional women's regular-season record crowd of 21,490 in Philadelphia, semifinals averaging 213,000 with playoff viewership -9%. The specialist missed the most commercially relevant datapoint in the story: the Philadelphia game generated roughly USD 1 million in ticket revenue and USD 400,000 in merchandise in one night. Getting that USD 400,000 split by category (jersey vs tee vs bottoms) would test the fan-to-court shorts thesis directly and cheaply. Caveat honestly that this is a two-season-old startup league."
+    },
+    {
+      "signal_id": "A06-S1",
+      "action": "none",
+      "note": "The best-evidenced signal in the entire base and the only one that survived its review untouched. Quoted figures confirmed against the underlying Sports Medicine 2017 systematic review, with the 31% lateral-shuffle figure independently corroborated by a 2022 MDPI Sports study of 140 professional and collegiate players. Two narrowing caveats to carry: the review is 2017 and rests on 11 basketball studies of 81, '450' is an upper bound repeatedly restated as typical, and the entire dataset is elite competitive play - none of it describes the pickup, half-court or 3x3 consumer the Worldball opportunities target."
+    },
+    {
+      "signal_id": "A03-S9",
+      "action": "none",
+      "note": "Independently confirmed verbatim and the strongest item in A03. Fix the citation only: the second evidence item points at the FY2025 10-K (nke-20250531.htm) for FY2026 figures; the correct source is nke-20260531.htm. Add the detail that reinforces the implication - the ASP lift came primarily from product mix, partially offset by higher discounts and channel mix, so it is mix rather than pricing power and is already being eroded."
+    },
+    {
+      "signal_id": "A03-S5",
+      "action": "flag",
+      "note": "Carry both readings rather than one verdict. Percentage-on-a-hangtag is commoditised (the observation is well corroborated across Puma, Jordan, adidas and Nike at 70-100%), while material-source innovation is not - Nike leads Aero-FIT on being its first elite apparel from 100% textile waste, only 26% of the 110+ Textile Exchange signatories met the 2025 target, and the frontier has moved to textile-to-textile recycling. Add the urgent compliance layer nobody addressed: the EU Empowering Consumers Directive applies from 27 September 2026, three weeks from this audit, banning generic and uncertified environmental claims on anything sold in Europe. The 'reviews do not mention it' inference is correlation-as-causation off a tiny sample."
+    }
+  ]
+}
