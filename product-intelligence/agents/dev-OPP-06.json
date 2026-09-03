@@ -1,0 +1,373 @@
+{
+  "id": "OPP-06",
+  "name": "Doha to LA",
+  "opportunity": "Build a dated, moment-anchored basketball SHORTS programme - not a jersey capsule with shorts attached - timed to the two largest basketball moments of the cycle: the FIBA Basketball World Cup in Doha, Qatar (27 Aug - 12 Sep 2027, 32 teams, four arenas, first edition ever staged in one city and the first in the Middle East; fiba.basketball, tickets on sale Aug 2026) and the LA28 Olympic Games (14-30 Jul 2028), whose 3x3 tournament runs 16-22 July 2028 in a purpose-built OUTDOOR venue at the Sepulveda Basin Recreation Area. The commercial logic is borrowed, verified and specific: adidas grew apparel 35% currency-neutral in Q2 2026 on FIFA World Cup kit demand in the same quarter its basketball business fell 21% (A04-S3; independently confirmed in adidas' 30 July 2026 release, https://www.adidas-group.com/en/media/press-releases/adidas-grows-top-line-14percent-and-achieves-record-sales-in-q2). A dated moment is the only mechanism anywhere in this evidence base observed to pull full-price apparel volume through a promotional floor (A04-S4). The opportunity is to run that mechanism for basketball shorts, through the channels that are actually growing - wholesale and physical/in-arena retail (A02-S7, A04-S1) - and to size it to attendance and federation reach rather than to narrative.",
+  "target_consumer": "Two overlapping cohorts, deliberately not merged into one buyer. (1) The FEDERATION FAN-PLAYER, 16-34, in the 32 qualified national-team markets - heaviest in the US around a home Games, in Europe, Australia (1.3M players, female participation +25% since 2022, A02-S9), the Philippines and Japan around a world championship, and in a Gulf market where this evidence base has essentially no data at all. They buy national-identity product in a compressed window and they buy it at wholesale doors, not on an app (A02-S7). (2) The EVENT ATTENDEE and fan-zone visitor, who buys on site where full price demonstrably holds - one Unrivaled night in Philadelphia (21,490 crowd) generated roughly USD 1M in tickets and about USD 400,000 in merchandise (A05-S7, corroborated in audit contradiction 3). Secondary: the 3x3 and outdoor player who will actually be playing on the same asphalt the Olympic tournament is played on (A05-S6, A06-S5). Explicitly NOT the target: the general athleisure shopper the retro-mesh wave already serves (A05-S3, A07-S7) - that consumer is served by inline product and does not need a dated reason to buy.",
+  "consumer_problem_jtbd": "'The biggest basketball moment of my life is happening in my country / my sport, and the only thing I can buy that says so is a jersey.' Federation merchandise is structurally tops-led - the strongest single term in the sport-as-fashion dataset is 'female jersey outfit' at +494%, which argues for TOPS and is the exact inference the auditor warned against reading as shorts demand (A05-S4, audit contradiction 14). So the fan who wants to dress for the moment has a top and no bottom, and the player who wants to play the moment is handed a replica short that is either not legal (FIBA requires the short to end at or above the knee with team-uniform-coloured compression, A06-S3) or not playable outdoors (no storage, no UV, no heat spec, A06-S4, A06-S7). The job: give me one garment I can wear to the arena or the fan court, play in on the asphalt outside it, and still wear in October - and make it cost what a moment costs, not what a promotional core short costs (A04-S4, A04-S6).",
+  "product_idea": "Programme name direction: NIKE BASKETBALL TRANSIT - a chassis, not an event name, numbered by drop (TRANSIT 01 DOHA, FA27; TRANSIT 02 VALLEY, SS28). Deliberately not named for the events themselves: Nike does not control FIBA or IOC marks, and the chassis must survive past 2028 into the 2029 U19 cycle and the 2031 World Cup. 'Doha to LA' is the internal calendar name. Fallback naming direction: NIKE BASKETBALL WINDOW.\n\nONE BLOCK, THREE INSEAMS, built on a single graded pattern with explicit inseam labelling and published waist / hip / rise by size - because inconsistent grading is the single most repeated complaint on Nike and Jordan shorts (A01-S2) and because Nike's own women's guidance currently sizes by hip alone, leaving the waist uncontrolled (A06-S9). Design at the poles, not the 9-10 inch commodity middle (A07-S4, A02-S5):\n\n1. COURT 7 in. - the legal one. Knee-clearing, linerless, no external pockets, flat-front, tonal team-colour system with a matching 3/4 compression tight sold as a set so a team can meet the FIBA/NFHS same-colour rule out of one box (A06-S3). Engineered knit mesh ~140 gsm, laser-cut ventilation zones at outer thigh and back yoke using Nike's owned cooling grammar (Aero-FIT / Aerogami / Dri-FIT ADV zonal mapping, A03-S4, A07-S2). This is the replica and the 3x3 competition piece.\n\n2. SESSION 9 in. - the hero and the volume. Woven/knit hybrid: quick-dry ripstop woven at the outer panel and seat for asphalt abrasion, engineered mesh at the inner thigh. UPF 40-50 across the full thigh - Nike today applies UPF only at its 6-inch DNA UV Woven short, i.e. at the least thigh coverage, and sunscreen fails at 40-80 minutes under heavy sweat across 4-6 hour tournament days on surfaces reflecting 2-15% of UV (A06-S7). Storage engineered, not appended: a single bonded internal zip pocket sized to a 6.7-inch phone, set at the side seam below the iliac crest so it does not bounce or catch fingers, with no hanging pocket bag (A06-S4, A01-S3). Reflective heat-transfer at the hem and back waistband, because outdoor play in the largest participation markets has already shifted to dawn and dusk to escape the heat (A06-S5). Internal silicone waistband gripper plus a flat woven drawcord with a saturation-proof lock.\n\n3. STAND 11 in. - wide-leg, longer rise, the fan-zone and in-arena piece (A05-S9, A05-S4). Heavyweight jacquard knit mesh 220-260 gsm with the branding woven in rather than printed, silicone-transfer graphics and a rubberised badge - the settled detail grammar of the elevated short that Nike's inline line does not currently participate in (A07-S3). Two-way side vents so it still plays.\n\nSPEC ANCHOR (the differentiating engineering call): write the fabric brief against GARMENT-TRAPPED sweat, not sweat rate. Baker 2017 measured 0.00-1.33 kg of sweat held IN basketball uniforms, and the cross-sport auditor flagged that this is the actionable number nobody used, while the 1.5 L/h figure describes a competitive tail, not the sport mean of 0.95 +/- 0.42 L/h (A06-S2, audit contradiction 8). Testable acceptance criteria: wet-weight gain ceiling at 45 minutes, dry-back time, drawstring slip when saturated, and wet cling at 30 C / 60% RH.\n\nCOLOUR AND GRAPHICS - place, not nostalgia. Retro is saturated from USD 15 to USD 150 and leading with vintage waistband stripes is derivative (A07-S7); the courts speak place, and Nike's global short speaks tonal-logo minimalism (A07-S9, A01-S10). So: court-line cartography of the actual courts - the Sepulveda Basin outdoor 3x3 site for VALLEY, the Doha corniche and Al Rayyan community courts for DOHA - with grid coordinates, bilingual Arabic/English and Spanish/English typography, and heat-derived palettes (DOHA: limestone, oryx maroon, 40 C gradient; VALLEY: asphalt, marine-layer grey, sun-bleach orange). Two inline-safe carryover colours (black, white) per inseam so the chassis has a life after the date. Federation marks only where a licence clears; the programme is designed to work without them.",
+  "why_now": "Three clocks converge and only one of them is a season. (1) The calendar: Doha runs 27 Aug - 12 Sep 2027 and LA28 opens 14 Jul 2028 - and neither appears anywhere in seven specialist files; the dates entered this analysis only through the cross-dataset audit. Nobody owns the join between a PLM season calendar and a federation qualification calendar, which is precisely why the window is still open. (2) The mechanism is proven and freshly dated: adidas' Q2 2026 apparel +35% currency-neutral on World Cup kit demand (A04-S3), published 30 July 2026 - five weeks before this brief. (3) The floor it has to beat is also dated: the US athletic marketplace turned 'increasingly promotional' in summer 2026 (A04-S4), Nike's core shorts franchises are clearing at ~25% off (A04-S6), and Nike's apparel growth is price-mix rather than pricing power - FY26 apparel USD 13.4B, +2% currency-neutral, units +1% (A03-S9). A flat-unit environment rewards new OCCASIONS, and a world championship plus a home Games are the two largest new occasions available. There is also a timing asymmetry worth exploiting rather than hiding: Doha lands in FA27 at retail, one season BEFORE SS28. That makes DOHA a contained, real-money pilot of the whole mechanism roughly eleven months before the LA28 SS28 buy has to commit.",
+  "key_features_benefits": [
+    {
+      "feature": "Dated two-drop capsule with tight, non-replenishable buys (TRANSIT 01 DOHA FA27, TRANSIT 02 VALLEY SS28)",
+      "benefit": "Gives a basketball short the one thing the evidence base shows can hold full price against a promotional floor - a reason to buy on a date - and caps markdown exposure if it does not.",
+      "supporting_signal_ids": [
+        "A04-S3",
+        "A04-S4",
+        "A04-S6",
+        "A03-S9"
+      ]
+    },
+    {
+      "feature": "COURT 7 in. sold as a short + colour-matched 3/4 compression set",
+      "benefit": "Meets FIBA's above-the-knee rule and the team-wide same-colour compression rule out of one box, so the replica is actually playable in sanctioned 3x3 and federation formats instead of being fan-only.",
+      "supporting_signal_ids": [
+        "A06-S3",
+        "A06-S6",
+        "A05-S6"
+      ]
+    },
+    {
+      "feature": "SESSION 9 in. with UPF 40-50 across the full thigh in a woven/knit hybrid",
+      "benefit": "Covers the thigh where sunscreen fails fastest over 4-6 hour outdoor tournament days on UV-reflective asphalt - and closes the gap where Nike today ships UPF only at its 6-inch inseam. Directly relevant to an OUTDOOR Olympic 3x3 venue in a valley that averages ~90 F in July.",
+      "supporting_signal_ids": [
+        "A06-S7",
+        "A06-S5",
+        "A05-S6"
+      ]
+    },
+    {
+      "feature": "Bonded internal zip pocket sized to a 6.7 in. phone, set below the iliac crest, no hanging pocket bag",
+      "benefit": "Solves the specific documented failure modes - open pockets spill, zip pockets are too small, pocket bags flap and catch fingers - which is also where Nike's own durability complaints concentrate.",
+      "supporting_signal_ids": [
+        "A06-S4",
+        "A01-S3",
+        "A07-S9"
+      ]
+    },
+    {
+      "feature": "One graded block across all three inseams, with published waist / hip / rise by size and explicit inseam labelling; women's cut graded on waist AND hip",
+      "benefit": "Attacks the most repeated consumer complaint on Nike and Jordan shorts and reduces the return rate on a capsule that has no second chance at sell-through.",
+      "supporting_signal_ids": [
+        "A01-S2",
+        "A06-S9",
+        "A03-S6"
+      ]
+    },
+    {
+      "feature": "Fabric brief written against garment-trapped sweat (0.00-1.33 kg measured in basketball uniforms) with wet-weight-gain, dry-back and saturated-drawcord-slip acceptance criteria",
+      "benefit": "A testable, defensible cooling claim at the garment level rather than an unfalsifiable airflow number - the one performance metric in the base that nobody has used.",
+      "supporting_signal_ids": [
+        "A06-S2",
+        "A03-S4",
+        "A07-S2"
+      ]
+    },
+    {
+      "feature": "STAND 11 in. wide-leg in heavyweight jacquard mesh with silicone graphics and a rubberised badge",
+      "benefit": "Puts Nike's inline line into the elevated-short detail grammar it currently only reaches through collabs, and gives the event attendee and fan-zone buyer a bottom to match the jersey they already own.",
+      "supporting_signal_ids": [
+        "A07-S3",
+        "A05-S9",
+        "A05-S4",
+        "A02-S5"
+      ]
+    },
+    {
+      "feature": "Court-line cartography and bilingual place typography instead of 90s-retro codes",
+      "benefit": "Differentiates in a retro field saturated from USD 15 to USD 150, and reads as native to Doha and to the Valley rather than as a US design exported with a flag on it.",
+      "supporting_signal_ids": [
+        "A07-S7",
+        "A07-S9",
+        "A01-S10",
+        "A05-S5"
+      ]
+    },
+    {
+      "feature": "Wholesale-first and in-arena-first distribution with Nike Direct as story, not volume",
+      "benefit": "Ships into the only channels growing - Nike wholesale +6% reported FY26 while Nike Direct fell and Nike Digital has now declined for ten straight quarters - and into event-site retail where full price is observed to hold.",
+      "supporting_signal_ids": [
+        "A02-S7",
+        "A04-S1",
+        "A05-S7"
+      ]
+    }
+  ],
+  "target_price": {
+    "currency": "USD",
+    "msrp": "COURT 7 in. USD 55; SESSION 9 in. (hero) USD 70; STAND 11 in. USD 85; licensed federation replica variant USD 90-100 if marks clear",
+    "tier": "Premium-core moment tier: above the contested USD 45-50 branded core, below the USD 100-120 collab ceiling, straddling Nike's own USD 75 Aero-FIT price point",
+    "rationale": "Anchors, with an explicit health warning. The contested branded core is USD 45-50 and is being squeezed from below by USD 4-per-pair private label (Amazon Essentials 5-packs at USD 26.59) and from above by USD 78-90 premium that only clears at 40-50% off - Curry 6.5 in. USD 90 cut to USD 48 (A02-S4). Nike's own observable ladder runs DNA 6 in. USD 65, Standard Issue 8 in. USD 55, DNA 10 in. USD 50 marked to USD 30.97, DNA Academy 11 in. USD 37, with the DNA 8 in. listed at USD 65 and reduced to USD 48.75 at Foot Locker (A04-S6, A02-S4). Nike's Aero-FIT basketball short is reported at USD 75 (A03-S4). The elevated-collab ceiling is ~USD 115 (Nike x Martine Rose, A07-S3). Event-adjacent comparables found this session: USMNT Nike 2026 Home Stadium Replica Shorts USD 55.00 and Team USA Nike Allover Print Shorts USD 69.99 on Fanatics; a Nike Team USA Basketball 2024 Olympics Swingman Short listed at USD 94.99 on eBay (search-result summaries, fanatics.com / ebay.com, checked 3 Sep 2026 - retail hosts were egress-blocked, see 'what we still don't know'). USD 70 for SESSION places the hero one notch under Aero-FIT and above the USD 65 DNA that is already discounting, which is only defensible because SESSION carries two visible, verifiable benefits DNA does not (full-thigh UPF, engineered storage) plus a date. HEALTH WARNING the Consumer Council must see: the cross-dataset auditor found three mutually incompatible Nike price ladders in this base, NONE of them from a retrieved page, and called this 'the single largest unforced gap' - so treat every number above as an ordering, not a level, until a merchant confirms live retails. Also note the base's own USD 100 exemption fact (A04-S8) is superseded: Nike's gross tariff exposure rose to ~USD 1.5B with a ~120bp FY26 gross-margin headwind and Nike has since taken ~+3% on apparel (audit contradiction 6), so the sub-USD 100 ceiling is not frozen.",
+    "regional_notes": "US: as listed; LA28 is the home market and the only geography where the premium tier and the fan tier can both be carried. Gulf / Qatar: price at USD parity in QAR - high-income, duty-light, and event-site pricing where full price holds (A05-S7); but this base has essentially ZERO Gulf evidence beyond one UAE property blog, so QAR pricing must be set by a local merchant, not inferred. Greater China: do NOT carry STAND. Domestic brands sell outdoor-claim shorts (UPF 50+, quick-dry, knee-length) at low price points, Li-Ning basketball retail fell 19% in 2025 amid discounting, and Nike Greater China apparel is shrinking in units (A03-S7, A02-S3, A04-S2). Carry SESSION only, at a China-specific RMB 399-449, or skip the market for this programme. Philippines: Nike PH basketball shorts sit in a sub-PHP 3,000 band (~USD 52) with local brands undercutting (A03-S10, A01-S10) - COURT at PHP 2,995 only; SESSION at USD 70 is out of band. Europe / Australia: EUR 65 / 75 / 85 and AUD equivalents; Australia is the strongest verified non-US market in the base (1.3M players, NBL attendance 1,093,048, female participation +25%) with a league apparel partner that is not a performance-basketball leader (A02-S9)."
+  },
+  "market_distribution_role": "ROLE IN LINE: a dated hero capsule, explicitly NOT a franchise and explicitly not replenishable. It exists to give the basketball shorts business a full-price story and a halo for the inline ladder (DNA, Standard Issue, Icon) that is currently clearing at ~25% off (A04-S6); it does not exist to carry units. LEAD MARKETS: United States (LA28 home Games, and the geography where Nike wholesale growth is concentrated, A04-S1); Qatar and the wider Gulf for DOHA; then the highest-conviction federation markets outside the US - Australia (A02-S9), France around Quai 54 at Roland-Garros in July (A05-S6), the Philippines and Japan (A05-S6, A07-S9), and Greater China on the SESSION style only (A02-S3, A04-S2). CHANNEL MIX, weighted to what is growing: roughly 60% wholesale (Dick's, Foot Locker, JD, KICKZ, Rebel in Australia, Titan 22 in the Philippines) because Nike wholesale grew ~6% reported in FY26 while Nike Direct fell and Nike Digital has declined ten straight quarters (A02-S7, A04-S1); ~20% event and in-arena retail at the four Doha venues, the Doha fan zones and the LA28 3x3 site and fan sites, where full price observably holds (A05-S7); ~15% Nike Direct as the archive, story and size-completion channel, not the volume channel; ~5% team-dealer via BSN for the COURT + compression set into US high-school and club programmes, a bookings-led, low-markdown pool (A04-S9). CADENCE, and this is the central sequencing argument: DOHA is a FA27 delivery (on shelf Jul-Sep 2027), one season EARLIER than SS28 - so it is a contained, real-money pilot of the entire mechanism roughly eleven months before the SS28 VALLEY buy has to commit. Gate VALLEY's buy on DOHA's full-price sell-through. HONEST SIZING: the event is a marketing vehicle with a merchandising floor, not a volume channel. The 2023 FIBA World Cup drew 700,665 spectators across 92 games in total (fiba.basketball / event reporting, checked 3 Sep 2026) - about 64% of a single NBL season's 1,093,048 (A02-S9), or roughly 105 NBL games' worth. At a 1-2% shorts attach rate that is 7,000-14,000 units sold at the event itself. The volume, if it comes, comes the way adidas' came: from the home markets of 32 federations during a 17-day window, sold at wholesale.",
+  "evidence_stack": [
+    {
+      "agent_id": "A04",
+      "agent_name": "Commercial Intelligence",
+      "signal_ids": [
+        "A04-S3",
+        "A04-S4",
+        "A04-S1",
+        "A04-S6",
+        "A04-S8",
+        "A04-S9"
+      ],
+      "contribution": "Supplies the entire mechanism and the entire problem it solves. A04-S3 is the load-bearing datapoint: adidas apparel +35% currency-neutral in Q2 2026 on World Cup demand in the very quarter its basketball fell 21% - filed by the specialist under 'competitors are retreating from basketball', i.e. read as a rival's weakness rather than as a calendar instruction. A04-S4 establishes the promotional floor the moment has to beat; A04-S6 shows Nike's own franchises clearing at ~25% off; A04-S1 and A02-S7 route the programme to wholesale; A04-S9 opens the team-dealer channel for the COURT set.",
+      "evidence_strength": "strong"
+    },
+    {
+      "agent_id": "A02",
+      "agent_name": "Marketplace Intelligence",
+      "signal_ids": [
+        "A02-S7",
+        "A02-S9",
+        "A02-S4",
+        "A02-S5",
+        "A02-S3"
+      ],
+      "contribution": "Establishes that wholesale and physical retail are the growing channels (A02-S7, VERIFIED) and therefore the only credible route for a moment capsule; supplies the price ladder that the capsule must clear (A02-S4) and the inseam architecture argument for designing at the poles rather than the middle (A02-S5); and provides the strongest verified non-US federation market in the base, Australia (A02-S9, VERIFIED). A02-S3 is the reason Greater China is scoped down rather than led with.",
+      "evidence_strength": "strong"
+    },
+    {
+      "agent_id": "A05",
+      "agent_name": "Cultural + Trend Intelligence",
+      "signal_ids": [
+        "A05-S6",
+        "A05-S7",
+        "A05-S9",
+        "A05-S4",
+        "A05-S3",
+        "A05-S5"
+      ],
+      "contribution": "Verifies that live basketball spectacle is growing on every continent and that streetball is being institutionalised into stadium events - Quai 54 at Roland-Garros, BAL 140,000+, NBL 1,229,604 with 58 sellouts, a 60,000 crowd in Melbourne, FIBA 3x3 expanding to 12+12 teams at LA 2028 (A05-S6, VERIFIED). A05-S7 (VERIFIED) supplies the single best piece of pricing evidence in the whole base: at an event, people pay full price - ~USD 400,000 of merchandise in one 21,490-seat night. A05-S9 and A05-S4 justify the STAND silhouette. A05-S3 and A07-S7 are used defensively, to steer the graphics AWAY from retro.",
+      "evidence_strength": "strong"
+    },
+    {
+      "agent_id": "A06",
+      "agent_name": "Athlete / Performance Intelligence",
+      "signal_ids": [
+        "A06-S3",
+        "A06-S4",
+        "A06-S7",
+        "A06-S5",
+        "A06-S2",
+        "A06-S9"
+      ],
+      "contribution": "Converts the moment into an actual garment spec. A06-S3 (rulebooks) forces the two-family split - a legal COURT short and an unregulated SESSION short - and kills any 'one short for both' compromise. A06-S7 identifies the specific unowned spec (full-thigh UPF where Nike only offers 6 in.), A06-S4 the specific unsolved one (storage), A06-S5 the actual use condition (dawn/dusk heat), and A06-S2 the testable acceptance criteria via the unused garment-trapped-sweat number. A06-S9 fixes the women's grading.",
+      "evidence_strength": "moderate"
+    },
+    {
+      "agent_id": "A07",
+      "agent_name": "Design Intelligence",
+      "signal_ids": [
+        "A07-S3",
+        "A07-S9",
+        "A07-S4",
+        "A07-S7",
+        "A07-S2"
+      ],
+      "contribution": "Supplies the detail grammar of the elevated short - jacquard branding, silicone graphics, rubberised badges, zip pockets, ~USD 100-120 ceiling - and the finding that Nike's inline line does not participate in it (A07-S3). A07-S9 (VERIFIED) is the design north star: local streetball cultures design around pockets, place and pride, and global brands do not. A07-S7 is the warning that retro is saturated and derivative for Nike. A07-S4 sets the poles.",
+      "evidence_strength": "moderate"
+    },
+    {
+      "agent_id": "A03",
+      "agent_name": "Product Intelligence",
+      "signal_ids": [
+        "A03-S4",
+        "A03-S9",
+        "A03-S7",
+        "A03-S10",
+        "A03-S6"
+      ],
+      "contribution": "A03-S4 (VERIFIED) confirms cooling is Nike's chosen and owned innovation vector, already validated on 2026 federation FOOTBALL kits - which is a direct technical bridge from adidas' football mechanism to Nike's basketball execution. A03-S9 (VERIFIED) supplies the flat-unit environment that makes a new-occasion argument necessary rather than optional. A03-S7 and A03-S10 constrain the China and Philippines pricing.",
+      "evidence_strength": "moderate"
+    },
+    {
+      "agent_id": "A01",
+      "agent_name": "Consumer Intelligence",
+      "signal_ids": [
+        "A01-S2",
+        "A01-S3",
+        "A01-S10",
+        "A01-S7"
+      ],
+      "contribution": "Weakest contribution to this opportunity and honestly so: A01 supplies execution constraints (sizing inconsistency, pocket failure, local-identity expectations in emerging markets) but NO evidence that any consumer buys basketball shorts around a national-team moment. That consumer behaviour is inferred from adidas' football financials, not observed in this base.",
+      "evidence_strength": "weak"
+    },
+    {
+      "agent_id": "AUDIT",
+      "agent_name": "Cross-dataset Auditor",
+      "signal_ids": [
+        "A04-S3",
+        "A04-S4",
+        "A04-S8",
+        "A02-S4",
+        "A06-S2"
+      ],
+      "contribution": "Supplied the anchoring calendar facts themselves - the FIBA World Cup Qatar dates and the LA28 opening date - which appear in NONE of the seven specialist files, and which are therefore not surviving signals but audit-supplied context requiring independent confirmation (done this session, see web checks). Also supplied three corrections this spec is built on: the promotional floor is a one-quarter, one-banner, footwear-led read and should not be treated as a settled SS28 condition; the sub-USD 100 price freeze is superseded by ~+3% apparel increases and a ~USD 1.5B tariff exposure; and the price ladder is unanchored to any retrieved page.",
+      "evidence_strength": "moderate"
+    }
+  ],
+  "contradictory_evidence": [
+    {
+      "signal_ids": [
+        "A04-S3"
+      ],
+      "description": "The mechanism was bought, not just earned, and it belongs to a rival's sport where that rival owns the kit rights. adidas' Q2 2026 apparel +35% came with EUR 212M of HIGHER marketing investment tied to World Cup campaigns and activations (adidas press release, 30 Jul 2026), and adidas is the FIFA/federation kit supplier - the +35% was largely national-team kit it manufactures. Nike's equivalent basketball rights position at Doha 2027 is unverified in this session: Nike is an Official Outfitter of the US Olympic and Paralympic Team for apparel, but FIBA World Cup federation outfitting for 2027 could not be confirmed. If Nike does not hold the federation kit, the replica half of the programme has no product and the capsule reduces to a graphic story.",
+      "severity": "high"
+    },
+    {
+      "signal_ids": [
+        "A05-S6",
+        "A02-S9",
+        "A05-S7"
+      ],
+      "description": "The moment is an order of magnitude smaller than the football analogue. The 2023 FIBA World Cup drew 700,665 spectators in total across 92 games - roughly 64% of one Australian NBL season (1,093,048) - and this base's largest continental property, the BAL, drew 140,000+ across a whole season, about 21 NBL games' worth. NOTE an arithmetic discrepancy the Council should see: the synthesis brief characterised that as 'roughly nine NBL games' worth', which does not reconcile with the NBL's own 6,665 average in A02-S9; the correct figure is ~21. Either way the conclusion is the same and it is unflattering - event-site sales are a rounding error, so the entire volume case rests on a broadcast-driven wholesale pull in 32 home markets that this base does not measure for basketball.",
+      "severity": "high"
+    },
+    {
+      "signal_ids": [
+        "A02-S4",
+        "A04-S8",
+        "A03-S4",
+        "A07-S3"
+      ],
+      "description": "AUDIT CONTRADICTION 7, verbatim severity: three mutually incompatible Nike price ladders appear in this base and NONE comes from a retrieved page. The auditor specifically warned that some figures - the USD 75 Aero-FIT short most likely among them - may be the search engine echoing the query language back, and could not independently confirm that price. Every retail host was egress-blocked again this session (Dick's, store.nba.com, Nike, Fanatics product pages). AUDIT CONTRADICTION 6 compounds it: the sub-USD 100 exemption in A04-S8 is a real fact about one day in June 2025 that has been superseded by ~+3% apparel increases, ~USD 1.5B tariff exposure and a ~120bp gross-margin headwind. The USD 55 / 70 / 85 ladder above is therefore an ordering, not a level.",
+      "severity": "high"
+    },
+    {
+      "signal_ids": [
+        "A04-S4",
+        "A04-S1"
+      ],
+      "description": "AUDIT CONTRADICTION 11: the promotional floor this opportunity is designed to beat may not be a floor. Ed Stack attributed the promotional conditions specifically to Foot Locker's exposure to legacy footwear silhouettes and launch/retro product, while the Dick's banner itself comped +4.9% with broad-based growth including apparel - and Foot Locker US comps were +6% in Q1 2026 before -3.6% in Q2. A one-quarter, one-banner, footwear-led swing is being generalised into an apparel pricing condition two years out. This cuts both ways: it weakens the urgency argument, but Nike's own FY26 commentary on elevated promotions and a CFO statement that marketplace conditions are unlikely to improve through at least H1 FY2027 is company-level and real.",
+      "severity": "medium"
+    },
+    {
+      "signal_ids": [
+        "A05-S10"
+      ],
+      "description": "The collab-and-resale premise that would normally justify a premium moment capsule was DELIBERATELY STRIPPED from this opportunity and must not be smuggled back in. A05-S10 is classified HYPOTHESIS and every citation behind it is a catalogue or product page with no price, premium or volume data - prices could not be verified. There is therefore no evidence in this base that limited basketball shorts drops command a resale premium or halo the core line. Any Council slide claiming resale heat for this programme is unsupported.",
+      "severity": "medium"
+    },
+    {
+      "signal_ids": [
+        "A05-S4",
+        "A05-S1"
+      ],
+      "description": "AUDIT CONTRADICTION 14: the sport-as-identity data that would justify the STAND lifestyle short is not basketball's, and its strongest term argues for the wrong garment. In the same Pinterest report, 'Formula 1 aesthetic outfit' +483% and 'Brazil jersey outfit women' +302% grow at comparable rates on unknown bases, and the single strongest term, 'female jersey outfit' at +494%, is for TOPS. Preserve the general finding (sportswear-as-fashion is broad and real) and discard the basketball-shorts inference. The STAND short is the weakest-evidenced of the three styles and should carry the smallest buy.",
+      "severity": "medium"
+    },
+    {
+      "signal_ids": [
+        "A06-S2",
+        "A06-S5",
+        "A06-S7"
+      ],
+      "description": "AUDIT CONTRADICTION 8: the heat and sweat case for a hot-market product rests on indoor, North American, overwhelmingly male data. Baker et al. 2019 (n=1303) puts basketball's normative whole-body sweating rate at 0.95 +/- 0.42 L/h - level with soccer and well below American football - so basketball is NOT a high-sweat sport by normative standards, and the 1.4-1.6 L/h figures describe a competitive tail. No outdoor-court sweat data exists in this base at all. Independent checks this session sharpen the exposure rather than resolve it: Doha averages a 40.7 C August high with a mean heat index around 61 C (weather-atlas.com, checked 3 Sep 2026) but the World Cup itself is played in four air-conditioned arenas; the genuinely heat-exposed Olympic venue is the OUTDOOR 3x3 site at Sepulveda Basin, in a valley averaging ~90 F highs in July. The heat story is real for the fan zone and the 3x3 court, not for the arena.",
+      "severity": "medium"
+    },
+    {
+      "signal_ids": [
+        "A05-S3",
+        "A07-S7"
+      ],
+      "description": "A commodity substitute already owns the fan-bottom occasion at a comparable price. Retro mesh swingman shorts are the lifestyle uniform of Gen Z and Gen Alpha, Mitchell & Ness swingman shorts are stocked across Fanatics, NBA Store and DXL at roughly USD 79.99-94.00 (search-result summaries, mitchellandness.com / store.nba.com, checked 3 Sep 2026), and retro codes are saturated from USD 15 to USD 150. A STAND short at USD 85 competes directly with a licensed team product that carries a real team mark, which a Nike moment capsule may not.",
+      "severity": "medium"
+    },
+    {
+      "signal_ids": [
+        "A04-S9",
+        "A02-S7"
+      ],
+      "description": "Channel timing risk specific to this programme. The team-dealer pool is described as having 2026 visibility that is 'less certain' after tariff-driven order pull-forward, and the FA27 DOHA drop must be bought against wholesale order books written in a marketplace where Jordan streetwear sell-through is already hurting future order books. A dated capsule cannot be re-cut if partners under-buy it, and cannot be cleared cleanly if they over-buy it.",
+      "severity": "low"
+    }
+  ],
+  "confidence_score": 57,
+  "confidence_rationale": "Above the middle because the causal mechanism is unusually well evidenced for this base and was independently re-verified this session: adidas' Q2 2026 release confirms apparel +35% currency-neutral on FIFA World Cup kit demand (30 Jul 2026), and the two calendar anchors both confirm cleanly - Doha 27 Aug-12 Sep 2027, 32 teams, four arenas, first Middle East edition, tickets already on sale; LA28 14-30 Jul 2028 with 3x3 on 16-22 Jul at an outdoor Sepulveda Basin venue. Four of the seven contributing signals are VERIFIED (A04-S3, A04-S4, A02-S7, A05-S6, A05-S7, A02-S9). Nike also holds the two structural assets the mechanism needs: Official Outfitter status for the US Olympic and Paralympic Team, and a cooling platform (Aero-FIT) that Nike itself debuted on 2026 federation FOOTBALL kits - the same bridge adidas walked.\n\nHeld well below 70 by four things, each of which could independently sink it. First, the consumer behaviour is INFERRED, not observed: not one signal across seven specialist files shows a basketball consumer buying shorts around a national-team moment, and A01's contribution here is execution constraints only. Second, the rights position is unverified - Nike's federation outfitting for Doha 2027 could not be confirmed this session, and without it the replica half has no product. Third, the price ladder is unanchored to any retrieved page, which the auditor called the single largest unforced gap in the base; every retail host was egress-blocked again today. Fourth, the sizing is genuinely small - 700,665 total spectators at the last World Cup, about 64% of one NBL season - so the volume case depends entirely on a wholesale pull in 32 home markets that nobody has measured for basketball apparel.\n\nThe score would move to roughly 70 on confirmation of Nike federation kit rights plus one live retail price pull; it would move to roughly 40 if a merchant reports that Nike's last event-linked basketball capsule cleared at markdown.",
+  "what_would_need_to_be_true": [
+    "Nike holds, or can acquire by Q1 2027, basketball kit rights to enough Doha 2027 federations - and LA28 national-team rights beyond its confirmed US Olympic and Paralympic Team outfitting - that a replica COURT short has actual marks on it. Without this the programme is a graphic capsule, not a moment capsule, and the price ladder collapses toward the inline USD 45-50 core.",
+    "A live retail price pull confirms the real Nike basketball shorts ladder and the real markdown cadence by franchise and door. The entire USD 55 / 70 / 85 architecture is currently an ordering built on search-result summaries that the cross-dataset auditor explicitly flagged as possibly the search engine echoing the query back.",
+    "A dated basketball capsule can pull full-price volume in the HOME MARKETS of the 32 competing federations, not just at the venue. Event-site sales at 700,665 total spectators are a rounding error; adidas' +35% was sold in the countries watching, and there is no basketball analogue for that in this base.",
+    "The FA27 DOHA drop clears at full price at an agreed sell-through threshold (recommend >75% at full price by week 8) before the SS28 VALLEY buy commits. This is the single most valuable feature of the calendar and the programme should be structured so that gate is real, not ceremonial.",
+    "Wholesale partners will book a non-replenishable dated capsule at all. Dick's, Foot Locker, JD, Rebel and Titan 22 buy replenishable core; a capsule with no reorder and a hard expiry is a different conversation, and Jordan streetwear sell-through is already hurting Nike's order books.",
+    "Full-thigh UPF 40-50 in a woven/knit hybrid can be delivered at a landed cost that supports USD 70 while Nike carries a ~USD 1.5B gross tariff exposure and a ~120bp FY26 gross-margin headwind.",
+    "Gulf demand exists at all. This evidence base contains essentially zero Gulf data beyond one UAE property-listing blog, and the programme's first drop is scheduled into it."
+  ],
+  "what_we_still_dont_know": [
+    "Whether Nike is a federation kit supplier for any team at the FIBA World Cup Qatar 2027, and what the licensing terms and lead times are. This could not be confirmed in this session and is the highest-value single unknown.",
+    "The actual current retail prices, markdown cadence and full-price sell-through of Nike basketball shorts by franchise, inseam and door. Every retail host (Dick's, store.nba.com, Nike.com, Fanatics product pages) was egress-blocked; the auditor found three incompatible ladders, none retrieved.",
+    "How any prior Nike event-linked basketball apparel capsule actually performed - Paris 2024, the 2023 FIBA World Cup, Quai 54. There is no historical read on the mechanism inside basketball anywhere in this base, and Nike certainly has one internally.",
+    "Whether basketball shorts specifically (as opposed to jerseys and tees) attach to a national-team moment at any meaningful rate. The strongest fan-fashion signal in the base is for TOPS (+494% 'female jersey outfit'), which argues the opposite.",
+    "Anything at all about the Gulf consumer: participation, court infrastructure, apparel price expectations, gender norms for women's basketball product, or retail structure in Qatar, Saudi Arabia and the UAE.",
+    "How much of adidas' +35% was incremental margin versus marketing-funded volume. EUR 212M of additional World Cup marketing investment is disclosed; the operating leverage on the apparel line is not.",
+    "Whether Nike Team Sports / BSN can transact a COURT + compression set as a single SKU for US high-school and club programmes, and whether NFHS colour rules make that set a genuine simplification or just a bundle.",
+    "Phone-carry behaviour at outdoor court level - no source in this base quantified how many pickup or 3x3 players carry a phone on-body, which is the demand assumption under the SESSION short's headline feature.",
+    "What LA28 and USOPC licensing will permit in terms of place-based graphics referencing the Sepulveda Basin 3x3 venue, and what FIBA will permit in Doha."
+  ],
+  "nike_right_to_win": "Four assets, three of them specific to this programme. (1) POSITION AT THE MOMENT: Nike is an Official Outfitter of the U.S. Olympic and Paralympic Team for apparel, and LA28 is a home Games in Nike's home market during the season when Nike wholesale growth is already concentrated in US doors (A04-S1). No competitor has a comparable home-market position at the largest basketball moment of the cycle. (2) THE TECHNOLOGY BRIDGE IS ALREADY BUILT AND ALREADY FEDERATION-PROVEN: Aero-FIT is Nike's own claimed pinnacle cooling platform, described as channelling more than double the airflow of legacy Nike apparel, and it DEBUTED ON 2026 FEDERATION FOOTBALL KITS before extending across the sport-led product strategy (A03-S4, VERIFIED). That is precisely the mechanism adidas monetised in the same window - Nike simply has not routed it to basketball shorts. Aerogami adaptive venting is already named in Nike's own internal Outdoor brief (A07-S2). (3) COMPETITIVE VACANCY: the Western competitor set is retreating from performance basketball apparel exactly as the moment arrives - adidas basketball -21% in Q2 2026, Under Armour's entire global basketball business guided at USD 100-120M for FY26 with a 25% SKU cut and a Curry separation, Puma growing off a tiny base (A04-S3, VERIFIED). Share of shelf at Dick's, Foot Locker and JD is genuinely available. (4) CHANNEL FIT: the programme is designed for the channels Nike is actually winning in - wholesale up ~6% reported in FY26 - rather than the Nike Digital channel that has declined for ten straight quarters (A02-S7, A04-S1). The honest counterweight: Nike's right to win at the FIBA property specifically is UNPROVEN, adidas holds the analogous football rights it monetised, and Mitchell & Ness already owns the fan-bottom occasion with real team marks at USD 80-94.",
+  "competitive_reference_points": [
+    {
+      "brand": "adidas",
+      "product": "FIFA World Cup 2026 federation kits (the mechanism being copied)",
+      "price": "n/a - programme-level",
+      "note": "Q2 2026 apparel +35% currency-neutral, record EUR 6.7B quarterly revenue, +14% currency-neutral overall, driven by World Cup kits and Originals - achieved WITH EUR 212M higher marketing investment tied to World Cup campaigns, and in the same quarter adidas basketball fell 21% (A04-S3; adidas press release 30 Jul 2026, https://www.adidas-group.com/en/media/press-releases/adidas-grows-top-line-14percent-and-achieves-record-sales-in-q2, checked 3 Sep 2026)."
+    },
+    {
+      "brand": "Mitchell & Ness",
+      "product": "NBA Hardwood Classics Swingman shorts",
+      "price": "USD 79.99-94.00 (clearance seen as low as USD 35.99)",
+      "note": "The incumbent owner of the fan-bottom occasion, stocked across Fanatics, store.nba.com and DXL including big and tall (A02-S5, A05-S3). It carries real team marks, which a Nike moment capsule may not. Directly competes with the proposed STAND 11 in. at USD 85. Prices are search-result summaries (mitchellandness.com / store.nba.com, checked 3 Sep 2026); retail hosts were egress-blocked."
+    },
+    {
+      "brand": "Nike",
+      "product": "USMNT 2026 Home Stadium Replica Shorts",
+      "price": "USD 55.00",
+      "note": "Nike's own event-linked federation replica bottom price point - the closest internal analogue to the proposed COURT 7 in. and the reason it is priced at USD 55 rather than higher (fanatics.com search-result summary, checked 3 Sep 2026)."
+    },
+    {
+      "brand": "Nike",
+      "product": "Team USA Allover Print Shorts / Team USA Basketball 2024 Olympics Swingman Short",
+      "price": "USD 69.99 / USD 94.99 (listed)",
+      "note": "The Olympic fan-bottom ladder Nike has already run: a printed fan short near USD 70 and a swingman-style Olympic basketball short listed near USD 95. Brackets the proposed SESSION (USD 70) and STAND (USD 85). Search-result summaries (fanatics.com, ebay.com, checked 3 Sep 2026); the USD 94.99 figure is a marketplace listing, not a Nike list price."
+    },
+    {
+      "brand": "Nike",
+      "product": "Aero-FIT Basketball Shorts",
+      "price": "USD 75 (reported, NOT independently confirmed)",
+      "note": "Nike's own cooling flagship and the ceiling the SESSION short is priced under (A03-S4). The cross-dataset auditor specifically warned this figure may be a search engine echoing the query language, and it did not reproduce on an independent check this session."
+    },
+    {
+      "brand": "Nike",
+      "product": "Dri-FIT DNA 8 in. Basketball Short",
+      "price": "USD 65, reduced to USD 48.75 (25% off) at Foot Locker",
+      "note": "The step-up franchise the moment capsule must out-earn. Reviews praise breathability and the zippered phone pocket but flag that it runs small/short; the lower-tier Icon short carries 'paper-thin' and seam-failure complaints (A04-S6). This is the concrete evidence that ASP without a new benefit does not hold (A03-S9)."
+    },
+    {
+      "brand": "Under Armour",
+      "product": "Curry 6.5 in. Basketball Short",
+      "price": "USD 90 list, cut to USD 48 (47% off)",
+      "note": "The cautionary premium comparable: a USD 90 basketball short that only sells at ~half price (A02-S4). Under Armour's entire global basketball business is guided at USD 100-120M for FY26 and it is separating from Curry (A04-S3), so this price point is being vacated rather than defended."
+    },
+    {
+      "brand": "Nike x Martine Rose",
+      "product": "Jacquard-knit shorts with zip pockets",
+      "price": "~USD 115",
+      "note": "The elevated-short ceiling and the detail grammar the STAND short borrows - jacquard branding instead of print, silicone/rubberised badges, zip pockets. Nike reaches this grammar only through collabs today; its inline line does not participate (A07-S3)."
+    },
+    {
+      "brand": "Amazon private label (Amazon Essentials, NORTHYARD, BALENNZ)",
+      "product": "Mesh basketball shorts multipacks",
+      "price": "USD 7.97 (2-pack) to USD 26.59 (5-pack)",
+      "note": "The floor. Roughly USD 4-5 per pair dominates Amazon's best-seller list, which is why a moment capsule cannot be justified on fabric alone - the date has to do work (A02-S4, A01-S9)."
+    },
+    {
+      "brand": "New Balance",
+      "product": "Basketball 7 in. Mesh Short",
+      "price": "USD 50, on sale USD 37.50 at Foot Locker",
+      "note": "The fastest-growing scaled competitor (+19% to USD 9.2B, apparel >USD 1B, Cooper Flagg) setting the branded-core price at USD 50 and already discounting (A02-S4, A02-S8)."
+    }
+  ],
+  "narrative": "This spec was built by taking one number seriously and refusing to take three others seriously.\n\nThe number that carries it is A04-S3: adidas apparel +35% currency-neutral in Q2 2026 on World Cup demand, in the very quarter its basketball fell 21%. That signal sat in the commercial file under a heading about competitors retreating from basketball - it was read as a rival's weakness. Read the other way, it is the only mechanism anywhere in this evidence base observed to pull full-price apparel volume through a promotional floor (A04-S4), in a business where Nike's own growth is price mix rather than pricing power (A03-S9) and its core shorts franchises are clearing at 25% off (A04-S6). A basketball PLM has no reason to read adidas' football quarter. That is exactly why the window is open.\n\nThe first argument with myself was about the season. The synthesis says SS28 contains both moments. It does not, quite: Doha runs 27 Aug-12 Sep 2027, which is FA27 at retail, a full season before SS28. I nearly treated that as a flaw and it is the programme's best feature. DOHA becomes a contained, real-money pilot of the entire mechanism about eleven months before the SS28 LA buy commits. So the capsule is structured as two gated drops on one chassis rather than one seasonal launch - and the chassis is named TRANSIT, not for either event, because Nike controls neither mark and the programme has to survive into 2031.\n\nThe second argument was about size, and it went against the idea. I checked the last World Cup: 700,665 spectators across 92 games - about 64% of one Australian NBL season (A02-S9). At a 1-2% attach that is under 15,000 shorts sold at the event. I also could not reconcile the synthesis' 'roughly nine NBL games' worth' for the BAL; against A02-S9's own 6,665 average, 140,000 is about 21 games. Either way the honest conclusion is the same and it is written into the distribution section: the event is a marketing vehicle with a merchandising floor, not a volume channel. adidas did not sell +35% in stadiums.\n\nThe third argument was about price, and I lost it. The auditor found three mutually incompatible Nike ladders in this base, none from a retrieved page, and every retail host was egress-blocked again today. So USD 55 / 70 / 85 is published as an ORDERING with a health warning, anchored where I could anchor it - Nike's own USMNT replica short at USD 55 and Team USA fan short at USD 69.99, Mitchell & Ness swingman at USD 80-94, DNA 8 in. at USD 65 clearing at USD 48.75, Curry at USD 90 clearing at USD 48.\n\nThree things were deliberately cut. The collab-and-resale premise, because A05-S10 is a HYPOTHESIS with no price or volume data behind any citation. The sport-as-fashion justification for the lifestyle short, because the auditor showed its strongest term is for jerseys - so STAND survives with the smallest buy and the weakest claim. And the 1.5 L/h sweat spec, replaced by the garment-trapped-sweat number (0.00-1.33 kg) that nobody used, because it is testable.\n\nOne genuinely new fact changed the product: LA28's 3x3 tournament is OUTDOOR, at Sepulveda Basin, 16-22 July 2028, in a valley averaging ~90 F highs. That is what turns full-thigh UPF and dawn-dusk reflectivity from a Worldball talking point into the actual condition of an Olympic venue - and it is why SESSION, not the replica, is the hero."
+}

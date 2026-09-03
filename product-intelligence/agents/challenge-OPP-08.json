@@ -1,0 +1,191 @@
+{
+  "id": "OPP-08",
+  "narrative": "I went at this one hard, because it is the most seductive brief in the portfolio: a single number that looks like a scandal (USD 65 for the shortest short, USD 37 for the longest and most size-inclusive one), a fix that requires no new technology, and a channel that is already growing. Seductive briefs are the ones that get funded without being checked.\n\nThe attack that did the most damage was the cheapest one to run. Nike UK publishes its ladder at the same lengths in both franchises, and the shape is different from the US story: Nike DNA at roughly 20cm (~8 in) is GBP 64.99, Nike DNA ACADEMY at roughly 20.5cm (~8 in) is GBP 44.99, and DNA Academy at 28cm (~11 in) is GBP 32.99 (nike.com/gb, retrieved via search 2026-09-03). Hold the length constant and the franchise gap is GBP 20. Hold the franchise constant and the length gap is GBP 12. That is decisive: the USD 65-versus-USD 37 headline is comparing two different franchises, not two lengths. DNA Academy is Nike's opening-price sub-brand naming convention - the same 'Academy' label Nike uses for entry-tier football product - so the brief's central claim is partly a tautology: Nike's cheapest franchise is cheap. The residual within-franchise decline is real and does survive (DNA 6 in USD 65, DNA 8 in USD 55, DNA 10 in USD 50; Academy 8 in GBP 44.99 versus Academy 11 in GBP 32.99), so 'longer costs less inside the same make' holds. But it is a modest gradient, not an inversion, and the spec's rhetorical engine - 'Nike prices coverage as cheapness' - runs on the confounded comparison, not the clean one.\n\nThe second hit compounds the first. The brief says Full Range creates a rung that does not exist between USD 37 and USD 65. It does exist. Nike ships a DNA 8 in at USD 55 and a DNA 10 in at USD 50 today (A02-S4, A02-S5, corroborated by retrieval 2026-09-03). Full Range at USD 55 in 9 in and 11 in is therefore a one-to-three-inch extension and a USD 5 uplift on a shipped SKU, plus a size run and a heavier mesh. That is a line-plan and grading decision. It is not a new tier, and on the NEW test that this engine exists to apply, the length half of this brief is close to already-shipped.\n\nThird: the prices the brief argues from are list prices, and nothing in this band transacts at list. Kohl's is selling the Big & Tall DNA Academy 11 in at USD 27.75 against USD 37 (kohls.com, 2026-09-03), and Foot Locker is selling Nike DNA shorts at USD 48.75 against USD 65 (footlocker.com, 2026-09-03). So the top of the ladder discounts 25 percent, the bottom discounts 25 percent, and the trade-up the consumer is actually being asked to make is USD 27.75 to USD 55 - a 98 percent step, not the 49 percent the brief states. The brief's own contradictions section warned that no retail page had been retrieved; retrieving them made the ask harder, not easier.\n\nFourth, and this is the one a PLM will not have heard: the load-bearing decision in this brief - a full size run, every colourway, both lengths, same price, in physical wholesale doors - has already been run as a public experiment by someone else, and it was pulled back. Old Navy launched BODEQUALITY in August 2021 (sizes 0-30, all styles, price parity, merchandised together in every store) and by May 2022 removed extended sizes from about 75 US and 15 Canadian stores. Gap's CEO attributed it to overestimating in-store demand, launching too broadly too fast, and over-planning larger sizes into excess inventory (glossy.co and gapinc.com, May 2022). Notably, price parity itself survived - what failed was the door-level physical size run. That is precisely the half of Full Range that needs written buyer commitments, and it is precisely the half the brief treats as a moral position rather than an inventory bet.\n\nWhat survived. The size-and-construction half. It is still true, and I could not break it, that the only Nike basketball shorts in the Kohl's Big & Tall assortment are DNA Academy and Icon - Nike's two cheapest franchises - and that Icon carries the seam-failure and see-through review corpus (A04-S6, A01-S3). It is still true that Nike offers no premium-make basketball short in extended sizes in that door. It is still true that the fix costs no technology, no athlete, no platform. And it is still true that nobody in seven specialist files holds a single unit of sell-through by inseam, so no one can prove the long band is shrinking either.\n\nWhere that leaves me: the opportunity survives, demoted from a length-and-price architecture to a size-and-make argument with a merchandising remedy attached. The honest reframing is not 'Nike prices coverage as cheapness' - it is 'Nike offers no premium make in extended sizes, and its two cheapest franchises are the only ones a 3XL player can buy.' That claim is smaller, checkable in an afternoon against the internal price file, and does not need an SS28 architecture to act on. I took the confidence from 58 to 44, and the reason is not that the diagnosis is wrong - it is that the diagnosis mostly resolves to a decision Nike can make without this brief.",
+  "kill_attempts": [
+    {
+      "angle": "The inversion is not an inversion - it is franchise tiering, and inseam is confounded with make",
+      "argument": "The entire brief rests on comparing Nike DNA 6 in (USD 65) with Nike DNA ACADEMY 11 in (USD 37). Those are two different franchises. 'Academy' is Nike's global opening-price sub-brand label. If the gap is franchise-driven rather than length-driven, the headline finding - that Nike prices coverage as cheapness - collapses into 'Nike's entry line is cheap', which is not a finding.",
+      "evidence": "Nike UK publishes both franchises at comparable lengths: DNA at ~20cm (~8 in) GBP 64.99; DNA Academy at ~20.5cm (~8 in) GBP 44.99; DNA Academy at 28cm (~11 in) GBP 32.99 (nike.com/gb, retrieved 2026-09-03). At constant length the franchise gap is GBP 20; at constant franchise the length gap is GBP 12. So roughly two-thirds of the headline gap is franchise, one-third is length. The within-franchise decline does survive - DNA 6 in USD 65 / 8 in USD 55 / 10 in USD 50 (A02-S4) and Academy 8 in GBP 44.99 vs 11 in GBP 32.99 - so 'longer costs less inside one make' is real but modest.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "The rung Full Range claims to create already exists - Nike ships a USD 55 8 in and a USD 50 10 in",
+      "argument": "The brief's core structural claim is that there is no step between the USD 37 opening 11 in and the USD 65 6 in. If Nike already sells long-ish lengths at USD 50-55, then Full Range is a USD 5 uplift and a one-to-three-inch extension on shipped product, plus a size run - a grading and line-plan decision, not a new tier. On the NEW test this engine applies, that is close to disqualifying for the length half.",
+      "evidence": "A02-S4 and A02-S5 (via skeptic counter-evidence) establish the live ladder DNA 6 in USD 65 / 8 in USD 55 / 10 in USD 50 / Academy 11 in USD 37; independently corroborated 2026-09-03 (nike.com listings surfaced in search: DNA 8 in USD 55, DNA 10 in USD 50). The digest's own contradiction at A05-S8 already notes Nike markets an 11 in explicitly for 'extra coverage' and sells women's 5/7/9 in.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "The trade-up is nearly double, not 49 percent - nothing in this band transacts at list",
+      "argument": "The price case is built on list prices. If the long band is chronically marked down, the consumer's reference price is the discounted one, and a new USD 55 rung will itself be sold at roughly USD 38 - i.e. at today's 11 in list - which destroys the ASP-accretion argument that is the whole commercial rationale.",
+      "evidence": "Kohl's is selling the Big & Tall DNA Academy 11 in at USD 27.75 from USD 37 (kohls.com, 2026-09-03) - a 25 percent markdown on the exact SKU the brief calls the opening price point. Foot Locker is selling Nike DNA shorts at USD 48.75 from USD 65 (footlocker.com, 2026-09-03), so the premium end discounts 25 percent too. A02-S4 already had the 10 in at ~38 percent off, New Balance USD 50 at USD 37.50, Mitchell & Ness USD 79.99 clearing at USD 35.99, and Curry USD 90 at USD 48. The real ask on the value-channel consumer is USD 27.75 to USD 55, a 98 percent step.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "The load-bearing decision - full size run, same price, in every physical door - has already failed publicly at scale",
+      "argument": "Full Range's stated 'load-bearing decision' is extended sizes in every colourway and both lengths at one MSRP, merchandised on the performance wall in wholesale doors. That exact proposition was executed nationally by Old Navy and retrenched within nine months. If the best-resourced attempt at door-level size inclusion could not hold inventory turns, a Nike carry-over program with a 4XL Tall grade in six core colours and two lengths in Kohl's, Dick's, Academy and Hibbett is a serious inventory bet, not a moral one.",
+      "evidence": "Old Navy BODEQUALITY launched August 2021 (sizes 0-30, all styles, price parity, integrated merchandising). In May 2022 Old Navy removed extended sizes from about 75 US and 15 Canadian stores; Gap Inc. CEO Sonia Syngal cited overestimated in-store demand, too-broad and too-fast launch, and over-planned larger sizes creating excess inventory (glossy.co, gapinc.com, mytotalretail.com, May 2022). Price parity survived; the physical full size run did not.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "The demand-side timing runs against the long end, and the brief has no demand clock at all",
+      "argument": "All four 'why now' clocks are supply-side: a price anomaly, a duty stack, a channel swing, a flat-unit mix argument. None is a statement about consumers wanting more long shorts. Meanwhile the visible 2026 read points the other way.",
+      "evidence": "2026 shorts commentary describes the shorter inseam as the dominant men's trend and casual basketball shorts moving away from oversized toward a more tailored though still relaxed fit (northyard.com, anarchylabel.com, 2026 - both low-authority SEO sources, flagged as such). A07-S4 argues the poles and abandoning the 9-10 in middle; the auditor's verdict (digest contradictions on A07-S4 and A02-S5) is that nobody holds a unit of sell-through by inseam. The brief pre-concedes this and states it is not betting on long growing - which is intellectually honest but leaves the length half with no demand evidence of any kind.",
+      "outcome": "survives"
+    },
+    {
+      "angle": "The coverage-first need is stale, unsized, and Nike has declined to serve it for nine years despite proving the adjacent market",
+      "argument": "If the modest and coverage-first lower-body gap were commercially material, Nike had every reason and every capability to close it after Pro Hijab. It did not. Nine years of revealed preference is evidence about size of prize, not just about oversight.",
+      "evidence": "A05-S8 is explicitly a HYPOTHESIS; the Griner quote traces to May 2014 and the Minnesota Muslim girls' uniform work to 2015-2017 (per the spec's own contradictions section). Nike Pro Hijab launched Dec 2017 and Nike's modest collection - hijabs, long-line tops, leggings, swim - remains live in 2026 (nike.com, nike.com/a/nike-pro-hijab-release-info, stylist.co.uk), with no matching long women's basketball bottom ever added. Digest contradiction on A05-S8 additionally records that Nike already ships an 11 in marketed for extra coverage and women's 5/7/9 in, so the 'no product' framing was already contradicted inside the base. France separately bans the hijab in federated play.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "The AND1 buyer is a price buyer and will not move 5.5x - the whole demand thesis is one anonymous review",
+      "argument": "The second of three target consumers is defined entirely by a Walmart shopper choosing an 11 in to 5XL at USD 9.98. If the driver is price rather than inclusion, a USD 55 Nike short does not address the motive at all, and the segment evaporates.",
+      "evidence": "A01-S9 rests on unranked marketplace listings and a single anonymous review calling AND1 'affordable and cultural'; the skeptic's counter-evidence in the same base records value-channel Nike buyers posting strongly positive reviews, so this is not demonstrably a Nike-rejecting segment. No POS, no best-seller rank, no unit figure, no date. I found no willingness-to-pay datapoint in any source, in the base or on the open web. The brief concedes this as its own most likely failure mode.",
+      "outcome": "survives"
+    },
+    {
+      "angle": "Cannibalization: the USD 55 short sits in the same door, on the same rail, above a USD 27.75 version of itself",
+      "argument": "Kohl's carries the DNA Academy 11 in in Big & Tall today. Put a Full Range 11 in beside it at USD 55 and the consumer is asked to pay roughly double for heavier mesh, a better waistband and a hangtag claim, in the same silhouette, same franchise family, same colour palette, deliberately without graphics as a differentiator. The most likely outcome is not trade-up; it is a split buy that halves the Academy's facings and adds markdown risk on the new SKU.",
+      "evidence": "Same-door coexistence is verified: Kohl's carries both the Big & Tall DNA Academy 11 in (prd-7499374, selling USD 27.75) and Nike Dri-FIT Icon 11 in (prd-6479747) (kohls.com, 2026-09-03). The brief's own choice to make construction, not print, the differentiator removes the visual cue that normally lets two price points coexist on one rail (A07-S6, A07-S9). Nothing in the base tests held-out-market expansion versus substitution - the brief lists this as an open question and it remains open.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "Execution and cost: a deliberately margin-dilutive carry-over program in the most promoted band, inside a cost-cutting turnaround",
+      "argument": "The brief explicitly accepts margin dilution as 'the mechanism of the idea': heavier GSM plus flat MSRP across sizes that consume more fabric. That is a hard sell to a merchandising financial planner in a year of tariff absorption and headcount reduction, in the one length band that already discounts hardest.",
+      "evidence": "Industry pricing sources put plus-size gross margin roughly 3-5 points lower on fabric consumption alone, before any GSM increase (aims360, ninghowapparel, bigboyzcollection, 2025-26). A04-S8 counter-evidence puts Nike's tariff exposure at ~USD 1.5B with a ~120bp FY26 gross-margin headwind and continued surgical apparel increases of ~3 percent. Nike's 'Win Now' turnaround includes ~1,400 role reductions reported in 2026 (ciodive.com, inc.com). A02-S4/A04-S4 establish the long band as the most discounted band.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "Geographic generalization: the anomaly does not reproduce outside the US, and the brief deprioritises the brief's own priority market",
+      "argument": "Every price, competitor and channel datapoint is American. If the ladder shape differs by region, 'the inversion' is a US price-file artifact, not a global architecture problem - and a global PLM team cannot fund an architecture on one market's price file.",
+      "evidence": "The UK ladder does not reproduce the US shape: DNA ~8 in GBP 64.99, DNA Academy ~8 in GBP 44.99, DNA Academy 11 in GBP 32.99 (nike.com/gb, 2026-09-03) - i.e. in the UK the same franchise carries two lengths at two prices and the premium franchise is priced above at equal length. The AND1 USD 9.98-to-5XL competitor is a US Walmart phenomenon with no established equivalent in UK/EU/AU. The base's own geographic-bias audit flags US over-representation across all seven domains. The brief also explicitly deprioritises Greater China, which is the SS28 Worldball priority space.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "This is not a product brief - it is a price-file memo, and the remedy does not require SS28",
+      "argument": "If the diagnosis is that the 11 in sits in the wrong franchise, the remedy is to put an 11 in into the premium DNA franchise, or to reprice the Academy 11 in. Both are merchandising decisions available next season with zero development. Conversely, if Nike prices Academy low deliberately to hold the opening price point against AND1 and private label in Kohl's and Walmart-adjacent doors, then 'fixing the inversion' means abandoning the opening price point - which is a strategy question, not a defect.",
+      "evidence": "Nike already ships DNA 8 in at USD 55 and 10 in at USD 50 (A02-S4, A02-S5, corroborated 2026-09-03), demonstrating the premium franchise can carry longer lengths at the target price without any new development. Kohl's Big & Tall Nike basketball assortment is DNA Academy and Icon only (kohls.com, 2026-09-03) - consistent with a deliberate opening-price role for those franchises in that door, not only with neglect. No evidence in the base distinguishes the two interpretations.",
+      "outcome": "weakens"
+    },
+    {
+      "angle": "The waist-engineering content, which is the brief's only defensible construction claim, is deduced from boilerplate",
+      "argument": "Strip out the waist system and Full Range is 'the same short, heavier, in more sizes'. The waist system is the only thing that makes it a designed product. It rests on a single inference.",
+      "evidence": "A06-S9 is Nike's generic women's-bottoms sizing guidance ('order according to your hip measurement'), which appears identically on the Women's Bottoms and Women's Numeric charts and is standard industry practice; the signal's own author conceded no independent quantitative data on women's basketball shorts fit complaints exists. A03-S6's Sabrina reviewers report wearing the shorts at home more than playing and praise lightness and comfort, not fit structure - so the demonstrated USD 65 willingness-to-pay may be for drape and softness, the opposite of a heavier, structured make.",
+      "outcome": "weakens"
+    }
+  ],
+  "additional_contradictory_evidence": [
+    {
+      "source": "Nike UK (nike.com/gb) basketball shorts listings, retrieved via search",
+      "url": "https://www.nike.com/gb/w/nike-dna-basketball-shorts-38fphz3glsmzarl2g",
+      "source_date": "2026-09-03",
+      "finding": "At comparable length, the franchise premium is larger than the length effect: Nike DNA ~20cm (~8 in) GBP 64.99 vs Nike DNA ACADEMY ~20.5cm (~8 in) GBP 44.99, with DNA Academy 28cm (~11 in) at GBP 32.99. The USD 65-vs-USD 37 'inversion' is therefore mostly a DNA-vs-DNA-Academy franchise gap, not an inseam gap. This is the single most damaging finding against the brief's framing and it was not in the evidence base.",
+      "severity": "high"
+    },
+    {
+      "source": "Kohl's - Big & Tall Nike DNA Academy Dri-FIT 11 in Basketball Shorts (prd-7499374)",
+      "url": "https://www.kohls.com/product/prd-7499374/big-tall-nike-dna-academy-dri-fit-11-in-basketball-shorts.jsp",
+      "source_date": "2026-09-03",
+      "finding": "The SKU the brief calls Nike's USD 37 opening price point is selling at USD 27.75 (25 percent off) in Big & Tall today. The consumer trade-up being proposed is therefore USD 27.75 to USD 55 - approximately 98 percent, not the 49 percent stated in the spec.",
+      "severity": "high"
+    },
+    {
+      "source": "Nike.com product listings (DNA 8 in, DNA 10 in), retrieved via search",
+      "url": "https://www.nike.com/t/dna-mens-dri-fit-8-basketball-shorts-jVkw9d",
+      "source_date": "2026-09-03",
+      "finding": "Nike already lists a DNA 8 in at USD 55 and a DNA 10 in at USD 50 in the premium franchise. The USD 50-55 longer-length rung that Full Range claims to create already exists; the proposal reduces to adding 9 in and 11 in to that franchise plus a size run and a heavier make.",
+      "severity": "high"
+    },
+    {
+      "source": "Foot Locker - Nike DNA shorts",
+      "url": "https://www.footlocker.com/buy/nike-dna-shorts-0xqz03b",
+      "source_date": "2026-09-03",
+      "finding": "Nike DNA shorts selling at USD 48.75 from USD 65 - a 25 percent markdown at the top of the ladder. Both ends of the ladder are promotional, so the 'protect full price with a replenishable core' plan has no observed precedent inside this franchise.",
+      "severity": "medium"
+    },
+    {
+      "source": "Glossy / Gap Inc. - Old Navy BODEQUALITY scale-back",
+      "url": "https://www.glossy.co/fashion/old-navy-to-scale-back-inclusive-sizing-in-stores-less-than-a-year-after-launch/",
+      "source_date": "2022-05-26",
+      "finding": "The exact load-bearing proposition - full size run, all styles, price parity, integrated in physical doors - launched nationally in Aug 2021 and was pulled from ~75 US and ~15 Canadian stores by May 2022. Gap's CEO cited overestimated in-store demand, too-broad a launch and over-planned larger sizes creating excess inventory. Price parity survived; the door-level physical size run did not. Directly precedents the failure mode of Full Range's distribution plan.",
+      "severity": "high"
+    },
+    {
+      "source": "2026 men's shorts trend commentary (NorthYard; Anarchy Label) - low-authority SEO sources, flagged",
+      "url": "https://www.northyard.com/blogs/news/what-are-popular-shorts-right-now-the-top-5-men-s-styles-for-spring-2026",
+      "source_date": "2026",
+      "finding": "Describes the shorter inseam as the dominant 2026 men's shorts trend and casual basketball shorts as moving away from oversized toward a more tailored, utility-led fit. Corroborates A07-S4's 'design at the poles' position and gives the brief's length half no demand tailwind. Source quality is poor and should not be treated as sell-through data.",
+      "severity": "medium"
+    },
+    {
+      "source": "Apparel pricing and margin references (AIMS360; industry commentary on plus-size cost)",
+      "url": "https://www.aims360.com/fashion-business-resources/how-to-calculate-profit-margin",
+      "source_date": "2025-2026",
+      "finding": "Extended sizes carry roughly 3-5 points lower gross margin from fabric consumption alone, before any GSM increase. Full Range stacks a heavier mesh on top of a flat MSRP across sizes, inside a year with ~USD 1.5B tariff absorption and a ~120bp FY26 gross-margin headwind (A04-S8) and a publicly reported cost-reduction turnaround.",
+      "severity": "medium"
+    },
+    {
+      "source": "Nike modest collection / Nike Pro Hijab, still live",
+      "url": "https://www.nike.com/a/nike-pro-hijab-release-info",
+      "source_date": "2026 (product live; launched Dec 2017)",
+      "finding": "Nike has run a modest performance collection continuously since 2017 - hijabs, long-line tops, leggings, swim - and has never added a long women's basketball bottom to it. Nine years of revealed preference is evidence about the size of the coverage-first prize, not only about Nike's oversight. Cuts both ways, but weakens the 'obvious unserved need' framing behind A05-S8.",
+      "severity": "medium"
+    },
+    {
+      "source": "Kohl's Big & Tall Nike basketball assortment (DNA Academy 11 in; Dri-FIT Icon 11 in, prd-6479747)",
+      "url": "https://www.kohls.com/product/prd-6479747/mens-nike-dri-fit-icon-11-in-basketball-short.jsp",
+      "source_date": "2026-09-03",
+      "finding": "Confirms the brief's strongest surviving observation - the Big & Tall Nike basketball offer in this door is composed of Nike's two cheapest franchises - but also shows both SKUs are 11 in, i.e. this door's extended-size offer is length-appropriate and make-inappropriate. That supports the size-and-make half of the brief and undercuts the length half.",
+      "severity": "low"
+    }
+  ],
+  "strongest_counterargument": "\"This is a price-file memo wearing a product brief's clothes, and the gap you found is DNA versus DNA Academy, not 11 inches versus 6 inches. Nike UK sells the same ~8-inch length at GBP 64.99 in DNA and GBP 44.99 in Academy - the franchise is worth GBP 20 at constant length, the length is worth GBP 12 at constant franchise. And we already ship an 8-inch at USD 55 and a 10-inch at USD 50. So if your real point is that the 11-inch and the 3XL belong in the premium make rather than the opening-price make, say that - and I will put an 11-inch into DNA next season for the cost of a line-plan meeting. I do not need an SS28 architecture, a heavier GSM, a hangtag durability claim, or a same-price 4XL commitment that the Old Navy precedent says my buyers will not hold in their doors. And check your ask: the customer you are trying to move is not paying USD 37 today, she is paying USD 27.75 at Kohl's. You are asking for double.\"",
+  "adjusted_confidence_score": 44,
+  "adjustment_rationale": "Down from 58 to 44. Four attacks landed and none of them was resolvable from public data.\n\n(1) The franchise confound is the big one. Retrieving Nike UK - a market the brief never checked - shows the price difference is mostly DNA versus DNA Academy at constant length (GBP 20) rather than length at constant franchise (GBP 12). The brief's headline is built on the confounded comparison. The residual within-franchise gradient survives, so the insight is not dead, but it is roughly a third of the size the brief claims. (2) The USD 50-55 longer-length rung already exists inside the premium franchise (DNA 8 in USD 55, 10 in USD 50), so the length half fails the NEW test that this engine is supposed to enforce - the brief itself warned that seven specialists had been burned proposing product Nike ships, and this is a softer version of the same error. (3) Realized prices make the ask nearly double, not half again: USD 27.75 at Kohl's today, against a USD 55 proposal, with no willingness-to-pay evidence anywhere in the base or on the open web. (4) The load-bearing distribution decision has a documented real-world failure precedent in Old Navy BODEQUALITY, which retrenched the physical door-level size run within nine months for exactly the reason a Nike buyer would cite - over-planned large sizes and excess inventory.\n\nWhat holds 44 up rather than lower: the Big & Tall assortment observation is genuinely verified and genuinely damning in its narrow form - Nike offers no premium-make basketball short in extended sizes in the biggest big-and-tall door, only its two cheapest franchises, one of which carries a seam-failure review corpus (A04-S6). The remedy is cheap, requires no technology, no athlete and no platform, and two of the decisive tests cost near zero. The rules opening (A06-S3) is real, dated and actionable. And nobody can prove the long band is shrinking either - the auditor's verdict that no unit share by inseam exists cuts against critics as much as against the brief.\n\n44 means: do not fund an architecture. Fund a two-week price-file decomposition and a one-season live test of an 11-inch inside the premium franchise. If that test moves, the size-and-make brief comes back stronger and cheaper than this one.",
+  "survives": true,
+  "validation_plan": [
+    {
+      "question": "How much of the USD 65-to-USD 37 gap is franchise (DNA vs DNA Academy) versus inseam versus feature content? This determines whether there is an opportunity at all or only a naming convention.",
+      "method": "Regress list price and realized AUR on inseam, franchise, feature count (zip pocket, waistband treatment, liner) and size across the full basketball shorts price file, 8 quarters, US + UK + AU. Explicitly test the UK counter-case surfaced here (DNA ~8 in GBP 64.99 vs Academy ~8 in GBP 44.99 vs Academy 11 in GBP 32.99).",
+      "who": "Merchandising Financial Planning + Basketball Apparel PLM",
+      "cost_time": "2 weeks, no external cost - internal price file and POS only"
+    },
+    {
+      "question": "What does the long band actually transact at, and what is unit share by inseam and by size? The brief cannot be priced without this and the whole base lacks it.",
+      "method": "Pull markdown rate, weeks-of-supply, AUR and unit share by inseam AND by size for basketball shorts, full year (not an August snapshot), Nike DTC plus Kohl's, Dick's, Academy, Hibbett and Amazon, split men's/women's and performance/lifestyle door.",
+      "who": "NA Wholesale Demand & Supply Planning with account business teams",
+      "cost_time": "3-4 weeks, no external cost"
+    },
+    {
+      "question": "Will the extended-size and long-inseam buyer pay USD 55 against a shelf reality of USD 27.75, and is the AND1 buyer the same person as the Nike USD 37 buyer?",
+      "method": "Choice-based conjoint (n~800, US) with the true current shelf price as the reference point, plus a live price test on one SKU in one wholesale door. Run two separate cells: recruited AND1/Walmart 2XL-5XL buyers, and recruited Nike DNA Academy buyers. Include a cell testing drape/softness against structure/heft, because Sabrina reviews (A03-S6) suggest the paid-for attribute may be comfort, not engineering.",
+      "who": "Global Consumer Insights + NA Wholesale",
+      "cost_time": "6-8 weeks, approx. USD 60-90k"
+    },
+    {
+      "question": "Will wholesale buyers actually hold a full size run in both lengths and six colours in physical doors - the Old Navy failure mode?",
+      "method": "Before any development spend, take a paper line to Kohl's, Dick's, Academy and one big-and-tall specialty (DXL) and request written size-run and door-count commitments for a USD 55 11-inch in S-4XL plus Tall. Treat refusal or an online-only commitment as a redesign trigger: the proposition becomes a Nike.com long-tail size offer, not a wall program.",
+      "who": "NA Wholesale Sales leadership + Key Accounts",
+      "cost_time": "4-6 weeks, no external cost, pre-development"
+    },
+    {
+      "question": "Is the quality gap real and is waist gap the actual defect, or is it hem length, taper and expectation?",
+      "method": "Lab: fabric GSM history for DNA, DNA Academy and Icon FY23-FY26; 20-wash dimensional stability, opacity at 3XL and seam-strength testing against AND1 All Court, Icon and Mitchell & Ness. Consumer: fit study on 100+ female players 14-30 in two markets capturing waist-to-hip drop against current grading, plus a structured returns taxonomy coded for waist gap, hem length, ride-up and pocket.",
+      "who": "Apparel Innovation / Materials + Global Fit + Consumer Insights",
+      "cost_time": "8-10 weeks, approx. USD 40k"
+    },
+    {
+      "question": "Does simply moving the long length into the premium franchise capture the value - making the architecture unnecessary?",
+      "method": "Cheapest kill test: for one season, list an 11-inch inside the premium DNA franchise at USD 50-55 on Nike.com and in one wholesale door, in existing fabric, no new development, no size expansion. Measure sell-through, AUR, markdown and cannibalization of the Academy 11-inch in the same door against a held-out control door. If it sells, the size-and-make brief returns funded by data; if it does not, the architecture never gets built.",
+      "who": "Basketball Apparel PLM + Digital Merchandising + one key account",
+      "cost_time": "One season (Holiday 27 sell-in), effectively zero incremental development cost"
+    },
+    {
+      "question": "Does the proposition survive outside the US, given that the UK ladder does not reproduce the US shape and the value competitor is a US Walmart phenomenon?",
+      "method": "Replicate the price-ladder audit and the extended-size assortment audit in UK, DE, FR, AU and Greater China: list price and realized price by franchise, inseam and size, plus who holds the long-and-extended shelf locally (JD, Decathlon, Rebel, Tmall). Decide lead market from the result rather than assuming US-then-everywhere.",
+      "who": "Geo Merchandising leads (EMEA, APLA, GC) coordinated by Global PLM",
+      "cost_time": "3 weeks, no external cost"
+    }
+  ]
+}
