@@ -1,0 +1,562 @@
+.chapter {
+  position: relative;
+  height: 190svh;
+}
+.chapterStatic {
+  height: auto;
+}
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+.chapterStatic .stage {
+  position: relative;
+  height: auto;
+  min-height: 100svh;
+}
+.stageHead {
+  position: absolute;
+  z-index: 3;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 72px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.prompt {
+  transition: opacity 0.4s;
+}
+
+.reveal {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px var(--gutter) 28px;
+  background: var(--paper);
+  color: var(--ink);
+  transform: translateY(101%);
+  transition: transform 0.8s var(--ease-hard);
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8px 32px;
+  align-items: end;
+}
+.revealOn {
+  transform: none;
+}
+.chapterStatic .reveal {
+  position: relative;
+  transform: none;
+}
+.idx {
+  margin: 0;
+  grid-row: 1 / 3;
+  font-size: 13px;
+}
+.title {
+  margin: 0;
+  grid-column: 2 / 4;
+  font-size: clamp(36px, 6vw, 96px);
+}
+.statement {
+  margin: 0;
+  font-size: clamp(16px, 1.6vw, 24px);
+  font-weight: 700;
+}
+.explanation {
+  margin: 0;
+  font-size: clamp(14px, 1.15vw, 17px);
+  max-width: 48ch;
+  opacity: 0.8;
+}
+@media (max-width: 720px) {
+  .reveal {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding-bottom: 22px;
+  }
+  .idx {
+    grid-row: auto;
+  }
+  .title {
+    grid-column: auto;
+  }
+  .stageHead {
+    top: 96px;
+  }
+}
+
+/* ── 01 Interrupt the field ─────────────────────────────── */
+.grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: 2px;
+  padding: 120px var(--gutter) 90px;
+  touch-action: none;
+  cursor: crosshair;
+}
+.cell {
+  background: #1f1f1e;
+  transition: background 0.5s, transform 0.5s var(--ease-out);
+  transform-origin: center;
+}
+.cell[data-broken="1"] {
+  background: var(--accent);
+  transform: rotate(var(--rot)) scale(1.35);
+  transition: background 0.05s, transform 0.25s var(--ease-out);
+  z-index: 1;
+}
+.cell[data-broken="2"] {
+  background: var(--paper);
+  transform: rotate(var(--rot)) scale(1.9);
+  transition: background 0.05s, transform 0.25s var(--ease-out);
+  z-index: 2;
+}
+.fieldNote {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 24px;
+  margin: 0;
+  z-index: 3;
+  opacity: 0.5;
+}
+
+/* ── 02 Wear the target ─────────────────────────────────── */
+.targetStage {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  cursor: none;
+  user-select: none;
+}
+.figure {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: min(60vh, 80vw);
+  height: 84vh;
+  transform: translateX(-50%);
+}
+.figure svg {
+  width: 100%;
+  height: 100%;
+}
+.figure polygon {
+  fill: #121211;
+  stroke: rgba(242, 239, 233, 0.45);
+  stroke-width: 0.35;
+}
+.chest {
+  fill: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 240px;
+  margin: -120px 0 0 -120px;
+  border-radius: 50%;
+  border: 1px solid var(--paper);
+  pointer-events: none;
+  will-change: transform;
+}
+.ring::before,
+.ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--paper);
+}
+.ring::before {
+  transform: scale(0.62);
+}
+.ring::after {
+  transform: scale(0.28);
+  border-color: var(--accent);
+}
+.ringLine {
+  position: absolute;
+  background: var(--paper);
+  opacity: 0.6;
+}
+.ringLine:nth-child(1) {
+  left: 50%;
+  top: -30px;
+  width: 1px;
+  height: 60px;
+}
+.ringLine:nth-child(2) {
+  left: 50%;
+  bottom: -30px;
+  width: 1px;
+  height: 60px;
+}
+.ringLine:nth-child(3) {
+  top: 50%;
+  left: -30px;
+  height: 1px;
+  width: 60px;
+}
+.ringLine:nth-child(4) {
+  top: 50%;
+  right: -30px;
+  height: 1px;
+  width: 60px;
+}
+.lock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 12px;
+  background: var(--accent);
+  color: var(--ink);
+  pointer-events: none;
+}
+.holdBar {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 24px;
+  height: 1px;
+  background: rgba(242, 239, 233, 0.2);
+}
+.holdBar i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.keyHint {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 34px;
+  margin: 0;
+  opacity: 0.5;
+}
+
+/* ── 03 Create friction ─────────────────────────────────── */
+.frictionStage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  touch-action: none;
+  isolation: isolate;
+}
+.wordA,
+.wordB {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+  font-size: clamp(40px, 12vw, 200px);
+}
+.wordA {
+  left: var(--gutter);
+  transform: translateY(-50%);
+  color: var(--paper);
+}
+.wordA span {
+  display: inline-block;
+  animation: jitter 0.12s steps(2) infinite;
+  animation-play-state: paused;
+}
+.wordA[data-hot="true"] span {
+  animation-play-state: running;
+}
+@keyframes jitter {
+  from {
+    transform: translate(calc(var(--f) * -3px), calc(var(--f) * 2px)) skewX(calc(var(--f) * -4deg));
+  }
+  to {
+    transform: translate(calc(var(--f) * 3px), calc(var(--f) * -2px)) skewX(calc(var(--f) * 4deg));
+  }
+}
+.wordB {
+  right: var(--gutter);
+  transform: translate(var(--dx), -50%);
+  color: var(--accent);
+  mix-blend-mode: difference;
+  cursor: grab;
+  will-change: transform;
+  font-style: italic;
+}
+.wordB:active {
+  cursor: grabbing;
+}
+.wordB:focus-visible {
+  outline: 1px solid var(--accent);
+}
+.meter {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.meter i {
+  flex: 1;
+  height: 1px;
+  background: rgba(242, 239, 233, 0.2);
+  position: relative;
+}
+.meter i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  height: 5px;
+  width: calc(var(--f) * 100%);
+  background: var(--accent);
+}
+.spark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 6px, rgba(242, 239, 233, calc(var(--f) * 0.12)) 6px 7px);
+  opacity: calc(var(--f) * 1);
+}
+
+/* ── 04 Reward the second look ──────────────────────────── */
+.lookStage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  touch-action: none;
+  cursor: none;
+}
+.garment {
+  position: relative;
+  width: min(70vw, 62vh);
+  aspect-ratio: 4 / 5;
+  background: #0f0f0e;
+  clip-path: polygon(20% 0, 38% 6%, 62% 6%, 80% 0, 100% 10%, 92% 100%, 8% 100%, 0 10%);
+  overflow: hidden;
+}
+.garmentPlain {
+  position: absolute;
+  inset: 0;
+  background: #0f0f0e;
+}
+.details {
+  position: absolute;
+  inset: 0;
+  background: #141413;
+  mask-image: radial-gradient(circle var(--r) at var(--x) var(--y), #000 0, #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y), #000 0, #000 40%, transparent 100%);
+}
+.seam {
+  position: absolute;
+  border: 0 dashed rgba(242, 239, 233, 0.55);
+}
+.seam1 {
+  left: 12%;
+  top: 6%;
+  width: 76%;
+  height: 22%;
+  border-bottom-width: 1px;
+  border-radius: 0 0 50% 50%;
+}
+.seam2 {
+  left: 30%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+.tonal {
+  position: absolute;
+  left: 8%;
+  top: 34%;
+  width: 84%;
+  margin: 0;
+  font-size: clamp(28px, 6vw, 96px);
+  color: #1e1e1d;
+  -webkit-text-stroke: 1px rgba(242, 239, 233, 0.35);
+}
+.label {
+  position: absolute;
+  right: 12%;
+  bottom: 10%;
+  padding: 6px 8px;
+  background: var(--paper);
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.number {
+  position: absolute;
+  left: 12%;
+  bottom: 8%;
+  font-size: clamp(60px, 12vw, 180px);
+  color: var(--accent);
+  line-height: 1;
+}
+.hotspot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.hotspot[data-found="true"] {
+  opacity: 1;
+  background: var(--accent);
+}
+.light {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border-radius: 50%;
+  border: 1px solid var(--paper);
+  pointer-events: none;
+  will-change: transform;
+}
+.found {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 24px;
+  margin: 0;
+  display: flex;
+  gap: 6px;
+}
+.found i {
+  width: 22px;
+  height: 3px;
+  background: rgba(242, 239, 233, 0.2);
+}
+.found i[data-on="true"] {
+  background: var(--accent);
+}
+
+/* ── 05 Never neutral ───────────────────────────────────── */
+.neutralStage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.neutralWord {
+  margin: 0;
+  font-size: clamp(56px, 16vw, 280px);
+  color: #3a3a38;
+}
+.neutralWord span {
+  display: inline-block;
+  animation: dissolve 2.4s steps(3) infinite;
+  animation-delay: calc(var(--i) * 0.31s);
+}
+@keyframes dissolve {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.15;
+  }
+  60% {
+    opacity: 0.6;
+  }
+}
+.choices {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 12vh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+}
+.choice {
+  font-size: clamp(22px, 4vw, 64px);
+  padding: 0.3em 0.4em;
+  border: 1px solid currentColor;
+  transition: background 0.15s, color 0.15s, transform 0.3s var(--ease-out);
+}
+.choice:hover,
+.choice:focus-visible {
+  transform: scale(1.04);
+}
+.choiceHate:hover,
+.choiceHate:focus-visible {
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+.choiceLove:hover,
+.choiceLove:focus-visible {
+  background: var(--clash);
+  color: var(--paper);
+  border-color: var(--clash);
+}
+.noOpinion {
+  opacity: 0.35;
+  text-decoration: line-through;
+  cursor: not-allowed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.noOpinion small {
+  text-decoration: none;
+  font-size: 10px;
+}
+.flood {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  clip-path: circle(0% at 50% 80%);
+  transition: clip-path 0.7s var(--ease-hard);
+}
+.floodOn {
+  clip-path: circle(120% at 50% 80%);
+}
+.floodText {
+  margin: 0;
+  font-size: clamp(40px, 9vw, 160px);
+}
+@media (max-width: 720px) {
+  .choices {
+    grid-template-columns: 1fr;
+    bottom: 30vh;
+  }
+  .wordA {
+    font-size: 14vw;
+  }
+  .wordB {
+    font-size: 14vw;
+  }
+}

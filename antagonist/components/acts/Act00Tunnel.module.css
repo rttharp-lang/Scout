@@ -1,0 +1,128 @@
+.act {
+  background: var(--ink);
+}
+.stage {
+  background: var(--ink);
+}
+.cssTunnel {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 30% 22% at 50% 50%, rgba(255, 46, 0, 0.18), transparent 70%),
+    repeating-radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 42px),
+    var(--ink);
+}
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.word {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: var(--paper);
+  opacity: 0.4;
+  font-size: 4vw;
+  will-change: transform, opacity;
+}
+.statement {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 12vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(56px, 12vw, 200px);
+  color: var(--paper);
+}
+.statement span {
+  opacity: 0;
+  display: block;
+}
+.reveal {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(52px, 16vw, 300px);
+  color: var(--paper);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.flash {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  opacity: 0;
+  pointer-events: none;
+}
+.hint {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  opacity: 0;
+}
+.hintLine {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(var(--paper), transparent);
+  animation: drop 1.6s var(--ease-out) infinite;
+}
+@keyframes drop {
+  from {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+/* Reduced motion: statement and name are simply visible. */
+.static {
+  height: auto;
+  min-height: 100svh;
+  padding: 20vh var(--gutter);
+}
+.static .noise {
+  display: none;
+}
+.static .statement {
+  position: static;
+}
+.static .statement span,
+.static .reveal {
+  opacity: 1;
+}
+.static .reveal {
+  position: static;
+  margin-top: 8vh;
+  justify-content: start;
+}
+.static .hint {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .word {
+    font-size: 7vw;
+  }
+  .statement {
+    bottom: 16vh;
+  }
+}

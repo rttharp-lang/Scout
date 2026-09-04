@@ -1,0 +1,22 @@
+.act {
+  background: var(--ink);
+  color: var(--paper);
+}
+.intro {
+  min-height: 80svh;
+  padding: 24vh var(--gutter) 12vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.title {
+  margin: 0;
+  font-size: clamp(48px, 11vw, 200px);
+}
+.sub {
+  margin: 0;
+  max-width: 44ch;
+  font-size: clamp(16px, 1.5vw, 22px);
+  opacity: 0.8;
+}

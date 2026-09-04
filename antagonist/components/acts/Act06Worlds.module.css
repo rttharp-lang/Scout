@@ -1,0 +1,361 @@
+.act {
+  background: var(--ink);
+  color: var(--paper);
+}
+.intro {
+  min-height: 70svh;
+  padding: 22vh var(--gutter) 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.introTitle {
+  margin: 0;
+  font-size: clamp(48px, 11vw, 200px);
+}
+.introSub {
+  margin: 0;
+  max-width: 40ch;
+  font-size: clamp(16px, 1.5vw, 22px);
+  opacity: 0.8;
+}
+.pin {
+  position: relative;
+  overflow: hidden;
+}
+.track {
+  display: flex;
+  will-change: transform;
+}
+.world {
+  position: relative;
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+  padding: 90px var(--gutter) 28px;
+  background: var(--w-bg);
+  color: var(--w-fg);
+  transition: background 0.6s var(--ease-out), color 0.6s;
+}
+.worldHead {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 64px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.q {
+  max-width: 48ch;
+  text-align: right;
+  opacity: 0.75;
+}
+.worldTitle {
+  position: absolute;
+  left: var(--gutter);
+  bottom: -0.1em;
+  margin: 0;
+  font-size: clamp(90px, 22vw, 420px);
+  opacity: 0.08;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.provocations {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 34ch;
+  font-size: clamp(14px, 1.3vw, 19px);
+}
+.provocations li {
+  padding: 5px 0;
+  border-top: 1px solid color-mix(in srgb, var(--w-fg) 25%, transparent);
+}
+
+/* franchises */
+.franchiseRow {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 16vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+  align-items: start;
+}
+.franchise {
+  position: relative;
+  text-align: left;
+  transition: transform 0.6s var(--ease-out), opacity 0.4s, filter 0.4s;
+}
+.franchise[data-hot="true"] {
+  transform: translateY(-3vh) scale(1.04);
+}
+.franchise[data-dim="true"] {
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+.franchiseMedia {
+  width: 100%;
+}
+.franchiseLabel {
+  display: block;
+  margin-top: 10px;
+}
+.enemy {
+  display: block;
+  margin-top: 6px;
+  color: var(--w-accent);
+  font-size: clamp(14px, 1.4vw, 22px);
+  max-width: 20ch;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.4s var(--ease-out);
+}
+.franchise[data-hot="true"] .enemy {
+  opacity: 1;
+  transform: none;
+}
+
+/* athletes */
+.roster {
+  position: absolute;
+  left: var(--gutter);
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rosterName {
+  font-size: clamp(40px, 8vw, 150px);
+  line-height: 0.9;
+  opacity: 0.3;
+  text-align: left;
+  transition: opacity 0.2s, transform 0.4s var(--ease-out), color 0.2s;
+}
+.rosterName[data-on="true"] {
+  opacity: 1;
+  transform: translateX(3vw);
+  color: var(--w-accent);
+}
+.athleteSide {
+  position: absolute;
+  right: var(--gutter);
+  top: 14vh;
+  width: min(30vw, 380px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.athletePortrait {
+  width: 100%;
+  animation: cut 0.5s var(--ease-hard);
+}
+.attitude {
+  margin: 0;
+  font-size: clamp(16px, 1.8vw, 28px);
+  animation: cut 0.5s var(--ease-hard);
+}
+@keyframes cut {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.athletes .provocations {
+  left: auto;
+  right: var(--gutter);
+  width: min(30vw, 380px);
+}
+
+/* nba */
+.board {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: 14vh;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  padding: 18px;
+  border: 1px solid color-mix(in srgb, var(--w-fg) 30%, transparent);
+  background: color-mix(in srgb, var(--w-bg) 80%, black);
+}
+.boardMeta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--w-accent);
+  font-variant-numeric: tabular-nums;
+}
+.teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+}
+.team {
+  font-size: clamp(36px, 7vw, 130px);
+  animation: cut 0.4s var(--ease-hard);
+}
+.teamB {
+  text-align: right;
+  color: var(--w-accent);
+}
+.vs {
+  opacity: 0.6;
+}
+.boardLine {
+  font-size: clamp(16px, 1.6vw, 24px);
+  animation: cut 0.4s var(--ease-hard);
+}
+.tap {
+  opacity: 0.5;
+}
+.nbaMedia {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 28px;
+  display: flex;
+  gap: 12px;
+  width: min(40vw, 520px);
+}
+.nbaMedia figure {
+  flex: 1;
+}
+
+/* wnba */
+.wnbaTitle {
+  font-style: italic;
+  left: auto;
+  right: var(--gutter);
+}
+.wnba .worldHead span:first-child,
+.wnba .q {
+  font-style: italic;
+}
+.walk {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15vh;
+  height: 70vh;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.walk:active {
+  cursor: grabbing;
+}
+.walkTrack {
+  display: flex;
+  gap: 4vw;
+  padding: 0 var(--gutter);
+  height: 100%;
+  align-items: flex-start;
+  will-change: transform;
+}
+.frame {
+  flex: 0 0 auto;
+  width: min(28vw, 360px, 44vh);
+  margin: 0;
+}
+.frameCap {
+  margin-top: 10px;
+  font-size: clamp(13px, 1.2vw, 18px);
+  font-style: italic;
+  color: var(--w-accent);
+}
+.frameText {
+  width: min(40vw, 520px);
+  align-self: center;
+}
+.frameText p {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 72px);
+  font-style: italic;
+}
+.walkHint {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 28px;
+  margin: 0;
+  opacity: 0.5;
+}
+
+@media (max-width: 899px) {
+  .track {
+    flex-direction: column;
+  }
+  .world {
+    height: auto;
+    min-height: 100svh;
+    padding-bottom: 40px;
+  }
+  .worldHead {
+    position: static;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  .q {
+    text-align: left;
+  }
+  .worldTitle {
+    font-size: 30vw;
+  }
+  .provocations,
+  .franchiseRow,
+  .roster,
+  .athleteSide,
+  .board,
+  .nbaMedia,
+  .walk {
+    position: static;
+  }
+  .provocations {
+    margin-top: 28px;
+  }
+  .franchiseRow {
+    grid-template-columns: 1fr 1fr;
+  }
+  .franchise:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+  .rosterName[data-on="true"] {
+    transform: translateX(4vw);
+  }
+  .athleteSide {
+    width: 70%;
+    margin-top: 24px;
+  }
+  .athletes .provocations {
+    width: auto;
+  }
+  .nbaMedia {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .walk {
+    height: 60vh;
+    margin: 0 calc(var(--gutter) * -1);
+  }
+  .frame {
+    width: 64vw;
+  }
+  .frameText {
+    width: 70vw;
+  }
+  .walkHint {
+    position: static;
+    margin-top: 12px;
+  }
+}

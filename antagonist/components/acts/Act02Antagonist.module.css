@@ -1,0 +1,261 @@
+.act {
+  background: var(--ink);
+  color: var(--paper);
+}
+.stage {
+  background: var(--ink);
+}
+.tone {
+  position: absolute;
+  inset: 0;
+  transition: background 0.9s var(--ease-out), opacity 0.9s;
+  background: transparent;
+}
+.tone-hot .tone {
+  background: radial-gradient(ellipse 70% 60% at 70% 30%, rgba(255, 46, 0, 0.35), transparent 70%);
+}
+.tone-cold .tone {
+  background: radial-gradient(ellipse 60% 70% at 20% 70%, rgba(43, 76, 255, 0.35), transparent 70%);
+}
+.tone-flash .tone {
+  background: repeating-linear-gradient(90deg, rgba(242, 239, 233, 0.06) 0 2px, transparent 2px 80px), radial-gradient(circle at 50% 40%, rgba(242, 239, 233, 0.22), transparent 55%);
+}
+.tone-dirt .tone {
+  background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(120, 90, 50, 0.4), transparent 70%);
+}
+.tone-void .tone {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2) 80%);
+}
+.tone-clean .tone {
+  background: linear-gradient(180deg, rgba(242, 239, 233, 0.09), transparent 60%);
+}
+
+.strip {
+  position: absolute;
+  left: 0;
+  top: 8vh;
+  display: flex;
+  gap: 8vw;
+  padding-left: 60vw;
+  will-change: transform;
+  opacity: 0.9;
+}
+.stripGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 3vw;
+  flex-shrink: 0;
+  transition: opacity 0.6s, filter 0.6s;
+}
+.stripGroup[data-dim="true"] {
+  opacity: 0.25;
+  filter: grayscale(1) contrast(1.2);
+}
+.portrait {
+  width: 22vw;
+  min-width: 180px;
+}
+.archiveHigh {
+  width: 16vw;
+  min-width: 130px;
+  margin-top: 24vh;
+}
+.archiveLow {
+  width: 12vw;
+  min-width: 110px;
+  margin-top: 6vh;
+}
+.stripLabel {
+  writing-mode: vertical-rl;
+  opacity: 0.5;
+  margin-top: 10vh;
+}
+
+.figure {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: min(60vh, 70vw);
+  height: 78vh;
+  transform: translateX(-50%);
+  pointer-events: none;
+  will-change: transform;
+}
+.figure svg {
+  width: 100%;
+  height: 100%;
+}
+.figure polygon {
+  fill: #0b0b0b;
+  stroke: rgba(242, 239, 233, 0.5);
+  stroke-width: 0.35;
+  stroke-linejoin: round;
+}
+.tone-flash .figure polygon {
+  fill: var(--paper);
+  stroke: none;
+}
+.tone-hot .figure polygon {
+  stroke: var(--accent);
+}
+.tone-cold .figure polygon {
+  stroke: var(--clash);
+}
+
+.names {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 9vh;
+  height: 0;
+  pointer-events: none;
+}
+.name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  font-size: clamp(56px, 13.5vw, 260px);
+  line-height: 0.82;
+  white-space: nowrap;
+  overflow: hidden;
+  mix-blend-mode: difference;
+  color: var(--paper);
+}
+.name span {
+  will-change: transform;
+}
+
+.tickerWrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 64px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(242, 239, 233, 0.15);
+}
+.tickerRow {
+  display: flex;
+  white-space: nowrap;
+  animation: tick 18s linear infinite;
+  padding-bottom: 8px;
+}
+@keyframes tick {
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+.ticker {
+  color: var(--paper);
+}
+
+.score {
+  position: absolute;
+  right: var(--gutter);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 12px;
+}
+.score > span:first-child {
+  font-size: clamp(40px, 6vw, 96px);
+  line-height: 1;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-stretch: 62%;
+}
+.scoreSlash {
+  opacity: 0.4;
+}
+.scoreId {
+  opacity: 0.6;
+}
+.scorePrev {
+  opacity: 0.3;
+}
+
+.side {
+  position: absolute;
+  left: var(--gutter);
+  top: 42%;
+  max-width: 34ch;
+}
+.quote {
+  margin: 0 0 14px;
+  font-size: clamp(16px, 1.5vw, 22px);
+}
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li {
+  padding: 4px 8px;
+  border: 1px solid rgba(242, 239, 233, 0.3);
+}
+.note {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 20px;
+  margin: 0;
+  opacity: 0.45;
+}
+
+/* reduced motion list */
+.staticList {
+  padding: 12vh var(--gutter);
+  display: grid;
+  gap: 12vh;
+}
+.staticItem h3 {
+  font-size: clamp(40px, 9vw, 140px);
+  margin: 8px 0;
+}
+.staticMedia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 720px) {
+  .tickerWrap {
+    padding-top: 108px;
+  }
+  .strip {
+    top: 24vh;
+    padding-left: 40vw;
+  }
+  .portrait {
+    width: 44vw;
+  }
+  .side {
+    top: auto;
+    bottom: 34vh;
+    max-width: 70%;
+  }
+  .score {
+    top: 16vh;
+    transform: none;
+    mix-blend-mode: difference;
+  }
+  .figure {
+    width: 80vw;
+    height: 60vh;
+  }
+  .name {
+    font-size: clamp(38px, 16vw, 90px);
+    white-space: normal;
+  }
+  .names {
+    bottom: 12vh;
+  }
+}

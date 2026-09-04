@@ -1,0 +1,61 @@
+.act {
+  background: #000;
+  color: var(--paper);
+}
+.stage {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 20vh var(--gutter);
+}
+.group {
+  position: absolute;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(40px, 9vw, 170px);
+}
+.group span {
+  opacity: 0;
+}
+.attitude {
+  position: absolute;
+  margin: 0;
+  font-size: clamp(56px, 14vw, 280px);
+  color: var(--accent);
+  opacity: 0;
+  text-align: center;
+}
+.credit {
+  position: absolute;
+  bottom: 28px;
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  opacity: 0;
+}
+.dim {
+  opacity: 0.5;
+}
+.static .stage {
+  place-items: start;
+  gap: 8vh;
+  padding-bottom: 20vh;
+}
+.static .group,
+.static .attitude,
+.static .credit {
+  position: static;
+  opacity: 1;
+  align-items: flex-start;
+  text-align: left;
+}
+.static .group span {
+  opacity: 1;
+}

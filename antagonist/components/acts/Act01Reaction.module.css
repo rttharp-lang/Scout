@@ -1,0 +1,158 @@
+.act {
+  background: var(--ink);
+  color: var(--paper);
+}
+.head {
+  min-height: 90svh;
+  display: flex;
+  align-items: flex-end;
+  padding: 20vh var(--gutter) 10vh;
+}
+.headline {
+  margin: 0;
+  font-size: clamp(44px, 9.5vw, 170px);
+}
+.headline > span {
+  display: block;
+  overflow: hidden;
+}
+.headline > span > span {
+  display: block;
+}
+.hot {
+  color: var(--accent);
+}
+
+.field {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--ink);
+}
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  text-align: center;
+}
+.cant {
+  font-size: clamp(48px, 13vw, 240px);
+  transition: opacity 0.4s, color 0.6s, filter 0.5s;
+  will-change: transform;
+}
+.neutral {
+  position: absolute;
+  top: calc(50% + 12vh);
+  margin: 0;
+  transition: opacity 0.4s;
+  color: var(--mute);
+}
+.axis {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 12vh;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+.pole {
+  font-size: clamp(18px, 2.6vw, 44px);
+  transition: opacity 0.3s;
+}
+.track {
+  position: relative;
+  height: 56px;
+  cursor: ew-resize;
+  touch-action: none;
+}
+.line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba(242, 239, 233, 0.35);
+}
+.tick {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  background: rgba(242, 239, 233, 0.35);
+}
+.knob {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.3s;
+}
+.knobActive {
+  width: 26px;
+  height: 26px;
+}
+.reveal {
+  position: absolute;
+  left: 50%;
+  bottom: calc(12vh + 84px);
+  transform: translateX(-50%);
+  margin: 0;
+  color: var(--paper);
+  transition: opacity 0.6s;
+  white-space: nowrap;
+}
+.instruction {
+  position: absolute;
+  left: 50%;
+  bottom: 4vh;
+  transform: translateX(-50%);
+  margin: 0;
+  transition: opacity 0.4s;
+}
+
+.after {
+  padding: 20vh var(--gutter) 24vh;
+  max-width: 900px;
+}
+.line2 {
+  margin: 0 0 0.4em;
+  font-size: clamp(22px, 3.2vw, 48px);
+}
+.line2:last-child {
+  color: var(--accent);
+}
+
+.static {
+  height: auto;
+  min-height: 100svh;
+}
+
+@media (max-width: 720px) {
+  .axis {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    bottom: 10vh;
+  }
+  .pole:last-child {
+    justify-self: end;
+  }
+  .reveal {
+    bottom: 32vh;
+    white-space: normal;
+    text-align: center;
+    width: 80%;
+  }
+}
