@@ -139,6 +139,27 @@ duplicated without touching the others.
    `GarmentScene.tsx`; the lens `object` fields are the only contract with the
    content file.
 
+## Deploying (Vercel)
+
+The app deploys as a standard Next.js project. Two routes, both already configured:
+
+**A. Git integration (simplest).** Import the `Scout` repo in Vercel, set
+**Root Directory** to `antagonist`, keep the Next.js preset. `antagonist/vercel.json`
+supplies the build commands and headers (the site is marked `noindex`). Every push
+to a branch gets a preview URL; `main` is production.
+
+**B. GitHub Actions.** `.github/workflows/deploy-antagonist.yml` deploys with the
+Vercel CLI on any push that touches `antagonist/`. One-time setup:
+
+1. Create the Vercel project (Root Directory `antagonist`) and note its IDs:
+   `vercel link` inside `antagonist/` writes them to `.vercel/project.json`.
+2. Add repo secrets `VERCEL_TOKEN` (Account → Tokens), `VERCEL_ORG_ID` and
+   `VERCEL_PROJECT_ID`.
+3. Push. Non-`main` branches deploy as previews (URL in the job summary),
+   `main` deploys to production.
+
+No environment variables are required by the app itself.
+
 ## Notes
 
 - Placeholder copy (comments, quotes, headlines) is original and written for the

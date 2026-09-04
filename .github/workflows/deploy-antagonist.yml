@@ -1,0 +1,52 @@
+# Deploys antagonist/ to Vercel.
+#   - pushes to main            → production deployment
+#   - pushes to any other branch → preview deployment (URL posted in the job summary)
+#
+# One-time setup (see antagonist/README.md → Deploying):
+#   repo secrets VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+#   Vercel project "Root Directory" = antagonist
+name: Deploy antagonist to Vercel
+
+on:
+  push:
+    paths:
+      - "antagonist/**"
+      - ".github/workflows/deploy-antagonist.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: vercel-antagonist-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: antagonist/package-lock.json
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Pull Vercel project settings
+        run: vercel pull --yes --environment=${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build
+        run: vercel build ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy
+        id: deploy
+        run: |
+          URL=$(vercel deploy --prebuilt ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "### Deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "$URL" >> "$GITHUB_STEP_SUMMARY"
