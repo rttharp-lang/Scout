@@ -2,135 +2,192 @@
   background: var(--ink);
   color: var(--paper);
 }
-.intro {
-  min-height: 70svh;
-  padding: 22vh var(--gutter) 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 16px;
+.stage {
+  background: var(--ink);
 }
-.introTitle {
-  margin: 0;
-  font-size: clamp(48px, 11vw, 200px);
+.stageStatic {
+  height: auto;
 }
-.introSub {
-  margin: 0;
-  max-width: 40ch;
-  font-size: clamp(16px, 1.5vw, 22px);
-  opacity: 0.8;
-}
-.pin {
-  position: relative;
+.room {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-}
-.track {
-  display: flex;
-  will-change: transform;
-}
-.world {
-  position: relative;
-  flex: 0 0 100vw;
-  width: 100vw;
-  height: 100svh;
-  overflow: hidden;
-  padding: 90px var(--gutter) 28px;
   background: var(--w-bg);
   color: var(--w-fg);
-  transition: background 0.6s var(--ease-out), color 0.6s;
+  transition: background 0.6s var(--ease-out), color 0.6s, clip-path 0.7s var(--ease-hard);
 }
-.worldHead {
+.stageStatic .room {
+  position: relative;
+  min-height: 100svh;
+  clip-path: none !important;
+}
+/* Each room has its own way of arriving. */
+.wipeLights {
+  clip-path: inset(50% 0 50% 0);
+}
+.wipePage {
+  clip-path: inset(0 100% 0 0);
+}
+.wipeBuzzer {
+  clip-path: inset(0 0 0 0);
+  opacity: 0;
+  transition: opacity 0.05s steps(1), background 0.6s;
+}
+.wipeTunnel {
+  clip-path: inset(0 0 0 100%);
+}
+.on {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  z-index: 1;
+}
+.room:not(.on) {
+  pointer-events: none;
+}
+.head {
   position: absolute;
   left: var(--gutter);
-  right: var(--gutter);
+  right: calc(var(--gutter) + 150px);
   top: 64px;
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  z-index: 3;
 }
 .q {
-  max-width: 48ch;
+  max-width: 44ch;
   text-align: right;
   opacity: 0.75;
 }
-.worldTitle {
-  position: absolute;
-  left: var(--gutter);
-  bottom: -0.1em;
-  margin: 0;
-  font-size: clamp(90px, 22vw, 420px);
-  opacity: 0.08;
-  pointer-events: none;
-  white-space: nowrap;
-}
-.provocations {
-  position: absolute;
-  left: var(--gutter);
-  bottom: 28px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  max-width: 34ch;
-  font-size: clamp(14px, 1.3vw, 19px);
-}
-.provocations li {
-  padding: 5px 0;
-  border-top: 1px solid color-mix(in srgb, var(--w-fg) 25%, transparent);
-}
-
-/* franchises */
-.franchiseRow {
+.argument {
   position: absolute;
   left: var(--gutter);
   right: var(--gutter);
-  top: 16vh;
+  bottom: 24px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3vw;
-  align-items: start;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  color: var(--paper);
 }
-.franchise {
-  position: relative;
-  text-align: left;
-  transition: transform 0.6s var(--ease-out), opacity 0.4s, filter 0.4s;
+.argument p {
+  grid-area: 1 / 1;
+  margin: 0;
+  font-size: clamp(30px, 5.5vw, 100px);
+  max-width: 16ch;
 }
-.franchise[data-hot="true"] {
-  transform: translateY(-3vh) scale(1.04);
+.argIdx {
+  position: absolute;
+  right: 0;
+  bottom: 0.4em;
+  opacity: 0.5;
 }
-.franchise[data-dim="true"] {
-  opacity: 0.35;
-  filter: grayscale(1);
+.argumentSmall p {
+  font-size: clamp(20px, 2.6vw, 44px);
+  max-width: 28ch;
 }
-.franchiseMedia {
-  width: 100%;
+.hint {
+  position: absolute;
+  right: var(--gutter);
+  top: 15vh;
+  margin: 0;
+  transition: opacity 0.3s;
+  z-index: 3;
 }
-.franchiseLabel {
-  display: block;
-  margin-top: 10px;
-}
-.enemy {
-  display: block;
-  margin-top: 6px;
-  color: var(--w-accent);
-  font-size: clamp(14px, 1.4vw, 22px);
-  max-width: 20ch;
+.buzzer {
+  position: absolute;
+  inset: 0;
+  background: #fff;
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.3s, transform 0.4s var(--ease-out);
+  pointer-events: none;
+  z-index: 5;
 }
-.franchise[data-hot="true"] .enemy {
+.index {
+  position: absolute;
+  right: var(--gutter);
+  top: 64px;
+  display: flex;
+  gap: 10px;
+  z-index: 4;
+  mix-blend-mode: difference;
+  color: var(--paper);
+}
+.index span {
+  opacity: 0.35;
+}
+.index span[data-on="true"] {
   opacity: 1;
-  transform: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-/* athletes */
+/* ── franchises: three scales ──────────────────────────── */
+.block {
+  position: absolute;
+  text-align: left;
+  transition: opacity 0.4s, filter 0.4s, transform 0.6s var(--ease-out);
+  z-index: 1;
+}
+.block[data-dim="true"] {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+.block:hover,
+.block:focus-visible {
+  transform: translateY(-1.5vh);
+}
+.block0 {
+  left: var(--gutter);
+  top: 12vh;
+  width: min(26vw, 380px);
+}
+.block1 {
+  right: 26vw;
+  top: 16vh;
+  width: min(12vw, 170px);
+}
+.block2 {
+  right: calc(var(--gutter) * -1);
+  bottom: 10vh;
+  width: min(24vw, 340px);
+}
+.blockMedia {
+  width: 100%;
+}
+.blockLabel {
+  display: block;
+  margin-top: 8px;
+}
+.enemy {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 var(--gutter);
+  text-align: center;
+  font-size: clamp(36px, 8vw, 150px);
+  color: var(--w-accent);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 2;
+}
+.enemy span {
+  grid-area: 1 / 1;
+  max-width: 12ch;
+}
+.franchises .argument p {
+  max-width: 12ch;
+}
+
+/* ── athletes ──────────────────────────────────────────── */
 .roster {
   position: absolute;
   left: var(--gutter);
-  top: 15vh;
+  top: 14vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 2;
 }
 .rosterName {
   font-size: clamp(40px, 8vw, 150px);
@@ -144,23 +201,25 @@
   transform: translateX(3vw);
   color: var(--w-accent);
 }
-.athleteSide {
-  position: absolute;
-  right: var(--gutter);
-  top: 14vh;
-  width: min(30vw, 380px);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
 .athletePortrait {
-  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(38vw, 60vh);
+  aspect-ratio: auto !important;
   animation: cut 0.5s var(--ease-hard);
+  z-index: 1;
 }
 .attitude {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 18vh;
   margin: 0;
-  font-size: clamp(16px, 1.8vw, 28px);
+  max-width: 24ch;
+  font-size: clamp(18px, 2.4vw, 40px);
   animation: cut 0.5s var(--ease-hard);
+  z-index: 2;
 }
 @keyframes cut {
   from {
@@ -170,75 +229,100 @@
     clip-path: inset(0 0 0 0);
   }
 }
-.athletes .provocations {
-  left: auto;
-  right: var(--gutter);
-  width: min(30vw, 380px);
-}
 
-/* nba */
+/* ── nba: the room is the scoreboard ───────────────────── */
 .board {
+  position: absolute;
+  inset: 0;
+  text-align: left;
+  z-index: 1;
+}
+.teamA,
+.teamB {
+  position: absolute;
+  top: 18vh;
+  font-size: clamp(60px, 15vw, 300px);
+  line-height: 0.8;
+  animation: cut 0.4s var(--ease-hard);
+}
+.teamA {
+  left: var(--gutter);
+}
+.teamB {
+  right: var(--gutter);
+  color: var(--w-accent);
+  text-align: right;
+}
+.clock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(40px, 8vw, 150px);
+  letter-spacing: 0;
+  color: var(--w-accent);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clockQ {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+.boardLine {
   position: absolute;
   left: var(--gutter);
   right: var(--gutter);
-  top: 14vh;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  text-align: left;
-  padding: 18px;
-  border: 1px solid color-mix(in srgb, var(--w-fg) 30%, transparent);
-  background: color-mix(in srgb, var(--w-bg) 80%, black);
-}
-.boardMeta {
-  display: flex;
-  justify-content: space-between;
-  color: var(--w-accent);
-  font-variant-numeric: tabular-nums;
-}
-.teams {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 12px;
-}
-.team {
-  font-size: clamp(36px, 7vw, 130px);
-  animation: cut 0.4s var(--ease-hard);
-}
-.teamB {
-  text-align: right;
-  color: var(--w-accent);
-}
-.vs {
-  opacity: 0.6;
-}
-.boardLine {
-  font-size: clamp(16px, 1.6vw, 24px);
+  bottom: 24vh;
+  text-align: center;
+  font-size: clamp(18px, 2vw, 30px);
   animation: cut 0.4s var(--ease-hard);
 }
 .tap {
-  opacity: 0.5;
-}
-.nbaMedia {
   position: absolute;
-  right: var(--gutter);
-  bottom: 28px;
-  display: flex;
-  gap: 12px;
-  width: min(40vw, 520px);
+  left: 50%;
+  bottom: 20vh;
+  transform: translateX(-50%);
+  opacity: 0.55;
 }
-.nbaMedia figure {
+.monitors {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 9vh;
+  display: flex;
+  gap: 8px;
+  width: min(26vw, 340px);
+  z-index: 1;
+}
+.monitors figure {
   flex: 1;
 }
-
-/* wnba */
-.wnbaTitle {
-  font-style: italic;
+.nba .argumentSmall {
   left: auto;
-  right: var(--gutter);
+  width: min(34vw, 460px);
 }
-.wnba .worldHead span:first-child,
+.nba .argumentSmall p {
+  text-align: right;
+  margin-left: auto;
+}
+.nba .argIdx {
+  right: auto;
+  left: 0;
+}
+
+/* ── wnba ──────────────────────────────────────────────── */
+.wnbaTitle {
+  position: absolute;
+  right: var(--gutter);
+  bottom: -0.12em;
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(90px, 24vw, 460px);
+  opacity: 0.1;
+  pointer-events: none;
+}
+.wnba .head span:first-child,
 .wnba .q {
   font-style: italic;
 }
@@ -246,11 +330,12 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 15vh;
-  height: 70vh;
+  top: 14vh;
+  height: 72vh;
   overflow: hidden;
   cursor: grab;
   touch-action: pan-y;
+  z-index: 1;
 }
 .walk:active {
   cursor: grabbing;
@@ -258,7 +343,7 @@
 .walkTrack {
   display: flex;
   gap: 4vw;
-  padding: 0 var(--gutter);
+  padding: 0 var(--gutter) 0 40vw;
   height: 100%;
   align-items: flex-start;
   will-change: transform;
@@ -283,79 +368,101 @@
   font-size: clamp(30px, 4vw, 72px);
   font-style: italic;
 }
-.walkHint {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 28px;
-  margin: 0;
-  opacity: 0.5;
+.wnba .hint {
+  top: auto;
+  bottom: 24px;
 }
 
-@media (max-width: 899px) {
-  .track {
+@media (max-width: 720px) {
+  .head {
+    top: 100px;
     flex-direction: column;
-  }
-  .world {
-    height: auto;
-    min-height: 100svh;
-    padding-bottom: 40px;
-  }
-  .worldHead {
-    position: static;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 24px;
+    gap: 4px;
+    right: var(--gutter);
   }
   .q {
     text-align: left;
+    max-width: none;
   }
-  .worldTitle {
-    font-size: 30vw;
+  .index {
+    top: 100px;
+    right: var(--gutter);
+    display: none;
   }
-  .provocations,
-  .franchiseRow,
-  .roster,
-  .athleteSide,
-  .board,
-  .nbaMedia,
-  .walk {
-    position: static;
+  .hint {
+    top: 22vh;
   }
-  .provocations {
-    margin-top: 28px;
+  .block0 {
+    top: 24vh;
+    width: 52vw;
   }
-  .franchiseRow {
-    grid-template-columns: 1fr 1fr;
+  .block1 {
+    right: var(--gutter);
+    top: 26vh;
+    width: 26vw;
   }
-  .franchise:nth-child(3) {
-    grid-column: 1 / -1;
+  .block2 {
+    right: -6vw;
+    bottom: 22vh;
+    width: 44vw;
   }
-  .rosterName[data-on="true"] {
-    transform: translateX(4vw);
+  .argument p {
+    font-size: 9vw;
   }
-  .athleteSide {
-    width: 70%;
-    margin-top: 24px;
+  .argument {
+    bottom: 18px;
   }
-  .athletes .provocations {
+  .roster {
+    top: 24vh;
+  }
+  .rosterName {
+    font-size: 11vw;
+  }
+  .athletePortrait {
+    width: 40vw;
+    height: 46vh;
+    top: 24vh;
+  }
+  .attitude {
+    bottom: 22vh;
+    font-size: 5vw;
+  }
+  .teamA,
+  .teamB {
+    top: 26vh;
+    font-size: 16vw;
+  }
+  .teamB {
+    top: 40vh;
+  }
+  .clock {
+    top: 58%;
+  }
+  .boardLine {
+    bottom: 26vh;
+    font-size: 4vw;
+  }
+  .tap {
+    bottom: 22vh;
+  }
+  .monitors {
+    display: none;
+  }
+  .nba .argumentSmall {
     width: auto;
-  }
-  .nbaMedia {
-    width: 100%;
-    margin-top: 20px;
+    left: var(--gutter);
   }
   .walk {
-    height: 60vh;
-    margin: 0 calc(var(--gutter) * -1);
+    top: 24vh;
+    height: 58vh;
+  }
+  .walkTrack {
+    padding-left: var(--gutter);
   }
   .frame {
-    width: 64vw;
+    width: 60vw;
   }
   .frameText {
     width: 70vw;
-  }
-  .walkHint {
-    position: static;
-    margin-top: 12px;
   }
 }

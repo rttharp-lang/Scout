@@ -2,85 +2,176 @@
   background: var(--paper);
   color: var(--ink);
 }
+.studio {
+  background: var(--paper);
+  cursor: grab;
+  touch-action: pan-y;
+}
+.studio:active {
+  cursor: grabbing;
+}
+.studioStatic {
+  height: 100svh;
+  cursor: default;
+}
+.wall {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(72px, 17vw, 340px);
+  line-height: 0.8;
+  align-items: start;
+  padding-top: 11vh;
+  color: var(--ink);
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.wall span {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
 .intro {
-  min-height: 90svh;
-  padding: 24vh var(--gutter) 10vh;
+  position: absolute;
+  left: var(--gutter);
+  bottom: 12vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 18px;
+  font-size: clamp(44px, 9vw, 170px);
+  z-index: 2;
+  pointer-events: none;
 }
-.introTitle {
-  margin: 0;
-  font-size: clamp(52px, 12vw, 220px);
-}
-.clip {
-  display: block;
-  overflow: hidden;
-}
-.clip > span {
-  display: block;
-}
-.introSub {
-  margin: 0;
-  max-width: 46ch;
-  font-size: clamp(16px, 1.5vw, 22px);
-  opacity: 0.75;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
-.stage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  overflow: hidden;
-  background: var(--paper);
-  touch-action: pan-y;
-  cursor: grab;
-}
-.stage:active {
-  cursor: grabbing;
+.object {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 .fallback {
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
+  transition: opacity 0.4s;
 }
 .fallbackForm {
-  width: 34%;
+  width: 22%;
   aspect-ratio: 3 / 4;
   clip-path: polygon(20% 0, 38% 6%, 62% 6%, 80% 0, 100% 10%, 92% 100%, 8% 100%, 0 10%);
   transition: all 0.8s var(--ease-out);
 }
-.hud {
+.slate {
   position: absolute;
   left: var(--gutter);
-  right: var(--gutter);
   top: 72px;
   display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 3;
   pointer-events: none;
 }
-.hudHint {
+.slateDim {
   opacity: 0.5;
+}
+.lens {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.provocation {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 12vh;
+  margin: 0;
+  max-width: 16ch;
+  font-size: clamp(22px, 2.8vw, 46px);
+  font-weight: 700;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.15em 0.3em;
+  box-decoration-break: clone;
+}
+/* Annotations: a rule from the label to a point on the body. */
+.callout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+.calloutLeft {
+  left: var(--gutter);
+  width: calc(var(--ax) - var(--gutter));
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.calloutRight {
+  right: var(--gutter);
+  width: calc(100% - var(--ax) - var(--gutter));
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+.calloutRight .calloutLine {
+  order: 2;
+}
+.calloutLine {
+  flex: 1;
+  height: 1px;
+  background: var(--ink);
+  position: relative;
+  min-width: 40px;
+  opacity: 0.6;
+}
+.calloutLine::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+}
+.calloutLeft .calloutLine::after {
+  right: -3px;
+}
+.calloutRight .calloutLine::after {
+  left: -3px;
+}
+.calloutText {
+  background: var(--paper);
+  padding: 2px 0;
+}
+.ref {
+  position: absolute;
+  right: var(--gutter);
+  top: 230px;
+  width: min(10vw, 150px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: auto;
+}
+.refMedia {
+  width: 100%;
+}
+.refLabel {
+  opacity: 0.6;
 }
 .readout {
   position: absolute;
-  left: var(--gutter);
-  bottom: 24px;
+  right: var(--gutter);
+  top: 72px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 3px;
   pointer-events: none;
+  z-index: 3;
 }
 .readout span {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 8px;
   font-size: 10px;
@@ -91,86 +182,65 @@
   width: 60px;
   height: 2px;
   background: var(--ink);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.8s var(--ease-out);
 }
-
-.lenses {
+.strobe {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+.staticList {
   list-style: none;
   margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 1;
+  padding: 10vh var(--gutter);
+  display: grid;
+  gap: 10vh;
 }
-.lens {
-  min-height: 100svh;
-  padding: 18vh var(--gutter) 10vh 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  border-top: 1px solid rgba(7, 7, 7, 0.12);
-  transition: opacity 0.5s;
-  opacity: 0.35;
+.staticList h3 {
+  font-size: clamp(40px, 8vw, 120px);
+  margin: 0 0 8px;
 }
-.lens[data-active="true"] {
-  opacity: 1;
-}
-.lensIdx {
-  margin: 0;
-}
-.lensTitle {
-  margin: 0;
-  font-size: clamp(44px, 7vw, 132px);
-}
-.provocation {
-  margin: 0;
-  font-size: clamp(20px, 2.2vw, 34px);
-  font-weight: 700;
-  max-width: 24ch;
-}
-.possibilities {
+.staticList ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  margin: 8px 0 16px;
 }
-.possibilities li {
-  padding: 5px 8px;
-  border: 1px solid rgba(7, 7, 7, 0.3);
-}
-.media {
-  margin-top: 12px;
-  width: min(46%, 320px);
-}
-
-@media (max-width: 900px) {
-  .layout {
-    grid-template-columns: 1fr;
+@media (max-width: 720px) {
+  .wall {
+    font-size: 13vw;
+    align-items: start;
+    padding-top: 24vh;
   }
-  .stage {
-    height: 52svh;
-    z-index: 0;
-  }
-  .lens {
-    padding: 14vh var(--gutter) 10vh;
-    min-height: 80svh;
-    background: linear-gradient(180deg, transparent, var(--paper) 18%);
+  .slate {
+    top: 100px;
   }
   .readout {
     display: none;
   }
-  .hud {
-    top: auto;
-    bottom: 14px;
-    flex-direction: column;
-    gap: 2px;
+  .provocation {
+    bottom: 24vh;
+    max-width: 14ch;
+    font-size: 6.5vw;
   }
-  .hud > span:first-child {
+  .callout {
+    position: static;
+    width: auto;
+  }
+  .lens {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    padding: 0 var(--gutter) 22px;
+  }
+  .calloutLine {
     display: none;
   }
-  .media {
-    width: 60%;
+  .ref {
+    display: none;
   }
 }

@@ -8,16 +8,16 @@ import type { ProductLens } from "@/content/types";
  * ACT 05 — the garment object.
  *
  * One abstract, procedurally lit garment form that stays on screen while the ten
- * product lenses scroll past. Each lens tweens a set of shader uniforms
- * (proportion, graphic, colour, grain, trim, mark, layering, tilt) so the object
- * *becomes* the lens rather than illustrating it. It is deliberately not a real
- * jersey: a shape with the posture of one, so the eye reads silhouette, not SKU.
+ * product lenses cut past. Each lens sets shader uniforms (proportion, graphic,
+ * colour, grain, trim, mark, layering, tilt) and a camera set-up (zoom, orbit,
+ * look) so the object *becomes* the lens rather than illustrating it. It is
+ * deliberately not a real jersey: a shape with the posture of one.
  *
- * Uniform targets live in a ref (`stateRef`) written by the DOM scroll story;
- * useFrame eases toward them, so React never re-renders on scroll.
+ * Targets live in a ref (`stateRef`) written by the scroll story; useFrame eases
+ * toward them, so React never re-renders on scroll.
  */
 
-export type ObjectState = ProductLens["object"];
+export type ObjectState = ProductLens["object"] & { present?: number };
 
 const vert = /* glsl */ `
   uniform float uTime;
@@ -76,13 +76,11 @@ const vert = /* glsl */ `
   void main() {
     vUv = uv;
     vec3 p = position;
-    // Proportion: shoulders push out, hem drops.
     float shoulder = smoothstep(0.3, 1.0, p.y);
     p.x *= 1.0 + uProportion * 0.5 * shoulder;
     p.z *= 1.0 + uProportion * 0.25 * shoulder;
     float hem = smoothstep(-0.3, -1.3, p.y);
     p.y -= uProportion * 0.4 * hem;
-    // Drape: slow fabric breathing, roughened by the material lens.
     float n = snoise(vec3(p.xy * 2.2, uTime * 0.35));
     float n2 = snoise(vec3(p.xz * 9.0, uTime * 0.2 + 5.0));
     p += normal * (n * 0.035 + n2 * 0.06 * uGrain);
@@ -121,37 +119,31 @@ const frag = /* glsl */ `
     vec3 v = normalize(vView);
     float front = smoothstep(-0.2, 0.6, n.z);
 
-    // Colour: base → accent, then a clash split at the chest line.
     vec3 col = mix(uBase, uAccent, smoothstep(0.0, 0.6, uHue));
     float split = step(0.8, vUv.y);
     col = mix(col, uClash, smoothstep(0.55, 1.0, uHue) * split);
 
-    // Graphics: broadcast bands + a diagonal slash.
     float band = step(0.5, fract(vUv.y * 3.0 + 0.2));
     float slashD = fract(vUv.x * 2.0 + vUv.y * 0.9);
     float slash = smoothstep(0.03, 0.0, abs(slashD - 0.5) - 0.11);
     col = mix(col, uPaper, band * uGraphic * 0.85);
     col = mix(col, mix(uAccent, uBase, smoothstep(0.0,0.6,uHue)), slash * uGraphic);
 
-    // Mark: oversized, off-centre, on the front only.
     float box = step(abs(vPos.x - 0.22), 0.2) * step(abs(vPos.y - 0.42), 0.14) * front;
     float boxInner = step(abs(vPos.x - 0.22), 0.14) * step(abs(vPos.y - 0.42), 0.08) * front;
     col = mix(col, uPaper, box * uMark);
     col = mix(col, uBase, boxInner * uMark);
 
-    // Trim: fresnel edge and hem / collar lines.
     float fres = pow(1.0 - max(dot(n, v), 0.0), 3.0);
     float hemLine = smoothstep(0.02, 0.0, abs(vUv.y - 0.03)) + smoothstep(0.02, 0.0, abs(vUv.y - 0.965));
     vec3 trimCol = mix(uAccent, uPaper, step(0.5, uHue));
     col = mix(col, trimCol, clamp(hemLine + fres * 0.9, 0.0, 1.0) * uTrim);
 
-    // Material: grain and a crushed sheen.
     float g = hash(vUv * 900.0 + floor(uTime * 8.0));
     col += (g - 0.5) * 0.16 * uGrain;
     float sheen = pow(max(dot(reflect(-v, n), normalize(vec3(0.4, 0.9, 0.6))), 0.0), 18.0);
     col += sheen * (0.08 + uGrain * 0.35);
 
-    // Lighting: hard key from above (arena), cold rim from behind.
     float diff = max(dot(n, normalize(vec3(0.35, 1.0, 0.7))), 0.0);
     float rim = pow(1.0 - max(dot(n, v), 0.0), 2.2);
     col = col * (0.32 + 0.78 * diff) + rim * vec3(0.55, 0.65, 1.0) * 0.22;
@@ -166,7 +158,6 @@ const frag = /* glsl */ `
 `;
 
 function makeGeometry() {
-  // Torso profile, bottom → top. Flattened along z in the mesh scale.
   const pts = [
     [0.62, -1.3], [0.66, -1.0], [0.7, -0.5], [0.71, 0.0], [0.76, 0.4], [0.9, 0.7],
     [1.0, 0.82], [0.86, 0.94], [0.48, 1.0], [0.36, 1.1], [0.3, 1.18], [0.26, 1.2],
@@ -178,7 +169,13 @@ function makeGeometry() {
   return geo;
 }
 
-function Garment({ stateRef, pointerRef, colors }: { stateRef: React.MutableRefObject<ObjectState>; pointerRef: React.MutableRefObject<{ x: number; y: number; spin: number }>; colors: { base: string; accent: string; clash: string; paper: string } }) {
+interface Props {
+  stateRef: React.MutableRefObject<ObjectState>;
+  pointerRef: React.MutableRefObject<{ x: number; y: number; spin: number }>;
+  colors: { base: string; accent: string; clash: string; paper: string };
+}
+
+function Garment({ stateRef, pointerRef, colors }: Props) {
   const group = useRef<THREE.Group>(null);
   const geo = useMemo(makeGeometry, []);
   const uniforms = useMemo(
@@ -209,6 +206,7 @@ function Garment({ stateRef, pointerRef, colors }: { stateRef: React.MutableRefO
     uniforms.uClash.value.set(colors.clash).convertLinearToSRGB();
     uniforms.uPaper.value.set(colors.paper).convertLinearToSRGB();
   }, [colors, uniforms]);
+
   // Materials are built imperatively so the uniform objects are bound exactly once.
   const materials = useMemo(() => {
     const body = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms });
@@ -226,13 +224,18 @@ function Garment({ stateRef, pointerRef, colors }: { stateRef: React.MutableRefO
     materials.body.dispose();
     materials.shell.dispose();
   }, [materials]);
-  const cur = useRef<ObjectState>({ proportion: 0, graphic: 0, hue: 0, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: 0 });
-  const { viewport } = useThree();
+
+  const cur = useRef<Required<ObjectState>>({ proportion: 0, graphic: 0, hue: 0, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: 0, zoom: 0, orbit: 0, look: 0, present: 0 });
+  const { viewport, camera } = useThree();
+  const lookAt = useRef(new THREE.Vector3());
 
   useFrame((_, dt) => {
     const k = 1 - Math.pow(0.001, dt); // frame-rate independent ease
     const c = cur.current, t = stateRef.current;
-    (Object.keys(c) as (keyof ObjectState)[]).forEach((key) => (c[key] += (t[key] - c[key]) * k * 0.9));
+    (Object.keys(c) as (keyof Required<ObjectState>)[]).forEach((key) => {
+      const target = t[key] ?? (key === "present" ? 1 : 0);
+      c[key] += (target - c[key]) * k * 0.9;
+    });
     uniforms.uTime.value += dt;
     uniforms.uProportion.value = c.proportion;
     uniforms.uGraphic.value = c.graphic;
@@ -243,14 +246,22 @@ function Garment({ stateRef, pointerRef, colors }: { stateRef: React.MutableRefO
     uniforms.uLayer.value = c.layer;
     if (group.current) {
       const p = pointerRef.current;
-      group.current.rotation.y += ((p.spin + p.x * 0.5 + Math.sin(uniforms.uTime.value * 0.25) * 0.35) - group.current.rotation.y) * k;
-      group.current.rotation.x += ((c.tilt * 0.45 + p.y * 0.15) - group.current.rotation.x) * k;
+      // Orbit is the camera's move per lens; the pointer nudges it; drag spins it.
+      group.current.rotation.y += ((p.spin + p.x * 0.35 + c.orbit * 1.3 + Math.sin(uniforms.uTime.value * 0.25) * 0.2) - group.current.rotation.y) * k;
+      group.current.rotation.x += ((c.tilt * 0.45 + p.y * 0.12) - group.current.rotation.x) * k;
       group.current.rotation.z += ((c.tilt * -0.25) - group.current.rotation.z) * k;
-      // Fit the object to the stage on both axes; portrait stages (mobile) also sit it lower, under the chrome.
-      const s = Math.min(0.98, viewport.width / 3.2, viewport.height / 2.6);
-      group.current.scale.setScalar(s);
+      // Fit the object to the stage on both axes; portrait stages (mobile) sit it lower, under the chrome.
+      const fit = Math.min(0.98, viewport.width / 3.2, viewport.height / 2.6);
+      group.current.scale.setScalar(fit * (0.001 + Math.max(0, c.present)));
       group.current.position.y = viewport.aspect < 1 ? -0.35 : -0.05;
     }
+    // Camera: zoom pushes in; look tilts the point of interest between hem and collar.
+    const targetZ = 5.8 - c.zoom * 3.4;
+    const targetY = c.look * 0.9 * (0.4 + c.zoom);
+    camera.position.z += (targetZ - camera.position.z) * k;
+    camera.position.y += (targetY * 0.6 - camera.position.y) * k;
+    lookAt.current.set(0, targetY, 0);
+    camera.lookAt(lookAt.current);
   });
 
   return (
@@ -261,12 +272,12 @@ function Garment({ stateRef, pointerRef, colors }: { stateRef: React.MutableRefO
   );
 }
 
-export default function GarmentScene(props: { stateRef: React.MutableRefObject<ObjectState>; pointerRef: React.MutableRefObject<{ x: number; y: number; spin: number }>; colors: { base: string; accent: string; clash: string; paper: string } }) {
+export default function GarmentScene(props: Props) {
   return (
     <Canvas
       dpr={[1, 1.6]}
       gl={{ antialias: true, powerPreference: "high-performance", alpha: true }}
-      camera={{ position: [0, 0, 4.4], fov: 32 }}
+      camera={{ position: [0, 0, 5.8], fov: 32 }}
       style={{ position: "absolute", inset: 0 }}
       frameloop="always"
     >

@@ -4,7 +4,7 @@ import { season } from "@/content/season";
 import type { Archetype } from "@/content/types";
 import { gsap, useGsap, useReducedMotion } from "@/lib/hooks";
 import Placeholder from "@/components/system/Placeholder";
-import { seeded, hashString } from "@/lib/utils";
+import { figureFor } from "@/lib/figure";
 import styles from "./Act02Antagonist.module.css";
 
 /**
@@ -13,37 +13,6 @@ import styles from "./Act02Antagonist.module.css";
  * the tone, the silhouette, the ticker, the archive strip, the quote.
  * No cards. The name is the furniture.
  */
-
-/** Abstract figure silhouettes: 15-point polygons, same count so GSAP can morph them. */
-function figureFor(a: Archetype): string {
-  const r = seeded(hashString(a.id));
-  const shoulder = 22 + r() * 16;
-  const head = 8 + r() * 3;
-  const lean = (r() - 0.5) * 14;
-  const hip = 14 + r() * 8;
-  const armL = r() > 0.5 ? -shoulder - 10 - r() * 14 : -shoulder - 2;
-  const armR = r() > 0.5 ? shoulder + 10 + r() * 14 : shoulder + 2;
-  const armLy = 30 + r() * 30;
-  const armRy = 30 + r() * 30;
-  const pts: [number, number][] = [
-    [50 + lean, 4],                            // head top
-    [50 + lean + head, 9],                     // head R
-    [50 + lean + head * 0.6, 18],              // neck R
-    [50 + shoulder, 24],                       // shoulder R
-    [50 + armR, armRy],                        // hand R
-    [50 + shoulder * 0.7, 46],                 // armpit R
-    [50 + hip, 62],                            // hip R
-    [50 + hip + 6, 100],                       // foot R
-    [50 - hip - 6, 100],                       // foot L
-    [50 - hip, 62],                            // hip L
-    [50 - shoulder * 0.7, 46],                 // armpit L
-    [50 + armL, armLy],                        // hand L
-    [50 - shoulder, 24],                       // shoulder L
-    [50 + lean - head * 0.6, 18],              // neck L
-    [50 + lean - head, 9],                     // head L
-  ];
-  return pts.map((p) => p.map((n) => n.toFixed(1)).join(",")).join(" ");
-}
 
 export default function Act02Antagonist() {
   const { archetypes } = season;

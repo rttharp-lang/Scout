@@ -1,27 +1,32 @@
 "use client";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import { season } from "@/content/season";
 import { gsap, useGsap, useReducedMotion } from "@/lib/hooks";
 import { useSound } from "@/components/system/SoundSystem";
+import { figureFor } from "@/lib/figure";
 import { seeded } from "@/lib/utils";
 import styles from "./Act03RageBait.module.css";
 
 /**
  * ACT 03 — RAGE BAIT
- * Quiet insight → the machinery of reaction piles up until the frame can't hold it → hard cut to nothing.
- * The removal is the point. The silence after is where the line lands.
+ * The room from Act 02 doesn't end. The last body stays where it was standing.
+ * First: stillness. One light, a body, three broadcast captions. Then the chant.
+ * Then the crowd arrives and buries it. Then the cut: body, crowd, everything gone.
  */
 
 const COMMENT_COUNT = 56;
 const FLASH_COUNT = 16;
 
 export default function Act03RageBait() {
-  const { ragebait } = season;
+  const { ragebait, archetypes } = season;
   const reduced = useReducedMotion();
   const { cue, setHostility } = useSound();
   const counterRef = useRef<HTMLSpanElement>(null);
   const lastFlash = useRef(-1);
   const cutFired = useRef(false);
+  const [caption, setCaption] = useState(-1);
+  const [chant, setChant] = useState(-1);
+  const figure = useMemo(() => figureFor(archetypes[archetypes.length - 1]), [archetypes]);
 
   const comments = useMemo(() => {
     const r = seeded(303);
@@ -32,19 +37,14 @@ export default function Act03RageBait() {
       y: 6 + r() * 82,
       rot: (r() - 0.5) * 14,
       size: 0.8 + r() * 0.9,
-      t: Math.pow(i / COMMENT_COUNT, 1.7) * 0.82, // accelerates
+      t: 0.36 + Math.pow(i / COMMENT_COUNT, 1.7) * 0.52,
       dark: r() > 0.7,
     }));
   }, [ragebait.comments]);
 
   const flashes = useMemo(() => {
     const r = seeded(77);
-    return Array.from({ length: FLASH_COUNT }, (_, i) => ({
-      x: r() * 100,
-      y: r() * 100,
-      s: 30 + r() * 60,
-      t: 0.28 + (i / FLASH_COUNT) * 0.62 + r() * 0.02,
-    }));
+    return Array.from({ length: FLASH_COUNT }, (_, i) => ({ x: r() * 100, y: r() * 100, s: 30 + r() * 60, t: 0.44 + (i / FLASH_COUNT) * 0.47 + r() * 0.02 }));
   }, []);
 
   const scope = useGsap(
@@ -57,97 +57,73 @@ export default function Act03RageBait() {
       const peak = el.querySelector<HTMLElement>("[data-peak]")!;
       const all = el.querySelector<HTMLElement>("[data-all]")!;
       const wall = el.querySelector<HTMLElement>("[data-wall]")!;
-
-      // Quiet part.
-      gsap.from(q("[data-insight] p"), {
-        opacity: 0,
-        y: 30,
-        stagger: 0.5,
-        duration: 1.2,
-        scrollTrigger: { trigger: el.querySelector("[data-insight]") as HTMLElement, start: "top 65%" },
-      });
-      gsap.from(q("[data-words] span"), {
-        opacity: 0,
-        x: -20,
-        stagger: 0.06,
-        duration: 0.3,
-        ease: "power4.out",
-        scrollTrigger: { trigger: el.querySelector("[data-words]") as HTMLElement, start: "top 70%" },
-      });
+      const fig = el.querySelector<HTMLElement>("[data-figure]")!;
+      const spot = el.querySelector<HTMLElement>("[data-spot]")!;
+      const white = el.querySelector<HTMLElement>("[data-white]")!;
 
       const tl = gsap.timeline({
         defaults: { ease: "none" },
         scrollTrigger: {
           trigger: stage,
           start: "top top",
-          end: "+=450%",
+          end: "+=560%",
           pin: true,
           scrub: 0.35,
           onUpdate: (self) => {
             const p = self.progress;
-            setHostility(Math.min(1, p * 1.3));
-            // Counter
+            setHostility(p < 0.3 ? 0 : Math.min(1, (p - 0.3) * 1.8));
+            // Captions, one at a time, cut.
+            setCaption(p < 0.05 ? -1 : p < 0.22 ? Math.min(ragebait.insight.length - 1, Math.floor(((p - 0.05) / 0.17) * ragebait.insight.length)) : -1);
+            setChant(p < 0.22 || p >= 0.34 ? -1 : Math.min(ragebait.words.length - 1, Math.floor(((p - 0.22) / 0.12) * ragebait.words.length)));
             if (counterRef.current) {
-              const v = Math.floor(Math.pow(Math.min(p, 0.93) / 0.93, 2.4) * 4120882);
+              const v = Math.floor(Math.pow(gsap.utils.clamp(0, 1, (p - 0.34) / 0.59), 2.4) * 4120882);
               counterRef.current.textContent = v.toLocaleString("en-US").padStart(9, "0");
             }
-            // Flash cues
             let idx = -1;
             for (let i = 0; i < flashes.length; i++) if (flashes[i].t <= p) idx = i;
             if (idx !== lastFlash.current) {
               if (idx > lastFlash.current && p < 0.94) cue("flash", 0.5 + idx / flashes.length);
               lastFlash.current = idx;
             }
-            // Shake
+            // The body takes the heat: stroke turns hostile, then it shakes with the room.
+            fig.style.setProperty("--heat", String(gsap.utils.clamp(0, 1, (p - 0.4) / 0.4)));
             if (p > 0.78 && p < 0.94) {
               const k = ((p - 0.78) / 0.16) * 6;
               wall.style.transform = `translate(${(Math.random() - 0.5) * k}px, ${(Math.random() - 0.5) * k}px)`;
             } else wall.style.transform = "";
-            // Cut
-            if (p >= 0.94 && !cutFired.current) {
-              cutFired.current = true;
-              cue("cut");
-            }
+            if (p >= 0.94 && !cutFired.current) { cutFired.current = true; cue("cut"); }
             if (p < 0.9) cutFired.current = false;
           },
         },
       });
 
-      // Title grows, then ghosts split off.
-      tl.fromTo(title, { scale: 0.6, opacity: 0.6 }, { scale: 1.35, opacity: 1, duration: 0.9 }, 0);
-      tl.fromTo(ghosts[0], { x: 0, opacity: 0 }, { x: -30, y: 10, opacity: 0.8, duration: 0.5 }, 0.35);
-      tl.fromTo(ghosts[1], { x: 0, opacity: 0 }, { x: 34, y: -12, opacity: 0.8, duration: 0.5 }, 0.42);
-
-      // Comments arrive, accelerating.
+      // Stillness: the light finds the body.
+      tl.fromTo(spot, { opacity: 0 }, { opacity: 1, duration: 0.03 }, 0.01);
+      // Title grows through the escalation; ghosts split off.
+      tl.fromTo(title, { scale: 0.5, opacity: 0 }, { opacity: 0.9, duration: 0.01 }, 0.34);
+      tl.to(title, { scale: 1.35, duration: 0.56 }, 0.35);
+      tl.fromTo(ghosts[0], { x: 0, opacity: 0 }, { x: -30, y: 10, opacity: 0.8, duration: 0.3 }, 0.55);
+      tl.fromTo(ghosts[1], { x: 0, opacity: 0 }, { x: 34, y: -12, opacity: 0.8, duration: 0.3 }, 0.6);
       q("[data-comment]").forEach((c, i) => {
         const t = comments[i].t;
-        tl.fromTo(c, { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.012 }, t);
-        // late-arriving ones keep growing to crowd the frame
-        if (i > COMMENT_COUNT * 0.6) tl.to(c, { scale: 1.6, duration: 0.2 }, t + 0.03);
+        tl.fromTo(c, { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.01 }, t);
+        if (i > COMMENT_COUNT * 0.6) tl.to(c, { scale: 1.6, duration: 0.15 }, t + 0.03);
       });
-
-      // Camera flashes: hard on, quick off.
       q("[data-flash]").forEach((f, i) => {
         const t = flashes[i].t;
         tl.fromTo(f, { opacity: 0 }, { opacity: 1, duration: 0.004 }, t);
         tl.to(f, { opacity: 0, duration: 0.02 }, t + 0.004);
       });
-      // Full-frame white at the last flashes.
-      const white = el.querySelector<HTMLElement>("[data-white]")!;
       [0.86, 0.9, 0.925].forEach((t) => {
         tl.fromTo(white, { opacity: 0 }, { opacity: 0.9, duration: 0.004 }, t);
         tl.to(white, { opacity: 0, duration: 0.012 }, t + 0.004);
       });
-
-      // Peak statement.
-      tl.fromTo(peak, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.03 }, 0.8);
-      tl.to(peak, { scale: 1.15, duration: 0.14 }, 0.83);
-
-      // THE CUT. Everything gone at once. No fade.
+      tl.fromTo(peak, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.02 }, 0.8);
+      tl.to(peak, { scale: 1.15, duration: 0.14 }, 0.82);
+      // THE CUT.
       tl.set(all, { opacity: 0 }, 0.94);
       tl.set(stage, { backgroundColor: "#000" }, 0.94);
 
-      // Silence.
       gsap.from(el.querySelector("[data-silence]"), {
         opacity: 0,
         duration: 2.4,
@@ -155,37 +131,42 @@ export default function Act03RageBait() {
         scrollTrigger: { trigger: el.querySelector("[data-silence-wrap]") as HTMLElement, start: "top 30%" },
       });
     },
-    [reduced, comments, flashes]
+    [reduced, comments, flashes, ragebait.insight.length, ragebait.words.length]
   );
 
   return (
     <section id="act-ragebait" className={`act ${styles.act}`} ref={scope} aria-label="Act 03 — Rage Bait" data-theme="dark">
-      <div className={styles.insight} data-insight>
-        {ragebait.insight.map((l, i) => (
-          <p key={i} className={`${styles.insightLine} t-display`}>
-            {l}
-          </p>
-        ))}
-      </div>
-
-      <div className={`${styles.words} t-wide`} data-words>
-        {ragebait.words.map((w) => (
-          <span key={w}>{w}</span>
-        ))}
-      </div>
-
       <div className={`pin-stage ${styles.stage} ${reduced ? styles.static : ""}`} data-stage>
         <div className={styles.all} data-all>
+          <div className={styles.spot} data-spot aria-hidden="true" />
           <div className={styles.wall} data-wall>
-            <div className={`${styles.title} t-display`} data-title aria-hidden="true">
-              {season.meta.chapter}
+            {/* The same body, same place, as the end of Act 02. */}
+            <div className={styles.figure} data-figure aria-hidden="true">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet">
+                <polygon points={figure} />
+              </svg>
             </div>
-            <div className={`${styles.title} ${styles.ghostA} t-display`} data-ghost aria-hidden="true">
-              {season.meta.chapter}
+
+            <div className={`${styles.captions} t-mono t-mono--lg`} aria-live="polite">
+              {ragebait.insight.map((l, i) => (
+                <p key={l} style={{ visibility: caption === i || reduced ? "visible" : "hidden" }}>
+                  <span className={styles.capIdx}>{String(i + 1).padStart(2, "0")}</span>
+                  {l}
+                </p>
+              ))}
             </div>
-            <div className={`${styles.title} ${styles.ghostB} t-display`} data-ghost aria-hidden="true">
-              {season.meta.chapter}
+
+            <div className={`${styles.chant} t-display`} aria-hidden="true">
+              {ragebait.words.map((w, i) => (
+                <span key={w} style={{ visibility: chant === i || reduced ? "visible" : "hidden" }}>
+                  {w}
+                </span>
+              ))}
             </div>
+
+            <div className={`${styles.title} t-display`} data-title aria-hidden="true">{season.meta.chapter}</div>
+            <div className={`${styles.title} ${styles.ghostA} t-display`} data-ghost aria-hidden="true">{season.meta.chapter}</div>
+            <div className={`${styles.title} ${styles.ghostB} t-display`} data-ghost aria-hidden="true">{season.meta.chapter}</div>
 
             {comments.map((c, i) => (
               <div
@@ -198,27 +179,15 @@ export default function Act03RageBait() {
                 <span className={styles.handle}>{c.handle}</span> {c.text}
               </div>
             ))}
-
             {flashes.map((f, i) => (
-              <div
-                key={i}
-                className={styles.flash}
-                data-flash
-                style={{ left: `${f.x}%`, top: `${f.y}%`, width: `${f.s}vmin`, height: `${f.s}vmin` }}
-                aria-hidden="true"
-              />
+              <div key={i} className={styles.flash} data-flash style={{ left: `${f.x}%`, top: `${f.y}%`, width: `${f.s}vmin`, height: `${f.s}vmin` }} aria-hidden="true" />
             ))}
 
             <div className={`${styles.counter} t-mono`} aria-hidden="true">
               <span className={styles.counterLabel}>{ragebait.counterLabel}</span>
-              <span ref={counterRef} className={styles.counterValue}>
-                000,000,000
-              </span>
+              <span ref={counterRef} className={styles.counterValue}>000,000,000</span>
             </div>
-
-            <div className={`${styles.peak} t-display`} data-peak>
-              {ragebait.peak}
-            </div>
+            <div className={`${styles.peak} t-display`} data-peak>{ragebait.peak}</div>
           </div>
           <div className={styles.white} data-white aria-hidden="true" />
         </div>
@@ -226,9 +195,7 @@ export default function Act03RageBait() {
       </div>
 
       <div className={styles.silenceWrap} data-silence-wrap>
-        <p className={`${styles.silence} t-body`} data-silence>
-          {ragebait.silence}
-        </p>
+        <p className={`${styles.silence} t-body`} data-silence>{ragebait.silence}</p>
       </div>
     </section>
   );

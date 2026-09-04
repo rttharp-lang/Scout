@@ -92,7 +92,10 @@ export interface ProductLens {
     trim: number;         // 0..1  edge highlight
     mark: number;         // 0..1  oversized branding placement
     layer: number;        // 0..1  second shell
-    tilt: number;         // -1..1 camera tilt for styling
+    tilt: number;         // -1..1 object tilt
+    zoom: number;         // 0..1  camera distance: 0 far (whole body), 1 macro
+    orbit: number;        // -1..1 camera orbit around the object
+    look: number;         // -1..1 vertical point of interest: -1 hem, 1 collar
   };
 }
 

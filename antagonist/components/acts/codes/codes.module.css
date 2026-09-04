@@ -1,95 +1,106 @@
+/* The shared room: one chapter visible at a time, absolutely filling the stage. */
 .chapter {
-  position: relative;
-  height: 190svh;
+  position: absolute;
+  inset: 0;
 }
 .chapterStatic {
-  height: auto;
-}
-.stage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  overflow: hidden;
-  background: var(--ink);
-  color: var(--paper);
-}
-.chapterStatic .stage {
   position: relative;
-  height: auto;
   min-height: 100svh;
 }
-.stageHead {
+.head {
   position: absolute;
   z-index: 3;
   left: var(--gutter);
-  right: var(--gutter);
+  right: calc(var(--gutter) + 120px);
   top: 72px;
   display: flex;
   justify-content: space-between;
   pointer-events: none;
 }
+.headIdx {
+  opacity: 0.6;
+}
 .prompt {
   transition: opacity 0.4s;
 }
 
-.reveal {
+/* The stamp: the code lands on top of whatever the user just made. */
+.stamp {
   position: absolute;
   z-index: 4;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 24px var(--gutter) 28px;
-  background: var(--paper);
-  color: var(--ink);
-  transform: translateY(101%);
-  transition: transform 0.8s var(--ease-hard);
+  inset: 0;
   display: grid;
-  grid-template-columns: auto 1fr 1fr;
-  gap: 8px 32px;
-  align-items: end;
+  place-items: start center;
+  padding-top: 20vh;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  color: var(--paper);
+  opacity: 0;
+  transform: scale(1.12);
+  transition: opacity 0.05s steps(1), transform 0.35s var(--ease-hard);
 }
-.revealOn {
+.stampOn {
+  opacity: 1;
   transform: none;
 }
-.chapterStatic .reveal {
-  position: relative;
-  transform: none;
+.stampIdx {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 10vh;
+  font-size: clamp(64px, 12vw, 220px);
+  opacity: 0.35;
 }
-.idx {
+.stampTitle {
   margin: 0;
-  grid-row: 1 / 3;
-  font-size: 13px;
+  padding: 0 var(--gutter);
+  font-size: clamp(40px, 11vw, 200px);
+  text-align: center;
+  line-height: 0.82;
 }
-.title {
-  margin: 0;
-  grid-column: 2 / 4;
-  font-size: clamp(36px, 6vw, 96px);
+.caption {
+  position: absolute;
+  z-index: 4;
+  right: var(--gutter);
+  bottom: 24px;
+  width: min(44ch, 60vw);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s 0.3s;
+  pointer-events: none;
+}
+.captionOn {
+  opacity: 1;
 }
 .statement {
   margin: 0;
   font-size: clamp(16px, 1.6vw, 24px);
   font-weight: 700;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 4px 8px;
+  align-self: flex-start;
 }
 .explanation {
   margin: 0;
-  font-size: clamp(14px, 1.15vw, 17px);
-  max-width: 48ch;
-  opacity: 0.8;
+  font-size: clamp(13px, 1.1vw, 16px);
+  opacity: 0.85;
+  background: rgba(7, 7, 7, 0.75);
+  padding: 8px;
 }
 @media (max-width: 720px) {
-  .reveal {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding-bottom: 22px;
+  .head {
+    top: 100px;
+    right: var(--gutter);
   }
-  .idx {
-    grid-row: auto;
+  .stampIdx {
+    top: 20vh;
   }
-  .title {
-    grid-column: auto;
-  }
-  .stageHead {
-    top: 96px;
+  .caption {
+    width: auto;
+    left: var(--gutter);
+    bottom: 16px;
   }
 }
 

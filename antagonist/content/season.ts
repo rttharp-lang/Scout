@@ -267,7 +267,7 @@ export const season: SeasonConfig = {
         provocation: "The shape should be read from the upper deck.",
         possibilities: ["Exaggerated shoulder line", "Drop hems that move late", "Cropped over long, long over cropped"],
         media: slot("product-silhouette", "Silhouette study — full length", { ratio: "3 / 4" }),
-        object: { proportion: 1, graphic: 0, hue: 0, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: 0 },
+        object: { proportion: 1, graphic: 0, hue: 0, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: 0 , zoom: 0, orbit: 0, look: 0 },
       },
       {
         id: "graphics",
@@ -275,7 +275,7 @@ export const season: SeasonConfig = {
         provocation: "Graphics should talk before the athlete does.",
         possibilities: ["Broadcast-scale numerals", "Crowd-sign typography", "Headline crops as print"],
         media: slot("product-graphics", "Graphic study — chest placement", { ratio: "1 / 1", treatment: "halftone" }),
-        object: { proportion: 0.5, graphic: 1, hue: 0.1, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: 0.1 },
+        object: { proportion: 0.5, graphic: 1, hue: 0.1, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: 0.1 , zoom: 0.35, orbit: 0.15, look: 0.2 },
       },
       {
         id: "color",
@@ -283,7 +283,7 @@ export const season: SeasonConfig = {
         provocation: "Colour that the opposing arena can see coming.",
         possibilities: ["One hostile hue per franchise", "Clash pairings, never tonal", "Away colour as a statement"],
         media: slot("product-color", "Colour study — clash pairing", { ratio: "4 / 5", treatment: "flat" }),
-        object: { proportion: 0.5, graphic: 0.3, hue: 1, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: -0.1 },
+        object: { proportion: 0.5, graphic: 0.3, hue: 1, grain: 0.1, trim: 0, mark: 0, layer: 0, tilt: -0.1 , zoom: 0.2, orbit: -0.45, look: 0 },
       },
       {
         id: "material",
@@ -291,7 +291,7 @@ export const season: SeasonConfig = {
         provocation: "Surfaces with a temper.",
         possibilities: ["Crushed and coated", "Warm-up knit with a raw edge", "Sheen that flashes under arena light"],
         media: slot("product-material", "Material study — macro", { ratio: "1 / 1", treatment: "grain" }),
-        object: { proportion: 0.4, graphic: 0.2, hue: 0.5, grain: 1, trim: 0.2, mark: 0, layer: 0, tilt: 0.2 },
+        object: { proportion: 0.4, graphic: 0.2, hue: 0.5, grain: 1, trim: 0.2, mark: 0, layer: 0, tilt: 0.2 , zoom: 0.9, orbit: 0.3, look: 0.1 },
       },
       {
         id: "trim",
@@ -299,7 +299,7 @@ export const season: SeasonConfig = {
         provocation: "The edge is where the argument lives.",
         possibilities: ["Contrast binding as a line drawing", "Exposed seams as graphics", "Hardware that clicks"],
         media: slot("product-trim", "Trim study — binding detail", { ratio: "1 / 1", treatment: "scan" }),
-        object: { proportion: 0.4, graphic: 0.1, hue: 0.4, grain: 0.4, trim: 1, mark: 0, layer: 0, tilt: 0 },
+        object: { proportion: 0.4, graphic: 0.1, hue: 0.4, grain: 0.4, trim: 1, mark: 0, layer: 0, tilt: 0 , zoom: 0.8, orbit: 0, look: -0.9 },
       },
       {
         id: "branding",
@@ -307,7 +307,7 @@ export const season: SeasonConfig = {
         provocation: "Placement that provokes.",
         possibilities: ["Oversized and off-centre", "Hidden until the second look", "Marks that read as a taunt"],
         media: slot("product-branding", "Branding study — placement", { ratio: "4 / 5", treatment: "flat" }),
-        object: { proportion: 0.4, graphic: 0.1, hue: 0.4, grain: 0.3, trim: 0.3, mark: 1, layer: 0, tilt: -0.15 },
+        object: { proportion: 0.4, graphic: 0.1, hue: 0.4, grain: 0.3, trim: 0.3, mark: 1, layer: 0, tilt: -0.15 , zoom: 0.6, orbit: -0.2, look: 0.45 },
       },
       {
         id: "layering",
@@ -315,7 +315,7 @@ export const season: SeasonConfig = {
         provocation: "The tunnel walk is a layering problem.",
         possibilities: ["Shell over shell", "Warm-up worn as outerwear", "Undershirts that are the story"],
         media: slot("product-layering", "Layering study — tunnel", { ratio: "3 / 4", treatment: "blur" }),
-        object: { proportion: 0.6, graphic: 0.2, hue: 0.3, grain: 0.4, trim: 0.5, mark: 0.4, layer: 1, tilt: 0.15 },
+        object: { proportion: 0.6, graphic: 0.2, hue: 0.3, grain: 0.4, trim: 0.5, mark: 0.4, layer: 1, tilt: 0.15 , zoom: 0.3, orbit: 0.6, look: 0 },
       },
       {
         id: "proportion",
@@ -323,7 +323,7 @@ export const season: SeasonConfig = {
         provocation: "Wrong on purpose.",
         possibilities: ["Extra-long over extra-short", "Shoulder wider than the frame", "Collar as a crown"],
         media: slot("product-proportion", "Proportion study — profile", { ratio: "3 / 4", treatment: "grain" }),
-        object: { proportion: 1, graphic: 0.3, hue: 0.3, grain: 0.3, trim: 0.3, mark: 0.3, layer: 0.5, tilt: 0.3 },
+        object: { proportion: 1, graphic: 0.3, hue: 0.3, grain: 0.3, trim: 0.3, mark: 0.3, layer: 0.5, tilt: 0.3 , zoom: 0.05, orbit: -0.1, look: 0 },
       },
       {
         id: "customization",
@@ -331,7 +331,7 @@ export const season: SeasonConfig = {
         provocation: "Let the athlete finish the sentence.",
         possibilities: ["Number, name, insult", "Swappable panels", "Court-side personalisation"],
         media: slot("product-customization", "Customisation study — panels", { ratio: "1 / 1", treatment: "halftone" }),
-        object: { proportion: 0.6, graphic: 0.8, hue: 0.6, grain: 0.3, trim: 0.5, mark: 0.6, layer: 0.5, tilt: 0 },
+        object: { proportion: 0.6, graphic: 0.8, hue: 0.6, grain: 0.3, trim: 0.5, mark: 0.6, layer: 0.5, tilt: 0 , zoom: 0.5, orbit: 0.9, look: 0.3 },
       },
       {
         id: "styling",
@@ -339,7 +339,7 @@ export const season: SeasonConfig = {
         provocation: "The full look is the product.",
         possibilities: ["Tunnel to tip-off as one story", "Off-court codes on court", "Editorial first, catalogue never"],
         media: slot("product-styling", "Styling study — editorial", { ratio: "3 / 4", treatment: "blur" }),
-        object: { proportion: 0.7, graphic: 0.6, hue: 0.8, grain: 0.5, trim: 0.7, mark: 0.7, layer: 0.8, tilt: -0.4 },
+        object: { proportion: 0.7, graphic: 0.6, hue: 0.8, grain: 0.5, trim: 0.7, mark: 0.7, layer: 0.8, tilt: -0.4 , zoom: 0.15, orbit: -0.7, look: -0.1 },
       },
     ],
   },

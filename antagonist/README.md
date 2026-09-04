@@ -69,6 +69,7 @@ content/
   types.ts             SeasonConfig schema
   season.ts            THE season file
 lib/
+  figure.ts            shared archetype silhouettes (Acts 02 and 03)
   gsap.ts              GSAP + ScrollTrigger registration
   hooks.ts             useGsap (scoped contexts), useReducedMotion, useCoarsePointer, useWebGL
   utils.ts             clamp / lerp / seeded random (deterministic placeholders)
@@ -82,12 +83,12 @@ components/webgl/
   GarmentScene.tsx     Act 05 R3F scene: procedural garment with custom vertex/fragment shaders
 components/acts/
   Act00Tunnel.tsx      entry: noise → cut → statement → reveal → burst
-  Act01Reaction.tsx    LOVE ↔ HATE attention field (canvas 2D) with slider
+  Act01Reaction.tsx    arena: burst decays, headline in cuts, LOVE ↔ HATE field with slider
   Act02Antagonist.tsx  mutating environment for six archetypes
-  Act03RageBait.tsx    escalation to overload, hard cut, silence
-  Act04Codes.tsx       five interactive code chapters (codes/Chapter.tsx, codes/Interactions.tsx)
-  Act05Product.tsx     persistent object + ten scrolling lenses
-  Act06Worlds.tsx      horizontal track of four worlds (stacked on touch)
+  Act03RageBait.tsx    same body, stillness → chant → overload → hard cut → silence
+  Act04Codes.tsx       one room, five codes, hard cuts, stamp reveals (codes/)
+  Act05Product.tsx     paper studio: one object, ten camera set-ups, annotations
+  Act06Worlds.tsx      four rooms with their own wipes (lights, page, buzzer, tunnel)
   Act07Exit.tsx        timed exit sequence
 ```
 
@@ -100,6 +101,13 @@ duplicated without touching the others.
 - **One clock.** Lenis runs on `gsap.ticker`; ScrollTrigger listens to Lenis.
   All pins are standard ScrollTrigger pins (`pin`, `scrub`), which is why they
   survive resize and font loading.
+- **Rooms, not sections.** Acts 01, 03, 04, 05 and 06 are each a single pinned
+  stage. Scroll progress selects a beat (a headline cut, a code, a camera
+  set-up, a world) and the stage changes state; nothing scrolls past. The
+  transitions are cuts, wipes, strobes and camera moves, never the page moving.
+- **Objects persist.** The tunnel's white burst decays inside Act 01. The last
+  archetype's body stands in the same place through Act 03 until the cut
+  removes it. The garment never leaves Act 05; the camera moves around it.
 - **Scrubbed timelines** (Acts 00, 02, 03) map scroll progress to a timeline so
   every beat is reversible. Discrete cuts use `.set()` on purpose: the removal in
   Act 03 is a cut, not a fade.
@@ -109,8 +117,9 @@ duplicated without touching the others.
 - **WebGL is selective.** Two hero moments: the tunnel (Act 00) and the garment
   (Act 05). Both are lazy-loaded with `next/dynamic`, run only while on screen,
   cap device pixel ratio, and have CSS fallbacks when WebGL is unavailable.
-- **Object ↔ scroll sync (Act 05).** Lens ScrollTriggers write a target state to
-  a ref; `useFrame` eases the shader uniforms toward it every frame.
+- **Object ↔ scroll sync (Act 05).** The pinned stage writes the active lens's
+  `object` state (shader uniforms plus `zoom`, `orbit`, `look` for the camera)
+  to a ref; `useFrame` eases uniforms and camera toward it every frame.
 - **Rhythm.** Acts alternate quiet (01 headline, 03 insight, 03 silence, 07) and
   pressure (00 burst, 03 overload, 06 track). Not everything moves.
 - **Reduced motion.** `prefers-reduced-motion` disables Lenis and every pin;

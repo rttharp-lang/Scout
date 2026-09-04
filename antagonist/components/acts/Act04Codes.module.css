@@ -2,21 +2,38 @@
   background: var(--ink);
   color: var(--paper);
 }
-.intro {
-  min-height: 80svh;
-  padding: 24vh var(--gutter) 12vh;
+.room {
+  background: var(--ink);
+}
+.roomStatic {
+  height: auto;
+}
+.tally {
+  position: absolute;
+  right: var(--gutter);
+  top: 72px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 16px;
+  gap: 4px;
+  z-index: 5;
 }
-.title {
-  margin: 0;
-  font-size: clamp(48px, 11vw, 200px);
+.tally i {
+  width: 18px;
+  height: 2px;
+  background: rgba(242, 239, 233, 0.2);
 }
-.sub {
-  margin: 0;
-  max-width: 44ch;
-  font-size: clamp(16px, 1.5vw, 22px);
-  opacity: 0.8;
+.tally i[data-on="true"] {
+  background: var(--paper);
+}
+.shutter {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 6;
+}
+@media (max-width: 720px) {
+  .tally {
+    display: none;
+  }
 }
