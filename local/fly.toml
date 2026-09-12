@@ -1,0 +1,22 @@
+# Example Fly.io config: one always-on machine (the job runner and scheduler live in-process).
+app = "local-fandom"
+primary_region = "ord"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8787"
+  LOCAL_DB_PATH = "/app/data/local.db"
+  LOCAL_COOKIE_SECURE = "true"
+
+[[mounts]]
+  source = "local_data"
+  destination = "/app/data"
+
+[http_service]
+  internal_port = 8787
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1

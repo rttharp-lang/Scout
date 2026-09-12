@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import { api, fmtDate, fmtTime } from "../lib/api.js";
+import { useApp, useWorkspace, useFetch } from "../lib/store.jsx";
+import { Label, Empty } from "../components/ui.jsx";
+
+export default function Settings() {
+  const { wid } = useParams(); const { teams, llm } = useApp(); const ws = useWorkspace(wid); const admin = ws?.role === "admin";
+  const { data, reload } = useFetch(`/workspaces/${wid}`, [wid]);
+  const { data: connectors, reload: reloadC } = useFetch(`/connectors`, []);
+  const { data: schedules, reload: reloadS } = useFetch(`/workspaces/${wid}/schedules`, [wid]);
+  const { data: audit } = useFetch(admin ? `/workspaces/${wid}/audit` : null, [wid, admin]);
+  const [m, setM] = useState({ email: "", name: "", role: "viewer", password: "" });
+  const [ms, setMs] = useState({ label: "", on: "", kind: "briefing", team_id: "" });
+  const [sch, setSch] = useState({ team_id: "", frequency_hours: 168, question: "" });
+  const [srcMap, setSrcMap] = useState({ team_id: "", key: "media_sources", url: "" });
+  const [budget, setBudget] = useState(data?.settings?.budget_limits?.max_usd_per_run || "");
+  const settings = data?.settings || {};
+  const save = async (patch) => { await api.patch(`/workspaces/${wid}/settings`, patch); reload(); };
+  const addMember = async () => { await api.post(`/workspaces/${wid}/members`, m); setM({ email: "", name: "", role: "viewer", password: "" }); reload(); };
+  const addMilestone = async () => { await save({ product_milestones: [...(settings.product_milestones || []), { ...ms, id: `m_${Date.now()}` }] }); setMs({ label: "", on: "", kind: "briefing", team_id: "" }); };
+  const removeMilestone = async (id) => save({ product_milestones: (settings.product_milestones || []).filter((x) => x.id !== id) });
+  const addSchedule = async () => { await api.post(`/workspaces/${wid}/schedules`, { team_id: sch.team_id, frequency_hours: Number(sch.frequency_hours), kind: "refresh", config: { question: sch.question } }); setSch({ team_id: "", frequency_hours: 168, question: "" }); reloadS(); };
+  const addSource = async () => { const maps = { ...(settings.source_maps || {}) }; const t = { ...(maps[srcMap.team_id] || {}) }; t[srcMap.key] = [...(t[srcMap.key] || []), srcMap.url]; maps[srcMap.team_id] = t; await save({ source_maps: maps }); setSrcMap({ ...srcMap, url: "" }); };
+  return (
+    <main className="wrap" style={{ paddingTop: 30 }}>
+      <div className="eyebrow">Workspace settings</div><h2 className="section">{data?.name}</h2>
+      <div className="row small"><span className="pill">kind: {data?.kind}</span><span className="pill">your role: {ws?.role}</span><span className="pill">model: {llm?.configured ? `${llm.model} (${llm.provider})` : "not configured"}</span><span className="pill">internal docs to model: {llm?.internal_docs_allowed ? "allowed" : "blocked (default)"}</span></div>
+      <div className="grid cols-2" style={{ marginTop: 20 }}>
+        <div className="card stack"><div className="eyebrow">Access roles</div>
+          <table className="data"><thead><tr><th>Name</th><th>Role</th>{admin && <th></th>}</tr></thead><tbody>{(data?.members || []).map((x) => <tr key={x.user_id}><td>{x.name}{x.email ? <div className="small">{x.email}</div> : null}</td><td>{x.role}</td>{admin && <td><button className="btn ghost sm" onClick={async () => { await api.del(`/workspaces/${wid}/members/${x.user_id}`); reload(); }}>Remove</button></td>}</tr>)}</tbody></table>
+          {admin && <div className="grid cols-2">{[["email", "Email"], ["name", "Name"], ["password", "Password (new users)"]].map(([k, l]) => <div key={k}><label className="field">{l}</label><input className="input" type={k === "password" ? "password" : "text"} value={m[k]} onChange={(e) => setM({ ...m, [k]: e.target.value })} /></div>)}<div><label className="field">Role</label><select className="input" value={m.role} onChange={(e) => setM({ ...m, role: e.target.value })}>{["viewer", "editor", "admin"].map((r) => <option key={r}>{r}</option>)}</select></div><button className="btn sm" onClick={addMember} disabled={!m.email}>Add / update member</button></div>}
+          <p className="small">Authorization is enforced on backend routes and exports. Viewers cannot access individual research responses, uploads, or confidential briefs.</p>
+        </div>
+        <div className="card stack"><div className="eyebrow">Integrations (verified connector states)</div>
+          <ul className="list-plain">{(connectors || []).map((c) => <li key={c.id}><div className="row"><Label kind={c.state} /><b>{c.name}</b><span className="small">checked {fmtTime(c.last_checked_at)}</span></div><div className="small">{c.detail}</div></li>)}</ul>
+          <button className="btn ghost sm" onClick={async () => { await api.post(`/connectors/check`); reloadC(); }}>Re-check connectors</button>
+          <p className="small">Credentials are server-side environment variables (see .env.example). No platform is shown connected without a verified check.</p>
+        </div>
+        <div className="card stack"><div className="eyebrow">Product milestones (design, briefing, approval, production, launch, wear date)</div>
+          {settings.product_milestones?.length ? <ul className="list-plain">{settings.product_milestones.map((x) => <li key={x.id}><b>{x.label}</b> · {fmtDate(x.on)} · {x.kind} · {x.team_id ? teams.find((t) => t.id === x.team_id)?.name : "all teams"}{x.on < new Date().toISOString().slice(0, 10) ? <span className="chip state" style={{ marginLeft: 6 }}>passed</span> : null}{admin && <button className="btn ghost sm" style={{ marginLeft: 8 }} onClick={() => removeMilestone(x.id)}>Remove</button>}</li>)}</ul> : <p className="small">None configured. LOCAL does not assume Nike lead times; enter your own gates.</p>}
+          {admin && <div className="grid cols-2"><div><label className="field">Label</label><input className="input" value={ms.label} onChange={(e) => setMs({ ...ms, label: e.target.value })} /></div><div><label className="field">Date</label><input className="input" type="date" value={ms.on} onChange={(e) => setMs({ ...ms, on: e.target.value })} /></div><div><label className="field">Kind</label><select className="input" value={ms.kind} onChange={(e) => setMs({ ...ms, kind: e.target.value })}>{["design", "briefing", "approval", "production", "launch", "wear_date"].map((k) => <option key={k}>{k}</option>)}</select></div><div><label className="field">Team</label><select className="input" value={ms.team_id} onChange={(e) => setMs({ ...ms, team_id: e.target.value })}><option value="">All teams</option>{teams.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}</select></div><button className="btn sm" disabled={!ms.label || !ms.on} onClick={addMilestone}>Add milestone</button></div>}
+        </div>
+        <div className="card stack"><div className="eyebrow">Research schedules (real backend scheduler)</div>
+          {schedules?.length ? <ul className="list-plain">{schedules.map((s) => <li key={s.id}><b>{teams.find((t) => t.id === s.team_id)?.name}</b> · every {s.frequency_hours}h · {s.enabled ? "enabled" : "paused"} · next {fmtTime(s.next_run_at)} · last {s.last_run_at ? fmtTime(s.last_run_at) : "never"}{admin && <span> · <button className="btn ghost sm" onClick={async () => { await api.patch(`/workspaces/${wid}/schedules/${s.id}`, { enabled: !s.enabled }); reloadS(); }}>{s.enabled ? "Pause" : "Enable"}</button> <button className="btn ghost sm" onClick={async () => { await api.del(`/workspaces/${wid}/schedules/${s.id}`); reloadS(); }}>Delete</button></span>}</li>)}</ul> : <p className="small">No schedules. Nothing is running until you add one.</p>}
+          {admin && <div className="grid cols-2"><div><label className="field">Team</label><select className="input" value={sch.team_id} onChange={(e) => setSch({ ...sch, team_id: e.target.value })}><option value="">Select…</option>{teams.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}</select></div><div><label className="field">Frequency (hours)</label><input className="input" type="number" value={sch.frequency_hours} onChange={(e) => setSch({ ...sch, frequency_hours: e.target.value })} /></div><div style={{ gridColumn: "1 / -1" }}><label className="field">Standing question</label><input className="input" value={sch.question} onChange={(e) => setSch({ ...sch, question: e.target.value })} placeholder="Refresh changed sources and watchlist" /></div><button className="btn sm" disabled={!sch.team_id} onClick={addSchedule}>Add schedule</button></div>}
+        </div>
+        <div className="card stack"><div className="eyebrow">Team source maps (local media, fan sites, feeds)</div>
+          <p className="small">Specialists search local terms, neighborhood names and historical team names, but need real local sources. Add feed and page URLs per team. Public fetching respects robots.txt, rate limits and access controls.</p>
+          {Object.entries(settings.source_maps || {}).map(([tid, map]) => <div key={tid} className="small"><b>{teams.find((t) => t.id === tid)?.name || tid}</b>: {Object.entries(map).map(([k, v]) => `${k} (${v.length})`).join(" · ")}</div>)}
+          {admin && <div className="grid cols-3"><div><label className="field">Team</label><select className="input" value={srcMap.team_id} onChange={(e) => setSrcMap({ ...srcMap, team_id: e.target.value })}><option value="">Select…</option>{teams.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}</select></div><div><label className="field">Bucket</label><select className="input" value={srcMap.key} onChange={(e) => setSrcMap({ ...srcMap, key: e.target.value })}>{["media_sources", "fan_sources", "community_sources", "history_sources", "style_sources", "uniform_sources", "retail_sources", "event_sources", "social_sources", "feeds"].map((k) => <option key={k}>{k}</option>)}</select></div><div><label className="field">URL</label><input className="input" value={srcMap.url} onChange={(e) => setSrcMap({ ...srcMap, url: e.target.value })} placeholder="https://…" /></div><button className="btn sm" disabled={!srcMap.team_id || !srcMap.url} onClick={addSource}>Add source</button></div>}
+        </div>
+        <div className="card stack"><div className="eyebrow">Budget limits & retention</div>
+          {admin ? <div className="row"><div><label className="field">Max spend per run (USD)</label><input className="input" type="number" value={budget} onChange={(e) => setBudget(e.target.value)} /></div><button className="btn sm" onClick={() => save({ budget_limits: { max_usd_per_run: Number(budget) || null } })}>Save</button></div> : <p className="small">Max per run: {settings.budget_limits?.max_usd_per_run ?? "unlimited (run default $3)"}</p>}
+          <p className="small">Retention: sources carry per-source retention metadata; uploads default to workspace policy. Deleting a source removes its derived evidence from search results. External model processing must be explicitly enabled (LOCAL_ALLOW_INTERNAL_DOCS_TO_MODEL).</p>
+        </div>
+      </div>
+      {admin && <><h3 className="headline" style={{ marginTop: 30 }}>Audit log</h3><table className="data" style={{ marginTop: 8 }}><tbody>{(audit || []).slice(0, 40).map((a) => <tr key={a.id}><td className="small">{fmtTime(a.created_at)}</td><td>{a.action}</td><td className="small">{a.target_type} {a.target_id}</td><td className="small mono">{JSON.stringify(a.detail).slice(0, 120)}</td></tr>)}</tbody></table></>}
+    </main>
+  );
+}
