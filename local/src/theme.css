@@ -204,3 +204,23 @@ table.data th { font-size: 11px; letter-spacing: 0.08em; text-transform: upperca
 .login { min-height: 100vh; display: grid; place-items: center; background: var(--ink); color: #fff; }
 .login form { width: min(420px, 92vw); display: grid; gap: 12px; }
 .login .input { background: #111; border-color: #333; color: #fff; }
+
+/* Mobile */
+.menu-btn { display: none; }
+@media (max-width: 960px) {
+  .topbar .wrap { flex-wrap: wrap; gap: 8px; padding-block: 8px; }
+  .menu-btn { display: inline-flex; }
+  .topnav { display: none; width: 100%; flex-direction: column; gap: 2px; order: 10; }
+  .topnav.open { display: flex; }
+  .topbar .who { display: none; }
+  .topbar select.input { max-width: 150px; font-size: 12px; }
+  .hero { min-height: 70vh; }
+  .hero .media-note { max-width: 55%; }
+  table.data { display: block; overflow-x: auto; white-space: nowrap; }
+  table.data td, table.data th { white-space: normal; min-width: 120px; }
+  .kv { grid-template-columns: 1fr; }
+  .drawer { padding-inline: 16px; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tile { padding: 12px; }
+  .tile .nick { font-size: 30px; }
+}

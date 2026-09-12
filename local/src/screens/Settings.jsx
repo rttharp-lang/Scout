@@ -15,6 +15,9 @@ export default function Settings() {
   const [sch, setSch] = useState({ team_id: "", frequency_hours: 168, question: "" });
   const [srcMap, setSrcMap] = useState({ team_id: "", key: "media_sources", url: "" });
   const [budget, setBudget] = useState(data?.settings?.budget_limits?.max_usd_per_run || "");
+  const [media, setMedia] = useState({ team_id: "", url: "", caption: "", credit: "", rights: "", alt: "", type: "image" });
+  const { data: mediaList, reload: reloadMedia } = useFetch(`/workspaces/${wid}/entities/media`, [wid]);
+  const addMedia = async () => { await api.post(`/workspaces/${wid}/entities/media`, { team_id: media.team_id, title: media.caption || media.url, status: "approved", data: { ...media, kind: "hero" } }); setMedia({ ...media, url: "", caption: "", credit: "", rights: "", alt: "" }); reloadMedia(); };
   const settings = data?.settings || {};
   const save = async (patch) => { await api.patch(`/workspaces/${wid}/settings`, patch); reload(); };
   const addMember = async () => { await api.post(`/workspaces/${wid}/members`, m); setM({ email: "", name: "", role: "viewer", password: "" }); reload(); };
@@ -54,6 +57,11 @@ export default function Settings() {
           {admin ? <div className="row"><div><label className="field">Max spend per run (USD)</label><input className="input" type="number" value={budget} onChange={(e) => setBudget(e.target.value)} /></div><button className="btn sm" onClick={() => save({ budget_limits: { max_usd_per_run: Number(budget) || null } })}>Save</button></div> : <p className="small">Max per run: {settings.budget_limits?.max_usd_per_run ?? "unlimited (run default $3)"}</p>}
           <p className="small">Retention: sources carry per-source retention metadata; uploads default to workspace policy. Deleting a source removes its derived evidence from search results. External model processing must be explicitly enabled (LOCAL_ALLOW_INTERNAL_DOCS_TO_MODEL).</p>
         </div>
+      </div>
+      <div className="card stack" style={{ marginTop: 16 }}><div className="eyebrow">Approved media (team hero imagery)</div>
+        <p className="small">Only approved, licensed or permissioned media. Record source, caption, local context and usage rights. Generated imagery must never be presented as documentation of real fans, interviews, rituals or events. Until a team has approved media, its page uses the editorial fallback.</p>
+        {mediaList?.length ? <ul className="list-plain small">{mediaList.map((m) => <li key={m.id}><b>{teams.find((t) => t.id === m.team_id)?.name}</b> · {m.data.caption || m.data.url} · rights: {m.data.rights || "unspecified"} · credit: {m.data.credit || "—"}</li>)}</ul> : <p className="small">No approved media yet.</p>}
+        {admin && <div className="grid cols-3">{[["url", "Media URL (hosted, licensed)"], ["caption", "Caption / local context"], ["credit", "Credit"], ["rights", "Usage rights"], ["alt", "Alt text"]].map(([k, l]) => <div key={k}><label className="field">{l}</label><input className="input" value={media[k]} onChange={(e) => setMedia({ ...media, [k]: e.target.value })} /></div>)}<div><label className="field">Team</label><select className="input" value={media.team_id} onChange={(e) => setMedia({ ...media, team_id: e.target.value })}><option value="">Select…</option>{teams.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}</select></div><div><label className="field">Type</label><select className="input" value={media.type} onChange={(e) => setMedia({ ...media, type: e.target.value })}><option value="image">image</option><option value="video">video (muted, looped)</option></select></div><button className="btn sm" disabled={!media.team_id || !media.url || !media.rights} onClick={addMedia}>Add approved media</button></div>}
       </div>
       {admin && <><h3 className="headline" style={{ marginTop: 30 }}>Audit log</h3><table className="data" style={{ marginTop: 8 }}><tbody>{(audit || []).slice(0, 40).map((a) => <tr key={a.id}><td className="small">{fmtTime(a.created_at)}</td><td>{a.action}</td><td className="small">{a.target_type} {a.target_id}</td><td className="small mono">{JSON.stringify(a.detail).slice(0, 120)}</td></tr>)}</tbody></table></>}
     </main>

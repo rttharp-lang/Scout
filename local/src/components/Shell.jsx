@@ -23,12 +23,14 @@ export function TeamSwitcher({ wid, currentTeamId }) {
 export function Shell({ children }) {
   const { user, workspaces, logout } = useApp(); const nav = useNavigate(); const { wid, teamId } = useParams();
   const ws = useWorkspace(wid);
+  const [menu, setMenu] = useState(false);
   const link = (p) => `/w/${wid}${p}`;
   return (<>
     <header className="topbar">
       <div className="wrap">
         <Link to={link("")} className="brand">LOCAL</Link>
-        <nav className="topnav" aria-label="Primary">
+        <button className="btn ghost sm menu-btn" aria-expanded={menu} aria-controls="primary-nav" onClick={() => setMenu((m) => !m)}>Menu</button>
+        <nav id="primary-nav" className={`topnav ${menu ? "open" : ""}`} aria-label="Primary" onClick={() => setMenu(false)}>
           <NavLink to={link("")} end>Teams</NavLink>
           <NavLink to={link("/portfolio")}>Portfolio</NavLink>
           <NavLink to={link("/across")}>Across teams</NavLink>
