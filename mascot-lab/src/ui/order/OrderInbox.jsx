@@ -146,7 +146,7 @@ export function OrderInboxView({ inbox, title = "Order inbox", showEmpty = true 
         <div className="ib-wrap">
           <table className="ib-table">
             <thead>
-              <tr><th>Ref</th><th>Team</th><th className="ib-num">Pieces</th><th className="ib-num">Total</th><th>Contact</th><th>Date</th><th>Status</th></tr>
+              <tr><th>Ref</th><th>Team</th><th className="ib-num">Pieces</th><th className="ib-num" title="As worked out in the coach's browser (client-reported). Price the order from the roster and sizes on the proof.">Est. total</th><th>Contact</th><th>Date</th><th>Status</th></tr>
             </thead>
             <tbody>
               {inbox.orders.map((o) => <InboxRow key={o.id} o={o} db={inbox.db} meta={inbox.meta} />)}

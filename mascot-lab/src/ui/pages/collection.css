@@ -533,19 +533,11 @@ button.cl-insp__pane:hover .ml-canvas { box-shadow: inset 0 0 0 2px var(--ink); 
   .cl-insp__content { --insp-pad: var(--space-4); padding: var(--space-3) var(--insp-pad) var(--space-5); }
   .cl-place__grid { grid-template-columns: minmax(0, 1fr); }
 }
-/* touch sizes: every control in the page and the sheet is at least 40px tall */
+/* touch sizes: the shared components grow to 40px themselves (components.css); these
+ * are the page's own exceptions */
 @media (max-width: 720px), (pointer: coarse) {
-  :is(.cl-page, .cl-sheet) .ml-btn--sm { --btn-h: 40px; }
-  :is(.cl-page, .cl-sheet) .ml-iconbtn--sm { --ib: 40px; }
-  :is(.cl-page, .cl-sheet) .ml-toggle { min-height: 40px; }
-  :is(.cl-page, .cl-sheet) .ml-seg--sm .ml-seg__opt { min-height: 40px; }
-  :is(.cl-page, .cl-sheet) .ml-color__hex { min-height: 40px !important; }
-  :is(.cl-page, .cl-sheet) .ml-color__picker { width: 40px; height: 40px; }
-  :is(.cl-page, .cl-sheet) input[type="range"] { height: 40px; --thumb: 22px; }
   .cl-page .cl-look__color .ml-color__picker { height: 40px; }
-  /* colorway rows: five 40px swatches, then hex + picker on their own line */
   .cl-sheet .ml-swatch { --sw: 40px; }
-  .cl-sheet .ml-color__sep { flex-basis: 100%; width: 0; height: 0; margin: 0; background: none; }
   .cl-sheet .ml-color__hex { width: 178px !important; }
   /* the card flip keeps its small look (its ::after carries the hit area) */
   .cl-page .cl-card__flip .ml-seg__opt { min-height: 24px; }

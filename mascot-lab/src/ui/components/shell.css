@@ -33,6 +33,7 @@
   padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px));
 }
 .ml-header__brand { justify-self: start; display: flex; align-items: center; gap: 14px; min-width: 0; }
+.ml-header__brand .ml-wordmark { min-height: 40px; } /* full-height tap target, same look */
 .ml-header__steps { justify-self: center; }
 .ml-header__compact { display: none; justify-self: end; }
 .ml-header__team { justify-self: end; max-width: 280px; }
@@ -79,6 +80,8 @@
 .ml-footer__col { display: grid; gap: var(--space-2); align-content: start; }
 .ml-footer__col p { font-size: var(--step--1); color: var(--ink-2); line-height: 1.5; max-width: 52ch; }
 .ml-footer__col a { font-weight: 600; font-size: var(--step--1); }
+.ml-footer__email { justify-self: start; }
+.ml-footer__email .ml-copy__text { font-size: var(--step--1); color: var(--ink); }
 .ml-footer__base {
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap;
   margin-top: var(--space-7);
@@ -95,6 +98,19 @@
   .ml-footer__court { display: none; }
 }
 
-/* ── Page error boundary ── */
-.ml-crash { padding-block: var(--space-8); display: grid; gap: var(--space-4); justify-items: start; }
-.ml-crash pre { font-family: var(--font-mono); font-size: 12px; color: var(--danger); white-space: pre-wrap; max-width: 80ch; }
+/* ── Page error boundary (matches the order pages' guard card) ── */
+.ml-crash-wrap { padding-block: var(--space-7) 0; }
+.ml-crash {
+  display: grid; justify-items: start; gap: var(--space-4);
+  max-width: 760px; margin: 10px;
+  padding: var(--space-7) var(--space-6);
+  background: var(--surface);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-sm);
+}
+.ml-crash > .ml-reg { color: var(--ink-2); }
+.ml-crash__title { font-size: var(--step-4); }
+.ml-crash pre { font-family: var(--font-mono); font-size: 12px; color: var(--danger); white-space: pre-wrap; overflow-wrap: anywhere; max-width: 80ch; }
+@media (max-width: 560px) {
+  .ml-crash { padding: var(--space-6) var(--space-4); margin: 10px 0; }
+}

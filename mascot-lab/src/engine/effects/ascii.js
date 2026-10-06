@@ -43,14 +43,18 @@ const BAYER2 = [0.12, 0.62, 0.87, 0.37];   // 2×2 ordered-dither thresholds (TL
 
 /* ───────────────────────────── fonts ───────────────────────────── */
 
+// the page's FontFaceSet, or the worker's own (render workers register the bundled
+// IBM Plex Mono faces in self.fonts — see engine/worker/)
+const fontSet = () => (typeof document !== "undefined" ? document.fonts : typeof self !== "undefined" ? self.fonts : null) || null;
 const fontState = new Map(); // weight → Promise<void>
 /** Wait (once per weight, ≤ 2.5 s) for IBM Plex Mono; any failure falls back to monospace. */
 function fontReady(weight) {
-  if (typeof document === "undefined" || !document.fonts?.load) return Promise.resolve();
+  const fonts = fontSet();
+  if (!fonts?.load) return Promise.resolve();
   let pr = fontState.get(weight);
   if (!pr) {
     pr = Promise.race([
-      document.fonts.load(`${weight} 20px "IBM Plex Mono"`, "0123456789@#%").catch(() => null),
+      fonts.load(`${weight} 20px "IBM Plex Mono"`, "0123456789@#%").catch(() => null),
       new Promise((r) => setTimeout(r, 2500)),
     ]).then(() => undefined);
     fontState.set(weight, pr);
@@ -58,7 +62,7 @@ function fontReady(weight) {
   return pr;
 }
 const fontLoaded = (weight) => {
-  try { return typeof document !== "undefined" && !!document.fonts?.check(`${weight} 20px "IBM Plex Mono"`); } catch { return false; }
+  try { return !!fontSet()?.check(`${weight} 20px "IBM Plex Mono"`); } catch { return false; }
 };
 
 const rampCache = new Map();
@@ -169,6 +173,7 @@ export default {
   blurb: "Your logo rebuilt from type: ASCII, jersey digits, binary.",
   method: "Screen print",
   stage: "dark",
+  usesFonts: true, // draws IBM Plex Mono: a render worker only takes it once the face loaded there
   params: [
     { key: "cell", label: "Cell size", type: "range", min: 12, max: 44, step: 1, default: 20, unit: "px" },
     {

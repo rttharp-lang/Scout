@@ -9,7 +9,8 @@
     "build:artifact": "vite build --mode artifact && node scripts/build-artifact.mjs",
     "preview": "vite preview --port 4199 --strictPort --host 127.0.0.1",
     "shoot": "node scripts/shoot.mjs",
-    "e2e": "vite build && node scripts/e2e.mjs"
+    "e2e": "vite build && node scripts/e2e.mjs",
+    "e2e:artifact": "npm run build:artifact && node scripts/e2e.mjs --artifact"
   },
   "dependencies": {
     "@fontsource/archivo": "^5.3.0",

@@ -36,6 +36,9 @@ export function orderChecks(state, ids, t) {
   if (t.unsized) warnings.push(`${plural(t.unsized, "piece")} still need a size. You can confirm sizes on the proof.`);
   if (c.missingNumber && numbersMatter) warnings.push(`${plural(c.missingNumber, "player")} without a number.`);
   if (c.missingName) warnings.push(`${plural(c.missingName, "player")} without a name.`);
+  // the fictional example players the app opens with would otherwise go to the print shop
+  const examples = (state.roster || []).filter((r) => r?.example && !isBlankRow(r)).length;
+  if (examples) warnings.push(`${plural(examples, "example player")} from the sample roster ${examples === 1 ? "is" : "are"} still on the order. Clear them unless they're really on your team.`);
   return { issues, blockers, warnings, numbersMatter };
 }
 

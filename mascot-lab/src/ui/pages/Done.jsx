@@ -94,10 +94,11 @@ export default function Done() {
   const shipFrom = addDays(proofBy, LEAD_TIME_MIN_DAYS);
   const shipTo = addDays(proofBy, LEAD_TIME_MAX_DAYS);
   const email = state.contact.email;
-  const team = [state.team.school, state.team.mascot].filter(Boolean).join(" ");
+  // an uploaded logo clears the sample's team name; the school from the contact form stands in
+  const team = [state.team.school, state.team.mascot].filter(Boolean).join(" ") || String(state.contact.school || "").trim();
   const ctx = { garments, ids, byId, effect, logo, logoCanvas: logo.canvas };
   const base = fileBase(state);
-  const subject = `Order ${ref} · ${team}`;
+  const subject = team ? `Order ${ref} · ${team}` : `Order ${ref}`;
 
   const setFile = (k, v) => setFiles((f) => ({ ...f, [k]: { ...(f[k] || {}), ...v } }));
   const finish = (k, r) => setFile(k, r.ok ? { status: "done", how: r.how } : { status: "error", error: r.error || "The file couldn't be saved." });
@@ -153,7 +154,8 @@ export default function Done() {
 
   // an uploaded logo goes with a db order when it fits; otherwise the coach emails it
   const uploaded = !state.logo.sampleId;
-  const logoWithOrder = channel === "artifact-db" ? !!localCopy?.order?.logo?.file : channel === "endpoint";
+  // (this page load's submit result first: with storage blocked there is no local copy)
+  const logoWithOrder = channel === "artifact-db" ? !!(last?.logoStored || localCopy?.order?.logo?.file) : channel === "endpoint";
   const steps = sent
     ? [
         { k: "Received", when: shortDate(submittedAt), body: <>Order <span className="dn-nowrap">{ref}</span> is in our inbox{uploaded && logoWithOrder ? ", with your logo" : ""}.</>, state: "done" },

@@ -5,7 +5,7 @@ import { StoreProvider, useStore } from "./state/store.jsx";
 import { useLogoCanvas } from "./state/useLogoCanvas.js";
 import { COPY, CONTACT_EMAIL, LEGAL_LINE, PAGE_TITLES, ROUTE_STEP, SUPPORT_HOURS, TAGLINE } from "./brand.js";
 import {
-  Button, ConfirmProvider, Notice, SpecLabel, StepNav, TeamChip, ThemeSwitch, ToastProvider, Wordmark, useRoute,
+  Button, ConfirmProvider, CopyText, Notice, RegMark, SpecLabel, StepNav, TeamChip, ThemeSwitch, ToastProvider, Wordmark, useRoute,
 } from "./ui/components/index.js";
 import "./ui/components/shell.css";
 
@@ -65,7 +65,11 @@ function Shell() {
 function Header({ route }) {
   const { state } = useStore();
   const logo = useLogoCanvas();
-  const step = ROUTE_STEP[route] ?? 0;
+  // #done only completes the flow once an order actually went out (artifact db or the
+  // order endpoint). Before that — nothing submitted, or only saved on this device with
+  // "one step left: email it" — it is still the order step.
+  const sent = state.order?.status === "submitted" && !!state.order.channel && state.order.channel !== "local";
+  const step = route === "done" && !sent ? ROUTE_STEP.order : ROUTE_STEP[route] ?? 0;
   return (
     <header className="ml-header">
       <div className="ml-header__inner">
@@ -78,11 +82,13 @@ function Header({ route }) {
           className="ml-header__team"
           team={state.team}
           palette={state.palette}
-          logoCanvas={logo.canvas}
-          logoSrc={state.logo.src}
+          logoCanvas={logo.status === "error" ? null : logo.canvas}
+          logoSrc={logo.status === "error" ? null : state.logo.src}
+          status={logo.status}
           sampleLabel={COPY.sampleTag}
+          errorLabel={COPY.logoFailedTag}
           href="#studio"
-          title="Edit logo and colours"
+          title={logo.status === "error" ? COPY.logoFailedTitle : "Edit logo and colors"}
         />
       </div>
     </header>
@@ -118,7 +124,8 @@ function Footer() {
           </div>
           <div className="ml-footer__col">
             <SpecLabel>Orders &amp; questions</SpecLabel>
-            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            {/* selectable text + copy: mailto links do nothing inside the claude.ai frame */}
+            <CopyText text={CONTACT_EMAIL} label="Copy" className="ml-footer__email" />
             <p>{SUPPORT_HOURS}</p>
           </div>
         </div>
@@ -162,16 +169,20 @@ class PageBoundary extends React.Component {
   }
   render() {
     if (!this.state.error) return this.props.children;
+    // same "nothing to show here" card as the order guards: crop marks, reg mark, kicker
     return (
-      <div className="container ml-crash">
-        <SpecLabel variant="warning">Page error</SpecLabel>
-        <h2>This page hit a snag.</h2>
-        <p className="lead">Your team, logo and order details are saved. Try the page again, or head back to the start.</p>
-        <pre>{String(this.state.error?.message || this.state.error)}</pre>
-        <div className="cluster">
-          <Button onClick={() => this.setState({ error: null })}>Try again</Button>
-          <Button variant="secondary" href="#home">Back to start</Button>
-        </div>
+      <div className="container ml-crash-wrap">
+        <section className="ml-crash crop-marks" role="alert">
+          <RegMark size={30} />
+          <SpecLabel variant="warning">Page error</SpecLabel>
+          <h1 className="ml-crash__title">This page hit a snag</h1>
+          <p className="lead">Your team, logo and order details are saved. Try the page again, or head back to the start.</p>
+          <pre>{String(this.state.error?.message || this.state.error)}</pre>
+          <div className="cluster">
+            <Button onClick={() => this.setState({ error: null })}>Try again</Button>
+            <Button variant="secondary" href="#home">Back to start</Button>
+          </div>
+        </section>
       </div>
     );
   }

@@ -23,6 +23,13 @@
 // their base, lettering fill and outline must be distinct from each other and one of
 // them must read on the base, and drawcords avoid the colour of an all-over ink.
 //
+// Effect-aware colourways: dark-stage effects (neon, chrome, holographic, thermal,
+// glitch…) are built to glow on a dark ground and wash out on white or gold cloth, so
+// buildCollection(style, palette, { effectStage: "dark" }) moves every piece that prints
+// the full-colour effect on a light base onto a dark base (tinted and clean-logo pieces
+// keep their colours). The store passes the chosen effect's stage and keeps coach-edited
+// (custom) pieces as they are.
+//
 // Zone ids are the ones in CONTRACTS.md. The UI skips garments the registry did not load.
 
 export const DROP_STYLES = [
@@ -248,9 +255,9 @@ function quietTrim(base, pal) {
 
 const RECIPES = {
   // Pro warm-up drop: giant cropped hits on two-tone pieces; game jersey keeps its numbers.
-  statement: (pal) => ({
+  statement: (pal, B) => ({
     jersey: {
-      colors: lettered("primary", "secondary", pal),
+      colors: lettered(B("primary"), "secondary", pal),
       // the mascot's face sits under the number (90s-throwback style), cropped by the
       // right side panel and the hem at the jaw, eyes and muzzle clear of both; the jock
       // tag stays on bare cloth to the left of it
@@ -260,14 +267,14 @@ const RECIPES = {
       text: NUMBERS,
     },
     shorts: {
-      colors: corded("primary", "secondary", pal),
+      colors: corded(B("primary"), "secondary", pal),
       // the zone is tuned so scale 1 rises out of the left leg, cropped by hem + side panel
       front: [P("effect", "oversized", { scale: 1.0 })],
       back: [P("logo", "waist-back", { scale: 1.0 })],
       text: null,
     },
     hoodie: {
-      colors: corded("dark", "primary", pal),
+      colors: corded(B("dark"), "primary", pal),
       // the hero piece: the mascot's face cropped hard by the right armhole seam and the
       // rib band (clears the hood foot), plus the big centred back hit
       front: [P("effect", "oversized", { scale: 0.96, dx: -0.08, dy: -0.02 })],
@@ -275,21 +282,21 @@ const RECIPES = {
       text: null,
     },
     pants: {
-      colors: corded("dark", "primary", pal),
+      colors: corded(B("dark"), "primary", pal),
       // one giant hit running down the left leg, cropped by the outseam and inseam
       front: [P("effect", "oversized", { scale: 1.0 })],
       back: [P("logo", "back-leg", { scale: 0.95 })],
       text: null,
     },
     tee: {
-      colors: twoTone("light", "primary", pal),
+      colors: twoTone(B("light"), "primary", pal),
       // the reverse of the hoodie: a big centred front, the oversized crop on the back
       front: [P("effect", "center", { scale: 1.12, dy: 0.02 })],
       back: [P("effect", "oversized", { scale: 1.05 })],
       text: null,
     },
     longsleeve: {
-      colors: lettered("secondary", "primary", pal),
+      colors: lettered(B("secondary", ["primary", "dark"]), "primary", pal),
       // raglan two-tone: the mascot's face cropped hard by the right side seam and hem;
       // the back stays a clean player back (name over number, two-colour twill)
       front: [P("effect", "oversized", { scale: 1.0, dx: -0.04 })],
@@ -299,34 +306,34 @@ const RECIPES = {
   }),
 
   // Game-day staples: clean crests, numbers, one effect hit where there is room.
-  classic: (pal) => ({
+  classic: (pal, B) => ({
     jersey: {
-      colors: lettered("primary", "secondary", pal),
+      colors: lettered(B("primary"), "secondary", pal),
       front: [P("logo", "chest-center", { scale: 1.0 })],
       back: [],
       text: NUMBERS,
     },
     shorts: {
-      colors: corded("primary", "secondary", pal),
+      colors: corded(B("primary"), "secondary", pal),
       front: [P("logo", "leg-left", { scale: 0.85 })],
       back: [P("logo", "waist-back", { scale: 0.85 })],
       text: null,
     },
     hoodie: {
-      colors: corded("light", "primary", pal),
+      colors: corded(B("light"), "primary", pal),
       front: [P("effect", "center", { scale: 0.8, dy: -0.1 })],
       // a crest between the shoulder blades: small, but it reads at thumbnail size
       back: [P("logo", "back-yoke", { scale: 1.45, dy: 0.12 })],
       text: null,
     },
     pants: {
-      colors: corded("primary", "secondary", pal),
+      colors: corded(B("primary"), "secondary", pal),
       front: [P("logo", "thigh-left", { scale: 0.9 })],
       back: [P("logo", "waist-back", { scale: 0.85 })],
       text: null,
     },
     tee: {
-      colors: twoTone("secondary", "primary", pal),
+      colors: twoTone(B("secondary"), "primary", pal),
       front: [P("logo", "chest-left", { scale: 0.95 })],
       back: [P("effect", "back-center", { scale: 0.92, dy: -0.04 })],
       text: null,
@@ -334,7 +341,7 @@ const RECIPES = {
     longsleeve: {
       // the classic baseball raglan: team colour body, contrast sleeves; small crest at
       // the nape over name + number
-      colors: lettered("primary", "secondary", pal),
+      colors: lettered(B("primary"), "secondary", pal),
       front: [P("logo", "chest-center", { scale: 1.0 })],
       back: [P("logo", "back-yoke", { scale: 0.8 })],
       text: NUMBERS,
@@ -342,37 +349,37 @@ const RECIPES = {
   }),
 
   // Hero pieces in a repeat, companions solid with one hit.
-  allover: (pal) => {
+  allover: (pal, B) => {
     const T = (extra = {}) => P("effect", "center", { mode: "tile", tile: 215, scale: 0.8, rotate: -12, ...extra });
     // one-ink repeat on the hoodie: the first team colour that reads on its base
-    const hoodieInk = pickReadable("dark", ["secondary", "primary", "accent", "light"], pal, 2.2);
+    const hoodieInk = pickReadable(B("dark"), ["secondary", "primary", "accent", "light"], pal, 2.2);
     const hoodieInkHex = resolveColor(hoodieInk, pal);
     return {
       // sublimated game set: the full-colour repeat on jersey + shorts
-      jersey: { colors: lettered("primary", "secondary", pal), front: [T()], back: [T()], text: NUMBERS },
-      shorts: { colors: corded("primary", "secondary", pal), front: [T({ tile: 190 })], back: [T({ tile: 190 })], text: null },
+      jersey: { colors: lettered(B("primary"), "secondary", pal), front: [T()], back: [T()], text: NUMBERS },
+      shorts: { colors: corded(B("primary"), "secondary", pal), front: [T({ tile: 190 })], back: [T({ tile: 190 })], text: null },
       // the warm-up hero: one ink on fleece, cords in a colour the print doesn't use
       hoodie: {
-        colors: corded("dark", "primary", pal, [hoodieInk]),
+        colors: corded(B("dark"), "primary", pal, [hoodieInk]),
         front: [T({ tile: 200, tint: hoodieInkHex, opacity: 0.9 })],
         back: [T({ tile: 200, tint: hoodieInkHex, opacity: 0.9 })],
         text: null,
       },
       // companions: solid pieces in the print's colours, one hit each
       pants: {
-        colors: corded("primary", "dark", pal),
+        colors: corded(B("primary"), "dark", pal),
         front: [P("logo", "thigh-left", { scale: 0.9 })],
         back: [P("logo", "waist-back", { scale: 0.85 })],
         text: null,
       },
       tee: {
-        colors: twoTone("light", "primary", pal),
+        colors: twoTone(B("light"), "primary", pal),
         front: [P("logo", "chest-left", { scale: 1.0 })],
         back: [P("effect", "back-center", { scale: 0.8, dy: -0.06 })],
         text: null,
       },
       longsleeve: {
-        colors: lettered("dark", "secondary", pal),
+        colors: lettered(B("dark"), "secondary", pal),
         front: [P("logo", "chest-left", { scale: 1.0 })],
         back: [],
         text: NUMBERS,
@@ -382,7 +389,7 @@ const RECIPES = {
 
   // Quiet luxury: every graphic a shade off its base, big enough to read; quiet trims;
   // lettering on the game jersey stays legible, the shooting shirt's name goes tonal.
-  tonal: (pal) => {
+  tonal: (pal, B) => {
     // quiet two-tone; drawcords (accent) take the trim colour so nothing shouts
     const quiet = (base) => { const trim = quietTrim(base, pal); return { base, trim, accent: trim }; };
     const jersey = (() => { const trim = quietTrim("primary", pal); return { base: "primary", trim, accent: pickLettering("primary", trim, pal) }; })();
@@ -405,18 +412,52 @@ const RECIPES = {
   },
 };
 
+/* ───────────────────────────── effect-aware bases ───────────────────────────── */
+
+/** Above this relative luminance a dark-stage graphic (glow, chrome, neon) washes out. */
+const LIGHT_BASE = 0.4;
+/** A base at or under this luminance gives a dark-stage graphic the ground it was built for. */
+const DARK_BASE = 0.2;
+const NEAR_BLACK = "#121418";
+
 /**
- * buildCollection(dropStyleId, palette) → Collection (see CONTRACTS.md).
+ * darkBase(role, pal, prefer) → `role` when it is not light, else the first of `prefer`
+ * (palette roles) that is dark, else a neutral near-black.
+ */
+function darkBase(role, pal, prefer = ["dark", "primary", "secondary", "accent"]) {
+  if (luminance(resolveColor(role, pal)) <= LIGHT_BASE) return role;
+  for (const r of prefer) if (r !== role && luminance(resolveColor(r, pal)) <= DARK_BASE) return r;
+  return NEAR_BLACK;
+}
+
+/** The piece prints the full-colour effect render (not a one-ink tint) on a light base. */
+function washesOut(item, pal) {
+  if (luminance(resolveColor(item.colors.base, pal)) <= LIGHT_BASE) return false;
+  return [...item.front, ...item.back].some((p) => p.source === "effect" && !p.tint);
+}
+
+const same = (role) => role;
+
+/**
+ * buildCollection(dropStyleId, palette, { effectStage } = {}) → Collection (see CONTRACTS.md).
  * Unknown ids fall back to "statement". Colours stay as palette roles (resolve them
  * with resolveColors at render time) except where a recipe needs a derived shade;
  * tonal tints and all-over inks are resolved hexes.
+ *
+ * effectStage: the chosen effect's `stage`. "dark" moves every piece that prints the
+ * full-colour effect on a light base (white tee, gold shooting shirt…) onto a dark base,
+ * with its trim and lettering re-picked for that base; other stages change nothing.
+ * The result records `effectStage: "dark" | null` so a rebuild can keep it.
  */
-export function buildCollection(dropStyleId, palette) {
+export function buildCollection(dropStyleId, palette, { effectStage = null } = {}) {
   const style = DROP_STYLES.find((s) => s.id === dropStyleId) || DROP_STYLES[0];
   const pal = { ...FALLBACK, ...(palette || {}) };
-  const recipe = RECIPES[style.id](pal);
+  const stage = effectStage === "dark" ? "dark" : null;
+  const recipe = RECIPES[style.id](pal, same);
+  const dark = stage ? RECIPES[style.id](pal, (role, prefer) => darkBase(role, pal, prefer)) : null;
   const items = {};
-  for (const [id, r] of Object.entries(recipe)) {
+  for (const [id, plain] of Object.entries(recipe)) {
+    const r = dark && dark[id] && washesOut(plain, pal) ? dark[id] : plain;
     items[id] = {
       enabled: true,
       colors: { ...r.colors },
@@ -425,7 +466,7 @@ export function buildCollection(dropStyleId, palette) {
       text: r.text ? { ...r.text } : null,
     };
   }
-  return { dropStyle: style.id, items };
+  return { dropStyle: style.id, effectStage: stage, items };
 }
 
 /** getDropStyle(id) → drop style meta or null. */

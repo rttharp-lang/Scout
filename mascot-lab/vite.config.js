@@ -17,6 +17,11 @@ export default defineConfig(({ mode }) => {
       assetsInlineLimit: artifact ? 100_000_000 : 4096,
       chunkSizeWarningLimit: 2000,
     },
+    // Effect render worker (src/engine/worker/effectWorker.js): one classic IIFE bundle,
+    // its own file in dist/, inlined as a blob: URL in the Artifact build (pool.js picks
+    // `?worker&inline` there). IIFE can't code-split, so the worker imports every effect
+    // eagerly.
+    worker: { format: "iife" },
     server: { port: 5199, strictPort: true, host: "127.0.0.1" },
   };
 });

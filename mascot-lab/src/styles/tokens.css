@@ -27,7 +27,11 @@
   --team-on-light-ink: #ffffff;
   --team-on-dark: #f2a900;
   --team-on-dark-ink: #0b0d10;
-  --team-flash: #f2a900;        /* team colour that pops on ink AND on the page (trim, offsets) */
+  /* team colour that pops on the ink AND on the page (trim lines, wordmark offset), picked
+   * per theme by the store; --team-flash follows the theme (redefined in the dark blocks) */
+  --team-flash-on-light: #f2a900;
+  --team-flash-on-dark: #f2a900;
+  --team-flash: var(--team-flash-on-light);
 
   /* ── Neutrals: gym white (light) ─────────────────────────────────────── */
   --bg: #eceff3;                /* page — painted-cinderblock cool grey */
@@ -167,6 +171,7 @@
     --info-soft: #18202e;
     --accent: var(--team-on-dark);
     --accent-ink: var(--team-on-dark-ink);
+    --team-flash: var(--team-flash-on-dark);
     --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.06);
     --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 20px -8px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.07);
     --shadow-overlay: 0 14px 36px -8px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08);
@@ -204,6 +209,7 @@
   --info-soft: #18202e;
   --accent: var(--team-on-dark);
   --accent-ink: var(--team-on-dark-ink);
+  --team-flash: var(--team-flash-on-dark);
   --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.06);
   --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 20px -8px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.07);
   --shadow-overlay: 0 14px 36px -8px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08);

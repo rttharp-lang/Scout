@@ -28,7 +28,7 @@ export function ThemeSwitch({ className }) {
   return (
     <Segmented
       className={className}
-      label="Colour theme"
+      label="Color theme"
       size="sm"
       mono
       value={mode}

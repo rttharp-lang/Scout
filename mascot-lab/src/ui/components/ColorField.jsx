@@ -15,7 +15,8 @@ export function normHex(v) {
 
 /**
  * ColorField — pick a colour from the team palette (swatches), type a hex, or use the
- * native picker. `value` may be a palette role ("primary"…) or "#RRGGBB".
+ * native picker. Layout: one row (swatches · hex · picker) when it fits; otherwise the
+ * swatches keep the first line and hex + picker move to the next one together. `value` may be a palette role ("primary"…) or "#RRGGBB".
  * Swatch clicks call onChange(role) when allowRoles (so the param follows the
  * palette), otherwise onChange(hex). Typed/picked colours always call onChange(hex).
  *   palette: { primary, secondary, accent, dark, light }; extra: ["#hex", …] more swatches.
@@ -34,6 +35,8 @@ export function ColorField({ label, value, onChange, palette = {}, roles = ROLES
     else setText(resolved);
   };
   const roleSwatches = roles.filter((r) => normHex(palette[r]));
+  const extraHexes = [...new Set(extra.map(normHex).filter(Boolean))];
+  const hasSwatches = roleSwatches.length + extraHexes.length > 0;
   const matchRole = isRole ? value : null;
 
   return (
@@ -43,48 +46,52 @@ export function ColorField({ label, value, onChange, palette = {}, roles = ROLES
         <span className="ml-color__role">{matchRole ? `Team · ${ROLE_NAMES[matchRole]}` : "Custom"}</span>
       </div>
       <div className="ml-color__row">
-        {roleSwatches.map((r) => {
-          const hex = normHex(palette[r]);
-          const selected = matchRole ? matchRole === r : resolved === hex && !roleSwatches.slice(0, roleSwatches.indexOf(r)).some((q) => normHex(palette[q]) === hex);
-          return (
-            <Swatch
-              key={r}
-              color={hex}
-              size="md"
-              selected={selected}
-              label={`${ROLE_NAMES[r]} ${hex}`}
-              onClick={() => onChange?.(allowRoles ? r : hex)}
-            />
-          );
-        })}
-        {extra.map((h) => {
-          const hex = normHex(h);
-          if (!hex) return null;
-          return <Swatch key={hex} color={hex} selected={!matchRole && resolved === hex} label={hex} onClick={() => onChange?.(hex)} />;
-        })}
-        <span className="ml-color__sep" aria-hidden="true" />
-        <input
-          id={id}
-          className="ml-color__hex"
-          type="text"
-          inputMode="text"
-          spellCheck={false}
-          autoComplete="off"
-          maxLength={7}
-          aria-label={`${label} hex code`}
-          value={text}
-          onChange={(e) => setText(e.target.value.toUpperCase())}
-          onBlur={commit}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") { e.preventDefault(); commit(); }
-            if (e.key === "Escape") setText(resolved);
-          }}
-          aria-describedby={hint ? `${id}-h` : undefined}
-        />
-        <label className="ml-color__picker" title="Pick any colour">
-          <Pipette aria-hidden="true" />
-          <input type="color" aria-label={`${label}: pick any colour`} value={resolved.toLowerCase()} onChange={(e) => onChange?.(e.target.value.toUpperCase())} />
-        </label>
+        {hasSwatches && (
+          <div className="ml-color__swatches">
+            {roleSwatches.map((r) => {
+              const hex = normHex(palette[r]);
+              const selected = matchRole ? matchRole === r : resolved === hex && !roleSwatches.slice(0, roleSwatches.indexOf(r)).some((q) => normHex(palette[q]) === hex);
+              return (
+                <Swatch
+                  key={r}
+                  color={hex}
+                  size="md"
+                  selected={selected}
+                  label={`${ROLE_NAMES[r]} ${hex}`}
+                  onClick={() => onChange?.(allowRoles ? r : hex)}
+                />
+              );
+            })}
+            {extraHexes.map((hex) => (
+              <Swatch key={hex} color={hex} selected={!matchRole && resolved === hex} label={hex} onClick={() => onChange?.(hex)} />
+            ))}
+          </div>
+        )}
+        {/* hex + picker travel together: beside the swatches when they fit, on their own line when not */}
+        <div className="ml-color__custom">
+          <input
+            id={id}
+            className="ml-color__hex"
+            type="text"
+            inputMode="text"
+            spellCheck={false}
+            autoComplete="off"
+            maxLength={7}
+            aria-label={`${label} hex code`}
+            value={text}
+            onChange={(e) => setText(e.target.value.toUpperCase())}
+            onBlur={commit}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") { e.preventDefault(); commit(); }
+              if (e.key === "Escape") setText(resolved);
+            }}
+            aria-describedby={hint ? `${id}-h` : undefined}
+          />
+          <label className="ml-color__picker" title="Pick any color">
+            <Pipette aria-hidden="true" />
+            <input type="color" aria-label={`${label}: pick any color`} value={resolved.toLowerCase()} onChange={(e) => onChange?.(e.target.value.toUpperCase())} />
+          </label>
+        </div>
       </div>
       {hint && <div className="ml-field__hint" id={`${id}-h`}>{hint}</div>}
     </div>

@@ -546,26 +546,34 @@ export function blurMask(mask, w, h, r) {
   return out;
 }
 
-let FILTER_OK = null;
-/** supportsCanvasFilter() — true when ctx.filter = "blur()" works (checked once). */
+const FILTER_OK = {}; // canvas kind → boolean ("dom" on the page, "offscreen" in a worker)
+/**
+ * supportsCanvasFilter() — true when ctx.filter = "blur()" works on the canvases
+ * createCanvas() makes HERE (checked once per kind: a worker's OffscreenCanvas context
+ * may differ from the page's canvas element).
+ */
 export function supportsCanvasFilter() {
-  if (FILTER_OK !== null) return FILTER_OK;
+  const kind = typeof document !== "undefined" ? "dom" : "offscreen";
+  if (kind in FILTER_OK) return FILTER_OK[kind];
+  let ok = false;
   try {
     const c = createCanvas(8, 8);
     const x = ctx2d(c);
-    if (!("filter" in x)) return (FILTER_OK = false);
-    x.filter = "blur(2px)";
-    if (x.filter !== "blur(2px)") return (FILTER_OK = false);
-    // make sure it actually blurs (some engines accept the property but ignore it)
-    x.fillStyle = "#fff";
-    x.fillRect(0, 0, 8, 4);
-    const below = x.getImageData(4, 5, 1, 1).data[3]; // 1.5 px outside the rect
-    const inside = x.getImageData(4, 2, 1, 1).data[3];
-    FILTER_OK = below > 0 && inside < 255;
+    if (x && "filter" in x) {
+      x.filter = "blur(2px)";
+      if (x.filter === "blur(2px)") {
+        // make sure it actually blurs (some engines accept the property but ignore it)
+        x.fillStyle = "#fff";
+        x.fillRect(0, 0, 8, 4);
+        const below = x.getImageData(4, 5, 1, 1).data[3]; // 1.5 px outside the rect
+        const inside = x.getImageData(4, 2, 1, 1).data[3];
+        ok = below > 0 && inside < 255;
+      }
+    }
   } catch {
-    FILTER_OK = false;
+    ok = false;
   }
-  return FILTER_OK;
+  return (FILTER_OK[kind] = ok);
 }
 
 /** blurCanvas(canvas, r) → new canvas blurred by r px (std-dev); ctx.filter or 3× box fallback. */

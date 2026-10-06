@@ -28,7 +28,7 @@ export const PAGE_TITLES = {
   collection: "Your collection — Mascot Lab",
   order: "Order the kit — Mascot Lab",
   review: "Review your order — Mascot Lab",
-  done: "Order sent — Mascot Lab",
+  done: "Your order — Mascot Lab",
   orders: "Order inbox — Mascot Lab",
 };
 
@@ -37,9 +37,11 @@ export const COPY = {
   sampleLogo: "Sample logo",
   exampleRoster: "Example roster — replace with your players",
   footerNote:
-    "Mockups are previews; colours and placement are confirmed on a printed proof before production. Prices are estimates until proof approval.",
+    "Mockups are previews; colors and placement are confirmed on a printed proof before production. Prices are estimates until proof approval.",
   footerSample: "Northgate Bulldogs is a fictional sample team.",
   privacy: "Your logo stays in this browser. Nothing is uploaded until you send an order.",
+  logoFailedTag: "Logo didn't load",
+  logoFailedTitle: "Your logo didn't load. Open the studio to upload it again",
   logoTooBig:
     "Your uploaded logo was too large to keep on this device between visits, so the sample logo is showing. Upload it again to pick up where you left off.",
 };

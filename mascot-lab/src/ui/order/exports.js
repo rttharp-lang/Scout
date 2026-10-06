@@ -7,6 +7,7 @@ import { darken } from "../../engine/core.js";
 import { orderSheetHtml, rosterCsv, orderText } from "../../order/orderSheet.js";
 import { buildOrder, findLocalOrder, pendingRevision } from "../../order/orderService.js";
 import { countedRows } from "../../order/pricing.js";
+import { dataUrlText, sanitizeSvg, svgDataUrl } from "../../engine/sanitizeSvg.js";
 import { letteringFor, queue, renderArt, renderGarmentView } from "./kit.js";
 
 let jobSeq = 0;
@@ -58,12 +59,17 @@ export function logoThumb(canvas, maxBytes = 30 * 1024) {
 /**
  * logoFileFor(canvas, name, src) → { dataUrl, width, height, name } | null: the uploaded logo
  * small enough to travel with a db order (≤ 200 KB as a data URL). An SVG upload goes as
- * the original vector; a raster goes as the cleaned-up logo: PNG at 1024 px when it fits,
- * then WebP (keeps transparency, much smaller), then smaller PNG, then white-backed JPEG.
+ * the original vector, sanitized (engine/sanitizeSvg.js); a raster goes as the cleaned-up
+ * logo: PNG at 1024 px when it fits, then WebP (keeps transparency, much smaller), then
+ * smaller PNG, then white-backed JPEG.
  */
 export function logoFileFor(canvas, name = "logo", src = null, maxChars = 200 * 1024) {
-  if (typeof src === "string" && src.startsWith("data:image/svg+xml") && src.length <= maxChars) {
-    return { dataUrl: src, width: canvas?.width || null, height: canvas?.height || null, name };
+  if (typeof src === "string" && src.startsWith("data:image/svg+xml")) {
+    // the vector goes SANITIZED (no scripts, handlers, foreign HTML or external loads)
+    // and base64-encoded (what the order inbox accepts); else it travels as a raster below
+    const clean = sanitizeSvg(dataUrlText(src));
+    const url = clean ? svgDataUrl(clean) : null;
+    if (url && url.length <= maxChars) return { dataUrl: url, width: canvas?.width || null, height: canvas?.height || null, name };
   }
   if (!canvas?.width) return null;
   const draw = (side, bg) => {

@@ -149,14 +149,14 @@ export function orderText(order) {
   const extraLines = [];
   for (const [id, bySize] of Object.entries(o.extras || {})) {
     const g = (o.garments || []).find((x) => x.id === id);
-    const sz = Object.entries(bySize).filter(([, n]) => n > 0).map(([z, n]) => `${z} ${n}`).join(", ");
+    const sz = Object.entries(bySize && typeof bySize === "object" ? bySize : {}).filter(([, n]) => n > 0).map(([z, n]) => `${z} ${n}`).join(", ");
     if (sz) extraLines.push(`  ${g?.name || id}: ${sz}`);
   }
   if (extraLines.length) { L.push(""); L.push("EXTRAS (coaches, staff, fans)"); L.push(...extraLines); }
   const t = o.totals || {};
   L.push("");
   L.push("TOTALS");
-  for (const l of t.lines || []) if (l.units) L.push(`  ${l.name.padEnd(18)} ${String(l.units).padStart(4)} × ${formatMoney(l.price).padStart(5)} = ${formatMoney(l.amount)}`);
+  for (const l of t.lines || []) if (l?.units) L.push(`  ${s(l.name).padEnd(18)} ${String(l.units).padStart(4)} × ${formatMoney(l.price).padStart(5)} = ${formatMoney(l.amount)}`);
   L.push(`  Subtotal ${formatMoney(t.subtotal)}`);
   if (t.discount) L.push(`  Volume discount (${formatPercent(t.tier?.off)}, ${t.tier?.min}+ items) −${formatMoney(t.discount)}`);
   if (t.decorationFee) L.push(`  Art & setup ${formatMoney(t.decorationFee)}`);
@@ -202,13 +202,20 @@ export function rosterCsv(order) {
       rows.push(["Extra (coach, staff, fan)", "", g.fit === "bottom" ? "" : size, g.fit === "bottom" ? size : "", ...gs.map((x) => (x.id === g.id ? n : "")), "Extra"]);
     }
   }
-  return rows.map((r) => r.map(csvCell).join(",")).join("\r\n") + "\r\n";
+  // UTF-8 BOM first: without it Excel (Windows) reads the file as ANSI and "José Núñez"
+  // comes out as "JosÃ© NÃºÃ±ez"; Google Sheets and Numbers ignore it
+  return "\uFEFF" + rows.map((r) => r.map(csvCell).join(",")).join("\r\n") + "\r\n";
 }
 
 /* ───────────────────────────── HTML order sheet ───────────────────────────── */
 
 const esc = (v) => s(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const okImg = (u) => typeof u === "string" && /^data:image\/(png|jpeg|webp|svg\+xml);base64,/.test(u);
+// the whole URL must be base64 (a prefix check would let `"…` break out of the src attribute)
+const okImg = (u) => typeof u === "string" && /^data:image\/(png|jpeg|webp|svg\+xml);base64,[A-Za-z0-9+/]+=*$/.test(u);
+/** A colour for a style attribute: "#RRGGBB" only (anything else could load url()s). */
+const hex = (v) => (/^#[0-9a-f]{6}$/i.test(s(v)) ? s(v) : "transparent");
+/** A count for the sheet: a finite number, else 0 (never markup). */
+const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
 
 function luminance(hex) {
   const m = /^#?([0-9a-f]{6})$/i.exec(hex || "");
@@ -236,7 +243,7 @@ export function orderSheetHtml(order, images = {}) {
   const lookImg = okImg(images.look) ? images.look : null;
 
   const swatches = Object.entries(pal).map(([k, v]) => `
-      <div class="sw"><span class="chip" style="background:${esc(v)}"></span><span><b>${esc(ROLE_NAMES[k] || k)}</b><code>${esc(v)}</code></span></div>`).join("");
+      <div class="sw"><span class="chip" style="background:${hex(v)}"></span><span><b>${esc(ROLE_NAMES[k] || k)}</b><code>${esc(v)}</code></span></div>`).join("");
 
   const settings = (o.effect?.settings || []).map((x) => `<tr><th>${esc(x.label)}</th><td>${esc(x.value)}</td></tr>`).join("");
 
@@ -248,13 +255,13 @@ export function orderSheetHtml(order, images = {}) {
     const list = (arr) => (arr?.length ? `<ul>${arr.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="muted">No graphic</p>`);
     return `
     <article class="garment">
-      <header><h3>${esc(g.name)}</h3><code>${esc(g.styleCode)}</code><span class="qty">${q.total || 0} pcs</span></header>
+      <header><h3>${esc(g.name)}</h3><code>${esc(g.styleCode)}</code><span class="qty">${num(q.total)} pcs</span></header>
       <div class="views">${view("front")}${view("back")}</div>
       <div class="ginfo">
         <p class="spec">${esc(g.spec)}</p>
-        <p class="cw"><span class="dot" style="background:${esc(g.colors?.base)}"></span>Base <code>${esc(g.colors?.base)}</code>
-          <span class="dot" style="background:${esc(g.colors?.trim)}"></span>Trim <code>${esc(g.colors?.trim)}</code>
-          <span class="dot" style="background:${esc(g.colors?.accent)}"></span>Accent <code>${esc(g.colors?.accent)}</code></p>
+        <p class="cw"><span class="dot" style="background:${hex(g.colors?.base)}"></span>Base <code>${esc(g.colors?.base)}</code>
+          <span class="dot" style="background:${hex(g.colors?.trim)}"></span>Trim <code>${esc(g.colors?.trim)}</code>
+          <span class="dot" style="background:${hex(g.colors?.accent)}"></span>Accent <code>${esc(g.colors?.accent)}</code></p>
         <div class="place"><h4>Front</h4>${list(g.front)}<h4>Back</h4>${list(g.back)}${g.lettering ? `<h4>Lettering</h4><p>${esc(g.lettering)}</p>` : ""}</div>
       </div>
     </article>`;
@@ -265,7 +272,7 @@ export function orderSheetHtml(order, images = {}) {
       <thead><tr><th>Garment</th>${sizes.map((z) => `<th>${esc(z)}</th>`).join("")}<th class="tot">Total</th></tr></thead>
       <tbody>${gs.map((g) => {
         const q = o.quantities?.[g.id] || {};
-        return `<tr><th>${esc(g.name)}</th>${sizes.map((z) => `<td>${q[z] || ""}</td>`).join("")}<td class="tot">${q.total || 0}</td></tr>`;
+        return `<tr><th>${esc(g.name)}</th>${sizes.map((z) => `<td>${num(q[z]) || ""}</td>`).join("")}<td class="tot">${num(q.total)}</td></tr>`;
       }).join("")}</tbody>
     </table>`;
 
@@ -274,9 +281,9 @@ export function orderSheetHtml(order, images = {}) {
     return `<tr><td class="n">${i + 1}</td><td>${esc(r.name) || '<span class="muted">No name</span>'}</td><td class="num">${esc(r.number) || "–"}</td><td>${esc(r.top || UNSIZED)}</td><td>${esc(r.bottom || UNSIZED)}</td>${gs.map((g) => `<td class="chk">${inc.has(g.id) ? "●" : ""}</td>`).join("")}</tr>`;
   }).join("");
 
-  const extras = gs.flatMap((g) => Object.entries(o.extras?.[g.id] || {}).filter(([, n]) => n > 0).map(([z, n]) => `<tr><td>${esc(g.name)}</td><td>${esc(z)}</td><td class="num">${n}</td></tr>`)).join("");
+  const extras = gs.flatMap((g) => Object.entries(o.extras?.[g.id] || {}).filter(([, n]) => n > 0).map(([z, n]) => `<tr><td>${esc(g.name)}</td><td>${esc(z)}</td><td class="num">${num(n)}</td></tr>`)).join("");
 
-  const lines = (t.lines || []).filter((l) => l.units).map((l) => `<tr><td>${esc(l.name)}</td><td class="num">${l.units}</td><td class="num">${formatMoney(l.price)}</td><td class="num">${formatMoney(l.amount)}</td></tr>`).join("");
+  const lines = (t.lines || []).filter((l) => l.units).map((l) => `<tr><td>${esc(l.name)}</td><td class="num">${num(l.units)}</td><td class="num">${formatMoney(l.price)}</td><td class="num">${formatMoney(l.amount)}</td></tr>`).join("");
 
   return `<!doctype html>
 <html lang="en">
@@ -400,7 +407,7 @@ export function orderSheetHtml(order, images = {}) {
   <div class="meta">
     <div><span>Requested</span>${esc(formatDate(o.createdAt))}</div>
     <div><span>Status</span><span class="badge">${esc(o.status === "requested" ? "Awaiting proof" : s(o.status))}</span></div>
-    <div><span>Items</span>${t.units || 0} pieces · ${(o.roster || []).length} players</div>
+    <div><span>Items</span>${num(t.units)} pieces · ${(o.roster || []).length} players</div>
     <div><span>Need by</span>${c.needBy ? esc(formatDate(c.needBy)) : "Not given"}</div>
   </div>
 
@@ -439,7 +446,7 @@ export function orderSheetHtml(order, images = {}) {
         <tbody>${lines}</tbody>
         <tfoot>
           <tr><td>Subtotal</td><td></td><td></td><td class="num">${formatMoney(t.subtotal)}</td></tr>
-          ${t.discount ? `<tr><td>Volume discount ${formatPercent(t.tier?.off)} (${t.tier?.min}+ items)</td><td></td><td></td><td class="num">−${formatMoney(t.discount)}</td></tr>` : ""}
+          ${t.discount ? `<tr><td>Volume discount ${formatPercent(t.tier?.off)} (${num(t.tier?.min)}+ items)</td><td></td><td></td><td class="num">−${formatMoney(t.discount)}</td></tr>` : ""}
           ${t.decorationFee ? `<tr><td>Art &amp; setup</td><td></td><td></td><td class="num">${formatMoney(t.decorationFee)}</td></tr>` : ""}
           <tr class="grand"><td>Estimated total</td><td></td><td></td><td class="num">${formatMoney(t.total)}</td></tr>
         </tfoot>

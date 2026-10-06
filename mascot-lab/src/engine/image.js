@@ -5,6 +5,7 @@ import {
   rng, rgbToHex, hexToRgb, rgbToHsl, hslToHex, luminance, contrastRatio, clamp,
   SRGB_TO_LINEAR,
 } from "./core.js";
+import { sanitizeSvg } from "./sanitizeSvg.js";
 
 /** SAFE — the logo is fitted inside the central 72% of every effect source. */
 export const SAFE = 0.72;
@@ -34,7 +35,10 @@ const parseLen = (v) => {
 
 /** rasterizeSvgText(svgText, longSide = 2048) → canvas: SVG drawn crisply at an explicit size. */
 export async function rasterizeSvgText(svgText, longSide = SVG_LONG_SIDE) {
-  const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+  // sanitized first: an SVG with a <foreignObject> (every Illustrator "preserve editing"
+  // export has one inside a <switch>) TAINTS the canvas it is drawn into, so the pixels
+  // could never be read back (background removal, palette, every effect)
+  const doc = new DOMParser().parseFromString(sanitizeSvg(svgText) ?? String(svgText ?? ""), "image/svg+xml");
   const svg = doc.documentElement;
   if (!svg || svg.nodeName.toLowerCase() !== "svg" || doc.getElementsByTagName("parsererror").length) {
     throw new Error("That SVG file couldn't be read.");
@@ -73,11 +77,21 @@ export async function rasterizeSvgText(svgText, longSide = SVG_LONG_SIDE) {
   }
 }
 
+// Nothing downstream uses more than 1600 px (prepareLogo) or 2048 px (SVG), so a raster is
+// drawn at most this big: a 300 KB PNG can declare 16000×16000 px, and copying that at
+// full size (canvas, clone, resize steps) costs gigabytes and kills phone tabs.
+const MAX_DECODE_SIDE = 4096;
+
 function imageToCanvas(img) {
   const w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
   if (!w || !h) throw new Error("That image is empty.");
-  const c = createCanvas(w, h);
-  ctx2d(c).drawImage(img, 0, 0, w, h);
+  const k = Math.min(1, MAX_DECODE_SIDE / Math.max(w, h));
+  const W = Math.max(1, Math.round(w * k)), H = Math.max(1, Math.round(h * k));
+  const c = createCanvas(W, H);
+  const x = ctx2d(c);
+  x.imageSmoothingEnabled = true;
+  x.imageSmoothingQuality = "high";
+  x.drawImage(img, 0, 0, W, H);
   return c;
 }
 

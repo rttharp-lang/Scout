@@ -29,6 +29,7 @@ import { CONTACT_EMAIL } from "../brand.js";
 import { LEAD_TIME, MIN_ORDER_UNITS, PROOF_TIME, PRODUCTS } from "./catalog.js";
 import { countedRows, orderGarmentIds, quantities as computeQuantities, rowIncludes, totals as computeTotals } from "./pricing.js";
 import { describeLettering, describePlacement, describeSettings } from "./orderSheet.js";
+import { sanitizeSvg } from "../engine/sanitizeSvg.js";
 import { resolveParams } from "../engine/render.js";
 import { getDropStyle, resolveColors } from "../apparel/collection.js";
 
@@ -335,17 +336,23 @@ export async function fetchOrderLogo(db, order) {
   const bin = atob(m[3]);
   const bytes = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  // the ref comes from the coach's document: keep it to a plain filename
+  const base = String(order.ref || "order").replace(/[^A-Za-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "order";
+  if (m[2] === "svg+xml") {
+    // the coach's document is untrusted: never hand the owner an SVG that could run script
+    const clean = sanitizeSvg(new TextDecoder().decode(bytes));
+    return clean ? { blob: new Blob([clean], { type: "image/svg+xml" }), filename: `${base}-logo.svg` } : null;
+  }
   const blob = new Blob([bytes], { type: m[1] });
-  if (m[2] === "svg+xml") return { blob, filename: `${order.ref}-logo.svg` };
-  if (m[2] === "jpeg") return { blob, filename: `${order.ref}-logo.jpg` };
-  if (m[2] === "png") return { blob, filename: `${order.ref}-logo.png` };
+  if (m[2] === "jpeg") return { blob, filename: `${base}-logo.jpg` };
+  if (m[2] === "png") return { blob, filename: `${base}-logo.png` };
   // WebP isn't a download type the Artifact frame allows: re-encode as PNG
   const bmp = await createImageBitmap(blob);
   const c = document.createElement("canvas");
   c.width = bmp.width; c.height = bmp.height;
   c.getContext("2d").drawImage(bmp, 0, 0);
   const png = await new Promise((res) => c.toBlob(res, "image/png"));
-  return png ? { blob: png, filename: `${order.ref}-logo.png` } : null;
+  return png ? { blob: png, filename: `${base}-logo.png` } : null;
 }
 
 /** viewerId() → this viewer's opaque id from the `user` capability, or null. */
@@ -506,7 +513,8 @@ const txt = (v) => (typeof v === "string" ? v : typeof v === "number" ? String(v
 /** inboxOrder(raw, from) → an order body with the shapes the inbox renders (data is untrusted). */
 function inboxOrder(raw, from) {
   const o = { ...raw };
-  o.id = o.ref = txt(raw.ref);
+  o.ref = txt(raw.ref);
+  o.id = `${from}/${o.ref}`; // unique per coach document (a ref string is coach-chosen)
   o.from = from;
   o.createdAt = typeof raw.createdAt === "string" && !Number.isNaN(Date.parse(raw.createdAt)) ? raw.createdAt : "";
   o.team = isObj(raw.team) ? { school: txt(raw.team.school), mascot: txt(raw.team.mascot), isSample: !!raw.team.isSample } : { school: "", mascot: "" };
@@ -520,11 +528,12 @@ function inboxOrder(raw, from) {
   o.effect = isObj(raw.effect) ? { ...raw.effect, name: txt(raw.effect.name), method: txt(raw.effect.method), settings: arr(raw.effect.settings).filter(isObj) } : { name: "", method: "", settings: [] };
   o.design = isObj(raw.design) ? { dropStyleName: txt(raw.design.dropStyleName) } : {};
   o.logo = isObj(raw.logo)
-    ? { name: txt(raw.logo.name), isSample: !!raw.logo.isSample, thumb: /^data:image\/(jpeg|png);base64,/.test(txt(raw.logo.thumb)) ? raw.logo.thumb : null, file: isObj(raw.logo.file) && typeof raw.logo.file.path === "string" ? { path: raw.logo.file.path, width: Number(raw.logo.file.width) || null, height: Number(raw.logo.file.height) || null } : null }
+    ? { name: txt(raw.logo.name), isSample: !!raw.logo.isSample, thumb: /^data:image\/(jpeg|png);base64,[A-Za-z0-9+/]+=*$/.test(txt(raw.logo.thumb)) ? raw.logo.thumb : null, file: isObj(raw.logo.file) && typeof raw.logo.file.path === "string" ? { path: raw.logo.file.path, width: Number(raw.logo.file.width) || null, height: Number(raw.logo.file.height) || null } : null }
     : { name: "" };
   o.palette = isObj(raw.palette) ? raw.palette : {};
   o.replaces = txt(raw.replaces) || null;
-  o.status = txt(raw.status) || "requested";
+  // the status is the owner's call ("orders/_status"); a coach's document can't set it
+  o.status = "requested";
   return o;
 }
 
@@ -546,17 +555,20 @@ export function watchOrders(db, onOrders, onError) {
           for (const raw of arr(data.orders)) {
             if (!isObj(raw) || !txt(raw.ref)) continue;
             const o = inboxOrder(raw, d.id);
-            const seen = byRef.get(o.ref);
-            if (!seen || String(o.createdAt) > String(seen.createdAt)) byRef.set(o.ref, o);
+            const seen = byRef.get(o.id);
+            if (!seen || String(o.createdAt) > String(seen.createdAt)) byRef.set(o.id, o);
           }
         }
         const orders = [...byRef.values()].sort(byNewest);
-        const replacedBy = {};
-        for (const o of orders) if (o.replaces && byRef.has(o.replaces)) replacedBy[o.replaces] = o.ref;
+        // refs are coach-written strings ("__proto__", "constructor"…): Map + own-property
+        // lookups only, so a ref can never resolve to an Object.prototype member
+        // (a revision only replaces an order in the SAME coach's document)
+        const replacedBy = new Map();
+        for (const o of orders) if (o.replaces && byRef.has(`${o.from}/${o.replaces}`)) replacedBy.set(`${o.from}/${o.replaces}`, o.ref);
         for (const o of orders) {
-          const st = statuses?.[o.ref];
+          const st = statuses && Object.prototype.hasOwnProperty.call(statuses, o.ref) ? statuses[o.ref] : null;
           if (isObj(st) && ORDER_STATUSES.some((x) => x.id === st.status)) { o.status = st.status; o.statusAt = txt(st.at); }
-          if (replacedBy[o.ref]) o.replacedBy = replacedBy[o.ref];
+          if (replacedBy.has(o.id)) o.replacedBy = replacedBy.get(o.id);
         }
         onOrders(orders, { statuses: statuses || {}, hasStatusDoc: statuses !== null });
       },

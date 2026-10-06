@@ -18,7 +18,7 @@ function SecHead({ n, title, edit, children }) {
       <h3 className="rv-sec__h"><span className="rv-sec__n">{n}</span>{title}</h3>
       {children}
       {edit && (
-        <a className="rv-edit" href={edit.href}>
+        <a className="rv-edit" href={edit.href} aria-label={edit.label /* the text is hidden on phones */}>
           <Pencil aria-hidden="true" />
           <span>{edit.label}</span>
         </a>

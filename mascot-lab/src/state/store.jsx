@@ -24,7 +24,7 @@
 import React, { createContext, useContext, useEffect, useLayoutEffect, useMemo, useReducer, useRef } from "react";
 import { DEFAULT_SAMPLE, SAMPLE_LOGOS } from "../assets/samples/index.js";
 import { buildCollection } from "../apparel/collection.js";
-import { availableEffectIds, loadEffects } from "../engine/effects/index.js";
+import { availableEffectIds, getEffect, loadEffects } from "../engine/effects/index.js";
 import { luminance } from "../engine/core.js";
 import * as storage from "../platform/storage.js";
 
@@ -83,14 +83,58 @@ function readableTeamColor(palette, theme) {
   return THEME_INK[theme];
 }
 
-/** A team colour that pops against both the ink and the light page (wordmark offset, trim lines). */
-function flashTeamColor(p) {
-  const score = (c) => Math.min(contrast(c, THEME_INK.light), contrast(c, THEME_BG.light));
-  const cands = [p.secondary, p.primary, p.accent];
-  return cands.find((c) => score(c) >= 1.6) || cands.reduce((a, b) => (score(b) > score(a) ? b : a));
+/** CIELAB distance — "visibly different colours" (hue counts, not just lightness). */
+function lab(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  const lin = (c) => { c /= 255; return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
+  const [R, G, B] = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map(lin);
+  const f = (t) => (t > 0.008856 ? Math.cbrt(t) : 7.787 * t + 16 / 116);
+  const X = f((0.4124 * R + 0.3576 * G + 0.1805 * B) / 0.95047);
+  const Y = f(0.2126 * R + 0.7152 * G + 0.0722 * B);
+  const Z = f((0.0193 * R + 0.1192 * G + 0.9505 * B) / 1.08883);
+  return [116 * Y - 16, 500 * (X - Y), 200 * (Y - Z)];
+}
+const deltaE = (a, b) => { const A = lab(a), B = lab(b); return Math.hypot(A[0] - B[0], A[1] - B[1], A[2] - B[2]); };
+function mixHex(a, b, t) {
+  const x = parseInt(a.slice(1), 16), y = parseInt(b.slice(1), 16);
+  const ch = (sh) => Math.round(((x >> sh) & 255) * (1 - t) + ((y >> sh) & 255) * t);
+  return "#" + [16, 8, 0].map((sh) => ch(sh).toString(16).padStart(2, "0")).join("").toUpperCase();
 }
 
-/** teamCssVars(palette) → { "--team-1": "#…", … } — what the store writes on <html>. */
+/**
+ * flashTeamColor(palette, theme) → the team's "flash" for one theme: the trim line under
+ * the primary in header/dialog stripes, the wordmark's misregistration offset, toast
+ * edges. It must show on the theme background, stand apart from the ink (the wordmark
+ * tag) and from the primary it sits under. First a team colour that already does
+ * (secondary, then accent, light, dark); otherwise the team colour nudged lighter/darker
+ * until it does (red + black on the light theme → a charcoal; on dark → a light grey).
+ */
+function flashTeamColor(p, theme = "light") {
+  const bg = THEME_BG[theme], ink = THEME_INK[theme];
+  const primaryShows = contrast(p.primary, bg) >= 1.5;
+  const distinct = (c) => !primaryShows || deltaE(c, p.primary) >= 25;
+  const fits = (c, min) => (contrast(c, bg) >= min || deltaE(c, bg) >= 45) && (contrast(c, ink) >= min - 0.2 || deltaE(c, ink) >= 45) && distinct(c);
+  const roles = [p.secondary, p.accent, p.light, p.dark];
+  const hit = roles.find((c) => fits(c, 1.6));
+  if (hit) return hit;
+  let best = null, bestVis = 0;
+  for (const base of [p.secondary, p.accent, p.primary, p.light, p.dark]) {
+    for (const toward of ["#FFFFFF", "#000000"]) {
+      for (let t = 0.04; t <= 0.9; t += 0.04) {
+        const c = mixHex(base, toward, t);
+        if (contrast(c, bg) >= 2 && contrast(c, ink) >= 2 && distinct(c)) {
+          const vis = contrast(c, bg);
+          if (vis > bestVis) { best = c; bestVis = vis; }
+          break;
+        }
+      }
+    }
+  }
+  return best || (theme === "light" ? "#5C6470" : "#9BA4B0");
+}
+
+/** teamCssVars(palette) → { "--team-1": "#…", … } — what the store writes on <html>.
+ *  (--team-flash itself comes from tokens.css: --team-flash-on-light / -on-dark by theme.) */
 export function teamCssVars(palette) {
   const p = normPalette(palette);
   const onLight = readableTeamColor(p, "light");
@@ -108,7 +152,9 @@ export function teamCssVars(palette) {
     "--team-on-light-ink": inkOn(onLight),
     "--team-on-dark": onDark,
     "--team-on-dark-ink": inkOn(onDark),
-    "--team-flash": flashTeamColor(p),
+    // tokens.css points --team-flash at the one for the current theme
+    "--team-flash-on-light": flashTeamColor(p, "light"),
+    "--team-flash-on-dark": flashTeamColor(p, "dark"),
   };
 }
 
@@ -174,14 +220,24 @@ export function createInitialState() {
 
 const isObj = (v) => v && typeof v === "object" && !Array.isArray(v);
 
-/** Rebuild a collection for a style/palette, keeping per-item `enabled` and any item the coach edited. */
-function rebuildCollection(prev, styleId, palette, { keepCustom = true } = {}) {
-  const next = buildCollection(styleId, palette);
+/** A stored/edited item is usable (else it's rebuilt from the recipe rather than crash a page). */
+const validItem = (it) =>
+  isObj(it) && isObj(it.colors) && Array.isArray(it.front) && Array.isArray(it.back) &&
+  [...it.front, ...it.back].every(isObj) && (it.text == null || isObj(it.text));
+
+/**
+ * Rebuild a collection for a style/palette/effect stage, keeping per-item `enabled` and any
+ * item the coach edited (if it's well-formed). `stage` defaults to the previous collection's
+ * effectStage.
+ */
+function rebuildCollection(prev, styleId, palette, { keepCustom = true, stage } = {}) {
+  const effectStage = stage === undefined ? prev?.effectStage : stage;
+  const next = buildCollection(styleId, palette, { effectStage });
   const prevItems = prev?.items || {};
   for (const id of Object.keys(next.items)) {
     const old = prevItems[id];
     if (!old) continue;
-    if (keepCustom && old.custom && prev.dropStyle === next.dropStyle) next.items[id] = old;
+    if (keepCustom && old.custom && prev.dropStyle === next.dropStyle && validItem(old)) next.items[id] = old;
     else next.items[id].enabled = old.enabled !== false;
   }
   return next;
@@ -270,8 +326,20 @@ function reducer(state, action) {
       return { ...state, collection: { ...state.collection, items: { ...state.collection.items, [action.garmentId]: item } } };
     }
 
-    case "setCollection":
-      return isObj(action.collection) ? { ...state, collection: action.collection } : state;
+    case "setCollection": {
+      // pieces the coach never edited are a pure function of (drop style, palette, effect
+      // stage): re-derive them so a reset/undo can't bring back a stale colourway
+      const c = action.collection;
+      if (!isObj(c) || !isObj(c.items)) return state;
+      const styleId = typeof c.dropStyle === "string" ? c.dropStyle : state.collection.dropStyle;
+      return { ...state, collection: rebuildCollection({ ...c, dropStyle: styleId }, styleId, state.palette, { stage: state.collection.effectStage ?? null }) };
+    }
+
+    case "setEffectStage": {
+      const stage = action.stage === "dark" ? "dark" : null;
+      if ((state.collection.effectStage ?? null) === stage) return state;
+      return { ...state, collection: rebuildCollection(state.collection, state.collection.dropStyle, state.palette, { stage }) };
+    }
 
     case "setRoster": {
       const roster = typeof action.roster === "function" ? action.roster(state.roster) : action.roster;
@@ -363,7 +431,7 @@ function hydrate(raw) {
     // flags and `custom` items as stored
     const collection =
       isObj(raw.collection) && isObj(raw.collection.items) && typeof raw.collection.dropStyle === "string"
-        ? rebuildCollection(raw.collection, raw.collection.dropStyle, palette)
+        ? rebuildCollection(raw.collection, raw.collection.dropStyle, palette, { stage: raw.collection.effectStage === "dark" ? "dark" : null })
         : buildCollection("statement", palette);
     const effect = isObj(raw.effect) && typeof raw.effect.id === "string"
       ? { id: raw.effect.id, params: isObj(raw.effect.params) ? raw.effect.params : {}, seed: Number.isFinite(raw.effect.seed) ? raw.effect.seed : 7 }
@@ -404,6 +472,7 @@ export function StoreProvider({ children, initialState, persist: persistOn = tru
   useIsoLayoutEffect(() => {
     const root = document.documentElement;
     for (const [k, v] of Object.entries(teamCssVars(state.palette))) root.style.setProperty(k, v);
+    root.style.removeProperty("--team-flash"); // theme-aware in tokens.css (was inline before)
   }, [state.palette]);
 
   // debounced persistence (flush on page hide)
@@ -443,6 +512,22 @@ export function StoreProvider({ children, initialState, persist: persistOn = tru
         .catch(() => {});
     const present = availableEffectIds().includes(effectId);
     const t = setTimeout(check, present ? 2500 : 0);
+    return () => { alive = false; clearTimeout(t); };
+  }, [effectId]);
+
+  // effect-aware colourways: the collection follows the chosen effect's stage (dark-stage
+  // looks move light pieces onto dark bases). The stage lives on the collection, so this
+  // stays synchronous: render with what's stored, rebuild once the effect module answers.
+  // The lookup for the effect the page opened with waits a moment (it may load the effect
+  // modules while the first page renders); a newly picked effect is looked up at once.
+  const initialEffectId = useRef(effectId);
+  useEffect(() => {
+    let alive = true;
+    const run = () =>
+      getEffect(effectId)
+        .then((e) => { if (alive && e) dispatch({ type: "setEffectStage", stage: e.stage }); })
+        .catch(() => {});
+    const t = setTimeout(run, effectId === initialEffectId.current ? 1200 : 0);
     return () => { alive = false; clearTimeout(t); };
   }, [effectId]);
 

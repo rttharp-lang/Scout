@@ -105,6 +105,7 @@ strong, b { font-weight: 700; }
   padding: var(--space-2) var(--space-3);
   background: var(--surface-inverse); color: var(--ink-inverse);
   font-weight: 600; border-radius: var(--radius-sm);
+  min-height: 40px;
   transform: translateY(-200%);
 }
 .skip-link:focus { transform: none; }
@@ -257,6 +258,10 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   box-shadow: 0 0 0 1px var(--line-strong), 0 0 0 3px var(--surface), 0 0 0 5px var(--focus);
 }
 input[type="range"]:disabled { opacity: 0.45; cursor: not-allowed; }
+/* phones and touch screens: a 40px-tall hit area and a bigger thumb */
+@media (max-width: 720px), (pointer: coarse) {
+  input[type="range"] { height: 40px; --thumb: 22px; }
+}
 
 /* native colour well (ColorField styles its own) */
 input[type="color"] {

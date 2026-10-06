@@ -264,7 +264,10 @@
   flex: none;
   border-radius: var(--radius-sm);
   background: var(--sw-color, #888);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 16%, transparent);
+  /* two edges so every chip reads on every theme: an inner line in the chip's own ink
+   * (a light line on #111, a dark one on white) and an outer hairline in the theme ink */
+  --sw-edge: inset 0 0 0 1px color-mix(in srgb, var(--sw-ink, #000) 24%, transparent), 0 0 0 1px color-mix(in srgb, var(--ink) 22%, transparent);
+  box-shadow: var(--sw-edge);
   transition: box-shadow var(--dur-1) ease, transform var(--dur-1) var(--ease-out);
 }
 .ml-swatch--round .ml-swatch__chip { border-radius: 50%; }
@@ -277,9 +280,9 @@
 .ml-swatch__name { font-size: var(--step--1); font-weight: 600; }
 .ml-swatch__hex { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--ink-2); text-transform: uppercase; }
 button.ml-swatch { cursor: pointer; border-radius: var(--radius-sm); }
-button.ml-swatch:hover .ml-swatch__chip { transform: translateY(-1px); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 16%, transparent), 0 3px 8px -3px rgb(0 0 0 / 0.35); }
+button.ml-swatch:hover .ml-swatch__chip { transform: translateY(-1px); box-shadow: var(--sw-edge), 0 3px 8px -3px rgb(0 0 0 / 0.35); }
 .ml-swatch[aria-pressed="true"] .ml-swatch__chip,
-.ml-swatch.is-selected .ml-swatch__chip { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 16%, transparent), 0 0 0 2px var(--surface), 0 0 0 4px var(--ink); }
+.ml-swatch.is-selected .ml-swatch__chip { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--sw-ink, #000) 24%, transparent), 0 0 0 2px var(--surface), 0 0 0 4px var(--ink); }
 .ml-swatches { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 
 /* ═══════════════════════════ ColorField ═══════════════════════════ */
@@ -287,10 +290,15 @@ button.ml-swatch:hover .ml-swatch__chip { transform: translateY(-1px); box-shado
 .ml-color__head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
 .ml-color__label { font-size: var(--step--1); font-weight: 600; color: var(--ink); }
 .ml-color__role { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: var(--tracking-mono); color: var(--ink-2); text-transform: uppercase; }
-.ml-color__row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.ml-color__sep { width: 1px; align-self: stretch; background: var(--line); margin: 2px 4px; }
+/* swatches · hex · picker on one line when they fit; otherwise hex + picker wrap together
+ * onto their own line (never one without the other) and the hex field widens to fill it */
+.ml-color__row { display: flex; align-items: center; gap: 8px 14px; flex-wrap: wrap; }
+.ml-color__swatches { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; min-width: 0; }
+.ml-color__custom { display: flex; align-items: center; gap: 6px; flex: 1 1 auto; min-width: 0; }
 .ml-color__hex {
+  flex: 1 1 auto;
   width: 10.5ch !important;
+  max-width: 15ch;
   min-height: 32px !important;
   padding: 4px 8px !important;
   font-family: var(--font-mono) !important;
@@ -304,6 +312,7 @@ button.ml-swatch:hover .ml-swatch__chip { transform: translateY(-1px); box-shado
 .ml-color__picker {
   position: relative;
   display: grid; place-items: center;
+  flex: none;
   width: 32px; height: 32px;
   border-radius: var(--radius-sm);
   border: 1px dashed var(--line-strong);
@@ -722,6 +731,9 @@ a.ml-teamchip:hover, button.ml-teamchip:hover { border-color: var(--line-strong)
   padding: 3px;
 }
 .ml-teamchip__thumb .ml-canvas { border-radius: 0; height: 100%; }
+.ml-teamchip__thumb--error { display: grid; place-items: center; background: var(--danger-soft); color: var(--danger); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--danger) 35%, transparent); }
+.ml-teamchip__thumb--error svg { width: 20px; height: 20px; }
+.ml-teamchip__busy { position: absolute; inset: 0; display: grid; place-items: center; background: color-mix(in srgb, var(--surface) 55%, transparent); color: var(--ink); font-size: 16px; }
 .ml-teamchip__thumb img { width: 100%; height: 100%; object-fit: contain; }
 .ml-teamchip__text { display: grid; gap: 3px; min-width: 0; }
 .ml-teamchip__name { display: flex; align-items: center; gap: 7px; min-width: 0; font-weight: 700; font-size: 13.5px; line-height: 1.15; }
@@ -738,7 +750,10 @@ a.ml-teamchip:hover, button.ml-teamchip:hover { border-color: var(--line-strong)
   padding: 2px 4px 1px; border-radius: var(--radius-xs);
   color: var(--warning); background: var(--warning-soft);
   line-height: 1.2;
+  white-space: nowrap;
 }
+.ml-teamchip__tag--error { color: var(--danger); background: var(--danger-soft); }
+.ml-teamchip.is-error { border-color: color-mix(in srgb, var(--danger) 45%, var(--line)); }
 
 /* ═══════════════════════════ Notice (inline banner) ═══════════════════════════ */
 .ml-notice {
@@ -758,3 +773,27 @@ a.ml-teamchip:hover, button.ml-teamchip:hover { border-color: var(--line-strong)
 .ml-notice--success { background: var(--success-soft); --notice-tone: var(--success); }
 .ml-notice--danger { background: var(--danger-soft); --notice-tone: var(--danger); }
 .ml-notice .ml-iconbtn { margin: -6px -6px -6px 0; }
+
+/* ═══════════════════════════ CopyText ═══════════════════════════ */
+.ml-copy { display: inline-flex; align-items: center; gap: var(--space-2) var(--space-3); flex-wrap: wrap; min-width: 0; max-width: 100%; }
+.ml-copy__text { user-select: all; -webkit-user-select: all; overflow-wrap: anywhere; font-weight: 600; min-width: 0; }
+.ml-copy__text--mono { font-family: var(--font-mono); letter-spacing: 0.02em; }
+.ml-copy--lg .ml-copy__text { font-family: var(--font-mono); font-weight: 600; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); letter-spacing: 0.04em; line-height: 1; }
+
+/* ═══════════════════════════ Touch sizes ═══════════════════════════
+ * Phones and touch screens: every small control gets a ≥40px target (visuals that sit
+ * over artwork can opt back down in their page CSS). Range inputs: global.css. */
+@media (max-width: 720px), (pointer: coarse) {
+  .ml-btn--sm { --btn-h: 40px; }
+  .ml-iconbtn--sm { --ib: 40px; }
+  .ml-toggle { min-height: 40px; }
+  .ml-seg--sm .ml-seg__opt, .ml-seg__opt { min-height: 40px; }
+  .ml-chip, .ml-chip--sm { min-height: 40px; }
+  .ml-color__swatches .ml-swatch { --sw: 40px; }
+  .ml-color__hex { min-height: 40px !important; }
+  .ml-color__picker { width: 40px; height: 40px; }
+  .ml-stepper { height: 40px; }
+  .ml-stepper button { width: 40px; }
+  .ml-toast__close { width: 40px; height: 40px; }
+  .ml-toast__action { min-height: 40px; }
+}

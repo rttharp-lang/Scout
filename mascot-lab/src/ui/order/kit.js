@@ -136,6 +136,11 @@ export function useKitArt({ size = 1024, quality = "final" } = {}) {
 /* ───────────────────────────── mockups ───────────────────────────── */
 
 const mockCache = new Map(); // key → canvas (LRU 72)
+// the art canvases' identity goes into mockup keys: a new logo (same effect, params and
+// palette, e.g. another sample) renders new art canvases, so it must miss the cache
+const artIds = new WeakMap();
+let artSeq = 0;
+const artId = (c) => { if (!c) return "-"; let id = artIds.get(c); if (!id) { id = `a${++artSeq}`; artIds.set(c, id); } return id; };
 function remember(key, canvas) {
   mockCache.set(key, canvas);
   while (mockCache.size > 72) mockCache.delete(mockCache.keys().next().value);
@@ -186,7 +191,7 @@ export function useMockups(ids, { size = 320, detail = "fast", views = ["front"]
     if (kit.status !== "ready" || !kit.art) return;
     const my = ++gen.current;
     let alive = true;
-    const artId = `${state.effect.id}|${JSON.stringify(state.effect.params)}|${state.effect.seed}|${palKey}|${kit.art.width}`;
+    const artKey = `${state.effect.id}|${JSON.stringify(state.effect.params)}|${state.effect.seed}|${palKey}|${kit.art.width}|${artId(kit.art)}|${artId(kit.clean)}`;
     const next = {};
     const jobs = [];
     const mine = new Set();
@@ -196,7 +201,7 @@ export function useMockups(ids, { size = 320, detail = "fast", views = ["front"]
       if (!g || !item) return;
       next[id] = {};
       views.forEach((view, vi) => {
-        const key = `mock|${artId}|${id}|${view}|${size}|${detail}|${letterKey}|${JSON.stringify(item)}`;
+        const key = `mock|${artKey}|${id}|${view}|${size}|${detail}|${letterKey}|${JSON.stringify(item)}`;
         const hit = mockCache.get(key);
         if (hit) { next[id][view] = hit; return; }
         mine.add(key);

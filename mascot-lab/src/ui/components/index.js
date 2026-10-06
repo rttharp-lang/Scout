@@ -21,6 +21,7 @@ export { Skeleton } from "./Skeleton.jsx";
 export { CanvasImage } from "./CanvasImage.jsx";
 export { Tabs, TabPanel, tabId, panelId } from "./Tabs.jsx";
 export { Notice } from "./Notice.jsx";
+export { CopyText, copyToClipboard } from "./CopyText.jsx";
 export { Wordmark, RegMark } from "./Brand.jsx";
 export { StepNav } from "./StepNav.jsx";
 export { TeamChip } from "./TeamChip.jsx";
