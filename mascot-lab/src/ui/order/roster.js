@@ -77,7 +77,7 @@ export function normalizeSize(raw) {
   return ys || null;
 }
 
-/** looksLikeSize(cell) → true if the cell is a recognisable size. */
+/** looksLikeSize(cell) → true if the cell is a recognizable size. */
 const looksLikeSize = (c) => normalizeSize(c) != null;
 const looksLikeNumber = (c) => /^(?:no\.?\s*|#\s*)?\d{1,2}$/i.test(String(c).trim());
 /** size-shaped but maybe not in the catalog ("XLT", "LT", "4XL") — used to split loose lines. */
@@ -151,7 +151,7 @@ function headerRole(cell) {
 function mapHeader(cells) {
   const roles = cells.map(headerRole);
   const known = roles.filter(Boolean).length;
-  // a header row: at least two recognised titles, and no cell that looks like a size/number value
+  // a header row: at least two recognized titles, and no cell that looks like a size/number value
   if (known >= 2 || (known >= 1 && cells.length === 1)) {
     if (cells.some((c, i) => !roles[i] && (looksLikeNumber(c)))) return null;
     return roles;

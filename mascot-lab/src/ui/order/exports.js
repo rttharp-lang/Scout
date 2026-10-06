@@ -7,6 +7,7 @@ import { darken } from "../../engine/core.js";
 import { orderSheetHtml, rosterCsv, orderText } from "../../order/orderSheet.js";
 import { buildOrder, findLocalOrder, pendingRevision } from "../../order/orderService.js";
 import { countedRows } from "../../order/pricing.js";
+import { teamLabel } from "../../order/team.js";
 import { dataUrlText, sanitizeSvg, svgDataUrl } from "../../engine/sanitizeSvg.js";
 import { letteringFor, queue, renderArt, renderGarmentView } from "./kit.js";
 
@@ -112,7 +113,7 @@ export function orderForExport(state, { garments, ids, effect, logoCanvas }) {
 
 const firstLettering = (state) => letteringFor(countedRows(state.roster).find((r) => String(r.number || "").trim()) || null);
 
-const SHEET_BG = "#F3F4F6";  // the order sheet's figure grey (also the pack's garment backdrop)
+const SHEET_BG = "#F3F4F6";  // the order sheet's figure gray (also the pack's garment backdrop)
 const sheetJpeg = (c) => flatten(c, 560, SHEET_BG).toDataURL("image/jpeg", 0.85);
 const nextFrame = () => new Promise((r) => (typeof requestAnimationFrame === "function" ? requestAnimationFrame(() => setTimeout(r, 0)) : setTimeout(r, 0)));
 /** settle() — two frames, so a progress label paints before a long synchronous step. */
@@ -120,7 +121,7 @@ const settle = async () => { await nextFrame(); await nextFrame(); };
 
 /**
  * sheetImages(state, ctx) → { look, garments: { [id]: { front, back } } } as JPEG data URLs
- * for the HTML order sheet (560 px garments on the sheet's figure grey). `ctx.ready`
+ * for the HTML order sheet (560 px garments on the sheet's figure gray). `ctx.ready`
  * ({ [id]: { front, back } } data URLs the design pack already made) are used as they are.
  */
 export async function sheetImages(state, { byId, ids, logo, ready = null, onStep }) {
@@ -161,14 +162,14 @@ export function makeOrderText(state, ctx) {
 }
 
 const slug = (t) => String(t || "team").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "team";
-export const fileBase = (state) => `${slug(`${state.team.school} ${state.team.mascot}`)}-${String(state.order.ref || "draft").toLowerCase()}`;
+export const fileBase = (state) => `${slug(teamLabel(state.team, state.contact))}-${String(state.order.ref || "draft").toLowerCase()}`;
 
 export const PACK_GARMENT_PX = 1200;
 export const PACK_ART_PX = 2048;
 
 /**
  * makeDesignPack(state, ctx, onProgress(done, total, label)) → Promise<{ blob, filename }> (zip):
- *   garments/<id>-front.jpg / -back.jpg   1200 px mockups on a light grey backdrop
+ *   garments/<id>-front.jpg / -back.jpg   1200 px mockups on a light gray backdrop
  *   artwork/<effect>-2048.png             the look on a transparent background, print size
  *   order-sheet.html, roster.csv, order.json, README.txt
  * Each render is its own queue job and the page yields between steps; images are encoded
@@ -192,7 +193,7 @@ export async function makeDesignPack(state, ctx, onProgress) {
   const base = fileBase(state);
   const STORE = { compression: "STORE" }; // JPEG/PNG are already compressed
 
-  // 1 · garments at 1200 px on the sheet grey, from the 1024 px art the previews already use
+  // 1 · garments at 1200 px on the sheet gray, from the 1024 px art the previews already use
   const kit = await renderArt(state, logo, { size: 1024, priority: 8 });
   const lettering = firstLettering(state);
   const ready = {};
@@ -229,7 +230,7 @@ export async function makeDesignPack(state, ctx, onProgress) {
   await settle();
 
   zip.file("README.txt", [
-    `Mascot Lab design pack · ${order.team.school} ${order.team.mascot} · order ${order.ref}`,
+    `Mascot Lab design pack · ${teamLabel(order.team, order.contact, "Team")} · order ${order.ref}`,
     "",
     `${artName.padEnd(30)} the chosen look, transparent background, ${PACK_ART_PX} px square`,
     `garments/                      every garment in the kit, front and back, ${PACK_GARMENT_PX} px previews`,

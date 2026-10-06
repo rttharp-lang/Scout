@@ -1,0 +1,16 @@
+/* Mascot Lab — the shared title block of the step pages (Studio, Collection, Order,
+ * Review, Done): one top padding, one step label → h1 rhythm, one h1 size. Landing
+ * keeps its own editorial hero. Page width comes from the shared tokens
+ * (--page-max + --gutter via .container in global.css), the same box as the header.
+ * Prefix: pg-. */
+:root {
+  --pg-top: var(--space-6);          /* top of <main> → step label */
+  --pg-title: var(--step-4);         /* 60px at 1440, 35px at 390 */
+}
+@media (max-width: 720px) {
+  :root { --pg-top: var(--space-5); }
+}
+
+/* step label + h1 (+ lead, CTAs…) */
+.pg-head { display: grid; gap: var(--space-3); justify-items: start; align-content: start; min-width: 0; }
+.pg-title { font-size: var(--pg-title); font-weight: 900; line-height: var(--leading-tight); }

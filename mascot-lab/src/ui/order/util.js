@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { PRODUCTS } from "../../order/catalog.js";
 
 /** Short column labels for the roster grid (fits a 60px column). */
-export const SHORT_NAMES = { jersey: "Jersey", shorts: "Shorts", hoodie: "Hoodie", pants: "Pants", tee: "Tee", longsleeve: "Shooter" };
+export const SHORT_NAMES = { jersey: "Jersey", shorts: "Shorts", hoodie: "Hoodie", pants: "Pants", tee: "Tee", longsleeve: "Shooting" };
 export const shortName = (id) => SHORT_NAMES[id] || PRODUCTS[id]?.name || id;
 export const productName = (id, garment) => garment?.name || PRODUCTS[id]?.name || id;
 

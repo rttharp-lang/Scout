@@ -32,6 +32,7 @@ import { describeLettering, describePlacement, describeSettings } from "./orderS
 import { sanitizeSvg } from "../engine/sanitizeSvg.js";
 import { resolveParams } from "../engine/render.js";
 import { getDropStyle, resolveColors } from "../apparel/collection.js";
+import { teamFields } from "./team.js";
 
 export const ORDERS_COLLECTION = "orders";
 /** Owner-only document beside the viewer documents: { statuses: { [ref]: { status, at } } }. */
@@ -44,7 +45,7 @@ export const ORDER_STATUSES = [
   { id: "approved", label: "Approved" },
   { id: "in-production", label: "In production" },
   { id: "shipped", label: "Shipped" },
-  { id: "cancelled", label: "Cancelled" },
+  { id: "cancelled", label: "Canceled" },
 ];
 const MAX_DOC_BYTES = 240 * 1024;   // db documents must stay under 256 KiB
 const DOC_KEEP = 10;                // orders kept in one viewer's document (older ones stay on the device)
@@ -134,13 +135,15 @@ export function buildOrder(state, ctx = {}) {
   }
   const contact = {};
   for (const k of ["coach", "email", "phone", "school", "address", "needBy", "notes"]) contact[k] = String(state.contact?.[k] ?? "").trim();
+  // a blank team name (an upload cleared the sample's) falls back to the contact school
+  const tf = teamFields(state.team, state.contact);
 
   return {
     schema: "mascot-lab/order@1",
     ref: ctx.ref || null,
     status: "requested",
     createdAt: ctx.createdAt || new Date().toISOString(),
-    team: { school: state.team?.school || "", mascot: state.team?.mascot || "", isSample: !!state.team?.isSample },
+    team: { school: tf.school, mascot: tf.mascot, isSample: !!state.team?.isSample },
     logo: { name: state.logo?.name || "Logo", isSample: !!state.logo?.sampleId, sampleId: state.logo?.sampleId || null, thumb: ctx.logoThumb || null },
     palette: { ...state.palette },
     effect: {

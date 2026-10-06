@@ -1,7 +1,7 @@
 // Done — what actually happened to the order (sent vs saved on this device), the
 // order ref, next steps with dates, the files (order sheet, roster CSV, design pack),
 // and the owner's inbox when the viewer owns the site.
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { AlertTriangle, ArrowLeft, Check, Download, FileSpreadsheet, FileText, Mail, Package, Pencil, RotateCcw } from "lucide-react";
 import { useStore, EMPTY_CONTACT } from "../../state/store.jsx";
 import { useLogoCanvas } from "../../state/useLogoCanvas.js";
@@ -11,8 +11,9 @@ import { LEAD_TIME, LEAD_TIME_MAX_DAYS, LEAD_TIME_MIN_DAYS, PROOF_BUSINESS_DAYS,
 import { formatMoney, totals } from "../../order/pricing.js";
 import { clearRevision, findLocalOrder, rememberRevision } from "../../order/orderService.js";
 import { formatDate } from "../../order/orderSheet.js";
+import { teamLabel } from "../../order/team.js";
 import { saveFile } from "../../platform/files.js";
-import { inArtifactRuntime } from "../../platform/claude.js";
+import { getCapability, inArtifactRuntime } from "../../platform/claude.js";
 import { CopyText } from "../order/CopyText.jsx";
 import { OrderInboxView, useOwnerInbox } from "../order/OrderInbox.jsx";
 import { fileBase, makeDesignPack, makeOrderSheet, makeOrderText, makeRosterCsv } from "../order/exports.js";
@@ -21,9 +22,11 @@ import { KitNotice } from "../order/KitNotice.jsx";
 import { getLastResult } from "../order/session.js";
 import { addBusinessDays, addDays, copyText, plural, shortDate } from "../order/util.js";
 import { OrderGuard } from "./Review.jsx";
+import { CANT_SAVE_BODY, CANT_SAVE_TITLE, saveError } from "./saveNotice.js";
+import "./step.css";
 import "./order.css";
 
-function FileRow({ icon, title, ext, desc, state, onClick, label = "Download" }) {
+function FileRow({ icon, title, ext, desc, state, onClick, label = "Download", disabled = false }) {
   const working = state?.status === "working";
   const pct = state?.total ? Math.round((state.done / state.total) * 100) : 0;
   return (
@@ -41,7 +44,7 @@ function FileRow({ icon, title, ext, desc, state, onClick, label = "Download" })
         {state?.status === "done" && <p className="dn-file__status is-ok"><Check aria-hidden="true" /> {state.how === "downloads" ? "Saved." : "Download started. Check your downloads folder."}</p>}
         {state?.status === "error" && <p className="dn-file__status is-bad" role="alert"><AlertTriangle aria-hidden="true" /> {state.error}</p>}
       </div>
-      <Button variant={state?.status === "done" ? "secondary" : "primary"} size="sm" onClick={onClick} loading={working} icon={<Download aria-hidden="true" />}>
+      <Button variant={state?.status === "done" || disabled ? "secondary" : "primary"} size="sm" onClick={onClick} loading={working} disabled={disabled} icon={<Download aria-hidden="true" />}>
         {working ? `${pct || ""}${pct ? "%" : "Working"}` : state?.status === "done" ? "Download again" : label}
       </Button>
     </li>
@@ -60,6 +63,15 @@ export default function Done() {
   const submitted = state.order.status === "submitted";
   const { mockups, kit } = useMockups(submitted ? ids : [], { size: 176, detail: "fast", views: ["front"], priority: 2 });
   const t = useMemo(() => totals(state, { garmentIds: ids }), [state.roster, state.extras, state.collection, ids.join()]); // eslint-disable-line react-hooks/exhaustive-deps
+  // inside the claude.ai frame without the downloads capability no file can be saved:
+  // say so up front instead of offering downloads that can't happen
+  const [canSave, setCanSave] = useState(true);
+  useEffect(() => {
+    if (!inArtifactRuntime()) return undefined;
+    let on = true;
+    getCapability("downloads").then((d) => on && setCanSave(!!(d && typeof d.save === "function")), () => {});
+    return () => { on = false; };
+  }, []);
 
   if (!submitted) {
     return (
@@ -95,13 +107,13 @@ export default function Done() {
   const shipTo = addDays(proofBy, LEAD_TIME_MAX_DAYS);
   const email = state.contact.email;
   // an uploaded logo clears the sample's team name; the school from the contact form stands in
-  const team = [state.team.school, state.team.mascot].filter(Boolean).join(" ") || String(state.contact.school || "").trim();
+  const team = teamLabel(state.team, state.contact);
   const ctx = { garments, ids, byId, effect, logo, logoCanvas: logo.canvas };
   const base = fileBase(state);
   const subject = team ? `Order ${ref} · ${team}` : `Order ${ref}`;
 
   const setFile = (k, v) => setFiles((f) => ({ ...f, [k]: { ...(f[k] || {}), ...v } }));
-  const finish = (k, r) => setFile(k, r.ok ? { status: "done", how: r.how } : { status: "error", error: r.error || "The file couldn't be saved." });
+  const finish = (k, r) => setFile(k, r.ok ? { status: "done", how: r.how } : { status: "error", error: saveError(r) });
   const run = async (k, make) => {
     if (files[k]?.status === "working") return;
     setFile(k, { status: "working", done: 0, total: 0, label: "" });
@@ -121,9 +133,18 @@ export default function Done() {
     const { blob, filename } = await makeDesignPack(state, ctx, (done, total, label) => setFile("pack", { done, total, label }));
     return saveFile(filename, blob);
   });
+  // When the clipboard is refused (some embedded views), show the summary as
+  // selectable text instead: downloads may be unavailable there too.
+  const [summaryFallback, setSummaryFallback] = useState(null);
   const copySummary = async () => {
-    const ok = await copyText(makeOrderText(state, ctx));
-    toast(ok ? { tone: "success", title: "Order summary copied", body: "Paste it into the body of your email." } : { tone: "warning", title: "Couldn't copy here", body: "Download the order sheet and attach it instead." });
+    const text = makeOrderText(state, ctx);
+    const ok = await copyText(text);
+    if (ok) {
+      toast({ tone: "success", title: "Order summary copied", body: "Paste it into the body of your email." });
+    } else {
+      setSummaryFallback(text);
+      toast({ tone: "warning", title: "Couldn't copy here", body: "The summary is shown below. Select it and copy it by hand." });
+    }
   };
 
   const editOrder = () => {
@@ -166,7 +187,9 @@ export default function Done() {
         { k: "Ships", when: `${shortDate(shipFrom)} to ${shortDate(shipTo)}`, body: `If you approve the proof the day it arrives. Ships to ${state.contact.school || "your school"}.` },
       ]
     : [
-        { k: "Email the pack", when: "Today", body: <>Attach the design pack (or the order sheet) and send it to {CONTACT_EMAIL} with <span className="dn-nowrap">{ref}</span> in the subject.</>, state: "current" },
+        canSave
+          ? { k: "Email the pack", when: "Today", body: <>Attach the design pack (or the order sheet) and send it to {CONTACT_EMAIL} with <span className="dn-nowrap">{ref}</span> in the subject.</>, state: "current" }
+          : { k: "Email the order", when: "Today", body: <>Paste the order summary into an email to {CONTACT_EMAIL} with <span className="dn-nowrap">{ref}</span> in the subject.</>, state: "current" },
         { k: "Proof", when: PROOF_TIME, body: "After we receive it, we email a proof: every garment, the sizes and the final price." },
         { k: "You approve", when: "Your call", body: "Reply to approve, or ask for changes. Nothing is printed before you approve." },
         { k: "Production", when: LEAD_TIME, body: "Printing, sewing, and a quality check on every piece." },
@@ -177,19 +200,25 @@ export default function Done() {
     <div className="ord-page dn-page container">
       <section className={cx("dn-hero", sent ? "is-sent" : "is-local")} aria-labelledby="dn-title">
         <div className="dn-hero__main">
-          <SpecLabel variant={sent ? "success" : "warning"} size="lg">{sent ? "Request sent" : notStored ? "Not sent yet" : "Saved on this device"}</SpecLabel>
-          <h1 className="dn-title" id="dn-title">{sent ? "You're in the queue" : "One step left"}</h1>
+          <div className="pg-head">
+            <SpecLabel variant={sent ? "success" : "warning"} size="lg">{sent ? "Request sent" : notStored ? "Not sent yet" : "Saved on this device"}</SpecLabel>
+            <h1 className="pg-title dn-title" id="dn-title">{sent ? "You're in the queue" : "One step left"}</h1>
+          </div>
           {sent ? (
             <p className="lead">Order request sent. We'll email a proof to <strong>{email}</strong> within {PROOF_TIME}.</p>
           ) : (
             <p className="lead">
               {why}{notStored ? ", and this browser won't let us save the order." : ", so your order was saved on this device."}{" "}
-              Download the design pack below and email it to <strong className="dn-addr">{CONTACT_EMAIL}</strong>.
+              {canSave
+                ? <>Download the design pack below and email it to <strong className="dn-addr">{CONTACT_EMAIL}</strong>.</>
+                : <>Copy the order summary below and email it to <strong className="dn-addr">{CONTACT_EMAIL}</strong>.</>}
             </p>
           )}
           {notStored && (
             <Notice tone="warning" title="This browser didn't keep a copy">
-              Download the design pack before you leave this page. It holds everything we need to print the order.
+              {canSave
+                ? "Download the design pack before you leave this page. It holds everything we need to print the order."
+                : "Copy the order summary before you leave this page. Files can't be downloaded in this view."}
             </Notice>
           )}
         </div>
@@ -211,8 +240,10 @@ export default function Done() {
           <ol className="dn-mail__steps">
             <li><span>Send to</span><CopyText text={CONTACT_EMAIL} label="Copy address" /></li>
             <li><span>Subject</span><CopyText text={subject} label="Copy subject" mono={false} /></li>
-            <li><span>Attach</span><p>The design pack (.zip) below. It has the order sheet, roster and print-ready artwork.</p></li>
-            <li><span>Body</span><div className="dn-mail__body"><p>Paste the order summary so we can read it without opening files.</p><Button size="sm" variant="secondary" onClick={copySummary}>Copy order summary</Button></div></li>
+            <li><span>Attach</span><p>{canSave
+              ? "The design pack (.zip) below. It has the order sheet, roster and print-ready artwork."
+              : `Nothing to attach from here: ${CANT_SAVE_TITLE.charAt(0).toLowerCase()}${CANT_SAVE_TITLE.slice(1)}. Paste the order summary, and open the site in a browser if you want the design pack.`}</p></li>
+            <li><span>Body</span><div className="dn-mail__body"><p>Paste the order summary so we can read it without opening files.</p><Button size="sm" variant="secondary" onClick={copySummary}>Copy order summary</Button>{summaryFallback && <textarea id="dn-summary-fallback" className="dn-mail__fallback" readOnly rows={10} value={summaryFallback} aria-label="Order summary" onFocus={(e) => e.target.select()} />}</div></li>
           </ol>
           <p className="dn-mail__fine">If your email app doesn't open from this page, copy the address above into a new message.</p>
         </section>
@@ -221,6 +252,9 @@ export default function Done() {
       <div className="dn-grid">
         <section className="ord-panel dn-files" aria-labelledby="dn-files-h">
           <h2 className="ord-panel__h" id="dn-files-h">{sent ? "Your copies" : "Files to send"}</h2>
+          {!canSave && (
+            <Notice tone="warning" title={CANT_SAVE_TITLE}>{CANT_SAVE_BODY}</Notice>
+          )}
           <ul className="dn-filelist" role="list">
             <FileRow
               icon={<Package />}
@@ -229,6 +263,7 @@ export default function Done() {
               desc="Print artwork as a 2048 px PNG, every garment front and back at 1200 px, plus the order sheet, roster and order data. Takes a few seconds to build."
               state={files.pack}
               onClick={dlPack}
+              disabled={!canSave}
             />
             <FileRow
               icon={<FileText />}
@@ -237,6 +272,7 @@ export default function Done() {
               desc="Mockups, placements, sizes, roster and totals on one printable page. Opens in any browser."
               state={files.sheet}
               onClick={dlSheet}
+              disabled={!canSave}
             />
             <FileRow
               icon={<FileSpreadsheet />}
@@ -245,6 +281,7 @@ export default function Done() {
               desc="Players, numbers, sizes and pieces, plus extras. Opens in Excel or Google Sheets."
               state={files.csv}
               onClick={dlCsv}
+              disabled={!canSave}
             />
           </ul>
         </section>

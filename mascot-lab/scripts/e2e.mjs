@@ -546,6 +546,38 @@ async function runFlow(browser, origin, vp, scenario, db) {
     return `first hero canvas at ${Math.round(r.t)} ms after navigation${r2 ? `, ${r2.inked} painted by ${Math.round(r2.t)} ms` : ""}`;
   });
 
+  if (!phone) {
+    // every weight the CSS and the canvases use is really there (latin + latin-ext for the
+    // display/body faces), and nothing else ships (no vietnamese/cyrillic subsets)
+    await step("fonts: every face the UI uses", async () => {
+      const r = await page.evaluate(async () => {
+        const fam = (f) => f.family.replace(/["']/g, "");
+        const want = [["Big Shoulders Display", [700, 800, 900], true], ["Archivo", [400, 500, 600, 700], true], ["IBM Plex Mono", [500, 600], false], ["Graduate", [400], false]];
+        const missing = [];
+        for (const [family, weights, ext] of want) {
+          for (const w of weights) {
+            for (const text of ext ? ["AZaz09", "ŁŐŞŽ"] : ["AZaz09"]) {
+              const faces = await document.fonts.load(`${w} 16px "${family}"`, text);
+              if (!faces.some((f) => fam(f) === family && String(f.weight) === String(w))) missing.push(`${family} ${w} "${text}"`);
+            }
+          }
+        }
+        // one face per subset: latin (+ latin-ext for display/body). The default @fontsource
+        // imports add vietnamese (+ cyrillic, cyrillic-ext for Plex Mono) faces per weight.
+        // (Chromium reports CSS faces' unicodeRange as U+0-10FFFF, so faces are counted.)
+        const all = [...document.fonts];
+        const perFace = {};
+        for (const f of all) perFace[`${fam(f)} ${f.weight}`] = (perFace[`${fam(f)} ${f.weight}`] || 0) + 1;
+        const limit = (k) => (/^(Archivo|Big Shoulders Display) /.test(k) ? 2 : 1);
+        const exotic = Object.entries(perFace).filter(([k, n]) => n > limit(k)).map(([k, n]) => `${k} ×${n}`);
+        return { missing, exotic, faces: all.length };
+      });
+      assert(!r.missing.length, `missing faces: ${r.missing.join(", ")}`);
+      assert(!r.exotic.length, `more subsets than latin/latin-ext shipped: ${r.exotic.slice(0, 4).join("; ")}`);
+      return `${r.faces} @font-face rules; every used weight loads (latin + latin-ext display/body)`;
+    });
+  }
+
   /* 2 ── #studio gallery */
   await step("studio: gallery fills", async () => {
     const t0 = await now();
@@ -726,6 +758,30 @@ async function runFlow(browser, origin, vp, scenario, db) {
     });
   }
 
+  if (ARTIFACT && scenario.noDownloads && !phone && DOWNLOADS) {
+    // no downloads capability inside the frame: <a download> would do nothing there, so the
+    // page must say the file can't be saved (not "download started") and must not try it
+    await step("collection: no downloads → says so", async () => {
+      let anchors = 0;
+      const onDl = () => anchors++;
+      page.on("download", onDl);
+      try {
+        await clickVisible(page.getByRole("button", { name: /Download line sheet/ }), "line sheet button");
+        const t = page.locator(".ml-toast").filter({ hasText: /Downloads aren't available in this view/ });
+        await t.first().waitFor({ timeout: 90000 });
+        await sleep(600);
+        const claims = await page.locator(".ml-toast").filter({ hasText: /download started|Line sheet saved/i }).count();
+        assert(claims === 0, "a toast claims the line sheet downloaded");
+        assert(anchors === 0, "an <a download> fallback fired inside the frame");
+        const saves = await page.evaluate(() => window.__e2e.downloads.length);
+        assert(saves === 0, `downloads.save() called ${saves}× with no capability`);
+        return `toast: "${(await t.first().innerText()).replace(/\s+/g, " ").slice(0, 120)}"`;
+      } finally {
+        page.off("download", onDl);
+      }
+    });
+  }
+
   /* 6 ── #order */
   await step("order: clear examples + paste 13", async () => {
     await clickVisible(page.getByRole("button", { name: /^Order this collection/ }), '"Order this collection" button');
@@ -753,6 +809,9 @@ async function runFlow(browser, origin, vp, scenario, db) {
     assert(await rv.isEnabled(), "Review order is disabled");
     await rv.click();
     await page.waitForFunction(() => location.hash === "#review", null, { timeout: 10000 });
+    // toasts belong to their page: "Roster replaced: 13 players" leaves with #order
+    await poll(() => page.locator(".ml-toast:not(.is-leaving)").filter({ hasText: /Roster replaced|Added 13 players/ }).count(), (n) => n === 0,
+      { timeout: 2000, interval: 100, what: "the roster toast to close on the route change" });
     await page.locator('.rv-form input[name="coach"]').waitFor({ timeout: 15000 });
     const txt = await page.locator(".rv-send__total").innerText();
     return txt.replace(/\s+/g, " ");
@@ -864,6 +923,47 @@ async function runFlow(browser, origin, vp, scenario, db) {
       await page.evaluate(() => { location.hash = "#orders"; });
       await page.getByText("Only the site owner sees orders here").waitFor({ timeout: 15000 });
       return "coach sees the explanation, no inbox";
+    });
+  }
+
+  if (!phone && !NO_STORAGE) {
+    await step("storage: corrupt saved roster", async () => {
+      await page.close(); // flushes the store (pagehide); the next page starts from what it saved
+      const p2 = await context.newPage();
+      p2.on("console", (m) => { if (m.type() === "error" && !expected(m.text())) errors.push(`[console.error] ${m.text()}`); });
+      p2.on("pageerror", (e) => errors.push(`[pageerror] ${e.message}`));
+      await p2.addInitScript(() => {
+        if (sessionStorage.getItem("__e2eCorrupted")) return;
+        sessionStorage.setItem("__e2eCorrupted", "1");
+        const k = "mascot-lab:v1";
+        const raw = JSON.parse(localStorage.getItem(k));
+        raw.roster = [
+          { name: 123, number: {}, items: null, top: ["L"], bottom: null },
+          { id: "dup", name: "A", number: 7, top: "M", bottom: "M", items: { jersey: "yes", shorts: false } },
+          { id: "dup", name: "B" },
+          "junk", null, 42, [1, 2],
+        ];
+        raw.contact = { coach: { x: 1 }, email: 42, notes: null };
+        raw.extras = { jersey: { M: "3", L: -1, XL: "x" }, hoodie: null };
+        raw.order = { status: "draft", ref: {}, channel: 5 };
+        localStorage.setItem(k, JSON.stringify(raw));
+      });
+      await p2.goto(`${origin}/#order`, { waitUntil: "load", timeout: 60000 });
+      await p2.locator(".ord-page").waitFor({ timeout: 20000 });
+      await sleep(800);
+      const st = await p2.evaluate(() => window.__mascotLab.getState());
+      const rows = st.roster;
+      assert(rows.length === 3, `expected 3 sanitized rows, got ${rows.length}`);
+      assert(new Set(rows.map((r) => r.id)).size === 3 && rows.every((r) => typeof r.id === "string" && r.id), "row ids aren't unique strings");
+      for (const r of rows) for (const f of ["name", "number", "top", "bottom"]) assert(typeof r[f] === "string", `row ${r.id}.${f} is ${typeof r[f]}`);
+      assert(rows.every((r) => r.items && typeof r.items === "object" && !Array.isArray(r.items)), "row items aren't plain objects");
+      assert(rows[1].items.shorts === false && !("jersey" in rows[1].items), "row items weren't reduced to booleans");
+      assert(Object.values(st.contact).every((v) => typeof v === "string" || typeof v === "boolean"), "contact fields aren't strings");
+      assert(st.extras.jersey?.M === 3 && !("L" in st.extras.jersey) && !("hoodie" in st.extras), `extras not sanitized: ${JSON.stringify(st.extras)}`);
+      const shown = await p2.locator(".ord-page input").count();
+      await p2.screenshot({ path: path.join(SHOTS, `${ENV}-${vp}-corrupt-roster.png`) }).catch(() => {});
+      await p2.close();
+      return `#order renders ${rows.length} rows (${rows.map((r) => `${r.id}:"${r.name}"#${r.number}`).join(", ")}), ${shown} inputs`;
     });
   }
 

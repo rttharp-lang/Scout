@@ -18,6 +18,7 @@ import { logoFileFor, logoThumb } from "../order/exports.js";
 import { setLastResult } from "../order/session.js";
 import { plural, submittedTitle } from "../order/util.js";
 import { orderChecks } from "./Order.jsx";
+import "./step.css";
 import "./order.css";
 
 /** OrderGuard — shown instead of a page that has nothing to show yet. */
@@ -122,9 +123,9 @@ export default function Review() {
 
   return (
     <div className="ord-page rv-page container">
-      <header className="ord-head">
+      <header className="pg-head ord-head">
         <SpecLabel size="lg">Step 03 / 03 · Review</SpecLabel>
-        <h1 className="ord-title">Review &amp; send</h1>
+        <h1 className="pg-title ord-title">Review &amp; send</h1>
         <p className="lead">This is the sheet the print shop works from. Check it, add your details, and send the request. Nothing is printed until you approve a proof.</p>
         {!submitted && (
           <Button

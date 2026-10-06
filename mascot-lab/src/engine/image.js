@@ -81,10 +81,27 @@ export async function rasterizeSvgText(svgText, longSide = SVG_LONG_SIDE) {
 // drawn at most this big: a 300 KB PNG can declare 16000×16000 px, and copying that at
 // full size (canvas, clone, resize steps) costs gigabytes and kills phone tabs.
 const MAX_DECODE_SIDE = 4096;
+/**
+ * MAX_IMAGE_PIXELS — rasters with more pixels than this are refused BEFORE they are drawn
+ * (drawing decodes the whole image: 40 MP is 160 MB of RGBA; a 16000² PNG would be 1 GB).
+ * The size check reads only naturalWidth/Height, which the browser has from the file header.
+ */
+export const MAX_IMAGE_PIXELS = 40_000_000;
+
+/** checkImageSize(w, h) — throws an Error with code "too-large" (and width/height) past the limit. */
+export function checkImageSize(w, h) {
+  if (w * h <= MAX_IMAGE_PIXELS) return;
+  const e = new Error(`That image is ${w} × ${h} px (${Math.round((w * h) / 1e6)} megapixels); the limit is ${MAX_IMAGE_PIXELS / 1e6} megapixels.`);
+  e.code = "too-large";
+  e.width = w;
+  e.height = h;
+  throw e;
+}
 
 function imageToCanvas(img) {
   const w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
   if (!w || !h) throw new Error("That image is empty.");
+  checkImageSize(w, h);
   const k = Math.min(1, MAX_DECODE_SIDE / Math.max(w, h));
   const W = Math.max(1, Math.round(w * k)), H = Math.max(1, Math.round(h * k));
   const c = createCanvas(W, H);

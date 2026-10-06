@@ -21,7 +21,7 @@ export function newPlacement(zones, existing = []) {
   };
 }
 
-/** Ink mode of a placement: full colour, tonal (a shade off the base) or one flat ink. */
+/** Ink mode of a placement: full color, tonal (a shade off the base) or one flat ink. */
 export function inkMode(p, baseHex) {
   if (!p?.tint) return "full";
   if (p.tint === "tonal") return "tonal";

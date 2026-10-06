@@ -2,7 +2,7 @@
 
 .lp {
   display: flex; flex-direction: column;
-  /* garment wells: a soft studio sweep, lighter at the centre so flats (navy, black) pop */
+  /* garment wells: a soft studio sweep, lighter at the center so flats (navy, black) pop */
   --lp-spot: var(--surface);
   --lp-well: radial-gradient(70% 62% at 50% 44%, var(--lp-spot), var(--surface-2));
 }
@@ -585,7 +585,7 @@ button.lp-sheet__tile:hover { box-shadow: 0 0 0 1px var(--ink-2); }
 .lp-cta .lp-cta__secondary:hover:not(:disabled) { background: color-mix(in srgb, var(--team-1-ink) 12%, transparent); border-color: var(--team-1-ink); }
 .lp-cta .lp-cta__secondary:focus-visible, .lp-cta .lp-cta__primary:focus-visible { outline-color: var(--team-1-ink); }
 /* facts: each with its own tick, so a wrapped line never starts with a separator
-   (ink-coloured: the team's flash colour can equal the band colour, e.g. red on red) */
+   (ink-colored: the team's flash color can equal the band color, e.g. red on red) */
 .lp-cta__facts { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .lp-cta__facts .ml-spec { display: inline-flex; align-items: center; gap: 8px; color: color-mix(in srgb, var(--team-1-ink) 78%, transparent); }
 .lp-cta__facts .ml-spec::before { content: ""; flex: none; width: 5px; height: 5px; background: currentColor; border-radius: 1px; }

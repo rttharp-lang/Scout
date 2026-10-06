@@ -1,5 +1,5 @@
 // Mascot Lab — Collection (#collection): the chosen look across the whole team
-// collection. Pick a drop style, set team colours, flip and include/exclude pieces,
+// collection. Pick a drop style, set team colors, flip and include/exclude pieces,
 // edit any piece in the inspector, download the line sheet, then go to order.
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, FileImage } from "lucide-react";
@@ -19,6 +19,7 @@ import { DockedInspector, InspectorActions, InspectorContent, InspectorNav } fro
 import { downloadGarment, downloadLineSheet, saveToast } from "../collection/exports.js";
 import { formatPrice, plural } from "../collection/format.js";
 import { NoBreakTitle } from "../collection/Title.jsx";
+import "./step.css";
 import "./collection.css";
 
 const UI_KEY = "mascot-lab:collection-ui";
@@ -156,7 +157,7 @@ export default function Collection() {
   }, [resetUndo]);
   const onReset = (g) => {
     const prevItem = items[g.id];
-    const fresh = buildCollection(collection.dropStyle, palette).items[g.id];
+    const fresh = buildCollection(collection.dropStyle, palette, { effectStage: collection.effectStage }).items[g.id];
     if (!prevItem || !fresh) return;
     actions.setCollection({ ...collection, items: { ...items, [g.id]: { ...fresh, enabled: prevItem.enabled !== false } } });
     setResetUndo({
@@ -254,12 +255,12 @@ export default function Collection() {
     <div className={cx("cl-page", phone && "has-dock")}>
       {/* ── masthead ── */}
       <section className="container cl-hero" aria-labelledby="cl-title">
-        <div className="cl-hero__copy">
+        <div className="pg-head cl-hero__copy">
           <SpecLabel size="lg">Step 02 / 03 · Collection</SpecLabel>
-          <h1 className="cl-hero__title" id="cl-title">{title}</h1>
+          <h1 className="pg-title cl-hero__title" id="cl-title">{title}</h1>
           <p className="lead">Your look on every piece of the kit. Pick a drop style, fine-tune any piece, then order for the roster.</p>
           <div className="cl-hero__ctas" ref={heroCtaRef}>
-            <Button size="lg" iconRight={<ArrowRight aria-hidden="true" />} onClick={goOrder} disabled={!canOrder}>
+            <Button size="lg" variant="team" iconRight={<ArrowRight aria-hidden="true" />} onClick={goOrder} disabled={!canOrder}>
               Order this collection{orderCount}
             </Button>
             <Button size="lg" variant="secondary" icon={<FileImage aria-hidden="true" />} onClick={onLineSheet} loading={busy.sheet} disabled={!canExport}>
@@ -308,6 +309,7 @@ export default function Collection() {
           look={lookForCards}
           palette={palette}
           preview={preview}
+          effectStage={collection.effectStage}
         />
       </section>
 

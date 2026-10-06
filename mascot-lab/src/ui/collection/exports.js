@@ -7,7 +7,11 @@ import { PRODUCTS } from "../../order/catalog.js";
 import { saveFile } from "../../platform/files.js";
 import { PRIORITY, cachedMockup, drawMockup, letteringFontReady, mockupInput, queue } from "./render.js";
 import { POSTER, composeLineSheet, posterFontsReady } from "./lineSheet.js";
-import { slug, teamName } from "./format.js";
+import { slug } from "./format.js";
+import { teamFields, teamLabel } from "../../order/team.js";
+
+/** Team name for file names and labels (the contact school stands in for a blank name). */
+const teamName = (state) => teamLabel(state.team, state.contact, "Your team");
 
 let exportSeq = 0;
 
@@ -39,16 +43,8 @@ function mockupJob(input) {
   }, PRIORITY.export);
 }
 
-/** What saveFile said, as a toast. */
-export function saveToast(result, { what, filename, detail }) {
-  if (result.ok) {
-    return result.how === "downloads"
-      ? { tone: "success", title: `${what} saved`, body: `${filename}${detail ? ` · ${detail}` : ""}` }
-      : { tone: "success", title: `${what} download started`, body: `${filename}${detail ? ` · ${detail}` : ""}. Check your downloads folder.` };
-  }
-  if (result.code === "declined") return { tone: "info", title: "Download cancelled", body: `${filename} was not saved.` };
-  return { tone: "danger", title: `${what} not saved`, body: result.error || "The file couldn't be saved here." };
-}
+/** What saveFile said, as a toast (shared with every download button). */
+export { saveToast } from "../pages/saveNotice.js";
 
 /**
  * downloadLineSheet(ctx) → { result, filename }.
@@ -79,7 +75,7 @@ export async function downloadLineSheet(ctx) {
   // if the look didn't render, the sheet shows (and names) the clean logo instead
   const effect = (failed ? null : ctx.effect) || ctx.original;
   const canvas = await queue.enqueue(`x${++exportSeq}|linesheet`, async () => composeLineSheet({
-    team: state.team,
+    team: teamFields(state.team, state.contact),
     palette: state.palette,
     effect: effect ? { name: effect.name, method: effect.method, stage: effect.stage } : null,
     dropStyle: getDropStyle(state.collection.dropStyle),
@@ -87,12 +83,12 @@ export async function downloadLineSheet(ctx) {
     pieces,
   }), PRIORITY.export);
   const blob = await canvasToBlob(canvas, "image/png");
-  const filename = `${slug(teamName(state.team))}-line-sheet.png`;
+  const filename = `${slug(teamName(state))}-line-sheet.png`;
   const result = await saveFile(filename, blob);
   return { result, filename, detail: `${POSTER.width} × ${POSTER.height} px`, pieces: pieces.length };
 }
 
-// the per-garment image is a product shot, not UI: fixed backdrop + label colours
+// the per-garment image is a product shot, not UI: fixed backdrop + label colors
 const SHOT_BG = "#E9ECF0";
 const SHOT_INK = "#0E1116";
 const SHOT_MUTED = "#5B6470";
@@ -133,12 +129,12 @@ export async function downloadGarment(ctx, garment) {
     x.textAlign = "right";
     x.font = '600 30px "IBM Plex Mono", ui-monospace, monospace';
     x.fillStyle = SHOT_INK;
-    x.fillText(`${teamName(state.team).toUpperCase()}  ·  ${garment.name.toUpperCase()}  ·  ${garment.styleCode}`, S * 2 - 56, y);
+    x.fillText(`${teamName(state).toUpperCase()}  ·  ${garment.name.toUpperCase()}  ·  ${garment.styleCode}`, S * 2 - 56, y);
     x.textAlign = "left";
     return c;
   }, PRIORITY.export);
   const blob = await canvasToBlob(canvas, "image/png");
-  const filename = `${slug(teamName(state.team))}-${slug(garment.name, garment.id)}.png`;
+  const filename = `${slug(teamName(state))}-${slug(garment.name, garment.id)}.png`;
   const result = await saveFile(filename, blob);
   return { result, filename, detail: `${S * 2} × ${S + 120} px` };
 }

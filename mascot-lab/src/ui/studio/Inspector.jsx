@@ -10,6 +10,8 @@ import {
 import { CATEGORIES } from "../../engine/effects/index.js";
 import { canvasToBlob, defaultParams, renderEffect, resolveParams } from "../../engine/render.js";
 import { saveFile } from "../../platform/files.js";
+import { teamLabel } from "../../order/team.js";
+import { CANT_SAVE_BODY, CANT_SAVE_TITLE, cantSaveHere, saveError } from "../pages/saveNotice.js";
 import { stageStyle } from "./Gallery.jsx";
 import { holdProps, isAbort, renderKey, scheduler, useDraftRender, useEffectRender, useHeld } from "./renderKit.js";
 
@@ -75,7 +77,7 @@ const VIEWS = [
   { value: "product", label: "On product", title: "The graphic printed on a piece from your collection" },
 ];
 
-/** The team colour used for the "on team colour" backdrop: the first of primary, dark,
+/** The team color used for the "on team color" backdrop: the first of primary, dark,
  * secondary that differs clearly from the effect's own stage (so the swatches differ). */
 const STAGE_HEX = { paper: "#F1EFE9", dark: "#121418", mid: "#8D949E" };
 const ROLE_LABEL = { primary: "Team primary", dark: "Team dark", secondary: "Team secondary" };
@@ -89,7 +91,7 @@ function teamBackdrop(stage, palette) {
   return { hex: palette.primary, name: ROLE_LABEL.primary };
 }
 
-/** Backdrop picker: three swatches (the effect's stage, a team colour, transparent). */
+/** Backdrop picker: three swatches (the effect's stage, a team color, transparent). */
 function BackdropPicker({ value, onChange, effect, palette }) {
   const stage = effect?.stage || "paper";
   const team = teamBackdrop(stage, palette);
@@ -293,7 +295,7 @@ export function useDownload({ effect, state, logo, toast }) {
   const run = async () => {
     if (!effect || !logo?.canvas || busy) return;
     setBusy(true);
-    const team = [state.team.school, state.team.mascot].filter(Boolean).join(" ") || "team";
+    const team = teamLabel(state.team, state.contact, "team");
     const filename = `${slug(team) || "team"}-${slug(effect.name) || effect.id}.png`;
     const { params, seed } = state.effect;
     const key = `dl|${renderKey({ effectId: effect.id, logoKey: logo.key, palette: state.palette, params, seed, size: 2048, quality: "final" })}`;
@@ -308,8 +310,10 @@ export function useDownload({ effect, state, logo, toast }) {
           title: res.how === "downloads" ? `Saved ${filename}` : `Downloading ${filename}`,
           body: "2048 × 2048 px PNG with a transparent background.",
         });
+      } else if (cantSaveHere(res)) {
+        toast({ tone: "warning", title: CANT_SAVE_TITLE, body: `${filename} not saved. ${CANT_SAVE_BODY}`, duration: 9000 });
       } else {
-        toast({ tone: res.code === "declined" ? "info" : "danger", title: "Download didn't finish", body: res.error || "The file couldn't be saved." });
+        toast({ tone: res.code === "declined" ? "info" : "danger", title: "Download didn't finish", body: saveError(res) });
       }
     } catch (e) {
       if (!isAbort(e)) {

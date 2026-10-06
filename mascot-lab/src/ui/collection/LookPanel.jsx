@@ -1,5 +1,5 @@
-// Collection page — the chosen look (effect render, name, print method, "Change
-// look") and the team colours quick edit.
+// Collection page — the chosen look (effect render, name, print method, "Edit
+// look") and the team colors quick edit.
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button, CanvasImage, ColorField, Skeleton, SpecLabel, inkFor, navigate } from "../components/index.js";
@@ -36,7 +36,7 @@ export function LookPanel({ look, palette, onPalette }) {
             <Skeleton variant="text" lines={2} style={{ width: 140 }} />
           )}
           <Button variant="secondary" size="sm" icon={<ArrowLeft aria-hidden="true" />} onClick={() => navigate("studio")}>
-            Change look
+            Edit look
           </Button>
         </div>
       </div>

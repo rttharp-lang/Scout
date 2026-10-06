@@ -3,7 +3,7 @@
 //
 // Everything goes through ONE render queue (createRenderQueue), one job at a time,
 // highest priority first, yielding to the event loop between jobs. Mockups are keyed
-// by a signature of every input (garment, view, size, resolved colours, placements,
+// by a signature of every input (garment, view, size, resolved colors, placements,
 // lettering, and the identity of the art canvases), cached in a small LRU, so a card
 // only re-renders when something it shows actually changed.
 import { createRenderQueue } from "../../engine/render.js";

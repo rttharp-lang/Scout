@@ -1,9 +1,9 @@
 // Collection page — the lookbook "line sheet": a 2400 × 3000 poster composed on a
 // canvas, laid out like a real apparel line sheet (team masthead, the look, every
-// included piece front-and-back with style code and price, team colours, fine print).
+// included piece front-and-back with style code and price, team colors, fine print).
 //
 // The poster is a printed artefact, not UI chrome: it always uses the same paper and
-// ink whatever the site theme is, so its colours live here as constants (they mirror
+// ink whatever the site theme is, so its colors live here as constants (they mirror
 // the light-theme tokens in tokens.css).
 
 export const POSTER = { width: 2400, height: 3000 };
@@ -46,7 +46,7 @@ function lum(h) {
 function contrast(a, b) { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
 function darken(h, t) { const [r, g, b] = rgb(h); const f = (v) => Math.round(v * (1 - t)).toString(16).padStart(2, "0"); return `#${f(r)}${f(g)}${f(b)}`; }
 
-/** The first team colour that reads on paper (≥ 3:1), else ink. */
+/** The first team color that reads on paper (≥ 3:1), else ink. */
 function readableOnPaper(palette) {
   for (const c of [palette.primary, palette.secondary, palette.dark]) if (c && contrast(c, PAPER) >= 3) return c;
   return INK;
@@ -181,7 +181,7 @@ export function composeLineSheet({ team, palette, effect, dropStyle, art, pieces
   ctx.fillStyle = PAPER;
   ctx.fillRect(0, 0, W, H);
 
-  // jersey-trim stripe in the team colours (top and bottom)
+  // jersey-trim stripe in the team colors (top and bottom)
   ctx.fillStyle = palette.primary; ctx.fillRect(0, 0, W, 30);
   ctx.fillStyle = palette.secondary; ctx.fillRect(0, 30, W, 12);
   ctx.fillStyle = palette.primary; ctx.fillRect(0, H - 18, W, 18);
@@ -280,7 +280,7 @@ export function composeLineSheet({ team, palette, effect, dropStyle, art, pieces
 
   pieces.forEach((p, i) => {
     const r = Math.floor(i / cols), col = i % cols;
-    // centre a short last row
+    // center a short last row
     const inRow = r === rows - 1 ? n - r * cols : cols;
     const rowOffset = ((cols - inRow) * (colW + gapX)) / 2;
     const cx = M + rowOffset + col * (colW + gapX) + (colW - blockW) / 2;

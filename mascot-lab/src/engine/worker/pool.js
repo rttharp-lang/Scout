@@ -12,6 +12,7 @@
 //         "effect-error" the effect threw inside the worker
 //         "crash" | "timeout"  the worker died or went silent (it is replaced)
 // A job still waiting for a free worker is dropped when its AbortSignal fires.
+import { disableCanvasFilter, supportsCanvasFilter } from "../core.js";
 import plexMono500 from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-500-normal.woff2?url";
 import plexMono600 from "@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2?url";
 
@@ -21,8 +22,8 @@ const WORKER_FONTS = [
   { family: "IBM Plex Mono", weight: 600, url: plexMono600 },
 ];
 
-const START_TIMEOUT_MS = 10_000;        // init → "ready" (dev serves ~30 unbundled modules)
-const MAX_RESPAWNS = 4;                 // crashed/timed-out workers replaced, per page load
+const START_TIMEOUT_MS = import.meta.env.DEV ? 10_000 : 6_000; // init → "ready" (dev serves ~30 unbundled modules; a build is one file)
+const MAX_RESPAWNS = 2;                 // crashed/timed-out workers replaced, per page load
 const SOURCE_BUDGET_PX = 12_000_000;    // per worker: cached sources (2048² ≈ 4.2 M px)
 /** Per-job timeout once a worker has it: generous (CPU is shared), it only catches hangs. */
 const timeoutFor = (size) => Math.round(3000 + 9000 * (size / 1024) ** 2); // 384 ≈ 4 s, 1024 12 s, 2048 39 s
@@ -38,10 +39,12 @@ export function workersSupported() {
   }
 }
 
-// `?workers=0` turns the pool off (debugging, before/after comparisons)
+// `?workers=0` turns the pool off (debugging, before/after comparisons);
+// `?canvasFilter=0` pins every blur to the box-blur fallback (parity testing)
 const optedOut = (() => {
   try { return /[?&]workers=(0|off|false)\b/.test(window.location.search); } catch { return false; }
 })();
+try { if (/[?&]canvasFilter=(0|off|false)\b/.test(window.location.search)) disableCanvasFilter(true); } catch { /* no window */ }
 
 /** POOL_SIZE — min(2, cores − 1), at least 1; 0 when workers can't be used at all. */
 export const POOL_SIZE = workersSupported() && !optedOut
@@ -184,9 +187,11 @@ function fontList() {
 function start() {
   if (pool.state !== "idle") return;
   pool.state = "starting";
+  // the worker module itself might never arrive (a stalled dev request): jobs must not wait forever
+  const guard = setTimeout(() => { if (pool.state === "starting" && !pool.Ctor) die("the worker module did not load in time"); }, START_TIMEOUT_MS);
   workerCtor().then(
-    (Ctor) => { if (pool.state === "starting") for (let i = 0; i < POOL_SIZE; i++) spawn(Ctor); },
-    (err) => die(`worker module failed to load (${err?.message || err})`),
+    (Ctor) => { clearTimeout(guard); if (pool.state === "starting") for (let i = 0; i < POOL_SIZE; i++) spawn(Ctor); },
+    (err) => { clearTimeout(guard); die(`worker module failed to load (${err?.message || err})`); },
   );
 }
 
@@ -207,7 +212,7 @@ function spawn(Ctor) {
   };
   slot.w.onmessageerror = () => lose(slot, "crash", "a worker message could not be decoded");
   slot.timer = setTimeout(() => { if (!slot.ready) lose(slot, "start", "worker did not start in time"); }, START_TIMEOUT_MS);
-  slot.w.postMessage({ type: "init", fonts: fontList() });
+  slot.w.postMessage({ type: "init", fonts: fontList(), filter: supportsCanvasFilter() });
 }
 
 function onMessage(slot, m) {
@@ -217,6 +222,12 @@ function onMessage(slot, m) {
     if (!m.canvas2d) { lose(slot, "start", "no 2D OffscreenCanvas in workers"); return; }
     slot.ready = true;
     pool.ids = new Set(m.ids || []);
+    // blur parity: ctx.filter on one side only would make worker and main-thread renders
+    // of the same effect differ, so both use the fallback then (the worker already does)
+    if (!m.filter && supportsCanvasFilter()) {
+      disableCanvasFilter(true);
+      console.info("[render] workers can't use ctx.filter: blurs use the box-blur fallback on the page too");
+    }
     if (pool.state === "starting") pool.state = "ready";
     if (!pool.announced) {
       pool.announced = true;

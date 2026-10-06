@@ -2,7 +2,8 @@
 // gallery fill, slider drafts and big exports never block the page.
 //
 // Protocol (main → worker, all plain data except the transferred bitmap):
-//   { type: "init", fonts: [{ family, weight, url }] }   → { type: "ready", ids, filter, canvas2d }
+//   { type: "init", fonts: [{ family, weight, url }], filter }   → { type: "ready", ids, filter, canvas2d }
+//       filter: false = the page's canvases can't ctx.filter, so blur with the fallback here too
 //   { type: "source", key, bitmap }   cache a source (logoKey|size) as a canvas; bitmap transferred
 //   { type: "drop", keys }            forget sources (the main thread owns the eviction policy)
 //   { type: "clear" }                 forget every source
@@ -14,7 +15,7 @@
 // (a blob: URL in the single-file Artifact build) and IIFE bundles cannot code-split.
 // A module that throws while loading therefore stops this worker from starting — the
 // pool sees that as a startup failure and every render falls back to the main thread.
-import { createCanvas, ctx2d, supportsCanvasFilter } from "../core.js";
+import { createCanvas, ctx2d, disableCanvasFilter, supportsCanvasFilter } from "../core.js";
 
 const MODULES = import.meta.glob(["../effects/*.js", "!../effects/index.js"], { eager: true });
 
@@ -95,6 +96,7 @@ self.onmessage = async (e) => {
     case "init": {
       let canvas2d = false;
       try { canvas2d = !!ctx2d(createCanvas(2, 2)); } catch { /* no 2D OffscreenCanvas */ }
+      if (m.filter === false) disableCanvasFilter(true); // same blur path as the page
       fontsOk = registerFonts(m.fonts);
       self.postMessage({ type: "ready", ids: [...EFFECTS.keys()], canvas2d, filter: canvas2d && supportsCanvasFilter() });
       break;

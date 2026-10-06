@@ -401,6 +401,49 @@ function persist(state) {
   return storage.save(STORAGE_KEY, serialize(state, { withLogo: false }));
 }
 
+/* stored roster/contact/extras come back as whatever was saved (an older build, a hand
+   edit, a corrupt write): coerce them to the shapes the pages render, never crash #order */
+const str = (v) => (v == null ? "" : typeof v === "object" ? "" : String(v));
+
+function sanitizeRoster(rows) {
+  const seen = new Set();
+  let n = 0;
+  const out = [];
+  for (const r of rows) {
+    if (!isObj(r)) continue;
+    let id = typeof r.id === "string" || typeof r.id === "number" ? String(r.id).trim() : "";
+    while (!id || seen.has(id)) id = `r-restored-${++n}`;
+    seen.add(id);
+    const items = {};
+    if (isObj(r.items)) for (const [g, on] of Object.entries(r.items)) if (typeof on === "boolean") items[g] = on;
+    out.push({ ...r, id, name: str(r.name), number: str(r.number), top: str(r.top), bottom: str(r.bottom), items });
+  }
+  return out;
+}
+
+function sanitizeContact(c) {
+  const out = { ...EMPTY_CONTACT };
+  if (!isObj(c)) return out;
+  for (const k of Object.keys(EMPTY_CONTACT)) out[k] = str(c[k]);
+  if ("rightsConfirmed" in c) out.rightsConfirmed = c.rightsConfirmed === true; // Review's checkbox
+  return out;
+}
+
+function sanitizeExtras(x) {
+  const out = {};
+  if (!isObj(x)) return out;
+  for (const [g, bySize] of Object.entries(x)) {
+    if (!isObj(bySize)) continue;
+    const sizes = {};
+    for (const [size, q] of Object.entries(bySize)) {
+      const n = Math.floor(Number(q));
+      if (Number.isFinite(n) && n > 0) sizes[size] = Math.min(n, 9999);
+    }
+    out[g] = sizes;
+  }
+  return out;
+}
+
 /** hydrate(raw) → a valid state or null. Anything malformed falls back to the defaults. */
 function hydrate(raw) {
   if (!isObj(raw) || raw.version !== VERSION) return null;
@@ -410,7 +453,7 @@ function hydrate(raw) {
     const flags = { logoNotSaved: false };
     let logo = base.logo;
     let team = isObj(raw.team)
-      ? { school: String(raw.team.school ?? base.team.school), mascot: String(raw.team.mascot ?? base.team.mascot), isSample: !!raw.team.isSample }
+      ? { school: raw.team.school == null ? base.team.school : str(raw.team.school), mascot: raw.team.mascot == null ? base.team.mascot : str(raw.team.mascot), isSample: !!raw.team.isSample }
       : base.team;
     const rl = raw.logo;
     if (isObj(rl) && rl.sampleId) {
@@ -444,10 +487,17 @@ function hydrate(raw) {
       effect,
       favorites: Array.isArray(raw.favorites) ? raw.favorites.filter((f) => typeof f === "string") : [],
       collection,
-      roster: Array.isArray(raw.roster) ? raw.roster.filter(isObj) : base.roster,
-      extras: isObj(raw.extras) ? raw.extras : {},
-      contact: { ...EMPTY_CONTACT, ...(isObj(raw.contact) ? raw.contact : {}) },
-      order: isObj(raw.order) && (raw.order.status === "draft" || raw.order.status === "submitted") ? { ...DRAFT_ORDER, ...raw.order } : { ...DRAFT_ORDER },
+      roster: Array.isArray(raw.roster) ? sanitizeRoster(raw.roster) : base.roster,
+      extras: sanitizeExtras(raw.extras),
+      contact: sanitizeContact(raw.contact),
+      order: isObj(raw.order) && (raw.order.status === "draft" || raw.order.status === "submitted")
+        ? {
+          ...DRAFT_ORDER, ...raw.order,
+          ref: typeof raw.order.ref === "string" ? raw.order.ref : null,
+          channel: typeof raw.order.channel === "string" ? raw.order.channel : null,
+          submittedAt: typeof raw.order.submittedAt === "string" || Number.isFinite(raw.order.submittedAt) ? raw.order.submittedAt : null,
+        }
+        : { ...DRAFT_ORDER },
       flags,
     };
   } catch (e) {

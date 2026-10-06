@@ -3,7 +3,7 @@
 //
 // The piece is picked from state.collection (the drop style the coach has, custom
 // edits included): the garment view where the effect prints biggest and in full
-// colour, e.g. the hoodie back for Statement, the hoodie front for Classic, the
+// color, e.g. the hoodie back for Statement, the hoodie front for Classic, the
 // jersey front repeat for All-over. A drop that only prints the clean logo falls back
 // to the jersey front.
 //

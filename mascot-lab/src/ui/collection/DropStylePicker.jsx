@@ -25,14 +25,15 @@ function StyleThumb({ garment, item, look, palette, preview }) {
   return <CanvasImage className="cl-stage cl-style__thumb" canvas={m.canvas} ratio={1} loading={m.pending && !!m.canvas} alt="" />;
 }
 
-export function DropStylePicker({ value, onChange, garments, look, palette, preview }) {
+export function DropStylePicker({ value, onChange, garments, look, palette, preview, effectStage = null }) {
   const refs = useRef([]);
   const hero = heroGarment(garments);
   const paletteKey = JSON.stringify(palette);
+  // same build as the real collection (a dark-stage look moves light pieces onto dark bases)
   const recipes = useMemo(
-    () => Object.fromEntries(DROP_STYLES.map((s) => [s.id, buildCollection(s.id, palette).items])),
+    () => Object.fromEntries(DROP_STYLES.map((s) => [s.id, buildCollection(s.id, palette, { effectStage }).items])),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [paletteKey],
+    [paletteKey, effectStage],
   );
   const cur = Math.max(0, DROP_STYLES.findIndex((s) => s.id === value));
   const move = (i, dir) => {

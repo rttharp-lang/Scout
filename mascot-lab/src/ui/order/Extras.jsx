@@ -23,7 +23,7 @@ export function Extras({ extras, setExtras, ids, byId, locked = false, defaultOp
     });
   const clearGarment = (g) => setExtras((ex) => { const next = { ...(ex || {}) }; delete next[g]; return next; });
 
-  // short labels ("Jersey", "Shooter") keep all six tabs visible; the panel names the product
+  // short labels ("Jersey", "Shooting") keep all six tabs visible; the panel names the product
   const tabs = ids.map((g) => ({ id: g, label: shortName(g), count: extrasUnits({ [g]: extras?.[g] }) || undefined }));
 
   return (

@@ -59,7 +59,7 @@ its own. Publish that file as the Artifact page and declare these capabilities:
   "db": {
     "rules": [
       { "path": "orders", "read": "owner", "write": "owner" },
-      { "path": "orders/{self}", "write": "interact" }
+      { "path": "orders/{self}", "read": "interact", "write": "interact" }
     ]
   }
 }
@@ -87,8 +87,7 @@ requests to other hosts are blocked, so the app shows addresses as copyable text
 | Sample logos | `src/assets/samples/` (`scripts/gen-samples.mjs` regenerates them) |
 
 `CONTACT_EMAIL` in `src/brand.js` is `orders@mascotlab.example`. Replace it before
-launch. The Order page's intro line mentions "24 pieces" for the first discount tier,
-so check that sentence (`src/ui/pages/Order.jsx`) if you change `VOLUME_TIERS`.
+launch.
 
 ### Add an effect
 

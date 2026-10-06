@@ -1,9 +1,9 @@
 // Mascot Lab — Studio logo panel: the logo on a checkerboard, upload, background
-// removal (toggle, tolerance, hold-to-compare), team name and team colours, samples.
+// removal (toggle, tolerance, hold-to-compare), team name and team colors, samples.
 import React, { useEffect, useId, useMemo, useRef, useState } from "react";
 import { ArrowUpDown, ChevronDown, Eye, RotateCcw, Upload } from "lucide-react";
 import {
-  Button, CanvasImage, ColorField, Field, IconButton, Input, Notice, Slider, SpecLabel, Spinner, Toggle, cx,
+  Button, CanvasImage, ColorField, Field, IconButton, Input, Notice, Slider, SpecLabel, Spinner, Toggle, cx, inkFor,
 } from "../components/index.js";
 import { DEFAULT_TOLERANCE, logoKey } from "../../state/store.jsx";
 import { getLogoCanvas } from "../../state/useLogoCanvas.js";
@@ -18,7 +18,7 @@ const ROLE_FIELDS = [
   { role: "accent", label: "Accent" },
 ];
 
-// "the same colours" within a small tolerance: the upload flow suggests colours from a
+// "the same colors" within a small tolerance: the upload flow suggests colors from a
 // 640 px copy and this panel from a 480 px one, so exact hex matches would flag a
 // fresh upload as already edited
 const rgbOf = (h) => { const n = parseInt(String(h || "").replace("#", "").slice(0, 6), 16) || 0; return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
@@ -40,7 +40,7 @@ function logoColors(canvas, key) {
     const sugg = suggestPalette(canvas);
     out = { swatches: [...new Set(sw)], suggested: sugg };
   } catch (e) {
-    console.warn("[studio] logo colours:", e?.message || e);
+    console.warn("[studio] logo colors:", e?.message || e);
     out = { swatches: [], suggested: null };
   }
   colorMemo.set(key, out);
@@ -101,6 +101,8 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
   const sample = isSample ? getSample(state.logo.sampleId) : null;
   const teamName = [state.team.school, state.team.mascot].filter(Boolean).join(" ") || "Your team";
   const expanded = !collapsible || open;
+  const prompt = useNamePrompt(state, isSample);
+  const namePrompt = prompt.on ? <NamePrompt state={state} actions={actions} onDone={prompt.done} /> : null;
 
   return (
     <section className={cx("st-logo", collapsible && "st-logo--collapsible", expanded && "is-open")} aria-label="Logo and team">
@@ -140,10 +142,11 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
           )}
         </div>
       )}
+      {collapsible && !open && namePrompt && <div className="st-logo__prompt">{namePrompt}</div>}
 
       <div className="st-logo__body" id={bodyId} hidden={!expanded}>
-        <LogoCard state={state} actions={actions} logo={logo} upload={upload} isSample={isSample} sample={sample} onToast={onToast} />
-        <TeamNames state={state} actions={actions} />
+        <LogoCard state={state} actions={actions} logo={logo} upload={upload} isSample={isSample} sample={sample} onToast={onToast} namePrompt={expanded ? namePrompt : null} />
+        {!namePrompt && <TeamNames state={state} actions={actions} />}
         <TeamColors state={state} actions={actions} logo={logo} sample={sample} />
         <Samples state={state} actions={actions} />
         {collapsible && (
@@ -158,7 +161,7 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
 
 /* ───────────── logo card: preview, file, upload, background ───────────── */
 
-function LogoCard({ state, actions, logo, upload, isSample, sample, onToast }) {
+function LogoCard({ state, actions, logo, upload, isSample, sample, onToast, namePrompt = null }) {
   const setting = state.logo.bgRemoved;
   const info = logo.info;
   const decoding = logo.status === "loading";
@@ -219,6 +222,7 @@ function LogoCard({ state, actions, logo, upload, isSample, sample, onToast }) {
         <span className="st-logocard__name" title={state.logo.name}>{isSample ? sample?.name || state.logo.name : state.logo.name || "Your logo"}</span>
         {!isSample && size && <span className="st-logocard__size">{size}</span>}
       </div>
+      {namePrompt}
       <div className="st-logocard__upload">
         <Button block variant={isSample ? "primary" : "secondary"} icon={<Upload aria-hidden="true" />} loading={upload.busy} onClick={upload.openPicker}>
           {isSample ? "Upload your logo" : "Replace logo"}
@@ -277,6 +281,78 @@ function LogoCard({ state, actions, logo, upload, isSample, sample, onToast }) {
 
 /* ───────────────────────────── team names ───────────────────────────── */
 
+// "Later" on the name prompt holds for this logo until the page reloads
+let promptDismissedFor = null;
+
+/**
+ * useNamePrompt(state, isSample) → { on, done(later) }. An upload clears the sample's
+ * team name; when an uploaded logo arrives (or the Studio opens on one) with the school
+ * and mascot both blank, the logo panel asks for them inline (highlighted fields, nothing
+ * blocking). It stays up while the coach types and ends when focus leaves it with a name
+ * in, or on "Later". Clearing the names by hand later doesn't swap the fields under the
+ * cursor: only a new logo (or a fresh visit) asks again.
+ */
+function useNamePrompt(state, isSample) {
+  const blank = !String(state.team.school || "").trim() && !String(state.team.mascot || "").trim();
+  const needs = !isSample && blank;
+  const key = state.logo.src; // the uploaded file itself (logo.key also changes with background settings)
+  const [on, setOn] = useState(() => needs && promptDismissedFor !== key);
+  const seenKey = useRef(key);
+  useEffect(() => {
+    if (seenKey.current === key) return; // same logo: the name fields stay where they are
+    seenKey.current = key;
+    setOn(needs && promptDismissedFor !== key);
+  }, [needs, key]);
+  const done = (later) => {
+    if (later) promptDismissedFor = key;
+    setOn(false);
+  };
+  return { on: on && !isSample, done };
+}
+
+/** NamePrompt — the inline "Name your team" fields shown after an upload. */
+function NamePrompt({ state, actions, onDone }) {
+  const id = useId();
+  const named = () => !!(String(state.team.school || "").trim() || String(state.team.mascot || "").trim());
+  return (
+    <div
+      className="st-nameprompt"
+      role="group"
+      aria-labelledby={`${id}-h`}
+      aria-describedby={`${id}-d`}
+      onBlur={(e) => {
+        // done once a name is in and focus leaves the prompt
+        if (!e.currentTarget.contains(e.relatedTarget) && named()) onDone(false);
+      }}
+    >
+      <div className="st-nameprompt__head">
+        <span className="st-nameprompt__title" id={`${id}-h`}>Name your team</span>
+        <button type="button" className="st-nameprompt__later" onClick={() => onDone(true)}>Later</button>
+      </div>
+      <p className="st-hint" id={`${id}-d`}>Your school and mascot go on the line sheet, the file names and the order.</p>
+      <div className="st-names">
+        <Field label="School">
+          <Input
+            value={state.team.school}
+            placeholder="e.g. Lincoln High"
+            autoComplete="organization"
+            maxLength={40}
+            onChange={(e) => actions.setTeam({ school: e.target.value })}
+          />
+        </Field>
+        <Field label="Mascot">
+          <Input
+            value={state.team.mascot}
+            placeholder="e.g. Eagles"
+            maxLength={30}
+            onChange={(e) => actions.setTeam({ mascot: e.target.value })}
+          />
+        </Field>
+      </div>
+    </div>
+  );
+}
+
 function TeamNames({ state, actions }) {
   return (
     <div className="st-card">
@@ -304,7 +380,7 @@ function TeamNames({ state, actions }) {
   );
 }
 
-/* ───────────────────────────── team colours ───────────────────────────── */
+/* ───────────────────────────── team colors ───────────────────────────── */
 
 function TeamColors({ state, actions, logo, sample }) {
   const [active, setActive] = useState("primary");
@@ -340,7 +416,7 @@ function TeamColors({ state, actions, logo, sample }) {
               aria-pressed={active === role}
               onClick={() => setActive(role)}
             >
-              <span className="st-role__chip" style={{ background: hex }} aria-hidden="true" />
+              <span className="st-role__chip" style={{ background: hex, "--chip-ink": inkFor(hex) }} aria-hidden="true" />
               <span className="st-role__name">{label}</span>
               <span className="st-role__hex">{hex}</span>
             </button>

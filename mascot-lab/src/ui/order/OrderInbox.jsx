@@ -12,6 +12,8 @@ import { saveFile } from "../../platform/files.js";
 import { formatMoney } from "../../order/pricing.js";
 import { formatDate, orderText } from "../../order/orderSheet.js";
 import { copyText, plural } from "./util.js";
+import { teamLabel } from "../../order/team.js";
+import { saveError } from "../pages/saveNotice.js";
 
 /** useOwnerInbox() → { status: "checking" | "hidden" | "loading" | "ready" | "error", orders, meta, db, error }. */
 export function useOwnerInbox() {
@@ -40,7 +42,7 @@ function InboxRow({ o, db, meta }) {
   const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
-  const team = [o.team?.school, o.team?.mascot].filter(Boolean).join(" ") || "Team";
+  const team = teamLabel(o.team, o.contact, "Team");
   const changeStatus = async (status) => {
     if (status === o.status) return;
     setBusy(true);
@@ -63,7 +65,7 @@ function InboxRow({ o, db, meta }) {
       const file = await fetchOrderLogo(db, o);
       if (!file) { toast({ tone: "warning", title: "Logo not found", body: "This order's logo file isn't in the inbox. Ask the coach to email it." }); return; }
       const r = await saveFile(file.filename, file.blob);
-      if (!r.ok) toast({ tone: "warning", title: "Logo not saved", body: r.error });
+      if (!r.ok) toast({ tone: "warning", title: "Logo not saved", body: saveError(r) });
     } catch (e) {
       toast({ tone: "danger", title: "Logo didn't load", body: e?.message || "Try again." });
     } finally {

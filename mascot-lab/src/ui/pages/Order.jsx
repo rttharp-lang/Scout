@@ -5,7 +5,7 @@ import React, { useMemo, useRef, useState } from "react";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { useStore } from "../../state/store.jsx";
 import { Button, Notice, SpecLabel, navigate, useToast } from "../components/index.js";
-import { MIN_ORDER_UNITS } from "../../order/catalog.js";
+import { MIN_ORDER_UNITS, VOLUME_TIERS } from "../../order/catalog.js";
 import { isBlankRow, quantities, totals } from "../../order/pricing.js";
 import { RosterEditor } from "../order/RosterEditor.jsx";
 import { PasteRoster } from "../order/PasteRoster.jsx";
@@ -16,7 +16,11 @@ import { placeholderText, useMockups, useOrderGarments } from "../order/kit.js";
 import { KitNotice } from "../order/KitNotice.jsx";
 import { findLocalOrder, rememberRevision } from "../../order/orderService.js";
 import { plural, submittedTitle } from "../order/util.js";
+import "./step.css";
 import "./order.css";
+
+/** The first volume tier that takes money off (the intro line names it). */
+const FIRST_DISCOUNT = VOLUME_TIERS.filter((t) => t.off > 0).sort((a, b) => a.min - b.min)[0] || null;
 
 /** orderChecks(state, ids, t) → { issues, blockers[], warnings[] } — shared with Review. */
 export function orderChecks(state, ids, t) {
@@ -82,10 +86,13 @@ export default function Order() {
     <div className="ord-page container">
       <div className="ord-layout">
         <div className="ord-main">
-          <header className="ord-head">
+          <header className="pg-head ord-head">
             <SpecLabel size="lg">Step 03 / 03 · Order</SpecLabel>
-            <h1 className="ord-title">Order the kit</h1>
-            <p className="lead">Add your players and their sizes. The price updates as you go, and the team discount starts at 24 pieces.</p>
+            <h1 className="pg-title ord-title">Order the kit</h1>
+            <p className="lead">
+              Add your players and their sizes. The price updates as you go
+              {FIRST_DISCOUNT ? `, and the team discount starts at ${FIRST_DISCOUNT.min} pieces.` : "."}
+            </p>
           </header>
 
           {locked && (

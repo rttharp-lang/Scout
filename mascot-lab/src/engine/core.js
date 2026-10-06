@@ -547,12 +547,15 @@ export function blurMask(mask, w, h, r) {
 }
 
 const FILTER_OK = {}; // canvas kind → boolean ("dom" on the page, "offscreen" in a worker)
+let filterOff = false;
 /**
  * supportsCanvasFilter() — true when ctx.filter = "blur()" works on the canvases
  * createCanvas() makes HERE (checked once per kind: a worker's OffscreenCanvas context
- * may differ from the page's canvas element).
+ * may differ from the page's canvas element), and blurs haven't been pinned to the
+ * fallback with disableCanvasFilter().
  */
 export function supportsCanvasFilter() {
+  if (filterOff) return false;
   const kind = typeof document !== "undefined" ? "dom" : "offscreen";
   if (kind in FILTER_OK) return FILTER_OK[kind];
   let ok = false;
@@ -574,6 +577,16 @@ export function supportsCanvasFilter() {
     ok = false;
   }
   return (FILTER_OK[kind] = ok);
+}
+
+/**
+ * disableCanvasFilter(off = true) — blurCanvas() uses the box-blur fallback on this thread
+ * even where ctx.filter works. The effect worker pool pins both sides to the fallback when
+ * only one of them (page canvas vs a worker's OffscreenCanvas) can filter, so an effect
+ * renders the same pixels in a worker and on the main thread.
+ */
+export function disableCanvasFilter(off = true) {
+  filterOff = !!off;
 }
 
 /** blurCanvas(canvas, r) → new canvas blurred by r px (std-dev); ctx.filter or 3× box fallback. */

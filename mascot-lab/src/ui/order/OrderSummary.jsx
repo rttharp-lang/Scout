@@ -69,10 +69,11 @@ function useScrollCue(ref, deps) {
 }
 
 /**
- * OrderSummary — head, a body (lines, money, tier meter, notes) and a foot (total, what
- * blocks the order, the primary button). On wide screens the panel is sticky and capped
- * to the viewport: the body scrolls inside it, so the total and the button never leave
- * the screen.
+ * OrderSummary — head, a body (garment lines, notes) and a foot (subtotal, discount,
+ * setup, tier meter, total, what blocks the order, the primary button). On wide screens
+ * the panel is sticky and capped to the viewport: only the garment lines scroll (with
+ * scroll shadows, never a fade over the money), so the money, the total and the button
+ * are always fully on screen.
  */
 export function OrderSummary({ t, q, ids, byId, mockups = {}, placeholder = null, blockers = [], warnings = [], onContinue, continueLabel = "Review order", locked = false, summaryRef, footExtra = null }) {
   const hint = tierHint(t.units);
@@ -108,21 +109,6 @@ export function OrderSummary({ t, q, ids, byId, mockups = {}, placeholder = null
             </ul>
           )}
 
-          <dl className="ord-money">
-            <div><dt>Subtotal</dt><dd>{formatMoney(t.subtotal)}</dd></div>
-            <div className={cx(!t.discount && "is-muted")}>
-              <dt>Volume discount{t.discount ? ` · ${formatPercent(t.tier.off)}` : ""}</dt>
-              <dd>{t.discount ? `−${formatMoney(t.discount)}` : "$0"}</dd>
-            </div>
-            <div className="is-muted"><dt>Printing &amp; setup</dt><dd>{t.decorationFee ? formatMoney(t.decorationFee) : "Included"}</dd></div>
-          </dl>
-
-          <TierMeter units={t.units} />
-          <p className={cx("ord-hint", !hint && "is-top")}>
-            {hint || `Top volume tier: ${formatPercent(t.tier.off)} off the whole order.`}
-            {hint && t.discount > 0 && <span> You're saving {formatMoney(t.discount)} now.</span>}
-          </p>
-
           {warnings.length > 0 && blockers.length === 0 && (
             <ul className="ord-warn" role="list">
               {warnings.map((w) => <li key={w}>{w}</li>)}
@@ -136,6 +122,23 @@ export function OrderSummary({ t, q, ids, byId, mockups = {}, placeholder = null
       </div>
 
       <div className="ord-summary__foot">
+        <dl className="ord-money">
+          <div><dt>Subtotal</dt><dd>{formatMoney(t.subtotal)}</dd></div>
+          <div className={cx(!t.discount && "is-muted")}>
+            <dt>Volume discount{t.discount ? ` · ${formatPercent(t.tier.off)}` : ""}</dt>
+            <dd>{t.discount ? `−${formatMoney(t.discount)}` : "$0"}</dd>
+          </div>
+          <div className="is-muted"><dt>Printing &amp; setup</dt><dd>{t.decorationFee ? formatMoney(t.decorationFee) : "Included"}</dd></div>
+        </dl>
+
+        <div className="ord-tier">
+          <TierMeter units={t.units} />
+          <p className={cx("ord-hint", !hint && "is-top")}>
+            {hint || `Top volume tier: ${formatPercent(t.tier.off)} off the whole order.`}
+            {hint && t.discount > 0 && <span> You're saving {formatMoney(t.discount)} now.</span>}
+          </p>
+        </div>
+
         <div className="ord-total">
           <span>Estimated total</span>
           <strong>{formatMoney(t.total)}</strong>

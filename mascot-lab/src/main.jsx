@@ -2,15 +2,26 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 // Self-hosted fonts (never Google Fonts links): display, body, spec labels, jersey lettering.
-import "@fontsource/big-shoulders-display/700";
-import "@fontsource/big-shoulders-display/800";
-import "@fontsource/big-shoulders-display/900";
-import "@fontsource/archivo/400";
-import "@fontsource/archivo/500";
-import "@fontsource/archivo/600";
-import "@fontsource/archivo/700";
-import "@fontsource/ibm-plex-mono/500";
-import "@fontsource/ibm-plex-mono/600";
+// Only the subsets the page can show: latin everywhere, plus latin-ext for the display and
+// body faces (team and player names a coach types: Ł, Ő, Ş, Ž…). The packages' default
+// imports also carry vietnamese/cyrillic faces — ~260 KB of the single-file Artifact page.
+// Graduate ships latin only; renderMockup.js imports the same file (deduped).
+import "@fontsource/big-shoulders-display/latin-700";
+import "@fontsource/big-shoulders-display/latin-800";
+import "@fontsource/big-shoulders-display/latin-900";
+import "@fontsource/big-shoulders-display/latin-ext-700";
+import "@fontsource/big-shoulders-display/latin-ext-800";
+import "@fontsource/big-shoulders-display/latin-ext-900";
+import "@fontsource/archivo/latin-400";
+import "@fontsource/archivo/latin-500";
+import "@fontsource/archivo/latin-600";
+import "@fontsource/archivo/latin-700";
+import "@fontsource/archivo/latin-ext-400";
+import "@fontsource/archivo/latin-ext-500";
+import "@fontsource/archivo/latin-ext-600";
+import "@fontsource/archivo/latin-ext-700";
+import "@fontsource/ibm-plex-mono/latin-500";
+import "@fontsource/ibm-plex-mono/latin-600";
 import "@fontsource/graduate/400";
 
 import "./styles/tokens.css";

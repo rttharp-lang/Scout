@@ -19,6 +19,7 @@ import {
   Inspector, InspectorActions, InspectorControls, InspectorHead, InspectorStage, useDownload, useInspectorRender,
 } from "../studio/Inspector.jsx";
 import { useProductMockup } from "../studio/ProductPreview.jsx";
+import "./step.css";
 import "./studio.css";
 
 export default function Studio() {
@@ -85,11 +86,11 @@ export default function Studio() {
 
 
   return (
-    <div className={cx("st-page", isPhone && "is-phone")}>
+    <div className={cx("container st-page", isPhone && "is-phone")}>
       <header className="st-head">
-        <div className="st-head__copy">
+        <div className="pg-head st-head__copy">
           <SpecLabel size="lg">Step 01 / 03 · Remix</SpecLabel>
-          <h1 className="st-head__title">Remix your logo</h1>
+          <h1 className="pg-title st-head__title">Remix your logo</h1>
         </div>
         <p className="st-head__lead">
           Every tile is your logo, rendered live in your team colors. Pick one, tune it, then put it on the kit.

@@ -94,7 +94,7 @@ export const ContactForm = forwardRef(function ContactForm({ contact, onChange, 
         </Field>
         {warnings.needBy && !show("needBy") && <p className="rv-form__warn" role="status">{warnings.needBy}</p>}
         <Field label="Notes for the print shop" optional className="rv-form__wide">
-          <Textarea name="notes" rows={3} value={contact.notes || ""} onChange={set("notes")} disabled={disabled} placeholder="Season opener date, a second colourway, a player joining late…" />
+          <Textarea name="notes" rows={3} value={contact.notes || ""} onChange={set("notes")} disabled={disabled} placeholder="Season opener date, a second colorway, a player joining late…" />
         </Field>
       </div>
       <label className={cx("rv-rights", show("rightsConfirmed") && "is-error")}>

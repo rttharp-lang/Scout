@@ -1,9 +1,9 @@
 /* Mascot Lab — order flow: #order, #review, #done, #orders. Tokens only. */
 
 /* ═══════════════════════ shared page frame ═══════════════════════ */
-.ord-page { padding-block: var(--space-7) 0; display: grid; gap: var(--space-5); }
-.ord-head { display: grid; gap: var(--space-3); max-width: 900px; }
-.ord-title { font-size: var(--step-5); }
+/* top padding, step label → h1 rhythm and h1 size are shared with Studio + Collection (step.css) */
+.ord-page { padding-block: var(--pg-top) 0; display: grid; gap: var(--space-5); }
+.ord-head { max-width: 900px; }
 .ord-nav { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
 
 .ord-layout {
@@ -21,16 +21,29 @@
   min-width: 0;
 }
 /* wide screens: the summary is capped to the viewport (with room for where it starts
-   before the page scrolls); its body scrolls, the total + button stay on screen */
-@media (min-width: 1101px) {
+   before the page scrolls). Only the garment lines scroll; the money, tier meter, total
+   and button sit in the foot and are always fully on screen. The scroll cue is a pair of
+   scroll shadows at the clipped edges (never a fade over content). */
+@media (min-width: 1101px) and (min-height: 700px) {
   .ord-aside .ord-summary { max-height: calc(100vh - var(--aside-top) - var(--space-6) - var(--space-2)); max-height: calc(100dvh - var(--aside-top) - var(--space-6) - var(--space-2)); }
   .ord-aside .ord-summary__body {
-    flex: 1 1 auto; min-height: 120px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
+    --sh: color-mix(in srgb, var(--ink) 16%, transparent);
+    flex: 1 1 auto; min-height: 96px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
     margin-inline: calc(var(--space-5) * -1); padding-inline: var(--space-5);
+    background:
+      linear-gradient(var(--surface) 30%, transparent) center top / 100% 28px no-repeat local,
+      linear-gradient(transparent, var(--surface) 70%) center bottom / 100% 28px no-repeat local,
+      radial-gradient(farthest-side at 50% 0, var(--sh), transparent) center top / 100% 9px no-repeat scroll,
+      radial-gradient(farthest-side at 50% 100%, var(--sh), transparent) center bottom / 100% 9px no-repeat scroll;
+    background-color: var(--surface);
   }
-  .ord-aside .ord-summary__body.is-scroll { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 36px), transparent); }
-  .ord-aside .ord-summary__body.is-scroll.is-end { -webkit-mask-image: none; mask-image: none; }
   .ord-aside .ord-summary__body:focus-visible { outline-offset: -2px; }
+  /* the lines scroll under a hairline so the foot reads as its own block */
+  .ord-aside .ord-summary__body.is-scroll { border-bottom: 1px solid var(--line); }
+}
+/* short desktop windows: no inner scroll; the summary just scrolls with the page */
+@media (min-width: 1101px) and (max-height: 699px) {
+  .ord-aside { position: static; }
 }
 
 .ord-panel {
@@ -164,7 +177,7 @@
 }
 .ord-card.is-example { background: linear-gradient(to right, var(--warning) 0 3px, var(--surface) 3px); }
 .ord-card.is-example .ord-card__name { color: var(--ink-2); font-style: italic; }
-.ord-card__head { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: var(--space-2); align-items: center; }
+.ord-card__head { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: var(--space-2); align-items: center; }
 .ord-card__num {
   display: flex; align-items: center;
   height: 44px; padding: 0 4px 0 8px;
@@ -175,7 +188,9 @@
 .ord-card__num.has-duplicate { background: var(--warning-soft); border-color: var(--warning); }
 .ord-card__num.has-invalid { background: var(--danger-soft); border-color: var(--danger); }
 .ord-card__hash { font-family: var(--font-display); font-weight: 800; font-size: 18px; color: var(--ink-2); }
+/* the number field itself is ≥ 56px wide (a comfortable thumb target for two digits) */
 .ord-card__num input {
+  flex: 1 1 auto; min-width: 56px;
   min-height: 0 !important; height: 100%; padding: 0 !important; border: 0 !important; background: transparent !important; box-shadow: none !important;
   font-family: var(--font-display); font-weight: 900; font-size: 26px !important; text-align: center; line-height: 1;
 }
@@ -315,7 +330,8 @@
 .ord-meter__labels span b { font-weight: 600; margin-left: 2px; }
 .ord-meter__labels span.is-met { color: var(--ink); }
 .ord-meter__labels span.is-met b { color: var(--success); }
-.ord-hint { font-size: var(--step--1); font-weight: 600; margin-top: calc(var(--space-2) * -1); line-height: 1.35; }
+.ord-tier { display: grid; gap: var(--space-1); }
+.ord-hint { font-size: var(--step--1); font-weight: 600; line-height: 1.35; }
 .ord-hint span { font-weight: 400; color: var(--ink-2); }
 .ord-hint.is-top { color: var(--success); }
 
@@ -366,7 +382,7 @@
   .ord-page .ml-iconbtn--sm { --ib: 40px; }
   .ord-csel { height: 44px; }
   .ord-card__num input { width: 100%; }
-  .ord-page { padding-top: var(--space-6); gap: var(--space-4); }
+  .ord-page { gap: var(--space-4); }
   .ord-panel { padding: var(--space-4); }
   .ord-panel--roster { background: none; box-shadow: none; padding: 0; }
   .ord-panel--roster .ord-panel__head { padding-right: 0; margin-bottom: var(--space-2); }
@@ -600,12 +616,12 @@
 .dn-page .ord-panel__h { font-size: var(--step-2); margin-bottom: var(--space-4); }
 .dn-page .dn-kit .ord-panel__h, .dn-page .ib .ord-panel__h { margin-bottom: 0; }
 .dn-hero {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 420px); gap: var(--space-6); align-items: end;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 420px); gap: var(--space-6); align-items: start; /* step label at the shared height */
   padding-bottom: var(--space-5);
   border-bottom: var(--rule) solid var(--ink);
 }
 .dn-hero__main { display: grid; gap: var(--space-4); justify-items: start; }
-.dn-title { font-size: var(--step-5); }
+.dn-files > .ml-notice { margin-bottom: var(--space-3); }
 .dn-hero .lead strong { color: var(--ink); font-weight: 700; }
 .dn-addr { font-family: var(--font-mono); font-size: 0.9em; user-select: all; -webkit-user-select: all; overflow-wrap: anywhere; }
 .dn-ticket {
@@ -641,6 +657,7 @@
 .dn-mail__steps li > span:first-child::before { content: counter(mail, decimal-leading-zero) "  "; color: var(--ink-3); white-space: pre; }
 .dn-mail__steps p { font-size: var(--step--1); color: var(--ink-2); }
 .dn-mail__body { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.dn-mail__fallback { flex-basis: 100%; width: 100%; min-width: 0; font: 500 var(--step--1)/1.5 var(--font-mono); color: var(--ink); background: var(--surface-2, var(--surface)); border: 1px solid var(--line-strong, var(--line)); border-radius: var(--radius-sm, 4px); padding: var(--space-3); resize: vertical; }
 .dn-mail__fine { font-size: 12.5px; color: var(--ink-2); }
 
 .dn-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--space-5); align-items: start; }
@@ -729,7 +746,6 @@
   .ib-detail__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 720px) {
-  .dn-title { font-size: var(--step-4); }
   .dn-mail__steps li { grid-template-columns: 1fr; gap: 6px; }
   .dn-file { grid-template-columns: 36px minmax(0, 1fr); }
   .dn-file__icon { width: 36px; height: 36px; }

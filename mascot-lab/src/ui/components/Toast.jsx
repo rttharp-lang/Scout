@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 import { cx } from "./cx.js";
+import { currentRoute } from "./router.js";
 import "./components.css";
 
 const ToastContext = createContext(null);
@@ -13,21 +14,48 @@ let seq = 0;
  *   toast({ title: "Saved", body: "…", tone: "success", action: { label: "Undo", onClick }, duration: 5000 });
  *   toast("Plain message");
  * tone: "info" | "success" | "warning" | "danger"; duration 0 = stays until closed.
+ * A route change (#order → #review …) dismisses the toasts raised on the page being left,
+ * except sticky ones (`sticky: true` or duration 0). A toast raised right before a
+ * navigate() in the same handler ("Order reopened", then go to #order) belongs to the
+ * page being opened: navigate() updates location.hash synchronously, so a microtask
+ * after toast() sees the destination and the toast adopts it.
  */
 export function ToastProvider({ children, max = 4 }) {
   const [items, setItems] = useState([]);
+  const itemsRef = useRef(items);
+  itemsRef.current = items;
+  const routes = useRef(new Map()); // toast id → the route it belongs to
   const dismiss = useCallback((id) => {
     setItems((list) => list.map((t) => (t.id === id ? { ...t, leaving: true } : t)));
-    setTimeout(() => setItems((list) => list.filter((t) => t.id !== id)), 180);
+    setTimeout(() => {
+      setItems((list) => list.filter((t) => !(t.id === id && t.leaving)));
+      // (unless a new toast reused the id meanwhile)
+      if (!itemsRef.current.some((t) => t.id === id && !t.leaving)) routes.current.delete(id);
+    }, 180);
   }, []);
   const toast = useCallback((opts) => {
     const o = typeof opts === "string" ? { title: opts } : opts || {};
     const id = o.id || `t${++seq}`;
     const tone = o.tone || "info";
     const duration = o.duration ?? (tone === "danger" ? 9000 : 4800);
+    routes.current.set(id, currentRoute());
+    queueMicrotask(() => { if (routes.current.has(id)) routes.current.set(id, currentRoute()); });
     setItems((list) => [...list.filter((t) => t.id !== id), { ...o, id, tone, duration }].slice(-max));
     return id;
   }, [max]);
+  // toasts belong to the page they were raised on
+  useEffect(() => {
+    const onHash = () => {
+      const route = currentRoute();
+      for (const t of itemsRef.current) {
+        if (t.leaving || t.sticky || t.duration === 0) continue;
+        const own = routes.current.get(t.id);
+        if (own && own !== route) dismiss(t.id);
+      }
+    };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, [dismiss]);
   const api = useRef({ toast, dismiss });
   api.current.toast = toast;
   api.current.dismiss = dismiss;

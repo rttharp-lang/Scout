@@ -6,7 +6,8 @@
 //   up.handleFile(file)                      drag-and-drop / paste go through here too
 //   up.error                                 plain-English message, or null
 //
-// handleFile validates the file (PNG/JPG/SVG/WEBP/GIF, ≤ 15 MB), decodes it,
+// handleFile validates the file (PNG/JPG/SVG/WEBP/GIF, ≤ 15 MB, ≤ 40 megapixels — checked
+// from the image header before anything full-size is drawn), decodes it,
 // re-encodes big rasters (1600 px PNG when transparent, else JPEG 0.92) so the
 // logo survives localStorage, stores it with setLogo, proposes team colours from
 // the cleaned-up logo (suggestPalette → setPalette), marks the team as no longer
@@ -15,7 +16,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useStore, DEFAULT_TOLERANCE } from "../../state/store.jsx";
 import { SAMPLE_LOGOS } from "../../assets/samples/index.js";
-import { hasTransparency, loadImageFromFile, prepareLogo, suggestPalette } from "../../engine/image.js";
+import { MAX_IMAGE_PIXELS, hasTransparency, loadImageFromFile, prepareLogo, suggestPalette } from "../../engine/image.js";
 import { resizeCanvas } from "../../engine/core.js";
 
 export const MAX_UPLOAD_BYTES = 15 * 1024 * 1024;
@@ -123,7 +124,11 @@ export function useLogoUpload({ onDone } = {}) {
       let raw;
       try {
         raw = await loadImageFromFile(file);
-      } catch {
+      } catch (e) {
+        if (e?.code === "too-large") {
+          const px = (n) => Number(n).toLocaleString("en-US");
+          return fail(run, `That image is ${px(e.width)} × ${px(e.height)} px, over the ${MAX_IMAGE_PIXELS / 1e6}-megapixel limit. Save it at 4000 px or less on the long side and try again.`);
+        }
         return fail(run, kind === "svg"
           ? "We couldn't read that SVG. Export it again from your design app, or upload a PNG instead."
           : "We couldn't open that image. It may be damaged or saved in a format the browser can't read. Export it again as a PNG and retry.");

@@ -1,5 +1,5 @@
 // OrderSheetView — the order laid out the way a print shop reads a tech pack: team and
-// logo, the look (effect, print method, settings in words), team colours with hex,
+// logo, the look (effect, print method, settings in words), team colors with hex,
 // every garment front and back with placements in words, the size breakdown, the
 // roster, extras and totals. Rendered from the same order body that gets sent.
 import React from "react";
@@ -82,7 +82,7 @@ export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logo
             )}
           </div>
           <div className="rv-colors">
-            <h4 className="rv-mini-h">Team colours</h4>
+            <h4 className="rv-mini-h">Team colors</h4>
             <ul role="list">
               {Object.entries(o.palette).map(([role, hex]) => (
                 <li key={role}><Swatch color={hex} name={ROLE_LABEL[role] || role} showHex size="sm" /></li>
@@ -116,7 +116,7 @@ export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logo
                   ))}
                 </div>
                 {g.spec && <p className="rv-garment__spec">{g.spec}</p>}
-                <div className="rv-garment__cw" aria-label="Colourway">
+                <div className="rv-garment__cw" aria-label="Colorway">
                   {["base", "trim", "accent"].map((k) => (
                     <Swatch key={k} color={g.colors[k]} name={k[0].toUpperCase() + k.slice(1)} showHex size="xs" />
                   ))}

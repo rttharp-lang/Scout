@@ -3,7 +3,10 @@
 // Inside the claude.ai Artifact frame `<a download>` does nothing, so the
 // `downloads` capability is tried first (the viewer confirms the save). Outside
 // that runtime (dev server, static deploy) a temporary anchor click downloads it.
-import { getCapability } from "./claude.js";
+// Inside the frame WITHOUT the capability (signed out, not granted) there is no way
+// to save a file: saveFile says so ({ ok: false, how: "anchor-inert" }) instead of
+// clicking an anchor that silently does nothing and reporting "download started".
+import { getCapability, inArtifactRuntime } from "./claude.js";
 
 const MIME = {
   png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", svg: "image/svg+xml", zip: "application/zip",
@@ -42,9 +45,15 @@ function anchorDownload(filename, blob) {
   }
 }
 
+/** The message callers show when this view can't save files at all. */
+export const DOWNLOADS_UNAVAILABLE = "Downloads aren't available in this view.";
+
 /**
- * saveFile(filename, blobOrString) → Promise<{ ok, how: "downloads" | "anchor", error?, code? }>.
- * Never throws. `code` carries the downloads capability's error code (e.g. "declined").
+ * saveFile(filename, blobOrString) →
+ *   Promise<{ ok, how: "downloads" | "anchor" | "anchor-inert", error?, code? }>.
+ * Never throws. `code` carries the downloads capability's error code (e.g. "declined"),
+ * or "downloads_unavailable" with how: "anchor-inert" (ok: false) inside the Artifact
+ * frame when the capability is missing — `<a download>` does nothing there.
  */
 export async function saveFile(filename, data) {
   const name = String(filename || "download.txt");
@@ -57,13 +66,16 @@ export async function saveFile(filename, data) {
       const code = (e && e.code) || "unavailable";
       if (!FALL_THROUGH.has(code)) {
         const message =
-          code === "declined" ? "Download cancelled."
+          code === "declined" ? "Download canceled."
           : code === "rate_limited" ? "A download prompt is already open."
           : code === "rejected_extension" || code === "extension_not_enabled" ? "That file type can't be saved here."
           : (e && e.message) || "The file couldn't be saved.";
         return { ok: false, how: "downloads", error: message, code };
       }
     }
+  }
+  if (inArtifactRuntime()) {
+    return { ok: false, how: "anchor-inert", code: "downloads_unavailable", error: DOWNLOADS_UNAVAILABLE };
   }
   try {
     anchorDownload(name, toBlob(data, name));

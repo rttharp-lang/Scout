@@ -1,4 +1,4 @@
-// Closing call to action: team-colour panel + the current look printed oversized,
+// Closing call to action: team-color panel + the current look printed oversized,
 // cropped hard by the edge (the statement-drop move, applied to the page).
 import React, { useRef } from "react";
 import { ArrowRight, Upload } from "lucide-react";

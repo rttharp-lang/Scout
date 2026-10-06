@@ -1,7 +1,7 @@
 /* Mascot Lab — Collection page (#collection). Tokens only. Class prefix: cl- */
 
 .cl-page, .cl-sheet {
-  /* backdrop behind garment mockups: a studio grey that holds both the light tee
+  /* backdrop behind garment mockups: a studio gray that holds both the light tee
      and the near-black hoodie, in either theme */
   --cl-stage: color-mix(in srgb, var(--surface-2) 55%, var(--surface-3));
   --cl-stage-line: color-mix(in srgb, var(--ink) 7%, transparent);
@@ -21,11 +21,11 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 640px);
   gap: var(--space-5) var(--space-7);
   align-items: end;
-  padding-top: var(--space-6);
+  padding-top: var(--pg-top);         /* shared step-page top (step.css) */
   padding-bottom: var(--space-5);
 }
-.cl-hero__copy { display: grid; gap: var(--space-3); justify-items: start; min-width: 0; }
-.cl-hero__title { font-size: var(--step-4); max-width: 16ch; }
+/* .cl-hero__copy = .pg-head, .cl-hero__title = .pg-title (step.css) */
+.cl-hero__title { max-width: 16ch; }
 .cl-hero__copy .lead { max-width: 46ch; }
 .cl-hero__ctas { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-1); }
 /* included-piece count inside the order buttons */
@@ -72,7 +72,7 @@
 .cl-look__colors { display: grid; gap: var(--space-3); padding: var(--space-5); align-content: start; }
 .cl-look__colors-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); }
 .cl-look__colors-note { font-size: var(--step--1); color: var(--ink-2); }
-/* ColorField, one line: label | hex | colour chip (the chip IS the native picker; DOM order = visual order) */
+/* ColorField, one line: label | hex | color chip (the chip IS the native picker; DOM order = visual order) */
 .cl-look__color { grid-template-columns: 5.6em minmax(0, 1fr); align-items: center; gap: var(--space-2); }
 .cl-look__color .ml-color__role, .cl-look__color .ml-color__sep { display: none; }
 .cl-look__color .ml-color__row { flex-wrap: nowrap; gap: var(--space-2); }
@@ -82,11 +82,14 @@
   background: var(--chip);
   color: var(--chip-ink);
   border: 0;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 18%, transparent);
+  /* the shared Swatch's two edges (inner line in the chip's own ink + outer hairline in
+     the theme ink), so #111 reads on the dark theme and white on the light one */
+  --chip-edge: inset 0 0 0 1px color-mix(in srgb, var(--chip-ink, #000) 24%, transparent), 0 0 0 1px color-mix(in srgb, var(--ink) 22%, transparent);
+  box-shadow: var(--chip-edge);
 }
 .cl-look__color .ml-color__picker svg { opacity: 0; transition: opacity var(--dur-1) ease; }
 .cl-look__color .ml-color__picker:hover svg, .cl-look__color .ml-color__picker:focus-within svg { opacity: 1; }
-.cl-look__color .ml-color__picker:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 18%, transparent), 0 0 0 2px var(--surface), 0 0 0 3px var(--line-strong); }
+.cl-look__color .ml-color__picker:hover { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--chip-ink, #000) 24%, transparent), 0 0 0 2px var(--surface), 0 0 0 3px var(--line-strong); }
 
 /* ═════════════════════════ section blocks ═════════════════════════ */
 .cl-notices { display: grid; gap: var(--space-3); padding-bottom: var(--space-4); }
@@ -506,7 +509,7 @@ button.cl-insp__pane:hover .ml-canvas { box-shadow: inset 0 0 0 2px var(--ink); 
   .cl-cta { padding: var(--space-6) var(--space-5) var(--space-6) calc(var(--space-5) + 10px); }
 }
 @media (max-width: 720px) {
-  .cl-hero { padding-top: var(--space-5); padding-bottom: var(--space-4); }
+  .cl-hero { padding-bottom: var(--space-4); }
   .cl-hero__ctas { width: 100%; }
   .cl-hero__ctas .ml-btn { flex: 1 1 100%; }
   .cl-look { grid-template-columns: minmax(0, 1fr); }

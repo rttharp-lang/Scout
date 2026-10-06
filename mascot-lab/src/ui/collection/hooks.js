@@ -111,7 +111,7 @@ export function useLookArt() {
       if (!alive) return;
       if (preview) setArt({ key, art: preview, clean, final: false, error: null });
       // only start the expensive final once the inputs have held still for a moment
-      // (a colour drag changes the key every few frames; each tick gets a preview)
+      // (a color drag changes the key every few frames; each tick gets a preview)
       await new Promise((r) => setTimeout(r, FINAL_SETTLE_MS));
       if (!alive) return;
       try {
@@ -126,7 +126,7 @@ export function useLookArt() {
     return () => {
       alive = false;
       // a newer look supersedes this one: drop its renders that haven't started yet
-      // (dragging a colour picker would otherwise queue one 1024 px render per tick)
+      // (dragging a color picker would otherwise queue one 1024 px render per tick)
       queue.cancel((k) => k === `art|${key}|384` || k === `art|${key}|1024`);
     };
     // key captures logo + effect + params + palette + seed

@@ -43,6 +43,8 @@ mascot-lab/
       core.js             pixel/mask/noise/color helpers shared by all effects
       image.js            load, background removal, trim, palette extraction, square source
       render.js           param resolution, render cache, progressive render queue
+      worker/             effect Web Worker pool (pool.js) + the worker (effectWorker.js)
+      sanitizeSvg.js      SVG allowlist sanitizer (uploads, orders, owner inbox)
       effects/
         index.js          registry + categories (glob-loaded, failure-tolerant)
         <id>.js           one effect per file, default export (contract below)
@@ -56,12 +58,15 @@ mascot-lab/
     order/
       catalog.js          products, prices, size runs, volume tiers, lead time
       pricing.js          quantities + totals from roster/extras
-      orderService.js     submit adapters (artifact db → endpoint → local)
+      orderService.js     submit adapters (artifact db → endpoint → local), owner inbox
       orderSheet.js       order summary: text, CSV roster, HTML order sheet
+      team.js             team name with the contact-school fallback (labels, files, refs)
     ui/
       components/         shared UI primitives (import from components/index.js; the
                           bare-hash router lives in components/router.js)  (updated)
-      pages/              Landing, Studio, Collection, Order, Review/Done
+      pages/              Landing, Studio, Collection, Order, Review, Done; step.css (shared
+                          step-page title block), saveNotice.js (download result copy)
+      landing/ studio/ collection/ order/   each page's own modules
     assets/samples/       sample logos (+ index.js); bulldog-on-white.jpg is a
                           background-removal test fixture, NOT in SAMPLE_LOGOS  (updated)
   harness/ui.html/.js     component gallery (?theme=light|dark&team=…&open=…)  (updated)
@@ -111,8 +116,14 @@ export default {
   params: [ /* ParamSpec[] — 3 to 7 controls, the ones a coach would actually touch */ ],
   presets: [ { name: "Comic", params: { /* partial */ } } ],  // 2–4 named looks, first = default look
   render(src, p, ctx) { /* … */ return canvas; },              // may return a Promise<canvas>
+  mainThread: false,           // (updated) optional: true = never render in the worker
 };
 ```
+(updated) `render` normally runs in a Web Worker on `OffscreenCanvas` (see render.js):
+no `document`, `Image` or DOM — make canvases with core.js `createCanvas` and read
+pixels with `ctx2d`. An effect that genuinely needs the DOM sets `mainThread: true`.
+Every effect module is bundled into the worker eagerly, so a module that throws at
+import time disables the pool for everyone (renders still work, on the main thread).
 
 ParamSpec:
 ```js
@@ -172,9 +183,9 @@ one preset named after the effect. Extra exports: `validateEffect(effect, id) �
 method from the list, 3–7 params, 2–4 presets, preset keys exist, color defaults are
 roles, id in EFFECT_ORDER). The contact sheet prints them as `[lint] <id>: …`
 console warnings and in red under the row header — fix them before you call an effect done.
-`EFFECT_ORDER` today: original, halftone, graffiti, chrome, risograph, neon, screenprint,
-varsity, chenille, glitch, sticker, stencil, holographic, puff, embroidery, pixel,
-woodcut, scribble, thermal, melt, ascii, speed.
+`EFFECT_ORDER` today (23 looks): original, graffiti, chrome, halftone, neon, screenprint,
+holographic, stencil, thermal, chenille, risograph, glitch, varsity, woodcut, sticker,
+pixel, embroidery, melt, speed, puff, ascii, scribble, emboss.
 
 ### render.js
 
@@ -194,7 +205,16 @@ export function createRenderQueue(): {
 export function canvasToBlob(canvas, type = "image/png", quality?): Promise<Blob>
 ```
 As implemented (updated):
-- Result canvases are **cached and shared** (LRU 60) — treat them as read-only; never
+- (updated) **Where renders run**: a pool of min(2, cores − 1) Web Workers
+  (`engine/worker/pool.js`) when Worker + OffscreenCanvas exist; each worker gets a logo's
+  square source once per `logoKey|size` and returns an ImageBitmap that becomes an ordinary
+  canvas. Main thread instead when the pool is unavailable, `?workers=0`, the effect sets
+  `mainThread: true`, or a worker job fails (crash/timeout/throw → retried on the main
+  thread; an effect that throws only in the worker stays on the main thread for the
+  session). Same pixels either way. `window.__mascotRender` shows stats and toggles the pool.
+- `createRenderQueue({ concurrency }?)` runs up to one job per worker (1 without workers);
+  `cancel()` also aborts running jobs whose render hasn't reached a worker yet.
+- Result canvases are **cached and shared** (pixel-budgeted LRU, ≈40 M px) — treat them as read-only; never
   draw into a canvas returned by `renderEffect` (copy it first). Sources are cached per
   `logoKey|size` (LRU 16), so always pass a `logoKey` that changes when the logo
   pixels change — use the `key` returned by `useLogoCanvas()`, NOT `state.logo.key`
@@ -382,7 +402,7 @@ As implemented (updated):
 - Extra option `timings: {}` → filled with per-phase ms. Throws only when the garment/view
   is missing; bad placements are skipped.
 - `placement.tint` also accepts `"tonal"` (a shade off `colors.base`) or `"base" | "trim" |
-  "accent"`. A tint is a **one-colour screen separation** (ink density follows the
+  "accent"`. A tint is a **one-color screen separation** (ink density follows the
   graphic's luminance, so linework survives), not a flat silhouette; `knockout: false`
   forces the flat silhouette. Extra Placement keys (e.g. `source`) are ignored.
 - Unknown `zone` → `center` → `back-center` → the view's first zone.
@@ -393,7 +413,7 @@ As implemented (updated):
   fallback serif.
 - Caches key on **canvas identity** (tinted/scaled graphics) — never redraw into a canvas
   you already passed; pass a new canvas when the content changes (renderEffect does).
-- Timing reality: warm re-renders (new colours/graphics) ≈ 1.5 ms @600, 6.5 ms @1600; the
+- Timing reality: warm re-renders (new colors/graphics) ≈ 1.5 ms @600, 6.5 ms @1600; the
   FIRST render of each garment view at a new size is ≈ 55–100 ms @600 (one-time shading
   + texture layers), ≈ 110–180 ms @1600.
 - Extra exports: `tonalOf(baseHex)`, `viewBounds(garment, viewId)`, `ARTBOARD` (1000),
@@ -408,9 +428,10 @@ export const DROP_STYLES = [   // ids fixed; copy may be improved
   { id: "allover",   name: "All-over",  blurb: "Your graphic as a repeat print, edge to edge." },
   { id: "tonal",     name: "Tonal",     blurb: "Graphic printed a shade off the base. Understated." },
 ];
-export function buildCollection(dropStyleId, palette): Collection
+export function buildCollection(dropStyleId, palette, { effectStage } = {}): Collection   // (updated)
 Collection = {
   dropStyle,
+  effectStage: "dark" | null,                               // (updated) recorded for rebuilds
   items: { [garmentId]: {
     enabled: true,
     colors: { base: role|hex, trim: role|hex, accent: role|hex },
@@ -431,6 +452,13 @@ this). Items the coach edits via `updateItem` carry `custom: true` and survive p
 changes and reloads; non-custom items are rebuilt from the current recipes on load.
 Recipes exist for all six garments; the UI must skip garments the registry did not load.
 Extra exports: `resolveColor(roleOrHex, palette)`, `tonalTint(baseHex)`, `getDropStyle(id)`.
+(updated) **Effect-aware colorways**: `effectStage: "dark"` (the chosen effect's `stage`)
+moves every piece that prints the full-color effect on a light base onto a dark base
+(trim/lettering re-picked); other stages change nothing. The store keeps
+`collection.effectStage` in sync with the chosen effect, so **any code that rebuilds a
+recipe outside the store (style thumbnails, "reset this piece") must pass
+`{ effectStage: state.collection.effectStage }`**, or it shows light pieces the real
+collection no longer uses.
 Two-tone is the default language: each garment's base/trim come from the team
 palette so the set reads as one collection (e.g. hoodie in dark, pants in primary).
 
@@ -455,6 +483,33 @@ Tries the claude.ai artifact `db` capability, then `import.meta.env.VITE_ORDER_E
 (POST JSON), else stores locally. The UI must tell the truth about which one
 happened ("Order request sent" vs "Saved on this device — send it to us").
 
+As implemented (updated):
+- `buildOrder(state, ctx) → body` (schema `mascot-lab/order@1`, fields in README "How
+  orders flow"); `submitOrder(body, { logoFile? })` also returns `stored`,
+  `fallbackReason`, `attempts`, `logoStored`. Refs: `makeRef(team)` = `teamInitials` +
+  5 Crockford chars (`NB-4F7K2`); `likelyChannel()` labels the send button up front.
+- **Team name fallback** (`order/team.js`): `teamFields(team, contact)` /
+  `teamLabel(team, contact, empty)` — an upload clears the sample team name, and until the
+  coach types one the contact form's school stands in. `buildOrder`'s `team`, refs,
+  file names (`fileBase`, line sheet, garment and Studio PNGs) and the owner inbox use it.
+- **Private order inbox** (Artifact `db`, rules in README): each coach writes only
+  `orders/<viewer id>` = `{ orders: [compact bodies, newest first, ≤ 10, < 240 KiB],
+  updatedAt, app }`; an uploaded logo goes to `orders/<viewer id>/logos/logo-<hash>`
+  (data URL ≤ 200 KB, sanitized if SVG); order statuses live in the owner-only
+  `orders/_status` = `{ statuses: { [ref]: { status, at } } }` (`ORDER_STATUSES`), so the
+  owner never rewrites a coach's document. Owner side: `ownerInboxAccess()`,
+  `watchOrders(db, onOrders, onError)` (one collection subscription, flattened),
+  `setOrderStatus`, `fetchOrderLogo` (re-sanitizes). Local copies: `localOrders()`,
+  `findLocalOrder(ref)`; revisions: `rememberRevision` / `pendingRevision` / `clearRevision`.
+- **Design pack** (`ui/order/exports.js` `makeDesignPack`, `<team>-<ref>-design-pack.zip`):
+  `artwork/<effect>-2048.png` (transparent print art), `garments/<id>-front|back.jpg`
+  (1200 px), `order-sheet.html`, `roster.csv`, `order.json`, `README.txt` (+ the order
+  text). The uploaded logo file itself travels with a db/endpoint order, not in the pack.
+- `engine/sanitizeSvg.js`: `sanitizeSvg(text) → string | null` (allowlisted SVG drawing
+  elements; no script/foreignObject/on*/external refs/@import), `svgDataUrl(text)`,
+  `dataUrlText(url)`, `cleanCss(text)`. Used by `rasterizeSvgText` (uploads), before an
+  order is sent, and again in the owner inbox before a logo is saved.
+
 ## Platform (claude.ai Artifact runtime) — `src/platform/claude.js`
 
 When published as an Artifact the page runs in a sandboxed frame: `<a download>`
@@ -471,6 +526,11 @@ are no-ops, only bare `#token` hashes survive. So:
   but answers `declined | rate_limited | rejected_extension | bad_request`, it returns
   `{ ok: false, how: "downloads", error, code }` WITHOUT trying the anchor (show `error`
   in the UI); only "can't save here" codes fall back to the anchor. Also `mimeFor(filename)`.
+  (updated) Inside the Artifact frame WITHOUT the capability it returns
+  `{ ok: false, how: "anchor-inert", code: "downloads_unavailable" }` (the anchor would do
+  nothing). Every download button words its result through `ui/pages/saveNotice.js`
+  (`saveToast`, `saveError`, `cantSaveHere`): "Downloads aren't available in this view.
+  Open the site in a browser to save files."; #done also checks the capability up front.
 - (updated) `platform/storage.js`: `load(key, fallback = null)`, `save(key, value) →
   { ok: true, bytes } | { ok: false, reason: "unavailable" | "quota" | "error" }`,
   `remove(key)`, `available()`. Never throw.
@@ -495,16 +555,19 @@ are no-ops, only bare `#token` hashes survive. So:
              //  first loaded non-"original" effect (halftone today) and persists that
   favorites: [effectId],
   collection: Collection,                                   // from buildCollection()
-             //  (updated) edited items carry custom: true
+             //  (updated) edited items carry custom: true; effectStage follows the effect
   roster:    [RosterRow], extras: {…},                      // (updated) 12 example rows, example: true
-  contact:   { coach, email, phone, school, address, needBy, notes },
+  contact:   { coach, email, phone, school, address, needBy, notes, rightsConfirmed? },
   order:     { status: "draft" | "submitted", ref, channel, submittedAt } ,
   flags:     { logoNotSaved },   // (updated) uploaded logo was too big to persist → sample shown
 }
 ```
 Exposed via `useStore() → { state, dispatch, actions }` with named action helpers
-(`setLogo`, `setPalette`, `setEffect`, `setEffectParams`, `toggleFavorite`,
-`setDropStyle`, `updateItem`, `setRoster`, `setExtras`, `setContact`, `markSubmitted`, `reset`).
+(updated, complete list): `setLogo`, `loadSample`, `setTeam`, `setPalette`, `setEffect`,
+`setEffectParams`, `setEffectSeed`, `toggleFavorite`, `setDropStyle`, `updateItem`,
+`setCollection`, `setRoster`, `setExtras`, `setContact`, `markSubmitted`, `reopenOrder`,
+`dismissFlag`, `reset`. The provider also dispatches `setEffectStage` itself whenever the
+chosen effect changes (keeps `collection.effectStage` in sync; not an action helper).
 Persisted to localStorage (debounced, try/catch) under `mascot-lab:v1`.
 `useLogoCanvas()` returns the decoded logo canvas (memoized by `logo.key`).
 
@@ -555,16 +618,28 @@ no horizontal scroll, keyboard focus visible, `prefers-reduced-motion` respected
 (no `.css` suffix — some packages' export maps reject it); pages don't import fonts.
 CSS vars the store writes on `<html>`: `--team-1/2/3` (primary/secondary/accent),
 `--team-dark`, `--team-light`, `--team-{1,2,3}-ink` (readable ink on each),
-`--team-on-light(-ink)`, `--team-on-dark(-ink)` (the team colour that reads on each
-theme's background) and `--team-flash`. Components use `--accent` / `--accent-ink`,
-which tokens.css points at the readable team colour per theme — prefer those in pages.
+`--team-on-light(-ink)`, `--team-on-dark(-ink)` (the team color that reads on each
+theme's background) and (updated) `--team-flash-on-light` / `--team-flash-on-dark`
+(`teamCssVars` writes both; tokens.css points `--team-flash` at the current theme's).
+Components use `--accent` / `--accent-ink`,
+which tokens.css points at the readable team color per theme — prefer those in pages.
 Shared components (import from `ui/components/index.js`): Button (variants incl. `team`),
 Spinner, IconButton, Field/Input/Textarea, Slider, Select, Toggle, Segmented, Chip/ChipRow,
-ColorField, NumberStepper, Modal/Sheet, ConfirmProvider/useConfirm (awaitable confirm —
+ColorField, NumberStepper, Modal/Sheet, CopyText/copyToClipboard (updated: moved here from
+ui/order, which re-exports it), ConfirmProvider/useConfirm (awaitable confirm —
 use instead of `confirm()`), ToastProvider/useToast, SpecLabel, Swatch/inkFor, Skeleton,
 CanvasImage, Tabs/TabPanel, Notice, Wordmark/RegMark, StepNav, TeamChip, ThemeSwitch,
 and router helpers `useRoute`, `navigate(route)`, `currentRoute`, `href(route)`.
 See harness/ui.html for every state. Page copy/titles live in `src/brand.js`.
+(updated) Color chips outside `Swatch` (Studio role chips, Collection look-panel pickers)
+use the same two edges as `Swatch`: an inner line in the chip's own ink + an outer
+hairline in the theme ink, so `#111111` reads on the dark theme.
+(updated) **Step pages** (Studio, Collection, Order, Review, Done) share one title block
+(`ui/pages/step.css`): `.pg-head` (step label → h1, 12 px), `.pg-title` (`--pg-title` =
+`--step-4`, 60 px at 1440 / 35 px at 390) and `--pg-top` (32 px, 24 px ≤ 720) above it;
+every step page sits in `.container` (`--page-max` + `--gutter`), aligned with the header.
+Landing keeps its own editorial hero. Forward actions use `Button variant="team"`.
+US English throughout (color, canceled).
 
 ## Looking at your work (mandatory for anything visual)
 
@@ -637,13 +712,14 @@ for (const g of await loadGarments()) {             // skip garments that didn't
   is dropped on save and `flags.logoNotSaved` warns on the next visit, so re-encode big
   rasters before storing: `prepareLogo` caps the long side at 1600 anyway, so a 1600 px
   re-encode (PNG if it has transparency, else JPEG ≈0.92) loses nothing visible. Then
-  propose colours with `suggestPalette(canvas)` and let the coach confirm/swap roles.
-- Only `original` + `halftone` effects and the `jersey` garment exist after this phase;
-  every page must handle "not loaded yet" (the registries skip missing modules, the
-  collection recipes cover all six garments).
-- Artifact-build risk to verify at publish time: `rasterizeSvgText` loads the SVG into
-  an `<img>` through a `blob:` URL; if the Artifact CSP blocks `blob:` images, sample
-  logos will fail to decode there (switch that one URL to a `data:` URL).
+  propose colors with `suggestPalette(canvas)` and let the coach confirm/swap roles.
+- (then) Only `original` + `halftone` and the `jersey` existed after the foundation phase;
+  (now) all 23 effects and 6 garments ship. Pages still handle "not loaded yet" (the
+  registries skip modules that fail).
+- (resolved) Sample SVGs decode in the Artifact frame (`data:` URLs, decoded in JS); the
+  effect worker is inlined as a `blob:` worker in the single-file build, and the
+  main-thread fallback covers a CSP that refuses it (`node scripts/e2e.mjs --artifact
+  --worker-src="'none'"` exercises the fallback).
 - `state.effect.id` defaults to "graffiti"; until graffiti.js loads, the store falls
   back to halftone and persists it (a dev browser keeps halftone until reset —
   `window.__mascotLab.actions.reset()`).

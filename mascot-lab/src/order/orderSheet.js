@@ -14,7 +14,7 @@ import { UNSIZED, formatMoney, formatPercent } from "./pricing.js";
 
 const ROLE_NAMES = { primary: "Primary", secondary: "Secondary", accent: "Accent", dark: "Dark", light: "Light" };
 /** Short garment names for narrow table columns (the roster on the printed sheet). */
-const SHORT = { jersey: "Jersey", shorts: "Shorts", hoodie: "Hoodie", pants: "Pants", tee: "Tee", longsleeve: "Shooter" };
+const SHORT = { jersey: "Jersey", shorts: "Shorts", hoodie: "Hoodie", pants: "Pants", tee: "Tee", longsleeve: "Shooting" };
 const s = (v) => (v == null ? "" : String(v));
 
 /* ───────────────────────────── words ───────────────────────────── */
@@ -46,7 +46,7 @@ export function describePlacement(p, zoneLabel) {
   }
   if (p.tint && p.tint !== "tonal") parts.push(`one ink ${s(p.tint).toUpperCase()}`);
   else if (p.tint === "tonal") parts.push("one ink, a shade off the base");
-  else parts.push("full colour");
+  else parts.push("full color");
   if (p.opacity != null && Number(p.opacity) < 0.99) parts.push(`${Math.round(Number(p.opacity) * 100)}% ink density`);
   return parts.join(", ");
 }
@@ -73,7 +73,7 @@ export function describeLettering(garment, item, colors) {
 /**
  * describeSettings(effect, resolved, overrides) → [{ key, label, value, changed }] in words.
  * effect: the effect module (param specs); resolved: resolveParams() output;
- * overrides: state.effect.params (to mark what the coach changed, and which colours are roles).
+ * overrides: state.effect.params (to mark what the coach changed, and which colors are roles).
  */
 export function describeSettings(effect, resolved = {}, overrides = {}) {
   const out = [];
@@ -128,7 +128,7 @@ export function orderText(order) {
   L.push(`Design: ${s(o.effect?.name)} (${s(o.effect?.method)}), ${s(o.design?.dropStyleName)} drop`);
   if (o.effect?.settings?.length) L.push(`Effect settings: ${o.effect.settings.map((x) => `${x.label} ${x.value}`).join("; ")}`);
   const pal = o.palette || {};
-  L.push(`Team colours: ${Object.entries(pal).map(([k, v]) => `${ROLE_NAMES[k] || k} ${v}`).join(", ")}`);
+  L.push(`Team colors: ${Object.entries(pal).map(([k, v]) => `${ROLE_NAMES[k] || k} ${v}`).join(", ")}`);
   L.push(`Logo: ${s(o.logo?.name)}${o.logo?.isSample ? " (sample logo)" : ""}`);
   L.push("");
   L.push("GARMENTS");
@@ -212,7 +212,7 @@ export function rosterCsv(order) {
 const esc = (v) => s(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 // the whole URL must be base64 (a prefix check would let `"…` break out of the src attribute)
 const okImg = (u) => typeof u === "string" && /^data:image\/(png|jpeg|webp|svg\+xml);base64,[A-Za-z0-9+/]+=*$/.test(u);
-/** A colour for a style attribute: "#RRGGBB" only (anything else could load url()s). */
+/** A color for a style attribute: "#RRGGBB" only (anything else could load url()s). */
 const hex = (v) => (/^#[0-9a-f]{6}$/i.test(s(v)) ? s(v) : "transparent");
 /** A count for the sheet: a finite number, else 0 (never markup). */
 const num = (v) => (Number.isFinite(Number(v)) ? Number(v) : 0);
@@ -463,7 +463,7 @@ export function orderSheetHtml(order, images = {}) {
   </div>
 
   <div class="foot">
-    <p>Proof within ${esc(PROOF_TIME)} of the request. Production ${esc(LEAD_TIME)}. Prices are estimates until the proof is approved; mockups are previews and colours are confirmed on the printed proof.</p>
+    <p>Proof within ${esc(PROOF_TIME)} of the request. Production ${esc(LEAD_TIME)}. Prices are estimates until the proof is approved; mockups are previews and colors are confirmed on the printed proof.</p>
     ${o.rightsConfirmed ? "<p>The coach confirmed they own this logo or have permission to use it.</p>" : ""}
   </div>
 </main>
