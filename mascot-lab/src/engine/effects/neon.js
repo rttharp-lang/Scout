@@ -818,6 +818,22 @@ export default {
       kx.globalCompositeOperation = "source-atop";
       kx.fillStyle = "rgba(6,8,14,0.86)";
       kx.fillRect(0, 0, D2, D2);
+      // a wider smoky "night" under the tight backing: on a white / gold shirt the glow
+      // needs a dark aura to read as light (on dark shirts it disappears into the fabric)
+      // (a blur of thin tubes is faint, so the blurred coverage is re-thresholded into a
+      // solid aura that feathers out ≈ 2 tube widths from the glass)
+      {
+        const aura = blurCanvas(back, Math.min(Math.max(1.2, w * 1.8), (D2 * 0.14) / 3.2));
+        const ax = ctx2d(aura);
+        const im = ax.getImageData(0, 0, D2, D2), ad = im.data;
+        for (let j = 3; j < ad.length; j += 4) {
+          const t = Math.max(0, Math.min(1, (ad[j] / 255 - 0.028) / 0.04));   // short ramp: no muddy rim
+          ad[j] = t * t * (3 - 2 * t) * 255;
+        }
+        ax.putImageData(im, 0, 0);
+        o.globalAlpha = 0.8 + 0.2 * g;
+        o.drawImage(aura, 0, 0, S, S);
+      }
       o.globalAlpha = 0.42 + 0.3 * g;
       o.drawImage(blurCanvas(back, Math.max(0.8, w * 0.6)), 0, 0, S, S);
       // glow: wide bloom → tight halo (half-res canvas, so σ here is 2× in D px)

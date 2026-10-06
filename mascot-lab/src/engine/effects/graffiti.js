@@ -344,7 +344,7 @@ export default {
     const S = src.width;
     const sc = ctx.scale;                       // S px per unit
     const W = Math.min(S, 1024);                // masks + fill
-    const A = W > 400 ? Math.round(W * 0.4) : Math.min(W, 256); // distance fields + smooth fields
+    const A = W > 400 ? Math.round(W * 0.4) : Math.min(W, Math.max(160, Math.round(W * 0.5))); // distance fields + smooth fields
     const kW = W / S, kA = A / W;
     const u = sc * kW, uA = u * kA;             // px per unit at W / at A
     const n = W * W, nA = A * A;

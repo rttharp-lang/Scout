@@ -11,11 +11,16 @@ export const CATEGORIES = [
   { id: "digital", label: "Digital" },
 ];
 
-/** Gallery order; ids not listed sort after these, by name. "original" is always first. */
+/**
+ * Gallery order; ids not listed sort after these, by name. "original" is always first.
+ * Curated: the hero (graffiti) leads, the strongest and most distinct looks come early,
+ * and neighbours alternate stage / colour so no two adjacent tiles read alike (the
+ * logo-colour "decoration" looks — sticker, varsity, puff, embroidery — are spread out).
+ */
 export const EFFECT_ORDER = [
-  "original", "halftone", "graffiti", "chrome", "risograph", "neon", "screenprint",
-  "varsity", "chenille", "glitch", "sticker", "stencil", "holographic", "puff",
-  "embroidery", "emboss", "pixel", "woodcut", "scribble", "thermal", "melt", "ascii", "speed",
+  "original", "graffiti", "chrome", "halftone", "neon", "screenprint", "holographic",
+  "stencil", "thermal", "chenille", "risograph", "glitch", "varsity", "woodcut", "sticker",
+  "pixel", "embroidery", "melt", "speed", "puff", "ascii", "scribble", "emboss",
 ];
 
 const MODULES = import.meta.glob(["./*.js", "!./index.js"]);

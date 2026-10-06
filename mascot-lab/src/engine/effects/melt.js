@@ -400,13 +400,13 @@ export default {
   method: "Sublimation",
   stage: "mid",
   params: [
-    { key: "melt", label: "Melt", type: "range", min: 0, max: 100, step: 1, default: 55, unit: "%" },
-    { key: "drips", label: "Drips", type: "range", min: 0, max: 12, step: 1, default: 7 },
-    { key: "wobble", label: "Wobble", type: "range", min: 0, max: 100, step: 1, default: 25, unit: "%" },
+    { key: "melt", label: "Melt", type: "range", min: 0, max: 100, step: 1, default: 75, unit: "%" },
+    { key: "drips", label: "Drips", type: "range", min: 0, max: 12, step: 1, default: 9 },
+    { key: "wobble", label: "Wobble", type: "range", min: 0, max: 100, step: 1, default: 30, unit: "%" },
     { key: "gloss", label: "Gloss", type: "range", min: 0, max: 100, step: 1, default: 70, unit: "%" },
   ],
   presets: [
-    { name: "Melt", params: { melt: 55, drips: 7, wobble: 25, gloss: 70 } },
+    { name: "Melt", params: { melt: 75, drips: 9, wobble: 30, gloss: 70 } },
     { name: "Slow drip", params: { melt: 85, drips: 4, wobble: 10, gloss: 80 } },
     { name: "Heat wave", params: { melt: 20, drips: 0, wobble: 85, gloss: 0 } },
   ],

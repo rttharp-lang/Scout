@@ -110,7 +110,7 @@ function hash2(x, y, s) {
 export default {
   id: "puff",
   name: "Puff",
-  category: "metal",
+  category: "retro",
   blurb: "Raised puff-print ink, every color inflated.",
   method: "Puff print",
   stage: "mid",

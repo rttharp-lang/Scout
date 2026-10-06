@@ -268,6 +268,10 @@ export default {
     const sdat = srcImg.data;
     const edge = edgeColor(sdat, sd, W, kS, S);
     let col1 = p.color1, col2 = p.color2;
+    // a near-black outline 1 (a red/black team's "secondary") would merge with the black
+    // 3-D face and the team colour would never show: the team's primary takes it instead
+    const prim = ctx.palette?.primary;
+    if (luminance(col1) < 0.05 && contrastRatio(col1, dark) < 1.3 && prim && contrastRatio(prim, dark) >= 1.6) col1 = prim;
     const edgeHex = "#" + edge.map((v) => Math.round(v).toString(16).padStart(2, "0")).join("");
     const firstIs1 = p.outline1 > 0;
     const first = firstIs1 ? col1 : col2, other = firstIs1 ? col2 : col1;

@@ -662,7 +662,8 @@ export default {
     const fCell1 = 1 / Math.max(1.1, 2.0 * scale), fCell2 = 1 / Math.max(4, 14 * scale);
     const yarn = colors.map((c) => {
       const lum = (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) / 255;
-      return { c, lum, ao: 0.5 + 0.22 * lum, sheen: 0.12 + 0.2 * (1 - lum) };
+      // pale yarn gets more ambient: white chenille should read white (with texture), not grey
+      return { c, lum, ao: 0.5 + 0.3 * lum, base: 0.42 + 0.12 * lum * lum, sheen: 0.12 + 0.2 * (1 - lum) };
     });
     const hScale = loopR * 0.85; // pile relief in S px
     const cx0 = new Int32Array(S), cfx = new Float32Array(S);
@@ -728,7 +729,7 @@ export default {
             const pf = puff[i00] * w00 + puff[i10] * w10 + puff[i01] * w01 + puff[i11] * w11;
             const rdv = rd[i00] * w00 + rd[i10] * w10 + rd[i01] * w01 + rd[i11] * w11;
             const groove = 0.58 + 0.42 * smoothstep(0, loopR * 1.3 * kW + 0.5, rdv);
-            const v = ao * (0.42 + 0.92 * (diff < 0 ? 0 : diff)) * clamp(pf, 0.55, 1.35) * groove;
+            const v = ao * (Y.base + 0.92 * (diff < 0 ? 0 : diff)) * clamp(pf, 0.55, 1.35) * groove;
             const nh = nx * H0 + ny * H1 + nz * H2;
             const sp = nh > 0.85 ? Math.pow((nh - 0.85) / 0.15, 3) * Y.sheen * h : 0;
             const c = Y.c;
