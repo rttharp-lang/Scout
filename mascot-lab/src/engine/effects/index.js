@@ -15,7 +15,7 @@ export const CATEGORIES = [
 export const EFFECT_ORDER = [
   "original", "halftone", "graffiti", "chrome", "risograph", "neon", "screenprint",
   "varsity", "chenille", "glitch", "sticker", "stencil", "holographic", "puff",
-  "embroidery", "pixel", "woodcut", "scribble", "thermal", "melt", "ascii", "speed",
+  "embroidery", "emboss", "pixel", "woodcut", "scribble", "thermal", "melt", "ascii", "speed",
 ];
 
 const MODULES = import.meta.glob(["./*.js", "!./index.js"]);
