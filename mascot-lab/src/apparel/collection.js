@@ -142,20 +142,24 @@ const RECIPES = {
     },
     shorts: {
       colors: cw("primary", "secondary", pal),
-      front: [P("effect", "oversized", { scale: 1.05 })],
+      // the zone is tuned so scale 1 rises out of the left leg, cropped by hem + side panel
+      front: [P("effect", "oversized", { scale: 1.0 })],
       back: [P("logo", "waist-back", { scale: 0.9 })],
       text: null,
     },
     hoodie: {
       colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]),
-      front: [P("effect", "oversized", { scale: 1.08, dy: 0.04 })],
-      back: [P("logo", "back-yoke", { scale: 0.85 })],
+      // the hero piece: the mascot's face cropped hard by the right armhole seam and the
+      // rib band (clears the hood foot), plus the big centred back hit
+      front: [P("effect", "oversized", { scale: 0.96, dx: -0.08, dy: -0.02 })],
+      back: [P("effect", "back-center", { scale: 1.04, dy: -0.025 })],
       text: null,
     },
     pants: {
       colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]),
-      front: [P("effect", "oversized", { scale: 1.05 })],
-      back: [P("logo", "back-leg", { scale: 0.8 })],
+      // one giant hit running down the left leg, cropped by the outseam and inseam
+      front: [P("effect", "oversized", { scale: 1.0 })],
+      back: [P("logo", "back-leg", { scale: 0.85 })],
       text: null,
     },
     tee: {
@@ -166,9 +170,11 @@ const RECIPES = {
     },
     longsleeve: {
       colors: cw("secondary", "primary", pal, ["primary", "dark", "accent"]),
-      front: [P("logo", "chest-center", { scale: 0.95 })],
-      back: [P("effect", "oversized", { scale: 1.02, dy: 0.06 })],
-      text: NAME_ONLY,
+      // raglan two-tone: the mascot's face cropped hard by the right side seam and hem;
+      // the back stays a clean player back (name over number)
+      front: [P("effect", "oversized", { scale: 1.0, dx: -0.04 })],
+      back: [],
+      text: NUMBERS,
     },
   }),
 
@@ -183,19 +189,19 @@ const RECIPES = {
     shorts: {
       colors: cw("primary", "secondary", pal),
       front: [P("logo", "leg-left", { scale: 0.85 })],
-      back: [],
+      back: [P("logo", "waist-back", { scale: 0.75 })],
       text: null,
     },
     hoodie: {
       colors: cw("light", "primary", pal, ["primary", "dark", "secondary"]),
       front: [P("effect", "center", { scale: 0.8, dy: -0.1 })],
-      back: [P("logo", "back-yoke", { scale: 0.8 })],
+      back: [P("logo", "back-yoke", { scale: 0.95 })],
       text: null,
     },
     pants: {
       colors: cw("primary", "secondary", pal),
-      front: [P("logo", "thigh-left", { scale: 0.85 })],
-      back: [],
+      front: [P("logo", "thigh-left", { scale: 0.9 })],
+      back: [P("logo", "waist-back", { scale: 0.75 })],
       text: null,
     },
     tee: {
@@ -205,10 +211,12 @@ const RECIPES = {
       text: null,
     },
     longsleeve: {
-      colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]),
-      front: [P("logo", "chest-center", { scale: 0.9 })],
+      // the classic baseball raglan: team colour body, contrast sleeves; small crest at
+      // the nape over name + number
+      colors: cw("primary", "secondary", pal, ["accent", "light", "secondary"]),
+      front: [P("logo", "chest-center", { scale: 1.0 })],
       back: [P("logo", "back-yoke", { scale: 0.8 })],
-      text: NAME_ONLY,
+      text: NUMBERS,
     },
   }),
 
@@ -218,10 +226,11 @@ const RECIPES = {
     const items = {
       jersey: { colors: cw("primary", "secondary", pal), front: [T()], back: [T()], text: NUMBERS },
       shorts: { colors: cw("primary", "secondary", pal), front: [T({ tile: 190 })], back: [T({ tile: 190 })], text: null },
-      hoodie: { colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]), front: [T({ tile: 240 })], back: [T({ tile: 240 })], text: null },
-      pants: { colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]), front: [T({ tile: 200 })], back: [T({ tile: 200 })], text: null },
-      tee: { colors: cw("light", "primary", pal, ["primary", "dark", "secondary"]), front: [T()], back: [T()], text: null },
-      longsleeve: { colors: cw("secondary", "primary", pal, ["primary", "dark", "accent"]), front: [T()], back: [T()], text: NAME_ONLY },
+      hoodie: { colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]), front: [T({ tile: 200 })], back: [T({ tile: 200 })], text: null },
+      pants: { colors: cw("dark", "primary", pal, ["secondary", "accent", "light"]), front: [T({ tile: 165 })], back: [T({ tile: 165 })], text: null },
+      tee: { colors: cw("light", "primary", pal, ["primary", "dark", "secondary"]), front: [T({ tile: 185, scale: 0.78 })], back: [T({ tile: 185, scale: 0.78 })], text: null },
+      // one-ink repeat in the sleeve colour; no lettering (it would sit in the same ink)
+      longsleeve: { colors: cw("secondary", "primary", pal, ["primary", "dark", "accent"]), front: [T()], back: [T()], text: null },
     };
     // single-ink repeats on the warm-up pieces, printed in the piece's accent (the third
     // colour, already chosen to read on that base)
@@ -236,9 +245,11 @@ const RECIPES = {
   tonal: (pal) => {
     const items = {
       jersey: { colors: cw("primary", "dark", pal), front: [P("effect", "oversized", { scale: 1.02, dx: 0.02 })], back: [P("effect", "back-center", { scale: 1.05, dy: 0.06 })], text: NUMBERS },
-      shorts: { colors: cw("primary", "dark", pal), front: [P("effect", "oversized", { scale: 1.05 })], back: [P("logo", "waist-back", { scale: 0.9 })], text: null },
-      hoodie: { colors: cw("dark", "primary", pal), front: [P("effect", "center", { scale: 1.0, dy: -0.04 })], back: [P("effect", "oversized", { scale: 1.05 })], text: null },
-      pants: { colors: cw("dark", "primary", pal), front: [P("logo", "leg-left-long", { scale: 1.0 })], back: [], text: null },
+      // shorts + pants: drawcords take the trim colour too (accent only colours the cords)
+      shorts: { colors: ((c) => ({ ...c, accent: c.trim }))(cw("primary", "dark", pal)), front: [P("effect", "oversized", { scale: 1.0 })], back: [P("logo", "waist-back", { scale: 0.9 })], text: null },
+      // drawcords take the trim colour (accent) so nothing on the hoodie shouts
+      hoodie: { colors: ((c) => ({ ...c, accent: c.trim }))(cw("dark", "primary", pal)), front: [P("effect", "center", { scale: 1.0, dy: -0.04 })], back: [P("effect", "oversized", { scale: 1.05 })], text: null },
+      pants: { colors: ((c) => ({ ...c, accent: c.trim }))(cw("dark", "primary", pal)), front: [P("logo", "leg-left-long", { scale: 1.0 })], back: [P("logo", "waist-back", { scale: 0.8 })], text: null },
       // the light piece gets a tonal grey trim so it stays in the quiet family
       tee: { colors: { ...cw("light", "primary", pal, ["primary", "dark"]), trim: tonalTint(tonalTint(resolveColor("light", pal))) }, front: [P("effect", "center", { scale: 1.0 })], back: [P("logo", "back-yoke", { scale: 0.85 })], text: null },
       longsleeve: { colors: cw("primary", "dark", pal), front: [P("logo", "chest-left", { scale: 0.95 })], back: [P("effect", "oversized", { scale: 1.05 })], text: NAME_ONLY },

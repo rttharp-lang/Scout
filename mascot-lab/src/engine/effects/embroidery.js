@@ -1,0 +1,573 @@
+// "Embroidered" — machine embroidery. The logo is reduced to a small thread palette;
+// every color region is digitized like a real file: a fill of parallel thread rows
+// (long satin stitches or short staggered tatami stitches, a per-region angle, gently
+// curved rows), and a satin column around each region whose stitches turn with the edge.
+// Each stitch is drawn as a thread: body, a shadow on its far side and a sheen line whose
+// strength follows the thread's angle to the light (that angle-dependent glint is what
+// makes embroidery read as embroidery). The whole piece is raised with a soft shadow;
+// optionally it sits on a twill patch with a rolled merrow border.
+//
+// Structure (see halftone.js): fields at W ≤ 1024 (thread labels, per-region edge
+// distance, traced region outlines) → vector stitches generated in S px and stroked at S.
+import {
+  createCanvas, ctx2d, getPixels, resizeCanvas, alphaMask, insideDistance, signedDistance, blurMask,
+  traceContours, contoursToPath, maskToCanvas, blurCanvas, clamp, hexToRgb, rgbToHex, mix,
+  nearestColorIndex, makeNoise2D, hashSeed, luminance, contrastRatio, smoothstep,
+} from "../core.js";
+import { extractPalette } from "../image.js";
+
+const DEG = Math.PI / 180;
+const LIGHT = [-0.6, -0.8];              // direction toward the light (up-left)
+const ANGLE_STEPS = [0, 90, 45, -45, 30, -60, 70, -20];
+
+/* ───────────────────────────── analysis ───────────────────────────── */
+
+/** Thread labels at W: palette quantization + a 3×3 majority filter (no 1-px slivers). */
+function threadLabels(small, mask, W) {
+  const tiny = resizeCanvas(small, Math.min(W, 200), Math.min(W, 200));
+  let pal = extractPalette(tiny, 7, { maxSamples: 8000 }).filter((c) => c.weight > 0.004);
+  if (!pal.length) pal = [{ hex: "#808080", weight: 1 }];
+  const colors = pal.map((c) => hexToRgb(c.hex));
+  const { data } = getPixels(small);
+  const n = W * W;
+  let label = new Int8Array(n);
+  const cache = new Int16Array(32768).fill(-1);
+  for (let i = 0, j = 0; i < n; i++, j += 4) {
+    if (mask[i] < 0.5) { label[i] = -1; continue; }
+    const key = ((data[j] >> 3) << 10) | ((data[j + 1] >> 3) << 5) | (data[j + 2] >> 3);
+    let k = cache[key];
+    if (k < 0) k = cache[key] = nearestColorIndex(data[j], data[j + 1], data[j + 2], colors);
+    label[i] = k;
+  }
+  // majority filter (2 passes): anti-aliased boundary pixels snap to a neighbour's thread
+  const K = colors.length;
+  const cnt = new Int32Array(K);
+  for (let pass = 0; pass < 2; pass++) {
+    const out = new Int8Array(label);
+    for (let y = 1; y < W - 1; y++) {
+      for (let x = 1; x < W - 1; x++) {
+        const i = y * W + x, l = label[i];
+        if (l < 0) continue;
+        if (label[i - 1] === l && label[i + 1] === l && label[i - W] === l && label[i + W] === l) continue;
+        cnt.fill(0);
+        for (let oy = -1; oy <= 1; oy++) for (let ox = -1; ox <= 1; ox++) { const v = label[i + oy * W + ox]; if (v >= 0) cnt[v]++; }
+        let best = l, bc = cnt[l];
+        for (let k = 0; k < K; k++) if (cnt[k] > bc) { bc = cnt[k]; best = k; }
+        out[i] = best;
+      }
+    }
+    label = out;
+  }
+  return { label, colors };
+}
+
+/** Distance (W px) of every labelled pixel to the edge of its own region. */
+function regionDistance(label, W) {
+  const n = W * W;
+  const interior = new Float32Array(n);
+  for (let y = 0; y < W; y++) {
+    for (let x = 0; x < W; x++) {
+      const i = y * W + x, l = label[i];
+      if (l < 0) continue;
+      if (x > 0 && label[i - 1] !== l) continue;
+      if (x < W - 1 && label[i + 1] !== l) continue;
+      if (y > 0 && label[i - W] !== l) continue;
+      if (y < W - 1 && label[i + W] !== l) continue;
+      interior[i] = 1;
+    }
+  }
+  const d = insideDistance(interior, W, W);
+  for (let i = 0; i < n; i++) if (label[i] >= 0) d[i] += 0.5;
+  return d;
+}
+
+/** Coverage of the shape {sd < 0} with interior holes filled (flood fill from the border). */
+function filledCoverage(sd, W) {
+  const n = W * W;
+  const out = new Uint8Array(n);
+  const queue = new Int32Array(n);
+  let head = 0, tail = 0;
+  const push = (i) => { if (!out[i] && sd[i] >= 0) { out[i] = 1; queue[tail++] = i; } };
+  for (let x = 0; x < W; x++) { push(x); push((W - 1) * W + x); }
+  for (let y = 0; y < W; y++) { push(y * W); push(y * W + W - 1); }
+  while (head < tail) {
+    const i = queue[head++], x = i % W;
+    if (x > 0) push(i - 1);
+    if (x < W - 1) push(i + 1);
+    if (i >= W) push(i - W);
+    if (i < n - W) push(i + W);
+  }
+  const cov = new Float32Array(n);
+  for (let i = 0; i < n; i++) cov[i] = out[i] ? clamp(0.5 - sd[i]) : 1;
+  return cov;
+}
+
+/* ───────────────────────────── stitches ───────────────────────────── */
+
+/**
+ * Fill rows for one region (S px segments [ax, ay, bx, by, …]). Rows run at angle `th`,
+ * bend gently with low-frequency noise, and are cut into stitches: satin = long stitches
+ * (split when longer than maxLen), tatami = short stitches with a staggered phase per row.
+ */
+function fillStitches(k, lab, rd, W, kS, box, th, rowSp, minD, satin, stitchLen, noise) {
+  const segs = [];
+  const c = Math.cos(th), s = Math.sin(th);
+  const xs = [box.x0, box.x1, box.x0, box.x1], ys = [box.y0, box.y0, box.y1, box.y1];
+  let u0 = Infinity, u1 = -Infinity, v0 = Infinity, v1 = -Infinity;
+  for (let q = 0; q < 4; q++) {
+    const u = xs[q] * c + ys[q] * s, v = -xs[q] * s + ys[q] * c;
+    if (u < u0) u0 = u; if (u > u1) u1 = u; if (v < v0) v0 = v; if (v > v1) v1 = v;
+  }
+  const du = Math.max(0.5, 0.9 / kS);       // ≈ one field pixel
+  const bendA = rowSp * 0.9, bf = 1 / (rowSp * 40), bv = 1 / (rowSp * 30);
+  const gap = Math.max(0.25, rowSp * 0.12);
+  const inside = (u, v) => {
+    const x = u * c - v * s, y = u * s + v * c;
+    const xi = (x * kS) | 0, yi = (y * kS) | 0;
+    if (xi < 0 || yi < 0 || xi >= W || yi >= W) return false;
+    const i = yi * W + xi;
+    return lab[i] === k && rd[i] >= minD;
+  };
+  const push = (ua, ub, v) => {
+    if (ub - ua < gap * 2.5) return;
+    const va = v + bendA * noise(ua * bf, v * bv), vb = v + bendA * noise(ub * bf, v * bv);
+    const a = ua + gap, b = ub - gap;
+    segs.push(a * c - va * s, a * s + va * c, b * c - vb * s, b * s + vb * c);
+  };
+  let j = 0;
+  for (let v = v0 + rowSp * 0.5; v <= v1; v += rowSp, j++) {
+    let start = null;
+    const phase = ((j * 0.382) % 1) * stitchLen;
+    for (let u = u0; u <= u1 + du; u += du) {
+      const vb = v + bendA * noise(u * bf, v * bv);
+      const inn = u <= u1 && inside(u, vb);
+      if (inn && start === null) start = u;
+      else if (!inn && start !== null) {
+        const ua = start, ub = u - du * 0.5;
+        if (satin) {
+          const L = ub - ua;
+          const parts = Math.max(1, Math.ceil(L / stitchLen));
+          const off = parts > 1 ? ((j % 2) * 0.5 - 0.25) * (L / parts) : 0;
+          let prev = ua;
+          for (let q = 1; q <= parts; q++) {
+            const cut = q === parts ? ub : ua + (L * q) / parts + off;
+            push(prev, cut, v);
+            prev = cut;
+          }
+        } else {
+          let prev = ua;
+          let cut = ua - ((ua - phase) % stitchLen + stitchLen) % stitchLen + stitchLen;
+          while (cut < ub - gap * 3) { push(prev, cut, v); prev = cut; cut += stitchLen; }
+          push(prev, ub, v);
+        }
+        start = null;
+      }
+    }
+  }
+  return segs;
+}
+
+/**
+ * Satin column along a region's outline: stitches from the edge inward, turning with the
+ * contour (slight slant), spanning the whole stroke where the region is thinner than the
+ * column. → segments in S px.
+ */
+function borderStitches(contours, k, lab, rd, W, kS, toS, bw, sp, onlyThin = false) {
+  const segs = [];
+  const slant = 0.24;
+  const labAt = (x, y) => {
+    const xi = (x * kS) | 0, yi = (y * kS) | 0;
+    return xi < 0 || yi < 0 || xi >= W || yi >= W ? -2 : lab[yi * W + xi];
+  };
+  const rdAt = (x, y) => {
+    const xi = (x * kS) | 0, yi = (y * kS) | 0;
+    return xi < 0 || yi < 0 || xi >= W || yi >= W ? 0 : rd[yi * W + xi] * toS;
+  };
+  const stepIn = Math.max(0.5, 0.8 * toS);
+  for (const c0 of contours) {
+    const m = c0.length;
+    if (m < 3) continue;
+    const c = c0.map(([x, y]) => [x * toS, y * toS]);
+    const seg = new Float32Array(m);
+    let L = 0;
+    for (let i = 0; i < m; i++) { const a = c[i], b = c[(i + 1) % m]; seg[i] = Math.hypot(b[0] - a[0], b[1] - a[1]); L += seg[i]; }
+    if (L < sp * 3) continue;
+    const steps = Math.max(3, Math.round(L / sp));
+    const h = L / steps;
+    let si = 0, acc = 0;
+    for (let q = 0; q < steps; q++) {
+      const at = q * h;
+      while (si < m - 1 && acc + seg[si] < at) { acc += seg[si]; si++; }
+      const a = c[si], b = c[(si + 1) % m];
+      const ln = seg[si] || 1;
+      const u = clamp((at - acc) / ln);
+      const px = a[0] + (b[0] - a[0]) * u, py = a[1] + (b[1] - a[1]) * u;
+      // smoothed tangent over neighbouring segments
+      const pa = c[(si - 1 + m) % m], pb = c[(si + 2) % m];
+      let tx = pb[0] - pa[0], ty = pb[1] - pa[1];
+      const tl = Math.hypot(tx, ty) || 1;
+      tx /= tl; ty /= tl;
+      let nx = -ty, ny = tx;
+      if (labAt(px + nx * 1.5 * toS, py + ny * 1.5 * toS) !== k) { nx = -nx; ny = -ny; }
+      if (labAt(px + nx * 1.5 * toS, py + ny * 1.5 * toS) !== k) continue;
+      // march inward to find the stroke's half width (peak of the region distance)
+      let peak = 0, sPeak = 0, thin = false;
+      for (let sIn = stepIn; sIn <= bw + stepIn; sIn += stepIn) {
+        const r = rdAt(px + nx * sIn, py + ny * sIn);
+        if (r > peak) { peak = r; sPeak = sIn; } else if (r < peak - stepIn * 0.75) { thin = true; break; }
+      }
+      let len = bw;
+      if (onlyThin && !(thin && sPeak < bw)) continue;
+      if (thin && sPeak < bw) {
+        len = Math.min(bw, Math.max(sPeak, peak) * 2);
+        if (q & 1) continue; // both sides of a thin stroke emit: halve each so density stays even
+      }
+      if (len < 0.8) continue;
+      const sx = px - nx * 0.15, sy = py - ny * 0.15;
+      segs.push(sx, sy, px + nx * len + tx * len * slant, py + ny * len + ty * len * slant);
+    }
+  }
+  return segs;
+}
+
+/** Stroke thread segments: body, far-side shadow, sheen (bucketed by angle to the light). */
+function drawThreads(o, segs, rgb, tw, sheen, cap) {
+  if (!segs.length) return;
+  const lum = luminance(rgbToHex(rgb));
+  const body = rgbToHex(rgb.map((v) => v * (1 - (0.03 + 0.05 * lum))));
+  const shadowCol = rgbToHex(rgb.map((v) => v * 0.45));
+  const sheenCol = rgbToHex(rgb.map((v) => v + (255 - v) * (lum > 0.7 ? 1 : 0.62)));
+  const bodyP = new Path2D(), shadeP = new Path2D();
+  const B = 4;
+  const sheenP = Array.from({ length: B }, () => new Path2D());
+  for (let q = 0; q < segs.length; q += 4) {
+    const ax = segs[q], ay = segs[q + 1], bx = segs[q + 2], by = segs[q + 3];
+    const dx = bx - ax, dy = by - ay;
+    const L = Math.hypot(dx, dy);
+    if (L < 0.2) continue;
+    const tx = dx / L, ty = dy / L;
+    let nx = -ty, ny = tx;
+    if (nx * LIGHT[0] + ny * LIGHT[1] < 0) { nx = -nx; ny = -ny; }
+    bodyP.moveTo(ax, ay); bodyP.lineTo(bx, by);
+    const so = tw * 0.3;
+    shadeP.moveTo(ax - nx * so, ay - ny * so); shadeP.lineTo(bx - nx * so, by - ny * so);
+    const across = Math.abs(tx * LIGHT[1] - ty * LIGHT[0]); // |sin| between thread and light
+    const bucket = Math.min(B - 1, (across * B) | 0);
+    const sh = tw * 0.14, cut = Math.min(L * 0.22, tw * 1.2);
+    const p = sheenP[bucket];
+    p.moveTo(ax + tx * cut + nx * sh, ay + ty * cut + ny * sh);
+    p.lineTo(bx - tx * cut + nx * sh, by - ty * cut + ny * sh);
+  }
+  o.lineCap = cap;
+  o.strokeStyle = body;
+  o.lineWidth = tw * 0.9;
+  o.stroke(bodyP);
+  o.lineCap = "butt";
+  o.globalAlpha = 0.5;
+  o.strokeStyle = shadowCol;
+  o.lineWidth = tw * 0.26;
+  o.stroke(shadeP);
+  o.lineCap = "round";
+  o.strokeStyle = sheenCol;
+  o.lineWidth = tw * 0.32;
+  for (let b = 0; b < B; b++) {
+    const a = sheen * (0.12 + 0.88 * Math.pow((b + 0.5) / B, 1.6));
+    if (a < 0.02) continue;
+    o.globalAlpha = Math.min(1, a);
+    o.stroke(sheenP[b]);
+  }
+  o.globalAlpha = 1;
+}
+
+/* ───────────────────────────── effect ───────────────────────────── */
+
+export default {
+  id: "embroidery",
+  name: "Embroidered",
+  category: "retro",
+  blurb: "Stitched thread with satin borders and real sheen.",
+  method: "Embroidery",
+  stage: "paper",
+  params: [
+    {
+      key: "mode", label: "Stitch", type: "select", default: "satin",
+      options: [{ value: "satin", label: "Satin" }, { value: "fill", label: "Fill (tatami)" }],
+    },
+    { key: "density", label: "Stitch density", type: "range", min: 50, max: 150, step: 5, default: 100, unit: "%" },
+    { key: "angle", label: "Stitch angle", type: "range", min: 0, max: 180, step: 5, default: 45, unit: "°" },
+    { key: "border", label: "Satin border", type: "range", min: 0, max: 20, step: 1, default: 8, unit: "px" },
+    { key: "sheen", label: "Sheen", type: "range", min: 0, max: 100, step: 1, default: 60, unit: "%" },
+    { key: "patch", label: "Merrowed patch", type: "toggle", default: false },
+    { key: "patchColor", label: "Patch color", type: "color", default: "primary" },
+  ],
+  presets: [
+    { name: "Satin", params: { mode: "satin", density: 100, angle: 45, border: 8, sheen: 60, patch: false } },
+    { name: "Fill stitch", params: { mode: "fill", density: 100, angle: 30, border: 6, sheen: 45, patch: false } },
+    { name: "Merrowed patch", params: { mode: "satin", density: 100, angle: 45, border: 6, sheen: 55, patch: true, patchColor: "primary" } },
+  ],
+
+  render(src, p, ctx) {
+    const S = src.width;
+    const scale = ctx.scale;
+    const W = Math.min(S, 1024);
+    const kS = W / S, toS = S / W;
+    const n = W * W;
+    const seed = hashSeed("embroidery", ctx.seed);
+    let _l = performance.now();
+    const mark = (k) => { const P = globalThis.__prof; if (P) { const t = performance.now(); P[k] = Math.round(t - _l); _l = t; } };
+
+    const small = W === S ? src : resizeCanvas(src, W, W);
+    const mask = alphaMask(small);
+    mark("mask");
+    // keep hairlines: anything ≥ 25% covered counts as thread
+    for (let i = 0; i < n; i++) mask[i] = mask[i] * 2 > 1 ? 1 : mask[i] * 2;
+    const { label, colors } = threadLabels(small, mask, W);
+    mark("tl");
+    const rd = regionDistance(label, W);
+    mark("labels");
+
+    // stitch geometry (S px)
+    const dens = p.density / 100;
+    const rowSp = Math.max(S <= 512 ? 1.9 : 1.5, (4.2 * scale) / dens);
+    const tw = rowSp * 1.08;
+    const bw = p.border * scale;
+    const satin = p.mode === "satin";
+    const stitchLen = satin ? 64 * scale : Math.max(5, 15 * scale);
+    const noise = makeNoise2D(seed);
+    const out = createCanvas(S, S);
+    const o = ctx2d(out);
+
+    // ── patch shape (optional): dilate + closing, like a cut twill blank
+    let sdP = null;
+    const mw = 15 * scale; // merrow width
+    if (p.patch) {
+      const sd = signedDistance(mask, W, W);
+      const pb = (18 * scale + mw) * kS, close = 48 * scale * kS;
+      const m1 = new Float32Array(n);
+      for (let i = 0; i < n; i++) m1[i] = clamp(pb + close - sd[i] + 0.5);
+      sdP = signedDistance(m1, W, W);
+      for (let i = 0; i < n; i++) sdP[i] += close;
+      sdP = signedDistance(filledCoverage(sdP, W), W, W); // a merrowed blank has no holes
+    }
+
+    // ── raised shadow under the whole piece
+    {
+      const cov = new Float32Array(n);
+      if (sdP) for (let i = 0; i < n; i++) cov[i] = clamp(0.5 - sdP[i]);
+      else cov.set(mask);
+      const sh = blurMask(cov, W, W, Math.max(0.8, 3 * scale * kS));
+      const shc = maskToCanvas(sh, W, W, "#000000");
+      o.save();
+      o.globalAlpha = sdP ? 0.42 : 0.34;
+      o.imageSmoothingEnabled = true;
+      o.drawImage(shc, 2.2 * scale, 3.2 * scale, S, S);
+      o.restore();
+    }
+    mark("shadow");
+
+    // ── patch twill + merrow base (per pixel at S)
+    let merrowRGB = null;
+    if (sdP) {
+      const pal = ctx.palette;
+      // the blank must not swallow the artwork: if the logo's own (area-weighted) color is
+      // too close to the chosen patch color, use the palette color that contrasts best
+      let pc = p.patchColor;
+      {
+        let r = 0, g = 0, b = 0, c = 0;
+        for (let i = 0; i < n; i += 3) { const l = label[i]; if (l < 0) continue; r += colors[l][0]; g += colors[l][1]; b += colors[l][2]; c++; }
+        const avg = c ? rgbToHex([r / c, g / c, b / c]) : "#808080";
+        if (contrastRatio(avg, pc) < 1.6) {
+          let best = pc, bc = 0;
+          for (const role of ["accent", "light", "secondary", "primary", "dark"]) {
+            const h = pal[role]; if (!h) continue;
+            const cr = contrastRatio(avg, h);
+            if (cr > bc + 0.3) { bc = cr; best = h; }
+          }
+          pc = best;
+        }
+      }
+      const cands = [pal.secondary, pal.accent, pal.primary, pal.dark, pal.light].filter(Boolean);
+      merrowRGB = hexToRgb(cands.find((c) => contrastRatio(c, pc) >= 2.6 && c.toUpperCase() !== pc.toUpperCase()) || (luminance(pc) > 0.4 ? "#111111" : "#F4F4F4"));
+      const prgb = hexToRgb(pc);
+      const img = o.getImageData(0, 0, S, S);
+      const d = img.data;
+      const P = Math.max(2.4, 4.6 * scale);
+      for (let y = 0; y < S; y++) {
+        const yw = (y + 0.5) * kS - 0.5;
+        for (let x = 0; x < S; x++) {
+          const xw = (x + 0.5) * kS - 0.5;
+          let v;
+          if (W === S) v = sdP[y * W + x];
+          else {
+            const xi = clamp(xw, 0, W - 1.001), yi = clamp(yw, 0, W - 1.001);
+            const x0 = xi | 0, y0 = yi | 0, fx = xi - x0, fy = yi - y0, i0 = y0 * W + x0;
+            v = (sdP[i0] * (1 - fx) + sdP[i0 + 1] * fx) * (1 - fy) + (sdP[i0 + W] * (1 - fx) + sdP[i0 + W + 1] * fx) * fy;
+          }
+          const dS = v * toS;
+          const a = clamp(0.5 - dS);
+          if (a <= 0) continue;
+          let r, g, b;
+          if (dS > -mw) {
+            // rolled merrow edge: a tube in cross-section (dark at both sides, lit on top)
+            const t = clamp(-dS / mw);
+            const tube = Math.sin(Math.PI * t);
+            const k = 0.42 + 0.62 * tube;
+            r = merrowRGB[0] * k; g = merrowRGB[1] * k; b = merrowRGB[2] * k;
+          } else {
+            // twill: diagonal wale + shadow of the merrow onto the blank
+            const ph = ((x - y) / P) % 1;
+            const wale = Math.sin((ph < 0 ? ph + 1 : ph) * Math.PI * 2);
+            const near = 1 - 0.3 * (1 - smoothstep(0, 6 * scale + 1, -dS - mw));
+            const k = (0.97 + 0.04 * wale) * near;
+            r = prgb[0] * k; g = prgb[1] * k; b = prgb[2] * k;
+          }
+          const j = (y * S + x) * 4;
+          const da = d[j + 3] / 255;
+          const A = a + da * (1 - a);
+          d[j] = (r * a + d[j] * da * (1 - a)) / A;
+          d[j + 1] = (g * a + d[j + 1] * da * (1 - a)) / A;
+          d[j + 2] = (b * a + d[j + 2] * da * (1 - a)) / A;
+          d[j + 3] = A * 255 + 0.5;
+        }
+      }
+      o.putImageData(img, 0, 0);
+    }
+    mark("patch");
+
+    // ── regions: outline, fill stitches, satin border
+    const K = colors.length;
+    const regions = [];
+    const bx0 = new Int32Array(K).fill(W), by0 = new Int32Array(K).fill(W), bx1 = new Int32Array(K).fill(-1), by1 = new Int32Array(K).fill(-1);
+    const area = new Int32Array(K);
+    for (let y = 0; y < W; y++) {
+      for (let x = 0; x < W; x++) {
+        const l = label[y * W + x];
+        if (l < 0) continue;
+        area[l]++;
+        if (x < bx0[l]) bx0[l] = x; if (x > bx1[l]) bx1[l] = x;
+        if (y < by0[l]) by0[l] = y; if (y > by1[l]) by1[l] = y;
+      }
+    }
+    const order = [...Array(K).keys()].filter((k) => area[k] > 0).sort((a, b) => area[b] - area[a]);
+    const blurR = Math.max(0.5, 0.7 * kS * toS);
+    order.forEach((k, idx) => {
+      // trace this thread's outline on a crop around its bounding box (cheap for small regions)
+      const pad = 4;
+      const cx0 = Math.max(0, bx0[k] - pad), cy0 = Math.max(0, by0[k] - pad);
+      const cw = Math.min(W, bx1[k] + 1 + pad) - cx0, ch = Math.min(W, by1[k] + 1 + pad) - cy0;
+      const side = Math.max(cw, ch);
+      const mk = new Float32Array(side * side);
+      for (let y = 0; y < ch; y++) {
+        const row = (cy0 + y) * W + cx0;
+        for (let x = 0; x < cw; x++) if (label[row + x] === k) mk[y * side + x] = 1;
+      }
+      const soft = blurMask(mk, side, side, blurR);
+      const contours = traceContours(soft, side, side, 0.5, 0.6);
+      for (const c of contours) for (const pt of c) { pt[0] += cx0; pt[1] += cy0; }
+      const th = (p.angle + ANGLE_STEPS[idx % ANGLE_STEPS.length]) * DEG;
+      const box = { x0: bx0[k] * toS, y0: by0[k] * toS, x1: (bx1[k] + 1) * toS, y1: (by1[k] + 1) * toS };
+      regions.push({ k, contours, th, box, path: contoursToPath(contours, toS) });
+    });
+    mark("contours");
+
+    const sheen = p.sheen / 100;
+    const minFill = Math.max(0, (bw > 0.5 ? bw : 3.5 * scale) * 0.5 * kS);
+    for (const r of regions) {
+      const rgb = colors[r.k];
+      const segs = fillStitches(r.k, label, rd, W, kS, r.box, r.th, rowSp, minFill, satin, stitchLen, noise);
+      o.save();
+      o.clip(r.path);
+      // the fabric/underlay between thread rows shows as a darker base
+      o.fillStyle = rgbToHex(rgb.map((v) => v * 0.62));
+      o.fill(r.path);
+      drawThreads(o, segs, rgb, tw, sheen, "round");
+      o.restore();
+    }
+    mark("fill");
+    {
+      // satin columns: around every region (border width), and always for hairlines and
+      // thin strokes — a fill can't hold a 1 mm line, a digitizer would satin it
+      const sp = rowSp * 0.85;
+      const thinOnly = bw <= 0.5;
+      const bwEff = thinOnly ? 7 * scale : bw;
+      for (const r of regions) {
+        const segs = borderStitches(r.contours, r.k, label, rd, W, kS, toS, bwEff, sp, thinOnly);
+        o.save();
+        o.clip(r.path);
+        drawThreads(o, segs, colors[r.k], tw * 0.95, sheen, "butt");
+        o.restore();
+      }
+    }
+    mark("border");
+
+    // ── relief: every stitched block domes a little (satin pulls its edges down), so
+    // block edges catch light on the upper left and shade on the lower right
+    {
+      const dome = (5 + p.border * 0.5) * scale * kS;
+      const hgt = new Float32Array(n);
+      for (let i = 0; i < n; i++) if (label[i] >= 0) { const t = clamp(rd[i] / dome); hgt[i] = Math.sqrt(t * (2 - t)); }
+      const hs = blurMask(hgt, W, W, Math.max(0.6, 0.9 * scale * kS));
+      const strength = dome * 0.55;
+      const sc = createCanvas(W, W);
+      const sx = ctx2d(sc);
+      const im = sx.createImageData(W, W);
+      const sdd = im.data;
+      const LX = LIGHT[0] * 0.7, LY = LIGHT[1] * 0.7, LZ = 0.71;
+      for (let y = 1; y < W - 1; y++) {
+        for (let x = 1; x < W - 1; x++) {
+          const i = y * W + x;
+          if (label[i] < 0 && mask[i] <= 0) continue;
+          const dx = (hs[i + 1] - hs[i - 1]) * 0.5 * strength, dy = (hs[i + W] - hs[i - W]) * 0.5 * strength;
+          const nl = 1 / Math.sqrt(dx * dx + dy * dy + 1);
+          const v = ((-dx * LX - dy * LY + LZ) * nl) / LZ - 1; // 0 on flat tops
+          const j = i * 4;
+          const a = mask[i];
+          if (v < 0) { sdd[j + 3] = Math.min(120, -v * 290) * a; }
+          else { sdd[j] = sdd[j + 1] = sdd[j + 2] = 255; sdd[j + 3] = Math.min(90, v * 230) * a; }
+        }
+      }
+      sx.putImageData(im, 0, 0);
+      o.save();
+      o.globalCompositeOperation = "source-atop";
+      o.imageSmoothingEnabled = true;
+      o.imageSmoothingQuality = "high";
+      o.drawImage(sc, 0, 0, S, S);
+      o.restore();
+    }
+    mark("relief");
+
+    // ── merrow stitches: dense wraps over the rolled edge
+    if (sdP) {
+      const neg = new Float32Array(n);
+      for (let i = 0; i < n; i++) neg[i] = -sdP[i];
+      const edge = traceContours(neg, W, W, -0.4 * scale * kS, 0.5);
+      const fakeLab = new Int8Array(n);
+      for (let i = 0; i < n; i++) fakeLab[i] = sdP[i] < 0 ? 0 : -1;
+      const rdP = new Float32Array(n);
+      for (let i = 0; i < n; i++) rdP[i] = Math.max(0, -sdP[i]);
+      const segs = borderStitches(edge, 0, fakeLab, rdP, W, kS, toS, mw * 1.02, Math.max(1.2, 2.6 * scale));
+      const mo = createCanvas(S, S);
+      const mx = ctx2d(mo);
+      drawThreads(mx, segs, merrowRGB, Math.max(1.4, 3 * scale), Math.max(0.35, sheen), "butt");
+      // the tube shading applies to the wraps too
+      mx.globalCompositeOperation = "source-atop";
+      const tubeImg = mx.getImageData(0, 0, S, S);
+      const td = tubeImg.data;
+      for (let y = 0; y < S; y++) {
+        for (let x = 0; x < S; x++) {
+          const j = (y * S + x) * 4;
+          if (!td[j + 3]) continue;
+          const xi = Math.min(W - 1, ((x + 0.5) * kS) | 0), yi = Math.min(W - 1, ((y + 0.5) * kS) | 0);
+          const t = clamp((-sdP[yi * W + xi] * toS) / mw);
+          const k = 0.55 + 0.6 * Math.sin(Math.PI * clamp(t, 0.02, 0.98));
+          td[j] = Math.min(255, td[j] * k); td[j + 1] = Math.min(255, td[j + 1] * k); td[j + 2] = Math.min(255, td[j + 2] * k);
+        }
+      }
+      mx.putImageData(tubeImg, 0, 0);
+      o.drawImage(mo, 0, 0);
+    }
+    mark("merrow");
+    void mix; void blurCanvas;
+    return out;
+  },
+};

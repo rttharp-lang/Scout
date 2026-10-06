@@ -15,8 +15,15 @@ import Collection from "./ui/pages/Collection.jsx";
 import Order from "./ui/pages/Order.jsx";
 import Review from "./ui/pages/Review.jsx";
 import Done from "./ui/pages/Done.jsx";
+import Orders from "./ui/order/OrdersPage.jsx";
+import { ROUTES } from "./brand.js";
 
-const PAGES = { home: Landing, studio: Studio, collection: Collection, order: Order, review: Review, done: Done };
+// "orders" — the site owner's order inbox (not in the 3-step flow). Registered here so
+// the router accepts the bare #orders token; move it into brand.js ROUTES/PAGE_TITLES.
+if (!ROUTES.includes("orders")) ROUTES.push("orders");
+if (!PAGE_TITLES.orders) PAGE_TITLES.orders = "Order inbox — Mascot Lab";
+
+const PAGES = { home: Landing, studio: Studio, collection: Collection, order: Order, review: Review, done: Done, orders: Orders };
 
 export default function App() {
   return (

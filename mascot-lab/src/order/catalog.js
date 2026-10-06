@@ -28,3 +28,32 @@ export const MIN_ORDER_UNITS = 12;
 export const LEAD_TIME = "3–4 weeks after proof approval";
 export const LEAD_TIME_DAYS = 28; // used to sanity-check "need by" dates
 export const PROOF_TIME = "2 business days";
+
+/* ── Extensions (additive) ─────────────────────────────────────────────── */
+
+/** Proof turnaround in business days (PROOF_TIME in numbers, for date maths). */
+export const PROOF_BUSINESS_DAYS = 2;
+/** Upper end of LEAD_TIME in days (the "4 weeks"), for ship-date estimates. */
+export const LEAD_TIME_MAX_DAYS = 28;
+/** Lower end of LEAD_TIME in days (the "3 weeks"). */
+export const LEAD_TIME_MIN_DAYS = 21;
+/** Flat per-order art/setup fee in USD. 0 = decoration is included in the unit prices. */
+export const DECORATION_FEE = 0;
+/** Currency shown everywhere prices appear. */
+export const CURRENCY = "USD";
+
+/** Size groups in display order, for selects and size tables. */
+export const SIZE_GROUPS = [
+  { id: "youth", label: "Youth", sizes: SIZES.youth },
+  { id: "adult", label: "Adult", sizes: SIZES.adult },
+];
+
+/** productFor(garmentId) → product or null. */
+export function productFor(garmentId) {
+  return PRODUCTS[garmentId] || null;
+}
+
+/** isSize(value) → true when `value` is one of the catalog sizes. */
+export function isSize(value) {
+  return ALL_SIZES.includes(value);
+}
