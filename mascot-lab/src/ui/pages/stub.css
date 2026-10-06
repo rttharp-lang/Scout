@@ -1,0 +1,43 @@
+.ml-stub { padding-block: var(--space-7) 0; display: grid; gap: var(--space-6); }
+.ml-stub__head { display: grid; gap: var(--space-3); max-width: 900px; }
+.ml-stub__title { font-size: var(--step-5); }
+.ml-stub__panel {
+  display: grid; place-items: center; align-content: center; gap: var(--space-3);
+  min-height: clamp(220px, 34vw, 420px);
+  margin: 10px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-sm);
+  background:
+    repeating-linear-gradient(-45deg, transparent 0 11px, color-mix(in srgb, var(--line) 55%, transparent) 11px 12px),
+    var(--surface);
+  color: var(--ink-3);
+}
+.ml-stub__nav { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+@media (max-width: 560px) {
+  .ml-stub { padding-top: var(--space-6); gap: var(--space-5); }
+  .ml-stub__nav { flex-direction: column-reverse; align-items: stretch; }
+  .ml-stub__nav .ml-btn { width: 100%; }
+}
+
+/* landing stub */
+.ml-hero { padding-block: var(--space-8) 0; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--space-7); align-items: center; }
+.ml-hero__copy { display: grid; gap: var(--space-5); justify-items: start; }
+.ml-hero__title { font-size: var(--step-6); line-height: 0.86; letter-spacing: -0.012em; }
+.ml-hero__title em { font-style: normal; color: var(--accent); }
+.ml-hero__ctas { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.ml-hero__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); width: 100%; max-width: 620px; padding-top: var(--space-4); border-top: 2px solid var(--ink); }
+.ml-hero__steps li { display: grid; gap: 4px; }
+.ml-hero__steps strong { font-family: var(--font-display); font-weight: 800; font-size: var(--step-1); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1; }
+.ml-hero__steps span:last-child { font-size: var(--step--1); color: var(--ink-2); line-height: 1.4; }
+.ml-hero__art { margin: 10px; display: grid; gap: var(--space-2); }
+.ml-hero__art .ml-canvas { border-radius: var(--radius-xs); }
+.ml-hero__caption { display: flex; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+@media (max-width: 900px) {
+  .ml-hero { grid-template-columns: 1fr; gap: var(--space-6); padding-top: var(--space-6); }
+  .ml-hero__art { max-width: 460px; }
+}
+@media (max-width: 560px) {
+  .ml-hero__steps { grid-template-columns: 1fr; gap: var(--space-3); }
+  .ml-hero__ctas { width: 100%; flex-direction: column; }
+  .ml-hero__ctas .ml-btn { width: 100%; }
+}

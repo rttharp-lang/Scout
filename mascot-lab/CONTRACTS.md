@@ -59,10 +59,19 @@ mascot-lab/
       orderService.js     submit adapters (artifact db → endpoint → local)
       orderSheet.js       order summary: text, CSV roster, HTML order sheet
     ui/
-      components/         shared UI primitives
+      components/         shared UI primitives (import from components/index.js; the
+                          bare-hash router lives in components/router.js)  (updated)
       pages/              Landing, Studio, Collection, Order, Review/Done
-    assets/samples/       sample logos (+ index.js)
+    assets/samples/       sample logos (+ index.js); bulldog-on-white.jpg is a
+                          background-removal test fixture, NOT in SAMPLE_LOGOS  (updated)
+  harness/ui.html/.js     component gallery (?theme=light|dark&team=…&open=…)  (updated)
+  scripts/gen-samples.mjs regenerates the sample SVGs + JPG fixture  (updated)
 ```
+
+`src/assets/samples/index.js` (updated): `SAMPLE_LOGOS = [{ id, name, blurb, url, team: { school, mascot }, palette }]`
+(ids `bulldog`, `crest`, `monogram`, in that order), `DEFAULT_SAMPLE` (= bulldog),
+`getSample(id) → sample | null`. `url` is a Vite asset URL (a `data:` URL in the
+single-file Artifact build). The SVG viewBoxes are tight squares, not 0 0 1000 1000.
 
 ## Sample team (used everywhere a default is needed)
 
@@ -155,6 +164,18 @@ loads every module with `Promise.allSettled`, skips (and `console.warn`s) any
 module that fails to load or fails validation, and sorts by `EFFECT_ORDER`.
 `original.js` is the pass-through "Clean" effect (logo as-is) and is always first.
 
+(updated) Validation is structural only (id = filename, render(), name, ParamSpec
+shapes, unique keys); unknown category → "print", unknown stage → "paper", no presets →
+one preset named after the effect. Extra exports: `validateEffect(effect, id) → error|null`,
+`availableEffectIds()` (every effect FILE present, loaded or not), and
+`lintEffect(effect) → string[]` — advisory contract checks (name ≤16, blurb ≤60,
+method from the list, 3–7 params, 2–4 presets, preset keys exist, color defaults are
+roles, id in EFFECT_ORDER). The contact sheet prints them as `[lint] <id>: …`
+console warnings and in red under the row header — fix them before you call an effect done.
+`EFFECT_ORDER` today: original, halftone, graffiti, chrome, risograph, neon, screenprint,
+varsity, chenille, glitch, sticker, stencil, holographic, puff, embroidery, pixel,
+woodcut, scribble, thermal, melt, ascii, speed.
+
 ### render.js
 
 ```js
@@ -172,6 +193,16 @@ export function createRenderQueue(): {
 }                                                                      // priority first; duplicate keys share a promise
 export function canvasToBlob(canvas, type = "image/png", quality?): Promise<Blob>
 ```
+As implemented (updated):
+- Result canvases are **cached and shared** (LRU 60) — treat them as read-only; never
+  draw into a canvas returned by `renderEffect` (copy it first). Sources are cached per
+  `logoKey|size` (LRU 16), so always pass a `logoKey` that changes when the logo
+  pixels change — use the `key` returned by `useLogoCanvas()`, NOT `state.logo.key`
+  (they differ while a new logo decodes; see App state).
+- `createRenderQueue()` also exposes `size` (pending count). `cancel(pred)` rejects the
+  matching pending jobs with an Error whose `name === "AbortError"` — catch and ignore it.
+- Extra exports: `resolveColor(roleOrHex, palette) → "#RRGGBB" | null`,
+  `getSource(logoCanvas, size, logoKey)` (cached `makeSource`), `clearRenderCaches()`.
 
 ### core.js (helpers every effect may use)
 
@@ -195,23 +226,48 @@ Compositing: `tintCanvas(canvas, hex)`, `applyGradientMap(canvas, stops)` where
 `clipToMask(canvas, maskCanvas)`, `posterize(canvas, levels)`,
 `quantizeToPalette(canvas, hexes)`, `compose(dst, src, { op, alpha, x, y })`.
 
+As implemented (updated):
+- `hexToRgb`, `hslToRgb`, `rgbToHsl` return arrays that also carry named props
+  (`const [r, g, b] = hexToRgb(h)` and `hexToRgb(h).r` both work). `rgbToHsl` → h in
+  degrees 0–360, s/l in 0–1. `lighten/darken/saturate(hex, amt)` add/subtract HSL
+  lightness/saturation (0–1, Sass style).
+- `blurMask(mask, w, h, r)` and `blurCanvas(canvas, r)`: `r` is the gaussian standard
+  deviation in px (like CSS `blur(r)`).
+- `traceContours` returns canvas coordinates with pixel centres at +0.5 (filling the
+  paths lines up with the image). `clipToMask(canvas, mask)` accepts a canvas or a
+  Float32Array mask. `compose` also takes `w, h`.
+- Extra exports: `clamp, lerp, smoothstep, getPixels, canvasFromImageData,
+  resizeCanvas(c, w, h), normalizeHex, hslToHex, contrastRatio, SRGB_TO_LINEAR,
+  insideDistance/outsideDistance(mask, w, h, threshold)` (one side, half the cost),
+  `signedDistance(mask, w, h, threshold)` (px, negative inside), `supportsCanvasFilter,
+  simplifyPolyline, contoursToPath(contours, scale, dx, dy) → Path2D, gradientLUT(stops),
+  nearestColorIndex, maskBounds(mask, w, h, threshold) → { x0, y0, x1, y1, empty },
+  sampleBilinear(map, w, h, x, y)`.
+
 ### image.js
 
 ```js
 export async function loadImageFromFile(file: File): Promise<HTMLCanvasElement>   // png/jpg/webp/gif/svg; SVG rasterized at 2048 long side
 export async function loadImageFromUrl(url): Promise<HTMLCanvasElement>
+   // (updated) data:image/svg+xml URLs are decoded in JS (no fetch — Artifact CSP safe)
 export function hasTransparency(canvas): boolean
-export function removeBackground(canvas, tolerance = 28): { canvas, removed: boolean }
+export function removeBackground(canvas, tolerance = 28, { holes = "auto" } = {}): { canvas, removed: boolean }   (updated)
    // flood-fill from the border through pixels close to the dominant border color,
-   // feathered edge; removed=false if the border isn't a near-uniform color
+   // feathered edge; removed=false if the border isn't a near-uniform color.
+   // Enclosed regions (eyes, teeth) survive; holes: "auto" clears exact-background
+   // counters only for single-ink marks | "keep" | "clear".
 export function trimTransparent(canvas, alphaThreshold = 8): HTMLCanvasElement
 export async function prepareLogo(input: File | string | HTMLCanvasElement,
                                   { removeBg = "auto", tolerance = 28, maxSide = 1600 } = {})
    : Promise<{ canvas, bgRemoved: boolean, hadAlpha: boolean, width, height }>
 export function makeSource(logoCanvas, size): HTMLCanvasElement   // square S×S, logo in central SAFE box
-export function extractPalette(canvas, k = 6): Array<{ hex, weight }>
+export function extractPalette(canvas, k = 6, { maxSamples = 20000 } = {}): Array<{ hex, weight }>   (updated)
 export function suggestPalette(canvas): palette   // primary = most prominent saturated color, etc.
+   // (updated) accent is white when the logo has ≥6% near-white and a dark primary.
+   // Picks by AREA: the sample monogram comes out gold-primary, so prefer a sample's
+   // own `palette` for samples and let the coach confirm/swap roles for uploads.
 export function canvasToDataURL(canvas, maxSide = 1024): string
+// extra exports (updated): SAFE (0.72), rasterizeSvgText(svgText, longSide = 2048)
 ```
 
 ## Garments
@@ -253,6 +309,19 @@ View = {
   text?: { name?: { x, y, w, h }, number?: { x, y, w, h } },   // jersey/shooting shirt lettering boxes
 };
 ```
+Optional extensions renderMockup understands (updated; all additive, see the header of
+`renderMockup.js` and `garments/jersey.js`, the copyable reference garment):
+- `part.over: true` — painted AFTER graphics + lettering (jock tag, drawcords, labels).
+- `part.texture: false` — no fabric texture on this part (woven labels, tapes).
+- `part.rule: "evenodd"` — fill rule for a part with holes.
+- `overlay.follow: "M…"` (rib: wales perpendicular to this centre line, for curved
+  bindings), `overlay.angle` (rib direction, default 90), `overlay.gap` (stitch: twin-needle
+  spacing, default 4), `overlay.width` = line width for seam/stitch but **blur radius** for
+  shadow/highlight/edge.
+- Parts are clipped to the silhouette (bands may overshoot it); `printArea` is clipped
+  with the even-odd rule, so an inner subpath cuts a hole.
+- **`chest-left` is the wearer's left chest = the viewer's RIGHT on a front flat.**
+  Same convention for `leg-left`, `thigh-left`, `leg-left-long`.
 
 Required zone ids (a garment may add more):
 - tops (jersey, tee, longsleeve, hoodie) front: `chest-left`, `chest-center`,
@@ -270,6 +339,13 @@ export const GARMENT_ORDER = ["jersey", "shorts", "hoodie", "pants", "tee", "lon
 export async function loadGarments(): Promise<Garment[]>   // glob, allSettled, validates, memoized
 export async function getGarment(id): Promise<Garment | null>
 ```
+(updated) Validation: id = filename, name, front+back views with silhouette path data and
+≥1 valid zone are required (else skipped with a warning). Bad parts/overlays/zones are
+dropped with a warning; a missing printArea falls back to the silhouette; **missing
+required zones only warn** (the garment still loads — placements on a missing zone fall
+back, see renderMockup). Unknown fabric → "knit", unknown category → "warmup", defaults
+filled for styleCode/spec/defaultColors. Extra exports: `REQUIRED_ZONES`,
+`availableGarmentIds()`.
 
 ### renderMockup.js
 
@@ -302,6 +378,27 @@ to the silhouette) → text (lettering font "Graduate", fill + outline) → fabr
 texture (multiply, clipped to silhouette) → overlays → silhouette outline stroke.
 Must be fast: size 600, detail "full" ≤ 60 ms; size 1600 ≤ 400 ms.
 
+As implemented (updated):
+- Extra option `timings: {}` → filled with per-phase ms. Throws only when the garment/view
+  is missing; bad placements are skipped.
+- `placement.tint` also accepts `"tonal"` (a shade off `colors.base`) or `"base" | "trim" |
+  "accent"`. A tint is a **one-colour screen separation** (ink density follows the
+  graphic's luminance, so linework survives), not a flat silhouette; `knockout: false`
+  forces the flat silhouette. Extra Placement keys (e.g. `source`) are ignored.
+- Unknown `zone` → `center` → `back-center` → the view's first zone.
+- `text`: draws only the boxes the view defines (the jersey FRONT has only `number`, the
+  BACK has `name` + `number`); a null/empty `name`/`number` is skipped. `fill`/`outline`
+  are hex; the convention (harness + recipes) is `fill: colors.accent, outline: colors.trim`.
+  Call `await fontsReady()` once before the first render, or the first lettering uses a
+  fallback serif.
+- Caches key on **canvas identity** (tinted/scaled graphics) — never redraw into a canvas
+  you already passed; pass a new canvas when the content changes (renderEffect does).
+- Timing reality: warm re-renders (new colours/graphics) ≈ 1.5 ms @600, 6.5 ms @1600; the
+  FIRST render of each garment view at a new size is ≈ 55–100 ms @600 (one-time shading
+  + texture layers), ≈ 110–180 ms @1600.
+- Extra exports: `tonalOf(baseHex)`, `viewBounds(garment, viewId)`, `ARTBOARD` (1000),
+  `SAFE` (0.72), `LETTERING_FONT`. textures.js: `FABRICS`, `getFabricTile`, `fabricPattern`.
+
 ### collection.js
 
 ```js
@@ -326,6 +423,14 @@ Collection = {
 };
 export function resolveColors(colors, palette): { base, trim, accent }   // roles → hex
 ```
+As implemented (updated): DROP_STYLES entries also carry `note` (a longer sentence).
+Placement specs are fully expanded (`source, zone, scale, dx, dy, rotate, mode, tile,
+opacity, tint, blend`). Tonal/all-over tints are **resolved hexes computed from the
+palette**, so the collection must be rebuilt when the palette changes (the store does
+this). Items the coach edits via `updateItem` carry `custom: true` and survive palette
+changes and reloads; non-custom items are rebuilt from the current recipes on load.
+Recipes exist for all six garments; the UI must skip garments the registry did not load.
+Extra exports: `resolveColor(roleOrHex, palette)`, `tonalTint(baseHex)`, `getDropStyle(id)`.
 Two-tone is the default language: each garment's base/trim come from the team
 palette so the set reads as one collection (e.g. hoodie in dark, pants in primary).
 
@@ -356,11 +461,19 @@ When published as an Artifact the page runs in a sandboxed frame: `<a download>`
 and `window.print()` do nothing, forms can't post anywhere, `alert/confirm/prompt`
 are no-ops, only bare `#token` hashes survive. So:
 - `getCapability(name)` → `window.claude?.use?.(name) ?? null` (await; null when absent; never throws).
+  (updated) Memoized per name, gives up after 12 s. Also `inArtifactRuntime()`,
+  `prefetchCapabilities(names)` (main.jsx prefetches "downloads"), `resetCapabilities()`.
 - `saveFile(filename, blobOrString)` (in `platform/files.js`): tries the `downloads`
   capability (`(await claude.use("downloads")).save({ filename, data })`), and falls
   back to an `<a download>` click outside the Artifact frame. Returns
-  `{ ok, how: "downloads" | "anchor", error? }`. Allowed extensions there:
-  png, jpg, svg, zip, csv, json, html, txt, pdf.
+  `{ ok, how: "downloads" | "anchor", error?, code? }` (updated). Allowed extensions there:
+  png, jpg, svg, zip, csv, json, html, txt, pdf. (updated) When the capability exists
+  but answers `declined | rate_limited | rejected_extension | bad_request`, it returns
+  `{ ok: false, how: "downloads", error, code }` WITHOUT trying the anchor (show `error`
+  in the UI); only "can't save here" codes fall back to the anchor. Also `mimeFor(filename)`.
+- (updated) `platform/storage.js`: `load(key, fallback = null)`, `save(key, value) →
+  { ok: true, bytes } | { ok: false, reason: "unavailable" | "quota" | "error" }`,
+  `remove(key)`, `available()`. Never throw.
 - Never use `alert/confirm/prompt/window.print`; build confirmations into the UI.
 - Routing uses bare hash tokens only: `#home`, `#studio`, `#collection`, `#order`, `#review`, `#done`.
 - `localStorage` access always in try/catch (`platform/storage.js`); the app must
@@ -370,15 +483,23 @@ are no-ops, only bare `#token` hashes survive. So:
 
 ```js
 {
+  version:   1,                                                          // (updated)
   team:      { school: "Northgate", mascot: "Bulldogs", isSample: true },
-  logo:      { dataUrl, name, bgRemoved, tolerance, key },   // key = hash for render caches
+  logo:      { src, name, bgRemoved, tolerance, key, sampleId? },        // (updated)
+             //  src: URL or data URL (NOT `dataUrl`); bgRemoved is the SETTING
+             //  "auto" | true | false (default "auto"); key = hash(src)+bg+tolerance,
+             //  recomputed by the reducer; sampleId set for SAMPLE_LOGOS (stored by id)
   palette:   { primary, secondary, accent, dark, light },
   effect:    { id: "graffiti", params: {}, seed: 7 },        // params: overrides only
+             //  (updated) if the id's file doesn't exist/load, the store switches to the
+             //  first loaded non-"original" effect (halftone today) and persists that
   favorites: [effectId],
   collection: Collection,                                   // from buildCollection()
-  roster:    [RosterRow], extras: {…},
+             //  (updated) edited items carry custom: true
+  roster:    [RosterRow], extras: {…},                      // (updated) 12 example rows, example: true
   contact:   { coach, email, phone, school, address, needBy, notes },
   order:     { status: "draft" | "submitted", ref, channel, submittedAt } ,
+  flags:     { logoNotSaved },   // (updated) uploaded logo was too big to persist → sample shown
 }
 ```
 Exposed via `useStore() → { state, dispatch, actions }` with named action helpers
@@ -386,6 +507,35 @@ Exposed via `useStore() → { state, dispatch, actions }` with named action help
 `setDropStyle`, `updateItem`, `setRoster`, `setExtras`, `setContact`, `markSubmitted`, `reset`).
 Persisted to localStorage (debounced, try/catch) under `mascot-lab:v1`.
 `useLogoCanvas()` returns the decoded logo canvas (memoized by `logo.key`).
+
+Action signatures as implemented (updated):
+- `setLogo({ src?, name?, bgRemoved?, tolerance?, sampleId? })` — merges; key recomputed;
+  a new src without sampleId sets `team.isSample = false`. (It does NOT change the
+  palette or team name — the upload flow should call `suggestPalette` + `setPalette`/`setTeam`.)
+- `loadSample(id)` — sample logo + its team + palette (rebuilds the collection).
+- `setTeam({ school?, mascot? })`, `setPalette(partial)` (rebuilds non-custom collection items).
+- `setEffect(id, { params?, seed? } = {})` — a new id resets params to {} unless given.
+  Apply a preset with `setEffect(id, { params: preset.params })` or `setEffectParams(null)`
+  then `setEffectParams(preset.params)`.
+- `setEffectParams(patch | null)` — merges overrides; `null`/no arg clears; `undefined`
+  values delete a key. `setEffectSeed(n)`.
+- `toggleFavorite(id)`, `setDropStyle(id)` (keeps only per-item `enabled`).
+- `updateItem(garmentId, patch | (item) => patch)` — `colors` merge; any key other than
+  `enabled` marks the item `custom`. `setCollection(collection)`.
+- `setRoster(rows | fn)`, `setExtras(obj | fn)`, `setContact(partial)`.
+- `markSubmitted({ ref, channel, submittedAt? })`, `reopenOrder()`, `dismissFlag(name)`,
+  `reset()` (also clears storage).
+- Also exported from store.jsx: `STORAGE_KEY`, `DEFAULT_EFFECT_ID`, `DEFAULT_TOLERANCE`,
+  `createInitialState()`, `teamCssVars(palette)`, `logoKey(logo)`, `hashString`, `normHex`,
+  `EMPTY_CONTACT`, `rosterHasExamples(roster)`.
+- Test handle: `window.__mascotLab = { getState, actions, storageKey }` (always present).
+
+`useLogoCanvas()` (in `state/useLogoCanvas.js`) (updated) → `{ canvas, key, status:
+"idle" | "loading" | "ready" | "error", error, info: { bgRemoved, hadAlpha, width, height } }`.
+While a new logo decodes it keeps returning the PREVIOUS canvas with that canvas's own
+`key` — **feed render caches (`renderEffect`'s `logoKey`) the returned `key`, never
+`state.logo.key`**, or the new key gets cached against the old pixels. Outside React:
+`getLogoCanvas(logo) → Promise<{ canvas, info }>` (same memo).
 
 ## Design language
 
@@ -400,6 +550,21 @@ codes, print methods); **Graduate** only for jersey lettering. Fonts are
 self-hosted via `@fontsource/*` imports (never Google Fonts links). Tokens live in
 `src/styles/tokens.css`; components use tokens only. Must work at 390px wide with
 no horizontal scroll, keyboard focus visible, `prefers-reduced-motion` respected.
+
+(updated) Fonts are imported once in `main.jsx` as `"@fontsource/<family>/<weight>"`
+(no `.css` suffix — some packages' export maps reject it); pages don't import fonts.
+CSS vars the store writes on `<html>`: `--team-1/2/3` (primary/secondary/accent),
+`--team-dark`, `--team-light`, `--team-{1,2,3}-ink` (readable ink on each),
+`--team-on-light(-ink)`, `--team-on-dark(-ink)` (the team colour that reads on each
+theme's background) and `--team-flash`. Components use `--accent` / `--accent-ink`,
+which tokens.css points at the readable team colour per theme — prefer those in pages.
+Shared components (import from `ui/components/index.js`): Button (variants incl. `team`),
+Spinner, IconButton, Field/Input/Textarea, Slider, Select, Toggle, Segmented, Chip/ChipRow,
+ColorField, NumberStepper, Modal/Sheet, ConfirmProvider/useConfirm (awaitable confirm —
+use instead of `confirm()`), ToastProvider/useToast, SpecLabel, Swatch/inkFor, Skeleton,
+CanvasImage, Tabs/TabPanel, Notice, Wordmark/RegMark, StepNav, TeamChip, ThemeSwitch,
+and router helpers `useRoute`, `navigate(route)`, `currentRoute`, `href(route)`.
+See harness/ui.html for every state. Page copy/titles live in `src/brand.js`.
 
 ## Looking at your work (mandatory for anything visual)
 
@@ -423,3 +588,62 @@ looks professionally designed. Report honestly what still looks weak.
 - Never run `vite build` into `dist/` while others work (use the dev server).
 - Don't commit; the orchestrator commits between phases.
 - No `Math.random()` in effects/garments; no network calls; no new deps.
+
+## Integration notes — foundation phase (updated)
+
+Verified together on the dev server (real modules, no fallbacks): effects harness
+(Clean + Halftone × bulldog/monogram/crest/bulldog-on-white, 33/33 engine checks),
+garments harness (jersey × 4 drop styles × front/back with the real halftone render of
+the bulldog), and the app (#home … #done at 1400 px and 390 px: 0 console errors, no
+horizontal scroll, reload keeps palette/favorites/contact/drop style/uploaded logo).
+The JPG fixture's background removal is clean: 0.03% light pixels on the cut edge,
+no holes in eyes/teeth, alpha within 0.05% of the SVG's.
+
+**The pipeline a page uses** (this is exactly what was tested):
+```js
+const { state } = useStore();
+const logo = useLogoCanvas();                       // { canvas, key, status, info }
+const effect = await getEffect(state.effect.id);
+const art = await renderEffect(effect, logo.canvas, state.effect.params, state.palette,
+  { size, seed: state.effect.seed, quality, logoKey: logo.key });   // returned key!
+const clean = await renderEffect(await getEffect("original"), logo.canvas, {}, state.palette,
+  { size, logoKey: logo.key });                     // the "logo" placement source
+await fontsReady();
+for (const g of await loadGarments()) {             // skip garments that didn't load
+  const item = state.collection.items[g.id];
+  if (!item?.enabled) continue;
+  const colors = resolveColors(item.colors, state.palette);
+  for (const view of ["front", "back"]) {
+    const graphics = item[view].map((p) => ({ ...p, canvas: p.source === "logo" ? clean : art }));
+    const text = item.text && { name: item.text.name ? "CARTER" : null,
+      number: item.text.number ? "23" : null, fill: colors.accent, outline: colors.trim };
+    renderMockup(g, view, { size: 600, colors, graphics, text });
+  }
+}
+```
+- Effect render size for mockups: oversized placements draw the 72% SAFE box at up to
+  ~1.1× the zone, so the effect canvas is upscaled — render effects at **1024 for
+  mockups ≤ 800 px and 2048 for 1600 px exports** (gallery thumbnails: 384, `quality: "preview"`).
+- Gallery card backdrops (`effect.stage`), as the contact sheet paints them: paper
+  `#ECEBE6`, dark `#101216`, mid `#7D838C` (heather; Halftone uses it so white ink reads),
+  team = `darken(palette.primary, 0.06)`. Results are transparent — the stage is the card.
+- Feed gallery renders through one `createRenderQueue()` (visible cards at higher
+  priority, `cancel()` on logo/palette change); budget reality: Halftone's FIRST render
+  at 384 is ≈150–185 ms cold (over the 150 ms budget), 55–95 ms warm.
+- Garment first renders are the slow part (≈55–100 ms @600 each, one-time per view and
+  size); render the visible garment first and stagger the rest (e.g. through the queue).
+- Uploads: store the file as a data URL in `logo.src` (`setLogo({ src, name })`) and let
+  `useLogoCanvas` decode it (SVG stays SVG text). A data URL over the localStorage quota
+  is dropped on save and `flags.logoNotSaved` warns on the next visit, so re-encode big
+  rasters before storing: `prepareLogo` caps the long side at 1600 anyway, so a 1600 px
+  re-encode (PNG if it has transparency, else JPEG ≈0.92) loses nothing visible. Then
+  propose colours with `suggestPalette(canvas)` and let the coach confirm/swap roles.
+- Only `original` + `halftone` effects and the `jersey` garment exist after this phase;
+  every page must handle "not loaded yet" (the registries skip missing modules, the
+  collection recipes cover all six garments).
+- Artifact-build risk to verify at publish time: `rasterizeSvgText` loads the SVG into
+  an `<img>` through a `blob:` URL; if the Artifact CSP blocks `blob:` images, sample
+  logos will fail to decode there (switch that one URL to a `data:` URL).
+- `state.effect.id` defaults to "graffiti"; until graffiti.js loads, the store falls
+  back to halftone and persists it (a dev browser keeps halftone until reset —
+  `window.__mascotLab.actions.reset()`).

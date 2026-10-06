@@ -1,0 +1,221 @@
+/* Mascot Lab — design tokens.
+ *
+ * Subject: an equipment room crossed with a screen-print shop's spec sheet.
+ * Chrome is quiet "gym white" (cool blue-grey) or blacktop dark; the TEAM's
+ * colours are the accent. --team-* defaults are the sample Northgate Bulldogs
+ * (navy / athletic gold / white); the store overwrites them on <html> at
+ * runtime whenever the palette changes, including two pre-computed "readable"
+ * accents (one that reads on the light theme, one on the dark theme).
+ *
+ * Components use tokens only — never raw hex.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* ── Team (runtime, set from the palette by state/store.jsx) ────────── */
+  --team-1: #13294b;            /* primary   */
+  --team-2: #f2a900;            /* secondary */
+  --team-3: #ffffff;            /* accent    */
+  --team-dark: #0b0d10;
+  --team-light: #f4f5f7;
+  --team-1-ink: #ffffff;        /* readable text on --team-1 */
+  --team-2-ink: #0b0d10;
+  --team-3-ink: #0b0d10;
+  /* team colour with ≥3:1 contrast on each theme's background (+ its text colour) */
+  --team-on-light: #13294b;
+  --team-on-light-ink: #ffffff;
+  --team-on-dark: #f2a900;
+  --team-on-dark-ink: #0b0d10;
+  --team-flash: #f2a900;        /* team colour that pops on ink AND on the page (trim, offsets) */
+
+  /* ── Neutrals: gym white (light) ─────────────────────────────────────── */
+  --bg: #eceff3;                /* page — painted-cinderblock cool grey */
+  --surface: #f9fafb;           /* cards, header, panels */
+  --surface-2: #e2e6ec;         /* wells, inputs at rest, tracks */
+  --surface-3: #d6dbe2;         /* pressed / hover on wells */
+  --surface-inverse: #0e1116;   /* toasts, primary buttons */
+  --ink: #0e1116;
+  --ink-2: #4c5562;             /* muted — 6.5:1 on --bg */
+  --ink-3: #737c89;             /* tertiary: placeholders, disabled glyphs (decorative only) */
+  --ink-inverse: #f3f5f8;
+  --line: #d3d9e1;
+  --line-strong: #a7b0bc;
+  --scrim: rgb(9 12 17 / 0.52);
+
+  /* ── Signals ─────────────────────────────────────────────────────────── */
+  --focus: #1f5cff;             /* focus ring — never a team colour (could be white) */
+  --success: #13804c;
+  --success-soft: #dcf1e5;
+  --warning: #a35f00;
+  --warning-soft: #fbecd2;
+  --danger: #c4291f;
+  --danger-soft: #f9dfdc;
+  --info-soft: #dfe7f6;
+
+  /* the one team colour the UI uses for selection, slider thumbs, progress */
+  --accent: var(--team-on-light);
+  --accent-ink: var(--team-on-light-ink);
+
+  /* ── Type ───────────────────────────────────────────────────────────── */
+  --font-display: "Big Shoulders Display", "Archivo Narrow", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-body: "Archivo", "Helvetica Neue", "Segoe UI", Roboto, Arial, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-jersey: "Graduate", "Rockwell", "Roboto Slab", Georgia, serif;
+
+  /* fluid scale (≈1.25 at 390px → ≈1.333 at 1400px) */
+  --step--2: 0.6875rem;                                   /* 11px — mono spec labels */
+  --step--1: clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);    /* 12.5–13.5px — meta, hints */
+  --step-0: clamp(0.94rem, 0.91rem + 0.12vw, 1rem);       /* 15–16px — body */
+  --step-1: clamp(1.08rem, 1.02rem + 0.3vw, 1.25rem);     /* lead, card titles */
+  --step-2: clamp(1.3rem, 1.17rem + 0.62vw, 1.75rem);
+  --step-3: clamp(1.65rem, 1.38rem + 1.25vw, 2.5rem);
+  --step-4: clamp(2.15rem, 1.6rem + 2.5vw, 3.75rem);
+  --step-5: clamp(2.75rem, 1.7rem + 4.8vw, 6rem);
+  --step-6: clamp(3.25rem, 1.5rem + 6.6vw, 7.5rem);       /* hero */
+
+  --leading-tight: 0.92;
+  --leading-snug: 1.2;
+  --leading-body: 1.5;
+  --tracking-display: -0.005em;
+  --tracking-mono: 0.08em;
+  --tracking-caps: 0.04em;
+
+  /* ── Space (4px base) ───────────────────────────────────────────────── */
+  --space-0: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --gutter: clamp(16px, 3.2vw, 40px);       /* page side padding */
+  --page-max: 1360px;
+  --header-h: 64px;
+
+  /* ── Shape: athletic / industrial, not bubbly ───────────────────────── */
+  --radius-xs: 2px;
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-pill: 999px;     /* switches, colour dots only */
+  --hairline: 1px;
+  --rule: 2px;              /* heavy spec-sheet rules */
+
+  /* ── Shadows by role ────────────────────────────────────────────────── */
+  --shadow-card: 0 1px 0 rgb(14 17 22 / 0.04), 0 0 0 1px rgb(14 17 22 / 0.07);
+  --shadow-raised: 0 1px 2px rgb(14 17 22 / 0.08), 0 6px 16px -6px rgb(14 17 22 / 0.18), 0 0 0 1px rgb(14 17 22 / 0.07);
+  --shadow-overlay: 0 12px 32px -8px rgb(14 17 22 / 0.28), 0 0 0 1px rgb(14 17 22 / 0.08);
+  --shadow-modal: 0 24px 64px -12px rgb(9 12 17 / 0.45), 0 0 0 1px rgb(14 17 22 / 0.1);
+  --shadow-inset: inset 0 1px 2px rgb(14 17 22 / 0.08);
+  --shadow-header: 0 1px 0 var(--line);
+
+  /* ── Layers ─────────────────────────────────────────────────────────── */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+
+  /* ── Motion ─────────────────────────────────────────────────────────── */
+  --dur-1: 90ms;     /* press, colour */
+  --dur-2: 160ms;    /* hover, toggles */
+  --dur-3: 260ms;    /* panels, sheets */
+  --dur-4: 420ms;    /* page-level reveals */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-snap: cubic-bezier(0.3, 1.4, 0.5, 1);
+
+  /* ── Stages (backdrops behind artwork) ──────────────────────────────── */
+  --stage-paper: #f1efe9;       /* uncoated stock — the one warm neutral, artwork only */
+  --stage-mid: #8d949e;
+  --stage-dark: #121418;
+  --checker-a: #e6e9ee;
+  --checker-b: #f6f7f9;
+}
+
+/* ── Dark: blacktop ──────────────────────────────────────────────────────
+ * Same values in both blocks: OS preference (unless forced light) and the
+ * explicit data-theme="dark" override. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0c0e12;
+    --surface: #14171c;
+    --surface-2: #1c2027;
+    --surface-3: #262b34;
+    --surface-inverse: #eef1f5;
+    --ink: #e8ecf1;
+    --ink-2: #9ba4b0;
+    --ink-3: #6c7581;
+    --ink-inverse: #0e1116;
+    --line: #262b33;
+    --line-strong: #3d4450;
+    --scrim: rgb(0 0 0 / 0.62);
+    --focus: #7ea2ff;
+    --success: #3ccf86;
+    --success-soft: #11291d;
+    --warning: #f0a83a;
+    --warning-soft: #2c2111;
+    --danger: #ff6b5e;
+    --danger-soft: #331512;
+    --info-soft: #18202e;
+    --accent: var(--team-on-dark);
+    --accent-ink: var(--team-on-dark-ink);
+    --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.06);
+    --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 20px -8px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.07);
+    --shadow-overlay: 0 14px 36px -8px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08);
+    --shadow-modal: 0 28px 72px -12px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(255 255 255 / 0.09);
+    --shadow-inset: inset 0 1px 2px rgb(0 0 0 / 0.4);
+    --stage-paper: #e9e7e1;
+    --stage-mid: #5f6670;
+    --stage-dark: #08090b;
+    --checker-a: #1a1e24;
+    --checker-b: #22272f;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0c0e12;
+  --surface: #14171c;
+  --surface-2: #1c2027;
+  --surface-3: #262b34;
+  --surface-inverse: #eef1f5;
+  --ink: #e8ecf1;
+  --ink-2: #9ba4b0;
+  --ink-3: #6c7581;
+  --ink-inverse: #0e1116;
+  --line: #262b33;
+  --line-strong: #3d4450;
+  --scrim: rgb(0 0 0 / 0.62);
+  --focus: #7ea2ff;
+  --success: #3ccf86;
+  --success-soft: #11291d;
+  --warning: #f0a83a;
+  --warning-soft: #2c2111;
+  --danger: #ff6b5e;
+  --danger-soft: #331512;
+  --info-soft: #18202e;
+  --accent: var(--team-on-dark);
+  --accent-ink: var(--team-on-dark-ink);
+  --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.06);
+  --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 20px -8px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.07);
+  --shadow-overlay: 0 14px 36px -8px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08);
+  --shadow-modal: 0 28px 72px -12px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(255 255 255 / 0.09);
+  --shadow-inset: inset 0 1px 2px rgb(0 0 0 / 0.4);
+  --stage-paper: #e9e7e1;
+  --stage-mid: #5f6670;
+  --stage-dark: #08090b;
+  --checker-a: #1a1e24;
+  --checker-b: #22272f;
+}
+
+@media (max-width: 720px) {
+  :root { --header-h: 56px; }
+}

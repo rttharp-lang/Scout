@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Effects contact sheet · Mascot Lab harness</title>
+    <style>
+      :root {
+        --ink: #14171c;
+        --ink-2: #5b636f;
+        --ink-3: #8c94a0;
+        --line: #d9dde3;
+        --page: #f4f5f7;
+        --card: #ffffff;
+        --bad: #d22b2b;
+        --warn: #b7791f;
+        --good: #2f855a;
+        --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        --sans: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --display: "Big Shoulders Display", "Archivo", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--page); color: var(--ink); }
+      body { font: 13px/1.4 var(--sans); width: max-content; min-width: 100%; }
+      header.top {
+        display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap;
+        padding: 18px 24px 14px; border-bottom: 1px solid var(--line); background: var(--card);
+      }
+      header.top h1 {
+        margin: 0; font: 900 28px/1 var(--display); text-transform: uppercase; letter-spacing: 0.01em;
+      }
+      .mono { font-family: var(--mono); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; font-size: 10.5px; }
+      .muted { color: var(--ink-2); }
+      #status { margin-left: auto; }
+      #status.done { color: var(--good); }
+      #status.bad { color: var(--bad); }
+      main { padding: 20px 24px 40px; }
+      .sheet { display: grid; gap: 0; }
+      .colhead { padding: 0 0 8px; color: var(--ink-2); }
+      .row { display: contents; }
+      .rowhead {
+        padding: 12px 16px 12px 0; border-top: 1px solid var(--line); align-self: stretch;
+      }
+      .rowhead h2 { margin: 0 0 4px; font: 800 22px/1 var(--display); text-transform: uppercase; }
+      .rowhead .blurb { margin: 6px 0 8px; color: var(--ink-2); max-width: 210px; }
+      .rowhead .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+      .tag { border: 1px solid var(--line); border-radius: 3px; padding: 1px 5px; background: var(--card); }
+      .params { margin-top: 8px; color: var(--ink-3); max-width: 210px; word-break: break-word; }
+      .params.lint { color: var(--bad); }
+      figure.cell { margin: 0; padding: 12px 0 14px 12px; border-top: 1px solid var(--line); }
+      .frame { position: relative; border-radius: 4px; overflow: hidden; box-shadow: 0 0 0 1px rgba(20, 23, 28, 0.08); }
+      .frame canvas { display: block; }
+      .frame .err {
+        position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+        padding: 16px; text-align: center; color: var(--bad); font: 600 12px/1.4 var(--mono);
+        background: repeating-linear-gradient(45deg, rgba(210, 43, 43, 0.05) 0 10px, transparent 10px 20px);
+      }
+      .frame .pending { position: absolute; inset: 0; display: grid; place-items: center; color: var(--ink-3); }
+      figcaption { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; color: var(--ink-2); }
+      figcaption .ms.slow { color: var(--warn); }
+      figcaption .ms.over { color: var(--bad); }
+      figcaption .perf { color: var(--ink-3); }
+      figcaption.error { color: var(--bad); }
+      .checker {
+        background-color: #fff;
+        background-image: linear-gradient(45deg, #e3e6ea 25%, transparent 25%), linear-gradient(-45deg, #e3e6ea 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #e3e6ea 75%), linear-gradient(-45deg, transparent 75%, #e3e6ea 75%);
+        background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      }
+      .core h2 { font: 800 20px/1 var(--display); text-transform: uppercase; margin: 22px 0 10px; }
+      .core .tiles { display: flex; flex-wrap: wrap; gap: 14px; }
+      .core figure { margin: 0; }
+      .core figcaption { display: block; }
+      .core .checks { font: 12px/1.6 var(--mono); }
+      .core .pass { color: var(--good); }
+      .core .fail { color: var(--bad); font-weight: 700; }
+      .swatches { display: flex; gap: 6px; flex-wrap: wrap; align-items: flex-end; }
+      .sw { display: flex; flex-direction: column; gap: 3px; }
+      .sw i { display: block; width: 64px; height: 40px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,.12) inset; }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <h1>Effects contact sheet</h1>
+      <span class="mono muted" id="query"></span>
+      <span class="mono" id="status">Loading…</span>
+    </header>
+    <main id="main"></main>
+    <script type="module" src="./effects.js"></script>
+  </body>
+</html>
