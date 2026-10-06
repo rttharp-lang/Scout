@@ -7,13 +7,17 @@
 // dark electrode gap where one tube ends and the next begins. Optional: a faint unlit
 // fill and a couple of flickering / dead segments.
 //
+// Each tube piece takes ONE colour (the outline stays one continuous outer tube), stray
+// short dashes are pruned, hairline art is thickened before tracing so it doesn't break
+// up, and a tight smoky backing under the glow keeps the glass readable on light shirts.
+//
 // Structure (same as halftone.js):
 //   1. analysis at D = min(S, 768): palette regions → thin strokes vs thick shapes →
 //      centre lines (distance-field ridges) + region edges → tube distance fields;
 //   2. compositing at full S with bilinear distance fields (smooth tubes at any size);
 //   3. transparent background, deterministic (seeded flicker), team palette by default.
 import {
-  createCanvas, ctx2d, getPixels, resizeCanvas, blurMask, blurCanvas, clamp, smoothstep, hexToRgb, rgbToHsl,
+  createCanvas, ctx2d, getPixels, resizeCanvas, blurMask, blurCanvas, smoothstep, hexToRgb, rgbToHsl,
   hslToRgb, nearestColorIndex, insideDistance, outsideDistance, maskBounds, rng, hashSeed, lerp,
 } from "../core.js";
 import { extractPalette } from "../image.js";
@@ -23,6 +27,8 @@ import { extractPalette } from "../image.js";
 /** Push a team colour to neon: full saturation at a luminous lightness; neutrals → ice white. */
 export function neonize(hex) {
   const [h, s, l] = rgbToHsl(hexToRgb(hex));
+  // near-black with almost no chroma (a palette's "dark", #0B0D10) has no real hue: ice white
+  if (s * (1 - Math.abs(2 * l - 1)) < 0.05 && l < 0.2) return [236, 246, 255];
   if (s < 0.14 || l > 0.94 || l < 0.04) return l < 0.5 && s >= 0.14 ? hslToRgb(h, 1, 0.6) : [236, 246, 255];
   // blues/violets need more lightness to glow; yellows less to stay saturated
   const hl = h >= 195 && h <= 290 ? 0.62 : h >= 40 && h <= 75 ? 0.55 : 0.6;
@@ -118,7 +124,6 @@ function centreLines(label, palRGB, D, T, w) {
     lineInk[a] = tot > 0 && hi > tot * 0.55 ? 1 : 0;
   }
   const dReg = insideDistance(interior, D, D);
-  tick('c:dReg'); // PROF
   // opening: thick = within T of a pixel deeper than T in its own region
   const core = new Float32Array(n);
   for (let i = 0; i < n; i++) core[i] = label[i] >= 0 && dReg[i] + 0.5 > T ? 1 : 0;
@@ -165,8 +170,8 @@ function centreLines(label, palRGB, D, T, w) {
     for (let c = 0; c < nc; c++) {
       for (let q = start[c]; q < end[c] && around[c] !== -1; q++) {
         const i = order[q], x = i % D;
-        const nbs = [x > 0 ? i - 1 : -1, x < D - 1 ? i + 1 : -1, i >= D ? i - D : -1, i < n - D ? i + D : -1];
-        for (const j of nbs) {
+        for (let k = 0; k < 4; k++) {
+          const j = k === 0 ? (x > 0 ? i - 1 : -1) : k === 1 ? (x < D - 1 ? i + 1 : -1) : k === 2 ? (i >= D ? i - D : -1) : (i < n - D ? i + D : -1);
           const cj = j < 0 ? -1 : label[j] < 0 ? -1 : comp[j];
           if (cj === c) continue;
           if (cj < 0) { around[c] = -1; break; }
@@ -188,7 +193,6 @@ function centreLines(label, palRGB, D, T, w) {
       }
     }
   }
-  tick('c:figure'); // PROF
   const C = new Uint8Array(n);
   const id = new Uint8Array(n);     // which stroke / edge a centre-line pixel belongs to
   let dThin = null;
@@ -199,7 +203,6 @@ function centreLines(label, palRGB, D, T, w) {
     const sk = new Uint8Array(n);
     for (let i = 0; i < n; i++) sk[i] = thin[i] === 1 ? 1 : 0;
     fillHoles(sk, D, 3 + 3 * (w / 9) * (w / 9));   // AA specks only — letter counters stay open
-    const cut = [];
     for (let y = 1; y < D - 1; y++) {
       for (let x = 1; x < D - 1; x++) {
         const i = y * D + x, l = label[i];
@@ -207,20 +210,16 @@ function centreLines(label, palRGB, D, T, w) {
         for (let oy = -D; oy <= D; oy += D) {
           for (let ox = -1; ox <= 1; ox++) {
             const j = i + oy + ox;
-            if (thin[j] === 1 && label[j] !== l && label[j] < l) { cut.push(i); oy = 2 * D; break; }
+            if (thin[j] === 1 && label[j] !== l && label[j] < l) { sk[i] = 0; oy = 2 * D; break; }
           }
         }
       }
     }
-    for (const i of cut) sk[i] = 0;
-    tick('c:fill+seam'); // PROF
     zhangSuen(sk, D);
-    tick('c:zs'); // PROF
     pruneSpurs(sk, D, dThin);
     pruneSpurs(sk, D, dThin);
     for (let i = 0; i < n; i++) if (sk[i]) { C[i] = 1; id[i] = 1 + label[i]; }
   }
-  tick('c:spurs'); // PROF
   // edges of thick shapes (thin line-ink strokes already carry their own tube)
   for (let y = 0; y < D - 1; y++) {
     for (let x = 0; x < D - 1; x++) {
@@ -239,22 +238,25 @@ function centreLines(label, palRGB, D, T, w) {
       }
     }
   }
-  if (globalThis.__NEON_DEBUG) globalThis.__NEON_DEBUG.maps = { label, thin, C: C.slice(), palRGB };
   return { C, id, dThin };
 }
 
 /** Zhang–Suen thinning in place (img: Uint8Array 0/1, D×D) → 1-px 8-connected skeleton. */
 function zhangSuen(img, D) {
-  let cand = [];
-  for (let y = 1; y < D - 1; y++) for (let x = 1; x < D - 1; x++) if (img[y * D + x]) cand.push(y * D + x);
+  // candidate list as a typed array, compacted in place (no per-pass JS arrays → no GC churn)
+  let nc = 0;
+  for (let y = 1; y < D - 1; y++) for (let x = 1; x < D - 1; x++) if (img[y * D + x]) nc++;
+  const cand = new Int32Array(nc);
+  nc = 0;
+  for (let y = 1; y < D - 1; y++) for (let x = 1; x < D - 1; x++) if (img[y * D + x]) cand[nc++] = y * D + x;
   for (let y = 0; y < D; y++) { img[y * D] = 0; img[y * D + D - 1] = 0; }
   for (let x = 0; x < D; x++) { img[x] = 0; img[(D - 1) * D + x] = 0; }
-  const del = [];
+  const del = new Int32Array(nc);
   for (let iter = 0; iter < 200; iter++) {
     let changed = 0;
     for (let step = 0; step < 2; step++) {
-      del.length = 0;
-      for (let q = 0; q < cand.length; q++) {
+      let nd = 0;
+      for (let q = 0; q < nc; q++) {
         const i = cand[q];
         if (!img[i]) continue;
         const p2 = img[i - D], p3 = img[i - D + 1], p4 = img[i + 1], p5 = img[i + D + 1];
@@ -264,13 +266,15 @@ function zhangSuen(img, D) {
         const A = (!p2 && p3) + (!p3 && p4) + (!p4 && p5) + (!p5 && p6) + (!p6 && p7) + (!p7 && p8) + (!p8 && p9) + (!p9 && p2);
         if (A !== 1) continue;
         if (step === 0 ? (p2 && p4 && p6) || (p4 && p6 && p8) : (p2 && p4 && p8) || (p2 && p6 && p8)) continue;
-        del.push(i);
+        del[nd++] = i;
       }
-      for (const i of del) img[i] = 0;
-      changed += del.length;
+      for (let q = 0; q < nd; q++) img[del[q]] = 0;
+      changed += nd;
     }
     if (!changed) break;
-    cand = cand.filter((i) => img[i]);
+    let k = 0;
+    for (let q = 0; q < nc; q++) if (img[cand[q]]) cand[k++] = cand[q];
+    nc = k;
   }
 }
 
@@ -465,6 +469,64 @@ function separate(C, id, D, minSep, K) {
   }
 }
 
+/**
+ * Drop short isolated tubes: centre-line groups (pixels within `reach` px count as one
+ * group, so a dotted skeleton stays one line) with fewer than minPx pixels. Stray dashes
+ * and needles between real tubes read as glitches, not as bent glass.
+ */
+function pruneShort(C, D, minPx, reach) {
+  const n = D * D;
+  const seen = new Uint8Array(n);
+  const queue = new Int32Array(n);
+  const R = Math.max(1, Math.round(reach));
+  for (let s = 0; s < n; s++) {
+    if (!C[s] || seen[s]) continue;
+    let head = 0, tail = 0;
+    queue[tail++] = s; seen[s] = 1;
+    while (head < tail) {
+      const i = queue[head++];
+      const x = i % D, y = (i / D) | 0;
+      const y0 = Math.max(0, y - R), y1 = Math.min(D - 1, y + R);
+      const x0 = Math.max(0, x - R), x1 = Math.min(D - 1, x + R);
+      for (let yy = y0; yy <= y1; yy++) {
+        for (let xx = x0, j = yy * D + x0; xx <= x1; xx++, j++) {
+          if (!C[j] || seen[j]) continue;
+          seen[j] = 1; queue[tail++] = j;
+        }
+      }
+    }
+    if (tail < minPx) for (let q = 0; q < tail; q++) C[queue[q]] = 0;
+  }
+}
+
+/** Euclidean distance (px) to the nearest set pixel of C, exact up to R, capped at R beyond. */
+function nearDistance(C, D, R) {
+  const n = D * D;
+  const out = new Float32Array(n).fill(R);
+  const ri = Math.ceil(R);
+  const offs = [], dist = [];
+  for (let oy = -ri; oy <= ri; oy++) {
+    for (let ox = -ri; ox <= ri; ox++) {
+      const d = Math.hypot(ox, oy);
+      if (d < R) { offs.push(ox, oy); dist.push(d); }
+    }
+  }
+  const m = dist.length;
+  for (let y = 0; y < D; y++) {
+    for (let x = 0; x < D; x++) {
+      if (!C[y * D + x]) continue;
+      const inner = x >= ri && y >= ri && x < D - ri && y < D - ri;
+      for (let k = 0; k < m; k++) {
+        const xx = x + offs[2 * k], yy = y + offs[2 * k + 1];
+        if (!inner && (xx < 0 || yy < 0 || xx >= D || yy >= D)) continue;
+        const j = yy * D + xx;
+        if (dist[k] < out[j]) out[j] = dist[k];
+      }
+    }
+  }
+  return out;
+}
+
 /** Drop connected bits of the centre-line set smaller than minPx (dots, AA noise). */
 function pruneSmall(C, D, minPx) {
   const n = D * D;
@@ -490,8 +552,154 @@ function pruneSmall(C, D, minPx) {
   }
 }
 
-let T0 = 0; // PROF
-const tick = (k) => { const t = performance.now(); const g = globalThis.__NEON_T; if (g) g[k] = (g[k] || 0) + t - T0; T0 = t; }; // PROF
+
+/**
+ * The expensive, colour-independent part of a neon render: palette regions → tube centre
+ * lines → per-tube colour class, distance to the glass and tube radius at D. Depends only on
+ * the source pixels, D and the tube width, so it is memoized (one entry) for slider drags.
+ */
+function analyse(srcFull, dataFull, DF, sc, width) {
+  // work on a padded square around the logo only (the 14% margins hold no tubes); the
+  // maps live at (ox, oy) in the D grid. ox / oy are even so they land exactly on the
+  // half-resolution glow grid
+  const aF = new Float32Array(DF * DF);
+  for (let i = 0, j = 3; i < aF.length; i++, j += 4) aF[i] = dataFull[j] / 255;
+  const bF = maskBounds(aF, DF, DF, 0.02);
+  if (bF.empty) return null;
+  const pad = Math.ceil(Math.max(1.6, width * sc) + 12);
+  let side = Math.max(bF.x1 - bF.x0, bF.y1 - bF.y0) + 2 * pad + 2;
+  side = Math.min(DF, side + (side & 1));
+  const ox = Math.max(0, Math.min(DF - side, (bF.x0 + bF.x1 - side) >> 1)) & ~1;
+  const oy = Math.max(0, Math.min(DF - side, (bF.y0 + bF.y1 - side) >> 1)) & ~1;
+  const D = side;
+  const n = D * D;
+  let srcD = createCanvas(D, D);
+  ctx2d(srcD).drawImage(srcFull, -ox, -oy);
+  let dataD = getPixels(srcD).data;
+  const alpha = new Float32Array(n);
+  for (let i = 0, j = 3; i < n; i++, j += 4) alpha[i] = dataD[j] / 255;
+  const bb = maskBounds(alpha, D, D, 0.5);
+  if (bb.empty) return null;
+  let depth = insideDistance(alpha, D, D, 0.5);
+  // hairline art (sub-pixel strokes at this size) is thickened by a pixel all round so
+  // the strokes don't break apart when binarized; the tubes follow their centre lines,
+  // so the drawing itself doesn't change
+  {
+    let opaque = 0, thick = 0;
+    for (let i = 0; i < n; i++) if (alpha[i] >= 0.5) { opaque++; if (depth[i] > Math.max(1.5, 4 * sc)) thick++; }
+    if (opaque > 0 && thick < opaque * 0.12) {
+      const g = createCanvas(D, D), gx = ctx2d(g);
+      for (const [ox, oy] of [[0, 0], [-0.6, 0], [0.6, 0], [0, -0.6], [0, 0.6]]) gx.drawImage(srcD, ox, oy);
+      srcD = g;
+      dataD = getPixels(g).data;
+      for (let i = 0, j = 3; i < n; i++, j += 4) alpha[i] = dataD[j] / 255;
+      depth = insideDistance(alpha, D, D, 0.5);
+    }
+  }
+  const small = resizeCanvas(srcD, Math.min(D, 160), Math.min(D, 160));
+  const pal = extractPalette(small, 7, { maxSamples: 4000 }).filter((c) => c.weight > 0.006);
+  const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
+  const label = labelMap(dataD, D, palRGB);
+  const span = Math.max(bb.x1 - bb.x0, bb.y1 - bb.y0);   // D px
+
+  const w = Math.max(1.6, width * sc);                 // tube width, D px
+  const T = Math.max(2, 13 * sc);
+  const { C, id, dThin } = centreLines(label, palRGB, D, T, w);
+  separate(C, id, D, w * 1.25, palRGB.length);
+  pruneSmall(C, D, Math.max(4, w * 1.6));
+  pruneShort(C, D, Math.max(6, w * 1.5), Math.max(1.5, w * 0.45));
+
+  // outer tubes (near the silhouette) vs inner detail, split with an electrode gap
+  const thr = T * 1.15 + w + 1;
+  const CA = new Float32Array(n), CB = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    if (!C[i]) continue;
+    // outer = near the silhouette, or the centre line of a band that touches the air
+    // (an outline stroke: its centre sits half its width in from the edge)
+    const outer = depth[i] <= thr || (id[i] < 32 && dThin && depth[i] <= dThin[i] * 1.35 + 1.5);
+    if (outer) CA[i] = 1; else CB[i] = 1;
+  }
+  // majority vote per tube so a colour only changes at a real hand-off; then a
+  // narrow class map (half resolution) says which colour each tube pixel is, and where
+  // an outer tube hands over to an inner one (class ≈ ½) the glass gets an electrode gap
+  const H2 = Math.ceil(D / 2), nH = H2 * H2;
+  const cls = new Float32Array(n);
+  {
+    const hA = new Float32Array(nH), hB = new Float32Array(nH);
+    // one colour per tube piece (8-connected run of one stroke / one edge): the
+    // outline of a mascot stays one continuous outer tube even where inner detail
+    // crowds it
+    hA.fill(0); hB.fill(0);
+    const seen = new Uint8Array(n), queue = new Int32Array(n);
+    for (let s0 = 0; s0 < n; s0++) {
+      if (!C[s0] || seen[s0]) continue;
+      const me = id[s0];
+      let head = 0, tail = 0, va = 0;
+      queue[tail++] = s0; seen[s0] = 1;
+      while (head < tail) {
+        const i = queue[head++], x = i % D;
+        va += CA[i];
+        for (let oy = -D; oy <= D; oy += D) {
+          for (let ox = -1; ox <= 1; ox++) {
+            if ((ox < 0 && x === 0) || (ox > 0 && x === D - 1)) continue;
+            const j = i + oy + ox;
+            if (j < 0 || j >= n || !C[j] || seen[j] || id[j] !== me) continue;
+            seen[j] = 1; queue[tail++] = j;
+          }
+        }
+      }
+      const a = va >= tail * 0.45;
+      for (let q = 0; q < tail; q++) {
+        const i = queue[q];
+        CA[i] = a ? 1 : 0; CB[i] = a ? 0 : 1;
+        const k = ((i / D) >> 1) * H2 + ((i % D) >> 1);
+        if (a) hA[k] += 1; else hB[k] += 1;
+      }
+    }
+    const nA = blurMask(hA, H2, H2, Math.max(0.6, w * 0.3)), nB = blurMask(hB, H2, H2, Math.max(0.6, w * 0.3));
+    for (let k = 0; k < nH; k++) { const t = nA[k] + nB[k]; nA[k] = t > 1e-4 ? nA[k] / t : 0.5; }
+    upsampleHalf(nA, H2, cls, D);
+  }
+  // distance to the centre lines, softened so the 1-px skeleton's stair steps don't
+  // show as a grainy core
+  // (only the band the glass and its edge need: stamped discs, far cheaper than an EDT)
+  for (let i = 0; i < n; i++) CB[i] += CA[i];
+  const dC = smooth3(nearDistance(CB, D, w / 2 + 5), D);
+  // tube bodies at D (for the glow) — dim parts don't glow
+  // tube radius: the full tube on key lines and edges, but never fatter than the stroke
+  // it traces — small lettering is bent from thinner tube so counters stay open
+  const half = w / 2;
+  let rad = null;
+  {
+    const rW = new Float32Array(nH), rV = new Float32Array(nH);
+    let thinner = 0;
+    for (let i = 0; i < n; i++) {
+      if (!C[i]) continue;
+      const onPanel = id[i] < 32 && dThin && depth[i] > dThin[i] + 1.5;   // stroke edged by other ink, not by air
+      const r = onPanel ? Math.min(half, Math.max(0.75, dThin[i] * 1.05 + 0.25)) : half;
+      if (r < half - 0.05) thinner++;
+      const k = ((i / D) >> 1) * H2 + ((i % D) >> 1);
+      rW[k] += 1; rV[k] += r;
+    }
+    if (thinner) {
+      const bw = blurMask(rW, H2, H2, Math.max(0.6, half * 0.5)), bv = blurMask(rV, H2, H2, Math.max(0.6, half * 0.5));
+      for (let k = 0; k < nH; k++) bw[k] = bw[k] > 0.02 ? Math.min(half, bv[k] / bw[k]) : half;
+      rad = new Float32Array(n);
+      upsampleHalf(bw, H2, rad, D);
+    }
+  }
+  return { C, span, w, half, rad, dC, cls, ox, oy, Dc: D };
+}
+
+/** FNV-1a over the RGBA words: a cheap content key for the analysis memo. */
+function pixelHash(data) {
+  const u = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >> 2);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < u.length; i++) h = Math.imul(h ^ u[i], 0x01000193);
+  return (h >>> 0).toString(36) + ":" + u.length;
+}
+
+let memo = null;   // { key, a } — last analysis (one entry: the logo being tuned)
 
 /* ───────────────────────────── effect ───────────────────────────── */
 
@@ -521,121 +729,46 @@ export default {
     const D = Math.min(S, 768);
     const kD = D / S;
     const sc = ctx.scale * kD;          // 1024-units → D px
-    const n = D * D;
 
     const srcD = D === S ? src : resizeCanvas(src, D, D);
-    const dataD = getPixels(srcD).data;
-    const small = resizeCanvas(srcD, Math.min(D, 160), Math.min(D, 160));
-    const pal = extractPalette(small, 7, { maxSamples: 4000 }).filter((c) => c.weight > 0.006);
-    const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
-    T0 = performance.now(); // PROF
-    const label = labelMap(dataD, D, palRGB);
-    tick('label'); // PROF
-    const alpha = new Float32Array(n);
-    for (let i = 0, j = 3; i < n; i++, j += 4) alpha[i] = dataD[j] / 255;
-    const bb = maskBounds(alpha, D, D, 0.5);
-    if (bb.empty) return createCanvas(S, S);
-    const span = Math.max(bb.x1 - bb.x0, bb.y1 - bb.y0);   // D px
+    const data0 = getPixels(srcD).data;
+    const key = `${D}|${p.width}|${pixelHash(data0)}`;
+    if (!memo || memo.key !== key) memo = { key, a: analyse(srcD, data0, D, sc, p.width) };
+    const A = memo.a;
+    if (!A) return createCanvas(S, S);
+    const { C, span, w, half, rad, dC, cls, ox, oy, Dc } = A;
+    const nC = Dc * Dc;
 
-    const w = Math.max(1.6, p.width * sc);                 // tube width, D px
-    const T = Math.max(2, 13 * sc);
-    const { C, id, dThin } = centreLines(label, palRGB, D, T, w);
-    tick('centre'); // PROF
-    const depth = insideDistance(alpha, D, D, 0.5);
-    separate(C, id, D, w * 1.25, palRGB.length);
-    pruneSmall(C, D, Math.max(4, w * 1.6));
-    tick('sep+prune'); // PROF
-    if (globalThis.__NEON_DEBUG) globalThis.__NEON_DEBUG.final = C.slice();
-
-    // outer tubes (near the silhouette) vs inner detail, split with an electrode gap
-    const thr = T * 1.15 + w + 1;
-    const CA = new Float32Array(n), CB = new Float32Array(n);
-    for (let i = 0; i < n; i++) {
-      if (!C[i]) continue;
-      if (depth[i] <= thr) CA[i] = 1; else CB[i] = 1;
-    }
-    // majority vote along the tubes so a colour only changes at a real hand-off; then a
-    // narrow class map (half resolution) says which colour each tube pixel is, and where
-    // an outer tube hands over to an inner one (class ≈ ½) the glass gets an electrode gap
-    const H2 = Math.ceil(D / 2), nH = H2 * H2;
-    const cls = new Float32Array(n);
-    {
-      const hA = new Float32Array(nH), hB = new Float32Array(nH);
-      for (let i = 0; i < n; i++) {
-        if (!C[i]) continue;
-        const k = ((i / D) >> 1) * H2 + ((i % D) >> 1);
-        hA[k] += CA[i]; hB[k] += CB[i];
-      }
-      const mA = blurMask(hA, H2, H2, w * 1.2), mB = blurMask(hB, H2, H2, w * 1.2);
-      hA.fill(0); hB.fill(0);
-      for (let i = 0; i < n; i++) {
-        if (!C[i]) continue;
-        const k = ((i / D) >> 1) * H2 + ((i % D) >> 1);
-        const a = mA[k] >= mB[k] * 0.9;
-        CA[i] = a ? 1 : 0; CB[i] = a ? 0 : 1;
-        if (a) hA[k] += 1; else hB[k] += 1;
-      }
-      const nA = blurMask(hA, H2, H2, Math.max(0.6, w * 0.3)), nB = blurMask(hB, H2, H2, Math.max(0.6, w * 0.3));
-      for (let k = 0; k < nH; k++) { const t = nA[k] + nB[k]; nA[k] = t > 1e-4 ? nA[k] / t : 0.5; }
-      upsampleHalf(nA, H2, cls, D);
-    }
-    // distance to the centre lines, softened so the 1-px skeleton's stair steps don't
-    // show as a grainy core
-    const dC = smooth3(outsideDistance(CA.map((v, i) => v + CB[i]), D, D, 0.5), D);
     // flicker: two dead segments and one half-lit, centred on tube pixels (seeded)
-    const dim = new Float32Array(n);
+    const dim = new Float32Array(nC);
     if (p.flicker) {
       const r = rng(hashSeed("neon-flicker", ctx.seed));
       const tubes = [];
-      for (let i = 0; i < n; i += 3) if (C[i]) tubes.push(i);
+      for (let i = 0; i < nC; i += 3) if (C[i]) tubes.push(i);
       const R = span * 0.07;
       const picks = [];
       for (let tries = 0; tries < 60 && picks.length < 3 && tubes.length; tries++) {
         const i = tubes[Math.floor(r() * tubes.length)];
-        const x = i % D, y = (i / D) | 0;
+        const x = i % Dc, y = (i / Dc) | 0;
         if (picks.every((q) => Math.hypot(q[0] - x, q[1] - y) > span * 0.35)) picks.push([x, y, picks.length < 2 ? 0.85 : 0.5]);
       }
       for (const [px, py, amt] of picks) {
-        const x0 = Math.max(0, Math.floor(px - R)), x1 = Math.min(D - 1, Math.ceil(px + R));
-        const y0 = Math.max(0, Math.floor(py - R)), y1 = Math.min(D - 1, Math.ceil(py + R));
+        const x0 = Math.max(0, Math.floor(px - R)), x1 = Math.min(Dc - 1, Math.ceil(px + R));
+        const y0 = Math.max(0, Math.floor(py - R)), y1 = Math.min(Dc - 1, Math.ceil(py + R));
         for (let y = y0; y <= y1; y++) {
           for (let x = x0; x <= x1; x++) {
             const t = amt * smoothstep(R, R * 0.75, Math.hypot(x - px, y - py));
-            const i = y * D + x;
+            const i = y * Dc + x;
             if (t > dim[i]) dim[i] = t;
           }
         }
       }
     }
 
-    // tube bodies at D (for the glow) — dim parts don't glow
-    tick('dists'); // PROF
-    // tube radius: the full tube on key lines and edges, but never fatter than the stroke
-    // it traces — small lettering is bent from thinner tube so counters stay open
-    const half = w / 2;
-    let rad = null;
-    {
-      const rW = new Float32Array(nH), rV = new Float32Array(nH);
-      let thinner = 0;
-      for (let i = 0; i < n; i++) {
-        if (!C[i]) continue;
-        const onPanel = id[i] < 32 && dThin && depth[i] > dThin[i] + 1.5;   // stroke edged by other ink, not by air
-        const r = onPanel ? Math.min(half, Math.max(0.75, dThin[i] * 1.05 + 0.25)) : half;
-        if (r < half - 0.05) thinner++;
-        const k = ((i / D) >> 1) * H2 + ((i % D) >> 1);
-        rW[k] += 1; rV[k] += r;
-      }
-      if (thinner) {
-        const bw = blurMask(rW, H2, H2, Math.max(0.6, half * 0.5)), bv = blurMask(rV, H2, H2, Math.max(0.6, half * 0.5));
-        for (let k = 0; k < nH; k++) bw[k] = bw[k] > 0.02 ? Math.min(half, bv[k] / bw[k]) : half;
-        rad = new Float32Array(n);
-        upsampleHalf(bw, H2, rad, D);
-      }
-    }
     // class → sharp colour weight + electrode gap, only near the glass
-    const csD = new Float32Array(n), gapD = new Float32Array(n);
-    const bodyA = new Float32Array(n), bodyB = new Float32Array(n);
-    for (let i = 0; i < n; i++) {
+    const csD = new Float32Array(nC), gapD = new Float32Array(nC);
+    const bodyA = new Float32Array(nC), bodyB = new Float32Array(nC);
+    for (let i = 0; i < nC; i++) {
       const h = rad ? rad[i] : half;
       if (dC[i] > h + 2) continue;
       const c = cls[i];
@@ -645,7 +778,6 @@ export default {
       const body = smoothstep(h + 0.7, h - 0.7, dC[i]) * (1 - dim[i]) * gapD[i];
       bodyA[i] = body * cs; bodyB[i] = body * (1 - cs);
     }
-    tick('radius+body'); // PROF
     const g = p.glow / 100;
     const colA = neonize(p.colorA), colB = neonize(p.colorB);
     const coreA = colA.map((c) => lerp(c, 255, 0.82)), coreB = colB.map((c) => lerp(c, 255, 0.82));
@@ -660,11 +792,11 @@ export default {
     if (g > 0) {
       const D2 = Math.ceil(D / 2), n2 = D2 * D2;
       const bA = new Float32Array(n2), bB = new Float32Array(n2);
-      for (let y = 0; y < D; y++) {
-        const r2 = (y >> 1) * D2;
-        for (let x = 0; x < D; x++) {
-          const i = y * D + x;
-          bA[r2 + (x >> 1)] += bodyA[i] * 0.25; bB[r2 + (x >> 1)] += bodyB[i] * 0.25;
+      for (let y = 0; y < Dc; y++) {
+        const r2 = ((y + oy) >> 1) * D2, hx = ox >> 1;
+        for (let x = 0; x < Dc; x++) {
+          const i = y * Dc + x, k = r2 + hx + (x >> 1);
+          bA[k] += bodyA[i] * 0.25; bB[k] += bodyB[i] * 0.25;
         }
       }
       const bc = createCanvas(D2, D2);
@@ -679,33 +811,44 @@ export default {
         bi.data[j + 3] = Math.min(1, t) * 255;
       }
       bx.putImageData(bi, 0, 0);
-      const layers = [[w * 3.25, 0.75], [w * 1.3, 0.6], [w * 0.45, 0.55]];
+      // a tight smoky backing in a deep shade of the tube colour: invisible on dark
+      // garments, but on white / gold it gives the glass the night it needs to glow in
+      const back = createCanvas(D2, D2), kx = ctx2d(back);
+      kx.drawImage(bc, 0, 0);
+      kx.globalCompositeOperation = "source-atop";
+      kx.fillStyle = "rgba(6,8,14,0.86)";
+      kx.fillRect(0, 0, D2, D2);
+      o.globalAlpha = 0.42 + 0.3 * g;
+      o.drawImage(blurCanvas(back, Math.max(0.8, w * 0.6)), 0, 0, S, S);
+      // glow: wide bloom → tight halo (half-res canvas, so σ here is 2× in D px)
+      const layers = [[w * 2.4, 0.62], [w * 1.0, 0.6], [w * 0.4, 0.55]];
+      const sigMax = (D2 * 0.14) / 3.2;   // the bloom fades out inside the 14% margin
       for (const [sig, k] of layers) {
         o.globalAlpha = Math.min(1, k * g * 1.25);
-        o.drawImage(blurCanvas(bc, sig), 0, 0, S, S);
+        o.drawImage(blurCanvas(bc, Math.min(sig, sigMax)), 0, 0, S, S);
       }
       o.globalAlpha = 1;
     }
 
-    tick('glow'); // PROF
     /* glass tubes at S from the bilinear distance fields */
     const tubes = o.createImageData(S, S);
     const od = tubes.data;
     const ix0 = new Int32Array(S), ix1 = new Int32Array(S), fxa = new Float32Array(S);
     for (let x = 0; x < S; x++) {
-      let fx = (x + 0.5) * kD - 0.5;
-      fx = fx < 0 ? 0 : fx > D - 1 ? D - 1 : fx;
-      ix0[x] = fx | 0; ix1[x] = Math.min(D - 1, ix0[x] + 1); fxa[x] = fx - ix0[x];
+      const fx = (x + 0.5) * kD - 0.5 - ox;               // crop-map coordinates
+      if (fx < 0 || fx > Dc - 1) { ix0[x] = -1; continue; }  // outside the map: no glass
+      ix0[x] = fx | 0; ix1[x] = Math.min(Dc - 1, ix0[x] + 1); fxa[x] = fx - ix0[x];
     }
     const aaD = Math.max(0.5, 0.75 * kD);   // ~0.75 output px edge
     const reach = half + aaD;
     for (let y = 0; y < S; y++) {
-      let fy = (y + 0.5) * kD - 0.5;
-      fy = fy < 0 ? 0 : fy > D - 1 ? D - 1 : fy;
-      const y0 = fy | 0, y1 = Math.min(D - 1, y0 + 1), wy = fy - y0;
-      const r0 = y0 * D, r1 = y1 * D;
+      const fy = (y + 0.5) * kD - 0.5 - oy;
+      if (fy < 0 || fy > Dc - 1) continue;
+      const y0 = fy | 0, y1 = Math.min(Dc - 1, y0 + 1), wy = fy - y0;
+      const r0 = y0 * Dc, r1 = y1 * Dc;
       for (let x = 0; x < S; x++) {
         const x0 = ix0[x], x1 = ix1[x];
+        if (x0 < 0) continue;
         const i00 = r0 + x0, i01 = r0 + x1, i10 = r1 + x0, i11 = r1 + x1;
         if (dC[i00] > reach + 1 && dC[i11] > reach + 1 && dC[i01] > reach + 1) continue;   // far from glass
         const wx = fxa[x];
@@ -740,7 +883,6 @@ export default {
     const tc = createCanvas(S, S);
     ctx2d(tc).putImageData(tubes, 0, 0);
     o.drawImage(tc, 0, 0);
-    tick('tubes'); // PROF
     return out;
   },
 };

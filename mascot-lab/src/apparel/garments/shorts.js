@@ -264,23 +264,25 @@ function eyelet(parts, overlays, x, y, r) {
 }
 
 /* ───────────────────────────── measurements ─────────────────────────────
- * Basketball-short proportions, size L at ≈ 34 units per inch: waist 18.6" (elastic,
- * drawn lightly stretched as on a spec flat), seat 24", outseam 22.7" incl. a 2"
- * elastic waistband, front rise 12.9", inseam 9.2", hem 12" flat per leg with a slight
- * flare, and a curved side split 3" high.
+ * Basketball-short proportions, size L at ≈ 34 units per inch: waist 21" (elastic,
+ * drawn stretched to the hip as on a spec flat, so the band is nearly as wide as the
+ * body), seat 23.5", outseam 22.7" incl. a 2" elastic waistband, front rise 12.9",
+ * inseam 9.2", a wide 11.8" leg opening per leg, and a curved side split 3" high.
+ * The outer edge runs as a straight A-line from the band to the split (no seat bulge:
+ * that reads as a board short).
  */
 const WAIST_Y = 112;              // top of the waistband at the sides
-const WAIST_HALF = 316;           // half waist (elastic, drawn lightly stretched as on a spec flat)
+const WAIST_HALF = 358;           // half waist (elastic, drawn stretched as on a spec flat)
 const WB = 68;                    // waistband height
 const WB_Y = WAIST_Y + WB;        // waistband / body join
 const WB_FLARE = 3;               // band widens a touch toward its lower edge
 const BODY_HALF = WAIST_HALF + 6; // gathered body pokes out under the band
-const HIP_Y = 352;                // widest point of the seat
-const HIP_HALF = 410;
+const HIP_Y = 420;                // widest point of the seat (barely: the side is an A-line)
+const HIP_HALF = 400;
 const VENT_Y = 786;               // top of the curved side split
-const SIDE_HALF = 436;            // outer leg at the split (slight flare)
+const SIDE_HALF = 444;            // outer leg at the split (A-line flare)
 const HEM_Y = 884;                // hem at the side (after the split curve)
-const INSEAM_HEM = [474, 866];    // inner hem corner (hem rises toward the inseam)
+const INSEAM_HEM = [478, 866];    // inner hem corner (hem rises toward the inseam)
 const CROTCH_Y = 552;             // crotch point (front rise 12.9")
 const HEM_STITCH = 16;            // coverstitch distance from the hem edge
 const PANEL_TOP_W = 40;           // side panel width at the waistband…
@@ -299,8 +301,8 @@ function halfOutline(isFront) {
   const corner = cubic([x0 + 7, WAIST_Y], [x0 + 2, WAIST_Y], [x0, WAIST_Y + 2], [x0, WAIST_Y + 7], 4);
   const bandSide = line([x0, WAIST_Y + 7], [x0 - WB_FLARE, WB_Y], 3);
   const ledge = line([x0 - WB_FLARE, WB_Y], [CX - BODY_HALF, WB_Y + 2], 2);
-  const flare = cubic([CX - BODY_HALF, WB_Y + 2], [CX - BODY_HALF - 36, WB_Y + 26], [CX - HIP_HALF + 3, HIP_Y - 104], [CX - HIP_HALF, HIP_Y], 20);
-  const side = cubic([CX - HIP_HALF, HIP_Y], [CX - HIP_HALF - 6, 470], [CX - SIDE_HALF + 3, 660], [CX - SIDE_HALF, VENT_Y], 26);
+  const flare = cubic([CX - BODY_HALF, WB_Y + 2], [CX - BODY_HALF - 9, WB_Y + 74], [CX - HIP_HALF + 7, HIP_Y - 96], [CX - HIP_HALF, HIP_Y], 20);
+  const side = cubic([CX - HIP_HALF, HIP_Y], [CX - HIP_HALF - 8, HIP_Y + 110], [CX - SIDE_HALF + 6, 660], [CX - SIDE_HALF, VENT_Y], 26);
   // the outline at the split is the UNDER layer's corner (back panel on the front view);
   // the top layer's rounder corner is drawn inside it (see splitEdge)
   const split = cubic([CX - SIDE_HALF, VENT_Y], [CX - SIDE_HALF + 0.5, VENT_Y + 58], [CX - SIDE_HALF + 5, HEM_Y + hemDrop - 3], [CX - SIDE_HALF + 38, HEM_Y + hemDrop], 18);
@@ -523,4 +525,7 @@ export default {
   spec: "Sublimated poly mesh · 2\" elastic waist · 9\" inseam · split hem · 150 gsm",
   views: { front: buildView("front"), back: buildView("back") },
   defaultColors: { base: "primary", trim: "secondary", accent: "accent" },
+  // drawn ≈14% smaller than its fit-to-artboard size so it sits at the same visual
+  // weight as the tops in a lookbook row (applied by the registry, see garments/index.js)
+  displayScale: 0.86,
 };

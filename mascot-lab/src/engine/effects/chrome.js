@@ -4,7 +4,9 @@
 // detail), lit by a studio environment: cool sky above a hard dark horizon line, a dim
 // warm ground below, crisp specular kicks and a cool rim. The horizon is bent by the
 // surface normals and a slow liquid warp, which is what makes it read as poured metal
-// instead of grey plastic.
+// instead of grey plastic. What the metal reflects follows a calmer copy of the surface
+// (blurred detail + a broad dome), with the fine detail damped only near the horizon, so
+// the horizon reads as one poured curve while every feature still catches sky / ground.
 //
 // Structure (same as halftone.js):
 //   1. analysis maps at D = min(S, 1024): palette labels, per-region and outer distance
@@ -24,7 +26,7 @@ import { extractPalette } from "../image.js";
 // The jump at v = 0 is the hard horizon line; it is anti-aliased per render (see envLUT).
 const ENV = {
   silver: {
-    ground: [[-1.25, "#34312E"], [-0.8, "#6E655C"], [-0.45, "#A0958A"], [-0.22, "#6E655D"], [-0.08, "#1E1C1A"], [-0.004, "#08090B"]],
+    ground: [[-1.25, "#2A2724"], [-0.8, "#5E554C"], [-0.5, "#B3A493"], [-0.36, "#C9BBAA"], [-0.2, "#6A6058"], [-0.07, "#1A1816"], [-0.004, "#060708"]],
     sky: [[0.004, "#D7DEE8"], [0.06, "#FFFFFF"], [0.22, "#F1F5FA"], [0.5, "#B4C1D2"], [0.85, "#7F92AC"], [1.25, "#5D6F8B"]],
     spec: "#FFFFFF", rim: "#CFE2FF", lo: 0.2,
   },
@@ -156,6 +158,81 @@ function regionDistance(label, D) {
 
 const circ = (t) => { const u = 1 - (t < 0 ? 0 : t > 1 ? 1 : t); return Math.sqrt(1 - u * u); };
 
+/**
+ * Colour-independent analysis at D: palette regions, distance fields → height → detail
+ * normals + the calm reflection normals, and the outline mask. Depends on the source
+ * pixels, S, bevel and smoothness only, so finish / contrast / horizon / tint changes
+ * re-shade without redoing it (one-entry memo).
+ */
+function analyse(srcD, data0, S, D, sc, bevelP, smooth) {
+  const n = D * D;
+  const dataD = data0;
+  const small = resizeCanvas(srcD, Math.min(D, 192), Math.min(D, 192));
+  const pal = extractPalette(small, 7, { maxSamples: 6000 }).filter((c) => c.weight > 0.006);
+  const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
+  const label = labelMap(dataD, D, palRGB);
+  const alpha = new Float32Array(n);
+  const lum = new Float32Array(n);
+  for (let i = 0, j = 0; i < n; i++, j += 4) {
+    alpha[i] = dataD[j + 3] / 255;
+    lum[i] = (0.299 * dataD[j] + 0.587 * dataD[j + 1] + 0.114 * dataD[j + 2]) / 255;
+  }
+  const b = maskBounds(alpha, D, D, 0.5);
+  if (b.empty) return null;
+
+  const bevel = Math.max(1.5, bevelP * sc);
+  const inner = Math.max(1.2, bevel * 0.42);
+  let dOut = insideDistance(alpha, D, D, 0.5);
+  // line art (nothing thicker than a hairline) is inflated to a minimum stroke so the
+  // metal has a body to reflect in; its alpha then comes from the inflated mask
+  let opaque = 0, thick = 0;
+  for (let i = 0; i < n; i++) if (alpha[i] >= 0.5) { opaque++; if (dOut[i] > 4 * sc) thick++; }
+  const lineArt = opaque > 0 && thick < opaque * 0.12;
+  let alphaS = null;
+  if (lineArt) {
+    const grown = dilateMask(alpha, D, D, Math.max(1, 3.4 * sc));
+    alpha.set(grown);
+    for (let i = 0; i < n; i++) { lum[i] = 1; label[i] = alpha[i] >= 0.5 ? 0 : -1; }
+    dOut = insideDistance(alpha, D, D, 0.5);
+    alphaS = upsampleAlpha(alpha, D, S);
+  }
+  const dReg = regionDistance(label, D);
+  const lumS = blurMask(lum, D, D, Math.max(0.6, 1.2 * sc));
+  const ampR = 0.4 - 0.16 * smooth;          // interior relief, softer when smoother
+  let H = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    if (dOut[i] <= 0) continue;
+    const ho = circ((dOut[i] - 0.5) / bevel);
+    const hr = circ(dReg[i] / inner);
+    H[i] = ho * (0.36 + ampR * hr + 0.3 * lumS[i]);
+  }
+  H = blurMask(H, D, D, Math.max(0.7, bevel * (0.03 + 0.14 * smooth)));
+  for (let i = 0; i < n; i++) H[i] *= alpha[i] > 0 ? 1 : 0;
+  const { nx, ny, nz } = normalsFromHeight(H, D, D, bevel * 1.25);
+  // what the metal REFLECTS follows a calmer surface: the detail height blurred (small
+  // features only ripple the horizon instead of shattering it) plus a broad dome over
+  // the whole body, so big flat faces sweep through the sky gradient like poured metal
+  const spanD = Math.max(8, Math.max(b.x1 - b.x0, b.y1 - b.y0));
+  const domeR = Math.max(bevel * 2.5, spanD * 0.16);
+  const HV = blurMask(H, D, D, Math.max(0.8, bevel * 0.32));
+  for (let i = 0; i < n; i++) if (dOut[i] > 0) HV[i] += 0.45 * circ((dOut[i] - 0.5) / domeR) * (bevel / domeR) * 2.2;
+  const nv = normalsFromHeight(HV, D, D, bevel * 1.25);
+  const nvy = nv.ny, nvz = nv.nz;
+
+  const ol = dilateMask(alpha, D, D, Math.max(0.8, 3.5 * sc));
+  return { b, alphaS, nx, ny, nz, nvy, nvz, spanD, ol };
+}
+
+/** FNV-1a over the RGBA words: a cheap content key for the analysis memo. */
+function pixelHash(data) {
+  const u = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >> 2);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < u.length; i++) h = Math.imul(h ^ u[i], 0x01000193);
+  return (h >>> 0).toString(36) + ":" + u.length;
+}
+
+let memo = null;   // { key, a } — last analysis (one entry: the logo being tuned)
+
 /* ───────────────────────────── effect ───────────────────────────── */
 
 export default {
@@ -193,64 +270,27 @@ export default {
     const D = Math.min(S, 1024);
     const kD = D / S;
     const sc = ctx.scale * kD;           // 1024-units → D px
-    const n = D * D;
     const contrast = p.contrast / 100, smooth = p.smooth / 100, tintP = p.tint / 100;
 
-    /* analysis at D */
+    /* analysis at D (memoized) */
     const srcD = D === S ? src : resizeCanvas(src, D, D);
-    const dataD = getPixels(srcD).data;
-    const small = resizeCanvas(srcD, Math.min(D, 192), Math.min(D, 192));
-    const pal = extractPalette(small, 7, { maxSamples: 6000 }).filter((c) => c.weight > 0.006);
-    const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
-    const label = labelMap(dataD, D, palRGB);
-    const alpha = new Float32Array(n);
-    const lum = new Float32Array(n);
-    for (let i = 0, j = 0; i < n; i++, j += 4) {
-      alpha[i] = dataD[j + 3] / 255;
-      lum[i] = (0.299 * dataD[j] + 0.587 * dataD[j + 1] + 0.114 * dataD[j + 2]) / 255;
-    }
-    const b = maskBounds(alpha, D, D, 0.5);
-    if (b.empty) return createCanvas(S, S);
-
-    const bevel = Math.max(1.5, p.bevel * sc);
-    const inner = Math.max(1.2, bevel * 0.42);
-    let dOut = insideDistance(alpha, D, D, 0.5);
-    // line art (nothing thicker than a hairline) is inflated to a minimum stroke so the
-    // metal has a body to reflect in; its alpha then comes from the inflated mask
-    let opaque = 0, thick = 0;
-    for (let i = 0; i < n; i++) if (alpha[i] >= 0.5) { opaque++; if (dOut[i] > 4 * sc) thick++; }
-    const lineArt = opaque > 0 && thick < opaque * 0.12;
-    let alphaS = null;
-    if (lineArt) {
-      const grown = dilateMask(alpha, D, D, Math.max(1, 3.4 * sc));
-      alpha.set(grown);
-      for (let i = 0; i < n; i++) { lum[i] = 1; label[i] = alpha[i] >= 0.5 ? 0 : -1; }
-      dOut = insideDistance(alpha, D, D, 0.5);
-      alphaS = upsampleAlpha(alpha, D, S);
-    }
-    const dReg = regionDistance(label, D);
-    const lumS = blurMask(lum, D, D, Math.max(0.6, 1.2 * sc));
-    const ampR = 0.4 - 0.16 * smooth;          // interior relief, softer when smoother
-    let H = new Float32Array(n);
-    for (let i = 0; i < n; i++) {
-      if (dOut[i] <= 0) continue;
-      const ho = circ((dOut[i] - 0.5) / bevel);
-      const hr = circ(dReg[i] / inner);
-      H[i] = ho * (0.36 + ampR * hr + 0.3 * lumS[i]);
-    }
-    H = blurMask(H, D, D, Math.max(0.7, bevel * (0.03 + 0.14 * smooth)));
-    for (let i = 0; i < n; i++) H[i] *= alpha[i] > 0 ? 1 : 0;
-    const { nx, ny, nz } = normalsFromHeight(H, D, D, bevel * 1.25);
+    const data0 = getPixels(srcD).data;
+    const key = `${S}|${D}|${p.bevel}|${p.smooth}|${pixelHash(data0)}`;
+    if (!memo || memo.key !== key) memo = { key, a: analyse(srcD, data0, S, D, sc, p.bevel, smooth) };
+    const A = memo.a;
+    if (!A) return createCanvas(S, S);
+    const { b, alphaS, nx, ny, nz, nvy, nvz, spanD, ol } = A;
 
     /* liquid warp: low-frequency noise on a coarse grid (bilinear at S) */
     const span = Math.max(8, b.y1 - b.y0) / kD;     // logo height in output px
+    const big = spanD / kD;                           // logo's long side in output px
     const G = 64;
     const warp = new Float32Array(G * G);
     const noise = makeNoise2D((ctx.seed >>> 0) + 911);
     for (let gy = 0; gy < G; gy++) {
       for (let gx = 0; gx < G; gx++) {
         const X = (gx / (G - 1)) * S, Y = (gy / (G - 1)) * S;
-        warp[gy * G + gx] = fbm(noise, X / span * 1.4, Y / span * 1.4, 3) * 0.27;
+        warp[gy * G + gx] = fbm(noise, X / big * 1.5, Y / big * 1.5, 3) * 0.27;
       }
     }
 
@@ -320,8 +360,17 @@ export default {
         const gxf = Math.min(G - 1.001, x * gk), gx0 = gxf | 0, gwx = gxf - gx0;
         const gi = gy0 * G + gx0;
         const wv = (warp[gi] * (1 - gwx) + warp[gi + 1] * gwx) * (1 - gwy) + (warp[gi + G] * (1 - gwx) + warp[gi + G + 1] * gwx) * gwy;
-        // reflected elevation: R = 2(N·V)N − V, V = (0,0,1) → R.y = 2 Nz Ny (screen y down)
-        let v = pos - 2 * Nz * Ny * 0.95 + wv;
+        // reflected elevation: R = 2(N·V)N − V, V = (0,0,1) → R.y = 2 Nz Ny (screen y down);
+        // mostly the calm reflection surface, a little of the detail on top
+        const Vy = nvy[i00] * w00 + nvy[i01] * w01 + nvy[i10] * w10 + nvy[i11] * w11;
+        const Vz = nvz[i00] * w00 + nvz[i01] * w01 + nvz[i10] * w10 + nvz[i11] * w11;
+        // Near the horizon the detail is damped so the line stays one liquid curve; away
+        // from it every feature's bevel catches sky / ground at full strength.
+        const vm = pos - 1.9 * Vz * Vy + wv;
+        const avm = vm < 0 ? -vm : vm;
+        const tw = avm >= 0.4 ? 1 : avm <= 0.05 ? 0 : (avm - 0.05) / 0.35;
+        const wd = 0.12 + 0.6 * tw * tw * (3 - 2 * tw);
+        let v = vm + 1.9 * wd * (Vz * Vy - Nz * Ny);
         v = v < V_MIN ? V_MIN : v > V_MAX ? V_MAX : v;
         const li = ((v - V_MIN) * lutK + 0.5) | 0;
         let r = lut[li * 3], g = lut[li * 3 + 1], bb = lut[li * 3 + 2];
@@ -330,7 +379,7 @@ export default {
         const f = 1 - detail * (1 - (lo + (1 - lo) * L));
         r *= f; g *= f; bb *= f;
         if (v > 0.02) {
-          const u = (x - cxL) / span + ((y - cyL) / span) * 0.62 + Nz * Nx * 0.6;
+          const u = (x - cxL) / big + ((y - cyL) / big) * 0.62 + Nz * Nx * 0.6;
           const d1 = 1 - Math.abs(u + 0.3) / 0.075, d2 = 1 - Math.abs(u + 0.14) / 0.022;
           let st = (d1 > 0 ? d1 * d1 * (3 - 2 * d1) : 0) + (d2 > 0 ? 0.7 * d2 * d2 * (3 - 2 * d2) : 0);
           if (st > 0) {
@@ -367,13 +416,12 @@ export default {
     ctx2d(metal).putImageData(img, 0, 0);
 
     /* thin dark outline under the metal */
-    const ol = dilateMask(alpha, D, D, Math.max(0.8, 3.5 * sc));
     const olC = maskToCanvas(ol, D, D, p.finish === "gold" ? "#140B03" : "#07080B");
     o.imageSmoothingEnabled = true;
     o.imageSmoothingQuality = "high";
     o.drawImage(olC, 0, 0, S, S);
     o.drawImage(metal, 0, 0);
-    drawGlints(o, glintV, glintP, S, span, specRGB);
+    drawGlints(o, glintV, glintP, S, Math.sqrt(span * big), specRGB);
     return out;
   },
 };

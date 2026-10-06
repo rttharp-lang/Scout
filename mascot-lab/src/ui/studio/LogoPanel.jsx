@@ -18,7 +18,12 @@ const ROLE_FIELDS = [
   { role: "accent", label: "Accent" },
 ];
 
-const samePalette = (a, b) => !!a && !!b && ["primary", "secondary", "accent"].every((r) => String(a[r]).toUpperCase() === String(b[r]).toUpperCase());
+// "the same colours" within a small tolerance: the upload flow suggests colours from a
+// 640 px copy and this panel from a 480 px one, so exact hex matches would flag a
+// fresh upload as already edited
+const rgbOf = (h) => { const n = parseInt(String(h || "").replace("#", "").slice(0, 6), 16) || 0; return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
+const near = (a, b) => { const x = rgbOf(a), y = rgbOf(b); return Math.abs(x[0] - y[0]) + Math.abs(x[1] - y[1]) + Math.abs(x[2] - y[2]) <= 24; };
+const samePalette = (a, b) => !!a && !!b && ["primary", "secondary", "accent"].every((r) => near(a[r], b[r]));
 
 /* ───────────── derived data, memoized per decoded logo ───────────── */
 
@@ -80,6 +85,17 @@ function useOriginalLogo(logoState, enabled) {
 
 export function LogoPanel({ state, actions, logo, upload, collapsible = false, onToast }) {
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef(null);
+  const close = () => {
+    setOpen(false);
+    // the panel can be taller than the screen: bring the summary (and the gallery under it) back
+    requestAnimationFrame(() => {
+      const el = toggleRef.current;
+      if (!el) return;
+      if (el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: "start", behavior: "auto" });
+      el.focus({ preventScroll: true });
+    });
+  };
   const bodyId = useId();
   const isSample = !!state.logo.sampleId;
   const sample = isSample ? getSample(state.logo.sampleId) : null;
@@ -91,6 +107,7 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
       {collapsible && (
         <div className="st-logo__summary">
           <button
+            ref={toggleRef}
             type="button"
             className="st-logo__toggle"
             aria-expanded={open}
@@ -129,6 +146,11 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
         <TeamNames state={state} actions={actions} />
         <TeamColors state={state} actions={actions} logo={logo} sample={sample} />
         <Samples state={state} actions={actions} />
+        {collapsible && (
+          <div className="st-logo__done">
+            <Button variant="secondary" block onClick={close}>Done</Button>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -160,7 +182,7 @@ function LogoCard({ state, actions, logo, upload, isSample, sample, onToast }) {
   if (decoding) status = "Updating the cut-out…";
   else if (!info) status = "";
   else if (!requested) status = hadAlpha && setting === "auto" ? "This logo is already transparent." : "Background kept as uploaded.";
-  else if (removed) status = "Background removed. Check the edges below.";
+  else if (removed) status = "Background removed. Check the edges in the preview.";
   else status = hadAlpha ? "Already transparent. Nothing to remove." : "No solid background at the edges, so nothing was removed.";
 
   const size = info ? `${info.width} × ${info.height} px` : null;
@@ -263,7 +285,7 @@ function TeamNames({ state, actions }) {
         <Field label="School">
           <Input
             value={state.team.school}
-            placeholder="Northgate"
+            placeholder="e.g. Northgate"
             autoComplete="organization"
             maxLength={40}
             onChange={(e) => actions.setTeam({ school: e.target.value })}
@@ -272,7 +294,7 @@ function TeamNames({ state, actions }) {
         <Field label="Mascot">
           <Input
             value={state.team.mascot}
-            placeholder="Bulldogs"
+            placeholder="e.g. Bulldogs"
             maxLength={30}
             onChange={(e) => actions.setTeam({ mascot: e.target.value })}
           />

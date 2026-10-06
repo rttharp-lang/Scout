@@ -5,8 +5,9 @@ import { CanvasImage, cx } from "../components/index.js";
  * WipeImage — a CanvasImage that, when its canvas changes, pulls the new image in
  * over the old one left to right with a squeegee blade (the hero's one motion moment).
  * With animate=false (or reduced motion: the global rule shortens it to 1 ms) it swaps.
+ * `placeholder` (a node) shows until the first canvas arrives (e.g. the logo as an <img>).
  */
-export function WipeImage({ canvas, stage = "none", alt = "", animate = true, padding = 0, loading = false, error = null, className }) {
+export function WipeImage({ canvas, stage = "none", alt = "", animate = true, padding = 0, loading = false, error = null, placeholder = null, className }) {
   const seq = useRef(0);
   const [layers, setLayers] = useState(() => (canvas ? [{ id: 0, canvas, stage, entering: false }] : []));
 
@@ -31,6 +32,8 @@ export function WipeImage({ canvas, stage = "none", alt = "", animate = true, pa
             <CanvasImage canvas={l.canvas} stage={l.stage} ratio={1} padding={padding} alt={i === layers.length - 1 ? alt : ""} loading={loading && i === layers.length - 1} />
           </div>
         ))
+      ) : placeholder && !error ? (
+        <div className="lp-wipe__layer">{placeholder}</div>
       ) : (
         <div className="lp-wipe__layer">
           <CanvasImage canvas={null} stage={stage} ratio={1} error={error} alt={alt} />

@@ -367,6 +367,12 @@ function buildView(kind) {
     { kind: "seam", d: open(armhole) },
     { kind: "seam", d: open(mirror(armhole)) },
   );
+  // the shoulder seam rolls a touch to the front on a dropped shoulder (as on the hoodie)
+  const shoulderRoll = offset(slice(shoulder, 0.15, 1, 16), isFront ? 6 : 4);
+  overlays.push(
+    { kind: "seam", d: open(shoulderRoll), opacity: isFront ? 0.22 : 0.15 },
+    { kind: "seam", d: open(mirror(shoulderRoll)), opacity: isFront ? 0.22 : 0.15 },
+  );
   if (isFront && insideNeck) overlays.push({ kind: "seam", d: open(backSeam), opacity: 0.25, width: 0.9 });
   // twin-needle coverstitch under the collar (on the back it runs shoulder to shoulder:
   // the back-neck tape), single-needle topstitch beside the armholes, twin-needle hems
@@ -408,7 +414,7 @@ function buildView(kind) {
   // zones (design units → artboard)
   const front = {
     "chest-left": zoneC(mx(CX - 106), HPS_Y + 204, 112, 104, "Left chest"),
-    "chest-center": zoneC(CX, HPS_Y + 236, 196, 144, "Center chest"),
+    "chest-center": zoneC(CX, HPS_Y + 250, 196, 144, "Center chest"),
     center: zoneC(CX, HPS_Y + 368, 440, 420, "Full front"),
     oversized: zoneC(CX + 250, HPS_Y + 610, 800, 800, "Oversized · crops right"),
   };

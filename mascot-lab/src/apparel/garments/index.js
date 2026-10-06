@@ -59,6 +59,44 @@ function validateView(view, name, id) {
   return null;
 }
 
+/* ───────────────────────────── display scale ─────────────────────────────
+ * Every garment is drawn as large as its own proportions allow, so a sleeveless tank or
+ * a pair of shorts fills far more of the artboard than a hoodie whose sleeves set its
+ * width. A garment may declare `displayScale` (0.6–1): the registry shrinks its whole
+ * drawing (paths, zones, lettering boxes) about the artboard centre once at load time,
+ * so a lookbook row has an even visual weight. Line widths, blur radii and stitch gaps
+ * are NOT scaled, so seams and outlines keep the same weight across the set.
+ */
+function scalePath(d, s, c = 500) {
+  const out = [];
+  for (const m of d.matchAll(/([MLHVCSQTAZmlhvcsqtaz])([^MLHVCSQTAZmlhvcsqtaz]*)/g)) {
+    const cmd = m[1], up = cmd.toUpperCase(), abs = cmd === up;
+    const n = (m[2].match(/-?(?:\d+\.?\d*|\.\d+)(?:e[-+]?\d+)?/gi) || []).map(Number);
+    const f = (v) => Math.round((abs ? c + (v - c) * s : v * s) * 100) / 100;
+    let o;
+    if (up === "Z") o = [];
+    else if (up === "H" || up === "V") o = n.map(f);
+    else if (up === "A") o = n.map((v, i) => { const j = i % 7; return j === 0 || j === 1 ? Math.round(v * s * 100) / 100 : j < 5 ? v : f(v); });
+    else o = n.map(f);
+    out.push(cmd + o.join(" "));
+  }
+  return out.join(" ");
+}
+const scaleBox = (b, s, c = 500) => ({ ...b, x: c + (b.x - c) * s, y: c + (b.y - c) * s, w: b.w * s, h: b.h * s });
+function applyDisplayScale(g) {
+  const s = Number(g.displayScale);
+  if (!Number.isFinite(s) || s === 1 || s < 0.6 || s > 1 || g.__scaled) return;
+  for (const view of Object.values(g.views)) {
+    view.silhouette = scalePath(view.silhouette, s);
+    view.printArea = scalePath(view.printArea, s);
+    for (const p of view.parts) p.d = scalePath(p.d, s);
+    for (const o of view.overlays) { o.d = scalePath(o.d, s); if (typeof o.follow === "string") o.follow = scalePath(o.follow, s); }
+    for (const z of Object.keys(view.zones)) view.zones[z] = scaleBox(view.zones[z], s);
+    if (view.text) for (const t of Object.keys(view.text)) if (view.text[t]) view.text[t] = scaleBox(view.text[t], s);
+  }
+  Object.defineProperty(g, "__scaled", { value: true });
+}
+
 /** validateGarment(garment, id) → error string or null (normalizes soft problems in place). */
 function validateGarment(g, id) {
   if (!g || typeof g !== "object") return "no default export";
@@ -75,6 +113,7 @@ function validateGarment(g, id) {
   if (typeof g.spec !== "string") g.spec = "";
   const dc = g.defaultColors || {};
   g.defaultColors = { base: dc.base || "primary", trim: dc.trim || "secondary", accent: dc.accent || "accent" };
+  applyDisplayScale(g);
   return null;
 }
 

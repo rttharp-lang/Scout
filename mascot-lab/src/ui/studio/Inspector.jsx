@@ -1,7 +1,7 @@
 // Mascot Lab — Studio inspector for the selected effect: big live preview with a
 // backdrop switch, presets, the effect's own controls (from its ParamSpec), shuffle
 // and reset, the look on the game jersey, Download PNG, and "Use this look".
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight, Download, RotateCcw, Shuffle } from "lucide-react";
 import {
   Button, CanvasImage, Chip, ChipRow, ColorField, IconButton, Segmented, Select, Skeleton, Slider, SpecLabel, Spinner, Toggle, cx,
@@ -10,10 +10,8 @@ import {
 import { CATEGORIES } from "../../engine/effects/index.js";
 import { canvasToBlob, defaultParams, renderEffect, resolveParams } from "../../engine/render.js";
 import { saveFile } from "../../platform/files.js";
-import { resolveColors } from "../../apparel/collection.js";
 import { stageStyle } from "./Gallery.jsx";
-import { holdProps, isAbort, renderKey, scheduler, useEffectRender, useHeld } from "./renderKit.js";
-import { JerseyThumb, ProductPreview } from "./ProductPreview.jsx";
+import { holdProps, isAbort, renderKey, scheduler, useDraftRender, useEffectRender, useHeld } from "./renderKit.js";
 
 export const INSPECTOR_SIZE = 1024;
 const pad2 = (n) => String(n).padStart(2, "0");
@@ -21,9 +19,11 @@ const catLabel = (id) => CATEGORIES.find((c) => c.id === id)?.label || "Effect";
 const slug = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 /**
- * useInspectorRender(effect, state, logo) → the 1024 "final" render. While it renders,
- * the 384 tile of the same settings stands in (it lands first: smaller, higher priority).
- * The big render waits while a slider is held down, and for a pause in the tuning.
+ * useInspectorRender(effect, state, logo) → the 1024 "final" render, with stand-ins
+ * while it renders, best first: the 384 gallery tile of the same settings (it lands
+ * first: smaller, higher priority), then the newest 256 px draft from a slider drag,
+ * then the last 1024 of this effect. While a slider is held the big render waits and
+ * drafts keep the preview moving; the big one runs after a pause in the tuning.
  */
 export function useInspectorRender(effect, state, logo) {
   const { params, seed } = state.effect;
@@ -31,10 +31,18 @@ export function useInspectorRender(effect, state, logo) {
   const placeholderKey = effect && logo?.key
     ? renderKey({ effectId: effect.id, logoKey: logo.key, palette: state.palette, params, seed, size: 384, quality: "preview" })
     : null;
-  return useEffectRender({
+  const main = useEffectRender({
     effect, logo, params, palette: state.palette, seed,
     size: INSPECTOR_SIZE, quality: "final", priority: 20, debounce: 380, placeholderKey, enabled: !held,
   });
+  const draft = useDraftRender({ effect, logo, params, palette: state.palette, seed, active: held && !!effect });
+  // a fresh big render retires the drafts
+  const { clear } = draft;
+  useEffect(() => { if (main.fresh) clear(); }, [main.fresh, clear]);
+  if (draft.canvas && !main.fresh && !main.placeholder && main.status !== "error") {
+    return { ...main, canvas: draft.canvas, placeholder: true, draft: true };
+  }
+  return main;
 }
 
 /** Is the current look exactly this preset? (compares fully resolved params) */
@@ -46,40 +54,86 @@ function presetMatches(effect, preset, params, palette) {
 
 /* ───────────────────────────── head ───────────────────────────── */
 
-export function InspectorHead({ effect, number, compact = false, aside = null }) {
+export function InspectorHead({ effect, number, compact = false }) {
   if (!effect) return <div className="st-insp__head"><Skeleton variant="text" lines={2} /></div>;
   return (
-    <div className={cx("st-insp__head", compact && "is-compact", aside && "has-aside")}>
-      <div className="st-insp__headtext">
-        <div className="st-insp__kicker">
-          <SpecLabel>FX {pad2(number)} · {catLabel(effect.category)}</SpecLabel>
-          {!compact && <SpecLabel variant="box">{effect.method}</SpecLabel>}
-        </div>
-        {!compact && <h2 className="st-insp__title">{effect.name}</h2>}
-        {effect.blurb && <p className="st-insp__blurb">{effect.blurb}</p>}
+    <div className={cx("st-insp__head", compact && "is-compact")}>
+      <div className="st-insp__kicker">
+        <SpecLabel>FX {pad2(number)} · {catLabel(effect.category)}</SpecLabel>
+        {!compact && <SpecLabel variant="box">{effect.method}</SpecLabel>}
       </div>
-      {aside}
+      {!compact && <h2 className="st-insp__title">{effect.name}</h2>}
+      {effect.blurb && <p className="st-insp__blurb">{effect.blurb}</p>}
     </div>
   );
 }
 
 /* ───────────────────────────── stage ───────────────────────────── */
 
-const BACKDROPS = [
-  { value: "stage", label: "Stage", title: "The effect's own backdrop" },
-  { value: "garment", label: "Jersey", title: "The game jersey's base color" },
-  { value: "checker", label: "Clear", title: "Transparent, as the PNG downloads" },
+const VIEWS = [
+  { value: "art", label: "Artwork", title: "The graphic on its own" },
+  { value: "product", label: "On product", title: "The graphic printed on a piece from your collection" },
 ];
 
-export function InspectorStage({ effect, render, state, backdrop, onBackdrop }) {
-  const jersey = state.collection?.items?.jersey;
-  const garmentColor = jersey ? resolveColors(jersey.colors, state.palette).base : state.palette.primary;
-  const stage = !effect ? "surface" : backdrop === "checker" ? "checker" : backdrop === "garment" ? "none" : effect.stage;
-  const style = backdrop === "garment" ? { background: garmentColor } : backdrop === "stage" && effect ? stageStyle(effect.stage, state.palette) : null;
+/** The team colour used for the "on team colour" backdrop: the first of primary, dark,
+ * secondary that differs clearly from the effect's own stage (so the swatches differ). */
+const STAGE_HEX = { paper: "#F1EFE9", dark: "#121418", mid: "#8D949E" };
+const ROLE_LABEL = { primary: "Team primary", dark: "Team dark", secondary: "Team secondary" };
+function teamBackdrop(stage, palette) {
+  const stageHex = stage === "team" ? palette.primary : STAGE_HEX[stage] || STAGE_HEX.paper;
+  const rgb = (h) => { const n = parseInt(String(h).slice(1, 7), 16) || 0; return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
+  const far = (a, b) => { const x = rgb(a), y = rgb(b); return Math.abs(x[0] - y[0]) + Math.abs(x[1] - y[1]) + Math.abs(x[2] - y[2]) > 90; };
+  for (const role of ["primary", "dark", "secondary"]) {
+    if (palette[role] && far(palette[role], stageHex)) return { hex: palette[role], name: ROLE_LABEL[role] };
+  }
+  return { hex: palette.primary, name: ROLE_LABEL.primary };
+}
+
+/** Backdrop picker: three swatches (the effect's stage, a team colour, transparent). */
+function BackdropPicker({ value, onChange, effect, palette }) {
+  const stage = effect?.stage || "paper";
+  const team = teamBackdrop(stage, palette);
+  const options = [
+    { value: "stage", name: "Studio backdrop", cls: `ml-stage--${stage}`, style: stageStyle(stage, palette) },
+    { value: "garment", name: `${team.name} color`, cls: "", style: { background: team.hex } },
+    { value: "checker", name: "Transparent, as the PNG downloads", cls: "ml-stage--checker", style: null },
+  ].map((o) => ({
+    value: o.value,
+    title: o.name,
+    label: null,
+    icon: (
+      <>
+        <span className={cx("st-bd__sw", o.cls)} style={o.style || undefined} aria-hidden="true" />
+        <span className="sr-only">{o.name}</span>
+      </>
+    ),
+  }));
+  return (
+    <div className="st-bd">
+      <span className="st-bd__k" aria-hidden="true">Backdrop</span>
+      <Segmented size="sm" label="Preview backdrop" className="st-bd__seg" options={options} value={value} onChange={onChange} />
+    </div>
+  );
+}
+
+/**
+ * InspectorStage — the big preview. view "art": the render on the chosen backdrop;
+ * view "product": the render printed on one piece of the collection (mock from
+ * useProductMockup). The bar under it switches both.
+ */
+export function InspectorStage({ effect, render, state, backdrop, onBackdrop, view = "art", onView, mock }) {
+  const product = view === "product" && !!mock?.available;
+  const garmentColor = teamBackdrop(effect?.stage || "paper", state.palette).hex;
+  const stage = !effect ? "surface" : product ? "surface" : backdrop === "checker" ? "checker" : backdrop === "garment" ? "none" : effect.stage;
+  const style = product ? null : backdrop === "garment" ? { background: garmentColor } : backdrop === "stage" && effect ? stageStyle(effect.stage, state.palette) : null;
   const rendering = render.status === "pending" || (!render.fresh && render.status !== "error");
+  const shown = product ? mock.canvas : render.canvas;
+  const busy = product ? (render.status !== "error" && (rendering || mock.pending)) : rendering;
+  const busyLabel = product ? "Printing" : render.draft ? "Draft" : render.placeholder ? "Sharpening" : "Rendering";
+  const caption = product && mock.garmentName ? `${mock.garmentName} · ${mock.view}` : null;
   return (
     <div className="st-insp__stagewrap">
-      <div className={cx("st-insp__stage", `ml-stage--${stage}`)} style={style || undefined} aria-busy={rendering || undefined}>
+      <div className={cx("st-insp__stage", `ml-stage--${stage}`, product && "is-product")} style={style || undefined} aria-busy={busy || undefined}>
         {render.status === "error" ? (
           <div className="st-insp__error" role="alert">
             <SpecLabel variant="warning">Render failed</SpecLabel>
@@ -88,17 +142,26 @@ export function InspectorStage({ effect, render, state, backdrop, onBackdrop }) 
           </div>
         ) : (
           <CanvasImage
-            canvas={render.canvas}
+            canvas={shown}
             ratio={1}
             className="st-insp__canvas"
-            alt={effect ? `Your logo in ${effect.name}` : "Loading preview"}
+            alt={!effect ? "Loading preview" : product ? `${effect.name} printed on the ${mock.garmentName || "garment"}, ${mock.view || "front"}` : `Your logo in ${effect.name}`}
           />
         )}
-        <div className="st-insp__backdrop">
-          <Segmented size="sm" mono label="Preview backdrop" options={BACKDROPS} value={backdrop} onChange={onBackdrop} />
-        </div>
-        {rendering && render.canvas && (
-          <span className="st-insp__busy" aria-hidden="true"><Spinner /> {render.placeholder ? "Sharpening" : "Rendering"}</span>
+        {busy && shown && (
+          <span className="st-insp__busy" aria-hidden="true"><Spinner /> {busyLabel}</span>
+        )}
+        {caption && <span className="st-insp__caption">{caption}</span>}
+      </div>
+      <div className="st-insp__stagebar">
+        {mock?.available && onView ? (
+          <Segmented size="sm" mono label="Preview" className="st-insp__views" options={VIEWS} value={product ? "product" : "art"} onChange={onView} />
+        ) : <span />}
+        {!product && (
+          <BackdropPicker value={backdrop} onChange={onBackdrop} effect={effect} palette={state.palette} />
+        )}
+        {product && mock.drop && (
+          <span className="st-insp__drop">{mock.drop.name} drop</span>
         )}
       </div>
     </div>
@@ -302,14 +365,13 @@ export function InspectorActions({ effect, download, compact = false }) {
 
 /* ───────────────────────────── composite (desktop / tablet column) ───────────────────────────── */
 
-export function Inspector({ effect, number, state, actions, render, mock, backdrop, onBackdrop, download }) {
+export function Inspector({ effect, number, state, actions, render, mock, backdrop, onBackdrop, view, onView, download }) {
   return (
-    <aside className="st-insp" aria-label="Selected effect">
-      <InspectorHead effect={effect} number={number} aside={<JerseyThumb mock={mock} effect={effect} />} />
-      <InspectorStage effect={effect} render={render} state={state} backdrop={backdrop} onBackdrop={onBackdrop} />
+    <aside className="st-insp" id="st-insp" tabIndex={-1} aria-label={effect ? `${effect.name} settings` : "Selected effect"}>
+      <InspectorHead effect={effect} number={number} />
+      <InspectorStage effect={effect} render={render} state={state} backdrop={backdrop} onBackdrop={onBackdrop} view={view} onView={onView} mock={mock} />
       <div className="st-insp__scroll">
         <InspectorControls effect={effect} state={state} actions={actions} />
-        <ProductPreview mock={mock} effect={effect} />
       </div>
       <InspectorActions effect={effect} download={download} />
     </aside>

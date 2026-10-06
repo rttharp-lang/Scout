@@ -318,4 +318,7 @@ export default {
   spec: "Sublimated poly mesh · rib-knit V binding · split hem · 160 gsm",
   views: { front: buildView("front"), back: buildView("back") },
   defaultColors: { base: "primary", trim: "secondary", accent: "accent" },
+  // a sleeveless tank fills more of the artboard than a sleeved top; drawn 7% smaller
+  // so the set reads evenly in a lookbook row (applied by the registry, see index.js)
+  displayScale: 0.93,
 };

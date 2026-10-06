@@ -8,8 +8,8 @@
 // at W → one per-pixel pass at S through a tone LUT built from the chosen color; alpha
 // comes from the full-resolution source (or the plate's distance field), so edges stay crisp.
 import {
-  createCanvas, ctx2d, getPixels, resizeCanvas, alphaMask, insideDistance, signedDistance, blurMask,
-  clamp, smoothstep, hexToRgb, lighten, darken, luminance, rgbToHsl, hslToRgb, hashSeed, rng,
+  createCanvas, ctx2d, getPixels, resizeCanvas, alphaMask, insideDistance, signedDistance, blurMask, dilateMask,
+  clamp, hexToRgb, lighten, darken, luminance, rgbToHsl, hslToRgb,
 } from "../core.js";
 
 /* ───────────────────────────── helpers ───────────────────────────── */
@@ -61,8 +61,10 @@ function lumaRelief(small, mask, W, soft) {
   const L = new Float32Array(n);
   const hist = new Uint32Array(256);
   let cnt = 0;
+  const ok = new Uint8Array(n);
   for (let i = 0, j = 0; i < n; i++, j += 4) {
-    if (mask[i] < 0.5) continue;
+    if (mask[i] < 0.5 || data[j + 3] < 128) continue; // (a widened hairline has no colour)
+    ok[i] = 1;
     const l = (0.299 * data[j] + 0.587 * data[j + 1] + 0.114 * data[j + 2]) | 0;
     L[i] = l / 255;
     hist[l]++; cnt++;
@@ -73,7 +75,7 @@ function lumaRelief(small, mask, W, soft) {
   const span = hi - lo;
   if (span < 0.08) { for (let i = 0; i < n; i++) L[i] = mask[i] >= 0.5 ? 0.5 : 0; return L; }
   // outside pixels take the mean so the blur doesn't drag the edge down
-  for (let i = 0; i < n; i++) L[i] = mask[i] >= 0.5 ? clamp((L[i] - lo) / span) : 0.5;
+  for (let i = 0; i < n; i++) L[i] = ok[i] ? clamp((L[i] - lo) / span) : 0.5;
   return soft > 0.3 ? blurMask(L, W, W, soft) : L;
 }
 
@@ -105,7 +107,7 @@ export default {
   category: "retro",
   blurb: "Tonal raised or pressed relief. Quiet and premium.",
   method: "Heat transfer",
-  stage: "team",
+  stage: "paper",       // tonal on the garment; on the gallery card the relief needs a ground that contrasts
   params: [
     {
       key: "mode", label: "Finish", type: "select", default: "emboss",
@@ -116,14 +118,14 @@ export default {
       ],
     },
     { key: "depth", label: "Depth", type: "range", min: 2, max: 30, step: 1, default: 12, unit: "px" },
-    { key: "detail", label: "Inner detail", type: "range", min: 0, max: 100, step: 1, default: 60, unit: "%" },
+    { key: "detail", label: "Inner detail", type: "range", min: 15, max: 100, step: 1, default: 60, unit: "%" },
     { key: "light", label: "Light angle", type: "range", min: 0, max: 360, step: 5, default: 135, unit: "°" },
     { key: "color", label: "Color", type: "color", default: "primary" },
-    { key: "gloss", label: "Gloss", type: "range", min: 0, max: 100, step: 1, default: 30, unit: "%" },
+    { key: "gloss", label: "Gloss", type: "range", min: 0, max: 100, step: 1, default: 40, unit: "%" },
   ],
   presets: [
-    { name: "Emboss", params: { mode: "emboss", depth: 12, detail: 60, light: 135, color: "primary", gloss: 30 } },
-    { name: "Deboss", params: { mode: "deboss", depth: 10, detail: 50, light: 135, color: "primary", gloss: 15 } },
+    { name: "Emboss", params: { mode: "emboss", depth: 12, detail: 60, light: 135, color: "primary", gloss: 40 } },
+    { name: "Deboss", params: { mode: "deboss", depth: 10, detail: 50, light: 135, color: "primary", gloss: 20 } },
     { name: "Rubber patch", params: { mode: "rubber", depth: 14, detail: 65, light: 135, color: "primary", gloss: 55 } },
   ],
 
@@ -139,7 +141,7 @@ export default {
     let _l = performance.now();
     const mark = (k) => { const P = globalThis.__prof; if (P) { const t = performance.now(); P[k] = Math.round(t - _l); _l = t; } };
     const small = W === S ? src : resizeCanvas(src, W, W);
-    const mask = alphaMask(small);
+    let mask = alphaMask(small);
     let bevel = Math.max(1, p.depth * scale * kS);             // W px
     let lineArt = 1;                                            // > 1: strokes thinner than the bevel
     const det = p.detail / 100;
@@ -147,19 +149,29 @@ export default {
     // ── height (W): rounded bevel from the silhouette + luminance relief inside
     // signed distance, softened so the pixel staircase of the edge can't serrate the bevel;
     // `inside` runs continuously from 0 at the edge (no jump at the anti-aliased pixels)
-    const sdl = blurMask(signedDistance(mask, W, W), W, W, Math.max(0.8, 1.5 * scale * kS));
+    const soften = Math.max(0.8, 1.5 * scale * kS);
+    let sdl = blurMask(signedDistance(mask, W, W), W, W, soften);
     const inside = new Float32Array(n);
-    for (let i = 0; i < n; i++) inside[i] = sdl[i] < 0 ? -sdl[i] : 0;
-    // line art can't hold a wide bevel: fit it to the strokes (90th percentile of the
-    // distance to the edge) so thin logos still stand up instead of reading flat
-    {
-      const hist = new Uint32Array(64);
+    // 90th percentile of the distance to the edge = how wide the strokes are (W px)
+    const strokeP90 = () => {
+      for (let i = 0; i < n; i++) inside[i] = sdl[i] < 0 ? -sdl[i] : 0;
+      const hist = new Uint32Array(128);
       let cnt = 0;
-      for (let i = 0; i < n; i += 2) { const v = inside[i]; if (v > 0) { hist[Math.min(63, v | 0)]++; cnt++; } }
-      let acc = 0, p90 = 63;
-      for (let v = 0; v < 64; v++) { acc += hist[v]; if (acc >= cnt * 0.9) { p90 = v + 1; break; } }
-      if (cnt && bevel > p90 * 1.15) { lineArt = bevel / Math.max(1, p90 * 1.15); bevel = Math.max(1, p90 * 1.15); }
+      for (let i = 0; i < n; i += 2) { const v = inside[i]; if (v > 0) { hist[Math.min(127, (v * 2) | 0)]++; cnt++; } }
+      let acc = 0;
+      for (let v = 0; v < 128; v++) { acc += hist[v]; if (acc >= cnt * 0.9) return cnt ? (v + 1) / 2 : 0; }
+      return 64;
+    };
+    let p90 = strokeP90();
+    // hairline art gets a production minimum line weight (a 1 px raised line can't be pressed)
+    const minHalf = 3.6 * scale * kS;
+    if (p90 > 0 && p90 < minHalf) {
+      mask = dilateMask(mask, W, W, minHalf - p90);
+      sdl = blurMask(signedDistance(mask, W, W), W, W, soften);
+      p90 = strokeP90();
     }
+    // line art can't hold a wide bevel: fit it to the strokes so thin logos still stand up
+    if (p90 > 0 && bevel > p90 * 1.15) { lineArt = bevel / Math.max(1, p90 * 1.15); bevel = Math.max(1, p90 * 1.15); }
     mark("sdl");
     const relief = det > 0 ? lumaRelief(small, mask, W, Math.max(0.5, bevel * 0.16)) : null;
     const H = new Float32Array(n);
@@ -212,6 +224,8 @@ export default {
     const strength = bevel * (rubber ? 1.1 : 0.95);
     const gloss = p.gloss / 100;
     const shin = 18 + gloss * 70;
+    // thin strokes have narrow bevels: push their light/shadow harder so line art still reads
+    const contrast = 1.2 * (1 + 0.6 * clamp((lineArt - 1) / 2));
     const shade = new Float32Array(n), spec = new Float32Array(n);
     const flatSpec = Math.pow(Hz, shin);
     // only the rows/columns that hold relief
@@ -229,7 +243,7 @@ export default {
         if (dx === 0 && dy === 0) continue;
         const nl = 1 / Math.sqrt(dx * dx + dy * dy + 1);
         const nx = -dx * nl, ny = -dy * nl, nz = nl;
-        shade[i] = (nx * Lx + ny * Ly + nz * Lz - Lz) / (1 - Lz * 0.35);
+        shade[i] = ((nx * Lx + ny * Ly + nz * Lz - Lz) / (1 - Lz * 0.35)) * contrast;
         const nh = nx * Hx + ny * Hy + nz * Hz;
         spec[i] = nh > 0.8 ? Math.max(0, Math.pow(nh, shin) - flatSpec) : 0;
       }
@@ -263,15 +277,13 @@ export default {
     // a tone of the chosen color: raised = a hair lighter, pressed = a hair deeper
     // (near-white gets pulled down a step so its highlights still have somewhere to go)
     if (L0 > 0.7) base = darken(base, 0.08);
-    else base = deboss ? darken(base, L0 > 0.5 ? 0.06 : 0.035) : lighten(base, 0.045 + 0.05 * clamp((lineArt - 1) / 2));
+    else base = deboss ? darken(base, L0 > 0.5 ? 0.06 : 0.035) : lighten(base, 0.045 + 0.1 * clamp((lineArt - 1) / 2));
     const lut = toneLUT(base, rubber ? 0.9 : 1);
     // rubber: the molded plate sits a shade deeper than the raised artwork (two-tone depth)
     const lutPlate = rubber ? toneLUT(darken(base, luminance(base) > 0.5 ? 0.12 : 0.08), 0.9) : null;
     let logoCov = null;
     if (rubber) { logoCov = new Float32Array(n); for (let i = 0; i < n; i++) logoCov[i] = clamp(inside[i] / 1.5); }
     const shadowDark = L0 > 0.45 ? 0.3 : 0.42;
-    const rNoise = rng(hashSeed("emboss", ctx.seed));
-    void rNoise;
 
     // ── composite at S
     const out = createCanvas(S, S);
@@ -284,7 +296,7 @@ export default {
       const xw = clamp((x + 0.5) * kS - 0.5, 0, W - 1.001);
       cx0[x] = xw | 0; cfx[x] = xw - (xw | 0);
     }
-    const specK = 255 * (0.25 + 0.85 * gloss) * (rubber ? 0.75 : 1);
+    const specK = 255 * (0.35 + 0.9 * gloss) * (rubber ? 0.8 : 1);
     // composite only where something is painted: the shape, its cast shadow / lip (W bbox → S)
     const covField = rubber ? plateSd : sdl;
     let qx0 = W, qx1 = -1, qy0 = W, qy1 = -1;
@@ -346,7 +358,6 @@ export default {
     }
     o.putImageData(img, 0, 0);
     mark("composite");
-    void smoothstep;
     return out;
   },
 };

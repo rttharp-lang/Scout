@@ -6,7 +6,7 @@
 // priority first, yielding to the event loop between jobs. Consumers hold a
 // ticket; when the last ticket for a key is released (unmount, logo/palette/params
 // changed) the queued job is cancelled before it ever runs.
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createRenderQueue, renderEffect } from "../../engine/render.js";
 import { loadEffects } from "../../engine/effects/index.js";
 
@@ -39,8 +39,8 @@ function createScheduler() {
     request(key, job, priority = 0) {
       let e = live.get(key);
       if (!e) {
-        e = { refs: 0, pending: true, priority };
-        e.promise = queue.enqueue(key, logged(key, job), priority);
+        e = { refs: 0, pending: true, priority, job: logged(key, job) };
+        e.promise = queue.enqueue(key, e.job, priority);
         live.set(key, e);
         e.promise.then(
           () => { e.pending = false; done++; if (live.get(key) === e) live.delete(key); notify(); },
@@ -49,7 +49,7 @@ function createScheduler() {
         notify();
       } else if (priority > e.priority && e.pending) {
         e.priority = priority;
-        queue.enqueue(key, job, priority); // same key → adopts the higher priority
+        queue.enqueue(key, e.job, priority); // same key → adopts the higher priority
       }
       e.refs++;
       let released = false;
@@ -71,7 +71,7 @@ function createScheduler() {
       const e = live.get(key);
       if (e && e.pending && priority > e.priority) {
         e.priority = priority;
-        queue.enqueue(key, () => Promise.resolve(null), priority);
+        queue.enqueue(key, e.job, priority); // same key → adopts the higher priority
       }
     },
     cancelAll(pred) { queue.cancel(pred); },
@@ -269,6 +269,78 @@ export function useEffectRender({
     placeholder: !!ph && canvas === ph,
     retry: () => setNonce((n) => n + 1),
   }), [res, key, canvas, fresh, ph, status, fx]);
+}
+
+/**
+ * useDraftRender(opts) → { canvas, exact, clear } — fast low-res previews while `active`
+ * (a slider drag). Unlike useEffectRender it never throws work away: one draft renders
+ * at a time, the finished one is shown, and the next starts from the newest params
+ * after a breather (so the slider thumb keeps moving between renders). The draft size
+ * adapts per effect so a draft costs roughly 40–90 ms on this machine.
+ *   opts: { effect, logo, params, palette, seed, active, priority = 50 }
+ * A draft is only shown for the effect + logo + palette it was made with.
+ */
+const DRAFT_SIZES = [160, 208, 256, 320];
+const draftSizeOf = new Map(); // effect id → index into DRAFT_SIZES
+export function useDraftRender({ effect, logo, params, palette, seed = 7, active, priority = 50 }) {
+  const scope = effect && logo?.key ? `${effect.id}|${logo.key}|${paletteSig(palette)}` : null;
+  const on = !!(active && effect && logo?.canvas && logo?.key);
+  const paramsKey = on ? `${scope}|${stable(params)}|${seed}` : null;
+  const [shown, setShown] = useState(null); // { canvas, paramsKey, scope }
+  const latest = useRef(null);
+  latest.current = { paramsKey, scope, effect, logo, params, palette, seed, priority };
+  const busy = useRef(false);
+  const mounted = useRef(true);
+  useEffect(() => {
+    mounted.current = true;
+    return () => { mounted.current = false; };
+  }, []);
+
+  useEffect(() => {
+    if (!paramsKey || busy.current) return;
+    const run = () => {
+      const i = latest.current;
+      if (!mounted.current || !i.paramsKey) return;
+      const pk = i.paramsKey;
+      const idx = draftSizeOf.get(i.effect.id) ?? 2;
+      const size = DRAFT_SIZES[idx];
+      const k = renderKey({ effectId: i.effect.id, logoKey: i.logo.key, palette: i.palette, params: i.params, seed: i.seed, size, quality: "preview" });
+      const hit = peek(k);
+      if (hit) { setShown({ canvas: hit, paramsKey: pk, scope: i.scope }); return; }
+      busy.current = true;
+      let ms = 0;
+      const t = scheduler.request(
+        k,
+        () => {
+          const t0 = performance.now();
+          return renderEffect(i.effect, i.logo.canvas, i.params, i.palette, { size, seed: i.seed, quality: "preview", logoKey: i.logo.key })
+            .then((c) => { ms = performance.now() - t0; remember(k, c); return c; });
+        },
+        i.priority,
+      );
+      t.promise
+        .then((c) => {
+          if (ms > 95 && idx > 0) draftSizeOf.set(i.effect.id, idx - 1);
+          else if (ms && ms < 35 && idx < DRAFT_SIZES.length - 1) draftSizeOf.set(i.effect.id, idx + 1);
+          if (mounted.current) setShown({ canvas: c, paramsKey: pk, scope: i.scope });
+        }, () => {})
+        .finally(() => {
+          t.release();
+          // breathe (longer after a slow draft), then catch up with the newest params;
+          // busy until then, so runs never overlap
+          setTimeout(() => {
+            busy.current = false;
+            const n = latest.current;
+            if (mounted.current && n.paramsKey && n.paramsKey !== pk) run();
+          }, Math.min(140, Math.max(45, ms * 0.6)));
+        });
+    };
+    run();
+  }, [paramsKey]);
+
+  const clear = useCallback(() => setShown(null), []);
+  const valid = !!shown && shown.scope === scope;
+  return useMemo(() => ({ canvas: valid ? shown.canvas : null, exact: valid && shown.paramsKey === paramsKey, clear }), [valid, shown, paramsKey, clear]);
 }
 
 /* ───────────────────────────── interaction hold ───────────────────────────── */

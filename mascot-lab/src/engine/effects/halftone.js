@@ -351,7 +351,7 @@ export default {
         { value: "duotone", label: "Two inks" },
       ],
     },
-    { key: "dot", label: "Dot size", type: "range", min: 10, max: 48, step: 1, default: 22, unit: "px" },
+    { key: "dot", label: "Dot size", type: "range", min: 10, max: 56, step: 1, default: 42, unit: "px" },
     { key: "angle", label: "Screen angle", type: "range", min: 0, max: 90, step: 1, default: 45, unit: "°" },
     {
       key: "shape", label: "Dot shape", type: "select", default: "round",
@@ -366,10 +366,11 @@ export default {
     { key: "fade", label: "Fade", type: "toggle", default: false },
   ],
   presets: [
-    { name: "Comic color", params: { mode: "color", dot: 22, angle: 45, shape: "round", fade: false } },
-    { name: "Mono ink", params: { mode: "mono", dot: 22, angle: 45, shape: "round", ink: "primary", fade: false } },
-    { name: "Fade", params: { mode: "mono", dot: 26, angle: 45, shape: "round", ink: "primary", fade: true } },
-    { name: "Duotone", params: { mode: "duotone", dot: 22, angle: 15, shape: "round", ink: "primary", ink2: "secondary", fade: false } },
+    // the gallery default: big, bold dots that read from across a gym (Halftoner-style)
+    { name: "Big dot", params: { mode: "color", dot: 42, angle: 45, shape: "round", fade: false } },
+    { name: "Mono ink", params: { mode: "mono", dot: 30, angle: 45, shape: "round", ink: "primary", fade: false } },
+    { name: "Fade", params: { mode: "color", dot: 36, angle: 45, shape: "round", fade: true } },
+    { name: "Duotone", params: { mode: "duotone", dot: 30, angle: 15, shape: "round", ink: "primary", ink2: "secondary", fade: false } },
   ],
 
   render(src, p, ctx) {

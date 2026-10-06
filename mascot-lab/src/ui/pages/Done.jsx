@@ -9,13 +9,15 @@ import { Button, CanvasImage, Notice, SpecLabel, cx, navigate, useConfirm, useTo
 import { CONTACT_EMAIL } from "../../brand.js";
 import { LEAD_TIME, LEAD_TIME_MAX_DAYS, LEAD_TIME_MIN_DAYS, PROOF_BUSINESS_DAYS, PROOF_TIME } from "../../order/catalog.js";
 import { formatMoney, totals } from "../../order/pricing.js";
-import { findLocalOrder } from "../../order/orderService.js";
+import { clearRevision, findLocalOrder, rememberRevision } from "../../order/orderService.js";
 import { formatDate } from "../../order/orderSheet.js";
 import { saveFile } from "../../platform/files.js";
+import { inArtifactRuntime } from "../../platform/claude.js";
 import { CopyText } from "../order/CopyText.jsx";
 import { OrderInboxView, useOwnerInbox } from "../order/OrderInbox.jsx";
 import { fileBase, makeDesignPack, makeOrderSheet, makeOrderText, makeRosterCsv } from "../order/exports.js";
-import { useEffectMeta, useMockups, useOrderGarments } from "../order/kit.js";
+import { placeholderText, useEffectMeta, useMockups, useOrderGarments } from "../order/kit.js";
+import { KitNotice } from "../order/KitNotice.jsx";
 import { getLastResult } from "../order/session.js";
 import { addBusinessDays, addDays, copyText, plural, shortDate } from "../order/util.js";
 import { OrderGuard } from "./Review.jsx";
@@ -56,7 +58,7 @@ export default function Done() {
   const inbox = useOwnerInbox();
   const [files, setFiles] = useState({});
   const submitted = state.order.status === "submitted";
-  const { mockups } = useMockups(submitted ? ids : [], { size: 176, detail: "fast", views: ["front"], priority: 2 });
+  const { mockups, kit } = useMockups(submitted ? ids : [], { size: 176, detail: "fast", views: ["front"], priority: 2 });
   const t = useMemo(() => totals(state, { garmentIds: ids }), [state.roster, state.extras, state.collection, ids.join()]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!submitted) {
@@ -86,6 +88,7 @@ export default function Done() {
   const localCopy = findLocalOrder(state.order.ref);
   const reason = last?.fallbackReason ?? localCopy?.reason ?? null;
   const notStored = !sent && !localCopy;
+  const why = reason ? `${reason.charAt(0).toUpperCase()}${reason.slice(1)}` : inArtifactRuntime() ? "This page can't send orders from your account" : "This preview isn't connected to an order inbox yet";
   const submittedAt = state.order.submittedAt ? new Date(state.order.submittedAt) : new Date();
   const proofBy = addBusinessDays(submittedAt, PROOF_BUSINESS_DAYS);
   const shipFrom = addDays(proofBy, LEAD_TIME_MIN_DAYS);
@@ -123,6 +126,7 @@ export default function Done() {
   };
 
   const editOrder = () => {
+    rememberRevision(state.order.ref);
     actions.reopenOrder();
     toast({ title: "Order reopened", body: "Make your changes, then review and send it again." });
     navigate("order");
@@ -131,11 +135,15 @@ export default function Done() {
     const ok = await confirm({
       kicker: "New order",
       title: "Start a new order?",
-      body: `This keeps your logo, look and kit, and clears the roster, extras and your contact details. Order ${ref} stays ${sent ? "with us" : "saved on this device"}; download its files first if you need them.`,
+      body: `This keeps your logo, look and kit, and clears the roster, extras and your contact details. ${
+        sent ? `Order ${ref} stays with us; download its files first if you want copies.`
+        : notStored ? `Order ${ref} isn't saved anywhere yet, so download its files first.`
+        : `Order ${ref} stays saved on this device.`}`,
       confirmLabel: "Start new order",
       tone: "danger",
     });
     if (!ok) return;
+    clearRevision();
     actions.setRoster([]);
     actions.setExtras({});
     actions.setContact({ ...EMPTY_CONTACT, rightsConfirmed: false });
@@ -143,10 +151,14 @@ export default function Done() {
     navigate("order");
   };
 
+  // an uploaded logo goes with a db order when it fits; otherwise the coach emails it
+  const uploaded = !state.logo.sampleId;
+  const logoWithOrder = channel === "artifact-db" ? !!localCopy?.order?.logo?.file : channel === "endpoint";
   const steps = sent
     ? [
-        { k: "Received", when: shortDate(submittedAt), body: <>Order <span className="dn-nowrap">{ref}</span> is in our inbox.</>, state: "done" },
-        { k: "Proof", when: `By ${shortDate(proofBy)}`, body: `We email a proof to ${email || "you"}: every garment, the sizes and the final price.`, state: "current" },
+        { k: "Received", when: shortDate(submittedAt), body: <>Order <span className="dn-nowrap">{ref}</span> is in our inbox{uploaded && logoWithOrder ? ", with your logo" : ""}.</>, state: "done" },
+        ...(uploaded && !logoWithOrder ? [{ k: "Send your logo", when: "Today", body: <>Your logo file didn't go with the request. Email it to {CONTACT_EMAIL} with <span className="dn-nowrap">{ref}</span> in the subject so we can build the proof.</>, state: "current" }] : []),
+        { k: "Proof", when: `By ${shortDate(proofBy)}`, body: `We email a proof to ${email || "you"}: every garment, the sizes and the final price.`, state: uploaded && !logoWithOrder ? undefined : "current" },
         { k: "You approve", when: "Your call", body: "Reply to approve, or ask for changes. Nothing is printed before you approve." },
         { k: "Production", when: LEAD_TIME, body: "Printing, sewing, and a quality check on every piece." },
         { k: "Ships", when: `${shortDate(shipFrom)} to ${shortDate(shipTo)}`, body: `If you approve the proof the day it arrives. Ships to ${state.contact.school || "your school"}.` },
@@ -163,14 +175,14 @@ export default function Done() {
     <div className="ord-page dn-page container">
       <section className={cx("dn-hero", sent ? "is-sent" : "is-local")} aria-labelledby="dn-title">
         <div className="dn-hero__main">
-          <SpecLabel variant={sent ? "success" : "warning"} size="lg">{sent ? "Request sent" : "Saved on this device"}</SpecLabel>
+          <SpecLabel variant={sent ? "success" : "warning"} size="lg">{sent ? "Request sent" : notStored ? "Not sent yet" : "Saved on this device"}</SpecLabel>
           <h1 className="dn-title" id="dn-title">{sent ? "You're in the queue" : "One step left"}</h1>
           {sent ? (
             <p className="lead">Order request sent. We'll email a proof to <strong>{email}</strong> within {PROOF_TIME}.</p>
           ) : (
             <p className="lead">
-              {reason ? `${reason.charAt(0).toUpperCase()}${reason.slice(1)}, so your order was saved on this device.` : "This preview isn't connected to an order inbox yet, so your order was saved on this device."}{" "}
-              Download the order pack and email it to <strong className="dn-addr">{CONTACT_EMAIL}</strong>.
+              {why}{notStored ? ", and this browser won't let us save the order." : ", so your order was saved on this device."}{" "}
+              Download the design pack below and email it to <strong className="dn-addr">{CONTACT_EMAIL}</strong>.
             </p>
           )}
           {notStored && (
@@ -179,14 +191,14 @@ export default function Done() {
             </Notice>
           )}
         </div>
-        <div className="dn-ticket" aria-label="Order reference">
+        <div className="dn-ticket" role="group" aria-label="Order reference">
           <span className="dn-ticket__k">Order ref</span>
           <CopyText text={ref} label="Copy ref" size="lg" />
           <dl className="dn-ticket__meta">
             <div><dt>Team</dt><dd>{team}</dd></div>
             <div><dt>Pieces</dt><dd>{t.units}</dd></div>
             <div><dt>Estimate</dt><dd>{formatMoney(t.total)}</dd></div>
-            <div><dt>{sent ? "Sent" : "Saved"}</dt><dd>{formatDate(state.order.submittedAt)}</dd></div>
+            <div><dt>{sent ? "Sent" : notStored ? "Date" : "Saved"}</dt><dd>{formatDate(state.order.submittedAt)}</dd></div>
           </dl>
         </div>
       </section>
@@ -206,13 +218,13 @@ export default function Done() {
 
       <div className="dn-grid">
         <section className="ord-panel dn-files" aria-labelledby="dn-files-h">
-          <h2 className="ord-panel__h" id="dn-files-h">{sent ? "Your copies" : "The order pack"}</h2>
+          <h2 className="ord-panel__h" id="dn-files-h">{sent ? "Your copies" : "Files to send"}</h2>
           <ul className="dn-filelist" role="list">
             <FileRow
               icon={<Package />}
               title="Design pack"
               ext=".zip"
-              desc="The look as a 2048 px PNG, every garment front and back at 1600 px, plus the order sheet, roster and order data."
+              desc="Print artwork as a 2048 px PNG, every garment front and back at 1200 px, plus the order sheet, roster and order data. Takes a few seconds to build."
               state={files.pack}
               onClick={dlPack}
             />
@@ -251,6 +263,8 @@ export default function Done() {
         </section>
       </div>
 
+      <KitNotice kit={kit} />
+
       <section className="ord-panel dn-kit" aria-labelledby="dn-kit-h">
         <div className="dn-kit__head">
           <h2 className="ord-panel__h" id="dn-kit-h">The kit</h2>
@@ -259,7 +273,7 @@ export default function Done() {
         <ul className="dn-kit__list" role="list">
           {ids.map((id) => (
             <li key={id}>
-              <CanvasImage canvas={mockups[id]?.front || null} ratio={1} stage="none" padding={0.05} className="ord-gstage" alt={byId[id]?.name || id} />
+              <CanvasImage canvas={mockups[id]?.front || null} error={!mockups[id]?.front ? placeholderText(kit) : null} ratio={1} stage="none" padding={0.05} className="ord-gstage" alt={byId[id]?.name || id} />
               <span>{byId[id]?.name || id}</span>
             </li>
           ))}

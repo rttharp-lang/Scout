@@ -12,7 +12,7 @@
 import {
   createCanvas, ctx2d, getPixels, resizeCanvas, clamp, lerp, hexToRgb, luminance,
   nearestColorIndex, insideDistance, outsideDistance, traceContours, maskBounds, rng, hashSeed,
-  makeNoise2D, smoothstep,
+  makeNoise2D, smoothstep, mix as mixHex,
 } from "../core.js";
 import { extractPalette } from "../image.js";
 
@@ -309,17 +309,22 @@ export default {
         densMul = L > 0.6 ? 0.55 : 1;
         layers = L < 0.35 ? 2 : 1;
       } else if (p.tool === "ballpoint" && L < 0.4) layers = 2;
+      // logo colours: a near-white area also gets a loose shading pass in a cool grey
+      // marker, so it reads as drawn (not as bare paper) on light paper and light shirts
+      const shadePass = !oneInk && L > 0.8;
+      const shadeInk = shadePass ? mixHex("#FFFFFF", lineInk, 0.36) : null;
       const inside = (i) => label[i] === k && thick[i] === 1;
-      for (let layer = 0; layer < layers; layer++) {
+      for (let layer = 0; layer < layers + (shadePass ? 1 : 0); layer++) {
+        const shading = layer >= layers;
         const ang = baseAngle + (rand() - 0.5) * 0.8 + (ri % 2 ? 0.35 : 0) + layer * (Math.PI / 2.3);
-        const sp = (spU / densMul) * uA;
+        const sp = (spU / densMul) * uA * (shading ? 1.7 : 1);
         const lines = hatch(inside, A, bounds, ang, sp, rand, sp * 0.45 * (0.4 + wob), 16 * uA);
         const warp = warpWith(ri * 3 + layer + 1);
-        o.strokeStyle = color;
+        o.strokeStyle = shading ? shadeInk : color;
         for (const pts of lines) {
           const press = 0.78 + rand() * 0.4;               // uneven pressure
-          o.lineWidth = w * sc * press;
-          o.globalAlpha = tool.alpha * (0.85 + rand() * 0.15);
+          o.lineWidth = w * sc * press * (shading ? 0.7 : 1);
+          o.globalAlpha = tool.alpha * (0.85 + rand() * 0.15) * (shading ? 0.75 : 1);
           o.stroke(wobblyPath(pts, kS, warp, false));
         }
       }

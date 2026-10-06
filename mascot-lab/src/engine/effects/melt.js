@@ -187,7 +187,7 @@ function planDrips(d, S, B, n, p, seed, sc) {
     hw = Math.min(hw, thick * 0.85);
     const across = runAcross(d, S, best, Math.max(0, Math.round(ry - Math.min(hw, thick * 0.5))), Math.ceil(hw * 4));
     hw = Math.min(hw, across * 0.42);
-    if (hw < 1.2 * Math.max(1, sc)) continue;
+    if (hw < 1.2 * sc) continue;            // 1024-units, so a preview drips where the export does
     if (drips.some((o) => Math.abs(o.cx - cx) < (o.hw + hw) * 1.6)) continue;
     const rb = hw * 1.22;
     const low = clamp(lowness[best], 0, 1.5);
@@ -455,7 +455,7 @@ export default {
       Math.max(0, bb.x0 - m), Math.min(S, bb.x1 + m),
       Math.max(0, Math.floor(bb.y0 - lift - m)), Math.min(S, Math.ceil(bb.y1 - lift + A * 1.5 + m)));
 
-    if (p.drips > 0 && melt > 0) {
+    if (p.drips > 0) {                       // melt 0 still drips (short drips, no sag)
       const B = bottomProfile(wd, S);
       const drips = planDrips(wd, S, B, Math.round(p.drips), p, ctx.seed, sc);
       // major inks of the artwork (≥ 7% of its area): drip cores only take these

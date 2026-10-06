@@ -131,6 +131,66 @@ function hash2(x, y, s) {
   return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
 }
 
+/**
+ * Analysis at D (palette regions, distance fields → height → normals, ink-darkness map).
+ * Independent of every param, so foil / spread / shine / sparkle / detail changes only
+ * re-shade (one-entry memo keyed by the source pixels and size).
+ */
+function analyse(srcD, data0, S, D, sc) {
+  const n = D * D;
+  const dataD = data0;
+  const small = resizeCanvas(srcD, Math.min(D, 160), Math.min(D, 160));
+  const pal = extractPalette(small, 7, { maxSamples: 4000 }).filter((c) => c.weight > 0.006);
+  const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
+  const label = labelMap(dataD, D, palRGB);
+  const alpha = new Float32Array(n), lum = new Float32Array(n);
+  for (let i = 0, j = 0; i < n; i++, j += 4) {
+    alpha[i] = dataD[j + 3] / 255;
+    lum[i] = (0.299 * dataD[j] + 0.587 * dataD[j + 1] + 0.114 * dataD[j + 2]) / 255;
+  }
+  const bb = maskBounds(alpha, D, D, 0.5);
+  if (bb.empty) return null;
+  const bevel = Math.max(1.5, 24 * sc), inner = Math.max(1.2, 9 * sc);
+  let dOut = insideDistance(alpha, D, D, 0.5);
+  // line art is inflated to a minimum stroke so the foil has a surface to show
+  let opaque = 0, thick = 0;
+  for (let i = 0; i < n; i++) if (alpha[i] >= 0.5) { opaque++; if (dOut[i] > 4 * sc) thick++; }
+  let alphaS = null;
+  if (opaque > 0 && thick < opaque * 0.12) {
+    alpha.set(dilateMask(alpha, D, D, Math.max(1, 3.4 * sc)));
+    for (let i = 0; i < n; i++) { lum[i] = 1; label[i] = alpha[i] >= 0.5 ? 0 : -1; }
+    dOut = insideDistance(alpha, D, D, 0.5);
+    alphaS = upsampleAlpha(alpha, D, S);
+  }
+  const dReg = regionDistance(label, D);
+  const lumS = blurMask(lum, D, D, Math.max(0.6, 1.5 * sc));
+  let H = new Float32Array(n);
+  for (let i = 0; i < n; i++) {
+    if (dOut[i] <= 0) continue;
+    H[i] = circ((dOut[i] - 0.5) / bevel) * (0.5 + 0.3 * circ(dReg[i] / inner) + 0.2 * lumS[i]);
+  }
+  H = blurMask(H, D, D, Math.max(0.8, 3 * sc));
+  // where the logo's darkness is kept: full on linework and region rims, partial deep
+  // inside big dark fields (a navy ring stays foil, just a deeper one)
+  const dk = new Float32Array(n);
+  const r0 = 3 * sc, r1 = 14 * sc;
+  for (let i = 0; i < n; i++) { const t = clamp((dReg[i] - r0) / (r1 - r0)); dk[i] = 1 - 0.3 * t * t * (3 - 2 * t); }
+  const dkS = blurMask(dk, D, D, Math.max(0.6, 1.5 * sc));
+  const { nx, ny, nz } = normalsFromHeight(H, D, D, bevel * 1.1);
+
+  return { bb, alphaS, nx, ny, nz, dkS };
+}
+
+/** FNV-1a over the RGBA words: a cheap content key for the analysis memo. */
+function pixelHash(data) {
+  const u = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >> 2);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < u.length; i++) h = Math.imul(h ^ u[i], 0x01000193);
+  return (h >>> 0).toString(36) + ":" + u.length;
+}
+
+let memo = null;   // { key, a } — last analysis (one entry: the logo being tuned)
+
 /* ───────────────────────────── effect ───────────────────────────── */
 
 export default {
@@ -173,51 +233,17 @@ export default {
     const D = Math.min(S, 1024);
     const kD = D / S;
     const sc = ctx.scale * kD;
-    const n = D * D;
     const spread = p.spread / 100, shine = p.shine / 100, sparkle = p.sparkle / 100, detail = p.detail / 100;
     const base = SPECTRA[p.base] ? p.base : "silver";
 
-    /* analysis at D */
+    /* analysis at D (memoized) */
     const srcD = D === S ? src : resizeCanvas(src, D, D);
-    const dataD = getPixels(srcD).data;
-    const small = resizeCanvas(srcD, Math.min(D, 160), Math.min(D, 160));
-    const pal = extractPalette(small, 7, { maxSamples: 4000 }).filter((c) => c.weight > 0.006);
-    const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
-    const label = labelMap(dataD, D, palRGB);
-    const alpha = new Float32Array(n), lum = new Float32Array(n);
-    for (let i = 0, j = 0; i < n; i++, j += 4) {
-      alpha[i] = dataD[j + 3] / 255;
-      lum[i] = (0.299 * dataD[j] + 0.587 * dataD[j + 1] + 0.114 * dataD[j + 2]) / 255;
-    }
-    const bb = maskBounds(alpha, D, D, 0.5);
-    if (bb.empty) return createCanvas(S, S);
-    const bevel = Math.max(1.5, 24 * sc), inner = Math.max(1.2, 9 * sc);
-    let dOut = insideDistance(alpha, D, D, 0.5);
-    // line art is inflated to a minimum stroke so the foil has a surface to show
-    let opaque = 0, thick = 0;
-    for (let i = 0; i < n; i++) if (alpha[i] >= 0.5) { opaque++; if (dOut[i] > 4 * sc) thick++; }
-    let alphaS = null;
-    if (opaque > 0 && thick < opaque * 0.12) {
-      alpha.set(dilateMask(alpha, D, D, Math.max(1, 3.4 * sc)));
-      for (let i = 0; i < n; i++) { lum[i] = 1; label[i] = alpha[i] >= 0.5 ? 0 : -1; }
-      dOut = insideDistance(alpha, D, D, 0.5);
-      alphaS = upsampleAlpha(alpha, D, S);
-    }
-    const dReg = regionDistance(label, D);
-    const lumS = blurMask(lum, D, D, Math.max(0.6, 1.5 * sc));
-    let H = new Float32Array(n);
-    for (let i = 0; i < n; i++) {
-      if (dOut[i] <= 0) continue;
-      H[i] = circ((dOut[i] - 0.5) / bevel) * (0.5 + 0.3 * circ(dReg[i] / inner) + 0.2 * lumS[i]);
-    }
-    H = blurMask(H, D, D, Math.max(0.8, 3 * sc));
-    // where the logo's darkness is kept: full on linework and region rims, partial deep
-    // inside big dark fields (a navy ring stays foil, just a deeper one)
-    const dk = new Float32Array(n);
-    const r0 = 3 * sc, r1 = 14 * sc;
-    for (let i = 0; i < n; i++) { const t = clamp((dReg[i] - r0) / (r1 - r0)); dk[i] = 1 - 0.55 * t * t * (3 - 2 * t); }
-    const dkS = blurMask(dk, D, D, Math.max(0.6, 1.5 * sc));
-    const { nx, ny, nz } = normalsFromHeight(H, D, D, bevel * 1.1);
+    const data0 = getPixels(srcD).data;
+    const key = `${S}|${D}|${pixelHash(data0)}`;
+    if (!memo || memo.key !== key) memo = { key, a: analyse(srcD, data0, S, D, sc) };
+    const A = memo.a;
+    if (!A) return createCanvas(S, S);
+    const { bb, alphaS, nx, ny, nz, dkS } = A;
 
     /* coarse fields: slow noise for the liquid swirl */
     const spanS = Math.max(bb.x1 - bb.x0, bb.y1 - bb.y0) / kD;   // logo size, output px
@@ -234,6 +260,7 @@ export default {
 
     /* foil look */
     const lut = spectrumLUT(SPECTRA[base]);
+    const lutInk = base === "black" ? lut : spectrumLUT(SPECTRA.black);   // dark inks → oil-slick foil
     const dark = base === "black";
     const pearl = base === "pearl";
     // hue cycles across the logo: diagonal sweep + surface tilt + swirl
@@ -307,25 +334,35 @@ export default {
         // a broad diagonal light sweep where the foil flashes silver-white
         const bd = ((x - cx) + (y - cy)) * 0.7071 / spanS + Nx * 0.3 + Ny * 0.25 + sw * 0.08 + 0.22;
         const sweep = Math.exp(-bd * bd * 22) * (0.25 + 0.55 * shine);
+        const L = alphaS ? 1 : (0.299 * sd[j] + 0.587 * sd[j + 1] + 0.114 * sd[j + 2]) / 255;
+        const inkL = L * 1.25 > 1 ? 1 : L * 1.25;
         if (dark) {
           // black holo: glossy black body, the spectrum lives on the bevels and the sweep
-          const film = clamp(0.3 + edge * 1.5 + sweep * 1.3);
-          const sh = 0.38 + 0.7 * clamp(ndl);
+          // (light inks carry a richer film so the mascot reads on a black shirt)
+          const film = clamp(0.28 + 0.34 * inkL + edge * 1.5 + sweep * 1.3);
+          const sh = 0.42 + 0.74 * clamp(ndl);
           r = (12 + (r - 12) * film) * sh; g = (12 + (g - 12) * film) * sh; b = (16 + (b - 16) * film) * sh;
         } else {
-          const sat = 1 + edge * 1.6;
+          const sat = 1.12 + edge * 1.7;
           const m = (r + g + b) / 3;
           r = m + (r - m) * sat; g = m + (g - m) * sat; b = m + (b - m) * sat;
-          const shade = pearl ? 0.85 + 0.2 * clamp(ndl) : 0.74 + 0.38 * clamp(ndl);
+          const shade = pearl ? 0.84 + 0.22 * clamp(ndl) : 0.66 + 0.46 * clamp(ndl);
           r *= shade; g *= shade; b *= shade;
           const wk = sweep * (pearl ? 0.5 : 0.65);
           r += (246 - r) * wk; g += (248 - g) * wk; b += (252 - b) * wk;
         }
-        // logo detail: dark inks stay dark
-        const L = alphaS ? 1 : (0.299 * sd[j] + 0.587 * sd[j + 1] + 0.114 * sd[j + 2]) / 255;
+        // logo detail: dark inks print as a smoked, oil-slick foil (deep body, the spectrum
+        // only in its sheen) so key lines stay dark but still read as foil
         const dkv = dkS[i00] * w00 + dkS[i01] * w01 + dkS[i10] * w10 + dkS[i11] * w11;
-        const f = 1 - detail * dkv * (1 - (lo + (1 - lo) * Math.min(1, L * 1.15)));
-        r *= f; g *= f; b *= f;
+        const ink = Math.min(1, detail * 1.4) * dkv * (1 - inkL) * Math.sqrt(1 - inkL);
+        if (ink > 0.003 && !dark) {
+          const film = clamp(0.12 + edge * 1.6 + sweep * 0.9);
+          const sh = 0.32 + 0.75 * clamp(ndl);
+          const kr = (10 + (lutInk[li * 3] - 10) * film) * sh, kg = (11 + (lutInk[li * 3 + 1] - 11) * film) * sh, kb = (16 + (lutInk[li * 3 + 2] - 16) * film) * sh;
+          r += (kr - r) * ink; g += (kg - g) * ink; b += (kb - b) * ink;
+        }
+        const f = dark ? 1 - detail * dkv * (1 - (lo + (1 - lo) * inkL)) : 1 - 0.55 * ink;
+        if (dark) { r *= f; g *= f; b *= f; }
         // specular: R·L = 2 Nz (N·L) − Lz
         let s1 = 2 * Nz * (ndl - tilt) - L1[2];
         s1 = s1 > 0 ? s1 : 0;

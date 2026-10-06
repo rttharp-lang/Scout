@@ -10,8 +10,8 @@
 // Structure (see halftone.js): fields at W ≤ 1024 (thread labels, per-region edge
 // distance, traced region outlines) → vector stitches generated in S px and stroked at S.
 import {
-  createCanvas, ctx2d, getPixels, resizeCanvas, alphaMask, insideDistance, signedDistance, blurMask,
-  traceContours, contoursToPath, maskToCanvas, blurCanvas, clamp, hexToRgb, rgbToHex, mix,
+  createCanvas, ctx2d, getPixels, resizeCanvas, alphaMask, insideDistance, outsideDistance, blurMask,
+  traceContours, contoursToPath, maskToCanvas, clamp, hexToRgb, rgbToHex,
   nearestColorIndex, makeNoise2D, hashSeed, luminance, contrastRatio, smoothstep,
 } from "../core.js";
 import { extractPalette } from "../image.js";
@@ -24,8 +24,8 @@ const ANGLE_STEPS = [0, 90, 45, -45, 30, -60, 70, -20];
 
 /** Thread labels at W: palette quantization + a 3×3 majority filter (no 1-px slivers). */
 function threadLabels(small, mask, W) {
-  const tiny = resizeCanvas(small, Math.min(W, 200), Math.min(W, 200));
-  let pal = extractPalette(tiny, 7, { maxSamples: 8000 }).filter((c) => c.weight > 0.004);
+  const tiny = resizeCanvas(small, Math.min(W, 160), Math.min(W, 160));
+  let pal = extractPalette(tiny, 7, { maxSamples: 5000 }).filter((c) => c.weight > 0.004);
   if (!pal.length) pal = [{ hex: "#808080", weight: 1 }];
   const colors = pal.map((c) => hexToRgb(c.hex));
   const { data } = getPixels(small);
@@ -58,6 +58,20 @@ function threadLabels(small, mask, W) {
     }
     label = out;
   }
+  // thread colour = mean of each region's interior pixels (AA edges drag cluster means)
+  const sum = new Float64Array(K * 4);
+  for (let y = 1; y < W - 1; y++) {
+    for (let x = 1; x < W - 1; x++) {
+      const i = y * W + x, l = label[i];
+      if (l < 0 || label[i - 1] !== l || label[i + 1] !== l || label[i - W] !== l || label[i + W] !== l) continue;
+      const j = i * 4;
+      sum[l * 4] += data[j]; sum[l * 4 + 1] += data[j + 1]; sum[l * 4 + 2] += data[j + 2]; sum[l * 4 + 3]++;
+    }
+  }
+  for (let k = 0; k < K; k++) {
+    const c = sum[k * 4 + 3];
+    if (c >= 8) colors[k] = hexToRgb(rgbToHex(sum[k * 4] / c, sum[k * 4 + 1] / c, sum[k * 4 + 2] / c));
+  }
   return { label, colors };
 }
 
@@ -79,6 +93,111 @@ function regionDistance(label, W) {
   const d = insideDistance(interior, W, W);
   for (let i = 0; i < n; i++) if (label[i] >= 0) d[i] += 0.5;
   return d;
+}
+
+/**
+ * Small colour areas enclosed by the logo (stitch dashes, pupils, small lettering — and
+ * the anti-aliasing rings around them) are details: a digitizer runs the surrounding fill
+ * straight under them and stitches the detail on top. → { base: labels with every detail
+ * group merged into its dominant surround, det: labels of the detail pixels only (−1
+ * elsewhere), count }.
+ */
+function splitDetails(label, W, maxArea) {
+  const n = W * W;
+  const base = new Int8Array(label);
+  const det = new Int8Array(n).fill(-1);
+  const small = new Uint8Array(n);
+  const seen = new Uint8Array(n);
+  const queue = new Int32Array(n);
+  const nb = new Int32Array(4);
+  const nbs = (i) => {
+    const x = i % W;
+    nb[0] = x > 0 ? i - 1 : -1; nb[1] = x < W - 1 ? i + 1 : -1; nb[2] = i >= W ? i - W : -1; nb[3] = i < n - W ? i + W : -1;
+    return nb;
+  };
+  // 1. small same-colour components (big ones stop growing once they pass maxArea)
+  for (let s = 0; s < n; s++) {
+    const l = label[s];
+    if (l < 0 || seen[s]) continue;
+    let head = 0, tail = 0;
+    queue[tail++] = s; seen[s] = 1;
+    while (head < tail) {
+      const i = queue[head++];
+      nbs(i);
+      for (let q = 0; q < 4; q++) { const j = nb[q]; if (j >= 0 && !seen[j] && label[j] === l) { seen[j] = 1; queue[tail++] = j; } }
+    }
+    if (tail <= maxArea) for (let q = 0; q < tail; q++) small[queue[q]] = 1;
+  }
+  // 2. groups of touching small components → merged into their dominant surround
+  seen.fill(0);
+  const K = 128;
+  const votes = new Int32Array(K);
+  let count = 0;
+  for (let s = 0; s < n; s++) {
+    if (!small[s] || seen[s]) continue;
+    let head = 0, tail = 0, open = false;
+    votes.fill(0);
+    queue[tail++] = s; seen[s] = 1;
+    while (head < tail) {
+      const i = queue[head++];
+      nbs(i);
+      for (let q = 0; q < 4; q++) {
+        const j = nb[q];
+        if (j < 0) { open = true; continue; }
+        if (small[j]) { if (!seen[j]) { seen[j] = 1; queue[tail++] = j; } continue; }
+        const lj = label[j];
+        if (lj < 0) open = true; else votes[lj]++;
+      }
+    }
+    if (open || tail > maxArea * 3) continue;
+    let best = -1, bv = 0, tot = 0;
+    for (let k = 0; k < K; k++) { tot += votes[k]; if (votes[k] > bv) { bv = votes[k]; best = k; } }
+    if (best < 0 || bv < tot * 0.6) continue;
+    count++;
+    for (let q = 0; q < tail; q++) {
+      const i = queue[q];
+      if (label[i] === best) continue; // an AA sliver of the surround's own colour
+      base[i] = best; det[i] = label[i];
+    }
+  }
+  return { base, det, count };
+}
+
+/** Area-average a W×W map down to P×P. */
+function areaDown(m, W, P) {
+  const out = new Float32Array(P * P);
+  const k = W / P;
+  for (let y = 0; y < P; y++) {
+    const y0 = Math.floor(y * k), y1 = Math.max(y0 + 1, Math.floor((y + 1) * k));
+    for (let x = 0; x < P; x++) {
+      const x0 = Math.floor(x * k), x1 = Math.max(x0 + 1, Math.floor((x + 1) * k));
+      let s = 0;
+      for (let yy = y0; yy < y1; yy++) for (let xx = x0; xx < x1; xx++) s += m[yy * W + xx];
+      out[y * P + x] = s / ((y1 - y0) * (x1 - x0));
+    }
+  }
+  return out;
+}
+
+/** Bilinear upsample of a P×P field to W×W (pixel centres aligned), times mul. */
+function bilinearUp(m, P, W, mul) {
+  const out = new Float32Array(W * W);
+  const k = P / W;
+  const xi = new Int32Array(W), xf = new Float32Array(W);
+  for (let x = 0; x < W; x++) {
+    const f = clamp((x + 0.5) * k - 0.5, 0, P - 1.001);
+    xi[x] = f | 0; xf[x] = f - (f | 0);
+  }
+  for (let y = 0; y < W; y++) {
+    const fy = clamp((y + 0.5) * k - 0.5, 0, P - 1.001);
+    const y0 = fy | 0, ty = fy - y0, r0 = y0 * P, r1 = r0 + P, row = y * W;
+    for (let x = 0; x < W; x++) {
+      const i0 = xi[x], tx = xf[x];
+      const a = m[r0 + i0], b = m[r0 + i0 + 1], c = m[r1 + i0], d = m[r1 + i0 + 1];
+      out[row + x] = ((a + (b - a) * tx) * (1 - ty) + (c + (d - c) * tx) * ty) * mul;
+    }
+  }
+  return out;
 }
 
 /** Coverage of the shape {sd < 0} with interior holes filled (flood fill from the border). */
@@ -121,6 +240,7 @@ function fillStitches(k, lab, rd, W, kS, box, th, rowSp, minD, satin, stitchLen,
   const du = Math.max(0.5, 0.9 / kS);       // ≈ one field pixel
   const bendA = rowSp * 0.9, bf = 1 / (rowSp * 40), bv = 1 / (rowSp * 30);
   const gap = Math.max(0.25, rowSp * 0.12);
+  const NS = 8;
   const inside = (u, v) => {
     const x = u * c - v * s, y = u * s + v * c;
     const xi = (x * kS) | 0, yi = (y * kS) | 0;
@@ -138,8 +258,11 @@ function fillStitches(k, lab, rd, W, kS, box, th, rowSp, minD, satin, stitchLen,
   for (let v = v0 + rowSp * 0.5; v <= v1; v += rowSp, j++) {
     let start = null;
     const phase = ((j * 0.382) % 1) * stitchLen;
+    // the bend is low-frequency: sample its noise every NS steps and interpolate
+    let nA = noise(u0 * bf, v * bv), nB = noise((u0 + du * NS) * bf, v * bv), ns = 0;
     for (let u = u0; u <= u1 + du; u += du) {
-      const vb = v + bendA * noise(u * bf, v * bv);
+      if (ns === NS) { ns = 0; nA = nB; nB = noise((u + du * NS) * bf, v * bv); }
+      const vb = v + bendA * (nA + (nB - nA) * (ns++ / NS));
       const inn = u <= u1 && inside(u, vb);
       if (inn && start === null) start = u;
       else if (!inn && start !== null) {
@@ -211,15 +334,17 @@ function borderStitches(contours, k, lab, rd, W, kS, toS, bw, sp, onlyThin = fal
       if (labAt(px + nx * 1.5 * toS, py + ny * 1.5 * toS) !== k) { nx = -nx; ny = -ny; }
       if (labAt(px + nx * 1.5 * toS, py + ny * 1.5 * toS) !== k) continue;
       // march inward to find the stroke's half width (peak of the region distance)
-      let peak = 0, sPeak = 0, thin = false;
+      let peak = 0, sPeak = 0, thin = false, exit = Infinity;
       for (let sIn = stepIn; sIn <= bw + stepIn; sIn += stepIn) {
-        const r = rdAt(px + nx * sIn, py + ny * sIn);
+        const qx = px + nx * sIn, qy = py + ny * sIn;
+        if (labAt(qx, qy) !== k) { thin = true; exit = sIn - stepIn * 0.5; if (!(peak > 0)) { peak = exit / 2; sPeak = exit / 2; } break; }
+        const r = rdAt(qx, qy);
         if (r > peak) { peak = r; sPeak = sIn; } else if (r < peak - stepIn * 0.75) { thin = true; break; }
       }
-      let len = bw;
+      let len = Math.min(bw, exit);
       if (onlyThin && !(thin && sPeak < bw)) continue;
       if (thin && sPeak < bw) {
-        len = Math.min(bw, Math.max(sPeak, peak) * 2);
+        len = Math.min(bw, exit, Math.max(sPeak, peak) * 2);
         if (q & 1) continue; // both sides of a thin stroke emit: halve each so density stays even
       }
       if (len < 0.8) continue;
@@ -238,7 +363,8 @@ function drawThreads(o, segs, rgb, tw, sheen, cap) {
   const shadowCol = rgbToHex(rgb.map((v) => v * 0.45));
   const sheenCol = rgbToHex(rgb.map((v) => v + (255 - v) * (lum > 0.7 ? 1 : 0.62)));
   const bodyP = new Path2D(), shadeP = new Path2D();
-  const B = 4;
+  const shade = tw >= 2.4; // a sub-pixel row shadow costs a stroke and shows nothing
+  const B = shade ? 4 : 3;
   const sheenP = Array.from({ length: B }, () => new Path2D());
   for (let q = 0; q < segs.length; q += 4) {
     const ax = segs[q], ay = segs[q + 1], bx = segs[q + 2], by = segs[q + 3];
@@ -250,7 +376,7 @@ function drawThreads(o, segs, rgb, tw, sheen, cap) {
     if (nx * LIGHT[0] + ny * LIGHT[1] < 0) { nx = -nx; ny = -ny; }
     bodyP.moveTo(ax, ay); bodyP.lineTo(bx, by);
     const so = tw * 0.3;
-    shadeP.moveTo(ax - nx * so, ay - ny * so); shadeP.lineTo(bx - nx * so, by - ny * so);
+    if (shade) { shadeP.moveTo(ax - nx * so, ay - ny * so); shadeP.lineTo(bx - nx * so, by - ny * so); }
     const across = Math.abs(tx * LIGHT[1] - ty * LIGHT[0]); // |sin| between thread and light
     const bucket = Math.min(B - 1, (across * B) | 0);
     const sh = tw * 0.14, cut = Math.min(L * 0.22, tw * 1.2);
@@ -258,21 +384,23 @@ function drawThreads(o, segs, rgb, tw, sheen, cap) {
     p.moveTo(ax + tx * cut + nx * sh, ay + ty * cut + ny * sh);
     p.lineTo(bx - tx * cut + nx * sh, by - ty * cut + ny * sh);
   }
-  o.lineCap = cap;
+  o.lineCap = shade ? cap : "butt";
   o.strokeStyle = body;
   o.lineWidth = tw * 0.9;
   o.stroke(bodyP);
-  o.lineCap = "butt";
-  o.globalAlpha = 0.5;
-  o.strokeStyle = shadowCol;
-  o.lineWidth = tw * 0.26;
-  o.stroke(shadeP);
-  o.lineCap = "round";
+  if (shade) {
+    o.lineCap = "butt";
+    o.globalAlpha = 0.5 - 0.22 * lum; // pale thread: softer row shadows (white reads white)
+    o.strokeStyle = shadowCol;
+    o.lineWidth = tw * 0.26;
+    o.stroke(shadeP);
+  }
+  o.lineCap = shade ? "round" : "butt"; // round caps on sub-2 px lines cost time, show nothing
   o.strokeStyle = sheenCol;
   o.lineWidth = tw * 0.32;
   for (let b = 0; b < B; b++) {
     const a = sheen * (0.12 + 0.88 * Math.pow((b + 0.5) / B, 1.6));
-    if (a < 0.02) continue;
+    if (a < (shade ? 0.02 : 0.08)) continue;
     o.globalAlpha = Math.min(1, a);
     o.stroke(sheenP[b]);
   }
@@ -323,12 +451,16 @@ export default {
     for (let i = 0; i < n; i++) mask[i] = mask[i] * 2 > 1 ? 1 : mask[i] * 2;
     const { label, colors } = threadLabels(small, mask, W);
     mark("tl");
-    const rd = regionDistance(label, W);
+    // details (dashes, pupils, small type) come off the base map and are stitched on top
+    const detMax = Math.max(24, Math.pow(30 * scale * kS, 2));
+    const { base, det, count: detCount } = splitDetails(label, W, detMax);
+    const rd = regionDistance(base, W);
+    const rdDet = detCount ? regionDistance(det, W) : null;
     mark("labels");
 
     // stitch geometry (S px)
     const dens = p.density / 100;
-    const rowSp = Math.max(S <= 512 ? 1.9 : 1.5, (4.2 * scale) / dens);
+    const rowSp = Math.max(S <= 512 ? 2.1 : 1.5, (4.2 * scale) / dens);
     const tw = rowSp * 1.08;
     const bw = p.border * scale;
     const satin = p.mode === "satin";
@@ -341,15 +473,23 @@ export default {
     let sdP = null;
     const mw = 15 * scale; // merrow width
     if (p.patch) {
-      const sd = signedDistance(mask, W, W);
-      const pb = (18 * scale + mw) * kS, close = 48 * scale * kS;
-      const m1 = new Float32Array(n);
-      for (let i = 0; i < n; i++) m1[i] = clamp(pb + close - sd[i] + 0.5);
-      sdP = signedDistance(m1, W, W);
-      for (let i = 0; i < n; i++) sdP[i] += close;
-      sdP = signedDistance(filledCoverage(sdP, W), W, W); // a merrowed blank has no holes
+      // closing = dilate by (border + close), fill the holes (a merrowed blank has none),
+      // erode by close. Euclidean erosion is exact on the inside distance: d(p, E) = d(p, M) − r.
+      // The blank is a smooth shape: built on a half-res grid P, its distance field upsampled.
+      const P = Math.max(96, Math.round(W / 2)), kP = P / W, nP = P * P;
+      const maskP = areaDown(mask, W, P);
+      const od = outsideDistance(maskP, P, P);
+      const pb = (18 * scale + mw) * kS * kP, close = 48 * scale * kS * kP;
+      const m1 = new Float32Array(nP);
+      for (let i = 0; i < nP; i++) m1[i] = od[i] === 0 ? 1 : clamp(pb + close - (od[i] - 0.5) + 0.5);
+      for (let i = 0; i < nP; i++) m1[i] = 0.5 - m1[i];
+      const ins = insideDistance(filledCoverage(m1, P), P, P);
+      const sdS = new Float32Array(nP);
+      for (let i = 0; i < nP; i++) sdS[i] = ins[i] > 0 ? close + 0.5 - ins[i] : close + 1;
+      sdP = bilinearUp(blurMask(sdS, P, P, 0.6), P, W, 1 / kP);
     }
 
+    mark("blank");
     // ── raised shadow under the whole piece
     {
       const cov = new Float32Array(n);
@@ -357,8 +497,12 @@ export default {
       else cov.set(mask);
       const sh = blurMask(cov, W, W, Math.max(0.8, 3 * scale * kS));
       const shc = maskToCanvas(sh, W, W, "#000000");
+      // pale thread on its own (a white logo) needs a deeper raised shadow to read at all
+      let lsum = 0, lc = 0;
+      for (let i = 0; i < n; i += 5) { const l = label[i]; if (l >= 0) { const c = colors[l]; lsum += (0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]) / 255; lc++; } }
+      const pale = sdP ? 0 : smoothstep(0.7, 0.92, lc ? lsum / lc : 0);
       o.save();
-      o.globalAlpha = sdP ? 0.42 : 0.34;
+      o.globalAlpha = sdP ? 0.42 : 0.34 + 0.2 * pale;
       o.imageSmoothingEnabled = true;
       o.drawImage(shc, 2.2 * scale, 3.2 * scale, S, S);
       o.restore();
@@ -434,69 +578,103 @@ export default {
     }
     mark("patch");
 
-    // ── regions: outline, fill stitches, satin border
+    // ── regions: outline, fill stitches, satin border — the base fills first, then details
     const K = colors.length;
-    const regions = [];
-    const bx0 = new Int32Array(K).fill(W), by0 = new Int32Array(K).fill(W), bx1 = new Int32Array(K).fill(-1), by1 = new Int32Array(K).fill(-1);
-    const area = new Int32Array(K);
-    for (let y = 0; y < W; y++) {
-      for (let x = 0; x < W; x++) {
-        const l = label[y * W + x];
-        if (l < 0) continue;
-        area[l]++;
-        if (x < bx0[l]) bx0[l] = x; if (x > bx1[l]) bx1[l] = x;
-        if (y < by0[l]) by0[l] = y; if (y > by1[l]) by1[l] = y;
-      }
-    }
-    const order = [...Array(K).keys()].filter((k) => area[k] > 0).sort((a, b) => area[b] - area[a]);
-    const blurR = Math.max(0.5, 0.7 * kS * toS);
-    order.forEach((k, idx) => {
-      // trace this thread's outline on a crop around its bounding box (cheap for small regions)
-      const pad = 4;
-      const cx0 = Math.max(0, bx0[k] - pad), cy0 = Math.max(0, by0[k] - pad);
-      const cw = Math.min(W, bx1[k] + 1 + pad) - cx0, ch = Math.min(W, by1[k] + 1 + pad) - cy0;
-      const side = Math.max(cw, ch);
-      const mk = new Float32Array(side * side);
-      for (let y = 0; y < ch; y++) {
-        const row = (cy0 + y) * W + cx0;
-        for (let x = 0; x < cw; x++) if (label[row + x] === k) mk[y * side + x] = 1;
-      }
-      const soft = blurMask(mk, side, side, blurR);
-      const contours = traceContours(soft, side, side, 0.5, 0.6);
-      for (const c of contours) for (const pt of c) { pt[0] += cx0; pt[1] += cy0; }
-      const th = (p.angle + ANGLE_STEPS[idx % ANGLE_STEPS.length]) * DEG;
-      const box = { x0: bx0[k] * toS, y0: by0[k] * toS, x1: (bx1[k] + 1) * toS, y1: (by1[k] + 1) * toS };
-      regions.push({ k, contours, th, box, path: contoursToPath(contours, toS) });
-    });
-    mark("contours");
-
     const sheen = p.sheen / 100;
     const minFill = Math.max(0, (bw > 0.5 ? bw : 3.5 * scale) * 0.5 * kS);
-    for (const r of regions) {
-      const rgb = colors[r.k];
-      const segs = fillStitches(r.k, label, rd, W, kS, r.box, r.th, rowSp, minFill, satin, stitchLen, noise);
-      o.save();
-      o.clip(r.path);
-      // the fabric/underlay between thread rows shows as a darker base
-      o.fillStyle = rgbToHex(rgb.map((v) => v * 0.62));
-      o.fill(r.path);
-      drawThreads(o, segs, rgb, tw, sheen, "round");
-      o.restore();
-    }
-    mark("fill");
-    {
+    const blurR = Math.max(0.5, 0.7 * kS * toS);
+    const buildRegions = (lab, angleOffset, rdm) => {
+      const regions = [];
+      const bx0 = new Int32Array(K).fill(W), by0 = new Int32Array(K).fill(W), bx1 = new Int32Array(K).fill(-1), by1 = new Int32Array(K).fill(-1);
+      const area = new Int32Array(K);
+      const deep = new Float32Array(K); // deepest point: can this thread hold a fill row at all?
+      for (let y = 0; y < W; y++) {
+        for (let x = 0; x < W; x++) {
+          const l = lab[y * W + x];
+          if (l < 0) continue;
+          area[l]++;
+          if (rdm[y * W + x] > deep[l]) deep[l] = rdm[y * W + x];
+          if (x < bx0[l]) bx0[l] = x; if (x > bx1[l]) bx1[l] = x;
+          if (y < by0[l]) by0[l] = y; if (y > by1[l]) by1[l] = y;
+        }
+      }
+      const order = [...Array(K).keys()].filter((k) => area[k] > 0).sort((a, b) => area[b] - area[a]);
+      order.forEach((k, idx) => {
+        // trace this thread's outline on a crop around its bounding box (cheap for small regions)
+        const pad = 4;
+        const cx0 = Math.max(0, bx0[k] - pad), cy0 = Math.max(0, by0[k] - pad);
+        const cw = Math.min(W, bx1[k] + 1 + pad) - cx0, ch = Math.min(W, by1[k] + 1 + pad) - cy0;
+        const mk = new Float32Array(cw * ch);
+        for (let y = 0; y < ch; y++) {
+          const row = (cy0 + y) * W + cx0;
+          for (let x = 0; x < cw; x++) if (lab[row + x] === k) mk[y * cw + x] = 1;
+        }
+        const soft = blurMask(mk, cw, ch, blurR);
+        const contours = traceContours(soft, cw, ch, 0.5, 0.6);
+        for (const c of contours) for (const pt of c) { pt[0] += cx0; pt[1] += cy0; }
+        const th = (p.angle + angleOffset + ANGLE_STEPS[idx % ANGLE_STEPS.length]) * DEG;
+        const box = { x0: bx0[k] * toS, y0: by0[k] * toS, x1: (bx1[k] + 1) * toS, y1: (by1[k] + 1) * toS };
+        regions.push({ k, contours, th, box, path: contoursToPath(contours, toS), fill: deep[k] >= minFill });
+      });
+      return regions;
+    };
+    // big renders clip every region to its outline (crisp colour boundaries); small ones
+    // stitch everything on one layer and clip once to the logo — an AA clip per region
+    // costs more than all the stitches, and a sub-pixel cap overlap is what real stitches do
+    const perRegionClip = S > 640;
+    const layer = perRegionClip ? null : createCanvas(S, S);
+    const L = perRegionClip ? o : ctx2d(layer);
+    const clipTo = (path) => { L.save(); if (perRegionClip) L.clip(path); };
+    const stitchRegions = (regions, lab, rdm) => {
+      for (const r of regions) {
+        const rgb = colors[r.k];
+        const segs = r.fill ? fillStitches(r.k, lab, rdm, W, kS, r.box, r.th, rowSp, minFill, satin, stitchLen, noise) : [];
+        clipTo(r.path);
+        const o = L;
+        // the fabric/underlay between thread rows shows as a darker base
+        const lum = luminance(rgbToHex(rgb));
+        o.fillStyle = rgbToHex(rgb.map((v) => v * (0.62 + 0.16 * lum)));
+        o.fill(r.path);
+        drawThreads(o, segs, rgb, tw, sheen, "round");
+        o.restore();
+      }
       // satin columns: around every region (border width), and always for hairlines and
       // thin strokes — a fill can't hold a 1 mm line, a digitizer would satin it
       const sp = rowSp * 0.85;
       const thinOnly = bw <= 0.5;
       const bwEff = thinOnly ? 7 * scale : bw;
       for (const r of regions) {
-        const segs = borderStitches(r.contours, r.k, label, rd, W, kS, toS, bwEff, sp, thinOnly);
-        o.save();
-        o.clip(r.path);
-        drawThreads(o, segs, colors[r.k], tw * 0.95, sheen, "butt");
-        o.restore();
+        const segs = borderStitches(r.contours, r.k, lab, rdm, W, kS, toS, bwEff, sp, thinOnly);
+        clipTo(r.path);
+        drawThreads(L, segs, colors[r.k], tw * 0.95, sheen, "butt");
+        L.restore();
       }
+    };
+    const baseRegions = buildRegions(base, 0, rd);
+    mark("contours");
+    stitchRegions(baseRegions, base, rd);
+    mark("fill");
+    mark("base");
+    if (detCount) {
+      // details: a raised satin piece on top of the fill, with a hairline of shadow
+      const detRegions = buildRegions(det, 90, rdDet);
+      mark("detBuild");
+      const shadowP = new Path2D();
+      for (const r of detRegions) shadowP.addPath(r.path);
+      L.save();
+      L.translate(0.6 * scale + 0.2, 0.9 * scale + 0.3);
+      L.fillStyle = "rgba(0,0,0,0.35)";
+      L.fill(shadowP);
+      L.restore();
+      stitchRegions(detRegions, det, rdDet);
+    }
+    mark("details");
+    if (layer) {
+      L.globalCompositeOperation = "destination-in";
+      L.imageSmoothingEnabled = true;
+      L.drawImage(maskToCanvas(mask, W, W, "#000"), 0, 0, S, S);
+      L.globalCompositeOperation = "source-over";
+      o.drawImage(layer, 0, 0);
     }
     mark("border");
 
@@ -505,7 +683,11 @@ export default {
     {
       const dome = (5 + p.border * 0.5) * scale * kS;
       const hgt = new Float32Array(n);
-      for (let i = 0; i < n; i++) if (label[i] >= 0) { const t = clamp(rd[i] / dome); hgt[i] = Math.sqrt(t * (2 - t)); }
+      for (let i = 0; i < n; i++) {
+        if (base[i] < 0) continue;
+        const t = clamp((det[i] >= 0 ? rdDet[i] : rd[i]) / dome);
+        hgt[i] = Math.sqrt(t * (2 - t));
+      }
       const hs = blurMask(hgt, W, W, Math.max(0.6, 0.9 * scale * kS));
       const strength = dome * 0.55;
       const sc = createCanvas(W, W);
@@ -516,7 +698,7 @@ export default {
       for (let y = 1; y < W - 1; y++) {
         for (let x = 1; x < W - 1; x++) {
           const i = y * W + x;
-          if (label[i] < 0 && mask[i] <= 0) continue;
+          if (base[i] < 0 && mask[i] <= 0) continue;
           const dx = (hs[i + 1] - hs[i - 1]) * 0.5 * strength, dy = (hs[i + W] - hs[i - W]) * 0.5 * strength;
           const nl = 1 / Math.sqrt(dx * dx + dy * dy + 1);
           const v = ((-dx * LX - dy * LY + LZ) * nl) / LZ - 1; // 0 on flat tops
@@ -567,7 +749,6 @@ export default {
       o.drawImage(mo, 0, 0);
     }
     mark("merrow");
-    void mix; void blurCanvas;
     return out;
   },
 };

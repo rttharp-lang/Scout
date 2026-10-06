@@ -94,7 +94,7 @@ function KitVisual({ active }) {
           <CanvasImage canvas={isCanvas(m?.result) ? m.result : null} stage="none" ratio={1} alt={m ? `${m.garment.name}, ${m.view}` : ""} />
         </div>
       ))}
-      {garments && !slots.length && <p className="lp-kit__empty">Garments are loading.</p>}
+      {garments && !slots.length && <p className="lp-kit__empty">The garment mockups didn't load. Reload the page to try again.</p>}
     </div>
   );
 }

@@ -240,8 +240,9 @@ export function composeLineSheet({ team, palette, effect, dropStyle, art, pieces
   cropMarks(ctx, artX, artY, artSize, artSize);
   ctx.font = `500 22px ${MONO}`;
   ctx.fillStyle = INK_3;
-  spaced(ctx, "ARTWORK", artX, artY + artSize + 52, 4);
-  spaced(ctx, (effect?.name || "Clean").toUpperCase(), artX + artSize, artY + artSize + 52, 4, "right");
+  // caption clears the crop marks (they reach 34 px below the box)
+  spaced(ctx, "ARTWORK", artX, artY + artSize + 70, 4);
+  spaced(ctx, (effect?.name || "Clean").toUpperCase(), artX + artSize, artY + artSize + 70, 4, "right");
 
   // heavy rule under the masthead
   const ruleY = Math.max(y + 70, artY + artSize + 100);
@@ -260,13 +261,20 @@ export function composeLineSheet({ team, palette, effect, dropStyle, art, pieces
   const gapX = 64, gapY = 64;
   const colW = (W - 2 * M - (cols - 1) * gapX) / cols;
   const textH = 196;
-  const img = Math.min(colW, (gridBottom - gridTop - (rows - 1) * gapY) / rows - textH);
-  const rowH = img + textH;
-  // when the column has room, the back sits beside the front instead of inset on it
+  const avail = gridBottom - gridTop;
   const besideGap = 28;
+  let img = Math.min(colW, (avail - (rows - 1) * gapY) / rows - textH);
+  // a single piece leaves room to show its back beside the front
+  if (n === 1) img = Math.min(img, (colW - besideGap) / 1.5);
   const beside = colW - img >= img * 0.36 + besideGap;
-  const backSize = beside ? Math.min(colW - img - besideGap, img * 0.48) : Math.round(img * 0.34);
+  // one short row (2–3 pieces): a tall stage, front on top and a larger back below it
+  // (the back sits under the front's square, never over it)
+  const tallBack = !beside && rows === 1 ? Math.min(img * 0.62, avail - textH - img - 28) : 0;
+  const tall = tallBack >= img * 0.4;
+  const stageH = tall ? Math.round(img + tallBack + 14) : img;
+  const backSize = tall ? tallBack : beside ? Math.min(colW - img - besideGap, img * 0.48) : Math.round(img * 0.34);
   const blockW = beside ? img + besideGap + backSize : img;
+  const rowH = stageH + textH;
   const usedH = rows * rowH + (rows - 1) * gapY;
   const top = gridTop + Math.max(0, (gridBottom - gridTop - usedH) / 2);
 
@@ -280,14 +288,14 @@ export function composeLineSheet({ team, palette, effect, dropStyle, art, pieces
 
     // stage + front
     ctx.fillStyle = STAGE;
-    ctx.fillRect(cx, cy, img, img);
+    ctx.fillRect(cx, cy, img, stageH);
     drawContain(ctx, p.front, cx + img * 0.02, cy + img * 0.02, img * 0.96, img * 0.96);
 
     // back: beside the front when there's room, else a small card inset bottom right
     if (p.back) {
       const b = Math.round(backSize);
       const bx = beside ? cx + img + besideGap : cx + img - b - 14;
-      const by = beside ? cy + img - b : cy + img - b - 14;
+      const by = beside ? cy + img - b : cy + stageH - b - 14;
       ctx.save();
       ctx.shadowColor = "rgba(14,17,22,0.18)";
       ctx.shadowBlur = 18;
@@ -310,7 +318,7 @@ export function composeLineSheet({ team, palette, effect, dropStyle, art, pieces
     // caption: name ........ price / code · spec
     const capW = blockW;
     const nameSize = Math.round(Math.max(40, Math.min(66, img * 0.082)));
-    const ty = cy + img + nameSize + 22;
+    const ty = cy + stageH + nameSize + 22;
     const price = Number.isFinite(p.price) ? `$${p.price}` : "";
     ctx.fillStyle = INK;
     ctx.font = `800 ${nameSize}px ${DISPLAY}`;

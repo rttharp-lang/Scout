@@ -164,8 +164,9 @@ function lensPts(pts, w) {
  * longer and slimmer than the boxy tee); neck 192 wide at the HPS with a 22 rib; front
  * neck drop 86, back 18; raglan underarm 262 below the HPS. With the arms hanging, a
  * raglan's shoulder must slope steeply: a 38° shoulder line off the HPS, filleted into
- * a sleeve hanging 14° off vertical; bicep 106 across tapering to 84 at the cuff seam;
- * 64-long rib cuff, 74 across (the sleeve eases into it); 22 twin-needle hem.
+ * a sleeve hanging 12° off vertical; bicep 134 across (≈ 0.25 of the chest, a regular
+ * athletic sleeve) tapering to 96 at the cuff seam; 64-long rib cuff, 82 across (the
+ * sleeve eases into it), ending just above the hem line; 22 twin-needle hem.
  */
 const HPS_Y = 150;                 // high point shoulder (collar meets the shoulder)
 const NECK_HALF = 96;
@@ -178,13 +179,13 @@ const HEM_HALF = 258;              // athletic: a touch narrower at the hem
 const HEM_Y = HPS_Y + 770;
 const HEM_TURN = 22;
 const NECK_SLOPE = 38;             // raglan shoulder slope off the neck (° below horizontal)
-const SLEEVE_DEG = 14;             // sleeve hangs this far off vertical
-const BICEP_W = 106;                // sleeve width across, level with the underarm
+const SLEEVE_DEG = 12;             // sleeve hangs this far off vertical
+const BICEP_W = 134;               // sleeve width across, level with the underarm
 const CAP = 84;                    // shoulder rounding (fillet tangent length)
-const SLEEVE_END_Y = HPS_Y + 624;  // outer sleeve meets the cuff
+const SLEEVE_END_Y = HPS_Y + 656;  // outer sleeve meets the cuff
 const CUFF_LEN = 64;
-const CUFF_HALF = 37;
-const SLEEVE_END_HALF = 42;        // sleeve at the cuff seam (eases into the rib)
+const CUFF_HALF = 41;
+const SLEEVE_END_HALF = 48;        // sleeve at the cuff seam (eases into the rib)
 const SIDE_INSET = 9;              // side seams sit a touch forward of the fold
 
 const HPS = [CX - NECK_HALF, HPS_Y];
@@ -462,7 +463,7 @@ function buildView(kind) {
   const backTop = BACK_NECK_Y + COLLAR;     // centre-back collar seam
   const front = {
     "chest-left": zoneC(mx(CX - 98), HPS_Y + 196, 100, 94, "Left chest"),
-    "chest-center": zoneC(CX, HPS_Y + 222, 176, 130, "Center chest"),
+    "chest-center": zoneC(CX, HPS_Y + 238, 176, 130, "Center chest"),
     center: zoneC(CX, HPS_Y + 364, 376, 380, "Full front"),
     oversized: zoneC(CX + 230, HPS_Y + 610, 740, 740, "Oversized · crops right"),
   };
@@ -478,7 +479,9 @@ function buildView(kind) {
     printArea: bodyPanel(seam, rag),
     zones: isFront ? front : back,
     overlays,
-    ...(isFront ? {} : { text: { name: box(CX - 156, backTop + 92, 312, 56), number: box(CX - 148, backTop + 160, 296, 266) } }),
+    // lettering ≈ 0.9× the game jersey's in real size (design units ≈ mm): name ≈ 50 mm
+    // tall, number ≈ 9 in, same name-over-number stack
+    ...(isFront ? {} : { text: { name: box(CX - 150, backTop + 96, 300, 50), number: box(CX - 136, backTop + 160, 272, 230) } }),
   };
 }
 

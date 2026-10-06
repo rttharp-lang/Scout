@@ -13,6 +13,8 @@ import { ALL_SIZES, LEAD_TIME, PROOF_TIME } from "./catalog.js";
 import { UNSIZED, formatMoney, formatPercent } from "./pricing.js";
 
 const ROLE_NAMES = { primary: "Primary", secondary: "Secondary", accent: "Accent", dark: "Dark", light: "Light" };
+/** Short garment names for narrow table columns (the roster on the printed sheet). */
+const SHORT = { jersey: "Jersey", shorts: "Shorts", hoodie: "Hoodie", pants: "Pants", tee: "Tee", longsleeve: "Shooter" };
 const s = (v) => (v == null ? "" : String(v));
 
 /* ───────────────────────────── words ───────────────────────────── */
@@ -121,6 +123,7 @@ export function orderText(order) {
   const rule = "-".repeat(56);
   L.push(`MASCOT LAB ORDER REQUEST  ${s(o.ref)}`);
   L.push(`${teamName(o)}  ·  ${formatDate(o.createdAt)}`);
+  if (o.replaces) L.push(`Replaces order ${s(o.replaces)}`);
   L.push(rule);
   L.push(`Design: ${s(o.effect?.name)} (${s(o.effect?.method)}), ${s(o.design?.dropStyleName)} drop`);
   if (o.effect?.settings?.length) L.push(`Effect settings: ${o.effect.settings.map((x) => `${x.label} ${x.value}`).join("; ")}`);
@@ -247,11 +250,13 @@ export function orderSheetHtml(order, images = {}) {
     <article class="garment">
       <header><h3>${esc(g.name)}</h3><code>${esc(g.styleCode)}</code><span class="qty">${q.total || 0} pcs</span></header>
       <div class="views">${view("front")}${view("back")}</div>
-      <p class="spec">${esc(g.spec)}</p>
-      <p class="cw"><span class="dot" style="background:${esc(g.colors?.base)}"></span>Base <code>${esc(g.colors?.base)}</code>
-        <span class="dot" style="background:${esc(g.colors?.trim)}"></span>Trim <code>${esc(g.colors?.trim)}</code>
-        <span class="dot" style="background:${esc(g.colors?.accent)}"></span>Accent <code>${esc(g.colors?.accent)}</code></p>
-      <div class="place"><h4>Front</h4>${list(g.front)}<h4>Back</h4>${list(g.back)}${g.lettering ? `<h4>Lettering</h4><p>${esc(g.lettering)}</p>` : ""}</div>
+      <div class="ginfo">
+        <p class="spec">${esc(g.spec)}</p>
+        <p class="cw"><span class="dot" style="background:${esc(g.colors?.base)}"></span>Base <code>${esc(g.colors?.base)}</code>
+          <span class="dot" style="background:${esc(g.colors?.trim)}"></span>Trim <code>${esc(g.colors?.trim)}</code>
+          <span class="dot" style="background:${esc(g.colors?.accent)}"></span>Accent <code>${esc(g.colors?.accent)}</code></p>
+        <div class="place"><h4>Front</h4>${list(g.front)}<h4>Back</h4>${list(g.back)}${g.lettering ? `<h4>Lettering</h4><p>${esc(g.lettering)}</p>` : ""}</div>
+      </div>
     </article>`;
   }).join("");
 
@@ -352,13 +357,33 @@ export function orderSheetHtml(order, images = {}) {
     .design, .garments, .two { grid-template-columns: 1fr; } .meta { grid-template-columns: 1fr 1fr; }
     .meta div:nth-child(3) { border-left: 0; } .grid { font-size: 11px; } .printbar { padding: 10px 18px; margin: 0; }
   }
+  .roster th.g { text-align: center; }
+  .roster td:nth-child(2) { white-space: nowrap; }
   @media print {
-    body { background: #fff; padding: 0; } .sheet { box-shadow: none; padding: 0; max-width: none; }
-    .stripe { margin: 0 0 20px; } .printbar { display: none; }
-    h2 { break-after: avoid; } .garment, tr { break-inside: avoid; }
+    /* A4 and Letter: 12–14 mm margins, garments as full-width rows (views left, spec right)
+       so the kit fits two pages and nothing splits across a page edge */
+    body { background: #fff; padding: 0; font-size: 11px; } .sheet { box-shadow: none; padding: 0; max-width: none; }
+    .stripe { margin: 0 0 16px; } .printbar { display: none; }
+    h1 { font-size: 28px; } h2 { margin: 18px 0 8px; font-size: 16px; break-after: avoid; }
+    .meta { margin-top: 12px; }
+    .design { grid-template-columns: 34mm 1fr 34mm; gap: 14px; }
+    .kv th, .kv td { padding: 1.5px 10px 1.5px 0; } .kv th { width: 36%; }
+    .sws { gap: 4px; } .sw .chip { width: 20px; height: 20px; }
+    .garments { grid-template-columns: 1fr; gap: 8px; }
+    .garment { display: grid; grid-template-columns: 70mm minmax(0, 1fr); grid-template-areas: "head head" "views info"; column-gap: 14px; padding: 8px 10px 10px; break-inside: avoid; }
+    .garment header { grid-area: head; }
+    .views { grid-area: views; margin: 6px 0 0; gap: 6px; align-self: start; }
+    .views figure { padding: 3px 3px 2px; }
+    .ginfo { grid-area: info; padding-top: 6px; }
+    .place li, .place p, .spec, .cw { font-size: 10.5px; }
+    .grid th, .grid td { padding: 3px 6px; }
+    .roster th, .roster td { padding: 2.5px 6px; }
+    .two { gap: 20px; }
+    .foot { margin-top: 16px; }
+    h2, .garment, tr, .two > div, .foot { break-inside: avoid; }
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   }
-  @page { margin: 14mm; }
+  @page { margin: 12mm 13mm; }
 </style>
 </head>
 <body>
@@ -374,7 +399,7 @@ export function orderSheetHtml(order, images = {}) {
   </section>
   <div class="meta">
     <div><span>Requested</span>${esc(formatDate(o.createdAt))}</div>
-    <div><span>Status</span><span class="badge">${esc(o.status === "requested" ? "Requested · awaiting proof" : s(o.status))}</span></div>
+    <div><span>Status</span><span class="badge">${esc(o.status === "requested" ? "Awaiting proof" : s(o.status))}</span></div>
     <div><span>Items</span>${t.units || 0} pieces · ${(o.roster || []).length} players</div>
     <div><span>Need by</span>${c.needBy ? esc(formatDate(c.needBy)) : "Not given"}</div>
   </div>
@@ -402,7 +427,7 @@ export function orderSheetHtml(order, images = {}) {
 
   <h2>Roster <small>${(o.roster || []).length} players</small></h2>
   <table class="roster">
-    <thead><tr><th></th><th>Name</th><th style="text-align:right">No.</th><th>Top</th><th>Bottom</th>${gs.map((g) => `<th style="text-align:center">${esc(g.name)}</th>`).join("")}</tr></thead>
+    <thead><tr><th></th><th>Name</th><th style="text-align:right">No.</th><th>Top</th><th>Bottom</th>${gs.map((g) => `<th class="g" title="${esc(g.name)}">${esc(SHORT[g.id] || g.name)}</th>`).join("")}</tr></thead>
     <tbody>${rosterRows || `<tr><td colspan="${5 + gs.length}" class="muted">No players listed.</td></tr>`}</tbody>
   </table>
   ${extras ? `<h2>Extras <small>Coaches, staff and fans</small></h2><table class="roster"><thead><tr><th>Garment</th><th>Size</th><th style="text-align:right">Qty</th></tr></thead><tbody>${extras}</tbody></table>` : ""}

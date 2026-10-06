@@ -50,7 +50,7 @@ export function GarmentCard({ garment, item, product, view, onView, onToggle, on
             error={main.error ? "Preview unavailable" : null}
             alt={`${garment.name}, ${sideLabel}`}
           />
-          <span className="cl-card__hint" aria-hidden="true"><SlidersHorizontal /> Edit piece</span>
+          <span className="cl-card__hint" aria-hidden="true"><SlidersHorizontal /><span>Edit piece</span></span>
         </button>
         <div className="cl-card__tags">
           <SpecLabel variant="box" className="cl-card__code">{garment.styleCode}</SpecLabel>

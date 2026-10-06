@@ -1,7 +1,12 @@
 // What the landing page shows, picked from whatever the registries have loaded so far.
 
-/** The hero's cycle: the coach's current effect, then the headline looks, then the rest. */
-export const HERO_LOOKS = ["graffiti", "chrome", "halftone", "risograph", "neon", "chenille"];
+/**
+ * The hero's cycle: the coach's current effect, then the headline looks, then the rest.
+ * Renders run in this order, so the cheap looks come right after the first one (the strip
+ * fills fast) and the heavy ones (chrome, chenille, neon ≈ 260–460 ms each) go last.
+ * Backdrops alternate (mid → paper → mid → dark → team → dark) so each wipe reads.
+ */
+export const HERO_LOOKS = ["graffiti", "risograph", "halftone", "chrome", "chenille", "neon"];
 export const HERO_GARMENTS = ["hoodie", "tee", "jersey", "longsleeve", "shorts", "pants"];
 
 /** Remixes only (no "Clean" pass-through), in gallery order. */

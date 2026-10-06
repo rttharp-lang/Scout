@@ -6,7 +6,6 @@ import { AlertTriangle, ArrowDownUp, ChevronDown, ClipboardPaste, Plus, Trash2, 
 import { Button, Chip, ChipRow, IconButton, SpecLabel, cx, useConfirm, useToast } from "../components/index.js";
 import { PRODUCTS, SIZE_GROUPS } from "../../order/catalog.js";
 import { isBlankRow, rowIncludes } from "../../order/pricing.js";
-import { COPY } from "../../brand.js";
 import { blankRow, cleanNumber, sortRoster } from "./roster.js";
 import { plural, shortName, useMedia } from "./util.js";
 
@@ -153,7 +152,7 @@ export function RosterEditor({ roster, setRoster, ids, issues, locked = false, o
 
   const banner = examples > 0 && !locked && (
     <div className="ord-example" role="status">
-      <p><strong>{COPY.exampleRoster}</strong>{examples < roster.length ? ` · ${plural(examples, "example player")} left` : ""}</p>
+      <p><strong>Example roster.</strong> Replace these players with yours{examples < roster.length ? ` (${plural(examples, "example player")} left)` : ""}.</p>
       <Button size="sm" variant="secondary" icon={<X aria-hidden="true" />} onClick={clearExamples} disabled={locked}>Clear examples</Button>
     </div>
   );

@@ -35,6 +35,15 @@ export function LandingProvider({ children }) {
   const effects = useRegistry(loadEffects);
   const garments = useRegistry(loadGarments);
   const reduced = useReducedMotion();
+  // dev-only timing marks for the landing QA scripts (window.__lpMarks)
+  if (import.meta.env?.DEV && typeof window !== "undefined") {
+    const m = (window.__lpMarks ||= {});
+    const now = () => Math.round(performance.now());
+    if (!m.provider) m.provider = now();
+    if (logo.canvas && !m.logo) m.logo = now();
+    if (effects && !m.effects) m.effects = now();
+    if (garments && !m.garments) m.garments = now();
+  }
   const value = useMemo(
     () => ({ state, actions, logo, palette: state.palette, effects, garments, reduced }),
     [state, actions, logo, effects, garments, reduced],

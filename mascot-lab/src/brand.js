@@ -15,11 +15,12 @@ export const STEPS = [
   { n: 3, id: "order", route: "order", label: "Order", hint: "Sizes, roster and checkout" },
 ];
 
-/** Every route the app understands (anything else falls back to home). */
-export const ROUTES = ["home", "studio", "collection", "order", "review", "done"];
+/** Every route the app understands (anything else falls back to home).
+ *  "orders" is the site owner's order inbox; it sits outside the 3-step flow. */
+export const ROUTES = ["home", "studio", "collection", "order", "review", "done", "orders"];
 
-/** Which step a route belongs to: 0 = before the flow (home), 4 = finished. */
-export const ROUTE_STEP = { home: 0, studio: 1, collection: 2, order: 3, review: 3, done: 4 };
+/** Which step a route belongs to: 0 = outside the flow (home, owner inbox), 4 = finished. */
+export const ROUTE_STEP = { home: 0, studio: 1, collection: 2, order: 3, review: 3, done: 4, orders: 0 };
 
 export const PAGE_TITLES = {
   home: "Mascot Lab — team apparel from your logo",
@@ -28,6 +29,7 @@ export const PAGE_TITLES = {
   order: "Order the kit — Mascot Lab",
   review: "Review your order — Mascot Lab",
   done: "Order sent — Mascot Lab",
+  orders: "Order inbox — Mascot Lab",
 };
 
 export const COPY = {

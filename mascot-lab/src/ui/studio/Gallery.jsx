@@ -3,10 +3,10 @@
 // shared scheduler: the selected tile first, on-screen tiles next, the rest after.
 import React, { memo, useMemo, useRef } from "react";
 import { AlertTriangle, Check, RefreshCw, Star } from "lucide-react";
-import { CanvasImage, Chip, ChipRow, Skeleton, cx } from "../components/index.js";
+import { Button, CanvasImage, Chip, ChipRow, Notice, Skeleton, cx } from "../components/index.js";
 import { CATEGORIES } from "../../engine/effects/index.js";
 import { darken } from "../../engine/core.js";
-import { useEffectRender, useInView } from "./renderKit.js";
+import { useEffectRender, useHeld, useInView } from "./renderKit.js";
 
 export const GALLERY_SIZE = 384;
 const pad2 = (n) => String(n).padStart(2, "0");
@@ -19,7 +19,7 @@ export function stageStyle(stage, palette) {
 
 export function Gallery({
   effects, loadStatus: status, status: statusNode, selectedId, favorites, filter, onFilter, onSelect, onToggleFavorite,
-  logo, palette, selectedParams, seed, numbers,
+  logo, palette, selectedParams, seed, numbers, onSkip, skipLabel, noLogo = false, onUpload,
 }) {
   const counts = useMemo(() => {
     const c = { all: effects.length, fav: effects.filter((e) => favorites.includes(e.id)).length };
@@ -73,8 +73,19 @@ export function Gallery({
       {status === "error" && (
         <p className="st-empty">The effects didn't load. Reload the page to try again.</p>
       )}
+      {noLogo && (
+        <Notice
+          tone="warning"
+          title="No logo to remix"
+          className="st-nologo"
+          action={onUpload ? <Button size="sm" variant="secondary" onClick={onUpload}>Upload your logo</Button> : null}
+        >
+          We couldn't read your logo file, so the effects have nothing to draw. Upload it again, or pick a sample in the logo panel.
+        </Notice>
+      )}
       {status === "ready" && (
         <>
+          {onSkip && <button type="button" className="st-skip" onClick={onSkip}>{skipLabel}</button>}
           <div className="st-grid">
             {effects.map((e) => (
               <EffectTile
@@ -114,13 +125,16 @@ const EffectTile = memo(function EffectTile({
   const ref = useRef(null);
   const hadCanvas = useRef(false);
   const inView = useInView(ref);
+  const held = useHeld();
   // the selected tile jumps the queue only while it has nothing to show; once it has a
-  // render, the inspector's big preview takes precedence while the coach tunes
+  // render, the inspector's big preview takes precedence while the coach tunes, and
+  // during a slider drag it waits for the release (the inspector shows drafts)
   const r = useEffectRender({
     effect, logo, params, palette, seed,
     size: GALLERY_SIZE, quality: "preview",
     priority: selected ? (hadCanvas.current ? 12 : 40) : inView && !hidden ? 30 : 0,
     debounce: selected ? 120 : 0,
+    enabled: !(selected && held && hadCanvas.current),
   });
   hadCanvas.current = !!r.canvas;
   const failed = r.status === "error";

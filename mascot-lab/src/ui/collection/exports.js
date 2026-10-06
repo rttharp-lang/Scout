@@ -23,12 +23,13 @@ async function lookAt(size, { state, logo, effect, original }) {
       .catch(() => logo.canvas);
   }
   let art = clean;
+  let failed = false;
   if (effect) {
     const key = `art-x|${logo.key}|${effect.id}|${JSON.stringify(state.effect.params)}|${JSON.stringify(state.palette)}|${state.effect.seed}|${size}`;
     art = await queue.enqueue(key, () => renderEffect(effect, logo.canvas, state.effect.params, state.palette, opts), PRIORITY.export)
-      .catch((err) => { console.warn("[collection] export look render failed:", err?.message || err); return clean; });
+      .catch((err) => { console.warn("[collection] export look render failed:", err?.message || err); failed = true; return clean; });
   }
-  return { art, clean };
+  return { art, clean, failed };
 }
 
 function mockupJob(input) {
@@ -55,7 +56,7 @@ export function saveToast(result, { what, filename, detail }) {
  */
 export async function downloadLineSheet(ctx) {
   const { state, garments, preview } = ctx;
-  const { art, clean } = await lookAt(1024, ctx);
+  const { art, clean, failed } = await lookAt(1024, ctx);
   await Promise.all([letteringFontReady(), posterFontsReady()]);
   const pieces = [];
   for (const g of garments) {
@@ -75,7 +76,8 @@ export async function downloadLineSheet(ctx) {
       back: views.back,
     });
   }
-  const effect = ctx.effect || ctx.original;
+  // if the look didn't render, the sheet shows (and names) the clean logo instead
+  const effect = (failed ? null : ctx.effect) || ctx.original;
   const canvas = await queue.enqueue(`x${++exportSeq}|linesheet`, async () => composeLineSheet({
     team: state.team,
     palette: state.palette,

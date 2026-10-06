@@ -80,3 +80,12 @@ export async function copyText(text) {
     return false;
   }
 }
+
+/** submittedTitle(order, sent, stored) → "Order NB-4F7K2 was sent on Oct 6, 2026" (or saved / not saved). */
+export function submittedTitle(order, sent, stored) {
+  const ref = order?.ref ? `Order ${order.ref}` : "Your order";
+  const when = shortDate(order?.submittedAt, true);
+  if (sent) return `${ref} was sent on ${when}`;
+  if (stored) return `${ref} was saved on this device on ${when}`;
+  return `${ref} from ${when} isn't saved on this device`;
+}

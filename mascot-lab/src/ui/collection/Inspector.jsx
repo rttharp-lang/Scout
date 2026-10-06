@@ -89,9 +89,9 @@ function MiniPreview({ garment, view, front, back, pinned, onView }) {
             <span>{v === "front" ? "Front" : "Back"}</span>
           </button>
         ))}
+        {/* the panel header already names the garment */}
         <span className="cl-insp__mini-text">
-          <strong><NoBreakTitle text={garment.name} /></strong>
-          <span>Editing the {view}</span>
+          <strong>Editing the {view}</strong>
         </span>
       </div>
     </div>

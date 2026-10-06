@@ -125,13 +125,37 @@ function genFleece(x, W, H, k, rand) {
 }
 
 // Jersey knit: columns of tiny V stitches (wales) with per-wale yarn irregularity.
-function genKnit(x, W, H, k, rand) {
-  const wales = 24, courses = 28;
+// Below ~2.2 px per wale the V's can't be drawn: they alias into a stripe/check pattern
+// at the tile period (very visible on white and gold knits at card sizes). There the
+// knit is drawn as what it looks like from that distance: a fine, even yarn grain
+// (per-pixel noise with a faint vertical bias) on a larger tile, so nothing repeats.
+// `reps` = how many 60×56-unit knit cells the tile holds per side.
+function genKnit(x, W, H, k, rand, reps = 1) {
+  const wales = 24 * reps, courses = 28 * reps;
   const sx = W / wales, sy = H / courses;
+  if (sx < 2.2) {
+    const img = x.createImageData(W, H);
+    const d = img.data;
+    const col = new Float32Array(W);
+    for (let i = 0; i < W; i++) col[i] = rand() - 0.5;            // faint wale-to-wale variation
+    for (let j = 0; j < H; j++) {
+      for (let i = 0; i < W; i++) {
+        const o = (j * W + i) * 4, r = rand();
+        if (r < 0.22) {                                            // yarn sheen
+          d[o] = d[o + 1] = d[o + 2] = 255;
+          d[o + 3] = Math.round(255 * (0.025 + rand() * 0.035));
+        } else {                                                   // grain between loops
+          d[o + 3] = Math.round(255 * Math.max(0, 0.055 + (rand() - 0.5) * 0.06 + col[i] * 0.018));
+        }
+      }
+    }
+    x.putImageData(img, 0, 0);
+    return;
+  }
   const lw = Math.max(0.5, 0.42 * k);
   x.lineCap = "round";
   for (let c = 0; c < wales; c++) {
-    const wa = 0.08 + rand() * 0.045;         // this wale's yarn tone
+    const wa = 0.085 + rand() * 0.025;        // this wale's yarn tone (subtle: no stripes)
     for (let r = 0; r < courses; r++) {
       const cx = (c + 0.5) * sx, cy = (r + 0.5) * sy;
       const a = wa * (0.75 + rand() * 0.5);
@@ -184,7 +208,7 @@ const GENERATORS = {
   // tile size in artboard units (square-ish; mesh is hex so it is taller than wide)
   mesh: { gen: genMesh, w: 58, h: 50.23, seed: 0x6d657368 },  // 10 cols × 10 hex rows: h = 10 · 5.8 · 0.866
   fleece: { gen: genFleece, w: 220, h: 220, seed: 0x666c6565 },
-  knit: { gen: genKnit, w: 60, h: 56, seed: 0x6b6e6974 },
+  knit: { gen: genKnit, w: 60, h: 56, seed: 0x6b6e6974, minPx: 120 },   // small sizes: a bigger noise tile
   woven: { gen: genWoven, w: 54, h: 54, seed: 0x776f7665 },
 };
 
@@ -206,11 +230,14 @@ export function getFabricTile(fabric, k) {
   let tile = tileCache.get(key);
   if (tile) return tile;
   const g = GENERATORS[f];
-  const W = Math.max(4, Math.round(g.w * kb));
-  const H = Math.max(4, Math.round(g.h * kb));
+  const W0 = Math.max(4, Math.round(g.w * kb));
+  const H0 = Math.max(4, Math.round(g.h * kb));
+  // a fabric may ask for a minimum tile size: the tile then holds reps × reps cells
+  const reps = g.minPx ? Math.max(1, Math.ceil(g.minPx / W0)) : 1;
+  const W = W0 * reps, H = H0 * reps;
   tile = makeCanvas(W, H);
-  const x = tile.getContext("2d");
-  g.gen(x, W, H, kb, mulberry32(g.seed));
+  const x = tile.getContext("2d", { willReadFrequently: false });
+  g.gen(x, W, H, kb, mulberry32(g.seed), reps);
   tileCache.set(key, tile);
   if (tileCache.size > 40) tileCache.delete(tileCache.keys().next().value);
   return tile;

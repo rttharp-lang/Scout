@@ -91,17 +91,21 @@ export function PlacementEditor({ placement: p, index, zones, effectName, open, 
             />
           </div>
           <div className="cl-place__grid">
-            <Slider label={isTile ? "Graphic size" : "Size"} min={0.2} max={1.6} step={0.01} value={p.scale ?? 1} format={pct} onChange={(v) => set({ scale: v })} />
+            {/* pairs read across: size + rotate (or repeat + graphic), then the offsets */}
             {isTile ? (
-              <Slider label="Space between repeats" min={100} max={420} step={5} value={p.tile ?? 220} format={(v) => `${Math.round(v / 10)}%`} onChange={(v) => set({ tile: v })} />
+              <>
+                <Slider label="Repeat size" min={100} max={420} step={5} value={p.tile ?? 220} format={(v) => `${Math.round(v / 10)}%`} onChange={(v) => set({ tile: v })} />
+                <Slider label="Graphic size" min={0.2} max={1.6} step={0.01} value={p.scale ?? 1} format={pct} onChange={(v) => set({ scale: v })} />
+              </>
             ) : (
-              <Slider label="Rotate" min={-180} max={180} step={1} value={p.rotate ?? 0} format={deg} onChange={(v) => set({ rotate: v })} />
+              <>
+                <Slider label="Size" min={0.2} max={1.6} step={0.01} value={p.scale ?? 1} format={pct} onChange={(v) => set({ scale: v })} />
+                <Slider label="Rotate" min={-180} max={180} step={1} value={p.rotate ?? 0} format={deg} onChange={(v) => set({ rotate: v })} />
+              </>
             )}
             <Slider label={isTile ? "Shift left / right" : "Left / right"} min={-0.6} max={0.6} step={0.01} value={p.dx ?? 0} format={signedPct} onChange={(v) => set({ dx: v })} />
             <Slider label={isTile ? "Shift up / down" : "Up / down"} min={-0.6} max={0.6} step={0.01} value={p.dy ?? 0} format={signedPct} onChange={(v) => set({ dy: v })} />
-            {isTile && (
-              <Slider label="Rotate" min={-180} max={180} step={1} value={p.rotate ?? 0} format={deg} onChange={(v) => set({ rotate: v })} />
-            )}
+            {isTile && <Slider label="Rotate" min={-180} max={180} step={1} value={p.rotate ?? 0} format={deg} onChange={(v) => set({ rotate: v })} />}
             <Slider label="Opacity" min={0.1} max={1} step={0.05} value={p.opacity ?? 1} format={pct} onChange={(v) => set({ opacity: v })} />
           </div>
           <div className="cl-place__row">

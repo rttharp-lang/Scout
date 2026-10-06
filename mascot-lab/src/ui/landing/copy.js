@@ -46,7 +46,7 @@ export const STEPS = [
   {
     n: "01",
     title: "Remix",
-    body: "Upload your logo. We cut out the background and run it through every effect at once, so you can pick the one that fits your program.",
+    body: "Upload your logo. Mascot Lab cuts out a plain background and runs it through every effect at once, so you can pick the one that fits your program.",
   },
   {
     n: "02",

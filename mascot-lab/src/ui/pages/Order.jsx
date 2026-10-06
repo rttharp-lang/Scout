@@ -12,8 +12,10 @@ import { PasteRoster } from "../order/PasteRoster.jsx";
 import { Extras } from "../order/Extras.jsx";
 import { MobileBar, OrderSummary } from "../order/OrderSummary.jsx";
 import { rosterIssues } from "../order/roster.js";
-import { useMockups, useOrderGarments } from "../order/kit.js";
-import { plural, shortDate } from "../order/util.js";
+import { placeholderText, useMockups, useOrderGarments } from "../order/kit.js";
+import { KitNotice } from "../order/KitNotice.jsx";
+import { findLocalOrder, rememberRevision } from "../../order/orderService.js";
+import { plural, submittedTitle } from "../order/util.js";
 import "./order.css";
 
 /** orderChecks(state, ids, t) → { issues, blockers[], warnings[] } — shared with Review. */
@@ -47,7 +49,7 @@ export default function Order() {
   const t = useMemo(() => totals(state, opts), [state.roster, state.extras, state.collection, ids.join()]); // eslint-disable-line react-hooks/exhaustive-deps
   const q = useMemo(() => quantities(state, opts), [state.roster, state.extras, state.collection, ids.join()]); // eslint-disable-line react-hooks/exhaustive-deps
   const { issues, blockers, warnings, numbersMatter } = orderChecks(state, ids, t);
-  const { mockups } = useMockups(ids, { size: 176, detail: "fast", views: ["front"], priority: 3 });
+  const { mockups, kit } = useMockups(ids, { size: 176, detail: "fast", views: ["front"], priority: 3 });
   const locked = state.order.status === "submitted";
 
   const onApplyPaste = (rows, mode) => {
@@ -55,11 +57,19 @@ export default function Order() {
     setPasteOpen(false);
     toast({ tone: "success", title: mode === "replace" ? `Roster replaced: ${plural(rows.length, "player")}` : `Added ${plural(rows.length, "player")}` });
   };
+  // keyboard users: the roster is 10+ tab stops per player; this jumps past it
+  const skipToSummary = () => {
+    const btn = summaryRef.current?.querySelector(".ord-summary__foot .ml-btn:not(:disabled)");
+    const target = btn || summaryRef.current;
+    target?.scrollIntoView?.({ block: "center" });
+    target?.focus({ preventScroll: true });
+  };
   const goReview = () => {
     if (blockers.length) return;
     navigate("review");
   };
   const reopen = () => {
+    rememberRevision(state.order.ref);
     actions.reopenOrder();
     toast({ title: "Order reopened", body: "Make your changes, then review and send it again." });
   };
@@ -67,36 +77,39 @@ export default function Order() {
 
   return (
     <div className="ord-page container">
-      <header className="ord-head">
-        <SpecLabel size="lg">Step 03 / 03 · Order</SpecLabel>
-        <h1 className="ord-title">Order the kit</h1>
-        <p className="lead">Add your players and their sizes. The price updates as you go, and the team discount starts at 24 pieces.</p>
-      </header>
-
-      {locked && (
-        <Notice
-          tone="success"
-          title={`Order ${state.order.ref || ""} was ${sent ? "sent" : "saved on this device"} on ${shortDate(state.order.submittedAt, true)}`}
-          action={
-            <div className="cluster">
-              <Button size="sm" href="#done" icon={<CheckCircle2 aria-hidden="true" />}>See confirmation</Button>
-              <Button size="sm" variant="secondary" onClick={reopen}>Edit order</Button>
-            </div>
-          }
-        >
-          The roster is locked so it matches the order sheet. Editing reopens the order, and you send it again for a new proof.
-        </Notice>
-      )}
-
-      {!loading && ids.length === 0 && (
-        <Notice tone="warning" title="No garments in the kit" action={<Button size="sm" variant="secondary" href="#collection">Open the collection</Button>}>
-          Every piece is switched off in your collection. Switch on at least one garment to order it.
-        </Notice>
-      )}
-
       <div className="ord-layout">
         <div className="ord-main">
+          <header className="ord-head">
+            <SpecLabel size="lg">Step 03 / 03 · Order</SpecLabel>
+            <h1 className="ord-title">Order the kit</h1>
+            <p className="lead">Add your players and their sizes. The price updates as you go, and the team discount starts at 24 pieces.</p>
+          </header>
+
+          {locked && (
+            <Notice
+              tone="success"
+              title={submittedTitle(state.order, sent, !!findLocalOrder(state.order.ref))}
+              action={
+                <div className="cluster">
+                  <Button size="sm" href="#done" icon={<CheckCircle2 aria-hidden="true" />}>See confirmation</Button>
+                  <Button size="sm" variant="secondary" onClick={reopen}>Edit order</Button>
+                </div>
+              }
+            >
+              The roster is locked so it matches the order sheet. Editing reopens the order, and you send it again for a new proof.
+            </Notice>
+          )}
+
+          {!loading && ids.length === 0 && (
+            <Notice tone="warning" title="No garments in the kit" action={<Button size="sm" variant="secondary" href="#collection">Open the collection</Button>}>
+              Every piece is switched off in your collection. Switch on at least one garment to order it.
+            </Notice>
+          )}
+
+          <KitNotice kit={kit} />
+
           <section className="ord-panel ord-panel--roster" aria-labelledby="ord-roster-h">
+            <button type="button" className="ord-skip" onClick={skipToSummary}>Skip the roster, go to the order summary</button>
             <header className="ord-panel__head">
               <h2 className="ord-panel__h" id="ord-roster-h">Roster</h2>
               <SpecLabel>{plural(t.players, "player")}{ids.length ? ` · ${plural(ids.length, "piece")} each` : ""}</SpecLabel>
@@ -122,13 +135,14 @@ export default function Order() {
             ids={ids}
             byId={byId}
             mockups={mockups}
+            placeholder={placeholderText(kit)}
             blockers={locked ? [] : blockers}
             warnings={warnings}
             onContinue={locked ? undefined : goReview}
             locked={locked}
             summaryRef={summaryRef}
+            footExtra={locked ? <Button variant="team" size="lg" block href="#done">See confirmation</Button> : null}
           />
-          {locked && <Button variant="team" size="lg" block href="#done">See confirmation</Button>}
         </aside>
       </div>
 

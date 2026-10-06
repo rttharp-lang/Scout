@@ -117,7 +117,12 @@ function splitLoose(line) {
   const tail = [];
   while (words.length > 1) {
     const w = words[words.length - 1];
-    if (sizeShaped(w) || looksLikeNumber(w)) tail.unshift(words.pop());
+    const prev = words[words.length - 2];
+    // two-word sizes: "Adult XL", "Youth M"
+    if (words.length > 2 && sizeShaped(w) && /^(youth|yth|adult|kids?|mens?|men's)$/i.test(prev) && looksLikeSize(`${prev} ${w}`)) {
+      words.splice(-2, 2);
+      tail.unshift(`${prev} ${w}`);
+    } else if (sizeShaped(w) || looksLikeNumber(w)) tail.unshift(words.pop());
     else break;
   }
   // a leading number ("23 Carter L")
@@ -196,7 +201,11 @@ function rowFromCells(cells, roles) {
   if (topRaw && !r.top) r.issues.push(`Unknown size "${topRaw}"`);
   if (bottomRaw && !r.bottom) r.issues.push(`Unknown size "${bottomRaw}"`);
   if (r.top && !bottomRaw) { r.bottom = r.top; r.bottomFromTop = true; }
-  r.name = r.name.replace(/\s+/g, " ").trim().slice(0, 40);
+  r.name = r.name.replace(/\s+/g, " ").trim();
+  // "Carter, Jamal" (a quoted spreadsheet cell) → "Jamal Carter", so lettering uses the surname
+  const lf = /^([^,]+),\s*([^,]+)$/.exec(r.name);
+  if (lf) r.name = `${lf[2].trim()} ${lf[1].trim()}`;
+  r.name = r.name.slice(0, 40);
   return r;
 }
 

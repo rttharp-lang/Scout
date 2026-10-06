@@ -3,7 +3,8 @@
 //
 //   useOrderGarments()            → { garments, ids, loading } (loaded + enabled + priced)
 //   useEffectMeta()               → the chosen effect module (or null while loading / missing)
-//   useKitArt({ size })           → { art, clean, effect, status, error } for placements
+//   useKitArt({ size })           → { art, clean, effect, fallback, status, error, kind } for placements
+//   kitProblem(kit)               → { tone, title, body } when the logo or the effect failed
 //   useMockups(ids, opts)         → { [garmentId]: { front, back } } canvases, staggered
 //   renderGarmentView(...)        → one mockup canvas (imperative; exports use it)
 //
@@ -63,41 +64,72 @@ async function effectOrClean(id) {
   return (await getEffect(id)) || (await getEffect("original")) || (await loadEffects())[0] || null;
 }
 
-/** renderArt(state, logo, size) → Promise<{ art, clean, effect }> (through the queue). */
+/**
+ * renderArt(state, logo, size) → Promise<{ art, clean, effect, fallback }> (through the queue).
+ * If the chosen effect fails to render, the clean logo stands in for it and `fallback`
+ * says so ({ effect: name, message }); it rejects only when the logo itself can't be drawn.
+ */
 export function renderArt(state, logo, { size = 1024, quality = "final", priority = 5 } = {}) {
   const key = `art|${logo.key}|${state.effect.id}|${JSON.stringify(state.effect.params)}|${Object.values(state.palette).join(",")}|${state.effect.seed}|${size}|${quality}`;
   return queue.enqueue(key, async () => {
+    if (!logo?.canvas) throw Object.assign(new Error("The logo isn't loaded."), { kind: "logo" });
     const effect = await effectOrClean(state.effect.id);
     const original = (await getEffect("original")) || effect;
     if (!effect) throw new Error("No effects are available yet.");
-    const art = await renderEffect(effect, logo.canvas, state.effect.params, state.palette, { size, seed: state.effect.seed, quality, logoKey: logo.key });
-    const clean = original === effect && effect.id !== "original" ? art
-      : await renderEffect(original, logo.canvas, {}, state.palette, { size, logoKey: logo.key });
-    return { art, clean, effect };
+    const clean = original
+      ? await renderEffect(original, logo.canvas, {}, state.palette, { size, logoKey: logo.key })
+      : null;
+    if (effect === original) return { art: clean, clean, effect, fallback: null };
+    try {
+      const art = await renderEffect(effect, logo.canvas, state.effect.params, state.palette, { size, seed: state.effect.seed, quality, logoKey: logo.key });
+      return { art, clean: clean || art, effect, fallback: null };
+    } catch (e) {
+      if (!clean) throw e;
+      console.warn(`[order] ${effect.name} didn't render; showing the clean logo —`, e?.message || e);
+      return { art: clean, clean, effect, fallback: { effect: effect.name, message: String(e?.message || e) } };
+    }
   }, priority);
 }
 
-/** useKitArt({ size }) → { art, clean, effect, status: "loading" | "ready" | "error", error }. */
+/** kitProblem(kit) → { tone, title, body } for a notice, or null when the art is fine. */
+export function kitProblem(kit) {
+  if (kit?.status === "error") {
+    return kit.kind === "logo"
+      ? { tone: "danger", title: "Your logo didn't load", body: "The garment previews need it. Upload the logo again in the studio; your roster, sizes and details stay as they are." }
+      : { tone: "danger", title: "The previews couldn't be drawn", body: `${kit.error?.message || "Something went wrong while drawing the artwork."} Your order details are safe. Reload the page, or pick another effect in the studio.` };
+  }
+  if (kit?.fallback) {
+    return { tone: "warning", title: `The ${kit.fallback.effect} effect didn't render`, body: `These previews show your clean logo instead. The order still asks for the ${kit.fallback.effect} effect. Try another effect in the studio if you'd rather see it here.` };
+  }
+  return null;
+}
+
+/** placeholderText(kit) → short text for an image box that won't fill in, or null. */
+export const placeholderText = (kit) => (kit?.status === "error" ? (kit.kind === "logo" ? "Logo didn't load" : "Preview unavailable") : null);
+
+/** useKitArt({ size }) → { art, clean, effect, fallback, status: "loading" | "ready" | "error", error, kind: "logo" | "render" | null }. */
 export function useKitArt({ size = 1024, quality = "final" } = {}) {
   const { state } = useStore();
   const logo = useLogoCanvas();
-  const [res, setRes] = useState({ art: null, clean: null, effect: null, status: "loading", error: null });
+  const [res, setRes] = useState({ art: null, clean: null, effect: null, fallback: null, status: "loading", error: null, kind: null });
   const paramsKey = JSON.stringify(state.effect.params);
   const palKey = Object.values(state.palette).join(",");
   useEffect(() => {
-    if (!logo.canvas) {
-      if (logo.status === "error") setRes((r) => ({ ...r, status: "error", error: logo.error }));
+    // a logo that fails to decode: say so (the previous logo's canvas would be the wrong art)
+    if (logo.status === "error") {
+      setRes({ art: null, clean: null, effect: null, fallback: null, status: "error", error: logo.error, kind: "logo" });
       return;
     }
+    if (!logo.canvas) return;
     let alive = true;
-    setRes((r) => ({ ...r, status: "loading" }));
+    setRes((r) => (r.status === "loading" ? r : { ...r, status: "loading" }));
     renderArt(state, logo, { size, quality }).then(
-      (out) => alive && setRes({ ...out, status: "ready", error: null }),
-      (e) => { if (alive && !isAbort(e)) setRes((r) => ({ ...r, status: "error", error: e })); },
+      (out) => alive && setRes({ ...out, status: "ready", error: null, kind: null }),
+      (e) => { if (alive && !isAbort(e)) setRes((r) => ({ ...r, status: "error", error: e, kind: e?.kind || "render" })); },
     );
     return () => { alive = false; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [logo.key, logo.canvas, state.effect.id, paramsKey, palKey, state.effect.seed, size, quality]);
+  }, [logo.key, logo.canvas, logo.status, state.effect.id, paramsKey, palKey, state.effect.seed, size, quality]);
   return res;
 }
 
@@ -149,6 +181,8 @@ export function useMockups(ids, { size = 320, detail = "fast", views = ["front"]
   const palKey = Object.values(state.palette).join(",");
 
   useEffect(() => {
+    // the art failed (e.g. the logo didn't decode): drop mockups drawn from the old art
+    if (kit.status === "error") { gen.current++; setOut({}); return; }
     if (kit.status !== "ready" || !kit.art) return;
     const my = ++gen.current;
     let alive = true;

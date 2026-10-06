@@ -1,11 +1,11 @@
 // Mascot Lab — files the coach takes away: the logo thumbnail stored with an order,
 // the printable order sheet (HTML with embedded mockups), the roster CSV and the
 // design pack (.zip). Every render goes through the shared queue, one job at a time,
-// so a 2048 px export never freezes the page for long.
+// with a yield between steps.
 import { canvasToBlob } from "../../engine/render.js";
 import { darken } from "../../engine/core.js";
 import { orderSheetHtml, rosterCsv, orderText } from "../../order/orderSheet.js";
-import { buildOrder } from "../../order/orderService.js";
+import { buildOrder, findLocalOrder, pendingRevision } from "../../order/orderService.js";
 import { countedRows } from "../../order/pricing.js";
 import { letteringFor, queue, renderArt, renderGarmentView } from "./kit.js";
 
@@ -33,6 +33,7 @@ function flatten(canvas, w, bg) {
 
 /** logoThumb(canvas) → JPEG data URL ≤ 30 KB (logo contained on a light square), or null. */
 export function logoThumb(canvas, maxBytes = 30 * 1024) {
+  // maxBytes is compared with the data URL's length (what a stored order carries)
   if (!canvas?.width) return null;
   try {
     for (const [side, q] of [[200, 0.82], [160, 0.75], [128, 0.7], [96, 0.6]]) {
@@ -54,9 +55,45 @@ export function logoThumb(canvas, maxBytes = 30 * 1024) {
   return null;
 }
 
+/**
+ * logoFileFor(canvas, name, src) → { dataUrl, width, height, name } | null: the uploaded logo
+ * small enough to travel with a db order (≤ 200 KB as a data URL). An SVG upload goes as
+ * the original vector; a raster goes as the cleaned-up logo: PNG at 1024 px when it fits,
+ * then WebP (keeps transparency, much smaller), then smaller PNG, then white-backed JPEG.
+ */
+export function logoFileFor(canvas, name = "logo", src = null, maxChars = 200 * 1024) {
+  if (typeof src === "string" && src.startsWith("data:image/svg+xml") && src.length <= maxChars) {
+    return { dataUrl: src, width: canvas?.width || null, height: canvas?.height || null, name };
+  }
+  if (!canvas?.width) return null;
+  const draw = (side, bg) => {
+    const k = Math.min(1, side / Math.max(canvas.width, canvas.height));
+    const out = document.createElement("canvas");
+    out.width = Math.max(1, Math.round(canvas.width * k));
+    out.height = Math.max(1, Math.round(canvas.height * k));
+    const ctx = out.getContext("2d");
+    if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, out.width, out.height); }
+    ctx.imageSmoothingQuality = "high";
+    ctx.drawImage(canvas, 0, 0, out.width, out.height);
+    return out;
+  };
+  const tries = [[1024, "image/png"], [1024, "image/webp", 0.92], [768, "image/webp", 0.9], [512, "image/png"], [768, "image/jpeg", 0.86, "#FFFFFF"], [512, "image/jpeg", 0.8, "#FFFFFF"]];
+  try {
+    for (const [side, type, q, bg] of tries) {
+      const c = draw(side, bg);
+      const url = c.toDataURL(type, q);
+      if (!url.startsWith(`data:${type}`)) continue; // e.g. no WebP encoder: the browser fell back to PNG
+      if (url.length <= maxChars) return { dataUrl: url, width: c.width, height: c.height, name };
+    }
+  } catch { /* tainted or unsupported */ }
+  return null;
+}
+
 /** orderForExport(state, ctx) → the order body with the submitted ref/date (or a draft ref). */
 export function orderForExport(state, { garments, ids, effect, logoCanvas }) {
+  const sent = state.order.ref ? findLocalOrder(state.order.ref) : null;
   return buildOrder(state, {
+    replaces: sent?.order?.replaces || (state.order.ref ? null : pendingRevision()),
     garments,
     garmentIds: ids,
     effect,
@@ -69,11 +106,18 @@ export function orderForExport(state, { garments, ids, effect, logoCanvas }) {
 
 const firstLettering = (state) => letteringFor(countedRows(state.roster).find((r) => String(r.number || "").trim()) || null);
 
+const SHEET_BG = "#F3F4F6";  // the order sheet's figure grey (also the pack's garment backdrop)
+const sheetJpeg = (c) => flatten(c, 560, SHEET_BG).toDataURL("image/jpeg", 0.85);
+const nextFrame = () => new Promise((r) => (typeof requestAnimationFrame === "function" ? requestAnimationFrame(() => setTimeout(r, 0)) : setTimeout(r, 0)));
+/** settle() — two frames, so a progress label paints before a long synchronous step. */
+const settle = async () => { await nextFrame(); await nextFrame(); };
+
 /**
- * sheetImages(state, ctx) → { look, logo, garments: { [id]: { front, back } } } as JPEG data URLs,
- * for the HTML order sheet (560 px garments on the sheet's figure grey).
+ * sheetImages(state, ctx) → { look, garments: { [id]: { front, back } } } as JPEG data URLs
+ * for the HTML order sheet (560 px garments on the sheet's figure grey). `ctx.ready`
+ * ({ [id]: { front, back } } data URLs the design pack already made) are used as they are.
  */
-export async function sheetImages(state, { byId, ids, logo, onStep }) {
+export async function sheetImages(state, { byId, ids, logo, ready = null, onStep }) {
   const kit = await renderArt(state, logo, { size: 1024, priority: 6 });
   const images = { garments: {} };
   images.look = flatten(kit.art, 640, stageColor(kit.effect, state.palette)).toDataURL("image/jpeg", 0.86);
@@ -85,8 +129,10 @@ export async function sheetImages(state, { byId, ids, logo, onStep }) {
     if (!g || !item) continue;
     images.garments[id] = {};
     for (const view of ["front", "back"]) {
+      const url = ready?.[id]?.[view];
+      if (typeof url === "string") { images.garments[id][view] = url; continue; }
       const c = await queue.enqueue(jobKey(`sheet|${id}|${view}`), async () => renderGarmentView(g, view, item, state.palette, kit, { size: 560, detail: "full", lettering }), 6);
-      images.garments[id][view] = flatten(c, 560, "#F3F4F6").toDataURL("image/jpeg", 0.85);
+      images.garments[id][view] = sheetJpeg(c);
       onStep?.();
     }
   }
@@ -111,58 +157,83 @@ export function makeOrderText(state, ctx) {
 const slug = (t) => String(t || "team").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "team";
 export const fileBase = (state) => `${slug(`${state.team.school} ${state.team.mascot}`)}-${String(state.order.ref || "draft").toLowerCase()}`;
 
+export const PACK_GARMENT_PX = 1200;
+export const PACK_ART_PX = 2048;
+
 /**
- * makeDesignPack(state, ctx, onProgress(done, total, label)) → Promise<Blob> (zip):
- *   artwork/<effect>-2048.png   the look, transparent
- *   garments/<id>-front.png / -back.png at 1600 px, transparent
+ * makeDesignPack(state, ctx, onProgress(done, total, label)) → Promise<{ blob, filename }> (zip):
+ *   garments/<id>-front.jpg / -back.jpg   1200 px mockups on a light grey backdrop
+ *   artwork/<effect>-2048.png             the look on a transparent background, print size
  *   order-sheet.html, roster.csv, order.json, README.txt
+ * Each render is its own queue job and the page yields between steps; images are encoded
+ * with the async toBlob(). The 2048 px artwork is one effect render that can hold the page
+ * for a few seconds, so it runs last, after its label has painted. Progress is weighted by
+ * rough cost (the artwork counts as much as all the garments).
  */
 export async function makeDesignPack(state, ctx, onProgress) {
   const { byId, ids, logo } = ctx;
-  const garmentJobs = ids.filter((id) => byId[id] && state.collection.items[id]).length * 2;
-  const total = 1 + garmentJobs + 1 + garmentJobs + 1; // art, garments, sheet look, sheet garments, zip
+  const todo = ids.filter((id) => byId[id] && state.collection.items[id]);
+  const gSteps = todo.length * 2;
+  const ART_W = Math.max(4, gSteps);           // the 2048 render ≈ every garment view together
+  const total = gSteps + 2 + ART_W + 1;          // garments, order sheet (2), artwork, zip
   let done = 0;
-  const step = (label) => { done += 1; onProgress?.(Math.min(done, total), total, label); };
-  onProgress?.(0, total, "Rendering the artwork at 2048 px");
+  const report = (label, w = 0) => { done = Math.min(total, done + w); onProgress?.(done, total, label); };
+  report("Drawing the garments");
+  await settle();
 
   const { default: JSZip } = await import("jszip");
   const zip = new JSZip();
   const base = fileBase(state);
+  const STORE = { compression: "STORE" }; // JPEG/PNG are already compressed
 
-  const kit = await renderArt(state, logo, { size: 2048, priority: 8 });
-  const STORE = { compression: "STORE" }; // PNGs are already compressed
-  zip.file(`artwork/${slug(kit.effect?.name || state.effect.id)}-2048.png`, await canvasToBlob(kit.art), STORE);
-  step("Rendering garments at 1600 px");
-
+  // 1 · garments at 1200 px on the sheet grey, from the 1024 px art the previews already use
+  const kit = await renderArt(state, logo, { size: 1024, priority: 8 });
   const lettering = firstLettering(state);
-  for (const id of ids) {
+  const ready = {};
+  for (const id of todo) {
     const g = byId[id];
     const item = state.collection.items[id];
-    if (!g || !item) continue;
+    ready[id] = {};
     for (const view of ["front", "back"]) {
-      const c = await queue.enqueue(jobKey(`pack|${id}|${view}`), async () => renderGarmentView(g, view, item, state.palette, kit, { size: 1600, detail: "full", lettering, shadow: false }), 8);
-      zip.file(`garments/${id}-${view}.png`, await canvasToBlob(c), STORE);
-      step(`${g.name} ${view}`);
+      const c = await queue.enqueue(jobKey(`pack|${id}|${view}`), async () => renderGarmentView(g, view, item, state.palette, kit, { size: PACK_GARMENT_PX, detail: "full", lettering, backdrop: SHEET_BG }), 8);
+      zip.file(`garments/${id}-${view}.jpg`, await canvasToBlob(c, "image/jpeg", 0.88), STORE);
+      ready[id][view] = sheetJpeg(c); // the order sheet's copy, so the big canvas can go
+      report(`Drawing the garments: ${g.name}, ${view}`, 1);
+      await nextFrame();
     }
   }
 
+  // 2 · the order sheet, reusing those renders
+  report("Building the order sheet");
+  await settle();
   const order = orderForExport(state, ctx);
-  const images = await sheetImages(state, { ...ctx, onStep: () => step("Building the order sheet") });
+  const images = await sheetImages(state, { ...ctx, ready });
   zip.file("order-sheet.html", orderSheetHtml(order, images));
   zip.file("roster.csv", rosterCsv(order));
   zip.file("order.json", JSON.stringify(order, null, 2));
+  report("Building the order sheet", 2);
+
+  // 3 · the print artwork (one long render)
+  report("Rendering the print artwork at 2048 px. The page may pause for a few seconds");
+  await settle();
+  const big = await renderArt(state, logo, { size: PACK_ART_PX, priority: 8 });
+  const artName = `artwork/${slug(big.effect?.name || state.effect.id)}-${PACK_ART_PX}.png`;
+  zip.file(artName, await canvasToBlob(big.art), STORE);
+  report("Compressing", ART_W);
+  await settle();
+
   zip.file("README.txt", [
     `Mascot Lab design pack · ${order.team.school} ${order.team.mascot} · order ${order.ref}`,
     "",
-    "artwork/   the chosen look on a transparent background, 2048 px square",
-    "garments/  every garment in the kit, front and back, 1600 px, transparent",
-    "order-sheet.html  open in any browser to view or print the full order",
-    "roster.csv        players, numbers, sizes and pieces, plus extras",
-    "order.json        the same order as data",
+    `${artName.padEnd(30)} the chosen look, transparent background, ${PACK_ART_PX} px square`,
+    `garments/                      every garment in the kit, front and back, ${PACK_GARMENT_PX} px previews`,
+    "order-sheet.html               open in any browser to view or print the full order",
+    "roster.csv                     players, numbers, sizes and pieces, plus extras",
+    "order.json                     the same order as data",
+    ...(big.fallback ? ["", `Note: the ${big.fallback.effect} effect didn't render, so the artwork is the clean logo.`] : []),
     "",
     orderText(order),
   ].join("\n"));
-  onProgress?.(total - 1, total, "Compressing");
   const blob = await zip.generateAsync({ type: "blob", compression: "DEFLATE", compressionOptions: { level: 6 } });
   onProgress?.(total, total, "Ready");
   return { blob, filename: `${base}-design-pack.zip` };

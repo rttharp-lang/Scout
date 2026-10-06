@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { Button, NumberStepper, SpecLabel, TabPanel, Tabs, cx } from "../components/index.js";
 import { PRODUCTS, SIZE_GROUPS } from "../../order/catalog.js";
 import { extrasUnits, formatMoney } from "../../order/pricing.js";
-import { plural, productName } from "./util.js";
+import { plural, productName, shortName } from "./util.js";
 
 export function Extras({ extras, setExtras, ids, byId, locked = false, defaultOpen = false }) {
   const total = extrasUnits(extras, ids);
@@ -23,7 +23,8 @@ export function Extras({ extras, setExtras, ids, byId, locked = false, defaultOp
     });
   const clearGarment = (g) => setExtras((ex) => { const next = { ...(ex || {}) }; delete next[g]; return next; });
 
-  const tabs = ids.map((g) => ({ id: g, label: productName(g, byId[g]), count: extrasUnits({ [g]: extras?.[g] }) || undefined }));
+  // short labels ("Jersey", "Shooter") keep all six tabs visible; the panel names the product
+  const tabs = ids.map((g) => ({ id: g, label: shortName(g), count: extrasUnits({ [g]: extras?.[g] }) || undefined }));
 
   return (
     <section className={cx("ord-panel ord-extras", open && "is-open")} aria-labelledby="ord-extras-h">
@@ -42,11 +43,11 @@ export function Extras({ extras, setExtras, ids, byId, locked = false, defaultOp
           <p className="muted">No garments in the kit yet.</p>
         ) : (
           <>
-            <Tabs tabs={tabs} value={tab} onChange={setTab} idBase="ord-extras" label="Garment" size="sm" />
+            <Tabs tabs={tabs} value={tab} onChange={setTab} idBase="ord-extras" label="Garment" size="sm" className="ord-extras__tabs" />
             {tab && (
               <TabPanel idBase="ord-extras" value={tab} className="ord-extras__panel">
                 <div className="ord-extras__meta">
-                  <SpecLabel k="Each" v={formatMoney(PRODUCTS[tab]?.price)} />
+                  <p className="ord-extras__product"><strong>{productName(tab, byId[tab])}</strong><SpecLabel k="Each" v={formatMoney(PRODUCTS[tab]?.price)} /></p>
                   {extras?.[tab] && <Button variant="ghost" size="sm" onClick={() => clearGarment(tab)} disabled={locked}>Clear {productName(tab, byId[tab])}</Button>}
                 </div>
                 {SIZE_GROUPS.map((grp) => (

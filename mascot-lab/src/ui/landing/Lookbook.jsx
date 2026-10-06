@@ -106,7 +106,7 @@ export function Lookbook() {
                 );
               })}
         </ul>
-        {!loading && !n && <p className="lp-drop__empty">The garment mockups are still loading. Open the Collection step to see your kit.</p>}
+        {!loading && !n && <p className="lp-drop__empty">The garment mockups didn't load. Reload the page, or open the Collection step to try again.</p>}
 
         <div className="lp-drop__foot">
           <p className="lp-drop__note">Mockups use your logo and team colors. Prices are per piece, decoration included.</p>

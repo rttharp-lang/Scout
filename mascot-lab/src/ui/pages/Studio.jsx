@@ -18,7 +18,7 @@ import { Gallery, GALLERY_SIZE, stageStyle } from "../studio/Gallery.jsx";
 import {
   Inspector, InspectorActions, InspectorControls, InspectorHead, InspectorStage, useDownload, useInspectorRender,
 } from "../studio/Inspector.jsx";
-import { JerseyThumb, ProductPreview, useJerseyMockup } from "../studio/ProductPreview.jsx";
+import { useProductMockup } from "../studio/ProductPreview.jsx";
 import "./studio.css";
 
 export default function Studio() {
@@ -30,17 +30,19 @@ export default function Studio() {
   const isPhone = useMediaQuery("(max-width: 759px)");
   const [filter, setFilter] = useState("all");
   const [backdrop, setBackdrop] = useState("stage");
+  const [view, setView] = useState("art");
   const [sheetOpen, setSheetOpen] = useState(false);
 
   /* upload: button, drop anywhere, paste */
   const onUploaded = useCallback((r) => {
+    const what = r.name === "Pasted logo" ? "your pasted logo" : r.name;
     toast({
       id: "upload",
       tone: "success",
-      title: "Logo uploaded",
+      title: "Logo added",
       body: r.bgRemoved
-        ? `We cut ${r.name} out of its background and set your team colors from it. Check both in the logo panel.`
-        : `We set your team colors from ${r.name}. Check them under Team colors.`,
+        ? `We removed the background from ${what} and set your team colors from it. Check both in the logo panel.`
+        : `We set your team colors from ${what}. Check them under Team colors.`,
       action: r.bgRemoved ? { label: "Keep background", onClick: () => actions.setLogo({ bgRemoved: false }) } : undefined,
       duration: 8000,
     });
@@ -61,7 +63,7 @@ export default function Studio() {
   }, [fx.effects]);
   const showInspector = !isPhone || sheetOpen;
   const render = useInspectorRender(showInspector ? effect : null, state, logo);
-  const mock = useJerseyMockup({
+  const mock = useProductMockup({
     art: render.canvas, effectId: effect?.id || null, state, logo,
     enabled: showInspector && !!effect && render.status !== "error",
   });
@@ -72,6 +74,11 @@ export default function Studio() {
     if (isPhone) setSheetOpen(true);
   }, [actions, state.effect.id, isPhone]);
   const onToggleFavorite = useCallback((id) => actions.toggleFavorite(id), [actions]);
+  // keyboard: jump past the tiles to the selected effect's settings
+  const onSkip = useCallback(() => {
+    if (isPhone) { setSheetOpen(true); return; }
+    document.getElementById("st-insp")?.focus();
+  }, [isPhone]);
 
   // leaving phone layout with the sheet open: close it
   useEffect(() => { if (!isPhone) setSheetOpen(false); }, [isPhone]);
@@ -116,7 +123,11 @@ export default function Studio() {
             selectedParams={state.effect.params}
             seed={state.effect.seed}
             numbers={numbers}
-            status={<RenderStatus loading={fx.status !== "ready"} total={fx.effects.length} />}
+            onSkip={effect ? onSkip : null}
+            skipLabel={effect ? `Skip to the ${effect.name} settings` : null}
+            noLogo={logo.status === "error" && !logo.canvas}
+            onUpload={upload.openPicker}
+            status={<RenderStatus loading={fx.status !== "ready"} noLogo={logo.status === "error" && !logo.canvas} total={fx.effects.length} />}
           />
         </div>
 
@@ -131,6 +142,8 @@ export default function Studio() {
               mock={mock}
               backdrop={backdrop}
               onBackdrop={setBackdrop}
+              view={view}
+              onView={setView}
               download={download}
             />
           </div>
@@ -139,7 +152,7 @@ export default function Studio() {
 
       {isPhone && (
         <>
-          <PhoneBar effect={effect} state={state} logo={logo} onOpen={() => setSheetOpen(true)} />
+          <PhoneBar effect={effect} state={state} logo={logo} paused={sheetOpen} onOpen={() => setSheetOpen(true)} />
           <Sheet
             open={sheetOpen && !!effect}
             onClose={() => setSheetOpen(false)}
@@ -148,10 +161,9 @@ export default function Studio() {
             className="st-sheet"
             footer={<InspectorActions effect={effect} download={download} compact />}
           >
-            <InspectorStage effect={effect} render={render} state={state} backdrop={backdrop} onBackdrop={setBackdrop} />
-            <InspectorHead effect={effect} number={effect ? numbers[effect.id] : 0} compact aside={<JerseyThumb mock={mock} effect={effect} className="is-sm" />} />
+            <InspectorStage effect={effect} render={render} state={state} backdrop={backdrop} onBackdrop={setBackdrop} view={view} onView={setView} mock={mock} />
+            <InspectorHead effect={effect} number={effect ? numbers[effect.id] : 0} compact />
             <InspectorControls effect={effect} state={state} actions={actions} />
-            <ProductPreview mock={mock} effect={effect} />
           </Sheet>
         </>
       )}
@@ -163,22 +175,24 @@ export default function Studio() {
 }
 
 /** Render-queue readout next to the gallery title (re-renders on its own, not the page). */
-function RenderStatus({ loading, total }) {
+function RenderStatus({ loading, noLogo, total }) {
   const { pending } = useQueueStatus();
   return (
     <span className="st-status">
-      <span className={cx("st-led", (loading || pending > 0) && "is-busy")} aria-hidden="true" />
-      <SpecLabel>{loading ? "Loading effects" : pending > 0 ? `Rendering · ${pending} to go` : `${total} looks · live`}</SpecLabel>
+      <span className={cx("st-led", noLogo ? "is-off" : (loading || pending > 0) && "is-busy")} aria-hidden="true" />
+      <SpecLabel>{loading ? "Loading effects" : noLogo ? "Waiting for a logo" : pending > 0 ? `Rendering · ${pending} to go` : `${total} looks · live`}</SpecLabel>
     </span>
   );
 }
 
 /* ───────────────────────────── phone bottom bar ───────────────────────────── */
 
-function PhoneBar({ effect, state, logo, onOpen }) {
+function PhoneBar({ effect, state, logo, paused, onOpen }) {
+  // same key as the selected gallery tile (shared render); paused under the sheet, where
+  // the inspector preview has the queue
   const r = useEffectRender({
     effect, logo, params: state.effect.params, palette: state.palette, seed: state.effect.seed,
-    size: GALLERY_SIZE, quality: "preview", priority: 35,
+    size: GALLERY_SIZE, quality: "preview", priority: 35, debounce: 120, enabled: !paused,
   });
   return (
     <div className="st-bar" role="region" aria-label="Selected look">

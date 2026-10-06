@@ -1026,8 +1026,55 @@ export function renderMockup(garment, viewId, {
   // one cached "finish" layer per garment view, size and detail level
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.drawImage(finishLayer(garment, cv, size, detail, timings ? mark : null), 0, 0);
+  // dark seams vanish on near-black cloth: there the light catching each seam ridge is
+  // what you see, so lift seams + stitching with a light pass (fades out by mid-navy)
+  const dark = DARK_SEAM_L - lum(col.base);
+  if (dark > 0) {
+    ctx.globalAlpha = Math.min(1, dark / 0.03) * 0.5;
+    ctx.drawImage(lightLineLayer(cv, size), 0, 0);
+    ctx.globalAlpha = 1;
+  }
   mark("finish");
   return canvas;
+}
+
+const DARK_SEAM_L = 0.04;    // base luminance below which seams get the light pass
+
+/** Seams + stitching only, in white (cached per view and size, like the finish layer). */
+function lightLineLayer(cv, size) {
+  const key = `${cv.key}|${size}|light-lines`;
+  const hit = finishCache.get(key);
+  if (hit) return hit;
+  const k = size / ARTBOARD;
+  const layer = makeCanvas(size);
+  const ctx = layer.getContext("2d");
+  ctx.setTransform(k, 0, 0, k, 0, 0);
+  ctx.save();
+  ctx.clip(cv.silhouette);
+  const list = cv.overlays;
+  for (let i = 0; i < list.length;) {
+    const o = list[i];
+    if (o.kind === "stitch") {
+      const group = [];
+      while (i < list.length && list[i].kind === "stitch" && (list[i].opacity ?? 0.5) === (o.opacity ?? 0.5)) group.push(list[i++]);
+      drawStitches(ctx, group, k, size);
+      continue;
+    }
+    if (o.kind === "seam") {
+      ctx.lineJoin = "round"; ctx.lineCap = "round";
+      ctx.strokeStyle = LINE_DARK + Math.min(1, (o.opacity ?? 0.35) * 1.3).toFixed(3) + ")";
+      ctx.lineWidth = (o.width ?? 1.2) * 0.9;
+      ctx.stroke(o.path);
+    }
+    i++;
+  }
+  ctx.restore();
+  // everything drawn above becomes white, keeping its alpha
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalCompositeOperation = "source-in";
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillRect(0, 0, size, size);
+  return finishCache.set(key, layer, size * size);
 }
 
 const finishCache = new PixelLRU(28e6);   // ≈ 110 MB of RGBA at most

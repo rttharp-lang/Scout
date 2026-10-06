@@ -47,6 +47,40 @@ function inkOf(palette) {
   return d && luminance(d) < 0.02 ? d : "#0D0F12";
 }
 
+/** A near-black, near-neutral colour: as a fill it would swallow the black keylines. */
+function isInkLike(hex) {
+  const [, s, l] = rgbToHsl(hexToRgb(hex));
+  return luminance(hex) < 0.035 && (s < 0.35 || l < 0.08);
+}
+
+/**
+ * Fill colour actually used for a fill slot: a near-black slot (a red/black team's
+ * "secondary") becomes steel silver — the classic red-to-chrome fade — instead of a
+ * lifted slate grey that turns the fade's horizon mauve.
+ */
+function usableFill(hex, other) {
+  if (!isInkLike(hex)) return hex;
+  return isInkLike(other) ? "#C9CFD8" : "#B4BDC8";
+}
+
+/**
+ * The 3-D block's colour: the darkest saturated colour among the piece's colours (navy
+ * for the sample team), held dark enough to read as the shadow side of the letters.
+ * Neutral pieces fall back to charcoal. → { lit, deep } hexes.
+ */
+function blockColors(cands, ink) {
+  let best = null;
+  for (const c of cands) {
+    const [h, s, l] = rgbToHsl(hexToRgb(c));
+    if (s < 0.25 || l > 0.75 || l < 0.04) continue;
+    const L = luminance(c);
+    if (!best || L < best.L) best = { h, s, l, L };
+  }
+  if (!best) return { lit: mix(ink, "#565D69", 0.55), deep: mix(ink, "#000000", 0.35) };
+  const s = Math.min(1, best.s * 0.95 + 0.05);
+  return { lit: hslToHex(best.h, s, clamp(best.l, 0.24, 0.34)), deep: hslToHex(best.h, s * 0.9, 0.07) };
+}
+
 /** Tone step of a fill colour: level −2..+2 (deep shade … pale tint). */
 function toneOf(hex, level) {
   if (level === 0) return hex;
@@ -295,12 +329,12 @@ export default {
     { key: "top", label: "Fill top", type: "color", default: "primary" },
     { key: "bottom", label: "Fill bottom", type: "color", default: "secondary" },
     { key: "outer", label: "Outer outline", type: "color", default: "accent" },
-    { key: "depth", label: "3-D depth", type: "range", min: 0, max: 60, step: 1, default: 26, unit: "px" },
+    { key: "depth", label: "3-D depth", type: "range", min: 0, max: 60, step: 1, default: 34, unit: "px" },
     { key: "drips", label: "Drips", type: "range", min: 0, max: 100, step: 1, default: 45, unit: "%" },
     { key: "spray", label: "Overspray", type: "range", min: 0, max: 100, step: 1, default: 55, unit: "%" },
   ],
   presets: [
-    { name: "Piece", params: { fill: "fade", top: "primary", bottom: "secondary", outer: "accent", depth: 26, drips: 45, spray: 55 } },
+    { name: "Piece", params: { fill: "fade", top: "primary", bottom: "secondary", outer: "accent", depth: 34, drips: 45, spray: 55 } },
     { name: "Chrome bomb", params: { fill: "chrome", top: "primary", bottom: "secondary", outer: "secondary", depth: 32, drips: 25, spray: 45 } },
     { name: "Drip", params: { fill: "fade", top: "secondary", bottom: "primary", outer: "accent", depth: 20, drips: 100, spray: 40 } },
     { name: "Throw-up", params: { fill: "bubble", top: "accent", bottom: "secondary", outer: "primary", depth: 10, drips: 0, spray: 30 } },
@@ -320,6 +354,9 @@ export default {
     const glintRand = rng(hashSeed("graffiti-glints", ctx.seed));
     const ink = inkOf(ctx.palette);
     const inkRGB = hexToRgb(ink);
+    // a near-black second outline would vanish into the black one: use the lightest palette colour
+    const outerHex = !isInkLike(p.outer) ? p.outer
+      : [ctx.palette?.accent, ctx.palette?.light, "#FFFFFF"].find((c) => c && luminance(c) > 0.4);
     const lum709 = (d, j) => (0.299 * d[j] + 0.587 * d[j + 1] + 0.114 * d[j + 2]) / 255;
 
     /* ── 1. read the logo at W (fill) and A (analysis) ── */
@@ -396,12 +433,13 @@ export default {
     const levels = centres.map((_, k) => clamp(k - anchor, -2, 2));
     const chrome = p.fill === "chrome";
     const flat = p.fill === "flat" || p.fill === "bubble";
-    const top = chrome ? p.top : liftForKeylines(p.top);
-    const bot = chrome ? p.bottom : liftForKeylines(p.bottom);
+    const top = chrome ? p.top : liftForKeylines(usableFill(p.top, p.bottom));
+    const bot = chrome ? p.bottom : liftForKeylines(usableFill(p.bottom, p.top));
     const lutFor = (level) => {
       if (chrome) {
         // team-tinted chrome: silver-blue sky over a sharp horizon, warm "ground" below
-        const sky = liftForKeylines(top, 0.2), ground = bot;
+        // a near-black "bottom" would sink the ground into mud: reflect the top colour there
+        const sky = liftForKeylines(top, 0.2), ground = isInkLike(bot) ? (isInkLike(top) ? "#8A7A62" : top) : bot;
         const tc = (h) => (level < 0 ? mix(h, "#15181D", level < -1 ? 0.55 : 0.35) : level > 0 ? mix(h, "#FFFFFF", level > 1 ? 0.55 : 0.3) : h);
         return gradientLUT([
           { at: 0.0, color: tc("#FFFFFF") },
@@ -533,7 +571,7 @@ export default {
       raster(W, line, n, LINE * u);
       raster(A, lineA, nA, LINE * uA);
     }
-    const outerCanvas = maskToCanvas(outer, W, W, p.outer);
+    const outerCanvas = maskToCanvas(outer, W, W, outerHex);
     const lineCanvas = maskToCanvas(line, W, W, ink);
 
     /* ── 7. 3-D block: the outer shape swept 0..depth px down-right ── */
@@ -554,8 +592,9 @@ export default {
       const sx = ctx2d(shadeCanvas);
       const img = sx.createImageData(A, A);
       const ed = img.data;
-      const lit = hexToRgb(mix(mix(ink, "#565D69", 0.55), p.outer, 0.05));
-      const deep = hexToRgb(mix(ink, "#000000", 0.35));
+      const bc = blockColors([p.top, p.bottom, outerHex], ink);
+      const lit = hexToRgb(bc.lit);
+      const deep = hexToRgb(bc.deep);
       for (let y = 0; y < A; y++) {
         for (let x = 0; x < A; x++) {
           const i = y * A + x;
@@ -610,7 +649,7 @@ export default {
     // overspray: fine particles with a gaussian falloff around the outer outline, in the
     // outline colour — or, when that is dark (it would read as a smudge), the lightest fill
     const lightest = [top, bot].sort((a, b) => luminance(b) - luminance(a))[0];
-    const sprayInk = luminance(p.outer) > 0.16 ? p.outer : luminance(lightest) > 0.16 ? lightest : "#FFFFFF";
+    const sprayInk = luminance(outerHex) > 0.16 ? outerHex : luminance(lightest) > 0.16 ? lightest : "#FFFFFF";
     if (p.spray > 0) {
       const amt = p.spray / 100;
       const sigma = (10 + 16 * amt) * uA;               // A px

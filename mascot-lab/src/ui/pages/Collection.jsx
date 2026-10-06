@@ -25,15 +25,23 @@ const UI_KEY = "mascot-lab:collection-ui";
 
 /** One line under the "Drop style" heading for the chosen style (falls back to the recipe's note). */
 const STYLE_NOTES = {
-  statement: "One giant graphic per piece, cropped hard by the seams. Built like a pro warm-up drop.",
-  classic: "A clean crest up front and one confident hit on the back. Game-day staples.",
-  allover: "A brick-repeat print on every panel: full color on game pieces, one ink on fleece.",
+  statement: "One giant graphic per piece, cropped hard by the seams, the way pro warm-up drops are built.",
+  classic: "Clean logo crests, numbers on the jersey and shooting shirt, and your look as one bigger hit on the hoodie and tee.",
+  allover: "A brick-repeat print on every panel. Full color on the jersey, shorts and tee, one ink on the rest.",
   tonal: "Graphics a shade off the garment color. Reads up close, quiet from across the gym.",
 };
 
 function defaultPreview(team) {
   const m = String(team?.mascot || team?.school || "TEAM").trim().toUpperCase();
   return { name: m.slice(0, 14), number: "23" };
+}
+
+/** A stored { name, number } preview, or null if it isn't one. */
+function validPreview(v) {
+  if (!v || typeof v !== "object") return null;
+  const name = typeof v.name === "string" ? v.name.toUpperCase().slice(0, 14) : "";
+  const number = typeof v.number === "string" ? v.number.replace(/[^0-9]/g, "").slice(0, 2) : "";
+  return { name, number };
 }
 
 export default function Collection() {
@@ -51,11 +59,11 @@ export default function Collection() {
 
   // per-viewer conveniences (survive reloads on this device only)
   const [showBacks, setShowBacks] = useState(() => !!storage.load(UI_KEY)?.showBacks);
-  useEffect(() => { storage.save(UI_KEY, { showBacks }); }, [showBacks]);
   const [flips, setFlips] = useState({});
   const [selectedId, setSelectedId] = useState(null);
   const [inspView, setInspView] = useState("front");
-  const [previewOverride, setPreviewOverride] = useState(null);
+  const [previewOverride, setPreviewOverride] = useState(() => validPreview(storage.load(UI_KEY)?.preview));
+  useEffect(() => { storage.save(UI_KEY, { showBacks, preview: previewOverride }); }, [showBacks, previewOverride]);
   const preview = previewOverride || defaultPreview(team);
   const [busy, setBusy] = useState({ sheet: false, garment: null });
   const openRefs = useRef({});
@@ -112,7 +120,7 @@ export default function Collection() {
       if (e.key !== "Escape" || e.defaultPrevented) return;
       if (document.querySelector(".ml-overlay")) return;
       // Esc inside a text field belongs to the field (ColorField uses it to undo typing)
-      if (e.target?.closest?.("input:not([type=range]), select, textarea")) return;
+      if (e.target?.closest?.("input:not([type=range]):not([type=color]), textarea")) return;
       closeInspector();
     };
     document.addEventListener("keydown", onKey);

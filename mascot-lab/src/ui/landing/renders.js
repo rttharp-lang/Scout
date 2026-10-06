@@ -65,12 +65,27 @@ export function peek(key) {
 }
 
 /**
+ * afterPaint() — resolves once the browser has had a chance to commit React updates and
+ * paint (rAF, then a task), so a finished render shows before the next heavy job blocks
+ * the main thread. Falls back to a short timeout where rAF doesn't fire (hidden tabs).
+ */
+function afterPaint() {
+  return new Promise((resolve) => {
+    let settled = false;
+    const go = () => { if (!settled) { settled = true; resolve(); } };
+    if (typeof requestAnimationFrame === "function") requestAnimationFrame(() => setTimeout(go, 0));
+    setTimeout(go, 60);
+  });
+}
+
+/**
  * request(key, job, priority) — enqueue a render (deduped by key). release() drops this
  * caller's interest; when nobody wants a pending job any more it is cancelled.
  */
 export function request(key, job, priority = 0) {
   refs.set(key, (refs.get(key) || 0) + 1);
   const promise = queue.enqueue(key, async () => {
+    await afterPaint();
     const t0 = performance.now();
     try {
       const out = await job();

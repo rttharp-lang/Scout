@@ -23,7 +23,7 @@ export function ForCoaches() {
           aside={`Min. ${MIN_ORDER_UNITS} pcs · Sizes ${SIZES.youth[0]}–${SIZES.adult[SIZES.adult.length - 1]}`}
           id="lp-coaches-title"
           title="Built for programs without a designer."
-          lead="Head coaches, assistants, athletic directors and booster parents use Mascot Lab to get gear that looks like a pro drop on a high-school budget."
+          lead="Made for head coaches, assistants, athletic directors and booster parents who want gear that looks like a pro drop on a high-school budget."
         />
 
         <div className="lp-coaches__top">

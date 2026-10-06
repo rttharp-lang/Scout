@@ -91,6 +91,7 @@
 /* ═════════════════════════ section blocks ═════════════════════════ */
 .cl-notices { display: grid; gap: var(--space-3); padding-bottom: var(--space-4); }
 .cl-block { padding-top: var(--space-5); }
+.cl-block + .cl-block { padding-top: var(--space-6); }
 .cl-block__head {
   display: flex;
   align-items: baseline;
@@ -186,7 +187,10 @@
 .cl-card__open:hover .ml-canvas > canvas { transform: scale(1.015); }
 .cl-card__tags { position: absolute; top: var(--space-3); left: var(--space-3); display: flex; gap: 6px; pointer-events: none; }
 .cl-card__code { background: color-mix(in srgb, var(--surface) 82%, transparent); border-color: transparent; }
-.cl-card__flip { position: absolute; top: 8px; right: 8px; background: color-mix(in srgb, var(--surface-2) 88%, transparent); }
+.cl-card__flip { position: absolute; top: 8px; right: 8px; background: color-mix(in srgb, var(--surface-2) 88%, transparent); overflow: visible; }
+/* the flip stays small over the art, but its hit area is ≥ 40px tall */
+.cl-card__flip .ml-seg__opt { position: relative; }
+.cl-card__flip .ml-seg__opt::after { content: ""; position: absolute; inset: -6px -1px -12px; }
 .cl-card__hint {
   position: absolute; left: 50%; bottom: var(--space-3);
   display: inline-flex; align-items: center; gap: 6px;
@@ -202,12 +206,28 @@
 }
 .cl-card__hint svg { width: 14px; height: 14px; stroke-width: 2.4; }
 .cl-card__open:hover .cl-card__hint, .cl-card__open:focus-visible .cl-card__hint { opacity: 1; transform: translate(-50%, 0); }
-@media (hover: none) { .cl-card__hint { display: none; } }
+/* touch screens and phones: no hover, so the hint becomes a small always-on edit badge */
+@media (hover: none), (max-width: 720px) {
+  .cl-card__open .cl-card__hint,
+  .cl-card__open:hover .cl-card__hint,
+  .cl-card__open:focus-visible .cl-card__hint {
+    left: auto; right: 8px; bottom: 8px;
+    width: 30px; height: 30px; padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0.9;
+    transform: none;
+  }
+  .cl-card__hint > span { display: none; }
+  .cl-card__hint svg { width: 15px; height: 15px; }
+  .cl-card.is-out .cl-card__hint { opacity: 0.6; }
+}
 
 /* excluded: dimmed and stamped, never removed */
 .cl-card.is-out { box-shadow: 0 0 0 1px var(--line); background: color-mix(in srgb, var(--surface) 55%, var(--bg)); }
 .cl-card.is-out .cl-card__open .ml-canvas > canvas { opacity: 0.32; filter: grayscale(0.9); }
-.cl-card.is-out .cl-card__title, .cl-card.is-out .cl-card__spec { opacity: 0.55; }
+.cl-card.is-out .cl-card__title { opacity: 0.6; }
+.cl-card.is-out .cl-card__spec { opacity: 0.8; }
 .cl-card__out {
   position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%) rotate(-7deg);
@@ -303,6 +323,8 @@
 button.cl-insp__pane { cursor: pointer; }
 button.cl-insp__pane .ml-canvas { box-shadow: inset 0 0 0 1px var(--cl-stage-line); transition: box-shadow var(--dur-1) ease; }
 button.cl-insp__pane:hover .ml-canvas { box-shadow: inset 0 0 0 2px var(--ink); }
+/* the small inset's label sits at its foot, clear of name/number lettering */
+.cl-insp__preview > .cl-insp__pane:not(.is-active) .cl-insp__pane-label { top: auto; bottom: 6px; left: 6px; }
 .cl-insp__pane-label {
   position: absolute; left: 8px; top: 8px;
   padding: 2px 6px 1px;
@@ -320,7 +342,8 @@ button.cl-insp__pane:hover .ml-canvas { box-shadow: inset 0 0 0 2px var(--ink); 
   pointer-events: none;
 }
 .cl-zone__tag {
-  position: absolute; left: -1.5px; bottom: 100%;
+  /* above the back/front inset (z-index 1) so the label is never hidden under it */
+  position: absolute; left: -1.5px; bottom: 100%; z-index: 2;
   margin-bottom: 3px;
   padding: 2px 5px 1px;
   background: var(--ink); color: var(--bg);
@@ -352,7 +375,6 @@ button.cl-insp__pane:hover .ml-canvas { box-shadow: inset 0 0 0 2px var(--ink); 
 .cl-insp__mini-pane.is-active > span { color: var(--ink); }
 .cl-insp__mini-text { display: grid; gap: 2px; min-width: 0; margin-left: var(--space-2); }
 .cl-insp__mini-text strong { font-family: var(--font-display); font-weight: 800; font-size: var(--step-1); text-transform: uppercase; line-height: 1; }
-.cl-insp__mini-text span { font-size: 12.5px; color: var(--ink-2); }
 
 .cl-insp__status {
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
@@ -510,6 +532,23 @@ button.cl-insp__pane:hover .ml-canvas { box-shadow: inset 0 0 0 2px var(--ink); 
   .cl-card__out { font-size: 10px; padding: 5px 8px 4px; }
   .cl-insp__content { --insp-pad: var(--space-4); padding: var(--space-3) var(--insp-pad) var(--space-5); }
   .cl-place__grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* touch sizes: every control in the page and the sheet is at least 40px tall */
+@media (max-width: 720px), (pointer: coarse) {
+  :is(.cl-page, .cl-sheet) .ml-btn--sm { --btn-h: 40px; }
+  :is(.cl-page, .cl-sheet) .ml-iconbtn--sm { --ib: 40px; }
+  :is(.cl-page, .cl-sheet) .ml-toggle { min-height: 40px; }
+  :is(.cl-page, .cl-sheet) .ml-seg--sm .ml-seg__opt { min-height: 40px; }
+  :is(.cl-page, .cl-sheet) .ml-color__hex { min-height: 40px !important; }
+  :is(.cl-page, .cl-sheet) .ml-color__picker { width: 40px; height: 40px; }
+  :is(.cl-page, .cl-sheet) input[type="range"] { height: 40px; --thumb: 22px; }
+  .cl-page .cl-look__color .ml-color__picker { height: 40px; }
+  /* colorway rows: five 40px swatches, then hex + picker on their own line */
+  .cl-sheet .ml-swatch { --sw: 40px; }
+  .cl-sheet .ml-color__sep { flex-basis: 100%; width: 0; height: 0; margin: 0; background: none; }
+  .cl-sheet .ml-color__hex { width: 178px !important; }
+  /* the card flip keeps its small look (its ::after carries the hit area) */
+  .cl-page .cl-card__flip .ml-seg__opt { min-height: 24px; }
 }
 @media (max-width: 380px) {
   .cl-hero__ctas .ml-btn, .cl-cta .ml-btn { --btn-fs: 18px; --btn-px: 14px; }

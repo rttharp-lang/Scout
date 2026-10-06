@@ -27,7 +27,7 @@ function SecHead({ n, title, edit, children }) {
   );
 }
 
-export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logoCanvas, refLabel = "Assigned when you send", status = "Draft" }) {
+export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logoCanvas, placeholder = null, refLabel = "Assigned when you send", status = "Draft" }) {
   const o = order;
   const t = o.totals;
   const sizes = sizesInOrder(o.quantities);
@@ -41,9 +41,9 @@ export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logo
       <span className="rv-sheet__stripe" aria-hidden="true" />
       <header className="rv-sheet__top">
         <div className="rv-sheet__id">
-          <CanvasImage canvas={logoCanvas} ratio={1} stage="checker" padding={0.08} className="rv-sheet__logo" alt={`${o.logo.name} logo`} />
+          <CanvasImage canvas={logoCanvas} error={!logoCanvas && placeholder ? "–" : null} ratio={1} stage="checker" padding={0.08} className="rv-sheet__logo" alt={`${o.logo.name} logo`} />
           <div>
-            <SpecLabel>Team order sheet · {status}</SpecLabel>
+            <SpecLabel>Team order sheet · {status}{o.replaces ? ` · Replaces ${o.replaces}` : ""}</SpecLabel>
             <h2 className="rv-sheet__team">{teamName}</h2>
           </div>
         </div>
@@ -60,7 +60,7 @@ export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logo
         <SecHead n={n()} title="Design" edit={{ href: "#studio", label: "Edit look" }} />
         <div className="rv-design">
           <figure className="rv-look">
-            <CanvasImage canvas={art} ratio={1} stage={stage} padding={0.02} alt={`${o.effect.name} version of the logo`} />
+            <CanvasImage canvas={art} error={!art && placeholder ? placeholder : null} ratio={1} stage={stage} padding={0.02} alt={`${o.effect.name} version of the logo`} />
             <figcaption><SpecLabel k="Artwork" v={`${o.effect.name}`} /></figcaption>
           </figure>
           <div className="rv-design__info">
@@ -110,7 +110,7 @@ export function OrderSheetView({ order, mockups = {}, art, stage = "paper", logo
                 <div className="rv-garment__views">
                   {["front", "back"].map((v) => (
                     <figure key={v}>
-                      <CanvasImage canvas={m[v] || null} ratio={1} stage="none" padding={0.03} className="ord-gstage" alt={`${g.name}, ${v}`} />
+                      <CanvasImage canvas={m[v] || null} error={!m[v] && placeholder ? placeholder : null} ratio={1} stage="none" padding={0.03} className="ord-gstage" alt={`${g.name}, ${v}`} />
                       <figcaption>{v === "front" ? "Front" : "Back"}</figcaption>
                     </figure>
                   ))}

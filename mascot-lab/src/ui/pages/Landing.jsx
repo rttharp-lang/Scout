@@ -2,7 +2,7 @@
 // their logo becomes pro-looking team gear without a designer, then get them into the
 // Studio. Everything visual on the page is a real render of the team's current logo
 // (effects + garment mockups), fed through one landing render queue.
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRight, Upload } from "lucide-react";
 import { useLogoUpload } from "../studio/useLogoUpload.js";
 import { useGlobalDrop } from "../studio/useGlobalDrop.js";
@@ -39,11 +39,18 @@ function LandingPage() {
     });
   };
   const { dragging } = useGlobalDrop({ onFile: onDrop, enabled: !upload.busy });
+  // an upload started from the looks grid reports problems in a toast (no inline slot there)
+  const { error: uploadError, clearError } = upload;
+  useEffect(() => {
+    if (!uploadError || origin !== "looks") return;
+    toast({ tone: "danger", title: "That file didn't work", body: uploadError, duration: 8000 });
+    clearError();
+  }, [uploadError, origin, toast, clearError]);
 
   const isSample = state.team.isSample;
   const tryLabel = isSample ? `Try it with the ${state.team.mascot || "Bulldogs"}` : "Keep remixing your logo";
   const open = (where) => () => { setOrigin(where); upload.clearError?.(); upload.openPicker(); };
-  const heroBusy = upload.busy && origin !== "cta";
+  const heroBusy = upload.busy && (origin === "hero" || origin === "drop");
   const heroUpload = { ...upload, openPicker: open("hero") };
   const ctaUpload = { ...upload, busy: upload.busy && origin === "cta", openPicker: open("cta") };
   const errorNotice = (where) =>
@@ -91,7 +98,7 @@ function LandingPage() {
       </section>
 
       <HowItWorks />
-      <LooksGrid />
+      <LooksGrid onUpload={open("looks")} uploading={upload.busy && origin === "looks"} />
       <Lookbook />
       <ForCoaches />
       <Faq />
