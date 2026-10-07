@@ -31,7 +31,7 @@
     },
     {
       "title": "The home season is Hawk season",
-      "detail": "The NBA season runs through the months when 'the Hawk', the wind off Lake Michigan, makes 20 degrees feel like zero; the January 2019 polar vortex hit about -23F. Fans walk to the United Center from the Ashland Green/Pink Line stop or the No. 20 Madison bus, so the real fan uniform is a long parka, a knit hat and a hoodie under it, and summer is lived outside on the 18-mile lakefront.",
+      "detail": "The NBA season runs through the months when 'the Hawk', the wind off Lake Michigan, makes 20 degrees feel like zero; the January 2019 polar vortex hit about -23F. Fans reach the United Center by the No. 20 Madison bus or a long walk from the nearest L stops, so the real fan uniform is a long parka, a knit hat and a hoodie under it, and summer is lived outside on the 18-mile lakefront.",
       "implication": "Make outerwear the hero of Chicago game-day product: wind-blocking stadium parkas, heavyweight fleece, cuffed knits and gloves, with reflective details for dark walks, timed to drop before the first freeze. Pivot to lakefront-weight tees and shorts for the spring and summer parade season."
     },
     {
@@ -63,7 +63,7 @@
       "name": "Little Village Arch ('Bienvenidos a Little Village')",
       "kind": "landmark",
       "neighborhood": "Little Village (La Villita)",
-      "why": "The gateway to 26th Street, the Mexican commercial corridor often cited as the city's second-busiest shopping strip after Michigan Avenue."
+      "why": "The gateway to 26th Street, the Mexican commercial corridor often cited (unverified) as the city's second-busiest shopping strip after Michigan Avenue."
     },
     {
       "name": "National Museum of Puerto Rican Arts & Culture",
@@ -237,7 +237,7 @@
       "use": "Neck tapes, sleeve hits and split-panel graphics that put North and South on one garment. It is ideal for a unity-themed City or fan collection."
     },
     {
-      "cue": "The municipal 'Y' device: a Y inside a circle standing for the Chicago River's main stem and its North and South branches.",
+      "cue": "The municipal 'Y' device: a three-pronged Y standing for the Chicago River's main stem and its North and South branches.",
       "type": "motif",
       "hex": "",
       "source": "The city symbol cast on bridges, park buildings and older municipal structures.",
@@ -282,13 +282,13 @@
       "cue": "The Hawk-season stadium parka: knee-length, wind-blocking, with a hood cut to fit over a fitted cap, storm cuffs and reflective piping.",
       "type": "silhouette",
       "hex": "",
-      "source": "Fans walking from the Ashland L stop or the Madison bus to the United Center in January.",
+      "source": "Fans walking from the L or the Madison bus to the United Center in January.",
       "use": "The hero Chicago game-day piece, in Bulls black with lake-gray lining and red reflective details."
     }
   ],
   "productHooks": [
     "'Madison Street' collection: split North/South hoodies and tees carrying the 0/0 grid coordinate and 1901 W. Madison, sold at the United Center and at shops on all sides of the city as a one-city statement.",
-    "'Hawk Season' outerwear drop before the first freeze in November: stadium parka, heavyweight fleece and a cuffed knit hat with a hidden Y-device patch, built for the walk from Ashland.",
+    "'Hawk Season' outerwear drop before the first freeze in November: stadium parka, heavyweight fleece and a cuffed knit hat with a hidden Y-device patch, built for the walk from the bus or L.",
     "A Chicago-first 'Gym Shoes' basketball footwear pack and campaign that uses the local word, launched through Public League and park-league programs rather than downtown retail alone.",
     "'I Will' shooting shirts and tees for the young Splitter-era core (Giddey, Buzelis, Caleb Wilson), with Sandburg lines printed inside, released around Chicago's 190th birthday on March 4, 2027.",
     "Neighborhood editions for the 77 community areas, co-designed and paid with local creatives in places such as Bronzeville, Little Village, Humboldt Park and Chatham, with bilingual tags where it fits.",
@@ -302,19 +302,58 @@
     "Stay out of politics and ownership fights: Chicago holds municipal elections in February-April 2027, fans are frustrated with the Reinsdorf era, Chicago-born Pope Leo XIV is a point of pride that should never be commercialized, and figures like Kanye West and R. Kelly are off-limits."
   ],
   "sources": [
-    { "title": "Chicago Bulls (official site)", "url": "https://www.nba.com/bulls" },
-    { "title": "United Center (official site)", "url": "https://www.unitedcenter.com" },
-    { "title": "Chicago Bulls (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago_Bulls" },
-    { "title": "Flag of Chicago (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Flag_of_Chicago" },
-    { "title": "Community areas in Chicago (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Community_areas_in_Chicago" },
-    { "title": "Bud Billiken Parade and Picnic (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Bud_Billiken_Parade_and_Picnic" },
-    { "title": "The Chicago Defender (Wikipedia)", "url": "https://en.wikipedia.org/wiki/The_Chicago_Defender" },
-    { "title": "Great Migration (African American) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Great_Migration_(African_American)" },
-    { "title": "DuSable Black History Museum and Education Center (official site)", "url": "https://www.dusablemuseum.org" },
-    { "title": "Chicago History Museum (official site)", "url": "https://www.chicagohistory.org" },
-    { "title": "Pullman National Historical Park (National Park Service)", "url": "https://www.nps.gov/pull/" },
-    { "title": "Chicago Stadium (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago_Stadium" },
-    { "title": "City of Chicago (official site)", "url": "https://www.chicago.gov" }
+    {
+      "title": "Chicago Bulls (official site)",
+      "url": "https://www.nba.com/bulls"
+    },
+    {
+      "title": "United Center (official site)",
+      "url": "https://www.unitedcenter.com"
+    },
+    {
+      "title": "Chicago Bulls (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Bulls"
+    },
+    {
+      "title": "Flag of Chicago (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Flag_of_Chicago"
+    },
+    {
+      "title": "Community areas in Chicago (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Community_areas_in_Chicago"
+    },
+    {
+      "title": "Bud Billiken Parade and Picnic (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Bud_Billiken_Parade_and_Picnic"
+    },
+    {
+      "title": "The Chicago Defender (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Chicago_Defender"
+    },
+    {
+      "title": "Great Migration (African American) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Great_Migration_(African_American)"
+    },
+    {
+      "title": "DuSable Black History Museum and Education Center (official site)",
+      "url": "https://www.dusablemuseum.org"
+    },
+    {
+      "title": "Chicago History Museum (official site)",
+      "url": "https://www.chicagohistory.org"
+    },
+    {
+      "title": "Pullman National Historical Park (National Park Service)",
+      "url": "https://www.nps.gov/pull/"
+    },
+    {
+      "title": "Chicago Stadium (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Stadium"
+    },
+    {
+      "title": "City of Chicago (official site)",
+      "url": "https://www.chicago.gov"
+    }
   ],
   "confidence": "medium",
   "provenance": {

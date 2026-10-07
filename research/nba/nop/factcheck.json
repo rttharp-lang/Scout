@@ -1,0 +1,287 @@
+{
+  "team": "nop",
+  "checked": 62,
+  "verdicts": [
+    {
+      "lens": "uniform",
+      "claim": "The 2023-24 City Edition (brought back in 2025-26) is a Mardi Gras / Carnival purple-green-gold design",
+      "verdict": "corrected",
+      "note": "Live spot-check: it is the 'NOLA Nights' edition, vivid purple with neon green, skeletal 'Skelican' logos and a NOLA wordmark, inspired by the city at night; not Carnival gold. Hoops, art, culture, fanbase and uniform dossiers rewritten accordingly.",
+      "source": "https://www.nba.com/news/new-orleans-pelicans-2023-24-city-edition-uniform-nola-nights"
+    },
+    {
+      "lens": "uniform",
+      "claim": "2025-26 City Edition reissued the 2023-24 design",
+      "verdict": "confirmed",
+      "note": "Reissue of the 'Skelican' edition confirmed by local coverage and the current facts.",
+      "source": "https://www.fox8live.com/2025/11/11/new-orleans-pelicans-bring-back-skelican-city-edition-uniform-2025-26-season/"
+    },
+    {
+      "lens": "uniform",
+      "claim": "Early City Editions (2017-18 to 2022-23) leaned on Mardi Gras colors and fleur-de-lis",
+      "verdict": "removed",
+      "note": "Unsupported from memory; replaced with a note that other seasons' concepts, including 2024-25, were not verified.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Fleurty Girl operates Magazine Street and Metairie doors",
+      "verdict": "corrected",
+      "note": "Live spot-check: stores at Lakeside Metairie, French Quarter (Chartres St) and Gretna, with a new Metairie flagship planned for 2027; Magazine Street door not confirmed. Founder name corrected to Lauren Haydel in art.json.",
+      "source": "https://www.axios.com/local/new-orleans/2025/12/23/fleurty-girl-to-open-new-flagship-store-in-metairie"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Derik Queen and Jeremiah Fears are rookies",
+      "verdict": "corrected",
+      "note": "Both were 2025 draftees, so they are second-year players in 2026-27; fixed in fanbase, rhythm, retail-landscape and retail-behavior.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Xavier University of Louisiana is in Gentilly/Mid-City",
+      "verdict": "corrected",
+      "note": "Xavier is in Gert Town (as art and uniform dossiers say); fixed in hoops.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Mardi Gras World sits in the Riverbend / Garden District edge",
+      "verdict": "corrected",
+      "note": "It is on the riverfront by the Convention Center, matching art.json; fixed in rhythm.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Christmas bonfire tradition on the levees as a city holiday event",
+      "verdict": "removed",
+      "note": "The Christmas Eve bonfires are a River Parishes (Lutcher/Gramercy) custom, not a New Orleans city event; removed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Rob49's 'On Dat Money' features Cardi B",
+      "verdict": "removed",
+      "note": "Featured artist not confidently known; removed the Cardi B credit.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Trombone Shorty has closed Jazz Fest since 2013",
+      "verdict": "corrected",
+      "note": "Softened to 'regular Jazz Fest closer'; the exact start year is not certain.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Prince of Wales club founded 1928; Juvenile 2023 Tiny Desk with Jon Batiste",
+      "verdict": "corrected",
+      "note": "Dropped the founding year and the year/guest detail as oddly specific and unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Ms. Linda Green appeared on Chopped",
+      "verdict": "removed",
+      "note": "Show credit not confident; kept only national TV appearances.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Faubourg Brewing is located in New Orleans East",
+      "verdict": "corrected",
+      "note": "Only the Benson ownership and Dixie rename are confident; location claim removed.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "BMike Odums' Project Be 2013 / Exhibit Be 2014 sites and years",
+      "verdict": "corrected",
+      "note": "Venue-to-year pairing uncertain; reworded without the years.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Relocation chatter resurfaced around the 26-56 season",
+      "verdict": "corrected",
+      "note": "No evidence for relocation talk; reworded to fan worry about permanence. Strategy.json repeats the claim (see strategy verdict).",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Louisiana flag pelican drops restored in the 2010 redesign",
+      "verdict": "corrected",
+      "note": "The flag redesign restoring the drops was 2006; fixed. City flag band order also softened to avoid a wrong orientation.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Old-gold #B4975A is team gold",
+      "verdict": "corrected",
+      "note": "Official Pelicans gold is #85714D used elsewhere; #B4975A relabeled as a brass-like accent chosen for this brief.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Pelicans home opener is late October (season opens Oct 20)",
+      "verdict": "corrected",
+      "note": "Pelicans are not on the Oct 20 opening-night slate and their opener date is unknown; reworded.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Pelicans in NBA Cup West Group B, opening Oct 30 at the Clippers; not on Christmas",
+      "verdict": "confirmed",
+      "note": "Matches the current facts.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Mardi Gras Feb 9, 2027; trade deadline Feb 11; All-Star Feb 19-21; Play-In Apr 13-16",
+      "verdict": "confirmed",
+      "note": "Feb 9 follows from Easter on Mar 28, 2027; league dates match the current facts.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Pelicans Team Store, Ward Call and Twelfth Night plans depend on a 'late October home opener'",
+      "verdict": "unverifiable",
+      "note": "Pelicans opener date is unknown and the Cup opener Oct 30 is away; editor should drop 'launch at the opener' dates or mark them pending the schedule.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "'Friday-night home giveaways' and a Memphis rivalry giveaway on Cup nights",
+      "verdict": "unverifiable",
+      "note": "Only the Oct 30 game at the Clippers is known; home/away for MEM, OKC, MIN is unconfirmed, so giveaways cannot be assumed home games.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Bayou Classic weekend Nov 27-28 drop and Black Friday timing",
+      "verdict": "unverifiable",
+      "note": "Nov 27 is Black Friday, a Cup Friday and Bayou Classic Battle of the Bands night; a Pelicans home game may collide. Check the schedule.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Corner Tile uniform avoids Carnival colors because the City Edition 'already owns' purple-green-gold",
+      "verdict": "unverifiable",
+      "note": "corrected premise: the 2023-24 edition is purple and neon green, not Carnival gold; the brief's 'Carnival palette is spent' rationale and the avoid list need rewording. Editor must fix.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Relocation chatter returns in seasons like 26-56",
+      "verdict": "unverifiable",
+      "note": "Unsupported; reword as fan worry about permanence.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Twelfth Night Pack calls the King Cake Baby team-owned IP 'clear to use'",
+      "verdict": "unverifiable",
+      "note": "Ownership and NBA licensing for the mascot are assumed; flag as to be cleared.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Fleurty Girl hosts the Twelfth Night drop in Magazine Street and Metairie doors",
+      "verdict": "unverifiable",
+      "note": "Magazine Street door not confirmed; confirmed doors are Lakeside Metairie, French Quarter and Gretna.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Boil Season sold at Riverwalk Outlets and Canal Place; Nike-owned door at Riverwalk",
+      "verdict": "unverifiable",
+      "note": "Riverwalk status and any Nike-owned door unverified; do not name them as launch doors.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Zion Williamson Jordan Brand status gates player-edition hook",
+      "verdict": "unverifiable",
+      "note": "Current status not verified; keep conditional.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Studio BE, Backstreet Cultural Museum, Dong Phuong, Feed the Second Line named as partners",
+      "verdict": "unverifiable",
+      "note": "Operating status and willingness unverified; a live check must confirm before outreach.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Peaches Records on Magazine St is open",
+      "verdict": "unverifiable",
+      "note": "Confirm still operating and location.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Kermit's Treme Mother-in-Law Lounge and Rebirth's Tuesday Maple Leaf residency continue",
+      "verdict": "unverifiable",
+      "note": "Confirm both operate as described.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Tipitina's is owned by members of Galactic; Foundation and Roots of Music active",
+      "verdict": "unverifiable",
+      "note": "Confirm ownership and programs.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Studio BE (2941 Royal St) open to commissions",
+      "verdict": "unverifiable",
+      "note": "Confirm address, status and BMike Odums' availability.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Dr. Bob and Simon of New Orleans still painting",
+      "verdict": "unverifiable",
+      "note": "Confirm both are alive and active; Dr. Bob's status especially uncertain.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Demond Melancon leads the Young Seminole Hunters and takes commissions",
+      "verdict": "unverifiable",
+      "note": "Confirm before naming as a partner.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Compere Lapin, Dakar NOLA, Turkey and the Wolf, Willie Mae's, Hansen's, Parkway, Dong Phuong all open",
+      "verdict": "unverifiable",
+      "note": "Confirm none has closed or moved.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Hubig's Pies in production since 2022 return",
+      "verdict": "unverifiable",
+      "note": "Confirm status and Savory Simon licensing.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Smoothie King Center naming and Gayle Benson ownership for 2026-27",
+      "verdict": "unverifiable",
+      "note": "Not verified in current facts; confirm.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Master P named UNO president of basketball operations in 2023",
+      "verdict": "unverifiable",
+      "note": "Confirm current role.",
+      "source": ""
+    }
+  ],
+  "summary": "The dossiers are largely accurate on the Pelicans' 2026-27 facts, Cup schedule and Carnival-calendar dates, but a live check found the central City Edition premise wrong: the 2023-24 design brought back in 2025-26 is the purple-and-neon-green 'NOLA Nights' Skelican edition, not a Mardi Gras one, so five dossiers were fixed and the brief's 'Carnival palette is spent' rationale is flagged for the editor. Smaller fixes covered rookie status for Queen and Fears, Xavier and Mardi Gras World locations, Fleurty Girl's doors and founder name, and several oddly specific music, food and art details. The remaining queue lists business, venue and schedule claims that need a live check, plus brief issues around unknown home dates and the Nov 27 Bayou Classic and Black Friday overlap."
+}

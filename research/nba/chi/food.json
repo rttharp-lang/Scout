@@ -32,7 +32,7 @@
     {
       "title": "Game day is a pre-game dinner, not a tailgate",
       "detail": "The United Center (1901 W. Madison) sits inside a food triangle: Randolph Street and Fulton Market a mile east (Au Cheval, Girl & the Goat), Greektown on Halsted, and Taylor Street's Little Italy, with Jim's Original Maxwell Street Polish stand near UIC. Winter means Bulls fans eat before tip-off instead of tailgating in the lots.",
-      "implication": "Stage launch-night activations indoors inside that triangle, such as a Fulton Market pop-up or collab wrappers at Al's on City Edition nights. Design for fans commuting in coats over jerseys from the Ashland Green/Pink Line stop."
+      "implication": "Stage launch-night activations indoors inside that triangle, such as a Fulton Market pop-up or collab wrappers at Al's on City Edition nights. Design for fans commuting in coats over jerseys on the No. 20 Madison bus or the L plus a long walk."
     },
     {
       "title": "The rebuild has a hometown pantry",
@@ -299,22 +299,61 @@
     "Keep Malort, Old Style and other alcohol brands off basketball product: it is youth-facing and the NBA restricts alcohol marks, even though 'Malort face' is beloved local humor.",
     "Deep-dish cliches read as tourist merch, and fried-chicken or barbecue jokes read as racist caricature; Black and Latino food cues should come only through paid, credited partnerships with the owners.",
     "The Puerto Rican, Mexican and Lithuanian flags are national symbols, not decoration; co-design with community organizations and do not mash them into Bulls marks.",
-    "Neighborhood food spots close or change hands (Hot Doug's shut in 2014, the Parthenon in 2020), so confirm every partner is open and willing before anything goes on durable product."
+    "Neighborhood food spots close or change hands (Hot Doug's shut in 2014), so confirm every partner is open and willing before anything goes on durable product."
   ],
   "sources": [
-    { "title": "Chicago Bulls (official site)", "url": "https://www.nba.com/bulls" },
-    { "title": "United Center (official site)", "url": "https://www.unitedcenter.com" },
-    { "title": "Choose Chicago (Chicago Restaurant Week organizer)", "url": "https://www.choosechicago.com" },
-    { "title": "Cuisine of Chicago (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Cuisine_of_Chicago" },
-    { "title": "Chicago-style hot dog (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago-style_hot_dog" },
-    { "title": "Italian beef (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Italian_beef" },
-    { "title": "Chicago-style pizza (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago-style_pizza" },
-    { "title": "Jibarito (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Jibarito" },
-    { "title": "Harold's Chicken Shack (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Harold%27s_Chicken_Shack" },
-    { "title": "Superdawg (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Superdawg" },
-    { "title": "Taste of Chicago (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Taste_of_Chicago" },
-    { "title": "Paseo Boricua (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Paseo_Boricua" },
-    { "title": "The Bear (TV series) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/The_Bear_(TV_series)" }
+    {
+      "title": "Chicago Bulls (official site)",
+      "url": "https://www.nba.com/bulls"
+    },
+    {
+      "title": "United Center (official site)",
+      "url": "https://www.unitedcenter.com"
+    },
+    {
+      "title": "Choose Chicago (Chicago Restaurant Week organizer)",
+      "url": "https://www.choosechicago.com"
+    },
+    {
+      "title": "Cuisine of Chicago (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cuisine_of_Chicago"
+    },
+    {
+      "title": "Chicago-style hot dog (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago-style_hot_dog"
+    },
+    {
+      "title": "Italian beef (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Italian_beef"
+    },
+    {
+      "title": "Chicago-style pizza (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago-style_pizza"
+    },
+    {
+      "title": "Jibarito (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Jibarito"
+    },
+    {
+      "title": "Harold's Chicken Shack (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Harold%27s_Chicken_Shack"
+    },
+    {
+      "title": "Superdawg (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Superdawg"
+    },
+    {
+      "title": "Taste of Chicago (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Taste_of_Chicago"
+    },
+    {
+      "title": "Paseo Boricua (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Paseo_Boricua"
+    },
+    {
+      "title": "The Bear (TV series) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Bear_(TV_series)"
+    }
   ],
   "confidence": "medium",
   "provenance": {

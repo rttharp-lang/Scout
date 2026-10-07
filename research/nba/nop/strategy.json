@@ -1,0 +1,520 @@
+{
+  "team": "nop",
+  "headline": "Sell New Orleans first and the Pelicans second: hand-made city craft timed to king cake, second lines and crawfish.",
+  "thesis": "New Orleans fans wear the city before the team: Dirty Coast and Fleurty Girl phrase tees, ward numbers and school colors beat a Pelicans logo that only dates to 2013, in a town that has watched the Jazz leave and the Hornets spend two Katrina seasons in Oklahoma City. The city runs on its own clock (second-line Sundays from Labor Day to June, king cake from Jan 6 to Mardi Gras on Feb 9, 2027, crawfish through Jazz Fest), and that clock overlaps the NBA season almost exactly. After a 26-56 season, with first-year coach Jamahl Mosley and no 2026 first-round pick, standings won't sell product here; craft and calendar will. Nike wins by commissioning the city's hands (sign painters, brass bands, Social Aid & Pleasure Clubs, bounce artists), paying them, and dropping product on New Orleans dates rather than league dates.",
+  "archetype": {
+    "name": "The Second Line",
+    "description": "They dance behind the city's main line (Saints, LSU and Carnival), loyal through every relocation scare and loud when the music is right. They buy city pride first and team gear second, and they punish anything that reads tourist."
+  },
+  "pulse": {
+    "teamMoment": "New coach Jamahl Mosley inherits Zion Williamson, breakout scorer Trey Murphy III (21.5 ppg, kept through June trade rumors) and young Derik Queen and Jeremiah Fears after a 26-56 season and a quiet offseason under Joe Dumars. The team is not on the opening-night or Christmas slates; NBA Cup West Group B (OKC, MIN, LAC, MEM) is the early-season stage.",
+    "sentiment": "Weary, not angry: protective of Murphy, hopeful on Queen and Fears, cautious about building anything on Zion's availability, and still more excited by the City Edition than by the roster.",
+    "heat": 34
+  },
+  "topInsights": [
+    {
+      "title": "City mark first, team mark second",
+      "insight": "Locals put local phrase tees over team gear, and the Pelicans compete with Saints black-and-gold and LSU purple-and-gold for the same shirt drawer. The 2023-24 City Edition, the one the team brought back in 2025-26, proved that local storytelling is what this fan base rewards.",
+      "evidence": ["retail-landscape", "underground", "fanbase", "uniform", "culture"],
+      "implication": "Make every hero piece pass as New Orleans pride on the street, with the Pelicans mark as a secondary lockup, a jock tag or a sleeve hit rather than the chest graphic.",
+      "confidence": "medium"
+    },
+    {
+      "title": "The NBA season is second-line season",
+      "insight": "Social Aid & Pleasure Clubs parade most Sundays from Labor Day into June in new color-matched suits and fresh sneakers, the city's living fashion show, and their colors stay secret until parade day. No other NBA market has a weekly street-style ritual on the same calendar as its home schedule.",
+      "evidence": ["music", "underground", "art", "food", "retail-behavior"],
+      "implication": "Build tonal, color-matchable sneaker and warm-up sets, commission one club per season as a paid co-designer, and copy their rollout: reveal on the day, never leak-then-drop.",
+      "confidence": "medium"
+    },
+    {
+      "title": "The Carnival palette is spent; the city's craft isn't",
+      "insight": "Purple, green and gold is already on the fan-favorite City Edition and on every souvenir in the Quarter. What locals haven't seen on a jersey is the hand-made city: blue-and-white tile street names, sign painters' dot-bordered lettering, iron lace, brass-band drum heads and doubloons.",
+      "evidence": ["art", "uniform", "music", "hoops", "retail-landscape"],
+      "implication": "Use commissioned craft (tile numerals, hand-lettered alphabets, iron-lace jacquard, brushed-brass hardware) as the design system, and keep Carnival color to January accents.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Food is the most precise retail clock",
+      "insight": "Attention for the Pelicans peaks October to December, and then the city's own seasons take over: king cake from Jan 6 to Feb 9, crawfish and Lenten fish fries from March to May, sno-balls all summer. The Pelicans already own the best inside joke of the season, the King Cake Baby.",
+      "evidence": ["food", "rhythm", "retail-behavior", "culture"],
+      "implication": "Sequence drops by what's on the table: king cake knit on Jan 6, a crawfish-red stretch-run pack in March, nectar-cream pink for spring and summer. Never launch a hero drop in the final two weeks before Mardi Gras.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Identity is ward, school and side of the river",
+      "insight": "New Orleanians place each other by high school ('What school you went to?') and by ward, which bounce records shout out by number, while the West Bank and New Orleans East rep separately. School programs like St. Aug and Edna Karr carry more block-level loyalty than a losing pro team.",
+      "evidence": ["culture", "hoops", "music", "underground", "uniform"],
+      "implication": "Build modular identity product (ward numerals, East and West Bank pieces, licensed school co-brands) so fans wear their exact New Orleans, drawn by artists from each area.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Permanence beats promises",
+      "insight": "Basketball has left New Orleans twice and relocation chatter returns in seasons like 26-56, so fans trust things that root the team in place. Murphy is the player fans trust, Zion is the brand (and a Jordan Brand athlete), and the pelican itself, back from zero after DDT, is a comeback story nobody has put on product.",
+      "evidence": ["culture", "fanbase", "hoops", "rhythm"],
+      "implication": "Tell 'still here' stories (pelican in her piety liners, school and ward ties) instead of contention messaging, and spread player product across Murphy, Queen and Fears so the line doesn't depend on one availability report.",
+      "confidence": "medium"
+    },
+    {
+      "title": "The sacred line is also the market's credibility test",
+      "insight": "Black Masking Indian suits, chants and patches are sacred and individually authored, second-line regalia belongs to its clubs, and bounce was built by queer Black artists. This city has already beaten the NFL once, over the 'Who Dat' letters in 2010, and it calls out brands that borrow without paying.",
+      "evidence": ["art", "music", "culture", "underground", "food", "retail-behavior"],
+      "implication": "Pay up front and give credit by name (parade fees, instrument donations, royalties), never print or trace Indian beadwork, and let culture bearers like the Backstreet Cultural Museum set the terms before any outreach.",
+      "confidence": "high"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "twelfth-night-drop",
+      "title": "Twelfth Night Pack",
+      "summary": "The season's biggest city-specific drop, released on Jan 6 when king cake season and Carnival begin, built on sanding-sugar texture and the team-owned King Cake Baby rather than beads and masks.",
+      "where": ["Pelicans Team Store, Smoothie King Center", "Dong Phuong Bakery, New Orleans East", "Dirty Coast and Fleurty Girl, Magazine Street", "Lakeside Shopping Center, Metairie", "Pelicans and Nike digital"],
+      "when": "Jan 6 launch through Mardi Gras Day (Feb 9, 2027); restock by mid-January, with no new hero launch after about Jan 26",
+      "months": [1, 2],
+      "how": "Sell the pack in a king-cake-style box next to a paid, co-branded cake from Dong Phuong. Hide the King Cake Baby on a waistband tab ('got the baby' wins a lagniappe item), and run a Carnival-season home night with the mascot.",
+      "products": ["Sanding-sugar knit warm-up jacket", "King Cake Baby waistband shorts", "Purple-green-gold speckle hoodie", "Doubloon jock-tag tee", "Fitted cap with doubloon pin"],
+      "segment": "Diehard locals, families and Carnival visitors",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Sell-through above 70% by Feb 1 and share of January Pelicans revenue versus January 2026"
+    },
+    {
+      "id": "ward-call-pack",
+      "title": "Ward Call and 'What School You Went To?'",
+      "summary": "A modular identity line: tile-set ward numerals, West Bank and The East pieces, and licensed co-brands with New Orleans high school programs, each drawn by an artist from that area.",
+      "where": ["Oakwood Center, Gretna (West Bank)", "Dirty Coast, Magazine Street", "St. Claude Avenue pop-ups", "High school gyms (St. Aug, Edna Karr, Warren Easton, McDonogh 35)", "Pelicans Team Store"],
+      "when": "Launch at a home game in late October, then run ward-themed home nights through the All-Star break",
+      "months": [10, 11, 12, 1, 2],
+      "how": "Launch with a bounce call-and-response set ('Where dey at?' answered ward by ward) led by Big Freedia and credited queer bounce artists. Pay one artist per ward, and send school-pack proceeds and gear back to each school's team.",
+      "products": ["Ward numeral tee", "Shooting shirt with tile-set numerals", "School co-brand hoodie", "Kids ward tee", "Snapback with ward number"],
+      "segment": "Neighborhood locals, high school families and young hoopers",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Units by ward and school code, share sold outside Orleans Parish core doors, and repeat buyers across two or more wards"
+    },
+    {
+      "id": "holiday-value-core",
+      "title": "Still Here holiday core",
+      "summary": "Capture the year's peak attention (November Cup nights through December) with accessible player and kids product spread across Murphy, Queen, Fears and Zion, plus 'still here' story pieces.",
+      "where": ["Lakeside Shopping Center (Foot Locker, Dillard's)", "Oakwood Center, Gretna", "Dick's Sporting Goods, Metairie", "Pelicans Team Store", "Online"],
+      "when": "Cup Friday nights Oct 30 to Nov 27, Black Friday, and through December",
+      "months": [11, 12],
+      "how": "Bundle a kids swingman with a tee at a value price for local households, and run Cup-night giveaways with a Memphis rivalry graphic for the Grizzlies game. Add a navy warm-up with a pelican-in-her-piety liner that explains the name.",
+      "products": ["Kids swingman jerseys (Murphy, Queen, Fears, Zion)", "Player name-and-number tees", "'Piety' warm-up with embroidered liner", "Cup-night Memphis rivalry tee", "Gift bundle box"],
+      "segment": "Families, gift buyers and Gulf South regional fans",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Holiday units versus 2025, kids share of jersey sales, and the share of player units that are not Zion"
+    },
+    {
+      "id": "second-line-sunday",
+      "title": "Second Line Sunday club commission",
+      "summary": "Each season one Social Aid & Pleasure Club co-designs a tonal sneaker colorway and a satin-trimmed warm-up in its own colors, released after its parade and credited by name.",
+      "where": ["Tremé and the Seventh Ward", "Central City (O.C. Haley Blvd)", "Pelicans Team Store, Sunday home games", "Instagram and social commerce"],
+      "when": "Commission at the start of second-line season; release the week after the club's parade, before a Sunday home game",
+      "months": [9, 10, 11, 3],
+      "how": "Approach through culture bearers such as the Backstreet Cultural Museum, then pay the club and its brass band and underwrite its parade permit and police fees. The club picks the colors and approves everything, and the swoosh never touches its regalia.",
+      "products": ["Tonal club-color sneaker colorway", "Satin-taped warm-up jacket", "Printed second-line handkerchief", "Matched tee, short and cap set"],
+      "segment": "Second-line culture and style-led Black New Orleanians",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Sell-out time, the club's public endorsement, and whether a second club asks to be next season's partner"
+    },
+    {
+      "id": "brass-and-band",
+      "title": "Brass series and Bayou Classic band warm-up",
+      "summary": "Treat Pelicans Gold as sousaphone brass: foil, hardware and drum-head lettering credited to a named brass band, plus a frogging-trimmed band warm-up for Bayou Classic weekend.",
+      "where": ["Pelicans Team Store, Smoothie King Center", "Caesars Superdome footprint, Bayou Classic weekend", "Maple Leaf Bar and Tipitina's (launch events)", "Pelicans and Nike digital"],
+      "when": "Bayou Classic weekend (Nov 27-28, 2026), with a second wave in Mardi Gras week",
+      "months": [11, 2],
+      "how": "Lead the launch with Rebirth Brass Band and pair each drop with an instrument donation through the Tipitina's Foundation or The Roots of Music. Co-create the band warm-up with St. Augustine's Marching 100 and pay the program back in uniforms or instruments.",
+      "products": ["Brushed-brass foil hoodie", "Drum-head lockup tee", "Frogging-trim band warm-up jacket", "Brass-hardware track pants"],
+      "segment": "HBCU and band-culture fans, Bayou Classic visitors and music-first locals",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Bayou Classic weekend sell-through, visitor versus local zip-code split, and instruments funded"
+    },
+    {
+      "id": "boil-season",
+      "title": "Boil Season and Nectar Cream",
+      "summary": "Give the stretch run and summer their own palette (boiled-crawfish red, nectar-cream pink, seersucker) in heat-ready mesh, instead of reusing Carnival colors.",
+      "where": ["Magazine Street", "Riverwalk Outlets and Canal Place (Jazz Fest visitors)", "Lakeside and Oakwood malls", "Festival pop-ups"],
+      "when": "Mid-March (Lent and crawfish season) through French Quarter Fest and Jazz Fest, then summer",
+      "months": [3, 4, 5, 6],
+      "how": "Launch Boil Season for the stretch run and any Play-In push (Apr 13-16), then switch to Nectar Cream with a paid sno-ball stand collab. Drop a commissioned poster-style tee from a Black New Orleans artist in the Jazz Fest window, with no festival marks.",
+      "products": ["Crawfish-red mesh shooting shirt", "Seersucker-panel shorts", "Nectar-pink slides", "Packable navy rain shell", "Numbered artist poster tee"],
+      "segment": "Locals in festival season and spring visitors",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "March-to-May Pelicans apparel revenue versus 2026 and visitor sell-through at downtown doors"
+    },
+    {
+      "id": "claiborne-oaks-essence",
+      "title": "Claiborne Oaks at Essence",
+      "summary": "A Black New Orleans artist capsule in which a commissioned painter paints the live oaks the I-10 overpass erased back onto wraparound panels, launched for the national audience at Essence Festival.",
+      "where": ["Studio BE, Bywater", "Smoothie King Center and Superdome area, Essence weekend", "Ashé Cultural Arts Center, Central City", "Online"],
+      "when": "Essence Festival of Culture, July 4 weekend 2027",
+      "months": [7],
+      "how": "Commission BMike Odums or artists in the Willie Birch lineage for original work, not reproductions of existing murals. Send proceeds to a Claiborne Corridor group the artists choose, and keep everything away from Aug 29.",
+      "products": ["Wraparound-print tee", "Premium hoodie with oak side panels", "Numbered signed print", "Artist-edition cap"],
+      "segment": "The national Black audience at Essence and culture-led locals",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Essence-weekend revenue, out-of-state share of buyers, and dollars returned to the corridor"
+    }
+  ],
+  "collection": {
+    "name": "Made by Hand",
+    "story": "New Orleans marks its own identity by hand: tiles at every street corner, sign painters' glitter, sousaphone brass, king cake sugar and the crawfish table. This collection is built by the people who make those things, credited and paid, so a Pelicans fan wears the city's own handwriting instead of a souvenir.",
+    "themes": [
+      {
+        "name": "Corner Tile",
+        "story": "Every New Orleanian knows their corner by its blue-and-white tile street name; this theme sets wards, neighborhoods and numbers in that tile grid.",
+        "segment": "Neighborhood locals and families",
+        "graphics": "Square-tile block capitals with a tile border for TREMÉ, 7TH WARD, WESTBANK and THE EAST, plus a crescent-and-star water-meter roundel as a quiet secondary mark.",
+        "palette": [
+          { "name": "Tile Cobalt", "hex": "#1E4D9B" },
+          { "name": "Glazed White", "hex": "#F3F0E6" },
+          { "name": "Pelicans Navy", "hex": "#0C2340" },
+          { "name": "Pelicans Gold", "hex": "#85714D" }
+        ],
+        "materials": "Heavyweight cotton jersey with a glazed-look high-density print, debossed rubber crescent-and-star patches, and Dri-FIT mesh for the shooting shirts.",
+        "pieces": [
+          { "item": "Ward numeral tee", "category": "tee", "tier": "entry", "detail": "One ward per tee in tile type, drawn with an artist from that ward." },
+          { "item": "Tile-numeral shooting shirt", "category": "jersey", "tier": "core", "detail": "Short-sleeve mesh with tile-grid numbers and a tile-border hem." },
+          { "item": "Kids corner-tile tee", "category": "kids", "tier": "entry", "detail": "A youth cut with the neighborhood name and a hidden pelican tile." },
+          { "item": "Crescent-and-star snapback", "category": "headwear", "tier": "core", "detail": "Debossed water-meter roundel on the front, ward number on the side." }
+        ]
+      },
+      {
+        "name": "Brass and Iron",
+        "story": "Pelicans Gold already reads as a tarnished sousaphone bell; this theme pairs brass-band hardware and drum-head lettering with original iron-lace patterning.",
+        "segment": "Music-first locals, band culture and premium buyers",
+        "graphics": "Circular drum-head lockups lettered by a New Orleans sign painter, and an original iron-lace railing drawing with a hidden 'NO' monogram.",
+        "palette": [
+          { "name": "Pelicans Navy", "hex": "#0C2340" },
+          { "name": "Sousaphone Brass", "hex": "#85714D" },
+          { "name": "Streetcar Olive", "hex": "#3F5B37" },
+          { "name": "Pelicans Red", "hex": "#C8102E" }
+        ],
+        "materials": "Brushed-brass zipper pulls, aglets and snaps, laser-cut iron-lace perforations, tonal jacquard knit, and satin taping for the Sunday pieces.",
+        "pieces": [
+          { "item": "Iron-lace warm-up jacket", "category": "outerwear", "tier": "premium", "detail": "Laser-cut lace panels at the yoke with brushed-brass hardware." },
+          { "item": "Drum-head tee", "category": "tee", "tier": "entry", "detail": "A credited brass band's name arched over a circular sign-painted lockup." },
+          { "item": "Brass foil hoodie", "category": "fleece", "tier": "core", "detail": "Pelicans Gold foil wordmark and a brass drawcord tip." },
+          { "item": "Iron-lace jacquard shorts", "category": "shorts", "tier": "core", "detail": "Tonal lace side panel with the monogram in the scrollwork." },
+          { "item": "Frogging-trim band jacket", "category": "outerwear", "tier": "limited", "detail": "Braid and cross-belt trim co-created with a marching band program." }
+        ]
+      },
+      {
+        "name": "Twelfth Night",
+        "story": "King cake sanding sugar in purple, green and gold, rendered as glittering crystals rather than flat Carnival blocks, with the King Cake Baby hidden inside.",
+        "segment": "Carnival-season locals, families and visitors",
+        "graphics": "A sugar-crystal speckle print and metallic-fleck knit, two-sided doubloon jock tags with a new theme each season, and the baby on the waistband.",
+        "palette": [
+          { "name": "Sugar Purple", "hex": "#5B2C83" },
+          { "name": "Sugar Green", "hex": "#00843D" },
+          { "name": "Sugar Gold", "hex": "#F2B900" },
+          { "name": "Pelicans Navy", "hex": "#0C2340" }
+        ],
+        "materials": "Metallic-fleck knit, speckle-print fleece, and anodized-aluminum two-sided doubloon tags.",
+        "pieces": [
+          { "item": "Sanding-sugar knit warm-up", "category": "outerwear", "tier": "premium", "detail": "Tri-color crystal fleck on a navy ground, with the baby inside the collar." },
+          { "item": "King Cake Baby shorts", "category": "shorts", "tier": "core", "detail": "The baby on the waistband tab and a doubloon on the leg." },
+          { "item": "Speckle hoodie", "category": "fleece", "tier": "core", "detail": "Sugar-speckle print across the hood and cuffs only, with a navy body." },
+          { "item": "Doubloon pack", "category": "accessory", "tier": "limited", "detail": "A numbered set of Pelicans doubloons made with a local doubloon maker." }
+        ]
+      },
+      {
+        "name": "Boil Season",
+        "story": "The stretch run and summer in the colors of the newspaper-covered crawfish table and the nectar-cream sno-ball, built for 80°F festival days.",
+        "segment": "Festival-season locals, spring visitors and summer hoopers",
+        "graphics": "A newsprint-grain texture under crawfish red (with no real mastheads), hand-painted sno-ball-stand menu lettering, and navy-and-white seersucker stripes.",
+        "palette": [
+          { "name": "Boil Red", "hex": "#C2401F" },
+          { "name": "Nectar Cream", "hex": "#F5A3C7" },
+          { "name": "Condensed Milk", "hex": "#FFF8EC" },
+          { "name": "Pelicans Navy", "hex": "#0C2340" }
+        ],
+        "materials": "Perforated mesh, quick-dry woven, navy-and-white seersucker panels, and packable water-resistant shells.",
+        "pieces": [
+          { "item": "Boil-red shooting shirt", "category": "jersey", "tier": "core", "detail": "Perforated mesh with a newsprint-grain sleeve and navy numerals." },
+          { "item": "Seersucker-panel shorts", "category": "shorts", "tier": "core", "detail": "Seersucker side panels on a navy mesh body." },
+          { "item": "Nectar Cream slides", "category": "footwear", "tier": "entry", "detail": "Pink footbed, navy strap and a hand-lettered 'nectar' hit." },
+          { "item": "Packable rain shell", "category": "outerwear", "tier": "core", "detail": "Navy shell with a nectar-pink lining that packs into its own pocket." }
+        ]
+      }
+    ]
+  },
+  "uniform": {
+    "concept": "Corner Tile",
+    "narrative": "At almost every corner in the city, the street name is set in blue-and-white tile in the sidewalk, and every New Orleanian has stood on theirs. The jersey spells NEW ORLEANS tile by tile, wraps it in an original iron-lace side panel, and puts the city's hand-made civic design on court instead of another round of Carnival color. It belongs to every ward and side of the river at once, and it is nobody's sacred property.",
+    "palette": [
+      { "name": "Glazed White", "hex": "#F3F0E6", "role": "base" },
+      { "name": "Tile Cobalt", "hex": "#1E4D9B", "role": "number" },
+      { "name": "Pelicans Navy", "hex": "#0C2340", "role": "trim" },
+      { "name": "Pelicans Gold", "hex": "#85714D", "role": "accent" }
+    ],
+    "motifs": [
+      "Square-tile block capitals set on a grid, with a tile border around the wordmark",
+      "Original iron-lace railing drawing with a hidden 'NO' monogram in the scrollwork",
+      "Crescent-and-star water-meter roundel",
+      "Pelican in her piety, the state's comeback bird, inside the collar"
+    ],
+    "typography": "A 'NEW ORLEANS' wordmark and numbers built square by square on a tile grid, drawn and signed by a New Orleans sign painter and lettering artist, with cobalt fills and a thin navy outline. No script and no fleur-de-lis in the wordmark.",
+    "details": [
+      "Waistband: ward numerals 1 to 17 in tile type running around the band, plus WESTBANK and THE EAST",
+      "Side panel: tonal iron-lace jacquard in glazed white on white, with the monogram at hip height",
+      "Jock tag: debossed brass crescent-and-star roundel with the lettering artist's signature",
+      "Neck tape: a 'lagniappe' inner tag telling the brown pelican's return from zero",
+      "Court: tile-bordered street-name corners at each baseline, as if the court sits on a city corner"
+    ],
+    "avoid": [
+      "Purple, green and gold as the lead: the 2023-24 design brought back in 2025-26 already owns Carnival color",
+      "Fleur-de-lis as the hero: it reads as the Saints, and the Code Noir used it to brand enslaved people",
+      "Black Masking Indian beadwork, plumes or chief iconography in any form, and copying any club's regalia",
+      "Katrina waterlines, FEMA X-codes, voodoo and Bourbon Street or 'N'awlins' tourist shorthand",
+      "Copying a real tiled street name, a specific building's railing, or Simon's or Dr. Bob's signature styles"
+    ],
+    "alternates": [
+      { "name": "Sousaphone", "idea": "Navy with brushed Pelicans Gold as brass and numbers in drum-head sign-painter lettering, co-designed with Rebirth Brass Band and paired with school instrument donations." },
+      { "name": "Streetcar", "idea": "St. Charles streetcar olive green with gold roller-sign numerals and iron-lace side panels, a quiet fall alternate." },
+      { "name": "Claiborne Oaks", "idea": "A commissioned Tremé or Seventh Ward artist paints the lost Claiborne Avenue live oaks across the side panels, with proceeds to the corridor." }
+    ]
+  },
+  "calendar": [
+    {
+      "month": 10,
+      "window": "Pelicans home opener, late October",
+      "moment": "Mosley's debut and the season's optimism peak",
+      "play": "Launch Ward Call at the opener with a bounce call-and-response set, plus Murphy-led player tees that tell a 'still here' story rather than promise contention.",
+      "products": ["Ward numeral tee", "Murphy player tee", "Crescent-and-star snapback"],
+      "channel": "Arena (Pelicans Team Store) and digital",
+      "priority": 1
+    },
+    {
+      "month": 11,
+      "window": "Cup Friday nights, Oct 30 to Nov 27",
+      "moment": "NBA Cup West Group B, including the Memphis rivalry",
+      "play": "Run Friday-night home giveaways and a Gulf South rivalry graphic for the Grizzlies game, with value bundles in the suburban malls.",
+      "products": ["Cup-night Memphis rivalry tee", "Kids swingman bundle", "Tile-numeral shooting shirt"],
+      "channel": "Arena, Lakeside and Oakwood malls",
+      "priority": 1
+    },
+    {
+      "month": 11,
+      "window": "Bayou Classic weekend, Nov 27-28",
+      "moment": "Southern vs. Grambling and the Battle of the Bands next door at the Superdome",
+      "play": "Drop the brass series and the frogging-trim band jacket with a band program, and pair it with an instrument donation.",
+      "products": ["Frogging-trim band jacket", "Brass foil hoodie", "Drum-head tee"],
+      "channel": "Superdome-area pop-up and arena store",
+      "priority": 2
+    },
+    {
+      "month": 11,
+      "window": "Oak Street Po-Boy Festival, November",
+      "moment": "The city's sandwich festival in Carrollton",
+      "play": "Ship a 'Dressed' hoodie in waxed butcher paper with an order-ticket hangtag and the 1929 'poor boy' strike story inside.",
+      "products": ["'Dressed' hoodie", "Order-ticket tee"],
+      "channel": "Community pop-up and digital",
+      "priority": 3
+    },
+    {
+      "month": 12,
+      "window": "Black Friday through Dec 24",
+      "moment": "Holiday gifting, the year's biggest retail peak (no Christmas Day game)",
+      "play": "Push value player bundles across Murphy, Queen, Fears and Zion, plus the 'Piety' warm-up as a premium gift.",
+      "products": ["Kids swingman jerseys", "'Piety' warm-up", "Gift bundle box"],
+      "channel": "Malls, Dick's, arena and online",
+      "priority": 1
+    },
+    {
+      "month": 1,
+      "window": "Jan 6 (Twelfth Night) to about Jan 26",
+      "moment": "King cake season and the start of Carnival",
+      "play": "Drop the Twelfth Night Pack with a co-branded Dong Phuong king cake, a King Cake Baby home night and a doubloon jock-tag hunt.",
+      "products": ["Sanding-sugar knit warm-up", "King Cake Baby shorts", "Speckle hoodie", "Doubloon pack"],
+      "channel": "Arena, Dong Phuong, Magazine Street doors and digital",
+      "priority": 1
+    },
+    {
+      "month": 2,
+      "window": "Around Feb 6 (Lunar New Year and Tết at Mary Queen of Vietnam)",
+      "moment": "Vietnamese New Orleans' biggest gathering, inside Carnival",
+      "play": "Release a small Tết x Carnival capsule co-designed with Vietnamese New Orleanian artists and Dong Phuong; there are no other new launches before Feb 9.",
+      "products": ["Tết x Carnival tee", "Embroidered cap"],
+      "channel": "Community (New Orleans East) and digital",
+      "priority": 3
+    },
+    {
+      "month": 2,
+      "window": "Feb 10-21, after Mardi Gras through the trade deadline and All-Star",
+      "moment": "Post-Carnival reset, when basketball gets the city back",
+      "play": "Pre-cleared rapid-response tees with Fleurty Girl for any big Murphy, Zion or young-core moment, plus a Ward Call restock.",
+      "products": ["Rapid-response player tee", "Ward numeral tee"],
+      "channel": "Local brand doors and digital",
+      "priority": 2
+    },
+    {
+      "month": 3,
+      "window": "Mid-March through Apr 16 (Lent, crawfish, Play-In)",
+      "moment": "Crawfish season and the stretch run; Super Sunday is a no-brand zone",
+      "play": "Launch Boil Season for the stretch run and hold a Play-In contingency tee; stay away from Super Sunday and St. Joseph's Night entirely.",
+      "products": ["Boil-red shooting shirt", "Seersucker-panel shorts", "Play-In contingency tee"],
+      "channel": "Arena, Magazine Street and malls",
+      "priority": 2
+    },
+    {
+      "month": 4,
+      "window": "French Quarter Fest through the end of Jazz Fest (mid-April to early May)",
+      "moment": "The city's festival peak, with visitors in town",
+      "play": "Drop a numbered poster-style artist tee and the Nectar Cream colorway with a paid sno-ball stand collab.",
+      "products": ["Numbered artist poster tee", "Nectar Cream slides", "Packable rain shell"],
+      "channel": "Downtown visitor doors, festival pop-ups and digital",
+      "priority": 2
+    },
+    {
+      "month": 7,
+      "window": "Essence Festival, July 4 weekend",
+      "moment": "The national Black audience comes to the Superdome and arena district",
+      "play": "Launch the Claiborne Oaks artist capsule with Studio BE, with proceeds to a Claiborne Corridor group.",
+      "products": ["Oak wraparound tee", "Premium oak-panel hoodie", "Signed numbered print"],
+      "channel": "Arena-district pop-up, Studio BE and online",
+      "priority": 2
+    },
+    {
+      "month": 8,
+      "window": "White Linen Night (first Saturday of August); nothing commercial on Aug 29",
+      "moment": "The offseason gallery night on Julia Street",
+      "play": "Reveal the sign-painter alphabet and lettering artist behind next season's city product as an artist story, not a sale.",
+      "products": ["Artist-signed print", "Hand-lettered tee preview"],
+      "channel": "Community (Julia Street galleries) and social",
+      "priority": 3
+    },
+    {
+      "month": 9,
+      "window": "Labor Day weekend into the first second-line Sundays",
+      "moment": "Second-line season opens on the NBA's clock",
+      "play": "Sign this season's Social Aid & Pleasure Club partner through culture bearers, pay its parade fees, and plan a reveal the week after its parade.",
+      "products": ["Tonal club-color sneaker", "Satin-taped warm-up", "Second-line handkerchief"],
+      "channel": "Community (Tremé, Seventh Ward, Central City) and Instagram",
+      "priority": 2
+    }
+  ],
+  "partners": [
+    {
+      "name": "Dirty Coast",
+      "type": "Local phrase-tee brand (Magazine Street)",
+      "why": "Its neighborhood in-jokes are what locals wear over team gear, which makes it the city-first voice the Pelicans lack.",
+      "idea": "Co-write Ward Call graphics and run a pre-cleared rapid-response tee program for big player moments."
+    },
+    {
+      "name": "Fleurty Girl",
+      "type": "Local tee and gift brand with multiple doors",
+      "why": "It became the local face of the city's tee vernacular when the NFL sent its 2010 'Who Dat' letters, and it reaches local women and families.",
+      "idea": "Host the Twelfth Night drop in its Magazine Street and Metairie doors and co-design a family and kids Carnival tee."
+    },
+    {
+      "name": "Studio BE (Brandan 'BMike' Odums)",
+      "type": "Artist-run warehouse gallery, Bywater",
+      "why": "The city's most credible street artist, whose work paints back what was lost after Katrina and urban renewal.",
+      "idea": "Commission the Claiborne Oaks capsule and a signed print for Essence weekend, with proceeds to a corridor group he chooses."
+    },
+    {
+      "name": "Rebirth Brass Band with the Tipitina's Foundation",
+      "type": "Brass band and school music nonprofit",
+      "why": "Rebirth is the standard every second-line band is measured against, and the foundation equips school band programs.",
+      "idea": "Credit Rebirth on the first brass-series drop, lead the launch with a live set, and fund instruments for every unit sold."
+    },
+    {
+      "name": "Dong Phuong Bakery",
+      "type": "Vietnamese bakery, New Orleans East",
+      "why": "Its king cake draws lines from every corner of the metro, and it carries both the Carnival and the Tết stories.",
+      "idea": "Bake a paid, co-branded king cake sold with the Twelfth Night Pack, and co-host the Tết x Carnival capsule."
+    },
+    {
+      "name": "Backstreet Cultural Museum",
+      "type": "Community-run museum of Black Masking Indian and second-line culture, Tremé",
+      "why": "It is the right door to knock on before any engagement with second-line clubs or Black Masking traditions.",
+      "idea": "Act as the paid advisor and introducer for the Second Line Sunday commission, with veto rights over anything culture-adjacent."
+    },
+    {
+      "name": "Big Freedia",
+      "type": "Bounce artist, the 'Queen of Bounce'",
+      "why": "The global face of a genre whose ward-by-ward call-and-response is the most local typography the city has.",
+      "idea": "Front the Ward Call launch with an in-arena bounce set alongside credited queer bounce pioneers, once footwear and apparel conflicts are cleared."
+    },
+    {
+      "name": "Feed the Second Line and the Krewe of Red Beans",
+      "type": "Culture-bearer nonprofit and Lundi Gras bean-mosaic krewe",
+      "why": "They turn a Monday dish into costume art and send money directly to maskers, club members and musicians.",
+      "idea": "Make a Red Beans Monday tee for Monday home games, designed by krewe bean artists, with proceeds to Feed the Second Line."
+    }
+  ],
+  "retailPlaybook": {
+    "where": [
+      "Taste: Dirty Coast and Fleurty Girl on Magazine Street, St. Claude Avenue pop-ups and Studio BE, where limited drops land first.",
+      "Volume: Lakeside (Metairie) and Oakwood (Gretna) through Foot Locker, Dillard's and Dick's, where families buy kids jerseys and mainstream colorways.",
+      "Launch: the Pelicans Team Store at Smoothie King Center for City Edition, Cup nights and Twelfth Night moments.",
+      "Social and events: Instagram-driven local sellers plus Essence, Bayou Classic and Jazz Fest pop-ups for visitor spend."
+    ],
+    "when": [
+      "Late October to December is peak Pelicans attention and the year's biggest gifting window.",
+      "Jan 6 to about Jan 26 for Carnival product; no hero launch in the two weeks before Mardi Gras (Feb 9).",
+      "Bayou Classic (Thanksgiving weekend) and Essence (July 4 weekend) for high-spend visitor drops.",
+      "Mid-March through Jazz Fest for a lightweight stretch-run and festival palette."
+    ],
+    "how": [
+      "Put the city mark first and the team mark second, so product passes as New Orleans pride.",
+      "Tier the range: accessible swingman, kids and tee bundles for local households, and numbered city-keepsake pieces for visitors.",
+      "Design for 60-80°F parade days and air-conditioned arenas: mesh, seersucker, packable shells, and color-matchable tonal sets for second-line style.",
+      "Pay and credit every collaborator up front and send money back visibly (parade fees, instruments, corridor groups), because this market checks."
+    ]
+  },
+  "risks": [
+    {
+      "risk": "Cultural extraction, such as anything resembling Black Masking Indian beadwork or an unpaid second-line reference, would end Nike's credibility in the communities that set the city's style.",
+      "mitigation": "Route all culture-adjacent work through paid culture bearers with veto power, and keep sacred material out of every brief."
+    },
+    {
+      "risk": "Zion is a Jordan Brand athlete with a long injury history, so a Zion-led line is both a brand conflict and fragile.",
+      "mitigation": "Spread player product across Murphy, Queen and Fears and coordinate any Zion piece with Jordan Brand."
+    },
+    {
+      "risk": "Another sub-30-win season, a Murphy trade at the Feb 11 deadline, or renewed relocation chatter could crater team-gear demand.",
+      "mitigation": "Weight inventory toward city-first product that sells regardless of standings, keep team-branded volume lean, and pre-clear rapid-response tees."
+    },
+    {
+      "risk": "Third-party IP is everywhere: Saints fleur-de-lis treatments, 'Who Dat', krewe marks, Hornets-era marks owned by Charlotte, school marks and food brands.",
+      "mitigation": "Use original commissioned art, clear school and partner licenses early, and never try to claim a local phrase as Nike or NBA property."
+    },
+    {
+      "risk": "Hurricane season (June 1 to Nov 30) can wipe out Essence-to-opener events and shipping, and Aug 29 is a day of grief.",
+      "mitigation": "Hold flexible launch dates for summer and early fall, keep digital fallbacks, and schedule nothing commercial around Aug 29."
+    }
+  ],
+  "scorecard": {
+    "opportunity": 56,
+    "culture": 96,
+    "retail": 34,
+    "fandom": 38,
+    "rationale": "Few NBA cities have a deeper or more design-ready local culture, and its calendar lines up with the season. But retail is thin (few destination sneaker doors, a modest arena store, a lower-income core), and Pelicans fandom is small, Saints-first and weary after 26-56. The opportunity is slightly above average only because city-first product can sell independent of the standings."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "The 2026-27 Pelicans City Edition design and release date, and that the 2023-24 design brought back in 2025-26 is the purple Mardi Gras concept, so Corner Tile does not collide with it.",
+      "Zion Williamson's Jordan Brand status and health, and Trey Murphy III's status through the Feb 11, 2027 trade deadline.",
+      "Gayle Benson's ownership, the Smoothie King Center name, and the operator of the Pelicans Team Store for 2026-27.",
+      "The Pelicans' 2026-27 home schedule: the home opener, home Cup dates (MEM, OKC, MIN), and home games around Jan 6, Feb 8-9 and Bayou Classic weekend.",
+      "That the King Cake Baby still appears at Carnival-season games and is cleared for product; Mardi Gras Day on Feb 9, 2027.",
+      "Bayou Classic Nov 27-28, 2026 at the Superdome; 2027 dates for Essence, Jazz Fest, French Quarter Fest and the Mary Queen of Vietnam Tết festival.",
+      "Operating status and willingness of Studio BE, Dirty Coast, Fleurty Girl, Dong Phuong, the Backstreet Cultural Museum and Feed the Second Line.",
+      "Current footwear and apparel deals for Big Freedia, Rebirth Brass Band members and other named artists before outreach.",
+      "That the Tipitina's Foundation and The Roots of Music run active instrument programs, and the current Social Aid & Pleasure Club parade schedule and city permit and police fees.",
+      "Whether the city's tile street-name and water-meter crescent designs are free for commercial use, plus licensing for school marks and the state seal pelican.",
+      "Which Nike-owned, Foot Locker, Dick's and Dillard's doors are open at Lakeside, Oakwood and Riverwalk.",
+      "The availability and terms of Hornets-era heritage marks, in case a vintage capsule is added later."
+    ]
+  }
+}

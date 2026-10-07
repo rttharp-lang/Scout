@@ -1,0 +1,132 @@
+{
+  "team": "min",
+  "issues": [
+    {
+      "target": "uniform / calendar[Oct]",
+      "type": "other",
+      "severity": "high",
+      "problem": "The brief briefs 'Mill City Lights' as the 2026-27 City Edition and lists a new City Edition launch on Oct 21, while its own risks section admits the 2026-27 set is unconfirmed. With the season tipping Oct 20, the 2026-27 City Edition is long since designed, approved and in production. Any NBA/team uniform change is a 2027-28 conversation, so the headline uniform concept cannot be acted on this season.",
+      "fix": "Relabel the concept as the 2027-28 City Edition pitch and say so in the headline and calendar. For 2026-27, fold Mill City into non-uniform product only (warmups, crewnecks, tees), and put a verify-the-announced-2026-27-set step first so the capsule doesn't clash with a set already revealed."
+    },
+    {
+      "target": "calendar[Apr] / opportunities[3] / partners[Prince Estate]",
+      "type": "other",
+      "severity": "high",
+      "problem": "The brief treats April 21 as a 'natural moment' for an Estate-licensed Prince lifestyle capsule with a drop at Paisley Park. April 21 is the anniversary of Prince's death in 2016. A merchandise launch on a mourning date, from a brand with no prior Estate relationship, risks reading as exploitation in the city that loves him most. The 'Prince the point guard' idea also leans on a basketball legend more than on anything the Estate has licensed.",
+      "fix": "Do not sell on April 21. Shift any Estate-approved item to a non-anniversary moment (Purple Rain's July 1984 release anniversary, or a First Avenue-led event), or cut it to a donation-led gesture. Treat the Estate license as a long-lead, uncertain 'maybe' that doesn't gate the playoff plan."
+    },
+    {
+      "target": "collection / opportunities[0-2] lead times",
+      "type": "other",
+      "severity": "high",
+      "problem": "Almost every hero product assumes bespoke development inside about ten weeks: a custom knee-length parka with an interior pocket, Molten Core lining, 9x13 quilting and reflective trim, Faribault Mill chopper mitts with a co-brand, an original sign-painter alphabet, flour-sack cotton packaging, and a 'by early December' shelf date. Outerwear, wool and licensed co-brand programs are typically planned 9 to 14 months out, and team-store and Fanatics-run doors take only approved, already-shipped goods.",
+      "fix": "Split the plan into 'can ship this season' (graphic tees, crewnecks and fleece in existing blanks, beanies, pins, an artist-pulled tee run, and hangtag storytelling) and 'brief now for fall 2027' (the parka, mitts, flour-sack packaging, mill co-brand). Say which is which on every product."
+    },
+    {
+      "target": "opportunities[4] / calendar[Nov]",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The Hmong New Year capsule is anchored to the 'Nov 24-25 Cup Nights', but it is not established that Minnesota plays on those extra nights. Group play is the Fridays Oct 30 to Nov 27, and the St. Paul New Year runs Thanksgiving weekend, so the one confirmed overlap is Friday Nov 27. The brief also calls Oct 30 the 'home opener', but Oct 30 is the confirmed Cup opener against Memphis and other home dates may come earlier.",
+      "fix": "Check the Wolves' full home schedule and anchor to Nov 27 or the actual home date. Rename the first home game from 'home opener' to 'Cup opener' unless the schedule confirms it."
+    },
+    {
+      "target": "opportunities[4] (Hmong New Year x Cup Nights)",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "Hmong New Year is a community and family celebration with spiritual elements. Naming a Nike capsule 'x Cup Nights' and selling a 'New Year gift tee' staples a corporate tournament brand onto it, and a four-week window to find, hire and pay designers is too short for real co-design. The brief's exclusions (paj ntaub family designs, funeral textiles, the qeej) are right, but the framing is still the brand arriving for the holiday.",
+      "fix": "Drop the Cup tie-in from the name. Open with a relationship (sponsor or support the New Year's youth tournament and the community's own vendors), and let Hmong designers decide whether a product exists this year. Move the product timeline to 2027 if consent and design can't be done properly."
+    },
+    {
+      "target": "opportunities[5-6] / calendar[Feb]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Black History Month on the Northside, Ramadan watch nights and the Hmong New Year each get a single time-boxed capsule, which puts three communities into a 'heritage moment' calendar. Two of them land in the same February stretch, and one is a Somali community the brief itself says is under strain. The Northside capsule also depends on the Minneapolis Sound story while barring Prince marks, so its most recognizable story is off-limits.",
+      "fix": "Lead with multi-year, paid commitments (a standing JXTA studio, court and league funding, a named Somali youth program) and let product follow. Separate February programs by partner readiness, and give the Northside capsule its own story: West Broadway hoops, North High and the teen-band scene without any Prince cues."
+    },
+    {
+      "target": "opportunities[0] / topInsights[1]",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "The core idea (cold-weather fan outerwear led by hoodies, parkas and beanies) is a Chicago, Milwaukee, Toronto or Denver idea too. 'Twenty below' is also rare in Minneapolis; most winter nights are single-digit to teens above. The distinctive parts sit in details (walleye-eye trim, 9x13 bar quilting) that are cute rather than proven local signals, and the buffalo check, blaze orange and chopper mitts skew to an outstate and hunting-and-lake image that is not the core Wolves fan.",
+      "fix": "Keep winter as the category but ground it in what only Minneapolis does: the downtown skyway walk, ramp-to-arena routes, and the Target Center neighborhood. Back each detail with a named local source or drop it, and test whether the youth hoop fan (the Edwards fan) would wear the rural cues at all."
+    },
+    {
+      "target": "opportunities[7] / collection[Area Code]",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "Area-code tees and neighborhood hoodies exist in nearly every NBA market and would pass the swap test for Atlanta, Houston or Phoenix. Six area-code variants (612, 651, 218, 507, 763, 952) is a SKU spread built for coverage, not for a point of view. The Northwest Angle notch is the only truly Minnesotan graphic in it.",
+      "fix": "Cut to three variants that mean something (612, 651 and 218), and build the graphic from the state outline with its Northwest Angle notch and Lake of the Woods geography. Make St. Paul's 651 a real St. Paul artist's piece, not a number swap."
+    },
+    {
+      "target": "collection[Twenty Below] palette",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "Walleye Gold (#A38F3B) and Molten Core orange sit next to University of Minnesota gold and the Vikings' purple-and-gold, so on a dark base they can read as Gophers or Vikings gear. Orange and gold also move away from the Wolves' blue-and-green identity that the brief says fans want back.",
+      "fix": "Keep the orange as a hidden lining only, and drop the gold or push it far from Gophers and Vikings gold. Prefer Aurora Green and Lake Blue on the visible surface."
+    },
+    {
+      "target": "topInsights[0] / opportunities[1]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "'Classic Edition Garnett #21 swingman' and the Garnett-era tree-line retirement-week drop assume a Wolves Classic Edition set exists to release and that the NBA and team will approve a Garnett-led jersey in retirement week. The retirement date is unconfirmed, so 'ship three weeks before' has no anchor, and a three-week window is not a real production lead.",
+      "fix": "Phrase it as a conditional heritage program that goes into production once the team confirms the date and the Classic Edition set. Prepare heritage-neutral tees and pins that can ship at any date, and keep the jacquard warmup as the 2027-28 item."
+    },
+    {
+      "target": "topInsights[0] / risks / partners",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The brief assumes Nike controls the Target Center team store, Mall of America doors and co-brand deals with local makers. Team stores and NBA-licensed fan retail run through the league and team licensing, and any co-brand with Askov Finlayson, Faribault Mill or a studio needs NBA and team approval and often a separate license. The brief also never notes that playoff logos and marks for artist-pulled tees are league-controlled.",
+      "fix": "Add a licensing line to each partner plan (who owns the mark, who signs, how revenue is shared) and ask the team and league before announcing any local co-brand. For Art-A-Whirl tees, limit to generic Minnesota and Wolves-approved art until playoff marks are cleared."
+    },
+    {
+      "target": "calendar[May] / opportunities[3]",
+      "type": "timing",
+      "severity": "low",
+      "problem": "Art-A-Whirl (third weekend of May) is described as 'during the second round', but the Wolves may be out by then, or well into the conference finals. A plan that depends on a playoff run hitting a fixed weekend, and on printmakers signed before the season, can't flex around the team's results.",
+      "fix": "Make the Art-A-Whirl drop playoff-independent (a Minnesota basketball print series that works whether the team is in or out) and keep the round-by-round swap graphic as a separate, flexible item."
+    },
+    {
+      "target": "calendar (December Cup knockouts)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The brief treats the Cup only as group-night apparel in October and November. The new 2026 format moves the semifinals to the higher seed's home arena (Dec 8-9), and the final is at Butler's Hinkle Fieldhouse on Dec 11, right before the Christmas push. A Minnesota Cup run gives an unplanned home semifinal and a national Prime Video window.",
+      "fix": "Add a Cup knockout contingency: a ready-to-ship Cup-night graphic, a Dec 8-9 home semifinal activation and a Hinkle-themed hoodie slot, sitting ahead of the Mill City Christmas capsule."
+    },
+    {
+      "target": "partners / opportunities (Indigenous Minnesota)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The brief mentions Dakota only as a sensitive area to avoid or hand to 'Native partners' later, and no dossier covers Ojibwe or Dakota hoops, Little Earth of United Tribes, or reservation basketball, which is a defining culture in northern Minnesota. Native Minnesota is treated as a risk to manage rather than a community with a hoops scene to support.",
+      "fix": "Add a standing partnership track with a Native-led organization and a Native designer, starting with listening and community court and league support, with any product only if they lead it. Commission research on Ojibwe and Dakota basketball before the next brief."
+    },
+    {
+      "target": "opportunities (Latino Minnesota)",
+      "type": "missed-opportunity",
+      "severity": "low",
+      "problem": "Mercado Central and Lake Street Latino businesses appear in the retail playbook and the dossiers, but there is no Latino moment, partner or product, even though three other immigrant or heritage communities get capsules. Wolves Latino nights and Lake Street's Mexican and Ecuadorian businesses are a clear gap.",
+      "fix": "Add a Latino partner in the Lake Street corridor and a Hispanic Heritage Month presence in Sept-Oct, led by named local businesses. If capacity is short, drop one of the three February/November capsules before adding a thin one."
+    },
+    {
+      "target": "topInsights[5] / risks",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The brief conditions three immigrant-community programs on 'partner consent' given the 2025-26 enforcement surge, but still schedules them into the calendar with launch dates and KPIs. If consent is withheld, the calendar has nothing to replace them, and the KPIs (units sold through Hmong vendors, hijab sell-through) can turn community trust into a sales target.",
+      "fix": "Make these programs partner-led with no fixed launch date or sales KPI in year one. Measure dollars paid, commitments kept and partner renewal instead, and keep a fallback plan if a partner says no or asks for a delay."
+    },
+    {
+      "target": "opportunities[2] / uniform",
+      "type": "other",
+      "severity": "low",
+      "problem": "The Mill City story is strong, but it centers the Minneapolis riverfront while the brief's own thesis says to lead with the state and St. Paul. The mills were built at a site taken from the Dakota, and the flour-sign lettering is closely tied to General Mills and Pillsbury trademarks that the brief says to avoid, which leaves only the generic idea of a lattice alphabet.",
+      "fix": "Say plainly how 'MINNESOTA' lettering reads for St. Paul and outstate fans, and test the sign-painter alphabet against a trademark check before the concept is shown to anyone. Pair the mills story with an early conversation with Dakota partners, not a footnote."
+    }
+  ],
+  "strengths": [
+    "It resolves the Edwards (adidas) and Ball (PUMA) problem cleanly: Nike's story is the jersey, the city and licensed name-and-number product, not the stars' personal brands.",
+    "It correctly reads Purple Rain as spent on court (2019-20 and 2025-26) and avoids a third purple set, steering Prince through the Estate rather than around it.",
+    "Winter as the real product driver is the right commercial instinct, and the Mall of America, ship-to-home and suburban-door retail map matches how Minnesota fans actually buy.",
+    "Its community guardrails are specific and good: paid, credited co-designers, excluded sacred textile and instrument imagery, and Somali and Hmong merchants kept as the point of sale.",
+    "The calendar is anchored to verified dates (Oct 21 at Miami, Oct 30 Cup opener vs Memphis, Dec 25 vs OKC, MLK Day at the Knicks, Feb 15 at Charlotte) and sensibly leaves Naz Reid's return as a fan moment rather than a product."
+  ],
+  "summary": "A strong, market-specific brief whose biggest problems are feasibility and timing: the City Edition concept is a 2027-28 pitch, most bespoke winter and co-brand product cannot ship in ten weeks, and the April 21 Prince drop lands on the anniversary of his death. Fix the lead times, drop the Cup tag from the Hmong capsule, pull the generic area-code and outerwear lines toward Minnesota-only details, and fill the Native, Latino and Cup-knockout gaps before it goes to design."
+}

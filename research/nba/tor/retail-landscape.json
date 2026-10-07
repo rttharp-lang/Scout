@@ -1,0 +1,376 @@
+{
+  "team": "tor",
+  "lens": "retail-landscape",
+  "headline": "Toronto buys basketball at Sport Chek and Foot Locker for volume, but taste is set on Queen West and at OVO, and the Raptors' one-country fanbase means gear moves through malls in the suburbs as much as downtown.",
+  "summary": "As Canada's only NBA team, the Raptors sell nationally, so the market is a map of GTA malls (Yorkdale, Eaton Centre, Scarborough Town Centre, Square One, Vaughan Mills, Bramalea City Centre) plus Sport Chek and online. Dick's has no Canadian stores of its own (it owns Foot Locker since 2025); Sport Chek, Foot Locker, JD and Lids carry the volume. Taste is set by a smaller circle: Queen West and Kensington streetwear and vintage, and Drake's OVO, the single most important local brand in the Raptors story. Kawhi's return and the Barnes-led team give a fresh reason to refresh Raptors product, and the Canadian-dollar price gap and cross-border shopping shape what fans will pay.",
+  "insights": [
+    {
+      "title": "Sport Chek is the volume door",
+      "detail": "Canada's largest sporting goods chain (owned by Canadian Tire Corporation) is where most suburban families buy kids' basketball shoes and team jerseys, with Atmosphere and Sports Experts as sister banners. Dick's Sporting Goods has no Canadian stores of its own, though its 2025 purchase of Foot Locker put Foot Locker Canada under Dick's ownership, so there is no Dick's-style big-box rival.",
+      "implication": "Plan jersey and entry-price basketball allocations around Sport Chek and Foot Locker Canada; treat them as the real big-box channel."
+    },
+    {
+      "title": "The suburbs outsell downtown",
+      "detail": "Scarborough Town Centre, Square One in Mississauga, Bramalea City Centre in Brampton and Vaughan Mills serve the large Caribbean, South Asian and East African communities where youth basketball participation is high. Yorkdale and the Eaton Centre pull the premium and tourist shopper.",
+      "implication": "Activate in suburban mall doors and community courts, not only the downtown flagship, and brief products with diaspora fans in mind."
+    },
+    {
+      "title": "OVO owns local taste",
+      "detail": "Drake's OVO label (Raptors global ambassador) runs a Queen West flagship and the team's official OVO collaborations carry an owl motif and a gold-and-black palette. No other local brand carries that much Raptors credibility.",
+      "implication": "Any Raptors statement product should be built with, or at least aware of, the OVO lane; do not duplicate its owl or gold language without partnership."
+    },
+    {
+      "title": "Queen West and Kensington set taste, not volume",
+      "detail": "Queen West boutiques and Kensington Market vintage shops are where younger fans and designers find new product. Courage My Love is a long-running Kensington vintage and bead shop.",
+      "implication": "Seed limited drops and pop-ups here for narrative; do not expect unit volume."
+    },
+    {
+      "title": "Canadian-made and Canadian-pride sells",
+      "detail": "Peace Collective, a Toronto-founded label, built a following on Raptors, 6ix and We The North themed apparel, and Roots is the heritage Canadian brand. Fans treat Toronto and Canada pride as one identity.",
+      "implication": "Frame Raptors product around 'We The North' and Canada-wide identity; consider a Canadian-only drop."
+    },
+    {
+      "title": "Outlets matter in the GTA",
+      "detail": "Vaughan Mills and Toronto Premium Outlets in Halton Hills draw bargain-minded, car-owning families, and Nike runs factory stores in this market.",
+      "implication": "Use outlets as the lower-price Raptors and basketball door and a place to clear carryover."
+    }
+  ],
+  "places": [
+    {
+      "name": "CF Toronto Eaton Centre",
+      "kind": "mall",
+      "neighborhood": "Downtown, Yonge and Dundas",
+      "why": "The dense downtown mall with Nike, Foot Locker and JD doors, shopped by tourists, students and commuters."
+    },
+    {
+      "name": "CF Yorkdale",
+      "kind": "mall",
+      "neighborhood": "North York",
+      "why": "The premium mall, with the highest-spending sneaker and fashion shopper in the city."
+    },
+    {
+      "name": "Scarborough Town Centre",
+      "kind": "mall",
+      "neighborhood": "Scarborough",
+      "why": "The eastern anchor for the Caribbean, South Asian and Tamil communities and for youth basketball."
+    },
+    {
+      "name": "Square One Shopping Centre",
+      "kind": "mall",
+      "neighborhood": "Mississauga",
+      "why": "One of Canada's biggest malls, drawing the western GTA's diverse family shopper."
+    },
+    {
+      "name": "Vaughan Mills",
+      "kind": "mall and outlet",
+      "neighborhood": "Vaughan",
+      "why": "Outlet-style mall with factory stores, drawing north-of-the-city families and tourists."
+    },
+    {
+      "name": "Bramalea City Centre",
+      "kind": "mall",
+      "neighborhood": "Brampton",
+      "why": "Serves Brampton's large South Asian and Caribbean communities where basketball is growing."
+    },
+    {
+      "name": "Queen Street West",
+      "kind": "district",
+      "neighborhood": "Queen West / West Queen West",
+      "why": "Toronto's streetwear and boutique spine, home to the OVO flagship."
+    },
+    {
+      "name": "Kensington Market",
+      "kind": "district",
+      "neighborhood": "Downtown West",
+      "why": "Vintage and thrift cluster with real subcultural credibility."
+    }
+  ],
+  "people": [
+    {
+      "name": "Drake",
+      "role": "Rapper, Raptors global ambassador, OVO founder",
+      "why": "His OVO label and Raptors collaborations define local team-gear taste."
+    },
+    {
+      "name": "Masai Ujiri",
+      "role": "Giants of Africa founder; former Raptors president (left June 2025)",
+      "why": "Giants of Africa links the team to African-diaspora youth basketball and community retail."
+    },
+    {
+      "name": "Scottie Barnes",
+      "role": "Raptors forward and All-Star",
+      "why": "The face of the current team and the likely jersey driver."
+    },
+    {
+      "name": "Kawhi Leonard",
+      "role": "Raptors forward, 2019 champion",
+      "why": "His return is the 2026-27 jersey and nostalgia story."
+    },
+    {
+      "name": "Peace Collective",
+      "role": "Toronto-based apparel brand",
+      "why": "A big local following for Raptors and Toronto pride apparel."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Raptors home opener window",
+      "timing": "Late October",
+      "month": 10,
+      "why": "First chance for jersey and Kawhi-return demand to peak."
+    },
+    {
+      "name": "Emirates NBA Cup group play at home",
+      "timing": "Starting Oct 30 against Brooklyn",
+      "month": 10,
+      "why": "Cup-branded merchandise and a Friday-night home window."
+    },
+    {
+      "name": "Boxing Day",
+      "timing": "Dec 26",
+      "month": 12,
+      "why": "Canada's biggest retail day; sneakers and team gear move heavily."
+    },
+    {
+      "name": "Black Friday and Cyber Week",
+      "timing": "Late November",
+      "month": 11,
+      "why": "Online demand for Raptors gear."
+    },
+    {
+      "name": "Playoff push",
+      "timing": "April to June",
+      "month": 4,
+      "why": "We The North energy and playoff merchandise surge."
+    },
+    {
+      "name": "Caribana and the Toronto Caribbean Carnival",
+      "timing": "Early August",
+      "month": 8,
+      "why": "Cultural moment where Caribbean-rooted fashion and pop-ups are strongest."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The 6ix",
+      "meaning": "Local nickname for Toronto, popularized by Drake."
+    },
+    {
+      "term": "We The North",
+      "meaning": "The Raptors' national rallying cry of Canada-wide fandom."
+    },
+    {
+      "term": "The GTA",
+      "meaning": "Greater Toronto Area, the suburban ring where most volume sells."
+    },
+    {
+      "term": "Boxing Day",
+      "meaning": "The Dec 26 sales day."
+    },
+    {
+      "term": "Mandem",
+      "meaning": "Local slang for a group of friends."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Raptors red as the base for any Toronto-specific team drop",
+      "type": "color",
+      "hex": "#CE1141",
+      "source": "Raptors primary team color",
+      "use": "Anchor team-specific product to the primary red."
+    },
+    {
+      "cue": "OVO-adjacent gold and black",
+      "type": "color",
+      "hex": "#B4975A",
+      "source": "The Raptors' gold-and-black City Edition lane and OVO's palette",
+      "use": "Use only in partnership with OVO or as a clearly distinct accent."
+    },
+    {
+      "cue": "Canadian maple leaf and red-and-white national pride",
+      "type": "motif",
+      "hex": "",
+      "source": "The national-team identity of Canada's only NBA franchise",
+      "use": "A Canada-wide drop; flag any use of government marks as restricted."
+    },
+    {
+      "cue": "CN Tower silhouette",
+      "type": "graphic",
+      "hex": "",
+      "source": "Toronto skyline icon",
+      "use": "A subtle line graphic, not a repeated tourist icon."
+    },
+    {
+      "cue": "Heritage wool and wide stripes",
+      "type": "pattern",
+      "hex": "",
+      "source": "Canadian heritage outerwear and the Roots look",
+      "use": "Cold-weather warm-ups and varsity jackets."
+    },
+    {
+      "cue": "Winter-ready layering and technical outerwear",
+      "type": "material",
+      "hex": "",
+      "source": "Toronto winters and Canada Goose's presence",
+      "use": "Water-resistant shells and fleece for fans going to games."
+    }
+  ],
+  "productHooks": [
+    "Kawhi return capsule: Raptors Association and Icon jerseys plus a Kawhi-themed tee, sold via Sport Chek and Raptors shop.",
+    "Canada-wide We The North warm-up and varsity jacket, tied to winter weather.",
+    "Boxing Day Raptors tee and cap exclusive across Canadian doors.",
+    "Queen West pop-up with a local streetwear brand, limited footwear colorway."
+  ],
+  "watchouts": [
+    "OVO and Drake imagery requires licensing and partnership; never imitate the owl.",
+    "Canadian national marks and 'We The North' may carry trademark restrictions.",
+    "Toronto's diaspora communities need partnership and credit, not borrowed pattern or flag imagery.",
+    "Do not assume Dick's or U.S. retail logic applies; Canadian pricing and tariffs affect margins."
+  ],
+  "sources": [
+    {
+      "title": "Toronto Raptors (official site)",
+      "url": "https://www.nba.com/raptors"
+    },
+    {
+      "title": "Scotiabank Arena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Scotiabank_Arena"
+    },
+    {
+      "title": "Sport Chek (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sport_Chek"
+    },
+    {
+      "title": "OVO (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/October%27s_Very_Own"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "districts": [
+      {
+        "name": "Queen Street West",
+        "profile": "Boutique and streetwear strip.",
+        "shopper": "Style-led 18-35 shoppers and collectors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Kensington Market",
+        "profile": "Vintage and thrift cluster.",
+        "shopper": "Students, creatives and collectors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "CF Yorkdale",
+        "profile": "Premium mall.",
+        "shopper": "Higher-income sneaker and fashion shoppers.",
+        "role": "mixed"
+      },
+      {
+        "name": "CF Toronto Eaton Centre",
+        "profile": "Downtown mall.",
+        "shopper": "Commuters, students and tourists.",
+        "role": "tourist"
+      },
+      {
+        "name": "Scarborough Town Centre",
+        "profile": "East-end community mall.",
+        "shopper": "Diaspora families and youth players.",
+        "role": "community"
+      },
+      {
+        "name": "Square One and Bramalea City Centre",
+        "profile": "Peel Region malls.",
+        "shopper": "Diverse suburban families.",
+        "role": "volume"
+      },
+      {
+        "name": "Vaughan Mills and outlets",
+        "profile": "Outlet mall.",
+        "shopper": "Car-owning families seeking value.",
+        "role": "volume"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Raptors team shop at Scotiabank Arena",
+        "type": "team-store",
+        "neighborhood": "Downtown, Union Station",
+        "why": "The game-day door for jerseys and new-signing product."
+      },
+      {
+        "name": "Nike Toronto Eaton Centre",
+        "type": "nike-owned",
+        "neighborhood": "Downtown",
+        "why": "Nike's main downtown retail presence for basketball."
+      },
+      {
+        "name": "Nike Factory Store Vaughan Mills",
+        "type": "nike-owned",
+        "neighborhood": "Vaughan",
+        "why": "Value door for GTA families."
+      },
+      {
+        "name": "Sport Chek",
+        "type": "athletic-chain",
+        "neighborhood": "GTA-wide",
+        "why": "The leading Canadian volume channel for basketball and team gear."
+      },
+      {
+        "name": "Foot Locker Canada",
+        "type": "athletic-chain",
+        "neighborhood": "GTA-wide malls",
+        "why": "The sneaker and basketball door for the youth buyer."
+      },
+      {
+        "name": "JD Sports",
+        "type": "athletic-chain",
+        "neighborhood": "Eaton Centre and other malls",
+        "why": "A trend-driven sneaker door for younger shoppers."
+      },
+      {
+        "name": "OVO Flagship",
+        "type": "local-brand",
+        "neighborhood": "Queen West",
+        "why": "The most important local brand and a taste setter."
+      },
+      {
+        "name": "Peace Collective",
+        "type": "local-brand",
+        "neighborhood": "Toronto",
+        "why": "Toronto-pride apparel with a loyal local following."
+      },
+      {
+        "name": "Courage My Love",
+        "type": "vintage",
+        "neighborhood": "Kensington Market",
+        "why": "A long-running vintage shop with local credibility."
+      },
+      {
+        "name": "Roots",
+        "type": "local-brand",
+        "neighborhood": "GTA-wide",
+        "why": "The heritage Canadian brand and collaboration partner."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Raptors team shop location and operator at Scotiabank Arena for 2026-27",
+      "Current Nike-owned doors in the GTA: Eaton Centre, Yorkdale, any Well Collective, Vaughan Mills and Toronto Premium Outlets factory stores",
+      "That the Nike Toronto Eaton Centre store is still operating under that name",
+      "OVO flagship still open on Queen West and its current Raptors collaboration status",
+      "Drake's current role as Raptors global ambassador",
+      "Peace Collective still operating and its Raptors licensing",
+      "Courage My Love still open in Kensington Market",
+      "JD Sports and Foot Locker door counts in GTA malls",
+      "Sport Chek remains the main Canadian sporting goods chain and its Nike assortment",
+      "Foot Locker Canada ownership and banner plans under Dick's Sporting Goods (acquisition closed 2025)",
+      "Raptors 2026-27 City Edition uniform and release date",
+      "Scotiabank Arena naming and Raptors ownership (MLSE) for 2026-27"
+    ]
+  }
+}

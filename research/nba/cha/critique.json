@@ -1,0 +1,139 @@
+{
+  "team": "cha",
+  "issues": [
+    {
+      "target": "calendar[0], calendar[1], opportunities[0], opportunities[5]",
+      "type": "timing",
+      "severity": "high",
+      "problem": "Today is Oct 7 and the calendar asks for newly designed product at the home-opener week and the Oct 24 Lexington festival, which is 2.5 weeks away. Nike cannot make a new satin bomber, garment-faded fleece or sauce-map hoodie in that time, and the Charlotte home-opener date is not even confirmed.",
+      "fix": "Reframe October as existing Hornets/Jordan heritage inventory plus content, with no new SKUs. Move the true Hive and Sauce Line launches to the Nov 4 to Black Friday window at the earliest (fast-turn graphic and cut-and-sew only). Label the rest as 2027-28 lead-time work."
+    },
+    {
+      "target": "opportunities[1], opportunities[2]",
+      "type": "timing",
+      "severity": "high",
+      "problem": "February holds three priority-1 plays (West End capsule, Feb 15 national game, Neutral Ground) and the only real Black-Charlotte retail peak, CIAA week in late Feb, is mentioned only as 'legacy'. The sit-ins peak (Feb 9) and the Ball game (Feb 15) are six days apart, so the community capsule risks being subordinated to a game that is about a departed star. A jacquard or braided warm-up jacket is also a stretch for a ~4-month lead time.",
+      "fix": "Make the HBCU/West End capsule its own beat, timed to the Feb 9 anniversary and CIAA week (confirm whether Charlotte still hosts), and keep Feb 15 for fast-turn tees. Do not launch the community partners' work in the shadow of the Ball night. Keep braid and jacquard to a small limited run or push to 2028."
+    },
+    {
+      "target": "calendar[2], partners, opportunities[5]",
+      "type": "inaccurate",
+      "severity": "high",
+      "problem": "The Cup calendar says 'home games vs. Boston, Atlanta, Chicago', but Charlotte plays each of four group opponents once, so only about two are home games, and Oct 30 is at Washington. 'Home Cup nights' pop-ups and Mert's collab menus therefore total roughly two nights, not a November series.",
+      "fix": "Say 'two home Cup games (dates and opponents to confirm from the schedule)'. Right-size the Blue Line pop-up to a pilot at one home Cup Friday and hold the bigger spend for Dec and Feb."
+    },
+    {
+      "target": "uniform",
+      "type": "other",
+      "severity": "high",
+      "problem": "The jersey is marked 'I-II-III-IV' waistband ward numbers with a printed history of each ward, and Second Ward is Brooklyn, the Black neighborhood razed by urban renewal. The brief's own 'avoid' list bans Brooklyn as decoration without co-authors, but the uniform tab names no partner for that content. A gray-paper base with purple numbers also drops the teal-and-purple field that fans call their color.",
+      "fix": "Either drop the ward numerals or write the Second Ward hem text with the Gantt Center and Brooklyn descendants, credited. Keep teal or purple as the dominant field color (gray as panels/trim) so it still reads as a Hornets jersey."
+    },
+    {
+      "target": "uniform, opportunities[4]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "No City Edition concept can be delivered to the 2026-27 season (kits are locked and the 2026-27 City Edition is unknown here). The brief never says this concept targets 2027-28, and the court-paint tie-in is the team's and NBA's call, not Nike's. The May 20 drop and the uniform both lean on the Meck Dec, which is disputed and is a North Carolina story, not a South Carolina one.",
+      "fix": "Label the uniform as a 2027-28 pitch to the Hornets and NBA. Treat court and arena ideas as asks, not deliverables. Add a SC-inclusive counterpart (the two-state sauce and 704/803 cues) so York and Lancaster County fans are not left out of the civic story."
+    },
+    {
+      "target": "opportunities[1], partners[2]",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "Navy and gold, band braid and drumhead roundels are Johnson C. Smith University's colors and band identity, and the brief calls them 'references' without a license. The International Institute of Sound is credited as a source, but college marks and band names need the school's licensing office, and CIAA marks need the conference. Revenue share alone also pays creators late and only if the product sells.",
+      "fix": "Get a written JCSU license and a guaranteed design fee for the student and alumni designers before any art is drawn. Use JCSU's marks only with approval, and add revenue share on top of fees, not in place of them."
+    },
+    {
+      "target": "opportunities[3], collection.themes[3], topInsights[4]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Neutral Ground rests on Carolina blue and Duke royal, which the retail dossiers warn reads as a rival college program, and Charlotte is not on Tobacco Road (it is the Triangle's). The framing excludes NC State, Wake, Davidson, Clemson and Gamecock households, and the 'truce' conceit rests on only three players on one roster, who could be traded within a season.",
+      "fix": "Run it as a limited youth-run product and test it before scaling. Lead with 704 and the Jumpman (the neutral element) and drop the 'Tobacco Road' language. Keep the college blues as a tonal accent only, not the two halves of the garment."
+    },
+    {
+      "target": "topInsights[2], risks[0], opportunities[2]",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The brief treats a Puma or non-Nike player as a blocker for name-and-number product ('until deals confirmed'), but player jerseys and tees are sold under the NBA/NBPA group license regardless of shoe deals. What a non-Nike athlete blocks is athlete-fronted Nike marketing. Holding back Miller product may leave sales on the table in the post-LaMelo jersey-wall reset.",
+      "fix": "Plan Miller, Knueppel, White and Reid name-and-number product from the group license now. Reserve 'confirm the deal' for campaigns, photography and signature lines."
+    },
+    {
+      "target": "calendar[11], opportunities[6]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The calendar merges Charlotte Pride (mid-August) with South Carolina's early-August tax-free weekend as one window, but they are different weekends. The Pride capsule also has no basketball moment in August and the brief rates it 'low' size while leaving the Hornets' own Pride night (if any) out.",
+      "fix": "Split the two entries. Tie the capsule to a Hornets in-season Pride night (confirm one exists) with Charlotte Pride and Charlotte Black Pride, and sell it in the season rather than only in a dead August month."
+    },
+    {
+      "target": "topInsights[6], calendar[4]",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "'Business-casual fans in a humid, mild city' and the December 'holiday gifting, youth sets' entry both pass the swap test for Atlanta, Dallas or Houston. Nothing in either is Charlotte-only beyond 'Uptown banks'. The December plan is Priority 1 and has no local hook at all.",
+      "fix": "Name the bank-tower and light-rail commute (Bank of America, Truist and Wells Fargo towers in Uptown, the Lynx Blue Line) in the quarter-zip story. Give December a Charlotte story, such as Hugo-led youth gifting or a Hive heritage gift set tied to the Charlotte Motor Speedway holiday lights tradition (confirm still running)."
+    },
+    {
+      "target": "opportunities[5], collection.themes[2]",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "Sauce Line is a Carolinas idea that works as well for Raleigh or Columbia, and Charlotte is not the barbecue capital (Lexington is about an hour away and the festival falls before most home games). Cheerwine, Lance and Bojangles are also a licensing tangle that the brief half acknowledges.",
+      "fix": "Keep it a small, one-partner capsule, or tie it to a Charlotte-specific food story (the Colliers and Mert's Heart and Soul) and let the festival date pass as a content moment only."
+    },
+    {
+      "target": "opportunities[0], collection.themes[0]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "'Archive-exact' is the wrong claim for Nike: the originals were Starter, Logo 7 and Nutmeg pieces, not Nike's, and the vintage buyers the brief targets can tell the difference by tag and stitch. A new Nike satin bomber sold as 'archive-exact' invites the comparison and the criticism. The Converse Grandmama piece also needs Larry Johnson and Converse brand-alignment, which is outside Nike Basketball's own calendar.",
+      "fix": "Call it a recut or a 'Julian-credited reissue' and let the unbranded modern fabric and fit be the story. Seed it through the picker and vintage dealers the brief names rather than saying 'exact'. Confirm Converse's schedule and Johnson's rights before listing the retro."
+    },
+    {
+      "target": "strategy overall",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The brief has no Hugo the Hornet or youth strategy, though Hugo is the franchise's strongest kid-facing asset (and fans' 1990s memory), and December gifting is 'the biggest jersey window'. The dossiers also say high schools claim players in Charlotte, but the brief names only two (Charlotte Christian and South Meck).",
+      "fix": "Add a Hugo-led youth and family line, licensed through the Hornets. Add a high-school warm-up program that names West End and public schools such as West Charlotte alongside the private ones (confirm current programs), to avoid a South-Charlotte-only read."
+    },
+    {
+      "target": "strategy overall",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Latino and Asian Charlotte are absent from the brief even though the food dossier names Central Avenue and North Tryon as the international corridors and Hispanic Heritage Month (Sept 15 to Oct 15) is under way today. No segment, partner or window addresses Charlotte's large Latino fan base, and Lunar New Year (Feb 6, 2027) is unused.",
+      "fix": "Add a small community program with Central Avenue restaurants and a Latino-led Hornets partner (confirm any existing Hornets Latin night), paid and credited, with bilingual hangtags. Use Lunar New Year as a Feb 6 content beat, not a capsule."
+    },
+    {
+      "target": "strategy overall",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The music dossier's best local ideas are not used: a 'Cut in Charlotte' recording-town story (WBT and the 1936 Bluebird sessions), the NC 'raise up' crowd ritual, and credible local artists like Lute and MAVI. No musician or producer is on the partner list, and the brief's only music reference is the JCSU band.",
+      "fix": "Add one paid Charlotte artist or producer to the partner list for hype video and drop soundtracks. Promote the 'Cut in Charlotte' alternate to a Q1 test, with rights cleared for any label or song names."
+    },
+    {
+      "target": "strategy overall",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Two summer-window ideas in the hoops and underground dossiers are dropped: a licensed women's-first Charlotte Sting heritage capsule (Nike makes WNBA uniforms) and the Charlotte AAU/pro-am gap. Both fit the May to August lull better than a May 20 drop or a Pride capsule with no game.",
+      "fix": "Add a licensed Sting tribute (WNBA licence, avoid South Carolina marks) and a Peach Jam-aligned June runs program for the summer calendar."
+    },
+    {
+      "target": "opportunities[7], calendar[8]",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "Central Ave SB and the Niners '77 retro are priority 3 with thin evidence of volume. The 49ers piece depends on UNC Charlotte's apparel contract and a school license, and the SB drop needs Nike SB's own calendar, not the Hornets'. Bobcats-orange product risks confusing a team that wants its teal back.",
+      "fix": "Keep both as test-and-learn only, with the Niners piece subject to licensing sign-off, and cut the SB drop if Nike SB and Black Sheep cannot confirm by December."
+    },
+    {
+      "target": "pulse, scorecard",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "The pulse calls Feb 15 Charlotte's only national stage, but the Play-In (all on Prime Video) and Cup knockouts are also national if Charlotte qualifies. The 'heat 56' score has no derivation shown.",
+      "fix": "Say 'only scheduled national window' and name the Prime Video Play-In and Cup knockouts as contingent second spots. Show how the heat number was set."
+    }
+  ],
+  "strengths": [
+    "The thesis is distinctly Charlotte: teal as a civic color, the 364-sellout Coliseum, the 2014 name return, and a hornet's-nest story that no swap-city could use.",
+    "Respect is handled with real specificity: Brooklyn, the West End and Pride are routed through named partners (JCSU, the Gantt Center, the Colliers, Charlotte Pride) with pay, credit and partner-chosen proceeds.",
+    "The evidence discipline is good: Puma and Curry conflicts, Starter and Hugo IP, Bearden's estate and NASCAR/Cheerwine marks are named and mitigated rather than ignored.",
+    "Retail logic is realistic and local: volume through Concord Mills, SouthPark and outlets, taste through Social Status, Central Avenue and the Blue Line, and no NC tax-free promise.",
+    "The brief uses the real calendar, including the Feb 15 Ball return framed as the new core's night and the avoidance of Panthers Sundays, with scenario-based Play-In stock."
+  ],
+  "summary": "A strong, unusually Charlotte-specific brief whose weakest part is execution realism rather than ideas. It plans new product for dates only weeks away, overloads February, miscounts the home Cup games, puts an unpartnered Brooklyn reference on the jersey, and ignores Hugo, Latino Charlotte, music and the Sting. Fix the lead times and the uniform's ward content first, then widen the community and youth segments."
+}

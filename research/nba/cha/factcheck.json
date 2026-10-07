@@ -1,0 +1,287 @@
+{
+  "team": "cha",
+  "checked": 96,
+  "verdicts": [
+    {
+      "lens": "underground",
+      "claim": "Black Sheep Skate Shop is a Charlotte skate shop (partner for Hornets x Nike SB)",
+      "verdict": "confirmed",
+      "note": "Live check: independent shop founded 2003 by Josh Frazier, with adidas Skateboarding x Charlotte FC collab (2024). Its Plaza Midwood location is NOT confirmed; strategy.json states it as fact.",
+      "source": "https://www.soccerbible.com/lifestyle/sneakers/2024/09/adidas-skate-x-charlotte-fc-x-black-sheep-drop-collaborative-collection"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "South Carolina holds an early-August tax-free weekend",
+      "verdict": "confirmed",
+      "note": "Live check: SC's 2026 holiday ran Aug 7-9 (clothing and footwear exempt). 2027 dates still need confirming; NC has none.",
+      "source": "https://www.dor.sc.gov/news/south-carolinas-2026-tax-free-weekend-starts-friday-august-7"
+    },
+    {
+      "lens": "food",
+      "claim": "Brooks' Sandwich House is a family-run NoDa cinder-block shack open since 1973",
+      "verdict": "corrected",
+      "note": "Live check: open since 1973, weekdays only, cash-only, red corner building at 2710 N. Brevard St.; the land was put up for sale, so the shop may move. Dossier text corrected; confirm before naming.",
+      "source": "https://www.aol.com/brooks-sandwich-shop-land-officially-003653482.html"
+    },
+    {
+      "lens": "uniform",
+      "claim": "Michael Jordan brought the team into Jordan Brand in 2014",
+      "verdict": "corrected",
+      "note": "Hornets moved to Jordan Brand with Nike's 2017-18 uniform deal; 2014 was only the name return. Fixed in insight, people and eras.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "The 1988-2002 era used the honeycomb logo",
+      "verdict": "corrected",
+      "note": "Honeycomb is a 2014-rebrand motif; original era marks are Hugo and the hornet logo. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "The first US branch Mint stood in Charlotte",
+      "verdict": "corrected",
+      "note": "Charlotte, Dahlonega and New Orleans were authorized together; softened to one of the first branch Mints.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Luke Combs was raised in Huntersville",
+      "verdict": "corrected",
+      "note": "Born in Huntersville but raised in Asheville; fixed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "J. Cole performed at 2019 All-Star halftime and Anthony Hamilton sang the anthem",
+      "verdict": "corrected",
+      "note": "Not confident of the lineup; softened to 'Carolinas artists' and left in the verify queue.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Bobby Jones and Walter Davis both came from South Mecklenburg High",
+      "verdict": "corrected",
+      "note": "Davis is South Mecklenburg; Jones went to Myers Park High. Fixed in summary, insight, people and place.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "The Hive (Charlotte Coliseum) ran 1988-2007",
+      "verdict": "corrected",
+      "note": "Coliseum hosted games 1988-2005 (Hornets to 2002, Bobcats 2004-05) and was imploded in 2007; hook retitled 1988-2002.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Bojangles' also names the old Coliseum",
+      "verdict": "corrected",
+      "note": "Bojangles Coliseum is the 1955 Independence Blvd dome, not the Hive; fixed.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Dell Curry is a Fox Sports broadcaster",
+      "verdict": "corrected",
+      "note": "He is the Hornets' TV analyst; fixed.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "LaMelo loyalists bought his Jordan Brand-adjacent look",
+      "verdict": "corrected",
+      "note": "LaMelo is a Puma athlete; fixed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "CIAA Tournament takes over Spectrum Center and Uptown (present tense)",
+      "verdict": "corrected",
+      "note": "CIAA left Charlotte after 2020 (Baltimore since 2022); fixed in places and moments.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "CIAA Tournament is held in Charlotte and is a retail weekend",
+      "verdict": "corrected",
+      "note": "Same stale claim in places, vocabulary, hook and verify list; recast as 2006-2020 legacy. Also removed the LaMelo-return capsule hook, which contradicted the culture and strategy advice not to troll him.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "CIAA is held in Charlotte each winter",
+      "verdict": "corrected",
+      "note": "Same stale claim across insight, moment, vocabulary, hook and verify; recast as legacy.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Hornets home Cup nights against Boston, Atlanta, Chicago and Washington",
+      "verdict": "corrected",
+      "note": "Group C is each team once: the opener is AT Washington, so only two of Boston/Atlanta/Chicago come to Charlotte. Fixed in food.",
+      "source": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+    },
+    {
+      "lens": "food",
+      "claim": "Sweet Lew's counter sits in a converted service station",
+      "verdict": "removed",
+      "note": "Oddly specific, unverified; detail removed. Open status still unverified.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Specter uniform plans may involve Charlotte",
+      "verdict": "corrected",
+      "note": "Current facts: the eight Specter franchises exclude Charlotte; verify items in fanbase and rhythm rewritten.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cup Nights: 'home games vs. Boston, Atlanta, Chicago' (calendar, month 11)",
+      "verdict": "corrected",
+      "note": "Only two of those three visit Charlotte; the opener is at Washington. Editor must fix the calendar row and any 'home Cup nights' count.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Brandon Miller 'signed with Puma' stated as fact (topInsights, risks)",
+      "verdict": "unverifiable",
+      "note": "Appears in 8 files; the brief hedges only in provenance. Editor should say 'reported' and confirm before anything player-led.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Black Sheep Skate Shop (Plaza Midwood) as partner",
+      "verdict": "unverifiable",
+      "note": "Shop is real (live check) but the Plaza Midwood location and openness to Nike are unconfirmed; soften the location.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Duke-UNC weeks in early February and early March drive the Neutral Ground drop",
+      "verdict": "unverifiable",
+      "note": "2026-27 Duke-UNC dates not in the facts; confirm before fixing launch dates.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nov 4 is the anniversary of the first Hornets game and May 20, 2014 is the name return",
+      "verdict": "unverifiable",
+      "note": "Believed correct (Nov 4, 1988; May 20, 2014) but both are anchors for drop dates; confirm.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "2026-27 Hornets City Edition and whether Jumpman remains on the uniform",
+      "verdict": "unverifiable",
+      "note": "CURRENT FACTS leave City Edition blank; every dossier avoids a concept collision claim. Highest-priority live check.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Orange is a current team accent (#E56020 in uniform, #F9A01B in retail-behavior)",
+      "verdict": "unverifiable",
+      "note": "Two different hexes and no source; the Bobcats-era orange is #F26522 in underground. Confirm current palette before any hex ships.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Spectrum Center is still the arena name and Hornets ownership (Schnall/Plotkin, Jordan minority)",
+      "verdict": "unverifiable",
+      "note": "Facts ownershipArena field is empty; claim appears in nearly every dossier.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Steph Curry is tied to Under Armour (underground, culture) vs a 'reported late-2025 split' (hoops)",
+      "verdict": "unverifiable",
+      "note": "Dossiers disagree; culture and underground softened. Confirm his current footwear status.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Social Status x Nike Dunk Mid 'Free Lunch' pack (2022); Social Status is Charlotte-born",
+      "verdict": "unverifiable",
+      "note": "Specific product and year repeated in art, underground and strategy; confirm and confirm store location and Nike account.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Leah & Louise open at Camp North End; Greg Collier's James Beard finalist years; BayHaven founded 2021",
+      "verdict": "unverifiable",
+      "note": "Years and festival dates are oddly specific; confirm before any copy.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Sweet Lew's, Midwood Smokehouse, Mert's, Green's Lunch, Olde Mecklenburg Brewery, Lang Van still open",
+      "verdict": "unverifiable",
+      "note": "Small businesses named from knowledge; strategy.json builds drops on Sweet Lew's and Mert's. Confirm each.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Snug Harbor, Lunchbox Records, Visulite, Neighborhood Theatre, Milestone Club still open at stated locations",
+      "verdict": "unverifiable",
+      "note": "Long-running but fragile venues; confirm before naming as launch sites.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Scorpio (Freedom Drive) and Boris & Natasha are still operating",
+      "verdict": "unverifiable",
+      "note": "Small venues; confirm current status and 'longest-running' claim.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Talking Walls was founded by Matt Hooker and ran in 2026; Goodyear Arts still at Camp North End",
+      "verdict": "unverifiable",
+      "note": "Provenance is shaky; strategy uses Talking Walls for the 5.20 launch. Confirm dates and organizers.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Camp North End was the Charlotte Army Missile Plant that built Nike Ajax and Hercules missiles",
+      "verdict": "unverifiable",
+      "note": "Believed correct (Douglas Aircraft); confirm before any copy.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Charlotte Coliseum had 364 straight sellouts; last playoff appearance 2016",
+      "verdict": "confirmed",
+      "note": "Long-established history (1988-97 sellout streak; 2016 first-round exit). The 2026 Play-In loss extends the drought per CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Jumpman Invitational returns to Spectrum Center in December 2026",
+      "verdict": "unverifiable",
+      "note": "Held there in recent Decembers; 2026 date and venue unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Dec 2026 and Feb 2027 national windows: Presidents' Day Wolves game, no opener or Christmas game",
+      "verdict": "confirmed",
+      "note": "Matches CURRENT FACTS (Feb 15 NBC quadrupleheader; Cup Group C opens at Washington Oct 30).",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Carolina Ascent FC plays at American Legion Memorial Stadium; Greensboro Swarm remain the Hornets' G League affiliate",
+      "verdict": "unverifiable",
+      "note": "Both could change by 2026-27; confirm.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Lexington Barbecue Festival on Saturday Oct 24, 2026",
+      "verdict": "unverifiable",
+      "note": "Fourth-Saturday rule gives Oct 24; confirm and check the Hornets' home schedule that weekend.",
+      "source": ""
+    }
+  ],
+  "summary": "Core history and the CURRENT FACTS items (2025-26 record, LaMelo trade, Cup Group C, Feb 15 game, no opener or Christmas game) are consistent across the dossiers. The errors found were mostly stale or garbled details: the CIAA Tournament treated as still in Charlotte (it left after 2020) in three retail and rhythm files, Jordan Brand dated to 2014 instead of 2017, honeycomb placed in the 1988-2002 era, Bobby Jones assigned to South Mecklenburg, Luke Combs's upbringing, Hive dates, Dell Curry's broadcaster role and a miscounted set of home Cup nights. All were fixed in place. Three live checks: Black Sheep Skate Shop exists (location unconfirmed), SC's tax-free weekend is real (Aug 7-9, 2026) and Brooks' Sandwich House is open but its land is for sale. The remaining risk is small-business and venue status, player shoe deals (Brandon Miller and Puma, Steph Curry), the City Edition and arena name, and the Duke-UNC and festival dates strategy.json builds on; the strategy brief needs the Cup-night count, Puma and Black Sheep wording fixed by the editor."
+}

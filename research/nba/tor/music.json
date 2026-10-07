@@ -6,7 +6,7 @@
   "insights": [
     {
       "title": "Drake is the team's soundtrack, and he is already a Nike partner",
-      "detail": "Drake has been the Raptors' Global Ambassador since 2013. His OVO label's name is on the OVO Athletic Centre practice facility, and OVO-inspired black-and-gold alternates became the Drake Night look in the mid-2010s. He worked the sideline through the 2019 title run and released 'The Best in the World Pack' two days after the clinching Game 6. He also runs NOCTA, his sub-brand with Nike.",
+      "detail": "Drake has been the Raptors' Global Ambassador since 2013. His OVO label's name is on the OVO Athletic Centre practice facility, and OVO-inspired black-and-gold alternates became the Drake Night look in the mid-2010s. He worked the sideline through the 2019 title run and released 'The Best in the World Pack' around the title clincher. He also runs NOCTA, his sub-brand with Nike.",
       "implication": "No other market links team, city soundtrack and an existing Nike line through one person, so a NOCTA x Raptors capsule is the obvious premium lane. Drake has been more polarizing since the 2024 Kendrick Lamar feud, though, so make him one pillar of the Toronto story, not all of it."
     },
     {
@@ -22,7 +22,7 @@
     {
       "title": "Caribbean sound systems are the root, and Carnival lands in the offseason",
       "detail": "Toronto hip-hop grew out of the Jamaican sound-system and reggae culture of Little Jamaica on Eglinton West. The Toronto Caribbean Carnival, founded in 1967 as Caribana, brings soca, steelpan and mas to Lake Shore Boulevard every Civic Holiday weekend, with attendance across its events often put at over a million.",
-      "implication": "Late July to early August is dead time for basketball but peak time for the Caribbean community, which makes it the ideal window for a summer Raptors capsule co-made with mas designers. Market it under 'Toronto Caribbean Carnival': the 'Caribana' name is a trademark held by the festival's founding committee."
+      "implication": "Late July to early August is dead time for basketball but peak time for the Caribbean community, which makes it the ideal window for a summer Raptors capsule co-made with mas designers. Market it under 'Toronto Caribbean Carnival': rights to the 'Caribana' name are contested and unverified, so clear it before any use."
     },
     {
       "title": "The T-Dot golden era grew up alongside the purple dinos",
@@ -276,27 +276,69 @@
     "Jurassic Park playoff crowd kit: a lightweight long-sleeve with a speaker-stack graphic, unlocked only when the Raptors clinch a playoff spot and sold at Maple Leaf Square and the satellite parks."
   ],
   "watchouts": [
-    "IP is everywhere: the OVO owl, XO and NOCTA marks, album art (including the CN Tower 'Views' cover), song titles and lyrics such as '6 Man', 'Caribana' (a trademark held by the festival's founding committee) and MLSE's 'We The North' all need licenses or should be avoided.",
+    "IP is everywhere: the OVO owl, XO and NOCTA marks, album art (including the CN Tower 'Views' cover), song titles and lyrics such as '6 Man', 'Caribana' (name rights unverified) and MLSE's 'We The North' all need licenses or should be avoided.",
     "Talent risk: Drake has been polarizing since 2024; Kawhi Leonard is not a Nike athlete and sued Nike over his Klaw logo; and Tory Lanez, convicted in 2022 of shooting Megan Thee Stallion, must never be associated with Nike or the team.",
-    "Toronto drill is tied to real violence, and local rappers including Smoke Dawg (2018) and Houdini (2020) were killed. Never borrow drill or gang-coded imagery, block names or balaclava visuals.",
+    "Toronto drill is tied to real violence, and local rapper Smoke Dawg was killed in 2018. Never borrow drill or gang-coded imagery, block names or balaclava visuals.",
     "Multicultural Toronto English comes from Black Caribbean, Somali and Arabic speakers, and 'wallahi' is a religious oath. Don't print slang as brand copy without Black and Muslim Toronto writers, and never use religious symbols such as the Sikh Khanda for heritage nights.",
     "Little Jamaica has been hollowed out by Crosstown construction and rising rents. Any Little Jamaica story has to put money into Black-owned businesses there, not just borrow the aesthetic."
   ],
   "sources": [
-    { "title": "Toronto Raptors (official site)", "url": "https://www.nba.com/raptors" },
-    { "title": "Toronto Raptors (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Toronto_Raptors" },
-    { "title": "Drake (musician) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Drake_(musician)" },
-    { "title": "OVO Sound (Wikipedia)", "url": "https://en.wikipedia.org/wiki/OVO_Sound" },
-    { "title": "The Weeknd (Wikipedia)", "url": "https://en.wikipedia.org/wiki/The_Weeknd" },
-    { "title": "Canadian hip hop (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Canadian_hip_hop" },
-    { "title": "Multicultural Toronto English (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Multicultural_Toronto_English" },
-    { "title": "Toronto Caribbean Carnival (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Toronto_Caribbean_Carnival" },
-    { "title": "Massey Hall (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Massey_Hall" },
-    { "title": "Horseshoe Tavern (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Horseshoe_Tavern" },
-    { "title": "Maple Leaf Square (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Maple_Leaf_Square" },
-    { "title": "Scotiabank Arena (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Scotiabank_Arena" },
-    { "title": "Polaris Music Prize (official site)", "url": "https://polarismusicprize.ca" },
-    { "title": "TD Toronto Jazz Festival (official site)", "url": "https://torontojazz.com" }
+    {
+      "title": "Toronto Raptors (official site)",
+      "url": "https://www.nba.com/raptors"
+    },
+    {
+      "title": "Toronto Raptors (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Raptors"
+    },
+    {
+      "title": "Drake (musician) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Drake_(musician)"
+    },
+    {
+      "title": "OVO Sound (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/OVO_Sound"
+    },
+    {
+      "title": "The Weeknd (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Weeknd"
+    },
+    {
+      "title": "Canadian hip hop (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Canadian_hip_hop"
+    },
+    {
+      "title": "Multicultural Toronto English (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Multicultural_Toronto_English"
+    },
+    {
+      "title": "Toronto Caribbean Carnival (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Caribbean_Carnival"
+    },
+    {
+      "title": "Massey Hall (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Massey_Hall"
+    },
+    {
+      "title": "Horseshoe Tavern (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Horseshoe_Tavern"
+    },
+    {
+      "title": "Maple Leaf Square (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Maple_Leaf_Square"
+    },
+    {
+      "title": "Scotiabank Arena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Scotiabank_Arena"
+    },
+    {
+      "title": "Polaris Music Prize (official site)",
+      "url": "https://polarismusicprize.ca"
+    },
+    {
+      "title": "TD Toronto Jazz Festival (official site)",
+      "url": "https://torontojazz.com"
+    }
   ],
   "confidence": "medium",
   "provenance": {

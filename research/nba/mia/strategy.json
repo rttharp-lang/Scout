@@ -1,0 +1,539 @@
+{
+  "team": "mia",
+  "headline": "Giannis gives Nike its first local Heat star in years; win Miami trilingual, neighborhood by neighborhood, cut for heat.",
+  "thesis": "Miami is a majority foreign-born city that sees itself as the capital of Latin America, yet its basketball identity is Heat Culture: earned, conditioned and undrafted, with Black Overtown and Liberty City at its roots. For a decade the market's most emotional jerseys sat on rival-brand feet (Wade with Li-Ning, now Klay Thompson with Anta), so Giannis Antetokounmpo, a Nike signature athlete with an arrival story that mirrors the city's, is the first star-led Nike footwear story the Heat have had in years. Nike wins by retiring Vice as the default and drawing the next palette from the counter and the walls (colada brown, guava red, flamboyán, breeze block, coral rock). It also wins by speaking English, Spanish and Kreyòl, building every piece for a city with no winter, and timing drops to Miami's own diaspora calendar rather than a generic holiday one.",
+  "archetype": {
+    "name": "The Title-or-Bust Diaspora",
+    "description": "A multinational, trilingual crowd that judges the Heat on effort and playoff nights, dresses for the arena like it is dinner or the club, and now expects a championship from a Giannis-Bam contender."
+  },
+  "pulse": {
+    "teamMoment": "After a 43-39, No. 10-seed season that ended in a 127-126 overtime Play-In loss at Charlotte, Miami traded Tyler Herro, Jaime Jaquez Jr., Kel'el Ware and a haul of picks for Giannis Antetokounmpo and Bobby Portis, then signed Klay Thompson. Under Erik Spoelstra, a Giannis-Bam Adebayo frontcourt now makes 2026-27 title-or-bust.",
+    "sentiment": "Euphoric and demanding: the mood flipped from Play-In frustration to championship expectation, with real worry about depth after losing Herro, Jaquez, Ware and Norman Powell.",
+    "heat": 86
+  },
+  "topInsights": [
+    {
+      "title": "Giannis is the Nike story Miami has been missing",
+      "insight": "The market's deepest jersey loyalties sit with rival-brand athletes: Dwyane Wade is with Li-Ning for life, Klay Thompson is with Anta, and Jimmy Butler left in 2025 for his own Bigface brand. Giannis is a Nike signature athlete (the Freak line), and his story fits a city whose landmark across from the arena is the Freedom Tower: born in Athens to Nigerian immigrants, selling goods on the street, stateless until 2013.",
+      "evidence": ["music", "underground", "culture", "hoops", "fanbase", "retail-behavior"],
+      "implication": "Make the Freak line the hero footwear story with Miami-only colorways seeded through local doors; keep Wade and Klay to NBA-licensed jersey product and drop any Wade sneaker-nostalgia play.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Vice is spent; the new palette is on the counter and the walls",
+      "insight": "The 2017-21 Vice run made pink and blue the Heat's second uniform, but it borrows a 1980s TV image and Leonard Horowitz's Deco repaint rather than the lived city. The untapped cues sit in places locals use every day: colada brown and guava-pastelito red from the ventanita, flamboyán blooms over Little Havana and Coral Gables, breeze-block screens on Hialeah duplexes and the pitted oolite coral rock underfoot.",
+      "evidence": ["art", "food", "uniform", "culture", "underground"],
+      "implication": "Build city product from colada #4B2E1F, guava #A3203A, flamboyán #E2462B and breeze-block geometry, and keep Vice to a licensed heritage reissue.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Design by nationality and neighborhood, on Miami's own calendar",
+      "insight": "Miami-Dade prints ballots in English, Spanish and Kreyòl. Cuban Hialeah, Venezuelan Doral, Nicaraguan Sweetwater, Haitian Little Haiti and Black Liberty City each claim the Heat differently and run their own holidays: Miami Carnival, Nochebuena, Three Kings, the Liberty City MLK parade, 305 Day, Calle Ocho and Haitian Flag Day.",
+      "evidence": ["culture", "food", "music", "fanbase", "hoops", "retail-behavior"],
+      "implication": "Replace one 'El Heat' tee with a family of community pieces, each with native-written copy, a paid local creator and a release date tied to that community's day.",
+      "confidence": "high"
+    },
+    {
+      "title": "No winter: the product brief is ventilation, sun and arena air-conditioning",
+      "insight": "Highs stay in the 80s most of the season, hurricane season runs June to November, and the only cold most fans feel is Kaseya Center's air-conditioning. The city's own vernacular is climate technology: breeze blocks to pull air, Deco eyebrow ledges for shade, linen guayaberas and the hooded UPF fishing shirt worn on every sandbar boat.",
+      "evidence": ["retail-behavior", "rhythm", "art", "underground", "hoops", "culture"],
+      "implication": "Lead with mesh, breeze-block ventilation maps, guayabera-pleat shooting shirts and a Heat UPF sun hoodie; treat fleece as Dec-Feb gifting and travel product, not core volume.",
+      "confidence": "high"
+    },
+    {
+      "title": "Two markets in one mall: the gateway shopper and the knockoff-priced family",
+      "insight": "Aventura, Bal Harbour and Brickell serve Brazilian, Colombian, Venezuelan and Caribbean visitors who buy US-only product in multi-item baskets. Dolphin Mall, Sawgrass Mills and Dadeland serve price-sensitive Hialeah, Little Haiti and Liberty City households who can buy unlicensed Heat gear at flea markets and the Fort Lauderdale Swap Shop.",
+      "evidence": ["retail-landscape", "retail-behavior", "rhythm", "fanbase"],
+      "implication": "Tier hard: a sub-$100 youth and tee tier timed to Florida's August tax holiday that beats knockoffs on design, and Miami-only keepsake colorways with bilingual tags for the gateway buyer.",
+      "confidence": "medium"
+    },
+    {
+      "title": "White Hot is the one uniform the whole city shares",
+      "insight": "Every community dresses head to toe in white for home playoff games, and after a Play-In exit the spring is the proof point for a title-or-bust year. The royal poincianas turn flame red across the city from late May, exactly when a deep run would land.",
+      "evidence": ["culture", "fanbase", "rhythm", "retail-landscape", "uniform", "art"],
+      "implication": "Pre-build a linen-white (#F4F0E6, not optic white) guayabera-ribbed playoff kit with flamboyán-red hits, held flexible to ship within days of seeding and series results.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Black Miami is the under-told origin story",
+      "insight": "Overtown's Lyric Theater and Purvis Young's Goodbread Alley came before Wynwood's walls, Liberty City and Carol City built Miami bass, and Miami Senior High's Udonis Haslem is the human definition of Heat Culture. The Latin narrative routinely stands in for all of Miami, and Heat uniforms have mostly skipped these neighborhoods.",
+      "evidence": ["music", "art", "culture", "hoops", "underground", "uniform"],
+      "implication": "Give Black Miami its own product line and calendar (MLK Day in Liberty City, Black History Month in Overtown), co-authored and paid through The Black Archives and the African Heritage Cultural Arts Center.",
+      "confidence": "medium"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "giannis-305-freak",
+      "title": "305 Freak: Giannis's arrival season",
+      "summary": "Concentrate the Giannis jersey and footwear wave into three storyline nights with Miami-only product: Nov 18 vs. Milwaukee, Christmas at Boston and the Jan 28 return to Fiserv Forum.",
+      "where": ["Heat Store at Kaseya Center", "Shoe Gallery, Downtown", "Foot Locker and House of Hoops at Aventura Mall and Dolphin Mall", "Nike digital"],
+      "when": "Nov 18 home game through the Jan 28 Milwaukee return, with a Christmas restock",
+      "months": [11, 12, 1],
+      "how": "Seed a Miami-only Freak colorway and a 305 Freak tee through Shoe Gallery on Nov 18 rather than at the malls, with the arrival story told through Miami Dade College and community storytellers. Pair it with a Giannis-Bam graphic so it reads as Heat Culture, not a poster drop, and run Jan 28 watch parties in Miami.",
+      "products": ["Miami-only Giannis Freak colorway (colada or candy-paint red)", "Giannis Icon and Statement Swingman, deep in youth sizes", "Giannis-Bam paired graphic tee", "305 Freak tee"],
+      "segment": "Heat Culture diehards, Gen Z sneaker fans and Giannis's international newcomers",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Giannis jersey and Freak sell-through by Dec 31, and Shoe Gallery drop sell-out time"
+    },
+    {
+      "id": "white-hot-linen-playoffs",
+      "title": "White Hot Linen playoff kit",
+      "summary": "A tonal linen-white playoff collection built on the guayabera, ready to ship the week the regular season ends.",
+      "where": ["Heat Store at Kaseya Center", "Dolphin Mall and Sawgrass Mills Nike Factory Stores", "Aventura Mall", "Nike and team digital"],
+      "when": "Pre-sell from Apr 11, restock through each home series, and add a flamboyán-red drop as the trees bloom in late May",
+      "months": [4, 5, 6],
+      "how": "Produce ahead and hold inventory flexible on seed and series results; restock within hours of wins. Co-design the guayabera shooting shirt with a Miami guayabera maker credited on the hangtag, and keep championship language off product until the team earns it.",
+      "products": ["White Hot guayabera shooting shirt with alforza ribs", "Linen-white tee with a small Heat red hit", "White mesh shorts", "White Hot cap", "Youth White Hot tee"],
+      "segment": "Every Heat fan on home playoff nights",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Playoff-window unit sales per home game and days from series win to restock"
+    },
+    {
+      "id": "tax-holiday-value-tier",
+      "title": "August tax-holiday youth tier that beats knockoffs",
+      "summary": "A sub-$100 youth, tee and short line for Miami-Dade's back-to-school month, designed well enough to beat flea-market Heat gear on looks and price.",
+      "where": ["Nike Factory Store, Dolphin Mall", "Nike Factory Store, Sawgrass Mills", "Dadeland Mall", "Westland Mall, Hialeah", "Dick's Sporting Goods doors"],
+      "when": "All of August 2027, timed to the mid-August Miami-Dade school start",
+      "months": [8],
+      "how": "Price every piece under the tax-holiday per-item cap, lead with Giannis and Bam youth tees and youth Swingman jerseys, and use bilingual English-Spanish tags with Kreyòl where relevant. Spanish- and Caribbean-language creators seed it, not national channels alone.",
+      "products": ["Youth Giannis and Bam name-and-number tees", "Youth Swingman jerseys", "Mesh Heat shorts", "305 youth cap"],
+      "segment": "Price-sensitive families in Hialeah, Little Haiti, Liberty City, Overtown and Miami Gardens",
+      "size": "high",
+      "priority": 1,
+      "kpi": "August youth unit sales and share of sub-$100 SKUs in the Factory doors"
+    },
+    {
+      "id": "rep-your-barrio",
+      "title": "Rep Your Barrio: trilingual neighborhood series",
+      "summary": "A year-round series of small-run pieces, each designed and signed by a paid creator from one neighborhood and released on that community's day.",
+      "where": ["Little Haiti Cultural Complex", "Calle Ocho, Little Havana", "African Heritage Cultural Arts Center, Liberty City", "Hialeah neighborhood retail"],
+      "when": "Liberty City on MLK Day (Jan 18), Little Havana on 305 Day (Mar 5) into Calle Ocho, Little Haiti on Haitian Flag Day (May 18), Caribbean Miami on Carnival weekend in October",
+      "months": [1, 3, 5, 10],
+      "how": "Commission working sign painters to letter HEAT, EL HEAT and CHALÈ by hand, with copy written by native speakers. Each drop launches in its neighborhood with a revenue share to a community institution, and no flags or sacred imagery are used without that community's creators.",
+      "products": ["Neighborhood tee lettered by a local sign painter", "Double-nine domino-pip 305 cap", "Kreyòl-language Little Haiti tee", "Liberty City MLK Day crew"],
+      "segment": "Cuban, Haitian, Black Miami and Caribbean neighborhood fans",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Sell-through per neighborhood drop, partner payouts delivered, and local creator posts"
+    },
+    {
+      "id": "noche-buena-to-three-kings",
+      "title": "Noche Buena to Three Kings gifting",
+      "summary": "Gift sets timed to Miami's Latin holiday calendar rather than a snow-and-cabin Christmas.",
+      "where": ["Dadeland Mall", "Dolphin Mall", "Aventura Mall", "Heat Store at Kaseya Center"],
+      "when": "In stores by Dec 20 for Noche Buena on Dec 24 and the 2:30 p.m. ET Christmas game at Boston, with a youth push through Three Kings Day on Jan 6",
+      "months": [12, 1],
+      "how": "Package sets in a caja china-inspired plywood-and-foil box (no trademarked name) with a Noche Buena menu card drawn by a Miami illustrator. Run Three Kings youth bundles with Latino and Caribbean creators.",
+      "products": ["Colada-brown crew and Heat double-nine domino set", "Youth tee, socks and cap gift bundle", "Giannis Christmas-game tee"],
+      "segment": "Cuban and Latin American families, plus Caribbean households gifting for kids",
+      "size": "high",
+      "priority": 2,
+      "kpi": "Gift-set units Dec 15-Jan 6 and attach rate of youth pieces"
+    },
+    {
+      "id": "art-week-commission",
+      "title": "Art Week commission from where artists actually work",
+      "summary": "Unveil a Miami-born artist's Heat collaboration during Art Basel week, sold at a home game and a Little River or Allapattah gallery rather than in Wynwood alone.",
+      "where": ["Little River galleries", "Allapattah (near the Rubell Museum)", "National YoungArts Foundation, Edgewater", "Heat Store at Kaseya Center"],
+      "when": "First week of December, alongside the NBA Cup knockout window",
+      "months": [12],
+      "how": "Commission a Miami artist such as Edouard Duval-Carrié, Tatiana Suarez or Lebo and add a youth edition designed with YoungArts or DASH students. License every wall that appears in imagery, and favor symbolic and typographic art over player portraits, since Miami fans publicly roasted the 2024 Wade statue.",
+      "products": ["Numbered artist capsule tee and hoodie", "Celosía breeze-block shooting shirt", "Youth-designed edition tee"],
+      "segment": "Creative class, collectors and Art Week visitors",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Earned media during Art Week and sell-out of the numbered run"
+    },
+    {
+      "id": "gateway-keepsake-line",
+      "title": "Miami-only gateway keepsake line",
+      "summary": "Exclusive Miami colorways with bilingual and Portuguese storytelling for Latin American and winter visitors, which also undercuts knockoffs.",
+      "where": ["Aventura Mall", "Bal Harbour Shops", "Lincoln Road, Miami Beach", "Brickell City Centre"],
+      "when": "Snowbird and tourist season, December through April",
+      "months": [12, 1, 2, 3, 4],
+      "how": "Run a city lane (Deco-fin MIAMI lettering in Horowitz seafoam on Heat black, stone-crab claw orange) kept separate from the locals' Heat Culture lane. Use gift-ready packaging and Spanish and Portuguese story cards, and avoid Miami Vice show marks.",
+      "products": ["Deco Fin MIAMI tee", "Stone Crab Season cap", "Miami-only Giannis tee", "Premium Swingman with bilingual tag"],
+      "segment": "Latin American and Caribbean visitors, snowbirds and Miami Beach tourists",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Average basket size and share of transactions from international cards at tourist doors"
+    },
+    {
+      "id": "sandbar-and-sunrise",
+      "title": "Sandbar and Sunrise: the Heat on the water and after hours",
+      "summary": "A Heat UPF sun hoodie for boat season and a black-to-coral sunrise capsule for Miami Music Week and Ultra, steps from the arena.",
+      "where": ["Kaseya Center and Bayfront Park area", "Bayside marinas", "Park West near Club Space", "Nike digital"],
+      "when": "Miami Music Week and Ultra in late March through spring boat season, then the October 2027 Columbus Day Regatta",
+      "months": [3, 4, 5, 10],
+      "how": "Sell downtown during festival week with a Club Space Terrace set as launch content once marks are licensed. Show the sun hoodie on the water at Haulover Sandbar, and use no imitation fish art.",
+      "products": ["Sandbar aqua Dri-FIT UV Heat sun hoodie", "Black-to-coral gradient hoodie", "Sunrise shooting shirt"],
+      "segment": "Boaters, the after-hours techno crowd and international festival visitors",
+      "size": "medium",
+      "priority": 3,
+      "kpi": "Sun hoodie sell-through by Memorial Day and festival-week downtown sales"
+    }
+  ],
+  "collection": {
+    "name": "Hecho en el 305",
+    "story": "Miami is a city of arrivals that built its own language for heat: the ventanita, the guayabera, the breeze block, the candy-painted donk and the white-out playoff night. This collection builds the Giannis era from those everyday codes, designed with the neighborhoods that made them, so it reads as the 305 rather than a postcard.",
+    "themes": [
+      {
+        "name": "Ventanita",
+        "story": "The colada passed five ways in thimble cups is Heat Culture at the counter: one cup, a whole starting five. Brush-lettered menu boards and guava pastelitos give the palette.",
+        "segment": "Cuban and Latin Miami, Hialeah and Little Havana families, and the off-court lifestyle buyer",
+        "graphics": "A colada cup ringed by five thimble cups as a starting five; hand-painted red-and-black ventanita lettering (Colada, 3:05, Dale) by a credited Miami sign painter; double-nine domino pips spelling 3-0-5.",
+        "palette": [
+          { "name": "Colada", "hex": "#4B2E1F" },
+          { "name": "Espumita", "hex": "#CFA97A" },
+          { "name": "Guava", "hex": "#A3203A" },
+          { "name": "Cream Cheese", "hex": "#F4ECDD" },
+          { "name": "Heat Red", "hex": "#98002E" }
+        ],
+        "materials": "Breathable piqué and linen-feel knits, tonal laminated-pastry emboss on fleece, and engineered knit ribs standing in for guayabera alforzas.",
+        "pieces": [
+          { "item": "Colada Giannis Freak colorway", "category": "footwear", "tier": "limited", "detail": "Colada-brown upper, espumita-tan midsole and guava-red accents, with a five-thimble-cup hangtag." },
+          { "item": "Guayabera warm-up shirt", "category": "jersey", "tier": "premium", "detail": "Four patch pockets and alforza-rib columns in breathable knit, co-designed with a Miami guayabera maker." },
+          { "item": "3:05 tee", "category": "tee", "tier": "entry", "detail": "Ventanita brush lettering reading 3:05, priced under the August tax-holiday cap." },
+          { "item": "Colada crew", "category": "fleece", "tier": "core", "detail": "Lightweight loopback in colada brown with a domino-pip 305 at the hem, for arena air-conditioning." },
+          { "item": "Domino-pip 305 cap", "category": "headwear", "tier": "core", "detail": "Guava crown with cream double-nine pips spelling 3-0-5 on the side." }
+        ]
+      },
+      {
+        "name": "Candy Paint",
+        "story": "Liberty City and Carol City built Miami bass for trunk subwoofers and finished their donks in candy paint and tuck-and-roll, with Seybold gold on the chain. This theme borrows the low end and the finish, never the explicit imagery.",
+        "segment": "Black Miami, Gen Z sneaker and car-culture fans",
+        "graphics": "Concentric speaker-cone emboss on chest logos, sub-bass waveform seam tape, and airbrush lettering hand-sprayed by working Miami airbrush artists who are named on the product.",
+        "palette": [
+          { "name": "Candy Paint Red", "hex": "#A8001C" },
+          { "name": "Heat Black", "hex": "#000000" },
+          { "name": "Seybold Gold", "hex": "#C9A23A" },
+          { "name": "Heat Red", "hex": "#98002E" }
+        ],
+        "materials": "Satin shells with diamond-stitch tuck-and-roll quilted lining, metallic-flake heat transfers over official Heat red, flat Cuban-link jacquard tape and gold-tone metal aglets.",
+        "pieces": [
+          { "item": "Candy Paint satin bomber", "category": "outerwear", "tier": "premium", "detail": "Diamond-stitched lining with the logo embroidered where a headrest would carry it, and candy-red metallic numbers." },
+          { "item": "Cuban-link drawcord shorts", "category": "shorts", "tier": "core", "detail": "Mesh shorts with flat Cuban-link jacquard waistband tape and gold aglets, developed with a credited Seybold jeweler." },
+          { "item": "Airbrush one-off player tee", "category": "tee", "tier": "limited", "detail": "Hand-sprayed Giannis or Bam lettering by named Miami airbrush artists; never a digital airbrush filter." },
+          { "item": "Speaker-cone youth tee", "category": "kids", "tier": "entry", "detail": "Concentric speaker-cone Heat mark in candy red on black, sized for the August youth push." }
+        ]
+      },
+      {
+        "name": "Celosía",
+        "story": "Miami's MiMo breeze blocks, Deco eyebrow ledges and oolite coral rock were built to move air and shade a hot city. Here they become the performance story.",
+        "segment": "Performance and park-court hoopers, plus design-literate locals",
+        "graphics": "Breeze-block geometry mapped as ventilation zones, an eyebrow-ledge stripe at hems, and a fossil-pitted oolite texture on tags and patches.",
+        "palette": [
+          { "name": "Heat Black", "hex": "#000000" },
+          { "name": "Flamboyán", "hex": "#E2462B" },
+          { "name": "Horowitz Seafoam", "hex": "#8ED6C3" },
+          { "name": "Heat Yellow", "hex": "#F9A01B" }
+        ],
+        "materials": "Engineered Dri-FIT mesh with laser-cut or jacquard breeze-block perforation, debossed oolite-texture jock tags and patches, and lightweight woven shells.",
+        "pieces": [
+          { "item": "Celosía shooting shirt", "category": "jersey", "tier": "core", "detail": "Breeze-block perforations mapped to sweat zones, with an eyebrow-ledge print at the hem and an oolite-texture jock tag." },
+          { "item": "Park-court mesh short", "category": "shorts", "tier": "entry", "detail": "Ultralight mesh with a breeze-block side panel, for night runs at Charles Hadley, Moore and Gibson parks." },
+          { "item": "Sandbar UV sun hoodie", "category": "outerwear", "tier": "core", "detail": "Dri-FIT UPF hooded long sleeve with a vented back yoke and thumbholes in sandbar aqua (#6FD3C3), with a small Heat mark." },
+          { "item": "Oolite patch cap", "category": "headwear", "tier": "core", "detail": "Debossed coral-rock-texture patch with a Heat yellow underbill." }
+        ]
+      },
+      {
+        "name": "White Hot Linen",
+        "story": "Every community wears white for home playoff games. This theme makes it linen, not a blank giveaway tee, with a flamboyán-red hit timed to the late-May bloom.",
+        "segment": "Every Heat fan on playoff nights",
+        "graphics": "Tonal white-on-white Heat marks, a single flamboyán-red bloom illustrated by a Haitian-American or Cuban-American painter, and a white ibis resilience motif on linings.",
+        "palette": [
+          { "name": "White Hot Linen", "hex": "#F4F0E6" },
+          { "name": "Flamboyán", "hex": "#E2462B" },
+          { "name": "Heat Red", "hex": "#98002E" },
+          { "name": "Heat Black", "hex": "#000000" }
+        ],
+        "materials": "Washed linen-look performance knit, slub cotton tees, and engineered alforza ribs.",
+        "pieces": [
+          { "item": "White Hot guayabera shooting shirt", "category": "jersey", "tier": "core", "detail": "Linen-white with alforza ribs front and back and a straight vented hem." },
+          { "item": "White Hot linen tee", "category": "tee", "tier": "entry", "detail": "Warm off-white slub tee with a small Heat red mark, built for volume." },
+          { "item": "Flamboyán playoff tee", "category": "tee", "tier": "limited", "detail": "Late-May drop with commissioned bloom artwork, credited on the hangtag." },
+          { "item": "Youth White Hot tee", "category": "kids", "tier": "entry", "detail": "Tonal white youth tee so families can white-out together." }
+        ]
+      }
+    ]
+  },
+  "uniform": {
+    "concept": "Flamboyán",
+    "narrative": "The royal poinciana blooms flame red across Little Havana, Little Haiti and Coral Gables from late May, and it appears in Haitian painting and in Cuban and Puerto Rican landscapes alike, so it is a Miami image that no single community owns and many share. It ties the uniform to the city's own season: the trees peak when a title-or-bust team would be deep in the playoffs. It also steps fully past Vice pink and blue while keeping the black and red that fans defend.",
+    "palette": [
+      { "name": "Heat Black", "hex": "#000000", "role": "base" },
+      { "name": "Flamboyán", "hex": "#E2462B", "role": "accent" },
+      { "name": "Heat Red", "hex": "#98002E", "role": "number" },
+      { "name": "White Hot Linen", "hex": "#F4F0E6", "role": "trim" },
+      { "name": "Heat Yellow", "hex": "#F9A01B", "role": "accent" }
+    ],
+    "motifs": [
+      "Poinciana bloom clusters and fern-like leaves rising up the side panels, painted by a commissioned Haitian-American and a Cuban-American artist",
+      "Breeze-block (celosía) geometry tone-on-tone in the black base",
+      "Oolite coral-rock texture on the jock tag",
+      "Small heat-yellow sun nod on the belt, a quiet reference to the 1988 flaming-ball era"
+    ],
+    "typography": "A chest wordmark reading MIAMI, hand-lettered by a working Miami sign painter in ventanita brush style rather than a stock font, with flamboyán-red numbers outlined in Heat red. HEAT, EL HEAT and CHALÈ, written by native speakers, run around the waistband.",
+    "details": [
+      "Waistband: trilingual HEAT / EL HEAT / CHALÈ lettering in linen white",
+      "Neck tape: the 305, 786 and 954 area codes in sequence",
+      "Jock tag: oolite-texture deboss with the bloom months, MAY-JUN",
+      "Side panels: breeze-block perforated mesh mapped as ventilation zones",
+      "Court tie-in: flamboyán petals scattered at the baseline corners and a breeze-block pattern in the lane"
+    ],
+    "avoid": [
+      "Pink-and-blue pastels, neon Deco fins or anything that reads as another Vice or Miami Vice riff (NBCUniversal IP)",
+      "Haitian, Cuban, Venezuelan or Nicaraguan flags as decoration, revolutionary or regime imagery, and Vodou or Lucumí sacred symbols",
+      "Hurricane, storm-cone or narco and Scarface imagery",
+      "Brightening Heat red toward scarlet; keep #98002E on numbers and trim",
+      "University of Miami orange and green or ibis-mascot cues"
+    ],
+    "alternates": [
+      { "name": "Celosía", "idea": "A linen-white uniform built entirely from breeze-block ventilation geometry and eyebrow-ledge striping, telling Miami's climate-architecture story." },
+      { "name": "Overtown Marquee", "idea": "A black uniform with Lyric Theater marquee-bulb lettering, co-authored and paid through The Black Archives, with proceeds to Overtown programs." },
+      { "name": "Rep Your Barrio", "idea": "A trilingual uniform whose wordmark is lettered by a different neighborhood sign painter each season, beginning with Little Haiti and Little Havana." }
+    ]
+  },
+  "calendar": [
+    {
+      "month": 10,
+      "window": "Oct 15-31 (stone crab season opens Oct 15; NBA tips Oct 20)",
+      "moment": "Stone crab season and the Giannis-Bam home opener",
+      "play": "A Stone Crab Season tip-off capsule with a black-tipped claw graphic and the regrow-the-claw story as a nod to a rebuilt roster, plus the first Giannis jersey push at the Heat Store.",
+      "products": ["Stone Crab Season tee and cap", "Giannis Icon Swingman", "Giannis-Bam paired graphic tee"],
+      "channel": "Arena (Heat Store at Kaseya Center) and Nike digital",
+      "priority": 1
+    },
+    {
+      "month": 11,
+      "window": "Nov 18",
+      "moment": "Bucks at Heat, Milwaukee's first visit after the trade",
+      "play": "A 305 Freak drop seeded through Shoe Gallery, plus an in-arena launch with a set from the Heat's DJ and a Liberty City or Carol City producer.",
+      "products": ["Miami-only Giannis Freak colorway", "305 Freak tee", "Candy Paint speaker-cone tee"],
+      "channel": "Door (Shoe Gallery) and arena",
+      "priority": 1
+    },
+    {
+      "month": 12,
+      "window": "First week of December",
+      "moment": "Art Basel Miami Beach and Miami Art Week",
+      "play": "Unveil a Miami-born artist collaboration with a numbered run, plus a YoungArts or DASH youth edition, sold at a Little River or Allapattah gallery and at a home game.",
+      "products": ["Numbered artist capsule tee and hoodie", "Celosía shooting shirt", "Youth-designed edition tee"],
+      "channel": "Community (Little River and Allapattah galleries) and arena",
+      "priority": 2
+    },
+    {
+      "month": 12,
+      "window": "Dec 20-25",
+      "moment": "Noche Buena (Dec 24) and Christmas Day at Boston, 2:30 p.m. ET",
+      "play": "Gift sets in caja china-style packaging, in stores by Dec 20, plus a Giannis Christmas-game tee for the afternoon after Noche Buena.",
+      "products": ["Colada crew and domino set", "Youth gift bundle", "Giannis Christmas-game tee"],
+      "channel": "Door (Dadeland, Dolphin Mall, Aventura Mall)",
+      "priority": 1
+    },
+    {
+      "month": 1,
+      "window": "Jan 1-6",
+      "moment": "Haitian Independence Day soup joumou and Three Kings Day",
+      "play": "A Haitian-led Jan 1 co-creation with a Little Haiti artist and Chef Creole, with proceeds to a community group, then Three Kings youth bundles for Latin households.",
+      "products": ["Kreyòl-language Little Haiti tee", "Three Kings youth bundle"],
+      "channel": "Community (Little Haiti Cultural Complex) and door",
+      "priority": 2
+    },
+    {
+      "month": 1,
+      "window": "Jan 18 and Jan 28",
+      "moment": "Liberty City MLK Day parade, then Giannis's return to Milwaukee",
+      "play": "A Liberty City Rep Your Barrio crew co-authored with the African Heritage Cultural Arts Center for MLK Day, and Miami watch parties with a restock for Jan 28.",
+      "products": ["Liberty City MLK Day crew", "305 Freak tee restock"],
+      "channel": "Community (Liberty City) and digital",
+      "priority": 2
+    },
+    {
+      "month": 2,
+      "window": "February, including the Feb 15 Spurs-Heat national game",
+      "moment": "Black History Month",
+      "play": "An Overtown capsule framed by Goodbread Alley and the Lyric Theater, co-authored and paid through The Black Archives with living Black Miami artists, with proceeds to the Lyric.",
+      "products": ["Overtown Marquee tee", "Overtown heritage hoodie"],
+      "channel": "Community (Overtown) and arena",
+      "priority": 2
+    },
+    {
+      "month": 3,
+      "window": "Mar 5 through Calle Ocho Sunday",
+      "moment": "305 Day into the Calle Ocho Festival",
+      "play": "A 3/05 drop of area-code and domino-pip product launched at 3:05 p.m. with a paid ventanita takeover, carried into Calle Ocho weekend with Spanish-first copy.",
+      "products": ["Domino-pip 305 cap", "3:05 tee", "Guayabera warm-up shirt"],
+      "channel": "Community (Calle Ocho) and digital",
+      "priority": 1
+    },
+    {
+      "month": 3,
+      "window": "Late March",
+      "moment": "Miami Music Week and Ultra at Bayfront Park",
+      "play": "A downtown Sunrise capsule for the global festival crowd steps from the arena, kept separate from core-fan product, alongside the spring launch of the Sandbar sun hoodie.",
+      "products": ["Black-to-coral gradient hoodie", "Sandbar UV sun hoodie"],
+      "channel": "Pop-up (Park West and downtown)",
+      "priority": 3
+    },
+    {
+      "month": 4,
+      "window": "Apr 11 regular-season finale through the Play-In (Apr 13-16) and first round",
+      "moment": "White Hot playoffs begin",
+      "play": "Pre-sell the White Hot Linen kit from the final week of the season and restock within hours of results.",
+      "products": ["White Hot guayabera shooting shirt", "White Hot linen tee", "Youth White Hot tee", "White Hot cap"],
+      "channel": "Arena, door and digital",
+      "priority": 1
+    },
+    {
+      "month": 5,
+      "window": "May 18 and late May",
+      "moment": "Haitian Flag Day and the flamboyán bloom during the playoffs",
+      "play": "A Little Haiti Rep Your Barrio drop with Haitian creators on Flag Day, then a Flamboyán playoff tee as the poincianas peak.",
+      "products": ["Little Haiti Kreyòl tee", "Flamboyán playoff tee"],
+      "channel": "Community (Little Haiti) and arena",
+      "priority": 1
+    },
+    {
+      "month": 8,
+      "window": "All of August",
+      "moment": "Florida back-to-school sales-tax holiday",
+      "play": "A sub-cap youth and tee tier in the Factory doors and Hialeah neighborhood retail, built to beat flea-market knockoffs.",
+      "products": ["Youth Giannis and Bam tees", "Youth Swingman jerseys", "Park-court mesh short", "Speaker-cone youth tee"],
+      "channel": "Door (Dolphin Mall and Sawgrass Mills Nike Factory, Westland Mall)",
+      "priority": 1
+    },
+    {
+      "month": 9,
+      "window": "Sep 15 to Oct 15",
+      "moment": "Hispanic Heritage Month and Billboard Latin Music Week",
+      "play": "Preview a family of nation-specific Noche Latina pieces (Cuban, Venezuelan, Colombian, Nicaraguan, Puerto Rican, Dominican) with Spanish-first copy by creators from each community.",
+      "products": ["Nation-specific Noche Latina tees", "El Heat hand-lettered cap"],
+      "channel": "Digital and community",
+      "priority": 2
+    }
+  ],
+  "partners": [
+    {
+      "name": "The Black Archives History & Research Foundation (Historic Lyric Theater)",
+      "type": "Archive and historic theater, Overtown",
+      "why": "It is the authority on Overtown and Black Miami history and runs the 1913 Lyric Theater, a mile from Kaseya Center.",
+      "idea": "Co-author and fact-check the Black History Month Overtown capsule and the Overtown Marquee alternate uniform, with proceeds to the Lyric."
+    },
+    {
+      "name": "African Heritage Cultural Arts Center",
+      "type": "County arts center and school, Liberty City",
+      "why": "It has trained Black Miami artists and performers since the 1970s and is the natural door to Liberty City creators.",
+      "idea": "Commission the Liberty City MLK Day Rep Your Barrio piece and a youth design program from its students."
+    },
+    {
+      "name": "Little Haiti Cultural Complex",
+      "type": "Cultural center, gallery and Caribbean Marketplace",
+      "why": "It is the public front door to Haitian art, kompa and Flag Day programming in Ti Ayiti.",
+      "idea": "Launch the Little Haiti Kreyòl capsule with artists such as Edouard Duval-Carrié or Serge Toussaint on Haitian Flag Day, with a revenue share to its programs."
+    },
+    {
+      "name": "Shoe Gallery",
+      "type": "Family-run downtown sneaker shop",
+      "why": "It has sold and collaborated on sneakers since the 1980s and is the most credible downtown door for a Miami-only drop.",
+      "idea": "Host the Nov 18 305 Freak launch and a Miami-only Giannis colorway raffle."
+    },
+    {
+      "name": "DJ Irie",
+      "type": "Heat's longtime arena DJ and founder of the Irie Foundation",
+      "why": "He has shaped Heat game nights for more than two decades and connects the team to local DJs and charities.",
+      "idea": "Curate the in-arena launch sets for the Nov 18 drop and the White Hot playoff kit, with proceeds to his foundation."
+    },
+    {
+      "name": "Vicky Bakery",
+      "type": "Cuban bakery founded in Hialeah in 1972",
+      "why": "Its pastelitos and ventanitas define the Hialeah morning and the guava-and-cheese palette.",
+      "idea": "A paid co-launch of the Ventanita theme boxed like a bakery order, with a 3:05 p.m. ventanita takeover on 305 Day."
+    },
+    {
+      "name": "National YoungArts Foundation",
+      "type": "Arts foundation, former Bacardi buildings in Edgewater",
+      "why": "Its network of young artists is a ready youth-design pipeline in an iconic Miami landmark.",
+      "idea": "A student-designed youth edition for the Art Week drop, credited and paid."
+    },
+    {
+      "name": "Club Space",
+      "type": "After-hours nightclub, Park West",
+      "why": "It is the after-hours scene's fashion barometer, with Terrace sunrise sets a few blocks from the arena during Miami Music Week.",
+      "idea": "A Terrace sunrise set as launch content for the Sunrise capsule, once marks are licensed, working through partner David Sinopoli."
+    }
+  ],
+  "retailPlaybook": {
+    "where": [
+      "Volume: Nike Factory Stores at Dolphin Mall and Sawgrass Mills, plus Dadeland and Westland Mall, for youth, tees and Swingman",
+      "Gateway: Aventura Mall, Bal Harbour, Lincoln Road and Brickell City Centre for Miami-only keepsakes and premium jerseys",
+      "Credibility: Shoe Gallery downtown and neighborhood pop-ups in Little Haiti, Calle Ocho, Liberty City and Hialeah",
+      "Taste: Little River and Allapattah galleries during Art Week, and Wynwood only for reach",
+      "Game night: the Heat Store at Kaseya Center for storyline-night and White Hot exclusives"
+    ],
+    "when": [
+      "Late Oct to Jan: the Giannis storyline (opener, Nov 18, Christmas at Boston, Jan 28)",
+      "Dec 20 to Jan 6: Noche Buena and Three Kings gifting, not Christmas morning",
+      "December to April: the tourist and snowbird season for gateway product",
+      "April to June: White Hot playoffs, restocked within hours of results",
+      "August: the tax-holiday youth window, with a buffer for hurricane-season logistics"
+    ],
+    "how": [
+      "Tier good-better-best: a sub-$100 youth and tee tier that beats flea-market knockoffs on design, Swingman in the middle, and authentic and collaboration pieces for Brickell, the Beach and international buyers",
+      "Write in English, Spanish and Kreyòl with native writers, and design by nationality and neighborhood rather than one Latino look",
+      "Seed through local creators, Spanish-language and Caribbean influencers and neighborhood doors before national channels",
+      "Build for heat: mesh, ventilation and sun protection as the default, with fleece reserved for Dec-Feb gifting and travel",
+      "Rebalance player allocations to Giannis and Bam, and treat Herro and Jaquez stock respectfully rather than as clearance"
+    ]
+  },
+  "risks": [
+    {
+      "risk": "Rival-brand athletes: Wade (Li-Ning) and Klay Thompson (Anta) carry huge local equity, and a fanbase-lens suggestion to tie Wade-era product to Jordan Brand conflicts with that.",
+      "mitigation": "Keep Wade and Klay to NBA-licensed jersey and heritage product, make no sneaker or likeness plays, and confirm Bam Adebayo's footwear deal before any player-led footwear."
+    },
+    {
+      "risk": "Title-or-bust can turn fast: an early slump, a Giannis injury or a Play-In repeat would deflate Giannis-only product.",
+      "mitigation": "Pair every Giannis piece with Bam and Heat Culture product, hold playoff inventory flexible, and keep championship language off product until it is earned."
+    },
+    {
+      "risk": "Political and community flashpoints: Cuban, Venezuelan and Nicaraguan exile politics, 2025-26 immigration enforcement and TPS cuts affecting Haitian and Venezuelan families, and presidential-library politics on the Freedom Tower block.",
+      "mitigation": "Tell arrival stories only with community partners and real support behind them, avoid flags, regime imagery and the library fight, and use native-written copy reviewed by each community."
+    },
+    {
+      "risk": "Third-party IP and copying: Miami Vice, Scarface, Wynwood murals, restaurant marks and the University of Miami's colors are all protected, and local artists sue (Ahol Sniffs Glue v. American Eagle).",
+      "mitigation": "License every wall, mark and likeness, draw on materials and rituals rather than logos, and pay and credit every artist on the hangtag."
+    },
+    {
+      "risk": "Hurricane season (June 1 to Nov 30) can disrupt August and October launches and fulfillment.",
+      "mitigation": "Build inventory and delivery buffers, avoid launches during an active storm, and never use storm or hurricane graphics."
+    }
+  ],
+  "scorecard": {
+    "opportunity": 86,
+    "culture": 92,
+    "retail": 78,
+    "fandom": 72,
+    "rationale": "A Nike signature superstar arriving in a gateway shopping market, with some of the league's deepest multicultural design material, puts opportunity and culture near the top of the league. Retail is strong but sprawling and knockoff-pressured, and fandom is intense at White Hot playoff peaks but more front-running than the league's most loyal markets."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "The 2026-27 Heat City Edition concept and reveal, plus the full list of recent City Edition names (Vice series, Mashup and since), to confirm Flamboyán does not collide with a recent or planned design.",
+      "Giannis Antetokounmpo's Heat jersey number and current Nike signature (Freak) status, and Bam Adebayo's current footwear deal.",
+      "Dwyane Wade's Li-Ning deal, Klay Thompson's Anta deal and DJ Khaled's Jordan Brand status are current.",
+      "2026-27 Heat home schedule details: home opener date, Noche Latina dates, the home team for the Feb 15 Spurs-Heat game and any home NBA Cup knockout game.",
+      "Florida's August back-to-school sales-tax holiday is permanent, and the per-item clothing cap (believed $100).",
+      "Operating status of partners and doors: Shoe Gallery, the Lyric Theater and Black Archives, the Little Haiti Cultural Complex, the African Heritage Cultural Arts Center, YoungArts, Vicky Bakery and Club Space.",
+      "The Nike Factory Stores at Dolphin Mall and Sawgrass Mills and the Heat Store at Kaseya Center are open, and the arena is still named Kaseya Center.",
+      "2026-27 event dates: Art Basel Miami Beach (December 2026), 305 Day and Calle Ocho, Miami Music Week and Ultra (March 2027), and Haitian Flag Day programming (May 2027).",
+      "Licensing status of the Heat's Vice marks and any NBCUniversal Miami Vice terms.",
+      "The White Hot playoff dress tradition is still promoted by the team.",
+      "The current immigration-enforcement and TPS climate for Haitian and Venezuelan Miami, and the status of the presidential library beside the Freedom Tower.",
+      "Udonis Haslem's current Heat role and DJ Irie's status as arena DJ."
+    ]
+  }
+}

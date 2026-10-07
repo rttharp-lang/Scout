@@ -1,0 +1,139 @@
+{
+  "team": "bos",
+  "issues": [
+    {
+      "target": "uniform (The Hub City Edition)",
+      "type": "other",
+      "severity": "high",
+      "problem": "The Hub is pitched as this season's City Edition, but the 2026-27 City Edition is unverified and these sets are normally locked a year or more ahead. A concept that reaches the team on Oct 7 can only be a 2027-28 proposal, and the brief never says so.",
+      "fix": "Label The Hub a 2027-28 City Edition pitch. For 2026-27, work only with the confirmed Specter set and the existing City Edition, and verify that set's design before anything cites 'avoid parquet-dominant'."
+    },
+    {
+      "target": "uniform / palette (Orange Line + Green + white)",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "Celtics green, an orange accent and white cream read as the Irish tricolor. That is the Irish kitsch the 'avoid' list rules out, and the St. Patrick's window puts it in the same month. The MBTA Orange Line hex also needs a license.",
+      "fix": "Cut the orange to a hairline side-stripe on a granite base, or drop it for Zakim-cable white. Keep the green-only line stripe and run a flag-association check on the final palette. Treat the MBTA mark as a licensed element or use color alone."
+    },
+    {
+      "target": "uniform.alternates (Gahden Broadside, Russell's Boston)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Both alternates put third-party voices and estates on a game jersey: Johnny Most calls on the neck tape and Russell's name and story. NBA uniform approval, the estate, the NBA and the Celtics all have to agree, and neither idea has a path past a pitch.",
+      "fix": "Keep both as retail and heritage capsule concepts. If either goes toward a uniform, start with the NBA and the estates and rely on the retired number and number-6 and 11-block graphics, not text."
+    },
+    {
+      "target": "opportunities[0] and calendar (Specter launch)",
+      "type": "timing",
+      "severity": "high",
+      "problem": "Specter and its merchandise went on sale Sept 9, so an Oct 30 'launch' and a Dec 25 headline for the Specter replica arrive two to three months late. The games in which Specter is worn are not captured, so Dec 25 may not show Specter on court at all.",
+      "fix": "Treat Oct 20-30 as the heritage layer on product already on shelves, not a launch. Hold the Dec 25 headline until the wear schedule is confirmed, and design the heritage story to work with or without Specter on court."
+    },
+    {
+      "target": "calendar[0] and retailPlaybook.when (read the Oct 10 crowd)",
+      "type": "timing",
+      "severity": "high",
+      "problem": "Oct 10 is three days away and tip-off is ten days after it. No production or Pro Shop allocation can respond to a preseason crowd, so 'read the Oct 10 Brown crowd first' is a decision gate that cannot work.",
+      "fix": "Lock the Oct assortment now on the no-Brown rule. Use Oct 10 only as a social and sentiment listen for the Jan 21 plan, which has real lead time."
+    },
+    {
+      "target": "topInsights[0] and retailPlaybook.how (Tatum-only player bet)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The player strategy rests on Tatum alone, with George kept shallow. It does not account for Tatum's own health history, his father's public criticism of the roster, or other players who could carry retail. Neemias Queta (just extended) and Mazzulla are barely used.",
+      "fix": "Say what the plan does if Tatum sits out or sentiment sours. Give Queta and Mazzulla a heritage-led slot. Verify whether George is still a Nike athlete before setting his volume."
+    },
+    {
+      "target": "opportunities[0] and uniform insights (missed: Jan 21 spectacle)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The brief frames Jan 21 as Brown versus a 60-year rivalry and also builds product for a Lakers visit. It ignores that LeBron James is now a Sixer, so Jan 21 is a Brown-plus-LeBron night in Philadelphia colors at the Garden. The 'Beat L.A.' lore also loses its current face.",
+      "fix": "Rewrite the Jan 21 brief for the Sixers pairing. Keep the numbers-only, no-player-names rule and push the Lakers rivalry product to a game that is actually confirmed."
+    },
+    {
+      "target": "topInsights[4] (Brown cut Nike's line into Black Boston)",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The thesis says Nike must build a line the team 'lost' when Brown left. That treats Roxbury, Dorchester and Mattapan as a market that went dark with one player, and casts Nike as the replacement. The partnerships belong to the institutions and to Brown's own foundation work, not to the Celtics brand.",
+      "fix": "Reframe as a long-term investment that does not depend on any player. Open with BNBL, Artists For Humanity and the Museum of African American History as co-owners of the program. Do not assume Brown's networks are available."
+    },
+    {
+      "target": "opportunities[3] (Russell's Boston) and calendar[5]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The February timing is justified as 'three weeks after the Brown return puts race and legacy in the conversation'. That ties Black History Month to a trade story and risks reading as exploitative. The lookbook and launch are also set at Slade's, which may no longer be operating as the dossier implies.",
+      "fix": "Justify the window on Russell's own story and the Celtics' firsts only. Confirm Slade's current status and ownership before it is named as a location. Have a fallback venue in Nubian Square."
+    },
+    {
+      "target": "opportunities[0] and collection (UV-reactive 'hack' lining, Bodega drop)",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The MIT 'hack' lore is the brief's cleverest hidden-detail idea, but it is applied to a Celtics heritage tee with no link to the dynasty story. The Bodega drop also needs New Balance clearance that the brief only half-flags.",
+      "fix": "Tie the decode to something Celtics-specific, such as retired-number rows or Most call dates. Confirm Bodega's brand commitments before it is a launch partner."
+    },
+    {
+      "target": "collection.themes[0] (Gahden broadside, Townie bomber)",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "Phonetic accent spelling like 'Gahden' is the tourist-shirt cliché the brief says Boston rejects, and 'Townie' carries class and Charlestown/Southie coding. Both undercut the 'loud reads tourist' thesis.",
+      "fix": "Set the Most calls in plain period type with exact call dates. Rename the bomber or take the label from a credited local maker, and test both with Boston creators before design lock."
+    },
+    {
+      "target": "opportunities[5] (617-and-beyond regional line)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "An area-code tee works for any city, and the code list leaves out 508, 781 and 978, which cover the suburbs and outlets the brief says drive volume (Wrentham is 508). Selling variants only in their own markets also clashes with online and wholesale distribution.",
+      "fix": "Add 508, 781, 978 and 857 and reserve exclusivity for a small run. Lean on what only New England has: Mazzulla's Rhode Island roots for 401 and the Maine Celtics for 207. Check the Connecticut framing against Hartford-area fan data."
+    },
+    {
+      "target": "opportunities[1] and calendar[1] (snow-emergency drop)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The hero drop is pegged to the first snow emergency in a November window. First emergencies commonly land in December to February, and a mild winter may bring none. A trigger drop with no fallback date risks stranded inventory or a missed holiday.",
+      "fix": "Set a backstop date, for example mid-January, and a second trigger such as the first nor'easter forecast. Reserve inventory early and keep the core layering line independent of the drop."
+    },
+    {
+      "target": "calendar[2], calendar[7] (Evacuation Day tattoo-flash tee)",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "A 'dockworker' tattoo-flash tee in the St. Patrick's window leans toward working-class Irish caricature, and the South Boston parade has its own contested history. The Evacuation Day angle is smart but the graphic direction is not yet safe.",
+      "fix": "Lead with Evacuation Day 1776 and Southie's actual place stories, with a credited Boston tattoo artist writing the flash. Skip the dockworker figure and submit the art to local reviewers."
+    },
+    {
+      "target": "calendar[9], opportunities[7], calendar[8] (Haitian Flag Day, Carnival, Allston Christmas)",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "A product tee tied to Haitian Flag Day and a presence at Boston Caribbean Carnival risk turning national and cultural symbols into merchandise. The Allston upcycle also asks for Nike and Celtics marks to be reworked, with unresolved licensing, and its Sept 1 date falls outside the season.",
+      "fix": "For Haitian and Caribbean moments, fund and credit community organizers and artists with no flag or Carnival costume imagery, and run product only if they ask for it. Clear NBA licensing for any rework and treat Allston Christmas as a 2027 test."
+    },
+    {
+      "target": "partners and collection (missed: Cape Verdean and Portuguese-speaking Boston, Queta)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Neemias Queta, the Portuguese center just given a four-year extension, speaks to a large Cape Verdean and Portuguese-speaking community in Dorchester, Roxbury and the Brockton area. The brief only mentions it as an extraction risk.",
+      "fix": "Test a Queta-led community program with Cape Verdean and Portuguese-language organizations, paid and credited, before any graphic. Confirm his heritage and community ties directly."
+    },
+    {
+      "target": "collection and opportunities (missed: women and girls)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Women and girls are absent from every capsule, apart from kids sizing. Boston has a deep women's college and school hoops layer and a WNBA expansion team the hoops dossier treats as still ahead.",
+      "fix": "Add a women's and girls' fit and a school and AAU girls program to the neighborhood courts plan. Check the WNBA Boston status before using it."
+    },
+    {
+      "target": "partners (Concepts, Bodega, Newbury Comics) and retailPlaybook.where",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "Concepts and Bodega are given specific addresses and Newbury Street and Newbury Comics are named as doors. The Celtics Pro Shop and marketplaces are run by the league's licensing system, so a Concepts capsule with team marks needs NBA and Celtics approval. The Statik Selektah vinyl bundle is a music product with no clear tie to apparel.",
+      "fix": "Confirm every store, address and opening before listing it. Add NBA and team approval time to the capsule schedule. Cut or reframe the vinyl idea unless a Boston artist and tee tie-in is concrete."
+    }
+  ],
+  "strengths": [
+    "The core read, that Boston trusts banners and heritage over a roster in flux, is consistent across every lens and fits the Brown trade and George signing.",
+    "The tax-line logic (MA clothing exemption at $175) and the nor'easter-driven mix of outerwear, knit and over-the-hoodie fit is concrete, local and tied to price.",
+    "Insider details are strong and decodable: the Auerbach Center and New Balance, Converse at Lovejoy Wharf, the weather-beacon rhyme, Space Saver chairs, the 'Hub' of 1858 and the Boston Public Library 'FREE TO ALL' lettering.",
+    "The no-Brown-product rule, numbers-only rivalry swagger and the commitment to pay, credit and launch in neighborhoods with Roxbury and Dorchester partners are the right guardrails.",
+    "Hex palette is grounded in real Boston materials (Quincy granite, State House gold, Celtics green #007A33, Hardwood Gold #BA9653), and the risks list names the IP and estate clearances."
+  ],
+  "summary": "A specific, well-grounded brief whose biggest weaknesses are timing and feasibility, not originality. The Hub City Edition cannot be this season's, Specter is already on sale so the launch story is late, and the Oct 10 read cannot change October product. It also ignores LeBron's move to the Sixers, Queta's community pull, women and girls, and the full area-code map, and a few graphics (Gahden, Townie, dockworker, orange-plus-green) drift toward the tourist and Irish clichés the brief warns against."
+}

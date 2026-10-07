@@ -296,25 +296,67 @@
   "watchouts": [
     "Kawhi Leonard is a New Balance athlete who sued Nike over the Klaw logo, and 'Fun Guy' and 'Board Man Gets Paid' are tied to his own merch; Scottie Barnes and RJ Barrett have been PUMA athletes. Lead with city and franchise stories rather than signature-player creative.",
     "Canadian rules: textile labels need bilingual fibre content, and product and packaging sold in Quebec must meet the Charter of the French Language. The Remembrance Day poppy is a Royal Canadian Legion trademark, and Orange Shirt Day/'Every Child Matters' product should go through the Orange Shirt Society and Indigenous designers.",
-    "Third-party IP: 'We The North' (MLSE), OVO's owl and '6 God', 'The Carter Effect' title, the CN Tower name and image (Canada Lands Company), the Leafs' maple leaf, TTC marks, Hudson's Bay stripes (now Canadian Tire's), Tim Hortons, and 'Caribana' (held by the festival's founders).",
+    "Third-party IP: 'We The North' (MLSE), OVO's owl and '6 God', 'The Carter Effect' title, the CN Tower name and image (Canada Lands Company), the Leafs' maple leaf, TTC marks, Hudson's Bay stripes (now Canadian Tire's), Tim Hortons, and 'Caribana' (name rights unverified).",
     "Never use sacred or religious imagery (the Sikh Khanda, wampum belts, eagle feathers, Arabic religious phrases such as 'wallahi') or other countries' flags as decoration on heritage-night product.",
     "Don't use outsider jabs ('Scarberia', slurs about Brampton) or treat Jane and Finch and Regent Park as 'gritty' backdrops; those communities fight that stigma, so feature them only as partners."
   ],
   "sources": [
-    { "title": "Toronto Raptors (official site)", "url": "https://www.nba.com/raptors" },
-    { "title": "Toronto Raptors (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Toronto_Raptors" },
-    { "title": "Toronto Huskies (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Toronto_Huskies" },
-    { "title": "We the North (Wikipedia)", "url": "https://en.wikipedia.org/wiki/We_the_North" },
-    { "title": "Municipality of Metropolitan Toronto (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Municipality_of_Metropolitan_Toronto" },
-    { "title": "Demographics of Toronto (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Demographics_of_Toronto" },
-    { "title": "Multicultural Toronto English (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Multicultural_Toronto_English" },
-    { "title": "Nav Bhatia (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Nav_Bhatia" },
-    { "title": "Jean Augustine (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Jean_Augustine" },
-    { "title": "The Carter Effect (Wikipedia)", "url": "https://en.wikipedia.org/wiki/The_Carter_Effect" },
-    { "title": "Toronto Caribbean Carnival (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Toronto_Caribbean_Carnival" },
-    { "title": "Mississaugas of the Credit First Nation (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Mississaugas_of_the_Credit_First_Nation" },
-    { "title": "City of Toronto", "url": "https://www.toronto.ca" },
-    { "title": "Royal Canadian Legion (poppy trademark)", "url": "https://www.legion.ca" }
+    {
+      "title": "Toronto Raptors (official site)",
+      "url": "https://www.nba.com/raptors"
+    },
+    {
+      "title": "Toronto Raptors (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Raptors"
+    },
+    {
+      "title": "Toronto Huskies (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Huskies"
+    },
+    {
+      "title": "We the North (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/We_the_North"
+    },
+    {
+      "title": "Municipality of Metropolitan Toronto (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Municipality_of_Metropolitan_Toronto"
+    },
+    {
+      "title": "Demographics of Toronto (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Demographics_of_Toronto"
+    },
+    {
+      "title": "Multicultural Toronto English (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Multicultural_Toronto_English"
+    },
+    {
+      "title": "Nav Bhatia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Nav_Bhatia"
+    },
+    {
+      "title": "Jean Augustine (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Jean_Augustine"
+    },
+    {
+      "title": "The Carter Effect (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Carter_Effect"
+    },
+    {
+      "title": "Toronto Caribbean Carnival (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Caribbean_Carnival"
+    },
+    {
+      "title": "Mississaugas of the Credit First Nation (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mississaugas_of_the_Credit_First_Nation"
+    },
+    {
+      "title": "City of Toronto",
+      "url": "https://www.toronto.ca"
+    },
+    {
+      "title": "Royal Canadian Legion (poppy trademark)",
+      "url": "https://www.legion.ca"
+    }
   ],
   "confidence": "medium",
   "provenance": {

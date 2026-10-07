@@ -1,0 +1,118 @@
+{
+  "team": "gsw",
+  "issues": [
+    {
+      "target": "opportunities[bay-bridge-90], opportunities[christmas-crab-feed], calendar[3], calendar[4]",
+      "type": "other",
+      "severity": "high",
+      "problem": "Feasibility: the brief commissions original lettering, poster art and heritage collaborators today (Oct 7) and then launches Bay Bridge 90 on Nov 12 (36 days) and a Christmas pack by Black Friday (Nov 27). Nike apparel is developed many months ahead, team-licensed art needs Warriors/NBA approval, and a paid, credited two-letterer process cannot finish in five weeks. The plan implies a real commission and still hits dates that only fit pre-existing product.",
+      "fix": "Split each into a now version and a later version. For Nov 12 and Dec 25, use a small local-made run (Oakland screenprinters, existing blanks, one credited letterer, press-and-poster format) and say plainly it is a pilot. Move the fully co-designed Bay Bridge 90 and Crab Feed lines to the 2027 holiday and 2027-28 calendar, and ask the team for Specter and City Edition lead-time facts before promising dates."
+    },
+    {
+      "target": "uniform (Candy Royal) and collection.themes[Roaracle]",
+      "type": "other",
+      "severity": "high",
+      "problem": "Feasibility: metal-flake royal, a chrome scrollwork belt area, foil-spoke waistband and a silver and candy-red palette are not realistic on an NBA game uniform. Nike and the NBA control the template, materials, broadcast legibility and color rules, City Editions are locked well over a year out, and the 2026-27 City design is not even confirmed. Adding red and silver also moves the Warriors off the royal-and-gold identity the brief itself calls a loyalty test.",
+      "fix": "Reframe Candy Royal as a lifestyle and warm-up capsule (printed or foil-effect jackets, not a game jersey) and, at most, a pitch for a later City Edition cycle. Keep candy effects to trim and details a template allows (neck tape, jock tag, pinstripe outline) and cap the palette at royal, gold and one accent."
+    },
+    {
+      "target": "opportunities[christmas-crab-feed]",
+      "type": "other",
+      "severity": "high",
+      "problem": "Internal contradiction: the brief says never lead with navy and orange because it recalls the 1997-2010 slump, then makes cooked-crab orange on royal the hero of the Christmas pack and its fleece. The 2007 navy-orange throwback in the Roaracle line is the same tension, though that one is earned by the We Believe memory.",
+      "fix": "Run the crab story in shell cream, royal and gold, with crab orange as a small tag or tipping accent only. Keep navy-orange for the single numbered 2007 throwback, where fans already read it as We Believe."
+    },
+    {
+      "target": "opportunities[candy-paint-408], uniform.avoid, partners",
+      "type": "appropriation",
+      "severity": "high",
+      "problem": "Candy Paint rests on two communities (Black East Oakland scraper culture and Chicano and Mexican American lowrider and pinstripe culture, plus Vietnamese and Filipino South Bay car scenes) but the partners list names only the Scraper Bike Team. The South Bay and lowrider side has no named partner (MACLA is a gallery, not a builders' collective) and the brief just says 'San Jose or Mission pinstriper'. A script wordmark, pinstripes and chrome scrollwork risk reading as lifted Chicano visual language.",
+      "fix": "Do not develop the lowrider half until a credited lowrider club or painter, led by Chicano or Mexican American makers, is signed with a fee and approval rights. Add that partner to the list by name after verification. Until then ship only the scraper-bike half, with the Scraper Bike Team's youth program funded as a line item."
+    },
+    {
+      "target": "partners, opportunities[we-believe-20]",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The brief's thesis says Oakland and Black Bay culture set the taste (hyphy, Go Dumb, stunna shades, turf dancing, Black History Month) but the partner list has no Black Oakland artist, hyphy-era musician, Black-owned retailer or Bayview institution, even though the culture and music dossiers name E-40 and Marcus Books. Hyphy language is being used on socks and hoodies with only a vague plan to work with 'Vallejo and Oakland artists'.",
+      "fix": "Name paid Black-led partners for Roaracle and Black History Month (a hyphy-era artist or estate representative, an Oakland screenprinter, Marcus Books, the Bayview Opera House) with revenue share, tag credit and veto on slang and iconography. Keep E-40 as an approach to a paid co-creator, with his wine and spirits boundary stated."
+    },
+    {
+      "target": "thesis, topInsights[2], risks[1], partners[Eat. Learn. Play. Foundation]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The brief says Nike wins because Curry is a rival's athlete and warns against any implied Nike-Curry link, then makes the Curry family foundation the beneficiary of the Christmas pack and calls the season his 'last chapter'. That ties Nike's holiday hero product to Curry's name and brand world, and 'last chapter' presumes a retirement the Warriors and Curry have not announced.",
+      "fix": "Route the crab-feed proceeds to an Oakland or Bayview food nonprofit with no Curry link, or get explicit clearance first. Replace 'last chapter' with 'dynasty-era window' in all language. Move Curry's footwear and apparel status to the top of the verify list because the whole thesis rests on it."
+    },
+    {
+      "target": "calendar[0], calendar[3], pulse",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "Calendar row 0 pairs 'Oct 21 at the Lakers' with 'the home opener' and says the first Specter games open then, but the Oct 21 game is on the road (ESPN, 10 p.m. ET) and the brief gives no Warriors home-opener date. Which games get Specter is not known, yet 'each home date the Specter uniform is worn' is the spine of opportunity 3. Nov 12 is a Thursday, so it falls between Friday Cup nights rather than on one.",
+      "fix": "Treat Oct 21 as a road watch-party night at Thrive City and find the real home opener and Specter game list before anchoring any drop. Call the first Cup Friday after Nov 12 the in-arena tie-in for Bay Bridge 90."
+    },
+    {
+      "target": "opportunities[heritage-co-creations], calendar[1]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "Filipino American History Month is happening now, and the brief answers it with commission briefs and a capsule for October 2027, a year away. Lunar New Year (Feb 6, 2027) needs finished art and approvals by roughly late December given the same lead-time problem. The heritage promise therefore risks reading as a theme-night gesture despite the brief insisting it is not.",
+      "fix": "Do one real thing for October 2026: a paid, credited Filipino-American DJ set at Thrive City or a donation to SoMa Pilipinas, with no merchandise. Make the Lunar New Year drop a small art-led capsule whose artist is signed by early November, and be open that the full Filipino capsule is a 2027 build."
+    },
+    {
+      "target": "opportunities[specter-archive-pop-ups], calendar[0]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The Specter plan is told as a vintage-dealer pop-up story but the brief says nothing about what Specter is, how it looks, or what the product is. It also sends fans toward Haight and Oakland vintage rows to buy a Nike-licensed jersey, while the brief's own insight is that fans buy vintage before the current jersey. Philadelphia and 1962-era references are also hard to square with the NBA and Warriors licensing the team controls.",
+      "fix": "Anchor the Specter story in the actual 2026 uniform and its collection (confirm design and game dates), and use vintage partners for archive walls and reference garments, not as sales doors. Clear all pre-Oakland marks through the team and NBA before any copy is written."
+    },
+    {
+      "target": "opportunities[we-believe-20], calendar[10]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "We Believe 20 depends on the team licensing the name, Oracle crowd audio and the players (Baron Davis, Stephen Jackson), none of whom Nike can name or picture without NBPA group-licensing or personal deals. Putting waveform graphics from 'licensed Oracle audio' on a hoodie is also an unusual rights ask. Releasing in late April regardless of seeding is good, but it is the only spring play and is blocked on approvals.",
+      "fix": "Lead with the fan-made yellow shirt and a credited fan or artist, with players appearing only if they sign personally. Ask the team early whether the crowd audio and name are cleared, and keep a waveform drawn by an artist (no recording) as the fallback."
+    },
+    {
+      "target": "calendar[0], partners[DJ D-Sharp]",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The D-Sharp warmup tee with a QR code to a 'licensed Bay mix' pairs an individual with a music-licensing problem: mixes that contain commercial tracks need label and publisher clearances, and an in-arena DJ's name is also team business. Nothing in the insights ties a warmup tee to him beyond the sound of the building.",
+      "fix": "Make D-Sharp a paid curator of an original or fully cleared mix, with the team's approval, and drop the tee unless the team agrees to a named collaboration. If it stays, put the mix on a Nike or Warriors channel, not a QR on the garment."
+    },
+    {
+      "target": "topInsights[0], collection.story",
+      "type": "generic",
+      "severity": "low",
+      "problem": "The Bay Bridge insight is strong, but 'the only NBA team whose logo is a bridge between two cities' is an overreach as brand copy and has to be checked against the logo's history. The same line also underplays that Chase Center sits within sight of the span, which is a stronger and more checkable local fact. The hangtag and packaging ideas are clever but lean on cute props.",
+      "fix": "Use the verifiable line (the logo shows the Bay Bridge; the bridge opened Nov 12, 1936; the arena is a short walk from it) and let a letterer's work carry the story, not packaging gimmicks."
+    },
+    {
+      "target": "calendar[13], calendar[12], calendar[9]",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "Several calendar rows are filler. September Hiero Day seeding and the 2027-28 City preview are a year out and do not belong in a 2026-27 plan, the June dynasty row has no signal beyond anniversaries, and Cesar Chavez Day is leaned on as a hook for a car-culture capsule when it is a labor and farmworker holiday.",
+      "fix": "Cut or fold these rows. Keep Cesar Chavez Day only if a Latino partner proposes it, and give the freed effort to the October to December launch problems."
+    },
+    {
+      "target": "opportunities (whole set)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The dossiers surface signals the brief drops entirely: Bay Area women's basketball and the Valkyries (hoops lens), Oakland-born Damian Lillard as a story bridge, the USF heritage story, a Nike SB crossover with San Francisco skate, Vietnamese-American Tet and Story Road beyond one retail line, and the 'Strength in Numbers' theme that suits a roster with few new stars. Women's sizing and fit, youth school-colour product and the 49ers and Giants competing for the fan wallet are also missing.",
+      "fix": "Add one women's and youth line (Valkyries-adjacent or Bay women's hoops, with correct fit) and one skate-led SB tie-in routed through skater-owned shops. Use Strength in Numbers as the through-line for a team-first campaign, which fits the 40.5 win total better than star-led gear."
+    },
+    {
+      "target": "scorecard, pulse.heat",
+      "type": "other",
+      "severity": "low",
+      "problem": "Culture 92 and opportunity 80 treat cultural depth as proof of retail upside, while the brief's own reasoning (non-Nike face, 37-45, a 40.5 win total, injuries to Butler and Moody) points to a defensive, winter-only year. Fandom 74 and heat 60 do not match an anxious fan base expecting little.",
+      "fix": "Lower opportunity to the low 70s and state which assumptions would move it back (Curry deal status, Specter game dates, a hot November). Keep culture high; it is justified."
+    }
+  ],
+  "strengths": [
+    "The Oakland-first, San Francisco-second sequencing is the right read and is backed by culture, art, music, underground and retail dossiers, with real credits and a refusal to let a Portland team stage Oakland as a nostalgia prop.",
+    "The Bay Bridge (not Golden Gate) insight is distinctly local, holds up against the swap test, and the Nov 12, 1936 anniversary is a true and fresh hook.",
+    "The brief handles sensitive material with care: it funds rather than merchandises the Black Panther Party's 60th, bans sideshow, Thizz and ghost-riding imagery, keeps the Philadelphia-era Native logos out, and names the licensing thicket (Golden Gate district, Bay Lights, Muni worm, Mac Dre estate).",
+    "The winter-only framing, the contingent 48-hour playoff capsule and the fog layering system (Bay Layers) are grounded in the data and are the most realistic, volume-bearing parts of the plan.",
+    "Using Specter, City and team marks rather than Curry's name respects the reality that Curry sits outside Nike, and the brief flags verification instead of assuming it."
+  ],
+  "summary": "A culturally sharp, well-credited brief with a real point of view (Oakland first, the Bay Bridge, fog), but it promises more than a five-week and one-season runway can deliver: the Nov 12 and Black Friday dates, the Candy Royal game uniform and the two-community Candy Paint capsule all outrun lead times, template rules and partner readiness, and the crab-orange hero contradicts the brief's own color warning. Tighten the near-term plan to pilot-scale local runs, add named Black and Chicano partners with pay and approval rights, remove Curry-adjacent ties, and fill the women's, youth and skate gaps. Written from model knowledge; Specter details, the City Edition and Curry's deal are unverified."
+}

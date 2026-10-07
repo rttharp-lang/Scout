@@ -1,0 +1,390 @@
+{
+  "team": "min",
+  "lens": "retail-behavior",
+  "headline": "Minnesota buys basketball on a cold-weather, mall-and-online calendar where clothing is untaxed, Christmas Day is now a home game, and the Edwards-Ball pairing is the demand engine.",
+  "summary": "Minnesota is a four-season, layering-driven apparel market: the Wolves season (late Oct to April) is entirely hoodie, crewneck, quarter-zip and beanie weather, so the product that moves is fleece, outerwear and long sleeves rather than tanks. The state does not tax most clothing, so jerseys, tees and hoodies carry no sales tax at the register, which flattens price friction on gifts. Demand is statewide and Midwest-regional, with purchases routed through Target Center, Mall of America, online and the Fanatics-type team shop rather than a single dense urban retail core. Fandom is hot because Edwards is a generational face and the Ball trade just added a second marquee name, while the Dec 25 home game against OKC and a Kevin Garnett jersey retirement give two giftable, collectible peaks. The cultural overlay is distinctive: Prince and Purple Rain, Minnesota winter, and large Somali, Hmong, Latino and Native communities with their own retail calendars.",
+  "insights": [
+    {
+      "title": "Winter is the whole season, so the hoodie is the jersey",
+      "detail": "From the late-October opener through March, daily highs in the Twin Cities sit around freezing or below, so fans wear team gear over and under parkas and rarely show a bare arm. Quarter-zips, heavyweight fleece, beanies, scarves and insulated shells outsell tanks and shorts for most of the Wolves calendar.",
+      "implication": "Lead the Wolves assortment with fleece, shell and layering pieces that carry the logo, and treat the swingman or tee as a layer-under or a gift item, not the core volume driver."
+    },
+    {
+      "title": "Clothing is not taxed, which helps the gift and the big-ticket jersey",
+      "detail": "Minnesota exempts most clothing from state sales tax (the statewide rate on other goods is 6.875 percent plus local add-ons), so there is no tax-free weekend and no tax-driven shopping cliff. Items classed as sports equipment or accessories can still be taxed, so a jersey and a hoodie are effectively tax-free while some bags or gear are not.",
+      "implication": "Do not build promotions around a tax holiday; price clean to the shelf number and let tax-free clothing be a quiet advantage in jersey and outerwear gifting pushes."
+    },
+    {
+      "title": "Christmas Day at Target Center makes December the peak",
+      "detail": "The Wolves host Oklahoma City on Dec 25 at 8 p.m. ET, a national ESPN/ABC showcase in the home market, and December already carries the strongest gifting in the state. The NBA Cup group nights run on Fridays from Oct 30 through Nov 27 and the Garnett jersey retirement adds a second collectible moment later in the season.",
+      "implication": "Time a Wolves holiday capsule and a gift-ready jersey and hoodie push to land by early December, and hold a Garnett and Christmas commemorative drop for in-arena and online."
+    },
+    {
+      "title": "The Edwards and LaMelo backcourt resets the jersey conversation",
+      "detail": "Edwards is the market's face and the best-selling name by default; the June trade for LaMelo Ball adds a nationally followed second name who plays Minnesota's biggest games, including Feb 15 at Charlotte. Fans who bought an Edwards jersey now look for a second shirt, and a Ball item bought in Minnesota is a first-time Wolves purchase for many Charlotte-era Ball fans.",
+      "implication": "Plan paired Edwards and Ball graphics and dual-name tees, and keep Ball jersey supply flexible until the live sales mix is known."
+    },
+    {
+      "title": "Mall of America and online carry regional and tourist demand",
+      "detail": "Mall of America in Bloomington is a destination for the Upper Midwest, Dakotas, Iowa, Wisconsin and visitors, and it concentrates holiday and weekend retail. Target Center and the arena team store serve game-night impulse buys, while online covers outstate Minnesota and the many fans well beyond the metro.",
+      "implication": "Treat MOA as the flagship wide-reach moment and keep online and ship-to-home strong for outstate and out-of-state fans; do not assume a Minneapolis-only footprint."
+    },
+    {
+      "title": "Community calendars create distinct, unrelated peak weeks",
+      "detail": "Eid, Somali independence celebrations in summer, Hmong New Year in St. Paul around Thanksgiving weekend, Dia de los Muertos and Cinco de Mayo on Lake Street, and the State Fair each create their own shopping moments and styles. Hmong New Year in particular is a major family clothing and gifting occasion, with traditional dress at its center.",
+      "implication": "Plan community-specific moments with partners from within each community rather than a generic multicultural capsule, and never use traditional or ceremonial dress as a pattern source without its makers."
+    }
+  ],
+  "places": [
+    {
+      "name": "Target Center",
+      "kind": "arena",
+      "neighborhood": "Downtown Minneapolis (North Loop edge)",
+      "why": "Home arena and team store where game-night and Christmas Day demand lands."
+    },
+    {
+      "name": "Mall of America",
+      "kind": "mall",
+      "neighborhood": "Bloomington",
+      "why": "The regional and tourist retail anchor for the Upper Midwest, with peak holiday and weekend traffic."
+    },
+    {
+      "name": "Rosedale Center",
+      "kind": "mall",
+      "neighborhood": "Roseville",
+      "why": "A big northern-suburb and St. Paul-side mall serving a different household mix than MOA."
+    },
+    {
+      "name": "Karmel Mall",
+      "kind": "shopping center",
+      "neighborhood": "Minneapolis, Lake Street area",
+      "why": "A long-running Somali community marketplace for clothing, accessories and gifts, and a core Eid-season destination."
+    },
+    {
+      "name": "Mercado Central",
+      "kind": "market",
+      "neighborhood": "Lake Street, Minneapolis",
+      "why": "A Latino cooperative market that anchors Lake Street retail and the Cinco de Mayo and Dia de los Muertos seasons."
+    },
+    {
+      "name": "Midtown Global Market",
+      "kind": "market",
+      "neighborhood": "Lake Street and Chicago Avenue, Minneapolis",
+      "why": "An immigrant-owned vendor hall that shows how Lake Street shops and gives local-made product a retail home."
+    },
+    {
+      "name": "Hmong Village and Hmong Town Marketplace",
+      "kind": "market",
+      "neighborhood": "St. Paul, Eastside and University Avenue area",
+      "why": "Large Hmong marketplaces with clothing and textile vendors central to Hmong New Year shopping."
+    },
+    {
+      "name": "Minnesota State Fairgrounds",
+      "kind": "fairgrounds",
+      "neighborhood": "Falcon Heights",
+      "why": "The Great Minnesota Get-Together from late August to Labor Day is a statewide merchandise and branding stage."
+    }
+  ],
+  "people": [
+    {
+      "name": "Anthony Edwards",
+      "role": "Timberwolves guard",
+      "why": "The market's face and the primary driver of jersey and apparel demand."
+    },
+    {
+      "name": "LaMelo Ball",
+      "role": "Timberwolves guard (acquired June 2026)",
+      "why": "A second national draw whose first Minnesota season creates new fans and new product."
+    },
+    {
+      "name": "Kevin Garnett",
+      "role": "Franchise legend, number 21",
+      "why": "His jersey retirement is a giftable, nostalgic collectible moment for older fans and lapsed buyers."
+    },
+    {
+      "name": "Prince",
+      "role": "Minnesota music icon",
+      "why": "The Purple Rain City Edition tied the Wolves to Prince and made purple a local retail signal; any use needs the estate's licensing."
+    },
+    {
+      "name": "Napheesa Collier",
+      "role": "Minnesota Lynx star",
+      "why": "A Lynx star with her own brand, showing local appetite for women's basketball product."
+    },
+    {
+      "name": "Chris Finch",
+      "role": "Timberwolves head coach",
+      "why": "The steady public face of the team and a Wolves identity for casual fans."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Wolves home opener and NBA Cup nights",
+      "timing": "Late October through November Fridays",
+      "month": 10,
+      "why": "Opening Cup night hosts Memphis at Target Center on Oct 30 and starts the first sustained buying window of the season."
+    },
+    {
+      "name": "Minnesota deer hunting opener and blaze-orange season",
+      "timing": "Early November",
+      "month": 11,
+      "why": "Blaze orange and hunting-layer apparel dominate rural Minnesota shopping and reflect an outstate fan base."
+    },
+    {
+      "name": "Hmong New Year, St. Paul",
+      "timing": "Around Thanksgiving weekend",
+      "month": 11,
+      "why": "A major family clothing and gifting occasion in the Hmong community, centered in St. Paul."
+    },
+    {
+      "name": "Black Friday and Thanksgiving week",
+      "timing": "Late November",
+      "month": 11,
+      "why": "Mall of America and online peaks, with extra NBA Cup nights on Nov 24 and 25."
+    },
+    {
+      "name": "Christmas Day vs OKC",
+      "timing": "Dec 25, 8 p.m. ET",
+      "month": 12,
+      "why": "A national Christmas showcase at home in the biggest gifting month."
+    },
+    {
+      "name": "St. Paul Winter Carnival",
+      "timing": "Late January to early February",
+      "month": 1,
+      "why": "A cold-weather civic ritual that rewards winter-themed apparel and local pride graphics."
+    },
+    {
+      "name": "Minnesota State Fair",
+      "timing": "Late August to Labor Day",
+      "month": 8,
+      "why": "A statewide merch moment where Wolves product meets non-metro fans before the season."
+    },
+    {
+      "name": "Eid al-Fitr and Eid al-Adha",
+      "timing": "Moves with the lunar calendar",
+      "month": 0,
+      "why": "Peak clothing and gifting for Minnesota's large Somali community, with dates shifting each year."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Minnesota nice",
+      "meaning": "The self-image of polite understatement; fans respond to confident but unshowy branding, not hype-heavy copy."
+    },
+    {
+      "term": "Up north / the Cities",
+      "meaning": "Local shorthand for the lake country and for the Twin Cities metro; it frames outstate versus metro fans."
+    },
+    {
+      "term": "Skyway",
+      "meaning": "The enclosed downtown walkway system that keeps winter shoppers and game-goers indoors."
+    },
+    {
+      "term": "Hotdish",
+      "meaning": "The casserole that stands for community gatherings; a friendly, humorous tone works with it."
+    },
+    {
+      "term": "Ant-Man",
+      "meaning": "A nickname for Edwards used by fans; use sparingly and only with licensed athlete rights."
+    },
+    {
+      "term": "Wolves Nation / Pack",
+      "meaning": "Fan self-identification used in team marketing and chants."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Midnight blue as the winter-night base",
+      "type": "color",
+      "hex": "#0C2340",
+      "source": "Timberwolves primary team color and Minnesota winter evenings",
+      "use": "Base color for fleece, shells and heavyweight hoodies."
+    },
+    {
+      "cue": "Aurora green accent",
+      "type": "color",
+      "hex": "#78BE20",
+      "source": "Timberwolves accent and the northern lights over lake country",
+      "use": "Use as trims, drawcords and small graphic hits rather than full panels."
+    },
+    {
+      "cue": "Purple Rain purple",
+      "type": "color",
+      "hex": "#5B2C83",
+      "source": "Prince and the Wolves Purple Rain City Edition",
+      "use": "Use only with proper licensing and with restraint, as a special-release accent."
+    },
+    {
+      "cue": "Blaze orange safety hit",
+      "type": "color",
+      "hex": "#F26B1D",
+      "source": "Minnesota deer-season culture and outstate fan base",
+      "use": "A small accent for outerwear and beanie patches in November drops."
+    },
+    {
+      "cue": "Heavy fleece and brushed-back textures",
+      "type": "texture",
+      "hex": "",
+      "source": "Minnesota winter layering",
+      "use": "Prioritize midweight to heavyweight brushed fleece and quilted linings."
+    },
+    {
+      "cue": "Lake and skyway line motifs",
+      "type": "motif",
+      "hex": "",
+      "source": "The Land of 10,000 Lakes and the Minneapolis skyway map",
+      "use": "Subtle line-map graphics on sleeves, hems and inner labels."
+    }
+  ],
+  "productHooks": [
+    "A Wolves winter-layer capsule: heavyweight fleece hoodie, quarter-zip, insulated shell and beanie in midnight blue with aurora-green trim.",
+    "A Christmas Day OKC game-day pack: gift-boxed jersey, tee and warm-up with a Dec 25 commemorative graphic.",
+    "A paired Edwards and Ball tee and hoodie set built around the new backcourt, with swappable name and number graphics.",
+    "A Kevin Garnett retirement commemorative drop (tee, hoodie, collectible patch) timed to the jersey retirement home game once the date is confirmed.",
+    "A Minnesota-made community collaboration series (Somali, Hmong and Latino designers) sold at Lake Street and St. Paul retail partners, with credit and revenue sharing."
+  ],
+  "watchouts": [
+    "Prince imagery, music and the Purple Rain name require licensing from the estate and rights holders; do not lift them without clearance.",
+    "Hmong, Somali and Native cultural dress and patterns are not decoration; work only with community creators and compensate them.",
+    "Do not promise a tax-free weekend or tax-free sportswear without checking which items count as clothing under Minnesota rules.",
+    "Do not over-index on Minneapolis; outstate Minnesota and neighboring states buy differently than the urban core."
+  ],
+  "sources": [
+    {
+      "title": "Minnesota Timberwolves official site",
+      "url": "https://www.nba.com/timberwolves"
+    },
+    {
+      "title": "Target Center",
+      "url": "https://www.targetcentermn.com"
+    },
+    {
+      "title": "Mall of America",
+      "url": "https://www.mallofamerica.com"
+    },
+    {
+      "title": "Minnesota Department of Revenue: sales tax on clothing",
+      "url": "https://www.revenue.state.mn.us"
+    },
+    {
+      "title": "Minnesota State Fair",
+      "url": "https://www.mnstatefair.org"
+    },
+    {
+      "title": "Minnesota Timberwolves (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Minnesota_Timberwolves"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "late Aug to Labor Day",
+        "month": 8,
+        "driver": "Minnesota State Fair and back-to-school; most schools start right after Labor Day",
+        "impact": "medium"
+      },
+      {
+        "window": "late Oct",
+        "month": 10,
+        "driver": "Season opener, first cold snaps, NBA Cup Fridays begin Oct 30",
+        "impact": "high"
+      },
+      {
+        "window": "early Nov",
+        "month": 11,
+        "driver": "Deer opener and outerwear season",
+        "impact": "medium"
+      },
+      {
+        "window": "Thanksgiving to Cyber Monday",
+        "month": 11,
+        "driver": "Black Friday at Mall of America and online; Hmong New Year weekend",
+        "impact": "high"
+      },
+      {
+        "window": "Dec 1-24",
+        "month": 12,
+        "driver": "Peak gifting; NBA Cup knockouts; Christmas Day home game build-up",
+        "impact": "high"
+      },
+      {
+        "window": "Dec 25",
+        "month": 12,
+        "driver": "Wolves host OKC at 8 p.m. ET",
+        "impact": "high"
+      },
+      {
+        "window": "late Jan to early Feb",
+        "month": 1,
+        "driver": "St. Paul Winter Carnival, Naz Reid's return, and MLK Day game at New York",
+        "impact": "medium"
+      },
+      {
+        "window": "mid Feb",
+        "month": 2,
+        "driver": "Feb 15 at Charlotte with LaMelo Ball, then All-Star Weekend in Phoenix",
+        "impact": "medium"
+      },
+      {
+        "window": "mid Apr to June",
+        "month": 4,
+        "driver": "Play-in and playoff run, with sales keyed to seeding and series length",
+        "impact": "high"
+      },
+      {
+        "window": "mid May to June",
+        "month": 5,
+        "driver": "Fishing opener, graduation gifts and warmer weather finally ease the layers",
+        "impact": "low"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Online and ship-to-home",
+        "role": "Reaches outstate Minnesota and neighboring states and is where most jersey gifts are bought."
+      },
+      {
+        "channel": "Target Center team store",
+        "role": "Game-night impulse buys, new-release moments and Christmas Day traffic."
+      },
+      {
+        "channel": "Mall of America and suburban malls",
+        "role": "Holiday and weekend destination shopping for families and tourists."
+      },
+      {
+        "channel": "Community markets (Lake Street, Karmel Mall, Hmong Village)",
+        "role": "Trusted local retail for clothing and gifts, especially around community holidays."
+      },
+      {
+        "channel": "Resale and secondhand",
+        "role": "Used jerseys and sneakers move through online resale and local consignment, especially for Garnett and Edwards items."
+      },
+      {
+        "channel": "Social commerce and limited drops",
+        "role": "Short-run local collabs and creator drops build buzz for younger fans."
+      }
+    ],
+    "priceProfile": "Minnesota is a middle-income, value-conscious market with high metro earnings but strong thrift and practical-spend habits, and a wide income gap between the suburbs and parts of north and south Minneapolis. Tier the line: affordable fleece, tees and kids product for volume, a swingman and mid-priced outerwear core, and a small premium authentic and limited-collab tier for committed fans and gift buyers. No clothing sales tax removes one friction point.",
+    "jerseyBehavior": "Edwards is the default jersey and the most common gift; swingman and replica dominate over authentic on price, and youth sizes matter for families. Fans often layer a jersey over a hoodie in winter, and legacy Garnett and older-name jerseys still sell through resale and nostalgia drops. Counterfeits exist online but fans skew toward trusted retail, so official, well-priced items win."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Minnesota's current clothing sales tax exemption and which sports or accessory items are excluded; confirm that jerseys and hoodies are exempt.",
+      "Garnett jersey retirement home game date and any associated merchandise plans.",
+      "The 2026-27 City Edition uniform and whether Purple Rain returns or changes.",
+      "Target Center arena name, ownership and team store status for 2026-27.",
+      "Current Wolves jersey sales rankings, including how Ball's and Dosunmu's names rank against Edwards.",
+      "Hmong New Year dates and venue for 2026 in St. Paul.",
+      "Eid dates for 2026-27 and the Somali Independence Day schedule in Minneapolis.",
+      "Karmel Mall, Mercado Central and Hmong Village operating status and current vendor mix.",
+      "Minnesota State Fair 2027 dates and merchandise partners.",
+      "Minneapolis local sales tax rate and Hennepin County add-ons.",
+      "Mall of America store roster and any Nike or team-store presence there.",
+      "Current Minnesota Lynx and Napheesa Collier product activity and brand status."
+    ]
+  }
+}

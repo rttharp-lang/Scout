@@ -1,0 +1,132 @@
+{
+  "team": "tor",
+  "issues": [
+    {
+      "target": "uniform",
+      "type": "timing",
+      "severity": "high",
+      "problem": "Home Stop is written as if it could ship this season (the calendar shows a 'Home Stop City Edition swingman' at DesignTO in late January 2027). 2026-27 City Edition designs are locked and normally unveiled in the fall, and the 2026-27 City Edition itself is unverified in the brief. Uniform concepts, court design, league sign-off and TTC licensing run 12 to 18 months.",
+      "fix": "Label Home Stop as the 2027-28 City Edition pitch. For 2026-27, keep only retail graphics that need no jersey approval (crewneck, tee, shooting shirt). Check the current Raptors City Edition and alternates before any Portland presentation."
+    },
+    {
+      "target": "uniform",
+      "type": "weak-link",
+      "severity": "high",
+      "problem": "The concept claims 'the whole Megacity and the 905' but is built on the TTC subway. Toronto's subway barely reaches the 905 (Line 1 ends at Vaughan). The commute from Brampton, Mississauga and Markham to the arena is GO Transit, Brampton Zum and MiWay buses, and the car. The '905 as a stop on one line' waistband is an untrue image to the very fans the brief wants to win.",
+      "fix": "Add GO Transit's Union Station platform and the Lakeshore and Kitchener lines to the narrative, or reframe the waistband as 'every line ends at Union'. Check that GO and Metrolinx marks are licensable. Otherwise drop the 905 claim from the jersey and keep it for the retail Ends series."
+    },
+    {
+      "target": "uniform.palette",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "The palette is a near-black base with cream numbers and two reds (Red Rocket #DA251D and Raptors Red #CE1141). The two reds are about 10 hex points apart. They will read as a printing error on a jersey, and Red Rocket borrows TTC identity the brief has not cleared. The black-and-cream base also resembles several NBA City Editions, so the concept rests on the lettering and tile, not the colour.",
+      "fix": "Use one red (Raptors Red) and give the station-tile cream the real contrast job. Make the tile band the only multi-colour element, sampled from named Line 1 stations. Drop the second red."
+    },
+    {
+      "target": "topInsights[5]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The insight says 'gold is spoken for' and must be rationed, but the plan then uses Patty Gold (#E0A526) as a heritage lining, Championship Gold on Four Bounces and the 2019 anniversary tee, and Raptors-gold hardware on the NOCTA capsule. That is four gold stories in one season. It undercuts the discipline it argues for and puts the brand on OVO's turf.",
+      "fix": "Pick one gold moment, the 2019 story (Four Bounces and June 13). Make the Patty and Coco lining a food-derived amber rather than gold, and drop gold hardware from the NOCTA piece."
+    },
+    {
+      "target": "opportunities[1] / calendar[0]",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The Kawhi homecoming launch is pinned to Oct 30 (Nets at Raptors, Cup Night). The brief's own facts say Leonard's home debut date is unverified, and the regular season opens Oct 20 with the Raptors not on opening night. The first home game, and Leonard's first Scotiabank Arena night, may come days earlier. The brief would then miss the peak emotional window and launch on a Nets game that has no meaning.",
+      "fix": "Tie the launch to Leonard's actual first home game, with Oct 30 as the fallback. Pre-stage the Four Bounces tee, the mural and the Jurassic Park shell for a 48-hour pivot once the schedule is checked."
+    },
+    {
+      "target": "topInsights[1] / risks[0]",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The brief treats Leonard's likeness as something to avoid and limits him to 'name-and-number jerseys'. In practice the Leonard jersey and the return tee will be the volume item of the season in Toronto and across Canada. NBA player jerseys are league-licensed and the New Balance deal does not stop Nike making the jersey. Holding back risks handing the biggest demand spike of the year to unlicensed and Fanatics-led product.",
+      "fix": "Keep the crowd-owned story, but plan deep Leonard jersey and tee inventory, kids' sizes included, as the headline unit driver. Add a 'Fun Guy' homecoming moment through the league's licensed player assets. Keep Barnes as the multi-year anchor."
+    },
+    {
+      "target": "opportunities[0] / retailPlaybook",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "'Drop on the first -20 windchill weekend' and 'clinch-unlock' product both assume reactive manufacturing. Outerwear is bought 9 to 12 months out and allocated to Sport Chek and Nike doors weeks ahead, so weather and results cannot trigger it. The insight is right (winter is the real uniform) but the mechanism is not feasible.",
+      "fix": "Set a fixed late-November or early-December ship date, with a weather-triggered marketing push on top of it. For clinch-unlock, pre-produce the shirt and release it by drop code, or use a rapid print-on-demand tee through league licensing partners."
+    },
+    {
+      "target": "retailPlaybook.how",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The CAD price ladder ($99, $149, $229) does not fit the product plan. A knee-length water-resistant synthetic-down parka and a Tech Fleece set sit well above $229 CAD in Canadian retail. At $229 the parka would also be priced against Canada Goose's much higher tier without matching it.",
+      "fix": "Price the parka and fleece set realistically (check Nike Canada pricing) and use $99 to $149 only for the toque, tees and kids' items. State plainly that the parka is a halo piece, not a volume piece."
+    },
+    {
+      "target": "topInsights[6] / opportunities[4]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The 1946 Huskies capsule is marked 'high' confidence, but the history is true while the fan pull is thin. The Huskies lasted one season, are unconnected to the Raptors' ownership, and are marks the NBA controls. Most Raptors fans do not claim them. Nov 1 also falls on a Sunday and the Raptors' schedule that weekend is unconfirmed.",
+      "fix": "Downgrade to a small collector and media capsule, one or two pieces, and secure the NBA Huskies mark first. Treat the Knicks angle as PR. Move the capsule's effort into the Vince Carter purple capsule, which has much more fan pull."
+    },
+    {
+      "target": "collection (all themes)",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The brief puts purple-dino and Vince Carter cues in the 'avoid' list and promises them to a Classic drop it never plans. Yet the dossiers call purple dino vintage the collector's grail. Carter's #15 was retired in 2024, and his Nike Shox BB4 years are a Nike archive story. This is the strongest Nike-owned asset in the market and no product, month or partner is attached to it.",
+      "fix": "Add a Carter-era capsule as its own theme: exact-spec 1990s purple-dino reissues for the collectors, plus a Shox BB4 archive story. Work with Toronto's 1990s flyer and mixtape culture and pay pioneers such as Maestro Fresh Wes. Pick a launch window (Carter anniversary or Black History Month)."
+    },
+    {
+      "target": "opportunities[3] / partners",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The heritage plan covers Caribbean, South Asian, Chinese and Somali communities but leaves out Filipino Toronto. Little Manila at Bathurst and Wilson is described in the food dossier as one of the GTA's most basketball-obsessed communities. Jane and Finch's Black, Vietnamese and Latin American communities, and the Latin American muralists Clandestinos, are also unused.",
+      "fix": "Add a Filipino-led capsule (June Philippine Independence Day, or a Little Manila court-and-bakery pop-up) co-designed by a Filipino-Canadian designer. Consider Clandestinos for the wraparound murals alongside Elicser Elliott."
+    },
+    {
+      "target": "opportunities[3] / collection.Co-Authored Heritage",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "Several heritage pieces turn a community's food or festival into a branded product, and a few sit close to religious moments: Vaisakhi (a Sikh holy day) and Diwali shoebox sleeves, a Phulkari tee marketed in Brampton, and a fleece named after patties and coco bread. The plan says community designers are paid, but the product names and release dates are set by Nike. The phrase 'Iftar to Tip-off' puts a sports brand inside a religious meal.",
+      "fix": "Let each community partner choose the object, name and launch date, or decline. Replace 'Patty and Coco' with a name chosen with the Little Jamaica partner. Present Ramadan watch nights as a free accommodation with halal food and prayer space, not as a campaign. Never market Vaisakhi."
+    },
+    {
+      "target": "calendar[7] (March)",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "The '905 tuner racing jacket' at Motorama ties car culture to the GTA's South Asian and Chinese suburbs. Brampton and Markham stunt-driving and street-racing stories are a stereotype that locals resent, and the link to a basketball team is thin. The Ramadan row also gives March two unrelated ideas.",
+      "fix": "Cut the tuner jacket. If car culture matters, ask a GTA shop what the community itself wants. Keep March to the Ramadan accommodation and the pre-playoff stock build."
+    },
+    {
+      "target": "opportunities[7] (NOCTA)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "NOCTA x Raptors is shown as a priority-3 conditional, but it depends on Drake's current ambassador role, OVO's rights in the Raptors' uniform, NBA and MLSE licensing of a sub-brand, and fan sentiment after the Kendrick Lamar feud. It also relies on gold hardware (see the gold issue). The 'Drake Night' date is unverified.",
+      "fix": "Keep it as a watch item behind a verification gate. Do not put hero weight on it. If it proceeds, use the existing Nike and OVO relationship, a restrained blue-black and no gold."
+    },
+    {
+      "target": "opportunities[6] (Tempo)",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The Raptors-Tempo shared capsule is priority 3, yet Nike outfits both leagues. The Tempo is an independently owned WNBA team with its own licensing, so a 'shared' graphic tee is unlikely. The Tempo's 2027 home opener is also unverified.",
+      "fix": "Give the Tempo its own women-first Toronto capsule with its supporters, using the Raptors only for a crossover night. Raise its priority, since it is the one place the brand can help set a new identity."
+    },
+    {
+      "target": "opportunities[1].how",
+      "type": "other",
+      "severity": "low",
+      "problem": "Two partner ideas lack a permission path: a mural on the Underpass Park courts (a city and Waterfront Toronto site), and a paid, Nike-wrapped street-meat cart outside the arena (Scotiabank Arena controls its perimeter and MLSE controls sponsorship categories). Jurassic Park imagery also touches Universal's film IP.",
+      "fix": "Add city and MLSE approval steps and a fallback site. Use 'Jurassic Park' only as the fans' name for the plaza, with no film imagery."
+    },
+    {
+      "target": "topInsights[3] / opportunities[2]",
+      "type": "generic",
+      "severity": "low",
+      "problem": "'Borough and area code beat skyline' is true, but 'one borough drop per month with a local artist' is a template that could run in any big metro. The Toronto-specific parts (plaza pylon signs, balcony-grid towers, Megacity 1998) are strong but are not named in the product list or tied to specific artists.",
+      "fix": "Name two or three actual borough artists up front, and give each drop a distinct object (a plaza pylon, a tower balcony grid) rather than a re-coloured shirt."
+    }
+  ],
+  "strengths": [
+    "The Canada-wide read is sharp: Toronto-coded versus Canada-coded fans, bilingual labels, CAD pricing and Canadian co-creators answer the anti-US mood after the 2025 booing.",
+    "Winter as the real uniform (black parka, Tech Fleece, road-salt hems, the walk from Union Station) is specific to this market and translates directly into product.",
+    "Leonard's New Balance and Klaw history is faced honestly, and the crowd's 2019 memory (Jurassic Park, the four bounces) is a smart way to own the moment.",
+    "The IP and sensitivity flags are unusually careful: 'Toronto Caribbean Carnival' not 'Caribana', no Tkaronto imagery without the Mississaugas of the Credit First Nation, no contested flags, partners named and paid.",
+    "The restraint thesis (night, cold, minimal, one red hit, nothing generic like the CN Tower, maple leaf or 'The 6ix') fits the Toronto sound and avoids souvenir-rack clichés."
+  ],
+  "summary": "A strong, specific brief with real insight into winter, boroughs, diaspora and anti-US sentiment, but its uniform and timing hold up less well. Home Stop cannot be a 2026-27 jersey and its subway premise leaves out the 905 commuter. The Kawhi launch date is unverified, the reactive weather and clinch mechanics are not manufacturable, and gold discipline is broken within the plan. The largest omissions are the Vince Carter purple-dino capsule (Nike's own archive asset), Filipino Toronto and a deeper Leonard jersey plan. Fix those and tighten heritage product naming and consent to bring it to a credible standard."
+}

@@ -1,0 +1,140 @@
+{
+  "team": "phi",
+  "lens": "retail-landscape",
+  "headline": "Philly buys Sixers gear on Sixers terms: loud, local, throwback-heavy, and bought at Sneaker Villa-type neighborhood doors as much as at any Center City flagship.",
+  "summary": "Philadelphia's basketball retail splits cleanly between Center City (Walnut Street and Chestnut Street, where tourists and office workers buy), the big suburban malls (King of Prussia, Cherry Hill, Willow Grove) that move volume, and neighborhood sneaker doors in North, West and Northeast Philly that set the taste. Allen Iverson-era Sixers nostalgia and Mitchell & Ness, a Philadelphia-founded throwback house, give the market an unusually strong heritage lane that Nike must respect rather than fight. The 2026 arrival of LeBron James and Jaylen Brown beside Embiid, Maxey and Edgecombe turns the first months of the season into a peak jersey and tee window, and the new 'Specter' uniforms plus the 2030 arena plan add story. Everything here is written from knowledge through mid-2026, so each door should be verified as open before any activation is planned.",
+  "insights": [
+    {
+      "title": "Neighborhood sneaker doors set taste, not Center City",
+      "detail": "Philadelphia-born chains like Sneaker Villa, plus corner and strip-mall sneaker shops across North Philly, Frankford and the Northeast, are where hoopers and teens actually buy Nike basketball product.",
+      "implication": "Seed Nike Basketball launches and Sixers player-edition product through these doors and community courts first, and treat Walnut Street as the amplifier, not the origin."
+    },
+    {
+      "title": "Mitchell & Ness owns the throwback lane",
+      "detail": "Mitchell & Ness began in Philadelphia and is the reference for authentic retro NBA jerseys, so Iverson-era and Moses Malone-Dr. J-era Sixers throwbacks have a respected local incumbent.",
+      "implication": "Do not try to out-heritage them; build Nike's Sixers story around the current roster and Specter uniform, and collaborate or stay in a clearly different lane (performance and lifestyle, not replica retro)."
+    },
+    {
+      "title": "Volume lives in suburban malls and the arena",
+      "detail": "King of Prussia Mall, Cherry Hill Mall (South Jersey) and Philadelphia Mills in the Northeast carry the family and casual-fan traffic, alongside the official team store at the South Philadelphia sports complex on game nights.",
+      "implication": "Roster-change gear (LeBron and Brown jerseys, Specter tees) should be in-stock at these doors by opening week; Nike factory-store inventory should lean toward entry-price Sixers-adjacent colorways."
+    },
+    {
+      "title": "Local-brand pride is a real purchase driver",
+      "detail": "Philadelphia fans reward homegrown labels and shirt makers that speak in neighborhood and rowhouse language, such as Philadelphia Printworks style local tees, over generic city-name merch.",
+      "implication": "Pair Nike Sixers product with local makers and Philadelphia-credentialed designers in pop-ups; credit and pay them rather than borrowing the look."
+    },
+    {
+      "title": "Biggest star-driven demand spike in years",
+      "detail": "LeBron James, Jaylen Brown and a healthy-or-not Embiid arrive with Maxey and VJ Edgecombe, and a Christmas Day game at the Lakers and a Jan 21 return to Boston concentrate attention.",
+      "implication": "Plan inventory depth for LeBron shoes plus James, Brown, Maxey and Embiid jerseys and tees in Philly doors, with fast replenishment through January."
+    },
+    {
+      "title": "Three-district shopping pattern by day-part",
+      "detail": "Weekday Center City shoppers differ from weekend suburban families and from the South Street, Fishtown and East Passyunk crowd that blends streetwear with Philadelphia pride.",
+      "implication": "Use different assortments per door tier: performance and entry price in malls, limited and collab product at tastemaker doors, and statement Specter product at Center City."
+    }
+  ],
+  "places": [
+    {"name": "Xfinity Mobile Arena", "kind": "venue", "neighborhood": "South Philadelphia", "why": "Home arena and location of the official Sixers team store, the anchor game-night retail door."},
+    {"name": "Walnut Street (Rittenhouse Row)", "kind": "district", "neighborhood": "Center City", "why": "Premium and flagship-style retail corridor where brand statements land for office workers, students and visitors."},
+    {"name": "Chestnut Street", "kind": "district", "neighborhood": "Center City", "why": "Mainstream retail spine with athletic chains and tourist traffic."},
+    {"name": "South Street", "kind": "district", "neighborhood": "Queen Village / Society Hill", "why": "Historic streetwear, vintage and counterculture strip that still skews young and local."},
+    {"name": "Fishtown / Frankford Avenue", "kind": "district", "neighborhood": "Fishtown", "why": "Creative-class corridor with independent boutiques and pop-up potential."},
+    {"name": "East Passyunk Avenue", "kind": "district", "neighborhood": "South Philadelphia", "why": "Neighborhood-forward shopping and dining strip close to the stadium complex."},
+    {"name": "King of Prussia Mall", "kind": "mall", "neighborhood": "King of Prussia", "why": "One of the largest US malls, a suburban volume and gift-buying destination."},
+    {"name": "Cherry Hill Mall", "kind": "mall", "neighborhood": "Cherry Hill, NJ", "why": "South Jersey's flagship mall, key to the New Jersey half of the fanbase."},
+    {"name": "Philadelphia Mills", "kind": "mall", "neighborhood": "Northeast Philadelphia", "why": "Outlet-style mall with factory-store and discount traffic across the city line."}
+  ],
+  "people": [
+    {"name": "Allen Iverson", "role": "Hall of Fame guard", "why": "The cultural root of Philadelphia sneaker and jersey identity; the reference every local door and fan measures product against."},
+    {"name": "Joel Embiid", "role": "Sixers center", "why": "The franchise face and a local-fan lightning rod whose availability affects jersey demand."},
+    {"name": "Tyrese Maxey", "role": "Sixers guard", "why": "Fan-favorite homegrown-feeling star with strong youth and community appeal."},
+    {"name": "VJ Edgecombe", "role": "Sixers guard", "why": "Young Nike-relevant talent for the next wave of local product."},
+    {"name": "LeBron James", "role": "Sixers forward (signed 2026)", "why": "Nike's biggest athlete adds national and international demand to the Philly market."},
+    {"name": "Jaylen Brown", "role": "Sixers wing (acquired 2026)", "why": "Adds a second jersey and tee driver with a Jan 21 return to Boston as a story beat; he runs his own 741 shoe brand, so he is not a Nike footwear story."},
+    {"name": "Mitchell & Ness", "role": "Philadelphia-founded throwback apparel brand", "why": "The authenticity incumbent in retro jerseys; a partner or boundary for heritage product."},
+    {"name": "Sneaker Villa", "role": "Philadelphia-founded sneaker retail chain", "why": "A homegrown multi-door chain with deep neighborhood reach across the region."}
+  ],
+  "moments": [
+    {"name": "Opening night at the Knicks", "timing": "Oct 20", "month": 10, "why": "First look at the James-Brown Sixers; jersey and tee demand starts here."},
+    {"name": "Home opener vs. Cleveland", "timing": "Late October (date to verify)", "month": 10, "why": "Philly home debut for LeBron and Brown, a peak arena team-store night."},
+    {"name": "Black Friday and holiday gifting", "timing": "Late Nov to Dec", "month": 11, "why": "The biggest team-gear and sneaker retail stretch for malls and the arena store."},
+    {"name": "Christmas Day at the Lakers", "timing": "Dec 25, 5 p.m. ET", "month": 12, "why": "National-stage game that fuels gift-driven jersey and shoe demand."},
+    {"name": "Jaylen Brown's return to Boston", "timing": "Jan 21, 2027", "month": 1, "why": "Rivalry-flavored storyline that sells Sixers-versus-Celtics themed product."},
+    {"name": "Playoffs", "timing": "April to June", "month": 4, "why": "Philly fandom intensifies and playoff tee and pop-up activations peak."}
+  ],
+  "vocabulary": [
+    {"term": "Trust the Process", "meaning": "The Sixers' rebuild-era fan rallying phrase, still printed on local gear and tied to Embiid-era identity."},
+    {"term": "Wawa run", "meaning": "Local convenience-store culture reference useful for storytelling but owned by a local brand, so license if used."},
+    {"term": "Jawn", "meaning": "Philadelphia all-purpose noun; widely used in local apparel but not owned by Nike."},
+    {"term": "Hoagie", "meaning": "The local sandwich name; Philly food graphics work as culture cues but check IP."},
+    {"term": "Broad Street", "meaning": "The north-south axis connecting North Philly to the sports complex, used in local gear as a symbol of the city."},
+    {"term": "Dr. J era", "meaning": "Shorthand for the 1983 championship-era Sixers, a heritage lane for color and typography."}
+  ],
+  "designCues": [
+    {"cue": "Sixers royal blue", "type": "color", "hex": "#006BB6", "source": "Philadelphia 76ers primary identity", "use": "Anchor Specter and retail-exclusive colorways in this blue, not in alternate Philadelphia palettes."},
+    {"cue": "Sixers red accent", "type": "color", "hex": "#ED174C", "source": "Philadelphia 76ers secondary identity", "use": "Use as a small accent in tee and shoe trim."},
+    {"cue": "Navy heritage base", "type": "color", "hex": "#002B5C", "source": "Throwback-era Sixers uniforms and Philadelphia sporting heritage", "use": "Heritage-leaning lifestyle apparel for Center City and Mitchell & Ness-adjacent shoppers."},
+    {"cue": "Rowhouse brick texture", "type": "texture", "hex": "", "source": "Philadelphia neighborhood rowhouse architecture", "use": "Subtle woven or printed texture on hoodies and jackets, tying to the local-doors narrative."},
+    {"cue": "Broad Street grid graphic", "type": "graphic", "hex": "", "source": "Philadelphia street grid and Broad Street spine", "use": "Map-line graphic on tees tied to Nike's Philly door locations; confirm nothing infringes city-owned marks."},
+    {"cue": "Local-shop collab labeling", "type": "story", "hex": "", "source": "Neighborhood-brand pride", "use": "Co-branded hang tags that credit local makers on any collaboration drop."}
+  ],
+  "productHooks": [
+    "Sixers Specter jersey and tee capsule in the Philadelphia Mills, King of Prussia and arena-store door set for opening week.",
+    "A LeBron James Philly-exclusive colorway, plus James and Brown jersey and tee product, released first through Sneaker Villa-type neighborhood doors.",
+    "Philadelphia local-maker pop-up capsule on South Street or Fishtown, co-credited with homegrown labels.",
+    "Entry-price Sixers-blue performance basics for factory-store and big-box doors."
+  ],
+  "watchouts": [
+    "Mitchell & Ness is a Philadelphia-founded heritage brand now owned by Fanatics; avoid appearing to copy its retro jersey lane without partnership.",
+    "Local slang and food references (jawn, Wawa) involve third-party brands or community ownership; license or collaborate rather than lift.",
+    "Fans are skeptical of overly corporate Philly nostalgia; credit neighborhood creators and avoid caricature.",
+    "Embiid's health and LeBron's age create inventory risk; avoid over-committing to a single player's jersey."
+  ],
+  "sources": [
+    {"title": "Philadelphia 76ers official site", "url": "https://www.nba.com/sixers"},
+    {"title": "Xfinity Mobile Arena", "url": "https://en.wikipedia.org/wiki/Xfinity_Mobile_Arena"},
+    {"title": "Mitchell & Ness", "url": "https://en.wikipedia.org/wiki/Mitchell_%26_Ness"},
+    {"title": "King of Prussia Mall", "url": "https://en.wikipedia.org/wiki/King_of_Prussia_(mall)"},
+    {"title": "Nike store locator", "url": "https://www.nike.com/retail"}
+  ],
+  "confidence": "low",
+  "extra": {
+    "districts": [
+      {"name": "Walnut Street / Rittenhouse Row", "profile": "Premium Center City retail corridor.", "shopper": "Office workers, students, visitors, higher-income locals.", "role": "tastemaker"},
+      {"name": "Chestnut Street", "profile": "Mainstream athletic and chain retail.", "shopper": "Commuters, tourists, casual fans.", "role": "tourist"},
+      {"name": "South Street", "profile": "Long-running streetwear and vintage strip.", "shopper": "Teens, students, creative locals.", "role": "tastemaker"},
+      {"name": "Fishtown / Frankford Avenue", "profile": "Independent boutiques and pop-up space.", "shopper": "Creative-class locals.", "role": "tastemaker"},
+      {"name": "King of Prussia Mall", "profile": "Mega suburban mall.", "shopper": "Suburban families, regional visitors.", "role": "volume"},
+      {"name": "Cherry Hill Mall", "profile": "South Jersey flagship mall.", "shopper": "South Jersey families and casual fans.", "role": "volume"},
+      {"name": "Philadelphia Mills", "profile": "Northeast Philadelphia outlet-style mall.", "shopper": "Value-seeking city and Bucks County shoppers.", "role": "volume"},
+      {"name": "North and West Philly neighborhood strips", "profile": "Corner sneaker doors and local shops.", "shopper": "Hoopers, teens, lifelong locals.", "role": "community"}
+    ],
+    "doors": [
+      {"name": "Sixers Team Store (arena)", "type": "team-store", "neighborhood": "South Philadelphia", "why": "Official arena team store; peak sales on game nights and the home opener."},
+      {"name": "Nike Factory Store at Philadelphia Mills", "type": "nike-owned", "neighborhood": "Northeast Philadelphia", "why": "Nike-owned value door for volume basketball and team-adjacent product."},
+      {"name": "Nike store in Center City", "type": "nike-owned", "neighborhood": "Center City", "why": "Premium Nike presence for launches and Specter statements; confirm current format and address."},
+      {"name": "Sneaker Villa", "type": "sneaker-boutique", "neighborhood": "Multiple Philadelphia locations", "why": "Homegrown multi-door chain with deep neighborhood credibility."},
+      {"name": "Foot Locker", "type": "athletic-chain", "neighborhood": "Center City and malls", "why": "Core partner door for basketball shoe drops and launches."},
+      {"name": "Mitchell & Ness", "type": "local-brand", "neighborhood": "Philadelphia", "why": "Philadelphia-founded heritage jersey brand; authenticity benchmark."},
+      {"name": "Dick's Sporting Goods", "type": "big-box", "neighborhood": "Suburban Philadelphia and malls", "why": "Volume door for team apparel and Nike basketball."},
+      {"name": "Lids and Fanatics shop-in-shops", "type": "athletic-chain", "neighborhood": "Malls and Center City", "why": "Main third-party team-gear channel for casual fans."}
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Current Nike-owned doors in Philadelphia (Center City store, Nike Factory at Philadelphia Mills) and whether any Nike Well Collective or community store opened",
+      "Sneaker Villa still operating and which Philadelphia locations are open",
+      "Mitchell & Ness current Philadelphia retail presence and ownership",
+      "Sixers Team Store location and hours at the arena",
+      "Nike Specter Sixers product availability at Philadelphia doors",
+      "Lids and Fanatics locations in Center City and malls",
+      "Dick's Sporting Goods locations and House of Sport presence in the region",
+      "Philadelphia Mills current name and tenant list",
+      "2026-27 City Edition uniform release and retail timing"
+    ]
+  }
+}

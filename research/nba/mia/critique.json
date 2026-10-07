@@ -1,0 +1,132 @@
+{
+  "team": "mia",
+  "issues": [
+    {
+      "target": "uniform",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The Flamboyán uniform is tied to the May-June bloom (jock tag reads MAY-JUN, narrative says it peaks in the playoffs), but a City Edition is worn mostly November to February and the 2026-27 slate is long locked. The live facts show no 2026-27 Heat City Edition in hand, and NBA/Nike uniform cycles run well over a year, so this is a 2027-28 concept at best.",
+      "fix": "Label it explicitly as a 2027-28 City Edition pitch and a design-team proposal, not a 2026-27 deliverable. Either move the bloom story to the playoff product (the Flamboyán tee already does this) or rebuild the uniform narrative around something visible in winter, such as the breeze-block and sign-painter lettering, and drop the MAY-JUN jock-tag conceit."
+    },
+    {
+      "target": "uniform.motifs / uniform.narrative",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "Commissioning 'a Haitian-American and a Cuban-American artist' for the flamboyán panels assigns artists by heritage rather than by practice, and treats a tree native to Madagascar as a neutral stand-in for two communities. It also pairs Haitian and Cuban cues in one garment while the brief elsewhere warns about exile politics and says to design by nationality, not one blended look.",
+      "fix": "Name the commissioning criteria as working Miami artists with a track record in botanical or sign-painting work, then shortlist (for example from the Little Haiti Cultural Complex and Little Havana sign-painting circuits) and let them define the bloom drawing. Pay and credit on the garment hangtag and keep the neck-tape area codes (305/786/954) as the only city-wide shared cue."
+    },
+    {
+      "target": "opportunities[giannis-305-freak]",
+      "type": "weak-link",
+      "severity": "high",
+      "problem": "The hero opportunity rests on a Miami-only Freak colorway landing Nov 18, only about five months after the June trade, and the brief never says whether Giannis's team and Nike's athlete office approve a city-specific colorway. Colada brown and candy-paint red are also unlinked to anything Giannis himself has said or done, so the story is Miami imposing a palette on him. The brief also treats Nov 18 as Shoe Gallery-only while the Heat Store and mall doors carry the volume.",
+      "fix": "State the lead time and approval path up front, with a fallback of a Miami-exclusive tee and a limited Shoe Gallery colorway of an existing Freak. Anchor the story in Giannis's own arrival narrative (Greek and Nigerian family, immigrant hustle) with his consent, and add a standard Giannis Icon/Statement restock plan so the volume doors are not waiting on a collab."
+    },
+    {
+      "target": "topInsights[0] / thesis",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The thesis claims Giannis is the 'first star-led Nike footwear story the Heat have had in years' and that Heat stars sit on rival brands. That is unverified and ignores that Bam Adebayo and other current Heat players may already be on Nike or Jordan, and it overstates Wade (retired) and Klay (just arrived on a two-year deal) as the market's defining rival-brand faces. A wrong brand-roster claim in the opening paragraph undermines trust with the Nike team.",
+      "fix": "Replace with a defensible line: Giannis is the biggest Nike-signature star in Heat colors in this era. Verify Bam's, Wiggins's and Davion Mitchell's footwear deals before the claim goes to a designer and keep the rival-brand point limited to Wade and Klay as heritage and licensed-jersey issues."
+    },
+    {
+      "target": "calendar[10] / gateway-keepsake-line (Stone Crab Season capsule)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "The stone-crab claw is a Miami Beach tourist and restaurant icon (Joe's and the season-opener ritual), not a Heat fan cue, and the 'regrow the claw as a nod to a rebuilt roster' metaphor is awkward after the team traded Herro, Jaquez and Ware for Giannis. It sits at priority 1 on the opener window with no insight in the dossiers behind it. Restaurant marks are also third-party IP.",
+      "fix": "Cut the Stone Crab tee from the opener window and replace it with a Heat Culture training-line story (the dossiers' strongest fan insight) for Oct 20. If the claw stays, confine it to the gateway tourist lane at Miami Beach doors, drawn as a generic claw with no restaurant marks."
+    },
+    {
+      "target": "collection.themes[Candy Paint]",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "Candy Paint packages Black Miami around trunk subwoofers, donks and gold chains, and names no actual Black Miami partner for it: the partners list contains heritage institutions (Black Archives, African Heritage Center) but no working Liberty City or Carol City creator, car club, producer or jeweler. Without that, a Cuban-link satin bomber risks reading as caricature, and 'Seybold jeweler' is unnamed.",
+      "fix": "Name and contract the partners before the theme is approved: a Liberty City or Carol City airbrush artist, a Seybold Building jeweler, a donk or car-club crew and a Miami bass producer or DJ (the music dossier names Uncle Luke, Trick Daddy, Trina and DJ Khaled as heritage voices to approach). Add revenue share and credit on the hangtag, and keep it as one theme next to the Overtown and Liberty City heritage work, not the entire Black Miami story."
+    },
+    {
+      "target": "opportunities[white-hot-linen-playoffs]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "White Hot is a team-run ritual where fans are handed a white giveaway shirt in the arena. A $60-plus linen guayabera kit competes with the free shirt, needs team approval on White Hot branding and marks, and pre-selling from Apr 11 commits inventory before seeding is known when the Heat just finished a 10-seed Play-In loss.",
+      "fix": "Position the kit as the elevated, fashion-forward layer above the giveaway (the fanbase dossier's arena-as-runway insight) and agree the White Hot name and timing with the Heat first. Pre-sell only a small core, then restock from a flexible base, and treat guayabera pieces as a separate lifestyle drop that does not depend on a playoff run."
+    },
+    {
+      "target": "opportunities[tax-holiday-value-tier]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The August tax holiday only removes sales tax on items under the cap, so it does not beat flea-market knockoffs on price and is a thin reason to design a line. It also lands in August 2027, long after the Giannis storyline, when jersey demand is lowest, and is priced as priority 1 with the same weight as the playoff kit.",
+      "fix": "Reframe as a back-to-school youth line sized for Hialeah, Miami Gardens and Little Haiti families that uses design and school-colors-adjacent cues, not tax math. Drop it to priority 2, keep the sub-$100 price point, and test the knockoff claim with the retail-behavior dossier's own evidence before presenting it as a strategy pillar."
+    },
+    {
+      "target": "calendar[12] Art Week / opportunities[art-week-commission]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The Art Week drop is pinned to 'the NBA Cup knockout window', but the Heat sit in East Group B with the champion Knicks, Cavaliers, 76ers and Pacers, so a quarterfinal on Dec 4-5 or home semifinal on Dec 8-9 is far from certain, and Art Basel week overlaps all of it. The brief also promises a numbered artist collaboration for a first week of December reveal with no commissioning lead time.",
+      "fix": "Decouple the drop from Cup results and anchor it to Art Week itself, with the arena sale tied to whichever home game falls in that week. Commission the artist by early November at the latest, and say plainly that a collab of this size needs NBA and Fanatics licensing approval for any Heat mark."
+    },
+    {
+      "target": "opportunities[rep-your-barrio]",
+      "type": "timing",
+      "severity": "low",
+      "problem": "The Carnival leg is listed for October, but Miami Broward One Carnival falls on Columbus Day weekend, which is this week in 2026 and too close to act on; the underground dossier already flags this for the Regatta. The series also names hand-lettered HEAT, EL HEAT and CHALÈ for every neighborhood although Kreyòl and Spanish are not interchangeable by community.",
+      "fix": "Start the Caribbean leg at Carnival 2027 and call that out as a 2027-28 item. Let each community's lettering artist choose the word and language, instead of the same three words in every neighborhood."
+    },
+    {
+      "target": "partners[Club Space] / calendar[Miami Music Week]",
+      "type": "other",
+      "severity": "low",
+      "problem": "Club Space is a fragile, high-risk partner for a Nike team: the Park West club sits in an area facing redevelopment pressure, nightlife carries drug and safety reputation risk, and the brief depends on marks being licensed and on one named owner. The Sunrise capsule is also priority 3 yet takes a named partner slot over core-fan partners.",
+      "fix": "Confirm operating status and brand-safety clearance first, and offer a second non-club partner for the capsule, such as a Haulover sandbar or marina crew from the underground dossier. Keep Club Space as optional content, not the launch pillar."
+    },
+    {
+      "target": "calendar[12] Dec 20-25 / noche-buena-to-three-kings",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "A 'Giannis Christmas-game tee' celebrates an away game at Boston with no Miami hook beyond the date, and caja china packaging for a Latin holiday gift set puts a Cuban cooking ritual on a product sold to Haitian, Venezuelan and Nicaraguan households too, which the brief elsewhere says not to flatten.",
+      "fix": "Make the tee a Giannis-Heat rivalry graphic against Boston that works at watch parties on the day, not a game-day souvenir. Let the Noche Buena set be Cuban-led and add parallel Haitian (Jan 1 soup joumou) and Venezuelan or Nicaraguan sets rather than one 'Latin' gift box."
+    },
+    {
+      "target": "strategy (hoops dossier)",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The hoops dossier's lead insight, that park courts (Charles Hadley, Moore, Gibson, Tropical and Flamingo) are the real home arenas, and its Heat Culture work-ethic and Haslem insights are almost absent from the strategy. There is no court refresh, park-league or pickup activation, no hooper-performance line and no homegrown-hero story, although those are the most credible bridge to local players and the one Nike can own against knockoffs.",
+      "fix": "Add a park-courts opportunity with Miami-Dade Parks as the named partner (court refresh, lighting and a Giannis or Bam pickup night), plus a Heat Culture training line led by Haslem and Mourning stories, clearing name and number use with the team and players. Make it priority 1 alongside the Giannis opportunity."
+    },
+    {
+      "target": "strategy (music dossier)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The music dossier flags a likely DJ Khaled x Heat Statement capsule (every Statement uniform carries the Jumpman) and Latin music's calendar in the Heat's building (Premio Lo Nuestro in February, Latin Music Week). The strategy uses neither: DJ Khaled is absent, and the Latin calendar is reduced to Calle Ocho and a Hispanic Heritage Month row.",
+      "fix": "Add a Khaled capsule as a Jordan Brand-adjacent pitch (verify his current status) and a February Premio Lo Nuestro tie-in at Kaseya Center. Anchor Latin product on Noche Latina and the El Heat uniform night as a built-in canvas with confirmed dates."
+    },
+    {
+      "target": "strategy (fanbase dossier)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The fanbase dossier's rivalry insight (Knicks, Celtics, Bucks) is only partly used. The Heat are in an NBA Cup group with the defending champion Knicks, who bring a large New York transplant crowd to Kaseya Center, and the Spurs-Heat Presidents' Day game puts Wembanyama in the building, yet neither appears as a product or activation moment. The strategy is also silent on Giannis's Greek and Nigerian heritage, which the dossier flagged for engagement with his consent.",
+      "fix": "Add a Knicks-night rivalry moment in the Cup window with a transplant-aware graphic, and put Presidents' Day Spurs-Heat on the calendar as a national-eyes night (confirm which team hosts). Handle Giannis's heritage with his team's consent and local Greek and Nigerian community partners, not as decoration."
+    },
+    {
+      "target": "partners",
+      "type": "other",
+      "severity": "medium",
+      "problem": "Eight partners are all either institutions or one DJ, and most of the people the dossiers name (Haslem, Mourning, Denzel Curry, Uncle Luke, Trina, Duval-Carrié's network) are not engaged. There is no hoops partner at all and no LGBTQ+ nightlife partner despite the underground dossier's explicit warning that queer scenes need paid collaboration. Retail partners also rest on unverified status for Foot Locker and House of Hoops at Aventura Mall.",
+      "fix": "Add at least a Miami-Dade parks and rec or school-hoops partner, a named Black Miami creator for Candy Paint, and a paid queer-nightlife collaborator, or explicitly drop that audience. Verify that House of Hoops doors still exist before listing them as venues."
+    },
+    {
+      "target": "risks",
+      "type": "other",
+      "severity": "low",
+      "problem": "The risk section covers politics and IP well but omits the risk that a Giannis-first line sells a star the fanbase just paid Herro, Jaquez and Ware for, and that the sentiment on those departures is unmeasured. It also treats Herro and Jaquez stock respectfully without saying how many units are sitting in the supply chain.",
+      "fix": "Add a sentiment-and-inventory risk: audit Herro and Jaquez stock, plan sell-through through outlet doors and not deep clearance in Hialeah, and measure early-season sentiment before leaning into Giannis-only product."
+    }
+  ],
+  "strengths": [
+    "The Miami-specific palette is genuinely ownable and non-generic: colada, guava, flamboyán, breeze block and oolite are drawn from the counter and the walls, with hex codes and a stated pivot away from Vice.",
+    "It respects community boundaries well: pay-and-credit rules, no flags or Vodou/Lucumí imagery, named local partners such as the Black Archives and Little Haiti Cultural Complex, and trilingual copy written by native speakers.",
+    "The product logic is built for Miami's climate and shopping reality: mesh and ventilation first, fleece only for gifting, tiered pricing, and separate lanes for locals and gateway tourists.",
+    "The calendar uses Miami's own diaspora rhythm (Noche Buena, Three Kings, Haitian Flag Day, 305 Day) rather than generic holidays, and its Giannis storyline nights match the confirmed schedule (Nov 18, Christmas at Boston at 2:30, Jan 28).",
+    "It names a clear fallback and a conservative risk stance on the title-or-bust bet: pair Giannis with Bam, keep championship language off product until earned, and hold playoff inventory flexible."
+  ],
+  "summary": "Strong on cultural specificity and respect, but it overreaches on feasibility and timing. The Flamboyán uniform is a 2027-28 idea dressed as a 2026-27 one, the Giannis colorway has no stated approval path or lead time, and the opener and Christmas moments lean on generic stone-crab and Christmas-tee ideas. It also leaves out the hoops dossier's strongest signals (park courts, Heat Culture, Haslem), the DJ Khaled and Latin-calendar hooks, and the Knicks and Spurs matchups. Fix the timing and approvals, name the Black Miami creators behind Candy Paint, and add a park-courts opportunity before this goes to design."
+}

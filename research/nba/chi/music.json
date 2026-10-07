@@ -115,7 +115,7 @@
     {
       "name": "Saba (Pivot Gang)",
       "role": "Rapper and producer from Austin on the West Side",
-      "why": "He comes from the United Center's side of town; 'Care for Me' and his 2025 album with producer No I.D. make him the respected local voice of the current era."
+      "why": "He comes from the United Center's side of town; 'Care for Me' and his recent work with producer No I.D. make him the respected local voice of the current era."
     },
     {
       "name": "Ravyn Lenae",
@@ -129,13 +129,13 @@
     },
     {
       "name": "Honey Dijon",
-      "role": "Chicago-born house DJ, producer and fashion designer",
+      "role": "Chicago-raised (born in Newark) house DJ, producer and fashion designer",
       "why": "She won a Grammy as a producer on Beyoncé's 'Renaissance' and has collaborated with Comme des Garçons, which makes her the scene's proven bridge from house to fashion."
     },
     {
       "name": "Brandon Breaux",
       "role": "Chicago visual artist",
-      "why": "He painted the cover of Chance's 'Acid Rap,' the defining album art of Chicago's 2010s rap wave, and would be a natural illustrator for a Bulls city collection."
+      "why": "He made the artwork for Chance's 'Acid Rap,' the defining album art of Chicago's 2010s rap wave, and would be a natural illustrator for a Bulls city collection."
     }
   ],
   "moments": [
@@ -173,7 +173,7 @@
       "name": "Bud Billiken Parade",
       "timing": "Second Saturday of August, King Drive to Washington Park",
       "month": 8,
-      "why": "The country's largest Black parade, running since 1929 and powered by South Side drumlines, marching bands and dance troupes."
+      "why": "One of the country's oldest and largest Black parades, running since 1929 and powered by South Side drumlines, marching bands and dance troupes."
     },
     {
       "name": "Frankie Knuckles Day",
@@ -185,7 +185,7 @@
       "name": "ARC Music Festival",
       "timing": "Labor Day weekend, Union Park",
       "month": 9,
-      "why": "A house and techno festival a short drive from the United Center, timed just ahead of Bulls preseason."
+      "why": "A house and techno festival a short drive from the United Center, a few weeks ahead of Bulls preseason."
     }
   ],
   "vocabulary": [
@@ -282,27 +282,69 @@
     "City-pack copy and art from the open-mic pipeline: commission Young Chicago Authors and YOUmedia poets to write the copy and Brandon Breaux to illustrate it, with a spoken-word halftime moment."
   ],
   "watchouts": [
-    "Drill is tied to real killings and active feuds, and Lil Durk faces federal murder-for-hire charges, so keep drill slang, set and block references (O-Block, 'on foenem,' 'Chiraq') and its artists off product and out of content.",
+    "Drill is tied to real killings and active feuds, and Lil Durk was federally charged with murder-for-hire in 2024 (case status unverified), so keep drill slang, set and block references (O-Block, 'on foenem,' 'Chiraq') and its artists off product and out of content.",
     "R. Kelly, who is convicted and wrote 'I Believe I Can Fly' for Space Jam, and Kanye West, after his antisemitic statements and the adidas split, are off-limits, including in Jordan-era nostalgia, playlists and archival footage.",
     "Licensing: 'Sirius' is Alan Parsons Project IP and 'Sirius' is also a SiriusXM mark. Chess, Trax and Dance Mania label art, the band Chicago's logo, Lyrical Lemonade branding and Frankie Knuckles' name and likeness all need clearance, so design originals or license.",
     "House was built by Black and Latino queer DJs and dancers at The Warehouse. Telling it as a generic 'Chicago party' erases them, so credit and pay Black and queer DJs, consult the Knuckles estate and the Chosen Few, and don't limit it to Pride-month timing.",
     "Check rival-brand deals before any partnership: Derrick Rose, Englewood's hometown hero, is a longtime adidas athlete, and artist footwear and apparel deals change fast."
   ],
   "sources": [
-    { "title": "Chicago Bulls (official team site)", "url": "https://www.nba.com/bulls" },
-    { "title": "United Center (official site)", "url": "https://www.unitedcenter.com" },
-    { "title": "Chicago house (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago_house" },
-    { "title": "Frankie Knuckles (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Frankie_Knuckles" },
-    { "title": "The Warehouse (nightclub) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/The_Warehouse_(nightclub)" },
-    { "title": "Chess Records (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chess_Records" },
-    { "title": "Chicago blues (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago_blues" },
-    { "title": "Drill music (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Drill_music" },
-    { "title": "Chicago Blues Festival (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago_Blues_Festival" },
-    { "title": "Bud Billiken Parade and Picnic (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Bud_Billiken_Parade_and_Picnic" },
-    { "title": "Chicago Stadium (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Chicago_Stadium" },
-    { "title": "2020 NBA All-Star Game (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2020_NBA_All-Star_Game" },
-    { "title": "Chicago Department of Cultural Affairs and Special Events", "url": "https://www.chicago.gov/city/en/depts/dca.html" },
-    { "title": "Buddy Guy's Legends (official site)", "url": "https://www.buddyguy.com" }
+    {
+      "title": "Chicago Bulls (official team site)",
+      "url": "https://www.nba.com/bulls"
+    },
+    {
+      "title": "United Center (official site)",
+      "url": "https://www.unitedcenter.com"
+    },
+    {
+      "title": "Chicago house (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago_house"
+    },
+    {
+      "title": "Frankie Knuckles (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Frankie_Knuckles"
+    },
+    {
+      "title": "The Warehouse (nightclub) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Warehouse_(nightclub)"
+    },
+    {
+      "title": "Chess Records (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chess_Records"
+    },
+    {
+      "title": "Chicago blues (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago_blues"
+    },
+    {
+      "title": "Drill music (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Drill_music"
+    },
+    {
+      "title": "Chicago Blues Festival (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Blues_Festival"
+    },
+    {
+      "title": "Bud Billiken Parade and Picnic (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Bud_Billiken_Parade_and_Picnic"
+    },
+    {
+      "title": "Chicago Stadium (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Stadium"
+    },
+    {
+      "title": "2020 NBA All-Star Game (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/2020_NBA_All-Star_Game"
+    },
+    {
+      "title": "Chicago Department of Cultural Affairs and Special Events",
+      "url": "https://www.chicago.gov/city/en/depts/dca.html"
+    },
+    {
+      "title": "Buddy Guy's Legends (official site)",
+      "url": "https://www.buddyguy.com"
+    }
   ],
   "confidence": "medium",
   "provenance": {

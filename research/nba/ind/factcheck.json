@@ -1,0 +1,287 @@
+{
+ "team": "ind",
+ "checked": 92,
+ "verdicts": [
+  {
+   "lens": "strategy",
+   "claim": "Haliburton's signature shoe is with Puma ('Hali' line / 'Hali 1')",
+   "verdict": "corrected",
+   "note": "Live check: Haliburton left Nike and signed a multi-year Puma deal in Oct 2024, wearing the All-Pro Nitro with a signature line 'expected'. Puma is confirmed; the 'Hali'/'Hali 1' naming is not. Fanbase dossier's Adidas query is wrong. Editor should say 'Puma athlete (signed Oct 2024)' and drop 'Hali 1' wording.",
+   "source": "https://www.si.com/fannation/sneakers/news/tyrese-haliburton-signs-massive-sneaker-deal-with-puma"
+  },
+  {
+   "lens": "music",
+   "claim": "Haliburton is a Puma signature athlete (Hali 1)",
+   "verdict": "corrected",
+   "note": "Puma confirmed; 'Hali 1' name removed from watchouts and verify queue.",
+   "source": "https://ipacers.com/2024/10/10/tyrese-haliburton-explains-decision-to-sign-with-puma-debuts-commercial/"
+  },
+  {
+   "lens": "uniform",
+   "claim": "Earlier Pacers City Editions used racing cues; recent ones leaned on wood floors",
+   "verdict": "corrected",
+   "note": "Live check: 2019-20 racing/checkered-flag 'Always Lead'; 2023-24 black and 2024-25 white hand-scripted 'Indy'; 2025-26 Moments Mixtape with 1984-90 lettering, Florence Griffith Joyner color blocking and 'Boom Baby!' on the anthem tag. No wood-floor edition found. Summary rewritten.",
+   "source": "https://www.nba.com/pacers/city"
+  },
+  {
+   "lens": "strategy",
+   "claim": "Brief avoids repeating 'Hickory, flag or racing' City Edition concepts",
+   "verdict": "corrected",
+   "note": "A Hickory edition was not found; the verified archive is racing (2019-20), 'Indy' script (2023-25) and Mixtape (2025-26). Editor should replace 'Hickory, flag' with the verified list and note the 2019-20 racing edition, which affects the Pace Line theme.",
+   "source": "https://www.nba.com/pacers/city"
+  },
+  {
+   "lens": "art",
+   "claim": "Florence Griffith Joyner designed the Pacers' 1990-97 uniforms",
+   "verdict": "confirmed",
+   "note": "Consistent with the 2025-26 Mixtape tying to FloJo color blocking.",
+   "source": "https://www.nba.com/pacers/city"
+  },
+  {
+   "lens": "food",
+   "claim": "Milktooth and Bluebeard are operating in Fletcher Place",
+   "verdict": "corrected",
+   "note": "Live check: Milktooth closed in early 2026 for an Arlene's conversion and is reportedly returning; Bluebeard status was not confirmed. Detail now flags this. Do not name either in a launch plan without a call.",
+   "source": "https://www.ibj.com/topics/fletcher-place"
+  },
+  {
+   "lens": "culture",
+   "claim": "New Castle Fieldhouse holds about 9,300",
+   "verdict": "corrected",
+   "note": "Capacity is roughly 7,300 after renovation (formerly about 9,300). Fixed in culture, art and underground.",
+   "source": ""
+  },
+  {
+   "lens": "art",
+   "claim": "New Castle's 9,000-plus-seat gym is the world's largest high school gym",
+   "verdict": "corrected",
+   "note": "Softened to 'roughly 7,300 seats, billed as largest'.",
+   "source": ""
+  },
+  {
+   "lens": "culture",
+   "claim": "Girls' IHSAA finals in late February or early March",
+   "verdict": "corrected",
+   "note": "Girls' finals are normally early February. Changed; 2027 date still to verify.",
+   "source": ""
+  },
+  {
+   "lens": "culture",
+   "claim": "Haliburton's 'most overrated' tag in an anonymous player poll",
+   "verdict": "removed",
+   "note": "Oddly specific, no sourcing I trust. Removed.",
+   "source": ""
+  },
+  {
+   "lens": "underground",
+   "claim": "Kyle Larson's 2024 and 2025 Indy-Charlotte Double attempts",
+   "verdict": "corrected",
+   "note": "Only the 2024 attempt is solid. 2025 removed.",
+   "source": ""
+  },
+  {
+   "lens": "uniform",
+   "claim": "Mel Daniels three-time ABA MVP",
+   "verdict": "corrected",
+   "note": "Two-time (1968, 1969). Fixed.",
+   "source": ""
+  },
+  {
+   "lens": "uniform",
+   "claim": "ABA-era Pacers look was red, white and blue",
+   "verdict": "corrected",
+   "note": "Pacers wore blue and gold; red-white-blue belongs to the ABA ball. Fixed in four fields.",
+   "source": ""
+  },
+  {
+   "lens": "fanbase",
+   "claim": "Jalen Rose and Mark Jackson on the 1998 and 2000 Finals teams",
+   "verdict": "corrected",
+   "note": "1998 ended in the conference finals; only 2000 was a Finals. Fixed.",
+   "source": ""
+  },
+  {
+   "lens": "rhythm",
+   "claim": "'Boom Baby' tied to Mark Boyle",
+   "verdict": "corrected",
+   "note": "It is Slick Leonard's call. Fixed in rhythm and retail-behavior.",
+   "source": ""
+  },
+  {
+   "lens": "retail-landscape",
+   "claim": "Treat Gainbridge as launch door for City Edition and Specter-adjacent drops",
+   "verdict": "corrected",
+   "note": "Specter covers eight franchises (Celtics, Lakers, Warriors, Knicks, 76ers, Kings, Pistons, Hawks); the Pacers are not one. Removed.",
+   "source": ""
+  },
+  {
+   "lens": "retail-landscape",
+   "claim": "Lids and Finish Line 'grew up' in Indianapolis",
+   "verdict": "corrected",
+   "note": "Finish Line was founded in Indianapolis; Lids is Indianapolis-based but not founded there. Softened.",
+   "source": ""
+  },
+  {
+   "lens": "music",
+   "claim": "Indy Jazz Fest runs in June around Juneteenth",
+   "verdict": "corrected",
+   "note": "Timing uncertain (I recall a fall slot). Claim softened; the Avenue summer chapter should not hang on it.",
+   "source": ""
+  },
+  {
+   "lens": "art",
+   "claim": "Talbot Street Art Fair held since the 1950s",
+   "verdict": "corrected",
+   "note": "Founding decade unsure; softened to 'long-running'.",
+   "source": ""
+  },
+  {
+   "lens": "fanbase",
+   "claim": "Hex values for Moments Mixtape royal",
+   "verdict": "corrected",
+   "note": "Dossiers use four different guesses (#2E5BBA, #1D4ED8, #2563C9, #1F4FA8). None is verified. Lab-match to the actual uniform; strategy palette #1F4FA8 is a placeholder.",
+   "source": ""
+  },
+  {
+   "lens": "strategy",
+   "claim": "Oct 30 is Haliburton's first home game and 'Back Home Again' home-opener anchor",
+   "verdict": "unverifiable",
+   "note": "Only Oct 30 (76ers) is a confirmed home date. The regular season opens Oct 20 and the Pacers have no opener, so an earlier home game may exist. Editor should say 'first home game (confirm)'.",
+   "source": ""
+  },
+  {
+   "lens": "strategy",
+   "claim": "Attucks '55 / Avenue uniform proposed for 2027-28 as an untold story",
+   "verdict": "unverifiable",
+   "note": "No City Edition in the verified archive tells it, but earlier Classic or Statement sets and the 2023 Gainbridge-themed set were not checked.",
+   "source": "https://www.nba.com/pacers/city"
+  },
+  {
+   "lens": "strategy",
+   "claim": "Hinkle '28 timeline: reveal Nov 27, sell Dec 1-11",
+   "verdict": "unverifiable",
+   "note": "Cup finalists are not set until the Dec 8-9 semifinals, now in higher seeds' home markets, and Butler/NBA clearance is unproven. Timeline is aggressive.",
+   "source": ""
+  },
+  {
+   "lens": "hoops",
+   "claim": "Hinkle Fieldhouse hosts the Dec 11 Cup final; Butler licensing for apparel",
+   "verdict": "unverifiable",
+   "note": "Date and venue confirmed by league facts. Butler and NBA terms for Hinkle marks are unknown.",
+   "source": ""
+  },
+  {
+   "lens": "music",
+   "claim": "Madam Walker Legacy Center and Crispus Attucks Museum are open and willing partners",
+   "verdict": "unverifiable",
+   "note": "Both are long-established, but current programming and appetite for a Nike co-design must be confirmed before they are named.",
+   "source": ""
+  },
+  {
+   "lens": "music",
+   "claim": "Jazz Kitchen, Chatterbox, HI-FI, the Vogue, Luna Music and Rhythm! Discovery Center still open under these names",
+   "verdict": "unverifiable",
+   "note": "Long-standing, but no live check. Confirm before any venue activation.",
+   "source": ""
+  },
+  {
+   "lens": "underground",
+   "claim": "Melody Inn still hosts Saturday Punk Rock Night; Emerson Theater and White Rabbit Cabaret open",
+   "verdict": "unverifiable",
+   "note": "Small rooms are fragile and I could not confirm any. Leave unbranded; confirm before even naming.",
+   "source": ""
+  },
+  {
+   "lens": "underground",
+   "claim": "Homefield Apparel is Indianapolis-based with retail presence",
+   "verdict": "unverifiable",
+   "note": "Plausible but unconfirmed; it is named as collaborator in strategy.",
+   "source": ""
+  },
+  {
+   "lens": "food",
+   "claim": "Plump's Last Shot open in Broad Ripple and Bobby Plump involved",
+   "verdict": "unverifiable",
+   "note": "Strategy builds a partner pop-up on it. Confirm open and Plump's role (he is about 90).",
+   "source": ""
+  },
+  {
+   "lens": "food",
+   "claim": "Long's Bakery, Mug-n-Bun, Red Key Tavern, Shapiro's and Slippery Noodle operating; Long's street location",
+   "verdict": "unverifiable",
+   "note": "Long-standing institutions, but the Long's address and hours were not checked.",
+   "source": ""
+  },
+  {
+   "lens": "food",
+   "claim": "Craig Huse leads Huse Culinary; St. Elmo sauce in grocery stores",
+   "verdict": "unverifiable",
+   "note": "Ownership and licensing door should be confirmed.",
+   "source": ""
+  },
+  {
+   "lens": "retail-landscape",
+   "claim": "Nike Factory Store at Edinburgh; Silver in the City on Mass Ave; Circle Centre tenant mix",
+   "verdict": "unverifiable",
+   "note": "Strategy's volume door and independent seeding rely on these.",
+   "source": ""
+  },
+  {
+   "lens": "retail-landscape",
+   "claim": "Finish Line and Lids Indianapolis HQ and current ownership",
+   "verdict": "unverifiable",
+   "note": "Finish Line is under JD Sports and Lids ownership may have changed. Strategy leans on them as 'homegrown'.",
+   "source": ""
+  },
+  {
+   "lens": "culture",
+   "claim": "Naismith's 1925 quote 'center of the sport'",
+   "verdict": "unverifiable",
+   "note": "Wording is unchecked; it is slated for a hangtag. Do not print until sourced.",
+   "source": ""
+  },
+  {
+   "lens": "rhythm",
+   "claim": "Presidents' Day Feb 15 Pacers vs Warriors; Oct 30 76ers at Pacers",
+   "verdict": "confirmed",
+   "note": "Both are in the league facts; the Feb 15 home team and tip time are still uncaptured.",
+   "source": ""
+  },
+  {
+   "lens": "fanbase",
+   "claim": "Gainbridge Fieldhouse name and Herb Simon ownership unchanged",
+   "verdict": "unverifiable",
+   "note": "The current facts leave ownership and arena blank. Confirm before print.",
+   "source": ""
+  },
+  {
+   "lens": "hoops",
+   "claim": "Hinkle (1928) hosted state finals through 1971; Milan 1954; Attucks 1955-56 first all-Black champion",
+   "verdict": "confirmed",
+   "note": "Long-established history.",
+   "source": ""
+  },
+  {
+   "lens": "culture",
+   "claim": "Indiana Black Expo Summer Celebration mid-July; Circle City Classic early October; IBE founded 1970",
+   "verdict": "unverifiable",
+   "note": "Dates are expected, not confirmed, and IBE's current programming is unknown.",
+   "source": ""
+  },
+  {
+   "lens": "rhythm",
+   "claim": "Gen Con, State Fair, DCI, ISSMA, BOA and PASIC 2026-27 dates",
+   "verdict": "unverifiable",
+   "note": "Seasonal windows are right, but exact dates (PASIC especially) are unchecked.",
+   "source": ""
+  },
+  {
+   "lens": "hoops",
+   "claim": "Braden Smith on a two-way deal with the Pacers",
+   "verdict": "confirmed",
+   "note": "Matches the current facts (second round, two-way).",
+   "source": ""
+  }
+ ],
+ "summary": "Dossiers are largely sound on long-established history (Hinkle, Attucks, Milan, Reggie's 8.9, the ABA titles, FloJo, Indiana Avenue) and consistent with the verified current facts (Haliburton's return, Zubac, the Oct 30 Cup opener, Hinkle Dec 11). Ten fixes were made in place: New Castle capacity (about 7,300, not 9,300), girls' state-final timing, Mel Daniels' MVPs, the ABA color description, a Pacers Finals-team error, the Boom Baby attribution to Mark Boyle, a false Specter reference, Larson's Double, an unsourced poll claim and Hali 1 naming. Three live checks: Puma is confirmed (signed Oct 2024), the City Edition archive is racing 2019-20, Indy script 2023-25 and Mixtape 2025-26 (no Hickory edition found), and Milktooth briefly closed in 2026. Brief fixes for the editor: use verified City Edition history, say Oct 30 is the only confirmed home date and stop saying 'Hali 1', reconcile the royal-blue hex, and treat small venues and shops as unverified."
+}

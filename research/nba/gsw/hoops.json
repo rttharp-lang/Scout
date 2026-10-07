@@ -1,0 +1,335 @@
+{
+  "team": "gsw",
+  "lens": "hoops",
+  "headline": "Bay Area hoops is an Oakland-rooted, East Bay-grit tradition that the San Francisco-era Warriors inherited, and the fans who claim Dame, Gary Payton and Jason Kidd are the ones who never left the Town.",
+  "summary": "The Warriors play in San Francisco, but the basketball identity of the Bay was built in West and East Oakland rec gyms, at McClymonds and Oakland Tech, and on the AAU circuit, which produced Bill Russell, Gary Payton, Jason Kidd and Damian Lillard. San Francisco adds a different strand: the University of San Francisco Dons of the Russell and K.C. Jones era, Kezar Pavilion, and city rec centers in the Fillmore and Mission. Silicon Valley and the Peninsula add Catholic-school and AAU depth (Mitty, Saint Mary's, Santa Clara). The region now has three pro tiers: the Warriors, the G League Santa Cruz Warriors, and the WNBA's Golden State Valkyries. Hoopers dress for function and local pride first: Oakland-first apparel, practical layers for foggy courts, and shoes that actually play. Any Warriors-adjacent product has to respect that Oakland is the emotional home even though Chase Center is the venue.",
+  "insights": [
+    {
+      "title": "Oakland is the hoops capital, and the Warriors are not the whole story",
+      "detail": "The pipeline from Bill Russell (McClymonds) through Gary Payton (Skyline), Jason Kidd (St. Joseph Notre Dame, Alameda) to Damian Lillard (Oakland High) is the Bay's real basketball pedigree. Many fans still claim the East Bay identity from the team's 47 years at Oracle/Oakland Coliseum Arena, and the move to San Francisco in 2019 left a sentimental gap.",
+      "implication": "Lead hoops-culture product with Oakland and 'the Town' language and graphics, not just the Chase Center skyline. Treat Oakland as a distinct design territory from San Francisco."
+    },
+    {
+      "title": "Dame Lillard is the living bridge between Oakland hoops and Nike-adjacent storytelling",
+      "detail": "Lillard is the most visible active Oakland-born star and keeps his hometown identity front and center in his music, community work and branding. He is not tied to Nike's Warriors product, so he is a cultural reference rather than a roster asset.",
+      "implication": "Use Oakland-born legends as story and archive references on collections without implying endorsement. Any named collaboration needs separate rights and partner conversations."
+    },
+    {
+      "title": "Catholic-school and public-school rivalries carry real neighborhood pride",
+      "detail": "Oakland's public-school tradition (McClymonds, Oakland Tech, Oakland High) sits alongside East Bay Catholic and independent programs like Bishop O'Dowd and Archbishop Mitty on the Peninsula side. In San Francisco, programs like Sacred Heart Cathedral, St. Ignatius, Lowell and Lincoln anchor a competitive city scene.",
+      "implication": "School-colour and hometown-pride capsules (team-issue style warmups, tees, practice jerseys) can work at the youth and high-school level, but should be done with the schools and licensed where marks are used."
+    },
+    {
+      "title": "The college scene is split, with USF's history as the sleeper story",
+      "detail": "Cal and Stanford now share a conference, Saint Mary's is a nationally ranked mid-major whose long WCC rivalry with Gonzaga changes now that Gonzaga is slated to join the Pac-12 in 2026, and USF's back-to-back 1955 and 1956 NCAA titles with Russell and K.C. Jones are a deep but under-told local story.",
+      "implication": "A USF-era vintage graphic or heritage story (licensed) is a strong archive hook that is genuinely San Francisco and not generic Warriors."
+    },
+    {
+      "title": "Three pro tiers mean three fan identities",
+      "detail": "The Warriors, the G League Santa Cruz Warriors (affiliate, Kaiser Permanente Arena in Santa Cruz) and the Golden State Valkyries (WNBA expansion team that began play in 2025 and sold out Chase Center) each have a different crowd. The Valkyries in particular reached many first-time and women's-basketball fans quickly.",
+      "implication": "Do not treat Bay Area hoops as only a men's NBA fandom. Women's product (cuts, sizing, campaigns) around the Valkyries is a real opportunity."
+    },
+    {
+      "title": "The Warriors enter 2026-27 with the dynasty core aging, so nostalgia is a live driver",
+      "detail": "Per current reporting the core of Curry, Green and Kerr is running it back after a 37-45 season and a play-in exit, with Butler and Moody injured. The new Nike 'Specter' uniforms are among the first of the eight historic franchises, which includes Golden State.",
+      "implication": "Pair the Specter reveal with a 'dynasty years' heritage story and the Oakland-era archive. Keep campaign tone earned and grounded, not triumphalist."
+    }
+  ],
+  "places": [
+    {
+      "name": "Kezar Pavilion",
+      "kind": "gym",
+      "neighborhood": "Haight-Ashbury / Golden Gate Park edge, San Francisco",
+      "why": "Historic San Francisco indoor court next to Kezar Stadium that has hosted city league, tournament and community games for decades."
+    },
+    {
+      "name": "Hamilton Recreation Center",
+      "kind": "rec center gym",
+      "neighborhood": "Fillmore / Western Addition, San Francisco",
+      "why": "A long-standing Western Addition rec center tied to Black San Francisco's youth hoops and community life."
+    },
+    {
+      "name": "Mission Recreation Center",
+      "kind": "rec center gym",
+      "neighborhood": "Mission, San Francisco",
+      "why": "A city rec hub where Mission neighborhood pickup and youth leagues run, with a significant Latino hooper base."
+    },
+    {
+      "name": "Mosswood Park",
+      "kind": "outdoor court",
+      "neighborhood": "Temescal / Oakland",
+      "why": "A well-known Oakland park with a busy outdoor court and recreation center near Broadway and MacArthur."
+    },
+    {
+      "name": "Raimondi Park",
+      "kind": "outdoor court",
+      "neighborhood": "West Oakland",
+      "why": "West Oakland park near McClymonds territory with a long local pickup tradition."
+    },
+    {
+      "name": "McClymonds High School",
+      "kind": "high school program",
+      "neighborhood": "West Oakland",
+      "why": "Alma mater of Bill Russell and Frank Robinson; the symbolic cradle of Oakland basketball."
+    },
+    {
+      "name": "Oakland Tech and Oakland High gyms",
+      "kind": "high school program",
+      "neighborhood": "Oakland",
+      "why": "Public-school programs that feed the East Bay rivalry scene; Oakland High is Lillard's school."
+    },
+    {
+      "name": "Chase Center",
+      "kind": "arena",
+      "neighborhood": "Mission Bay, San Francisco",
+      "why": "Home of the Warriors and the Golden State Valkyries; the NBA venue since 2019."
+    },
+    {
+      "name": "Kaiser Permanente Arena",
+      "kind": "arena",
+      "neighborhood": "Santa Cruz",
+      "why": "Home of the Santa Cruz Warriors, the G League affiliate."
+    },
+    {
+      "name": "War Memorial Gym (University of San Francisco)",
+      "kind": "college gym",
+      "neighborhood": "Lone Mountain, San Francisco",
+      "why": "USF's home court, with the Russell and K.C. Jones championship heritage."
+    }
+  ],
+  "people": [
+    {
+      "name": "Bill Russell",
+      "role": "Hall of Fame center, McClymonds and USF alumnus",
+      "why": "The foundational Bay Area basketball figure, whose USF and Oakland roots are claimed by both cities."
+    },
+    {
+      "name": "Gary Payton",
+      "role": "Hall of Fame guard, Skyline High (Oakland)",
+      "why": "The defining Oakland-born competitor; his son Gary Payton II is a Warriors guard and carries the family name."
+    },
+    {
+      "name": "Jason Kidd",
+      "role": "Hall of Fame guard and coach, St. Joseph Notre Dame (Alameda)",
+      "why": "East Bay star who made Cal famous and a Bay Area pride point."
+    },
+    {
+      "name": "Damian Lillard",
+      "role": "NBA star, Oakland High alumnus",
+      "why": "The most prominent active Oakland native; Oakland pride is central to his public identity."
+    },
+    {
+      "name": "Stephen Curry",
+      "role": "Warriors superstar",
+      "why": "The face of the dynasty and the reason the Bay's fandom is national; his Under Armour partnership ended in late 2025 and Curry Brand is now independent, so his next partner is a competitive and licensing watchout."
+    },
+    {
+      "name": "Steve Kerr",
+      "role": "Warriors head coach",
+      "why": "Architect of the 'Strength in Numbers' era and a Bay Area institution."
+    },
+    {
+      "name": "Golden State Valkyries",
+      "role": "WNBA team",
+      "why": "Expansion franchise that began play in 2025 and brought a new fan base into Bay hoops."
+    },
+    {
+      "name": "Draymond Green",
+      "role": "Warriors forward",
+      "why": "Heart of the dynasty and a personality fans claim as part of the local identity."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Warriors regular season tip-off",
+      "timing": "Late October (opening night Oct 20; Warriors at Lakers Oct 21)",
+      "month": 10,
+      "why": "The start of the 2026-27 season and the first look at the roster; which games Specter is worn in is unconfirmed."
+    },
+    {
+      "name": "NBA Cup group play",
+      "timing": "Fridays Oct 30 to Nov 27",
+      "month": 11,
+      "why": "Warriors are in West Group C with the Spurs, Lakers, Trail Blazers and Kings."
+    },
+    {
+      "name": "Christmas Day at Chase Center",
+      "timing": "Dec 25, Denver at Golden State, 10:30 p.m. ET",
+      "month": 12,
+      "why": "The marquee national window for Warriors product and storytelling."
+    },
+    {
+      "name": "Santa Cruz Warriors G League season",
+      "timing": "Roughly November through March",
+      "month": 11,
+      "why": "Local pro tier where prospects and two-way players are seen up close."
+    },
+    {
+      "name": "March Madness",
+      "timing": "Mid-March",
+      "month": 3,
+      "why": "Saint Mary's, Cal, Stanford and USF rivalries peak in conference tournament week."
+    },
+    {
+      "name": "NBA Play-In and Playoffs",
+      "timing": "April",
+      "month": 4,
+      "why": "The Warriors were a play-in team last year, so the late-season stretch is the peak fan engagement window."
+    },
+    {
+      "name": "Valkyries season",
+      "timing": "May through September",
+      "month": 5,
+      "why": "Opens a second major hoops moment in the summer when NBA is quiet."
+    },
+    {
+      "name": "Summer pro-am and rec-league run",
+      "timing": "June through August",
+      "month": 7,
+      "why": "Oakland and San Francisco rec and pro-am leagues play in summer; confirm current organizers before activating."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Town",
+      "meaning": "Oakland, used with pride by locals and the basis of 'Oakland Forever' era merchandise."
+    },
+    {
+      "term": "Dub Nation",
+      "meaning": "The Warriors fan community; 'Dubs' is the shorthand."
+    },
+    {
+      "term": "Hella",
+      "meaning": "Norcal intensifier, used constantly; hallmark of local speech."
+    },
+    {
+      "term": "Hyphy",
+      "meaning": "East Bay music and dance movement from the 2000s; the 'go dumb' energy is part of Oakland's pride vocabulary."
+    },
+    {
+      "term": "The Bay / the Yay",
+      "meaning": "The wider Bay Area, with 'the Yay' as a more intimate East Bay term."
+    },
+    {
+      "term": "We Believe",
+      "meaning": "The shorthand for the 2007 playoff upset team, a touchstone for pre-dynasty Oakland fans."
+    },
+    {
+      "term": "Strength in Numbers",
+      "meaning": "The Kerr-era team-first ethos fans use as shorthand for the dynasty's style."
+    },
+    {
+      "term": "Night night",
+      "meaning": "Curry's celebratory wave that doubles as a fan chant; a graphic and caption hook."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Warriors royal blue",
+      "type": "color",
+      "hex": "#1D428A",
+      "source": "Official Golden State Warriors primary blue.",
+      "use": "Anchor for Specter-adjacent and Warriors capsule product; pair with gold for a heritage feel."
+    },
+    {
+      "cue": "California gold",
+      "type": "color",
+      "hex": "#FFC72C",
+      "source": "Warriors gold and the broader Golden State identity.",
+      "use": "Accent colour on trim, numbers and outsoles; use sparingly for impact."
+    },
+    {
+      "cue": "Valkyries violet and black",
+      "type": "color",
+      "hex": "#7A4FBF",
+      "source": "The Golden State Valkyries brand palette; verify exact spec with official brand guide.",
+      "use": "Use only for licensed Valkyries product; verify exact value with the team."
+    },
+    {
+      "cue": "Oakland 'The Town' script and block lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Oakland-era Warriors 'The Town' and 'Oakland Forever' graphics and local streetwear.",
+      "use": "Use hometown-block lettering on tees and hoodies; license any team wordmarks."
+    },
+    {
+      "cue": "Court-worn hardwood and fog-grey layers",
+      "type": "texture",
+      "hex": "#8E98A3",
+      "source": "Foggy outdoor courts and unheated gyms, where hoopers wear layers to and from the court.",
+      "use": "Lightweight shell, warm-up and hoodie product in cool greys and washed blues for the Bay climate."
+    },
+    {
+      "cue": "Bay Bridge and Golden Gate line work",
+      "type": "graphic",
+      "hex": "",
+      "source": "Skyline silhouettes tied to both Oakland and San Francisco.",
+      "use": "Use thin line art on sock, tee and jersey details; avoid the generic Golden Gate postcard look."
+    },
+    {
+      "cue": "Heritage 1955-56 USF Dons graphic",
+      "type": "story",
+      "hex": "",
+      "source": "Bill Russell and K.C. Jones led USF to back-to-back NCAA titles in 1955 and 1956.",
+      "use": "Archive-inspired tee or warm-up story; requires USF licensing."
+    }
+  ],
+  "productHooks": [
+    "Specter Warriors capsule paired with an 'Oakland to San Francisco' dynasty-years story, with equal weight to both cities.",
+    "Oakland-first hoops pack of tees, shorts and warm-ups with 'The Town' typography, built with local designers and credited properly.",
+    "Valkyries-led women's capsule with proper sizing and fit, built with the team under license.",
+    "Fog-ready travel warm-up and shell for outdoor and rec-gym hoopers, in Bay blue and grey.",
+    "USF heritage capsule built around the 1955-56 titles, with university licensing."
+  ],
+  "watchouts": [
+    "Stephen Curry left Under Armour in late 2025 and is reportedly a sneaker free agent (a Li-Ning report is unconfirmed), so any Curry-named reference needs clear separation from Nike product until his deal is confirmed.",
+    "Oakland pride is tied to the Warriors' 2019 departure and the Raiders and A's moves; do not use Oakland graphics casually or as pure nostalgia that ignores the sting.",
+    "School, team, Valkyries, Santa Cruz Warriors and USF marks all require licensing; do not lift logos for street-level hometown product.",
+    "Credit and pay the Oakland designers, artists and community groups that shape local hoops style rather than copying their graphics."
+  ],
+  "sources": [
+    {
+      "title": "Golden State Warriors (official)",
+      "url": "https://www.nba.com/warriors"
+    },
+    {
+      "title": "Golden State Valkyries (official)",
+      "url": "https://valkyries.wnba.com"
+    },
+    {
+      "title": "Santa Cruz Warriors (official)",
+      "url": "https://santacruz.gleague.nba.com"
+    },
+    {
+      "title": "Chase Center (official)",
+      "url": "https://www.chasecenter.com"
+    },
+    {
+      "title": "Bill Russell (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Bill_Russell"
+    },
+    {
+      "title": "San Francisco Dons men's basketball (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/San_Francisco_Dons_men%27s_basketball"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Current Warriors home venue, arena name and ownership as of the 2026-27 season (Chase Center naming and ownership not verified).",
+      "The 2026-27 Warriors City Edition design and which games the Specter uniforms are worn in.",
+      "Jimmy Butler and Moses Moody injury timelines and return dates.",
+      "Golden State Valkyries 2026 season status, home arenas, practice facility and brand colors (violet hex is approximate).",
+      "Santa Cruz Warriors still operating at Kaiser Permanente Arena and still the Warriors' G League affiliate.",
+      "Current Oakland and San Francisco summer pro-am and rec league organizers, names and dates.",
+      "Kezar Pavilion, Hamilton Recreation Center, Mission Recreation Center, Mosswood Park and Raimondi Park court conditions and programming as of 2026.",
+      "Where Stephen Curry signed after leaving Under Armour (late 2025), and Curry Brand status.",
+      "Gary Payton II and Damian Lillard current teams and status.",
+      "Current AAU and high school program names, rankings and rivalries (McClymonds, Oakland Tech, Oakland High, Bishop O'Dowd, Mitty, Sacred Heart Cathedral).",
+      "Cal, Stanford, Saint Mary's and Gonzaga conference alignment for 2026-27 (Gonzaga to Pac-12).",
+      "Warriors home opener date and Chase Center schedule for October and November 2026."
+    ]
+  }
+}
