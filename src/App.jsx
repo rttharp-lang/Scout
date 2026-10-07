@@ -2381,6 +2381,7 @@ function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDa
         <div style={{ marginTop: 14 }}>
           <button onClick={() => { onNewSearch(); onClose(); }} style={{ ...row, fontWeight: 700 }}><Search size={17} color={NEON} /> New trip</button>
           <button onClick={() => { if (tripsRef.current) tripsRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }} style={{ ...row, fontWeight: 700 }}><ChevronRight size={17} color={NEON} /> Your trips</button>
+          <a href="/nba/" style={{ ...row, fontWeight: 700, textDecoration: "none" }}><ChevronRight size={17} color={NEON} /> Home Court · NBA markets</a>
         </div>
 
         <div style={sectionLabel}>Account</div>

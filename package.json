@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "smoke": "vite build && node scripts/smoke.mjs && node scripts/review-smoke.mjs && node scripts/hub-smoke.mjs"
+    "smoke": "vite build && node scripts/smoke.mjs && node scripts/review-smoke.mjs && node scripts/hub-smoke.mjs && node scripts/homecourt-smoke.mjs",
+    "research:validate": "node scripts/nba/validate.mjs --all",
+    "research:assemble": "node scripts/nba/assemble.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
     "@supabase/supabase-js": "^2.108.2",
     "lucide-react": "^0.460.0",
     "react": "^18.3.1",
