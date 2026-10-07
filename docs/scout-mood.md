@@ -67,8 +67,25 @@ fakes it:
   - only accounts an admin adds to `mood_curators` with `verified = true`
     can approve, and only in their own name;
   - un-verifying a curator immediately withdraws all of their approvals.
+- **Approvals store what the source says, never what a browser says.**
+  Before anything is approved, `/api/mood/resolve` re-fetches the image from
+  its source by id: its URLs, credit and license. If the source's image isn't
+  the one the curator was looking at, nothing is approved.
+- A badge also has to match the photo itself, not just the id, so it can't
+  attach to an image the curator never saw.
+- Curators act only in their own name. Revisiting a review never re-submits
+  another curator's verdicts, and switching an image to Pass withdraws that
+  curator's approval.
+- The review queue is protected against abuse:
+  - snapshots are capped at 60 images;
+  - timestamps are set by the server;
+  - each user can have at most 10 open requests;
+  - curators can dismiss spam.
+
+  All of this is enforced and tested in Postgres.
 - Approved images join a shared library. New boards whose story keywords
   match an image's tags pull it in first, with the curator's name and note.
+- Cooper Hewitt images can't be approved yet: they have no by-id lookup.
 - **Request designer review** sends a board snapshot to the curators' queue
   in the Curator Studio (`#/curate`). Curators approve or pass on each image,
   and approvals flow back to the board.
@@ -143,6 +160,11 @@ Vercel → Project → Settings → Environment Variables:
   `maxDuration` and the batch sizes in `server/mood/*` / `src/mood/api.js`.
 - **Response size.** Vercel caps function responses at 4.5 MB, so downloads
   use ~2400px copies, not originals.
+- **Abuse.** The API refuses other sites' pages (`Sec-Fetch-Site`) and
+  non-JSON bodies, so other websites can't spend your Claude or image quota
+  through their visitors' browsers. Scripts can still call it directly, so for
+  a public deployment add per-IP rate limiting at the edge (a Vercel Firewall
+  rule on `/api/mood/*`). Or, when Supabase is configured, require sign-in.
 - **Rate limits.** A first board costs about 18 image-API searches and 6–8
   Claude calls. On Unsplash's demo tier that is roughly 12 boards an hour.
 - **Licensing.** Unsplash, Pexels, Commons and museum images are cleared for
@@ -162,8 +184,8 @@ npm run smoke          # every smoke test (trip planner + Scout Mood)
 Code map:
 
 - `api/mood/[op].js`: the single Vercel function. It routes `/api/mood/brief`,
-  `/api/mood/search`, `/api/mood/curate` and `/api/mood/image` to
-  `server/mood/handlers/`.
+  `/api/mood/search`, `/api/mood/curate`, `/api/mood/resolve` and
+  `/api/mood/image` to `server/mood/handlers/`.
 - `server/mood/`: shared server code, outside `/api` so it isn't deployed as
   functions. It holds the Claude client, prompts and schemas, the source
   adapters, and validation.
@@ -171,6 +193,9 @@ Code map:
   pipeline, `store.js` for persistence, `library.js` for designer approval,
   `exportBoard.js`, `components/`).
 - `supabase/mood.sql`: tables and RLS.
-- `supabase/tests/mood_rls_test.sql`: 32 assertions. Users can't make
-  themselves curators, and can't approve or sign a review in someone else's
-  name. Revoked curators' approvals disappear. Boards stay private.
+- `supabase/tests/mood_rls_test.sql`: 38 assertions.
+  - Users can't make themselves curators.
+  - Nobody can approve, or sign a review, in someone else's name.
+  - Revoked curators' approvals disappear.
+  - The review queue can't be flooded or back-dated.
+  - Boards stay private.

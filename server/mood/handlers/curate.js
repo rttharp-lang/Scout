@@ -1,6 +1,6 @@
 // Scout Mood — POST /api/mood/curate: the design director's cull (one Claude vision call per batch).
 // POST { brief: { title, tagline, concept, palette, avoid }, story: { id, name, role, narrative, keywords },
-//        candidates: [{ id, thumb, alt, title, source, creator }] (≤24), keep?: 2..16, reference?: { thumb, alt } }
+//        candidates: [{ id, thumb, alt, title, source, creator }] (≤20, ≤19 with a reference), keep?: 2..16, reference?: { thumb, alt } }
 // → 200 { picks: [{ id, score, role, note }], rejected: [{ id, reason }] }
 // Claude returns hard-reject codes + six 0-5 sub-scores per image; the keep
 // threshold is applied here (scoreDecision), not left to the model.
@@ -15,7 +15,9 @@ import { body, str, strList, int } from "../validate.js";
 import { fetchAllowedImage, sniffImageType } from "../sources.js";
 
 
-const MAX_CANDIDATES = 24; // sized so one vision pass fits the 60s ceiling
+// ≤20 images per vision call, reference included: requests with more than 20
+// images get a much smaller per-image size limit. Also sized for the 60s ceiling.
+const MAX_IMAGES = 20;
 const PER_PHOTOGRAPHER = 2; // board rhythm: no photographer dominates a story
 const THUMB_BYTES = 3 * 1024 * 1024;
 
@@ -41,7 +43,7 @@ export default async function handler(req, res) {
     const candidates = (Array.isArray(b.candidates) ? b.candidates : [])
       .map((c) => ({ id: str(c?.id, 120), thumb: str(c?.thumb, 1000), alt: str(c?.alt, 300), title: str(c?.title, 200), source: str(c?.source, 40), creator: str(c?.creator, 120) }))
       .filter((c) => c.id && c.thumb && !seen.has(c.id) && seen.add(c.id))
-      .slice(0, MAX_CANDIDATES);
+      .slice(0, MAX_IMAGES - (b.reference?.thumb ? 1 : 0));
     if (!candidates.length) throw new MoodError(400, "no-candidates");
     const keep = int(b.keep, 2, 16, 10);
     const brief = b.brief && typeof b.brief === "object" ? b.brief : {};

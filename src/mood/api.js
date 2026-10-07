@@ -33,6 +33,9 @@ export function explainError(e) {
   if (code === "refused") return "The curator declined this direction. Try rephrasing it.";
   if (code === "network") return "Couldn't reach Scout Mood — check your connection.";
   if (code === "no-direction") return "Describe the creative direction first.";
+  if (code === "sources-unavailable") return "The image sources didn't respond (rate limits are the usual cause). Try again in a minute.";
+  if (code === "no-queries") return "There's nothing to search for with this image — try another one.";
+  if (code === "cross-site" || code === "json-required") return "This request was blocked by Scout Mood's security checks. Reload the page and try again.";
   return "Something went wrong curating this. Try again.";
 }
 
@@ -43,6 +46,9 @@ export const searchImages = (queries, { page = 1, perQuery = 8 } = {}, signal) =
   post("/api/mood/search", { queries, page, perQuery }, signal);
 
 export const curateImages = (payload, signal) => post("/api/mood/curate", payload, signal);
+
+// What the source itself says an image is (used before every approval).
+export const resolveImages = (ids, signal) => post("/api/mood/resolve", { ids }, signal).then((d) => d.images || {});
 
 // The slice of the brief the curator needs (keeps request bodies small).
 export const briefSummary = (b) => ({ title: b.title, tagline: b.tagline, concept: b.concept, palette: b.palette, avoid: b.avoid });
@@ -73,22 +79,36 @@ export function roundRobin(items, keyOf, limit) {
   return out;
 }
 
-// One vision pass looks at ≤24 images (sized for the 60s function ceiling);
-// a story's round over-fetches ~48 and culls them in two parallel passes.
-const BATCH = 24;
+// One vision pass looks at ≤20 images including any reference (requests with
+// more than 20 images get a much smaller per-image size limit) and fits the
+// 60s function ceiling; a story's round over-fetches ~40 and culls them in two
+// parallel passes.
+const MAX_IMAGES = 20;
 const MAX_BATCHES = 2;
+const PER_PHOTOGRAPHER = 2; // per story, across batches and rounds
+const CAPPED_SOURCES = new Set(["unsplash", "pexels", "arena"]);
+const creatorKey = (p) => (CAPPED_SOURCES.has(p.source) && p.creator ? `${p.source}:${p.creator.toLowerCase()}` : null);
 
 // One story, one round: search → cull. Returns the kept pins (curated
-// metadata merged onto the normalized image) and the per-source status.
-export async function curateStory({ brief, story, page = 1, exclude = new Set(), keep = 12, extraQueries = [], reference = null, onStatus, signal }) {
+// metadata merged onto the normalized image), the per-source status, and
+// whether the story is genuinely out of new images (only when every source
+// answered and still nothing new came back — a failed search is retryable).
+export async function curateStory({ brief, story, page = 1, exclude = new Set(), existing = [], keep = 12, extraQueries = [], reference = null, onStatus, signal }) {
   onStatus?.({ phase: "searching" });
-  const { candidates = [], sources = {} } = await searchImages(storyQueries(story, extraQueries), { page, perQuery: 8 }, signal);
+  const queries = storyQueries(story, extraQueries);
+  if (!queries.length) throw new ApiError(400, "no-queries");
+  const { candidates = [], sources = {} } = await searchImages(queries, { page, perQuery: 8 }, signal);
+  const sourcesFailed = Object.values(sources).some((v) => v === "error");
+  const batchSize = MAX_IMAGES - (reference ? 1 : 0);
   const fresh = candidates.filter((c) => !exclude.has(c.id));
-  const pool = roundRobin(fresh, (c) => c.query, BATCH * MAX_BATCHES);
-  if (!pool.length) return { pins: [], sources, exhausted: true, considered: 0 };
+  const pool = roundRobin(fresh, (c) => c.query, batchSize * MAX_BATCHES);
+  if (!pool.length) {
+    if (sourcesFailed) throw new ApiError(502, "sources-unavailable");
+    return { pins: [], sources, exhausted: page > 1, considered: 0 };
+  }
   onStatus?.({ phase: "curating", considered: pool.length });
   const batches = [];
-  for (let i = 0; i < pool.length; i += BATCH) batches.push(pool.slice(i, i + BATCH));
+  for (let i = 0; i < pool.length; i += batchSize) batches.push(pool.slice(i, i + batchSize));
   const perBatch = Math.max(2, Math.ceil(keep / batches.length));
   const results = await Promise.allSettled(batches.map((batch) => curateImages({
     brief: briefSummary(brief),
@@ -100,10 +120,18 @@ export async function curateStory({ brief, story, page = 1, exclude = new Set(),
   const ok = results.filter((r) => r.status === "fulfilled").map((r) => r.value);
   if (!ok.length) throw results[0].reason; // every pass failed: surface the error
   const byId = new Map(pool.map((c) => [c.id, c]));
-  const pins = ok.flatMap((r) => r.picks || [])
-    .filter((p) => byId.has(p.id))
-    .sort((a, b) => b.score - a.score)
-    .slice(0, keep)
-    .map((p) => ({ ...byId.get(p.id), storyId: story.id, score: p.score, role: p.role, note: p.note }));
+  // The server caps photographers per batch; re-apply it across both batches
+  // and the story's earlier rounds.
+  const perCreator = new Map();
+  existing.forEach((p) => { const k = creatorKey(p); if (k) perCreator.set(k, (perCreator.get(k) || 0) + 1); });
+  const pins = [];
+  for (const pick of ok.flatMap((r) => r.picks || []).filter((p) => byId.has(p.id)).sort((a, b) => b.score - a.score)) {
+    if (pins.length >= keep) break;
+    const c = byId.get(pick.id);
+    const k = creatorKey(c);
+    if (k && (perCreator.get(k) || 0) >= PER_PHOTOGRAPHER) continue;
+    if (k) perCreator.set(k, (perCreator.get(k) || 0) + 1);
+    pins.push({ ...c, storyId: story.id, score: pick.score, role: pick.role, note: pick.note });
+  }
   return { pins, sources, exhausted: false, considered: pool.length };
 }

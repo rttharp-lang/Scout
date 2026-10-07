@@ -20,7 +20,7 @@ const clean = (list, max, len = 140) => strList(list, max, len);
 export function normalizeBrief(raw, seasonCode) {
   const b = raw && typeof raw === "object" ? raw : {};
   const seen = new Set();
-  const queries = (list, max, words) => [...new Set(strList(list, max + 2, 120).map((q) => cleanQuery(q, words)).filter((q) => q.split(" ").length >= 1 && q.length > 2))].slice(0, max);
+  const queries = (list, max, words, archive) => [...new Set(strList(list, max + 2, 120).map((q) => cleanQuery(q, words, { archive })).filter((q) => q.length > 2))].slice(0, max);
   const stories = (Array.isArray(b.stories) ? b.stories : []).slice(0, 4).map((s, i) => {
     let id = slug(s?.id || s?.name) || `story-${i + 1}`;
     while (seen.has(id)) id = `${id}-${i + 1}`;
@@ -31,7 +31,7 @@ export function normalizeBrief(raw, seasonCode) {
       role: ["anchor", "directional", "edge"].includes(s?.role) ? s.role : ["anchor", "directional", "edge"][i] || "edge",
       narrative: str(s?.narrative, 600),
       keywords: clean(s?.keywords, 6, 40).map((k) => k.toLowerCase()),
-      queries: { photo: queries(s?.queries?.photo, 5, 6), archive: queries(s?.queries?.archive, 3, 4) },
+      queries: { photo: queries(s?.queries?.photo, 5, 6, false), archive: queries(s?.queries?.archive, 3, 4, true) },
     };
   }).filter((s) => s.queries.photo.length || s.queries.archive.length);
   const m = b.macro && typeof b.macro === "object" ? b.macro : {};
@@ -76,7 +76,7 @@ export default async function handler(req, res) {
     const direction = str(b.direction, 2000);
     if (!direction) throw new MoodError(400, "no-direction");
     const season = describeSeason(str(b.season, 12) || "FA27");
-    const categories = strList(b.categories, 6, 40);
+    const categories = strList(b.categories, 12, 40);
     const consumer = str(b.consumer, 500);
     const avoid = str(b.avoid, 500);
     const instruction = str(b.refine?.instruction, 600);

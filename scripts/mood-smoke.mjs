@@ -226,6 +226,81 @@ async function run(browser, vp, problems) {
   await page.close();
 }
 
+// Regressions from the adversarial review, run once at desktop width.
+async function regressions(browser, problems) {
+  const fail = (m) => problems.push(`[regressions] ${m}`);
+  const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const page = await context.newPage();
+  const errors = [];
+  page.on("pageerror", (e) => errors.push(e.message || String(e)));
+  page.on("dialog", (d) => d.accept());
+  const calls = { brief: 0, search: 0, curate: 0 };
+  await mockRoutes(page, calls);
+  await page.goto(URL, { waitUntil: "load" });
+  await page.fill("#direction", "Harbour workwear for night runners.");
+  await page.click("button:has-text('Build the mood board')");
+  await page.waitForFunction(() => document.querySelectorAll(".tile img.tile-img").length >= 12 && !document.querySelector(".skeleton"), null, { timeout: 15000 }).catch(() => fail("board didn't build"));
+  const stored = () => page.evaluate(() => JSON.parse(localStorage.getItem("scout.mood.explorations.v1") || "[]")[0]?.pins?.length || 0);
+  const before = await stored();
+
+  // 1. An image-host outage hides tiles for the session but never deletes pins.
+  for (const host of HOSTS) await page.route(`https://${host}/**`, (route) => route.abort(), { times: 1000 });
+  await page.reload({ waitUntil: "load" });
+  await wait(1500);
+  const duringOutage = await stored();
+  for (const host of HOSTS) await page.unroute(`https://${host}/**`);
+  for (const host of HOSTS) await page.route(`https://${host}/**`, (route) => route.fulfill({ status: 200, contentType: "image/svg+xml", body: svg(route.request().url()) }));
+  await page.reload({ waitUntil: "load" });
+  await page.waitForFunction((n) => document.querySelectorAll(".tile img.tile-img").length >= n, Math.min(before, 12), { timeout: 8000 }).catch(() => fail("tiles didn't come back after the outage"));
+  if (duringOutage !== before || (await stored()) !== before) fail(`image outage changed stored pins: ${before} → ${duringOutage} → ${await stored()}`);
+
+  // 2. Two tabs: each tab's new board survives the other's writes.
+  const tab2 = await context.newPage();
+  tab2.on("dialog", (d) => d.accept());
+  await mockRoutes(tab2, { brief: 0, search: 0, curate: 0 });
+  await tab2.goto(page.url(), { waitUntil: "load" });
+  await tab2.waitForSelector(".tile", { timeout: 8000 });
+  await page.click("button:has-text('Save as board')");
+  await wait(300);
+  await tab2.hover(".masonry .tile >> nth=0");
+  await tab2.click(".masonry .tile >> nth=0 >> .tile-save:not(.tile-save-caret)");
+  await tab2.fill(".popover input", "Tab two board");
+  await tab2.click(".popover button:has-text('Create')");
+  await tab2.click(".popover button:has-text('Done')");
+  await wait(300);
+  await page.hover(".masonry .tile >> nth=1");
+  await page.click(".masonry .tile >> nth=1 >> .tile-save.saved"); // "Saved" opens the picker (never unsaves)
+  await page.fill(".popover input", "Tab one board");
+  await page.click(".popover button:has-text('Create')");
+  await page.click(".popover button:has-text('Done')");
+  await wait(400);
+  const names = await page.evaluate(() => JSON.parse(localStorage.getItem("scout.mood.boards.v1") || "[]").map((b) => b.name).sort());
+  for (const n of ["Night Shift", "Tab one board", "Tab two board"]) if (!names.includes(n)) fail(`two tabs: board "${n}" was lost (stored: ${names.join(", ")})`);
+  // A delete in one tab sticks in the other.
+  await tab2.goto(URL.replace(/\/$/, "/") + "#/boards");
+  await tab2.click(".cover:has-text('Tab two board')");
+  await tab2.click("button:has-text('Delete')");
+  await tab2.waitForSelector("h1.board-title:has-text('Boards')", { timeout: 3000 }).catch(() => fail("delete didn't happen in tab two"));
+  await wait(400);
+  await page.goto(URL + "#/boards");
+  await wait(300);
+  if ((await page.textContent("main")).includes("Tab two board")) fail("a board deleted in another tab came back");
+  await tab2.close();
+
+  // 3. A story whose sources all fail is retryable, not silently "exhausted".
+  await page.unroute("**/api/mood/search");
+  await page.route("**/api/mood/search", (route) => route.fulfill({ json: { candidates: [], sources: { unsplash: "error", pexels: "error", met: "error", cma: "error" } } }));
+  await page.goto(URL, { waitUntil: "load" });
+  await page.fill("#direction", "Arctic archive for the city.");
+  await page.click("button:has-text('Build the mood board')");
+  await page.waitForSelector("button:has-text('Retry')", { timeout: 8000 }).catch(() => fail("failed searches didn't offer a retry"));
+  const exhausted = await page.evaluate(() => JSON.parse(localStorage.getItem("scout.mood.explorations.v1") || "[]")[0]?.exhausted || {});
+  if (Object.values(exhausted).some(Boolean)) fail(`failed searches marked stories exhausted: ${JSON.stringify(exhausted)}`);
+
+  if (errors.length) fail(`page errors: ${errors.join("; ")}`);
+  await context.close();
+}
+
 async function main() {
   if (SHOTS) fs.mkdirSync(SHOTS, { recursive: true });
   const preview = spawn("npx", ["vite", "preview", "--port", String(PORT), "--strictPort"], { stdio: "ignore" });
@@ -237,6 +312,7 @@ async function main() {
     for (const vp of [{ width: 390, height: 844, label: "phone" }, { width: 1440, height: 900, label: "desktop" }]) {
       await run(browser, vp, problems);
     }
+    await regressions(browser, problems);
   } catch (e) {
     problems.push(`errored: ${e.message}`);
   } finally {
@@ -247,7 +323,7 @@ async function main() {
     console.error("✗ Mood smoke FAILED\n  " + problems.join("\n  "));
     process.exitCode = 1;
   } else {
-    console.log("✓ Mood smoke passed — compose → brief → story sections → filter → not-this/undo → closeup → more like this → save (picker + one-click) → boards → reload, at phone and desktop widths.");
+    console.log("✓ Mood smoke passed — compose → brief → story sections → filter → not-this/undo → closeup → more like this → save (picker + one-click) → boards → reload, at phone and desktop widths; plus regressions (image outage, two tabs, failed sources).");
   }
 }
 main();

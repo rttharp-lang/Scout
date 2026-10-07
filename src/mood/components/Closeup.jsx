@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { BadgeCheck, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, Sparkles, X } from "lucide-react";
 import Masonry from "./Masonry.jsx";
 import Tile, { ratioOf } from "./Tile.jsx";
+import { approvalOf } from "../library.js";
 
 const ChevronDownIcon = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>;
 
@@ -38,7 +39,8 @@ function ApprovalBox({ pin, approvals, curator, libraryEnabled, signedIn, onAppr
   const [note, setNote] = useState("");
   const [busy, setBusy] = useState(false);
   const mine = curator?.verified ? approvals.find((a) => a.curatorId === curator.user_id) : null;
-  const act = async (fn) => { setBusy(true); try { await fn(); setNote(""); } finally { setBusy(false); } };
+  // Clear the note only when the action succeeded (a failed approve keeps it).
+  const act = async (fn) => { setBusy(true); try { if ((await fn()) !== false) setNote(""); } finally { setBusy(false); } };
 
   return (
     <div className={`approval-box${approvals.length ? " approved" : ""}`}>
@@ -159,7 +161,7 @@ export default function Closeup({
               {pin.note && <p className="closeup-note">{pin.note}</p>}
               {pin.note && <div className="closeup-note-by">AI curator's note</div>}
             </div>
-            <ApprovalBox pin={pin} approvals={approvals} curator={curator} libraryEnabled={libraryEnabled} signedIn={signedIn} onApprove={onApprove} onRevoke={onRevoke} onSignIn={onSignIn} />
+            <ApprovalBox key={pin.id} pin={pin} approvals={approvals} curator={curator} libraryEnabled={libraryEnabled} signedIn={signedIn} onApprove={onApprove} onRevoke={onRevoke} onSignIn={onSignIn} />
             <Credit pin={pin} />
             {(onPrev || onNext) && (
               <div style={{ display: "flex", gap: 8, marginTop: "auto" }}>
@@ -182,7 +184,7 @@ export default function Closeup({
                 getKey={(p) => p.id}
                 getRatio={ratioOf}
                 renderItem={(p) => (
-                  <Tile pin={p} approved={approvalsMap[p.id]?.[0]} saved={savedIds?.has(p.id)} onOpen={onOpen} onSave={onSave} onPick={onPick} onDownload={onDownload} onCopy={onCopy} onBroken={onBroken} onMeasure={onMeasure} />
+                  <Tile pin={p} approved={approvalOf(approvalsMap, p)} saved={savedIds?.has(p.id)} onOpen={onOpen} onSave={onSave} onPick={onPick} onDownload={onDownload} onCopy={onCopy} onBroken={onBroken} onMeasure={onMeasure} />
                 )}
               />
             )}

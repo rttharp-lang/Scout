@@ -92,7 +92,13 @@ export function creditsText(pins) {
   }).join("\n\n");
 }
 
-const csvCell = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+// Cells starting with = + - @ (or a control char) would run as formulas in
+// Excel/Sheets — titles and credits come from third parties, so neutralise them.
+const csvCell = (v) => {
+  let t = String(v ?? "");
+  if (/^[=+\-@\t\r]/.test(t)) t = `'${t}`;
+  return `"${t.replace(/"/g, '""')}"`;
+};
 export function creditsCsv(pins, files = []) {
   const head = ["n", "file", "story", "role", "title", "creator", "source", "source_url", "license", "license_url", "commercial_ok", "approved_by", "approved_at", "designer_note", "ai_curator_note"];
   const rows = pins.map((p, i) => [

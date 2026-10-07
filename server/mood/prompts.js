@@ -158,9 +158,15 @@ export const BRIEF_SCHEMA = {
 };
 
 // Words that pull stock clichés and influencer content into search results.
-const BANNED = /\b(aesthetics?|vibes?|fashion(able)?|stylish|trendy|beautiful|minimalist|luxury|luxurious|models?|outfits?|lifestyle|happy|team|\w+-?core)\b/gi;
-export function cleanQuery(q, maxWords) {
-  return String(q || "").replace(BANNED, " ").replace(/[^\p{L}\p{N}\s'&-]/gu, " ").split(/\s+/).filter(Boolean).slice(0, maxWords).join(" ");
+// "-core" only as a microtrend label (gorpcore, blokecore, cottage-core…),
+// never "score" or "albacore"; "model" only in stock queries ("ship model" is
+// museum vocabulary).
+const BANNED = /\b(aesthetics?|vibes?|fashion(able)?|stylish|trendy|beautiful|minimalist|luxury|luxurious|outfits?|lifestyle|happy|team|\w+-core|(?:gorp|norm|cottage|bloke|blok|barbie|ballet|mob|office|coastal|goblin|fairy)core)\b/gi;
+const STOCK_ONLY = /\b(models?)\b/gi;
+export function cleanQuery(q, maxWords, { archive = false } = {}) {
+  let out = String(q || "").replace(BANNED, " ");
+  if (!archive) out = out.replace(STOCK_ONLY, " ");
+  return out.replace(/[^\p{L}\p{N}\s'&-]/gu, " ").split(/\s+/).filter(Boolean).slice(0, maxWords).join(" ");
 }
 
 export const ROLES = ["people", "material", "garment", "place", "color", "lateral", "archive", "graphic"];

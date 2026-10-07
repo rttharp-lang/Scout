@@ -123,17 +123,50 @@ create table if not exists public.mood_review_requests (
   board        jsonb not null,                    -- snapshot: { title, season, concept, stories, pins[] }
   message      text not null default '',
   status       text not null default 'open' check (status in ('open', 'done')),
-  decisions    jsonb not null default '{}',       -- { [image_id]: { verdict: 'approved'|'rejected', note } }
+  decisions    jsonb not null default '{}',       -- { [image_id]: { verdict: 'approved'|'rejected', note, by } }
   reviewed_by  uuid references public.mood_curators (user_id) on delete set null,
   created_at   timestamptz not null default now(),
   updated_at   timestamptz not null default now()
 );
 alter table public.mood_review_requests enable row level security;
 
+-- Keep the curators' queue usable: bounded snapshots, server-stamped times
+-- (a request can't be pinned to the top with a future date), and at most ten
+-- open requests per requester.
+alter table public.mood_review_requests drop constraint if exists mood_reviews_size;
+alter table public.mood_review_requests add constraint mood_reviews_size check (
+  jsonb_typeof(board) = 'object'
+  and jsonb_typeof(board -> 'pins') = 'array'
+  and jsonb_array_length(board -> 'pins') between 1 and 60
+  and octet_length(board::text) <= 400000
+  and char_length(message) <= 1000
+);
+create or replace function public.mood_reviews_guard()
+returns trigger
+language plpgsql
+set search_path = ''
+as $$
+begin
+  if tg_op = 'INSERT' then
+    new.created_at := now();
+    if (select count(*) from public.mood_review_requests r
+        where r.requester_id = new.requester_id and r.status = 'open') >= 10 then
+      raise exception 'too many open review requests' using errcode = 'check_violation';
+    end if;
+  end if;
+  new.updated_at := now();
+  return new;
+end;
+$$;
+drop trigger if exists mood_reviews_guard on public.mood_review_requests;
+create trigger mood_reviews_guard before insert or update on public.mood_review_requests
+  for each row execute function public.mood_reviews_guard();
+
 drop policy if exists "mood_reviews requester insert" on public.mood_review_requests;
 drop policy if exists "mood_reviews read"             on public.mood_review_requests;
 drop policy if exists "mood_reviews curator update"   on public.mood_review_requests;
 drop policy if exists "mood_reviews requester delete" on public.mood_review_requests;
+drop policy if exists "mood_reviews curator delete"   on public.mood_review_requests;
 -- Requesters create open requests for themselves only (they cannot pre-fill decisions).
 create policy "mood_reviews requester insert" on public.mood_review_requests for insert to authenticated
   with check (requester_id = (select auth.uid()) and status = 'open' and decisions = '{}'::jsonb and reviewed_by is null);
@@ -146,10 +179,13 @@ create policy "mood_reviews curator update" on public.mood_review_requests for u
   with check ((select private.mood_is_curator()) and reviewed_by = (select auth.uid()));
 -- Curators may only touch the review columns — never the requester or snapshot.
 revoke update on public.mood_review_requests from anon, authenticated;
-grant update (status, decisions, reviewed_by, updated_at) on public.mood_review_requests to authenticated;
+grant update (status, decisions, reviewed_by) on public.mood_review_requests to authenticated;
 -- Requesters may withdraw their own request.
 create policy "mood_reviews requester delete" on public.mood_review_requests for delete to authenticated
   using (requester_id = (select auth.uid()));
+-- Verified curators may dismiss requests (spam, duplicates).
+create policy "mood_reviews curator delete" on public.mood_review_requests for delete to authenticated
+  using ((select private.mood_is_curator()));
 
 -- Earlier versions of this file put the helper in the exposed public schema.
 drop function if exists public.mood_is_curator();

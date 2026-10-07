@@ -12,8 +12,10 @@ import { fileURLToPath } from "node:url";
 
 import {
   normalizeUnsplash, normalizePexels, normalizeMet, normalizeCleveland, normalizeSmithsonian, normalizeCommons, normalizeArena,
-  isAllowedImageUrl, fetchAllowedImage, sniffImageType, planQueries, searchAll, trackUnsplashDownload,
+  isAllowedImageUrl, fetchAllowedImage, sniffImageType, planQueries, searchAll, trackUnsplashDownload, resolveImage, imageBase,
 } from "../server/mood/sources.js";
+import resolveHandler from "../server/mood/handlers/resolve.js";
+import { creditsCsv } from "../src/mood/exportBoard.js";
 import { scoreDecision, cleanQuery, describeSeason, BRIEF_SCHEMA, CURATE_SCHEMA } from "../server/mood/prompts.js";
 import briefHandler, { normalizeBrief } from "../server/mood/handlers/brief.js";
 import curateHandler from "../server/mood/handlers/curate.js";
@@ -62,14 +64,14 @@ function fakeRes() {
   res.setHeader = (k, v) => { res.headers[k.toLowerCase()] = v; };
   return res;
 }
-const post = (body) => ({ method: "POST", body, query: {} });
+const post = (body) => ({ method: "POST", body, query: {}, headers: { "content-type": "application/json", "sec-fetch-site": "same-origin" } });
 
 // ── Normalizers (real fixtures) ──────────────────────────────────────────────
 test("Unsplash: hotlinked imgix sizes, utm links, credit, download tracking", () => {
   const r = fx("unsplash-search.json").results[0];
   const c = normalizeUnsplash(r);
   assert.equal(c.id, `unsplash:${r.id}`);
-  assert.ok(c.thumb.startsWith(r.urls.raw) && /[?&]w=600/.test(c.thumb), "thumb is raw + w=600 (keeps ixid)");
+  assert.ok(c.thumb.startsWith(r.urls.raw) && /[?&]w=600&h=600/.test(c.thumb), "thumb is raw + a 600px box (keeps ixid)");
   assert.ok(c.thumb.includes("ixid="), "ixid must be preserved");
   assert.equal(c.width, r.width);
   assert.equal(c.attribution, `Photo by ${r.user.name} on Unsplash`);
@@ -86,7 +88,7 @@ test("Pexels: sized src.original URLs and credit", () => {
   const p = fx("pexels-search.json").photos[0];
   const c = normalizePexels(p);
   assert.equal(c.id, `pexels:${p.id}`);
-  assert.match(c.thumb, /auto=compress&cs=tinysrgb&w=600$/);
+  assert.match(c.thumb, /auto=compress&cs=tinysrgb&w=600&h=600$/, "bounded on both sides");
   assert.equal(c.color, p.avg_color);
   assert.equal(c.attribution, `Photo by ${p.photographer} on Pexels`);
   assert.equal(c.pageUrl, p.url);
@@ -130,8 +132,10 @@ test("Smithsonian / Cooper Hewitt: CC0 media via IIIF", () => {
 test("Wikimedia Commons: standard thumb widths, TASL attribution, trademark restriction dropped", () => {
   const page = fx("commons-search.json").query.pages[0];
   const c = normalizeCommons(page);
-  assert.match(c.thumb, /\/500px-/);
-  assert.match(c.src, /\/960px-|\/1280px-|upload\.wikimedia\.org/);
+  // 1319×2196 portrait: standard widths chosen so the long side stays bounded.
+  assert.match(c.thumb, /\/330px-/);
+  assert.match(c.src, /\/960px-/);
+  assert.match(c.full, /\/1280px-/);
   assert.match(c.attribution, /CC BY 2\.0, via Wikimedia Commons/);
   assert.equal(c.license.commercial, true);
   assert.ok(isAllowedImageUrl(c.thumb));
@@ -189,6 +193,9 @@ test("planQueries spreads photo/archive queries across configured sources", () =
   process.env.PEXELS_API_KEY = "p";
   assert.deepEqual(planQueries(qs, 1).map((x) => x.source), ["unsplash", "pexels", "commons", "met", "cma"]);
   assert.deepEqual(planQueries(qs, 2).map((x) => x.source), ["pexels", "commons", "unsplash", "cma", "met"], "page 2 rotates sources");
+  // Each query's first visit to a source asks for that source's page 1.
+  assert.deepEqual(planQueries(qs, 2).map((x) => x.sourcePage), [1, 1, 1, 1, 1]);
+  assert.deepEqual(planQueries(qs, 4).map((x) => `${x.source}@${x.sourcePage}`), ["unsplash@2", "pexels@2", "commons@2", "cma@2", "met@2"]);
 });
 
 test("searchAll: one failing source is reported, never fatal; unconfigured sources flagged", async () => {
@@ -223,6 +230,9 @@ test("mood-search handler validates input", async () => {
   const res = fakeRes();
   await searchHandler(post({ queries: [] }), res);
   assert.equal(res.statusCode, 400);
+  const r415 = fakeRes();
+  await searchHandler({ method: "POST", query: {}, headers: { "content-type": "text/plain" }, body: '{"queries":[{"q":"x"}]}' }, r415);
+  assert.equal(r415.statusCode, 415, "text/plain bodies (CORS-simple) are refused");
   const res2 = fakeRes();
   await searchHandler({ method: "GET", query: {} }, res2);
   assert.equal(res2.statusCode, 405);
@@ -233,6 +243,10 @@ test("cleanQuery strips cliché words and caps length", () => {
   assert.equal(cleanQuery("minimalist luxury fashion model outfit", 6), "");
   assert.equal(cleanQuery("wet asphalt night aesthetic vibes", 6), "wet asphalt night");
   assert.equal(cleanQuery("gorpcore fishing trawler deck crew at dawn light", 4), "fishing trawler deck crew");
+  assert.equal(cleanQuery("musical score manuscript", 4, { archive: true }), "musical score manuscript", "'score' is not a -core label");
+  assert.equal(cleanQuery("ship model 1900", 4, { archive: true }), "ship model 1900", "'model' is museum vocabulary");
+  assert.equal(cleanQuery("albacore fishing boat", 6), "albacore fishing boat");
+  assert.equal(cleanQuery("blokecore terrace scarf", 6), "terrace scarf");
 });
 
 test("describeSeason resolves Nike-style and fashion codes with lead time", () => {
@@ -406,13 +420,13 @@ test("mood-image: rejects non-allow-listed URLs, streams allowed ones as attachm
   assert.equal(track.init.headers.get("authorization"), "Client-ID u");
 });
 
-test("router: one function, four ops, 60s ceiling; unknown ops 404", async () => {
+test("router: one function, five ops, 60s ceiling; unknown ops 404", async () => {
   assert.deepEqual(routerConfig, { maxDuration: 60 });
   const r1 = fakeRes();
   await router({ method: "GET", query: { op: "__proto__" } }, r1);
   assert.equal(r1.statusCode, 404);
   const r2 = fakeRes();
-  await router({ method: "POST", query: { op: "search" }, body: { queries: [] } }, r2);
+  await router({ method: "POST", query: { op: "search" }, headers: { "content-type": "application/json" }, body: { queries: [] } }, r2);
   assert.equal(r2.statusCode, 400, "dispatches to the search handler");
   const apiFiles = fs.readdirSync(path.join(here, "..", "api"), { recursive: true }).filter((f) => /\.js$/.test(f) && !/(^|\/)_/.test(f));
   assert.ok(apiFiles.length <= 12, `Vercel Hobby allows 12 functions; found ${apiFiles.length}: ${apiFiles.join(", ")}`);
@@ -428,6 +442,45 @@ test("mood-image: refuses cross-site use and never CDN-caches tracked downloads"
   assert.equal(r2.statusCode, 200);
   assert.match(r2.headers["cache-control"], /^private/);
   assert.match(r2.headers["content-security-policy"], /sandbox/);
+});
+
+test("router refuses other sites' pages for every op", async () => {
+  for (const op of ["brief", "search", "curate", "resolve", "image"]) {
+    const r = fakeRes();
+    await router({ method: "POST", query: { op, u: "https://images.pexels.com/x" }, headers: { "content-type": "application/json", "sec-fetch-site": "cross-site" }, body: {} }, r);
+    assert.equal(r.statusCode, 403, op);
+  }
+});
+
+test("resolve: canonical metadata by id from the source; malformed or disabled ids resolve to null", async () => {
+  process.env.UNSPLASH_ACCESS_KEY = "u";
+  const photo = fx("unsplash-search.json").results[0];
+  const calls = mockFetch((url) => {
+    if (url === `https://api.unsplash.com/photos/${photo.id}`) return json(photo);
+    if (url.startsWith("https://collectionapi.metmuseum.org/public/collection/v1/objects/45734")) return json(fx("met-object.json"));
+    return undefined;
+  });
+  const res = fakeRes();
+  await resolveHandler(post({ ids: [`unsplash:${photo.id}`, "met:45734", "unsplash:../../me", "pexels:12", "si:abc", "nope"] }), res);
+  assert.equal(res.statusCode, 200);
+  const imgs = res.body.images;
+  assert.equal(imgs[`unsplash:${photo.id}`].attribution, `Photo by ${photo.user.name} on Unsplash`);
+  assert.equal(imgs["met:45734"].license.code, "cc0");
+  assert.equal(imgs["unsplash:../../me"], null, "path tricks never reach the source");
+  assert.equal(imgs["pexels:12"], null, "disabled source");
+  assert.equal(imgs["si:abc"], null);
+  assert.ok(!calls.some((c) => c.url.includes("/me")), "malformed id not requested");
+  assert.equal(imageBase(imgs[`unsplash:${photo.id}`].thumb), imageBase(normalizeUnsplash(photo).thumb), "same photo base as search results");
+  // An id whose source returns a different object is rejected.
+  mockFetch(() => json({ ...fx("met-object.json"), objectID: 1 }));
+  assert.equal(await resolveImage("met:45734"), null);
+});
+
+test("credits.csv neutralises spreadsheet formulas", () => {
+  const csv = creditsCsv([{ id: "commons:1", title: '=HYPERLINK("https://evil.example","x")', creator: "+cmd", sourceLabel: "Wikimedia Commons", pageUrl: "https://commons.wikimedia.org/x", license: { label: "CC BY 2.0", commercial: true } }]);
+  const row = csv.split("\r\n")[1];
+  assert.ok(row.includes(`"'=HYPERLINK(""https://evil.example"",""x"")"`), row);
+  assert.ok(row.includes(`"'+cmd"`), row);
 });
 
 test("trackUnsplashDownload ignores anything that isn't an Unsplash download endpoint", async () => {

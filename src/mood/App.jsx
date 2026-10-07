@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { BadgeCheck, ChevronDown, Copy, FileArchive, LogIn, LogOut, Pencil, Printer, RefreshCw, Send, Trash2, Wand2, X } from "lucide-react";
 import { supabase, authEnabled } from "../supabase";
 import { fetchBrief, curateStory, explainError } from "./api.js";
-import { uid, loadExplorations, loadBoards, saveExplorations, saveBoards, pushRemote, deleteRemote, pullRemote } from "./store.js";
-import { libraryEnabled, getMyCurator, approvalsFor, matchLibrary, approve, revoke, requestReview } from "./library.js";
+import { uid, loadExplorations, loadBoards, saveExplorations, saveBoards, pushRemote, deleteRemote, pullRemote, syncDeletes, addTombstone, mergeLists, parseList, KEY_EXPLORATIONS, KEY_BOARDS, KEY_DELETED } from "./store.js";
+import { libraryEnabled, getMyCurator, approvalsFor, matchLibrary, approve, revoke, requestReview, imageBase, approvalOf } from "./library.js";
 import { briefMarkdown, copyImage, copyText, creditsText, downloadPin, exportZip } from "./exportBoard.js";
 import Logo from "./components/Logo.jsx";
 import Masonry from "./components/Masonry.jsx";
@@ -134,6 +134,10 @@ export default function MoodApp() {
   const [printing, setPrinting] = useState(null);
   const [zipProgress, setZipProgress] = useState("");
   const [toast, showToast, hideToast] = useToast();
+  // Tiles whose image failed to load are hidden for this session only — a
+  // network blip must never delete curated pins from storage.
+  const [broken, setBroken] = useState(() => new Set());
+  const markBroken = useCallback((p) => setBroken((s) => (s.has(p.id) ? s : new Set(s).add(p.id))), []);
 
   const xRef = useRef(explorations);
   xRef.current = explorations;
@@ -159,9 +163,22 @@ export default function MoodApp() {
 
   // Local persistence (every change) + debounced account sync.
   useEffect(() => { saveExplorations(explorations); }, [explorations]);
-  useEffect(() => { saveBoards(boards); }, [boards]);
   useEffect(() => {
-    if (!session || !dirty.current.size) return undefined;
+    if (!saveBoards(boards)) showToast("This browser's storage is full — sign in to keep boards in your account, or export them.");
+  }, [boards, showToast]);
+  // Other tabs: merge their writes (and deletes) instead of overwriting them.
+  useEffect(() => {
+    const onStorage = (e) => {
+      if (e.key === KEY_EXPLORATIONS) setExplorations((cur) => mergeLists(cur, parseList(e.newValue)));
+      else if (e.key === KEY_BOARDS) setBoards((cur) => mergeLists(cur, parseList(e.newValue)));
+      else if (e.key === KEY_DELETED) { setExplorations((cur) => mergeLists(cur, [])); setBoards((cur) => mergeLists(cur, [])); }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+  const userId = session?.user?.id || null;
+  useEffect(() => {
+    if (!userId || !dirty.current.size) return undefined;
     const t = setTimeout(() => {
       const pending = [...dirty.current.entries()];
       dirty.current.clear();
@@ -171,7 +188,7 @@ export default function MoodApp() {
       });
     }, 1500);
     return () => clearTimeout(t);
-  }, [explorations, boards, session]);
+  }, [explorations, boards, userId]);
 
   // Auth + curator profile + pulling boards from the account.
   useEffect(() => {
@@ -180,15 +197,19 @@ export default function MoodApp() {
     const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
     return () => sub.subscription.unsubscribe();
   }, []);
+  // Keyed on the user, not the session object: supabase-js re-emits the
+  // session on every tab refocus and token refresh. Remote rows are merged into
+  // the CURRENT state, so nothing made while the pull is in flight is lost.
   useEffect(() => {
-    if (!session) { setCurator(null); return; }
+    if (!userId) { setCurator(null); return; }
     getMyCurator().then(setCurator).catch(() => setCurator(null));
-    pullRemote(xRef.current, bRef.current).then((merged) => {
-      if (!merged) return;
-      setExplorations(merged.explorations);
-      setBoards(merged.boards);
+    syncDeletes().catch(() => {});
+    pullRemote().then((rows) => {
+      if (!rows) return;
+      setExplorations((cur) => mergeLists(cur, rows.explorations));
+      setBoards((cur) => mergeLists(cur, rows.boards));
     }).catch(() => {});
-  }, [session]);
+  }, [userId]);
   const signIn = useCallback(() => {
     if (!authEnabled) return;
     supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: `${window.location.origin}/moodboard/`, queryParams: { prompt: "select_account" } } });
@@ -237,8 +258,9 @@ export default function MoodApp() {
     const x = xRef.current.find((e) => e.id === xid);
     if (!x?.brief || !story) return;
     const exclude = new Set([...x.pins.map((p) => p.id), ...(x.hidden || [])]);
+    const existing = x.pins.filter((p) => p.storyId === story.id);
     const attempt = () => curateStory({
-      brief: x.brief, story, page, exclude, keep: KEEP_PER_STORY,
+      brief: x.brief, story, page, exclude, existing, keep: KEEP_PER_STORY,
       onStatus: (st) => setStoryStatus(xid, story.id, st),
     });
     try {
@@ -253,7 +275,7 @@ export default function MoodApp() {
         ...cur,
         pins: dedupe([...cur.pins, ...pins]),
         pages: { ...(cur.pages || {}), [story.id]: page },
-        exhausted: { ...(cur.exhausted || {}), [story.id]: res.exhausted || res.considered < 6 },
+        exhausted: { ...(cur.exhausted || {}), [story.id]: Boolean(res.exhausted) },
         sources: { ...(cur.sources || {}), ...res.sources },
       }));
       setStoryStatus(xid, story.id, { phase: "done", kept: pins.length, considered: res.considered });
@@ -306,7 +328,9 @@ export default function MoodApp() {
   }, [updateX, setStoryStatus, seedFromLibrary, runRound]);
 
   const startExploration = useCallback((input, { parent, refine } = {}) => {
-    const x = { id: uid(), createdAt: now(), updatedAt: now(), input, brief: null, pins: [], hidden: [], pages: {}, exhausted: {}, sources: {}, parentId: parent?.id || null, refinedWith: refine?.instruction || null };
+    // The refine base (parent brief + note) travels with the child, so a retry
+    // still refines even if the parent exploration is gone by then.
+    const x = { id: uid(), createdAt: now(), updatedAt: now(), input, brief: null, pins: [], hidden: [], pages: {}, exhausted: {}, sources: {}, parentId: parent?.id || null, refinedWith: refine?.instruction || null, refineBase: refine || null };
     xRef.current = [x, ...xRef.current];
     setExplorations((l) => [x, ...l]);
     go(`#/x/${x.id}`);
@@ -333,7 +357,13 @@ export default function MoodApp() {
 
   // ── Boards ─────────────────────────────────────────────────────────────
   const savedIds = useMemo(() => new Set(boards.flatMap((b) => b.pins.map((p) => p.id))), [boards]);
-  const strip = (pin) => { const { fromLibrary, round, ...rest } = pin; return rest; };
+  // Pins saved to boards carry a snapshot of their story (name + keywords), so
+  // approvals and "more like this" still work after the exploration is gone.
+  const strip = (pin) => {
+    const { fromLibrary, round, ...rest } = pin;
+    const story = xRef.current.find((e) => e.id === pin.explorationId)?.brief?.stories?.find((st) => st.id === pin.storyId);
+    return story ? { ...rest, storyName: story.name, storyKeywords: story.keywords || [] } : rest;
+  };
   const openPicker = useCallback((pin, anchor) => setPicker({ pin, anchor }), []);
   const closePicker = useCallback(() => setPicker(null), []);
 
@@ -367,12 +397,15 @@ export default function MoodApp() {
   }, [addToBoard, openPicker, showToast]);
 
   const deleteBoard = (id) => {
+    addTombstone(id);
+    dirty.current.delete(id);
     updateBoards((list) => list.filter((b) => b.id !== id));
-    deleteRemote(id).catch(() => {});
+    deleteRemote(id).catch(() => {}); // the tombstone retries it on the next sync
     go("#/boards");
     showToast("Board deleted");
   };
   const deleteExploration = (id) => {
+    addTombstone(id);
     setExplorations((l) => l.filter((x) => x.id !== id));
     dirty.current.delete(id);
     deleteRemote(id).catch(() => {});
@@ -408,10 +441,12 @@ export default function MoodApp() {
     const story = base
       ? { ...base, queries: { photo: (base.queries?.photo || []).slice(0, 2), archive: (base.queries?.archive || []).slice(0, 1) } }
       : { id: pin.storyId || "reference", name: pin.role || "Reference", narrative: pin.note || "", keywords: [], queries: { photo: [], archive: [] } };
-    const words = String(pin.alt || pin.title || "").replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter(Boolean).slice(0, 6).join(" ");
+    const words = String(pin.alt || pin.title || pin.query || pin.storyName || "").replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter(Boolean).slice(0, 6).join(" ");
     try {
+      // Page 1: the closest matches are the top results; images already on
+      // the board are excluded by id.
       const exclude = new Set([...(x?.pins || []).map((p) => p.id), ...(x?.hidden || []), pin.id]);
-      const res = await curateStory({ brief, story, page: 2, exclude, keep: 8, extraQueries: words ? [words] : [], reference: pin });
+      const res = await curateStory({ brief, story, page: 1, exclude, keep: 8, extraQueries: words ? [words] : [], reference: pin });
       const pins = res.pins.map((p) => ({ ...p, explorationId: x?.id || null }));
       setRelated((r) => ({ ...r, [pin.id]: { status: "done", pins } }));
       refreshApprovals(pins.map((p) => p.id));
@@ -422,14 +457,16 @@ export default function MoodApp() {
 
   const onApprove = useCallback(async (pin, note) => {
     const x = xRef.current.find((e) => e.id === pin.explorationId);
-    const board = x?.brief ? { title: x.brief.title, stories: x.brief.stories } : { title: "", stories: [] };
+    const board = x?.brief ? { title: x.brief.title, stories: x.brief.stories } : { title: closeupRef.current?.ctx?.boardName || "", stories: [] };
     const story = board.stories.find((s) => s.id === pin.storyId);
     try {
-      const a = await approve(pin, { note, tags: tagsFor(board, pin), story: story?.name || board.title });
+      const a = await approve(pin, { note, tags: tagsFor(board, pin), story: story?.name || pin.storyName || board.title });
       setApprovals((m) => ({ ...m, [pin.id]: [a, ...(m[pin.id] || []).filter((o) => o.curatorId !== a.curatorId)] }));
       showToast("Approved — it now carries your name.");
+      return true;
     } catch (e) {
       showToast(`Couldn't approve: ${e.message || e}`);
+      return false;
     }
   }, [showToast]);
   const onRevoke = useCallback(async (pin) => {
@@ -448,7 +485,7 @@ export default function MoodApp() {
   }, [curator, showToast]);
 
   // ── Export ─────────────────────────────────────────────────────────────
-  const withApproval = (pins) => pins.map((p) => (approvals[p.id]?.[0] ? { ...p, approval: approvals[p.id][0] } : p));
+  const withApproval = (pins) => pins.map((p) => { const a = approvalOf(approvals, p); return a ? { ...p, approval: a } : p; });
   const doZip = async (name, brief, pins) => {
     if (!pins.length) { showToast("Nothing to export yet."); return; }
     setZipProgress(`0/${pins.length}`);
@@ -527,12 +564,13 @@ export default function MoodApp() {
           key={x.id} x={x} st={status[x.id] || {}} approvals={approvals} savedIds={savedIds} libraryOn={libraryEnabled}
           tileProps={tileProps} zipProgress={zipProgress}
           onLoad={() => refreshApprovals(x.pins.map((p) => p.id))}
-          onRetryBrief={() => runBrief(x.id, x.refinedWith && x.parentId ? { brief: explorations.find((e) => e.id === x.parentId)?.brief, instruction: x.refinedWith } : undefined)}
+          onRetryBrief={() => runBrief(x.id, x.refineBase || (x.refinedWith && x.parentId ? { brief: explorations.find((e) => e.id === x.parentId)?.brief, instruction: x.refinedWith } : undefined))}
           onRetryStory={(sid) => runStory(x.id, x.brief.stories.find((s) => s.id === sid), ((x.pages || {})[sid] || 0) + 1, Math.max(1, ...x.pins.map((p) => p.round || 1)))}
           onResume={() => runRound(x.id, x.brief.stories.filter((s) => !(x.pages || {})[s.id]).map((s) => s.id))}
           onMore={(storyIds) => runRound(x.id, storyIds)}
           onHide={(p) => hidePin(x.id, p)}
-          onBroken={(p) => updateX(x.id, (cur) => ({ ...cur, pins: cur.pins.filter((q) => q.id !== p.id) }))}
+          broken={broken}
+          onBroken={markBroken}
           onRefine={() => setDialog({ type: "refine", x })}
           onSaveAll={(pins) => { const b = createBoard(x.brief?.title || "Board", pins); showToast(`Saved ${pins.length} images to “${b.name}”`); }}
           onZip={(pins) => doZip(x.brief?.title || "scout-mood", x.brief, pins)}
@@ -560,7 +598,7 @@ export default function MoodApp() {
     const b = boards.find((x) => x.id === route.id);
     view = b
       ? <BoardView
-          key={b.id} b={b} approvals={approvals} savedIds={savedIds} libraryOn={libraryEnabled} zipProgress={zipProgress}
+          key={b.id} b={b} approvals={approvals} savedIds={savedIds} libraryOn={libraryEnabled} zipProgress={zipProgress} broken={broken} onBroken={markBroken}
           tileProps={(list) => tileProps(list, { boardName: b.name })}
           onLoad={() => refreshApprovals(b.pins.map((p) => p.id))}
           onRemove={(p) => updateBoards((list) => list.map((x) => (x.id === b.id ? { ...x, pins: x.pins.filter((q) => q.id !== p.id), updatedAt: now() } : x)), [b.id])}
@@ -601,7 +639,7 @@ export default function MoodApp() {
           index={cuIndex}
           total={cu.list.length}
           story={cuStory}
-          approvals={approvals[cu.pin.id] || []}
+          approvals={(approvals[cu.pin.id] || []).filter((a) => !a.base || a.base === imageBase(cu.pin.thumb))}
           approvalsMap={approvals}
           curator={curator}
           libraryEnabled={libraryEnabled}
@@ -622,6 +660,7 @@ export default function MoodApp() {
           onRevoke={onRevoke}
           onSignIn={signIn}
           onMeasure={measurePin}
+          onBroken={markBroken}
         />
       )}
 
@@ -678,10 +717,11 @@ export default function MoodApp() {
 const ROLE_LABELS = { people: "People & attitude", material: "Material", garment: "Garment & silhouette", place: "Place & light", color: "Colour", lateral: "Lateral", archive: "Archive", graphic: "Graphic" };
 
 function useFilters(approvals) {
+  const approved = (p) => Boolean(approvalOf(approvals, p));
   const [role, setRole] = useState("all");
   const [approvedOnly, setApprovedOnly] = useState(false);
   const [commercialOnly, setCommercialOnly] = useState(false);
-  const pass = (p) => (role === "all" || p.role === role) && (!approvedOnly || approvals[p.id]?.length) && (!commercialOnly || p.license?.commercial === true);
+  const pass = (p) => (role === "all" || p.role === role) && (!approvedOnly || approved(p)) && (!commercialOnly || p.license?.commercial === true);
   return { role, setRole, approvedOnly, setApprovedOnly, commercialOnly, setCommercialOnly, pass };
 }
 
@@ -706,7 +746,7 @@ function FilterTools({ f, pins, libraryOn }) {
 }
 
 // ── Exploration (a generated board) ──────────────────────────────────────
-function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zipProgress, onLoad, onRetryBrief, onRetryStory, onResume, onMore, onHide, onBroken, onRefine, onSaveAll, onZip, onPrint, onCopy, onCopyHex, onReview, onDelete }) {
+function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zipProgress, broken, onLoad, onRetryBrief, onRetryStory, onResume, onMore, onHide, onBroken, onRefine, onSaveAll, onZip, onPrint, onCopy, onCopyHex, onReview, onDelete }) {
   const [story, setStory] = useState("all");
   const f = useFilters(approvals);
   const brief = x.brief;
@@ -715,8 +755,8 @@ function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zip
   const shownStories = story === "all" ? stories : stories.filter((s) => s.id === story);
   // One section per story; the closeup steps through them in this order.
   const sections = useMemo(
-    () => shownStories.map((s) => ({ story: s, pins: storyPins(x.pins, s.id).filter(f.pass) })),
-    [x.pins, shownStories, f.role, f.approvedOnly, f.commercialOnly, approvals], // eslint-disable-line react-hooks/exhaustive-deps
+    () => shownStories.map((s) => ({ story: s, pins: storyPins(x.pins, s.id).filter((p) => !broken.has(p.id) && f.pass(p)) })),
+    [x.pins, shownStories, f.role, f.approvedOnly, f.commercialOnly, approvals, broken], // eslint-disable-line react-hooks/exhaustive-deps
   );
   const visible = sections.flatMap((s) => s.pins);
   const busy = (s) => ["searching", "curating"].includes(st[s.id]?.phase);
@@ -809,7 +849,7 @@ function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zip
                 getRatio={(p) => (p.skeleton ? SKELETON_RATIOS[p.i % 4] : ratioOf(p))}
                 renderItem={(p) => (p.skeleton
                   ? <SkeletonTile />
-                  : <Tile pin={p} approved={approvals[p.id]?.[0]} saved={savedIds.has(p.id)} {...props} onHide={onHide} onBroken={onBroken} />)}
+                  : <Tile pin={p} approved={approvalOf(approvals, p)} saved={savedIds.has(p.id)} {...props} onHide={onHide} onBroken={onBroken} />)}
               />
             ) : (
               <p className="story-empty">
@@ -836,10 +876,10 @@ function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zip
 }
 
 // ── Saved board ───────────────────────────────────────────────────────────
-function BoardView({ b, approvals, savedIds, libraryOn, zipProgress, tileProps, onLoad, onRemove, onRename, onDelete, onZip, onPrint, onCopy, onReview }) {
+function BoardView({ b, approvals, savedIds, libraryOn, zipProgress, broken, onBroken, tileProps, onLoad, onRemove, onRename, onDelete, onZip, onPrint, onCopy, onReview }) {
   const f = useFilters(approvals);
   useEffect(() => { onLoad(); }, [b.id]); // eslint-disable-line react-hooks/exhaustive-deps
-  const visible = b.pins.filter(f.pass);
+  const visible = b.pins.filter((p) => !broken.has(p.id) && f.pass(p));
   const props = tileProps(visible);
   return (
     <div>
@@ -862,7 +902,7 @@ function BoardView({ b, approvals, savedIds, libraryOn, zipProgress, tileProps, 
           getRatio={ratioOf}
           renderItem={(p) => (
             <div className="board-pin">
-              <Tile pin={p} approved={approvals[p.id]?.[0]} saved={savedIds.has(p.id)} {...props} onHide={onRemove} />
+              <Tile pin={p} approved={approvalOf(approvals, p)} saved={savedIds.has(p.id)} {...props} onHide={onRemove} onBroken={onBroken} />
             </div>
           )}
         />

@@ -119,7 +119,13 @@ update public.mood_curators set verified = true where user_id = '00000000-0000-0
 select pg_temp.as_user('00000000-0000-0000-0000-00000000000a');
 select pg_temp.must_fail($$insert into public.mood_review_requests (board, status, decisions) values ('{}', 'done', '{"x":{"verdict":"approved"}}')$$, 'a requester pre-filling decisions');
 select pg_temp.must_fail($$insert into public.mood_review_requests (board, requester_id) values ('{}', '00000000-0000-0000-0000-00000000000b')$$, 'requesting review in someone else''s name');
-insert into public.mood_review_requests (board, message) values ('{"title":"Night Shift","pins":[]}', 'please review');
+insert into public.mood_review_requests (board, message, created_at) values ('{"title":"Night Shift","pins":[{"id":"unsplash:1"}]}', 'please review', '2099-01-01');
+select pg_temp.check((select created_at < now() + interval '1 minute' from public.mood_review_requests limit 1), 'created_at is stamped by the server, not the requester');
+select pg_temp.must_fail($$insert into public.mood_review_requests (board) values ('{"pins":[]}')$$, 'a review request with no images');
+select pg_temp.must_fail($$insert into public.mood_review_requests (board) values (jsonb_build_object('pins', (select jsonb_agg(jsonb_build_object('id', g)) from generate_series(1, 61) g)))$$, 'a review request with more than 60 images');
+do $$ begin for i in 1..9 loop insert into public.mood_review_requests (board) values ('{"pins":[{"id":"x"}]}'); end loop; end $$;
+select pg_temp.must_fail($$insert into public.mood_review_requests (board) values ('{"pins":[{"id":"x"}]}')$$, 'an eleventh open review request from one user');
+delete from public.mood_review_requests where board = '{"pins":[{"id":"x"}]}'::jsonb;
 update public.mood_review_requests set decisions = '{"x":{"verdict":"approved"}}', status = 'done';
 reset role;
 select pg_temp.check((select status from public.mood_review_requests limit 1) = 'open', 'a requester cannot mark their own request reviewed');
@@ -130,12 +136,25 @@ select pg_temp.as_user('00000000-0000-0000-0000-00000000000c');
 select pg_temp.check((select count(*) from public.mood_review_requests) = 1, 'verified curators see the queue');
 select pg_temp.must_fail($$update public.mood_review_requests set board = '{"title":"tampered"}'$$, 'a curator tampering with the board snapshot');
 select pg_temp.must_fail($$update public.mood_review_requests set decisions = '{}', status = 'done', reviewed_by = '00000000-0000-0000-0000-00000000000d'$$, 'a curator signing a review as someone else');
-update public.mood_review_requests set decisions = '{"unsplash:1":{"verdict":"approved","note":""}}', status = 'done', reviewed_by = '00000000-0000-0000-0000-00000000000c', updated_at = now();
+update public.mood_review_requests set decisions = '{"unsplash:1":{"verdict":"approved","note":"","by":"00000000-0000-0000-0000-00000000000c"}}', status = 'done', reviewed_by = '00000000-0000-0000-0000-00000000000c';
 reset role;
 select pg_temp.check((select reviewed_by from public.mood_review_requests limit 1) = '00000000-0000-0000-0000-00000000000c', 'a verified curator records decisions in their own name');
 select pg_temp.as_user('00000000-0000-0000-0000-00000000000e');
 select pg_temp.check((select count(*) from public.mood_review_requests) = 0, 'an unverified curator cannot see the queue');
 reset role;
+
+-- Curators can dismiss spam; ordinary users can't delete others' requests.
+select pg_temp.as_user('00000000-0000-0000-0000-00000000000b');
+insert into public.mood_review_requests (board) values ('{"pins":[{"id":"spam"}]}');
+reset role;
+select pg_temp.as_user('00000000-0000-0000-0000-00000000000a');
+delete from public.mood_review_requests where board = '{"pins":[{"id":"spam"}]}'::jsonb;
+reset role;
+select pg_temp.check((select count(*) from public.mood_review_requests where board = '{"pins":[{"id":"spam"}]}'::jsonb) = 1, 'a user cannot delete someone else''s request');
+select pg_temp.as_user('00000000-0000-0000-0000-00000000000c');
+delete from public.mood_review_requests where board = '{"pins":[{"id":"spam"}]}'::jsonb;
+reset role;
+select pg_temp.check((select count(*) from public.mood_review_requests where board = '{"pins":[{"id":"spam"}]}'::jsonb) = 0, 'a verified curator can dismiss a request');
 
 -- ── Boards ───────────────────────────────────────────────────────────────────
 select pg_temp.as_user('00000000-0000-0000-0000-00000000000a');

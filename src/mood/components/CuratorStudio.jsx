@@ -1,40 +1,85 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { BadgeCheck } from "lucide-react";
-import { approve, decideReview, listReviewRequests, myApprovals, revoke } from "../library.js";
-import { LicensePill } from "./Closeup.jsx";
+import { approve, decideReview, dismissReview, listReviewRequests, myApprovals, revoke, verifiedCuratorIds } from "../library.js";
 
 const fmt = (t) => (t ? new Date(t).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) : "");
 
 // Tags that let an approved image find its way onto future boards: the story's
-// keywords plus the board title's words.
+// keywords plus the board title's words. Pins saved to boards carry a snapshot
+// of their story, used when the exploration itself is gone.
 export const tagsFor = (board, pin) => {
   const story = (board.stories || []).find((s) => s.id === pin.storyId);
-  return [...(story?.keywords || []), ...String(board.title || "").toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 3)];
+  const keywords = story?.keywords?.length ? story.keywords : pin.storyKeywords || [];
+  return [...keywords, ...String(board.title || pin.storyName || "").toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 3)];
 };
 
-function ReviewRequest({ req, onBack, onDone, toast }) {
+// decisions are stored per curator: { [curatorId]: { [imageId]: { verdict, note } } }.
+// (Older rows used { [imageId]: { verdict, note, by? } } — read them as the
+// reviewer's.)
+export function decisionsBy(req, curatorId) {
+  const d = req.decisions || {};
+  if (d[curatorId] && typeof d[curatorId] === "object" && !("verdict" in d[curatorId])) return d[curatorId];
+  if (req.reviewed_by === curatorId) return Object.fromEntries(Object.entries(d).filter(([, v]) => v && "verdict" in v && (!v.by || v.by === curatorId)));
+  return {};
+}
+export function approvedCount(req, verifiedIds) {
+  const d = req.decisions || {};
+  const ids = new Set();
+  for (const [k, v] of Object.entries(d)) {
+    if (v && "verdict" in v) { if (v.verdict === "approved" && (!verifiedIds || verifiedIds.has(v.by || req.reviewed_by))) ids.add(k); continue; }
+    if (verifiedIds && !verifiedIds.has(k)) continue; // that curator is no longer verified
+    for (const [img, dv] of Object.entries(v || {})) if (dv?.verdict === "approved") ids.add(img);
+  }
+  return ids.size;
+}
+
+function ReviewRequest({ req, me, onBack, onDone, toast }) {
   const board = req.board || {};
-  const pins = board.pins || [];
-  const [verdicts, setVerdicts] = useState(() => Object.fromEntries(Object.entries(req.decisions || {}).map(([k, v]) => [k, v.verdict])));
-  const [notes, setNotes] = useState(() => Object.fromEntries(Object.entries(req.decisions || {}).map(([k, v]) => [k, v.note || ""])));
+  const pins = Array.isArray(board.pins) ? board.pins.slice(0, 60) : [];
+  // Only this curator's own earlier verdicts are pre-filled: another curator's
+  // choices are never re-submitted under this curator's name.
+  const mine = decisionsBy(req, me);
+  const [verdicts, setVerdicts] = useState(() => Object.fromEntries(Object.entries(mine).map(([k, v]) => [k, v.verdict])));
+  const [notes, setNotes] = useState(() => Object.fromEntries(Object.entries(mine).map(([k, v]) => [k, v.note || ""])));
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState({}); // { [imageId]: reason }
   const decidedCount = pins.filter((p) => verdicts[p.id]).length;
 
   const submit = async () => {
     setBusy(true);
+    const problems = {};
+    const next = {};
     try {
-      const decisions = {};
       for (const p of pins) {
-        if (!verdicts[p.id]) continue;
-        decisions[p.id] = { verdict: verdicts[p.id], note: notes[p.id] || "" };
-        if (verdicts[p.id] === "approved") {
+        const v = verdicts[p.id];
+        const before = mine[p.id]?.verdict;
+        if (v === "approved") {
           const story = (board.stories || []).find((s) => s.id === p.storyId);
-          await approve(p, { note: notes[p.id] || "", tags: tagsFor(board, p), story: story?.name || board.title || "" });
+          try {
+            await approve(p, { note: notes[p.id] || "", tags: tagsFor(board, p), story: story?.name || board.title || "" });
+            next[p.id] = { verdict: "approved", note: notes[p.id] || "" };
+          } catch (e) {
+            problems[p.id] = String(e?.message || e);
+          }
+        } else {
+          // Switching away from Approve withdraws this curator's approval.
+          if (before === "approved") { try { await revoke(p.id); } catch {} }
+          if (v) next[p.id] = { verdict: v, note: "" };
         }
       }
+      const decisions = { ...(req.decisions || {}) };
+      // Drop legacy flat entries this curator made, then store theirs per curator.
+      for (const k of Object.keys(mine)) if (decisions[k] && "verdict" in decisions[k]) delete decisions[k];
+      decisions[me] = next;
       await decideReview(req.id, decisions);
-      toast(`Review saved — ${Object.values(decisions).filter((d) => d.verdict === "approved").length} approved.`);
-      onDone();
+      setFailed(problems);
+      const approvedNow = Object.values(next).filter((d) => d.verdict === "approved").length;
+      if (Object.keys(problems).length) {
+        toast(`Saved — ${approvedNow} approved; ${Object.keys(problems).length} couldn't be verified at the source and were not approved.`);
+      } else {
+        toast(`Review saved — ${approvedNow} approved.`);
+        onDone();
+      }
     } catch (e) {
       toast(`Couldn't save the review: ${e.message || e}`);
     } finally {
@@ -46,18 +91,18 @@ function ReviewRequest({ req, onBack, onDone, toast }) {
     <div>
       <button type="button" className="btn btn-quiet btn-sm" onClick={onBack}>← All requests</button>
       <div className="board-head" style={{ marginTop: 10 }}>
-        <div className="board-season">{board.season && <span className="pill">{board.season}</span>}<span>Requested {fmt(req.created_at)}</span></div>
-        <h1 className="board-title" style={{ fontSize: "clamp(2.4rem, 7vw, 5rem)" }}>{board.title || "Untitled"}</h1>
-        {board.concept && <p className="board-tagline" style={{ fontSize: 16 }}>{board.concept}</p>}
-        {req.message && <div className="notice">“{req.message}”</div>}
+        <div className="board-season">{board.season && <span className="pill">{String(board.season).slice(0, 12)}</span>}<span>Requested {fmt(req.created_at)}</span></div>
+        <h1 className="board-title" style={{ fontSize: "clamp(2.4rem, 7vw, 5rem)" }}>{String(board.title || "Untitled").slice(0, 80)}</h1>
+        {board.concept && <p className="board-tagline" style={{ fontSize: 16 }}>{String(board.concept).slice(0, 1400)}</p>}
+        {req.message && <div className="notice">From the requester: “{req.message}”</div>}
+        <p className="story-desc" style={{ margin: 0 }}>Approving checks each image against its source first; what gets stored — and credited — is what the source says, not what the request says.</p>
       </div>
       <div className="studio-grid">
         {pins.map((p) => (
           <div key={p.id} className="review-card">
-            <a href={p.pageUrl} target="_blank" rel="noopener noreferrer"><img src={p.thumb} alt={p.alt || p.title || ""} loading="lazy" style={{ background: p.color || undefined }} /></a>
+            <img src={p.thumb} alt={p.alt || p.title || ""} loading="lazy" referrerPolicy="no-referrer" style={{ background: p.color || undefined }} />
             <div className="rc-body">
-              {p.note && <div style={{ color: "#3b3a38" }}><b style={{ fontSize: 11, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--text-muted)" }}>AI note</b><br />{p.note}</div>}
-              <LicensePill license={p.license} />
+              {p.note && <div style={{ color: "#3b3a38" }}><b style={{ fontSize: 11, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--text-muted)" }}>AI note (from the request)</b><br />{String(p.note).slice(0, 300)}</div>}
               <div className="seg" role="group" aria-label="Decision">
                 <button type="button" className="yes" aria-pressed={verdicts[p.id] === "approved"} onClick={() => setVerdicts((v) => ({ ...v, [p.id]: v[p.id] === "approved" ? undefined : "approved" }))}>Approve</button>
                 <button type="button" className="no" aria-pressed={verdicts[p.id] === "rejected"} onClick={() => setVerdicts((v) => ({ ...v, [p.id]: v[p.id] === "rejected" ? undefined : "rejected" }))}>Pass</button>
@@ -65,13 +110,14 @@ function ReviewRequest({ req, onBack, onDone, toast }) {
               {verdicts[p.id] === "approved" && (
                 <input className="field" style={{ padding: "8px 10px", fontSize: 13 }} value={notes[p.id] || ""} onChange={(e) => setNotes((n) => ({ ...n, [p.id]: e.target.value }))} placeholder="Your note (optional)" maxLength={500} aria-label="Your note" />
               )}
+              {failed[p.id] && <div className="status-line err" style={{ margin: 0 }}>{failed[p.id]}</div>}
             </div>
           </div>
         ))}
       </div>
       <div className="more-row" style={{ position: "sticky", bottom: 16 }}>
-        <button type="button" className="btn btn-dark btn-lg" disabled={busy || !decidedCount} onClick={submit}>
-          {busy ? "Saving…" : `Submit ${decidedCount} decision${decidedCount === 1 ? "" : "s"}`}
+        <button type="button" className="btn btn-dark btn-lg" disabled={busy || (!decidedCount && !Object.keys(mine).length)} onClick={submit}>
+          {busy ? "Verifying & saving…" : `Submit ${decidedCount} decision${decidedCount === 1 ? "" : "s"}`}
         </button>
       </div>
     </div>
@@ -81,6 +127,7 @@ function ReviewRequest({ req, onBack, onDone, toast }) {
 export default function CuratorStudio({ enabled, signedIn, curator, onSignIn, toast }) {
   const [tab, setTab] = useState("queue");
   const [requests, setRequests] = useState(null);
+  const [verified, setVerified] = useState(null);
   const [approvals, setApprovals] = useState(null);
   const [open, setOpen] = useState(null);
   const [error, setError] = useState("");
@@ -89,7 +136,9 @@ export default function CuratorStudio({ enabled, signedIn, curator, onSignIn, to
   const load = useCallback(async () => {
     setError("");
     try {
-      setRequests(await listReviewRequests());
+      const [reqs, ids] = await Promise.all([listReviewRequests(), verifiedCuratorIds()]);
+      setRequests(reqs);
+      setVerified(ids);
       if (isCurator) setApprovals(await myApprovals());
     } catch (e) {
       setError(String(e.message || e));
@@ -115,7 +164,7 @@ export default function CuratorStudio({ enabled, signedIn, curator, onSignIn, to
       </div>
     );
   }
-  if (open) return <ReviewRequest req={open} onBack={() => setOpen(null)} onDone={() => { setOpen(null); load(); }} toast={toast} />;
+  if (open) return <ReviewRequest req={open} me={curator.user_id} onBack={() => setOpen(null)} onDone={() => { setOpen(null); load(); }} toast={toast} />;
 
   return (
     <div>
@@ -140,7 +189,7 @@ export default function CuratorStudio({ enabled, signedIn, curator, onSignIn, to
         <div style={{ display: "grid", gap: 10 }}>
           {requests.map((r) => {
             const n = r.board?.pins?.length || 0;
-            const approved = Object.values(r.decisions || {}).filter((d) => d.verdict === "approved").length;
+            const approved = approvedCount(r, verified);
             return (
               <div key={r.id} className="request-row">
                 <div style={{ display: "flex", gap: 12, alignItems: "center", minWidth: 0 }}>
@@ -150,7 +199,12 @@ export default function CuratorStudio({ enabled, signedIn, curator, onSignIn, to
                     <div style={{ fontSize: 13, color: "var(--text-muted)" }}>{n} images · {fmt(r.created_at)} · {r.status === "done" ? `reviewed — ${approved} approved` : "awaiting review"}</div>
                   </div>
                 </div>
-                {isCurator && <button type="button" className="btn btn-ghost btn-sm" onClick={() => setOpen(r)}>{r.status === "done" ? "Revisit" : "Review"}</button>}
+                {isCurator && (
+                  <span style={{ display: "inline-flex", gap: 6 }}>
+                    <button type="button" className="btn btn-ghost btn-sm" onClick={() => setOpen(r)}>{decisionsBy(r, curator.user_id) && Object.keys(decisionsBy(r, curator.user_id)).length ? "Revisit" : "Review"}</button>
+                    <button type="button" className="btn btn-quiet btn-sm" onClick={async () => { if (!window.confirm("Dismiss this request? It's removed for everyone.")) return; try { await dismissReview(r.id); setRequests((l) => l.filter((x) => x.id !== r.id)); toast("Request dismissed."); } catch (e) { toast(String(e.message || e)); } }}>Dismiss</button>
+                  </span>
+                )}
               </div>
             );
           })}

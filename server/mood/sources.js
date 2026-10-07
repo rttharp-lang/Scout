@@ -139,9 +139,11 @@ export function normalizeUnsplash(r) {
     source: "unsplash",
     sourceLabel: "Unsplash",
     sourceHome: utm("https://unsplash.com/"),
-    thumb: raw ? withParams(raw, "w=600&q=75&fm=jpg&fit=max") : r.urls?.small,
-    src: raw ? withParams(raw, "w=1600&q=80&fm=jpg&fit=max") : r.urls?.regular,
-    full: raw ? withParams(raw, "w=2400&q=85&fm=jpg&fit=max") : r.urls?.full,
+    // Bounding boxes (not width-only): tall images stay inside the vision
+    // API's per-image limits and the download proxy's size cap.
+    thumb: raw ? withParams(raw, "w=600&h=600&q=75&fm=jpg&fit=max") : r.urls?.small,
+    src: raw ? withParams(raw, "w=1600&h=1600&q=80&fm=jpg&fit=max") : r.urls?.regular,
+    full: raw ? withParams(raw, "w=2400&h=2400&q=85&fm=jpg&fit=max") : r.urls?.full,
     width: Number(r.width) || null,
     height: Number(r.height) || null,
     color: /^#[0-9a-f]{6}$/i.test(r.color || "") ? r.color : null,
@@ -174,9 +176,9 @@ export function normalizePexels(p) {
     source: "pexels",
     sourceLabel: "Pexels",
     sourceHome: "https://www.pexels.com",
-    thumb: withParams(o, "auto=compress&cs=tinysrgb&w=600"),
-    src: withParams(o, "auto=compress&cs=tinysrgb&w=1600"),
-    full: withParams(o, "auto=compress&cs=tinysrgb&w=2400"),
+    thumb: withParams(o, "auto=compress&cs=tinysrgb&w=600&h=600"),
+    src: withParams(o, "auto=compress&cs=tinysrgb&w=1600&h=1600"),
+    full: withParams(o, "auto=compress&cs=tinysrgb&w=2400&h=2400"),
     width: Number(p.width) || null,
     height: Number(p.height) || null,
     color: /^#[0-9a-f]{6}$/i.test(p.avg_color || "") ? p.avg_color : null,
@@ -331,14 +333,18 @@ export function normalizeCommons(page) {
   const creator = clip(stripHtml(meta.Artist?.value), 120) || null;
   const lic = clip(meta.LicenseShortName?.value, 40) || "See source";
   const pd = /^(pd|cc0)/i.test(String(meta.License?.value || "")) || /public domain|cc0/i.test(lic);
-  const big = info.width >= 1920 ? commonsWidth(info.thumburl, 1920) : info.size > 0 && info.size < 4_000_000 ? info.url : commonsWidth(info.thumburl, 1280);
+  // Standard widths only; for tall images pick a narrower bucket so the long
+  // side stays bounded (vision limits, proxy size cap).
+  const tall = info.height > 0 && info.width > 0 ? info.height / info.width : 1;
+  const fit = (box) => [3840, 1920, 1280, 960, 500, 330, 250].find((w) => w <= box && w * tall <= box && w <= info.width) || 250;
+  const big = info.width >= 1280 || info.height >= 1280 ? commonsWidth(info.thumburl, fit(2400)) : info.size > 0 && info.size < 4_000_000 ? info.url : commonsWidth(info.thumburl, fit(1280));
   return {
     id: `commons:${page.pageid}`,
     source: "commons",
     sourceLabel: "Wikimedia Commons",
     sourceHome: "https://commons.wikimedia.org/wiki/Commons:Featured_pictures",
-    thumb: commonsWidth(info.thumburl, 500),
-    src: info.width >= 1280 ? commonsWidth(info.thumburl, 1280) : big,
+    thumb: commonsWidth(info.thumburl, fit(600)),
+    src: info.width >= 1280 || info.height >= 1280 ? commonsWidth(info.thumburl, fit(1600)) : big,
     full: big,
     width: Number(info.width) || null,
     height: Number(info.height) || null,
@@ -416,8 +422,47 @@ export const SOURCES = {
   smithsonian: { kind: "archive", search: searchSmithsonian, enabled: () => Boolean(process.env.SMITHSONIAN_API_KEY), optional: true },
 };
 
+// ── Canonical lookup by id (for approvals) ───────────────────────────────────
+// An approval must store what the SOURCE says an image is — never image data
+// supplied by a browser (a review request is written by its requester). Each
+// adapter fetches one image by id and runs it through the same normalizer as
+// search, so a curator approves exactly the photo the id points to.
+const RESOLVERS = {
+  unsplash: async (id) => normalizeUnsplash(await getJson(`https://api.unsplash.com/photos/${encodeURIComponent(id)}`, { Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`, "Accept-Version": "v1" })),
+  pexels: async (id) => normalizePexels(await getJson(`https://api.pexels.com/v1/photos/${encodeURIComponent(id)}`, { Authorization: process.env.PEXELS_API_KEY })),
+  met: async (id) => normalizeMet(await getJson(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${encodeURIComponent(id)}`)),
+  cma: async (id) => normalizeCleveland((await getJson(`https://openaccess-api.clevelandart.org/api/artworks/${encodeURIComponent(id)}`)).data),
+  commons: async (id) => {
+    const p = new URLSearchParams({
+      action: "query", format: "json", formatversion: "2", pageids: id, prop: "imageinfo", iiprop: "url|size|mime|extmetadata", iiurlwidth: "500", iiextmetadatalanguage: "en",
+      iiextmetadatafilter: "ObjectName|ImageDescription|Artist|LicenseShortName|License|LicenseUrl|Restrictions|DateTimeOriginal",
+    });
+    return normalizeCommons((await getJson(`https://commons.wikimedia.org/w/api.php?${p}`)).query?.pages?.[0]);
+  },
+  arena: async (id) => normalizeArena(await getJson(`https://api.are.na/v3/blocks/${encodeURIComponent(id)}`, process.env.ARENA_ACCESS_TOKEN ? { Authorization: `Bearer ${process.env.ARENA_ACCESS_TOKEN}` } : {})),
+};
+const ID_SHAPE = { unsplash: /^[A-Za-z0-9_-]{4,40}$/, pexels: /^\d{1,12}$/, met: /^\d{1,9}$/, cma: /^\d{1,9}$/, commons: /^\d{1,12}$/, arena: /^\d{1,12}$/ };
+
+export async function resolveImage(fullId) {
+  const m = /^([a-z]+):(.+)$/.exec(String(fullId || ""));
+  if (!m || !RESOLVERS[m[1]] || !ID_SHAPE[m[1]].test(m[2])) return null;
+  const src = SOURCES[m[1]];
+  if (src && !src.enabled()) return null;
+  const img = await RESOLVERS[m[1]](m[2]);
+  return img && img.id === fullId ? img : null;
+}
+
+// Same photo? Compare origin + path of the thumbnail (query strings carry
+// sizing and tracking parameters that legitimately differ).
+export function imageBase(url) {
+  try { const u = new URL(url); return `${u.origin}${u.pathname}`; } catch { return ""; }
+}
+
 // Route each query to ONE source of its kind, rotating by query index and page
 // so a story spreads across sources and "load more" visits different ones.
+// Each query cycles through every source of its kind once per `pool.length`
+// pages, so the page number sent to a source counts only that query's own
+// visits to it — the first visit is always the source's page 1.
 export function planQueries(queries, page) {
   const live = (kind) => Object.keys(SOURCES).filter((k) => SOURCES[k].kind === kind && SOURCES[k].enabled());
   const pools = { photo: live("photo"), archive: live("archive") };
@@ -427,7 +472,7 @@ export function planQueries(queries, page) {
     const pool = pools[q.kind];
     if (!pool?.length) continue;
     const source = pool[(counters[q.kind]++ + page - 1) % pool.length];
-    plan.push({ ...q, source });
+    plan.push({ ...q, source, sourcePage: Math.floor((page - 1) / pool.length) + 1 });
   }
   return plan;
 }
@@ -438,7 +483,7 @@ export async function searchAll(queries, { perQuery = 8, page = 1 } = {}) {
   const failed = new Set();
   const results = await Promise.all(plan.map(async (job) => {
     try {
-      const items = await SOURCES[job.source].search(job.q, { perQuery, page });
+      const items = await SOURCES[job.source].search(job.q, { perQuery, page: job.sourcePage });
       ok.add(job.source);
       return items.map((c) => ({ ...c, query: job.q, storyId: job.storyId }));
     } catch {

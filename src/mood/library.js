@@ -5,13 +5,23 @@
 // Without Supabase configured, every function here is a harmless no-op and the
 // UI explains that designer approval isn't set up — it never fakes a badge.
 import { supabase, authEnabled } from "../supabase";
+import { resolveImages } from "./api.js";
 
 export const libraryEnabled = authEnabled;
 
 const APPROVAL_COLS = "id, image_id, image, tags, story, note, created_at, curator_id, curator:mood_curators(display_name, title, house)";
 
+// Same photo? Origin + path of the thumbnail (query strings carry sizing).
+export const imageBase = (url) => { try { const u = new URL(url); return `${u.origin}${u.pathname}`; } catch { return ""; } };
+
+// An approval counts for a pin only if it's for the same photo (same id AND
+// same image at the source), so a badge can never land on an image the
+// curator didn't see.
+export const approvalOf = (approvals, pin) => (approvals[pin.id] || []).find((a) => !a.base || a.base === imageBase(pin.thumb)) || null;
+
 const toApproval = (row) => ({
   id: row.id,
+  base: imageBase(row.image?.thumb),
   imageId: row.image_id,
   note: row.note || "",
   story: row.story || "",
@@ -66,15 +76,22 @@ export async function matchLibrary(keywords, limit = 24) {
   return out;
 }
 
-const cleanImage = (pin) => {
-  const { approval, score, role, note, storyId, ...image } = pin;
-  return image;
-};
+// An approval stores the image exactly as its SOURCE describes it, fetched
+// server-side by id — never the pin data held in a browser (a review request's
+// snapshot is written by its requester). If the source's thumbnail isn't the
+// one the curator was looking at, nothing is approved.
+export async function canonicalImage(pin) {
+  const found = (await resolveImages([pin.id]))[pin.id];
+  if (!found) throw new Error("Couldn't verify this image at its source, so it wasn't approved.");
+  if (imageBase(found.thumb) !== imageBase(pin.thumb)) throw new Error("This image's data doesn't match its source, so it wasn't approved.");
+  return found;
+}
 
 export async function approve(pin, { note = "", tags = [], story = "" }) {
+  const image = await canonicalImage(pin);
   const { data, error } = await supabase.from("mood_approvals").upsert({
-    image_id: pin.id,
-    image: cleanImage(pin),
+    image_id: image.id,
+    image,
     tags: [...new Set(tags.map((t) => String(t).toLowerCase().trim()).filter(Boolean))].slice(0, 30),
     story: String(story).slice(0, 120),
     note: String(note).slice(0, 500),
@@ -110,13 +127,31 @@ export async function listReviewRequests() {
   return data || [];
 }
 
+// decisions: { [imageId]: { verdict, note, by } } — the caller merges its own
+// verdicts over other curators' (updated_at is stamped by the database).
 export async function decideReview(id, decisions) {
   const { data: s } = await supabase.auth.getSession();
   const { error } = await supabase.from("mood_review_requests").update({
     decisions,
     status: "done",
     reviewed_by: s?.session?.user?.id,
-    updated_at: new Date().toISOString(),
   }).eq("id", id);
   if (error) throw error;
+}
+
+export async function dismissReview(id) {
+  const { error } = await supabase.from("mood_review_requests").delete().eq("id", id);
+  if (error) throw error;
+}
+
+// Ids of currently verified curators (RLS shows the public only verified ones).
+export async function verifiedCuratorIds() {
+  const { data, error } = await supabase.from("mood_curators").select("user_id").eq("verified", true);
+  if (error) throw error;
+  return new Set((data || []).map((r) => r.user_id));
+}
+
+export async function myUserId() {
+  const { data: s } = await supabase.auth.getSession();
+  return s?.session?.user?.id || null;
 }

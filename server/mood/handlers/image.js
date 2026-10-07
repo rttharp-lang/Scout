@@ -8,6 +8,7 @@
 // When `track` is an Unsplash download_location, it is pinged server-side
 // (Unsplash API guidelines require it whenever a user downloads a photo).
 import { fetchAllowedImage, isAllowedImageUrl, sniffImageType, trackUnsplashDownload } from "../sources.js";
+import { crossSite } from "../validate.js";
 
 // Vercel caps a function response at 4.5 MB; stay under it.
 const MAX_BYTES = 4_400_000;
@@ -19,8 +20,7 @@ const safeName = (s) => String(s || "").replace(/\.[a-z0-9]{2,4}$/i, "").replace
 export default async function handler(req, res) {
   if (req.method && req.method !== "GET") { res.status(405).json({ error: "method-not-allowed" }); return; }
   // Only this site's own pages may use the proxy (browsers send Sec-Fetch-Site).
-  const site = String(req.headers?.["sec-fetch-site"] || "");
-  if (site && site !== "same-origin" && site !== "none") { res.status(403).json({ error: "cross-site" }); return; }
+  if (crossSite(req)) { res.status(403).json({ error: "cross-site" }); return; }
   const u = (req.query.u || "").toString();
   if (!isAllowedImageUrl(u)) { res.status(400).json({ error: "bad-url" }); return; }
   try {
