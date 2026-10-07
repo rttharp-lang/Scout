@@ -9,6 +9,9 @@ export const CATEGORIES = [
   { id: "metal", label: "Chrome & light" },
   { id: "retro", label: "Varsity & craft" },
   { id: "digital", label: "Digital" },
+  { id: "optics", label: "Glass & optics" },
+  { id: "material", label: "3-D & material" },
+  { id: "texture", label: "Worn & pressed" },
 ];
 
 /**
@@ -85,7 +88,7 @@ const METHODS = ["Screen print", "Sublimation", "Embroidery", "Chenille patch", 
 
 /**
  * lintEffect(effect) → string[] — soft CONTRACTS.md problems that do NOT stop an effect
- * from loading (name/blurb length, method, 3–7 params, 2–4 presets, preset keys, palette
+ * from loading (name/blurb length, method, 3–7 params, 2–6 presets, preset keys, palette
  * roles as color defaults). harness/effects.html prints them as [lint] warnings.
  */
 export function lintEffect(eff) {
@@ -99,7 +102,7 @@ export function lintEffect(eff) {
   if (params.length < 3 || params.length > 7) w.push(`${params.length} params (contract: 3–7)`);
   for (const p of params) if (p?.type === "color" && !ROLES.includes(p.default)) w.push(`color "${p.key}" defaults to a hex, not a palette role`);
   const presets = Array.isArray(eff.presets) ? eff.presets : [];
-  if (presets.length < 2 || presets.length > 4) w.push(`${presets.length} preset(s) (contract: 2–4)`);
+  if (presets.length < 2 || presets.length > 6) w.push(`${presets.length} preset(s) (contract: 2–6)`);
   const keys = new Set(params.map((p) => p?.key));
   for (const pr of presets) {
     const bad = Object.keys(pr?.params || {}).filter((k) => !keys.has(k));

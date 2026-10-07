@@ -1,0 +1,2334 @@
+{
+ "catalog": [
+  {
+   "name": "Halftoner",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/halftoner",
+   "kind": "photo effect",
+   "description": "5 screens (dot, line, wave), 20 gradient maps, paper. Dot screen is covered; line/wave screens need the 'Wave screen' preset.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Hype",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/hype",
+   "kind": "text/logo effect",
+   "description": "Vivid neon chrome, 20 gradient maps, grain. Becomes new effect: hype.",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Cyber",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/cyber",
+   "kind": "text/logo effect",
+   "description": "Neon HUD display with screen texture and depth-of-field blur. Becomes new: hype (Cyber preset).",
+   "logoApplicable": true,
+   "coveredBy": "partial:neon"
+  },
+  {
+   "name": "Futurist Neon Chrome Effect",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/futurist-neon-chrome-effect",
+   "kind": "text/logo effect",
+   "description": "Smart-object neon chrome. Becomes new: hype (Futurist preset).",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Spray",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/spray",
+   "kind": "action",
+   "description": "One-step spray paint and stencil.",
+   "logoApplicable": true,
+   "coveredBy": "stencil"
+  },
+  {
+   "name": "Zine",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/zine",
+   "kind": "photo effect",
+   "description": "Free effect: colour halftone, misregistration, photocopy grain. Needs halftone preset 'Zine CMYK'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Risoprint (studio2am.co + YouWorkForThem listing)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/risoprint",
+   "kind": "photo effect",
+   "description": "Riso overprint, choice of colours, 3 grain levels.",
+   "logoApplicable": true,
+   "coveredBy": "risograph"
+  },
+  {
+   "name": "Refrakt",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/refrakt",
+   "kind": "photo effect",
+   "description": "Reeded/fluted glass refraction with 12 patterns. Becomes new: refrakt.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Glow FX",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/glow-fx-photoshop-action",
+   "kind": "action",
+   "description": "15 pattern styles, 18 glow presets, grit. Becomes new: aura (Glow FX preset).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Distress",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/distress",
+   "kind": "text/logo effect",
+   "description": "Grain, halftone and distortion damage at light/medium/heavy. Becomes new: distress.",
+   "logoApplicable": true,
+   "coveredBy": "partial:screenprint"
+  },
+  {
+   "name": "xScan (studio2am.co + Creative Market)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/xscan",
+   "kind": "text/logo effect",
+   "description": "Logo dragged through a scanner: smear, pull, uneven pressure. Becomes new: photocopy.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Ghosted",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/ghosted",
+   "kind": "text/logo effect",
+   "description": "Ghost/echo distortion. Needs speed preset 'Ghosted' (and warp echo).",
+   "logoApplicable": true,
+   "coveredBy": "partial:speed"
+  },
+  {
+   "name": "CRT Machine (studio2am.co + YWFT)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/crt-machine",
+   "kind": "text/logo effect",
+   "description": "Old-school CRT: RGB subpixels, scanlines, phosphor glow. Becomes new: crt.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "LCD Machine",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/lcd-machine",
+   "kind": "text/logo effect",
+   "description": "Monochrome LCD in 12 colourways. Becomes new: crt (LCD preset). 8-Bit Handheld is only near.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Bitmap (studio2am.co + YWFT)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/bitmap",
+   "kind": "action",
+   "description": "Retro 8-bit matrix conversion.",
+   "logoApplicable": true,
+   "coveredBy": "pixel"
+  },
+  {
+   "name": "Bleeder",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/distortion-collection",
+   "kind": "action",
+   "description": "Ink bleed, sold in the Distortion Collection. Becomes new: inkbleed.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Melted (studio2am.co + Creative Market)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/melted",
+   "kind": "text/logo effect",
+   "description": "Drippy, wavy and stretched trippy distortions. Stretch needs a melt preset.",
+   "logoApplicable": true,
+   "coveredBy": "partial:melt"
+  },
+  {
+   "name": "Blotter",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/blotter",
+   "kind": "mockup",
+   "description": "Perforated LSD blotter-tab mockup. Skipped on purpose.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Glow (Studio 2am 2020 Collection / Ghost Who Walks)",
+   "vendor": "Studio 2am / Ghost Who Walks",
+   "url": "https://studio2am.co/products/glow",
+   "kind": "action",
+   "description": "One-step soft lens glow. Becomes new: aura (Soft glow).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Reflex",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/reflex",
+   "kind": "photo effect",
+   "description": "Realistic mirror reflections. Becomes new: mirror.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Filmic",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/2021-collection",
+   "kind": "photo effect",
+   "description": "Seasonal colour grades for photos.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Thermal (Studio 2am / Ghost Who Walks, 52 gradient maps)",
+   "vendor": "Studio 2am / Ghost Who Walks",
+   "url": "https://studio2am.co/products/thermal",
+   "kind": "gradient pack",
+   "description": "Triad, Heatmap, Fade and Surge maps. Heatmap is covered; Triad and Surge need presets.",
+   "logoApplicable": true,
+   "coveredBy": "partial:thermal"
+  },
+  {
+   "name": "Neonic / Neonic 2",
+   "vendor": "anthony.psd (sold by Studio 2am)",
+   "url": "https://studio2am.co/products/neonic",
+   "kind": "gradient pack",
+   "description": "Vivid textured organic neon gradients. Becomes new: gradmap.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Dirty Scanner",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/dirty-scanner",
+   "kind": "texture/overlay",
+   "description": "Grainy scan and dust overlays. Becomes new: grunge / photocopy.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Fingerprint",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/fingerprint",
+   "kind": "texture/overlay",
+   "description": "100+ finger, hand and smudge textures. Becomes new: grunge.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Graffiti (tags + distressed overlays)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/graffiti",
+   "kind": "texture/overlay",
+   "description": "60 tags, 15 distressed overlays. Needs graffiti preset 'Tagged'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:graffiti"
+  },
+  {
+   "name": "Marker (2022 Collection / 500+ PNGs)",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/marker",
+   "kind": "texture/overlay",
+   "description": "Marker strokes and scribbles.",
+   "logoApplicable": true,
+   "coveredBy": "scribble"
+  },
+  {
+   "name": "Scribble",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/scribble",
+   "kind": "texture/overlay",
+   "description": "500+ hand-drawn scribbles plus brushes.",
+   "logoApplicable": true,
+   "coveredBy": "scribble"
+  },
+  {
+   "name": "Ransom",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/ransom",
+   "kind": "other",
+   "description": "Cut-out ransom letters (asset pack). Its look feeds cutout (Collage).",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Collage",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/collage",
+   "kind": "other",
+   "description": "Retro cut-outs (asset pack). Its look feeds cutout (Collage).",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Paper Vol. 1",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/paper-vol-1",
+   "kind": "texture/overlay",
+   "description": "200+ paper scans. Becomes new: grunge (paper) and cutout.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Tape Vol. 1",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/tape-vol-1",
+   "kind": "texture/overlay",
+   "description": "Masking, PVC and packing tape. Becomes new: cutout (Taped up).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Sensory",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/2020-collection",
+   "kind": "texture/overlay",
+   "description": "Animated retro textures.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Solid",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/solid",
+   "kind": "other",
+   "description": "Instagram story templates.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Broken",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/broken",
+   "kind": "photo effect",
+   "description": "Cracked glass with blur, grain and chromatic aberration. Becomes new: shatter.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Prizm",
+   "vendor": "Studio 2am",
+   "url": "https://studio2am.co/products/prizm",
+   "kind": "photo effect",
+   "description": "Prism ghost copies with rainbow fringe. Becomes new: prism.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Halftone Print Effect / Halftone Print Style Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/halftone-print-effect",
+   "kind": "photo effect",
+   "description": "Halftone print looks.",
+   "logoApplicable": true,
+   "coveredBy": "halftone"
+  },
+  {
+   "name": "Halftone Effects Creator",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/halftone-effects-creator",
+   "kind": "generator",
+   "description": "20 patterns (dots, tiles, zigzags, cubes), dust, paper. Zigzag needs halftone 'Wave screen'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Delusio Halftone Photoshop Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/delusio-halftone-photoshop-effect",
+   "kind": "generator",
+   "description": "20 halftone patterns, 50 gradients.",
+   "logoApplicable": true,
+   "coveredBy": "halftone"
+  },
+  {
+   "name": "Halftone Text Effect",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/halftone-text-effect",
+   "kind": "text/logo effect",
+   "description": "Halftone on text.",
+   "logoApplicable": true,
+   "coveredBy": "halftone"
+  },
+  {
+   "name": "Hyper Halftone Effects",
+   "vendor": "Afterimagine",
+   "url": "https://studio2am.co/products/hyper-halftone-effects",
+   "kind": "photo effect",
+   "description": "Halftone effects.",
+   "logoApplicable": true,
+   "coveredBy": "halftone"
+  },
+  {
+   "name": "Comic Halftone Photo / Print Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/comic-halftone-print-effect",
+   "kind": "photo effect",
+   "description": "Comic dot print.",
+   "logoApplicable": true,
+   "coveredBy": "halftone"
+  },
+  {
+   "name": "Grunge Halftone Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/grunge-halftone-photo-effect",
+   "kind": "photo effect",
+   "description": "Halftone with grunge. Distress also covers this.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Halftone Crumpled Paper Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/halftone-crumpled-paper-photo-effect",
+   "kind": "photo effect",
+   "description": "Halftone on crumpled paper. Grunge (crease) adds the paper.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Halftone Spinning Blur Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/halftone-spinning-blur-photo-effect",
+   "kind": "photo effect",
+   "description": "Halftone with radial spin blur.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Dreamy Glow Halftone Print Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/dreamy-glow-halftone-print-effect",
+   "kind": "photo effect",
+   "description": "Glow plus halftone. Becomes new: aura (Halftone glow).",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Halftone Image Effects Pack",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/halftone-image-effects-pack",
+   "kind": "photo effect",
+   "description": "20 halftone options, 11 textures.",
+   "logoApplicable": true,
+   "coveredBy": "halftone"
+  },
+  {
+   "name": "Halftone Textures Pack / Halftone Textures Map Pack",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/halftone-textures-pack",
+   "kind": "texture/overlay",
+   "description": "Normal and curved halftone textures. Curved needs 'Wave screen'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Multi-App Printing Press Brush Studio",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/multi-app-printing-press-brush-studio",
+   "kind": "other",
+   "description": "Halftone and grain brushes.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Exhaustive Photoshop Effects Bundle",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/exhaustive-photoshop-effects-bundle",
+   "kind": "photo effect",
+   "description": "80 effects: prism, halftone, sketch, retro. Prism and sketch spread across new effects.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Pop Art Cartoons Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/pop-art-cartoons-photo-effect",
+   "kind": "photo effect",
+   "description": "Pop-art posterize plus dots. Halftone 'Zine CMYK' covers it.",
+   "logoApplicable": true,
+   "coveredBy": "partial:halftone"
+  },
+  {
+   "name": "Aura Text Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/aura-text-effect",
+   "kind": "text/logo effect",
+   "description": "Glowing aura plus distortion. Becomes new: aura.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Disorder / Status / Wired / Memory Text Distortions",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/disorder-text-distortion",
+   "kind": "text/logo effect",
+   "description": "Smart-object liquify, smear and wave distortions. Becomes new: warp.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Venom Text Distortion Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/venom-text-distortion-effect",
+   "kind": "text/logo effect",
+   "description": "Toxic dripping text. Needs melt preset 'Venom'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:melt"
+  },
+  {
+   "name": "Prism Text Distortion Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/prism-text-distortion-effect",
+   "kind": "text/logo effect",
+   "description": "Prism refraction on type. Becomes new: prism.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "X-Ray Text Distortion",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/x-ray-text-distortion",
+   "kind": "text/logo effect",
+   "description": "Inverted x-ray look. Needs thermal preset 'X-ray'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:thermal"
+  },
+  {
+   "name": "Screentime Monitor Text Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/screentime-monitor-text-effect",
+   "kind": "text/logo effect",
+   "description": "Screen pixels and scanlines. Becomes new: crt (Monitor).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Chrome Effect / Retro Chrome Effect / Golden Metallic Text Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/chrome-effect",
+   "kind": "text/logo effect",
+   "description": "Silver and gold chrome on logos.",
+   "logoApplicable": true,
+   "coveredBy": "chrome"
+  },
+  {
+   "name": "Stamp Kit (7 Ink Textures)",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/stamp-kit-7-ink-textures",
+   "kind": "text/logo effect",
+   "description": "Rubber stamp with 7 ink textures. Becomes new: stamp.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Steam Overlay Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/steam-overlay-effect",
+   "kind": "texture/overlay",
+   "description": "Rising steam. Becomes new: fire (Steam).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Signal Neon Distortion Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/signal-neon-distortion-effect",
+   "kind": "text/logo effect",
+   "description": "Distorted neon.",
+   "logoApplicable": true,
+   "coveredBy": "partial:neon"
+  },
+  {
+   "name": "Dreamy Bubble Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/dreamy-bubble-effect",
+   "kind": "text/logo effect",
+   "description": "Soap-bubble distortion. Becomes new: glass (Bubble).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Static Distortion Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/static-distortion-effect",
+   "kind": "photo effect",
+   "description": "Stippled TV static. Becomes new: crt static / dither noise.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Lapse Chromatic Aberration Text Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/lapse-chromatic-aberration-text-effect",
+   "kind": "text/logo effect",
+   "description": "Clean RGB split. Needs glitch preset 'Lapse'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:glitch"
+  },
+  {
+   "name": "Low Ink Printer Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/low-ink-printer-effect",
+   "kind": "photo effect",
+   "description": "Ink starvation and banding. Becomes new: stamp (Low ink).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Liquid Glass Overlay / Clarity Glass Overlay",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/liquid-glass-overlay-effect",
+   "kind": "text/logo effect",
+   "description": "Glass slab with refraction and highlights. Becomes new: glass.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "VHS Machine Retro Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/vhs-machine-retro-effect",
+   "kind": "photo effect",
+   "description": "VHS tape look. Needs glitch preset 'Tape tracking'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:glitch"
+  },
+  {
+   "name": "Drifter Motion Blur Effect",
+   "vendor": "Divided.co",
+   "url": "https://studio2am.co/products/drifter-motion-blur-effect",
+   "kind": "photo effect",
+   "description": "Coloured motion blur. Needs speed preset 'Dunk'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:speed"
+  },
+  {
+   "name": "Technical Blueprint Text Effects",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/technical-blueprint-text-effects",
+   "kind": "text/logo effect",
+   "description": "Engineering schematic styles. Becomes new: blueprint.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Futuristic Chrome / Y2K Chrome / Chrome Metallic Y2K Text Effects",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/y2k-chrome-text-effect",
+   "kind": "text/logo effect",
+   "description": "Y2K chrome with iridescent highlights and star accents. Iridescent needs a holo preset.",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Holographic Chrome Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/holographic-chrome-text-effect-3",
+   "kind": "text/logo effect",
+   "description": "Rainbow chrome. Needs holo preset 'Iridescent chrome'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:holographic"
+  },
+  {
+   "name": "Holographic Glass Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/holographic-glass-text-effect",
+   "kind": "text/logo effect",
+   "description": "Iridescent transparent glass. Becomes new: glass (Holo glass).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Overprint Typography Text Effect Pack",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/overprint-typography-text-effect-pack",
+   "kind": "text/logo effect",
+   "description": "Riso-style misaligned overprint.",
+   "logoApplicable": true,
+   "coveredBy": "risograph"
+  },
+  {
+   "name": "Bootleg Metal Typography Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/bootleg-metal-typography-text-effect",
+   "kind": "text/logo effect",
+   "description": "Bootleg metal-band logo. Becomes new: thorns.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Vintage Western Ornamental Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/vintage-western-ornamental-text-effect",
+   "kind": "text/logo effect",
+   "description": "Western inline ornamental type. Becomes new: western.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Bold Rubber Stamp Badge Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/bold-rubber-stamp-badge-text-effect",
+   "kind": "text/logo effect",
+   "description": "Stamp badge. Becomes new: stamp (Badge).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Experimental Chaotic Typography Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/experimental-chaotic-typography-text-effect",
+   "kind": "text/logo effect",
+   "description": "Layered chaotic copies. Becomes new: warp (Chaos).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "3D Groovy Pop Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/3d-groovy-pop-text-effect",
+   "kind": "text/logo effect",
+   "description": "90s perspective 3-D pop letters. Becomes new: extrude. Varsity block is only oblique.",
+   "logoApplicable": true,
+   "coveredBy": "partial:varsity"
+  },
+  {
+   "name": "Chrome Graffiti Street Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/chrome-graffiti-street-text-effect",
+   "kind": "text/logo effect",
+   "description": "Glossy chrome and neon graffiti.",
+   "logoApplicable": true,
+   "coveredBy": "graffiti"
+  },
+  {
+   "name": "Golden Retro Enamel Pin Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/golden-retro-enamel-pin-text-effect",
+   "kind": "text/logo effect",
+   "description": "Gold enamel pin with bevel and glow. Becomes new: enamel.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Retro VHS Glitch Neon Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/retro-vhs-glitch-neon-text-effect",
+   "kind": "text/logo effect",
+   "description": "Synthwave VHS: scanlines, RGB split.",
+   "logoApplicable": true,
+   "coveredBy": "partial:glitch"
+  },
+  {
+   "name": "Risograph Offset Print Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/risograph-offset-print-text-effect",
+   "kind": "text/logo effect",
+   "description": "Riso offset.",
+   "logoApplicable": true,
+   "coveredBy": "risograph"
+  },
+  {
+   "name": "Chrome Gothic Text Effect",
+   "vendor": "Matsero",
+   "url": "https://studio2am.co/products/chrome-gothic-text-effect",
+   "kind": "text/logo effect",
+   "description": "Blackletter chrome with neon. Becomes new: thorns (Gothic chrome).",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Diffusion Text Effect",
+   "vendor": "God Control",
+   "url": "https://studio2am.co/products/diffusion-text-effect",
+   "kind": "text/logo effect",
+   "description": "Diffuse blur glow. Becomes new: aura.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Dunk Text Effect",
+   "vendor": "God Control",
+   "url": "https://studio2am.co/products/dunk-text-effect",
+   "kind": "text/logo effect",
+   "description": "Motion blur with grain and gradients. Needs speed preset 'Dunk'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:speed"
+  },
+  {
+   "name": "Fastgrad",
+   "vendor": "God Control",
+   "url": "https://studio2am.co/products/fastgrad-photoshop-gradient-maps",
+   "kind": "gradient pack",
+   "description": "120+ gradient maps. Becomes new: gradmap.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Plastic Textures Vol.1",
+   "vendor": "God Control",
+   "url": "https://studio2am.co/products/plastic-textures-vol-1",
+   "kind": "texture/overlay",
+   "description": "Plastic wrap textures. Becomes new: plastic.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Graffiti Text & Logos Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/graffiti-text-logos-effect",
+   "kind": "text/logo effect",
+   "description": "Spray graffiti logo.",
+   "logoApplicable": true,
+   "coveredBy": "graffiti"
+  },
+  {
+   "name": "Cinematic Text Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/cinematic-text-effects",
+   "kind": "text/logo effect",
+   "description": "Cinematic glow titles. Becomes new: aura.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Liquid Text Effects Collection",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/liquid-text-effects-collection",
+   "kind": "text/logo effect",
+   "description": "Glossy liquid type.",
+   "logoApplicable": true,
+   "coveredBy": "partial:melt"
+  },
+  {
+   "name": "Chrome Text & Logo / Silver Chrome / Original Chrome Style / Metal Chrome / Liquid Chrome",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/liquid-chrome-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Silver liquid chrome family, some with colour variants.",
+   "logoApplicable": true,
+   "coveredBy": "chrome"
+  },
+  {
+   "name": "Purple Chrome Text & Logo Effect / Purple Chrome Effect",
+   "vendor": "Pixelbuddha / Kuro",
+   "url": "https://studio2am.co/products/purple-chrome-effect",
+   "kind": "text/logo effect",
+   "description": "Purple-tinted chrome. Needs chrome preset.",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Chrome Style Effects Lab",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/chrome-style-effects-lab",
+   "kind": "text/logo effect",
+   "description": "9 chromes in variable hues, plus metallic frames.",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Chrome / Liquid Metal Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/chrome-liquid-metal-text-effect",
+   "kind": "text/logo effect",
+   "description": "Tubular liquid metal in gold, rose and gunmetal. Rose and gunmetal need presets.",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Iridescent Chrome Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/iridescent-chrome-text-effect",
+   "kind": "text/logo effect",
+   "description": "Y2K iridescent chrome.",
+   "logoApplicable": true,
+   "coveredBy": "partial:holographic"
+  },
+  {
+   "name": "Plastic Text & Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/plastic-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Plastic wrap over logo. Becomes new: plastic.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Acid Faded Text & Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/acid-faded-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Faded acid colours. Becomes new: gradmap (Acid fade).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "CRT Monitor Text & Logo / CRT Glowing Screen Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/crt-glowing-screen-text-effect",
+   "kind": "text/logo effect",
+   "description": "Phosphor glow, thick scanlines, bitmap grid. Becomes new: crt.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Angelic Grunge Text & Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/angelic-grunge-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Cyber grunge: spray edges, halftone glow, circuits. Becomes new: cybergrunge.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Printed Mess Text & Logo Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/printed-mess-text-logo-effects",
+   "kind": "text/logo effect",
+   "description": "Messy misprint. Becomes new: inkbleed.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Neo Blur Vintage Text & Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/neo-blur-vintage-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Vintage blur glow. Becomes new: aura.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Neon CRT Blurry Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/neon-crt-blurry-text-effect",
+   "kind": "text/logo effect",
+   "description": "Neon plus CRT blur. Becomes new: crt with glow.",
+   "logoApplicable": true,
+   "coveredBy": "partial:neon"
+  },
+  {
+   "name": "Metal Emboss Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/metal-emboss-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Embossed metal. Needs emboss 'Foil stamp' (metal finish).",
+   "logoApplicable": true,
+   "coveredBy": "partial:emboss"
+  },
+  {
+   "name": "Glitched Distortion / Glitch Distortion Photo / Distortion Glitch Photo Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/glitched-distortion-effect",
+   "kind": "text/logo effect",
+   "description": "Slice-offset glitch, vertical and horizontal.",
+   "logoApplicable": true,
+   "coveredBy": "glitch"
+  },
+  {
+   "name": "Chromatic Glitch Text Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/chromatic-glitch-text-effects",
+   "kind": "text/logo effect",
+   "description": "RGB split text.",
+   "logoApplicable": true,
+   "coveredBy": "partial:glitch"
+  },
+  {
+   "name": "Classic Glitch Effects Collection / Glitch Effects Bundle / Distortion Text Effects Collection",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/classic-glitch-effects-collection",
+   "kind": "photo effect",
+   "description": "Analog glitch, pixel sort, B/W distortion.",
+   "logoApplicable": true,
+   "coveredBy": "glitch"
+  },
+  {
+   "name": "Blurry Glitch / Blur Glitch Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/blurry-glitch-photo-effect",
+   "kind": "photo effect",
+   "description": "Soft blur with RGB fringes.",
+   "logoApplicable": true,
+   "coveredBy": "partial:glitch"
+  },
+  {
+   "name": "Color Overprint Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/color-overprint-effect",
+   "kind": "photo effect",
+   "description": "Two inks with a multiplied third tone. Needs riso preset 'Overprint'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:risograph"
+  },
+  {
+   "name": "Risograph Grain / Risoprint Photo / Weaving Machine Risograph Creator / Risoprint Creator / Risograph Retro Text",
+   "vendor": "Pixelbuddha / mockstar / Creative Veila",
+   "url": "https://studio2am.co/products/risograph-grain-effect",
+   "kind": "photo effect",
+   "description": "Riso grain and offset generators.",
+   "logoApplicable": true,
+   "coveredBy": "risograph"
+  },
+  {
+   "name": "Retro Risoprint Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/retro-risoprint-photo-effect",
+   "kind": "photo effect",
+   "description": "Coarse orange/teal stipple. Needs riso preset 'Coarse stipple'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:risograph"
+  },
+  {
+   "name": "Risograph Double Exposure Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/risograph-double-exposure-effect",
+   "kind": "photo effect",
+   "description": "Halftone double exposure (photo-led).",
+   "logoApplicable": true,
+   "coveredBy": "partial:risograph"
+  },
+  {
+   "name": "Ultra Ink Printer Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/ultra-ink-printer-effect",
+   "kind": "text/logo effect",
+   "description": "Heavy patchy ink with clogged bleeding edges. Becomes new: inkbleed (Ultra ink).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Misprint Stamp Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/misprint-stamp-text-effect",
+   "kind": "text/logo effect",
+   "description": "Off-register stamp with halftone and canvas. Becomes new: stamp (Double hit).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Dirty Print Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/dirty-print-effect",
+   "kind": "text/logo effect",
+   "description": "Feathered ink on textured paper. Becomes new: inkbleed.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Ink Bleed Photo & Text / Ink Printed Bleed Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/ink-bleed-photo-text-effect",
+   "kind": "text/logo effect",
+   "description": "Dense ink bleed, soft edges, misalignment. Becomes new: inkbleed.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "20-in-1 Overprint & Ink Bleed Effects Bundle",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/20-in-1-overprint-ink-bleed-effects-bundle",
+   "kind": "text/logo effect",
+   "description": "Ink bleed and overprint. Becomes new: inkbleed + riso Overprint.",
+   "logoApplicable": true,
+   "coveredBy": "partial:risograph"
+  },
+  {
+   "name": "20-in-1 Print Text Effects Bundle",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/20-in-1-print-text-effects-bundle",
+   "kind": "text/logo effect",
+   "description": "Ink starvation, stamp pressure, offset slip, toner dropout. Becomes new: stamp + photocopy.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Printed Effects Bundle",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/printed-effects-bundle",
+   "kind": "photo effect",
+   "description": "18 print flaws: ink spread, riso grain.",
+   "logoApplicable": true,
+   "coveredBy": "partial:risograph"
+  },
+  {
+   "name": "Embroidery Stitch Texture / Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/embroidery-stitch-texture-effect",
+   "kind": "photo effect",
+   "description": "Satin stitch texture.",
+   "logoApplicable": true,
+   "coveredBy": "embroidery"
+  },
+  {
+   "name": "Embroidery Patch Logo / Embroidered Patch / Patch Embroidery Logo Mockups",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/embroidery-patch-logo-mockup",
+   "kind": "mockup",
+   "description": "Twill patch, merrowed border, raised satin.",
+   "logoApplicable": true,
+   "coveredBy": "embroidery"
+  },
+  {
+   "name": "Custom Shape Patch Mockup",
+   "vendor": "mockstar",
+   "url": "https://studio2am.co/products/custom-shape-patch-mockup",
+   "kind": "mockup",
+   "description": "3 stitch options plus border shapes. Needs embroidery 'Shield patch'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:embroidery"
+  },
+  {
+   "name": "Dithering Bitmap Creator",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/dithering-bitmap-creator",
+   "kind": "generator",
+   "description": "7 dither types, 9 duotones. Becomes new: dither.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Dithering Automator",
+   "vendor": "MiksKS",
+   "url": "https://studio2am.co/products/dithering-automator",
+   "kind": "action",
+   "description": "12 dither patterns, 74 palettes. Becomes new: dither.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Dither Effects Pack",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/dither-effects-pack",
+   "kind": "action",
+   "description": "10 dither actions, 250 gradients. Becomes new: dither.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "BYTE - Bitmap Actions",
+   "vendor": "Massive Supply Co.",
+   "url": "https://studio2am.co/products/byte-bitmap-actions-for-photoshop",
+   "kind": "action",
+   "description": "14 bitmap actions. Becomes new: dither.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Bitmap Effect - Convert Image into Bitmap",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/bitmap-effect-convert-image-into-bitmap",
+   "kind": "photo effect",
+   "description": "1-bit conversion. Becomes new: dither.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Pixelated Dithered Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/pixelated-dithered-effect",
+   "kind": "photo effect",
+   "description": "Pixelate plus dither.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Acid Pixel Art Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/acid-pixel-art-effect",
+   "kind": "photo effect",
+   "description": "Pixel art in acid colours. Needs pixel 'Acid pixel'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Colorful Pixels / Pixel Photo Effect / Pixel-8",
+   "vendor": "Pixelbuddha / unknown",
+   "url": "https://studio2am.co/products/colorful-pixels-photo-effect",
+   "kind": "photo effect",
+   "description": "Pixelation and 8-bit conversion.",
+   "logoApplicable": true,
+   "coveredBy": "pixel"
+  },
+  {
+   "name": "TEXTURE MACHINE",
+   "vendor": "Massive Supply Co.",
+   "url": "https://studio2am.co/products/texture-machine-71-texture-generating-actions-for-photoshop",
+   "kind": "action",
+   "description": "71 texture actions: noise gradients, stickers, tape. Becomes new: grunge / gradmap.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Displacement Map Packs (Scans, Noise, Warp, Bubbles, DLC-001, 12 Free)",
+   "vendor": "Massive Supply Co.",
+   "url": "https://studio2am.co/products/warp-displacement-map-pack-20-psd-displacement-maps",
+   "kind": "texture/overlay",
+   "description": "PSD displacement maps. Becomes new: warp.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Glass Displacement Map Pack",
+   "vendor": "Massive Supply Co.",
+   "url": "https://studio2am.co/products/glass-displacement-map-pack-20-psd-displacement-maps",
+   "kind": "texture/overlay",
+   "description": "Glass displacement. Becomes new: refrakt / glass.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Photocopy Machine / CopyCat / Hyper Photocopy Grain",
+   "vendor": "unknown / MiksKS / Aftermockup",
+   "url": "https://studio2am.co/products/copycat-photocopy-effect",
+   "kind": "action",
+   "description": "Toner marks, grit, threshold contrast. Becomes new: photocopy.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Grunge Photocopy Photo / Bad Print Copier Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/bad-print-copier-effect",
+   "kind": "photo effect",
+   "description": "Copier streaks and grunge. Becomes new: photocopy.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "HeatMaps",
+   "vendor": "secret-cache",
+   "url": "https://studio2am.co/products/heatmaps",
+   "kind": "gradient pack",
+   "description": "50 thermal maps.",
+   "logoApplicable": true,
+   "coveredBy": "partial:thermal"
+  },
+  {
+   "name": "Recolor - 60 Gradient Maps / GRADED Gradient Maps",
+   "vendor": "Studio Dusk / Fox Rockett Studio",
+   "url": "https://studio2am.co/products/recolor-60-gradient-maps",
+   "kind": "gradient pack",
+   "description": "Duotone and gradient maps. Becomes new: gradmap.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Y2k Image Effects Pack",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/y2k-image-effects-pack",
+   "kind": "photo effect",
+   "description": "3 Y2K effects (details unknown); likely chrome/holo.",
+   "logoApplicable": true,
+   "coveredBy": "partial:holographic"
+  },
+  {
+   "name": "CRT Image Effects Pack / Arcade Tube CRT / Vintage CRT Digital / Screen Flicker",
+   "vendor": "Z\u00fcli / Pixelbuddha",
+   "url": "https://studio2am.co/products/arcade-tube-crt-effect",
+   "kind": "photo effect",
+   "description": "CRT 8-bit tube, flicker, scanlines. Becomes new: crt.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Retro Phone Screen Effect",
+   "vendor": "MiksKS",
+   "url": "https://studio2am.co/products/retro-phone-screen-effect",
+   "kind": "photo effect",
+   "description": "Old-phone LCD. Becomes new: crt (Phone screen).",
+   "logoApplicable": true,
+   "coveredBy": "partial:pixel"
+  },
+  {
+   "name": "Retro Prism / Lens & Prism / Radiance Prism Photo Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/lens-prism-photo-effects-collection",
+   "kind": "photo effect",
+   "description": "Prismatic ghosting, rainbow, light leaks. Becomes new: prism.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Crystal Prism Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/crystal-prism-photo-effect",
+   "kind": "photo effect",
+   "description": "Mirror and kaleidoscope illusions. Becomes new: mirror (Kaleidoscope).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Soft Glow / Trendy Glow / Magic Glow Photo Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/soft-glow-photo-effect",
+   "kind": "photo effect",
+   "description": "Bloom and dreamy blur. Becomes new: aura.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Acid Blur Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/acid-blur-photo-effect",
+   "kind": "photo effect",
+   "description": "Acid-colour blur. Becomes new: aura + gradmap.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Motion Blur Style / Acid Motion Kit / Cyberpunk Motion",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/motion-blur-style-photo-effect",
+   "kind": "photo effect",
+   "description": "Directional motion blur. Needs speed 'Dunk'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:speed"
+  },
+  {
+   "name": "Film Burn / Light Leak Bundle / Light Leaks Overlays / Golden Hour / Old Film Burn / Vintage Light Leaks",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/old-film-burn-overlay-bundle",
+   "kind": "texture/overlay",
+   "description": "Amber leaks, burnt frames, dust, scratches. Becomes new: filmburn.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Smudged Gloomy Photoshop Kit",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/smudged-gloomy-photoshop-kit",
+   "kind": "photo effect",
+   "description": "Smudged dark mood. Becomes new: grunge.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "12-in-1 Embossed Effects Bundle",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/12-in-1-embossed-effects-bundle",
+   "kind": "mockup",
+   "description": "Paper/leather emboss, letterpress, stitched leather. Needs emboss 'Leather stamp'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:emboss"
+  },
+  {
+   "name": "Embossed Fabric Logo Mockups",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/embossed-fabric-logo-mockups",
+   "kind": "mockup",
+   "description": "Emboss on leather, velour, suede.",
+   "logoApplicable": true,
+   "coveredBy": "partial:emboss"
+  },
+  {
+   "name": "Posh Debossed / Pressed Paper Debossing & Embossing Mockups",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/posh-debossed-logo-mockup",
+   "kind": "mockup",
+   "description": "Paper emboss/deboss.",
+   "logoApplicable": true,
+   "coveredBy": "emboss"
+  },
+  {
+   "name": "Foil-Stamped Paper Logo Mockup",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/foil-stamped-paper-logo-mockup",
+   "kind": "mockup",
+   "description": "Gold foil deboss on kraft. Needs emboss 'Foil stamp'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:emboss"
+  },
+  {
+   "name": "Cyberpunk Photoshop Effects Bundle",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/cyberpunk-photoshop-effects-bundle",
+   "kind": "photo effect",
+   "description": "Neon cyberpunk. Becomes new: hype (Cyber).",
+   "logoApplicable": true,
+   "coveredBy": "partial:neon"
+  },
+  {
+   "name": "Sparkling Glitter Text & Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/sparkling-glitter-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Glitter flakes and sparkles. Becomes new: glitter.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Grunge Distortion Text Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/grunge-distortion-text-effect",
+   "kind": "text/logo effect",
+   "description": "Grunge plus displacement. Becomes new: distress.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Vintage Worn Print / Time-Worn Print Effect",
+   "vendor": "Pixelbuddha / mockstar",
+   "url": "https://studio2am.co/products/vintage-worn-print-effect",
+   "kind": "photo effect",
+   "description": "Worn, faded print.",
+   "logoApplicable": true,
+   "coveredBy": "partial:screenprint"
+  },
+  {
+   "name": "Grunge Effects for Photoshop",
+   "vendor": "HVNTER",
+   "url": "https://studio2am.co/products/grunge-effects-for-photoshop",
+   "kind": "photo effect",
+   "description": "20 grunge effects. Becomes new: distress.",
+   "logoApplicable": true,
+   "coveredBy": "partial:screenprint"
+  },
+  {
+   "name": "Dirty Stamp Text & Logo / Vintage Stamp Texture Effect",
+   "vendor": "Pixelbuddha / mockstar",
+   "url": "https://studio2am.co/products/dirty-stamp-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Grimy rubber stamp. Becomes new: stamp.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Retro Book Print / Retro Print Photo / Retro Print Texture / Vintage Postcard Press",
+   "vendor": "Pixelbuddha / mockstar",
+   "url": "https://studio2am.co/products/retro-book-print-effect",
+   "kind": "photo effect",
+   "description": "Old press print on paper. Needs screenprint 'Press print'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:screenprint"
+  },
+  {
+   "name": "Old Master OverPrint Photoshop Effects",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/old-master-overprint-photoshop-effects",
+   "kind": "photo effect",
+   "description": "Overprint inks.",
+   "logoApplicable": true,
+   "coveredBy": "partial:risograph"
+  },
+  {
+   "name": "Broken Glass Text & Logo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/broken-glass-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "Shattered glass logo. Becomes new: shatter.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "100 Broken Glass Textures Pack",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/100-broken-glass-textures-pack",
+   "kind": "texture/overlay",
+   "description": "Cracked glass overlays. Becomes new: shatter (Cracked).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Acid House Photoshop Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/acid-house-photoshop-effect",
+   "kind": "photo effect",
+   "description": "50 gradients plus noise. Becomes new: gradmap.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Neon Negative Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/neon-negative-photo-effect",
+   "kind": "photo effect",
+   "description": "Inverted neon. Needs thermal 'X-ray'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:thermal"
+  },
+  {
+   "name": "Frozen Y2K Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/frozen-y2k-photo-effect",
+   "kind": "photo effect",
+   "description": "Icy Y2K. Becomes new: ice.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "The Fridge - Text and Logo Effects",
+   "vendor": "Studio Dusk",
+   "url": "https://studio2am.co/products/the-fridge-text-and-logo-effects",
+   "kind": "text/logo effect",
+   "description": "10 frozen/frost logo effects. Becomes new: ice.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Mercury",
+   "vendor": "Ghost Who Walks",
+   "url": "https://studio2am.co/products/mercury",
+   "kind": "text/logo effect",
+   "description": "Chrome in 4 depths and 3 grains. Needs chrome 'Mercury grain'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:chrome"
+  },
+  {
+   "name": "Cinematic Titles Text Effect",
+   "vendor": "Sko4",
+   "url": "https://studio2am.co/products/cinematic-titles-text-effect",
+   "kind": "text/logo effect",
+   "description": "3-D metal movie titles. Becomes new: extrude (Cinematic steel).",
+   "logoApplicable": true,
+   "coveredBy": "partial:varsity"
+  },
+  {
+   "name": "The Neon Toolbox / Bayshore Neon Glow Styles",
+   "vendor": "MiksKS / Set Sail Studios",
+   "url": "https://studio2am.co/products/the-neon-toolbox",
+   "kind": "text/logo effect",
+   "description": "Neon-sign layer styles.",
+   "logoApplicable": true,
+   "coveredBy": "neon"
+  },
+  {
+   "name": "Iridescent Texture Action Kit",
+   "vendor": "angelainthefields",
+   "url": "https://studio2am.co/products/iridescent-texture-action-kit",
+   "kind": "action",
+   "description": "Iridescent holographic textures.",
+   "logoApplicable": true,
+   "coveredBy": "holographic"
+  },
+  {
+   "name": "3D Plush Inflated Alphabet",
+   "vendor": "Afterimagine",
+   "url": "https://studio2am.co/products/3d-plush-inflated-alphabet",
+   "kind": "other",
+   "description": "Pillowy inflated letters (asset). Look needs puff 'Plush'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:puff"
+  },
+  {
+   "name": "Sci-Fi Matrix Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/sci-fi-matrix-photo-effect",
+   "kind": "photo effect",
+   "description": "Green code rain. Needs ascii 'Matrix'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:ascii"
+  },
+  {
+   "name": "Scissors Wizard: Paper Cutout Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/scissors-wizard-paper-cutout-effect",
+   "kind": "photo effect",
+   "description": "Scissor-cut paper with white border and shadow. Becomes new: cutout.",
+   "logoApplicable": true,
+   "coveredBy": "partial:sticker"
+  },
+  {
+   "name": "VHS Tape Text & Logo / Vintage VHS Tape Photo Effect",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/vhs-tape-text-logo-effect",
+   "kind": "text/logo effect",
+   "description": "VHS chroma bleed and tracking. Needs glitch 'Tape tracking'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:glitch"
+  },
+  {
+   "name": "Graffiti Spray Paint Glow Text Effect",
+   "vendor": "After7am",
+   "url": "https://studio2am.co/products/graffiti-spray-paint-glow-text-effect",
+   "kind": "text/logo effect",
+   "description": "Airbrush stencil with glow. Needs stencil 'Glow spray'.",
+   "logoApplicable": true,
+   "coveredBy": "partial:stencil"
+  },
+  {
+   "name": "Spray Scans Textures Pack",
+   "vendor": "Z\u00fcli",
+   "url": "https://studio2am.co/products/spray-scans-textures-pack",
+   "kind": "texture/overlay",
+   "description": "Spray scans.",
+   "logoApplicable": true,
+   "coveredBy": "stencil"
+  },
+  {
+   "name": "Print Scanned Textures / Hyper Scanner Textures / Grunge Paper Marks",
+   "vendor": "Z\u00fcli / Afterimagine / Textexp",
+   "url": "https://studio2am.co/products/hyper-scanner-textures",
+   "kind": "texture/overlay",
+   "description": "Scanned print, scanner and paper grunge. Becomes new: grunge.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Fire Spark Overlay",
+   "vendor": "Afterimagine",
+   "url": "https://studio2am.co/products/fire-spark-overlay",
+   "kind": "texture/overlay",
+   "description": "Embers and sparks. Becomes new: fire.",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Grainy Gradient Textures Pack / Psychedelic Texture Kit",
+   "vendor": "Pixelbuddha / angelainthefields",
+   "url": "https://studio2am.co/products/grainy-gradient-textures-pack",
+   "kind": "texture/overlay",
+   "description": "Grainy and psychedelic gradients. Becomes new: gradmap (+ warp).",
+   "logoApplicable": true,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Styles Pack Vol. I",
+   "vendor": "MiksKS",
+   "url": "https://studio2am.co/products/styles-pack-vol-i",
+   "kind": "text/logo effect",
+   "description": "Layer-style pack; details unknown.",
+   "logoApplicable": true,
+   "coveredBy": "partial:original"
+  },
+  {
+   "name": "Photocopy Effect Illustrations Pack",
+   "vendor": "Afterimagine",
+   "url": "https://studio2am.co/products/photocopy-effect-illustrations-pack",
+   "kind": "other",
+   "description": "Ready-made illustrations, not an effect.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Hyper XRays",
+   "vendor": "Afterimagine",
+   "url": "https://studio2am.co/products/hyper-xrays",
+   "kind": "other",
+   "description": "X-ray graphics assets.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "30 Light Leaks",
+   "vendor": "Studio Dusk",
+   "url": "https://studio2am.co/products/30-light-leaks",
+   "kind": "texture/overlay",
+   "description": "Photo light leaks (filmburn covers the look).",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Holographic Backgrounds / X30 Hologram Sticker Pack",
+   "vendor": "MiksKS / GFX DATABASE",
+   "url": "https://studio2am.co/products/holographic-backgrounds-collection",
+   "kind": "texture/overlay",
+   "description": "Background and sticker assets.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Fractal Glass Gradients / Prismatic Light Backgrounds",
+   "vendor": "Pixelbuddha",
+   "url": "https://studio2am.co/products/fractal-glass-gradients",
+   "kind": "gradient pack",
+   "description": "Backgrounds (refrakt/prism cover the look).",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "3D Liquid Metal Shapes / 3D Iridescent HD Shapes / Liquid Metal Procreate Brushes",
+   "vendor": "Designessense / Digi Life",
+   "url": "https://studio2am.co/products/3d-liquid-metal-shapes-collection",
+   "kind": "other",
+   "description": "3-D shape and brush assets.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "CYBER2K Resource Pack / Cyber Y2K Shapes",
+   "vendor": "Massive Supply Co. / Studio Dusk",
+   "url": "https://studio2am.co/products/cyber2k-futuristic-y2k-resource-pack",
+   "kind": "other",
+   "description": "Y2K shape assets.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  },
+  {
+   "name": "Chroma Waves",
+   "vendor": "Kuro",
+   "url": "https://studio2am.co/products/chroma-waves",
+   "kind": "other",
+   "description": "Unknown; no details in the search snippet.",
+   "logoApplicable": false,
+   "coveredBy": "none"
+  }
+ ],
+ "presetAdditions": [
+  {
+   "effectId": "chrome",
+   "presetName": "Purple chrome",
+   "inspiredBy": "Purple Chrome Effect (Kuro), Purple Chrome Text & Logo Effect (Pixelbuddha)",
+   "spec": "Add finish option 'purple', env ramp #1A0B2E \u2192 #7B3FE4 \u2192 #E9D8FF with white spec. Preset {finish:'purple', bevel:26, smooth:50, contrast:62, horizon:50, tint:0}."
+  },
+  {
+   "effectId": "chrome",
+   "presetName": "Rose gold",
+   "inspiredBy": "Chrome / Liquid Metal Text Effect (gold/rose/gunmetal swaps), Metal Chrome Text & Logo (6 colours)",
+   "spec": "Add finish 'rose', ramp #3B1F1A \u2192 #B76E79 \u2192 #F7D7C9. Preset {finish:'rose', bevel:30, smooth:60, contrast:55, horizon:52}."
+  },
+  {
+   "effectId": "chrome",
+   "presetName": "Gunmetal",
+   "inspiredBy": "Chrome / Liquid Metal Text Effect, Chrome Style Effects Lab",
+   "spec": "Add finish 'gunmetal', ramp #0E1114 \u2192 #4A5560 \u2192 #C9D2DA, blue-grey spec. Preset {finish:'gunmetal', bevel:22, smooth:40, contrast:72, horizon:46}."
+  },
+  {
+   "effectId": "chrome",
+   "presetName": "Mercury grain",
+   "inspiredBy": "Mercury (Ghost Who Walks: 4 depths, 3 grains)",
+   "spec": "Add range param grain (0\u2013100%, default 0): fine fbm luminance grain plus sparse 1-px micro-scratches, applied after the env lookup. Preset {finish:'silver', bevel:44, smooth:72, contrast:58, grain:45}."
+  },
+  {
+   "effectId": "holographic",
+   "presetName": "Iridescent chrome",
+   "inspiredBy": "Iridescent Chrome Text Effect, Holographic Chrome / Chrome Metallic Y2K / Futuristic Chrome (Matsero)",
+   "spec": "{base:'silver', pattern:'liquid', spread:90, shine:88, sparkle:65, detail:40}. Add a horizon-band contrast boost when shine > 80 so it reads as chrome, not foil."
+  },
+  {
+   "effectId": "halftone",
+   "presetName": "Zine CMYK",
+   "inspiredBy": "Zine (Studio 2am), Comic Halftone Print, Pop Art Cartoons",
+   "spec": "Add mode 'cmyk': naive RGB\u2192CMYK split; each plate screened at C15/M75/Y0/K45\u00b0 with round dots and offset 1\u20134 px from a seeded rng (misregistration); multiply onto transparent; photocopy grain 15%. Preset {mode:'cmyk', dot:22, angle:15, shape:'round', fade:false}."
+  },
+  {
+   "effectId": "halftone",
+   "presetName": "Wave screen",
+   "inspiredBy": "Halftoner (line/wave patterns), Halftone Effects Creator (zig-zags), Halftone Textures Pack (curved)",
+   "spec": "Add shape options 'wave' (line screen whose centre line follows y + A\u00b7sin(2\u03c0x/\u03bb), line width \u221d tone) and 'zigzag'. Preset {mode:'mono', dot:20, angle:0, shape:'wave', ink:'primary'}."
+  },
+  {
+   "effectId": "halftone",
+   "presetName": "Spin",
+   "inspiredBy": "Halftone Spinning Blur Photo Effect",
+   "spec": "Add shape 'radial': concentric ring line screen centred on the logo bbox, ring width \u221d tone, plus a light rotational smear (5 rotated copies at \u00b13\u00b0 with alpha falloff). Preset {mode:'color', dot:24, shape:'radial'}."
+  },
+  {
+   "effectId": "risograph",
+   "presetName": "Overprint",
+   "inspiredBy": "Color Overprint Effect, Overprint Typography Pack, Old Master OverPrint, 20-in-1 Overprint & Ink Bleed",
+   "spec": "{inkA:'#00A95C', inkB:'#FF48B0', separation:'tone', misreg:18, grain:35, density:92, paper:false}. The wide misreg exposes the multiplied third tone where the inks overlap."
+  },
+  {
+   "effectId": "risograph",
+   "presetName": "Coarse stipple",
+   "inspiredBy": "Retro Risoprint Photo Effect",
+   "spec": "{inkA:'#FF6C2F', inkB:'#00838A', separation:'tone', misreg:12, grain:95, density:70, paper:true}."
+  },
+  {
+   "effectId": "screenprint",
+   "presetName": "Press print",
+   "inspiredBy": "Retro Book Print, Vintage Postcard Press, Retro Print Photo, Retro Print Texture",
+   "spec": "{wear:30, crack:40, misreg:3, inks:3, underbase:false}. Optionally add a 'paper' toggle that multiplies a warm paper-fibre tone inside the ink."
+  },
+  {
+   "effectId": "glitch",
+   "presetName": "Tape tracking",
+   "inspiredBy": "VHS Tape Text & Logo, VHS Machine, Vintage VHS Tape, Retro VHS Glitch Neon",
+   "spec": "Add range bleed (0\u2013100%): horizontal chroma smear (box-blur of the R and B channels along x only, ~bleed\u00b70.3 px) plus one bright tracking band. Preset {split:8, slices:3, shift:24, colors:'rgb', scanlines:true, noise:60, bleed:70}."
+  },
+  {
+   "effectId": "glitch",
+   "presetName": "Lapse",
+   "inspiredBy": "Lapse Chromatic Aberration Text Effect, Chromatic Glitch Text, Blurry Glitch",
+   "spec": "Clean aberration with no tearing: {split:24, slices:0, shift:0, colors:'rgb', scanlines:false, noise:0}."
+  },
+  {
+   "effectId": "pixel",
+   "presetName": "Acid pixel",
+   "inspiredBy": "Acid Pixel Art Effect, Colorful Pixels Photo Effect",
+   "spec": "Add palette 'acid': 6 hues (#FF2BD6, #7CFF3A, #00E5FF, #FFE600, #8A2BFF, #FF5A1F) mapped by luminance band with a hue rotation per region. Preset {size:12, palette:'acid', shape:'square', outline:false, dither:true}."
+  },
+  {
+   "effectId": "thermal",
+   "presetName": "X-ray",
+   "inspiredBy": "X-Ray Text Distortion (Divided.co), Neon Negative Photo Effect",
+   "spec": "Add palette 'xray' #000814 \u2192 #0A3A6B \u2192 #7FD1FF \u2192 #FFFFFF with edges hottest (invert the core weighting so the outline glows and the interior is dim, like bone density). Preset {palette:'xray', spread:40, contrast:70, halo:30, noise:30}."
+  },
+  {
+   "effectId": "thermal",
+   "presetName": "Surge",
+   "inspiredBy": "Thermal 52 gradient maps (Triad, Heatmap, Fade, Surge), HeatMaps (secret-cache)",
+   "spec": "Add palettes 'surge' (#0D0221 \u2192 #FF1E56 \u2192 #FFAC41 \u2192 #FFFFFF) and 'triad' (#140B3D \u2192 #00B3A4 \u2192 #FFE14D). Preset {palette:'surge', spread:90, contrast:60, halo:26, noise:25}."
+  },
+  {
+   "effectId": "emboss",
+   "presetName": "Foil stamp",
+   "inspiredBy": "Foil-Stamped Paper Logo Mockup, Metal Emboss Logo Effect",
+   "spec": "Add mode 'foil': deboss height field; the face is mapped through a gold ramp (#5A3E12 \u2192 #C9A54A \u2192 #FFF1B8) by n\u00b7L with a hard spec. Preset {mode:'foil', depth:8, detail:70, light:135, color:'#C9A54A', gloss:85}."
+  },
+  {
+   "effectId": "emboss",
+   "presetName": "Leather stamp",
+   "inspiredBy": "12-in-1 Embossed Effects Bundle (stitched leather stamps), Embossed Fabric Logo Mockups",
+   "spec": "{mode:'deboss', depth:9, detail:55, light:120, color:'dark', gloss:15}. Optionally add a 'material' select (smooth|leather|suede) that modulates the surface with pebbled Worley grain or fine fbm."
+  },
+  {
+   "effectId": "melt",
+   "presetName": "Venom",
+   "inspiredBy": "Venom Text Distortion Effect, Liquid Text Effects Collection",
+   "spec": "Add color param tint (default 'primary', with a 'keep logo' toggle) that recolours the melt and drips; glossy highlights plus a faint outer glow in the tint. Preset {melt:85, drips:12, wobble:25, gloss:90, tint:'#7CFF3A'}."
+  },
+  {
+   "effectId": "melt",
+   "presetName": "Stretch",
+   "inspiredBy": "Melted (Studio 2am: drippy, wavy, stretched)",
+   "spec": "Add select mode (sag|stretch). Stretch smears the bottom 35\u201350% of each column straight down (pixel-sort-like, length from fbm). Preset {mode:'stretch', melt:70, drips:0, wobble:15, gloss:40}."
+  },
+  {
+   "effectId": "speed",
+   "presetName": "Ghosted",
+   "inspiredBy": "Ghosted (Studio 2am)",
+   "spec": "Echo instead of motion: {angle:0, length:18, ghosts:4, lines:0}. Each ghost is also scaled 1.04^k and blurred k\u00b71.5 px; add a 'scale' range (0\u201320%) if the existing ghost code is translate-only."
+  },
+  {
+   "effectId": "speed",
+   "presetName": "Dunk",
+   "inspiredBy": "Dunk Text Effect (God Control), Drifter Motion Blur, Motion Blur Style, Acid Motion, Cyberpunk Motion",
+   "spec": "Add range blur (0\u2013100%): true directional motion blur of the logo (accumulate 16\u201332 shifted copies along the angle) under a sharp copy, plus a colorA\u2192colorB gradient on the trail and 20% grain. Preset {angle:0, length:80, ghosts:0, lines:0, blur:70}."
+  },
+  {
+   "effectId": "ascii",
+   "presetName": "Matrix",
+   "inspiredBy": "Sci-Fi Matrix Photo Effect",
+   "spec": "Add charset 'katakana' (half-width \uff71\u2013\uff9d plus digits) and a column-rain brightness falloff (each column brightest at a seeded head row). Preset {cell:16, charset:'katakana', color:'fade', ink:'#00FF66', ink2:'#D9FFE6', weight:'bold'}."
+  },
+  {
+   "effectId": "stencil",
+   "presetName": "Glow spray",
+   "inspiredBy": "Graffiti Spray Paint Glow Text Effect",
+   "spec": "Add range glow (0\u2013100%): an airbrushed soft halo in ink2 behind the cut (blurMask of the dilated mask, two radii, speckled with spray dots). Preset {cut:50, ink:'light', under:false, spray:70, grit:30, drips:false, glow:70}."
+  },
+  {
+   "effectId": "neon",
+   "presetName": "Neon sign",
+   "inspiredBy": "The Neon Toolbox, Bayshore Neon Glow Styles, Signal Neon Distortion",
+   "spec": "Classic warm sign: {width:12, glow:65, colorA:'#FF3B3B', colorB:'#FFD23F', fill:false, flicker:true}."
+  },
+  {
+   "effectId": "graffiti",
+   "presetName": "Tagged",
+   "inspiredBy": "Graffiti (Studio 2am: 60 tags + distressed overlays)",
+   "spec": "Add toggle tags: 3\u20136 procedural handstyle tag scribbles (reuse scribble.js stroke engine, random-walk loops, 6\u201310 px marker) in dark/accent behind and around the piece, with one distressed buff patch. Preset {fill:'flat', depth:20, drips:60, spray:70, tags:true}."
+  },
+  {
+   "effectId": "embroidery",
+   "presetName": "Shield patch",
+   "inspiredBy": "Custom Shape Patch Mockup, Embroidered Patch Mockup, Patch Embroidery Logo Mockup",
+   "spec": "Add select shape (contour|circle|shield|rect) for the merrowed patch border (shield = rounded top, pointed bottom, fitted to the logo bbox + 12%). Preset {mode:'satin', patch:true, shape:'shield', border:8, patchColor:'primary'}."
+  },
+  {
+   "effectId": "puff",
+   "presetName": "Plush",
+   "inspiredBy": "3D Plush Inflated Alphabet",
+   "spec": "{puff:40, angle:120, gloss:10, shadow:55, outline:false}. Add a low-amplitude fuzz noise to the normals (fbm at 2 px) so it reads as fabric plush, not plastic."
+  }
+ ],
+ "newEffects": [
+  {
+   "id": "refrakt",
+   "name": "Reeded Glass",
+   "category": "optics",
+   "method": "Sublimation",
+   "stage": "team",
+   "inspiredBy": [
+    "Refrakt",
+    "Glass Displacement Map Pack",
+    "Fractal Glass Gradients"
+   ],
+   "priority": 1,
+   "buildGroup": "optics",
+   "brief": "LOOK: the logo seen through fluted/reeded glass. Each flute is a cylindrical lens, so the logo breaks into parallel strips, each showing a magnified, shifted slice with bright flute edges. This is Studio 2am's signature 2024\u201326 look.\nBUILD (\u22641024 working res): along an axis rotated by angle, u = ((x\u00b7cos\u03b8 + y\u00b7sin\u03b8) mod flute)/flute. Displace perpendicular to the flutes by d = (u\u22120.5)\u00b7flute\u00b7strength\u00b7k, with an extra per-strip magnification of 1+0.15\u00b7strength about each strip centre, and sample src with sampleBilinear. Dispersion: sample R at d\u00b7(1+disp\u00b70.08) and B at d\u00b7(1\u2212disp\u00b70.08). Alpha comes from the displaced src, so the silhouette visibly splits.\nSHADING: per flute, lighten the u\u22480.1 edge by 0.25 and darken u\u22480.9; draw a 1 px white spec line per flute at 35% alpha; add a soft vertical gloss gradient.\nPANEL: optional rounded rect over the logo bbox (+8%) as frosted glass (white 10\u201314% alpha, fbm frost, 1 px light rim) so the effect reads on any garment.\nPARAMS: flute (12\u201380 px, 32), strength (0\u2013100%, 55), pattern (select straight|wave|ripple|grid; wave bends flutes with a sine, ripple uses concentric rings around the centre, grid applies flutes on both axes = glass block), angle (0\u2013180\u00b0, 90), dispersion (0\u2013100%, 30), panel (toggle, true).\nPRESETS: Reeded (straight, 32), Wave glass (wave, 40), Ripple (ripple, 28, dispersion 50), Glass block (grid, 56, panel on)."
+  },
+  {
+   "id": "hype",
+   "name": "Neon Chrome",
+   "category": "metal",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Hype",
+    "Cyber",
+    "Futurist Neon Chrome Effect",
+    "Chrome Graffiti Street Text Effect",
+    "Cyberpunk Photoshop Effects Bundle"
+   ],
+   "priority": 1,
+   "buildGroup": "light",
+   "brief": "LOOK: Studio 2am's flagship. Hard-horizon liquid chrome whose environment is a vivid neon gradient map, with hot white speculars, a wide coloured outer glow and gritty imperfections. It must look different from Chrome: saturated and glowing, not silver.\nBUILD: reuse chrome.js reflection math (extract its env lookup into a shared helper): heightFromMask(bevel) \u2192 normalsFromHeight \u2192 reflect a view vector \u2192 lookup into a 1-D environment. The environment is a neon LUT above the horizon (e.g. #12002B \u2192 #FF2E97 \u2192 #FFFFFF at the horizon) and a darker complementary LUT below (#00F0FF \u2192 #1B0B4A). Add a Blinn spec (exp 60) in white.\nGLOW: dilate mask 4 px \u2192 blurMask at r1 = 18 and r2 = 60 px; tint with the gradient's two hottest stops; composite 'lighter' behind, alpha \u2264 0.8, fading to 0 before the edge.\nGRAIN: monochrome rng grain \u00b1grain\u00b70.12 on the surface plus 6\u201312 short scratch streaks.\nCYBER / HUD: a dashed contour stroke offset +14 px (traceContours of the dilated mask, setLineDash) and a blurred duplicate behind for depth-of-field.\nPARAMS: gradient (select hype|cyber|futurist|synth|team; team builds a saturated LUT from primary/secondary/accent), bevel (8\u201360 px, 24), glow (0\u2013100%, 60), grain (0\u2013100%, 35), horizon (20\u201380%, 50), hud (toggle, false).\nPRESETS: Hype (pink/cyan), Cyber (cyan/acid green, hud on, glow 75), Futurist (violet/orange, bevel 34), Team neon (team)."
+  },
+  {
+   "id": "aura",
+   "name": "Glow",
+   "category": "metal",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Glow",
+    "Glow FX",
+    "Soft Glow Photo Effect",
+    "Aura Text Effect",
+    "Diffusion Text Effect",
+    "Neo Blur Vintage Text & Logo Effect",
+    "Cinematic Text Effects",
+    "Dreamy Glow Halftone Print Effect",
+    "Acid Blur Photo Effect"
+   ],
+   "priority": 1,
+   "buildGroup": "light",
+   "brief": "LOOK: dreamy lens bloom and aura around the logo, from soft Pro-Mist diffusion to a big grainy gradient aura (the Divided.co Aura look) to Glow FX's textured pattern halo.\nBUILD: keep the logo crisp on top.\n- bloom: blurCanvas(logo, radius\u00b70.25) and blurCanvas(logo, radius) screen-blended at strength, with highlights lifted 10%.\n- aura: the halo = blurMask(dilateMask(mask, radius\u00b70.3), radius), mapped through a 3-stop LUT (white-hot \u2192 color \u2192 color2 \u2192 transparent) and modulated by low-frequency fbm so it is organic, not circular; add grain inside the halo.\n- pattern: the same halo multiplied by a pattern (horizontal lines at 6\u201310 px, dot grid or grid lines) plus grit noise = Glow FX.\n- halftone: the halo converted to round halftone dots (dot size \u221d halo value) in color.\nKeep halo alpha at 0 by 92% of S. A slight blur of the logo edge (0.6 px) sells the diffusion.\nPARAMS: mode (select bloom|aura|pattern|halftone), radius (10\u2013160 px, 60), strength (0\u2013100%, 55), color (color, secondary), color2 (color, accent), grain (0\u2013100%, 30).\nPRESETS: Soft glow (bloom), Aura (aura, radius 110), Glow FX (pattern lines), Halftone glow (halftone)."
+  },
+  {
+   "id": "prism",
+   "name": "Prism",
+   "category": "metal",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Prizm",
+    "Prism Text Distortion Effect",
+    "Retro Prism Photo Effects Collection",
+    "Lens & Prism Photo Effects Collection",
+    "Radiance Prism Photo Effect"
+   ],
+   "priority": 1,
+   "buildGroup": "light",
+   "brief": "LOOK: the logo shot through a crystal prism. Translucent duplicate copies slide off along one direction inside angular facets, each with rainbow dispersion, plus a spectral flare streak. The original logo stays sharp on top.\nBUILD: generate 3\u20137 convex facet wedges (seeded rng lines through the logo bbox centre). For k = 1..copies: transform src by offset\u00b7k along angle and scale 1+0.025k; render the copy three times, as R, G and B channels offset \u00b1dispersion\u00b7k\u00b73 px perpendicular to the angle; composite with 'lighter' at alpha 0.5/k; clip each copy to its facet (or to the dilated logo hull if facets are off). Draw facet edges as 1 px white lines at 25% inside the hull.\nFLARE: a thin band across the logo coloured by a spectrum gradientLUT (red\u2192violet), blurred 6 px, 'lighter', clipped to dilateMask(mask, 30), alpha = flare.\nOriginal logo on top at 100%.\nPARAMS: copies (1\u20135, 3), offset (0\u2013120 px, 40), angle (0\u2013360\u00b0, 30), dispersion (0\u2013100%, 50), facets (toggle, true), flare (0\u2013100%, 45).\nPRESETS: Prizm (default), Rainbow split (facets off, dispersion 95, copies 2), Crystal (copies 5, offset 16), Light leak (flare 90, warm-shifted spectrum)."
+  },
+  {
+   "id": "crt",
+   "name": "CRT Screen",
+   "category": "digital",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "CRT Machine",
+    "LCD Machine",
+    "CRT Monitor Text & Logo Effect",
+    "CRT Glowing Screen Text Effect",
+    "Arcade Tube CRT Effect",
+    "CRT Image Effects Pack",
+    "Screentime Monitor Text Effect",
+    "Retro Phone Screen Effect",
+    "Screen Flicker Photo Effect",
+    "Static Distortion Effect"
+   ],
+   "priority": 1,
+   "buildGroup": "signal",
+   "brief": "LOOK: the logo displayed on a physical screen and photographed: visible subpixels, scanlines, phosphor bloom and slight tube curvature. It must read as a screen, unlike 8-Bit's clean pixel art.\nBUILD (\u22641024):\n1. Curvature: remap coords around the centre with r' = r\u00b7(1 + curve\u00b70.25\u00b7r\u00b2).\n2. Downsample the logo to cell-size pixels (box filter).\n3. Draw each pixel through a subpixel mask:\n- crt: aperture-grille vertical R/G/B stripes, each stripe's intensity = that channel, 1 px gaps, plus a dark scanline every cell row at the scanlines strength.\n- arcade: shadow-mask round phosphor dots in a delta triad.\n- lcd: monochrome square pixels with a 1 px gap, mapped through the colourway LUT, plus a soft ghost copy offset (+2, +2) at 25% (LCD shadow).\n- monitor: fine RGB stripes at half cell.\n4. Bloom: blurCanvas(result, cell\u00b71.5) screen at glow, then a horizontal chroma bleed (R shifted +1 px).\n5. Optional rolling bright band and rng static.\nAlpha = dilated coverage (glow extends past the logo). Bezel toggle: a rounded-rect dark glass panel behind the logo with vignette and glare, still transparent outside.\nPARAMS: display (select crt|arcade|lcd|monitor), cell (3\u201316 px, 6), scanlines (0\u2013100%, 60), glow (0\u2013100%, 55), curve (0\u2013100%, 25), colorway (select logo|green|amber|blue|team), bezel (toggle, false).\nPRESETS: CRT Machine (crt, logo), Arcade tube (arcade, cell 8, glow 70), LCD Machine (lcd, green, curve 0), Phone screen (lcd, blue, bezel on)."
+  },
+  {
+   "id": "photocopy",
+   "name": "xScan",
+   "category": "texture",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "xScan",
+    "Photocopy Machine",
+    "CopyCat - Photocopy Effect",
+    "Hyper Photocopy Grain Effect",
+    "Grunge Photocopy Photo Effect",
+    "Bad Print Copier Effect",
+    "Dirty Scanner",
+    "20-in-1 Print Text Effects Bundle"
+   ],
+   "priority": 1,
+   "buildGroup": "press",
+   "brief": "LOOK: the logo dragged across a scanner bed or copied to death. Crunchy black toner, smeared streaks along the drag direction, uneven pressure, drum lines and toner speckle.\nBUILD:\n1. Toner: luminance of the logo (or posterize(3) when keeping colours) \u2192 threshold whose edge is jittered by fbm at 3 scales (\u00b1toner\u00b70.25), giving ragged edges, small dropouts and filled-in counters.\n2. Drag: low-frequency noise along the cross axis picks drag bands. In those bands out(p) = max over k = 1..L of src(p \u2212 k\u00b7dir)\u00b7(1 \u2212 k/L)^1.5, with L up to drag\u00b7180 px, so the logo smears into streaks. Add 1\u20133 'pull jumps' (abrupt row offsets of 6\u201320 px). Multiply alpha by a 1-D pressure noise along the drag axis.\n3. Copier marks: 1\u20132 px drum lines across the bbox at 15\u201330% alpha; toner speckle outside edges (rng dots, density \u221d exp(\u2212outsideDistance/12)).\n4. Ink: single colour (default dark) or kept colours.\nPARAMS: drag (0\u2013100%, 55), direction (select down|right|up|left), toner (0\u2013100%, 60), streaks (0\u2013100%, 35), ink (color, dark), keepColors (toggle, false).\nPRESETS: xScan (drag 55), Smear (drag 95, streaks 20), Dead copy (toner 90, drag 15, streaks 70), Color copy (keepColors on, toner 40)."
+  },
+  {
+   "id": "distress",
+   "name": "Distressed",
+   "category": "texture",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "Distress",
+    "Vintage Worn Print Effect",
+    "Time-Worn Print Effect",
+    "Grunge Effects for Photoshop",
+    "Grunge Distortion Text Effect",
+    "Grunge Halftone Photo Effect"
+   ],
+   "priority": 1,
+   "buildGroup": "press",
+   "brief": "LOOK: Studio 2am Distress. A damaged logo combining grain, halftone breakdown and edge distortion at light, medium or heavy damage. It is different from Vintage Print: scuffed and broken, not cracked plastisol.\nBUILD:\n(a) Edge distortion: displace the mask by an fbm vector field (amp = roughness\u00b76 px) before thresholding.\n(b) Erosion: subtract a union of an fbm threshold mask (coverage 5/15/30% by damage), scuff scratches (40\u2013200 random-walk polylines 1\u20133 px, clustered at 2\u20133 dominant angles) and speckle holes. Weight erosion toward edges with insideDistance (more loss within 8 px of the edge).\n(c) Halftone breakdown: in a second noise region (halftone %), replace solid ink with a 45\u00b0 round-dot screen whose dot size follows the noise, so ink fades to dots.\n(d) Grain: \u00b18% luminance.\nDamage select maps to preset multipliers on all three.\nPARAMS: damage (select light|medium|heavy), scratches (0\u2013100%, 50), halftone (0\u2013100%, 40), roughness (0\u2013100%, 45), ink (select logo|mono), color (color, dark; used when mono).\nPRESETS: Light, Medium, Heavy, Mono grunge (heavy, mono)."
+  },
+  {
+   "id": "stamp",
+   "name": "Rubber Stamp",
+   "category": "texture",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "Stamp Kit (7 Ink Textures)",
+    "Bold Rubber Stamp Badge Text Effect",
+    "Dirty Stamp Text & Logo Effect",
+    "Vintage Stamp Texture Effect",
+    "Misprint Stamp Text Effect",
+    "20-in-1 Print Text Effects Bundle",
+    "Low Ink Printer Effect"
+   ],
+   "priority": 1,
+   "buildGroup": "press",
+   "brief": "LOOK: the logo inked with a rubber stamp in one ink: uneven pressure, ink-starved texture, pooled edges, an optional badge frame and an optional double hit.\nBUILD: coverage = mask \u00d7 pressure \u00d7 texture.\n- Pressure: a linear tilt across the stamp (random angle, 0.55\u21921.0) \u00d7 low-frequency fbm.\n- Texture per select:\n  - mottled: fbm threshold\n  - starved: horizontal striated noise (fbm with x-scale 0.05, y-scale 1) giving streaky dropouts\n  - dry: coarse rng grain threshold\n  - heavy: near-solid, with ink pooling at edges (insideDistance < 2 px \u2192 \u00d71.3 darker) plus a faint 1\u20132 px squash halo outside at 20%\n- Threshold coverage against a pressure-scaled cutoff.\n- Badge: a ring (two concentric circles around the bbox with a 6 px gap) or a double rect, drawn into the mask before the ink pass so it gets the same texture.\n- Tilt: rotate the whole stamp.\n- Double: a second impression offset 4\u201310 px at 35% coverage.\n- Low-ink banding: sin bands along y with noise phase.\nPARAMS: texture (select mottled|starved|dry|heavy), pressure (0\u2013100%, 60), badge (select none|ring|rect), double (toggle, false), tilt (\u221212\u201312\u00b0, \u22124), ink (color, primary).\nPRESETS: Rubber stamp (mottled), Badge (ring, tilt \u22126, heavy), Low ink (starved, pressure 35), Double hit (double on, dry)."
+  },
+  {
+   "id": "inkbleed",
+   "name": "Ink Bleed",
+   "category": "print",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "Bleeder",
+    "Ink Bleed Photo & Text Effect",
+    "Ink Printed Bleed Text Effect",
+    "Dirty Print Effect",
+    "Ultra Ink Printer Effect",
+    "Printed Mess Text & Logo Effects",
+    "20-in-1 Overprint & Ink Bleed Effects Bundle"
+   ],
+   "priority": 1,
+   "buildGroup": "press",
+   "brief": "LOOK: ink soaking into absorbent paper. Hairy capillary fringes around every edge, ink pooled darker at the edges, dot grain and slight colour misregistration.\nBUILD:\n- Fibre field: anisotropic fbm (sample at x\u00b70.08, y\u00b70.02, rotated per region by a slow noise angle) \u2192 F \u2208 [0, 1].\n- Bleed: od = outsideDistance(mask); coverage_out = smoothstep(spread\u00b7(0.35 + 0.65\u00b7F)\u00b7feather, 0, od), which gives fibrous fringes that reach further along fibres.\n- Interior pooling: darken by pooling\u00b70.2\u00b7exp(\u2212insideDistance/3); mottle with low-frequency fbm.\n- Colours: posterize(4) and give each colour region its own misreg offset (seeded 0..misreg px).\n- Grain: dot grain multiply.\n- 'Ultra ink' adds patchy starvation (fbm holes in centres).\nPARAMS: spread (0\u201340 px, 12), feather (0\u2013100%, 60), pooling (0\u2013100%, 40), misreg (0\u201312 px, 3), grain (0\u2013100%, 40), ink (select logo|mono).\nPRESETS: Bleeder (default), Soak (spread 30, feather 85), Dirty print (misreg 7, grain 70), Ultra ink (pooling 85, patchy, spread 8)."
+  },
+  {
+   "id": "glitter",
+   "name": "Glitter",
+   "category": "material",
+   "method": "Heat transfer",
+   "stage": "dark",
+   "inspiredBy": [
+    "Sparkling Glitter Text & Logo Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "material",
+   "brief": "LOOK: glitter heat-transfer vinyl, a real apparel finish. Dense metallic flakes, each catching light differently, a few blowing out to white with 4-point star sparkles.\nBUILD: jittered grid of flakes (cell = flake px). Each flake gets a random normal (rng hemisphere), a hexagon/square footprint and a colour = base \u00d7 (0.3 + 0.7\u00b7max(0, n\u00b7L)^0.6), plus spec (n\u00b7H)^40 in white. With holo, the hue is rotated by atan2(nx, ny)\u00b70.5.\nClip to the mask. Add a 1\u20131.5 px darker edge so the shape reads, and a subtle raised drop shadow (2 px, 25%).\nStars: for the top 1\u20133% brightest flakes draw cross sparkles (two thin tapered lines + soft core), length \u221d brightness\u00b7sparkle, allowed to extend past the edge.\nPARAMS: color (color, secondary), flake (2\u201312 px, 5), sparkle (0\u2013100%, 60), contrast (0\u2013100%, 55), holo (toggle, false), stars (toggle, true).\nPRESETS: Gold glitter (color #D4AF37), Team glitter (secondary), Holo glitter (silver base, holo on), Silver (color #CFD4DA, contrast 70)."
+  },
+  {
+   "id": "warp",
+   "name": "Warp",
+   "category": "optics",
+   "method": "Sublimation",
+   "stage": "paper",
+   "inspiredBy": [
+    "Disorder / Status / Wired / Memory Text Distortions",
+    "Displacement Map Packs (Scans, Noise, Warp, Bubbles, DLC-001, 12 Free)",
+    "Experimental Chaotic Typography Text Effect",
+    "Psychedelic Texture Kit",
+    "Ghosted"
+   ],
+   "priority": 2,
+   "buildGroup": "signal",
+   "brief": "LOOK: displacement-map distortion of the logo, from liquid swirls to smeared drags, bubble lenses and chaotic layered type.\nBUILD: per output pixel, p + amount\u00b7D(p) \u2192 sampleBilinear on RGBA. Cap the displacement so nothing passes 0.06\u00b7S from the canvas edge. D by map:\n- liquid: two-stage domain-warped fbm vector (Inigo-style q/r warp)\n- wave: x += A\u00b7sin(2\u03c0y/scale + fbm\u00b72)\n- smear: along the angle, take the max-alpha sample over a streak length from thresholded fbm, so the logo drags like wet paint\n- bubble: Worley cells, each a spherical lens (offset = (p \u2212 cellCentre)\u00b7(1 \u2212 d/R)\u00b7k)\n- chaos: 3 copies at scales 0.8/1.0/1.25, rotations \u00b18\u00b0, each with its own liquid D, composited multiply/normal with alpha 0.5/0.7/1\nEcho: repeat the displaced copy N times with increasing amount and decreasing alpha (Ghosted). Add grain.\nPARAMS: map (select liquid|wave|smear|bubble|chaos), amount (0\u2013100%, 45), scale (20\u2013300 px, 120), angle (0\u2013360\u00b0, 0), echo (0\u20134, 0), grain (0\u2013100%, 20).\nPRESETS: Liquid (Disorder), Smear (Wired/Memory, angle 0, amount 70), Wave (Status), Chaos (Experimental)."
+  },
+  {
+   "id": "glass",
+   "name": "Liquid Glass",
+   "category": "optics",
+   "method": "Sublimation",
+   "stage": "team",
+   "inspiredBy": [
+    "Liquid Glass Overlay / Clarity Glass Overlay",
+    "Holographic Glass Text Effect",
+    "Dreamy Bubble Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "optics",
+   "brief": "LOOK: the logo as a thick clear glass/acrylic slab. A translucent tinted body refracts a soft backdrop, with a bright fresnel rim, sharp speculars, a thin dark inner edge and a caustic light spill beside it. It is the 2025 'liquid glass' UI look.\nBUILD:\n- h = heightFromMask(mask, thickness); n = normalsFromHeight.\n- Backdrop: a blurred, oversized copy of the logo's own colours (blurCanvas(src, 40)) plus fbm colour blobs from palette roles.\n- Body: backdrop sampled at p + n.xy\u00b7thickness\u00b71.2 (refraction), mixed with tint at (1 \u2212 clarity), alpha 0.45 + 0.4\u00b7(1 \u2212 clarity).\n- Rim: white\u00b7(1 \u2212 nz)^3.\n- Spec: (n\u00b7H)^80 for the light angle.\n- Inner edge: 1.2 px dark line at insideDistance \u2248 1.5.\n- Caustic: a light-coloured copy of the mask shifted along the light direction by thickness\u00b70.6, blurred 6 px, 'lighter' outside the shape.\n- Iridescence: hue from the normal angle multiplied into the rim and spec.\n- Frosted mode: fbm frost multiplies the body and lowers refraction.\n- Bubble mode: round pillow height with thin-film rainbow (hue = h\u00b76).\nPARAMS: thickness (8\u201360 px, 28), tint (color, primary), clarity (0\u2013100%, 60), iridescence (0\u2013100%, 0), light (0\u2013360\u00b0, 135), caustic (toggle, true).\nPRESETS: Liquid glass, Holo glass (iridescence 80), Frosted (clarity 20), Bubble (thickness 50, iridescence 45)."
+  },
+  {
+   "id": "shatter",
+   "name": "Shattered",
+   "category": "optics",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Broken",
+    "Broken Glass Text & Logo Effect",
+    "100 Broken Glass Textures Pack"
+   ],
+   "priority": 2,
+   "buildGroup": "optics",
+   "brief": "LOOK: the logo printed on glass that has been hit. Shards radiate from an impact point, slightly displaced and tilted, with bright cut edges, dark crack lines, chromatic aberration near the impact and a few falling chips.\nBUILD:\n- Seeds: Voronoi with a radial bias. Half the seeds lie along 8\u201314 spokes from the impact, denser near it; the rest are random.\n- Each shard: translate away from the impact by gap\u00b7(0.3..1)\u00b7(1 \u2212 d/dmax)^0.5, rotate \u00b12\u00b0, then resample src.\n- Shading: per-shard brightness offset \u00b112%; edge highlight where distance to the cell border < 1.5 px (white 60%) with a dark line 1 px inside it.\n- Cracks: 8\u201314 spoke polylines plus 2 concentric rings near the impact, 1 px.\n- Aberration: R/B offsets \u221d aberration\u00b7(1 \u2212 d/dmax)\u00b74 px.\n- Chips: 6\u201320 small triangles below the logo, rotated.\n- Impact 'off' gives cracks only, with an intact silhouette.\nPARAMS: impact (select center|top-left|bottom-right|off), shards (10\u2013120, 45), gap (0\u201330 px, 8), cracks (0\u2013100%, 60), aberration (0\u2013100%, 35), glint (toggle, true).\nPRESETS: Broken (Studio 2am), Impact (center, gap 4, cracks 90), Exploded (gap 26, shards 70), Cracked (impact off, gap 0)."
+  },
+  {
+   "id": "fire",
+   "name": "Fire",
+   "category": "metal",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Fire Spark Overlay",
+    "Steam Overlay Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "light",
+   "brief": "LOOK: the mascot on fire: flame tongues licking up from every upward edge, glowing embers, a hot orange rim on the logo, or soft rising steam. It is a staple of team apparel.\nBUILD:\n- Source: for each pixel, coverage below = max of mask over the column window [y, y + height] (a running max per column).\n- Intensity: I = source\u00b7(1 \u2212 dy/height)^1.6 \u00d7 turbulence. Turbulence = fbm sampled at (x\u00b7f + warpX, y\u00b7f\u00b70.6 + seed) with domain warp, so tongues form and split, then a contrast curve.\n- Colour: map I through a LUT (transparent \u2192 #3A0000 \u2192 #C1121F \u2192 #FF7A00 \u2192 #FFD60A \u2192 #FFFFFF) with alpha = smoothstep(0.08, 0.5, I). 'team' builds the LUT from dark \u2192 primary \u2192 secondary \u2192 white; 'blue' uses a blue LUT.\n- Draw the flames behind the logo, then the logo, then a rim: an orange inner glow on top-facing edges (normal.y < \u22120.3).\n- Sparks: 40\u2013200 rng embers above the logo with short upward streaks, 'lighter'.\n- Steam: the same field mapped to white/grey at alpha \u2264 0.5 and blurred 8 px.\nPARAMS: style (select flame|blue|team|steam), height (40\u2013300 px, 140), turbulence (0\u2013100%, 55), sparks (0\u2013100%, 40), rim (toggle, true).\nPRESETS: On fire, Blue flame, Team fire, Steam."
+  },
+  {
+   "id": "gradmap",
+   "name": "Grain Fade",
+   "category": "digital",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Neonic / Neonic 2",
+    "Recolor - 60 Gradient Maps / GRADED Gradient Maps",
+    "Fastgrad",
+    "Acid House Photoshop Effect",
+    "Acid Faded Text & Logo Effect",
+    "Grainy Gradient Textures Pack / Psychedelic Texture Kit",
+    "TEXTURE MACHINE"
+   ],
+   "priority": 2,
+   "buildGroup": "signal",
+   "brief": "LOOK: the logo recoloured through a vivid gradient map with heavy grain: organic neon gradients flowing through the shape, or a faded acid look.\nKEY: flat logos have no tonal range, so synthesise one first: tone = 0.45\u00b7luminance + 0.35\u00b7(lit height from heightFromMask at 135\u00b0) + 0.3\u00b7organic\u00b7fbm(large scale, domain-warped); normalise to 0..1.\nBUILD: applyGradientMap(tone, LUT) (5-stop maps) \u2192 grain (rng \u00b1grain\u00b70.15, applied before quantising so it prints as stipple). Fade lifts blacks (+fade\u00b70.3) and lowers contrast. Halo: a large blurred organic gradient blob behind the logo (Neonic backgrounds), clipped to a soft rounded shape, alpha 0.7. Invert flips the tone. Keep the logo alpha.\nPARAMS: map (select neonic|acid|sunset|ice|duotone|team; team = dark \u2192 primary \u2192 secondary \u2192 light), organic (0\u2013100%, 50), grain (0\u2013100%, 45), fade (0\u2013100%, 20), halo (toggle, false), invert (toggle, false).\nPRESETS: Neonic (halo on), Acid fade (acid, fade 55), Duotone (team two-stop), Grainy sunset (sunset, grain 70)."
+  },
+  {
+   "id": "dither",
+   "name": "1-Bit",
+   "category": "digital",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "Dithering Bitmap Creator",
+    "Dithering Automator",
+    "BYTE - Bitmap Actions",
+    "Bitmap Effect - Convert Image into Bitmap",
+    "Dither Effects Pack",
+    "Pixelated Dithered Effect",
+    "Static Distortion Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "signal",
+   "brief": "LOOK: fine 1-bit bitmap dither, like MacPaint or Photoshop Bitmap mode, in one or two inks. It is finer than 8-Bit's chunky pixels and prints as a single screen.\nBUILD:\n- Tone (flat logos need it): luminance + shading\u00b7(lit heightFromMask \u2212 0.5) + an optional fade ramp (linear top\u2192bottom or radial from the centre).\n- Downsample by pixel.\n- Dither by algorithm: Bayer 8\u00d78 ordered; Floyd\u2013Steinberg; Atkinson (75% error, the Mac look); noise (seeded blue-ish noise threshold); lines (1-D ordered threshold along rows for a line-bitmap look).\n- Upscale with nearest neighbour.\n- On pixels = ink. Off pixels inside the mask are transparent (the garment shows) or ink2 when backing is on. Outside the mask stays transparent.\nPARAMS: algorithm (select atkinson|floyd|bayer|noise|lines), pixel (1\u20138 px, 2), shading (0\u2013100%, 60), fade (select none|linear|radial), ink (color, dark), backing (toggle, false) with ink2 (color, secondary).\nPRESETS: Atkinson, Bayer grid (pixel 3), Floyd fade (linear fade), Duotone (ink primary, backing on, ink2 secondary)."
+  },
+  {
+   "id": "grunge",
+   "name": "Grit",
+   "category": "texture",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "Dirty Scanner",
+    "Fingerprint",
+    "Paper Vol. 1",
+    "Print Scanned Textures / Hyper Scanner Textures / Grunge Paper Marks",
+    "TEXTURE MACHINE",
+    "Smudged Gloomy Photoshop Kit"
+   ],
+   "priority": 2,
+   "buildGroup": "press",
+   "brief": "LOOK: Studio 2am's texture overlays (fingerprints, scanner dust, folded paper) applied to the logo as knock-outs and tonal shading, so the result stays a transparent, printable graphic.\nBUILD:\n- fingerprint: 2\u20135 prints, each an ellipse mask (\u2248 70\u00d795 px at 1024) with a ridge pattern sin(r\u00b70.9 + fbm\u00b73 + loop term) \u2192 threshold \u2192 knock out knockout% of the ink. Smudge: a directional blur of the logo near one print.\n- dust: rng specks, 3\u20138 hairs (thin bezier curves), plus a tonal scan ramp (darken one side by 15%).\n- paper: paper-fibre fbm multiply plus speckle knock-out.\n- crease: 2\u20134 fold lines across the bbox, each a light 1.5 px line with a dark line offset 1 px and a slight displacement of the logo across the fold.\n- mix: all of them at lower amounts.\nScale multiplies feature size. The tone toggle adds a soft multiply shading.\nPARAMS: texture (select fingerprint|dust|paper|crease|mix), amount (0\u2013100%, 50), scale (50\u2013200%, 100), knockout (0\u2013100%, 60), tone (toggle, true).\nPRESETS: Fingerprints, Dirty scan, Folded paper (crease), Mixed grit."
+  },
+  {
+   "id": "thorns",
+   "name": "Metal Thorns",
+   "category": "street",
+   "method": "Screen print",
+   "stage": "dark",
+   "inspiredBy": [
+    "Bootleg Metal Typography Text Effect",
+    "Chrome Gothic Text Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "craft",
+   "brief": "LOOK: a death-metal / bootleg-tee logo. The silhouette sprouts sharp tapered thorns and roots, mostly from top and bottom edges, often mirror-symmetric, finished in flat ink or gothic chrome. It is a huge streetwear trend.\nBUILD:\n- traceContours(mask), outer contours only. Seed points along them with density; weight the selection by |normal.y|^1.5 so spikes favour top and bottom.\n- Each spike: a quadratic-bezier tapered polygon from base width w (6\u201314 px) to a point at length L\u00b7(0.4..1). It bends sideways by curl\u00b7L\u00b70.3, and 30% of spikes get a secondary branch at 40\u201360% length.\n- Symmetry: generate for x < centre and mirror across the bbox centre.\n- Union spikes with the logo.\n- Finish: ink = flat colour with a 2 px dark keyline; chrome = hard-horizon gradient map on heightFromMask(union) with a white spec; blood = red ink with 3\u20136 drips from bottom spikes.\nPARAMS: length (10\u2013120 px, 50), density (0\u2013100%, 50), curl (0\u2013100%, 35), symmetry (toggle, true), finish (select ink|chrome|blood), ink (color, light).\nPRESETS: Bootleg (ink, white), Gothic chrome (chrome), Black metal (density 85, length 90, thin), Blood (blood)."
+  },
+  {
+   "id": "cybergrunge",
+   "name": "Angelic Grunge",
+   "category": "street",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Angelic Grunge Text & Logo Effect",
+    "Graffiti Spray Paint Glow Text Effect",
+    "Cyberpunk Photoshop Effects Bundle"
+   ],
+   "priority": 2,
+   "buildGroup": "craft",
+   "brief": "LOOK: the 2026 cyber-sigilism look. A cool silver monochrome logo wrapped in thin sweeping sigil/barbed linework, with sprayed edges, a halftone glow behind and faint circuit traces inside.\nBUILD:\n- Base: gradient map of heightFromMask (bevel 12) through grey #2B2F36 \u2192 #C9D1DC \u2192 #FFFFFF (tone silver), single ink, or team.\n- Sigils: from seeded contour points, emit 6\u201316 long thin swooshes that follow the contour tangent for 30\u201360% of their length, then curve outward and taper to hairline (stroke width tapering via segmented lineWidth). Some are mirrored for symmetry.\n- Spray: overspray dots outside the edge (density \u221d exp(\u2212od/8)), as in stencil.\n- Halftone glow: blurMask(dilated mask, 40) \u2192 round halftone dots in color behind.\n- Circuit: Manhattan polylines with node dots inside the mask at 25% alpha, in color.\nPARAMS: sigils (0\u2013100%, 60), glow (0\u2013100%, 50), circuit (0\u2013100%, 30), spray (0\u2013100%, 40), tone (select silver|ink|team), color (color, accent).\nPRESETS: Angelic, Sigil (circuit 0, sigils 85), Cyber (circuit 70, glow 70), Team glow (team)."
+  },
+  {
+   "id": "cutout",
+   "name": "Paper Cutout",
+   "category": "texture",
+   "method": "Heat transfer",
+   "stage": "mid",
+   "inspiredBy": [
+    "Scissors Wizard: Paper Cutout Effect",
+    "Tape Vol. 1",
+    "Paper Vol. 1",
+    "Collage",
+    "Ransom"
+   ],
+   "priority": 2,
+   "buildGroup": "craft",
+   "brief": "LOOK: the logo cut out of paper and stuck down: hand-scissored white border, paper fibre, a layered drop shadow and masking tape. Collage mode splits it into offset scraps, zine style.\nBUILD:\n- Border: dilateMask(mask, border) \u2192 traceContours \u2192 simplifyPolyline(tolerance 6\u201310 px) for straight scissor facets \u2192 fill with paper colour plus fibre fbm.\n- torn: displace the contour along its normal with fbm (amp 4 px) and add a white fibrous rim (rng hairs).\n- collage: cut the bordered logo with 2\u20134 random straight lines into scraps; each scrap is translated 3\u201310 px and rotated \u00b13\u00b0, with different paper tones (light, cream, kraft), and one scrap printed in halftone.\n- Shadow: offset (6, 8) px, blur 6, alpha = shadow.\n- Tape: 0\u20134 rectangles (~110\u00d734 px) at scrap edges, beige #E8DCC0 at 70% alpha, fibre noise, zig-zag torn ends.\n- Rotate the whole by tilt.\nPARAMS: mode (select scissor|torn|collage), border (6\u201360 px, 22), shadow (0\u2013100%, 45), tape (0\u20134, 2), paper (color, light), tilt (\u221210\u201310\u00b0, \u22123).\nPRESETS: Scissor cut, Torn paper, Collage (ransom feel), Taped up (tape 4)."
+  },
+  {
+   "id": "ice",
+   "name": "Frozen",
+   "category": "material",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "The Fridge - Text and Logo Effects",
+    "Frozen Y2K Photo Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "material",
+   "brief": "LOOK: the logo frozen solid. Translucent icy body, frost rime on the edges, icicles hanging from bottom edges, internal cracks and bubbles, and a cold glow. 'Freeze out the competition'.\nBUILD:\n- Body: tone = luminance mixed with heightFromMask \u2192 LUT #0B3D6B \u2192 #5FB8E6 \u2192 #DFF6FF \u2192 #FFFFFF, mixed with the original colour at tint%, alpha 0.9.\n- Cracks: Voronoi borders at 25% white plus tiny bubble circles.\n- Frost: within insideDistance < 10 px, a dendritic fbm threshold (high frequency) in white.\n- Spec: from normals.\n- Icicles: at contour points with outward normal.y > 0.7, every 10\u201330 px, a tapered triangle of length 10\u201360 px\u00b7icicles with a gradient and a highlight stripe.\n- Glow: blurMask cyan halo at glow%.\n- color is the halo/accent tint.\nPARAMS: frost (0\u2013100%, 55), icicles (0\u2013100%, 50), tint (0\u2013100%, 30), cracks (0\u2013100%, 40), glow (0\u2013100%, 40), color (color, light).\nPRESETS: Frozen, Freezer burn (frost 95), Y2K ice (icicles 0, glossy, tint 10), Team ice (tint 75)."
+  },
+  {
+   "id": "enamel",
+   "name": "Enamel Pin",
+   "category": "material",
+   "method": "Heat transfer",
+   "stage": "mid",
+   "inspiredBy": [
+    "Golden Retro Enamel Pin Text Effect",
+    "Metal Emboss Logo Effect"
+   ],
+   "priority": 2,
+   "buildGroup": "material",
+   "brief": "LOOK: a hard-enamel pin: flat glossy enamel colours separated by raised polished metal lines and a metal rim, with a domed gloss and a drop shadow.\nBUILD:\n- quantizeToPalette(src, up to 5 palette colours) \u2192 regions.\n- Metal mask = ring dilateMask(mask, rim) \u2212 mask, plus region-boundary lines (pixels whose 3\u00d73 neighbourhood has more than one region) dilated to lines px.\n- Metal shading: heightFromMask(metal, 3) \u2192 normals \u2192 ramp (gold #6B4A12 \u2192 #E9C46A \u2192 #FFF6D5; silver, black nickel and rose variants) with spec (n\u00b7H)^60.\n- Enamel: flat colours, darkened 6% within 2 px of the metal walls (soft enamel = recessed, more darkening plus inner shadow).\n- Dome: a radial white gradient highlight across the pin, alpha = gloss\u00b70.35, screen.\n- Drop shadow: (5, 7) px, blur 5, alpha = shadow.\nPARAMS: metal (select gold|silver|black|rose), rim (4\u201330 px, 12), lines (1\u20136 px, 3), gloss (0\u2013100%, 55), shadow (0\u2013100%, 50), soft (toggle, false).\nPRESETS: Gold pin, Silver pin, Black nickel, Soft enamel."
+  },
+  {
+   "id": "extrude",
+   "name": "3-D Pop",
+   "category": "material",
+   "method": "Sublimation",
+   "stage": "mid",
+   "inspiredBy": [
+    "3D Groovy Pop Text Effect",
+    "Cinematic Titles Text Effect",
+    "3D Plush Inflated Alphabet"
+   ],
+   "priority": 2,
+   "buildGroup": "material",
+   "brief": "LOOK: a true perspective 3-D extrusion toward a vanishing point (unlike Varsity's flat oblique block). Sides are lit, the face is bevelled, groovy 70s stripes are optional and cinematic steel is a variant.\nBUILD:\n- Vanishing point VP chosen by vanish relative to the bbox, at ~1.8 S away.\n- For i = N..1 (N = 24\u201360 by quality), slice t = i/N\u00b7depth: draw the mask scaled toward VP by (1 \u2212 0.35t) and filled with the side colour shaded by t (darken 0.35\u00b7t). Groovy mode alternates side and accent every 3 slices for stripes.\n- Face: the original logo, with a bevel highlight from heightFromMask(mask, 6) normals (a light edge line).\n- Outline: union of all slices dilated 5 px in dark, behind everything, plus a 2 px face keyline.\n- Steel: side slices through a brushed-metal LUT, face as chrome-lite.\n- Keep the whole within 0.94 S by shrinking the face if needed.\nPARAMS: depth (0\u2013100%, 50), vanish (select below|above|left|right|center), style (select pop|groovy|steel|team), side (color, secondary), outline (toggle, true).\nPRESETS: 3-D pop, Groovy (groovy, depth 70), Cinematic steel (steel, below), Team extrude (team)."
+  },
+  {
+   "id": "mirror",
+   "name": "Reflection",
+   "category": "optics",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Reflex",
+    "Crystal Prism Photo Effect"
+   ],
+   "priority": 3,
+   "buildGroup": "optics",
+   "brief": "LOOK: the logo standing on a glossy floor or water with its reflection, or multiplied into a kaleidoscope or mirror split.\nBUILD: the source has the logo centred in the SAFE box, so first scale the logo to 0.7 and lift it so the reflection fits.\n- floor: a vertically flipped copy below with gap, alpha gradient 0.55 \u2192 0 over the logo height (fade), blur increasing with distance (lerp between the copy and blurCanvas(copy, blur)), plus a thin horizon highlight line in tint.\n- water: the floor copy plus horizontal sine displacement with fbm-modulated ripples and darkening.\n- kaleido: n-fold rotated copies (segments) at 0.55 scale and 40% alpha behind the full logo.\n- split: mirror the left half onto the right.\nPARAMS: mode (select floor|water|kaleido|split), fade (0\u2013100%, 60), gap (0\u201340 px, 6), blur (0\u201320 px, 4), segments (3\u201312, 6), tint (color, accent).\nPRESETS: Glossy floor, Water, Kaleidoscope, Split mirror."
+  },
+  {
+   "id": "filmburn",
+   "name": "Film Burn",
+   "category": "metal",
+   "method": "Sublimation",
+   "stage": "dark",
+   "inspiredBy": [
+    "Film Burn / Light Leak Bundle / Light Leaks Overlays / Golden Hour / Old Film Burn / Vintage Light Leaks"
+   ],
+   "priority": 3,
+   "buildGroup": "light",
+   "brief": "LOOK: the logo on a burnt 35 mm frame. Warm light leaks wash across it, red halation glows at the edges, dust and scratches appear, and optionally a charred burn hole eats one side.\nBUILD:\n- Leaks: 2\u20133 large radial gradients (amber #FFB347, orange #FF5E1A, red #C8102E, magenta for prism) from one side, modulated by fbm, composited 'screen' over the logo and clipped to dilateMask(mask, 20).\n- Halation: blurMask(mask, 10) tinted #FF3B1F behind, 'lighter', alpha = halation\u00b70.6.\n- Dust: rng specks plus 3\u20138 vertical scratch lines 1 px light at 30%, clipped to the dilated region.\n- Burn: an fbm threshold eating the mask from the chosen side, a charred rim (dark 3 px) and a glowing orange edge (2 px, 'lighter').\n- Prism leak: a spectral fringe along the leak boundary.\nPARAMS: leak (select golden|burn|prism|vhs), strength (0\u2013100%, 60), side (select left|right|top|corner), dust (0\u2013100%, 40), halation (0\u2013100%, 45), burn (toggle, false).\nPRESETS: Golden hour, Film burn (burn on), Prism leak, VHS flare."
+  },
+  {
+   "id": "western",
+   "name": "Western",
+   "category": "retro",
+   "method": "Screen print",
+   "stage": "paper",
+   "inspiredBy": [
+    "Vintage Western Ornamental Text Effect"
+   ],
+   "priority": 3,
+   "buildGroup": "craft",
+   "brief": "LOOK: a wood-type 'Wanted poster' treatment: a solid fill with a thin light inline, a dark keyline, a hatched offset drop shadow, aged woodgrain and optional ornament stars.\nBUILD:\n- id = insideDistance(mask). Inline = pixels where id is within 1 px of 0.4\u00b7localMax, with localMax approximated as dilateMask of id over 12 px. Paint it light.\n- Keyline: 2.5 px dark around the outside.\n- Shadow region: mask shifted by depth at 135\u00b0 minus the dilated mask, filled with 45\u00b0 stripes (3 px on / 3 off) in color2 or dark.\n- Wood: horizontally stretched fbm (x\u00b70.01, y\u00b70.12) thresholded to knock out wood% of the ink in grain streaks.\n- Ornaments: 2\u20133 five-point stars or diamonds centred above and below the bbox.\nPARAMS: inline (toggle, true), shadow (0\u201340 px, 14), hatch (toggle, true), wood (0\u2013100%, 40), color2 (color, accent), ornaments (toggle, false).\nPRESETS: Wanted poster, Rodeo (bright, ornaments on), Saloon (wood 80), Clean inline (wood 0, hatch off)."
+  },
+  {
+   "id": "blueprint",
+   "name": "Blueprint",
+   "category": "retro",
+   "method": "Screen print",
+   "stage": "team",
+   "inspiredBy": [
+    "Technical Blueprint Text Effects"
+   ],
+   "priority": 3,
+   "buildGroup": "craft",
+   "brief": "LOOK: the logo as an engineering drawing: crisp light contour linework, dash-dot centre lines, extended construction lines, dimension arrows with measurements, 45\u00b0 section hatching and a fine grid, optionally on a blueprint panel.\nBUILD:\n- traceContours \u2192 stroke 1.6 px in ink, plus a dashed offset contour at +6 px (hidden line).\n- Construction lines: tangent lines at the bbox edges extended 40 px past it.\n- Centre lines: dash-dot through the centre, both axes.\n- Dimensions: arrows along the top and right of the bbox with labels in a monospace font (e.g. '12.40\"' derived from bbox aspect \u00d7 12), via fillText at 11 px\u00b7scale.\n- Hatch: 45\u00b0 lines every 7 px clipped to the mask at hatch%.\n- Grid: 16 px minor and 80 px major lines over the panel or the dilated bbox.\n- Panel: a rounded rect in paper with paper noise and a slight vignette; when off, everything stays transparent.\n- Use ctx 'final' fonts only from bundled fonts; fall back to a monospace stack.\nPARAMS: panel (toggle, true), grid (0\u2013100%, 50), dims (toggle, true), hatch (0\u2013100%, 30), ink (color, light), paper (color, primary).\nPRESETS: Blueprint (paper #1F4E8C-ish team-dark), Whiteprint (paper light, ink primary), Schematic (panel off), Draft (hatch 70)."
+  },
+  {
+   "id": "plastic",
+   "name": "Shrink Wrap",
+   "category": "material",
+   "method": "Sublimation",
+   "stage": "mid",
+   "inspiredBy": [
+    "Plastic Text & Logo Effect",
+    "Plastic Textures Vol.1",
+    "TEXTURE MACHINE"
+   ],
+   "priority": 3,
+   "buildGroup": "material",
+   "brief": "LOOK: the logo sealed in plastic: crinkled wrap with long creases catching sharp highlights, slight distortion of the print underneath and a faint film extending past the logo with a crisp edge.\nBUILD:\n- Wrinkle height W = sum of 6\u201312 random long creases. Each crease is a line across the bbox; its profile is exp(\u2212d\u00b2/w\u00b2) with w = 6\u201320 px and sign \u00b1. Add fbm crinkle\u00b70.3.\n- Normals from W.\n- Wrap region = dilateMask(mask, margin), filled with white film at 8\u201314% alpha (frosted: 25% plus fbm), with a 1 px light edge.\n- Distort: displace the logo by normals.xy\u00b7distort\u00b76 px.\n- Shade: spec (n\u00b7H)^30 in white 'screen' at gloss, and troughs darkened 8%.\n- Bubble film: a hex grid of round domes (heightFromMask of circles) instead of creases.\nPARAMS: wrinkles (0\u2013100%, 55), gloss (0\u2013100%, 65), margin (0\u201350 px, 18), distort (0\u2013100%, 35), film (select clear|frosted|bubble).\nPRESETS: Shrink wrap, Cling film (fine crinkles), Frosted bag, Bubble wrap."
+  }
+ ],
+ "newCategories": [
+  {
+   "id": "optics",
+   "label": "Glass & optics"
+  },
+  {
+   "id": "material",
+   "label": "3-D & material"
+  },
+  {
+   "id": "texture",
+   "label": "Worn & pressed"
+  }
+ ],
+ "notLogoApplicable": [
+  "Filmic (Studio 2am): photo colour grading with no graphic structure to apply to a flat logo.",
+  "Sensory (Studio 2am): animated textures; the gallery renders static print art.",
+  "Solid (Studio 2am): Instagram story templates, not an effect.",
+  "Ransom and Collage (Studio 2am): cut-out letter and image asset packs, not effects. Their look is folded into the new cutout effect (Collage preset).",
+  "Blotter (Studio 2am): LSD-tab perforation mockup. Its drug connotation is wrong for youth and school team apparel, so it is skipped on purpose even though it could technically apply.",
+  "Photocopy Effect Illustrations Pack (Afterimagine): ready-made illustrations, not a treatment. Photocopy covers the look.",
+  "Hyper XRays (Afterimagine): x-ray image assets. The x-ray look is covered by the thermal 'X-ray' preset.",
+  "30 Light Leaks (Studio Dusk), Fractal Glass Gradients, Prismatic Light Backgrounds: background/photo overlays. Filmburn, refrakt and prism cover the looks on a logo.",
+  "Holographic Backgrounds Collection, X30 Hologram Sticker Pack: background and sticker assets, already represented by Holo Foil.",
+  "3D Liquid Metal Shapes, 3D Iridescent HD Shapes, Liquid Metal Procreate Brushes: decorative 3-D shape and brush assets, not logo treatments.",
+  "CYBER2K Resource Pack, Cyber Y2K Shapes: Y2K shape and asset packs.",
+  "Chroma Waves (Kuro): the search results gave no description, so it could not be assessed."
+ ],
+ "coverageSummary": "EVIDENCE: The catalogue comes from 6 search sweeps (153 queries), not from studio2am.co itself, which could not be reached. That gives 269 raw hits, merged here into about 150 distinct entries. Coverage is strong for Studio 2am's own effect line: about 36 products confirmed, including every one-step text/logo effect named in its collections (Halftoner, Hype, Cyber, Futurist, Spray, Zine, Risoprint, Refrakt, Glow FX, Distress, xScan, Ghosted, CRT/LCD Machine, Bitmap, Bleeder, Melted, Reflex, Thermal, Broken, Prizm). Coverage is partial for the partner marketplace.\n\nKnown gaps:\n- Matsero alone reportedly lists about 171 products and only about 15 were seen.\n- Pixelbuddha's catalogue is much larger than the roughly 70 seen.\n- These collection pages were never crawled: /collections/glass, /acid, /y2k, /trending-effects.\n- Some items were named without URLs, so they are left out of the catalogue: Retro Sports Typography (Matsero), CRT TV, 80s TV, Retro Comic, Retro Magazine Halftone, Silk Glow, Ink Print Effect, Halftone Factory, Reeded Text Distortion (Kuro).\n- Many descriptions are one-line search snippets, so some coveredBy calls are judgements, not verified against product images.\n\nI am confident the new set spans every visual family the evidence shows. I am not confident the catalogue lists every SKU. Unseen partner products will most likely be variants of families already covered here (chrome hues, halftone patterns, glitch types, print flaws).\n\nAFTER BUILD: 23 existing + 28 new effects = 51 effects across 8 categories. Most of the 28 effect presets are new; about 31 come from existing effects.\n- Studio 2am's own logo-applicable products: every one is covered by an effect or preset. Blotter is skipped on purpose.\n- Partner logo-applicable products: about 95% covered, with the rest only near-misses. Remaining near-misses:\n  - photo-only grades\n  - true 3-D render assets\n  - exact Matsero font-specific styles (western/gothic are approximated procedurally)\n\nBuild order: start with the priority 1 effects: refrakt, hype, aura, prism, crt and the four in the press group (photocopy, distress, stamp, inkbleed). These are Studio 2am's signature looks that are still missing.\n\nCONTRACT NOTES:\n1. lintEffect caps presets at 4. chrome, halftone, holographic, graffiti, risograph, stencil, pixel and ascii already have 4, so either raise the cap to 6, which I recommend, or swap out weaker presets.\n2. Add the new category ids to CATEGORIES: optics, material, texture.\n3. Consider moving puff and emboss into 'material' and screenprint into 'texture' so each tab holds 5\u20139 effects.\n4. Extend EFFECT_ORDER so neighbouring tiles keep alternating stage and colour.\n5. hype should share chrome.js's env-mapping code. Extract it into a helper rather than duplicating it.\n6. Many new effects need a synthesised tonal image (heightFromMask lighting + fbm) because flat logos give gradient maps and dithers nothing to work with. A shared 'synthTone(mask, src, opts)' helper in core.js would serve gradmap, dither, ice, hype and glass."
+}

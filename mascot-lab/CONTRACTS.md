@@ -107,14 +107,14 @@ drips and drop shadows. Built by `image.makeSource(logoCanvas, S)`.
 export default {
   id: "halftone",              // must equal the filename
   name: "Halftone",            // display name, ≤ 16 chars
-  category: "print",           // "print" | "street" | "metal" | "retro" | "digital"
+  category: "print",           // "print" | "street" | "metal" | "retro" | "digital" | "optics" | "material" | "texture"
   blurb: "Comic-era dot screen in your team ink.",   // ≤ 60 chars, plain English
   method: "Screen print",      // how it would be produced on apparel:
                                // "Screen print" | "Sublimation" | "Embroidery" |
                                // "Chenille patch" | "Heat transfer" | "Puff print"
   stage: "paper",              // gallery card backdrop: "paper" | "dark" | "mid" | "team"
   params: [ /* ParamSpec[] — 3 to 7 controls, the ones a coach would actually touch */ ],
-  presets: [ { name: "Comic", params: { /* partial */ } } ],  // 2–4 named looks, first = default look
+  presets: [ { name: "Comic", params: { /* partial */ } } ],  // 2–6 named looks, first = default look
   render(src, p, ctx) { /* … */ return canvas; },              // may return a Promise<canvas>
   mainThread: false,           // (updated) optional: true = never render in the worker
 };
