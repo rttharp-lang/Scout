@@ -1,0 +1,115 @@
+{
+  "team": "uta",
+  "lens": "underground",
+  "headline": "Salt Lake's underground is a snowboard-skate-DIY-music hybrid on the Wasatch Front, with a West Side Polynesian and Latino car and church culture the mainstream rarely credits.",
+  "summary": "The scenes that set taste here sit between mountain and city: skate and snowboard share the same crews and the same Carhartt-and-beanie wardrobe, DIY music runs through all-ages rooms like Kilby Court, and the West Side (Rose Park, Glendale) carries lowrider, Polynesian and Latino style that is rarely credited. Queer nightlife and Pride are bigger and more organized than outsiders assume. The Jazz sit in the middle as a nostalgia object: 1990s purple-and-copper Mountain gear is thrifted and remixed, while the 2026-27 young core and the gray City Edition give a newer entry point. Nike should come in through shops, crews and community orgs rather than the Delta Center, and credit the Pacific Islander and Latino scenes by paying their creators.",
+  "insights": [
+    {
+      "title": "Snow and skate are one scene",
+      "detail": "Wasatch snowboard and skate crews overlap, with Alta, Brighton and Park City resort culture sitting a canyon away from Sugar House and Ogden skate spots. The uniform is workwear, beanies, technical shells and skate shoes rather than fashion-forward streetwear.",
+      "implication": "Basketball product that reads weather-ready (shell textures, utility pockets, fleece) fits better than hype-driven drops; pair Jazz warm-up and shell jackets with the Ogden outdoor-industry crowd."
+    },
+    {
+      "title": "Jazz 90s gear is the vintage currency",
+      "detail": "The purple Mountain and Note-era Stockton-and-Malone aesthetic is thrifted, restored and cut up by locals, and it signals older-sibling and parent loyalty to the Jazz. It is a nostalgia code shared across Mormon-majority suburbs and the West Side alike.",
+      "implication": "Reissue-style graphics and a purple-copper Mountain palette on heritage product will land, but only with a licensed, accurate Jazz vintage identity; a leaning-in on the 2026-27 youth movement (Peterson, Bailey) can bridge old and new."
+    },
+    {
+      "title": "West Side is the culture engine nobody credits",
+      "detail": "Rose Park and Glendale hold a Polynesian (Tongan, Samoan) and Latino community that shapes football-first, family-and-church street style, lowrider and truck culture, and cruising rituals. Utah's Pacific Islander population is among the highest per capita in the US.",
+      "implication": "Work through community orgs and local designers and pay them; collaborate on tapa and tatau-inspired pattern only with explicit cultural-owner approval, and never lift sacred motifs."
+    },
+    {
+      "title": "DIY music rooms set the weekend",
+      "detail": "All-ages and DIY venues such as Kilby Court (Granary/Rio Grande area) and the Urban Lounge on Fifth East, plus record stores like Diabolical and Randy's, anchor punk, emo and hardcore crowds. Their merch culture is band tee, thrifted sport jersey and screenprint.",
+      "implication": "A small run of screenprinted warm-up tees and practice jerseys sold or gifted through DIY rooms reaches taste-setters better than a flagship activation."
+    },
+    {
+      "title": "Queer nightlife is organized and visible",
+      "detail": "Utah Pride (June) and a long-running bar and drag circuit have given SLC an openly queer culture that contrasts with its image. Ballroom and drag crowds remix athletic wear with glam.",
+      "implication": "Engage with Pride-season product only through local queer organizations and artists, with real partnership and payment, not a seasonal logo swap."
+    },
+    {
+      "title": "Salt flats and speed culture",
+      "detail": "The Bonneville Salt Flats and Speed Week at Wendover feed a hot-rod, land-speed and custom-car culture distinct from coastal lowrider scenes. Its visual language is white salt, chrome, hand-painted numerals and pinstriping.",
+      "implication": "Pinstripe and racing-number typography is a Utah-only graphic idea for City Edition-adjacent product, and fits the gray-gradient palette."
+    }
+  ],
+  "places": [
+    {"name": "Kilby Court", "kind": "all-ages DIY music venue", "neighborhood": "Granary District / Rio Grande", "why": "The long-running tiny all-ages room where local bands and teen crowds build taste."},
+    {"name": "Urban Lounge", "kind": "music venue", "neighborhood": "Downtown / Fifth East", "why": "Club and live room central to the indie, punk and DJ scenes."},
+    {"name": "Diabolical Records", "kind": "record shop", "neighborhood": "Downtown / Central City", "why": "Independent record store tied to local metal, punk and collector circles."},
+    {"name": "Randy's Records", "kind": "record shop", "neighborhood": "Central City", "why": "Vintage vinyl institution where music and thrift style cross."},
+    {"name": "Fairmont Park skatepark", "kind": "skatepark", "neighborhood": "Sugar House", "why": "A neighborhood skate gathering point in a walkable, hip district."},
+    {"name": "Sugar Space Arts Warehouse", "kind": "arts and DIY event space", "neighborhood": "Central 9th area", "why": "Warehouse venue for zines, shows and small fashion events."},
+    {"name": "Bonneville Salt Flats", "kind": "land-speed site", "neighborhood": "Wendover, west of SLC", "why": "Home of Speed Week and Utah's hot-rod identity."},
+    {"name": "Rose Park and Glendale", "kind": "district", "neighborhood": "West Side", "why": "Polynesian and Latino neighborhoods where cruising, church and football style shape local taste."}
+  ],
+  "people": [
+    {"name": "Pacific Islander Knowledge 2 Action Resources (PIK2AR)", "role": "community nonprofit", "why": "A Utah Pacific Islander organization that is a credible partner route into the community."},
+    {"name": "Utah Pride Center", "role": "LGBTQ+ nonprofit", "why": "Runs Utah's Pride programming and is the right door for queer partnerships."},
+    {"name": "Craft Lake City", "role": "DIY festival organizer", "why": "Showcase for Utah makers, screenprinters and independent designers."},
+    {"name": "Lauri Markkanen", "role": "Jazz star", "why": "Finnish forward whose low-key persona fits the understated local style."},
+    {"name": "Darryn Peterson", "role": "Jazz No. 2 pick", "why": "The new face of Utah's youth movement and a gateway for younger fans."},
+    {"name": "Ace Bailey", "role": "Jazz forward", "why": "Young, expressive scorer who can speak to a more streetwear-oriented audience."}
+  ],
+  "moments": [
+    {"name": "Utah Pride Festival", "timing": "Early June", "month": 6, "why": "The biggest queer gathering of the year."},
+    {"name": "Utah Arts Festival", "timing": "Late June", "month": 6, "why": "Large downtown art and maker event."},
+    {"name": "Bonneville Speed Week", "timing": "Mid August", "month": 8, "why": "Land-speed and hot-rod pilgrimage on the salt flats."},
+    {"name": "Craft Lake City DIY Festival", "timing": "Mid August", "month": 8, "why": "Local makers and independent designers."},
+    {"name": "FanX Salt Lake Comic Convention", "timing": "Early fall", "month": 9, "why": "Gaming, anime and cosplay crowd."},
+    {"name": "Jazz season opener at the Delta Center", "timing": "Late October", "month": 10, "why": "Start of a home slate featuring an Oct 30 NBA Cup night against Denver."},
+    {"name": "Ski and snowboard season start", "timing": "Late November", "month": 11, "why": "Wasatch resorts open and shell-and-beanie style peaks."}
+  ],
+  "vocabulary": [
+    {"term": "The Wasatch", "meaning": "The mountain range above the valley that defines local identity and weekends."},
+    {"term": "Jazz Note", "meaning": "Shorthand for the 1990s music-note logo era."},
+    {"term": "West Side", "meaning": "SLC's historically immigrant and working-class neighborhoods west of I-15."},
+    {"term": "Speed Week", "meaning": "The annual land-speed event at the Bonneville Salt Flats."},
+    {"term": "Pow", "meaning": "Fresh Wasatch powder, central to snowboard and ski life."}
+  ],
+  "designCues": [
+    {"cue": "Mountain purple with copper accent from the 1990s Jazz", "type": "color", "hex": "#4B2E83", "source": "Stockton-and-Malone-era Jazz Mountain identity", "use": "Heritage warm-ups and vintage-wash tees, licensed through the team."},
+    {"cue": "Salt-flat white and wash", "type": "color", "hex": "#F2F0E8", "source": "Bonneville Salt Flats", "use": "Off-white base for tees and shells with cracked-salt texture."},
+    {"cue": "City Edition gray with baby blue trim", "type": "color", "hex": "#8FC4E8", "source": "Current gray-gradient City Edition", "use": "Trim and lining color on shells and street product."},
+    {"cue": "Red-rock canyon rust", "type": "color", "hex": "#B5502D", "source": "Southern Utah desert", "use": "Accent for washed outerwear and hats."},
+    {"cue": "Hand-painted pinstripe and land-speed numerals", "type": "typography", "hex": "", "source": "Hot-rod and Speed Week culture", "use": "Number and wordmark treatments on jerseys and tees."},
+    {"cue": "Shell-jacket utility silhouette", "type": "silhouette", "hex": "", "source": "Wasatch snow and skate crossover", "use": "Weather-ready warm-up shell with oversized fit and snap pockets."},
+    {"cue": "Screenprint-on-thrift texture", "type": "texture", "hex": "", "source": "DIY music merch", "use": "Cracked-ink graphics and garment-dye on practice tees."}
+  ],
+  "productHooks": [
+    "Jazz heritage shell warm-up in mountain purple and copper with washed-salt lining, licensed through the team.",
+    "Screenprinted practice tee capsule sold through Kilby Court and Craft Lake City makers, co-branded with local screenprinters.",
+    "Land-speed numeral and pinstripe graphic tee tied to Speed Week, for City Edition-adjacent lifestyle product.",
+    "Community-led West Side collection built with Polynesian and Latino designers, with credit and payment to creators."
+  ],
+  "watchouts": [
+    "Pacific Islander tatau, tapa and ceremonial imagery are cultural property; do not lift them, and only engage through approved community partners.",
+    "Jazz vintage graphics and the note logo are third-party team IP requiring licensing.",
+    "Do not trade on the religious majority culture or stereotype Utah as monolithic; the queer and immigrant scenes are strong.",
+    "Skip generic Utah ski kitsch such as beehives and Delicate Arch; locals read it as tourism."
+  ],
+  "sources": [
+    {"title": "Salt Lake City Wikipedia", "url": "https://en.wikipedia.org/wiki/Salt_Lake_City"},
+    {"title": "Utah Jazz Wikipedia", "url": "https://en.wikipedia.org/wiki/Utah_Jazz"},
+    {"title": "Kilby Court", "url": "https://www.kilbycourt.com"},
+    {"title": "Utah Pride Center", "url": "https://www.utahpridecenter.org"},
+    {"title": "Craft Lake City", "url": "https://craftlakecity.com"}
+  ],
+  "confidence": "low",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Kilby Court, Urban Lounge, Diabolical Records, Randy's Records and Sugar Space are still operating at the stated locations.",
+      "PIK2AR and Utah Pride Center remain active and are the right partner contacts.",
+      "Speed Week and Craft Lake City dates and months for 2026-27.",
+      "Utah Pride Festival and Utah Arts Festival timing in June 2027.",
+      "FanX Salt Lake Comic Convention month and venue in 2026.",
+      "Fairmont Park skatepark is open and still a skate gathering spot.",
+      "Jazz branding and current logo and whether 1990s Mountain and Note graphics are in the team's active licensing.",
+      "Delta Center ownership and name for 2026-27."
+    ]
+  }
+}
