@@ -1,0 +1,337 @@
+{
+  "team": "uta",
+  "lens": "culture",
+  "headline": "Utah is a proud, understated, outdoors-first place that feels permanently underestimated by the coasts, and the Jazz are the one big-league stage where that chip turns into noise.",
+  "summary": "Salt Lake City sees itself as a mountain-and-desert hometown with deep pioneer roots, a fast-growing mix of communities, and a work-hard, low-ego temperament, while it assumes the rest of the country reduces it to one religion and one stereotype. The Wasatch Front is a tight strip between the Great Salt Lake and the canyons, so civic pride is expressed through terrain (snow, salt, red rock), the beehive, and the Jazz, who have carried the state's name since 1979. The Jazz are a small-market, loyal-fan story: Stockton and Malone, Jerry Sloan, two Finals runs, and now a young roster that suits a place that likes building over buying. Dress is functional and layered, with outdoor technical wear as everyday clothing and church, family and game-night dress codes that skew modest. The strongest design territory is landscape and heritage rather than nightlife or street cliches.",
+  "insights": [
+    {
+      "title": "The small-market chip, worn lightly",
+      "detail": "Utahns joke about being overlooked and misread by national media, but the response is quiet pride and loud arena support rather than swagger. The Jazz's long-running identity is the underdog that outworks bigger markets.",
+      "implication": "Tone should be earned and understated: craft, material and place-specific detail over hype slogans or flash."
+    },
+    {
+      "title": "The mountain is the skyline",
+      "detail": "The Wasatch wall behind downtown is the shared symbol, and skiing at Alta, Snowbird and Brighton or Solitude is a weekday-after-work activity for many locals. The Jazz's own Mountain-era branding, and the current gray-gradient City Edition, both speak that language.",
+      "implication": "Gradients, ridgelines and snow-and-slate palettes read as local without needing a city name, and layer well into outerwear-influenced product."
+    },
+    {
+      "title": "The beehive and Deseret heritage are everyday civic marks",
+      "detail": "The beehive is on the state flag, road signs, buildings and beer taps; it stands for industry and cooperation and is used far beyond any one institution. Pioneer Day on July 24 is a state holiday with its own parades, fireworks and family rituals.",
+      "implication": "A clean beehive or honeycomb geometry is a safe, high-recognition motif, but keep it civic and avoid church-owned imagery or temple iconography."
+    },
+    {
+      "title": "The West Side and Pacific Islander and Latino communities are the city's fastest-changing core",
+      "detail": "Rose Park, Glendale, Kearns and West Valley City hold large Polynesian (Tongan, Samoan), Latino and refugee communities, and Utah has one of the highest per-capita Pacific Islander populations in the country. Football and basketball courts and church gyms are community anchors here.",
+      "implication": "Engage through paid partnerships with community artists and organizations; never borrow tatau, tapa or other ceremonial patterning as decoration."
+    },
+    {
+      "title": "Two valleys, two rivalries, one state",
+      "detail": "University of Utah (Utes, red), BYU in Provo (Cougars, blue) and Utah State in Logan (Aggies, navy) divide family loyalties; the Utes-BYU game is called the Holy War. The Jazz are one of the few things that pull all three into the same arena.",
+      "implication": "Avoid college-adjacent colorways that read as favoring a school; lean on neutral state-level cues and Jazz-owned palettes."
+    },
+    {
+      "title": "Outdoor life defines the wardrobe",
+      "detail": "Fleece, puffer jackets, trail shoes and cap-and-hoodie combinations are normal downtown dress, and arrival to Delta Center in winter means layers. Summers are dry and hot, and the high desert has strong UV and dust.",
+      "implication": "Prioritize warm-up jackets, vests, quarter-zips, heavyweight fleece and weather-ready fabrics; the product should work before and after a night out in the cold."
+    },
+    {
+      "title": "The Great Salt Lake is both pride and anxiety",
+      "detail": "The lake's shrinking shoreline and dust problems are a live civic topic, and its salt flats, pink north arm and Spiral Jetty are shared visual icons. Locals care about water and air quality.",
+      "implication": "Salt-white and lake-pink accents are distinctive, but any lake-themed product should be handled with care and, ideally, tied to a conservation partner instead of used as pure decoration."
+    }
+  ],
+  "places": [
+    {
+      "name": "Delta Center",
+      "kind": "arena",
+      "neighborhood": "Downtown Salt Lake City",
+      "why": "The Jazz's home since 1991 and the civic living room; the building and block are the center of game-day culture."
+    },
+    {
+      "name": "Sugar House",
+      "kind": "district",
+      "neighborhood": "Sugar House",
+      "why": "Walkable southeast neighborhood with the Sugar House Monument, Sugar House Park and a younger, design-forward crowd that reps the name."
+    },
+    {
+      "name": "Central 9th",
+      "kind": "district",
+      "neighborhood": "Central 9th / Ballpark",
+      "why": "Mural-heavy, creative-industry strip around 900 South that carries a local art-and-music identity."
+    },
+    {
+      "name": "Rose Park and Glendale",
+      "kind": "district",
+      "neighborhood": "West Side",
+      "why": "Home to the West Side Latino, Pacific Islander and refugee communities that drive much of Salt Lake's youth basketball and football culture."
+    },
+    {
+      "name": "Pioneer Park Saturday Farmers Market",
+      "kind": "market",
+      "neighborhood": "Downtown / Granary",
+      "why": "A long-running weekly gathering that mixes food vendors, makers and a wide cross-section of the city."
+    },
+    {
+      "name": "Little Cottonwood Canyon (Snowbird and Alta)",
+      "kind": "mountain",
+      "neighborhood": "Wasatch Front",
+      "why": "Salt Lake's defining winter playground, reachable in under an hour and central to the city's self-image as the Greatest Snow on Earth."
+    },
+    {
+      "name": "Utah Olympic Park",
+      "kind": "venue",
+      "neighborhood": "Park City",
+      "why": "Legacy site of the 2002 Winter Games and a tie to the city's 2034 Winter Games hosting."
+    },
+    {
+      "name": "Great Salt Lake and Antelope Island",
+      "kind": "landmark",
+      "neighborhood": "Northwest of Salt Lake City",
+      "why": "The state's namesake lake, with salt flats, bison herds and the Spiral Jetty as visual touchstones."
+    },
+    {
+      "name": "25th Street Historic District",
+      "kind": "district",
+      "neighborhood": "Ogden",
+      "why": "The old railroad corridor and now a bar, gallery and outdoors-gear strip that reps Weber County's own identity."
+    },
+    {
+      "name": "Provo and the Utah Valley",
+      "kind": "district",
+      "neighborhood": "Provo / Orem",
+      "why": "Happy Valley, BYU country and one of the Jazz's strongest suburban fan bases."
+    }
+  ],
+  "people": [
+    {
+      "name": "John Stockton and Karl Malone",
+      "role": "Hall of Fame Jazz duo",
+      "why": "The pick-and-roll pair who defined the franchise and the state's basketball pride in the 1990s."
+    },
+    {
+      "name": "Jerry Sloan",
+      "role": "Longtime Jazz head coach (died 2020)",
+      "why": "Embodies the blue-collar, no-nonsense Utah ideal; still invoked as the franchise's moral center."
+    },
+    {
+      "name": "Lauri Markkanen",
+      "role": "Jazz forward and All-Star",
+      "why": "A Finnish star who became a local face and a national-team hero; gives the team a distinct international lens."
+    },
+    {
+      "name": "Darryn Peterson and Ace Bailey",
+      "role": "Young Jazz building blocks",
+      "why": "The No. 2 pick and the 2025 draftee are the faces of the youth movement that defines this season's fan hopes."
+    },
+    {
+      "name": "Ryan Smith",
+      "role": "Owner of the Jazz (via Smith Entertainment Group)",
+      "why": "Qualtrics co-founder and the owner who set a tech-and-community tone for the franchise and Delta Center district."
+    },
+    {
+      "name": "Gail Miller",
+      "role": "Former Jazz owner, Larry H. Miller Company chair",
+      "why": "Widow of Larry H. Miller, who kept the team in Utah; respected across the state for her stewardship."
+    },
+    {
+      "name": "Imagine Dragons",
+      "role": "Rock band formed in Provo",
+      "why": "The Utah-linked band that most visibly exports the state's music identity; Dan Reynolds is also a visible LGBTQ+ ally in the state."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Jazz home opener and the season's first Delta Center weeks",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The first big collective moment for fans and the right window for drops tied to the youth roster and the City Edition."
+    },
+    {
+      "name": "Ski season opens in the Wasatch",
+      "timing": "Mid November",
+      "month": 11,
+      "why": "Snowbird, Alta and Brighton open and the city's winter wardrobe shifts; an obvious pairing for outerwear-led capsules."
+    },
+    {
+      "name": "Living Traditions Festival",
+      "timing": "Mid May",
+      "month": 5,
+      "why": "A multi-day celebration of Salt Lake's immigrant and Indigenous cultures, where partnership and credit matter."
+    },
+    {
+      "name": "Utah Pride Festival",
+      "timing": "Early June",
+      "month": 6,
+      "why": "The largest Pride gathering in the state, run by Utah Pride Center in a place where visibility carries weight."
+    },
+    {
+      "name": "Utah Arts Festival",
+      "timing": "Late June",
+      "month": 6,
+      "why": "Library Square festival with local makers and a good venue for artist collaborations."
+    },
+    {
+      "name": "Pioneer Day and the Days of '47 Parade",
+      "timing": "July 24",
+      "month": 7,
+      "why": "The state's biggest civic holiday, with parades, rodeos and fireworks and strong family participation."
+    },
+    {
+      "name": "Hispanic Heritage Month",
+      "timing": "Mid September to mid October",
+      "month": 9,
+      "why": "A window to work with Salt Lake's Latino creators and organizations ahead of the season."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Wasatch Front",
+      "meaning": "The strip of cities from Ogden through Salt Lake to Provo, between the mountains and the lake."
+    },
+    {
+      "term": "The Beehive State",
+      "meaning": "Utah's nickname and the root of the beehive symbol; also tied to the old Deseret idea."
+    },
+    {
+      "term": "Greatest Snow on Earth",
+      "meaning": "The local line for Utah powder, a source of civic pride and a plate slogan."
+    },
+    {
+      "term": "Fry sauce",
+      "meaning": "The ketchup-mayo dip Utah is known for; locals defend it as theirs."
+    },
+    {
+      "term": "Utah scones",
+      "meaning": "Fried dough served with honey butter, not the British pastry."
+    },
+    {
+      "term": "Dirty soda",
+      "meaning": "A soda with flavored creamers and syrups, a drive-through staple across Utah."
+    },
+    {
+      "term": "The Holy War",
+      "meaning": "Utah-BYU football rivalry, a loaded but widely used local name."
+    },
+    {
+      "term": "801 / 385",
+      "meaning": "The Salt Lake area codes; 801 is the original and carries more local cred."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Wasatch snow-and-slate gradient, pairing the current gray fade with baby-blue edging",
+      "type": "color",
+      "hex": "#8E98A3",
+      "source": "The Wasatch ridgeline in winter and the current Jazz City Edition palette.",
+      "use": "Base layer for jackets, tees and warm-ups, working with the existing City Edition."
+    },
+    {
+      "cue": "Red-rock sandstone",
+      "type": "color",
+      "hex": "#B5482A",
+      "source": "Southern Utah's canyon country and the state's national parks.",
+      "use": "Accent colorway for road-trip and outdoor-inspired capsules."
+    },
+    {
+      "cue": "Great Salt Lake pink and salt white",
+      "type": "color",
+      "hex": "#D58BA0",
+      "source": "The pink north arm of the lake and the salt crust on its shore.",
+      "use": "Small accent or lining color; pair with off-white #F3EFE6 and treat as a nod to the lake."
+    },
+    {
+      "cue": "Beehive and honeycomb geometry",
+      "type": "motif",
+      "hex": "",
+      "source": "The state's civic beehive symbol on flags and buildings.",
+      "use": "Tonal jacquard, all-over hex pattern or small left-chest mark; keep it distinct from church-owned logos."
+    },
+    {
+      "cue": "Classic Jazz purple and mountain",
+      "type": "color",
+      "hex": "#4B2E83",
+      "source": "The 1990s purple, teal and copper Jazz era with its Mountain logo.",
+      "use": "Retro capsule, warm-up pieces and archival graphics; check licensing with the team."
+    },
+    {
+      "cue": "Strata and topographic lines",
+      "type": "pattern",
+      "hex": "",
+      "source": "Layered canyon walls and Great Salt Lake shoreline contours.",
+      "use": "Embroidery, jacquard knits or lining graphic that could only belong to Utah geography."
+    },
+    {
+      "cue": "Heavyweight fleece and technical shell",
+      "type": "material",
+      "hex": "",
+      "source": "Local outdoor wardrobe and Utah's outdoor-gear industry.",
+      "use": "Warm-up jackets, vests and quarter-zips that suit canyon commutes and Delta Center nights."
+    },
+    {
+      "cue": "Honey and bonneville salt texture",
+      "type": "texture",
+      "hex": "",
+      "source": "Beehive heritage and the Bonneville Salt Flats.",
+      "use": "Speckled, crackled or salt-wash fabric finishes for a subtle landscape feel."
+    }
+  ],
+  "productHooks": [
+    "A Wasatch winter warm-up collection: gray-gradient fleece, vest and shell using the City Edition palette with a hidden topographic strata lining.",
+    "A tonal beehive jacquard capsule (hoodie, cap, warm-up jacket) sold around the home opener and Pioneer Day.",
+    "A 90s Jazz heritage drop in purple, with archival graphics and Delta Center references, cleared with the team.",
+    "A West Side community capsule co-designed with and credited to local Pacific Islander and Latino artists, with proceeds to a local youth-basketball program.",
+    "A Great Salt Lake conservation limited run (lake-pink and salt-white accents) with a recognized local partner."
+  ],
+  "watchouts": [
+    "Do not use temple, Temple Square or other church-owned imagery; refer to members as Latter-day Saints in copy and keep faith references respectful or avoided.",
+    "Pacific Islander and Native designs (tatau, tapa, Ute, Goshute, Navajo, Paiute and Shoshone motifs) are not decorative; commission and credit community designers or skip.",
+    "The 2034 Winter Games marks and the Olympic rings are IP that need licensing from the IOC and USOPC, and Jazz and Delta Center marks need team approval.",
+    "Avoid caricature of Utah as one thing; the state has a visible LGBTQ+, Black, Latino, Polynesian and refugee population and a lot of non-LGBTQ+ ally support.",
+    "College colors (Utah red, BYU blue, Utah State navy) can alienate half a room; stay state-level."
+  ],
+  "sources": [
+    {
+      "title": "Utah Jazz official site",
+      "url": "https://www.nba.com/jazz"
+    },
+    {
+      "title": "Utah - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Utah"
+    },
+    {
+      "title": "Salt Lake City - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Salt_Lake_City"
+    },
+    {
+      "title": "Utah Jazz - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Utah_Jazz"
+    },
+    {
+      "title": "Visit Salt Lake",
+      "url": "https://www.visitsaltlake.com"
+    },
+    {
+      "title": "Delta Center - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Delta_Center"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Current Jazz ownership (Ryan Smith / Smith Entertainment Group) and the Delta Center name and renovation status for 2026-27.",
+      "Whether Ace Bailey and Darryn Peterson are both on the active roster and the exact draft-year details quoted.",
+      "Dates of the 2026-27 Jazz home opener and the Delta Center Cup Night schedule.",
+      "Whether the Utah state flag and the Salt Lake City flag references are current and which design is in use.",
+      "2026 dates and status of Living Traditions Festival, Utah Arts Festival and Utah Pride Festival.",
+      "Status of the Great Salt Lake water level and the current civic framing around it.",
+      "Whether the Pioneer Park Saturday Farmers Market, 25th Street Ogden and other named places remain open and operating.",
+      "Mid-November 2026 opening dates for Snowbird, Alta and other Wasatch ski resorts.",
+      "Salt Lake City's status as 2034 Winter Games host and any current IOC or USOPC branding rules.",
+      "Current Jazz retro or purple Mountain logo licensing and whether a heritage drop is being planned by the team.",
+      "Whether Imagine Dragons and named public figures are still the right local references.",
+      "Local slang usage such as dirty soda chains and Holy War phrasing in 2026."
+    ]
+  }
+}

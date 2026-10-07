@@ -1,0 +1,122 @@
+{
+  "team": "orl",
+  "lens": "underground",
+  "headline": "Orlando's underground is built by the people who run the tourism machine, so its taste comes from park-worker thrift, Boricua car-and-bike culture on the Orange Blossom Trail, and a queer scene that defines the city's resilience.",
+  "summary": "Orlando's subcultures grow in the cracks beside the theme-park economy: Mills 50 and the Milk District hold the DIY, punk and queer rooms, the Orange Blossom Trail holds Latino and Caribbean car and moto culture, and fandom scenes (anime, horror, park-pass culture) are unusually big and unusually customized. The scenes remix pop-culture IP and sportswear rather than treat teams as sacred, except the 1995 Penny-and-Shaq Magic, which is the one piece of team nostalgia the whole city agrees on. The Magic are a young, Black and Latino, working-class-adjacent fandom with a new coach and no big-market swagger, so credibility comes from showing up in small rooms, not from billboards. Confidence is medium: this is written from knowledge and the specific venues and dates need a live check.",
+  "insights": [
+    {
+      "title": "Penny-era Magic is the shared underground relic",
+      "detail": "The 1994-95 pinstripe era (Penny Hardaway, Shaq, the Finals run) is the vintage object Orlando thrift hunters, flea-market vendors and older fans all chase, and it is the only team nostalgia that crosses scenes. Penny's own Nike lineage means Nike already owns the credibility here.",
+      "implication": "Build a Penny-era archive story (pinstripe graphics, early-90s Magic Blue and black) as the entry point for Orlando rather than inventing a new city myth."
+    },
+    {
+      "title": "The Orange Blossom Trail is the car and moto corridor",
+      "detail": "OBT is Orlando's long-running cruising strip, lined with Latino, Caribbean and Black-owned shops, with car meets, bike and wheelie-style riding and custom audio culture overlapping with Boricua pride. It is mostly invisible to visitors and the Magic's downtown corporate crowd.",
+      "implication": "Engage through meet-ups and local builders, with product that survives car-meet and riding life: reflective trims, tonal black, heavy-gauge nylon outerwear."
+    },
+    {
+      "title": "Queer nightlife carries civic weight after Pulse",
+      "detail": "Orlando's LGBTQ+ community, centered on Orange Avenue, Mills 50 and Thornton Park, is both a nightlife engine and a community shaped by the 2016 Pulse tragedy. Gay Days each June is a huge annual gathering, and the Latino queer community is central to the story.",
+      "implication": "Support through paid partnerships with community-rooted organizers and artists, never as an opportunistic pride capsule, and never use Pulse memorial imagery commercially."
+    },
+    {
+      "title": "Park-worker and passholder culture is a real style scene",
+      "detail": "Cast members, annual passholders and Halloween Horror Nights regulars customize clothing with pins, ears, lanyards and event-specific merch, and trade it like currency. Horror Nights fans in particular wear dark, graphic, collectible-minded gear each fall.",
+      "implication": "Offer customizable pieces (pin-friendly canvas, patch fields, lanyard loops) and be careful: Disney and Universal marks are third-party IP and cannot be referenced without licensing."
+    },
+    {
+      "title": "Anime, comics and gaming conventions anchor the youth taste scene",
+      "detail": "Central Florida hosts big annual conventions (MegaCon at the Orange County Convention Center, Anime Festival Orlando) and cosplay is a mainstream local hobby. Cosplayers sew, dye and modify jerseys and sneakers.",
+      "implication": "A basketball-anime crossover pitch should be made with local cosplay and customization artists rather than licensed characters; sneaker customizing stations suit this crowd."
+    },
+    {
+      "title": "Hurricane and humidity logic shapes what people wear",
+      "detail": "Summer storms, hurricane season and 90-degree evenings make breathable fabrics, quick-dry layers and rain shells everyday needs rather than fashion choices. Locals joke about plywood and blue tarps as a seasonal aesthetic.",
+      "implication": "Lead with lightweight mesh, water-shedding shells and warm-weather fits instead of the heavy winter outerwear other markets get."
+    }
+  ],
+  "places": [
+    { "name": "Will's Pub", "kind": "music venue", "neighborhood": "Mills 50", "why": "Long-running DIY, punk and indie room that has defined the Mills 50 underground for decades." },
+    { "name": "Orange Blossom Trail (OBT)", "kind": "corridor", "neighborhood": "West and south Orlando", "why": "Historic cruising strip and the center of Latino, Caribbean and Black-owned commercial and car culture." },
+    { "name": "Milk District", "kind": "district", "neighborhood": "East of downtown", "why": "Gritty-cool bar, record and tattoo pocket where the independent crowd gathers." },
+    { "name": "Lake Eola Park", "kind": "park", "neighborhood": "Thornton Park / Downtown", "why": "Public gathering spot where skaters, dancers, pop-up markets and the Sunday farmers market overlap." },
+    { "name": "Webster Flea Market", "kind": "flea market", "neighborhood": "Webster (Sumter County)", "why": "Huge Monday market that serves as the Central Florida vintage, sneaker and sportswear hunting ground." },
+    { "name": "Parramore", "kind": "historic neighborhood", "neighborhood": "Downtown West", "why": "Historic Black neighborhood next to the Kia Center, with deep community ties the Magic and Nike should respect and invest in." },
+    { "name": "Eatonville", "kind": "historic town", "neighborhood": "Eatonville", "why": "One of the oldest incorporated Black towns in the country and home of the annual Zora Neale Hurston festival." },
+    { "name": "Kia Center", "kind": "arena", "neighborhood": "Downtown", "why": "Magic home arena; the one place where all the scenes meet around the team." }
+  ],
+  "people": [
+    { "name": "Penny Hardaway", "role": "Former Magic star, Nike signature athlete", "why": "The face of the 1990s Magic and of the Nike Penny line that already ties Orlando to Nike." },
+    { "name": "Shaquille O'Neal", "role": "Former Magic center", "why": "His Orlando years are a key part of the 1995 nostalgia that thrift buyers chase." },
+    { "name": "Paolo Banchero", "role": "Magic forward", "why": "The franchise face for the current young fan base and a signature-style anchor." },
+    { "name": "Iron Lion Firm", "role": "Orlando City supporters group", "why": "The city's best-known supporters culture, whose scarf, flag and tifo craft overlaps with Magic fan style." },
+    { "name": "Orlando Fringe", "role": "Annual independent theater festival", "why": "The city's longest-running outsider arts gathering and a source of local poster and zine design." }
+  ],
+  "moments": [
+    { "name": "Magic season tip-off and Cup Nights", "timing": "Late October to late November, Friday Cup Nights", "month": 10, "why": "Orlando is in East Group A of the NBA Cup, so the early-season Friday home games are the first chance to activate in the city." },
+    { "name": "Halloween Horror Nights", "timing": "Roughly September through early November", "month": 10, "why": "A massive dark-fashion, collectible-merch fan scene that peaks right as the season opens." },
+    { "name": "Daytona Turkey Run", "timing": "Thanksgiving weekend", "month": 11, "why": "A classic Florida car-and-swap-meet gathering within driving distance that draws the state's car culture." },
+    { "name": "Zora! Festival", "timing": "Late January or early February", "month": 1, "why": "Eatonville's celebration of Zora Neale Hurston, a Black arts and culture touchstone." },
+    { "name": "MegaCon Orlando", "timing": "Spring", "month": 3, "why": "Large comic, anime and gaming convention drawing cosplayers and customizers." },
+    { "name": "Orlando Fringe", "timing": "Mid-May", "month": 5, "why": "Independent arts festival that fills the Loch Haven area with DIY posters and weird merch." },
+    { "name": "Gay Days", "timing": "Early June", "month": 6, "why": "Huge annual LGBTQ+ gathering in Orlando; engage with community organizers, not as a marketing moment." },
+    { "name": "Pulse remembrance", "timing": "June 12", "month": 6, "why": "A solemn community remembrance date; the brand should stay quiet and supportive." }
+  ],
+  "vocabulary": [
+    { "term": "The 407", "meaning": "Orlando's area code, used as local shorthand on shirts and in captions." },
+    { "term": "O-Town", "meaning": "Common nickname for Orlando, also tied to the pop-music history of the city." },
+    { "term": "The City Beautiful", "meaning": "Orlando's official nickname, a more civic and older-school local reference." },
+    { "term": "Boricua", "meaning": "Puerto Rican identity term of pride, used by the large Central Florida Puerto Rican community." },
+    { "term": "Cast member", "meaning": "Theme-park employee term; park workers are a huge slice of the local fan base." },
+    { "term": "Pub sub", "meaning": "Publix deli sandwich, a statewide shorthand that is also a local rite." },
+    { "term": "OBT", "meaning": "Orange Blossom Trail, the cruising and commercial corridor." }
+  ],
+  "designCues": [
+    { "cue": "Magic Blue, from the team's brand blue", "type": "color", "hex": "#0077C0", "source": "Orlando Magic primary color and the blue of the 1990s uniforms", "use": "Use as a saturated base or accent, not a faint tint." },
+    { "cue": "Pinstripe black with silver", "type": "pattern", "hex": "", "source": "The original 1989 and 1990s Magic pinstripe uniforms", "use": "Use as a tonal pinstripe on warm-up jackets and shorts, a quiet nod for archive buyers." },
+    { "cue": "Boricua flag blue and red", "type": "color", "hex": "#0050F0", "source": "Puerto Rican flag blue, widely displayed in Orlando on cars, flags and chains", "use": "Use only in partnership with Puerto Rican designers, with credit and payment; avoid turning the flag into a pattern." },
+    { "cue": "Hurricane-shutter plywood tan", "type": "color", "hex": "#B58B5A", "source": "Storm-prep plywood and spray-painted slogans seen across Florida neighborhoods", "use": "Use as a utility-tone for workwear-style outerwear." },
+    { "cue": "Car-meet reflective and chrome trim", "type": "material", "hex": "", "source": "OBT car and bike meets", "use": "Add reflective piping and chrome-look hardware to shells and bags." },
+    { "cue": "Patch-and-pin canvas field", "type": "texture", "hex": "", "source": "Park-worker and passholder pin and ears culture", "use": "Build a blank patch panel with loops so wearers add their own pins, with no third-party marks included." },
+    { "cue": "Convention-poster sticker typography", "type": "typography", "hex": "", "source": "Fringe and MegaCon-era DIY posters and zines", "use": "Use hand-cut, high-contrast display type for limited drops." }
+  ],
+  "productHooks": [
+    "A Penny-era archive capsule: pinstripe warm-up, Magic Blue and black, with a note that credits the 1995 team and Penny's Nike line.",
+    "A pin-and-patch customizable warm-up jacket for passholders and park workers, sold blank with local-artist patch packs.",
+    "A lightweight, rain-shell and mesh summer pack built for storms and heat, themed on hurricane-season gear rather than a generic Florida palm.",
+    "An OBT car-meet reflective outerwear drop made with local builders, launched at a Cup Night Friday."
+  ],
+  "watchouts": [
+    "Disney, Universal and cosplay character IP is third-party and needs licensing; do not reference the parks or characters on product.",
+    "Pulse is a memorial for survivors and families; do not use its imagery, name or the date in marketing, and pay and credit LGBTQ+ creators for any pride work.",
+    "Do not use the Puerto Rican flag or vejigante masks as decoration; partner with Puerto Rican designers and cultural groups, with credit and payment.",
+    "Leave Parramore and Eatonville history to community voices; invest and partner rather than extract."
+  ],
+  "sources": [
+    { "title": "Orlando Magic official site", "url": "https://www.nba.com/magic" },
+    { "title": "Orlando, Florida (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Orlando,_Florida" },
+    { "title": "Orange Blossom Trail (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Orange_Blossom_Trail" },
+    { "title": "Gay Days (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Gay_Days" },
+    { "title": "Orlando Fringe", "url": "https://orlandofringe.org" },
+    { "title": "onePULSE Foundation", "url": "https://onepulsefoundation.org" }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Magic City Edition uniform for 2026-27 (theme, colors, release date), not yet captured",
+      "Dates and venues of Orlando home games in the first Cup Night window (Oct 30 to Nov 27)",
+      "Will's Pub, Milk District venues and other named places are still open and operating",
+      "Webster Flea Market still runs Mondays with sneaker and vintage vendors",
+      "MegaCon Orlando 2027 dates and venue, plus Anime Festival Orlando dates",
+      "Halloween Horror Nights 2026 run dates",
+      "Zora! Festival 2027 dates",
+      "Gay Days 2027 dates and organizer",
+      "Daytona Turkey Run 2026 dates and format",
+      "Orlando skate, ballroom and sneaker-shop scenes: add currently operating named shops, collectives and crews",
+      "Orlando Fringe 2027 dates and location",
+      "Iron Lion Firm is still active and affiliated with Orlando City"
+    ]
+  }
+}

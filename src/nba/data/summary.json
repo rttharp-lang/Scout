@@ -1409,14 +1409,14 @@
   "id": "chi",
   "status": "complete",
   "updated": "2026-10-07",
-  "headline": "Six banners sell themselves; Nike wins Chicago by dressing the Hawk-season walk to Madison in the city's own codes",
+  "headline": "Six banners sell themselves; Nike wins Chicago by dressing the walk to 1901 W. Madison in the city's own codes",
   "archetype": {
    "name": "The Six-Banner Congregation",
    "description": "A multigenerational, all-sides faith in the 1991-98 Bulls that keeps buying through losing seasons but greets every rebuild promise with South Side and West Side sarcasm. It is loyal to the banners and the red-and-black, while the roster has to earn its place."
   },
   "pulse": {
-   "teamMoment": "Year one of a new regime: Billy Donovan stepped down, Tiago Splitter took over as coach and EVP Bryson Graham is building a size-first 'SLAP' roster around Josh Giddey, Matas Buzelis and No. 4 pick Caleb Wilson, with Norman Powell and Nic Claxton added. The Bulls are coming off 31-51, are rated low in power rankings and have no opening-night or Christmas Day game, so the Emirates NBA Cup's East Group C is their early stage.",
-   "sentiment": "Guarded hope wrapped in ownership fatigue: fans like the draft and Wilson's All-Summer League debut but have learned to mock hype and wait for proof.",
+   "teamMoment": "Year one of a new regime: Billy Donovan stepped down, Tiago Splitter took over as coach and EVP Bryson Graham is building a size-first 'SLAP' roster around Josh Giddey, Matas Buzelis and No. 4 pick Caleb Wilson, with Norman Powell and Nic Claxton added. The Bulls are coming off 31-51, are rated low in power rankings and have no opening-night or Christmas Day game; their early national stage is Emirates NBA Cup East Group C against Boston, Atlanta, Charlotte and Washington.",
+   "sentiment": "Guarded hope wrapped in ownership fatigue: fans like the draft and Wilson's First Team All-Summer League debut but have learned to mock hype and wait for proof.",
    "heat": 48
   },
   "verifiedMoment": "A new regime in Chicago: Billy Donovan stepped down, Tiago Splitter took over as coach and new EVP Bryson Graham is building for 'SLAP' (size, length, athleticism, physicality) around Josh Giddey, Matas Buzelis and No. 4 pick Caleb Wilson.",
@@ -1425,7 +1425,7 @@
    "culture": 93,
    "retail": 84,
    "fandom": 74,
-   "rationale": "Chicago is one of the league's deepest design cultures and a global heritage retail engine with a full flagship, arena, boutique and suburban-mall network. Fan intensity scores high on legacy but is held back by a 31-51 rebuild and ownership fatigue, so the near-term upside is in civic and outerwear product more than in current-player demand.",
+   "rationale": "Chicago is one of the league's deepest design cultures and a global heritage retail engine with a full flagship, arena, boutique and suburban-mall network. Fan intensity scores high on legacy but is held back by a 31-51 rebuild and ownership fatigue, so the near-term upside is in civic and outerwear product, mostly in the 2027-28 cycle, more than in current-player demand.",
    "calibrated": false
   },
   "palette": [
@@ -1444,17 +1444,17 @@
   ],
   "opportunities": [
    {
-    "id": "hawk-season-outerwear",
-    "title": "Hawk Season game-day outerwear",
-    "summary": "A Bulls outerwear system built for the January walk to 1901 W. Madison: knee-length stadium parka, heavyweight fleece, cuffed knit and grip gloves in black with Bulls red and lake-gray. It targets the market's biggest and most functional spending window.",
+    "id": "lake-wind-outerwear",
+    "title": "Lake Wind: the coat over the jersey",
+    "summary": "A Bulls outerwear system for the January trip to 1901 W. Madison: a knee-length stadium coat cut to go over a jersey, heavyweight fleece, cuffed knit and grip gloves in black, Bulls red and lake gray. In 2026-27 it sells existing licensed outerwear and wear-tests prototypes; the new system launches November 2027.",
     "where": [
      "Bulls Team Store at the United Center",
      "Nike Chicago (Michigan Avenue)",
      "Woodfield Mall and Oakbrook Center",
      "Nike app and online for out-of-city fans"
     ],
-    "when": "Drop the first week of November before the first freeze, then push through Black Friday and Dec 20 and hold core pieces through February.",
-    "how": "Launch with a walk-to-the-arena story from the Ashland Green/Pink stop and the No. 20 Madison bus, with reflective piping for dark walks. Tier from knit and gloves to fleece to parka so the 10.25% city tax doesn't price out entry buyers.",
+    "when": "Winter 2026-27: push existing outerwear from early November to Dec 20 and wear-test prototypes with season-ticket holders through February. Hero drop of the new system in the first week of November 2027.",
+    "how": "Prove function before launch: a winter of wear-tests with season-ticket holders on the No. 20 Madison bus and the walk from the L, with their notes shaping the 2027 coat. Keep 'Hawk' in the copy only, and tier from knit and gloves to fleece to coat so the 10.25% city tax doesn't price out entry buyers.",
     "segment": "Season-ticket families and suburban fans, plus dynasty diehards who wear a coat over the jersey",
     "priority": 1,
     "size": "high",
@@ -1465,9 +1465,9 @@
      2
     ],
     "products": [
-     "Hawk-season stadium parka",
+     "Over-the-jersey stadium coat (2027)",
      "Heavyweight Bulls fleece hoodie",
-     "Cuffed knit hat with hidden Y-device patch (city-cleared)",
+     "Cuffed knit hat",
      "Insulated warm-up jacket",
      "Grip gloves"
     ]
@@ -1475,19 +1475,21 @@
    {
     "id": "madison-street-one-city",
     "title": "Madison Street: one city, every side",
-    "summary": "A grid-coded collection with split North/South hoodies, '1901 W' shooting shirts and area-code editions (312, 773, 708, 630, 847) that turns the Bulls' address into a unity statement.",
+    "summary": "A 2027-28 grid-coded collection built on the Bulls' own address: split North/South hoodies, '1901 W' shooting shirts and grid-coordinate caps in street-sign lettering, with a single 708 south-suburb edition as the only area-code piece.",
     "where": [
      "United Center",
      "Nike Chicago (Michigan Avenue)",
-     "South-suburb (708) and North Shore (847) mall doors",
+     "South-suburb (708) doors",
      "Wabash Arts Corridor mural wall"
     ],
-    "when": "Open House Chicago weekend in mid-October through the home opener and the holiday window.",
-    "how": "Commission a Chicago type designer for street-sign lettering and a South or West Side muralist for a Giddey-Buzelis-Wilson wall on the Wabash Arts Corridor, with a credited print-and-tee run. Stock each area-code edition where that code lives.",
+    "when": "Commission the type designer and muralist in winter 2026-27, paint the mural in spring 2027 after the thaw, launch the collection at the 2027-28 home opener and carry it through the holiday window.",
+    "how": "Commission a Chicago type designer for street-sign lettering and a South or West Side muralist, credited and paid, for a Wabash Arts Corridor wall that celebrates the city's sides rather than individual players. Make the 708 edition with a south-suburb maker and drop 630 and 847 unless a suburban partner asks for them.",
     "segment": "Locals across all sides and the suburbs; tourists buying a Chicago-specific souvenir",
     "priority": 1,
     "size": "high",
     "months": [
+     3,
+     4,
      10,
      11,
      12
@@ -1495,49 +1497,77 @@
     "products": [
      "Split North/South hoodie",
      "'1901 W' shooting shirt",
-     "Area-code tees",
      "Grid-coordinate cap",
-     "Kids' area-code tee"
+     "708 edition tee (south-suburb co-made)",
+     "Kids' grid-coordinate tee"
     ]
    },
    {
-    "id": "lights-out-opener",
-    "title": "Lights Out: the new era's first intro",
-    "summary": "A near-black spotlight warm-up with reflective Bulls-red beams that flare under the intro lights, plus a 'Rebuild Mixtape' tee listing the new core as a cassette tracklist, launched at the home opener and carried through Cup Nights.",
+    "id": "lights-out-basement-stock",
+    "title": "Lights Out and the Basement Stock reissue",
+    "summary": "Pregame and boutique product for the new era: a near-black Spotlight warm-up with reflective Bulls-red beams, a roster tracklist tee in jersey numbers, and a Nike-built 1990s half-zip in aged 'basement stock' red seeded first with taste-setting doors.",
     "where": [
-     "United Center",
-     "Bulls Team Store",
-     "Nike Chicago (Michigan Avenue)",
-     "Fulton Market pop-up"
+     "Notre (West Loop)",
+     "RSVP Gallery",
+     "Leaders 1354",
+     "Bulls Team Store (second wave)",
+     "Nike Chicago (Michigan Avenue)"
     ],
-    "when": "Home opener week through the Cup Night Fridays from Oct 30 to Nov 27.",
-    "how": "Build an all-Chicago music moment modeled on the 2020 All-Star Game, with a mix by a local DJ released as launch content and copy written by YOUmedia and Young Chicago Authors poets, all paid. Don't use the intro song's name or audio without clearance.",
-    "segment": "Gen Z digital fans and current-roster buyers",
-    "priority": 1,
+    "when": "2026-27: seed existing Bulls SKUs at boutique doors around the home opener and over Black Friday. 2027-28: launch the Spotlight warm-up and Basement Stock pieces at the home opener, with a December restock.",
+    "how": "Pair the launch with a mix by a paid local DJ and copy by Young Chicago Authors poets, never the intro song's name or audio. Keep the tracklist to numbers with no 'Rebuild' wording, get NBPA clearance before any player names, use original dot-matrix numerals, and use clean raffles, boutique first and big box second.",
+    "segment": "Gen Z digital fans, sneakerheads, vintage hunters and West Loop creatives",
+    "priority": 2,
     "size": "medium",
     "months": [
      10,
-     11
+     11,
+     12
     ],
     "products": [
      "Spotlight reflective warm-up jacket",
      "Glow-print pregame tee",
-     "'Rebuild Mixtape' tee",
-     "Two-player select-screen duo tees (Giddey/Buzelis, Buzelis/Wilson)"
+     "Tracklist tee (jersey numbers only)",
+     "Basement Stock half-zip pullover",
+     "Garment-dyed aged-red fleece"
+    ]
+   },
+   {
+    "id": "buzelis-lithuanian-chicago",
+    "title": "Buzelis and Lithuanian Chicago",
+    "summary": "A hometown lane for the core's Chicago-area native: a community night with Lithuanian-Chicago institutions and bakeries in 2026-27, then a small paid collaboration in fall 2027 if he and the community want it.",
+    "where": [
+     "Balzekas Museum of Lithuanian Culture",
+     "Lithuanian Plaza (Marquette Park)",
+     "Lithuanian community schools and parishes",
+     "United Center"
+    ],
+    "when": "Community night around Lithuanian State Restoration Day (Feb 16, 2027); collaboration at the start of 2027-28.",
+    "how": "Confirm Buzelis's community ties and get his family's blessing first, then build with the Balzekas Museum and community schools, paying the bakeries that cater. Keep Lithuanian national symbols off Nike product unless the community and Lithuanian federation clear them, and route player use through the NBPA.",
+    "segment": "Lithuanian-American families across the city and southwest suburbs, and fans looking for a homegrown core player",
+    "priority": 2,
+    "size": "low",
+    "months": [
+     2,
+     10
+    ],
+    "products": [
+     "Community-night tee co-designed with a Lithuanian-Chicago artist",
+     "Buzelis player tee (NBPA-cleared)",
+     "Kids' community-school tee"
     ]
    },
    {
     "id": "fieldhouse-public-league",
-    "title": "Fieldhouse City: Public League and Park District",
-    "summary": "Winter warm-ups in fieldhouse brick and varnished maple, launched alongside refurbished floors in South and West Side Park District fieldhouse gyms, then licensed Public League shooting shirts and a Downstate '39 bracket capsule.",
+    "title": "Fieldhouse City: Park District and Public League",
+    "summary": "Winter warm-ups in fieldhouse brick and varnished maple, preceded by donated floor refurbishments in South and West Side Park District gyms, with school shooting shirts only where a school signs on.",
     "where": [
      "Park District fieldhouses on the South and West Sides",
-     "Simeon, Whitney Young, Farragut, Marshall and Morgan Park",
+     "Public League schools that opt in (Simeon, Whitney Young, Farragut, Marshall, Morgan Park)",
      "Leaders 1354 and neighborhood doors",
      "Proviso West Holiday Tournament"
     ],
-    "when": "Preview at the late-December holiday tournament, launch in January, school drops at the late-February city final, and the Downstate capsule in March.",
-    "how": "Co-brand with the Chicago Park District and run the product through Mac Irvin Fire and school programs, with proceeds going to each program under CPS and IHSA licensing. A paid, credited documentary series with Kartemquin or Coodie & Chike following a Public League team carries the story.",
+    "when": "Donate and refurbish floors in winter 2026-27 with no product on them; launch the Fieldhouse warm-up in January 2028; school shirts around the Public League city final; a Downstate tee in March.",
+    "how": "Sequence it: a donation-led floor refurbishment through the Park District's own approvals first, then licensed school shirts only where a school and its athletic department sign, with proceeds to the program. Any documentary (Kartemquin or Coodie & Chike) follows a program with school, parent and IHSA clearance, and Mac Irvin Fire stays the wear-test and Combine Week partner, not part of the Public League story.",
     "segment": "Teens, Public League families and neighborhood hoopers who claim players by school and side",
     "priority": 2,
     "size": "medium",
@@ -1549,289 +1579,244 @@
     ],
     "products": [
      "Fieldhouse brick wool-look warm-up",
-     "School-licensed Public League shooting shirts",
-     "Downstate '39 bracket tee (no 'March Madness' wordmark)",
-     "Hawk Layer hooded shooting shirt",
+     "School-licensed Public League shooting shirt",
+     "Downstate bracket tee (IHSA-approved, no 'March Madness')",
      "Reversible 'Chicago' color-block practice jersey"
     ]
    },
    {
-    "id": "boutique-first-basement-stock",
-    "title": "Boutique-first drops and the Basement Stock reissue",
-    "summary": "Limited Chicago-only product seeded first with taste-setting doors, led by a Nike-built 1990s half-zip pullover and garment-dyed fleece in aged 'basement stock' red that nods to the city's thrift hunt.",
+    "id": "rink-session-jb",
+    "title": "Rink Session: the JB track suit",
+    "summary": "A stretch track suit co-designed with Chicago's JB skating crews, whose matching crew suits are already the city's own team uniform. It is a ready silhouette with a real community partner and no equivalent in any other market.",
     "where": [
-     "Notre (West Loop)",
-     "Saint Alfred and RSVP Gallery (Milwaukee Ave)",
-     "Leaders 1354",
-     "Bulls Team Store (second wave)"
-    ],
-    "when": "First drop around the home opener, a holiday restock in December and a Black Friday raffle.",
-    "how": "Use clean raffles over blanket availability for the resale-aware buyer, go boutique first and big box second, and make the pieces archive-honest without Starter trade dress or 'Three-Peat' wording.",
-    "segment": "Sneakerheads, vintage hunters and Wicker Park and West Loop creatives",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     10,
-     11,
-     12
-    ],
-    "products": [
-     "Basement Stock half-zip pullover",
-     "Garment-dyed aged-red fleece",
-     "Off-register original-graphic tee",
-     "Bulls Arcade dot-grid shooting shirt"
-    ]
-   },
-   {
-    "id": "bhm-wall-of-respect",
-    "title": "Black History Month: Wall of Respect lineage",
-    "summary": "A February capsule built on AfriCOBRA principles ('Kool-Aid colors', shine, lettering woven into figures) and the Wall of Respect's heroes tradition, paired with a South Side chef series during Chicago Restaurant Week.",
-    "where": [
-     "South Side Community Art Center (Bronzeville)",
-     "DuSable Black History Museum",
-     "Stony Island Arts Bank",
-     "South-suburb (708) doors"
-    ],
-    "when": "Chef series during Restaurant Week in late January, capsule through February.",
-    "how": "License through AfriCOBRA members and estates and share proceeds with the South Side Community Art Center. Erick Williams of Virtue, Lem's Bar-B-Q and Brown Sugar Bakery each co-design a menu item and a credited, paid patch or tee.",
-    "segment": "Black Chicago from Bronzeville to the 708 south suburbs, and dynasty-era diehards",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     1,
-     2
-    ],
-    "products": [
-     "AfriCOBRA-principle graphic tee",
-     "Lettering-led warm-up jacket",
-     "Chef-series co-designed patch tee",
-     "Kids' heroes-wall tee"
-    ]
-   },
-   {
-    "id": "born-here-summer",
-    "title": "Born Here: house, footwork and JB through the dead zone",
-    "summary": "A house capsule in flag blue with Warehouse-flyer type, co-made with the Chosen Few DJs, alongside a JB skating track suit and a footwork-tested low-top. Together they fill the August Bulls dead zone with the city's own culture.",
-    "where": [
-     "Chosen Few DJs Picnic (Jackson Park)",
      "The Rink Fitness Factory (East 87th St)",
-     "Bud Billiken Parade route",
-     "ARC Music Festival (Union Park)"
+     "South Side and 708 neighborhood doors",
+     "Nike app"
     ],
-    "when": "Chosen Few Picnic in early July, restock on Frankie Knuckles Day (Aug 25), close at ARC on Labor Day weekend.",
-    "how": "Co-design with and pay the Chosen Few, JB crews and Teklife or The Era footwork dancers. Credit house's Black and queer founders, consult the Knuckles estate, and don't limit the story to Pride-month timing.",
-    "segment": "House heads, Black South Side families and style-setting dance and skate crews",
+    "when": "Co-design with crews through 2026-27 and launch with a Bulls skate night at The Rink in late summer 2027, ahead of the 2027-28 season.",
+    "how": "Pay crews as co-designers, embroider crew names where they want them, and let them set the skate-night program. Credit JB as a Black Chicago form by name and keep it a Bulls-licensed piece only if the crews and the Bulls agree.",
+    "segment": "JB crews, Black South Side families and style-setting dance and skate communities",
     "priority": 2,
     "size": "medium",
     "months": [
-     7,
      8,
      9
     ],
     "products": [
-     "'Born in Chicago' house pregame shooting shirt",
-     "Flag-blue house tee",
-     "Rink Session stretch track suit with crew-name embroidery",
-     "Footwork-tested Bulls-colored low-top with rhythm-grid insole"
+     "Rink Session stretch track suit",
+     "Crew-name embroidered jacket",
+     "Skate-night tee"
     ]
    },
    {
-    "id": "one-city-summer-hoops",
-    "title": "One City summer: Bulls, Sky and Combine Week",
-    "summary": "Keep Nike-dressed Chicago hoops on shelves from May to September with a Bulls-Sky reversible practice pack and a Combine Week run at a West Side fieldhouse with Mac Irvin Fire players.",
+    "id": "africobra-commission",
+    "title": "Wall of Respect lineage: a commissioned AfriCOBRA collaboration",
+    "summary": "A named, licensed collaboration with surviving AfriCOBRA members and estates, whose movement included wearable art, built with the South Side Community Art Center and backed by year-round funding rather than a February-only drop.",
     "where": [
-     "Wintrust Arena (Sky and the Draft Combine)",
-     "West Side Park District fieldhouse",
-     "Nike Chicago (Michigan Avenue)",
-     "The Original Rainbow Cone (Beverly) for the kids' drop"
+     "South Side Community Art Center (Bronzeville)",
+     "DuSable Black History Museum",
+     "South-suburb (708) doors",
+     "Nike Chicago (Michigan Avenue)"
     ],
-    "when": "Draft Combine week in mid-May, the Sky's May tip-off through Labor Day, and the June draft.",
-    "how": "Lead with the teams and the uniforms rather than with rival-brand stars like Reese. Add a licensed Rainbow Cone five-stripe kids' capsule credited to the Beverly shop.",
-    "segment": "Families, youth hoopers and WNBA fans",
-    "priority": 3,
-    "size": "low",
+    "when": "Announce a year-round SSCAC fund in 2026-27; the artists set the product launch date, and Black History Month is one option, not the default.",
+    "how": "License or commission named members and estates with billing on the product and a revenue share, under SSCAC guidance. Never reproduce the 1967 Wall of Respect portraits, which carry likeness rights, and don't imitate the AfriCOBRA style without its artists.",
+    "segment": "Black Chicago from Bronzeville to the 708 south suburbs, and dynasty-era diehards",
+    "priority": 2,
+    "size": "medium",
     "months": [
-     5,
-     6,
+     2,
+     6
+    ],
+    "products": [
+     "Artist-billed graphic tee",
+     "Lettering-led warm-up jacket",
+     "Kids' artist-billed tee"
+    ]
+   },
+   {
+    "id": "born-here-house",
+    "title": "Born Here: house through the dead zone",
+    "summary": "A Nike-credited house collaboration with the Chosen Few DJs in flag blue and Warehouse-flyer type, carrying no NBA marks because house heritage is not a Bulls property. It fills the July-August Bulls dead zone with the city's own culture.",
+    "where": [
+     "Chosen Few DJs Picnic (Jackson Park)",
+     "Nike Chicago (Michigan Avenue)",
+     "South Side doors",
+     "Nike app"
+    ],
+    "when": "Open the conversation in 2026-27; the Chosen Few set the release around their July 2027 picnic.",
+    "how": "Name the Chosen Few on the product, share revenue, credit house's Black and queer founders and consult the Knuckles estate. A separate Bulls house night at a home game needs Bulls approval; Frankie Knuckles Day stays with the house community unless Nike is invited.",
+    "segment": "House heads, Black South Side families and dance crews",
+    "priority": 3,
+    "size": "medium",
+    "months": [
      7,
      8
     ],
     "products": [
-     "Bulls-Sky reversible practice jersey",
-     "One City mesh shorts",
-     "Draft-night rookie tee",
-     "Rainbow Cone kids' tee"
+     "'Born in Chicago' house shooting shirt (Nike, no team marks)",
+     "Flag-blue house tee",
+     "Footwork-tested low-top with rhythm-grid insole"
     ]
    }
   ],
   "calendar": [
    {
     "month": 10,
-    "window": "Oct 11 (Bulls at Nuggets on ESPN; Chicago Marathon expected the same day)",
-    "moment": "The first national look at the Splitter-era roster on a downtown marathon weekend",
-    "play": "Tease the Lights Out pieces on the broadcast and run a layering drop at the Michigan Avenue flagship for marathon visitors.",
-    "products": [
-     "Hawk Layer hooded shooting shirt",
-     "Insulated warm-up jacket",
-     "'Rebuild Mixtape' tee"
-    ],
-    "priority": 2
-   },
-   {
-    "month": 10,
-    "window": "Mid-October, Open House Chicago weekend",
-    "moment": "The city's design vernacular is in the spotlight the week of tip-off",
-    "play": "Unveil the Giddey-Buzelis-Wilson mural on the Wabash Arts Corridor and launch the 1901 W. Madison collection.",
-    "products": [
-     "Split North/South hoodie",
-     "'1901 W' shooting shirt",
-     "Area-code tees"
-    ],
-    "priority": 2
-   },
-   {
-    "month": 10,
-    "window": "Bulls home opener (date to confirm)",
+    "window": "Bulls 2026-27 home opener (date to confirm)",
     "moment": "The first lights-out intro of the new regime",
-    "play": "Launch the Spotlight warm-up with an all-Chicago music moment and seed boutique-first Basement Stock pieces at Notre and Saint Alfred.",
+    "play": "No new product: seed existing Bulls SKUs at Notre, RSVP Gallery and Leaders 1354, and open partner introductions with the Chosen Few, The Rink, SSCAC and Lithuanian-Chicago groups.",
     "products": [
-     "Spotlight warm-up jacket",
-     "Glow-print pregame tee",
-     "Basement Stock half-zip pullover",
-     "Two-Player Select duo tee"
+     "Existing Bulls Statement fleece",
+     "Existing heritage Swingman jerseys"
     ],
     "priority": 1
    },
    {
     "month": 11,
-    "window": "Fridays Oct 30 to Nov 27, East Group C Cup Nights",
-    "moment": "The Bulls' only guaranteed branded-night slate before December, against Boston, Atlanta, Charlotte and Washington",
-    "play": "Sell a tavern-cut watch-party kit made with a South Side tavern-style pizzeria for road Cup games, plus duo tees on home Cup Nights.",
+    "window": "Cup Nights: Fridays Oct 30 to Nov 27, plus Tue Nov 24 and Wed Nov 25",
+    "moment": "East Group C games against Boston, Atlanta, Charlotte and Washington, the Bulls' early stage with no opening-night or Christmas game",
+    "play": "Watch parties at South Side tavern-style pizzerias and gifting with existing product; plan the home Cup games once the schedule is confirmed, with no Cup-specific Bulls apparel.",
     "products": [
-     "Tavern-cut grid tee",
-     "Pizza-box mailer kit",
-     "Two-Player Select duo tee"
+     "Existing Bulls fleece",
+     "Existing kids' tees"
     ],
     "priority": 2
    },
    {
     "month": 11,
-    "window": "First week of November, before the first freeze",
+    "window": "Early November 2026 through February 2027",
     "moment": "Hawk season starts",
-    "play": "Hero drop of the outerwear system, framed around the walk from the Ashland L to the arena.",
+    "play": "Push existing licensed Bulls outerwear before the first freeze and run the over-the-jersey coat wear-test with season-ticket holders.",
     "products": [
-     "Hawk-season stadium parka",
-     "Heavyweight Bulls hoodie",
+     "Existing Bulls outerwear",
+     "Heavyweight Bulls fleece hoodie",
      "Cuffed knit hat",
-     "Grip gloves"
+     "Coat prototypes (wear-test)"
     ],
     "priority": 1
    },
    {
     "month": 11,
-    "window": "Black Friday (Nov 27) through Dec 20",
+    "window": "Black Friday (Nov 27) through Dec 20, 2026",
     "moment": "Peak gifting, the Mag Mile Lights Festival and Christkindlmarket crowds, with no Bulls Christmas Day game",
-    "play": "Matching adult, youth and kids gift bundles and a Black Friday raffle at boutique doors.",
+    "play": "Matching adult, youth and kids gift bundles from existing inventory and a Black Friday raffle at boutique doors.",
     "products": [
      "Swingman jersey gift bundle",
-     "Kids' area-code tee",
      "Heavyweight Bulls hoodie",
-     "Garment-dyed aged-red fleece"
+     "Kids' Benny the Bull tee"
     ],
     "priority": 1
-   },
-   {
-    "month": 12,
-    "window": "Between Christmas and New Year's, Proviso West Holiday Tournament",
-    "moment": "Public League, Catholic League and suburban powers meet for the first time",
-    "play": "Preview the Fieldhouse warm-up on Mac Irvin Fire alumni and tournament teams.",
-    "products": [
-     "Fieldhouse warm-up jacket",
-     "Reversible 'Chicago' practice jersey"
-    ],
-    "priority": 3
    },
    {
     "month": 1,
-    "window": "Mid-January through Restaurant Week (late January)",
-    "moment": "Deepest cold and the quietest Bulls stretch",
-    "play": "Launch the Fieldhouse Collection alongside refurbished South and West Side fieldhouse floors, and start the South Side chef series.",
+    "window": "January 2027",
+    "moment": "Deepest cold, when Chicago hoops lives in fieldhouses",
+    "play": "Donation-led floor refurbishments in South and West Side Park District fieldhouses through the Park District's approvals, with no product on the floor.",
     "products": [
-     "Fieldhouse warm-up jacket",
-     "Fieldhouse fleece jogger",
-     "Chef-series patch tee"
+     "Refurbished fieldhouse floors (no product)"
     ],
     "priority": 2
    },
    {
     "month": 2,
-    "window": "February, through the late-February Public League city final",
-    "moment": "Black History Month and the city championship",
-    "play": "Wall of Respect and AfriCOBRA capsule launched at the South Side Community Art Center, plus school-licensed shooting shirts the week of the city final.",
+    "window": "February 2027",
+    "moment": "Black History Month",
+    "play": "Announce a year-round fund with the South Side Community Art Center and begin the AfriCOBRA artist commissions; the artists choose the product launch date.",
     "products": [
-     "AfriCOBRA-principle graphic tee",
-     "Lettering-led warm-up jacket",
-     "Public League school shooting shirt"
-    ],
-    "priority": 1
-   },
-   {
-    "month": 3,
-    "window": "March 4 (Chicago's 190th birthday) through the IHSA state finals",
-    "moment": "Civic birthday and 'going downstate'",
-    "play": "'I Will' shooting shirts for the young core on the city's birthday, then the Downstate '39 capsule with custom tees for every Chicago-area team that makes the state finals.",
-    "products": [
-     "'I Will' shooting shirt",
-     "Downstate '39 bracket tee"
+     "SSCAC year-round fund (no product)"
     ],
     "priority": 2
    },
    {
-    "month": 5,
-    "window": "Mid-May, NBA Draft Combine week and Sky tip-off",
-    "moment": "The league's prospects are in Chicago just after the Bulls' season ends",
-    "play": "Host a Combine Week run at a West Side fieldhouse with Mac Irvin Fire players and launch the Bulls-Sky One City pack.",
+    "month": 2,
+    "window": "Around Feb 16, 2027 (Lithuanian State Restoration Day)",
+    "moment": "Lithuanian Chicago's civic holiday",
+    "play": "A Buzelis community night with the Balzekas Museum, community schools and paid Lithuanian bakeries, if he and the community want it.",
     "products": [
-     "Bulls-Sky reversible practice jersey",
-     "One City mesh shorts"
+     "Community-night tee co-designed with a Lithuanian-Chicago artist"
     ],
-    "priority": 3
+    "priority": 2
+   },
+   {
+    "month": 4,
+    "window": "Spring 2027, after the thaw",
+    "moment": "Mural season opens",
+    "play": "Paint the commissioned Madison Street mural on the Wabash Arts Corridor, credited and paid, as the first public sign of the 2027-28 collection.",
+    "products": [
+     "Credited mural print"
+    ],
+    "priority": 2
    },
    {
     "month": 6,
-    "window": "June 13 (30th anniversary of the 1997 title) and the Chicago Blues Festival",
+    "window": "June 13, 2027 (30th anniversary of the 1997 title)",
     "moment": "Dynasty anniversary season",
-    "play": "A Jordan Brand-coordinated heritage drop for the anniversary, plus a Record Row capsule for Blues Fest with proceeds shared with Blues Heaven.",
+    "play": "A Jordan Brand-coordinated heritage drop for the anniversary, plus a Record Row tee for the Chicago Blues Festival with proceeds shared with Blues Heaven.",
     "products": [
      "Heritage warm-up jacket (Jordan Brand-coordinated)",
-     "Record Row vintage-wash tee",
-     "Coaches jacket with neon-script accents"
+     "Record Row vintage-wash tee"
     ],
     "priority": 2
    },
    {
     "month": 7,
-    "window": "Early July, Chosen Few DJs Picnic in Jackson Park",
+    "window": "Early July 2027, Chosen Few DJs Picnic in Jackson Park",
     "moment": "Black Chicago's house family reunion",
-    "play": "Release the 'Born in Chicago' house capsule co-designed with the Chosen Few, and the Rink Session track suit with JB crews.",
+    "play": "Release the Nike-credited 'Born in Chicago' house collaboration on the date the Chosen Few choose, with their name on the product and a revenue share.",
     "products": [
      "'Born in Chicago' house shooting shirt",
-     "Flag-blue house tee",
-     "Rink Session track suit"
+     "Flag-blue house tee"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 8,
+    "window": "Bud Billiken Parade (expected Aug 14, 2027)",
+    "moment": "South Side back-to-school",
+    "play": "Back-to-school gifts for South Side students given through Chicago Defender Charities, with no sales on the parade route.",
+    "products": [
+     "Kids' Benny the Bull tee",
+     "Youth Bulls hoodie"
     ],
     "priority": 2
    },
    {
-    "month": 8,
-    "window": "Bud Billiken Parade (second Saturday) and Frankie Knuckles Day (Aug 25)",
-    "moment": "South Side back-to-school and the city's day for the Godfather of House",
-    "play": "A back-to-school kids' collection made with Chicago Defender Charities that gives back to South Side schools, then a house-capsule restock on Aug 25.",
+    "month": 9,
+    "window": "Late summer 2027",
+    "moment": "The Rink's skate season before the Bulls return",
+    "play": "Launch the Rink Session track suit at a Bulls skate night at The Rink on 87th, with paid crews setting the program.",
     "products": [
-     "Kids' Benny the Bull tee",
-     "Youth Bulls hoodie",
-     "Flag-blue house tee"
+     "Rink Session stretch track suit",
+     "Crew-name embroidered jacket"
     ],
     "priority": 2
+   },
+   {
+    "month": 10,
+    "window": "Bulls 2027-28 home opener",
+    "moment": "Year two of the Splitter era",
+    "play": "Launch the Madison Street collection, the Spotlight warm-up and the Basement Stock reissue, boutique first, plus the Buzelis collaboration if agreed.",
+    "products": [
+     "Split North/South hoodie",
+     "'1901 W' shooting shirt",
+     "Spotlight warm-up jacket",
+     "Basement Stock half-zip pullover",
+     "Tracklist tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "First week of November 2027, before the first freeze",
+    "moment": "Hawk season returns",
+    "play": "Hero drop of the Lake Wind outerwear system built from the wear-test, told through the No. 20 Madison bus and the walk to the arena.",
+    "products": [
+     "Over-the-jersey stadium coat",
+     "Heavyweight Bulls hoodie",
+     "Cuffed knit hat",
+     "Grip gloves"
+    ],
+    "priority": 1
    }
   ],
   "rhythm": [
@@ -4794,17 +4779,17 @@
    "description": "A fan base forged in 40 lean Oakland years and spoiled by four titles, now spread across The Town, The City and the 408. It is loyal to Curry, Draymond and Kerr more than to an arena, and it is nostalgic for Oracle in a building that never had Oracle's soul."
   },
   "pulse": {
-   "teamMoment": "Stephen Curry's aging core ran it back after a 37-45 season, a play-in win over the Clippers and a 111-96 loss at Phoenix; the Warriors chased Giannis and Anthony Davis without a deal, re-signed Porzingis, Horford, Melton and Gary Payton II, drafted Yaxel Lendeborg at No. 11, and have Jimmy Butler and Moses Moody recovering from injury.",
-   "sentiment": "Grateful and anxious: fans are emotionally invested in a final Curry run but expect little (a 40.5 win total, with previews doubting a play-in spot), so the mood favors keepsake and heritage buying over hype.",
-   "heat": 60
+   "teamMoment": "Curry's aging core ran it back after a 37-45 season, a play-in win over the Clippers and a 111-96 loss at Phoenix: the Warriors chased Giannis and Anthony Davis without a deal, re-signed Porzingis, Horford, Melton and Gary Payton II, added Niang and Brandon Williams, drafted Yaxel Lendeborg at No. 11, and have Jimmy Butler and Moses Moody recovering from injury.",
+   "sentiment": "Grateful and anxious: fans are invested in the dynasty-era window but expect little (a 40.5 win total, with previews doubting a play-in spot), so the mood favors keepsake and heritage buying over hype.",
+   "heat": 55
   },
   "verifiedMoment": "Stephen Curry's aging core ran it back after failing to land another star (the Warriors explored Giannis and Anthony Davis). Jimmy Butler and Moses Moody are still recovering from injuries.",
   "scorecard": {
-   "opportunity": 80,
+   "opportunity": 72,
    "culture": 92,
-   "retail": 80,
-   "fandom": 74,
-   "rationale": "One of the league's deepest and most designable cultures (two cities, three subcultural lineages, huge Asian American communities) and very high spending power put culture and opportunity near the top. The score is held back by Curry's non-Nike deal, a mediocre roster and fandom heat cooled by a play-in exit, despite a huge national base.",
+   "retail": 78,
+   "fandom": 70,
+   "rationale": "Culture is near the top (two cities, three subcultural lineages, huge Asian American communities), but opportunity is held to the low 70s by a 40.5 win total, injured Butler and Moody, an open Curry deal and a winter-only window. A Curry-Nike deal, confirmed Specter game dates and a hot November would move it back toward 80.",
    "calibrated": false
   },
   "palette": [
@@ -4821,60 +4806,59 @@
    {
     "id": "bay-bridge-90",
     "title": "Bay Bridge 90: The City / The Town",
-    "summary": "A two-city capsule for the 90th anniversary of the bridge in the Warriors logo (Nov 12, 2026). It is lettered by one San Francisco and one Oakland letterer, with 'THE CITY' down one seam and 'THE TOWN' down the other.",
+    "summary": "Now: a pilot screenprint run for the 90th anniversary of the bridge in the Warriors logo (Thursday, Nov 12, 2026), lettered by one credited Oakland letterer and printed by an Oakland shop on existing blanks. Later: the full two-letterer City/Town line, with 'THE CITY' down one seam and 'THE TOWN' down the other, built for the 2027-28 season.",
     "where": [
-     "Oakland pop-up at Lake Merritt or Uptown (launches first)",
-     "Warriors Team Shop at Chase Center",
+     "Oakland pop-up at Lake Merritt or Uptown (Nov 12, first)",
      "Oaklandish (Oakland)",
-     "Nike Union Square"
+     "Warriors Team Shop at Chase Center",
+     "Nike Union Square (2027-28 full line)"
     ],
-    "when": "Launch on Nov 12, 2026 in Oakland and at Chase Center the same day, with sell-through across Cup Fridays into Black Friday.",
-    "how": "Commission the two letterers and credit both on the jock tag. Draw catenary and hanger line art from the bridge's own geometry, with no Bay Lights reference unless licensed. Send part of the proceeds to an Oakland youth program and tell the story of the eastern span rebuilt after Loma Prieta.",
+    "when": "Pilot launches in Oakland on Nov 12, 2026, with the arena tie-in on the Warriors' first Cup night after it; full line in fall 2027.",
+    "how": "Run the pilot under the Warriors' license with team approval, sell it as a numbered poster-and-tee pair, and say plainly that it is a pilot. Draw catenary and hanger line art from the bridge's own geometry (no Bay Lights or Caltrans marks), credit and pay the letterer on the tag, and send part of the proceeds to an Oakland youth program.",
     "segment": "Oakland and East Bay diehards and San Francisco natives, in one product",
     "priority": 1,
-    "size": "high",
+    "size": "medium",
     "months": [
      11,
      12
     ],
     "products": [
-     "Fog-gray heather hoodie with seam lettering",
-     "Catenary-line shooting shirt",
-     "Limited '1936' crew",
-     "Royal-and-gold cap"
+     "Numbered '1936' pilot tee with poster",
+     "Catenary-line crew (pilot)",
+     "City/Town seam-lettered hoodie (2027-28)",
+     "Royal-and-gold two-city cap (2027-28)"
     ]
    },
    {
     "id": "christmas-crab-feed",
-    "title": "Christmas Night Crab Feed pack",
-    "summary": "A holiday pack for the Dec 25 Denver nightcap at Chase Center in cooked-Dungeness orange and shell cream on Warriors royal, with a numbered Fillmore-style poster tee drawn by a living Bay poster artist.",
+    "title": "Christmas Night Crab Feed",
+    "summary": "Now: a numbered poster tee for the Dec 25 Denver nightcap at Chase Center, drawn by one commissioned living Bay poster artist and sold as an arena drop. Later: a full Crab Feed holiday pack in shell cream, royal and gold for holiday 2027.",
     "where": [
      "Warriors Team Shop at Chase Center and Thrive City",
-     "Nike Union Square",
-     "Westfield Valley Fair",
-     "Amoeba Music (Haight) for the poster tee",
-     "Nike app with ship-by-Dec-20 guarantee"
+     "Amoeba Music (Haight) for the poster",
+     "Nike app (holiday 2027 pack)",
+     "Westfield Valley Fair (holiday 2027 pack)"
     ],
-    "when": "In market by Black Friday, with gift shipping guaranteed by Dec 20 and an arena drop on Dec 25.",
-    "how": "Use a bib-shaped hangtag and butcher-paper-print packaging with no restaurant marks, and send part of the proceeds to a community crab feed through the Eat. Learn. Play. Foundation or a Bayview nonprofit. Commission new poster art instead of tracing Fillmore classics. Don't date-lock to the crab opener.",
-    "segment": "Holiday gifters, Silicon Valley families and tourists",
+    "when": "Poster tee drop on Dec 25, 2026 with existing holiday product carrying Black Friday; full pack in market by Black Friday 2027.",
+    "how": "Commission new art instead of tracing Fillmore classics, keep crab orange to a small tag or tipping accent, and use no restaurant marks. Route proceeds to a community crab feed through the Alameda County Community Food Bank or a Bayview food nonprofit with no Curry link.",
+    "segment": "Holiday gifters, Silicon Valley families and Christmas-night ticket holders",
     "priority": 1,
-    "size": "high",
+    "size": "medium",
     "months": [
-     11,
-     12
+     12,
+     11
     ],
     "products": [
-     "Royal fleece with crab-orange tipping",
-     "Numbered poster tee plus printed poster",
-     "Dutch-crunch-emboss gold hoodie",
-     "Kids' holiday tee"
+     "Numbered Christmas-night poster tee plus printed poster",
+     "Shell-cream fleece with crab-orange tipping (2027)",
+     "Dutch-crunch-emboss gold hoodie (2027)",
+     "Kids' holiday tee (2027)"
     ]
    },
    {
     "id": "bay-layers",
     "title": "Bay Layers fan system",
-    "summary": "A microclimate outerwear system (packable water-repellent shell, midweight half-zip, vest, beanie) in fog gray and royal, cut to sit over a jersey, as the season-long volume engine.",
+    "summary": "A microclimate outerwear system (packable water-repellent shell, midweight half-zip, vest, beanie) in fog gray and royal, cut to sit over a jersey in men's, true women's and youth fits, as the season-long volume engine.",
     "where": [
      "Chase Center and Thrive City",
      "Nike Union Square",
@@ -4882,9 +4866,9 @@
      "Sports Basement",
      "Nike app (bundle pricing)"
     ],
-    "when": "Launch before the November rains and sell through the season to April, with a summer-fog restock in June-August.",
-    "how": "Style it on BART, Muni and Caltrain riders and on Thrive City watch-party crowds, never the tech-vest look. Line it with Bay Bridge cable patterns and use golden-poppy drawcords as the only bright accent, and sell it as a 'cold-night kit' bundle with free-shipping thresholds rather than discounts.",
-    "segment": "Game-night commuters, season-ticket holders and the premium San Francisco buyer",
+    "when": "In-line team outerwear re-merchandised as a cold-night kit before the November rains; the purpose-built system lands for 2027-28, with a summer-fog restock that crosses into Valkyries season.",
+    "how": "This season, bundle existing royal and gray team outerwear as a 'cold-night kit' with free-shipping thresholds rather than discounts. Build the full system with Bay Bridge cable linings and golden-poppy drawcords as the only bright accent, styled on BART, Muni and Caltrain riders, never the tech-vest look.",
+    "segment": "Game-night commuters, season-ticket holders, women fans and families",
     "priority": 1,
     "size": "high",
     "months": [
@@ -4898,25 +4882,26 @@
     ],
     "products": [
      "Packable royal shell",
-     "Fog-gray half-zip fleece",
+     "Fog-gray half-zip fleece (women's and youth cuts)",
      "Insulated vest",
      "Fog-gray beanie",
      "Hooded warm-up"
     ]
    },
    {
-    "id": "specter-archive-pop-ups",
-    "title": "Specter, told from the archive",
-    "summary": "Retail the Specter collection with a deep-cut franchise story (1962 San Francisco Warriors and 'The City' script, the Cow Palace, Rick Barry and Al Attles's 1975 title, the Run TMC Bay Bridge era) staged in vintage-adjacent pop-ups before the big doors.",
+    "id": "specter-strength-in-numbers",
+    "title": "Specter and Strength in Numbers",
+    "summary": "Make the Warriors' Specter uniform, one of eight historic-franchise designs Nike revealed on Sept 9, the hero of a team-first 'Strength in Numbers' story that fits a roster with few new stars, with women's-cut and youth sizes from day one.",
     "where": [
-     "Haight Street vintage row",
-     "Temescal and Telegraph, Oakland",
      "Warriors Team Shop at Chase Center",
-     "Shoe Palace"
+     "Shoe Palace (San Jose and Oakland)",
+     "Nike Union Square",
+     "Oakland archive-wall pop-up (Temescal or Uptown)",
+     "Nike app"
     ],
-    "when": "Each home date the Specter uniform is worn, from late October through the All-Star break.",
-    "how": "Partner with Haight and Oakland vintage dealers for real reference garments and in-store archive walls. Restock in step with Specter game dates, and keep the Philadelphia-era Native caricature logos out of every historic treatment.",
-    "segment": "Gen Z vintage buyers and long-time collectors",
+    "when": "From the first confirmed Specter game through the All-Star break, restocking only on confirmed worn dates.",
+    "how": "Anchor copy in the actual Specter design and its Sept 9 collection once the team confirms the look and game dates. Use Haight and Oakland vintage dealers for archive walls and reference garments, not as sales doors, and clear every pre-Oakland mark (1962 'The City' script, Philadelphia era) through the team and NBA before any copy is written.",
+    "segment": "Long-time collectors, Gen Z vintage buyers, women fans and Bay families",
     "priority": 2,
     "size": "medium",
     "months": [
@@ -4928,15 +4913,16 @@
     ],
     "products": [
      "Specter swingman and authentic jerseys",
-     "Archive-story heritage tee",
-     "Retro warm-up jacket",
-     "Faded-gold reissue cap"
+     "Women's-cut Specter tee",
+     "Youth Specter jersey",
+     "Strength in Numbers roster tee (team marks only)",
+     "Retro warm-up jacket"
     ]
    },
    {
     "id": "we-believe-20",
     "title": "We Believe 20 / Roaracle",
-    "summary": "An Oakland-heritage capsule for the 20th anniversary of the 8-seed upset of 67-win Dallas, co-authored with 2007 alumni such as Baron Davis and Stephen Jackson and with Oakland artists, built around the yellow shirt and licensed Oracle crowd-noise waveforms.",
+    "summary": "An Oakland-heritage capsule for the 20th anniversary of the 8-seed upset of 67-win Dallas, built around the yellow We Believe shirt the crowd wore and credited to fans and Black Oakland and Vallejo artists, not players.",
     "where": [
      "Oakland pop-up around Lake Merritt",
      "Fox Theater (Uptown Oakland) launch night",
@@ -4944,7 +4930,7 @@
      "Warriors Team Shop at Chase Center (second)"
     ],
     "when": "Late April to early May 2027, timed to the play-in and playoff start whether or not the Warriors advance.",
-    "how": "Sell it first in Oakland, with proceeds to an East Oakland youth music or bike program. Use 'Go Dumb' type and stunna-shade graphics with Vallejo and Oakland artists, never Thizz, sideshow or ghost-riding imagery, and license the We Believe name and Oracle audio through the team.",
+    "how": "Ask the team now whether the We Believe name and Oracle crowd audio can be cleared, and keep an artist-drawn waveform (no recording) as the fallback; 2007 players appear only if they sign personally. Hyphy type and stunna-shade graphics come from paid Black Oakland and Vallejo creators with revenue share and veto on slang, never Thizz, sideshow or ghost-riding imagery; sell in Oakland first with proceeds to an East Oakland youth program.",
     "segment": "Oakland and East Bay diehards now in their 30s and 40s",
     "priority": 2,
     "size": "medium",
@@ -4954,126 +4940,147 @@
     ],
     "products": [
      "Yellow We Believe anniversary tee",
-     "Roaracle waveform hoodie",
-     "Crew socks with scraper-foil piping",
-     "Navy-orange 2007 throwback (one-off, limited)"
+     "Roaracle waveform hoodie (artist-drawn)",
+     "Go Dumb crew socks",
+     "Navy-orange 2007 throwback (one-off, numbered)"
     ]
    },
    {
     "id": "heritage-co-creations",
-    "title": "Year of the Goat and Filipino Heritage co-creations",
-    "summary": "Paid, credited heritage capsules for two of the fan base's biggest communities: Lunar New Year 2027 (Year of the Goat, Feb 6) drawn by Chinatown-rooted artists, and an October 2027 Filipino Heritage Night capsule built on turntablism and ube.",
+    "title": "Year of the Goat now, Filipino Heritage for 2027",
+    "summary": "A small, art-led Lunar New Year 2027 capsule (Year of the Goat, Feb 6) by a Chinatown-rooted artist signed by early November, a no-merchandise Filipino American History Month gesture this October, and a full Filipino Heritage capsule built for October 2027.",
     "where": [
      "Chinese Historical Society of America Museum and Chinatown pop-up",
      "SoMa Pilipinas, a walk from Chase Center",
-     "Daly City and Vallejo retail",
      "Thrive City DJ set",
+     "Daly City retail (2027)",
      "Little Saigon (Story Road), San Jose for Tết"
     ],
-    "when": "Lunar New Year drop in late January-February 2027; Filipino Heritage capsule developed through 2027 for October.",
-    "how": "Commission through the Chinese Culture Center and the Chinese Historical Society of America, with neon blade-sign characters by a local calligrapher. For Filipino Heritage Night, approach DJ Qbert or P-Lo for scratch-waveform sleeves and slipmat hangtags, with a Señor Sisig pop-up at Thrive City.",
+    "when": "October 2026 DJ set or donation; Lunar New Year drop late January-February 2027; Filipino capsule October 2027.",
+    "how": "This October, pay and credit a Filipino-American DJ set at Thrive City or donate to SoMa Pilipinas, with nothing for sale. Commission the Goat art through the Chinese Culture Center and the Chinese Historical Society of America, and approach DJ Qbert or P-Lo for the 2027 scratch-waveform and ube capsule.",
     "segment": "Asian American Bay fans across San Francisco, Daly City and San Jose",
     "priority": 2,
     "size": "high",
     "months": [
+     10,
      1,
-     2,
-     10
+     2
     ],
     "products": [
      "Year of the Goat shooting shirt",
      "Red-and-gold heritage tee",
-     "Scratch-waveform long-sleeve",
-     "Ube-and-gold hoodie",
-     "Slipmat-hangtag cap"
+     "Scratch-waveform long-sleeve (2027)",
+     "Ube-and-gold hoodie (2027)"
     ]
    },
    {
-    "id": "candy-paint-408",
-    "title": "Candy Paint: Oakland to the 408",
-    "summary": "A car-culture capsule in candy royal over metal flake with gold hand pinstriping that links East Oakland scraper bikes and San Jose lowriders, the two Bay cities Warriors product rarely speaks to.",
+    "id": "scraper-spokes",
+    "title": "Scraper Spokes: East Oakland car culture",
+    "summary": "A scraper-bike capsule co-designed with East Oakland's Scraper Bike Team in Warriors royal and gold with foil-spoke trims, the funded youth program as a line item. The San Jose lowrider half waits until a Chicano-led lowrider club or painter is signed with a fee and approval rights.",
     "where": [
      "East Oakland launch with the Scraper Bike Team",
-     "MACLA (downtown San Jose)",
-     "Shoe Palace (San Jose and Oakland)",
-     "Westfield Valley Fair"
+     "Shoe Palace (Oakland)",
+     "Oaklandish",
+     "MACLA (San Jose) only with a signed lowrider partner"
     ],
-    "when": "Spring 2027 around Cesar Chavez Day (Mar 31), with a summer second wave when the NBA is quiet.",
-    "how": "Name the builders and pinstripers on the product, fund a youth bike-build grant, and celebrate the craft, never sideshows. Give San Jose's 408 equal billing through area-code personalization.",
-    "segment": "South Bay and East Bay sneaker-first youth and families",
+    "when": "Spring and summer 2027, when the NBA calendar is quiet and riding season starts.",
+    "how": "Credit and pay named builders on the tag, fund a youth bike-build program from every unit, and celebrate the craft, never sideshows. Use pinstripes and script only if Chicano artists lead that work.",
+    "segment": "East Bay sneaker-first youth and families",
     "priority": 3,
-    "size": "medium",
+    "size": "low",
     "months": [
-     3,
+     5,
      6,
      7
     ],
     "products": [
-     "Metal-flake royal warm-up jacket with gold pinstripe",
-     "Foil-spoke reflective tee",
-     "Area-code numeral tee (510/408)",
-     "Shoe Palace-exclusive sneaker colorway"
+     "Royal warm-up jacket with foil-spoke trim",
+     "Reflective foil-spoke tee",
+     "510 area-code numeral tee",
+     "Scraper-bike sneaker colorway (Shoe Palace)"
+    ]
+   },
+   {
+    "id": "fog-city-skate",
+    "title": "Nike SB x San Francisco skate",
+    "summary": "A small skate-led tie-in that brings Warriors gold and royal into San Francisco's skate lineage through FTC Skateboarding, whose multiple Nike SB Dunk collaborations make it the city's most direct sneaker-culture link to Nike.",
+    "where": [
+     "FTC Skateboarding (San Francisco)",
+     "Skater-owned Bay shops",
+     "Nike SNKRS (limited)"
+    ],
+    "when": "Summer 2027, outside the NBA calendar, when skate and fog season overlap.",
+    "how": "Route it through skater-owned shops only, with a credited San Francisco skate artist and no Embarcadero or Muni marks without clearance. Keep team marks small so it reads as skate first.",
+    "segment": "San Francisco skaters and sneaker collectors",
+    "priority": 3,
+    "size": "low",
+    "months": [
+     6,
+     7,
+     8
+    ],
+    "products": [
+     "SB colorway in royal and gold",
+     "Skate-cut fog-gray hoodie",
+     "Shop-exclusive cap"
     ]
    }
   ],
   "calendar": [
    {
     "month": 10,
-    "window": "Oct 21 at the Lakers and the home opener",
-    "moment": "Season tip-off and the first Specter games",
-    "play": "Drop a DJ D-Sharp warmup tee with a QR code to a licensed Bay mix, plus the first numbered game-night poster tee, and open Specter archive walls in Haight vintage and Temescal pop-ups.",
+    "window": "Now through October",
+    "moment": "Filipino American History Month and the Black Panther Party's 60th (Oct 15)",
+    "play": "Pay and credit a Filipino-American DJ set at Thrive City or donate to SoMa Pilipinas, with no merchandise; fund rather than merchandise the Panther 60th. Sign the Bay Bridge pilot letterer, the Christmas poster artist and the Lunar New Year artist this month.",
     "products": [
-     "D-Sharp warmup tee",
-     "Numbered poster tee",
-     "Specter swingman jersey"
+     "No product: paid DJ set or donation",
+     "Artist and letterer contracts"
     ],
     "priority": 1
    },
    {
     "month": 10,
-    "window": "Mid-October into November weekends",
-    "moment": "San Francisco Open Studios and Filipino American History Month",
-    "play": "Scout and sign City-side letterers, poster artists and Filipino-American DJs for the Bay Bridge 90, Christmas and 2027 heritage capsules. Fund rather than merchandise the Black Panther Party's 60th (Oct 15).",
+    "window": "Oct 21, 7 p.m. PT (ESPN)",
+    "moment": "Warriors at Lakers, the season's first national game (on the road)",
+    "play": "Host a Thrive City watch party with in-line team product and the Specter collection; hold home-opener and Specter drops until the team confirms those dates.",
     "products": [
-     "Commission briefs for Bay Bridge 90 lettering",
-     "Filipino Heritage 2027 capsule development"
+     "Specter swingman jersey",
+     "In-line royal warm-up"
     ],
     "priority": 2
    },
    {
-    "month": 11,
-    "window": "Before the first November rains",
-    "moment": "Weather turns; Cup Fridays begin Oct 30 at Portland",
-    "play": "Launch Bay Layers as a cold-night kit bundle styled on transit riders and Thrive City watch parties.",
+    "month": 10,
+    "window": "Oct 30 at Portland, then Cup Fridays through Nov 27",
+    "moment": "NBA Cup West Group C (Spurs, Lakers, Blazers, Kings) and the first rains",
+    "play": "Re-merchandise existing royal and gray team outerwear as a Bay Layers cold-night kit bundle, styled on transit riders and Thrive City crowds.",
     "products": [
-     "Packable fog shell",
-     "Half-zip midlayer",
-     "Insulated vest",
-     "Fog beanie"
+     "In-line royal shell",
+     "Gray half-zip",
+     "Beanie bundle"
     ],
     "priority": 1
    },
    {
     "month": 11,
-    "window": "Nov 12, 2026",
-    "moment": "Bay Bridge 90th anniversary, during Cup group play",
-    "play": "Launch City/Town in Oakland and at Chase Center the same day, with the two letterers present and part of the proceeds to an Oakland youth program.",
+    "window": "Thu Nov 12, 2026, with the next Warriors Cup night as the arena tie-in",
+    "moment": "Bay Bridge 90th anniversary",
+    "play": "Launch the numbered 1936 pilot tee and poster in Oakland first, with the letterer present and part of the proceeds to an Oakland youth program; carry it to Chase Center on the next Cup night.",
     "products": [
-     "City/Town seam-lettered hoodie",
-     "Catenary shooting shirt",
-     "Bay Bridge 90 crew"
+     "1936 pilot tee and poster",
+     "Catenary-line crew (pilot)"
     ],
     "priority": 1
    },
    {
     "month": 11,
-    "window": "Black Friday through Dec 20 ship-by",
+    "window": "Black Friday (Nov 27) through the Dec 20 ship-by",
     "moment": "Holiday gifting run",
-    "play": "Put the Crab Feed pack in market with member early access, free-shipping thresholds and gift-with-purchase, since California has no tax holiday to wait for.",
+    "play": "Carry holiday with existing in-line product plus Bay Layers bundles, using member early access, free-shipping thresholds and gift-with-purchase; California has no tax holiday to wait for.",
     "products": [
-     "Crab Feed royal fleece",
-     "Dutch Crunch hoodie",
-     "Kids' holiday tee"
+     "Bay Layers bundle",
+     "In-line holiday fleece",
+     "Kids' team tee"
     ],
     "priority": 1
    },
@@ -5081,29 +5088,17 @@
     "month": 12,
     "window": "Dec 25, 7:30 p.m. PT",
     "moment": "Christmas nightcap: Denver at Golden State",
-    "play": "Run an arena drop of the numbered Christmas-night poster tee with the printed poster, and fund a community crab feed with Eat. Learn. Play. or a Bayview nonprofit.",
+    "play": "Run an arena drop of the numbered Christmas-night poster tee with the printed poster, and fund a community crab feed through the Alameda County Community Food Bank or a Bayview food nonprofit.",
     "products": [
-     "Christmas-night poster tee",
-     "Crab Feed royal fleece"
+     "Christmas-night poster tee and poster"
     ],
     "priority": 1
-   },
-   {
-    "month": 1,
-    "window": "Mid-January",
-    "moment": "FOG Design+Art and crab feed season",
-    "play": "Reveal a premium artist collaboration (a Mission School or Bay poster artist) to the collector crowd that shares Chase Center's premium seats.",
-    "products": [
-     "Artist-collab premium hoodie",
-     "Signed numbered print"
-    ],
-    "priority": 3
    },
    {
     "month": 2,
     "window": "Late January to the SF Chinese New Year Parade (Lunar New Year Feb 6, 2027)",
     "moment": "Year of the Goat and Tết",
-    "play": "Release the Lunar New Year capsule drawn by Chinatown-rooted artists, with a Chinatown pop-up at the T Third terminus and a San Jose Little Saigon door for Tết.",
+    "play": "Release the small Lunar New Year capsule by the Chinatown-rooted artist signed in the fall, with a Chinatown pop-up and a Little Saigon door on Story Road for Tết.",
     "products": [
      "Year of the Goat shooting shirt",
      "Red-and-gold heritage tee"
@@ -5114,24 +5109,12 @@
     "month": 2,
     "window": "Black History Month, peaking at the Black Joy Parade (late Feb)",
     "moment": "Black History Month in Oakland and the Bayview",
-    "play": "Release screenprint-textured product commissioned from Oakland printmakers and sold through Black-owned Oakland shops, with programming at Marcus Books and the Bayview Opera House (on the T Third line to Chase Center).",
+    "play": "Release screenprint-textured product by a paid Oakland printmaker, sold through Black-owned Oakland shops, with programming at Marcus Books and the Bayview Opera House (on the T Third line to Chase Center).",
     "products": [
      "Screenprint heritage tee",
      "Printmaker-collab crewneck"
     ],
     "priority": 2
-   },
-   {
-    "month": 3,
-    "window": "Cesar Chavez Day (Mar 31) into spring",
-    "moment": "South Bay civic touchstone and the stretch run",
-    "play": "Launch Candy Paint at MACLA and Shoe Palace with San Jose lowrider and Oakland scraper builders and a youth bike-build grant.",
-    "products": [
-     "Metal-flake warm-up jacket",
-     "Area-code numeral tee",
-     "Shoe Palace-exclusive colorway"
-    ],
-    "priority": 3
    },
    {
     "month": 4,
@@ -5158,25 +5141,29 @@
    },
    {
     "month": 6,
-    "window": "June title anniversaries and draft week",
-    "moment": "Dynasty anniversaries (2015, 2017, 2018, 2022) and Pride",
-    "play": "Release small-batch dynasty commemoratives using team marks only, with Lendeborg's year-two story and summer-fog Bay Layers restocks.",
+    "window": "June into summer fog",
+    "moment": "Riding and skate season; Valkyries at Chase Center; dynasty title anniversaries",
+    "play": "Launch Scraper Spokes in East Oakland and the SB skate tie-in at FTC, restock Bay Layers in women's and youth fits, and mark the dynasty titles with team-marks-only commemoratives.",
     "products": [
-     "Dynasty commemorative tee",
-     "Bay Layers restock"
+     "Scraper Spokes warm-up",
+     "SB royal-and-gold colorway",
+     "Bay Layers restock",
+     "Dynasty commemorative tee"
     ],
     "priority": 3
    },
    {
     "month": 9,
-    "window": "Labor Day (Hiero Day) to media day",
-    "moment": "Pre-season seeding in the East Bay",
-    "play": "Seed next season's Town product with Oakland hip-hop heads at Hiero Day, then preview the 2027-28 City look before tip-off.",
+    "window": "Fall 2027 build, briefed now",
+    "moment": "2027-28 season and holiday 2027",
+    "play": "Ship the full City/Town line, the Crab Feed holiday pack, the purpose-built Bay Layers system and the Filipino Heritage capsule, each sized by this winter's pilot results.",
     "products": [
-     "Next-season Town capsule seeding",
-     "City Edition preview tee"
+     "City/Town seam-lettered hoodie",
+     "Crab Feed cream fleece",
+     "Packable fog shell",
+     "Ube-and-gold hoodie"
     ],
-    "priority": 3
+    "priority": 2
    }
   ],
   "rhythm": [
@@ -5234,7 +5221,7 @@
    "live": 0,
    "knowledge": 11,
    "briefMode": "knowledge",
-   "queue": 146
+   "queue": 147
   },
   "checks": {
    "checked": 120,
@@ -5254,14 +5241,14 @@
   "id": "lal",
   "status": "complete",
   "updated": "2026-10-07",
-  "headline": "The Luka era has no look yet: let Black and Brown LA draw it, in Spanish, before Santee Alley does.",
+  "headline": "The Luka era has no look yet: Nike should draw it first, with Black and Brown LA's own hands, in Spanish and English.",
   "archetype": {
    "name": "The Inherited Dynasty",
    "description": "Fans who were handed purple and gold by a parent or a block and judge every new star by whether he belongs in the line from Magic to Kobe. They wear the throwback of their era as a family crest and expect newcomers to earn the 8/24 shrine's respect."
   },
   "pulse": {
    "teamMoment": "The full Luka Doncic era begins after LeBron James left for Philadelphia: Reaves is max-extended, Walker Kessler arrived at center, and none of the top five playoff-minutes players from the 53-29 team that OKC swept in the West semifinals returned. BetMGM sets the win total at 46.5, sixth in the West, and JJ Redick, in his third season, says the fit is better.",
-   "sentiment": "Cautious excitement shot through with grief: curiosity about a Doncic-Reaves-Kessler core, real loss over the LeBron era ending, and an emotional Christmas Day return already circled.",
+   "sentiment": "Cautious excitement shot through with grief: curiosity about a Doncic-Reaves-Kessler core, real loss over the LeBron era ending (felt hardest in Black LA, which also carried the Kobe and Showtime eras), and an emotional Dec 25 return already circled.",
    "heat": 77
   },
   "verifiedMoment": "The full Luka Doncic era begins after LeBron James left for Philadelphia. The Lakers rebuilt around Doncic and max-extended Austin Reaves with Walker Kessler at center, and none of their top five playoff-minutes players returned, a first in NBA history.",
@@ -5270,7 +5257,7 @@
    "culture": 94,
    "retail": 88,
    "fandom": 86,
-   "rationale": "The NBA's most mythologized brand is resetting its jersey wall in a vast, multilingual market with design traditions (Chicano lettering and serigraphs, lowriders, Kobe murals, immigrant food color) few cities can match, and every retail tier from Fairfax to Citadel is already there. Fandom stays near the top of the league but sits a notch lower this season, because grief over LeBron and a 46.5-win projection temper the heat.",
+   "rationale": "The NBA's most mythologized brand is resetting its jersey wall in a vast, multilingual market with design traditions (South Central signage, Chicano lettering and serigraphs, lowriders, Kobe murals, immigrant food color) few cities can match, and every retail tier from Fairfax to Citadel is already there. Fandom sits a notch lower this season because grief over LeBron and a 46.5-win projection temper the heat.",
    "calibrated": false
   },
   "palette": [
@@ -5291,7 +5278,7 @@
    {
     "id": "next-chapter-opener",
     "title": "Next Chapter: win the jersey wall at the opener",
-    "summary": "A Doncic-led opener drop that frames the new core as the next chapter of the Lakers lineage while the post-LeBron jersey wall is still unsettled.",
+    "summary": "In-season now: a Doncic-led opener push that frames the new core as the next chapter of the Lakers lineage while the post-LeBron jersey wall is unsettled.",
     "where": [
      "Lakers Team Store at Crypto.com Arena",
      "L.A. Live and Star Plaza",
@@ -5299,8 +5286,8 @@
      "Fairfax resale corridor (seeding)",
      "Nike app and nba.com"
     ],
-    "when": "Seed at the Oct 8 and Oct 16 ESPN preseason home games, launch for the Oct 21 opener vs Golden State, restock through Cup Fridays.",
-    "how": "Stage Doncic and Reaves jerseys plus Specter heritage pieces at the arena store on opener night; seed a sun-faded lineage tee with Fairfax tastemakers a week early; run bilingual opener content. Keep Reaves to licensed apparel because of his outside footwear deal.",
+    "when": "Seed at the Oct 8 and Oct 16 ESPN preseason home games, push for the Oct 21 opener vs Golden State, restock through Cup Fridays.",
+    "how": "Lead with Doncic and Reaves jerseys and a restocked Specter assortment (released Sept 9) at the arena store; seed a sun-faded lineage tee from existing licensed blanks with Fairfax tastemakers a week early; run bilingual opener content. Confirm which games Specter and the triangle City Edition are worn in before promising on-court tie-ins, and keep Reaves to licensed apparel.",
     "segment": "Lifelong diehards resetting their jersey, Gen Z fans arriving through Luka, and opener-week tourists",
     "priority": 1,
     "size": "high",
@@ -5309,25 +5296,25 @@
      11
     ],
     "products": [
-     "Doncic Icon swingman jersey",
-     "Reaves Icon swingman jersey",
-     "Specter heritage warm-up jacket",
+     "Doncic swingman jersey (gold Icon)",
+     "Reaves swingman jersey (gold Icon)",
+     "Specter collection restock",
      "Sun-faded 'next chapter' lineage tee",
      "Showtime-cream cap"
     ]
    },
    {
     "id": "los-lakers-serigraph",
-    "title": "Los Lakers: the Eastside serigraph collection",
-    "summary": "A Spanish-first Luka-era collection printed with Self Help Graphics artists and lettered by a commissioned Chicano letterer, priced for families.",
+    "title": "Los Lakers: the Eastside serigraph run (Phase 1 now, collection 2027)",
+    "summary": "Phase 1 this season: a small, artist-led, partner-sold serigraph print and tee run at Self Help Graphics. Phase 2: a full Spanish-first collection for holiday 2027 on a real commissioning calendar.",
     "where": [
      "Self Help Graphics & Art, Boyle Heights (partner-led print sale)",
-     "Nike Factory Store at Citadel Outlets",
      "Lakers Team Store at Crypto.com Arena",
+     "Nike Factory Store at Citadel Outlets (Phase 2)",
      "Spanish-language media and Nike app"
     ],
-    "when": "Release in mid-November after Día de los Muertos has passed, ahead of Black Friday; restock for the holidays.",
-    "how": "Commission original serigraphs and a custom 'Los Angeles' alphabet, sell signed prints alongside the product, and route proceeds to SHG. Release through existing Boyle Heights institutions, not a new Nike storefront, and score the film with paid Mariachi Plaza musicians.",
+    "when": "Phase 1: announce in November, sell at SHG in early December after artists set their own timeline; Phase 2: commission in winter 2027 for a holiday 2027 launch.",
+    "how": "SHG artists set the design and run size and are paid fees up front plus a per-unit royalty, with a fixed donation to SHG printed on the hangtag. Phase 1 tees are screen-printed locally on licensed blanks; the custom 'Los Angeles' alphabet, charro-stripe pants and family bundles wait for Phase 2. Release through existing Boyle Heights institutions, not a Nike storefront.",
     "segment": "Mexican American and Central American Lakers families on the Eastside, in Southeast LA and in the Valley",
     "priority": 1,
     "size": "high",
@@ -5336,51 +5323,52 @@
      12
     ],
     "products": [
-     "Hand-pulled serigraph tee with signed print",
-     "Bilingual 'Los Angeles' hoodie",
-     "Charro-stripe warm-up pants",
-     "Kids' matching tee and family bundle",
-     "Rosa mexicano-trim cap"
+     "Phase 1: hand-pulled serigraph tee with signed print",
+     "Phase 1: numbered artist print",
+     "Phase 2: bilingual 'Los Angeles' hoodie",
+     "Phase 2: charro-stripe warm-up pants",
+     "Phase 2: kids' matching tee and family bundle"
     ]
    },
    {
-    "id": "tamalada-christmas",
-    "title": "Tamalada Christmas: LA-first gifting for the LeBron return",
-    "summary": "The year's biggest gifting push, built on LA's December tamale tradition and a Doncic-forward gift box, so Dec 25 celebrates the city instead of the rivalry.",
+    "id": "christmas-reunion",
+    "title": "Christmas reunion: thank-you, watch parties and Doncic gifting",
+    "summary": "In-season: meet LeBron's Dec 25 return with a licensed-safe thank-you moment, community watch parties in Leimert Park and Boyle Heights, and Doncic-forward family gifting.",
     "where": [
+     "Leimert Park Village (Black-led watch party with local partners)",
+     "La Mascota Bakery or a paid Eastside tamalera collective, Boyle Heights",
      "Lakers Team Store at Crypto.com Arena",
      "Nike Factory Store at Citadel Outlets",
-     "An Eastside panadería partner such as La Mascota Bakery",
-     "Westfield Century City and family mall doors",
      "Nike app"
     ],
-    "when": "Dec 1-25, peaking the week before the Dec 25 2 p.m. PT tip vs Philadelphia; Presidents' Day (Feb 15) restock.",
-    "how": "Launch the pack with a paid Eastside panadería partner and a husk-wrapped gift box; pair it with Doncic and Reaves family bundles. No LeBron likeness without licensing and no mocking copy.",
-    "segment": "Holiday gift buyers, Latino families and the national Christmas Day audience",
+    "when": "Dec 1-25, peaking before the Dec 25 2 p.m. PT tip vs Philadelphia; Presidents' Day, Feb 15, for a Doncic and Reaves restock once the home team is confirmed.",
+    "how": "Host and pay for a real tamalada with an Eastside panadería or tamalera collective and a Leimert Park watch party with Black-led local organizers, and shoot the content there with the cooks and hosts credited and paid. Build the LeBron thank-you from Lakers-era history with Nike's LeBron team and licensing cleared; keep product in purple, gold and cream with corn husk only as a packaging texture.",
+    "segment": "Holiday gift buyers, Latino and Black LA families, and the national Christmas Day audience",
     "priority": 1,
     "size": "high",
     "months": [
-     12
+     12,
+     2
     ],
     "products": [
-     "Tamalada fleece in Hoja Husk and Consomé Red",
-     "Tamalada crew socks",
      "Doncic jersey gift box with heritage tee",
-     "Kids' Icon jersey bundle"
+     "Kids' gold Icon jersey bundle",
+     "Purple-and-cream holiday fleece (existing licensed blank, local print)",
+     "Husk-textured gift packaging"
     ]
    },
    {
     "id": "kobe-824-wall-series",
     "title": "8/24 Wall Series with the muralists who painted Kobe",
-    "summary": "An estate-approved Kobe-line drop designed by LA muralists who painted Kobe walls, released on the city's Kobe Bryant Day in the NBA's quietest month.",
+    "summary": "A muralist-art tee and print run, scoped to follow Nike Kobe's own 8/24 calendar, designed by LA artists who painted Kobe walls.",
     "where": [
      "Nike SNKRS and Nike app",
      "Fairfax and Melrose resale-credible doors",
      "Mamba Sports Academy, Thousand Oaks",
      "Star Plaza at Crypto.com Arena"
     ],
-    "when": "Release Aug 24, 2027; lock estate approvals by spring because of the lead time.",
-    "how": "Run it through Nike's Kobe team and the Bryant estate; credit each muralist on the jock tag, license their walls and route proceeds to the Mamba & Mambacita Sports Foundation. Focus on craft and life, never the crash; nothing on Jan 26.",
+    "when": "Open talks with Nike's Kobe team and the Bryant family this October; target Aug 24, 2027 only if it fits their calendar.",
+    "how": "Work inside Nike Kobe's plan and the Bryant family's approvals; pay each muralist a fee and royalty, credit them on the hangtag, license their walls and route proceeds to the Mamba & Mambacita Sports Foundation. Focus on craft and life, never the crash; nothing on Jan 26.",
     "segment": "Kobe devotees across every LA community, plus the non-Lakers Mamba buyer",
     "priority": 2,
     "size": "high",
@@ -5389,76 +5377,74 @@
     ],
     "products": [
      "Muralist-designed Kobe-line tee (three artists)",
-     "Kobe-line hoodie",
-     "Kobe Protro colorway",
-     "Numbered artist print"
+     "Numbered artist print",
+     "Kobe-line hoodie (if the Kobe team adds it)"
     ]
    },
    {
     "id": "candy-paint-cortez",
-    "title": "Candy Paint: the Lakers Cortez pack",
-    "summary": "A Lakers Cortez and warm-up pack in candy-flake purple and gold leaf, lettered by Mister Cartoon's lineage and shot by Estevan Oriol, linking Crenshaw and the Eastside.",
+    "title": "Candy Paint: Compton-to-Whittier Boulevard, tees now, Cortez in 2027-28",
+    "summary": "Phase 1 this season: hand-striped warm-ups and a lettering tee made with a Compton lowrider club and Eastside pinstripers. Phase 2: a Lakers Cortez pack for fall 2027.",
     "where": [
      "Nike Melrose",
-     "Marathon Clothing, Crenshaw (only on terms set with its stewards)",
      "Whittier Boulevard partner shops, East LA",
-     "Grammy Museum and L.A. Live",
-     "Nike SNKRS"
+     "South LA partner shops on Crenshaw and in Compton",
+     "Nike SNKRS (Phase 2)"
     ],
-    "when": "Drop during Grammy week in early February while the Lakers are on their Grammy road trip; restock for the first home game back.",
-    "how": "Commission lettering and photography from Mister Cartoon and Estevan Oriol, have a working lowrider pinstriper draw the trims, and pair a South LA partner with an Eastside one. Keep Recording Academy marks off unless licensed and review every graphic for gang codes.",
-    "segment": "South LA and Eastside style leaders, lowrider and G-funk heads, and sneaker collectors",
+    "when": "Phase 1: a February or May drop tied to a confirmed Lakers home date, or Cinco de Mayo season with Eastside shops, not a Grammy road trip; Phase 2 Cortez for the 2027-28 opener window.",
+    "how": "Start contracting now with Mister Cartoon and Estevan Oriol (checking their other brand deals), a Black South LA lowrider club approached on its terms, and Lauren Halsey or another South Central sign artist invited to co-letter with equal credit. Run gang-code and community review before any art is final.",
+    "segment": "South LA and Eastside style leaders, lowrider families and sneaker collectors",
     "priority": 2,
     "size": "medium",
     "months": [
-     2
-    ],
-    "products": [
-     "Lakers Cortez in candy-flake purple and gold",
-     "Pinstripe satin warm-up jacket",
-     "Old English lettering tee",
-     "Heavyweight work short"
-    ]
-   },
-   {
-    "id": "playoff-chase-jacaranda",
-    "title": "Playoff chase: Jacaranda pack and Koreatown 'After the Buzzer'",
-    "summary": "A quick-turn playoff program with a jacaranda-toned pack and a late-night Koreatown capsule with Roy Choi, sized to how far a 46.5-win team goes.",
-    "where": [
-     "Koreatown late-night pop-up and a Kogi truck stop",
-     "Lakers Team Store at Crypto.com Arena",
-     "Foot Locker and Dick's volume doors",
-     "Nike app"
-    ],
-    "when": "Pre-build tees and towels in March, trigger replenishment after the Apr 11 finale and Play-In (Apr 13-16), drop the Jacaranda pack in May if the run continues.",
-    "how": "Hold inventory flexible and let first-round results release depth. Co-create the Koreatown capsule with Roy Choi and Ktown operators, with Hangul set by a Korean American designer and copy in Spanish, Korean and English.",
-    "segment": "Watch-party crowds in Koreatown, Downtown, the Valley and Eastside backyard carne asadas",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     3,
-     4,
+     2,
      5
     ],
     "products": [
-     "Playoff tee and rally towel",
-     "Forum Blue-to-jacaranda shooting shirt",
-     "Jacaranda tonal fleece",
-     "'After the Buzzer' warm-up with grill-grate perforation"
+     "Phase 1: hand-pinstriped satin warm-up (numbered, striper-signed)",
+     "Phase 1: co-lettered 'Los Angeles' tee",
+     "Phase 2: Lakers Cortez in candy-flake purple and gold",
+     "Phase 2: heavyweight work short"
+    ]
+   },
+   {
+    "id": "koreatown-after-the-buzzer",
+    "title": "Koreatown 'After the Buzzer': a winter watch-party program",
+    "summary": "A fall-to-winter Koreatown moment with Roy Choi and a paid Korean American designer, from Cup Nights through Christmas, rather than a playoff-only pop-up.",
+    "where": [
+     "An established Koreatown venue near Wilshire and Western",
+     "Kogi truck stops",
+     "Lakers Team Store at Crypto.com Arena",
+     "Nike app"
+    ],
+    "when": "Watch parties on Cup Fridays (Oct 30-Nov 27) and Dec 25; a small locally printed tee now, a full 'After the Buzzer' warm-up for the 2027 playoffs.",
+    "how": "Co-create with Roy Choi and Koreatown operators; a paid Korean American designer sets the Hangul, with copy in Korean, Spanish and English. Partners share revenue on every unit. Pair it with a small pre-ordered jacaranda playoff run, released on results and moved to a summer LA-pride drop if the team is eliminated.",
+    "segment": "Korean American and Latino Koreatown fans and late-night watch-party crowds",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     11,
+     12,
+     4
+    ],
+    "products": [
+     "Trilingual 'After the Buzzer' tee",
+     "Watch-party rally towel",
+     "'After the Buzzer' warm-up (2027 playoffs)"
     ]
    },
    {
     "id": "drew-league-co-creation",
     "title": "The Drew and the school pipeline",
-    "summary": "Co-created Drew League jerseys and warm-ups plus team packs for Compton, Crenshaw and Verbum Dei, rooting Nike in Black-led South LA hoops instead of only the Lakers.",
+    "summary": "Co-created Drew League jerseys and warm-ups plus team packs for Compton, Crenshaw and Verbum Dei, rooting Nike in Black-led South LA hoops.",
     "where": [
-     "Drew League home gym, South LA",
+     "Drew League home gym, South LA (site to confirm)",
      "Compton, Crenshaw and Verbum Dei high schools",
      "Venice Beach courts",
      "Nike Melrose (limited sell-in)"
     ],
-    "when": "Build with organizers in spring, launch for the Drew League summer season, and fold school packs into back-to-school.",
-    "how": "Treat the Drew as a co-owner: league-credited designs, sales at games paid through the league and its local sponsors, and school colorways that credit each school. Respect youth and NIL rules on any high school promotion.",
+    "when": "Proposal contingent on organizer talks: build in spring, launch for the summer season, fold school packs into back-to-school.",
+    "how": "Treat the Drew as a co-owner: league-credited designs, sales at games with revenue paid through the league, and school colorways that credit each school. Respect youth and NIL rules on any high school promotion.",
     "segment": "South LA hoopers, summer pro-am crowds and local high school programs",
     "priority": 2,
     "size": "medium",
@@ -5477,17 +5463,16 @@
    {
     "id": "ube-mango-october",
     "title": "Ube x Mango for Filipino American History Month",
-    "summary": "A tonal Lakers capsule in ube purple and mango gold, co-designed with Filipino American LA creatives for October, when the season tips off.",
+    "summary": "A tonal Lakers capsule in ube purple and mango gold, co-owned with Filipino American LA partners: a small seed now if a Heritage Night is confirmed, the full capsule in October 2027.",
     "where": [
      "Historic Filipinotown",
-     "South Bay doors near Lomita",
      "Lakers Team Store at Crypto.com Arena",
      "Nike app"
     ],
-    "when": "October 2027 for Filipino American History Month and opener week; seed a small graphic run with a 2026-27 Filipino Heritage Night if one is scheduled.",
-    "how": "Co-design with paid Filipino American partners such as chef Lord Maynard Llera (Kuya Lord) and local artists, with Tagalog-English hangtags; launch with a bakery or restaurant partner in the community.",
+    "when": "Seed a small locally printed tee this season only if a Lakers Filipino Heritage Night is confirmed; full capsule October 2027 with the 2027-28 opener.",
+    "how": "Partner with Pilipino Workers Center and paid Filipino American artists, who own the story and share revenue, with Tagalog-English hangtags and a community bakery launch.",
     "segment": "LA County's Filipino American Lakers families, the largest such community of any U.S. county",
-    "priority": 3,
+    "priority": 2,
     "size": "medium",
     "months": [
      10
@@ -5505,11 +5490,11 @@
     "month": 10,
     "window": "Oct 8-21: ESPN preseason home games Oct 8 (Kings) and Oct 16 (Nuggets), opener Oct 21 vs Golden State",
     "moment": "The first Luka-era home nights",
-    "play": "Seed the lineage tee on Fairfax, stage Doncic and Reaves jerseys and Specter heritage pieces on the arena jersey wall, and run bilingual opener content.",
+    "play": "Seed the lineage tee on Fairfax, lead the arena jersey wall with Doncic and Reaves plus a restocked Specter assortment, and run bilingual opener content.",
     "products": [
-     "Doncic Icon swingman jersey",
-     "Reaves Icon swingman jersey",
-     "Specter heritage warm-up",
+     "Doncic swingman jersey (gold Icon)",
+     "Reaves swingman jersey (gold Icon)",
+     "Specter collection restock",
      "Next Chapter lineage tee"
     ],
     "priority": 1
@@ -5517,23 +5502,22 @@
    {
     "month": 10,
     "window": "Oct 30-Nov 27: Emirates NBA Cup Fridays (West Group C), opening at San Antonio",
-    "moment": "Cup Nights",
-    "play": "Run a small Friday-night digital drop and restock opener product so November doesn't go flat after the opener.",
+    "moment": "Cup Nights in Koreatown",
+    "play": "Launch Koreatown 'After the Buzzer' watch parties with Roy Choi and a trilingual tee, and restock opener product so November doesn't go flat.",
     "products": [
-     "Cup Night tee",
-     "Next Chapter coach jacket"
+     "Trilingual 'After the Buzzer' tee",
+     "Area-code coach jacket"
     ],
-    "priority": 3
+    "priority": 2
    },
    {
     "month": 11,
-    "window": "Mid-November, after Día de los Muertos (Nov 2) and around the Festival de Santa Cecilia at Mariachi Plaza",
-    "moment": "Los Lakers serigraph launch",
-    "play": "Release the Spanish-first collection with a partner-led print sale at Self Help Graphics and a film scored by paid Mariachi Plaza musicians.",
+    "window": "November announcement, early December sale at Self Help Graphics",
+    "moment": "Los Lakers Phase 1",
+    "play": "Announce the artist-led serigraph run in November and sell signed prints and locally printed tees at SHG on the artists' timeline; commission Phase 2 for holiday 2027.",
     "products": [
      "Serigraph tee with signed print",
-     "Bilingual 'Los Angeles' hoodie",
-     "Charro-stripe warm-up pants"
+     "Numbered artist print"
     ],
     "priority": 1
    },
@@ -5541,76 +5525,85 @@
     "month": 11,
     "window": "Black Friday through Cyber Monday",
     "moment": "First gifting wave",
-    "play": "Lead with family and youth bundles and a clear price ladder that shows real product apart from Santee Alley knockoffs.",
+    "play": "Lead with a real family-priced entry tier (youth jerseys, value tees) so licensed product competes on price and design, and offer licensed customization at partner shops.",
     "products": [
-     "Family matching tee bundle",
-     "Kids' Icon jersey",
-     "Rosa-trim snapback"
+     "Kids' gold Icon jersey",
+     "Next Chapter lineage tee",
+     "Showtime-cream heritage cap"
     ],
     "priority": 2
    },
    {
     "month": 12,
-    "window": "Dec 1-25, peaking before the Dec 25 2 p.m. PT tip vs Philadelphia",
-    "moment": "Tamalada season and LeBron's return",
-    "play": "Launch the Tamalada pack with an Eastside panadería partner and push Doncic gift boxes; keep LeBron likeness out and the tone celebratory.",
+    "window": "Dec 4-11, only if the Lakers win West Group C",
+    "moment": "Possible home Cup knockout game",
+    "play": "Print the Cup knockout tee on demand and push Doncic content around any home quarterfinal or semifinal.",
     "products": [
-     "Tamalada fleece",
-     "Tamalada crew socks",
-     "Doncic jersey gift box"
+     "Cup knockout tee"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 12,
+    "window": "Dec 1-25, peaking before the Dec 25 2 p.m. PT tip vs Philadelphia",
+    "moment": "LeBron's return and tamalada week",
+    "play": "Run a licensed-safe LeBron thank-you built from Lakers-era history with Nike's LeBron team, host paid community watch parties in Leimert Park and Boyle Heights (with a real tamalada), and push Doncic gift boxes.",
+    "products": [
+     "Doncic jersey gift box",
+     "Kids' gold Icon jersey bundle",
+     "Purple-and-cream holiday fleece"
     ],
     "priority": 1
    },
    {
-    "month": 2,
-    "window": "Early February, Lunar New Year (Feb 6, 2027)",
-    "moment": "Lunar New Year in the 626 and Chinatown",
-    "play": "A small red-and-gold accent capsule developed with Chinese, Korean and Vietnamese American partners, seeded in Chinatown's Far East Plaza shops.",
+    "month": 1,
+    "window": "Jan 18, 2027: MLK Day and the Kingdom Day Parade in South LA",
+    "moment": "Black LA's civic day",
+    "play": "Support the Kingdom Day Parade with Black-led South LA partners and debut a co-lettered tee from the Candy Paint Phase 1 team; keep it community-led and low on branding.",
     "products": [
-     "Lunar red-accent tee",
-     "Gold-trim cap"
+     "Co-lettered 'Los Angeles' tee"
     ],
     "priority": 3
    },
    {
     "month": 2,
-    "window": "Grammy week (early February, date to confirm) while the Lakers are on their Grammy road trip",
-    "moment": "Music takes over the Lakers' building",
-    "play": "Drop the Candy Paint Cortez pack at L.A. Live and Nike Melrose with Mister Cartoon lettering and Estevan Oriol photography, then restock for the first home game back.",
+    "window": "Feb 15: 76ers vs Lakers on NBC/Peacock (home team to confirm)",
+    "moment": "LeBron rematch",
+    "play": "Restock Doncic and Reaves jerseys and push second-half-push content; plan an arena presence only if it is a Lakers home game.",
     "products": [
-     "Lakers Cortez, candy-flake purple and gold",
-     "Pinstripe satin warm-up jacket",
-     "Old English 'Los Angeles' tee"
+     "Doncic swingman jersey (gold Icon)",
+     "Reaves swingman jersey (gold Icon)"
     ],
     "priority": 2
    },
    {
     "month": 2,
-    "window": "Late February: LA Art Show and Frieze Los Angeles",
-    "moment": "The art world comes to LA",
-    "play": "Unveil the 'First Walls' Doncic-era murals and release numbered, artist-credited tees from each wall.",
+    "window": "February or Cinco de Mayo season, tied to a confirmed Lakers home date",
+    "moment": "Candy Paint Phase 1",
+    "play": "Release numbered hand-pinstriped warm-ups and the co-lettered tee through Crenshaw, Compton and Whittier Boulevard partner shops, with no dependence on a Grammy road trip.",
     "products": [
-     "First Walls numbered artist tee"
+     "Hand-pinstriped satin warm-up",
+     "Co-lettered 'Los Angeles' tee"
     ],
-    "priority": 3
+    "priority": 2
    },
    {
     "month": 4,
     "window": "Apr 11 regular-season finale, Play-In Apr 13-16, playoffs from mid-April",
     "moment": "Playoff push",
-    "play": "Release pre-built playoff tees and towels on the result, chase replenishment round by round, and open a Koreatown 'After the Buzzer' late-night pop-up with Roy Choi.",
+    "play": "Release pre-built playoff tees and towels on the result, chase replenishment round by round, and bring 'After the Buzzer' watch parties back to Koreatown.",
     "products": [
      "Playoff tee",
      "Rally towel",
-     "'After the Buzzer' warm-up jacket"
+     "'After the Buzzer' warm-up"
     ],
     "priority": 2
    },
    {
     "month": 5,
-    "window": "May-June jacaranda bloom, if the run continues",
+    "window": "May-June jacaranda bloom",
     "moment": "Jacaranda season meets the second round",
-    "play": "Drop the Forum Blue-to-jacaranda tonal pack only once the team advances; hold it if they are eliminated.",
+    "play": "Release the pre-ordered jacaranda run if the team advances; otherwise move it into a summer LA-pride drop.",
     "products": [
      "Jacaranda shooting shirt",
      "Jacaranda tonal fleece"
@@ -5619,9 +5612,9 @@
    },
    {
     "month": 7,
-    "window": "Drew League summer season (early summer through August)",
+    "window": "Drew League summer season (dates and gym to confirm)",
     "moment": "The Drew",
-    "play": "Sell co-created Drew League jerseys and warm-ups at the games, with revenue paid through the league and its local sponsors.",
+    "play": "If organizers agree, sell co-created Drew League jerseys and warm-ups at games, with revenue paid through the league.",
     "products": [
      "Drew League co-branded jersey",
      "Drew warm-up tee",
@@ -5631,37 +5624,24 @@
    },
    {
     "month": 8,
-    "window": "Aug 24, 2027 (Kobe Bryant Day)",
+    "window": "Aug 24, 2027 (Kobe Bryant Day), if it fits Nike Kobe's calendar",
     "moment": "8/24",
-    "play": "Release the estate-approved 8/24 Wall Series designed by Kobe muralists, with proceeds to the Mamba & Mambacita Sports Foundation.",
+    "play": "Release the muralist-designed Wall Series tees and prints within Nike Kobe's plan, with proceeds to the Mamba & Mambacita Sports Foundation.",
     "products": [
      "Muralist-designed Kobe-line tee",
-     "Kobe-line hoodie",
-     "Kobe Protro colorway"
+     "Numbered artist print"
     ],
     "priority": 1
    },
    {
-    "month": 8,
-    "window": "Mid-August LAUSD back-to-school",
-    "moment": "Back to school",
-    "play": "Push youth sizing and the Compton, Crenshaw and Verbum Dei school team packs at outlets and malls.",
-    "products": [
-     "School team pack",
-     "Kids' Icon jersey",
-     "Youth Next Chapter tee"
-    ],
-    "priority": 3
-   },
-   {
     "month": 10,
-    "window": "October 2027: Filipino American History Month and the next opener",
-    "moment": "Ube x Mango",
-    "play": "Launch the Ube x Mango capsule with Filipino American co-designers and a community bakery or restaurant partner, alongside the 2027-28 opener drop.",
+    "window": "October 2027: Filipino American History Month and the 2027-28 opener",
+    "moment": "Ube x Mango, plus the 2027-28 builds",
+    "play": "Launch Ube x Mango with Filipino American partners, and the Candy Paint Cortez and Los Lakers Phase 2 lines with the new season.",
     "products": [
      "Ube x Mango shooting shirt",
-     "Ube Halaya hoodie",
-     "Mango Gold cap"
+     "Lakers Cortez, candy-flake purple and gold",
+     "Bilingual 'Los Angeles' hoodie"
     ],
     "priority": 2
    }

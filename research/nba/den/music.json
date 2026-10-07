@@ -1,0 +1,315 @@
+{
+  "team": "den",
+  "lens": "music",
+  "headline": "Denver's sound is altitude and open air: Red Rocks amphitheater, jam and bluegrass roots, a Five Points jazz heritage and a bass-music and indie-folk scene that all orbit the same Mile High stage.",
+  "summary": "Denver music is defined by place: Red Rocks Amphitheatre carved from sandstone, the Fillmore, Ogden and Bluebird club circuit on Colfax, and Five Points' history as the 'Harlem of the West' jazz corridor. The modern city exports soulful indie-folk (Nathaniel Rateliff, The Lumineers), jam and bluegrass culture across the Front Range and mountain towns, and a heavy electronic and bass scene (Pretty Lights, Big Gigantic). A newer Denver hip-hop and DIY layer lives along South Broadway and RiNo. The Nuggets sit inside this world through Ball Arena concerts, a Jokic-era global fanbase, and a crowd that treats the team as part of the same outdoor-and-altitude identity.",
+  "insights": [
+    {
+      "title": "Red Rocks is the city's cathedral",
+      "detail": "Red Rocks Amphitheatre in Morrison, with its red sandstone monoliths and tiered seating, is the most photographed music symbol in Colorado and the venue every touring act and local band measures itself against. The Colorado Music Hall of Fame is housed there.",
+      "implication": "Sandstone red, rock-ledge silhouettes and tiered-seat geometry give a uniquely Denver graphic language that reads as music and mountains at once; it suits a statement or city-themed tee and warm-up collection."
+    },
+    {
+      "title": "Five Points jazz is the buried heritage story",
+      "detail": "Welton Street in Five Points was a national Black jazz corridor, with the Rossonian Hotel hosting touring greats, and the neighborhood still anchors Black Denver culture and the Five Points Jazz Festival each May.",
+      "implication": "A respectful, community-credited capsule built on Welton Street signage, club-poster type and a Black Denver creative partner gives depth beyond mountain cliches. Pay and credit local designers and musicians."
+    },
+    {
+      "title": "Jam, bluegrass and folk culture is the regional default",
+      "detail": "The Front Range and mountain towns breed jam bands, string bands and festivals such as Telluride Bluegrass and Planet Bluegrass events in Lyons. Locals wear the music: flannel, trucker hats, hiking layers and festival wristbands.",
+      "implication": "Outdoor-ready apparel such as fleece-lined warm-ups, packable shells and heavy-cotton tees fits how fans actually dress to shows and games in the mountains."
+    },
+    {
+      "title": "Electronic and bass music runs through the arena crowd",
+      "detail": "Pretty Lights, Big Gigantic and the Red Rocks late-night bass shows built a distinctly Colorado electronic identity; Denver crowds are comfortable with light-show, laser and neon visual language.",
+      "implication": "Rainbow Skyline-era Nuggets color can be remixed with laser-gradient treatments for a night-game and highlight-reel capsule."
+    },
+    {
+      "title": "The DIY and club ladder shapes who gets claimed as local",
+      "detail": "Artists climb from rooms like Larimer Lounge, Hi-Dive and Globe Hall to the Bluebird, Ogden and Fillmore, then Red Rocks. The Underground Music Showcase on South Broadway each summer is where the next local names are claimed.",
+      "implication": "Activations in club-scale rooms and local record stores read as authentic; a Red Rocks-scale spectacle does not replace that groundwork."
+    },
+    {
+      "title": "Music meets the team through Ball Arena and the Jokic era",
+      "detail": "Ball Arena is both the Nuggets' home and the city's biggest indoor concert room, so players and artists share the same stage. Jokic's Serbian roots and the 2023 title parade gave the team a global and Balkan-diaspora following that crosses into music culture.",
+      "implication": "Co-branded moments with a local artist at home games, and Serbian-language touches handled with community input, can make music a team-fan bridge. Confirm current arena DJ and walkout practices before building on them."
+    }
+  ],
+  "places": [
+    {
+      "name": "Red Rocks Amphitheatre",
+      "kind": "venue",
+      "neighborhood": "Morrison",
+      "why": "The sandstone natural amphitheater and Colorado Music Hall of Fame home that defines the state's live-music identity."
+    },
+    {
+      "name": "Ball Arena",
+      "kind": "venue",
+      "neighborhood": "Lower Downtown (LoDo)",
+      "why": "Nuggets home and Denver's largest indoor concert room."
+    },
+    {
+      "name": "Fillmore Auditorium",
+      "kind": "venue",
+      "neighborhood": "Uptown / Colfax",
+      "why": "Historic Colfax Avenue ballroom with a chandelier-and-poster tradition."
+    },
+    {
+      "name": "Ogden Theatre",
+      "kind": "venue",
+      "neighborhood": "Capitol Hill / Colfax",
+      "why": "Long-running Colfax theater, a rite-of-passage mid-size room for touring and local acts."
+    },
+    {
+      "name": "Bluebird Theater",
+      "kind": "venue",
+      "neighborhood": "Capitol Hill / Colfax",
+      "why": "Intimate Colfax room where rising Denver bands graduate to headlining."
+    },
+    {
+      "name": "Cervantes' Masterpiece Ballroom",
+      "kind": "venue",
+      "neighborhood": "Five Points",
+      "why": "Five Points venue known for hip-hop, electronic and local showcases."
+    },
+    {
+      "name": "Dazzle",
+      "kind": "jazz club",
+      "neighborhood": "Capitol Hill / Uptown",
+      "why": "Denver's best-known dedicated jazz club, carrying the city's jazz lineage forward."
+    },
+    {
+      "name": "Larimer Lounge",
+      "kind": "club",
+      "neighborhood": "RiNo",
+      "why": "Small RiNo room central to the indie and DIY circuit."
+    },
+    {
+      "name": "Twist & Shout Records",
+      "kind": "record store",
+      "neighborhood": "Congress Park",
+      "why": "Long-running independent record store and an in-store-performance hub for local bands."
+    },
+    {
+      "name": "KGNU Community Radio",
+      "kind": "radio",
+      "neighborhood": "Denver / Boulder",
+      "why": "Community radio institution and local-music platform; confirm current programming before outreach."
+    }
+  ],
+  "people": [
+    {
+      "name": "Nathaniel Rateliff & The Night Sweats",
+      "role": "soul and Americana band",
+      "why": "Denver-based and closely tied to Red Rocks, with a soul-stomp sound locals claim proudly."
+    },
+    {
+      "name": "The Lumineers",
+      "role": "indie-folk band",
+      "why": "Denver-formed group whose stomp-and-clap folk sound became a global export of the city."
+    },
+    {
+      "name": "Flobots",
+      "role": "hip-hop and rock group",
+      "why": "Denver hip-hop and activist-minded act with deep local roots."
+    },
+    {
+      "name": "Pretty Lights",
+      "role": "electronic producer",
+      "why": "Colorado bass and sample-soul electronic pioneer with Red Rocks history."
+    },
+    {
+      "name": "Big Gigantic",
+      "role": "electronic duo",
+      "why": "Colorado live-electronic act with sax-driven sets and Red Rocks residencies."
+    },
+    {
+      "name": "Wheelchair Sports Camp",
+      "role": "Denver hip-hop collective",
+      "why": "Denver hip-hop group representing the city's current underground voice."
+    },
+    {
+      "name": "Big Head Todd and the Monsters",
+      "role": "rock band",
+      "why": "Longtime Colorado jam-rock fixture."
+    },
+    {
+      "name": "Nikola Jokic",
+      "role": "Nuggets center",
+      "why": "The team's global face; his Serbian identity brings Balkan music and fan culture into the Denver orbit."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Five Points Jazz Festival",
+      "timing": "May",
+      "month": 5,
+      "why": "Celebrates the Welton Street jazz heritage with free outdoor performances."
+    },
+    {
+      "name": "Telluride Bluegrass Festival",
+      "timing": "Mid-June",
+      "month": 6,
+      "why": "Mountain West bluegrass pilgrimage drawing Colorado fans."
+    },
+    {
+      "name": "Red Rocks summer concert season",
+      "timing": "Roughly April through October",
+      "month": 7,
+      "why": "The defining recurring music moment of the Colorado year; overlaps with offseason."
+    },
+    {
+      "name": "Underground Music Showcase (UMS)",
+      "timing": "Late July",
+      "month": 7,
+      "why": "Multi-venue showcase on South Broadway celebrating local and independent bands."
+    },
+    {
+      "name": "Nuggets home opener and Ball Arena fall concert run",
+      "timing": "Late October onward",
+      "month": 10,
+      "why": "Season launch is the window when music and team culture share Ball Arena."
+    },
+    {
+      "name": "Christmas Day at Golden State",
+      "timing": "Dec 25, 10:30 p.m. ET",
+      "month": 12,
+      "why": "National holiday showcase for the team, a time to push holiday-capsule music collaborations."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Mile High",
+      "meaning": "Denver's altitude nickname, used by fans, bands and brands."
+    },
+    {
+      "term": "Red Rocks",
+      "meaning": "Shorthand for the Morrison amphitheater and a status marker for artists."
+    },
+    {
+      "term": "Welton Street",
+      "meaning": "Five Points' historic Black business and jazz corridor."
+    },
+    {
+      "term": "The Front Range",
+      "meaning": "The urban corridor along the Rockies' eastern edge, where the scene spans Denver, Boulder and Fort Collins."
+    },
+    {
+      "term": "Jam band",
+      "meaning": "Improvisational live-music culture that is a regional default."
+    },
+    {
+      "term": "Nuggets Rainbow",
+      "meaning": "Fan shorthand for the 1980s-90s rainbow skyline era look."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Red Rocks sandstone red-orange",
+      "type": "color",
+      "hex": "#B5502D",
+      "source": "The amphitheater's monoliths at sunset",
+      "use": "Use as a warm accent or garment-dye on tees, hoodies and warm-ups paired with navy."
+    },
+    {
+      "cue": "Midnight navy night-sky base",
+      "type": "color",
+      "hex": "#0D2240",
+      "source": "Nuggets navy and Colorado night skies over Red Rocks",
+      "use": "Base color for a night-show collection."
+    },
+    {
+      "cue": "Sunrise gold",
+      "type": "color",
+      "hex": "#FEC524",
+      "source": "Nuggets gold and Red Rocks sunrise shows",
+      "use": "Trim and graphic highlight."
+    },
+    {
+      "cue": "Rainbow skyline stripes",
+      "type": "pattern",
+      "hex": "",
+      "source": "Nuggets' returning alternate era and Denver skyline silhouette",
+      "use": "Stripe taping or gradient on sleeve panels; keep consistent with whatever alternate is confirmed."
+    },
+    {
+      "cue": "Gig-poster screenprint",
+      "type": "graphic",
+      "hex": "",
+      "source": "Fillmore and Ogden poster tradition and local screenprint artists",
+      "use": "Commission local poster artists for graphic tees with credited collaboration."
+    },
+    {
+      "cue": "Tiered amphitheater rock-ledge silhouette",
+      "type": "motif",
+      "hex": "",
+      "source": "Red Rocks geometry",
+      "use": "Embossed or tonal graphic for chest and back-yoke."
+    },
+    {
+      "cue": "Jazz-era marquee lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Welton Street signage and Rossonian-era posters",
+      "use": "Display type for Five Points-inspired capsule, designed with Black Denver creatives."
+    },
+    {
+      "cue": "Heavyweight flannel and fleece",
+      "type": "material",
+      "hex": "",
+      "source": "Mountain festival and bluegrass dress",
+      "use": "Fleece warm-ups and flannel-lined jackets for cold-weather game days."
+    }
+  ],
+  "productHooks": [
+    "Red Rocks-inspired sandstone-and-navy tonal hoodie and warm-up set with a rock-ledge emboss.",
+    "Five Points jazz capsule: Welton Street marquee-type tees co-created with local Black designers and musicians, with proceeds shared.",
+    "Gig-poster graphic tee series with commissioned Denver screenprint artists tied to home games.",
+    "Laser-gradient rainbow skyline night-game tee that remixes the alternate uniform stripes.",
+    "Fleece and packable-shell mountain-show jacket in Nuggets navy and gold."
+  ],
+  "watchouts": [
+    "Do not use band logos, album art or artist likenesses without licensing; Red Rocks and venue marks are trademarked.",
+    "Five Points jazz heritage belongs to Black Denver; partner with and pay local creators rather than lifting imagery.",
+    "Avoid overusing cannabis or mountain-bro stereotypes as Colorado shorthand.",
+    "Jokic-related Serbian cultural cues need community input and should avoid national or political symbolism."
+  ],
+  "sources": [
+    {
+      "title": "Red Rocks Amphitheatre (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Red_Rocks_Amphitheatre"
+    },
+    {
+      "title": "Denver Nuggets (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Denver_Nuggets"
+    },
+    {
+      "title": "Five Points, Denver (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Five_Points,_Denver"
+    },
+    {
+      "title": "Colorado Music Hall of Fame (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Colorado_Music_Hall_of_Fame"
+    },
+    {
+      "title": "Ball Arena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ball_Arena"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Which alternate/City Edition uniform the Nuggets will wear in 2026-27 and its colors, before tying cues to it.",
+      "Current Ball Arena naming and the 2026-27 arena concert calendar.",
+      "Nuggets arena DJ, anthem and player walkout music practices for 2026-27.",
+      "Whether Cervantes', Larimer Lounge, Dazzle, Fillmore, Ogden and Bluebird are all operating as described.",
+      "2026 dates for Five Points Jazz Festival, UMS and Telluride Bluegrass, and Red Rocks season dates.",
+      "Current status and activity of Wheelchair Sports Camp, Flobots and other named acts.",
+      "Twist & Shout and KGNU current locations and programming.",
+      "Any player-artist relationships with Nuggets players for 2026-27, including DeRozan.",
+      "Hex values for Nuggets team colors against current official palette."
+    ]
+  }
+}
