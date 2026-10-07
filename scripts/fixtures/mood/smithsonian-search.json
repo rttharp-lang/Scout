@@ -1,0 +1,119 @@
+{
+ "status": 200,
+ "responseCode": 1,
+ "response": {
+  "rows": [
+   {
+    "id": "ld1-1643399887910-1643399899124-0",
+    "title": "Le Blessé",
+    "unitCode": "CHNDM",
+    "url": "edanmdm:chndm_1921-6-402-2",
+    "content": {
+     "freetext": {
+      "name": [
+       {
+        "label": "Designer",
+        "content": "Charles-Germain de Saint-Aubin, French, 1721–1786"
+       },
+       {
+        "label": "Print Maker",
+        "content": "Charles-Germain de Saint-Aubin, French, 1721–1786"
+       },
+       {
+        "label": "Publisher",
+        "content": "Étienne Fessard, French, 1714–1777"
+       }
+      ],
+      "notes": [
+       {
+        "label": "Catalogue Status",
+        "content": "Research in Progress"
+       },
+       {
+        "label": "Description",
+        "content": "An injured butterfly is shown lying in the middle of a stretcher carried by two butterflies (one on the left and one right). ..."
+       }
+      ],
+      "creditLine": [
+       {
+        "label": "Credit Line",
+        "content": "Purchased for the Museum by the Advisory Council"
+       }
+      ],
+      "objectRights": [
+       {
+        "label": "Restrictions & Rights",
+        "content": "CC0"
+       }
+      ]
+     },
+     "descriptiveNonRepeating": {
+      "title": {
+       "label": "Title",
+       "content": "Le Blessé"
+      },
+      "record_ID": "chndm_1921-6-402-2",
+      "unit_code": "CHNDM",
+      "record_link": "https://collection.cooperhewitt.org/view/objects/asitem/id/34063",
+      "online_media": {
+       "mediaCount": 2,
+       "media": [
+        {
+         "id": "media:CHSDM-34063_02-000001",
+         "type": "Images",
+         "idsId": "CHSDM-34063_02-000001",
+         "usage": {
+          "access": "CC0"
+         },
+         "content": "https://ids.si.edu/ids/deliveryService?id=CHSDM-34063_02-000001",
+         "thumbnail": "https://ids.si.edu/ids/deliveryService?id=CHSDM-34063_02-000001",
+         "resources": [
+          {
+           "label": "High-resolution TIFF",
+           "url": "https://ids.si.edu/ids/download?id=CHSDM-34063_02-000001.tif",
+           "width": 7037,
+           "height": 4344,
+           "dimensions": "7037x4344"
+          },
+          {
+           "label": "High-resolution JPEG",
+           "url": "https://ids.si.edu/ids/download?id=CHSDM-34063_02-000001.jpg",
+           "width": 7037,
+           "height": 4344,
+           "dimensions": "7037x4344"
+          }
+         ]
+        },
+        {
+         "id": "media:CHSDM-chd2898",
+         "type": "Images",
+         "idsId": "CHSDM-chd2898",
+         "usage": {
+          "access": "CC0"
+         },
+         "content": "https://ids.si.edu/ids/deliveryService?id=CHSDM-chd2898",
+         "thumbnail": "https://ids.si.edu/ids/deliveryService?id=CHSDM-chd2898",
+         "resources": [
+          {
+           "label": "High-resolution JPEG",
+           "url": "https://ids.si.edu/ids/download?id=CHSDM-chd2898.jpg",
+           "width": 1974,
+           "height": 1292,
+           "dimensions": "1974x1292"
+          },
+          {
+           "label": "Screen Image",
+           "url": "https://ids.si.edu/ids/download?id=CHSDM-chd2898_screen"
+          }
+         ]
+        }
+       ]
+      }
+     }
+    }
+   }
+  ],
+  "rowCount": 667,
+  "message": "content found"
+ }
+}
