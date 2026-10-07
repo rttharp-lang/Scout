@@ -1,0 +1,381 @@
+{
+  "team": "cle",
+  "lens": "retail-behavior",
+  "headline": "Cleveland buys loyalty, not hype: a gray, cold, value-minded Rust Belt market that spends in short bursts around home-opener, Black Friday-Christmas and playoff runs, and rewards product that looks like it was made for Cleveland rather than for a national tourist.",
+  "summary": "Northeast Ohio is a big, price-aware regional market with a dense suburban shopping ring (Beachwood, Legacy Village, Crocker Park, Akron-Fairlawn) and a strong city-pride identity that peaks when the Cavs, Browns and Guardians are winning. Winter is long and lake-effect gray, so layering, outerwear and heavyweight fleece sell for six-plus months and the Q4 gifting window is the biggest single retail moment. Fans buy team goods heavily through the arena shop, Fanatics and big-box sporting goods, but the Cavs' title-or-bust 2026-27 season (conference finalists, Mitchell extended, Harden re-signed) is a rare demand surge after a run that ended in a sweep, so scarcity and local authenticity matter more than blanket volume. The 2026-27 City Edition reverts to a 'Cleveland' wordmark rather than 'The Land', which splits the identity between civic-formal and street-local and invites a separate city-level product layer.",
+  "insights": [
+    {
+      "title": "Winter is the product calendar",
+      "detail": "Lake Erie cold, lake-effect snow and a long gray stretch from roughly November to March mean fleece, quarter-zips, beanies and puffer layers carry the season while shorts and tees are a May-September business. Cavs fans wear team gear over and under coats, so graphics must read on a hoodie or jacket chest, not just a jersey.",
+      "implication": "Lead the Q4 Cavs push with heavyweight hoodies, shell and insulated jackets and knit hats in wine, gold and navy, and hold lightweight tees and shorts to a late-spring playoff drop."
+    },
+    {
+      "title": "Q4 gifting plus the home-opener spike is the main window",
+      "detail": "Cleveland spend concentrates around the late-October home opener and Cup nights, Black Friday through Christmas, and the MLK Day noon home game against Detroit on January 18, 2027. The Cavs have no opening-night or Christmas Day national game this year, so local demand is driven by the home schedule and playoff expectations, not national TV.",
+      "implication": "Time the City Edition and Association collection drops to the first home stand and Black Friday week, with a second wave built around MLK Day and any playoff clinch."
+    },
+    {
+      "title": "Value-minded, tiered buying",
+      "detail": "Cuyahoga and Summit counties mix legacy industrial and healthcare-income households with a large lower-income urban core, and sales tax on apparel is not waived in Ohio, so shoppers are sensitive to sticker price, bundles and outlet-style discounts. The suburban ring (Beachwood, Hudson, Westlake, Avon) buys premium, while East Cleveland and Slavic Village buy accessible.",
+      "implication": "Build a clear good-better-best ladder: affordable tees, hoodies and kids' replicas as volume, Swingman at core price, and a small authentic and premium outerwear tier for the suburban and season-ticket buyer."
+    },
+    {
+      "title": "Jersey culture is player-loyal and LeBron-shaped",
+      "detail": "Cleveland remains the global home of LeBron James product, from the 2016 title to his later returns, and the Akron-born star now playing for the 76ers makes a heritage-versus-current split live. Current demand centers on Donovan Mitchell, Evan Mobley and Jarrett Allen, with Harden's re-signing a new draw for older fans.",
+      "implication": "Keep Mitchell and Mobley as the primary jersey and tee names, and treat LeBron as a heritage and Akron story (graphics, not new current-team jerseys) to avoid brand confusion."
+    },
+    {
+      "title": "City Edition drift from 'The Land'",
+      "detail": "The announced 2026-27 City Edition brings back the 2018-19 Earned Edition look with a 'Cleveland' wordmark and drops 'The Land' for the first time in five City Editions. Locals use 'The Land' on streetwear, bars and murals as everyday identity, so the uniform and the street may now diverge.",
+      "implication": "Pair the City Edition jersey with 'The Land'-adjacent lifestyle product built with local makers, so the street identity is still served even when the uniform says 'Cleveland'."
+    },
+    {
+      "title": "Multi-sport calendar competes for the same wallet",
+      "detail": "Browns season (September to January) and Guardians baseball (April to October) dominate Northeast Ohio's sports spend, and Browns fall gear is a fierce competitor for hoodie and outerwear dollars. Basketball season spend ramps as the Browns fade and the Cavs rise into winter.",
+      "implication": "Do not launch the Cavs' major collection against peak Browns Sundays; use November and December for the Cavs hand-off and cross-promote winter product."
+    },
+    {
+      "title": "Regional and in-person shopping still matters",
+      "detail": "Fans drive in from Akron, Canton, Youngstown and Lorain and shop at the arena team shop on game nights and at malls, with Akron and the LeBron connection giving a second hub. Online (Fanatics, team shop) and resale cover the long tail, but in-person game-night purchase is a real channel for Cleveland.",
+      "implication": "Plan arena pop-ups and Akron-area events as activation points, and stock them with limited, local-story pieces that online cannot replicate."
+    }
+  ],
+  "places": [
+    {
+      "name": "Rocket Arena",
+      "kind": "venue",
+      "neighborhood": "Downtown Cleveland (Gateway District)",
+      "why": "Home of the Cavs and the arena team shop, where game-night impulse buys and City Edition first-looks happen."
+    },
+    {
+      "name": "Tower City Center",
+      "kind": "mall and transit hub",
+      "neighborhood": "Downtown Cleveland",
+      "why": "Walkable downtown retail and RTA hub connected to the arena district, useful for pop-up foot traffic."
+    },
+    {
+      "name": "Beachwood Place",
+      "kind": "mall",
+      "neighborhood": "Beachwood (east suburbs)",
+      "why": "High-end eastern suburb mall anchoring premium and gifting spend."
+    },
+    {
+      "name": "Legacy Village",
+      "kind": "lifestyle center",
+      "neighborhood": "Lyndhurst",
+      "why": "Upscale open-air shopping for east-side families, a gifting and outerwear stop."
+    },
+    {
+      "name": "Crocker Park",
+      "kind": "lifestyle center",
+      "neighborhood": "Westlake (west suburbs)",
+      "why": "West-side counterpart to Legacy Village, a major holiday retail draw."
+    },
+    {
+      "name": "Summit Mall",
+      "kind": "mall",
+      "neighborhood": "Fairlawn / Akron",
+      "why": "Akron-area anchor for Summit County shoppers and the LeBron-adjacent market."
+    },
+    {
+      "name": "West Side Market",
+      "kind": "public market",
+      "neighborhood": "Ohio City",
+      "why": "A local institution and gathering point that signals neighborhood pride and weekend foot traffic for makers' pop-ups."
+    },
+    {
+      "name": "Aurora Premium Outlets",
+      "kind": "outlet center",
+      "neighborhood": "Aurora (southeast of Cleveland)",
+      "why": "Value-minded regional shoppers treat the outlet trip as a seasonal ritual, including for Nike factory-priced goods."
+    }
+  ],
+  "people": [
+    {
+      "name": "Donovan Mitchell",
+      "role": "Cavs guard, extended through the 2027-28 option",
+      "why": "The face of current Cavs jerseys and Spida-era product demand."
+    },
+    {
+      "name": "Evan Mobley",
+      "role": "Cavs forward",
+      "why": "Young franchise-core star and a growing second jersey name."
+    },
+    {
+      "name": "James Harden",
+      "role": "Cavs guard, re-signed",
+      "why": "Veteran draw for a title-or-bust season and a new name in older fans' closets."
+    },
+    {
+      "name": "LeBron James",
+      "role": "Akron-born NBA legend, now with the 76ers",
+      "why": "The enduring Northeast Ohio heritage anchor; his first game back in Philadelphia against Cleveland is a story moment."
+    },
+    {
+      "name": "Kenny Atkinson",
+      "role": "Cavs head coach (reported returning)",
+      "why": "Coach of a conference-finals team and the face of the culture-over-star style fans praise."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Cavs home opener and first home stand",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The first big in-arena merchandising window, with Cup Nights beginning October 30 and the East Group B rivals (Knicks, 76ers, Heat, Pacers) giving marquee dates."
+    },
+    {
+      "name": "Black Friday through Christmas",
+      "timing": "Late November to December 25",
+      "month": 11,
+      "why": "The single largest gifting stretch, with Cup Nights in Thanksgiving week and cold weather driving outerwear."
+    },
+    {
+      "name": "MLK Day home game vs Detroit",
+      "timing": "Monday, January 18, 2027, noon ET",
+      "month": 1,
+      "why": "A national NBC/Peacock window at home against Detroit, a 2026 East semifinal rematch and a chance for a hometown product moment."
+    },
+    {
+      "name": "Dyngus Day",
+      "timing": "Monday after Easter",
+      "month": 4,
+      "why": "Cleveland's Polish-American celebration, centered in Slavic Village and a spring street-culture and gifting moment."
+    },
+    {
+      "name": "NBA Playoffs",
+      "timing": "April to June",
+      "month": 4,
+      "why": "A deep run triggers rapid reorders and a spike in playoff tees, hats and fan gear."
+    },
+    {
+      "name": "Browns season and Guardians season overlap",
+      "timing": "September to January and April to October",
+      "month": 9,
+      "why": "Competes for fan dollars and sets seasonal hoodie and hat demand."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Land",
+      "meaning": "Local nickname for Cleveland, popularized in sports and hip-hop and used on street apparel; absent from the 2026-27 City Edition wordmark."
+    },
+    {
+      "term": "Cavs",
+      "meaning": "Everyday name for the Cavaliers, used on tees and fan gear."
+    },
+    {
+      "term": "Spida",
+      "meaning": "Nickname for Donovan Mitchell, used on fan tees and signs."
+    },
+    {
+      "term": "Believeland",
+      "meaning": "Fan-culture shorthand for Cleveland's long wait and its 2016 title payoff."
+    },
+    {
+      "term": "Lake effect",
+      "meaning": "The lake-driven snow and gray that shapes outerwear demand for months."
+    },
+    {
+      "term": "Dawg Pound",
+      "meaning": "Browns fan section nickname, a competing sports-tribe identity in the same wallet."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Wine as the lead color",
+      "type": "color",
+      "hex": "#860038",
+      "source": "Cavs team wine color, the core of Cleveland fan identity",
+      "use": "Use as the dominant hue on heavyweight hoodies, outerwear and tees for winter."
+    },
+    {
+      "cue": "Gold accent",
+      "type": "color",
+      "hex": "#FDBB30",
+      "source": "Cavs gold, a signature accent",
+      "use": "Use as stitching, logo accents and trims so it pops on dark winter layers."
+    },
+    {
+      "cue": "Midnight navy",
+      "type": "color",
+      "hex": "#041E42",
+      "source": "Cavs navy used alongside wine and gold",
+      "use": "Base color for outerwear shells and neutral winter pieces."
+    },
+    {
+      "cue": "Lake Erie overcast gray",
+      "type": "color",
+      "hex": "#8A939B",
+      "source": "The heavy-sky winter palette of Northeast Ohio",
+      "use": "A heathered-gray fleece and hat family that mirrors Cleveland's winter and sells in the long season."
+    },
+    {
+      "cue": "Heavyweight fleece and knit",
+      "type": "texture",
+      "hex": "",
+      "source": "Long lake-effect winters",
+      "use": "Brushed-back fleece, ribbed knit and thermal linings for the Q4 collection."
+    },
+    {
+      "cue": "Layering silhouette",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Cavs fans wearing gear over and under coats",
+      "use": "Boxy hoodies and quarter-zips cut to fit over a base layer and under a coat."
+    },
+    {
+      "cue": "Plain 'Cleveland' civic wordmark",
+      "type": "typography",
+      "hex": "",
+      "source": "The 2026-27 City Edition wordmark that replaces 'The Land'",
+      "use": "Echo the wordmark on tees and hats, with a distinct 'The Land' line made with local creators."
+    },
+    {
+      "cue": "Believeland title-story graphic",
+      "type": "story",
+      "hex": "",
+      "source": "Cleveland's long title drought and the 2016 championship memory",
+      "use": "Use sparingly as a heritage graphic, with care for the city's own copyright-free symbols and no unlicensed marks."
+    }
+  ],
+  "productHooks": [
+    "A Q4 'Cleveland Winter' capsule of heavyweight hoodies, shell jackets and knit hats in wine, gold, navy and lake gray, launched at the home opener and Black Friday.",
+    "City Edition drop with a matching 'Cleveland' wordmark line at accessible price tiers, plus a limited local-maker 'The Land' side collection.",
+    "Mitchell and Mobley youth and kids' jersey bundles for the holiday gifting window at value price points.",
+    "MLK Day (January 18) game-night capsule sold at the arena and online, designed with the Cavs and local Black-owned creators.",
+    "Playoff reserve tee, hat and warmup program staged for a deep spring run, ready to ship within days of a clinching win."
+  ],
+  "watchouts": [
+    "Do not use team marks, the Cavs wordmarks or 'Believeland' phrasing without Cavs and NBA licensing and check any third-party artist work before using it.",
+    "'The Land' is community vocabulary; credit and pay local creators and avoid an outside brand claiming it.",
+    "LeBron-related graphics and name use require careful licensing since he plays for another team now.",
+    "Avoid Rust Belt poverty caricature; price accessibility is a market fact, not a theme to market on.",
+    "Do not rely on a tax-free weekend or similar dates until verified, since Ohio rules have changed."
+  ],
+  "sources": [
+    {
+      "title": "Cleveland Cavaliers official site",
+      "url": "https://www.nba.com/cavaliers"
+    },
+    {
+      "title": "Rocket Arena",
+      "url": "https://www.rocketarena.com"
+    },
+    {
+      "title": "Ohio Department of Taxation - Sales and Use Tax",
+      "url": "https://tax.ohio.gov"
+    },
+    {
+      "title": "Cleveland (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cleveland"
+    },
+    {
+      "title": "Cleveland Cavaliers (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cleveland_Cavaliers"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "Late October",
+        "month": 10,
+        "driver": "Cavs home opener, preseason and the start of Cup Nights on October 30.",
+        "impact": "high"
+      },
+      {
+        "window": "Late November",
+        "month": 11,
+        "driver": "Black Friday and Thanksgiving week Cup Nights, plus the start of cold-weather outerwear buying.",
+        "impact": "high"
+      },
+      {
+        "window": "December",
+        "month": 12,
+        "driver": "Holiday gifting, with no Christmas Day Cavs game and strong mall and online traffic.",
+        "impact": "high"
+      },
+      {
+        "window": "Mid January",
+        "month": 1,
+        "driver": "MLK Day noon home game vs Detroit (January 18, 2027) and post-holiday returns and gift cards.",
+        "impact": "medium"
+      },
+      {
+        "window": "Mid to late February",
+        "month": 2,
+        "driver": "Trade deadline (February 11) and Presidents' Day sales, with All-Star Weekend in Phoenix February 19-21.",
+        "impact": "low"
+      },
+      {
+        "window": "Mid April",
+        "month": 4,
+        "driver": "Regular season ends April 11, Play-In runs April 13-16, Dyngus Day, and playoff tee demand begins.",
+        "impact": "medium"
+      },
+      {
+        "window": "May to June",
+        "month": 5,
+        "driver": "Deep playoff run reorders and the shift to warm-weather tees, hats and shorts.",
+        "impact": "high"
+      },
+      {
+        "window": "Early August to early September",
+        "month": 8,
+        "driver": "Back-to-school buying; Ohio has no routine tax-free weekend as far as the model knows, so shoppers lean on outlet and retailer promotions.",
+        "impact": "medium"
+      },
+      {
+        "window": "September to January",
+        "month": 9,
+        "driver": "Browns season sets hoodie and cap demand and competes for fan spend until the Cavs take the center.",
+        "impact": "medium"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Arena team shop and game-night pop-ups",
+        "role": "Impulse and gift buys on home game nights, with the City Edition first-look moments."
+      },
+      {
+        "channel": "Fanatics and the team online shop",
+        "role": "The long-tail channel for sizes, names and gifts shipped to Akron, Canton and beyond."
+      },
+      {
+        "channel": "Mall and big-box sporting goods",
+        "role": "Beachwood, Legacy Village, Crocker Park, Summit Mall and chain stores are the main in-person browse and gift places."
+      },
+      {
+        "channel": "Outlets",
+        "role": "Aurora Premium Outlets serves value-minded regional shoppers on weekend trips."
+      },
+      {
+        "channel": "Local streetwear and maker shops",
+        "role": "Small Cleveland brands carry 'The Land' identity and win credibility for collaborations."
+      },
+      {
+        "channel": "Resale and social marketplaces",
+        "role": "Older LeBron-era jerseys and limited drops trade on resale; a secondary channel that tracks hype."
+      }
+    ],
+    "priceProfile": "Value-conscious and income-split: affordable and mid-priced goods dominate, with a smaller premium suburban base in the east and west rings. Ohio applies state sales tax (5.75 percent) plus county tax, bringing Cuyahoga County to about 8 percent, and clothing is taxable, so bundles, gift sets and outlet-style pricing resonate. Tier the line with a strong entry price, a core Swingman price and a limited authentic or premium outerwear layer.",
+    "jerseyBehavior": "Fans favor current stars and heritage names; Swingman and replica tees and hoodies dominate over authentic jerseys, kids' jerseys spike at Christmas and playoff time, and knockoffs and discount marketplace listings are a presence in a price-aware market. Winter makes hoodies, tees and layering pieces more commonly worn than jerseys outdoors, so jersey graphics should live on outerwear and fleece too."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Ohio state sales tax of 5.75 percent and Cuyahoga County combined rate of about 8 percent; confirm current rates and that Ohio has no back-to-school tax-free weekend in 2026.",
+      "Home opener date and Cup Night home dates at Rocket Arena for October and November 2026.",
+      "The Cavs team shop at Rocket Arena and its current retail operator, and any Fanatics or Nike merchandise arrangements.",
+      "Whether the Nike Factory Store at Aurora Premium Outlets is still operating.",
+      "Which Cavs players hold the top-selling jerseys in 2026-27 (NBA Store or Fanatics rankings).",
+      "Design details of the 2026-27 City Edition (colors, wordmark treatment, release date and retail price).",
+      "Current operating status of Beachwood Place, Legacy Village, Crocker Park, Summit Mall and Tower City Center retail.",
+      "Whether LeBron James is still on the 76ers roster and the date of his Philadelphia game against Cleveland.",
+      "Dyngus Day 2027 date and current Slavic Village event organizers.",
+      "Any Browns schedule overlap with the Cavs home calendar in November and December 2026."
+    ]
+  }
+}

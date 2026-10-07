@@ -1,0 +1,419 @@
+{
+  "team": "hou",
+  "lens": "retail-landscape",
+  "headline": "Houston shops sprawled and sorted by community: taste is set in Third Ward, Southwest and the Heights, but volume lives in suburban malls, Academy and the Toyota Center team shop.",
+  "summary": "Houston has no single sneaker street. Retail is spread across a 600-square-mile metro, so the doors that matter are tied to specific communities: Black Southside and Third Ward culture, the Vietnamese, Chinese, Latino and South Asian corridors of Southwest Houston, and the inner-loop Heights and Montrose crowd. Volume runs through malls (Galleria, Memorial City, Willowbrook, Almeda, Pearland Town Center, Houston Premium Outlets), Houston-headquartered Academy Sports + Outdoors, and the Rockets' own arena store. Taste is set by the grill, custom-jewelry, slab and screw economy as much as by sneaker boutiques, so Nike's credibility here comes from showing up in those worlds rather than only in malls. With Durant, Sengun, Amen Thompson and an Udoka team that won 52 games, team gear demand is real again after years of rebuild.",
+  "insights": [
+    {
+      "title": "Houston-built volume partner: Academy",
+      "detail": "Academy Sports + Outdoors is headquartered in the Houston area (Katy) and has dense store coverage across the metro, so it is the everyday door for family basketball, team tees and value sneakers. Rockets gear there competes on price, not hype.",
+      "implication": "Treat Academy as the volume engine for Rockets Icon/Statement fan product and back-to-school basketball; keep heat and City Edition story product in tastemaker doors."
+    },
+    {
+      "title": "The arena store is the Rockets' flagship",
+      "detail": "The Rockets Team Shop at Toyota Center downtown is where game-night, tourist and out-of-town buyers get authentic jerseys and new-drop merchandise. It is the one place the whole metro converges, but only on game and event nights.",
+      "implication": "Launch Houston-specific product and any ketchup-and-mustard throwback capsule at Toyota Center first, with in-bowl moments tied to home openers and Cup nights."
+    },
+    {
+      "title": "Taste is set by jewelers, slab builders and rappers, not only sneaker shops",
+      "detail": "Houston's style authority runs through grillz and custom jewelry (Johnny Dang & Co. on the Southwest side, Paul Wall), slab candy-paint culture and the screw tape scene. A sneaker door with no tie to those worlds reads as corporate.",
+      "implication": "Build pop-ups and collaborations with these creators and pay them; use gold, candy-paint and chrome as product language rather than generic red-and-white."
+    },
+    {
+      "title": "Southwest Houston is the most diverse and least served retail geography",
+      "detail": "Sharpstown, Gulfton, Alief and the Bellaire Boulevard corridor mix Vietnamese, Chinese, Latino, Nigerian and South Asian communities with strong youth hoops and sneaker participation, largely outside Nike-owned doors.",
+      "implication": "Activate through local independents, community courts and food-adjacent plazas with multilingual storytelling instead of defaulting to Galleria."
+    },
+    {
+      "title": "Third Ward and Southeast are community anchors with thin sneaker infrastructure",
+      "detail": "Third Ward (Texas Southern, University of Houston, Emancipation Park, Project Row Houses nearby) and the Almeda corridor carry deep Black fan loyalty and Hakeem-era memory, but mainstream athletic retail is mostly at Almeda Mall and the chains.",
+      "implication": "Pair youth-court and HBCU activations at Texas Southern with partner doors, and credit the community history in any product."
+    },
+    {
+      "title": "Outlet and suburban malls are where fans spend at scale",
+      "detail": "Houston Premium Outlets in Cypress, Katy and Sugar Land area malls, Willowbrook and Memorial City draw the sprawling suburban family shopper who drives to one destination.",
+      "implication": "Use Nike Factory and chain doors for Rockets fan-tier product and seasonal drops, and keep inventory depth for kids' sizes."
+    }
+  ],
+  "places": [
+    {
+      "name": "Toyota Center",
+      "kind": "venue",
+      "neighborhood": "Downtown",
+      "why": "Home arena and the Rockets Team Shop, the one place the whole metro converges."
+    },
+    {
+      "name": "Houston Galleria",
+      "kind": "mall",
+      "neighborhood": "Uptown",
+      "why": "Largest mall in Texas and a tourist and high-income draw with major athletic and luxury anchors."
+    },
+    {
+      "name": "Houston Premium Outlets",
+      "kind": "outlet mall",
+      "neighborhood": "Cypress",
+      "why": "Big outlet destination for suburban families and value-minded sneaker shoppers."
+    },
+    {
+      "name": "Almeda Mall",
+      "kind": "mall",
+      "neighborhood": "Southeast Houston",
+      "why": "Long-running community mall for Black Southside shoppers with sneaker chains and teen traffic."
+    },
+    {
+      "name": "Johnny Dang & Co.",
+      "kind": "jeweler",
+      "neighborhood": "Southwest Houston (Sharpstown/Hillcroft area)",
+      "why": "Iconic custom grillz and jewelry shop, a taste-setting stop for Houston hip-hop style."
+    },
+    {
+      "name": "Bellaire Boulevard Asiatown corridor",
+      "kind": "district",
+      "neighborhood": "Southwest Houston",
+      "why": "Vietnamese and Chinese plazas where youth fashion and sneaker culture mix with food."
+    },
+    {
+      "name": "Texas Southern University",
+      "kind": "campus",
+      "neighborhood": "Third Ward",
+      "why": "HBCU anchor for Third Ward culture, homecoming style and community hoops."
+    },
+    {
+      "name": "Rice Village",
+      "kind": "shopping district",
+      "neighborhood": "Rice Military/Rice University area",
+      "why": "Walkable inner-loop boutiques serving a university and young-professional crowd."
+    },
+    {
+      "name": "Heights (19th Street and Heights Boulevard)",
+      "kind": "shopping district",
+      "neighborhood": "The Heights",
+      "why": "Independent boutiques and vintage for the creative inner-loop shopper."
+    },
+    {
+      "name": "Memorial City Mall",
+      "kind": "mall",
+      "neighborhood": "Memorial/West Houston",
+      "why": "Affluent west-side mall with strong athletic and family traffic."
+    }
+  ],
+  "people": [
+    {
+      "name": "Johnny Dang",
+      "role": "Jeweler and grillz maker",
+      "why": "Public face of Houston's custom jewelry economy and a bridge to hip-hop style."
+    },
+    {
+      "name": "Paul Wall",
+      "role": "Rapper and grillz entrepreneur",
+      "why": "Houston hip-hop figure whose grillz and style define the city's flashy aesthetic."
+    },
+    {
+      "name": "Travis Scott",
+      "role": "Rapper and Nike/Jordan partner",
+      "why": "Houston native with a major Nike relationship and Cactus Jack brand; a tastemaker for local sneaker culture."
+    },
+    {
+      "name": "Megan Thee Stallion",
+      "role": "Rapper",
+      "why": "Houston icon with global influence on Hot Girl style and local fandom."
+    },
+    {
+      "name": "Hakeem Olajuwon",
+      "role": "Rockets legend",
+      "why": "Foundational figure for Houston's team-gear nostalgia and the city's African and Muslim communities."
+    },
+    {
+      "name": "Kevin Durant",
+      "role": "Rockets star and Nike athlete",
+      "why": "Nike signature athlete whose presence drives Rockets and KD product demand."
+    },
+    {
+      "name": "Alperen Sengun",
+      "role": "Rockets center",
+      "why": "Fan favorite whose Turkish heritage resonates with the city's international communities."
+    },
+    {
+      "name": "Academy Sports + Outdoors",
+      "role": "Houston-area headquartered retailer",
+      "why": "Local volume powerhouse for team and sneaker sales across the metro."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Rockets home opener and Cup nights",
+      "timing": "Late October through November",
+      "month": 10,
+      "why": "First chance to move Houston product at Toyota Center, with Cup Friday games in Houston's West Group A run."
+    },
+    {
+      "name": "MLK Day game vs. Memphis",
+      "timing": "Jan 18, 2027",
+      "month": 1,
+      "why": "National-window game with potential community and heritage product tie-ins."
+    },
+    {
+      "name": "Houston Livestock Show and Rodeo",
+      "timing": "Late Feb to mid-March",
+      "month": 3,
+      "why": "Huge cultural event where western wear, Black rodeo style and Rockets fandom collide."
+    },
+    {
+      "name": "Black Friday and holiday gifting",
+      "timing": "Late November to December",
+      "month": 11,
+      "why": "Peak team-gear spend at malls, Academy and the arena store."
+    },
+    {
+      "name": "Back-to-school",
+      "timing": "August",
+      "month": 8,
+      "why": "Volume moment for kids' basketball shoes and apparel at Academy, chains and outlets."
+    },
+    {
+      "name": "Juneteenth at Emancipation Park",
+      "timing": "Mid June",
+      "month": 6,
+      "why": "Third Ward community celebration with natural pop-up and partnership potential."
+    },
+    {
+      "name": "Playoff run",
+      "timing": "April to June",
+      "month": 4,
+      "why": "Peak demand for Rockets playoff gear and limited-run drops after a 52-win season."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "H-Town",
+      "meaning": "Common local nickname for Houston used on shirts and merchandise."
+    },
+    {
+      "term": "Slab",
+      "meaning": "Slow, loud, banging: a customized car with candy paint, rims and a trunk display."
+    },
+    {
+      "term": "Swangas",
+      "meaning": "Protruding, elbow-style rims on slabs, part of the visual language."
+    },
+    {
+      "term": "Screw",
+      "meaning": "Short for chopped and screwed music created by DJ Screw, a source of Houston slow-tempo style."
+    },
+    {
+      "term": "Southside / Third Ward / Fifth Ward",
+      "meaning": "Historic Black neighborhoods where Houston hip-hop and hoops culture is rooted."
+    },
+    {
+      "term": "Grillz",
+      "meaning": "Custom gold or diamond dental jewelry, a signature Houston accessory."
+    },
+    {
+      "term": "Clutch City",
+      "meaning": "Rockets nickname from the 1994 title run, used in fan merchandise."
+    },
+    {
+      "term": "Space City",
+      "meaning": "Houston's NASA-linked nickname that anchors Rockets branding."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Rockets red",
+      "type": "color",
+      "hex": "#CE1141",
+      "source": "Rockets primary color and the red of the ketchup-and-mustard throwback",
+      "use": "Lead color for fan product, paired with gold for the throwback story."
+    },
+    {
+      "cue": "Mustard gold",
+      "type": "color",
+      "hex": "#FFC72C",
+      "source": "The yellow-gold of the throwback uniform and grill culture",
+      "use": "Accent on trims, outsoles and jewelry-inspired hardware."
+    },
+    {
+      "cue": "Slab candy paint",
+      "type": "color",
+      "hex": "#6B1E5E",
+      "source": "Deep candy-paint finishes on Houston slabs",
+      "use": "Pearlescent or gradient finishes on sneakers and jackets; credit slab builders and clubs."
+    },
+    {
+      "cue": "Gold and chrome hardware",
+      "type": "material",
+      "hex": "",
+      "source": "Grillz and custom jewelry culture",
+      "use": "Metallic eyelets, pendants or lace tips inspired by Houston jewelers; partner with local jewelers rather than copying."
+    },
+    {
+      "cue": "Space City / NASA-era graphics",
+      "type": "graphic",
+      "hex": "",
+      "source": "Houston's space identity and the Rockets name",
+      "use": "Orbital line work and mission-patch style graphics; confirm any NASA marks are not used without permission."
+    },
+    {
+      "cue": "Western and rodeo texture",
+      "type": "texture",
+      "hex": "",
+      "source": "Rodeo season and Black cowboy culture",
+      "use": "Suede, embroidered yokes and fringe details on outerwear; collaborate with Black rodeo and trail ride groups."
+    },
+    {
+      "cue": "Multilingual signage typography",
+      "type": "typography",
+      "hex": "",
+      "source": "Southwest Houston signage in Vietnamese, Chinese, Spanish and Arabic",
+      "use": "Use community-written type on limited pieces, with native-speaking creators credited and paid."
+    }
+  ],
+  "productHooks": [
+    "Ketchup-and-mustard throwback capsule launched at the Toyota Center team shop, Academy and Foot Locker, built around the red and mustard colors.",
+    "Houston grill-inspired accessory and hardware drop on a KD or Amen Thompson shoe, co-designed with a Houston jeweler.",
+    "Candy-paint pearlescent colorway of a team basketball shoe, with slab builders credited at launch.",
+    "Rodeo-season outerwear and suede capsule tied to Houston Livestock Show and Rodeo, designed with local western and Black rodeo creators.",
+    "Southwest Houston multilingual tee and hoodie series, co-created with community designers and sold at local independents."
+  ],
+  "watchouts": [
+    "Do not lift DJ Screw, slab or grillz imagery without partnering with and paying local creators and estates.",
+    "NASA and Johnson Space Center marks require licensing; avoid implied endorsements.",
+    "Avoid caricature of Houston's cowboy, rodeo or hip-hop cultures; engage Black rodeo and trail ride communities directly.",
+    "Chopped-and-screwed imagery should not reference drug culture in product or marketing.",
+    "Rockets and NBA marks, plus any third-party brand or license on throwbacks, require league licensing."
+  ],
+  "sources": [
+    {
+      "title": "Houston Rockets official site",
+      "url": "https://www.nba.com/rockets"
+    },
+    {
+      "title": "Toyota Center official site",
+      "url": "https://www.toyotacenter.com"
+    },
+    {
+      "title": "Academy Sports + Outdoors",
+      "url": "https://www.academy.com"
+    },
+    {
+      "title": "Houston Premium Outlets (Simon)",
+      "url": "https://www.premiumoutlets.com/outlet/houston"
+    },
+    {
+      "title": "Houston Livestock Show and Rodeo",
+      "url": "https://www.rodeohouston.com"
+    },
+    {
+      "title": "Houston Galleria - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Galleria_(Houston)"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "districts": [
+      {
+        "name": "Uptown / Houston Galleria",
+        "profile": "Texas's largest mall and a luxury and tourist retail hub.",
+        "shopper": "Tourists, high-income families, international visitors and fashion-forward sneaker buyers.",
+        "role": "tourist"
+      },
+      {
+        "name": "Southwest Houston (Sharpstown, Gulfton, Alief, Bellaire Blvd)",
+        "profile": "Dense, diverse commercial corridors of plazas, jewelers and small shops.",
+        "shopper": "Vietnamese, Chinese, Latino, Nigerian and South Asian families and youth hoopers.",
+        "role": "community"
+      },
+      {
+        "name": "Third Ward / Southeast (Almeda corridor)",
+        "profile": "Historic Black neighborhoods with campus and community anchors and Almeda Mall nearby.",
+        "shopper": "Black families, students and long-time Rockets and Hakeem-era fans.",
+        "role": "community"
+      },
+      {
+        "name": "The Heights and Montrose",
+        "profile": "Inner-loop independent boutiques, vintage and creative studios.",
+        "shopper": "Creatives, young professionals and streetwear collectors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Suburban malls and outlets (Cypress, Katy, Sugar Land, Pearland, The Woodlands)",
+        "profile": "Car-driven destination shopping for the sprawling metro.",
+        "shopper": "Suburban families and kids buying team gear and value sneakers.",
+        "role": "volume"
+      },
+      {
+        "name": "Downtown / Toyota Center",
+        "profile": "Arena-adjacent game-night retail with the team shop.",
+        "shopper": "Game-night fans, tourists and corporate gift buyers.",
+        "role": "mixed"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Rockets Team Shop at Toyota Center",
+        "type": "team-store",
+        "neighborhood": "Downtown",
+        "why": "Official arena store and flagship for authentic and new-drop Rockets merchandise."
+      },
+      {
+        "name": "Nike Factory Store at Houston Premium Outlets",
+        "type": "nike-owned",
+        "neighborhood": "Cypress",
+        "why": "Nike-owned outlet door serving high-volume suburban families; confirm current status and any other Nike-owned doors."
+      },
+      {
+        "name": "Academy Sports + Outdoors",
+        "type": "big-box",
+        "neighborhood": "Metro-wide (HQ in Katy)",
+        "why": "Local volume leader for team gear, basketball shoes and back-to-school."
+      },
+      {
+        "name": "Foot Locker / Champs Sports",
+        "type": "athletic-chain",
+        "neighborhood": "Houston Galleria, Almeda Mall and suburban malls",
+        "why": "Mall athletic chains that drive Nike basketball sneaker volume across demographics."
+      },
+      {
+        "name": "Dick's Sporting Goods",
+        "type": "big-box",
+        "neighborhood": "Suburban Houston",
+        "why": "National sporting goods partner for team and basketball product in family destinations."
+      },
+      {
+        "name": "Johnny Dang & Co.",
+        "type": "other",
+        "neighborhood": "Southwest Houston",
+        "why": "Cultural landmark for grillz and custom jewelry; taste-setting partner rather than a sales door."
+      },
+      {
+        "name": "Houston Galleria department stores (Nordstrom, Neiman Marcus, Saks)",
+        "type": "department",
+        "neighborhood": "Uptown",
+        "why": "High-end and fashion sneaker exposure for premium and collaboration product."
+      },
+      {
+        "name": "Fanatics and Lids at malls and Toyota Center",
+        "type": "athletic-chain",
+        "neighborhood": "Metro-wide",
+        "why": "Primary team-gear aggregators and the place casual fans buy caps, tees and jerseys."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Whether the Nike Factory Store at Houston Premium Outlets is still open, and whether any other Nike-owned doors (Nike Well Collective, Nike community or Nike by Houston stores) operate in Houston.",
+      "Rockets Team Shop location and current operation at Toyota Center, and the operator of the arena store.",
+      "Which Foot Locker, Champs Sports, Dick's and Dick's House of Sport doors currently operate and where, including any House of Hoops or JD Sports doors.",
+      "Whether Johnny Dang & Co. remains at its Southwest Houston location.",
+      "Which local independent sneaker boutiques, streetwear shops and consignment stores in Houston are currently open and credible; none were named because none could be confirmed.",
+      "Current status of Almeda Mall and Houston Galleria anchor tenants and their athletic retailers.",
+      "Houston Livestock Show and Rodeo 2027 dates.",
+      "Whether the ketchup-and-mustard throwback is the 2026-27 City Edition or another uniform, and the planned retail drop timing.",
+      "Current arena ownership and Toyota Center naming status.",
+      "Travis Scott and Megan Thee Stallion current brand and Nike relationships.",
+      "Home team and tip time for the Jan 18, 2027 Rockets-Grizzlies MLK Day game."
+    ]
+  }
+}

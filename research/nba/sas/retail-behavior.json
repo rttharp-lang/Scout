@@ -1,0 +1,412 @@
+{
+  "team": "sas",
+  "lens": "retail-behavior",
+  "headline": "San Antonio buys Spurs gear in value-minded, family-sized, military-payday rhythms, with Fiesta in April and the Texas back-to-school tax-free weekend as the two civic shopping peaks, and a Finals-run surge that has changed the baseline.",
+  "summary": "San Antonio is a big, price-aware, majority-Latino market with a large military and healthcare workforce, where the Spurs are the only major league team and the brand most people already own something from. Spend clusters around a few reliable windows: the early-August Texas sales-tax holiday, the November-December gifting run and Mexico's Buen Fin shoppers, Fiesta in April, and playoff weeks. Heat drives a short-sleeve, shorts and shooting-shirt year with a brief hoodie season from December to February. The 2026 West title and Finals run, plus Wembanyama and Fox extensions, mean demand is at a franchise high, so the question is less about reaching fans than about tiering product so a family of four, a Fort Sam Houston E-5 and a Alamo Heights collector can each find an entry point.",
+  "insights": [
+    {
+      "title": "The August tax-free weekend is the real back-to-school start",
+      "detail": "Texas runs an annual sales-tax holiday on the second weekend in August (Friday to Sunday) for clothing, footwear and school supplies priced under $100 per item, against a normal 8.25% San Antonio combined rate. Spurs fans, many shopping for several kids at once, plan around it and pull forward sneakers, tees and shorts.",
+      "implication": "Hold a sub-$100 hero tier (kids and youth sizing, tees, shorts, slides, Spurs-specific graphic hoodies on promo) so the product lands under the threshold; authentic jerseys sit above it and will not benefit."
+    },
+    {
+      "title": "Fiesta is the local super-bowl for apparel, and Spurs gear lives inside it",
+      "detail": "Fiesta San Antonio in April is a ten-day citywide celebration of parades (Battle of Flowers, Fiesta Flambeau), the Fiesta Medal culture and Night in Old San Antonio at La Villita. Locals buy and trade commemorative medals and wear Fiesta-colored outfits, and it often overlaps the playoff push.",
+      "implication": "A Fiesta-colorway drop (the City Edition's Fiesta stripes are the bridge) timed to early April, with medal-pin or patch accessories, aligns Nike with a ritual that fans already shop for."
+    },
+    {
+      "title": "Military paydays and the base exchange shape the calendar and the price ceiling",
+      "detail": "Joint Base San Antonio (Fort Sam Houston, Lackland, Randolph) puts a large population on the 1st and 15th pay cycle, plus deployment send-offs and homecomings that drive gifting. Many service members and families shop on-base exchanges and online rather than at mall flagships.",
+      "implication": "Plan activations and promo codes around the 1st and 15th, and consider a military-appreciation capsule or first-responder pricing, in partnership with the Spurs' existing military-night programming rather than Nike alone."
+    },
+    {
+      "title": "Heat sets the product mix; the hoodie window is short but sharp",
+      "detail": "Summers regularly run into the upper 90s and 100s, and the playoff run falls in the hottest months. Cold fronts (northers) arrive abruptly between December and February and trigger a sudden run on hoodies, fleece and warm-ups for a few days at a time.",
+      "implication": "Lead with breathable tees, shooting shirts, shorts and lightweight tops year-round; keep fleece and warm-ups in smaller, fast-replenishment buys timed to the first cold snaps and the Christmas gifting run."
+    },
+    {
+      "title": "Mexico and South Texas fans shop San Antonio as a regional hub",
+      "detail": "Shoppers from Laredo, the Rio Grande Valley and northern Mexico (Monterrey and Nuevo Laredo especially) drive to San Antonio for malls and outlets (La Cantera, North Star, the San Marcos Premium Outlets), concentrated around Mexico's Buen Fin in November and the December holidays. Spurs fandom in Mexico is long-established through the team's Mexican-market presence and the NBA's Mexico City games.",
+      "implication": "Make Spanish-language and bilingual messaging standard on drops, and align promos with Buen Fin and December travel weekends; confirm inventory in border-region stores rather than assuming only Bexar County demand."
+    },
+    {
+      "title": "Jersey buying is tiered by income, and Wembanyama has reset the stack",
+      "detail": "Fans buy across a wide ladder: swingman and kids' replica jerseys, tees with a player name and number, and knockoffs and bootleg designs at flea markets such as Traders Village and Mission Marketplace. Demand since the Finals run is concentrated on Wembanyama, with Fox, Castle and Harper as the other name-and-number buys.",
+      "implication": "Maintain a clear good-better-best ladder of tee, swingman and authentic, and protect launch moments for the authentic tier with limited drops; do not chase flea-market price points with the top tier."
+    },
+    {
+      "title": "Holiday and heritage moments matter more than a generic retail calendar",
+      "detail": "San Antonio gifting follows Christmas and Las Posadas, Dia de los Muertos (late October to November 2), Mother's Day, Easter and quinceanera season, with the San Antonio Stock Show and Rodeo in February as another dress-up and Western-wear moment. Many are family-oriented purchases rather than self-purchases.",
+      "implication": "Build gift-ready sets and family bundles around Christmas and Mother's Day, and treat Dia de los Muertos and rodeo season as design inspiration only through local creator partnerships."
+    }
+  ],
+  "places": [
+    {
+      "name": "Frost Bank Center / Spurs Pro Shop",
+      "kind": "arena and team store",
+      "neighborhood": "East Side",
+      "why": "The home arena and the core in-person game-night retail environment, and the venue for opening night and the March 7 Knicks game."
+    },
+    {
+      "name": "The Shops at La Cantera",
+      "kind": "outdoor mall",
+      "neighborhood": "Far Northwest (Loop 1604)",
+      "why": "The premium regional destination for higher-income Northwest side shoppers and Mexican visitors."
+    },
+    {
+      "name": "North Star Mall",
+      "kind": "mall",
+      "neighborhood": "Central / Northeast",
+      "why": "The long-standing mall with sneaker and sportswear anchors that is a default gifting stop for the city."
+    },
+    {
+      "name": "Ingram Park Mall",
+      "kind": "mall",
+      "neighborhood": "West Side",
+      "why": "A West Side mall that serves a core Latino, value-minded customer base for sneaker and apparel retail."
+    },
+    {
+      "name": "Historic Market Square (El Mercado)",
+      "kind": "marketplace",
+      "neighborhood": "Downtown West",
+      "why": "The country's largest Mexican market outside Mexico, where locals and tourists buy Spurs and Mexican-heritage merchandise side by side."
+    },
+    {
+      "name": "Traders Village San Antonio",
+      "kind": "flea market",
+      "neighborhood": "Southwest Side",
+      "why": "A weekend flea market that is a real channel for discounted and unlicensed team goods and a price benchmark."
+    },
+    {
+      "name": "San Marcos Premium Outlets",
+      "kind": "outlet center",
+      "neighborhood": "San Marcos (I-35 corridor)",
+      "why": "A Nike outlet and Texas destination that draws San Antonio and Mexican shoppers on weekends and tax-free days."
+    },
+    {
+      "name": "Joint Base San Antonio",
+      "kind": "military installation",
+      "neighborhood": "Fort Sam Houston, Lackland, Randolph",
+      "why": "A large, steady customer base with exchange shopping, payday rhythms and strong Spurs loyalty."
+    }
+  ],
+  "people": [
+    {
+      "name": "Victor Wembanyama",
+      "role": "Spurs center, franchise star",
+      "why": "The demand driver for name-and-number product after a Finals run and a five-year extension."
+    },
+    {
+      "name": "De'Aaron Fox",
+      "role": "Spurs guard",
+      "why": "The veteran co-star on a max extension, and a strong second jersey name in the market."
+    },
+    {
+      "name": "Stephon Castle",
+      "role": "Spurs guard",
+      "why": "A homegrown young star whose youth-sized and kids' product is a natural family-gift play."
+    },
+    {
+      "name": "Dylan Harper",
+      "role": "Spurs guard",
+      "why": "A rising young name whose rookie-to-sophomore growth supports new-wave drops."
+    },
+    {
+      "name": "Tim Duncan",
+      "role": "Spurs legend",
+      "why": "The enduring retro anchor for older fans who buy throwback and heritage product."
+    },
+    {
+      "name": "Manu Ginobili",
+      "role": "Spurs legend",
+      "why": "A hero to Argentine, Latin American and Mexican-market fans and a throwback-tee name."
+    },
+    {
+      "name": "Selena Quintanilla",
+      "role": "Tejano icon",
+      "why": "A San Antonio-area cultural touchstone whose estate and licensing are tightly managed, which any reference must respect."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Texas back-to-school sales-tax holiday",
+      "timing": "Second weekend in August",
+      "month": 8,
+      "why": "A three-day window with no sales tax on clothing and footwear under $100 per item."
+    },
+    {
+      "name": "Opening night vs OKC",
+      "timing": "Oct 20",
+      "month": 10,
+      "why": "A West finals rematch and the season's first gifting and fan-gear spike."
+    },
+    {
+      "name": "Dia de los Muertos",
+      "timing": "Late October to Nov 2",
+      "month": 11,
+      "why": "A major local heritage moment with altars, parades and merchandise, relevant to design but never to be commodified without local creators."
+    },
+    {
+      "name": "Buen Fin and Thanksgiving week",
+      "timing": "Mid to late November",
+      "month": 11,
+      "why": "Mexico's discount weekend lines up with US Black Friday and the NBA Cup nights."
+    },
+    {
+      "name": "Christmas gifting and Las Posadas",
+      "timing": "December",
+      "month": 12,
+      "why": "The biggest family gifting window, with the Dec 25 game at the Knicks keeping Spurs on the screen."
+    },
+    {
+      "name": "San Antonio Stock Show and Rodeo",
+      "timing": "February",
+      "month": 2,
+      "why": "A Western-wear and dress-up moment that overlaps with the post-All-Star stretch."
+    },
+    {
+      "name": "Fiesta San Antonio",
+      "timing": "Mid to late April",
+      "month": 4,
+      "why": "The city's biggest civic celebration, overlapping with the playoff push and the City Edition's Fiesta stripe."
+    },
+    {
+      "name": "NBA playoffs and Finals",
+      "timing": "April to June",
+      "month": 5,
+      "why": "The 2026 run showed that playoff weeks produce sudden, concentrated demand for tees, caps and authentic jerseys."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Go Spurs Go",
+      "meaning": "The rallying cry and chant that works as a universal caption on product."
+    },
+    {
+      "term": "Silver and Black",
+      "meaning": "The team's identity colors, which fans use as shorthand for the brand."
+    },
+    {
+      "term": "Alamo City / SA",
+      "meaning": "Local nicknames for San Antonio used in graphics and captions."
+    },
+    {
+      "term": "Fiesta medals",
+      "meaning": "Collectible commemorative pins worn and traded during Fiesta."
+    },
+    {
+      "term": "Wemby",
+      "meaning": "The fan nickname for Victor Wembanyama, used on tees and in social drops."
+    },
+    {
+      "term": "Tienda",
+      "meaning": "Spanish for shop, used in bilingual retail and in neighborhood-store framing."
+    },
+    {
+      "term": "Norther",
+      "meaning": "A sudden Texas cold front, which triggers the quick hoodie and layering buys."
+    },
+    {
+      "term": "Puro SA",
+      "meaning": "A pride phrase used in local apparel and merch, best used through local makers."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Fiesta-stripe accent on black and silver base",
+      "type": "color",
+      "hex": "#E4002B",
+      "source": "The 2025-26 City Edition's Fiesta-colored chest and short stripes",
+      "use": "Use as a trim and cuff accent on tees, hoodies and caps so product ties directly to the on-court City Edition."
+    },
+    {
+      "cue": "Spurs silver",
+      "type": "color",
+      "hex": "#C4CED4",
+      "source": "The team's long-running silver and black identity",
+      "use": "Use for the core value-tier tees and warm-ups as a heritage anchor."
+    },
+    {
+      "cue": "Spurs black",
+      "type": "color",
+      "hex": "#000000",
+      "source": "The team's identity black",
+      "use": "Use as the base for the highest-margin authentic and premium line."
+    },
+    {
+      "cue": "Papel picado-inspired cut-line graphic",
+      "type": "pattern",
+      "hex": "",
+      "source": "Fiesta decor and Mexican folk art",
+      "use": "Use as a subtle graphic in woven labels or a back-neck print, developed with a San Antonio artist and credited."
+    },
+    {
+      "cue": "Fiesta medal and ribbon as an accessory",
+      "type": "motif",
+      "hex": "",
+      "source": "Fiesta medal-collecting tradition",
+      "use": "Use as a pin, patch or hang tag on a launch-week tee or cap."
+    },
+    {
+      "cue": "Heat-ready lightweight fabrics",
+      "type": "material",
+      "hex": "",
+      "source": "South Texas summers",
+      "use": "Use breathable Dri-FIT knit and mesh for tees and shorts as the default, with fleece as the seasonal exception."
+    },
+    {
+      "cue": "Bilingual typography",
+      "type": "typography",
+      "hex": "",
+      "source": "San Antonio's majority-Latino, bilingual daily life",
+      "use": "Pair English and Spanish set in the same weight on hang tags, labels and packaging."
+    }
+  ],
+  "productHooks": [
+    "A sub-$100 back-to-school Spurs tier (youth tees, shorts, slides, kids' replica jerseys) launched ahead of the August tax-free weekend.",
+    "A Fiesta-timed April capsule built on the City Edition's Fiesta stripes, with a medal-style pin or patch and bilingual labeling.",
+    "A military-appreciation capsule with JBSA-adjacent partners, timed around the 1st and 15th pay cycle and a military-night home game.",
+    "A Wembanyama, Fox and Castle name-and-number tee and kids' jersey ladder, with limited authentic drops at the Frost Bank Center Pro Shop and online.",
+    "A norther-ready layering drop: lightweight warm-up jackets, hoodies and fleece in small, fast-replenishment runs timed for December gifting."
+  ],
+  "watchouts": [
+    "Selena imagery and name are tightly licensed; do not reference her visually without an approved partnership.",
+    "Dia de los Muertos, Fiesta medals and papel picado are living cultural traditions; engage and pay San Antonio artists and makers rather than lifting the imagery.",
+    "Flea-market and unlicensed Spurs product is a real channel; avoid chasing it with price cuts that harm the authentic tier.",
+    "Fiesta, Night in Old San Antonio and Fiesta Commission marks are controlled and may need licensing.",
+    "Avoid treating the market as one Latino or military monolith; West Side, South Side, Northwest and base communities shop differently."
+  ],
+  "sources": [
+    {
+      "title": "San Antonio Spurs official site",
+      "url": "https://www.nba.com/spurs"
+    },
+    {
+      "title": "Texas Comptroller: Sales tax holidays",
+      "url": "https://comptroller.texas.gov/taxes/sales/holiday/"
+    },
+    {
+      "title": "Fiesta San Antonio (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Fiesta_San_Antonio"
+    },
+    {
+      "title": "Joint Base San Antonio (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Joint_Base_San_Antonio"
+    },
+    {
+      "title": "Historic Market Square (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Market_Square_(San_Antonio)"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "Second weekend of August (Fri-Sun)",
+        "month": 8,
+        "driver": "Texas back-to-school sales-tax holiday on clothing and footwear under $100 per item",
+        "impact": "high"
+      },
+      {
+        "window": "Oct 20 opening night and Oct 30 Cup night",
+        "month": 10,
+        "driver": "West finals rematch and Lakers at Spurs, the first game-night gifting spike",
+        "impact": "high"
+      },
+      {
+        "window": "Late Oct to Nov 2",
+        "month": 11,
+        "driver": "Dia de los Muertos events and family heritage gatherings",
+        "impact": "low"
+      },
+      {
+        "window": "Mid to late Nov",
+        "month": 11,
+        "driver": "Buen Fin from Mexico plus Black Friday and Thanksgiving week",
+        "impact": "high"
+      },
+      {
+        "window": "December",
+        "month": 12,
+        "driver": "Christmas and Las Posadas gifting, plus the Dec 25 Finals rematch at the Knicks",
+        "impact": "high"
+      },
+      {
+        "window": "February",
+        "month": 2,
+        "driver": "Stock Show and Rodeo, Valentine's Day and cold-front hoodie buys",
+        "impact": "medium"
+      },
+      {
+        "window": "Mar 7",
+        "month": 3,
+        "driver": "Knicks visit San Antonio in a Finals rematch, a marquee home date",
+        "impact": "medium"
+      },
+      {
+        "window": "Mid to late April",
+        "month": 4,
+        "driver": "Fiesta San Antonio and the playoff push, overlapping with City Edition colors",
+        "impact": "high"
+      },
+      {
+        "window": "May",
+        "month": 5,
+        "driver": "Mother's Day gifting, playoff rounds and quinceanera and graduation season",
+        "impact": "medium"
+      },
+      {
+        "window": "June",
+        "month": 6,
+        "driver": "Finals weeks if the team returns, plus Father's Day",
+        "impact": "high"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "In-arena and team store",
+        "role": "The Frost Bank Center Pro Shop is the place to buy on game night, especially on opening night and playoff nights."
+      },
+      {
+        "channel": "Malls and sneaker retail",
+        "role": "North Star, La Cantera and Ingram Park carry the in-person sneaker and apparel business, with La Cantera premium and Ingram Park value-oriented."
+      },
+      {
+        "channel": "Online and app",
+        "role": "Used for sizing and limited drops, and for military and border-region shoppers far from flagships."
+      },
+      {
+        "channel": "Social commerce and local creators",
+        "role": "Instagram and TikTok are where local artists, sneaker pages and Spurs fan accounts drive awareness of small drops."
+      },
+      {
+        "channel": "Flea markets and unlicensed vendors",
+        "role": "Traders Village and Mission Marketplace remain a parallel low-price channel for team goods."
+      },
+      {
+        "channel": "Resale and sneaker drops",
+        "role": "A modest but real market for limited sneakers and jerseys, with lines and raffles for the biggest releases."
+      }
+    ],
+    "priceProfile": "San Antonio is price-aware, with median household income below the national and Texas averages and wide neighborhood spread, from a value-minded West and South Side and military households to affluent Alamo Heights, Stone Oak and the Hill Country. Texas has no state income tax but an 8.25% combined sales tax, so the August holiday and promos matter. Tier clearly: a sub-$100 entry, a mid-range swingman and premium tees, and a limited authentic top.",
+    "jerseyBehavior": "Fans buy team apparel across tiers, with tees and kids' replica jerseys as the volume, swingmen as the committed-fan buy, and authentics mainly from collectors and higher-income households. Name-and-number demand is concentrated on Wembanyama, with Fox, Castle and Harper behind. Throwback Duncan, Ginobili and Parker items work with older fans, and the City Edition is a major seasonal purchase, particularly as it returns with the Fiesta stripes for 2026-27."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "The 2026 Texas back-to-school sales-tax holiday dates and the $100 per-item clothing and footwear threshold still apply, and the 2027 dates",
+      "San Antonio combined sales tax rate of 8.25% is still current",
+      "Fiesta San Antonio 2027 dates and the current Fiesta Commission licensing rules for marks",
+      "Frost Bank Center Pro Shop and other in-arena store locations and operators for 2026-27",
+      "Traders Village San Antonio and Mission Marketplace are still operating as flea-market channels",
+      "San Marcos Premium Outlets still has a Nike outlet and its current hours",
+      "Ingram Park Mall and North Star Mall anchors and current tenant mix",
+      "San Antonio Stock Show and Rodeo February 2027 dates and venue",
+      "Buen Fin 2026 dates in Mexico",
+      "Which Spurs jersey names are the current top sellers, per NBA Store or Fanatics rankings",
+      "Whether Spurs military-appreciation nights are scheduled in 2026-27 and with which partners",
+      "Current San Antonio retail trends, including any closures among mall anchors"
+    ]
+  }
+}
