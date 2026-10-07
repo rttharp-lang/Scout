@@ -1,0 +1,227 @@
+{
+  "season": "2026-27",
+  "verifiedAt": "2026-10-07",
+  "events": [
+    {
+      "name": "Preseason start",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the 2026 preseason schedule is almost certainly already published (preseason normally starts in early October), but no live source could be reached this session, so do not treat this TBA as 'not announced' — fill from nba.com/schedule.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/schedule"
+    },
+    {
+      "name": "Opening night (regular season tips off)",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the date and opening-night matchups were released with the 2026-27 schedule but could not be retrieved this session; do not infer a date (e.g., Tuesday 2026-10-20) without checking nba.com.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/schedule"
+    },
+    {
+      "name": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "date": "TBA",
+      "month": 0,
+      "location": "Home arenas",
+      "notes": "UNVERIFIED: in 2023-2025, group play ran on Tuesday and Friday 'Cup Nights' in November, with 30 teams in six groups of five split by conference, and the 2026 groups and dates were not retrieved this session.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/nba-cup"
+    },
+    {
+      "name": "Emirates NBA Cup 2026 — quarterfinals",
+      "date": "TBA",
+      "month": 0,
+      "location": "Home arenas of higher seeds",
+      "notes": "UNVERIFIED: in prior editions, the six group winners and two wild cards (one per conference) played single-game quarterfinals at home sites in early-to-mid December, but the 2026 dates were not retrieved.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/nba-cup"
+    },
+    {
+      "name": "Emirates NBA Cup 2026 — semifinals",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: T-Mobile Arena in Las Vegas hosted the semifinals and final in 2023, 2024 and 2025, but the 2026 site and dates were not verified, so do not assume Las Vegas.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/nba-cup"
+    },
+    {
+      "name": "Emirates NBA Cup 2026 — championship",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the final is the only Cup game that does not count in regular-season standings, and the 2026 date and site were not verified (Prime Video holds the knockout rounds under the 2025-26 media deals).",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/nba-cup"
+    },
+    {
+      "name": "Christmas Day games",
+      "date": "2026-12-25",
+      "month": 12,
+      "location": "Various",
+      "notes": "The date (a Friday) is fixed and the NBA plays a Christmas slate every year, but the 2026 matchups and count (five games in recent seasons, on ESPN/ABC) could NOT be verified this session — fill matchups from nba.com.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/schedule"
+    },
+    {
+      "name": "MLK Day games",
+      "date": "2027-01-18",
+      "month": 1,
+      "location": "Various",
+      "notes": "The federal holiday falls on Monday 2027-01-18 and the NBA stages an MLK Day slate every year, but the 2027 matchups and broadcasters were not verified.",
+      "status": "announced-tentative",
+      "source": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+    },
+    {
+      "name": "NBA Rivals Week / league themed weeks",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: a January 'NBA Rivals Week' ran in 2024-25, but whether it or any other league themed week is scheduled for 2026-27 could not be confirmed.",
+      "status": "not-announced",
+      "source": "https://www.nba.com/news"
+    },
+    {
+      "name": "Trade deadline",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the league usually publishes the deadline with the schedule (recently a Thursday in early February), but the 2027 deadline could not be retrieved, so do not assume 2027-02-04.",
+      "status": "announced-tentative",
+      "source": "https://pr.nba.com/"
+    },
+    {
+      "name": "NBA All-Star 2027",
+      "date": "TBA",
+      "month": 0,
+      "location": "Phoenix, AZ (Suns' arena, renamed Mortgage Matchup Center in 2025 — re-verify)",
+      "notes": "UNVERIFIED (from pre-season knowledge, not re-checked): Phoenix was announced as the 2027 host, the weekend traditionally falls on Presidents' Day weekend (Feb 12-15, 2027), and the 2027 format is unconfirmed (2026 in LA used a USA-vs-World three-team round robin).",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/allstar"
+    },
+    {
+      "name": "Regular season ends",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the season normally ends on a Sunday in mid-April and the date is usually published with the schedule, but it was not retrieved this session.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/schedule"
+    },
+    {
+      "name": "Play-In Tournament",
+      "date": "TBA",
+      "month": 0,
+      "location": "Home arenas",
+      "notes": "UNVERIFIED: the Play-In (seeds 7-10 in each conference) is played over the week after the regular season ends and streams exclusively on Prime Video under the current media deals, but the 2027 dates were not retrieved.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/playoffs"
+    },
+    {
+      "name": "NBA Playoffs begin",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the playoffs normally start the weekend after the Play-In in mid-to-late April, but the 2027 date was not retrieved.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/playoffs"
+    },
+    {
+      "name": "NBA Finals",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the Finals normally run from early to mid/late June on ABC (Disney holds the Finals for all 11 years of the current deal), but the 2027 window was not retrieved.",
+      "status": "announced-tentative",
+      "source": "https://www.nba.com/playoffs"
+    },
+    {
+      "name": "2027 NBA Draft Lottery",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the lottery is normally held in mid-May during combine week, and the 2027 date is typically announced in spring, so it is likely unannounced as of October 2026.",
+      "status": "not-announced",
+      "source": "https://www.nba.com/draft"
+    },
+    {
+      "name": "2027 NBA Draft Combine",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the combine has been held in Chicago in mid-May in recent years, and the 2027 dates and site have likely not been announced yet.",
+      "status": "not-announced",
+      "source": "https://www.nba.com/draft"
+    },
+    {
+      "name": "2027 NBA Draft",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: the draft is normally held in late June (two nights at Barclays Center, Brooklyn, in recent years), and the 2027 dates and venue have likely not been announced yet.",
+      "status": "not-announced",
+      "source": "https://www.nba.com/draft"
+    },
+    {
+      "name": "Free agency negotiating window opens",
+      "date": "2027-06-30",
+      "month": 6,
+      "location": "",
+      "notes": "Under the 2023 CBA, negotiations open on June 30 at 6 p.m. ET and signings wait for the early-July moratorium to end, but the league's 2027 confirmation was not re-checked this session.",
+      "status": "announced-tentative",
+      "source": "https://nbpa.com/cba"
+    },
+    {
+      "name": "Las Vegas Summer League 2027",
+      "date": "TBA",
+      "month": 0,
+      "location": "Las Vegas, NV (Thomas & Mack Center / Cox Pavilion in recent years)",
+      "notes": "Naming caveat: 'NBA 2K27 Summer League' was the July 2026 edition (title tracks the next 2K game), so the July 2027 event would be '2K28' if the deal continues, and its dates were not verified.",
+      "status": "not-announced",
+      "source": "https://www.nba.com/summer-league"
+    },
+    {
+      "name": "Nike City Edition 2026-27 unveil",
+      "date": "TBA",
+      "month": 0,
+      "location": "",
+      "notes": "UNVERIFIED: City Edition uniforms have typically been unveiled league-wide in November and debuted around the NBA Cup window, but the 2026-27 unveil date and any league-wide jersey initiative were not verified.",
+      "status": "not-announced",
+      "source": "https://www.nba.com/news"
+    }
+  ],
+  "structural": [
+    {
+      "topic": "VERIFICATION CAVEAT — read first",
+      "fact": "On 2026-10-07 this agent could not verify anything live: the shared web-search budget (200 calls per turn across all agents) was already used up before its first search, and the network proxy blocked nba.com, pr.nba.com, cdn.nba.com, ESPN, Wikipedia, Basketball-Reference, CBS, NBC Sports, SI, Yahoo, Fox Sports and HoopsHype (Reuters, AP, USA Today and Sporting News also returned no content); every entry comes from pre-2026-27 knowledge or fixed calendar and CBA rules, 'TBA' means 'not captured' rather than 'not announced' wherever status is announced-tentative, and the file should be re-verified before auditors treat it as ground truth.",
+      "source": ""
+    },
+    {
+      "topic": "National media rights (where games air)",
+      "fact": "2026-27 is year two of the 11-year national deals (2025-26 through 2035-36) with Disney (ESPN/ABC, including the NBA Finals every year), NBCUniversal (NBC and Peacock, the league's return to NBC, with Tuesday and Sunday night windows) and Amazon Prime Video (including exclusive NBA Cup knockout rounds and the Play-In Tournament), and TNT is no longer a national game partner, with Inside the NBA now licensed to ESPN.",
+      "source": "https://pr.nba.com/"
+    },
+    {
+      "topic": "Expansion (Seattle, Las Vegas)",
+      "fact": "League leadership has publicly discussed expansion, with Seattle and Las Vegas widely reported as the leading candidates, but no expansion vote, franchise award or start date could be verified for this file — re-check the latest Board of Governors news before citing anything.",
+      "source": "https://pr.nba.com/"
+    },
+    {
+      "topic": "NBA Europe",
+      "fact": "In March 2025 the NBA and FIBA announced that they are jointly exploring a new men's professional league in Europe; it is not part of the 2026-27 NBA season, and launch timing, cities and teams were not verified.",
+      "source": "https://pr.nba.com/"
+    },
+    {
+      "topic": "Emirates NBA Cup format and sponsor",
+      "fact": "The in-season tournament has been branded the Emirates NBA Cup since 2024-25: group-stage and knockout games count toward the regular-season record except the championship game, and Las Vegas hosted the final rounds from 2023 to 2025, but the 2026 knockout site was not verified.",
+      "source": "https://www.nba.com/nba-cup"
+    },
+    {
+      "topic": "Relocations and new arenas",
+      "fact": "No franchise relocation or new NBA arena opening for 2026-27 could be verified; the Phoenix Suns' arena, the expected All-Star 2027 venue, was renamed from Footprint Center to Mortgage Matchup Center in 2025, and the name should be re-verified.",
+      "source": "https://www.nba.com/news"
+    }
+  ]
+}
