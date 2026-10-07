@@ -23,6 +23,15 @@ THE BAR — every claim must pass all of these:
 - TIGHT: one to three sentences per field. No filler, no hedging boilerplate. Fewer, stronger items beat padded lists.
 - SOURCES: list the URLs you actually used.`;
 
+// Swapped in for the CURRENT and SOURCES rules when live web research is
+// unavailable (e.g. the session's search budget is spent). The draft stays
+// useful but every time-sensitive claim is queued for live verification.
+export const KNOWLEDGE_MODE = `RESEARCH MODE: KNOWLEDGE. Live web research is unavailable for this run. Do not call WebSearch or WebFetch. Write from your own knowledge, current to roughly mid-2026, and be rigorous about the edge of what you know:
+- Name places, businesses, people and events only when you are confident they exist and were operating (or recurring) as of 2025-26. Prefer long-standing institutions over new or fragile ones; leave out anything you're unsure is still open.
+- State time-sensitive facts as of your knowledge — the 2026-27 roster, coach, ownership and arena name, 2026-27 dates, the current City Edition, recent openings and closures, current fan sentiment — and add each one to provenance.verify: the claims a live check must confirm before anyone acts, most important first (max 12).
+- Set provenance to { "mode": "knowledge", "asOf": "Model knowledge, mid-2026", "verify": [...] }. Set confidence honestly: "medium" at most unless the lens rests on long-established history.
+- sources: list only canonical reference pages you are confident exist (official team, venue and organization sites; Wikipedia articles) as where to verify. Never invent deep links.`;
+
 // ── Lens agents ───────────────────────────────────────────────────
 // group: how the site clusters them. questions: what the agent must answer.
 export const LENS_AGENTS = [
@@ -183,7 +192,13 @@ const CONFIDENCE = { type: "string", enum: ["high", "medium", "low"] };
 const HEX = { type: "string", pattern: "^#[0-9A-Fa-f]{6}$" };
 const MONTH = { type: "integer", minimum: 1, maximum: 12 };
 
-const SOURCE = obj({ title: str("Page title"), url: str("URL actually used") });
+const SOURCE = obj({ title: str("Page title"), url: str("URL used (live research) or canonical reference page to verify against (knowledge mode)") });
+// Optional on every dossier and brief; absent means researched live on the web.
+const PROVENANCE = obj({
+  mode: { type: "string", enum: ["live", "knowledge"], description: "live = verified on the web; knowledge = written from model knowledge" },
+  asOf: str("e.g. 'Live web, Oct 2026' or 'Model knowledge, mid-2026'"),
+  verify: arr(str("A time-sensitive claim a live check must confirm, most important first"), 0, 12),
+});
 const CUE_TYPES = ["color", "motif", "texture", "typography", "silhouette", "material", "graphic", "pattern", "story"];
 
 // Fields every lens dossier shares, so the site can render any lens the same way.
@@ -248,14 +263,14 @@ const LENS_EXTRA = {
 export function lensSchema(id) {
   const props = { ...LENS_BASE };
   if (LENS_EXTRA[id]) props.extra = LENS_EXTRA[id];
-  return obj(props);
+  return obj({ ...props, provenance: PROVENANCE }, Object.keys(props));
 }
 
 const PRODUCT_CATEGORY = { type: "string", enum: ["jersey", "tee", "fleece", "outerwear", "shorts", "pants", "headwear", "footwear", "accessory", "kids", "other"] };
 
 // The Nike Basketball brief for one market (written by the strategist, revised
 // by the editor).
-export const STRATEGY_SCHEMA = obj({
+const STRATEGY_PROPS = {
   team: str("Team id"),
   headline: str("The market thesis in one line (≤ 120 characters)"),
   thesis: str("3-5 sentences: what makes this fandom distinct and where Nike wins"),
@@ -318,7 +333,8 @@ export const STRATEGY_SCHEMA = obj({
     fandom: { type: "integer", minimum: 0, maximum: 100, description: "Fan intensity" },
     rationale: str("One or two sentences explaining the scores"),
   }),
-});
+};
+export const STRATEGY_SCHEMA = obj({ ...STRATEGY_PROPS, provenance: PROVENANCE }, Object.keys(STRATEGY_PROPS));
 
 // Critic outputs (written to research/nba/<team>/factcheck.json, critique.json).
 export const FACTCHECK_SCHEMA = obj({

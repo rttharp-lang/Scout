@@ -5,7 +5,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import { loadMarket, loadLiveRun, clearLiveRun, currentMonth, inkOn, heroColor, MONTHS, MONTHS_LONG, SEASON_ORDER } from "../data.js";
 import { TEAM_BY_ID } from "../teams.js";
 import { AGENT_BY_ID, LENS_AGENTS } from "../agents/roster.js";
-import { Chip, Scorecard, PaletteRow, MonthStrip, Priority, Confidence, SectionHead, KV, href } from "../ui.jsx";
+import { Chip, Scorecard, PaletteRow, MonthStrip, Priority, Confidence, Provenance, SectionHead, KV, href } from "../ui.jsx";
+import { verificationOf } from "../agents/provenance.js";
 import { RhythmChart } from "../charts.jsx";
 import { LensView, Jersey } from "./parts.jsx";
 
@@ -69,6 +70,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
   const bg = heroColor(team);
   const ink = inkOn(bg);
   const [lens, setLens] = useState("music");
+  const ver = useMemo(() => verificationOf(data), [data]);
 
   const calendarBySeason = useMemo(() => SEASON_ORDER.map((m) => ({ m, items: s.calendar.filter((c) => c.month === m).sort((a, b) => a.priority - b.priority) })).filter((x) => x.items.length), [s]);
   const opps = useMemo(() => [...s.opportunities].sort((a, b) => a.priority - b.priority), [s]);
@@ -112,9 +114,18 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
         </div>
       )}
 
+      {ver.knowledge.length > 0 && (
+        <div className="hc-notice" role="note">
+          <b>{ver.knowledge.length === 11 ? "Knowledge draft." : `Partly verified: ${ver.live.length} of 11 dossiers verified on the live web.`}</b>{" "}
+          {ver.knowledge.length} of 11 dossiers{ver.briefMode === "knowledge" ? " and the brief" : ""} were written from agent knowledge (current to mid-2026) because live web research was unavailable for that run. {ver.queue.length} time-sensitive claims are queued for live verification.{" "}
+          <a href={`#/m/${team.id}`} onClick={(e) => { e.preventDefault(); document.getElementById("review")?.scrollIntoView({ behavior: "smooth" }); }}>See the queue</a> or <a href={href("agents", team.id)}>re-run the agents live</a>.
+        </div>
+      )}
+
       <nav className="hc-subnav hc-no-print" aria-label="Sections">
         {SECTIONS.map(([sid, label]) => <a key={sid} href={`#/m/${team.id}`} className={active === sid ? "is-active" : ""} onClick={(e) => { e.preventDefault(); document.getElementById(sid)?.scrollIntoView({ behavior: "smooth" }); }}>{label}</a>)}
-        <a href={`#/m/${team.id}`} onClick={(e) => { e.preventDefault(); window.print(); }} style={{ marginLeft: "auto" }}>Print brief</a>
+        <a href={href("compare", team.id)} style={{ marginLeft: "auto" }}>Compare</a>
+        <a href={`#/m/${team.id}`} onClick={(e) => { e.preventDefault(); window.print(); }}>Print brief</a>
       </nav>
 
       {/* ── Brief ────────────────────────────────────── */}
@@ -287,7 +298,9 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
 
       {/* ── Retail ───────────────────────────────────── */}
       <section className="hc-section" id="retail">
-        <SectionHead eyebrow="Where, when and how they shop" title="Retail" />
+        <SectionHead eyebrow="Where, when and how they shop" title="Retail">
+          <a className="hc-btn hc-btn-ghost hc-no-print" style={{ textDecoration: "none" }} href={`/?city=${encodeURIComponent(`${team.city}, ${team.state}`)}`}>Plan a scouting trip in Scout ↗</a>
+        </SectionHead>
         <div className="hc-grid hc-grid-3">
           {[["Where to win", s.retailPlaybook.where], ["When to win", s.retailPlaybook.when], ["How to win", s.retailPlaybook.how]].map(([t, items]) => (
             <div key={t} className="hc-card-invert"><h3 className="hc-h2">{t}</h3><ul className="hc-list" style={{ marginTop: 10 }}>{items.map((x, i) => <li key={i}>{x}</li>)}</ul></div>
@@ -324,7 +337,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
         <SectionHead eyebrow="How this was made" title="Agent review">
           <a className="hc-btn hc-btn-ghost hc-no-print" style={{ textDecoration: "none" }} href={href("agents", team.id)}>Re-run agents live</a>
         </SectionHead>
-        <Review data={data} />
+        <Review data={data} ver={ver} />
       </section>
     </div>
   );
@@ -435,10 +448,11 @@ function Retail({ land, beh }) {
   );
 }
 
-function Review({ data }) {
+function Review({ data, ver }) {
   const fc = data.review && data.review.factcheck;
   const cr = data.review && data.review.critique;
   const [open, setOpen] = useState(false);
+  const [qOpen, setQOpen] = useState(false);
   const counts = fc ? ["confirmed", "corrected", "removed", "unverifiable"].map((k) => [k, fc.verdicts.filter((v) => v.verdict === k).length]) : [];
   const allSources = LENS_AGENTS.map((a) => ({ a, d: data.dossiers[a.id] }));
   return (
@@ -466,12 +480,21 @@ function Review({ data }) {
           ) : <p className="hc-muted">No critique for this run.</p>}
         </div>
       </div>
+      {ver.queue.length > 0 && (
+        <div className="hc-card-invert" style={{ marginTop: "var(--grid-gap)" }}>
+          <div className="hc-row" style={{ justifyContent: "space-between" }}>
+            <div><div className="hc-eyebrow">Verification queue</div><h3 className="hc-h3" style={{ marginTop: 4 }}>{ver.queue.length} claims to confirm live before acting</h3></div>
+            <button className="hc-pill-btn hc-no-print" onClick={() => setQOpen(!qOpen)} aria-expanded={qOpen}>{qOpen ? "Hide" : "Show"} queue</button>
+          </div>
+          {qOpen && <ul className="hc-list" style={{ marginTop: 10 }}>{ver.queue.map((q, i) => <li key={i}><span className="hc-small hc-muted">{AGENT_BY_ID[q.lens]?.name || "Brief"} · </span>{q.claim}{q.note ? <div className="hc-small hc-muted">{q.note}</div> : null}</li>)}</ul>}
+        </div>
+      )}
       <div className="hc-card" style={{ marginTop: "var(--grid-gap)" }}>
         <div className="hc-kv-label">Sources by agent</div>
         <div className="hc-grid hc-grid-3" style={{ marginTop: 10 }}>
           {allSources.map(({ a, d }) => d && (
             <div key={a.id}>
-              <div className="hc-row" style={{ marginBottom: 6 }}><b className="hc-small">{a.name}</b><Confidence level={d.confidence} /></div>
+              <div className="hc-row" style={{ marginBottom: 6 }}><b className="hc-small">{a.name}</b><Provenance of={d} /><Confidence level={d.confidence} /></div>
               <ul className="hc-bullets hc-tiny">{d.sources.map((s, i) => <li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a></li>)}</ul>
             </div>
           ))}

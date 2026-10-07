@@ -2,6 +2,7 @@
 //   node scripts/nba/validate.mjs <team> <name>   one file (research/nba/<team>/<name>.json)
 //   node scripts/nba/validate.mjs <team>          every file present for a team
 //   node scripts/nba/validate.mjs --all           every team
+//   node scripts/nba/validate.mjs league          the league synthesis
 // Prints OK or the errors; exits 1 on any error. Agents run this after writing.
 import fs from "node:fs";
 import path from "node:path";
@@ -50,8 +51,33 @@ function report({ file, errors }) {
   return false;
 }
 
+// research/nba/league.json — the cross-market synthesis.
+export function validateLeague() {
+  const file = path.join(ROOT, "league.json");
+  if (!fs.existsSync(file)) return { file, errors: ["file does not exist"] };
+  let data;
+  try { data = JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) { return { file, errors: [`invalid JSON: ${e.message}`] }; }
+  const errors = check(schemaFor("league"), data);
+  if (errors.length) return { file, errors };
+  const ids = TEAMS.map((t) => t.id);
+  const unknown = (where, list) => list.filter((id) => !TEAM_BY_ID[id]).forEach((id) => errors.push(`${where}: unknown team id "${id}"`));
+  const scored = data.scores.map((s) => s.team);
+  ids.filter((id) => !scored.includes(id)).forEach((id) => errors.push(`$.scores: missing "${id}"`));
+  if (new Set(scored).size !== scored.length) errors.push("$.scores: duplicate team ids");
+  unknown("$.scores", scored);
+  const clustered = data.clusters.flatMap((c) => c.teams);
+  ids.filter((id) => !clustered.includes(id)).forEach((id) => errors.push(`$.clusters: "${id}" is in no cluster`));
+  if (new Set(clustered).size !== clustered.length) errors.push("$.clusters: a team appears in more than one cluster");
+  unknown("$.clusters", clustered);
+  data.themes.forEach((t, i) => unknown(`$.themes[${i}].teams`, t.teams));
+  data.tentpoles.forEach((t, i) => unknown(`$.tentpoles[${i}].teams`, t.teams));
+  unknown("$.priorities", data.priorities.map((p) => p.team));
+  return { file, errors };
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [a, b] = process.argv.slice(2);
+  if (a === "league") process.exit(report(validateLeague()) ? 0 : 1);
   let ok = true;
   const teams = a === "--all" ? TEAMS.map((t) => t.id) : [a];
   if (!a || (a !== "--all" && !TEAM_BY_ID[a])) { console.error("usage: validate.mjs <team> [name] | --all"); process.exit(2); }

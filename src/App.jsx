@@ -2523,6 +2523,13 @@ export default function App() {
           setScreen(s.screen && s.screen !== "building" && s.screen !== "builderror" ? s.screen : "review");
         }
       }
+      // Deep link (e.g. from Home Court: /?city=Portland, OR) starts trip setup
+      // for that city, exactly like picking it on the landing page.
+      const linked = new URLSearchParams(window.location.search).get("city");
+      if (linked) {
+        setCity(linked); setHotel(null); setStartDate(null); setEndDate(null); setScreen("setup");
+        window.history.replaceState(null, "", window.location.pathname);
+      }
     } catch {}
     hydrated.current = true;
   }, []);

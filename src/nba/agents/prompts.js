@@ -4,24 +4,29 @@
 //                     writes research/nba/<team>/<agent>.json and validates it
 //   mode "api"      → a Claude API call with the web_search server tool that
 //                     returns the same JSON via structured outputs
-import { STANDARDS, SEASON, AGENT_BY_ID, LENS_AGENTS, LENS_IDS, schemaFor } from "./roster.js";
+import { STANDARDS, KNOWLEDGE_MODE, SEASON, AGENT_BY_ID, LENS_AGENTS, LENS_IDS, schemaFor } from "./roster.js";
 
 const teamLine = (t) => `${t.city} ${t.name} (${t.abbr}) — ${t.conference}ern Conference, ${t.division} Division. Home arena: ${t.arena}.`;
 
-function header(agent, team, today) {
+// Knowledge mode drops the live-web CURRENT and SOURCES rules for KNOWLEDGE_MODE.
+const standardsFor = (knowledge) => (knowledge
+  ? `${STANDARDS.split("\n").filter((l) => !/^- (CURRENT|SOURCES):/.test(l)).join("\n")}\n\n${KNOWLEDGE_MODE}`
+  : STANDARDS);
+
+function header(agent, team, today, knowledge) {
   return `You are the ${agent.name} agent on Home Court, Nike Basketball's local-fandom intelligence system.
 
 MARKET: ${teamLine(team)}
 MARKET FOCUS: ${team.focus}
 TODAY: ${today}. The ${SEASON} NBA season tips off in late October 2026; the 2027 playoffs run April–June 2027.
 
-${STANDARDS}`;
+${standardsFor(knowledge)}`;
 }
 
 const dossierPath = (teamId, name) => `research/nba/${teamId}/${name}.json`;
 
 // ── Lens agents ───────────────────────────────────────────────────
-function lensTask(agent, team) {
+function lensTask(agent, team, knowledge) {
   const extraNotes = {
     rhythm: `The "extra.months" array must have exactly 12 entries in order (1 = January … 12 = December). Score intensity relative to THIS fan base's own year (100 = its peak month). "extra.keyDates" holds verifiable 2026-27 dates (home opener, rivalry and national-TV games, NBA Cup, Christmas, heritage nights, City Edition debut, All-Star, trade deadline, playoffs, draft) plus the local moments that matter.`,
     fanbase: `"extra" carries segments, traditions, icons, rivalries, the current sentiment and the gameday look.`,
@@ -40,13 +45,20 @@ OUTPUT FIELDS (team = "${team.id}", lens = "${agent.id}"):
 - insights (4-7) — each with a market-specific detail and its implication for Nike Basketball.
 - places, people, moments, vocabulary — real and current; moments carry a month (0 if year-round).
 - designCues (3-8) — concrete enough to brief a designer; colors carry hex.
-- productHooks (2-6), watchouts, sources (URLs you used), confidence.${extraNotes[agent.id] ? `\n- ${extraNotes[agent.id]}` : ""}`;
+- productHooks (2-6), watchouts, ${knowledge ? "sources (canonical reference pages to verify against), confidence, provenance (mode \"knowledge\" + the verify list)" : "sources (URLs you used), confidence"}.${extraNotes[agent.id] ? `\n- ${extraNotes[agent.id]}` : ""}`;
 }
 
 // ── Synthesis agents ──────────────────────────────────────────────
 const DOSSIER_LIST = (teamId) => LENS_IDS.map((id) => dossierPath(teamId, id)).join(", ");
 
-function synthesisTask(agent, team) {
+function synthesisTask(agent, team, knowledge) {
+  if (knowledge && agent.id === "factcheck") {
+    return `YOUR JOB: Fact-Check Critic, knowledge mode. You cannot browse, so audit instead of verifying. Be adversarial — assume some claims are wrong.
+- Remove or correct what you are confident is wrong: businesses or venues you know closed or moved, departed players or coaches, renamed arenas, wrong dates, wrong City Edition history, anything that contradicts another dossier.
+- Flag likely hallucinations: oddly specific details (exact addresses, dates, quotes, statistics, small businesses) with no well-known basis. Soften or remove them.
+- Build the market's verification queue: log the 15-25 highest-risk remaining claims across the dossiers and the brief as verdicts with verdict "unverifiable" and a note saying what a live check must confirm. Use "corrected" or "removed" for what you changed and "confirmed" only for long-established facts.
+- Brief problems go in as verdicts with lens "strategy" so the editor fixes them.`;
+  }
   switch (agent.id) {
     case "strategist":
       return `YOUR JOB: Market Strategist. Synthesize the eleven lens dossiers into the Nike Basketball brief for ${team.city}.
@@ -80,15 +92,19 @@ Rate severity honestly; say what's strong too.`;
 }
 
 // Workflow-mode I/O contract per agent.
-function workflowIO(agent, team) {
+function workflowIO(agent, team, knowledge) {
   const out = (name) => dossierPath(team.id, name);
   const validate = (name) => `node scripts/nba/validate.mjs ${team.id} ${name}`;
   const schemaCmd = (name) => `node scripts/nba/brief.mjs --schema ${name}`;
-  const common = `Use the WebSearch tool (mode "standard"; "extended" only for hard-to-find or very recent facts) and WebFetch to research and verify. Write valid JSON only — no comments, no trailing commas. Run the validator and fix every error until it prints OK.`;
+  const research = knowledge
+    ? `Knowledge mode: do not use WebSearch or WebFetch. Every file you write carries "provenance" (mode "knowledge").`
+    : `Use the WebSearch tool (mode "standard"; "extended" only for hard-to-find or very recent facts) and WebFetch to research and verify.`;
+  const common = `${research} Write valid JSON only — no comments, no trailing commas. Run the validator and fix every error until it prints OK.`;
   if (LENS_IDS.includes(agent.id)) {
     return `${common}
 
-OUTPUT: write your dossier to ${out(agent.id)}
+OUTPUT: write your dossier to ${out(agent.id)}${knowledge ? `
+KEEP LIVE WORK: if ${out(agent.id)} already exists, validates, and has no "provenance" field or provenance.mode "live", it was verified on the live web — keep it exactly as is and finish.` : ""}
 SCHEMA: run \`${schemaCmd(agent.id)}\` to print the exact JSON Schema.
 VALIDATE: \`${validate(agent.id)}\``;
   }
@@ -126,15 +142,18 @@ VALIDATE: \`${validate("strategy")}\``;
   }
 }
 
-export function buildBrief(agentId, team, { mode = "workflow", today } = {}) {
+export function buildBrief(agentId, team, { mode = "workflow", today, knowledge = false } = {}) {
   const agent = AGENT_BY_ID[agentId];
   if (!agent) throw new Error(`unknown agent: ${agentId}`);
   const day = today || new Date().toISOString().slice(0, 10);
-  const task = LENS_IDS.includes(agentId) ? lensTask(agent, team) : synthesisTask(agent, team);
+  const task = LENS_IDS.includes(agentId) ? lensTask(agent, team, knowledge) : synthesisTask(agent, team, knowledge);
   const io = mode === "workflow"
-    ? workflowIO(agent, team)
+    ? workflowIO(agent, team, knowledge)
     : `When web search is available, use it to verify anything that could have changed. When asked for output, return only the JSON object described by the output schema.`;
-  return `${header(agent, team, day)}\n\n${task}\n\n${io}\n`;
+  const prov = knowledge && ["strategist", "editor"].includes(agentId)
+    ? `\n\nPROVENANCE: the brief carries provenance (mode "knowledge") whose verify list holds the claims the brief depends on that a live check must confirm before Nike acts on them.`
+    : "";
+  return `${header(agent, team, day, knowledge)}\n\n${task}${prov}\n\n${io}\n`;
 }
 
 // API mode: which schema an agent returns.

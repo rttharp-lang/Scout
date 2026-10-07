@@ -3,7 +3,7 @@
 import React from "react";
 import { AGENT_BY_ID } from "../agents/roster.js";
 import { MONTHS } from "../data.js";
-import { Chip, Confidence, KV } from "../ui.jsx";
+import { Chip, Confidence, Provenance } from "../ui.jsx";
 
 export function LensView({ dossier: d, compact = false }) {
   if (!d) return null;
@@ -14,7 +14,7 @@ export function LensView({ dossier: d, compact = false }) {
         <div className="hc-card-invert hc-stack">
           <div className="hc-row" style={{ justifyContent: "space-between" }}>
             <span className="hc-eyebrow">{agent ? `${agent.name} agent` : d.lens}</span>
-            <Confidence level={d.confidence} />
+            <span className="hc-row"><Provenance of={d} /><Confidence level={d.confidence} /></span>
           </div>
           <h3 className="hc-h2" style={{ textTransform: "none", fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: "-0.01em", fontSize: "var(--step-h2)", lineHeight: 1.15 }}>{d.headline}</h3>
           <p className="hc-muted">{d.summary}</p>
@@ -22,7 +22,7 @@ export function LensView({ dossier: d, compact = false }) {
       )}
 
       <div className={compact ? "hc-card hc-stack" : "hc-grid hc-grid-2"}>
-        {compact && <div className="hc-row" style={{ justifyContent: "space-between" }}><span className="hc-eyebrow">{agent ? `${agent.name} agent` : d.lens} · insights</span><Confidence level={d.confidence} /></div>}
+        {compact && <div className="hc-row" style={{ justifyContent: "space-between" }}><span className="hc-eyebrow">{agent ? `${agent.name} agent` : d.lens} · insights</span><span className="hc-row"><Provenance of={d} /><Confidence level={d.confidence} /></span></div>}
         {d.insights.map((x, i) => (
           compact
             ? <div key={i}><b>{x.title}</b><p className="hc-small" style={{ marginTop: 2 }}>{x.detail}</p><p className="hc-small hc-implication" style={{ marginTop: 6 }}>{x.implication}</p></div>
@@ -84,8 +84,11 @@ export function LensView({ dossier: d, compact = false }) {
             <div className="hc-kv-label" style={{ color: "var(--pop-ink)", opacity: 0.7 }}>Product hooks</div>
             <ul className="hc-bullets" style={{ fontWeight: 600 }}>{d.productHooks.map((h, i) => <li key={i}>{h}</li>)}</ul>
           </div>
-          {d.watchouts.length > 0 && (
-            <div className="hc-card"><div className="hc-kv-label">Watch-outs</div><ul className="hc-bullets">{d.watchouts.map((w, i) => <li key={i}>{w}</li>)}</ul></div>
+          {(d.watchouts.length > 0 || (d.provenance && d.provenance.verify.length > 0)) && (
+            <div className="hc-card hc-stack">
+              {d.watchouts.length > 0 && <div><div className="hc-kv-label">Watch-outs</div><ul className="hc-bullets">{d.watchouts.map((w, i) => <li key={i}>{w}</li>)}</ul></div>}
+              {d.provenance && d.provenance.verify.length > 0 && <div><div className="hc-kv-label">Verify before acting</div><ul className="hc-bullets hc-small">{d.provenance.verify.map((w, i) => <li key={i}>{w}</li>)}</ul></div>}
+            </div>
           )}
         </div>
       )}

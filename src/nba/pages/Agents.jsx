@@ -55,6 +55,9 @@ export default function Agents({ preselect }) {
       <p className="hc-lede" style={{ marginTop: 18 }}>
         Eleven specialist agents each research one slice of a market on the live web and write a dossier. A strategist turns the dossiers into the Nike Basketball brief, two critics attack it — one fact-checks the dossiers and corrects them in place, one hunts for generic, stereotyped or unfounded recommendations — and an editor resolves every issue. {publishedCount} of 30 markets are published.
       </p>
+      <p className="hc-small hc-muted" style={{ marginTop: 12, maxWidth: "70ch" }}>
+        Two research modes, always labeled: <b style={{ color: "var(--text)" }}>Live-verified</b> dossiers were researched and checked on the web. <b style={{ color: "var(--text)" }}>Knowledge drafts</b> were written from the agents' own knowledge (current to mid-2026) when live search was unavailable; their time-sensitive claims sit in a verification queue on each market page until a live run confirms them.
+      </p>
 
       {/* Pipeline */}
       <section className="hc-section">

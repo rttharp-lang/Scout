@@ -26,6 +26,7 @@ export default function Overview() {
   const thisMonth = useMemo(() => markets.flatMap((m) => (m.calendar || []).filter((c) => c.month === now && c.priority === 1).map((c) => ({ ...c, m }))), [now]);
   const sources = markets.reduce((s, m) => s + (m.sources || 0), 0);
   const checks = markets.reduce((s, m) => s + (m.checks ? m.checks.checked : 0), 0);
+  const queued = markets.reduce((s, m) => s + (m.verification ? m.verification.queue : 0), 0);
 
   return (
     <div>
@@ -42,7 +43,9 @@ export default function Overview() {
             <div className="hc-stat"><b>{publishedCount}<span className="hc-muted" style={{ fontSize: "0.5em" }}>/30</span></b><span className="hc-small hc-muted">markets published</span></div>
             <div className="hc-stat"><b>{ALL_AGENTS.length}</b><span className="hc-small hc-muted">agents per market</span></div>
             <div className="hc-stat"><b>{sources.toLocaleString()}</b><span className="hc-small hc-muted">sources cited</span></div>
-            <div className="hc-stat"><b>{checks.toLocaleString()}</b><span className="hc-small hc-muted">claims fact-checked</span></div>
+            <div className="hc-stat"><b>{checks.toLocaleString()}</b><span className="hc-small hc-muted">claims audited by critics</span></div>
+            <div className="hc-stat"><b>{queued.toLocaleString()}</b><span className="hc-small hc-muted">claims queued to verify live</span></div>
+            <div className="hc-stat"><b>{markets.filter((m) => m.verification && m.verification.knowledge === 0).length}</b><span className="hc-small hc-muted">markets fully live-verified</span></div>
           </div>
           <a href={href("agents")} className="hc-btn" style={{ display: "inline-block", marginTop: 22, textDecoration: "none" }}>How the agents work</a>
         </div>
@@ -107,7 +110,10 @@ function MarketCard({ m }) {
       <div className="hc-market-body">
         <div className="hc-row" style={{ justifyContent: "space-between" }}>
           <span className="hc-eyebrow">{t.abbr} · {t.division}</span>
-          {m.status !== "complete" && <Chip tone="line">Research pending</Chip>}
+          {m.status !== "complete" ? <Chip tone="line">Research pending</Chip>
+            : m.verification && m.verification.knowledge === 0 ? <Chip tone="pop">Live-verified</Chip>
+            : m.verification && m.verification.live > 0 ? <Chip tone="line" title={`${m.verification.live} of 11 dossiers verified on the live web`}>Partly verified</Chip>
+            : <Chip tone="line" title="Written from agent knowledge (to mid-2026) — verify before acting">Knowledge draft</Chip>}
         </div>
         <div>
           <h3 className="hc-market-city">{t.city}</h3>

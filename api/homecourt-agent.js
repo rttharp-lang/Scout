@@ -98,7 +98,7 @@ export default async function handler(req, res) {
       max_tokens: 16000,
       system,
       output_config: { effort: "low", format: { type: "json_schema", schema: apiSchema(schema) } },
-      messages: [{ role: "user", content: `COMPOSE PHASE. Produce your output for ${team.city} (team id "${team.id}"${LENS_IDS.includes(agentId) ? `, lens "${agentId}"` : ""}).${notes ? `\n\nYOUR RESEARCH NOTES:\n${String(notes).slice(0, 60000)}` : ""}${inputsBlock(body.inputs)}` }],
+      messages: [{ role: "user", content: `COMPOSE PHASE. Produce your output for ${team.city} (team id "${team.id}"${LENS_IDS.includes(agentId) ? `, lens "${agentId}"` : ""}). This is a live run: if you include provenance, set mode "live" and asOf "Live web, ${today}", and list in verify only claims your research could not confirm.${notes ? `\n\nYOUR RESEARCH NOTES:\n${String(notes).slice(0, 60000)}` : ""}${inputsBlock(body.inputs)}` }],
     });
     if (msg.stop_reason === "refusal") { res.status(422).json({ error: "refused" }); return; }
     if (msg.stop_reason === "max_tokens") { res.status(502).json({ error: "truncated" }); return; }

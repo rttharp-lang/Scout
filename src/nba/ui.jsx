@@ -44,6 +44,7 @@ export function Header({ route }) {
         {link(href(), "Markets", section === "" || section === "m")}
         {link(href("opportunities"), "Opportunities", section === "opportunities")}
         {link(href("calendar"), "Calendar", section === "calendar")}
+        {link(href("compare"), "Compare", section === "compare")}
         {link(href("agents"), "Agents", section === "agents")}
         <a href="/">Scout ↗</a>
       </nav>
@@ -105,6 +106,14 @@ export function MonthStrip({ months }) {
 }
 
 export const Priority = ({ p }) => <span className="hc-priority" data-p={p}>P{p}</span>;
+
+// Live-verified vs written from agent knowledge (see agents/provenance.js).
+export function Provenance({ of }) {
+  const knowledge = of && of.provenance && of.provenance.mode === "knowledge";
+  return knowledge
+    ? <Chip tone="line" title="Written from agent knowledge (to mid-2026) — verify time-sensitive claims before acting">Knowledge draft</Chip>
+    : <Chip tone="pop" title="Researched and verified on the live web">Live-verified</Chip>;
+}
 
 export function Confidence({ level }) {
   const tone = { high: "ink", medium: "line", low: "line" }[level] || "line";

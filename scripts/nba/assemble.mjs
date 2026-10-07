@@ -8,9 +8,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { TEAMS } from "../../src/nba/teams.js";
 import { LENS_IDS } from "../../src/nba/agents/roster.js";
-import { validateFile } from "./validate.mjs";
-import { check } from "../../src/nba/agents/jsonschema.js";
-import { LEAGUE_SCHEMA } from "../../src/nba/agents/roster.js";
+import { validateFile, validateLeague } from "./validate.mjs";
+import { verificationOf } from "../../src/nba/agents/provenance.js";
 
 const here = path.dirname(new URL(import.meta.url).pathname);
 const RESEARCH = path.resolve(here, "../../research/nba");
@@ -25,9 +24,9 @@ const problems = [];
 const leagueFile = path.join(RESEARCH, "league.json");
 let league = null;
 if (fs.existsSync(leagueFile)) {
-  league = read(leagueFile);
-  const errs = check(LEAGUE_SCHEMA, league);
-  if (errs.length) { problems.push(`league: ${errs.slice(0, 5).join("; ")}`); league = null; }
+  const { errors } = validateLeague();
+  if (errors.length) problems.push(`league: ${errors.slice(0, 5).join("; ")}`);
+  else league = read(leagueFile);
 }
 const calibrated = Object.fromEntries((league ? league.scores : []).map((s) => [s.team, s]));
 function scorecardFor(id, own) {
@@ -53,6 +52,7 @@ for (const t of TEAMS) {
   const review = { factcheck: optional("factcheck"), critique: optional("critique") };
   const updated = fs.statSync(path.join(dir, "strategy.json")).mtime.toISOString().slice(0, 10);
 
+  const verification = verificationOf({ dossiers, strategy, review });
   fs.writeFileSync(path.join(OUT, "markets", `${t.id}.json`), JSON.stringify({ id: t.id, updated, strategy, dossiers, review }));
 
   const rhythm = dossiers.rhythm.extra.months;
@@ -71,6 +71,7 @@ for (const t of TEAMS) {
     calendar: strategy.calendar.map((c) => ({ month: c.month, window: c.window, moment: c.moment, play: c.play, products: c.products, priority: c.priority })),
     rhythm: rhythm.map((m) => ({ intensity: m.intensity, phase: m.phase })),
     sources: sources.size,
+    verification: { live: verification.live.length, knowledge: verification.knowledge.length, briefMode: verification.briefMode, queue: verification.queue.length },
     checks: { checked: review.factcheck ? review.factcheck.checked : 0, corrected: verdicts.filter((v) => v.verdict === "corrected").length, removed: verdicts.filter((v) => v.verdict === "removed").length },
   });
 }

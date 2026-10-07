@@ -32,6 +32,7 @@ async function main() {
       ["overview", "#/", /Home\s*Court/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
+      ["compare", "#/compare", /Compare\s*markets/i],
       ["agents", "#/agents", /Fifteen agents/i],
       ...(market ? [["market", `#/m/${market}`, /Opportunities[\s\S]*Product[\s\S]*Agent review/i]] : []),
       ["pending-or-unknown", "#/m/zzz", /Unknown market/i],
