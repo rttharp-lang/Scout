@@ -1,7 +1,9 @@
 // Mascot Lab — Studio logo panel: the logo on a checkerboard, upload, background
 // removal (toggle, tolerance, hold-to-compare), team name and team colors, samples.
+// Desktop: a sticky sidebar of quiet groups split by hairlines. Tablet and phone
+// (`collapsible`): a team bar (logo, name, colors, Upload) that opens the same groups.
 import React, { useEffect, useId, useMemo, useRef, useState } from "react";
-import { ArrowUpDown, ChevronDown, Eye, RotateCcw, Upload } from "lucide-react";
+import { ArrowUpDown, Check, ChevronDown, Eye, RotateCcw, Upload } from "lucide-react";
 import {
   Button, CanvasImage, ColorField, Field, IconButton, Input, Notice, Slider, SpecLabel, Spinner, Toggle, cx, inkFor,
 } from "../components/index.js";
@@ -116,7 +118,7 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
             aria-controls={bodyId}
             onClick={() => setOpen((o) => !o)}
           >
-            <span className="st-logo__thumb ml-stage--checker" aria-hidden="true">
+            <span className="st-logo__thumb" aria-hidden="true">
               {logo.canvas ? <CanvasImage canvas={logo.canvas} ratio={1} padding={0.06} alt="" /> : <Spinner />}
             </span>
             <span className="st-logo__sumtext">
@@ -127,11 +129,11 @@ export function LogoPanel({ state, actions, logo, upload, collapsible = false, o
                   <i style={{ background: state.palette.secondary }} />
                   <i style={{ background: state.palette.accent }} />
                 </span>
-                {isSample ? <span className="st-tag">Sample logo</span> : <span className="st-logo__fname">{state.logo.name}</span>}
+                {isSample ? <SpecLabel variant="box" className="st-tag">Sample logo</SpecLabel> : <span className="st-logo__fname">{state.logo.name}</span>}
               </span>
             </span>
             <span className="st-logo__edit">
-              <span>{open ? "Done" : "Edit"}</span>
+              <span>{open ? "Done" : "Edit logo"}</span>
               <ChevronDown aria-hidden="true" />
             </span>
           </button>
@@ -202,10 +204,10 @@ function LogoCard({ state, actions, logo, upload, isSample, sample, onToast, nam
   };
 
   return (
-    <div className="st-card st-logocard">
-      <div className="st-card__head">
-        <SpecLabel>Logo</SpecLabel>
-        {isSample && <span className="st-tag">Sample logo</span>}
+    <div className="st-group st-logocard">
+      <div className="ml-panel__head">
+        <span className="ml-panel__title">Logo</span>
+        {isSample && <SpecLabel variant="box" className="st-tag">Sample logo</SpecLabel>}
       </div>
       <div className={cx("st-logocard__preview", "ml-stage--checker", showOriginal && "is-original")}>
         <CanvasImage
@@ -220,14 +222,14 @@ function LogoCard({ state, actions, logo, upload, isSample, sample, onToast, nam
       </div>
       <div className="st-logocard__file">
         <span className="st-logocard__name" title={state.logo.name}>{isSample ? sample?.name || state.logo.name : state.logo.name || "Your logo"}</span>
-        {!isSample && size && <span className="st-logocard__size">{size}</span>}
+        {!isSample && size && <span className="t-meta st-logocard__size">{size}</span>}
       </div>
       {namePrompt}
       <div className="st-logocard__upload">
         <Button block variant={isSample ? "primary" : "secondary"} icon={<Upload aria-hidden="true" />} loading={upload.busy} onClick={upload.openPicker}>
           {isSample ? "Upload your logo" : "Replace logo"}
         </Button>
-        <p className="st-hint">PNG, JPG, SVG or WebP up to 15 MB.<span className="st-hint__more"> You can also drop a file anywhere on this page or paste an image.</span></p>
+        <p className="st-hint">PNG, JPG, SVG or WebP up to 15 MB.<span className="st-hint__more"> Or drop a file anywhere on this page, or paste an image.</span></p>
       </div>
       {upload.error && (
         <Notice tone="danger" title="That file didn't work" onDismiss={upload.clearError}>{upload.error}</Notice>
@@ -355,8 +357,8 @@ function NamePrompt({ state, actions, onDone }) {
 
 function TeamNames({ state, actions }) {
   return (
-    <div className="st-card">
-      <div className="st-card__head"><SpecLabel>Team name</SpecLabel></div>
+    <div className="st-group st-teamnames">
+      <div className="ml-panel__head"><span className="ml-panel__title">Team name</span></div>
       <div className="st-names">
         <Field label="School">
           <Input
@@ -395,9 +397,9 @@ function TeamColors({ state, actions, logo, sample }) {
   const activeField = ROLE_FIELDS.find((r) => r.role === active) || ROLE_FIELDS[0];
 
   return (
-    <div className="st-card st-colors">
-      <div className="st-card__head">
-        <SpecLabel>Team colors</SpecLabel>
+    <div className="st-group st-colors">
+      <div className="ml-panel__head">
+        <span className="ml-panel__title">Team colors</span>
         <IconButton
           size="sm"
           label="Swap primary and secondary"
@@ -416,9 +418,11 @@ function TeamColors({ state, actions, logo, sample }) {
               aria-pressed={active === role}
               onClick={() => setActive(role)}
             >
-              <span className="st-role__chip" style={{ background: hex, "--chip-ink": inkFor(hex) }} aria-hidden="true" />
+              <span className="st-role__chip" style={{ background: hex, "--chip-ink": inkFor(hex) }} aria-hidden="true">
+                {active === role && <Check />}
+              </span>
               <span className="st-role__name">{label}</span>
-              <span className="st-role__hex">{hex}</span>
+              <span className="t-meta st-role__hex">{hex}</span>
             </button>
           );
         })}
@@ -453,8 +457,8 @@ function TeamColors({ state, actions, logo, sample }) {
 
 function Samples({ state, actions }) {
   return (
-    <div className="st-card st-samples">
-      <div className="st-card__head"><SpecLabel>No logo handy? Try a sample</SpecLabel></div>
+    <div className="st-group st-samples">
+      <div className="ml-panel__head"><span className="ml-panel__title">No logo handy? Try a sample</span></div>
       <div className="st-samples__row" role="group" aria-label="Sample logos">
         {SAMPLE_LOGOS.map((s) => {
           const on = state.logo.sampleId === s.id;
@@ -467,7 +471,7 @@ function Samples({ state, actions }) {
               title={s.blurb}
               onClick={() => actions.loadSample(s.id)}
             >
-              <span className="st-sample__img ml-stage--paper"><img src={s.url} alt="" /></span>
+              <span className="st-sample__img"><img src={s.url} alt="" /></span>
               <span className="st-sample__name">{s.name}</span>
             </button>
           );

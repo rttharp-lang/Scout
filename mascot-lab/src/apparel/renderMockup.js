@@ -1,7 +1,19 @@
-// Mascot Lab — garment mockup renderer.
+// Mascot Lab — garment mockup renderer (public API for every page).
 //
-// renderMockup(garment, viewId, opts) draws one view of a garment (a technical flat
-// on a 1000×1000 artboard) into a size×size canvas:
+// renderMockup(garment, viewId, opts) dispatches on the garment's format:
+//   · garment.format === "photo" → the painted-light engine in ./photo/ (studio-lit
+//     product render; see GARMENTS.md). This is the production path.
+//   · anything else              → the LEGACY vector renderer below (technical flats with
+//     outline strokes). Kept only until every garment is converted; delete everything
+//     from "LEGACY VECTOR RENDERER" down (and textures.js) once none is left.
+//
+// Both paths share one option set and return an HTMLCanvasElement (size × size):
+//   { size = 800, colors: { base, trim, accent }, graphics: Placement[], text,
+//     backdrop: null | "#hex" | "studio", shadow = true, detail = "full" | "fast", timings }
+// "studio" is a lit paper sweep (photo garments; legacy garments get a flat #ECEDEF).
+//
+// ─── LEGACY VECTOR RENDERER ───
+// Draws one view of a garment (a technical flat on a 1000×1000 artboard):
 //
 //   drop shadow → parts (filled by colour role) → graphics (clipped to printArea ∩
 //   silhouette) → lettering (Graduate, outline under fill) → parts marked `over`
@@ -31,10 +43,12 @@
 //   printArea is clipped with the even-odd rule, so an inner subpath cuts a hole.
 import "@fontsource/graduate/400.css";
 import { fabricPattern } from "./textures.js";
+import { renderPhoto, isPhotoGarment, photoViewBounds, clearLetteringMetrics } from "./photo/index.js";
 
 export const ARTBOARD = 1000;
 export const SAFE = 0.72;
 export const LETTERING_FONT = "Graduate";
+export { isPhotoGarment };
 
 /* ───────────────────────────── utilities ───────────────────────────── */
 
@@ -743,7 +757,7 @@ function drawText(ctx, cv, text, colors, k) {
 export function fontsReady() {
   try {
     if (!document.fonts?.load) return Promise.resolve();
-    return document.fonts.load(`400 120px "${LETTERING_FONT}"`).then(() => { metricCache.clear(); }, () => {});
+    return document.fonts.load(`400 120px "${LETTERING_FONT}"`).then(() => { metricCache.clear(); clearLetteringMetrics(); }, () => {});
   } catch { return Promise.resolve(); }
 }
 
@@ -963,6 +977,13 @@ export function renderMockup(garment, viewId, {
   detail = "full",
   timings = null,                      // optional {} → per-phase ms (dev/perf tooling)
 } = {}) {
+  if (isPhotoGarment(garment)) {
+    // painted-light engine: draws into a DOM canvas so every consumer (CanvasImage,
+    // toBlob exports, drawImage) gets the same element type as before
+    const target = makeCanvas(Math.max(16, Math.round(size)));
+    return renderPhoto(garment, viewId, { size, colors, graphics, text, backdrop, shadow, detail, timings, target });
+  }
+  if (backdrop === "studio") backdrop = "#ECEDEF";
   const now = () => (typeof performance !== "undefined" ? performance.now() : Date.now());
   let tPrev = now();
   const mark = (name) => { if (timings) { const t = now(); timings[name] = (timings[name] || 0) + (t - tPrev); tPrev = t; } };
@@ -1120,6 +1141,7 @@ function finishLayer(garment, cv, size, detail, mark) {
 
 /** Bounding box (artboard units) of a view's silhouette — handy for cropping thumbnails. */
 export function viewBounds(garment, viewId) {
+  if (isPhotoGarment(garment)) return photoViewBounds(garment, viewId);
   const cv = compileView(garment, viewId);
   return cv ? { ...cv.bounds } : null;
 }

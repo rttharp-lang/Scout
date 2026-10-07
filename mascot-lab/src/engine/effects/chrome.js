@@ -14,11 +14,12 @@
 //   2. shading at full S with the maps bilinearly sampled (crisp alpha from the source);
 //   3. transparent background, deterministic (seeded warp), team palette for "Team".
 import {
-  createCanvas, ctx2d, getPixels, resizeCanvas, blurMask, clamp, hexToRgb, rgbToHsl, hslToRgb,
-  nearestColorIndex, insideDistance, dilateMask, maskToCanvas, makeNoise2D, fbm, maskBounds,
-  normalsFromHeight, lerp,
+  createCanvas, ctx2d, getPixels, resizeCanvas, hexToRgb, hslToRgb, maskToCanvas, makeNoise2D, fbm, lerp,
 } from "../core.js";
-import { extractPalette } from "../image.js";
+import {
+  envLUT, teamTint, analyseRelief, pixelHash, drawGlints, norm3, V_MIN, V_MAX, LUT_N, valueNoise,
+  microScratches,
+} from "../fx/light.js";
 
 /* ───────────────────────────── environments ───────────────────────────── */
 
@@ -40,197 +41,25 @@ const ENV = {
     sky: [[0.004, "#A7B1BF"], [0.06, "#DDE3EB"], [0.2, "#8E98A6"], [0.45, "#454C58"], [0.85, "#262B34"], [1.25, "#1A1E25"]],
     spec: "#FFFFFF", rim: "#B8CCE6", lo: 0.32,
   },
+  // Purple chrome (Kuro / Pixelbuddha): violet sky over a deep plum ground, white spec
+  purple: {
+    ground: [[-1.25, "#1A0B2E"], [-0.8, "#3E1F73"], [-0.5, "#9C7AD8"], [-0.36, "#B9A0E8"], [-0.2, "#4A2A86"], [-0.07, "#160A28"], [-0.004, "#08040F"]],
+    sky: [[0.004, "#D9C8FF"], [0.06, "#FFFFFF"], [0.22, "#E9D8FF"], [0.5, "#A57CF0"], [0.85, "#7B3FE4"], [1.25, "#4A2399"]],
+    spec: "#FFFFFF", rim: "#D8C2FF", lo: 0.22, ink: "#0B0414",
+  },
+  // rose gold: blush sky, copper-brown ground
+  rose: {
+    ground: [[-1.25, "#3B1F1A"], [-0.8, "#7A4645"], [-0.5, "#C99A92"], [-0.36, "#DDB3A8"], [-0.2, "#86504F"], [-0.07, "#2A1512"], [-0.004, "#120807"]],
+    sky: [[0.004, "#F2CFC2"], [0.06, "#FFF6F1"], [0.22, "#F7D7C9"], [0.5, "#D69A98"], [0.85, "#B76E79"], [1.25, "#8A4A55"]],
+    spec: "#FFF4EE", rim: "#FFD6CC", lo: 0.24, ink: "#140806",
+  },
+  // gunmetal: blue-grey steel, cool spec
+  gunmetal: {
+    ground: [[-1.25, "#0E1114"], [-0.8, "#262D35"], [-0.5, "#5D6874"], [-0.36, "#77838F"], [-0.2, "#2C343C"], [-0.07, "#0D1013"], [-0.004, "#050607"]],
+    sky: [[0.004, "#AEB9C4"], [0.06, "#E3EAF0"], [0.22, "#C9D2DA"], [0.5, "#7D8995"], [0.85, "#4A5560"], [1.25, "#2E363F"]],
+    spec: "#DCE8F5", rim: "#9FB6CF", lo: 0.28,
+  },
 };
-const V_MIN = -1.25, V_MAX = 1.25, LUT_N = 2048;
-
-/**
- * Environment LUT (LUT_N × RGB floats 0–255) over v ∈ [V_MIN, V_MAX]. `aa` = horizon ramp
- * width in v units (≈ 1.5 output px), `contrast` 0–1 pushes tones away from mid grey,
- * `tint` = [h, s] team hue colorized in at `tintAmt` (anodized / candy metal).
- */
-function envLUT(env, aa, contrast, tint, tintAmt, skyOnly) {
-  const stops = [...env.ground, ...env.sky].map(([v, c]) => [v, hexToRgb(c)]);
-  const lut = new Float32Array(LUT_N * 3);
-  const span = V_MAX - V_MIN;
-  const g = 0.85 + 0.5 * contrast;  // tone spread around mid grey
-  for (let i = 0; i < LUT_N; i++) {
-    const v = V_MIN + (span * i) / (LUT_N - 1);
-    // horizon ramp: widen the 0.004 gap to the AA width
-    let k = 0;
-    while (k < stops.length - 2 && stops[k + 1][0] <= v) k++;
-    let [va, A] = stops[k], [vb, B] = stops[k + 1];
-    if (va < 0 && vb > 0) { va = -aa * 0.5; vb = aa * 0.5; }
-    const t = clamp((v - va) / (vb - va || 1));
-    let r = lerp(A[0], B[0], t), gg = lerp(A[1], B[1], t), b = lerp(A[2], B[2], t);
-    if (tint && tintAmt > 0 && (!skyOnly || v > 0.1)) {
-      const l = (0.299 * r + 0.587 * gg + 0.114 * b) / 255;
-      // colorize: team hue at the metal's lightness; whites stay white-hot
-      const c = hslToRgb(tint[0], Math.min(1, tint[1] * 1.05 + 0.15), clamp(l * 0.96));
-      const ta = skyOnly ? tintAmt * clamp((v - 0.1) / 0.3) : tintAmt;
-      r = lerp(r, c[0], ta); gg = lerp(gg, c[1], ta); b = lerp(b, c[2], ta);
-    }
-    // contrast around mid grey (keeps hue)
-    const l = (0.299 * r + 0.587 * gg + 0.114 * b);
-    const nl = clamp(128 + (l - 128) * g, 0, 255);
-    const f = l > 0.5 ? nl / l : 1;
-    lut[i * 3] = clamp(r * f, 0, 255); lut[i * 3 + 1] = clamp(gg * f, 0, 255); lut[i * 3 + 2] = clamp(b * f, 0, 255);
-  }
-  return lut;
-}
-
-/** The team hue to tint with: primary, or secondary when primary is a neutral (black/white/grey). */
-function teamTint(palette) {
-  for (const hex of [palette?.primary, palette?.secondary]) {
-    if (!hex) continue;
-    const [h, s, l] = rgbToHsl(hexToRgb(hex));
-    if (s > 0.18 && l > 0.08 && l < 0.92) return [h, s];
-  }
-  return null;
-}
-
-/* ───────────────────────────── analysis ───────────────────────────── */
-
-/**
- * Palette label per pixel (−1 = transparent) with 1-px anti-aliasing slivers folded into
- * the neighbouring region (a grey AA pixel between black and white must not become its
- * own "navy" region with its own bevel).
- */
-function labelMap(data, D, palRGB) {
-  const n = D * D;
-  const lab = new Int8Array(n);
-  const cache = new Int16Array(32768).fill(-1);
-  for (let i = 0, j = 0; i < n; i++, j += 4) {
-    if (data[j + 3] < 128) { lab[i] = -1; continue; }
-    const r = data[j], g = data[j + 1], b = data[j + 2];
-    const key = ((r >> 3) << 10) | ((g >> 3) << 5) | (b >> 3);
-    let k = cache[key];
-    if (k < 0) k = cache[key] = nearestColorIndex(r, g, b, palRGB);
-    lab[i] = k;
-  }
-  // majority clean-up of thin slivers (2 passes)
-  const out = new Int8Array(lab);
-  const cnt = new Int16Array(16);
-  for (let pass = 0; pass < 2; pass++) {
-    const srcL = pass ? out.slice() : lab;
-    for (let y = 1; y < D - 1; y++) {
-      for (let x = 1; x < D - 1; x++) {
-        const i = y * D + x, l = srcL[i];
-        if (l < 0) continue;
-        if (srcL[i - 1] === l && srcL[i + 1] === l && srcL[i - D] === l && srcL[i + D] === l) continue;
-        cnt.fill(0);
-        let own = 0;
-        for (let oy = -1; oy <= 1; oy++) {
-          for (let ox = -1; ox <= 1; ox++) {
-            const q = srcL[i + oy * D + ox];
-            if (q === l) own++;
-            else if (q >= 0) cnt[q]++;
-          }
-        }
-        if (own > 3) continue;
-        let best = -1, bc = 0;
-        for (let q = 0; q < 16; q++) if (cnt[q] > bc) { bc = cnt[q]; best = q; }
-        if (best >= 0 && bc >= 3) out[i] = best;
-      }
-    }
-  }
-  return out;
-}
-
-/** Distance (px) of every opaque pixel to the edge of its own color region. */
-function regionDistance(label, D) {
-  const n = D * D;
-  const interior = new Float32Array(n);
-  for (let y = 0; y < D; y++) {
-    for (let x = 0; x < D; x++) {
-      const i = y * D + x, l = label[i];
-      if (l < 0) continue;
-      if (x > 0 && label[i - 1] !== l) continue;
-      if (x < D - 1 && label[i + 1] !== l) continue;
-      if (y > 0 && label[i - D] !== l) continue;
-      if (y < D - 1 && label[i + D] !== l) continue;
-      interior[i] = 1;
-    }
-  }
-  const d = insideDistance(interior, D, D);
-  for (let i = 0; i < n; i++) if (label[i] >= 0) d[i] += 0.5;
-  return d;
-}
-
-const circ = (t) => { const u = 1 - (t < 0 ? 0 : t > 1 ? 1 : t); return Math.sqrt(1 - u * u); };
-
-/**
- * Colour-independent analysis at D: palette regions, distance fields → height → detail
- * normals + the calm reflection normals, and the outline mask. Depends on the source
- * pixels, S, bevel and smoothness only, so finish / contrast / horizon / tint changes
- * re-shade without redoing it (one-entry memo).
- */
-function analyse(srcD, data0, S, D, sc, bevelP, smooth) {
-  const n = D * D;
-  const dataD = data0;
-  const small = resizeCanvas(srcD, Math.min(D, 192), Math.min(D, 192));
-  const pal = extractPalette(small, 7, { maxSamples: 6000 }).filter((c) => c.weight > 0.006);
-  const palRGB = (pal.length ? pal : [{ hex: "#808080" }]).map((c) => hexToRgb(c.hex));
-  const label = labelMap(dataD, D, palRGB);
-  const alpha = new Float32Array(n);
-  const lum = new Float32Array(n);
-  for (let i = 0, j = 0; i < n; i++, j += 4) {
-    alpha[i] = dataD[j + 3] / 255;
-    lum[i] = (0.299 * dataD[j] + 0.587 * dataD[j + 1] + 0.114 * dataD[j + 2]) / 255;
-  }
-  const b = maskBounds(alpha, D, D, 0.5);
-  if (b.empty) return null;
-
-  const bevel = Math.max(1.5, bevelP * sc);
-  const inner = Math.max(1.2, bevel * 0.42);
-  let dOut = insideDistance(alpha, D, D, 0.5);
-  // line art (nothing thicker than a hairline) is inflated to a minimum stroke so the
-  // metal has a body to reflect in; its alpha then comes from the inflated mask
-  let opaque = 0, thick = 0;
-  for (let i = 0; i < n; i++) if (alpha[i] >= 0.5) { opaque++; if (dOut[i] > 4 * sc) thick++; }
-  const lineArt = opaque > 0 && thick < opaque * 0.12;
-  let alphaS = null;
-  if (lineArt) {
-    const grown = dilateMask(alpha, D, D, Math.max(1, 3.4 * sc));
-    alpha.set(grown);
-    for (let i = 0; i < n; i++) { lum[i] = 1; label[i] = alpha[i] >= 0.5 ? 0 : -1; }
-    dOut = insideDistance(alpha, D, D, 0.5);
-    alphaS = upsampleAlpha(alpha, D, S);
-  }
-  const dReg = regionDistance(label, D);
-  const lumS = blurMask(lum, D, D, Math.max(0.6, 1.2 * sc));
-  const ampR = 0.4 - 0.16 * smooth;          // interior relief, softer when smoother
-  let H = new Float32Array(n);
-  for (let i = 0; i < n; i++) {
-    if (dOut[i] <= 0) continue;
-    const ho = circ((dOut[i] - 0.5) / bevel);
-    const hr = circ(dReg[i] / inner);
-    H[i] = ho * (0.36 + ampR * hr + 0.3 * lumS[i]);
-  }
-  H = blurMask(H, D, D, Math.max(0.7, bevel * (0.03 + 0.14 * smooth)));
-  for (let i = 0; i < n; i++) H[i] *= alpha[i] > 0 ? 1 : 0;
-  const { nx, ny, nz } = normalsFromHeight(H, D, D, bevel * 1.25);
-  // what the metal REFLECTS follows a calmer surface: the detail height blurred (small
-  // features only ripple the horizon instead of shattering it) plus a broad dome over
-  // the whole body, so big flat faces sweep through the sky gradient like poured metal
-  const spanD = Math.max(8, Math.max(b.x1 - b.x0, b.y1 - b.y0));
-  const domeR = Math.max(bevel * 2.5, spanD * 0.16);
-  const HV = blurMask(H, D, D, Math.max(0.8, bevel * 0.32));
-  for (let i = 0; i < n; i++) if (dOut[i] > 0) HV[i] += 0.45 * circ((dOut[i] - 0.5) / domeR) * (bevel / domeR) * 2.2;
-  const nv = normalsFromHeight(HV, D, D, bevel * 1.25);
-  const nvy = nv.ny, nvz = nv.nz;
-
-  const ol = dilateMask(alpha, D, D, Math.max(0.8, 3.5 * sc));
-  return { b, alphaS, nx, ny, nz, nvy, nvz, spanD, ol };
-}
-
-/** FNV-1a over the RGBA words: a cheap content key for the analysis memo. */
-function pixelHash(data) {
-  const u = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >> 2);
-  let h = 0x811c9dc5;
-  for (let i = 0; i < u.length; i++) h = Math.imul(h ^ u[i], 0x01000193);
-  return (h >>> 0).toString(36) + ":" + u.length;
-}
-
 let memo = null;   // { key, a } — last analysis (one entry: the logo being tuned)
 
 /* ───────────────────────────── effect ───────────────────────────── */
@@ -250,6 +79,9 @@ export default {
         { value: "gold", label: "Gold" },
         { value: "team", label: "Team" },
         { value: "black", label: "Black chrome" },
+        { value: "purple", label: "Purple" },
+        { value: "rose", label: "Rose gold" },
+        { value: "gunmetal", label: "Gunmetal" },
       ],
     },
     { key: "bevel", label: "Bevel", type: "range", min: 8, max: 64, step: 1, default: 26, unit: "px" },
@@ -257,12 +89,15 @@ export default {
     { key: "contrast", label: "Contrast", type: "range", min: 0, max: 100, step: 1, default: 60, unit: "%" },
     { key: "horizon", label: "Horizon", type: "range", min: 20, max: 80, step: 1, default: 52, unit: "%" },
     { key: "tint", label: "Team tint", type: "range", min: 0, max: 100, step: 1, default: 0, unit: "%" },
+    { key: "grain", label: "Grain", type: "range", min: 0, max: 100, step: 1, default: 0, unit: "%" },
   ],
   presets: [
     { name: "Liquid silver", params: { finish: "silver", bevel: 26, smooth: 45, contrast: 60, horizon: 52, tint: 0 } },
     { name: "Gold", params: { finish: "gold", bevel: 26, smooth: 45, contrast: 58, horizon: 50, tint: 0 } },
     { name: "Team chrome", params: { finish: "team", bevel: 28, smooth: 50, contrast: 62, horizon: 50, tint: 60 } },
     { name: "Black chrome", params: { finish: "black", bevel: 24, smooth: 40, contrast: 70, horizon: 48, tint: 0 } },
+    { name: "Purple chrome", params: { finish: "purple", bevel: 26, smooth: 50, contrast: 62, horizon: 50, tint: 0, grain: 0 } },
+    { name: "Mercury grain", params: { finish: "silver", bevel: 44, smooth: 72, contrast: 58, horizon: 52, tint: 0, grain: 45 } },
   ],
 
   render(src, p, ctx) {
@@ -276,7 +111,7 @@ export default {
     const srcD = D === S ? src : resizeCanvas(src, D, D);
     const data0 = getPixels(srcD).data;
     const key = `${S}|${D}|${p.bevel}|${p.smooth}|${pixelHash(data0)}`;
-    if (!memo || memo.key !== key) memo = { key, a: analyse(srcD, data0, S, D, sc, p.bevel, smooth) };
+    if (!memo || memo.key !== key) memo = { key, a: analyseRelief(srcD, data0, S, D, sc, p.bevel, smooth) };
     const A = memo.a;
     if (!A) return createCanvas(S, S);
     const { b, alphaS, nx, ny, nz, nvy, nvz, spanD, ol } = A;
@@ -310,6 +145,10 @@ export default {
     const lutK = (LUT_N - 1) / (V_MAX - V_MIN);
     const detail = 0.55 + 0.3 * contrast;
     const lo = env.lo;
+    // Mercury grain: fine two-octave value noise (cells ≈ 1.6 and 4.5 units), multiplicative
+    const grainK = (p.grain || 0) / 100;
+    const gi1 = 1 / Math.max(0.8, 1.6 * ctx.scale), gi2 = 1 / Math.max(1.6, 4.5 * ctx.scale);
+    const gSeed = (ctx.seed | 0) * 7919 + 101;
     // key light (top-left, toward the viewer) and a broad top softbox
     const L1 = norm3(-0.42, -0.72, 0.55), L2 = norm3(0.15, -0.95, 0.3);
     const specK = 1.05 + 0.5 * contrast;
@@ -406,6 +245,11 @@ export default {
         r += spec * specRGB[0] + rimF * rimC[0];
         g += spec * specRGB[1] + rimF * rimC[1];
         bb += spec * specRGB[2] + rimF * rimC[2];
+        if (grainK > 0) {
+          const gN = (valueNoise(x * gi1, y * gi1, gSeed) - 0.5) * 0.7 + (valueNoise(x * gi2, y * gi2, gSeed + 17) - 0.5) * 0.45;
+          const gf = 1 + gN * grainK * 0.62;
+          r *= gf; g *= gf; bb *= gf;
+        }
         od[j] = r > 255 ? 255 : r;
         od[j + 1] = g > 255 ? 255 : g;
         od[j + 2] = bb > 255 ? 255 : bb;
@@ -414,9 +258,10 @@ export default {
     }
     const metal = createCanvas(S, S);
     ctx2d(metal).putImageData(img, 0, 0);
+    if (grainK > 0) microScratches(ctx2d(metal), { x0: b.x0 / kD, y0: b.y0 / kD, x1: b.x1 / kD, y1: b.y1 / kD }, ctx.scale, gSeed + 3, grainK);
 
     /* thin dark outline under the metal */
-    const olC = maskToCanvas(ol, D, D, p.finish === "gold" ? "#140B03" : "#07080B");
+    const olC = maskToCanvas(ol, D, D, p.finish === "gold" ? "#140B03" : env.ink || "#07080B");
     o.imageSmoothingEnabled = true;
     o.imageSmoothingQuality = "high";
     o.drawImage(olC, 0, 0, S, S);
@@ -425,58 +270,3 @@ export default {
     return out;
   },
 };
-
-/** D×D float mask → S×S Uint8 alpha (smooth upscale). */
-function upsampleAlpha(mask, D, S) {
-  const n = S * S;
-  const out = new Uint8Array(n);
-  if (D === S) {
-    for (let i = 0; i < n; i++) out[i] = mask[i] * 255 + 0.5;
-    return out;
-  }
-  const c = createCanvas(S, S);
-  const x = ctx2d(c);
-  x.imageSmoothingEnabled = true;
-  x.imageSmoothingQuality = "high";
-  x.drawImage(maskToCanvas(mask, D, D), 0, 0, S, S);
-  const d = getPixels(c).data;
-  for (let i = 0, j = 3; i < n; i++, j += 4) out[i] = d[j];
-  return out;
-}
-
-/** Up to three 4-point star flares on the strongest, well separated specular peaks. */
-function drawGlints(o, val, pos, S, span, rgb) {
-  const order = Array.from(val.keys()).filter((c) => val[c] > 0.75).sort((a, b) => val[b] - val[a] || a - b);
-  const picks = [];
-  for (const c of order) {
-    const x = (pos[c] % S) + 0.5, y = Math.floor(pos[c] / S) + 0.5;
-    if (picks.every((q) => Math.hypot(q[0] - x, q[1] - y) > span * 0.3)) picks.push([x, y]);
-    if (picks.length >= 3) break;
-  }
-  const col = `${rgb[0] | 0},${rgb[1] | 0},${rgb[2] | 0}`;
-  o.save();
-  picks.forEach(([x, y], k) => {
-    const R = span * (k === 0 ? 0.075 : 0.05);
-    const glow = o.createRadialGradient(x, y, 0, x, y, R * 0.45);
-    glow.addColorStop(0, `rgba(${col},0.95)`);
-    glow.addColorStop(0.25, `rgba(${col},0.45)`);
-    glow.addColorStop(1, `rgba(${col},0)`);
-    o.fillStyle = glow;
-    o.beginPath(); o.arc(x, y, R * 0.45, 0, Math.PI * 2); o.fill();
-    o.fillStyle = `rgba(${col},0.95)`;
-    for (const [dx, dy, len] of [[1, 0, 1], [0, 1, 0.8]]) {
-      const w = R * 0.045;
-      o.beginPath();
-      o.moveTo(x - dx * R * len, y - dy * R * len);
-      o.quadraticCurveTo(x + dy * w, y + dx * w, x + dx * R * len, y + dy * R * len);
-      o.quadraticCurveTo(x - dy * w, y - dx * w, x - dx * R * len, y - dy * R * len);
-      o.fill();
-    }
-  });
-  o.restore();
-}
-
-function norm3(x, y, z) {
-  const l = Math.hypot(x, y, z);
-  return [x / l, y / l, z / l];
-}

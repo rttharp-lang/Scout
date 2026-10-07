@@ -694,6 +694,7 @@ button.ml-swatch:hover .ml-swatch__chip { transform: scale(1.06); }
 .ml-wordmark--sm { --wm: 13px; }
 .ml-wordmark--lg { --wm: 22px; }
 .ml-wordmark--xl { --wm: 36px; }
+@media (max-width: 480px) { .ml-wordmark--xl { --wm: 26px; } } /* 36 px is ~390 px wide: too wide for a phone column */
 
 /* registration mark (retired: renders nothing) */
 .ml-reg { display: none; }

@@ -1,24 +1,26 @@
-// Mascot Lab — Studio inspector for the selected effect: big live preview with a
-// backdrop switch, presets, the effect's own controls (from its ParamSpec), shuffle
-// and reset, the look on the game jersey, Download PNG, and "Use this look".
+// Mascot Lab — Studio inspector for the selected look (DESIGN.md §4.7, the "Tune every
+// look" blueprint in harness/design.html): a large live preview on its studio tile with
+// glass controls over it (shuffle top-right, Artwork / On product bottom-left, backdrop
+// swatches bottom-right), the look's name and print method, presets as pills, the
+// effect's own controls (from its ParamSpec) with Reset, then Download PNG and the
+// page's one forward action, "Use this look".
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowRight, Download, RotateCcw, Shuffle } from "lucide-react";
+import { ArrowRight, Check, Download, Heart, Shuffle } from "lucide-react";
 import {
-  Button, CanvasImage, Chip, ChipRow, ColorField, IconButton, Segmented, Select, Skeleton, Slider, SpecLabel, Spinner, Toggle, cx,
-  navigate,
+  Button, CanvasImage, Chip, ChipRow, ColorField, IconButton, Segmented, Select, Skeleton, Slider, Spinner, Toggle, cx,
+  inkFor, navigate,
 } from "../components/index.js";
-import { CATEGORIES } from "../../engine/effects/index.js";
 import { canvasToBlob, defaultParams, renderEffect, resolveParams } from "../../engine/render.js";
+import { luminance } from "../../engine/core.js";
 import { saveFile } from "../../platform/files.js";
 import { teamLabel } from "../../order/team.js";
 import { CANT_SAVE_BODY, CANT_SAVE_TITLE, cantSaveHere, saveError } from "../pages/saveNotice.js";
-import { stageStyle } from "./Gallery.jsx";
+import { catLabel, stageStyle } from "./Gallery.jsx";
 import { holdProps, isAbort, renderKey, scheduler, useDraftRender, useEffectRender, useHeld } from "./renderKit.js";
 
 export const INSPECTOR_SIZE = 1024;
-const pad2 = (n) => String(n).padStart(2, "0");
-const catLabel = (id) => CATEGORIES.find((c) => c.id === id)?.label || "Effect";
 const slug = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+const DEFAULT_SEED = 7;
 
 /**
  * useInspectorRender(effect, state, logo) → the 1024 "final" render, with stand-ins
@@ -54,17 +56,37 @@ function presetMatches(effect, preset, params, palette) {
   return Object.keys(a).every((k) => a[k] === b[k]);
 }
 
+const isDirty = (state) => Object.keys(state.effect.params || {}).length > 0 || state.effect.seed !== DEFAULT_SEED;
+
+function nextSeed(seed) {
+  const x = Math.imul((seed >>> 0) ^ 0x9e3779b9, 2654435761) >>> 0;
+  return (x % 99991) + 8;
+}
+
 /* ───────────────────────────── head ───────────────────────────── */
 
-export function InspectorHead({ effect, number, compact = false }) {
-  if (!effect) return <div className="st-insp__head"><Skeleton variant="text" lines={2} /></div>;
+export function InspectorHead({ effect, favorite = false, onToggleFavorite, compact = false }) {
+  if (!effect) return <div className="st-insp__head"><Skeleton variant="text" lines={3} /></div>;
+  if (compact) {
+    return effect.blurb ? <div className="st-insp__head is-compact"><p className="st-insp__blurb">{effect.blurb}</p></div> : null;
+  }
   return (
-    <div className={cx("st-insp__head", compact && "is-compact")}>
-      <div className="st-insp__kicker">
-        <SpecLabel>FX {pad2(number)} · {catLabel(effect.category)}</SpecLabel>
-        {!compact && <SpecLabel variant="box">{effect.method}</SpecLabel>}
+    <div className="st-insp__head">
+      <div className="st-insp__titlerow">
+        <h2 className="t-title-3 st-insp__title">{effect.name}</h2>
+        {onToggleFavorite && (
+          <IconButton
+            size="sm"
+            className={cx("st-favbtn", favorite && "is-on")}
+            pressed={favorite}
+            label={favorite ? `Remove ${effect.name} from favorites` : `Add ${effect.name} to favorites`}
+            title={favorite ? "Remove from favorites" : "Add to favorites"}
+            icon={<Heart aria-hidden="true" />}
+            onClick={() => onToggleFavorite(effect.id)}
+          />
+        )}
       </div>
-      {!compact && <h2 className="st-insp__title">{effect.name}</h2>}
+      <p className="st-insp__meta">{catLabel(effect.category)} · {effect.method}</p>
       {effect.blurb && <p className="st-insp__blurb">{effect.blurb}</p>}
     </div>
   );
@@ -77,9 +99,9 @@ const VIEWS = [
   { value: "product", label: "On product", title: "The graphic printed on a piece from your collection" },
 ];
 
-/** The team color used for the "on team color" backdrop: the first of primary, dark,
- * secondary that differs clearly from the effect's own stage (so the swatches differ). */
-const STAGE_HEX = { paper: "#F1EFE9", dark: "#121418", mid: "#8D949E" };
+/** The team color for the "team color" backdrop: the first of primary, dark, secondary
+ * that differs clearly from the effect's own stage (so the swatches differ). */
+const STAGE_HEX = { paper: "#F1F1EE", dark: "#121316", mid: "#8A8F98" };
 const ROLE_LABEL = { primary: "Team primary", dark: "Team dark", secondary: "Team secondary" };
 function teamBackdrop(stage, palette) {
   const stageHex = stage === "team" ? palette.primary : STAGE_HEX[stage] || STAGE_HEX.paper;
@@ -90,81 +112,106 @@ function teamBackdrop(stage, palette) {
   }
   return { hex: palette.primary, name: ROLE_LABEL.primary };
 }
+const darkHex = (hex) => { try { return luminance(hex) < 0.28; } catch { return false; } };
 
-/** Backdrop picker: three swatches (the effect's stage, a team color, transparent). */
+/** Backdrop picker: three round swatches (the look's studio stage, a team color, transparent). */
 function BackdropPicker({ value, onChange, effect, palette }) {
   const stage = effect?.stage || "paper";
   const team = teamBackdrop(stage, palette);
-  const options = [
-    { value: "stage", name: "Studio backdrop", cls: `ml-stage--${stage}`, style: stageStyle(stage, palette) },
-    { value: "garment", name: `${team.name} color`, cls: "", style: { background: team.hex } },
-    { value: "checker", name: "Transparent, as the PNG downloads", cls: "ml-stage--checker", style: null },
-  ].map((o) => ({
+  const opts = [
+    { value: "stage", name: "Studio backdrop", cls: `ml-stage--${stage}`, style: stageStyle(stage, palette), ink: stage === "paper" ? "#0B0D10" : stage === "team" ? inkFor(palette.primary) : "#FFFFFF" },
+    { value: "garment", name: `${team.name} backdrop`, cls: "", style: { background: team.hex }, ink: inkFor(team.hex) },
+    { value: "checker", name: "Transparent, as the PNG downloads", cls: "ml-stage--checker", style: null, ink: "#0B0D10" },
+  ];
+  const options = opts.map((o) => ({
     value: o.value,
     title: o.name,
     label: null,
     icon: (
       <>
-        <span className={cx("st-bd__sw", o.cls)} style={o.style || undefined} aria-hidden="true" />
+        <span className={cx("st-bd__sw", o.cls)} style={{ ...(o.style || {}), "--sw-ink": o.ink }} aria-hidden="true">
+          {value === o.value && <Check />}
+        </span>
         <span className="sr-only">{o.name}</span>
       </>
     ),
   }));
-  return (
-    <div className="st-bd">
-      <span className="st-bd__k" aria-hidden="true">Backdrop</span>
-      <Segmented size="sm" label="Preview backdrop" className="st-bd__seg" options={options} value={value} onChange={onChange} />
-    </div>
-  );
+  return <Segmented size="sm" label="Preview backdrop" className="st-bd st-glass" options={options} value={value} onChange={onChange} />;
 }
 
 /**
- * InspectorStage — the big preview. view "art": the render on the chosen backdrop;
+ * InspectorStage — the big preview tile. view "art": the render on the chosen backdrop;
  * view "product": the render printed on one piece of the collection (mock from
- * useProductMockup). The bar under it switches both.
+ * useProductMockup). Controls sit in the tile's corners, over the backdrop.
  */
-export function InspectorStage({ effect, render, state, backdrop, onBackdrop, view = "art", onView, mock }) {
+export function InspectorStage({ effect, render, state, actions, backdrop, onBackdrop, view = "art", onView, mock }) {
   const product = view === "product" && !!mock?.available;
-  const garmentColor = teamBackdrop(effect?.stage || "paper", state.palette).hex;
-  const stage = !effect ? "surface" : product ? "surface" : backdrop === "checker" ? "checker" : backdrop === "garment" ? "none" : effect.stage;
-  const style = product ? null : backdrop === "garment" ? { background: garmentColor } : backdrop === "stage" && effect ? stageStyle(effect.stage, state.palette) : null;
+  const team = teamBackdrop(effect?.stage || "paper", state.palette);
+  let tileCls, style = null, onDark;
+  if (!effect) { tileCls = ""; onDark = false; }
+  else if (product) { tileCls = "ml-tile--product"; onDark = false; }
+  else if (backdrop === "checker") { tileCls = "ml-stage--checker"; onDark = false; }
+  else if (backdrop === "garment") { tileCls = ""; style = { background: team.hex }; onDark = darkHex(team.hex); }
+  else {
+    tileCls = `ml-tile--${effect.stage}`;
+    style = stageStyle(effect.stage, state.palette);
+    onDark = effect.stage === "dark" || effect.stage === "mid" || (effect.stage === "team" && darkHex(state.palette.primary));
+  }
   const rendering = render.status === "pending" || (!render.fresh && render.status !== "error");
   const shown = product ? mock.canvas : render.canvas;
   const busy = product ? (render.status !== "error" && (rendering || mock.pending)) : rendering;
   const busyLabel = product ? "Printing" : render.draft ? "Draft" : render.placeholder ? "Sharpening" : "Rendering";
-  const caption = product && mock.garmentName ? `${mock.garmentName} · ${mock.view}` : null;
+  const caption = product && mock.garmentName ? `${mock.garmentName} · ${mock.view === "back" ? "Back" : "Front"}` : null;
   return (
     <div className="st-insp__stagewrap">
-      <div className={cx("st-insp__stage", `ml-stage--${stage}`, product && "is-product")} style={style || undefined} aria-busy={busy || undefined}>
+      <div
+        className={cx("ml-tile ml-tile--hero st-stage", tileCls, product && "is-product", onDark ? "is-ondark" : "is-onlight")}
+        style={style || undefined}
+        aria-busy={busy || undefined}
+      >
         {render.status === "error" ? (
           <div className="st-insp__error" role="alert">
-            <SpecLabel variant="warning">Render failed</SpecLabel>
-            <p>{effect?.name || "This effect"} couldn't draw your logo with these settings.</p>
+            <p className="st-insp__error-title">Render failed</p>
+            <p>{effect?.name || "This look"} couldn't draw your logo with these settings.</p>
             <Button size="sm" variant="secondary" onClick={render.retry}>Try again</Button>
           </div>
         ) : (
-          <CanvasImage
-            canvas={shown}
-            ratio={1}
-            className="st-insp__canvas"
-            alt={!effect ? "Loading preview" : product ? `${effect.name} printed on the ${mock.garmentName || "garment"}, ${mock.view || "front"}` : `Your logo in ${effect.name}`}
-          />
+          <div className="ml-tile__media">
+            <CanvasImage
+              canvas={shown}
+              ratio={1}
+              className="st-insp__canvas"
+              alt={!effect ? "Loading preview" : product ? `${effect.name} printed on the ${mock.garmentName || "garment"}, ${mock.view || "front"}` : `Your logo in ${effect.name}`}
+            />
+          </div>
         )}
-        {busy && shown && (
-          <span className="st-insp__busy" aria-hidden="true"><Spinner /> {busyLabel}</span>
+        {(caption || (busy && effect)) && (
+          <div className="st-stage__tl">
+            {caption && <span className="st-pill st-glass">{caption}</span>}
+            {busy && effect && <span className="st-pill st-glass st-insp__busy" aria-hidden="true"><Spinner /> {busyLabel}</span>}
+          </div>
         )}
-        {caption && <span className="st-insp__caption">{caption}</span>}
-      </div>
-      <div className="st-insp__stagebar">
-        {mock?.available && onView ? (
-          <Segmented size="sm" mono label="Preview" className="st-insp__views" options={VIEWS} value={product ? "product" : "art"} onChange={onView} />
-        ) : <span />}
-        {!product && (
-          <BackdropPicker value={backdrop} onChange={onBackdrop} effect={effect} palette={state.palette} />
+        {effect && actions && !product && (
+          <div className="st-stage__tr">
+            <IconButton
+              variant="glass"
+              className="st-glass"
+              label="Shuffle"
+              title="Shuffle: same settings, a new random variation"
+              icon={<Shuffle aria-hidden="true" />}
+              onClick={() => actions.setEffectSeed(nextSeed(state.effect.seed))}
+            />
+          </div>
         )}
-        {product && mock.drop && (
-          <span className="st-insp__drop">{mock.drop.name} drop</span>
-        )}
+        <div className="st-stage__bar">
+          {mock?.available && onView ? (
+            <Segmented size="sm" label="Preview" className="st-views st-glass" options={VIEWS} value={product ? "product" : "art"} onChange={onView} />
+          ) : <span />}
+          {!product && effect && (
+            <BackdropPicker value={backdrop} onChange={onBackdrop} effect={effect} palette={state.palette} />
+          )}
+          {product && mock.drop && <span className="st-pill st-glass st-stage__drop">{mock.drop.name} drop</span>}
+        </div>
       </div>
     </div>
   );
@@ -180,25 +227,24 @@ export function InspectorControls({ effect, state, actions }) {
       </div>
     );
   }
-  const { params, seed } = state.effect;
+  const { params } = state.effect;
   const defaults = defaultParams(effect);
   const value = (spec) => (params[spec.key] !== undefined ? params[spec.key] : defaults[spec.key]);
   const resolved = resolveParams(effect, params, state.palette);
   const set = (key, v) => actions.setEffectParams({ [key]: v });
   const presets = effect.presets || [];
-  const dirty = Object.keys(params).length > 0 || seed !== 7;
+  const dirty = isDirty(state);
   const activePreset = presets.find((pr) => presetMatches(effect, pr, params, state.palette));
 
   return (
     <div className="st-insp__controls" {...holdProps}>
       {presets.length > 1 && (
-        <div className="st-insp__group">
-          <div className="st-insp__label"><SpecLabel>Presets</SpecLabel></div>
-          <ChipRow label="Presets">
+        <div className="st-group">
+          <div className="ml-panel__head"><span className="ml-panel__title" id="st-presets-h">Presets</span></div>
+          <ChipRow aria-labelledby="st-presets-h" className="st-presets">
             {presets.map((pr) => (
               <Chip
                 key={pr.name}
-                size="sm"
                 selected={activePreset === pr}
                 onClick={() => { actions.setEffectParams(null); actions.setEffectParams({ ...pr.params }); }}
               >
@@ -210,42 +256,26 @@ export function InspectorControls({ effect, state, actions }) {
       )}
 
       {effect.params.length > 0 && (
-        <div className="st-insp__group st-params">
-          <div className="st-insp__label"><SpecLabel>Adjust</SpecLabel></div>
+        <div className="st-group st-params">
+          <div className="ml-panel__head">
+            <span className="ml-panel__title">Adjust</span>
+            <Button
+              size="sm"
+              variant="ghost"
+              disabled={!dirty}
+              onClick={() => { actions.setEffectParams(null); actions.setEffectSeed(DEFAULT_SEED); }}
+              title="Back to the default look"
+            >
+              Reset
+            </Button>
+          </div>
           {effect.params.map((spec) => (
             <ParamControl key={spec.key} spec={spec} value={value(spec)} resolved={resolved[spec.key]} palette={state.palette} onChange={(v) => set(spec.key, v)} />
           ))}
         </div>
       )}
-
-      <div className="st-insp__tools">
-        <Button
-          size="sm"
-          variant="secondary"
-          icon={<Shuffle aria-hidden="true" />}
-          onClick={() => actions.setEffectSeed(nextSeed(seed))}
-          title="Same settings, new random variation"
-        >
-          Shuffle
-        </Button>
-        <Button
-          size="sm"
-          variant="ghost"
-          icon={<RotateCcw aria-hidden="true" />}
-          disabled={!dirty}
-          onClick={() => { actions.setEffectParams(null); actions.setEffectSeed(7); }}
-        >
-          Reset
-        </Button>
-        <SpecLabel className="st-insp__seed" k="Seed" v={String(seed).padStart(5, "0")} />
-      </div>
     </div>
   );
-}
-
-function nextSeed(seed) {
-  const x = Math.imul((seed >>> 0) ^ 0x9e3779b9, 2654435761) >>> 0;
-  return (x % 99991) + 8;
 }
 
 function ParamControl({ spec, value, resolved, palette, onChange }) {
@@ -266,7 +296,7 @@ function ParamControl({ spec, value, resolved, palette, onChange }) {
       return <ColorField label={spec.label} value={value} palette={palette} onChange={onChange} />;
     case "select": {
       const opts = spec.options || [];
-      if (opts.length <= 4) {
+      if (opts.length <= 3 || (opts.length === 4 && opts.every((o) => String(o.label).length <= 8))) {
         return (
           <div className="st-param">
             <span className="st-param__label" id={`p-${spec.key}`}>{spec.label}</span>
@@ -318,7 +348,7 @@ export function useDownload({ effect, state, logo, toast }) {
     } catch (e) {
       if (!isAbort(e)) {
         console.error("[studio] download failed:", e);
-        toast({ tone: "danger", title: "Couldn't build the full-size file", body: `${effect.name} failed at 2048 px. Try again, or pick another effect.` });
+        toast({ tone: "danger", title: "Couldn't build the full-size file", body: `${effect.name} failed at 2048 px. Try again, or pick another look.` });
       }
     } finally {
       t.release();
@@ -331,28 +361,19 @@ export function useDownload({ effect, state, logo, toast }) {
 export function InspectorActions({ effect, download, compact = false }) {
   return (
     <div className={cx("st-insp__actions", compact && "is-compact")}>
-      {compact ? (
-        <IconButton
-          size="lg"
-          variant="secondary"
-          label="Download PNG (2048 px, transparent)"
-          icon={download.busy ? <Spinner /> : <Download aria-hidden="true" />}
-          disabled={!effect || download.busy}
-          onClick={download.run}
-        />
-      ) : (
-        <Button
-          variant="secondary"
-          icon={<Download aria-hidden="true" />}
-          loading={download.busy}
-          disabled={!effect}
-          onClick={download.run}
-          aria-label="Download PNG, 2048 px, transparent"
-          title="Download a 2048 px PNG with a transparent background"
-        >
-          PNG
-        </Button>
-      )}
+      <Button
+        variant="secondary"
+        size="lg"
+        className="st-dl"
+        icon={<Download aria-hidden="true" />}
+        loading={download.busy}
+        disabled={!effect}
+        onClick={download.run}
+        aria-label="Download PNG, 2048 px, transparent"
+        title="Download a 2048 px PNG with a transparent background"
+      >
+        PNG
+      </Button>
       <Button
         variant="team"
         size="lg"
@@ -369,12 +390,12 @@ export function InspectorActions({ effect, download, compact = false }) {
 
 /* ───────────────────────────── composite (desktop / tablet column) ───────────────────────────── */
 
-export function Inspector({ effect, number, state, actions, render, mock, backdrop, onBackdrop, view, onView, download }) {
+export function Inspector({ effect, state, actions, render, mock, backdrop, onBackdrop, view, onView, download, onToggleFavorite }) {
   return (
-    <aside className="st-insp" id="st-insp" tabIndex={-1} aria-label={effect ? `${effect.name} settings` : "Selected effect"}>
-      <InspectorHead effect={effect} number={number} />
-      <InspectorStage effect={effect} render={render} state={state} backdrop={backdrop} onBackdrop={onBackdrop} view={view} onView={onView} mock={mock} />
+    <aside className="st-insp" id="st-insp" tabIndex={-1} aria-label={effect ? `${effect.name} settings` : "Selected look"}>
+      <InspectorStage effect={effect} render={render} state={state} actions={actions} backdrop={backdrop} onBackdrop={onBackdrop} view={view} onView={onView} mock={mock} />
       <div className="st-insp__scroll">
+        <InspectorHead effect={effect} favorite={!!effect && state.favorites.includes(effect.id)} onToggleFavorite={onToggleFavorite} />
         <InspectorControls effect={effect} state={state} actions={actions} />
       </div>
       <InspectorActions effect={effect} download={download} />

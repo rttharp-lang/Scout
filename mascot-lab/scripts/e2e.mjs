@@ -13,9 +13,9 @@
 //
 // The flow (each viewport, a fresh browser context = empty storage):
 //   #home hero renders → "Try it with the Bulldogs" → #studio gallery fills (≥ 20 tiles with
-//   pixels, no error tiles) → upload bulldog-on-white.jpg → background removed (transparent
-//   corners) → pick another effect, change a param → "Use this look" → #collection: all six
-//   garments render → switch drop style → line sheet PNG → "Order this collection" → #order:
+//   pixels, no error tiles; tiles render lazily, so the test scrolls through the gallery) →
+//   upload bulldog-on-white.jpg → background removed (transparent corners) → pick another
+//   effect, change a param → "Use this look" → #collection: all six garments render → switch drop style → line sheet PNG → "Order this collection" → #order:
 //   clear the examples, paste a 13-player roster → review → contact form → send → #done: a ref
 //   and the truthful message for the channel that was really used → design pack zip.
 // Every step: zero console errors / page errors / CSP violations, no request leaves the
@@ -412,6 +412,14 @@ const INK_FN = `(c) => {
   for (let y = 0; y < c.height; y += step) for (let x = 0; x < c.width; x += step) if (d[(y * c.width + x) * 4 + 3] > 8) n++;
   return n;
 }`;
+/** The Studio gallery renders lazily (only tiles on or near the screen get a render; data-render
+ * says fresh | stale | pending | idle | error): scroll the first tile that still needs one into
+ * view, the way a coach scrolls. Returns whether one was found. */
+const SWEEP_FN = `() => {
+  const t = [...document.querySelectorAll(".st-tile:not(.is-ghost):not([hidden])")].find((x) => x.dataset.render && x.dataset.render !== "fresh" && x.dataset.render !== "error");
+  if (t) t.scrollIntoView({ block: "center" });
+  return !!t;
+}`;
 /** A cheap pixel fingerprint of a canvas (changes when its content does). */
 const PRINT_FN = `(c) => {
   if (!c || !c.width || !c.height) return "none";
@@ -552,13 +560,17 @@ async function runFlow(browser, origin, vp, scenario, db) {
     await step("fonts: every face the UI uses", async () => {
       const r = await page.evaluate(async () => {
         const fam = (f) => f.family.replace(/["']/g, "");
-        const want = [["Big Shoulders Display", [700, 800, 900], true], ["Archivo", [400, 500, 600, 700], true], ["IBM Plex Mono", [500, 600], false], ["Graduate", [400], false]];
+        // the "Studio" faces (styles/fonts.css, variable) + the static faces main.jsx still
+        // imports for the line sheet, exports and the ascii effect (DESIGN.md §9)
+        const want = [["Geist Variable", [400, 500, 600], true], ["Archivo Wide", [800, 900], true], ["Geist Mono Variable", [450, 500], false],
+          ["Big Shoulders Display", [800, 900], true], ["Archivo", [400, 600], true], ["IBM Plex Mono", [500, 600], false], ["Graduate", [400], false]];
+        const hasW = (f, w) => { const [lo, hi = lo] = String(f.weight).split(/\s+/).map(Number); return w >= lo && w <= hi; }; // "100 900" = variable
         const missing = [];
         for (const [family, weights, ext] of want) {
           for (const w of weights) {
             for (const text of ext ? ["AZaz09", "ŁŐŞŽ"] : ["AZaz09"]) {
               const faces = await document.fonts.load(`${w} 16px "${family}"`, text);
-              if (!faces.some((f) => fam(f) === family && String(f.weight) === String(w))) missing.push(`${family} ${w} "${text}"`);
+              if (!faces.some((f) => fam(f) === family && hasW(f, w))) missing.push(`${family} ${w} "${text}"`);
             }
           }
         }
@@ -568,7 +580,7 @@ async function runFlow(browser, origin, vp, scenario, db) {
         const all = [...document.fonts];
         const perFace = {};
         for (const f of all) perFace[`${fam(f)} ${f.weight}`] = (perFace[`${fam(f)} ${f.weight}`] || 0) + 1;
-        const limit = (k) => (/^(Archivo|Big Shoulders Display) /.test(k) ? 2 : 1);
+        const limit = (k) => (/^(Archivo|Big Shoulders Display|Geist Variable) /.test(k) ? 2 : 1);
         const exotic = Object.entries(perFace).filter(([k, n]) => n > limit(k)).map(([k, n]) => `${k} ×${n}`);
         return { missing, exotic, faces: all.length };
       });
@@ -585,7 +597,7 @@ async function runFlow(browser, origin, vp, scenario, db) {
     await page.waitForFunction(() => location.hash === "#studio", null, { timeout: 10000 });
     const marks = {};
     const r = await poll(
-      () => page.evaluate(`(() => { const ink = ${INK_FN}; const tiles = [...document.querySelectorAll(".st-tile:not(.is-ghost)")];
+      () => page.evaluate(`(() => { (${SWEEP_FN})(); const ink = ${INK_FN}; const tiles = [...document.querySelectorAll(".st-tile:not(.is-ghost)")];
         return { total: tiles.length, rendered: tiles.filter((t) => ink(t.querySelector(".st-tile__art canvas")) > 30).length,
                  failed: tiles.filter((t) => t.classList.contains("is-failed")).map((t) => t.dataset.effect), t: performance.now() }; })()`),
       (v) => {
@@ -645,7 +657,7 @@ async function runFlow(browser, origin, vp, scenario, db) {
     S.logoBox = corners.box;
     // the gallery re-renders with the new logo: wait until it has settled again, no errors
     const r = await poll(
-      () => page.evaluate(`(() => { const ink = ${INK_FN}; const tiles = [...document.querySelectorAll(".st-tile")];
+      () => page.evaluate(`(() => { (${SWEEP_FN})(); const ink = ${INK_FN}; const tiles = [...document.querySelectorAll(".st-tile")];
         return { total: tiles.length, rendered: tiles.filter((t) => ink(t.querySelector(".st-tile__art canvas")) > 30).length,
                  busy: document.querySelectorAll(".st-tile .ml-canvas.is-loading").length,
                  failed: tiles.filter((t) => t.classList.contains("is-failed")).map((t) => t.dataset.effect),

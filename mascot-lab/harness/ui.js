@@ -286,7 +286,7 @@ function MediaSection({ logo }) {
 function NavSection({ logo, team }) {
   return h(Section, { title: "Brand & navigation", code: "Wordmark · StepNav · TeamChip" },
     h("div", { className: "kit-grid" },
-      h(Card, { title: "Wordmark" },
+      h(Card, { title: "Wordmark", wide: true },
         h(Wordmark, { size: "xl", href: null }), Row(h(Wordmark, { size: "lg", href: null }), h(Wordmark, { href: null }), h(Wordmark, { size: "sm", href: null }))),
       h(Card, { title: "StepNav · full", wide: true },
         ...[0, 1, 2, 3, 4].map((n) => h("div", { key: n, className: "kit-row" }, h(SpecLabel, { style: { width: 70 } }, `current=${n}`), h(StepNav, { current: n })))),

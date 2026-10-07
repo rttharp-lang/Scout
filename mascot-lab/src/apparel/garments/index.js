@@ -2,6 +2,10 @@
 // module (default export, see CONTRACTS.md "Garment module"). Modules are lazy-loaded
 // with Promise.allSettled and validated; a broken garment is skipped with a warning
 // so one bad file can never take the collection page down.
+//
+// Two formats load side by side: `format: "photo"` garments (painted light, see
+// GARMENTS.md — rendered by src/apparel/photo/) and legacy vector flats (SVG path data,
+// no `format`). renderMockup dispatches on the same flag.
 
 /** Collection order; ids not listed sort after these, by name. */
 export const GARMENT_ORDER = ["jersey", "shorts", "hoodie", "pants", "tee", "longsleeve"];
@@ -97,23 +101,56 @@ function applyDisplayScale(g) {
   Object.defineProperty(g, "__scaled", { value: true });
 }
 
+/* ───────────────────────────── photo format ───────────────────────────── */
+
+const isPt = (p) => Array.isArray(p) && Number.isFinite(p[0]) && Number.isFinite(p[1]);
+const isPoly = (pts, min = 3) => Array.isArray(pts) && pts.length >= min && pts.every(isPt);
+
+/** validatePhotoView(view, name, id) → error string or null (structural; the engine is defensive too). */
+function validatePhotoView(view, name, id) {
+  if (!view || typeof view !== "object") return `${name} view missing`;
+  if (!Array.isArray(view.parts)) return `${name}.parts missing`;
+  view.parts = view.parts.filter((p, i) => {
+    const ok = p && typeof p.id === "string" && isPoly(p.pts);
+    if (!ok) console.warn(`[garments] ${id}: dropped ${name}.parts[${i}] (${p?.id || "no id"}) — needs id + pts`);
+    return ok;
+  });
+  if (!view.parts.length) return `${name} has no valid parts`;
+  if (!view.parts.some((p) => p.print) && !Array.isArray(view.print)) console.warn(`[garments] ${id}: ${name} has no printable part`);
+  if (!view.zones || typeof view.zones !== "object") return `${name}.zones missing`;
+  for (const [z, box] of Object.entries(view.zones)) {
+    if (!isBox(box)) { console.warn(`[garments] ${id}: dropped ${name}.zones.${z} — needs numeric x, y, w, h`); delete view.zones[z]; }
+    else if (typeof box.label !== "string") box.label = z.replace(/-/g, " ");
+  }
+  if (!Object.keys(view.zones).length) return `${name} has no valid zones`;
+  const need = REQUIRED_ZONES[KIND_OF[id]]?.[name] || [];
+  const missing = need.filter((z) => !view.zones[z]);
+  if (missing.length) console.warn(`[garments] ${id}: ${name} is missing zone(s) ${missing.join(", ")}`);
+  if (view.text) {
+    for (const t of ["name", "number"]) if (view.text[t] && !isBox(view.text[t])) delete view.text[t];
+  }
+  return null;
+}
+
 /** validateGarment(garment, id) → error string or null (normalizes soft problems in place). */
 function validateGarment(g, id) {
   if (!g || typeof g !== "object") return "no default export";
   if (g.id !== id) return `id "${g.id}" must equal the filename "${id}"`;
   if (typeof g.name !== "string" || !g.name) return "missing name";
   if (!g.views || typeof g.views !== "object") return "missing views";
+  const photo = g.format === "photo";
   for (const v of ["front", "back"]) {
-    const err = validateView(g.views[v], v, id);
+    const err = photo ? validatePhotoView(g.views[v], v, id) : validateView(g.views[v], v, id);
     if (err) return err;
   }
+  if (photo && g.displayScale !== undefined) console.warn(`[garments] ${id}: displayScale is ignored for photo garments — size the inch frame instead`);
   if (!FABRICS.includes(g.fabric)) { console.warn(`[garments] ${id}: unknown fabric "${g.fabric}", using "knit"`); g.fabric = "knit"; }
   if (!CATEGORIES.includes(g.category)) g.category = "warmup";
   if (typeof g.styleCode !== "string") g.styleCode = `ML-${id.slice(0, 3).toUpperCase()}`;
   if (typeof g.spec !== "string") g.spec = "";
   const dc = g.defaultColors || {};
   g.defaultColors = { base: dc.base || "primary", trim: dc.trim || "secondary", accent: dc.accent || "accent" };
-  applyDisplayScale(g);
+  if (!photo) applyDisplayScale(g);
   return null;
 }
 

@@ -226,6 +226,7 @@ export default {
     { name: "Opal", params: { base: "pearl", pattern: "liquid", spread: 35, shine: 70, sparkle: 25, detail: 55 } },
     { name: "Oil slick", params: { base: "black", pattern: "liquid", spread: 80, shine: 55, sparkle: 20, detail: 60 } },
     { name: "Prism", params: { base: "silver", pattern: "prism", spread: 60, shine: 65, sparkle: 55, detail: 65 } },
+    { name: "Iridescent chrome", params: { base: "silver", pattern: "liquid", spread: 90, shine: 88, sparkle: 65, detail: 40 } },
   ],
 
   render(src, p, ctx) {
@@ -280,6 +281,11 @@ export default {
     const glintV = new Float32Array(GC * GC), glintP = new Int32Array(GC * GC);
     const seedG = hashSeed("holo-glitter", ctx.seed) | 0;
     const lo = dark ? 0.06 : 0.1;
+    // shine > 80 %: a chrome horizon (dark line, bright sky above, deeper ground below)
+    // bent by the surface, so very shiny foil reads as iridescent CHROME, not foil
+    const hb = shine > 0.8 ? Math.min(1, (shine - 0.8) / 0.08) : 0;
+    const yHz = cy + (bb.y1 - bb.y0) / kD * 0.02;
+    const spanY = Math.max(8, (bb.y1 - bb.y0) / kD);
 
     const sd = getPixels(src).data;
     const out = createCanvas(S, S);
@@ -363,6 +369,19 @@ export default {
         }
         const f = dark ? 1 - detail * dkv * (1 - (lo + (1 - lo) * inkL)) : 1 - 0.55 * ink;
         if (dark) { r *= f; g *= f; b *= f; }
+        if (hb > 0) {
+          const hv = ((yHz - y) / spanY) * 1.7 - 1.9 * Nz * Ny + sw * 0.3;
+          const band = Math.exp(-(hv / 0.07) * (hv / 0.07));
+          if (hv > 0) {
+            const up = 0.42 * hb * (hv < 0.25 ? hv / 0.25 : 1) * (hv > 0.9 ? Math.max(0, 1 - (hv - 0.9) / 0.6) : 1);
+            r += (255 - r) * up; g += (255 - g) * up; b += (255 - b) * up;
+          } else {
+            const dn = 1 - 0.5 * hb * (hv > -0.3 ? -hv / 0.3 : 1);
+            r *= dn; g *= dn; b *= dn;
+          }
+          const hl = 1 - 0.88 * hb * band;
+          r *= hl; g *= hl; b *= hl;
+        }
         // specular: R·L = 2 Nz (N·L) − Lz
         let s1 = 2 * Nz * (ndl - tilt) - L1[2];
         s1 = s1 > 0 ? s1 : 0;

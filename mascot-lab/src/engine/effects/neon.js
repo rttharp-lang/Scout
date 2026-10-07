@@ -722,6 +722,7 @@ export default {
     { name: "Team glow", params: { width: 9, glow: 45, colorA: "secondary", colorB: "primary", fill: false, flicker: false } },
     { name: "Hype", params: { width: 10, glow: 70, colorA: "#FF2E97", colorB: "#21E6FF", fill: false, flicker: true } },
     { name: "Ice", params: { width: 8, glow: 50, colorA: "#E8FBFF", colorB: "#4FA8FF", fill: true, flicker: false } },
+    { name: "Neon sign", params: { width: 12, glow: 65, colorA: "#FF3B3B", colorB: "#FFD23F", fill: false, flicker: true } },
   ],
 
   render(src, p, ctx) {

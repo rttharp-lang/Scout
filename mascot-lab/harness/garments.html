@@ -52,6 +52,10 @@
       figcaption .ms.over { color: var(--bad); }
       .swatches { display: inline-flex; gap: 3px; vertical-align: middle; }
       .swatches i { width: 12px; height: 12px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset; display: inline-block; }
+      .frame.checker { background: repeating-conic-gradient(#e6e8eb 0 25%, #f6f7f8 0 50%) 0 0 / 24px 24px; }
+      .grid.matrix { display: grid; grid-template-columns: repeat(2, max-content); }
+      body.bare header.top, body.bare #notes { display: none; }
+      body.bare main { padding: 0; }
       table.perf { border-collapse: collapse; margin-top: 18px; font: 12px/1.5 var(--mono); }
       table.perf td, table.perf th { padding: 3px 12px 3px 0; text-align: left; border-bottom: 1px solid var(--line); }
     </style>
