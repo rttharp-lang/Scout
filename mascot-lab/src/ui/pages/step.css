@@ -1,16 +1,30 @@
 /* Mascot Lab — the shared title block of the step pages (Studio, Collection, Order,
- * Review, Done): one top padding, one step label → h1 rhythm, one h1 size. Landing
- * keeps its own editorial hero. Page width comes from the shared tokens
- * (--page-max + --gutter via .container in global.css), the same box as the header.
- * Prefix: pg-. */
+ * Review, Done): one top padding, one eyebrow → h1 rhythm, one h1 size. Landing has
+ * its own hero. Page width comes from .container (--page-max + --gutter), the same box
+ * as the header. Prefix: pg-. Pattern: DESIGN.md → "Page title block".
+ *
+ *   <header class="pg-head">
+ *     <SpecLabel size="lg">Step 2 of 3</SpecLabel>     ← eyebrow (14 px, ink-2)
+ *     <h1 class="pg-title">The Bulldogs collection</h1>
+ *     <p class="t-lead">…</p>
+ *   </header>
+ */
 :root {
-  --pg-top: var(--space-6);          /* top of <main> → step label */
-  --pg-title: var(--step-4);         /* 60px at 1440, 35px at 390 */
+  --pg-top: var(--space-7);          /* top of <main> → eyebrow: 48 px */
+  --pg-title: var(--text-4xl);       /* 32 px at 390 → 52 px at 1440, Geist semibold */
 }
 @media (max-width: 720px) {
-  :root { --pg-top: var(--space-5); }
+  :root { --pg-top: var(--space-6); }
 }
 
-/* step label + h1 (+ lead, CTAs…) */
 .pg-head { display: grid; gap: var(--space-3); justify-items: start; align-content: start; min-width: 0; }
-.pg-title { font-size: var(--pg-title); font-weight: 900; line-height: var(--leading-tight); }
+.pg-head > .ml-spec:first-child { font-size: var(--text-sm); font-weight: 500; color: var(--ink-2); }
+.pg-head > .pg-title + .lead, .pg-head > .pg-title + .t-lead { margin-top: var(--space-1); }
+.pg-title {
+  font-family: var(--font-sans);
+  font-size: var(--pg-title);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tighter);
+  text-transform: none;
+}

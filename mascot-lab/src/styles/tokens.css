@@ -1,13 +1,17 @@
-/* Mascot Lab — design tokens.
+/* Mascot Lab — design tokens ("Studio").
  *
- * Subject: an equipment room crossed with a screen-print shop's spec sheet.
- * Chrome is quiet "gym white" (cool blue-grey) or blacktop dark; the TEAM's
- * colours are the accent. --team-* defaults are the sample Northgate Bulldogs
- * (navy / athletic gold / white); the store overwrites them on <html> at
- * runtime whenever the palette changes, including two pre-computed "readable"
- * accents (one that reads on the light theme, one on the dark theme).
+ * A premium sport product site that is also a refined creative tool: image-first,
+ * quiet monochrome chrome, generous whitespace, soft studio-grey tiles, hairlines only
+ * where needed. The TEAM's colour is the only accent (selection, progress, small
+ * details) — never decoration. Rules and patterns: DESIGN.md.
  *
- * Components use tokens only — never raw hex.
+ * --team-* defaults are the sample Northgate Bulldogs (navy / athletic gold / white);
+ * the store overwrites them on <html> whenever the palette changes, including the
+ * pre-computed readable accents (one for the light theme, one for the dark theme).
+ *
+ * Token NAMES from the previous system (bg, surface-*, step-*, radius-*, …) still
+ * work: they are remapped onto the new values below ("legacy aliases"). New code uses
+ * the new names. Components use tokens only — never raw hex.
  */
 
 :root {
@@ -22,70 +26,100 @@
   --team-1-ink: #ffffff;        /* readable text on --team-1 */
   --team-2-ink: #0b0d10;
   --team-3-ink: #0b0d10;
-  /* team colour with ≥3:1 contrast on each theme's background (+ its text colour) */
+  /* team colour with ≥3:1 contrast on each theme's page (+ its text colour) */
   --team-on-light: #13294b;
   --team-on-light-ink: #ffffff;
   --team-on-dark: #f2a900;
   --team-on-dark-ink: #0b0d10;
-  /* team colour that pops on the ink AND on the page (trim lines, wordmark offset), picked
-   * per theme by the store; --team-flash follows the theme (redefined in the dark blocks) */
+  /* team colour that pops on ink AND on the page, picked per theme by the store */
   --team-flash-on-light: #f2a900;
   --team-flash-on-dark: #f2a900;
   --team-flash: var(--team-flash-on-light);
 
-  /* ── Neutrals: gym white (light) ─────────────────────────────────────── */
-  --bg: #eceff3;                /* page — painted-cinderblock cool grey */
-  --surface: #f9fafb;           /* cards, header, panels */
-  --surface-2: #e2e6ec;         /* wells, inputs at rest, tracks */
-  --surface-3: #d6dbe2;         /* pressed / hover on wells */
-  --surface-inverse: #0e1116;   /* toasts, primary buttons */
-  --ink: #0e1116;
-  --ink-2: #4c5562;             /* muted — 6.5:1 on --bg */
-  --ink-3: #737c89;             /* tertiary: placeholders, disabled glyphs (decorative only) */
-  --ink-inverse: #f3f5f8;
-  --line: #d3d9e1;
-  --line-strong: #a7b0bc;
-  --scrim: rgb(9 12 17 / 0.52);
-
-  /* ── Signals ─────────────────────────────────────────────────────────── */
-  --focus: #1f5cff;             /* focus ring — never a team colour (could be white) */
-  --success: #13804c;
-  --success-soft: #dcf1e5;
-  --warning: #a35f00;
-  --warning-soft: #fbecd2;
-  --danger: #c4291f;
-  --danger-soft: #f9dfdc;
-  --info-soft: #dfe7f6;
-
-  /* the one team colour the UI uses for selection, slider thumbs, progress */
+  /* the one team colour the UI uses: selected tiles, slider fill, toggles, progress */
   --accent: var(--team-on-light);
   --accent-ink: var(--team-on-light-ink);
+  --accent-soft: color-mix(in srgb, var(--accent) 10%, transparent);
+
+  /* ── Surfaces ───────────────────────────────────────────────────────── */
+  --page: #ffffff;              /* the page — always white in light */
+  --tile: #f4f5f7;              /* studio grey: image tiles, grouped content, secondary buttons */
+  --tile-hover: #eceef1;
+  --tile-strong: #e3e5e9;       /* pressed, slider tracks, skeleton base on tiles */
+  --raised: #ffffff;            /* floating layers: sheets, dialogs, popovers, toasts' inverse aside */
+  --field: #f4f5f7;             /* input fill (override to var(--page) inside a tile) */
+  --field-hover: #eceef1;
+  --fill: rgb(11 12 15 / 0.05); /* translucent hover fill that works on any surface */
+  --fill-strong: rgb(11 12 15 / 0.09);
+  --glass: rgb(255 255 255 / 0.78); /* sticky header / bars, with backdrop blur */
+
+  /* ── Ink ─────────────────────────────────────────────────────────────── */
+  --ink: #0b0c0f;               /* text, primary buttons */
+  --ink-2: #5f636b;             /* secondary text — 6.0:1 on page, 5.5:1 on tile */
+  --ink-3: #8c9099;             /* placeholders, disabled glyphs, decorative only (3.2:1) */
+  --ink-inverse: #ffffff;
+  --ink-fill: #0b0c0f;          /* primary button fill (ink) */
+  --ink-fill-hover: #2b2d33;
+
+  /* ── Lines ───────────────────────────────────────────────────────────── */
+  --line: rgb(11 12 15 / 0.08);         /* the hairline */
+  --line-strong: rgb(11 12 15 / 0.16);  /* dividers that must read on a tile */
+  --line-control: rgb(11 12 15 / 0.42); /* checkbox / radio edge (≥3:1 non-text) */
+  --scrim: rgb(11 12 15 / 0.42);
+
+  /* ── Signals ─────────────────────────────────────────────────────────── */
+  --focus: #0b66ff;             /* focus ring — never a team colour (could be white) */
+  --focus-halo: rgb(11 102 255 / 0.22);
+  --success: #0e7a43;
+  --success-soft: #e9f6ef;
+  --warning: #9a5800;
+  --warning-soft: #fdf3e2;
+  --danger: #c42b21;
+  --danger-soft: #fdeceb;
+  --info-soft: #eef3ff;
 
   /* ── Type ───────────────────────────────────────────────────────────── */
-  --font-display: "Big Shoulders Display", "Archivo Narrow", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
-  --font-body: "Archivo", "Helvetica Neue", "Segoe UI", Roboto, Arial, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-sans: "Geist Variable", "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* wide display caps: through .t-hero / .t-display / .t-display-sm (they set weight + leading) */
+  --font-wide: "Archivo Wide", "Archivo Black", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
   --font-jersey: "Graduate", "Rockwell", "Roboto Slab", Georgia, serif;
+  --font-body: var(--font-sans);
+  /* LEGACY — condensed Archivo at the old face's widths, for pages not yet converted.
+   * New code never uses it: wide caps = --font-wide, everything else = --font-sans. */
+  --font-display: "Archivo Condensed", "Big Shoulders Display", "Archivo Narrow", "Arial Narrow", Impact, sans-serif;
 
-  /* fluid scale (≈1.25 at 390px → ≈1.333 at 1400px) */
-  --step--2: 0.6875rem;                                   /* 11px — mono spec labels */
-  --step--1: clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);    /* 12.5–13.5px — meta, hints */
-  --step-0: clamp(0.94rem, 0.91rem + 0.12vw, 1rem);       /* 15–16px — body */
-  --step-1: clamp(1.08rem, 1.02rem + 0.3vw, 1.25rem);     /* lead, card titles */
-  --step-2: clamp(1.3rem, 1.17rem + 0.62vw, 1.75rem);
-  --step-3: clamp(1.65rem, 1.38rem + 1.25vw, 2.5rem);
-  --step-4: clamp(2.15rem, 1.6rem + 2.5vw, 3.75rem);
-  --step-5: clamp(2.75rem, 1.7rem + 4.8vw, 6rem);
-  --step-6: clamp(3.25rem, 1.5rem + 6.6vw, 7.5rem);       /* hero */
+  /* UI scale (fixed) */
+  --text-2xs: 0.6875rem;  /* 11 — badges only */
+  --text-xs: 0.75rem;     /* 12 — metadata, captions */
+  --text-sm: 0.875rem;    /* 14 — secondary UI, labels, hints */
+  --text-md: 0.9375rem;   /* 15 — buttons, dense UI, card titles */
+  --text-base: 1rem;      /* 16 — body */
+  --text-lg: 1.125rem;    /* 18 */
+  --text-xl: 1.25rem;     /* 20 — group titles, lead on desktop */
+  /* headings (fluid, 390 → 1440) */
+  --text-2xl: clamp(1.375rem, 1.24rem + 0.55vw, 1.75rem);  /* 22 → 28 */
+  --text-3xl: clamp(1.625rem, 1.38rem + 1vw, 2.375rem);    /* 26 → 38 */
+  --text-4xl: clamp(2rem, 1.6rem + 1.65vw, 3.25rem);       /* 32 → 52 page titles */
+  /* wide display (uppercase statements) */
+  --display-sm: clamp(1.75rem, 1.3rem + 1.8vw, 3rem);      /* 28 → 48 */
+  --display-md: clamp(2.25rem, 1.4rem + 3.4vw, 4.75rem);   /* 36 → 76 */
+  --display-lg: clamp(2.5rem, 0.9rem + 6.3vw, 7.25rem);    /* 40 → 116 hero */
+  --display-weight: 900;
 
-  --leading-tight: 0.92;
-  --leading-snug: 1.2;
-  --leading-body: 1.5;
-  --tracking-display: -0.005em;
-  --tracking-mono: 0.08em;
+  --leading-display: 0.9;
+  --leading-tight: 1.06;
+  --leading-snug: 1.3;
+  --leading-body: 1.55;
+  --tracking-tighter: -0.035em;
+  --tracking-tight: -0.022em;
+  --tracking-snug: -0.011em;
+  --tracking-display: -0.022em;  /* sentence-case headings */
+  --tracking-wide-display: -0.012em;
   --tracking-caps: 0.04em;
+  --tracking-mono: 0.01em;
 
-  /* ── Space (4px base) ───────────────────────────────────────────────── */
+  /* ── Space (4/8 rhythm) ──────────────────────────────────────────────── */
   --space-0: 2px;
   --space-1: 4px;
   --space-2: 8px;
@@ -96,25 +130,34 @@
   --space-7: 48px;
   --space-8: 64px;
   --space-9: 96px;
-  --gutter: clamp(16px, 3.2vw, 40px);       /* page side padding */
-  --page-max: 1360px;
+  --space-10: 128px;
+  --section-y: clamp(64px, 3.2rem + 4.5vw, 128px);  /* between page sections */
+  --gutter: clamp(16px, 4vw, 48px);                 /* page side padding: 16 @390, 48 @1200+ */
+  --page-max: 1440px;
+  --measure: 62ch;
   --header-h: 64px;
+  --grid-gap: clamp(8px, 1.1vw, 16px);              /* image tile grids */
 
-  /* ── Shape: athletic / industrial, not bubbly ───────────────────────── */
-  --radius-xs: 2px;
-  --radius-sm: 3px;
-  --radius-md: 4px;
-  --radius-lg: 6px;
-  --radius-pill: 999px;     /* switches, colour dots only */
+  /* ── Shape ───────────────────────────────────────────────────────────── */
+  --radius-xs: 4px;
+  --radius-sm: 8px;       /* small chips inside tiles, thumbs ≤ 48px */
+  --radius-md: 12px;      /* inputs, menus, small cards */
+  --radius-lg: 16px;      /* image tiles, cards, panels */
+  --radius-xl: 20px;      /* hero tiles, dialogs, sheets */
+  --radius-2xl: 28px;
+  --radius-pill: 999px;   /* buttons, chips, segmented, team pill */
   --hairline: 1px;
-  --rule: 2px;              /* heavy spec-sheet rules */
+  --rule: 1px;            /* legacy: was the 2 px spec-sheet rule */
 
-  /* ── Shadows by role ────────────────────────────────────────────────── */
-  --shadow-card: 0 1px 0 rgb(14 17 22 / 0.04), 0 0 0 1px rgb(14 17 22 / 0.07);
-  --shadow-raised: 0 1px 2px rgb(14 17 22 / 0.08), 0 6px 16px -6px rgb(14 17 22 / 0.18), 0 0 0 1px rgb(14 17 22 / 0.07);
-  --shadow-overlay: 0 12px 32px -8px rgb(14 17 22 / 0.28), 0 0 0 1px rgb(14 17 22 / 0.08);
-  --shadow-modal: 0 24px 64px -12px rgb(9 12 17 / 0.45), 0 0 0 1px rgb(14 17 22 / 0.1);
-  --shadow-inset: inset 0 1px 2px rgb(14 17 22 / 0.08);
+  /* ── Elevation (floating layers only) ───────────────────────────────── */
+  --shadow-card: 0 0 0 1px var(--line);  /* not a shadow: the hairline ring for a white card on white */
+  --shadow-hover: 0 2px 4px -2px rgb(11 12 15 / 0.06), 0 16px 36px -16px rgb(11 12 15 / 0.22);
+  --shadow-raised: 0 1px 2px rgb(11 12 15 / 0.06), 0 8px 24px -10px rgb(11 12 15 / 0.18);
+  --shadow-overlay: 0 0 0 1px rgb(11 12 15 / 0.05), 0 4px 12px -4px rgb(11 12 15 / 0.08), 0 20px 48px -16px rgb(11 12 15 / 0.24);
+  --shadow-modal: 0 0 0 1px rgb(11 12 15 / 0.05), 0 8px 24px -8px rgb(11 12 15 / 0.12), 0 40px 96px -24px rgb(11 12 15 / 0.36);
+  --shadow-sticky: 0 -1px 0 var(--line), 0 -18px 40px -28px rgb(11 12 15 / 0.28);
+  --shadow-knob: 0 0 0 0.5px rgb(11 12 15 / 0.12), 0 1px 3px rgb(11 12 15 / 0.22), 0 3px 8px -2px rgb(11 12 15 / 0.12);
+  --shadow-inset: inset 0 0 0 1px var(--line);
   --shadow-header: 0 1px 0 var(--line);
 
   /* ── Layers ─────────────────────────────────────────────────────────── */
@@ -122,104 +165,148 @@
   --z-raised: 10;
   --z-sticky: 100;
   --z-header: 200;
+  --z-dropdown: 300;
   --z-overlay: 400;
   --z-modal: 500;
   --z-toast: 600;
 
   /* ── Motion ─────────────────────────────────────────────────────────── */
-  --dur-1: 90ms;     /* press, colour */
-  --dur-2: 160ms;    /* hover, toggles */
-  --dur-3: 260ms;    /* panels, sheets */
-  --dur-4: 420ms;    /* page-level reveals */
-  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-1: 120ms;    /* press, colour */
+  --dur-2: 180ms;    /* hover, toggles */
+  --dur-3: 260ms;    /* panels, sheets, indicators */
+  --dur-4: 320ms;    /* page enter, image reveals */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --ease-snap: cubic-bezier(0.3, 1.4, 0.5, 1);
+  --ease-snap: cubic-bezier(0.3, 1.2, 0.5, 1);
 
-  /* ── Stages (backdrops behind artwork) ──────────────────────────────── */
-  --stage-paper: #f1efe9;       /* uncoated stock — the one warm neutral, artwork only */
-  --stage-mid: #8d949e;
-  --stage-dark: #121418;
-  --checker-a: #e6e9ee;
-  --checker-b: #f6f7f9;
+  /* ── Stages (backdrops behind artwork; results are transparent) ─────── */
+  --stage-paper: #f1f1ee;       /* light-ground effects: a studio grey with a breath of stock */
+  --stage-mid: #8a8f98;         /* heather: white ink reads */
+  --stage-dark: #121316;        /* glow / dark-ground effects */
+  --stage-tile: var(--tile);
+  --stage-product: var(--tile);  /* garments: a studio grey that a black hoodie still reads on */
+  --tile-edge: transparent;      /* dark theme: a faint ring so dark tiles hold their shape */
+  --checker-a: #eceef1;
+  --checker-b: #f7f8fa;
+
+  /* ── Legacy aliases (the previous system's names → the new values) ─── */
+  --bg: var(--page);
+  --surface: var(--page);       /* old cards/panels: now white with a hairline (--shadow-card) */
+  --surface-2: var(--tile);     /* wells, tracks, inputs at rest */
+  --surface-3: var(--tile-strong);
+  --surface-inverse: var(--ink-fill);
+  --step--2: var(--text-xs);                                  /* 12 */
+  --step--1: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);     /* 13 → 14 */
+  --step-0: var(--text-base);                                 /* 16 */
+  --step-1: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem);         /* 17 → 20 */
+  --step-2: var(--text-2xl);                                  /* 22 → 28 */
+  --step-3: var(--text-3xl);                                  /* 26 → 38 */
+  --step-4: var(--text-4xl);                                  /* 32 → 52 */
+  --step-5: clamp(2.25rem, 1.5rem + 2.8vw, 4rem);             /* 36 → 64 */
+  --step-6: clamp(2.5rem, 1.1rem + 5vw, 5.75rem);             /* 40 → 92 */
 }
 
-/* ── Dark: blacktop ──────────────────────────────────────────────────────
- * Same values in both blocks: OS preference (unless forced light) and the
- * explicit data-theme="dark" override. */
+/* ── Dark ────────────────────────────────────────────────────────────────
+ * Near-black page, tiles raised a step. Same values in both blocks: the OS
+ * preference (unless forced light) and the explicit data-theme="dark" override. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0c0e12;
-    --surface: #14171c;
-    --surface-2: #1c2027;
-    --surface-3: #262b34;
-    --surface-inverse: #eef1f5;
-    --ink: #e8ecf1;
-    --ink-2: #9ba4b0;
-    --ink-3: #6c7581;
-    --ink-inverse: #0e1116;
-    --line: #262b33;
-    --line-strong: #3d4450;
-    --scrim: rgb(0 0 0 / 0.62);
-    --focus: #7ea2ff;
-    --success: #3ccf86;
-    --success-soft: #11291d;
-    --warning: #f0a83a;
-    --warning-soft: #2c2111;
-    --danger: #ff6b5e;
-    --danger-soft: #331512;
-    --info-soft: #18202e;
     --accent: var(--team-on-dark);
     --accent-ink: var(--team-on-dark-ink);
     --team-flash: var(--team-flash-on-dark);
-    --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.06);
-    --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 20px -8px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.07);
-    --shadow-overlay: 0 14px 36px -8px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08);
-    --shadow-modal: 0 28px 72px -12px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(255 255 255 / 0.09);
-    --shadow-inset: inset 0 1px 2px rgb(0 0 0 / 0.4);
-    --stage-paper: #e9e7e1;
-    --stage-mid: #5f6670;
-    --stage-dark: #08090b;
-    --checker-a: #1a1e24;
-    --checker-b: #22272f;
+    --page: #0a0a0c;
+    --tile: #151619;
+    --tile-hover: #1c1d21;
+    --tile-strong: #24262b;
+    --raised: #18191d;
+    --field: #17181b;
+    --field-hover: #1e2024;
+    --fill: rgb(255 255 255 / 0.06);
+    --fill-strong: rgb(255 255 255 / 0.1);
+    --glass: rgb(10 10 12 / 0.72);
+    --ink: #f4f5f7;
+    --ink-2: #a3a6ae;
+    --ink-3: #6e727b;
+    --ink-inverse: #0a0a0c;
+    --ink-fill: #f4f5f7;
+    --ink-fill-hover: #d9dbe0;
+    --line: rgb(255 255 255 / 0.09);
+    --line-strong: rgb(255 255 255 / 0.17);
+    --line-control: rgb(255 255 255 / 0.4);
+    --scrim: rgb(0 0 0 / 0.6);
+    --focus: #5b9bff;
+    --focus-halo: rgb(91 155 255 / 0.28);
+    --success: #3ccf86;
+    --success-soft: #0f2219;
+    --warning: #f0a83a;
+    --warning-soft: #2a1f0e;
+    --danger: #ff6b5e;
+    --danger-soft: #2e1412;
+    --info-soft: #121a2b;
+    --shadow-hover: 0 0 0 1px rgb(255 255 255 / 0.06), 0 18px 40px -16px rgb(0 0 0 / 0.8);
+    --shadow-raised: 0 0 0 1px rgb(255 255 255 / 0.06), 0 10px 28px -10px rgb(0 0 0 / 0.75);
+    --shadow-overlay: 0 0 0 1px rgb(255 255 255 / 0.08), 0 4px 12px -4px rgb(0 0 0 / 0.5), 0 24px 56px -16px rgb(0 0 0 / 0.8);
+    --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.08), 0 8px 24px -8px rgb(0 0 0 / 0.55), 0 40px 96px -24px rgb(0 0 0 / 0.9);
+    --shadow-sticky: 0 -1px 0 var(--line), 0 -18px 40px -24px rgb(0 0 0 / 0.8);
+    --shadow-knob: 0 0 0 0.5px rgb(0 0 0 / 0.4), 0 1px 3px rgb(0 0 0 / 0.5), 0 3px 8px -2px rgb(0 0 0 / 0.4);
+    --stage-paper: #e9e9e6;
+    --stage-mid: #5f646d;
+    --stage-dark: #0e0f12;
+    --stage-product: #2a2c31;
+    --tile-edge: rgb(255 255 255 / 0.05);
+    --checker-a: #1a1b1f;
+    --checker-b: #212328;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0c0e12;
-  --surface: #14171c;
-  --surface-2: #1c2027;
-  --surface-3: #262b34;
-  --surface-inverse: #eef1f5;
-  --ink: #e8ecf1;
-  --ink-2: #9ba4b0;
-  --ink-3: #6c7581;
-  --ink-inverse: #0e1116;
-  --line: #262b33;
-  --line-strong: #3d4450;
-  --scrim: rgb(0 0 0 / 0.62);
-  --focus: #7ea2ff;
-  --success: #3ccf86;
-  --success-soft: #11291d;
-  --warning: #f0a83a;
-  --warning-soft: #2c2111;
-  --danger: #ff6b5e;
-  --danger-soft: #331512;
-  --info-soft: #18202e;
   --accent: var(--team-on-dark);
   --accent-ink: var(--team-on-dark-ink);
   --team-flash: var(--team-flash-on-dark);
-  --shadow-card: 0 0 0 1px rgb(255 255 255 / 0.06);
-  --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.5), 0 8px 20px -8px rgb(0 0 0 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.07);
-  --shadow-overlay: 0 14px 36px -8px rgb(0 0 0 / 0.75), 0 0 0 1px rgb(255 255 255 / 0.08);
-  --shadow-modal: 0 28px 72px -12px rgb(0 0 0 / 0.85), 0 0 0 1px rgb(255 255 255 / 0.09);
-  --shadow-inset: inset 0 1px 2px rgb(0 0 0 / 0.4);
-  --stage-paper: #e9e7e1;
-  --stage-mid: #5f6670;
-  --stage-dark: #08090b;
-  --checker-a: #1a1e24;
-  --checker-b: #22272f;
+  --page: #0a0a0c;
+  --tile: #151619;
+  --tile-hover: #1c1d21;
+  --tile-strong: #24262b;
+  --raised: #18191d;
+  --field: #17181b;
+  --field-hover: #1e2024;
+  --fill: rgb(255 255 255 / 0.06);
+  --fill-strong: rgb(255 255 255 / 0.1);
+  --glass: rgb(10 10 12 / 0.72);
+  --ink: #f4f5f7;
+  --ink-2: #a3a6ae;
+  --ink-3: #6e727b;
+  --ink-inverse: #0a0a0c;
+  --ink-fill: #f4f5f7;
+  --ink-fill-hover: #d9dbe0;
+  --line: rgb(255 255 255 / 0.09);
+  --line-strong: rgb(255 255 255 / 0.17);
+  --line-control: rgb(255 255 255 / 0.4);
+  --scrim: rgb(0 0 0 / 0.6);
+  --focus: #5b9bff;
+  --focus-halo: rgb(91 155 255 / 0.28);
+  --success: #3ccf86;
+  --success-soft: #0f2219;
+  --warning: #f0a83a;
+  --warning-soft: #2a1f0e;
+  --danger: #ff6b5e;
+  --danger-soft: #2e1412;
+  --info-soft: #121a2b;
+  --shadow-hover: 0 0 0 1px rgb(255 255 255 / 0.06), 0 18px 40px -16px rgb(0 0 0 / 0.8);
+  --shadow-raised: 0 0 0 1px rgb(255 255 255 / 0.06), 0 10px 28px -10px rgb(0 0 0 / 0.75);
+  --shadow-overlay: 0 0 0 1px rgb(255 255 255 / 0.08), 0 4px 12px -4px rgb(0 0 0 / 0.5), 0 24px 56px -16px rgb(0 0 0 / 0.8);
+  --shadow-modal: 0 0 0 1px rgb(255 255 255 / 0.08), 0 8px 24px -8px rgb(0 0 0 / 0.55), 0 40px 96px -24px rgb(0 0 0 / 0.9);
+  --shadow-sticky: 0 -1px 0 var(--line), 0 -18px 40px -24px rgb(0 0 0 / 0.8);
+  --shadow-knob: 0 0 0 0.5px rgb(0 0 0 / 0.4), 0 1px 3px rgb(0 0 0 / 0.5), 0 3px 8px -2px rgb(0 0 0 / 0.4);
+  --stage-paper: #e9e9e6;
+  --stage-mid: #5f646d;
+  --stage-dark: #0e0f12;
+  --stage-product: #2a2c31;
+  --tile-edge: rgb(255 255 255 / 0.05);
+  --checker-a: #1a1b1f;
+  --checker-b: #212328;
 }
 
 @media (max-width: 720px) {

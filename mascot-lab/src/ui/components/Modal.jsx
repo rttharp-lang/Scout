@@ -94,7 +94,6 @@ function Overlay({ open, onClose, dismissible = true, kind = "dialog", size = "m
         style={width ? { [isSheet ? "--sheet-w" : "--dialog-w"]: typeof width === "number" ? `${width}px` : width } : undefined}
       >
         <span className="ml-dialog__grab" aria-hidden="true" />
-        {!isSheet && <span className={cx("ml-dialog__bar", tone === "danger" && "ml-dialog__bar--danger")} aria-hidden="true" />}
         {(title || dismissible) && (
           <div className="ml-dialog__head">
             <div className="ml-dialog__titles">
@@ -118,7 +117,7 @@ function Overlay({ open, onClose, dismissible = true, kind = "dialog", size = "m
 /**
  * Modal — centred dialog on desktop, bottom sheet on phones. Focus is trapped,
  * Esc / scrim click / ✕ call onClose (unless dismissible={false}), focus returns
- * to the opener on close. Props: open, onClose, title, kicker (mono line above the
+ * to the opener on close. Props: open, onClose, title, kicker (small line above the
  * title), description, footer (buttons), size "sm"|"md"|"lg", tone "danger",
  * initialFocusRef (or mark a child with data-autofocus).
  */

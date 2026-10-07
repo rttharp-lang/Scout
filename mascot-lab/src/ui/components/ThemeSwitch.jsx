@@ -30,7 +30,6 @@ export function ThemeSwitch({ className }) {
       className={className}
       label="Color theme"
       size="sm"
-      mono
       value={mode}
       onChange={setMode}
       options={[

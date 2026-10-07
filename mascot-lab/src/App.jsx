@@ -1,11 +1,13 @@
-// Mascot Lab — app shell: providers, bare-hash router, sticky header (wordmark,
-// 3-step progress, team chip), page outlet with an error boundary, footer.
-import React, { useEffect, useRef } from "react";
+// Mascot Lab — app shell: providers, bare-hash router, sticky translucent header
+// (wordmark, 3-step progress tabs, team pill), page outlet (enter animation + error
+// boundary), quiet footer.
+import React, { useEffect, useRef, useState } from "react";
 import { StoreProvider, useStore } from "./state/store.jsx";
 import { useLogoCanvas } from "./state/useLogoCanvas.js";
 import { COPY, CONTACT_EMAIL, LEGAL_LINE, PAGE_TITLES, ROUTE_STEP, SUPPORT_HOURS, TAGLINE } from "./brand.js";
+import { AlertTriangle } from "lucide-react";
 import {
-  Button, ConfirmProvider, CopyText, Notice, RegMark, SpecLabel, StepNav, TeamChip, ThemeSwitch, ToastProvider, Wordmark, useRoute,
+  Button, ConfirmProvider, CopyText, Notice, StepNav, TeamChip, ThemeSwitch, ToastProvider, Wordmark, cx, useRoute,
 } from "./ui/components/index.js";
 import "./ui/components/shell.css";
 
@@ -54,7 +56,9 @@ function Shell() {
       <LogoNotSavedBanner />
       <main id="main" className="ml-main" ref={mainRef} tabIndex={-1} aria-label={PAGE_TITLES[route]}>
         <PageBoundary key={route} route={route}>
-          <Page />
+          <div className="ml-page">
+            <Page />
+          </div>
         </PageBoundary>
       </main>
       <Footer />
@@ -62,34 +66,51 @@ function Shell() {
   );
 }
 
+/** true once the page has scrolled past the top (the header shows its hairline). */
+function useScrolled(threshold = 2) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    let raf = 0;
+    const read = () => { raf = 0; setScrolled(window.scrollY > threshold); };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(read); };
+    read();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => { window.removeEventListener("scroll", onScroll); cancelAnimationFrame(raf); };
+  }, [threshold]);
+  return scrolled;
+}
+
 function Header({ route }) {
   const { state } = useStore();
   const logo = useLogoCanvas();
+  const scrolled = useScrolled();
   // #done only completes the flow once an order actually went out (artifact db or the
   // order endpoint). Before that — nothing submitted, or only saved on this device with
   // "one step left: email it" — it is still the order step.
   const sent = state.order?.status === "submitted" && !!state.order.channel && state.order.channel !== "local";
   const step = route === "done" && !sent ? ROUTE_STEP.order : ROUTE_STEP[route] ?? 0;
   return (
-    <header className="ml-header">
+    <header className={cx("ml-header", scrolled && "is-scrolled")}>
       <div className="ml-header__inner">
         <div className="ml-header__brand">
           <Wordmark />
         </div>
         <StepNav current={step} className="ml-header__steps" />
-        <StepNav current={step} variant="compact" className="ml-header__compact" />
-        <TeamChip
-          className="ml-header__team"
-          team={state.team}
-          palette={state.palette}
-          logoCanvas={logo.status === "error" ? null : logo.canvas}
-          logoSrc={logo.status === "error" ? null : state.logo.src}
-          status={logo.status}
-          sampleLabel={COPY.sampleTag}
-          errorLabel={COPY.logoFailedTag}
-          href="#studio"
-          title={logo.status === "error" ? COPY.logoFailedTitle : "Edit logo and colors"}
-        />
+        <div className="ml-header__end">
+          <StepNav current={step} variant="compact" className="ml-header__compact" />
+          <TeamChip
+            className="ml-header__team"
+            team={state.team}
+            palette={state.palette}
+            logoCanvas={logo.status === "error" ? null : logo.canvas}
+            logoSrc={logo.status === "error" ? null : state.logo.src}
+            status={logo.status}
+            sampleLabel={COPY.sampleTag}
+            errorLabel={COPY.logoFailedTag}
+            href="#studio"
+            title={logo.status === "error" ? COPY.logoFailedTitle : "Edit logo and colors"}
+          />
+        </div>
       </div>
     </header>
   );
@@ -110,49 +131,26 @@ function LogoNotSavedBanner() {
 function Footer() {
   return (
     <footer className="ml-footer">
-      <CourtLines />
       <div className="container">
-        <div className="ml-footer__grid">
-          <div className="ml-footer__col">
+        <div className="ml-footer__top">
+          <div className="ml-footer__brand">
             <Wordmark size="sm" href={null} />
             <p>{TAGLINE}</p>
           </div>
-          <div className="ml-footer__col">
-            <SpecLabel>Proofs &amp; pricing</SpecLabel>
-            <p>{COPY.footerNote}</p>
-            <p>{COPY.privacy}</p>
-          </div>
-          <div className="ml-footer__col">
-            <SpecLabel>Orders &amp; questions</SpecLabel>
+          <div className="ml-footer__contact">
+            <span className="ml-footer__label">{COPY.contactLabel}</span>
             {/* selectable text + copy: mailto links do nothing inside the claude.ai frame */}
-            <CopyText text={CONTACT_EMAIL} label="Copy" className="ml-footer__email" />
-            <p>{SUPPORT_HOURS}</p>
+            <CopyText text={CONTACT_EMAIL} label="Copy" mono={false} className="ml-footer__email" />
+            <span>{SUPPORT_HOURS}</span>
           </div>
         </div>
+        <p className="ml-footer__note">{COPY.footerNote} {COPY.privacy}</p>
         <div className="ml-footer__base">
-          <SpecLabel wrap>{LEGAL_LINE} · {COPY.footerSample}</SpecLabel>
+          <span>{LEGAL_LINE} · {COPY.footerSample}</span>
           <ThemeSwitch />
         </div>
       </div>
     </footer>
-  );
-}
-
-/** Half-court linework, drawn once, faint — the one place the court motif appears. */
-function CourtLines() {
-  return (
-    <svg className="ml-footer__court" viewBox="0 0 600 360" preserveAspectRatio="xMaxYMid meet" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-      {/* half court to scale (1 ft = 7.2 units): sidelines, half-court line, centre circle, lane, FT circle, 3-pt line, rim */}
-      <path d="M0 1H599V359H0" />
-      <path d="M262 1V359" />
-      <circle cx="262" cy="180" r="43" />
-      <circle cx="262" cy="180" r="14" />
-      <path d="M599 122.5H463V237.5H599" />
-      <circle cx="463" cy="180" r="43" />
-      <path d="M599 21.6H497.6A171 171 0 0 0 497.6 338.4H599" />
-      <path d="M571 158V202" />
-      <circle cx="562" cy="180" r="5.4" />
-    </svg>
   );
 }
 
@@ -169,16 +167,14 @@ class PageBoundary extends React.Component {
   }
   render() {
     if (!this.state.error) return this.props.children;
-    // same "nothing to show here" card as the order guards: crop marks, reg mark, kicker
     return (
       <div className="container ml-crash-wrap">
-        <section className="ml-crash crop-marks" role="alert">
-          <RegMark size={30} />
-          <SpecLabel variant="warning">Page error</SpecLabel>
-          <h1 className="ml-crash__title">This page hit a snag</h1>
-          <p className="lead">Your team, logo and order details are saved. Try the page again, or head back to the start.</p>
+        <section className="ml-empty ml-empty--error ml-crash" role="alert">
+          <span className="ml-empty__icon"><AlertTriangle aria-hidden="true" /></span>
+          <h1 className="ml-empty__title">This page hit a snag</h1>
+          <p className="ml-empty__text">Your team, logo and order details are saved. Try the page again, or head back to the start.</p>
           <pre>{String(this.state.error?.message || this.state.error)}</pre>
-          <div className="cluster">
+          <div className="ml-empty__actions">
             <Button onClick={() => this.setState({ error: null })}>Try again</Button>
             <Button variant="secondary" href="#home">Back to start</Button>
           </div>

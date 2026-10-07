@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Proto A · Garment photo</title>
+    <style>
+      :root { --page: #e9e9e7; --ink: #15181d; --muted: #6b717b; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--page); color: var(--ink); font: 12px/1.4 ui-monospace, Menlo, monospace; }
+      body.bare { background: #ddd; }
+      #root canvas { display: block; }
+      .meta { padding: 10px 14px; color: var(--muted); white-space: pre; }
+      table { border-collapse: collapse; margin: 12px 14px; }
+      td, th { padding: 3px 12px 3px 0; text-align: left; border-bottom: 1px solid #ccc; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="meta" id="meta"></div>
+    <script type="module" src="./proto-a.js"></script>
+  </body>
+</html>

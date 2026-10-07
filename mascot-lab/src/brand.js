@@ -34,6 +34,7 @@ export const PAGE_TITLES = {
 
 export const COPY = {
   sampleTag: "Sample",
+  contactLabel: "Orders and questions",
   sampleLogo: "Sample logo",
   exampleRoster: "Example roster — replace with your players",
   footerNote:

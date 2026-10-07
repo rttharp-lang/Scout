@@ -1,0 +1,80 @@
+/* Mascot Lab — self-hosted type (never Google Fonts links).
+ *
+ * Only the subsets the page can show: latin everywhere, plus latin-ext for the faces
+ * that set team and player names a coach types (Ł, Ő, Ş, Ž…). The fontsource-variable
+ * packages' own CSS also declares vietnamese/cyrillic faces, which the single-file
+ * Artifact page would inline for nothing — so the faces are declared here instead.
+ * Vite resolves the package paths in url() for both builds.
+ *
+ *   Geist Variable       UI + body (100–900)                     → --font-sans
+ *   Archivo Wide         wide display caps (wdth 125, wght 100–900) → --font-wide
+ *   Geist Mono Variable  tiny metadata only (hex, style codes)   → --font-mono
+ *   Archivo Condensed    legacy alias for unconverted pages      → --font-display
+ *
+ * Graduate (jersey lettering) and the legacy faces still drawn on canvases (IBM Plex
+ * Mono for the ascii effect and line sheet; Big Shoulders + static Archivo for the line
+ * sheet) are imported from main.jsx. */
+
+/* ── Geist ─────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Geist Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/geist/files/geist-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Geist Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/geist/files/geist-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ── Archivo: one variable file (wdth 62–125 · wght 100–900), two families ──
+ * A face whose font-stretch descriptor is a single value pins the wdth axis there,
+ * whatever the element asks for — so the width travels with the family name:
+ *   "Archivo Wide"       125%  the display face (.t-hero / .t-display*; --font-wide).
+ *                              Finer widths: font-variation-settings: "wdth" 112.
+ *   "Archivo Condensed"   62%  LEGACY: what --font-display resolves to, so pages not yet
+ *                              converted keep the widths they were laid out for (the old
+ *                              face was Big Shoulders). Latin only. Never in new code. */
+@font-face {
+  font-family: "Archivo Wide";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 125%;
+  src: url("@fontsource-variable/archivo/files/archivo-latin-ext-wdth-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Archivo Wide";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 125%;
+  src: url("@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Archivo Condensed";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62%;
+  src: url("@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ── Geist Mono (metadata) ─────────────────────────────────────────────── */
+@font-face {
+  font-family: "Geist Mono Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>proto-b · painted light</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: #f4f5f7; color: #14171c; font: 13px/1.4 ui-sans-serif, system-ui, sans-serif; }
+      body.bare { background: #fff; }
+      body.bare header, body.bare #info { display: none; }
+      header { padding: 14px 20px; border-bottom: 1px solid #d9dde3; background: #fff; display: flex; gap: 16px; align-items: baseline; }
+      header h1 { margin: 0; font-size: 18px; }
+      .mono { font: 11px/1.4 ui-monospace, Menlo, monospace; color: #5b636f; }
+      #stage { display: flex; flex-wrap: wrap; gap: 0; }
+      body:not(.bare) #stage { gap: 16px; padding: 16px 20px; }
+      #stage canvas { display: block; }
+      #info { padding: 0 20px 24px; }
+      table { border-collapse: collapse; font: 12px/1.5 ui-monospace, Menlo, monospace; margin-top: 10px; }
+      td, th { padding: 2px 14px 2px 0; text-align: left; border-bottom: 1px solid #e3e6ea; }
+      .bad { color: #c62828; }
+    </style>
+  </head>
+  <body>
+    <header><h1>proto-b · painted light</h1><span class="mono" id="status">Loading…</span></header>
+    <div id="stage"></div>
+    <div id="info"></div>
+    <script type="module" src="./proto-b.js"></script>
+  </body>
+</html>

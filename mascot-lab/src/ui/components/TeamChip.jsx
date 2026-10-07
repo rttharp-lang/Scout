@@ -6,8 +6,8 @@ import { cx } from "./cx.js";
 import "./components.css";
 
 /**
- * TeamChip — logo thumbnail + the three team colours + school/mascot, with a
- * "Sample" tag while the sample team is loaded. Presentational: pass state in.
+ * TeamChip — the team pill: round logo thumbnail, school/mascot, the three team colours,
+ * and a "Sample" tag while the sample team is loaded. Presentational: pass state in.
  *   team: { school, mascot, isSample }, palette, logoCanvas (decoded) or logoSrc (fallback),
  *   status: the logo decode status from useLogoCanvas() — "loading" keeps the current
  *     thumbnail with a spinner over it, "error" shows a broken-logo thumbnail and tag
@@ -26,7 +26,7 @@ export function TeamChip({
   const tagNote = failed ? errorLabel.toLowerCase() : team.isSample ? sampleLabel.toLowerCase() : "";
   return (
     <Tag
-      className={cx("ml-teamchip", failed && "is-error", className)}
+      className={cx("ml-teamchip", compact && "ml-teamchip--compact", failed && "is-error", className)}
       title={failed ? `${errorLabel} — ${title || "team"}` : title}
       aria-label={href || onClick ? `${name}${tagNote ? ` (${tagNote})` : ""} — ${title || "team"}` : undefined}
       aria-busy={busy || undefined}

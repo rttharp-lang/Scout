@@ -43,7 +43,7 @@ export function ColorField({ label, value, onChange, palette = {}, roles = ROLES
     <div className={["ml-color", className].filter(Boolean).join(" ")} role="group" aria-labelledby={`${id}-l`}>
       <div className="ml-color__head">
         <span className="ml-color__label" id={`${id}-l`}>{label}</span>
-        <span className="ml-color__role">{matchRole ? `Team · ${ROLE_NAMES[matchRole]}` : "Custom"}</span>
+        <span className="ml-color__role">{matchRole ? `Team ${ROLE_NAMES[matchRole].toLowerCase()}` : "Custom"}</span>
       </div>
       <div className="ml-color__row">
         {hasSwatches && (
@@ -56,6 +56,7 @@ export function ColorField({ label, value, onChange, palette = {}, roles = ROLES
                   key={r}
                   color={hex}
                   size="md"
+                  shape="round"
                   selected={selected}
                   label={`${ROLE_NAMES[r]} ${hex}`}
                   onClick={() => onChange?.(allowRoles ? r : hex)}
@@ -63,7 +64,7 @@ export function ColorField({ label, value, onChange, palette = {}, roles = ROLES
               );
             })}
             {extraHexes.map((hex) => (
-              <Swatch key={hex} color={hex} selected={!matchRole && resolved === hex} label={hex} onClick={() => onChange?.(hex)} />
+              <Swatch key={hex} color={hex} shape="round" selected={!matchRole && resolved === hex} label={hex} onClick={() => onChange?.(hex)} />
             ))}
           </div>
         )}

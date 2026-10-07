@@ -1,11 +1,11 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { X } from "lucide-react";
+import { AlertCircle, AlertTriangle, CheckCircle2, Info, X } from "lucide-react";
 import { cx } from "./cx.js";
 import { currentRoute } from "./router.js";
 import "./components.css";
 
 const ToastContext = createContext(null);
-const KICKER = { info: "Note", success: "Done", warning: "Heads up", danger: "Problem" };
+const ICON = { info: Info, success: CheckCircle2, warning: AlertTriangle, danger: AlertCircle };
 let seq = 0;
 
 /**
@@ -92,9 +92,9 @@ function ToastItem({ t, onClose }) {
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
-      <span className="ml-toast__tone" aria-hidden="true" />
+      <span className="ml-toast__icon" aria-hidden="true">{React.createElement(ICON[t.tone] || Info)}</span>
       <div className="ml-toast__main">
-        <span className="ml-toast__kicker">{t.kicker || KICKER[t.tone] || "Note"}</span>
+        {t.kicker && <span className="ml-toast__kicker">{t.kicker}</span>}
         {t.title && <span className="ml-toast__title">{t.title}</span>}
         {t.body && <span className="ml-toast__body">{t.body}</span>}
       </div>

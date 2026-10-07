@@ -1,29 +1,31 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-// Self-hosted fonts (never Google Fonts links): display, body, spec labels, jersey lettering.
-// Only the subsets the page can show: latin everywhere, plus latin-ext for the display and
-// body faces (team and player names a coach types: Ł, Ő, Ş, Ž…). The packages' default
-// imports also carry vietnamese/cyrillic faces — ~260 KB of the single-file Artifact page.
-// Graduate ships latin only; renderMockup.js imports the same file (deduped).
-import "@fontsource/big-shoulders-display/latin-700";
+// Type (self-hosted, never Google Fonts links). The UI faces are declared in
+// styles/fonts.css (latin + latin-ext only): Geist (UI/body), Archivo Variable (wide
+// display), Geist Mono (metadata).
+//
+// Faces still drawn on CANVASES — loaded here so `document.fonts.load()` finds them:
+//   · IBM Plex Mono 500/600 — the ascii effect on the main-thread fallback (the render
+//     worker gets the same files from engine/worker/pool.js), the line sheet and the
+//     collection exports.
+//   · Big Shoulders Display 800/900 + static Archivo 400/600 — the line sheet poster
+//     (ui/collection/lineSheet.js). Drop these once it moves to the Studio faces.
+//   · Graduate — jersey lettering (renderMockup.js imports the same file, deduped).
+// An @font-face costs nothing in the browser until something draws with it.
+import "@fontsource/ibm-plex-mono/latin-500";
+import "@fontsource/ibm-plex-mono/latin-600";
 import "@fontsource/big-shoulders-display/latin-800";
 import "@fontsource/big-shoulders-display/latin-900";
-import "@fontsource/big-shoulders-display/latin-ext-700";
 import "@fontsource/big-shoulders-display/latin-ext-800";
 import "@fontsource/big-shoulders-display/latin-ext-900";
 import "@fontsource/archivo/latin-400";
-import "@fontsource/archivo/latin-500";
 import "@fontsource/archivo/latin-600";
-import "@fontsource/archivo/latin-700";
 import "@fontsource/archivo/latin-ext-400";
-import "@fontsource/archivo/latin-ext-500";
 import "@fontsource/archivo/latin-ext-600";
-import "@fontsource/archivo/latin-ext-700";
-import "@fontsource/ibm-plex-mono/latin-500";
-import "@fontsource/ibm-plex-mono/latin-600";
 import "@fontsource/graduate/400";
 
+import "./styles/fonts.css";
 import "./styles/tokens.css";
 import "./styles/global.css";
 import "./ui/components/components.css";
