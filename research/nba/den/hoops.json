@@ -1,0 +1,322 @@
+{
+  "team": "den",
+  "lens": "hoops",
+  "headline": "Denver hoops is a high-altitude, adopted-champion culture: Jokic's 2023 title sits on top of a Black-rooted Park Hill and Five Points court tradition, the ABA-era rainbow heritage, and a Mountain West college scene that all feel like one underdog story.",
+  "summary": "Denver's basketball identity is built from the outside in: a team that was never a destination, an ABA lineage (Denver Rockets to Nuggets, David Thompson, Alex English, Dan Issel), and a 2023 championship led by a Serbian MVP the city treats as its own. The street layer lives in Denver Parks and Recreation gyms and in Denver Public Schools programs in Park Hill, Five Points, Montbello and the Westside, plus a growing Aurora and suburban AAU scene. The college map is regional (Colorado, Colorado State, Air Force, Denver, Wyoming) and tied to the Mountain West and Big 12. There is no WNBA team here, the Nuggets' G League affiliate is out of state, and locals therefore claim the NBA team as the whole pro ecosystem. Dress is practical and layered, shaped by altitude, big temperature swings and outdoor life, so function and mountain-adjacent aesthetics land better than loud streetball flash.",
+  "insights": [
+    {
+      "title": "The rainbow skyline is the one local graphic everyone owns",
+      "detail": "The 1980s powder-blue, gold and rainbow-stripe skyline era (Alex English, Fat Lever, Dan Issel) is the most beloved Nuggets look, and the team brought the 'Rainbow Skyline' set back as the 2025-26 City Edition. A leak points to a fan-favorite alternate returning for 2026-27.",
+      "implication": "Hoopers and grandparents both claim this look; lead with throwback rainbow-skyline stories in lifestyle and warm-up pieces, and confirm the 2026-27 City Edition before building campaigns on it."
+    },
+    {
+      "title": "Jokic is claimed as a local, not as an import",
+      "detail": "Denver treats Nikola Jokic as a hometown figure: the horse-racing, quiet-star, anti-celebrity persona fits a city that distrusts hype. He is a three-time MVP eligible for a roughly $290M extension, and the 2023 title is the city's only NBA championship.",
+      "implication": "Local credibility comes from understatement and humor, not hype copy. Product storytelling should celebrate Serbian and Denver identity together without turning him into a costume."
+    },
+    {
+      "title": "Black Denver hoops history runs through Park Hill, Five Points and Montbello",
+      "detail": "Neighborhood rec centers (Hiawatha Davis Jr., Glenarm) and DPS programs like Manual, East and George Washington (Chauncey Billups's school) carry the street tradition. These communities have seen heavy displacement and gentrification in RiNo, Five Points and Curtis Park.",
+      "implication": "Any court-culture activation should be co-created with and paid to local coaches, rec-center programs and Black-owned creators, not parachute-lifted from Five Points imagery."
+    },
+    {
+      "title": "The college map is regional and rivalry-driven",
+      "detail": "Colorado (Boulder) and Colorado State (Fort Collins) share the in-state rivalry; Air Force, Denver and Wyoming fill out the Mountain West and Rocky Mountain map. Derrick White (Parker, Legend High School, then CU) is a local-kid-made-good claimed by Colorado hoopers.",
+      "implication": "Mountain-state school colors and a college-to-NBA pipeline story can support a regional collection, but any university marks need licensing."
+    },
+    {
+      "title": "No WNBA, no local G League: the Nuggets are the whole ecosystem",
+      "detail": "Denver has no WNBA franchise; the Nuggets' G League affiliate is the Grand Rapids Gold, out of state. Women's hoops energy shows up at CU, CSU and strong Colorado high school programs.",
+      "implication": "Women's product and storytelling should go through Colorado high school and college talent and local clubs, not a pro team, and a future WNBA bid is worth watching."
+    },
+    {
+      "title": "Altitude shapes how people play and dress",
+      "detail": "The Mile High elevation is part of Nuggets lore as a home-court weapon, and locals layer for 40-degree swings, with fleece, shells and trail-adjacent gear common around outdoor courts and rec centers.",
+      "implication": "Outerwear-meets-warm-up pieces (shooting shells, fleece-lined track tops) and breathable fabrics speak to real local use, and the altitude story is a design hook."
+    }
+  ],
+  "places": [
+    {
+      "name": "Ball Arena",
+      "kind": "venue",
+      "neighborhood": "Lower Downtown (LoDo)",
+      "why": "Nuggets home since 1999 and the center of the fandom, with the Jokic-era watch parties spilling into the surrounding bars."
+    },
+    {
+      "name": "Hiawatha Davis Jr. Recreation Center",
+      "kind": "rec center",
+      "neighborhood": "Park Hill",
+      "why": "A long-running Denver Parks and Recreation gym tied to neighborhood youth hoops in a historically Black part of the city."
+    },
+    {
+      "name": "Glenarm Recreation Center",
+      "kind": "rec center",
+      "neighborhood": "Five Points",
+      "why": "Five Points' neighborhood gym, a pickup and youth-league anchor in the area long called the Harlem of the West."
+    },
+    {
+      "name": "Montbello Recreation Center",
+      "kind": "rec center",
+      "neighborhood": "Montbello",
+      "why": "Anchor for northeast Denver youth and pickup basketball, in a community that has produced DPS hoops talent."
+    },
+    {
+      "name": "Manual High School",
+      "kind": "high school",
+      "neighborhood": "Whittier / Five Points",
+      "why": "Historic DPS school with deep Black Denver roots and a long basketball tradition."
+    },
+    {
+      "name": "George Washington High School",
+      "kind": "high school",
+      "neighborhood": "Southeast Denver",
+      "why": "Chauncey Billups's high school, the most-cited local path to a Hall of Fame career."
+    },
+    {
+      "name": "Washington Park outdoor courts",
+      "kind": "outdoor court",
+      "neighborhood": "Wash Park",
+      "why": "Summer pickup in a park where the whole city passes through, the broadest-mix outdoor hoops spot."
+    },
+    {
+      "name": "CU Events Center",
+      "kind": "college arena",
+      "neighborhood": "Boulder",
+      "why": "Home of Colorado Buffaloes basketball, the Front Range's marquee college program."
+    },
+    {
+      "name": "Moby Arena",
+      "kind": "college arena",
+      "neighborhood": "Fort Collins",
+      "why": "Colorado State's loud on-campus gym, home of the in-state rival to CU."
+    },
+    {
+      "name": "Magness Arena",
+      "kind": "college arena",
+      "neighborhood": "University Park, Denver",
+      "why": "Denver Pioneers' home, the city's own D1 program."
+    }
+  ],
+  "people": [
+    {
+      "name": "Nikola Jokic",
+      "role": "Nuggets center, three-time MVP",
+      "why": "The franchise's face, claimed locally through the 2023 title and an understated image."
+    },
+    {
+      "name": "Jamal Murray",
+      "role": "Nuggets guard",
+      "why": "Playoff-clutch partner to Jokic whose Blue Arrow nickname and Canadian roots give a second fan identity."
+    },
+    {
+      "name": "Chauncey Billups",
+      "role": "Hall of Famer and coach, Denver native",
+      "why": "George Washington High and CU alum who is the clearest local-kid-to-legend story."
+    },
+    {
+      "name": "Alex English",
+      "role": "Nuggets Hall of Famer",
+      "why": "The scoring star of the rainbow-skyline era and a living symbol of the throwback look."
+    },
+    {
+      "name": "David Thompson",
+      "role": "ABA and Nuggets Hall of Famer",
+      "why": "Skywalker, the ABA-era icon whose leaping legend anchors the franchise's pre-NBA history."
+    },
+    {
+      "name": "Derrick White",
+      "role": "NBA guard, Colorado product",
+      "why": "From Parker, played at Legend High School and CU, a state-kid success story."
+    },
+    {
+      "name": "Dan Issel",
+      "role": "Nuggets and ABA legend",
+      "why": "Retired-jersey star of the 1970s-80s who carries the franchise's long heritage."
+    },
+    {
+      "name": "Altitude Sports",
+      "role": "Regional Nuggets TV home",
+      "why": "Local broadcast voice for the team, with analysts like Scott Hastings who are familiar to every Denver fan."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Nuggets vs. Thunder, Ball Arena",
+      "timing": "Oct 22",
+      "month": 10,
+      "why": "Nationally televised early-season matchup against a West power, the first big home test for the Jokic and DeRozan group."
+    },
+    {
+      "name": "Nuggets at Warriors, Christmas nightcap",
+      "timing": "Dec 25",
+      "month": 12,
+      "why": "A holiday spotlight game and a natural watch-party and gifting moment."
+    },
+    {
+      "name": "NBA Cup West Group A play",
+      "timing": "Fridays, Oct 30 to Nov 27",
+      "month": 11,
+      "why": "Denver plays Houston, Phoenix, Dallas and Utah in group play, with a Jazz opener on Oct 30 that is a regional rivalry beat."
+    },
+    {
+      "name": "Colorado high school state basketball tournaments",
+      "timing": "March",
+      "month": 3,
+      "why": "The peak of local prep pride, when Denver Public Schools and suburban programs chase state titles."
+    },
+    {
+      "name": "Mountain West and Big 12 college tournaments",
+      "timing": "March",
+      "month": 3,
+      "why": "CU, CSU, Air Force and Denver fans activate around conference tournaments and March Madness."
+    },
+    {
+      "name": "NBA playoffs and title-anniversary run",
+      "timing": "April to June",
+      "month": 6,
+      "why": "The 2023 championship parade anniversary falls in June and shapes the city's playoff mood."
+    },
+    {
+      "name": "Summer pickup and rec-center league season",
+      "timing": "June to August",
+      "month": 7,
+      "why": "Outdoor-court season is the best window for grassroots activation as Denver's weather opens up."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Mile High",
+      "meaning": "Denver's elevation nickname, used for the city and as a hoops claim about the arena advantage."
+    },
+    {
+      "term": "The Joker",
+      "meaning": "Fan nickname for Nikola Jokic, used affectionately across the city."
+    },
+    {
+      "term": "Blue Arrow",
+      "meaning": "Nickname for Jamal Murray."
+    },
+    {
+      "term": "Skywalker",
+      "meaning": "Nickname for ABA-era star David Thompson."
+    },
+    {
+      "term": "Rainbow Skyline",
+      "meaning": "The shorthand for the 1980s Nuggets jersey with a mountain skyline and rainbow stripes."
+    },
+    {
+      "term": "The Front Range",
+      "meaning": "The Boulder-Denver-Fort Collins corridor that defines the regional college and prep map."
+    },
+    {
+      "term": "Mile High Magic",
+      "meaning": "Fan shorthand for late-game home runs at altitude."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Nuggets midnight blue as a base for warm-ups and hoodies",
+      "type": "color",
+      "hex": "#0E2240",
+      "source": "Nuggets primary color and the night-sky tone of the Front Range",
+      "use": "Use as the dominant base on court-to-street pieces, pairing with gold accents."
+    },
+    {
+      "cue": "Sunshine gold accent",
+      "type": "color",
+      "hex": "#FEC524",
+      "source": "Nuggets gold and Colorado aspen season",
+      "use": "Use as trims, piping and graphic highlights, sparingly so it reads as premium."
+    },
+    {
+      "cue": "Flatirons red",
+      "type": "color",
+      "hex": "#8B2131",
+      "source": "Nuggets alternate red and Colorado red-rock tones",
+      "use": "Accent on shoes and bags, tied to a Rocky Mountain landscape story."
+    },
+    {
+      "cue": "Rainbow skyline stripe",
+      "type": "pattern",
+      "hex": "",
+      "source": "The 1980s Nuggets uniform with mountain-peak skyline and multicolor stripes",
+      "use": "Use as a throwback stripe on shorts and tees, ensuring any official marks are licensed with the team."
+    },
+    {
+      "cue": "Mountain skyline graphic",
+      "type": "graphic",
+      "hex": "",
+      "source": "Denver and Front Range peak silhouettes",
+      "use": "Use as an abstract line graphic on tees and hats, not a literal photo."
+    },
+    {
+      "cue": "Layered shell and fleece-lined warm-up",
+      "type": "material",
+      "hex": "",
+      "source": "Altitude and outdoor temperature swings",
+      "use": "Develop technical warm-up shells and fleece tops for pre-game and rec-center use."
+    },
+    {
+      "cue": "ABA-era ball and Rockets nod",
+      "type": "story",
+      "hex": "",
+      "source": "Denver Rockets and the franchise's ABA lineage",
+      "use": "Use as a heritage story on hangtags and capsule copy."
+    }
+  ],
+  "productHooks": [
+    "Rainbow skyline throwback warm-up and short set, timed to the 2026-27 City Edition once confirmed.",
+    "Altitude shell: a technical shooting jacket with fleece liner in midnight blue and gold, built for rec-center and outdoor use.",
+    "Front Range college-to-pro capsule linking Colorado hoopers (such as Derrick White and Chauncey Billups) to local courts, with licensing for any university marks.",
+    "Park Hill and Five Points community court capsule co-created with local coaches and rec-center programs, with proceeds returning to neighborhood gyms."
+  ],
+  "watchouts": [
+    "Gentrification in Five Points, RiNo and Curtis Park is sensitive; credit and pay Black-owned creators and avoid using the history as aesthetic.",
+    "Nuggets marks, the rainbow skyline and university logos require licensing; do not reproduce them without agreement.",
+    "Do not turn Jokic's Serbian identity or his horse-racing persona into a gimmick or costume.",
+    "Verify all 2026-27 City Edition claims, since the current leak is unconfirmed."
+  ],
+  "sources": [
+    {
+      "title": "Denver Nuggets (official)",
+      "url": "https://www.nba.com/nuggets/"
+    },
+    {
+      "title": "Denver Nuggets (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Denver_Nuggets"
+    },
+    {
+      "title": "Ball Arena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ball_Arena"
+    },
+    {
+      "title": "Denver Parks and Recreation",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation"
+    },
+    {
+      "title": "Colorado Buffaloes men's basketball (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Colorado_Buffaloes_men%27s_basketball"
+    },
+    {
+      "title": "Colorado High School Activities Association",
+      "url": "https://chsaanow.com/"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Which 2026-27 Nuggets City Edition or alternate uniform is confirmed and its release date",
+      "Whether Hiawatha Davis Jr. and Glenarm Recreation Centers still run open gym and youth hoops programs",
+      "Current coaches and records for Colorado, Colorado State, Air Force and Denver men's and women's programs",
+      "Whether any WNBA expansion bid or franchise for Denver has advanced",
+      "Current G League affiliate of the Nuggets (Grand Rapids Gold) and any change",
+      "Names and schedules of Denver summer pro-am and rec leagues, including any run by Denver Parks and Recreation",
+      "Current Altitude Sports broadcasters and Nuggets radio voices",
+      "Whether Chauncey Billups is still tied to any coaching role or lawsuit status that affects use of his name",
+      "Current Colorado high school state tournament venues and dates",
+      "Derrick White's current team and status"
+    ]
+  }
+}

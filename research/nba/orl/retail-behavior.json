@@ -1,0 +1,373 @@
+{
+  "team": "orl",
+  "lens": "retail-behavior",
+  "headline": "Orlando shops in two overlapping economies, a price-aware Central Florida fan base and a year-round tourist stream, and the Magic merch that wins has to work for both.",
+  "summary": "Florida has no state income tax and a 6% state sales tax, plus Orange County's 0.5% surtax. Locals are a young, Latino-heavy, hospitality-wage base with modest disposable income, while visitors arrive with vacation budgets and shop outlets and theme-park retail. Weather is warm nearly all year, so short sleeves, tees and lightweight layers outsell outerwear, and a cold snap is a micro-spike. Fans are loyal to the Banchero era but buy cheaper tiers (tees, kids, fan-grade jerseys), and the Puerto Rican and wider Caribbean community makes Christmas-through-Three-Kings gifting the strongest local peak. The season arrives with a new coach in Sean Sweeney and a core that needs to prove it can win together, so the Play-In-to-first-round arc is the fan mood to design against.",
+  "insights": [
+    {
+      "title": "Two shoppers, one arena",
+      "detail": "Kia Center crowds mix season-ticket locals from Orlando, Winter Park, Kissimmee and Lake Nona with out-of-town visitors who buy a single Magic piece as a trip souvenir. Visitors skew to one-off, high-visibility purchases; locals buy repeatedly through the season.",
+      "implication": "Build a clear two-lane range: a travel-friendly souvenir tier (tees, caps, packable items) and a deeper local tier (jerseys, warm-ups, player-led graphics)."
+    },
+    {
+      "title": "August tax relief and school-start timing",
+      "detail": "Florida's August back-to-school sales tax holiday has covered clothing and shoes at or under $100, and recent legislation reportedly made it a permanent August exemption. Orange County schools typically start in the second week of August, so the spend window lands in late July through mid-August.",
+      "implication": "Price kids' and youth apparel and sneakers at or just under $100 and launch in late July to catch the exemption. Verify the current rules before locking pricing."
+    },
+    {
+      "title": "Weather keeps the product light",
+      "detail": "Central Florida is hot and humid for most of the year, with summer afternoon thunderstorms and hurricane season running June through November. Real cold arrives only in short December to February fronts, which prompt a quick run on hoodies and warm-ups.",
+      "implication": "Lead with lightweight tees, shorts, mesh and breathable fabrics. Treat hoodies and warm-ups as a small, fast-turn winter capsule timed for holiday gifting, not as a deep buy."
+    },
+    {
+      "title": "Puerto Rican and Caribbean gifting calendar",
+      "detail": "Central Florida, especially Kissimmee, Osceola County and east Orlando, has one of the largest Puerto Rican communities on the mainland, and Noche Buena, Christmas and Three Kings Day on January 6 stretch gifting well past December 25. Many families buy for extended networks, including relatives on the island.",
+      "implication": "Keep gift-ready product in market through January 6, not just Christmas Eve, and consider Spanish-language and heritage-aware campaigns, co-created with Puerto Rican designers and creators."
+    },
+    {
+      "title": "Outlets and malls as the physical channel",
+      "detail": "Orlando's retail traffic runs through Orlando Premium Outlets (Vineland and International Drive), Lake Buena Vista Factory Stores, the Mall at Millenia and the Florida Mall, all heavily visited by tourists including Latin American shoppers. Locals also buy at the Magic team store at the arena and online.",
+      "implication": "Place Nike inventory and Magic-specific product where tourist and local traffic overlap, and use outlet-friendly price points. Keep premium and limited drops at Millenia and the arena."
+    },
+    {
+      "title": "Fan-grade jerseys and the star-driven spike",
+      "detail": "Orlando's modest local incomes and large family-with-kids base push demand toward lower-priced Swingman and youth jerseys instead of authentics, and Paolo Banchero is the dominant name. Franz Wagner and Desmond Bane carry smaller but real demand, and Nikola Vucevic's return gives longtime fans a nostalgia buy.",
+      "implication": "Weight production toward Banchero in youth and Swingman, with smaller runs for Wagner and Bane. Consider a Vucevic return graphic tee rather than a deep jersey commitment."
+    },
+    {
+      "title": "Sweeney reset and fan mood",
+      "detail": "Orlando went 45-37, lost the Play-In to Philadelphia, then beat Charlotte for the No. 8 seed before falling to No. 1 Detroit. Jamahl Mosley was fired and Sean Sweeney hired, with expectations resting on growth and a healthy Wagner.",
+      "implication": "Fan sentiment is hopeful but guarded, so lean on identity and 'prove it' energy over championship-level claims, and hold back big collections until the team shows early-season results."
+    }
+  ],
+  "places": [
+    {
+      "name": "Kia Center",
+      "kind": "arena",
+      "neighborhood": "Downtown Orlando / Parramore",
+      "why": "Home arena and the main in-person channel for Magic merchandise on game nights."
+    },
+    {
+      "name": "Orlando Premium Outlets, Vineland Avenue",
+      "kind": "outlet center",
+      "neighborhood": "Lake Buena Vista / Vineland",
+      "why": "A top regional outlet destination for tourists and locals, and a Nike-relevant channel."
+    },
+    {
+      "name": "Orlando Premium Outlets, International Drive",
+      "kind": "outlet center",
+      "neighborhood": "International Drive",
+      "why": "The second outlet campus, central to visitor shopping and international tourists."
+    },
+    {
+      "name": "The Mall at Millenia",
+      "kind": "mall",
+      "neighborhood": "Millenia / west Orlando",
+      "why": "Upscale mall with a more affluent local and tourist skew, suited to premium product."
+    },
+    {
+      "name": "The Florida Mall",
+      "kind": "mall",
+      "neighborhood": "South Orange Blossom Trail / south Orlando",
+      "why": "Large mall serving a broad local and Latin American visitor base."
+    },
+    {
+      "name": "Disney Springs",
+      "kind": "shopping district",
+      "neighborhood": "Lake Buena Vista",
+      "why": "Visitor-heavy retail where souvenir-grade, giftable sports product reaches vacationers."
+    },
+    {
+      "name": "Mills 50 District",
+      "kind": "district",
+      "neighborhood": "Mills 50, Orlando",
+      "why": "Independent, Asian-American-rooted commercial strip with a younger local shopper."
+    },
+    {
+      "name": "Camping World Stadium",
+      "kind": "stadium",
+      "neighborhood": "Parramore / West Orlando",
+      "why": "Host of the Florida Classic and bowl games, bringing HBCU and out-of-town fans to Orlando to shop."
+    }
+  ],
+  "people": [
+    {
+      "name": "Paolo Banchero",
+      "role": "Magic forward",
+      "why": "The face of the franchise and the primary driver of jersey and tee demand."
+    },
+    {
+      "name": "Franz Wagner",
+      "role": "Magic forward",
+      "why": "Core piece whose health shapes the season's merchandise momentum."
+    },
+    {
+      "name": "Desmond Bane",
+      "role": "Magic guard",
+      "why": "Third pillar of the core and a scorer fans are still adopting."
+    },
+    {
+      "name": "Nikola Vucevic",
+      "role": "Magic center",
+      "why": "Returned to Orlando, giving long-time fans a nostalgia hook."
+    },
+    {
+      "name": "Sean Sweeney",
+      "role": "Magic head coach",
+      "why": "New coach whose defense-first reputation sets the identity story for the season."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Back-to-school tax holiday and school start",
+      "timing": "Late July to mid August",
+      "month": 8,
+      "why": "The year's biggest value-driven youth apparel and footwear window."
+    },
+    {
+      "name": "Magic season opener and Emirates NBA Cup group play",
+      "timing": "Late October to late November",
+      "month": 10,
+      "why": "Cup Nights on Fridays make home-game merchandise moments, with Orlando in East Group A."
+    },
+    {
+      "name": "Black Friday and Thanksgiving week",
+      "timing": "Late November",
+      "month": 11,
+      "why": "Peak promotional shopping and the start of holiday gifting."
+    },
+    {
+      "name": "Noche Buena, Christmas and Three Kings Day",
+      "timing": "December 24 through January 6",
+      "month": 12,
+      "why": "The longest gifting stretch for the Puerto Rican and Caribbean community."
+    },
+    {
+      "name": "Florida Classic weekend",
+      "timing": "Typically November",
+      "month": 11,
+      "why": "Draws HBCU fans to Camping World Stadium and adds out-of-town shoppers."
+    },
+    {
+      "name": "Spring break and Easter tourism",
+      "timing": "March through April",
+      "month": 3,
+      "why": "Visitor surges raise souvenir and outlet traffic ahead of the playoff run."
+    },
+    {
+      "name": "Playoffs and Play-In",
+      "timing": "April through June",
+      "month": 4,
+      "why": "Playoff gear and fan fervor create a short, intense spending spike if Orlando qualifies."
+    },
+    {
+      "name": "Hurricane season",
+      "timing": "June through November",
+      "month": 9,
+      "why": "Storm threats disrupt in-store traffic and shipping, and pull spending toward supplies temporarily."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Magic Kingdom, Magic Basketball",
+      "meaning": "Fan wordplay linking the team to the city's theme-park identity; use sparingly to avoid IP issues."
+    },
+    {
+      "term": "O-Town",
+      "meaning": "Common local nickname for Orlando."
+    },
+    {
+      "term": "Noche Buena",
+      "meaning": "Christmas Eve family dinner and gift moment in Puerto Rican households."
+    },
+    {
+      "term": "Día de Reyes",
+      "meaning": "Three Kings Day on January 6, a gifting day for many Puerto Rican and Latin American families."
+    },
+    {
+      "term": "The 407",
+      "meaning": "Orlando's area code, used as local shorthand."
+    },
+    {
+      "term": "Boricua",
+      "meaning": "Puerto Rican pride term, best used only with community partners."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Magic blue as the anchor color",
+      "type": "color",
+      "hex": "#0077C0",
+      "source": "Orlando Magic primary team color",
+      "use": "Keep as the hero color on core tees, warm-ups and kids' product."
+    },
+    {
+      "cue": "Silver and black accent set",
+      "type": "color",
+      "hex": "#C4CED4",
+      "source": "Orlando Magic secondary palette",
+      "use": "Use for trims, outlines and tonal graphics that survive heat and wash."
+    },
+    {
+      "cue": "Pinstripe texture",
+      "type": "pattern",
+      "hex": "",
+      "source": "Long-running Magic identity through the 1990s and later throwback and Statement uniforms",
+      "use": "Use subtle pinstripes on lightweight shorts and tees as a heritage nod."
+    },
+    {
+      "cue": "Sunshine and sky gradients",
+      "type": "color",
+      "hex": "#F6A800",
+      "source": "Florida sunset and Central Florida skies",
+      "use": "Accent color for summer capsule graphics and tourist-facing souvenirs."
+    },
+    {
+      "cue": "Lightweight performance fabrics",
+      "type": "material",
+      "hex": "",
+      "source": "Hot, humid Central Florida climate",
+      "use": "Mesh, Dri-FIT and breathable blends for core product, with a small winter fleece capsule."
+    },
+    {
+      "cue": "Bilingual typography",
+      "type": "typography",
+      "hex": "",
+      "source": "Large Puerto Rican and Spanish-speaking population",
+      "use": "Use Spanish-language holiday or Three Kings graphics developed with local Puerto Rican creators."
+    }
+  ],
+  "productHooks": [
+    "A late-July youth capsule priced at or under $100 per item for Florida's August back-to-school exemption.",
+    "A giftable Noche Buena to Three Kings Day box (tee, cap, sock set) with bilingual packaging, co-created with a Puerto Rican designer.",
+    "A lightweight Magic summer and tourist capsule for outlets, Disney Springs and the arena store.",
+    "A Banchero-led youth and Swingman jersey program, with a small Vucevic return tee."
+  ],
+  "watchouts": [
+    "Theme-park and Disney-related Magic wordplay, characters or icons require licensing and should be avoided.",
+    "Puerto Rican and Caribbean imagery must be created with community partners who are credited and paid, never borrowed from flags or sacred symbols.",
+    "Hurricane season can disrupt launches, shipping and traffic, so avoid tying drops to major September storm-risk weeks.",
+    "Do not over-index on one star, since Wagner's health and the coaching change make demand uncertain."
+  ],
+  "sources": [
+    {
+      "title": "Orlando Magic official site",
+      "url": "https://www.nba.com/magic"
+    },
+    {
+      "title": "Kia Center",
+      "url": "https://www.kiacenterorlando.com"
+    },
+    {
+      "title": "Orlando Premium Outlets",
+      "url": "https://www.premiumoutlets.com"
+    },
+    {
+      "title": "Florida Department of Revenue",
+      "url": "https://floridarevenue.com"
+    },
+    {
+      "title": "Orlando, Florida (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Orlando,_Florida"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "Late July to mid August",
+        "month": 8,
+        "driver": "Back-to-school and Florida's August sales tax exemption on clothing and shoes at or under $100",
+        "impact": "high"
+      },
+      {
+        "window": "Late October",
+        "month": 10,
+        "driver": "Magic season opener, first home games and Cup Friday nights",
+        "impact": "medium"
+      },
+      {
+        "window": "Black Friday and Thanksgiving week",
+        "month": 11,
+        "driver": "Promotional peak and start of holiday gifting; Cup Nights run in Thanksgiving week",
+        "impact": "high"
+      },
+      {
+        "window": "December 15 to January 6",
+        "month": 12,
+        "driver": "Christmas, Noche Buena and Three Kings Day gifting",
+        "impact": "high"
+      },
+      {
+        "window": "Early January",
+        "month": 1,
+        "driver": "Three Kings Day tail and PGA Merchandise Show convention traffic",
+        "impact": "medium"
+      },
+      {
+        "window": "Spring break and Easter",
+        "month": 3,
+        "driver": "Peak tourist traffic at outlets and theme-park retail",
+        "impact": "medium"
+      },
+      {
+        "window": "April to June",
+        "month": 4,
+        "driver": "Play-In and playoff gear spike if Orlando qualifies",
+        "impact": "high"
+      },
+      {
+        "window": "June to August",
+        "month": 7,
+        "driver": "Summer tourism peak and heat-driven light apparel",
+        "impact": "medium"
+      },
+      {
+        "window": "June to November",
+        "month": 9,
+        "driver": "Hurricane season that can pause store traffic and shipments",
+        "impact": "low"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Kia Center team store",
+        "role": "Game-night impulse buying by locals and visitors, strongest on marquee opponents and Cup Fridays."
+      },
+      {
+        "channel": "Outlets and malls",
+        "role": "Orlando Premium Outlets, Mall at Millenia and Florida Mall serve tourists and locals with discount-conscious shopping."
+      },
+      {
+        "channel": "Online and e-commerce",
+        "role": "Primary channel for young, mobile-first locals and for gifts shipped to family elsewhere, including Puerto Rico."
+      },
+      {
+        "channel": "Social commerce",
+        "role": "Instagram and TikTok drive awareness among younger fans, with Spanish-language creators relevant."
+      },
+      {
+        "channel": "Resale and secondhand",
+        "role": "Used for authentic jerseys and sneakers by price-sensitive and collector fans."
+      }
+    ],
+    "priceProfile": "Florida has no state income tax, a 6% state sales tax and Orange County's 0.5% surtax, for roughly 6.5% at the register. Local incomes are modest and hospitality-weighted, so core tiers should sit at accessible price points, with the $100 clothing cap during the August exemption as a key threshold. Tourists and affluent suburbs such as Windermere, Winter Park and Lake Nona support a premium tier at Millenia and the arena.",
+    "jerseyBehavior": "Most fans buy fan-grade Swingman, youth and women's jerseys or tees rather than authentics, with Banchero as the clear favorite. Counterfeits and cheap knockoffs are a competitor, especially in tourist corridors and flea markets, so authentic, licensed value tiers matter. Gifting season and playoff runs drive most jersey purchases."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Florida's August back-to-school sales tax exemption: whether it is now permanent, the exact dates, and the $100 clothing and shoes cap.",
+      "Orange County sales tax rate (6% state plus 0.5% surtax, about 6.5%).",
+      "Orange County Public Schools 2026-27 first day of school (typically second week of August).",
+      "Current Magic City Edition and Statement uniform designs and colors for 2026-27.",
+      "Current Magic ownership, Kia Center naming, and team store hours and locations.",
+      "Which Magic players carry the most jersey demand and jersey numbers for 2026-27.",
+      "Whether Orlando Premium Outlets Vineland and International Drive and Lake Buena Vista Factory Stores are still operating as described.",
+      "Dates of the Florida Classic and PGA Merchandise Show for 2026-27.",
+      "Orlando Magic 2026-27 home schedule, including home Cup Nights and marquee opponents.",
+      "Current fan sentiment toward Sean Sweeney and expectations for the season."
+    ]
+  }
+}

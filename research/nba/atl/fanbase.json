@@ -1,0 +1,155 @@
+{
+  "team": "atl",
+  "lens": "fanbase",
+  "headline": "Atlanta's Hawks fans are a Black-led, hip-hop-literate, metro-wide crowd that is loyal in spirit but rarely loud in numbers, and a defense-first reload under Quin Snyder gives them a reason to show up.",
+  "summary": "Hawks fandom is shaped by Atlanta as a Black cultural capital: the crowd at State Farm Arena blends longtime Atlanta families, AUC alumni, Gwinnett and South Fulton suburbanites, transplants and corporate seats, and it dresses as if the arena were also a runway. The franchise is the city's most erratic fandom, with Dominique-era devotion, long stretches of apathy and a hot-and-cold relationship with the Falcons-first sports culture. Heading into 2026-27 the mood is optimistic but guarded: a 46-36 six-seed lost a first-round series to the eventual champion Knicks after leading 2-1, and the offseason pivoted to defense and the Jalen Johnson era after the Trae Young chapter closed. The Hawks sit at the edge of the city's music, fashion and sneaker scenes more than at their center, which makes local culture the way in, not the logo.",
+  "insights": [
+    {
+      "title": "The Black cultural capital is the real fan base",
+      "detail": "Atlanta's Black middle class, the AUC schools (Morehouse, Spelman, Clark Atlanta) and the hip-hop industry define what is cool in the building. The MLK Day home game is the franchise's most culturally resonant night of the year.",
+      "implication": "Build Hawks product with Atlanta Black creators and institutions credited and paid, and make the MLK Day game the anchor activation, not a footnote."
+    },
+    {
+      "title": "Loyal but light on tradition",
+      "detail": "The Hawks have no Garden-style ritual canon; fans identify with eras (Dominique, Pac-Man logo, Trae) more than with chants. Attendance and energy track winning and star power.",
+      "implication": "Design around era nostalgia and player identity (the volt-yellow and red Pac-Man hawk, Dominique's number 21) because there is no single sacred symbol to protect or exploit."
+    },
+    {
+      "title": "Jalen Johnson is the new face",
+      "detail": "Johnson is an All-Star and All-NBA player, Nickeil Alexander-Walker is the Most Improved Player, and Dyson Daniels and Onyeka Okongwu anchor a defense-first identity. Fans are pivoting from a Trae-centered story to a team-defense story.",
+      "implication": "Player-led capsules for Johnson and Daniels, and defense-flavored graphics, fit the new identity better than the old high-scoring guard narrative."
+    },
+    {
+      "title": "Gwinnett and South Fulton are two different Hawks fan bases",
+      "detail": "Metro fans span Decatur, East Point and College Park on the south and east sides, and Gwinnett and North Fulton suburbs on the other side, with a long commute to State Farm Arena and MARTA as the equalizer.",
+      "implication": "Reach suburban families through Gwinnett and Cobb retail and school-age programming, and urban Gen Z through AUC, Little Five Points and Westside pop-ups."
+    },
+    {
+      "title": "Retro is the loyalty currency",
+      "detail": "The 1990s Pac-Man hawk, the Dominique-era red and gold, and the City Editions honoring Atlanta culture and MLK are the pieces fans treasure. The new Specter uniforms put Atlanta among eight historic franchises.",
+      "implication": "Lead with heritage-informed throwbacks and the Specter collection rather than novelty marks, and tell the Atlanta story in the details."
+    },
+    {
+      "title": "Nike and Jordan are assumed, not special",
+      "detail": "Atlanta's sneaker culture runs deep through local boutiques, resale and Jordan Brand's ubiquity, so Nike and Jordan product is the default, not a differentiator. Authenticity comes from local credit.",
+      "implication": "Activate with local sneaker shops, DJs and artists rather than broad advertising; the credibility test is who is in the room."
+    }
+  ],
+  "places": [
+    { "name": "State Farm Arena", "kind": "venue", "neighborhood": "Downtown", "why": "The Hawks' home, rebuilt in 2018, with the club spaces and concourse that make the gameday look as important as the game." },
+    { "name": "Atlanta University Center", "kind": "campus district", "neighborhood": "West End", "why": "Home of Morehouse, Spelman and Clark Atlanta, the cultural and style engine of Black Atlanta fandom, and the center of homecoming season." },
+    { "name": "Little Five Points", "kind": "district", "neighborhood": "Inman Park / Candler Park", "why": "The city's vintage, streetwear and counterculture corner where throwback hawks logos and thrifted jerseys turn up." },
+    { "name": "Lenox Square", "kind": "mall", "neighborhood": "Buckhead", "why": "A long-running sneaker and fashion destination where gameday outfits are bought." },
+    { "name": "Westside Provisions District", "kind": "district", "neighborhood": "West Midtown", "why": "Design-forward retail and food that hosts brand pop-ups reaching the creative crowd." },
+    { "name": "Greenbriar Mall", "kind": "mall", "neighborhood": "Southwest Atlanta", "why": "A long-standing southwest Atlanta shopping hub with deep neighborhood sneaker and apparel roots." },
+    { "name": "Mercedes-Benz Stadium", "kind": "venue", "neighborhood": "Downtown", "why": "Shares Downtown with the Hawks and anchors the city's Falcons and Atlanta United sports culture that competes for fan attention." },
+    { "name": "Atlanta Dream at Gateway Center Arena", "kind": "venue", "neighborhood": "College Park", "why": "The Dream's home in the southside suburb is a basketball culture hub for families and women's hoops fans who overlap with the Hawks base." }
+  ],
+  "people": [
+    { "name": "Jalen Johnson", "role": "Hawks forward, All-Star and All-NBA", "why": "The face of the franchise heading into 2026-27." },
+    { "name": "Nickeil Alexander-Walker", "role": "Hawks guard, Most Improved Player", "why": "A breakout story fans have embraced as the model of development." },
+    { "name": "Dyson Daniels", "role": "Hawks guard", "why": "The defensive identity of the Snyder era." },
+    { "name": "Quin Snyder", "role": "Head coach", "why": "Architect of the turnover-forcing, high-three-point-volume system." },
+    { "name": "Dominique Wilkins", "role": "Hall of Fame forward and franchise icon", "why": "The Human Highlight Film is still the most beloved Hawk and a team ambassador." },
+    { "name": "Spud Webb", "role": "Former guard, Slam Dunk champion", "why": "The 1986 dunk champion remains a living local legend." },
+    { "name": "Killer Mike", "role": "Atlanta rapper and activist", "why": "A Westside-rooted voice for the city whose culture and business ties make him a natural authenticity reference." },
+    { "name": "Tony Ressler", "role": "Hawks principal owner", "why": "The ownership face fans judge on investment and direction." }
+  ],
+  "moments": [
+    { "name": "MLK Day home game", "timing": "Mon Jan 18, 2027, 2:30 pm ET vs. 76ers", "month": 1, "why": "Atlanta's traditional MLK Day game, the most culturally significant date of the Hawks calendar and tied to a reported City Edition tribute." },
+    { "name": "Emirates NBA Cup group play", "timing": "Fridays Oct 30 to Nov 27", "month": 11, "why": "East Group C with Boston, Charlotte, Chicago and Washington opens at Boston on Oct 30 and gives early-season stakes." },
+    { "name": "Morehouse and Spelman homecoming season", "timing": "October", "month": 10, "why": "AUC homecoming brings alumni style and sneaker culture to Atlanta streets in the weeks before tip-off." },
+    { "name": "Season opener", "timing": "Late October 2026", "month": 10, "why": "The Hawks have no opening night or Christmas game, so the home opener has to carry the launch energy." },
+    { "name": "Specter uniform games", "timing": "Select 2026-27 games", "month": 0, "why": "Atlanta is one of eight historic franchises getting Nike's Specter uniforms." },
+    { "name": "Playoff push", "timing": "April 2027", "month": 4, "why": "The 2027 playoff run is when casual and bandwagon fans decide whether to show up." }
+  ],
+  "vocabulary": [
+    { "term": "The A", "meaning": "Local shorthand for Atlanta, used constantly in team and city branding." },
+    { "term": "ATLiens", "meaning": "An OutKast-rooted nickname for Atlanta's culture-defining outsiders; use with respect for the artists." },
+    { "term": "Hotlanta", "meaning": "A dated nickname that locals use ironically; avoid on lead product." },
+    { "term": "Trill", "meaning": "Atlanta hip-hop slang for true and real; carries credibility only when credited to the culture." },
+    { "term": "The Dirty South", "meaning": "The regional hip-hop identity Atlanta helped define." },
+    { "term": "Human Highlight Film", "meaning": "Dominique Wilkins' nickname, still used to describe the franchise's highlight-reel DNA." },
+    { "term": "Peachtree", "meaning": "The street name that appears everywhere; used in Peachtree Hoops and in local identity." },
+    { "term": "Soar", "meaning": "The hawk-related cheer used in team marketing; fans are lukewarm on slogans." }
+  ],
+  "designCues": [
+    { "cue": "Volt yellow and Hawks red from the 1990s Pac-Man era", "type": "color", "hex": "#C8D32B", "source": "The 1995-2007 Pac-Man hawk uniforms fans still wear as throwbacks.", "use": "Use as a pop accent on warm-up and lifestyle pieces, not as a full base." },
+    { "cue": "Hawks red", "type": "color", "hex": "#E03A3E", "source": "The core team color across eras.", "use": "Primary for Association and Icon pieces and for the Specter collection tie-ins." },
+    { "cue": "Hawk wing and Pac-Man hawk mark", "type": "graphic", "hex": "", "source": "The alternate 1990s logo and the current hawk head.", "use": "Graphic tees and hoodies; pair a heritage mark with a modern cut." },
+    { "cue": "Dominique number 21 and Human Highlight Film script", "type": "typography", "hex": "", "source": "The franchise's most beloved era.", "use": "Numbered capsules and vintage-style lettering for the diehard segment." },
+    { "cue": "MLK tribute palette", "type": "story", "hex": "", "source": "The reported return of the 2020-21 City Edition honoring Martin Luther King Jr.", "use": "Work with the King family's licensing and Atlanta partners; do not approximate the likeness or speech." },
+    { "cue": "Peach and Georgia clay accents", "type": "color", "hex": "#E8A07A", "source": "Atlanta's peach identity and Georgia clay.", "use": "Secondary color for summer and lifestyle drops." },
+    { "cue": "Premium nylon and satin warm-up fabrics", "type": "material", "hex": "", "source": "The Atlanta gameday look favors tailored warm-ups, jewelry and statement outerwear.", "use": "Satin bombers and track sets with subtle hawk embroidery." }
+  ],
+  "productHooks": [
+    "Specter-uniform capsule with a hawk-wing tonal graphic and Dominique-number lettering for heritage diehards.",
+    "MLK Day game collection built with local Black designers and the King family's approval, with credited artists on the product.",
+    "Jalen Johnson and Dyson Daniels player-led apparel and signature-color footwear in volt yellow and Hawks red.",
+    "AUC homecoming and Westside pop-up limited run with local DJs, designers and sneaker shops credited.",
+    "Pac-Man hawk throwback shooting shirts and warm-ups in satin and nylon for the Atlanta gameday-fashion crowd."
+  ],
+  "watchouts": [
+    "MLK and civil-rights imagery requires the King estate's licensing and respectful treatment; never use his words or likeness as a decorative graphic.",
+    "Hip-hop references (OutKast, Outkast-rooted slogans, lyrics) are third-party IP and must be licensed and credited.",
+    "Do not treat Atlanta as a single fan base; the Black urban core, Gwinnett and corporate suburbs want different things.",
+    "Avoid trap or Magic City stereotypes; engage artists and businesses as partners instead.",
+    "Trae Young's departure is still emotional for some fans; avoid nostalgia product that reads as taking sides."
+  ],
+  "sources": [
+    { "title": "Atlanta Hawks official site", "url": "https://www.nba.com/hawks" },
+    { "title": "Atlanta Hawks (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Atlanta_Hawks" },
+    { "title": "State Farm Arena (Wikipedia)", "url": "https://en.wikipedia.org/wiki/State_Farm_Arena" },
+    { "title": "Peachtree Hoops (Hawks community blog)", "url": "https://www.peachtreehoops.com" }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "segments": [
+      { "name": "Longtime Atlanta diehards", "description": "Multigenerational Black Atlanta families and Dominique-era fans, many from southside and westside neighborhoods and the AUC.", "share": "core, loud", "wears": "Dominique-era red and gold, Pac-Man hawk throwbacks, Jordan Brand footwear, local streetwear.", "reach": "Church, barbershops, AUC events, local radio and the MLK game." },
+      { "name": "Suburban families", "description": "Gwinnett, Cobb, and South Fulton families who attend a few games a year.", "share": "large", "wears": "Current Icon and Association jerseys, youth jerseys, licensed fleece.", "reach": "Suburban retail, youth leagues and school partnerships." },
+      { "name": "Gen Z digital fans", "description": "Younger Atlantans and Georgia college students who follow the team through TikTok, Instagram and highlight accounts.", "share": "growing", "wears": "City Edition, oversized tees, Nike hoodies, Jordan sneakers.", "reach": "Social creators, campus pop-ups and sneaker drops." },
+      { "name": "Regional Georgia and Southeast fans", "description": "Fans across Georgia, Alabama and the Carolinas for whom the Hawks are the closest team.", "share": "moderate", "wears": "Classic logo tees, caps.", "reach": "Regional retail and broadcast partners." },
+      { "name": "Corporate and club-seat fans", "description": "Business-hospitality guests in Downtown and Buckhead and visitors from Atlanta's large corporate base.", "share": "small but high value", "wears": "Quarter-zips, premium polos, tailored jackets with team marks.", "reach": "Club spaces and partner events." }
+    ],
+    "traditions": [
+      { "name": "MLK Day home game", "detail": "The annual game on Martin Luther King Jr. Day is a cultural centerpiece with community tributes and special apparel." },
+      { "name": "Gameday fit", "detail": "Fans treat arrival at State Farm Arena as a style moment, with dressed-up streetwear, fresh sneakers and jewelry." },
+      { "name": "Dominique tributes", "detail": "Wilkins is honored in arena moments, and fans cheer his appearances more loudly than any current player." },
+      { "name": "Hip-hop in the building", "detail": "Atlanta artists appear courtside and in halftime programming, and the arena soundtrack leans on local music." }
+    ],
+    "icons": [
+      { "name": "Dominique Wilkins", "era": "1980s and early 1990s", "why": "The franchise's greatest scorer and the symbol of the Human Highlight Film." },
+      { "name": "Pete Maravich", "era": "1970s", "why": "Pistol Pete starred for Atlanta in the early 1970s and is remembered by older fans." },
+      { "name": "Spud Webb", "era": "1980s", "why": "The 1986 Slam Dunk Contest winner at barely five-foot-seven." },
+      { "name": "Joe Johnson", "era": "2000s", "why": "The star of the Hawks' playoff run in the late 2000s." },
+      { "name": "Al Horford", "era": "2000s and 2010s", "why": "The leader of the 60-win 2014-15 team." },
+      { "name": "Trae Young", "era": "2018 to 2026", "why": "The star of the 2021 Eastern Conference Finals run, whose era divides some fans." }
+    ],
+    "rivalries": [
+      { "opponent": "New York Knicks", "heat": "red-hot", "why": "The Knicks beat the Hawks in the 2026 first round after Atlanta led 2-1, echoing the 2021 first-round series Atlanta won; the title-winning Knicks are the benchmark." },
+      { "opponent": "Boston Celtics", "heat": "strong", "why": "A Cup group rival and a playoff foe, with the 2026-27 Cup opener at Boston." },
+      { "opponent": "Miami Heat", "heat": "simmering", "why": "A Southeast Division rival with frequent postseason history." },
+      { "opponent": "Orlando Magic", "heat": "simmering", "why": "Another Southeast Division opponent with a young, defensive roster." },
+      { "opponent": "Philadelphia 76ers", "heat": "historic", "why": "Past playoff series and the traditional MLK Day opponent this season, with LeBron James as the draw." }
+    ],
+    "sentiment": "Cautiously optimistic: a Jalen Johnson All-Star and a defense-first reload after a 46-36 season and a 2-1-series collapse against the Knicks. The Trae Young trade is still processed by many fans, and the Hawks must prove sustained playoff success.",
+    "gamedayLook": "Dressed-up streetwear with a jersey or hawk-logo piece layered in: red or black Icon jerseys, Dominique and Pac-Man throwbacks, fresh Jordan or Nike sneakers, caps and jewelry, with a quarter-zip or satin jacket for corporate seats."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Tony Ressler is still the Hawks' principal owner and no sale is pending",
+      "State Farm Arena naming rights and any arena renovation plans remain in place",
+      "Trae Young was traded from the Hawks and the fan response described in sentiment",
+      "The 2026-27 City Edition design and whether the MLK tribute is confirmed",
+      "Which games the Specter uniforms will be worn in",
+      "Dominique Wilkins' current team ambassador role",
+      "Atlanta Dream still plays at Gateway Center Arena in College Park",
+      "Greenbriar Mall and Lenox Square retail status and sneaker offerings",
+      "Peachtree Hoops is still active as the main Hawks community blog",
+      "Hawks home-opener date and any Cup home game dates",
+      "Killer Mike's current local business and cultural ties"
+    ]
+  }
+}

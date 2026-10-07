@@ -1,0 +1,266 @@
+{
+  "team": "dal",
+  "lens": "underground",
+  "headline": "Dallas taste is set south of the river and east of downtown, in Oak Cliff lowrider lots, Deep Ellum DIY rooms and Erykah Badu's orbit, long before Uptown or the Mavs mainstream catches on.",
+  "summary": "Dallas underground culture is split into scenes that rarely overlap: Oak Cliff and West Dallas Chicano car and mural culture, Deep Ellum's punk, DIY and live-music strip, South Dallas and Oak Cliff Black hip-hop and neo-soul lineage, and a huge suburban anime, sneaker and gaming base in Plano, Frisco and Arlington. The Mavs sit awkwardly across them, because the arena is downtown and the fandom is regional. With the franchise in a full reset (Ujiri, Dusty May, Cooper Flagg), the opening is a clean-slate identity play, and the credible route is through neighborhood scenes rather than Uptown gloss. Customization here runs through candy paint, hand lettering, thrifted Western and varsity pieces and Texas-flag remixes.",
+  "insights": [
+    {
+      "title": "Oak Cliff is the cultural engine, not downtown",
+      "detail": "Jefferson Boulevard, Bishop Arts and the Texas Theatre area anchor Oak Cliff's mix of Latino families, artists and vintage dealers, and the neighborhood has long been the cradle of Dallas independent taste. Mavs fandom here is real but under-served by official product.",
+      "implication": "Launch any Dallas-specific capsule through Oak Cliff partners and pop-ups rather than an Uptown or arena-first activation."
+    },
+    {
+      "title": "Lowrider and candy-paint culture is a deep Mexican-American craft tradition",
+      "detail": "Dallas lowrider clubs, hydraulic builds, pinstriping and airbrushed murals are a multi-generational family practice across Oak Cliff, West Dallas and Pleasant Grove, with Texas candy paint as a shared visual language.",
+      "implication": "Candy-paint gradients and pinstripe line work can inform colorways and graphics, but only through paid collaboration with local club members and painters."
+    },
+    {
+      "title": "Deep Ellum is the DIY and live-music proving ground",
+      "detail": "Deep Ellum's venues, murals and weekend outdoor markets host punk, hip-hop and electronic shows and a steady flow of independent makers. Its graffiti-layered wall culture is the city's most photographed street identity.",
+      "implication": "Use Deep Ellum for limited drops, maker markets and mural-backed content aimed at 18-30 creatives."
+    },
+    {
+      "title": "Dallas dance and hip-hop are exported culture, not borrowed",
+      "detail": "The Dougie, born in Dallas hip-hop in the late 2000s, and the broader Dallas buck and club dance lineage show the city originates movement culture. Erykah Badu's Oak Cliff and South Dallas ties give the scene a respected elder.",
+      "implication": "Frame movement, not just logos, in content, and tie any music activation to artists from the neighborhoods, credited and paid."
+    },
+    {
+      "title": "The suburbs hold the volume in anime, sneakers and gaming",
+      "detail": "Plano, Frisco, Irving and Arlington host large Asian-American and gaming communities, and conventions such as Anime Frontier in Fort Worth and Dallas fan expos draw big crowds. Sneaker meets and resale shops cluster around the same suburbs.",
+      "implication": "A Flagg-era youth push belongs here: Mavs collabs with anime-style graphics, drop-calendar sneaker events and school-age programming."
+    },
+    {
+      "title": "Texas western and varsity remix is the thrift uniform",
+      "detail": "Vintage dealers and thrifters in Dallas pair 90s Mavs and Cowboys gear with Western shirts, boots, work jackets and varsity patches. The result is a distinctly Texan hybrid of sportswear and ranch wear.",
+      "implication": "Embroidered chain-stitch, western yokes and snap closures are product details that read as local rather than costume."
+    }
+  ],
+  "places": [
+    {
+      "name": "Deep Ellum",
+      "kind": "district",
+      "neighborhood": "Deep Ellum",
+      "why": "Historic live-music and mural district that remains the center of Dallas DIY, with a long Black blues and jazz heritage underneath the punk era."
+    },
+    {
+      "name": "Texas Theatre",
+      "kind": "venue",
+      "neighborhood": "Oak Cliff",
+      "why": "Independent cinema and event space on Jefferson Boulevard, a hub for Oak Cliff's creative community."
+    },
+    {
+      "name": "Bishop Arts District",
+      "kind": "district",
+      "neighborhood": "Oak Cliff",
+      "why": "Indie shops, vintage dealers and galleries that set the neighborhood's indie retail tone."
+    },
+    {
+      "name": "Jefferson Boulevard",
+      "kind": "district",
+      "neighborhood": "Oak Cliff",
+      "why": "Latino commercial corridor with murals, quinceanera and western wear storefronts, and a lowrider cruising tradition."
+    },
+    {
+      "name": "Fair Park",
+      "kind": "district",
+      "neighborhood": "South Dallas",
+      "why": "Art Deco exposition grounds that host the State Fair of Texas and Red River Rivalry crowds, and a landmark of South Dallas identity."
+    },
+    {
+      "name": "Trees",
+      "kind": "venue",
+      "neighborhood": "Deep Ellum",
+      "why": "Long-running Deep Ellum club that has hosted rock, hip-hop and rising acts for decades."
+    },
+    {
+      "name": "Kessler Theater",
+      "kind": "venue",
+      "neighborhood": "Oak Cliff",
+      "why": "Restored Oak Cliff venue central to the neighborhood's music scene."
+    },
+    {
+      "name": "Fort Worth Convention Center",
+      "kind": "venue",
+      "neighborhood": "Fort Worth",
+      "why": "Home of the Anime Frontier convention, the region's largest anime gathering."
+    }
+  ],
+  "people": [
+    {
+      "name": "Erykah Badu",
+      "role": "Neo-soul artist and cultural elder",
+      "why": "A South Dallas native whose style, head wraps and local advocacy shape Dallas taste across generations."
+    },
+    {
+      "name": "Lil Wil",
+      "role": "Rapper behind The Dougie",
+      "why": "Dallas artist whose track spread a local dance nationwide, proof that the city exports trends."
+    },
+    {
+      "name": "Dirk Nowitzki",
+      "role": "Mavericks legend",
+      "why": "Universal Dallas touchpoint, the one figure fans from every scene respect, with a statue outside the arena."
+    },
+    {
+      "name": "Cooper Flagg",
+      "role": "Mavericks franchise player",
+      "why": "The first generational face of the reset, and a draw for the younger, online, gaming-adjacent fans."
+    },
+    {
+      "name": "Post Malone",
+      "role": "Musician from the DFW suburbs",
+      "why": "Grapevine-raised artist whose Texan, tattoo and Western-tinged look has influenced suburban DFW streetwear."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Deep Ellum Arts Festival",
+      "timing": "Spring, typically April",
+      "month": 4,
+      "why": "Annual street festival with local artists and bands, a natural pop-up window."
+    },
+    {
+      "name": "State Fair of Texas",
+      "timing": "Late September to mid October",
+      "month": 10,
+      "why": "Fair Park fills with the whole metroplex, overlapping the start of the Mavs season and the Red River Rivalry weekend."
+    },
+    {
+      "name": "Anime Frontier",
+      "timing": "Late November or early December",
+      "month": 11,
+      "why": "Fort Worth convention that gathers the region's anime and cosplay crowd just ahead of holiday retail."
+    },
+    {
+      "name": "NBA Cup group play",
+      "timing": "Fridays, Oct 30 to Nov 27",
+      "month": 11,
+      "why": "The Mavs are in West Group A, so Friday home Cup nights are early-season activation moments."
+    },
+    {
+      "name": "Opening week of the 2026-27 season",
+      "timing": "Late October",
+      "month": 10,
+      "why": "First Flagg and Dusty May season is the identity reset moment for new fans and drops."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Big D",
+      "meaning": "Nickname for Dallas, widely used in local sports and music."
+    },
+    {
+      "term": "DFW",
+      "meaning": "The metroplex of Dallas, Fort Worth and suburbs, and the real size of the fan base."
+    },
+    {
+      "term": "The Cliff",
+      "meaning": "Oak Cliff, said with neighborhood pride."
+    },
+    {
+      "term": "Dougie",
+      "meaning": "The Dallas-born dance that went national."
+    },
+    {
+      "term": "Candy paint",
+      "meaning": "Layered translucent car finish prized in Texas lowrider and custom car culture."
+    },
+    {
+      "term": "Y'all",
+      "meaning": "Texas plural, and an easy lettering hook for apparel graphics."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Mavericks royal blue anchor",
+      "type": "color",
+      "hex": "#00538C",
+      "source": "Mavericks team identity",
+      "use": "Base color for a Dallas capsule, paired with candy-paint accents rather than flat navy."
+    },
+    {
+      "cue": "Candy apple red-orange fade",
+      "type": "color",
+      "hex": "#B3122A",
+      "source": "Texas lowrider candy paint tradition",
+      "use": "Gradient panels or trim, built with local painters' credit and direction."
+    },
+    {
+      "cue": "Pinstripe and airbrush line work",
+      "type": "graphic",
+      "hex": "",
+      "source": "Dallas lowrider striping and mural tradition",
+      "use": "Fine linework on jacket linings and shorts hems, commissioned from local artists."
+    },
+    {
+      "cue": "Western yoke and snap detailing",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Texas thrift and Western wear remix",
+      "use": "Yoke stitching and snap-style closures on warm-ups and track jackets."
+    },
+    {
+      "cue": "Art Deco Fair Park lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Fair Park exposition architecture",
+      "use": "Geometric display type for City Edition-style graphics and tees."
+    },
+    {
+      "cue": "Layered poster-wall texture",
+      "type": "texture",
+      "hex": "",
+      "source": "Deep Ellum wheatpaste and mural walls",
+      "use": "Tonal collage prints on hoodies and lining."
+    }
+  ],
+  "productHooks": [
+    "A Deep Ellum or Oak Cliff artist-credited mural collab capsule: tees, hoodies and a warm-up jacket with commissioned linework and artist revenue share.",
+    "A candy-paint gradient colorway of a signature Flagg-era basketball shoe, developed with local lowrider painters and released through Oak Cliff shops.",
+    "Western-detail warm-up and track jacket with chain-stitch lettering and Texas-flag remix, aimed at thrift-minded DFW buyers.",
+    "Anime Frontier-timed limited graphic tee and shoe pack for the suburban anime and gaming audience."
+  ],
+  "watchouts": [
+    "Lowrider and Chicano art are community traditions; partner with, credit and pay local clubs and artists and do not lift existing murals or club logos.",
+    "Do not use Dougie or other Black dance and music heritage as costume; involve originators and neighborhood artists.",
+    "Cowboys, Texas Rangers and State Fair of Texas marks are third-party IP and would need licensing; avoid blending them with Mavs marks.",
+    "Avoid Uptown and Highland Park prep clichés and cowboy caricature; the Dallas underground is multicultural and urban."
+  ],
+  "sources": [
+    {
+      "title": "Dallas Mavericks (official)",
+      "url": "https://www.mavs.com"
+    },
+    {
+      "title": "Deep Ellum (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Deep_Ellum,_Dallas"
+    },
+    {
+      "title": "Oak Cliff (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Oak_Cliff"
+    },
+    {
+      "title": "Fair Park (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Fair_Park"
+    },
+    {
+      "title": "Anime Frontier",
+      "url": "https://www.animefrontier.com"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Mavericks 2026-27 City Edition uniform theme and release date",
+      "Whether the Texas Theatre, Kessler Theater and Trees are still operating and programming as described",
+      "Dates of Anime Frontier 2026 and its Fort Worth venue",
+      "Dates for the 2026 Deep Ellum Arts Festival and State Fair of Texas run and the Red River weekend",
+      "Active Dallas lowrider clubs and any local car shows suited to partnership",
+      "Current Deep Ellum outdoor market and independent shop roster",
+      "Whether Lil Wil and Erykah Badu are open to or active in local collaboration",
+      "New-arena plans and any move affecting the Mavs home identity"
+    ]
+  }
+}

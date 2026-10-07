@@ -1,0 +1,347 @@
+{
+  "team": "phx",
+  "lens": "retail-landscape",
+  "headline": "Phoenix buys Suns gear sprawled across the Valley's malls and big boxes, while taste is set in a handful of Roosevelt Row, Melrose and Tempe doors, and All-Star 2027 puts a global spotlight on the downtown arena store.",
+  "summary": "The Valley is a sprawl of car-ride retail: volume lives at Arizona Mills, Chandler Fashion Center, Scottsdale Fashion Square and Dick's/Fanatics-style big-box doors, not on one walkable high street. The arena team store at Mortgage Matchup Center is the emotional flagship and will be the busiest door of the year for NBA All-Star weekend (Feb 19-21, 2027). Culture is set on the central corridor (Roosevelt Row, Melrose District, Mill Ave in Tempe) and by vintage and local-brand makers, not by mall doors. Phoenix's dual Chicano and desert identity means the strongest local product sells through community pop-ups, tied to the Suns' purple and orange, rather than generic city tees. Door-level details here come from model knowledge and must be live-checked before anyone plans a visit or activation.",
+  "insights": [
+    {
+      "title": "Sprawl means mall clusters, not one flagship street",
+      "detail": "Phoenix has no Soho-style street. Arizona Mills (Tempe), Chandler Fashion Center and Scottsdale Fashion Square each anchor a different part of the Valley, with Kierland and Desert Ridge pulling the north.",
+      "implication": "Plan retail activation as a hub-and-spoke across East Valley, Scottsdale and West Valley, not a single downtown takeover."
+    },
+    {
+      "title": "The arena store is the heart, and All-Star is its peak",
+      "detail": "The Suns team store at Mortgage Matchup Center (formerly Footprint Center, renamed Oct 2025) is where the fan-identity purchase happens. All-Star 2027 lands there Feb 19-21, with the arena adding a large outdoor LED display.",
+      "implication": "Build an All-Star-week capsule and Phoenix-specific drop that can launch through the arena store and downtown pop-ups, subject to NBA and Suns licensing."
+    },
+    {
+      "title": "Taste is set in the central corridor",
+      "detail": "Roosevelt Row's mural-and-gallery blocks, the Melrose District's vintage and resale shops along 7th Avenue, and Tempe's Mill Avenue/ASU orbit are where streetwear, vintage and sneaker culture mix.",
+      "implication": "Seed limited product and collaborations in these doors first; use mall doors for scaled follow-through."
+    },
+    {
+      "title": "Vintage Suns is a real category",
+      "detail": "Gradient-sunburst Suns jerseys and 1990s Barkley-era gear are collected here, and Melrose vintage and thrift stores are natural places for fans to hunt it.",
+      "implication": "Retro-led product (Sunburst-era graphics, Valley-purple palette) wins credibility; stage vintage-style pop-ups at Melrose-type doors."
+    },
+    {
+      "title": "Heat shapes how product is sold",
+      "detail": "Summer triple-digit heat pushes buying indoors, to malls, outlets and online; outdoor pop-ups cluster in the cooler months, which happens to include the whole NBA season.",
+      "implication": "Schedule outdoor activations October through April and keep summer drops digital or indoor."
+    },
+    {
+      "title": "Local brands carry a Valley identity",
+      "detail": "Arizona-based apparel companies such as Antigua (golf and team apparel, Peoria) and a scene of small Chicano- and desert-themed streetwear labels sell at fairs, flea markets and pop-ups.",
+      "implication": "Partner with, credit and pay local makers on any Valley-voiced collaboration instead of designing 'Phoenix' graphics in-house."
+    }
+  ],
+  "places": [
+    {
+      "name": "Mortgage Matchup Center team store",
+      "kind": "team store",
+      "neighborhood": "Downtown Phoenix",
+      "why": "The Suns' home arena and primary team-gear door, central to All-Star 2027."
+    },
+    {
+      "name": "Roosevelt Row",
+      "kind": "district",
+      "neighborhood": "Downtown Phoenix",
+      "why": "The arts district with murals, galleries and First Friday crowds, ideal for taste-setting pop-ups."
+    },
+    {
+      "name": "Melrose District (7th Avenue)",
+      "kind": "district",
+      "neighborhood": "Central Phoenix",
+      "why": "Vintage, resale and antique shops along 7th Avenue, with a strong secondhand and retro-sports crowd."
+    },
+    {
+      "name": "Mill Avenue",
+      "kind": "district",
+      "neighborhood": "Tempe",
+      "why": "ASU-adjacent street where students and young adults shop and hang out."
+    },
+    {
+      "name": "Arizona Mills",
+      "kind": "mall",
+      "neighborhood": "Tempe",
+      "why": "A large value-focused mall with outlet-style athletic retail, a central volume door for the East Valley."
+    },
+    {
+      "name": "Chandler Fashion Center",
+      "kind": "mall",
+      "neighborhood": "Chandler",
+      "why": "Major East Valley mall serving suburban families."
+    },
+    {
+      "name": "Scottsdale Fashion Square",
+      "kind": "mall",
+      "neighborhood": "Scottsdale",
+      "why": "Premium mall for high-spending shoppers and visitors, strongest for lifestyle and premium product."
+    },
+    {
+      "name": "Desert Sky Mall area",
+      "kind": "mall",
+      "neighborhood": "West Phoenix / Maryvale",
+      "why": "West Valley retail anchor near Maryvale's large Latino community; verify current status and tenants before planning."
+    }
+  ],
+  "people": [
+    {
+      "name": "Devin Booker",
+      "role": "Suns guard",
+      "why": "The franchise face and the player whose jersey and signature product drives local demand."
+    },
+    {
+      "name": "Jalen Green",
+      "role": "Suns guard",
+      "why": "A second young star on the roster, with visibility that supports new-fan product."
+    },
+    {
+      "name": "Dillon Brooks",
+      "role": "Suns forward",
+      "why": "Newly extended; his edge resonates with the team's physical identity."
+    },
+    {
+      "name": "Charles Barkley",
+      "role": "Suns legend and broadcaster",
+      "why": "The 1993 Finals icon whose era powers the retro-Suns collecting category."
+    },
+    {
+      "name": "Antigua Group",
+      "role": "Arizona apparel company",
+      "why": "A homegrown licensed apparel maker, a reminder that local manufacturing and licensing exist in the Valley."
+    }
+  ],
+  "moments": [
+    {
+      "name": "NBA All-Star Weekend in Phoenix",
+      "timing": "Feb 19-21, 2027",
+      "month": 2,
+      "why": "The biggest retail moment of the season for the downtown arena store and nearby pop-ups."
+    },
+    {
+      "name": "Home opener and Cup opener",
+      "timing": "Late October (Cup opener Oct 30 vs. Dallas)",
+      "month": 10,
+      "why": "Start of the season; first big gear demand of the cycle."
+    },
+    {
+      "name": "Holiday gifting",
+      "timing": "Late Nov to Dec",
+      "month": 12,
+      "why": "Peak team-gear spend, mainly at malls and big box, while Cup group play is in progress."
+    },
+    {
+      "name": "First Friday art walk",
+      "timing": "First Friday monthly",
+      "month": 0,
+      "why": "Roosevelt Row's long-running monthly crowd, a natural pop-up venue."
+    },
+    {
+      "name": "Play-In and playoffs",
+      "timing": "April 2027",
+      "month": 4,
+      "why": "Last season ended in a first-round sweep, so postseason demand depends on a climb this year."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Valley",
+      "meaning": "Local shorthand for the Phoenix metro; use it in copy instead of 'Phoenix' alone."
+    },
+    {
+      "term": "602 / 480 / 623",
+      "meaning": "The area codes of Phoenix, East Valley and West Valley; shorthand for where someone repped."
+    },
+    {
+      "term": "Suns up",
+      "meaning": "Fan rallying phrase tied to the team."
+    },
+    {
+      "term": "Sunburst",
+      "meaning": "The Suns' retro graphic motif; a fan shorthand for the franchise's retro look."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Suns purple, as a Valley-dusk gradient",
+      "type": "color",
+      "hex": "#1D1160",
+      "source": "Suns core color and Valley sunsets",
+      "use": "Base color for tees, hoodies and warm-ups paired with orange."
+    },
+    {
+      "cue": "Suns orange",
+      "type": "color",
+      "hex": "#E56020",
+      "source": "Suns core color and desert light",
+      "use": "Accent on trims, graphics and footwear details."
+    },
+    {
+      "cue": "Desert-adobe sand",
+      "type": "color",
+      "hex": "#D9B38C",
+      "source": "Adobe and desert landscape",
+      "use": "Neutral for premium lifestyle and heavyweight fleece."
+    },
+    {
+      "cue": "Sunburst rays",
+      "type": "graphic",
+      "hex": "",
+      "source": "Suns retro branding and the 1990s collecting scene",
+      "use": "Retro graphics on tees and warm-ups; confirm current Suns licensing."
+    },
+    {
+      "cue": "Heavy-hand mural lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Roosevelt Row murals and Chicano lettering traditions",
+      "use": "Hire local artists for lettering rather than imitating the style."
+    },
+    {
+      "cue": "Lightweight, heat-ready fabrics",
+      "type": "material",
+      "hex": "",
+      "source": "Phoenix summers",
+      "use": "Breathable, UV-protective shells and tees for a Valley-specific performance story."
+    }
+  ],
+  "productHooks": [
+    "All-Star 2027 Phoenix capsule sold through the arena store and downtown pop-ups, subject to NBA and Suns licensing.",
+    "Vintage-sunburst retro capsule launched in Melrose-style vintage doors and relaunched at mall doors.",
+    "Heat-ready Valley performance line: breathable warm-ups and UV tees for outdoor courts.",
+    "Local artist collaboration with named Valley artists, with credit and revenue share, sold at pop-ups on First Friday."
+  ],
+  "watchouts": [
+    "Do not use sacred or ceremonial Indigenous imagery (for example Hopi, Navajo, O'odham or Akimel O'odham symbols); engage tribal artists and enterprises only through proper partnership.",
+    "Chicano and Mexican American motifs must come from credited local artists, not generic 'southwest' graphics.",
+    "Avoid cliches such as cactus, pastel Southwest patterns and tourist 'desert' kitsch.",
+    "Suns, NBA and arena marks require licensing; Barkley and player likenesses need separate rights.",
+    "Store details are unverified; confirm that doors are open and carry Nike basketball before planning."
+  ],
+  "sources": [
+    {
+      "title": "Phoenix Suns (official)",
+      "url": "https://www.nba.com/suns"
+    },
+    {
+      "title": "Mortgage Matchup Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mortgage_Matchup_Center"
+    },
+    {
+      "title": "Arizona Mills (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Arizona_Mills"
+    },
+    {
+      "title": "Scottsdale Fashion Square (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Scottsdale_Fashion_Square"
+    },
+    {
+      "title": "Roosevelt Row (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Roosevelt_Row"
+    }
+  ],
+  "confidence": "low",
+  "extra": {
+    "districts": [
+      {
+        "name": "Downtown Phoenix / Roosevelt Row",
+        "profile": "Arena, murals, galleries and First Friday.",
+        "shopper": "Young creatives, game-day fans and visitors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Melrose District",
+        "profile": "Vintage, resale and antique shops on 7th Avenue.",
+        "shopper": "Collectors, vintage hunters and locals who value authenticity.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Tempe: Mill Avenue and Arizona Mills",
+        "profile": "College-town street plus a major value mall.",
+        "shopper": "ASU students, East Valley families and bargain shoppers.",
+        "role": "mixed"
+      },
+      {
+        "name": "Scottsdale Fashion Square / Kierland",
+        "profile": "Premium malls and lifestyle centers.",
+        "shopper": "Higher-income locals and visitors.",
+        "role": "tourist"
+      },
+      {
+        "name": "Chandler Fashion Center / Gilbert",
+        "profile": "Suburban mall and big-box cluster.",
+        "shopper": "Suburban families and youth sports households.",
+        "role": "volume"
+      },
+      {
+        "name": "West Valley / Maryvale",
+        "profile": "Large Latino community with mall and swap-meet retail.",
+        "shopper": "Families and teens, heavily Mexican American.",
+        "role": "community"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Phoenix Suns Team Store",
+        "type": "team-store",
+        "neighborhood": "Downtown Phoenix",
+        "why": "The arena door, the central place for official Suns gear and the focus of All-Star 2027."
+      },
+      {
+        "name": "Nike Factory Store, Arizona Mills",
+        "type": "nike-owned",
+        "neighborhood": "Tempe",
+        "why": "A Nike-owned volume door in the East Valley; verify it is still open and its basketball assortment."
+      },
+      {
+        "name": "Foot Locker / Champs Sports (Valley malls)",
+        "type": "athletic-chain",
+        "neighborhood": "Valley-wide",
+        "why": "Major sneaker volume channel across the malls; confirm which locations carry House of Hoops-style basketball."
+      },
+      {
+        "name": "Dick's Sporting Goods (Valley locations)",
+        "type": "big-box",
+        "neighborhood": "Valley-wide",
+        "why": "Where suburban families buy team gear and kids' basketball product."
+      },
+      {
+        "name": "Fanatics / Lids (mall kiosks)",
+        "type": "athletic-chain",
+        "neighborhood": "Valley malls",
+        "why": "Primary retail source for fan caps and jerseys outside the arena."
+      },
+      {
+        "name": "Melrose vintage and resale shops",
+        "type": "vintage",
+        "neighborhood": "Central Phoenix",
+        "why": "Cultural doors for retro Suns gear; confirm named tenants before partnering."
+      },
+      {
+        "name": "Antigua Group",
+        "type": "local-brand",
+        "neighborhood": "Peoria",
+        "why": "An Arizona-based apparel company that makes licensed and team apparel; potential reference point for local licensing partners."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Nike-owned doors in the Valley (Nike Factory Store at Arizona Mills, any Nike Well Collective or community store) are open and current",
+      "Current Suns team store locations, hours and whether an All-Star pop-up or fan fest store is planned",
+      "Which independent sneaker boutiques and streetwear shops in Roosevelt Row, Tempe and Scottsdale are currently open (none named here for lack of confidence)",
+      "Suns 2026-27 City Edition uniform and whether Nike has announced Phoenix-specific product",
+      "Melrose District vintage and resale shops currently operating and best suited for partnership",
+      "Desert Sky Mall status and tenant mix",
+      "Foot Locker / House of Hoops and Champs locations carrying Nike basketball in the Valley",
+      "Antigua Group current Peoria operations and licensing relationships",
+      "First Friday art walk status and Roosevelt Row pop-up venues",
+      "Suns ownership and arena naming status for 2026-27",
+      "Local streetwear brands with big followings and their pop-up calendar",
+      "Barkley-era retro product availability and current Suns licensing for sunburst graphics"
+    ]
+  }
+}
