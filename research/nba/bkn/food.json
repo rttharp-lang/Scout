@@ -1,0 +1,326 @@
+{
+  "team": "bkn",
+  "lens": "food",
+  "headline": "Brooklyn eats by neighborhood, not by cuisine: doubles on Nostrand, sauce-on-top squares in Gravesend, cheesecake at Flatbush and DeKalb, and an Arab grocery strip on Atlantic Avenue that runs to Barclays. With Manhattan celebrating a Knicks title, \"Brooklyn-made\" is the Nets' food story.",
+  "summary": "Brooklyn's food identity is a set of neighborhood loyalties. Caribbean doubles, patties, roti and Haitian bakeries line Nostrand Avenue from Bed-Stuy to Flatbush. Italian-American pizza and spumoni run from Carroll Gardens to Gravesend and Coney Island. Atlantic Avenue's Arab grocery strip ends at the arena's door, and Williamsburg and Bushwick launched the chef-driven wave that Roberta's, Smorgasburg and Mike's Hot Honey took national. Barclays opened in 2012 selling that borough pride in its concourse (Nathan's, Junior's, L&B, Brooklyn Brewery), and Junior's is still the pre-game diner three blocks away. With the Knicks defending a title, the strongest food plays are paid, co-credited collaborations with Brooklyn institutions and Caribbean, Haitian and Asian-American cooks, timed to Carnival, December sorrel season, January 1 soup joumou and Lunar New Year.",
+  "insights": [
+    {
+      "title": "Atlantic Avenue runs to the arena's front door",
+      "detail": "Atlantic Avenue is Brooklyn's historic Arab food strip: Sahadi's has sold spices, nuts and olives from open bins there since 1948, next to Yemeni and Lebanese restaurants such as Yemen Café. The avenue runs east to Barclays at Flatbush. Each fall the Atlantic Antic street festival (since 1974) closes it from Hicks Street to Fourth Avenue, ending right at the arena.",
+      "implication": "Treat Atlantic Ave as a launch route: run a preseason or opening-week booth at the Antic, set up co-promotions with merchants along the strip, and use street-sign graphics that map the walk from the waterfront to the arena."
+    },
+    {
+      "title": "Barclays opened as Brooklyn on a plate",
+      "detail": "Barclays opened in 2012 with borough institutions in the concourse instead of generic arena food: Nathan's hot dogs, Junior's cheesecake, L&B Spumoni Gardens squares and Brooklyn Brewery lager. Junior's original 1950 diner at Flatbush Avenue Extension and DeKalb is still the pre- and post-game stop.",
+      "implication": "With the Knicks defending a title, \"Brooklyn-made\" is the Nets' clearest difference from Manhattan. Food collaborations should carry that provenance, with licensed co-branded pieces sold at the food stand and food served at the merch pop-up, once we confirm which vendors are still in the building."
+    },
+    {
+      "title": "Nostrand Avenue is the borough's food spine",
+      "detail": "From Bed-Stuy through Crown Heights to Flatbush, Nostrand is lined with Trinidadian doubles and roti shops, Jamaican patty and jerk counters, and Haitian bakeries. New York State designated Flatbush's Little Haiti Cultural and Business District in 2018. Locals order doubles \"slight pepper\" or \"heavy pepper\", and the street food peaks on Labor Day, when Carnival fills Eastern Parkway.",
+      "implication": "This is the strongest base for a co-designed, paid collaboration. Keep it specific to each nation (Trinidad, Jamaica, Haiti and Grenada are distinct, not one 'Caribbean'), and time it to the September Carnival run-up to tip-off and to December sorrel season."
+    },
+    {
+      "title": "Brooklyn pizza is a neighborhood argument",
+      "detail": "The canon runs from Totonno's coal oven (1924) in Coney Island, Di Fara in Midwood (Dom DeMarco, d. 2022) and L&B's sauce-on-top squares in Gravesend to Lucali in Carroll Gardens and Roberta's in Bushwick (2008), which started the wood-fired wave. Paulie Gee's Hellboy pie in Greenpoint launched Mike's Hot Honey. Every Brooklynite has a pick and will defend it.",
+      "implication": "Turn the argument into product: a neighborhood slice-map graphic, or a rotating pizza-box series made as a licensed, paid collaboration with each shop, plus a concourse Pizza Night where fans vote on the featured pie."
+    },
+    {
+      "title": "The newer chef class cooks its own heritage",
+      "detail": "The current chef wave includes Calvin Eng's Cantonese-American Bonnie's in Williamsburg, Win Son's Taiwanese-American cooking in East Williamsburg, and Charlie Mitchell's Clover Hill in Brooklyn Heights; its 2022 Michelin star was reported as the first for a Black chef in New York City. Sunset Park's Eighth Avenue is Brooklyn's own Fujianese-Cantonese Chinatown.",
+      "implication": "Hire these chefs to headline heritage nights, such as Lunar New Year (Feb 6, 2027) and Black History Month, with arena menus plus a limited product item they help design and tell the story of."
+    },
+    {
+      "title": "Locals already wear Brooklyn food brands",
+      "detail": "Milton Glaser's 1987 'B' for Brooklyn Brewery is the borough's most-worn food mark. Mike's Hot Honey and Roberta's frozen pies carry Brooklyn names into supermarkets nationwide. Fox's U-Bet syrup, made in Brooklyn for over a century, is the base of the egg cream still poured at Tom's Restaurant (1936) in Prospect Heights.",
+      "implication": "Food merch already works as borough pride here, so licensed co-brands, or original marks with the same mid-century energy, will read as authentic. Each brand mark, including Glaser's design, needs its own license."
+    }
+  ],
+  "places": [
+    {
+      "name": "Junior's Restaurant",
+      "kind": "restaurant",
+      "neighborhood": "Downtown Brooklyn (Flatbush Ave Extension & DeKalb Ave)",
+      "why": "Opened in 1950, it's the closest institution to Barclays and the default pre- and post-game diner, with a cheesecake that is a Brooklyn export."
+    },
+    {
+      "name": "Tom's Restaurant",
+      "kind": "restaurant",
+      "neighborhood": "Prospect Heights (Washington Ave)",
+      "why": "This 1936 luncheonette, walkable from the arena, has weekend lines, egg creams and lime rickeys; it's Brooklyn's Tom's, not the Seinfeld one."
+    },
+    {
+      "name": "Nostrand Avenue",
+      "kind": "district",
+      "neighborhood": "Bed-Stuy, Crown Heights, Flatbush",
+      "why": "Doubles, roti, patties, jerk and Haitian bakeries line the avenue, which runs through the neighborhoods closest to Barclays."
+    },
+    {
+      "name": "A&A Bake & Doubles",
+      "kind": "restaurant",
+      "neighborhood": "Bed-Stuy (Nostrand Ave)",
+      "why": "The Trinidadian doubles counter Brooklyn food people name first, and the place to learn 'slight pepper' versus 'heavy pepper'."
+    },
+    {
+      "name": "Sahadi's",
+      "kind": "shop",
+      "neighborhood": "Atlantic Avenue (Brooklyn Heights / Cobble Hill)",
+      "why": "This Lebanese-American family grocery has been on Atlantic since 1948 and anchors the Arab food strip that leads to the arena."
+    },
+    {
+      "name": "L&B Spumoni Gardens",
+      "kind": "restaurant",
+      "neighborhood": "Gravesend (86th St)",
+      "why": "Since 1939, its Sicilian square with the sauce on top and tricolor spumoni have defined south Brooklyn Italian-American pride."
+    },
+    {
+      "name": "Di Fara Pizza",
+      "kind": "restaurant",
+      "neighborhood": "Midwood (Avenue J)",
+      "why": "Dom DeMarco's hand-made pies, now carried on by his family, made it Brooklyn's pizza pilgrimage."
+    },
+    {
+      "name": "Nathan's Famous (Surf & Stillwell)",
+      "kind": "restaurant",
+      "neighborhood": "Coney Island",
+      "why": "The 1916 original hot dog stand, where crinkle-cut fries come with a small red fork and the July 4 eating contest is held."
+    },
+    {
+      "name": "Roberta's",
+      "kind": "restaurant",
+      "neighborhood": "Bushwick (Moore St)",
+      "why": "Opened in 2008 in a cinder-block former garage, it made Bushwick a food destination and now sells pizza nationally."
+    },
+    {
+      "name": "Paulie Gee's",
+      "kind": "restaurant",
+      "neighborhood": "Greenpoint (Greenpoint Ave)",
+      "why": "Its Hellboy pie made hot honey a national craze and launched Mike's Hot Honey."
+    }
+  ],
+  "people": [
+    {
+      "name": "Garrett Oliver",
+      "role": "Brewmaster, Brooklyn Brewery; founder of the Michael James Jackson Foundation for Brewing & Distilling",
+      "why": "Brooklyn's most respected Black voice in food and drink, and his foundation funds BIPOC brewers, which makes him a natural storyteller and partner."
+    },
+    {
+      "name": "Charlie Mitchell",
+      "role": "Chef, Clover Hill (Brooklyn Heights)",
+      "why": "Reported as the first Black chef in New York City to earn a Michelin star (2022), and a Brooklyn fine-dining voice for heritage-night collaborations."
+    },
+    {
+      "name": "Calvin Eng",
+      "role": "Chef-owner, Bonnie's (Williamsburg); author of Salt Sugar MSG",
+      "why": "His Cantonese-American cooking (Bonnie's is named for his mother) is the chef-driven Brooklyn take on Lunar New Year content."
+    },
+    {
+      "name": "Mike Kurtz",
+      "role": "Founder, Mike's Hot Honey",
+      "why": "He turned a Greenpoint pizzeria drizzle into a national Brooklyn brand, an example of 'Brooklyn-made' merch that locals actually buy."
+    },
+    {
+      "name": "Mark Iacono",
+      "role": "Pizzaiolo-owner, Lucali (Carroll Gardens)",
+      "why": "A self-taught pizza maker whose candlelit room on Henry Street became a celebrity-and-athlete pilgrimage."
+    },
+    {
+      "name": "Jonathan Butler and Eric Demby",
+      "role": "Co-founders, Brooklyn Flea and Smorgasburg",
+      "why": "They built the open-air vendor market that launched many Brooklyn food brands, a ready platform for pop-ups from April to October."
+    },
+    {
+      "name": "Rawlston Williams",
+      "role": "Chef-owner, The Food Sermon (Crown Heights)",
+      "why": "A Vincentian-born chef cooking Caribbean bowls and roti in Crown Heights, a chef-driven Caribbean voice rather than a nostalgia pick."
+    },
+    {
+      "name": "West Indian American Day Carnival Association (WIADCA)",
+      "role": "Organizer of the Labor Day Carnival on Eastern Parkway",
+      "why": "Runs the borough's biggest food-and-culture day, and it is the right partner, not a backdrop, for any Carnival-season activation."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Atlantic Antic",
+      "timing": "Last Sunday of September or first Sunday of October",
+      "month": 9,
+      "why": "Brooklyn's biggest street festival runs along Atlantic Avenue to the arena, which makes it the natural preseason launch window."
+    },
+    {
+      "name": "J'ouvert and the Labor Day Carnival",
+      "timing": "Labor Day Monday (Sept 6, 2027), J'ouvert before dawn",
+      "month": 9,
+      "why": "Eastern Parkway turns into a mile of jerk drums, doubles and roti, the peak of Caribbean Brooklyn six weeks before tip-off."
+    },
+    {
+      "name": "Sorrel and black cake season",
+      "timing": "Mid-December through New Year's",
+      "month": 12,
+      "why": "Caribbean bakeries along Nostrand and Flatbush stock sorrel and black cake, a holiday ritual that falls in the heart of the home schedule."
+    },
+    {
+      "name": "Soup joumou on Haitian Independence Day",
+      "timing": "January 1",
+      "month": 1,
+      "why": "Flatbush's Haitian community marks 1804 with the freedom soup, which UNESCO recognized as cultural heritage in 2021."
+    },
+    {
+      "name": "Lunar New Year on Eighth Avenue",
+      "timing": "Saturday Feb 6, 2027 and the surrounding week",
+      "month": 2,
+      "why": "Sunset Park's Chinatown fills with bakery and banquet traffic, a borough-specific setting for a Lunar New Year night."
+    },
+    {
+      "name": "Ramadan iftars in Bay Ridge and on Atlantic Ave",
+      "timing": "About Feb 8 to Mar 9, 2027",
+      "month": 2,
+      "why": "Fifth Avenue in Bay Ridge and the Atlantic Avenue strip come alive after sunset during the late-season home stretch."
+    },
+    {
+      "name": "Smorgasburg season",
+      "timing": "April to October: Saturdays in Williamsburg, Sundays in Prospect Park",
+      "month": 4,
+      "why": "The weekly showcase for new Brooklyn food brands, a good place to soft-launch playoff-season and summer product."
+    },
+    {
+      "name": "Nathan's Hot Dog Eating Contest",
+      "timing": "July 4",
+      "month": 7,
+      "why": "Coney Island's televised summer ritual, a hook for offseason and Summer League capsules."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Slight pepper / heavy pepper",
+      "meaning": "How you order doubles: how much Scotch bonnet sauce goes on. Say it right and you sound local."
+    },
+    {
+      "term": "Doubles",
+      "meaning": "Trinidadian street breakfast of two pieces of fried bara holding curried channa, with tamarind, cucumber, shado beni and pepper."
+    },
+    {
+      "term": "Patty and coco",
+      "meaning": "A Jamaican beef patty folded into soft coco bread, the Flatbush and Crown Heights cheap lunch."
+    },
+    {
+      "term": "A square",
+      "meaning": "A Sicilian slice from L&B Spumoni Gardens, with the cheese under the sauce. \"Grab a square at Spumoni Gardens.\""
+    },
+    {
+      "term": "Egg cream",
+      "meaning": "A soda-fountain drink with no egg and no cream: milk, seltzer and chocolate syrup, traditionally Brooklyn-made Fox's U-Bet."
+    },
+    {
+      "term": "J'ouvert",
+      "meaning": "The pre-dawn opening of Carnival, with paint, powder, steel pan and food, on Labor Day morning in Flatbush and Crown Heights."
+    },
+    {
+      "term": "Soup joumou",
+      "meaning": "Haitian squash soup eaten on January 1 to mark independence, once forbidden to the enslaved."
+    },
+    {
+      "term": "Lard bread",
+      "meaning": "Brooklyn Italian bakery bread with salami and cheese baked in; Mazzola Bakery in Carroll Gardens is the reference."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Sorrel red: the deep hibiscus red of Caribbean Christmas sorrel, as a holiday colorway against Nets black and white.",
+      "type": "color",
+      "hex": "#7A1C34",
+      "source": "Sorrel steeped with ginger and clove in Jamaican, Trinidadian and Vincentian homes and bakeries in Flatbush and Crown Heights every December",
+      "use": "December warm-up and fleece colorway, with the story told by a paid Caribbean bakery partner, not by Nike alone."
+    },
+    {
+      "cue": "Patty gold: the turmeric-curry orange-gold of a Jamaican beef patty crust, paired with coco-bread cream (#F3E4C8).",
+      "type": "color",
+      "hex": "#E3A33A",
+      "source": "Patty counters along Nostrand, Church and Flatbush Avenues",
+      "use": "Accent color for sleeve tips, linings and tags on black Nets pieces in a Nostrand Ave capsule; avoid caricature food graphics."
+    },
+    {
+      "cue": "Slight/heavy pepper heat dial: a two-step gauge graphic based on the doubles order, set in hand-painted shop-sign lettering.",
+      "type": "graphic",
+      "hex": "",
+      "source": "The ordering language at Trinidadian doubles shops in Bed-Stuy and Crown Heights",
+      "use": "Tee and shooting-shirt graphic co-written with a named doubles vendor, who is credited on the tag. Use no national flags unless the partner directs it."
+    },
+    {
+      "cue": "Lunch-counter lettering: chrome-and-neon script plus changeable-letter menu-board type, redrawn as an original 'Brooklyn' wordmark.",
+      "type": "typography",
+      "hex": "",
+      "source": "Junior's 1950 neon at Flatbush and DeKalb and Tom's Restaurant's 1936 luncheonette",
+      "use": "Wordmarks for shooting shirts and retro-leaning fan product, a natural pair with the reported ABA-era throwbacks. Draw new letterforms; don't trace either restaurant's sign."
+    },
+    {
+      "cue": "Crinkle-cut wave pattern with a small two-prong red fry-fork icon.",
+      "type": "pattern",
+      "hex": "",
+      "source": "Nathan's crinkle-cut fries at Surf and Stillwell, Coney Island",
+      "use": "All-over print for a summer or July 4 Coney capsule. The shapes are generic, but any Nathan's name or green-and-yellow trade dress needs a license."
+    },
+    {
+      "cue": "Egg-cream brown: the chocolate-syrup brown of a Brooklyn egg cream, worn two-tone with a seltzer-foam off-white.",
+      "type": "color",
+      "hex": "#4A2B20",
+      "source": "Fox's U-Bet syrup, made in Brooklyn, and the soda fountains that still pour egg creams",
+      "use": "Heritage two-tone for lifestyle fleece and caps. Tell the egg-cream story on the hang tag without using the Fox's label."
+    },
+    {
+      "cue": "Soup joumou as a freedom story, not a food joke: the January 1, 1804 independence meal told by Haitian Brooklynites.",
+      "type": "story",
+      "hex": "",
+      "source": "Haitian families and restaurants in Flatbush's Little Haiti Cultural and Business District",
+      "use": "A January 1 capsule or content series designed by a commissioned Haitian Brooklyn artist and chef. Use no Vodou or ceremonial imagery."
+    }
+  ],
+  "productHooks": [
+    "Slight Pepper capsule: a paid, co-credited collaboration with a Nostrand Ave doubles shop (heat-dial tees, wax-paper-wrapped packaging), launched in the Labor Day Carnival run-up to tip-off, with a Barclays doubles pop-up on a Caribbean Heritage night.",
+    "Sorrel holiday pack: sorrel-red fleece and warm-ups for December home games, sold beside a Flatbush Caribbean bakery's sorrel and black cake at the arena, in bakery-box packaging.",
+    "Brooklyn Slice Map series: a neighborhood-stamped tee for each licensed pizza partner (Midwood, Gravesend, Coney Island, Carroll Gardens, Bushwick, Greenpoint), packed in a kraft pizza box, released one per month with a concourse Pizza Night where fans vote on the pie.",
+    "Atlantic Ave preseason drop: debut the season's City or Classic collection at an Atlantic Antic booth, with merchant co-promotions from Sahadi's to Fourth Avenue and a street-sign graphic tracing the walk to Barclays.",
+    "Lunch Counter collection: an original neon-script 'Brooklyn' wordmark in egg-cream brown and off-white, paired with the reported ABA-era throwbacks, launched with a licensed Junior's cheesecake or Tom's egg-cream post-game promotion."
+  ],
+  "watchouts": [
+    "Barclays was built through the contested Atlantic Yards eminent-domain fight (Freddy's Bar was displaced to South Slope), and Prospect Heights, Crown Heights and Bed-Stuy have gentrified fast. Partner with long-standing Black, Caribbean and immigrant-owned businesses and pay them, rather than presenting newcomer spots as 'authentic Brooklyn'.",
+    "Junior's, Nathan's, L&B, Peter Luger, Fox's U-Bet, Mike's Hot Honey, every pizzeria name and Milton Glaser's Brooklyn Brewery 'B' are protected marks. License them or draw original work, and check whether a food brand already has an apparel deal with a rival.",
+    "Caribbean cues must be nation-specific and partner-led. Don't mash flags together, don't borrow mas costume imagery without a mas camp, and don't play on J'ouvert's history of violence and heavy policing.",
+    "Crown Heights (Chabad) and Williamsburg (Satmar) are religious communities with a history of tension, including the 1991 Crown Heights riot. Don't turn kosher or Hasidic foodways into graphics, and handle Ramadan and Lunar New Year with community partners.",
+    "NYC-generic tropes (chopped cheese is Harlem's, plus bodega cats and the generic 'NY slice') fail the swap test and are shared with the title-holding Knicks. Brooklyn's most famous fan, Spike Lee, is a Knicks icon."
+  ],
+  "sources": [
+    { "title": "Brooklyn Nets (official site)", "url": "https://www.nba.com/nets" },
+    { "title": "Barclays Center (official site)", "url": "https://www.barclayscenter.com" },
+    { "title": "Barclays Center (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Barclays_Center" },
+    { "title": "Atlantic Avenue (New York City) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Atlantic_Avenue_(New_York_City)" },
+    { "title": "Junior's (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Junior%27s" },
+    { "title": "Nathan's Famous (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Nathan%27s_Famous" },
+    { "title": "L&B Spumoni Gardens (Wikipedia)", "url": "https://en.wikipedia.org/wiki/L%26B_Spumoni_Gardens" },
+    { "title": "Di Fara Pizza (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Di_Fara_Pizza" },
+    { "title": "Brooklyn Brewery (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Brooklyn_Brewery" },
+    { "title": "West Indian Day Parade (Wikipedia)", "url": "https://en.wikipedia.org/wiki/West_Indian_Day_Parade" },
+    { "title": "Smorgasburg (official site)", "url": "https://www.smorgasburg.com" },
+    { "title": "Soup joumou (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Soup_joumou" },
+    { "title": "Doubles (food) (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Doubles_(food)" },
+    { "title": "Egg cream (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Egg_cream" }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Barclays Center 2026-27 concessions: which Brooklyn vendors (Nathan's, Junior's, L&B Spumoni Gardens, Brooklyn Brewery) still operate in the building, and who runs food service.",
+      "Atlantic Antic: whether the 2026 edition already ran (Sept 27 or Oct 4) and the 2027 date and route (Hicks St to Fourth Ave).",
+      "A&A Bake & Doubles is still operating on Nostrand Ave in Bed-Stuy, and whether it holds a James Beard America's Classics award (do not cite one until confirmed).",
+      "Charlie Mitchell is still chef at Clover Hill; confirm the 2022 Michelin star, the 'first Black chef in NYC' framing and any later James Beard win.",
+      "Bonnie's (Calvin Eng), Win Son, Roberta's (Bushwick), Paulie Gee's (Greenpoint), Lucali and Di Fara are all still open in late 2026.",
+      "Rawlston Williams' The Food Sermon is still operating in Crown Heights.",
+      "Garrett Oliver is still Brooklyn Brewery's brewmaster, and whether the Williamsburg brewery and taproom has relocated.",
+      "Tom's Restaurant (Washington Ave) is still open and serving egg creams, and Fox's U-Bet is still produced in Brooklyn.",
+      "Whether the Nets have scheduled Lunar New Year (Feb 6, 2027), Caribbean, Haitian or Ramadan heritage nights for 2026-27, and their dates.",
+      "2027 dates: Smorgasburg season start and sites (Williamsburg on Saturdays, Prospect Park on Sundays), and the Labor Day Carnival and J'ouvert route for Sept 6, 2027.",
+      "Ramadan 2027 dates (estimated Feb 8 to Mar 9) and Nathan's July 4, 2027 contest at Surf and Stillwell.",
+      "Freddy's Bar is still operating at its South Slope location, and Sahadi's and Yemen Café are still on Atlantic Ave."
+    ]
+  }
+}

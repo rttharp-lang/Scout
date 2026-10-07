@@ -1,0 +1,332 @@
+{
+  "team": "tor",
+  "lens": "art",
+  "headline": "Toronto's look is TTC red, subway lettering, brutalist concrete and murals painted under its expressways, and its sharpest makers now work from Oakwood, Regent Park, Scarborough and Brampton rather than Queen West.",
+  "summary": "Toronto's visual culture comes from infrastructure and diaspora. Its building blocks are Red Rocket streetcar red, the 1954 subway lettering on tiled station walls and Viljo Revell's City Hall 'eye'. Add the board-formed concrete of Raymond Moriyama's Scarborough Civic Centre and the slab towers of Jane & Finch and Thorncliffe Park, plus murals on the pillars of Underpass Park, The Bentway and Graffiti Alley, many funded by the city's StreetARToronto program. The most credible makers are muralists Elicser Elliott, Adrian Hayles and Clandestinos, basketball-obsessed sculptor Esmaa Mohamoud and mas designer Louis Saldenah. More and more of them work through Black-led and suburban hubs such as Nia Centre, Daniels Spectrum and Mural Routes, after Artscape's 2024 collapse cut downtown studio space. Kawhi Leonard's return brings back the four-bounce imagery of 2019, and All-Star Scottie Barnes gives that nostalgia a current face. Nike's opening is a transit-and-concrete design language made with 416 and 905 artists, instead of another CN Tower, maple leaf or OVO-owl riff.",
+  "insights": [
+    {
+      "title": "Toronto paints under its expressways",
+      "detail": "Many of the city's best-known walls are public infrastructure. StreetARToronto funds murals on underpasses and utility boxes, painted pillars shade the Underpass Park basketball courts beneath the Eastern Ave and Adelaide/Richmond ramps, and The Bentway runs art and a winter skate trail under the Gardiner's concrete bents. Graffiti Alley (Rush Lane, off Queen West) is still the showcase where Elicser Elliott, Birdo and others have painted for years.",
+      "implication": "In Toronto the pier and the pillar are the native canvas. Design wraparound side-panel and shorts graphics as 'column murals', commission them from StART-roster artists, and launch them on the Underpass Park courts, not at a downtown mall."
+    },
+    {
+      "title": "Four bounces is back in play",
+      "detail": "Kawhi Leonard's Game 7 buzzer-beater over Philadelphia on May 12, 2019 (the crouch and the four rim bounces) spread across GTA murals, tattoos and bootleg tees before the June 2019 title. His trade back from the Clippers this summer brings that imagery back, now alongside 2026 All-Star Scottie Barnes.",
+      "implication": "Build the Kawhi-return drop around an abstract four-arc bounce graphic drawn by a Toronto artist, which avoids licensing the photograph. Pair it with product led by Barnes so it reads as a new chapter, not a 2019 museum piece."
+    },
+    {
+      "title": "The scene's center of gravity left Queen West",
+      "detail": "Rising rents and Artscape Toronto's 2024 receivership squeezed downtown studio space. Black-led and suburban hubs gained ground: Nia Centre for the Arts on Oakwood Ave, BAND in Parkdale, Daniels Spectrum in Regent Park, Scarborough-rooted Mural Routes, and MOCA in the Junction Triangle's former Tower Automotive factory.",
+      "implication": "Find collaborators and run paid, credited co-design sessions through these hubs. Product should come from Oakwood, Regent Park and Scarborough, where much of the Raptors' fanbase lives, not from the downtown core."
+    },
+    {
+      "title": "Transit is the GTA's shared typography",
+      "detail": "The 1954 Yonge line's custom geometric sans still names stations on tiled walls; David Vereschagin digitized it as 'Toronto Subway'. The red-and-white streetcar is the 'Red Rocket', and Raptors 905 in Mississauga made an area code into a team name. Fans place themselves by 416, 905 and their subway line.",
+      "implication": "A numbers-and-lettering system based on the subway face and the station tile bands would give Toronto a City Edition font no other market can copy. It needs a license from the TTC and from whoever holds the typeface rights."
+    },
+    {
+      "title": "Diaspora craft is the city's living textile tradition",
+      "detail": "Mas camps like Louis Saldenah's build feathered, beaded Carnival costumes all year for the August Grand Parade on Lake Shore Blvd. Brampton and Malton's Punjabi community wears phulkari embroidery at Vaisakhi. Little Ethiopia on the Danforth shows tibeb woven borders and Ge'ez-script storefront signs.",
+      "implication": "Make each one a separate capsule co-designed with named, paid community designers, not one blended 'multicultural' print. Time them to Black History Month (February), Vaisakhi (April) and Carnival (August)."
+    },
+    {
+      "title": "Toronto sports wear blue; the Raptors own red, black and purple",
+      "detail": "The Leafs, Blue Jays and Argonauts all dress the city in blue. The Raptors' visual history runs from the 1995 purple dinosaur of the Vince Carter era, through Sid Lee's black-and-white 2014 'We The North' campaign, to today's red, black and silver.",
+      "implication": "Use the contrast: red and black for core product, and Dino purple as the heritage lever for fans who grew up with Vince. Never default to a generic 'Toronto blue' that belongs to other franchises."
+    }
+  ],
+  "places": [
+    {
+      "name": "Graffiti Alley (Rush Lane)",
+      "kind": "mural district",
+      "neighborhood": "Fashion District / Queen West",
+      "why": "This kilometre-long legal-wall laneway between Spadina and Portland is the city's densest record of its graffiti writers and muralists, and the first place to scout artists."
+    },
+    {
+      "name": "Underpass Park",
+      "kind": "park with basketball courts and mural pillars",
+      "neighborhood": "West Don Lands / Canary District",
+      "why": "Its basketball half-courts sit under painted expressway pillars, the most direct meeting of Toronto hoops and Toronto murals."
+    },
+    {
+      "name": "The Bentway",
+      "kind": "public art space under the Gardiner Expressway",
+      "neighborhood": "Fort York / Liberty Village",
+      "why": "It turns the Gardiner's concrete bents into a year-round venue for installations and a winter skate trail, a ready stage for column-graphic launches."
+    },
+    {
+      "name": "OCAD University (Sharp Centre for Design)",
+      "kind": "art and design school",
+      "neighborhood": "Grange Park",
+      "why": "Canada's largest art and design university works from Will Alsop's checkerboard 'tabletop' on crayon-coloured stilts, beside Frank Gehry's AGO, and its students and alumni feed the city's illustration and design talent."
+    },
+    {
+      "name": "Museum of Contemporary Art Toronto (MOCA)",
+      "kind": "contemporary art museum",
+      "neighborhood": "Junction Triangle (Sterling Road)",
+      "why": "Housed in the former Tower Automotive factory, it anchors the west-end studio cluster that grew as galleries left Queen West."
+    },
+    {
+      "name": "Nia Centre for the Arts",
+      "kind": "Black arts centre",
+      "neighborhood": "Oakwood Village (Oakwood Ave, near Little Jamaica)",
+      "why": "A centre dedicated to Black Canadian art and young creatives, and a natural co-design partner for Black History Month product."
+    },
+    {
+      "name": "Reggae Lane",
+      "kind": "mural laneway",
+      "neighborhood": "Little Jamaica (Eglinton Ave West)",
+      "why": "Adrian Hayles's 2015 mural honouring Toronto's reggae pioneers marks the heart of the Caribbean community whose shops took years of damage from Crosstown construction."
+    },
+    {
+      "name": "Daniels Spectrum",
+      "kind": "community arts hub",
+      "neighborhood": "Regent Park",
+      "why": "The arts centre of the rebuilt Regent Park and home to community arts organizations, it is the place to co-create with east-downtown youth."
+    },
+    {
+      "name": "Scarborough Civic Centre",
+      "kind": "architecture landmark",
+      "neighborhood": "Scarborough City Centre",
+      "why": "Raymond Moriyama's 1973 white concrete civic building is Scarborough's architectural signature and has hosted Nuit Blanche exhibitions."
+    },
+    {
+      "name": "Sankofa Square (formerly Yonge-Dundas Square)",
+      "kind": "public square / neon signage",
+      "neighborhood": "Downtown Yonge",
+      "why": "The city's billboard-lit crossroads, renamed for the Akan concept of sankofa, sits under the restored spinning-record neon of Sam the Record Man."
+    }
+  ],
+  "people": [
+    {
+      "name": "Elicser Elliott",
+      "role": "Graffiti writer and muralist",
+      "why": "His expressive figures of everyday, often Black and brown, Torontonians cover Graffiti Alley and Kensington, a credible voice for player and fan portraiture."
+    },
+    {
+      "name": "Adrian Hayles",
+      "role": "Muralist",
+      "why": "He painted Reggae Lane in Little Jamaica and works in community-centred, figurative murals that suit Caribbean-diaspora Raptors storytelling."
+    },
+    {
+      "name": "Clandestinos (Shalak Attack and Bruno Smoky)",
+      "role": "Muralist duo",
+      "why": "This Toronto-based, Latin American-rooted duo paints vivid large-scale murals across the city, with the scale and colour to work as wraparound uniform graphics."
+    },
+    {
+      "name": "Esmaa Mohamoud",
+      "role": "Visual artist",
+      "why": "Her concrete basketballs and reworked jerseys question how Black athletes are seen and sold, so she is the most serious basketball artist in the market. Any collaboration must give her editorial control."
+    },
+    {
+      "name": "Louis Saldenah",
+      "role": "Mas band leader and costume designer (Saldenah Carnival)",
+      "why": "His band has won Toronto Carnival's Band of the Year many times, and he is the leading name in the city's feather, bead and sequin craft."
+    },
+    {
+      "name": "Peace Collective",
+      "role": "Toronto apparel brand",
+      "why": "Its 'Toronto vs Everybody' tees became the city's unofficial fan uniform and showed how strongly people here want local-pride graphics."
+    },
+    {
+      "name": "StreetARToronto (StART)",
+      "role": "City of Toronto street art program",
+      "why": "It funds and manages murals on underpasses, laneways and utility boxes, and is the gateway to the city's muralist roster and its walls."
+    },
+    {
+      "name": "Mural Routes",
+      "role": "Nonprofit mural organization",
+      "why": "This Scarborough-rooted group trains muralists and produces community murals across the inner suburbs, a partner for 416-and-905 product."
+    }
+  ],
+  "moments": [
+    {
+      "name": "DesignTO Festival",
+      "timing": "Late January",
+      "month": 1,
+      "why": "A citywide design festival of window installations and exhibitions, a mid-season platform to show a Raptors design process."
+    },
+    {
+      "name": "Winter Stations",
+      "timing": "Mid-February into March",
+      "month": 2,
+      "why": "A design competition that turns lifeguard stands on the east-end beaches into winter art installations, a Toronto-only cold-weather design story."
+    },
+    {
+      "name": "Four-bounce anniversary (Kawhi's 2019 Game 7 winner)",
+      "timing": "May 12",
+      "month": 5,
+      "why": "With Kawhi back, the anniversary of Toronto's most-reproduced sports image could fall in a playoff run."
+    },
+    {
+      "name": "CONTACT Photography Festival",
+      "timing": "May",
+      "month": 5,
+      "why": "A month-long citywide photography festival with large outdoor public installations, a window to scout photographers and stage player-portrait works."
+    },
+    {
+      "name": "Toronto Outdoor Art Fair",
+      "timing": "July",
+      "month": 7,
+      "why": "This long-running juried outdoor fair at Nathan Phillips Square is the best single scouting ground for local illustrators and printmakers."
+    },
+    {
+      "name": "Toronto Caribbean Carnival Grand Parade",
+      "timing": "Early August, Simcoe Day long weekend",
+      "month": 8,
+      "why": "The mas camps' year of costume-building peaks on Lake Shore Blvd in the city's biggest design spectacle."
+    },
+    {
+      "name": "Nuit Blanche Toronto",
+      "timing": "Early October, sunset to sunrise",
+      "month": 10,
+      "why": "An all-night contemporary art event downtown and in recent editions the inner suburbs, falling weeks before tip-off."
+    },
+    {
+      "name": "Art Toronto",
+      "timing": "Late October",
+      "month": 10,
+      "why": "Canada's main international art fair, at the Metro Toronto Convention Centre, lands in tip-off week, which makes it an art-world stage for a season-opening drop."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The 6ix",
+      "meaning": "Toronto, popularized by Drake around 2015. It is saturated on souvenir merch, so it fails the swap test for premium product."
+    },
+    {
+      "term": "416 / 905",
+      "meaning": "Area codes used as identity: 416 is the city and 905 the suburbs (Mississauga, Brampton, Markham, Vaughan). The G League affiliate is literally named Raptors 905."
+    },
+    {
+      "term": "Red Rocket",
+      "meaning": "Nickname for TTC vehicles, especially the red-and-white streetcars."
+    },
+    {
+      "term": "We The North",
+      "meaning": "The Raptors' rallying cry and brand platform since 2014, created with agency Sid Lee, which claims all of Canada as the team's turf."
+    },
+    {
+      "term": "Jurassic Park",
+      "meaning": "The outdoor watch party in Maple Leaf Square outside Scotiabank Arena. During the 2019 run it was copied in squares across Canada, from Mississauga to Halifax."
+    },
+    {
+      "term": "Tkaronto",
+      "meaning": "A Mohawk-derived name for the area, usually translated as 'where there are trees standing in the water'. It is used in land acknowledgements and Indigenous art and is not a free-to-use slogan."
+    },
+    {
+      "term": "Mas camp",
+      "meaning": "A Carnival band's workshop, where costumes are designed and built for months before the Grand Parade."
+    },
+    {
+      "term": "Toronto vs Everybody",
+      "meaning": "Peace Collective's underdog-pride slogan, now shorthand for the city's chip on its shoulder. It is their IP, not a public phrase."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Red Rocket red: the flat TTC streetcar red set against white and black, as on the Flexity and retired CLRV liveries.",
+      "type": "color",
+      "hex": "#DA251D",
+      "source": "TTC streetcars and corporate red (approximate; match to TTC brand standards)",
+      "use": "Trim, piping and taping on warm-ups and shooting shirts, set against Raptors red #CE1141 as a deliberate tonal clash. Using the streetcar silhouette or TTC marks requires a license."
+    },
+    {
+      "cue": "Toronto Subway lettering: the squared, wide-countered geometric sans in all caps on the walls of the original Yonge and Bloor-Danforth stations.",
+      "type": "typography",
+      "hex": "",
+      "source": "TTC Line 1 and Line 2 station walls, digitized as the 'Toronto Subway' typeface by David Vereschagin",
+      "use": "Jersey numbers, name bars and wordmarks. Either license the revival or have a Toronto type designer draw an original face in its spirit."
+    },
+    {
+      "cue": "Glossy two-tone station tile walls, where each original subway station has its own colour pairing and the station name runs in a contrasting band.",
+      "type": "texture",
+      "hex": "",
+      "source": "Original Yonge (1954) and Bloor-Danforth (1966) subway stations",
+      "use": "Gridded tile texture on side panels, plus a 'home stop' capsule where each colourway is a station a fan grew up on."
+    },
+    {
+      "cue": "City Hall's 'eye': two curved towers cupping a round council chamber.",
+      "type": "graphic",
+      "hex": "",
+      "source": "Viljo Revell's 1965 Toronto City Hall, abstracted in the Toronto flag and city logo",
+      "use": "Abstract the curve-pair-plus-disc into a neck tape, waistband or hangtag motif. Don't reproduce the official logo or flag without City of Toronto permission."
+    },
+    {
+      "cue": "Board-formed concrete and the balcony grid of postwar slab towers, in heathered concrete grey (about #8C8C88).",
+      "type": "texture",
+      "hex": "",
+      "source": "Moriyama's Scarborough Civic Centre, Robarts Library and the slab towers of St. James Town, Thorncliffe Park and Jane & Finch",
+      "use": "Concrete-heather knits and a balcony-grid all-over print, co-designed with artists from those neighbourhoods so they read as pride, not 'urban decay'."
+    },
+    {
+      "cue": "Dino purple: the original Raptors purple of the jagged-pinstripe, dinosaur-dribbling 1995 uniforms.",
+      "type": "color",
+      "hex": "#753BBD",
+      "source": "Raptors' 1995-era identity and the Vince Carter years",
+      "use": "Heritage colourway lever for millennial fans. Pair it sparingly with black and Raptors red #CE1141 rather than adding the full throwback dinosaur to everything."
+    },
+    {
+      "cue": "Yonge Street marquee neon: Sam the Record Man's twin spinning red-neon records and the bulb-lit, hand-lettered pun signs of the vanished Honest Ed's.",
+      "type": "graphic",
+      "hex": "",
+      "source": "Yonge Street and Bloor-Bathurst retail signage, now civic nostalgia",
+      "use": "Neon-tube outline lettering and bulb-dot typography for holiday and playoff tees. The signs themselves are third-party property, so borrow the technique, not the marks."
+    },
+    {
+      "cue": "Phulkari: dense geometric darning-stitch 'flower work' in golden silk floss (about #E1A730) on red or rust cotton (about #9E1B32).",
+      "type": "pattern",
+      "hex": "",
+      "source": "Punjabi community of Brampton and Malton, worn at Vaisakhi and weddings",
+      "use": "Embroidered trim or a chest patch for a Brampton capsule co-designed with Punjabi-Canadian designers and stitched by South Asian makers. Keep religious symbols such as the Khanda off product."
+    }
+  ],
+  "productHooks": [
+    "'Four Bounces' Kawhi-return capsule: an abstract four-arc bounce graphic drawn by a Toronto muralist such as Elicser Elliott, released for Kawhi's 2026-27 home debut with a matching mural on the Underpass Park courts. No licensed photograph needed.",
+    "'Line 1 / Line 2' lettering kit: Raptors names and numbers in a subway-inspired face with station-tile side panels, licensed through the TTC and sold in station-specific colourways at a Union Station pop-up.",
+    "'416 / 905' capsule: paired city and suburb tees and shooting shirts with a balcony-grid all-over print, co-designed through Mural Routes in Scarborough and launched with Raptors 905 in Mississauga.",
+    "Black History Month collection made with Nia Centre artists, or with Esmaa Mohamoud on her terms: concrete-textured ball and jersey graphics, credited, paid, and with proceeds shared with the partner hub.",
+    "Brampton Vaisakhi capsule timed to mid-April during the playoff push: phulkari-embroidered trim on Raptors red and black, made with Punjabi-Canadian designers and makers.",
+    "Tip-off art series for late October around Art Toronto: limited artist tees from Clandestinos, Adrian Hayles and other StART muralists, launched under the Gardiner at The Bentway or at MOCA."
+  ],
+  "watchouts": [
+    "Swap-test traps: the CN Tower skyline, a generic red maple leaf and 'The 6ix' are on every souvenir rack. Leaning on Drake and OVO as Toronto's only visual voice is also risky while his public feuds and lawsuit play out.",
+    "Third-party IP needs licensing: TTC logos, streetcar livery and the 'Toronto Subway' revival font; the City of Toronto logo and flag; the Sam the Record Man and Honest Ed's signs; Hudson's Bay's multistripe (now owned by Canadian Tire); Getty/NBAE photos of the 2019 Game 7 shot; Universal's 'Jurassic Park' film marks; Peace Collective's slogans.",
+    "Toronto sits on Treaty 13 and Dish With One Spoon territory. Wampum belts, medicine wheels and eagle feathers are sacred or treaty objects, so any 'Tkaronto' product needs engagement with the Mississaugas of the Credit First Nation and named, paid Indigenous artists.",
+    "Diaspora textiles (mas, phulkari, tibeb, kente) belong to specific communities: co-design, credit and pay. Avoid patois punchlines, flag-and-dreadlocks Jamaican clichés and religious symbols.",
+    "Artists here are under pressure: Artscape's collapse and Little Jamaica's losses from Crosstown construction are recent wounds. Pay real fees, never ask for 'exposure' murals, and don't sell Little Jamaica's look while its businesses are still recovering."
+  ],
+  "sources": [
+    { "title": "Toronto Raptors (official site)", "url": "https://www.nba.com/raptors" },
+    { "title": "Toronto Raptors - Wikipedia", "url": "https://en.wikipedia.org/wiki/Toronto_Raptors" },
+    { "title": "Raptors 905 - Wikipedia", "url": "https://en.wikipedia.org/wiki/Raptors_905" },
+    { "title": "Toronto Transit Commission (official site)", "url": "https://www.ttc.ca" },
+    { "title": "Toronto subway - Wikipedia", "url": "https://en.wikipedia.org/wiki/Toronto_subway" },
+    { "title": "Toronto City Hall - Wikipedia", "url": "https://en.wikipedia.org/wiki/Toronto_City_Hall" },
+    { "title": "Scarborough Civic Centre - Wikipedia", "url": "https://en.wikipedia.org/wiki/Scarborough_Civic_Centre" },
+    { "title": "OCAD University - Wikipedia", "url": "https://en.wikipedia.org/wiki/OCAD_University" },
+    { "title": "Museum of Contemporary Art Toronto (official site)", "url": "https://moca.ca" },
+    { "title": "The Bentway (official site)", "url": "https://www.thebentway.ca" },
+    { "title": "Toronto Caribbean Carnival - Wikipedia", "url": "https://en.wikipedia.org/wiki/Toronto_Caribbean_Carnival" },
+    { "title": "Nuit Blanche - Wikipedia", "url": "https://en.wikipedia.org/wiki/Nuit_Blanche" }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "The Raptors' 2026-27 City Edition design, whether a purple 'Dino' Classic Edition is in the rotation, and that primary colours and logo are unchanged.",
+      "Kawhi Leonard's 2026-27 home debut date at Scotiabank Arena, to time the 'Four Bounces' drop.",
+      "Arena name (Scotiabank Arena) and MLSE ownership after Rogers' 2025 purchase of BCE's stake.",
+      "Art Toronto 2026 dates (expected late October at the Metro Toronto Convention Centre) and Nuit Blanche Toronto's 2027 date and format.",
+      "Operating status of Daniels Spectrum and other former Artscape sites after Artscape Toronto's 2024 receivership.",
+      "Current locations and programs of Nia Centre for the Arts (Oakwood Ave) and BAND (Parkdale).",
+      "That the restored Sam the Record Man sign is lit above Sankofa Square and that the Sankofa Square name is in official use.",
+      "Drake/OVO's current status as Raptors global ambassador, and NOCTA's standing with Nike.",
+      "Peace Collective's current Raptors/MLSE licensing and its trademark on 'Toronto vs Everybody'.",
+      "TTC trademark licensing policy and who holds the rights to the 'Toronto Subway' typeface revival.",
+      "Canadian Tire's ownership of the Hudson's Bay stripes and other HBC IP after the 2025 liquidation.",
+      "2027 dates for DesignTO, Winter Stations, CONTACT and the Toronto Outdoor Art Fair, and whether Elicser Elliott, Adrian Hayles, Clandestinos and Esmaa Mohamoud are currently active and available."
+    ]
+  }
+}
