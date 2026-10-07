@@ -53,7 +53,9 @@ const DOSSIER_LIST = (teamId) => LENS_IDS.map((id) => dossierPath(teamId, id)).j
 
 function synthesisTask(agent, team, knowledge) {
   if (knowledge && agent.id === "factcheck") {
-    return `YOUR JOB: Fact-Check Critic, knowledge mode. You cannot browse, so audit instead of verifying. Be adversarial — assume some claims are wrong.
+    return `YOUR JOB: Fact-Check Critic, knowledge mode. The dossiers were written from model knowledge, so audit them — and spend a tiny live budget where it matters most. Be adversarial — assume some claims are wrong.
+- LIVE SPOT-CHECKS: you may make at most 3 WebSearch calls (load it with ToolSearch "select:WebSearch") on the three highest-risk claims that the CURRENT FACTS section doesn't already settle — e.g. a named business that may have closed, a festival date, a store. Mark those verdicts "confirmed", "corrected" or "removed" with the source URL. If a search is refused, stop searching and continue the audit.
+- Treat the CURRENT FACTS section (verified today) as ground truth: correct any dossier or brief claim that contradicts it (rosters, coach, arena, last season, offseason moves, City Edition, marquee games).
 - Remove or correct what you are confident is wrong: businesses or venues you know closed or moved, departed players or coaches, renamed arenas, wrong dates, wrong City Edition history, anything that contradicts another dossier.
 - Flag likely hallucinations: oddly specific details (exact addresses, dates, quotes, statistics, small businesses) with no well-known basis. Soften or remove them.
 - Build the market's verification queue: log the 15-25 highest-risk remaining claims across the dossiers and the brief as verdicts with verdict "unverifiable" and a note saying what a live check must confirm. Use "corrected" or "removed" for what you changed and "confirmed" only for long-established facts.
@@ -104,7 +106,7 @@ function workflowIO(agent, team, knowledge) {
     return `${common}
 
 OUTPUT: write your dossier to ${out(agent.id)}${knowledge ? `
-KEEP LIVE WORK: if ${out(agent.id)} already exists, validates, and has no "provenance" field or provenance.mode "live", it was verified on the live web — keep it exactly as is and finish.` : ""}
+KEEP EXISTING WORK: if ${out(agent.id)} already exists and validates, keep it exactly as is and finish — it is either live-verified or a completed draft from an earlier run.` : ""}
 SCHEMA: run \`${schemaCmd(agent.id)}\` to print the exact JSON Schema.
 VALIDATE: \`${validate(agent.id)}\``;
   }

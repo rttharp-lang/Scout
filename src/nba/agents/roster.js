@@ -385,7 +385,29 @@ export const LEAGUE_SCHEMA = obj({
   }), 30, 30),
 });
 
+// League Pulse: each team's verified 2026-27 situation, researched live once per
+// conference (research/nba/league-pulse-<east|west>.json) and injected into
+// every market agent's brief as authoritative current facts.
+export const PULSE_SCHEMA = obj({
+  asOf: str("Date researched, YYYY-MM-DD"),
+  conference: { type: "string", enum: ["East", "West"] },
+  teams: arr(obj({
+    team: str("Team id"),
+    teamMoment: str("1-2 sentences: the team's 2026-27 situation and storyline"),
+    lastSeason: str("2025-26 record and how it ended"),
+    headCoach: str("Head coach for 2026-27"),
+    stars: arr(str("Key player on the 2026-27 roster"), 1, 6),
+    keyMoves: arr(str("2026 offseason move: trade, signing, draft pick, departure"), 0, 8),
+    expectations: str("Expectations for 2026-27"),
+    ownershipArena: str("Ownership and arena facts or news (empty string if none)"),
+    cityEdition: str("2026-27 City Edition status if announced, else empty string"),
+    marquee: arr(str("Marquee 2026-27 game: opening night, Christmas, rivalry, NBA Cup"), 0, 6),
+    sources: arr(SOURCE, 1, 8),
+  }), 15, 15),
+});
+
 export const SCHEMAS = {
+  pulse: PULSE_SCHEMA,
   strategy: STRATEGY_SCHEMA,
   factcheck: FACTCHECK_SCHEMA,
   critique: CRITIQUE_SCHEMA,

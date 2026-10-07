@@ -3,6 +3,7 @@
 //   node scripts/nba/validate.mjs <team>          every file present for a team
 //   node scripts/nba/validate.mjs --all           every team
 //   node scripts/nba/validate.mjs league          the league synthesis
+//   node scripts/nba/validate.mjs pulse east|west the League Pulse
 // Prints OK or the errors; exits 1 on any error. Agents run this after writing.
 import fs from "node:fs";
 import path from "node:path";
@@ -75,9 +76,26 @@ export function validateLeague() {
   return { file, errors };
 }
 
+// research/nba/league-pulse-<east|west>.json — verified 2026-27 team facts.
+export function validatePulse(conf) {
+  const file = path.join(ROOT, `league-pulse-${conf}.json`);
+  if (!fs.existsSync(file)) return { file, errors: ["file does not exist"] };
+  let data;
+  try { data = JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) { return { file, errors: [`invalid JSON: ${e.message}`] }; }
+  const errors = check(schemaFor("pulse"), data);
+  if (errors.length) return { file, errors };
+  const want = TEAMS.filter((t) => t.conference.toLowerCase() === conf).map((t) => t.id);
+  const got = data.teams.map((t) => t.team);
+  want.filter((id) => !got.includes(id)).forEach((id) => errors.push(`$.teams: missing "${id}"`));
+  got.filter((id) => !want.includes(id)).forEach((id) => errors.push(`$.teams: "${id}" is not in the ${conf} conference`));
+  if (new Set(got).size !== got.length) errors.push("$.teams: duplicate team ids");
+  return { file, errors };
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [a, b] = process.argv.slice(2);
   if (a === "league") process.exit(report(validateLeague()) ? 0 : 1);
+  if (a === "pulse") process.exit(["east", "west"].includes(b) && report(validatePulse(b)) ? 0 : 1);
   let ok = true;
   const teams = a === "--all" ? TEAMS.map((t) => t.id) : [a];
   if (!a || (a !== "--all" && !TEAM_BY_ID[a])) { console.error("usage: validate.mjs <team> [name] | --all"); process.exit(2); }

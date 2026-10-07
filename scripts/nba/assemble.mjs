@@ -8,7 +8,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { TEAMS } from "../../src/nba/teams.js";
 import { LENS_IDS } from "../../src/nba/agents/roster.js";
-import { validateFile, validateLeague } from "./validate.mjs";
+import { validateFile, validateLeague, validatePulse } from "./validate.mjs";
 import { verificationOf } from "../../src/nba/agents/provenance.js";
 
 const here = path.dirname(new URL(import.meta.url).pathname);
@@ -35,6 +35,14 @@ function scorecardFor(id, own) {
   return { opportunity: c.opportunity, culture: c.culture, retail: c.retail, fandom: c.fandom, rationale: `${c.note} ${own.rationale}`.trim(), calibrated: true, self: { opportunity: own.opportunity, culture: own.culture, retail: own.retail, fandom: own.fandom } };
 }
 
+// League Pulse: each team's 2026-27 situation, verified on the live web.
+const pulse = {};
+for (const conf of ["east", "west"]) {
+  if (validatePulse(conf).errors.length) continue;
+  const p = read(path.join(RESEARCH, `league-pulse-${conf}.json`));
+  p.teams.forEach((t) => { pulse[t.team] = { ...t, asOf: p.asOf }; });
+}
+
 const summary = [];
 for (const t of TEAMS) {
   const dir = path.join(RESEARCH, t.id);
@@ -53,7 +61,7 @@ for (const t of TEAMS) {
   const updated = fs.statSync(path.join(dir, "strategy.json")).mtime.toISOString().slice(0, 10);
 
   const verification = verificationOf({ dossiers, strategy, review });
-  fs.writeFileSync(path.join(OUT, "markets", `${t.id}.json`), JSON.stringify({ id: t.id, updated, strategy, dossiers, review }));
+  fs.writeFileSync(path.join(OUT, "markets", `${t.id}.json`), JSON.stringify({ id: t.id, updated, strategy, dossiers, review, pulse: pulse[t.id] || null }));
 
   const rhythm = dossiers.rhythm.extra.months;
   const sources = new Set(Object.values(dossiers).flatMap((d) => d.sources.map((s) => s.url)));
@@ -65,6 +73,7 @@ for (const t of TEAMS) {
     headline: strategy.headline,
     archetype: strategy.archetype,
     pulse: strategy.pulse,
+    verifiedMoment: pulse[t.id] ? pulse[t.id].teamMoment : null,
     scorecard: strategy.scorecard,
     palette: dossiers.uniform.extra.palette,
     opportunities: strategy.opportunities.map((o) => ({ id: o.id, title: o.title, summary: o.summary, where: o.where, when: o.when, how: o.how, segment: o.segment, priority: o.priority, size: o.size, months: o.months, products: o.products })),

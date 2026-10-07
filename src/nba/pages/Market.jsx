@@ -117,7 +117,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
       {ver.knowledge.length > 0 && (
         <div className="hc-notice" role="note">
           <b>{ver.knowledge.length === 11 ? "Knowledge draft." : `Partly verified: ${ver.live.length} of 11 dossiers verified on the live web.`}</b>{" "}
-          {ver.knowledge.length} of 11 dossiers{ver.briefMode === "knowledge" ? " and the brief" : ""} were written from agent knowledge (current to mid-2026) because live web research was unavailable for that run. {ver.queue.length} time-sensitive claims are queued for live verification.{" "}
+          {ver.knowledge.length} of 11 dossiers{ver.briefMode === "knowledge" ? " and the brief" : ""} were written from agent knowledge (current to mid-2026) because live web research was unavailable for that run{data.pulse ? `; the 2026-27 team facts they use were verified live on ${data.pulse.asOf}` : ""}. {ver.queue.length} time-sensitive claims are queued for live verification.{" "}
           <a href={`#/m/${team.id}`} onClick={(e) => { e.preventDefault(); document.getElementById("review")?.scrollIntoView({ behavior: "smooth" }); }}>See the queue</a> or <a href={href("agents", team.id)}>re-run the agents live</a>.
         </div>
       )}
@@ -151,6 +151,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
             )}
           </div>
         </div>
+        {data.pulse && <VerifiedSnapshot p={data.pulse} />}
         <div className="hc-grid hc-grid-3" style={{ marginTop: "var(--grid-gap)" }}>
           {s.topInsights.map((t, i) => (
             <article key={i} className="hc-card hc-insight">
@@ -344,6 +345,31 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
 }
 
 const SEASON_LABEL = "2026-27";
+
+// The League Pulse entry: this team's 2026-27 situation, verified live.
+function VerifiedSnapshot({ p }) {
+  return (
+    <div className="hc-card" style={{ marginTop: "var(--grid-gap)", background: "var(--hc-card)", boxShadow: "inset 0 0 0 1.5px var(--text)" }}>
+      <div className="hc-row" style={{ justifyContent: "space-between" }}>
+        <div className="hc-eyebrow">2026-27 snapshot</div>
+        <Chip tone="pop" title="Researched on the live web by the League Pulse agents">Live-verified · {p.asOf}</Chip>
+      </div>
+      <p style={{ marginTop: 8, fontWeight: 600 }}>{p.teamMoment}</p>
+      <div className="hc-grid hc-grid-4" style={{ marginTop: 14 }}>
+        <KV label="Last season"><span className="hc-small">{p.lastSeason}</span></KV>
+        <KV label="Head coach"><span className="hc-small">{p.headCoach}</span></KV>
+        <KV label="Core players"><span className="hc-small">{p.stars.join(" · ")}</span></KV>
+        <KV label="Expectations"><span className="hc-small">{p.expectations}</span></KV>
+      </div>
+      <div className="hc-grid hc-grid-3" style={{ marginTop: 14 }}>
+        {p.keyMoves.length > 0 && <KV label="2026 offseason"><ul className="hc-bullets hc-small">{p.keyMoves.map((m, i) => <li key={i}>{m}</li>)}</ul></KV>}
+        {p.marquee.length > 0 && <KV label="Marquee games"><ul className="hc-bullets hc-small">{p.marquee.map((m, i) => <li key={i}>{m}</li>)}</ul></KV>}
+        <KV label="City Edition 2026-27"><span className="hc-small">{p.cityEdition || "Not yet revealed"}</span>{p.ownershipArena ? <div className="hc-small hc-muted" style={{ marginTop: 6 }}>{p.ownershipArena}</div> : null}</KV>
+      </div>
+      <div className="hc-tiny hc-muted" style={{ marginTop: 12 }}>Sources: {p.sources.map((x, i) => <React.Fragment key={i}>{i ? " · " : ""}<a href={x.url} target="_blank" rel="noreferrer">{x.title}</a></React.Fragment>)}</div>
+    </div>
+  );
+}
 
 function UniformArchive({ u }) {
   const x = u.extra;
