@@ -65,7 +65,8 @@ export async function fetchAllowedImage(u, { timeoutMs = 8000, maxBytes = 4_000_
     let url = u;
     for (let hop = 0; hop < 4; hop++) {
       if (!isAllowedImageUrl(url)) throw new Error("host-not-allowed");
-      const r = await fetch(url, { redirect: "manual", signal: ctrl.signal, headers: { "User-Agent": UA, Accept: "image/*" } });
+      // Prefer JPEG/PNG: Miro and some desktop tools reject WebP.
+      const r = await fetch(url, { redirect: "manual", signal: ctrl.signal, headers: { "User-Agent": UA, Accept: "image/jpeg,image/png;q=0.9,image/*;q=0.5" } });
       if (r.status >= 300 && r.status < 400) {
         const loc = r.headers.get("location");
         if (!loc) throw new Error("bad-redirect");

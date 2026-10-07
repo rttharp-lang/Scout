@@ -1,4 +1,4 @@
-// Scout Mood — the design director's cull (one Claude vision call per story).
+// Scout Mood — POST /api/mood/curate: the design director's cull (one Claude vision call per batch).
 // POST { brief: { title, tagline, concept, palette, avoid }, story: { id, name, role, narrative, keywords },
 //        candidates: [{ id, thumb, alt, title, source, creator }] (≤24), keep?: 2..16, reference?: { thumb, alt } }
 // → 200 { picks: [{ id, score, role, note }], rejected: [{ id, reason }] }
@@ -9,12 +9,11 @@
 // Claude as base64, so a dead or slow link drops out as "unavailable" instead
 // of failing the whole request — and the browser can never make this function
 // fetch an arbitrary URL.
-import { callStructured, sendError, MoodError } from "../server/mood/claude.js";
-import { CURATE_SYSTEM, CURATE_SCHEMA, ROLES, scoreDecision } from "../server/mood/prompts.js";
-import { body, str, strList, int } from "../server/mood/validate.js";
-import { fetchAllowedImage, sniffImageType } from "../server/mood/sources.js";
+import { callStructured, sendError, MoodError } from "../claude.js";
+import { CURATE_SYSTEM, CURATE_SCHEMA, ROLES, scoreDecision } from "../prompts.js";
+import { body, str, strList, int } from "../validate.js";
+import { fetchAllowedImage, sniffImageType } from "../sources.js";
 
-export const config = { maxDuration: 60 };
 
 const MAX_CANDIDATES = 24; // sized so one vision pass fits the 60s ceiling
 const PER_PHOTOGRAPHER = 2; // board rhythm: no photographer dominates a story

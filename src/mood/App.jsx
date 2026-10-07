@@ -4,7 +4,7 @@ import { supabase, authEnabled } from "../supabase";
 import { fetchBrief, curateStory, explainError } from "./api.js";
 import { uid, loadExplorations, loadBoards, saveExplorations, saveBoards, pushRemote, deleteRemote, pullRemote } from "./store.js";
 import { libraryEnabled, getMyCurator, approvalsFor, matchLibrary, approve, revoke, requestReview } from "./library.js";
-import { briefMarkdown, copyText, creditsText, downloadPin, exportZip } from "./exportBoard.js";
+import { briefMarkdown, copyImage, copyText, creditsText, downloadPin, exportZip } from "./exportBoard.js";
 import Logo from "./components/Logo.jsx";
 import Masonry from "./components/Masonry.jsx";
 import Tile, { SkeletonTile, ratioOf } from "./components/Tile.jsx";
@@ -30,33 +30,32 @@ const go = (h) => { if (window.location.hash !== h) window.location.hash = h; };
 
 const KEEP_PER_STORY = 12;
 const REVIEW_LIMIT = 60;
+const LAST_BOARD_KEY = "scout.mood.lastBoard.v1";
+const SKELETON_RATIOS = [1.25, 1.5, 0.8, 1.33];
 
-// Display order: designer-approved library picks first, then each round of
-// curation interleaved across stories (so the board reads as one mix, not
-// story-by-story blocks), best-scored first within a story.
-export function orderPins(pins, stories) {
-  const lib = pins.filter((p) => p.fromLibrary);
-  const rest = pins.filter((p) => !p.fromLibrary);
-  const rounds = [...new Set(rest.map((p) => p.round || 1))].sort((a, b) => a - b);
-  const storyIds = (stories || []).map((s) => s.id);
-  const out = [...lib];
-  for (const r of rounds) {
-    const inRound = rest.filter((p) => (p.round || 1) === r);
-    const groups = storyIds.map((id) => inRound.filter((p) => p.storyId === id));
-    groups.push(inRound.filter((p) => !storyIds.includes(p.storyId)));
-    for (let i = 0; groups.some((g) => i < g.length); i++) groups.forEach((g) => { if (i < g.length) out.push(g[i]); });
-  }
-  return out;
+// A story's pins in board order: designer-approved library picks first, then
+// each round of curation in the order it was kept (best-scored first).
+export function storyPins(pins, storyId) {
+  const mine = pins.filter((p) => p.storyId === storyId);
+  return [...mine.filter((p) => p.fromLibrary), ...mine.filter((p) => !p.fromLibrary).sort((a, b) => (a.round || 1) - (b.round || 1))];
 }
 
 const dedupe = (pins) => { const seen = new Set(); return pins.filter((p) => (seen.has(p.id) ? false : seen.add(p.id))); };
 const now = () => Date.now();
+const readLastBoard = () => { try { return localStorage.getItem(LAST_BOARD_KEY) || ""; } catch { return ""; } };
+const writeLastBoard = (id) => { try { localStorage.setItem(LAST_BOARD_KEY, id); } catch {} };
 
+// Toasts can carry one action ("Undo", "Change"); those stay up longer.
 function useToast() {
-  const [msg, setMsg] = useState("");
+  const [toast, setToast] = useState(null);
   const t = useRef(null);
-  const show = useCallback((m) => { setMsg(m); clearTimeout(t.current); t.current = setTimeout(() => setMsg(""), 2800); }, []);
-  return [msg, show];
+  const show = useCallback((msg, action) => {
+    setToast({ msg, action, key: now() });
+    clearTimeout(t.current);
+    t.current = setTimeout(() => setToast(null), action ? 6000 : 2800);
+  }, []);
+  const hide = useCallback(() => { clearTimeout(t.current); setToast(null); }, []);
+  return [toast, show, hide];
 }
 
 // ── Header ────────────────────────────────────────────────────────────────
@@ -95,7 +94,7 @@ function ExportMenu({ onZip, onPrint, onCopy, zipProgress, copyLabel = "Copy bri
       </button>
       {open && (
         <div className="popover left" role="menu">
-          <button type="button" role="menuitem" className="pop-item" onClick={pick(onZip)}><FileArchive size={18} aria-hidden="true" /><span>Download images (.zip)<small>Full-size images + credits + brief</small></span></button>
+          <button type="button" role="menuitem" className="pop-item" onClick={pick(onZip)}><FileArchive size={18} aria-hidden="true" /><span>Download images (.zip)<small>A folder per story + credits.csv + brief</small></span></button>
           <button type="button" role="menuitem" className="pop-item" onClick={pick(onPrint)}><Printer size={18} aria-hidden="true" /><span>Print / save as PDF<small>A presentation-ready board</small></span></button>
           <button type="button" role="menuitem" className="pop-item" onClick={pick(onCopy)}><Copy size={18} aria-hidden="true" /><span>{copyLabel}<small>Markdown, ready to paste</small></span></button>
         </div>
@@ -106,8 +105,7 @@ function ExportMenu({ onZip, onPrint, onCopy, zipProgress, copyLabel = "Copy bri
 
 function SourceNotice({ sources }) {
   const s = sources || {};
-  const photoKeys = ["unsplash", "pexels"];
-  if (photoKeys.every((k) => s[k] === "not-configured")) {
+  if (["unsplash", "pexels"].every((k) => s[k] === "not-configured")) {
     return <div className="notice warn">Stock photography isn't connected on this deployment (set <code>UNSPLASH_ACCESS_KEY</code> and/or <code>PEXELS_API_KEY</code>), so this board draws on Wikimedia Commons' juried photography and museum archives only.</div>;
   }
   const down = Object.entries(s).filter(([, v]) => v === "error").map(([k]) => k);
@@ -115,21 +113,10 @@ function SourceNotice({ sources }) {
   return null;
 }
 
-function StoryStatus({ stories, status }) {
-  if (!stories?.length || !status) return null;
-  const items = stories.map((s) => ({ s, st: status[s.id] })).filter((x) => x.st);
-  if (!items.length) return null;
-  return (
-    <p className="status-line" aria-live="polite">
-      {items.map(({ s, st }) => (
-        <span key={s.id} className={st.phase === "done" ? "done" : st.phase === "error" ? "err" : ""}>
-          {(st.phase === "searching" || st.phase === "curating") && <span className="dot" />}
-          {s.name}: {st.phase === "searching" ? "searching sources…" : st.phase === "curating" ? `curating ${st.considered} candidates…` : st.phase === "error" ? st.error : `${st.kept} of ${st.considered} kept`}
-        </span>
-      ))}
-    </p>
-  );
-}
+const phaseText = (st) => (st.phase === "searching" ? "searching sources…"
+  : st.phase === "curating" ? `curating ${st.considered} candidates…`
+    : st.phase === "error" ? st.error
+      : `${st.kept} of ${st.considered} kept`);
 
 // ── App ───────────────────────────────────────────────────────────────────
 export default function MoodApp() {
@@ -146,12 +133,14 @@ export default function MoodApp() {
   const [dialog, setDialog] = useState(null); // { type, ... }
   const [printing, setPrinting] = useState(null);
   const [zipProgress, setZipProgress] = useState("");
-  const [toast, showToast] = useToast();
+  const [toast, showToast, hideToast] = useToast();
 
   const xRef = useRef(explorations);
   xRef.current = explorations;
   const bRef = useRef(boards);
   bRef.current = boards;
+  const closeupRef = useRef(closeup);
+  closeupRef.current = closeup;
   const dirty = useRef(new Map()); // id -> kind, pending remote push
 
   // Routing
@@ -159,6 +148,13 @@ export default function MoodApp() {
     const on = () => { setRoute(parseRoute(window.location.hash)); setCloseup(null); setPicker(null); window.scrollTo(0, 0); };
     window.addEventListener("hashchange", on);
     return () => window.removeEventListener("hashchange", on);
+  }, []);
+  // The closeup owns one history entry, so the back button (and the Android
+  // back gesture) closes it instead of leaving the board.
+  useEffect(() => {
+    const onPop = () => setCloseup(null);
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
   }, []);
 
   // Local persistence (every change) + debounced account sync.
@@ -239,8 +235,8 @@ export default function MoodApp() {
   // ── Generation ─────────────────────────────────────────────────────────
   const runStory = useCallback(async (xid, story, page, round) => {
     const x = xRef.current.find((e) => e.id === xid);
-    if (!x?.brief) return;
-    const exclude = new Set(x.pins.map((p) => p.id));
+    if (!x?.brief || !story) return;
+    const exclude = new Set([...x.pins.map((p) => p.id), ...(x.hidden || [])]);
     const attempt = () => curateStory({
       brief: x.brief, story, page, exclude, keep: KEEP_PER_STORY,
       onStatus: (st) => setStoryStatus(xid, story.id, st),
@@ -284,7 +280,8 @@ export default function MoodApp() {
       if (!matches.length) return;
       const pins = matches.map(({ image, approval }) => {
         const story = brief.stories.map((s) => ({ s, n: (s.keywords || []).filter((k) => approval.tags.includes(k)).length })).sort((a, b) => b.n - a.n)[0]?.s;
-        return { ...image, storyId: story?.id || brief.stories[0]?.id, note: approval.note || "", role: image.role || "attitude", fromLibrary: true, explorationId: xid };
+        // The designer's note lives on the approval, not in the AI-note field.
+        return { ...image, storyId: story?.id || brief.stories[0]?.id, note: "", role: image.role || "lateral", fromLibrary: true, explorationId: xid };
       });
       setApprovals((a) => ({ ...a, ...Object.fromEntries(matches.map((m) => [m.image.id, [m.approval]])) }));
       updateX(xid, (cur) => ({ ...cur, pins: dedupe([...pins, ...cur.pins]) }));
@@ -309,7 +306,7 @@ export default function MoodApp() {
   }, [updateX, setStoryStatus, seedFromLibrary, runRound]);
 
   const startExploration = useCallback((input, { parent, refine } = {}) => {
-    const x = { id: uid(), createdAt: now(), updatedAt: now(), input, brief: null, pins: [], pages: {}, exhausted: {}, sources: {}, parentId: parent?.id || null, refinedWith: refine?.instruction || null };
+    const x = { id: uid(), createdAt: now(), updatedAt: now(), input, brief: null, pins: [], hidden: [], pages: {}, exhausted: {}, sources: {}, parentId: parent?.id || null, refinedWith: refine?.instruction || null };
     xRef.current = [x, ...xRef.current];
     setExplorations((l) => [x, ...l]);
     go(`#/x/${x.id}`);
@@ -317,22 +314,58 @@ export default function MoodApp() {
     return x.id;
   }, [runBrief]);
 
+  // "Not this": drop a pin from the exploration (and keep it out of later
+  // rounds), with an Undo that puts it back where it was.
+  const hidePin = useCallback((xid, pin) => {
+    const x = xRef.current.find((e) => e.id === xid);
+    const at = x ? x.pins.findIndex((p) => p.id === pin.id) : -1;
+    if (at < 0) return;
+    updateX(xid, (cur) => ({ ...cur, pins: cur.pins.filter((p) => p.id !== pin.id), hidden: [...new Set([...(cur.hidden || []), pin.id])] }));
+    showToast("Removed from the board", {
+      label: "Undo",
+      run: () => updateX(xid, (cur) => {
+        const pins = cur.pins.filter((p) => p.id !== pin.id);
+        pins.splice(Math.min(at, pins.length), 0, pin);
+        return { ...cur, pins, hidden: (cur.hidden || []).filter((id) => id !== pin.id) };
+      }),
+    });
+  }, [updateX, showToast]);
+
   // ── Boards ─────────────────────────────────────────────────────────────
   const savedIds = useMemo(() => new Set(boards.flatMap((b) => b.pins.map((p) => p.id))), [boards]);
   const strip = (pin) => { const { fromLibrary, round, ...rest } = pin; return rest; };
-  const saveToBoard = useCallback((boardId, pin) => {
+  const openPicker = useCallback((pin, anchor) => setPicker({ pin, anchor }), []);
+  const closePicker = useCallback(() => setPicker(null), []);
+
+  const addToBoard = useCallback((boardId, pin) => {
+    updateBoards((list) => list.map((x) => (x.id === boardId && !x.pins.some((p) => p.id === pin.id) ? { ...x, pins: [strip(pin), ...x.pins], updatedAt: now() } : x)), [boardId]);
+    writeLastBoard(boardId);
+  }, [updateBoards]);
+  // In the picker, each board is a checkbox: tick to add, untick to remove.
+  const toggleInBoard = useCallback((boardId, pin) => {
     const b = bRef.current.find((x) => x.id === boardId);
     if (!b) return;
-    const has = b.pins.some((p) => p.id === pin.id);
-    updateBoards((list) => list.map((x) => (x.id === boardId ? { ...x, pins: has ? x.pins.filter((p) => p.id !== pin.id) : [strip(pin), ...x.pins], updatedAt: now() } : x)), [boardId]);
-    showToast(has ? `Removed from ${b.name}` : `Saved to ${b.name}`);
-    setPicker(null);
-  }, [updateBoards, showToast]);
+    if (b.pins.some((p) => p.id === pin.id)) {
+      updateBoards((list) => list.map((x) => (x.id === boardId ? { ...x, pins: x.pins.filter((p) => p.id !== pin.id), updatedAt: now() } : x)), [boardId]);
+    } else {
+      addToBoard(boardId, pin);
+    }
+  }, [updateBoards, addToBoard]);
   const createBoard = useCallback((name, pins = []) => {
     const b = { id: uid(), name, pins: pins.map(strip), createdAt: now(), updatedAt: now() };
     updateBoards((list) => [b, ...list], [b.id]);
+    if (pins.length) writeLastBoard(b.id);
     return b;
   }, [updateBoards]);
+  // Pinterest-style Save: one click to the board you last saved to; the
+  // first save (or the caret) opens the picker.
+  const quickSave = useCallback((pin, anchor) => {
+    const last = bRef.current.find((b) => b.id === readLastBoard());
+    if (!last) { openPicker(pin, anchor); return; }
+    addToBoard(last.id, pin);
+    showToast(`Saved to ${last.name}`, { label: "Change", run: () => openPicker(pin, null) });
+  }, [addToBoard, openPicker, showToast]);
+
   const deleteBoard = (id) => {
     updateBoards((list) => list.filter((b) => b.id !== id));
     deleteRemote(id).catch(() => {});
@@ -347,14 +380,27 @@ export default function MoodApp() {
     showToast("Exploration deleted");
   };
 
-  const openPicker = useCallback((pin, anchor) => setPicker({ pin, anchor }), []);
-  const closePicker = useCallback(() => setPicker(null), []);
+  const doCopyImage = useCallback(async (pin) => {
+    try {
+      await copyImage(pin);
+      showToast("Image copied — paste it into Figma, Miro or a deck.");
+    } catch (e) {
+      showToast(String(e?.message || "Couldn't copy the image — use Download."));
+    }
+  }, [showToast]);
 
   // ── Closeup + "More like this" ──────────────────────────────────────────
-  const openCloseup = useCallback((pin, list, ctx) => setCloseup({ pin, list: list || [pin], ctx }), []);
+  const openCloseup = useCallback((pin, list, ctx) => {
+    if (!closeupRef.current) { try { window.history.pushState({ moodCloseup: true }, ""); } catch {} }
+    setCloseup({ pin, list: list || [pin], ctx });
+  }, []);
+  const closeCloseup = useCallback(() => {
+    if (window.history.state?.moodCloseup) window.history.back(); // popstate closes it
+    else setCloseup(null);
+  }, []);
 
   const moreLikeThis = useCallback(async (pin, ctx) => {
-    setCloseup((c) => (c && c.pin.id === pin.id ? c : { pin, list: [pin], ctx }));
+    if (closeupRef.current?.pin.id !== pin.id) openCloseup(pin, [pin], ctx);
     setRelated((r) => ({ ...r, [pin.id]: { status: "loading", pins: [] } }));
     const x = xRef.current.find((e) => e.id === (pin.explorationId || ctx?.explorationId));
     const brief = x?.brief || { title: ctx?.boardName || "Board", tagline: "", concept: "", palette: [], avoid: [] };
@@ -364,7 +410,7 @@ export default function MoodApp() {
       : { id: pin.storyId || "reference", name: pin.role || "Reference", narrative: pin.note || "", keywords: [], queries: { photo: [], archive: [] } };
     const words = String(pin.alt || pin.title || "").replace(/[^\p{L}\p{N}\s-]/gu, " ").split(/\s+/).filter(Boolean).slice(0, 6).join(" ");
     try {
-      const exclude = new Set([...(x?.pins || []).map((p) => p.id), pin.id]);
+      const exclude = new Set([...(x?.pins || []).map((p) => p.id), ...(x?.hidden || []), pin.id]);
       const res = await curateStory({ brief, story, page: 2, exclude, keep: 8, extraQueries: words ? [words] : [], reference: pin });
       const pins = res.pins.map((p) => ({ ...p, explorationId: x?.id || null }));
       setRelated((r) => ({ ...r, [pin.id]: { status: "done", pins } }));
@@ -372,7 +418,7 @@ export default function MoodApp() {
     } catch (e) {
       setRelated((r) => ({ ...r, [pin.id]: { status: "error", pins: [], error: explainError(e) } }));
     }
-  }, [refreshApprovals]);
+  }, [openCloseup, refreshApprovals]);
 
   const onApprove = useCallback(async (pin, note) => {
     const x = xRef.current.find((e) => e.id === pin.explorationId);
@@ -441,8 +487,10 @@ export default function MoodApp() {
   // ── Views ──────────────────────────────────────────────────────────────
   const tileProps = (list, ctx) => ({
     onOpen: (p) => openCloseup(p, list, ctx),
-    onSave: openPicker,
+    onSave: quickSave,
+    onPick: openPicker,
     onDownload: (p) => downloadPin(p),
+    onCopy: doCopyImage,
     onMore: (p) => moreLikeThis(p, ctx),
     onMeasure: measurePin,
   });
@@ -465,9 +513,9 @@ export default function MoodApp() {
         )}
         <div className="section-head"><h2 className="section-title">How curation works</h2></div>
         <div className="how">
-          <div className="how-step"><b>01</b><p><strong>The brief.</strong> An AI creative director turns your direction into a point of view: the consumer shift and cultural signals, 3–4 stories, a named palette, materials, silhouettes, details and the clichés to avoid.</p></div>
-          <div className="how-step"><b>02</b><p><strong>The search.</strong> Each story searches real photography (Unsplash, Pexels) and open-access museum collections. Every image keeps its credit, license and source link.</p></div>
-          <div className="how-step"><b>03</b><p><strong>The cull.</strong> A vision pass scores every candidate like a design director would — brief fit, craft, originality, what a designer can lift from it — and rejects stock clichés, logos and watermarks. Most candidates don't make it.</p></div>
+          <div className="how-step"><b>01</b><p><strong>The brief.</strong> An AI creative director turns your direction into a point of view: the consumer shift and its drivers, three stories (anchor, directional, edge), a named palette, materials, silhouettes, details and the clichés to avoid.</p></div>
+          <div className="how-step"><b>02</b><p><strong>The search.</strong> Each story searches real photography (Unsplash, Pexels, Wikimedia Commons' juried pictures) and open-access museum collections. Every image keeps its credit, license and source link.</p></div>
+          <div className="how-step"><b>03</b><p><strong>The cull.</strong> A vision pass scores every candidate like a design director would — brief fit, specificity, material, palette, craft, originality — and rejects stock clichés, logos and watermarks. Roughly one in four survives.</p></div>
           <div className="how-step"><b>04</b><p><strong>Designer approval.</strong> Verified designer-curators review boards and approve images into a shared library. Approved images carry the curator's name and lead future boards. Everything else is clearly labelled AI-curated.</p></div>
         </div>
       </>
@@ -483,6 +531,7 @@ export default function MoodApp() {
           onRetryStory={(sid) => runStory(x.id, x.brief.stories.find((s) => s.id === sid), ((x.pages || {})[sid] || 0) + 1, Math.max(1, ...x.pins.map((p) => p.round || 1)))}
           onResume={() => runRound(x.id, x.brief.stories.filter((s) => !(x.pages || {})[s.id]).map((s) => s.id))}
           onMore={(storyIds) => runRound(x.id, storyIds)}
+          onHide={(p) => hidePin(x.id, p)}
           onBroken={(p) => updateX(x.id, (cur) => ({ ...cur, pins: cur.pins.filter((q) => q.id !== p.id) }))}
           onRefine={() => setDialog({ type: "refine", x })}
           onSaveAll={(pins) => { const b = createBoard(x.brief?.title || "Board", pins); showToast(`Saved ${pins.length} images to “${b.name}”`); }}
@@ -549,6 +598,8 @@ export default function MoodApp() {
       {cu && (
         <Closeup
           pin={cu.pin}
+          index={cuIndex}
+          total={cu.list.length}
           story={cuStory}
           approvals={approvals[cu.pin.id] || []}
           approvalsMap={approvals}
@@ -558,11 +609,13 @@ export default function MoodApp() {
           saved={savedIds.has(cu.pin.id)}
           savedIds={savedIds}
           related={related[cu.pin.id]}
-          onClose={() => setCloseup(null)}
+          onClose={closeCloseup}
           onPrev={cuIndex > 0 ? () => setCloseup({ ...cu, pin: cu.list[cuIndex - 1] }) : null}
           onNext={cuIndex >= 0 && cuIndex < cu.list.length - 1 ? () => setCloseup({ ...cu, pin: cu.list[cuIndex + 1] }) : null}
-          onSave={openPicker}
+          onSave={quickSave}
+          onPick={openPicker}
           onDownload={(p) => downloadPin(p)}
+          onCopy={doCopyImage}
           onMore={(p) => moreLikeThis(p, cu.ctx)}
           onOpen={(p) => setCloseup({ pin: p, list: related[cu.pin.id]?.pins || [p], ctx: cu.ctx })}
           onApprove={onApprove}
@@ -577,8 +630,8 @@ export default function MoodApp() {
           anchor={picker.anchor}
           pin={picker.pin}
           boards={boards}
-          onPick={saveToBoard}
-          onCreate={(name, pin) => { const b = createBoard(name, [pin]); showToast(`Saved to ${b.name}`); setPicker(null); }}
+          onToggle={toggleInBoard}
+          onCreate={(name, pin) => { const b = createBoard(name, [pin]); showToast(`Saved to ${b.name}`); }}
           onClose={closePicker}
         />
       )}
@@ -611,28 +664,66 @@ export default function MoodApp() {
       )}
 
       {printing && <PrintBoard name={printing.name} brief={printing.brief} pins={printing.pins} onReady={onPrintReady} />}
-      {toast && <div className="toast" role="status">{toast}</div>}
+      {toast && (
+        <div className="toast" role="status" key={toast.key}>
+          <span>{toast.msg}</span>
+          {toast.action && <button type="button" onClick={() => { hideToast(); toast.action.run(); }}>{toast.action.label}</button>}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Filters shared by the exploration and board views ────────────────────
+const ROLE_LABELS = { people: "People & attitude", material: "Material", garment: "Garment & silhouette", place: "Place & light", color: "Colour", lateral: "Lateral", archive: "Archive", graphic: "Graphic" };
+
+function useFilters(approvals) {
+  const [role, setRole] = useState("all");
+  const [approvedOnly, setApprovedOnly] = useState(false);
+  const [commercialOnly, setCommercialOnly] = useState(false);
+  const pass = (p) => (role === "all" || p.role === role) && (!approvedOnly || approvals[p.id]?.length) && (!commercialOnly || p.license?.commercial === true);
+  return { role, setRole, approvedOnly, setApprovedOnly, commercialOnly, setCommercialOnly, pass };
+}
+
+function FilterTools({ f, pins, libraryOn }) {
+  const roles = [...new Set(pins.map((p) => p.role).filter(Boolean))];
+  return (
+    <div className="bar-tools">
+      {roles.length > 1 && (
+        <select className="filter-select" value={f.role} onChange={(e) => f.setRole(e.target.value)} aria-label="Filter by image role">
+          <option value="all">All roles</option>
+          {roles.map((r) => <option key={r} value={r}>{ROLE_LABELS[r] || r}</option>)}
+        </select>
+      )}
+      {pins.some((p) => p.license?.commercial !== true) && (
+        <label className="switch"><input type="checkbox" checked={f.commercialOnly} onChange={(e) => f.setCommercialOnly(e.target.checked)} /> Commercial-use only</label>
+      )}
+      {libraryOn && (
+        <label className="switch"><input type="checkbox" checked={f.approvedOnly} onChange={(e) => f.setApprovedOnly(e.target.checked)} /> <BadgeCheck size={15} aria-hidden="true" /> Approved only</label>
+      )}
     </div>
   );
 }
 
 // ── Exploration (a generated board) ──────────────────────────────────────
-function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zipProgress, onLoad, onRetryBrief, onRetryStory, onResume, onMore, onBroken, onRefine, onSaveAll, onZip, onPrint, onCopy, onCopyHex, onReview, onDelete }) {
+function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zipProgress, onLoad, onRetryBrief, onRetryStory, onResume, onMore, onHide, onBroken, onRefine, onSaveAll, onZip, onPrint, onCopy, onCopyHex, onReview, onDelete }) {
   const [story, setStory] = useState("all");
-  const [approvedOnly, setApprovedOnly] = useState(false);
+  const f = useFilters(approvals);
   const brief = x.brief;
   const briefSt = st.brief;
   const stories = brief?.stories || [];
-  const ordered = useMemo(() => orderPins(x.pins, stories), [x.pins, stories]);
-  const visible = ordered.filter((p) => (story === "all" || p.storyId === story) && (!approvedOnly || approvals[p.id]?.length));
-  const busyStories = stories.filter((s) => ["searching", "curating"].includes(st[s.id]?.phase));
-  const pendingSkeletons = busyStories.filter((s) => story === "all" || s.id === story).length * 4;
+  const shownStories = story === "all" ? stories : stories.filter((s) => s.id === story);
+  // One section per story; the closeup steps through them in this order.
+  const sections = useMemo(
+    () => shownStories.map((s) => ({ story: s, pins: storyPins(x.pins, s.id).filter(f.pass) })),
+    [x.pins, shownStories, f.role, f.approvedOnly, f.commercialOnly, approvals], // eslint-disable-line react-hooks/exhaustive-deps
+  );
+  const visible = sections.flatMap((s) => s.pins);
+  const busy = (s) => ["searching", "curating"].includes(st[s.id]?.phase);
+  const anyBusy = stories.some(busy);
   const errors = stories.filter((s) => st[s.id]?.phase === "error");
-  const unstarted = brief && !busyStories.length && stories.some((s) => !(x.pages || {})[s.id] && !st[s.id]);
-  const canMore = stories.some((s) => (story === "all" || s.id === story) && !(x.exhausted || {})[s.id]);
-  const activeStory = stories.find((s) => s.id === story);
-  const list = visible;
-  const props = tileProps(list, { explorationId: x.id });
+  const unstarted = brief && !anyBusy && stories.some((s) => !(x.pages || {})[s.id] && !st[s.id]);
+  const props = tileProps(visible, { explorationId: x.id });
 
   // Pins restored from storage: ask once on open whether any are now approved.
   useEffect(() => { onLoad(); }, [x.id]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -648,11 +739,11 @@ function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zip
         {briefSt?.phase === "error" ? (
           <div className="notice err">{briefSt.error}<div><button type="button" className="btn btn-primary btn-sm" onClick={onRetryBrief}><RefreshCw size={14} aria-hidden="true" />Try again</button></div></div>
         ) : briefSt?.phase === "writing" ? (
-          <p className="status-line"><span><span className="dot" />The creative director is reading your direction, sizing up the macro view and writing the stories…</span></p>
+          <p className="status-line" aria-live="polite"><span><span className="dot" />The creative director is reading your direction, sizing up the macro view and writing the stories…</span></p>
         ) : (
           <div className="notice">This board didn't finish.<div><button type="button" className="btn btn-primary btn-sm" onClick={onRetryBrief}>Finish it</button></div></div>
         )}
-        <Masonry items={Array.from({ length: 12 }, (_, i) => i)} getKey={(i) => `s${i}`} getRatio={(i) => [1.25, 1.5, 0.8, 1.33][i % 4]} renderItem={(i) => <SkeletonTile ratio={[1.25, 1.5, 0.8, 1.33][i % 4]} />} />
+        <Masonry items={Array.from({ length: 12 }, (_, i) => i)} getKey={(i) => `s${i}`} getRatio={(i) => SKELETON_RATIOS[i % 4]} renderItem={() => <SkeletonTile />} label="Loading" />
       </div>
     );
   }
@@ -686,40 +777,58 @@ function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zip
             </button>
           ))}
         </div>
-        {libraryOn && (
-          <label className="switch"><input type="checkbox" checked={approvedOnly} onChange={(e) => setApprovedOnly(e.target.checked)} /> <BadgeCheck size={15} aria-hidden="true" /> Approved only</label>
-        )}
+        <FilterTools f={f} pins={x.pins} libraryOn={libraryOn} />
       </div>
-      {activeStory && <p className="story-desc">{activeStory.role && <span className="story-role">{activeStory.role}</span>}{activeStory.narrative}</p>}
 
       <SourceNotice sources={x.sources} />
-      <StoryStatus stories={stories} status={st} />
       {errors.length > 0 && (
         <div className="notice err">
-          {errors.map((s) => s.name).join(", ")} didn't finish curating.
+          {errors.map((s) => `${s.name}: ${st[s.id].error}`).join(" ")}
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>{errors.map((s) => <button key={s.id} type="button" className="btn btn-ghost btn-sm" onClick={() => onRetryStory(s.id)}><RefreshCw size={14} aria-hidden="true" />Retry {s.name}</button>)}</div>
         </div>
       )}
       {unstarted && <div className="notice">Some stories haven't been curated yet.<div><button type="button" className="btn btn-primary btn-sm" onClick={onResume}>Curate them now</button></div></div>}
 
-      {visible.length || pendingSkeletons ? (
-        <Masonry
-          items={[...visible, ...Array.from({ length: pendingSkeletons }, (_, i) => ({ skeleton: true, id: `sk-${i}` }))]}
-          getKey={(p) => p.id}
-          getRatio={(p) => (p.skeleton ? [1.25, 1.5, 0.8, 1.33][Number(p.id.slice(3)) % 4] : ratioOf(p))}
-          renderItem={(p) => (p.skeleton
-            ? <SkeletonTile ratio={[1.25, 1.5, 0.8, 1.33][Number(p.id.slice(3)) % 4]} />
-            : <Tile pin={p} approved={approvals[p.id]?.[0]} saved={savedIds.has(p.id)} {...props} onBroken={onBroken} />)}
-        />
-      ) : (
-        <div className="empty">
-          <h3>{approvedOnly ? "No designer-approved images here yet" : "Nothing cleared the bar"}</h3>
-          <p>{approvedOnly ? "Request a designer review, or turn off the filter to see the AI-curated picks." : "The curator rejected every candidate for this view. Load more to search further, or refine the direction."}</p>
-        </div>
-      )}
+      {sections.map(({ story: s, pins }) => {
+        const sst = st[s.id];
+        const skeletons = busy(s) ? 4 : 0;
+        const filteredOut = !pins.length && x.pins.some((p) => p.storyId === s.id);
+        return (
+          <section key={s.id} className="story-section" aria-labelledby={`story-${s.id}`}>
+            <div className="story-head">
+              <h2 id={`story-${s.id}`}>{s.role && <span className="story-role">{s.role}</span>}{s.name}</h2>
+              <span className="n">{pins.length} image{pins.length === 1 ? "" : "s"}</span>
+              {sst && <span className={`status-line inline${sst.phase === "error" ? " err" : ""}`} aria-live="polite">{busy(s) && <span className="dot" />}{phaseText(sst)}</span>}
+            </div>
+            <p className="story-desc">{s.narrative}</p>
+            {pins.length || skeletons ? (
+              <Masonry
+                label={`${s.name} — ${pins.length} images`}
+                items={[...pins, ...Array.from({ length: skeletons }, (_, i) => ({ skeleton: true, id: `sk-${s.id}-${i}`, i }))]}
+                getKey={(p) => p.id}
+                getRatio={(p) => (p.skeleton ? SKELETON_RATIOS[p.i % 4] : ratioOf(p))}
+                renderItem={(p) => (p.skeleton
+                  ? <SkeletonTile />
+                  : <Tile pin={p} approved={approvals[p.id]?.[0]} saved={savedIds.has(p.id)} {...props} onHide={onHide} onBroken={onBroken} />)}
+              />
+            ) : (
+              <p className="story-empty">
+                {filteredOut ? "Nothing in this story matches the filters." : sst?.phase === "error" ? "This story didn't finish — retry above." : "Nothing cleared the bar for this story yet."}
+              </p>
+            )}
+            {!(x.exhausted || {})[s.id] && (
+              <div className="more-row" style={{ justifyContent: "flex-start", marginTop: 14 }}>
+                <button type="button" className="btn btn-ghost btn-sm" disabled={busy(s)} onClick={() => onMore([s.id])}>{busy(s) ? "Curating…" : `More for ${s.name}`}</button>
+              </div>
+            )}
+          </section>
+        );
+      })}
 
       <div className="more-row" style={{ gap: 10, flexWrap: "wrap" }}>
-        {canMore && <button type="button" className="btn btn-dark" disabled={busyStories.length > 0} onClick={() => onMore(story === "all" ? undefined : [story])}>{busyStories.length ? "Curating…" : `More images${activeStory ? ` for ${activeStory.name}` : ""}`}</button>}
+        {stories.some((s) => !(x.exhausted || {})[s.id]) && story === "all" && (
+          <button type="button" className="btn btn-dark" disabled={anyBusy} onClick={() => onMore(undefined)}>{anyBusy ? "Curating…" : "More for every story"}</button>
+        )}
       </div>
       <div className="more-row"><button type="button" className="btn btn-quiet btn-sm" onClick={() => { if (window.confirm("Delete this exploration? Boards you saved images to are kept.")) onDelete(); }}><Trash2 size={14} aria-hidden="true" />Delete exploration</button></div>
     </div>
@@ -728,9 +837,9 @@ function ExplorationView({ x, st, approvals, savedIds, libraryOn, tileProps, zip
 
 // ── Saved board ───────────────────────────────────────────────────────────
 function BoardView({ b, approvals, savedIds, libraryOn, zipProgress, tileProps, onLoad, onRemove, onRename, onDelete, onZip, onPrint, onCopy, onReview }) {
-  const [approvedOnly, setApprovedOnly] = useState(false);
+  const f = useFilters(approvals);
   useEffect(() => { onLoad(); }, [b.id]); // eslint-disable-line react-hooks/exhaustive-deps
-  const visible = b.pins.filter((p) => !approvedOnly || approvals[p.id]?.length);
+  const visible = b.pins.filter(f.pass);
   const props = tileProps(visible);
   return (
     <div>
@@ -744,23 +853,21 @@ function BoardView({ b, approvals, savedIds, libraryOn, zipProgress, tileProps, 
           <button type="button" className="btn btn-quiet" onClick={() => { if (window.confirm(`Delete “${b.name}”?`)) onDelete(); }}><Trash2 size={15} aria-hidden="true" />Delete</button>
         </div>
       </div>
-      {libraryOn && b.pins.length > 0 && (
-        <div className="story-bar"><span /><label className="switch"><input type="checkbox" checked={approvedOnly} onChange={(e) => setApprovedOnly(e.target.checked)} /> <BadgeCheck size={15} aria-hidden="true" /> Approved only</label></div>
-      )}
+      {b.pins.length > 0 && <div className="story-bar"><span /><FilterTools f={f} pins={b.pins} libraryOn={libraryOn} /></div>}
       {visible.length ? (
         <Masonry
+          label={`${b.name} — ${visible.length} images`}
           items={visible}
           getKey={(p) => p.id}
           getRatio={ratioOf}
           renderItem={(p) => (
-            <div style={{ position: "relative" }}>
-              <Tile pin={p} approved={approvals[p.id]?.[0]} saved={savedIds.has(p.id)} {...props} />
-              <button type="button" className="tile-fab" style={{ position: "absolute", top: 10, left: approvals[p.id]?.length ? 104 : 10 }} onClick={() => onRemove(p)} aria-label="Remove from this board" title="Remove from board"><X size={16} /></button>
+            <div className="board-pin">
+              <Tile pin={p} approved={approvals[p.id]?.[0]} saved={savedIds.has(p.id)} {...props} onHide={onRemove} />
             </div>
           )}
         />
       ) : (
-        <div className="empty"><h3>{approvedOnly ? "No designer-approved images here yet" : "This board is empty"}</h3><p>Save images from any exploration to fill it.</p><a className="btn btn-primary" href="#/">Start a new board</a></div>
+        <div className="empty"><h3>{b.pins.length ? "Nothing here matches the filters" : "This board is empty"}</h3><p>Save images from any exploration to fill it.</p><a className="btn btn-primary" href="#/">Start a new board</a></div>
       )}
     </div>
   );

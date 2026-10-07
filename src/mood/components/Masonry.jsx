@@ -1,19 +1,39 @@
 import React, { useLayoutEffect, useMemo, useRef, useState } from "react";
 
-// Pinterest-style masonry: items flow left-to-right into the currently
-// shortest column, using each image's known aspect ratio so nothing shifts as
-// images load. Greedy placement is deterministic, so appending items ("load
-// more") never reshuffles what's already on screen.
-const GUTTER = { phone: 12, wide: 16 };
-
-export function columnCount(width) {
+// Pinterest-style masonry (the Gestalt approach): every item is placed, in
+// rank order, into the left-most of the shortest columns using its known
+// aspect ratio, then absolutely positioned. DOM / tab / screen-reader order is
+// the curated rank order, nothing shifts as images load, and appending items
+// never moves the ones already placed.
+export function gutterFor(width) {
+  return width < 480 ? 8 : width < 768 ? 12 : 16;
+}
+export function columnCount(width, gutter = gutterFor(width)) {
   if (!width) return 2;
   if (width < 600) return 2;
-  const g = width >= 900 ? GUTTER.wide : GUTTER.phone;
-  return Math.max(3, Math.min(7, Math.floor((width + g) / (220 + g))));
+  return Math.max(3, Math.min(8, Math.floor((width + gutter) / (220 + gutter))));
 }
 
-export default function Masonry({ items, getKey, getRatio, renderItem, extraHeight = 0 }) {
+// Columns within TIE px of the shortest count as tied → the left-most wins,
+// which keeps visual order close to rank order.
+const TIE = 16;
+export function layoutMasonry(ratios, width) {
+  const gutter = gutterFor(width);
+  const cols = columnCount(width, gutter);
+  const colW = width ? (width - (cols - 1) * gutter) / cols : 0;
+  const heights = new Array(cols).fill(0);
+  const boxes = ratios.map((r) => {
+    const h = Math.round(colW * r);
+    const min = Math.min(...heights);
+    const c = heights.findIndex((v) => v <= min + TIE);
+    const box = { x: Math.round(c * (colW + gutter)), y: heights[c], w: Math.floor(colW), h };
+    heights[c] += h + gutter;
+    return box;
+  });
+  return { boxes, height: Math.max(0, Math.max(...heights) - gutter), cols };
+}
+
+export default function Masonry({ items, getKey, getRatio, renderItem, label }) {
   const ref = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -22,33 +42,29 @@ export default function Masonry({ items, getKey, getRatio, renderItem, extraHeig
     if (!el) return undefined;
     setWidth(el.clientWidth);
     if (typeof ResizeObserver === "undefined") return undefined;
-    const ro = new ResizeObserver((entries) => setWidth(Math.round(entries[0].contentRect.width)));
+    let frame = 0;
+    const ro = new ResizeObserver((entries) => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => setWidth(Math.round(entries[0].contentRect.width)));
+    });
     ro.observe(el);
-    return () => ro.disconnect();
+    return () => { cancelAnimationFrame(frame); ro.disconnect(); };
   }, []);
 
-  const cols = columnCount(width);
-  const columns = useMemo(() => {
-    const heights = new Array(cols).fill(0);
-    const out = Array.from({ length: cols }, () => []);
-    items.forEach((it, i) => {
-      let c = 0;
-      for (let k = 1; k < cols; k++) if (heights[k] < heights[c] - 0.01) c = k;
-      out[c].push({ it, i });
-      heights[c] += getRatio(it) + extraHeight;
-    });
-    return out;
-  }, [items, cols, getRatio, extraHeight]);
+  const ratios = items.map(getRatio);
+  const key = ratios.join(",");
+  const { boxes, height, cols } = useMemo(() => layoutMasonry(ratios, width), [key, width]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="masonry" ref={ref} role="list">
-      {columns.map((col, c) => (
-        <div className="masonry-col" key={c} role="none">
-          {col.map(({ it, i }) => (
-            <div role="listitem" key={getKey(it)}>{renderItem(it, i)}</div>
-          ))}
-        </div>
-      ))}
-    </div>
+    <ul className="masonry" ref={ref} style={{ height }} aria-label={label} data-cols={cols}>
+      {width > 0 && items.map((it, i) => {
+        const b = boxes[i];
+        return (
+          <li key={getKey(it)} className="masonry-item" style={{ width: b.w, height: b.h, transform: `translate(${b.x}px, ${b.y}px)` }}>
+            {renderItem(it, i)}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

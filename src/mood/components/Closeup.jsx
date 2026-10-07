@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { BadgeCheck, ChevronLeft, ChevronRight, Download, ExternalLink, Sparkles, X } from "lucide-react";
+import { BadgeCheck, ChevronLeft, ChevronRight, Copy, Download, ExternalLink, Sparkles, X } from "lucide-react";
 import Masonry from "./Masonry.jsx";
 import Tile, { ratioOf } from "./Tile.jsx";
+
+const ChevronDownIcon = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>;
 
 export function LicensePill({ license }) {
   if (!license) return null;
@@ -88,12 +90,13 @@ function ApprovalBox({ pin, approvals, curator, libraryEnabled, signedIn, onAppr
 }
 
 export default function Closeup({
-  pin, story, approvals = [], curator, libraryEnabled, signedIn, saved,
+  pin, index = -1, total = 0, story, approvals = [], curator, libraryEnabled, signedIn, saved,
   related, approvalsMap = {}, savedIds,
-  onClose, onPrev, onNext, onSave, onDownload, onMore, onOpen, onApprove, onRevoke, onSignIn, onBroken, onMeasure,
+  onClose, onPrev, onNext, onSave, onPick, onDownload, onCopy, onMore, onOpen, onApprove, onRevoke, onSignIn, onBroken, onMeasure,
 }) {
   const closeRef = useRef(null);
   const lastFocus = useRef(null);
+  const dialogRef = useRef(null);
 
   useEffect(() => {
     lastFocus.current = document.activeElement;
@@ -102,13 +105,25 @@ export default function Closeup({
     closeRef.current?.focus();
     return () => {
       document.body.style.overflow = prevOverflow;
-      lastFocus.current?.focus?.();
+      if (lastFocus.current?.isConnected) lastFocus.current.focus?.();
     };
   }, []);
 
   useEffect(() => {
     const onKey = (e) => {
-      if (e.target?.closest?.("textarea, input")) return;
+      // Keep Tab inside the dialog (aria-modal).
+      if (e.key === "Tab" && dialogRef.current) {
+        const f = [...dialogRef.current.querySelectorAll("button:not([disabled]), a[href], textarea, input, select, [tabindex]:not([tabindex='-1'])")].filter((el) => el.offsetParent !== null);
+        if (f.length) {
+          const first = f[0];
+          const last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          else if (!dialogRef.current.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+        }
+        return;
+      }
+      if (e.target?.closest?.("textarea, input, select")) return;
       if (e.key === "Escape") onClose();
       else if (e.key === "ArrowLeft" && onPrev) onPrev();
       else if (e.key === "ArrowRight" && onNext) onNext();
@@ -122,7 +137,8 @@ export default function Closeup({
 
   return (
     <div className="modal-backdrop" ref={scrollerRef} onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
-      <div className="modal" role="dialog" aria-modal="true" aria-label={pin.alt || pin.title || "Image"}>
+      <div className="modal" role="dialog" aria-modal="true" aria-label={pin.alt || pin.title || "Image"} ref={dialogRef}>
+        {total > 1 && index >= 0 && <div className="sr-only" aria-live="polite">Image {index + 1} of {total}</div>}
         <button ref={closeRef} type="button" className="btn btn-ghost btn-icon modal-close" onClick={onClose} aria-label="Close"><X size={18} /></button>
         <div className="closeup">
           <div className="closeup-media" style={{ background: pin.color || "#111" }}>
@@ -130,13 +146,18 @@ export default function Closeup({
           </div>
           <div className="closeup-body">
             <div className="closeup-actions">
-              <button type="button" className={`btn ${saved ? "btn-dark" : "btn-primary"}`} onClick={(e) => onSave(pin, e.currentTarget)}>{saved ? "Saved" : "Save"}</button>
+              <span className="save-split">
+                <button type="button" className={`btn ${saved ? "btn-dark" : "btn-primary"}`} onClick={(e) => (saved ? onPick : onSave)(pin, e.currentTarget)}>{saved ? "Saved" : "Save"}</button>
+                {!saved && onPick && <button type="button" className="btn btn-primary btn-caret" onClick={(e) => onPick(pin, e.currentTarget.previousSibling)} aria-label="Choose a board"><ChevronDownIcon /></button>}
+              </span>
               <button type="button" className="btn btn-ghost" onClick={() => onDownload(pin)}><Download size={16} aria-hidden="true" />Download</button>
+              {onCopy && <button type="button" className="btn btn-ghost" onClick={() => onCopy(pin)}><Copy size={16} aria-hidden="true" />Copy</button>}
               {onMore && <button type="button" className="btn btn-ghost" onClick={() => onMore(pin)}><Sparkles size={16} aria-hidden="true" />More like this</button>}
             </div>
             <div>
               {story && <div className="closeup-story">{story.name}{pin.role ? ` · ${pin.role}` : ""}</div>}
               {pin.note && <p className="closeup-note">{pin.note}</p>}
+              {pin.note && <div className="closeup-note-by">AI curator's note</div>}
             </div>
             <ApprovalBox pin={pin} approvals={approvals} curator={curator} libraryEnabled={libraryEnabled} signedIn={signedIn} onApprove={onApprove} onRevoke={onRevoke} onSignIn={onSignIn} />
             <Credit pin={pin} />
@@ -156,11 +177,12 @@ export default function Closeup({
             {related.status === "done" && !related.pins.length && <p className="status-line">Nothing else cleared the bar for this one — try another image.</p>}
             {related.pins.length > 0 && (
               <Masonry
+                label="More like this"
                 items={related.pins}
                 getKey={(p) => p.id}
                 getRatio={ratioOf}
                 renderItem={(p) => (
-                  <Tile pin={p} approved={approvalsMap[p.id]?.[0]} saved={savedIds?.has(p.id)} onOpen={onOpen} onSave={onSave} onDownload={onDownload} onBroken={onBroken} onMeasure={onMeasure} />
+                  <Tile pin={p} approved={approvalsMap[p.id]?.[0]} saved={savedIds?.has(p.id)} onOpen={onOpen} onSave={onSave} onPick={onPick} onDownload={onDownload} onCopy={onCopy} onBroken={onBroken} onMeasure={onMeasure} />
                 )}
               />
             )}

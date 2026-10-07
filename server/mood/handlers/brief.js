@@ -1,15 +1,14 @@
-// Scout Mood — creative direction → art-direction brief (one Claude call).
+// Scout Mood — POST /api/mood/brief: creative direction → art-direction brief (one Claude call).
 // POST { direction, season, categories[], consumer?, avoid?, refine?: { brief, instruction } }
 // → 200 { brief }. The brief carries the macro view, stories with concrete
 // image queries, palette and product language; the client then searches and
-// curates images per story (api/mood-search.js, api/mood-curate.js).
-import { callStructured, sendError, MoodError } from "../server/mood/claude.js";
-import { BRIEF_SYSTEM, BRIEF_SCHEMA, describeSeason, cleanQuery } from "../server/mood/prompts.js";
-import { body, str, strList } from "../server/mood/validate.js";
+// curates images per story (/api/mood/search, /api/mood/curate).
+import { callStructured, sendError, MoodError } from "../claude.js";
+import { BRIEF_SYSTEM, BRIEF_SCHEMA, describeSeason, cleanQuery } from "../prompts.js";
+import { body, str, strList } from "../validate.js";
 
-// 60s is the known-deployable ceiling on this project (Hobby without Fluid
-// Compute). The brief is sized to fit one low-effort generation inside it.
-export const config = { maxDuration: 60 };
+// The brief is sized so one low-effort generation fits the 60s ceiling
+// (see api/mood/[op].js).
 
 const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
 const HEX = /^#[0-9a-f]{6}$/i;

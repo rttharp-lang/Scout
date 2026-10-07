@@ -35,10 +35,10 @@ drop policy if exists "mood_boards owner read"   on public.mood_boards;
 drop policy if exists "mood_boards owner insert" on public.mood_boards;
 drop policy if exists "mood_boards owner update" on public.mood_boards;
 drop policy if exists "mood_boards owner delete" on public.mood_boards;
-create policy "mood_boards owner read"   on public.mood_boards for select to authenticated using (user_id = auth.uid());
-create policy "mood_boards owner insert" on public.mood_boards for insert to authenticated with check (user_id = auth.uid());
-create policy "mood_boards owner update" on public.mood_boards for update to authenticated using (user_id = auth.uid()) with check (user_id = auth.uid());
-create policy "mood_boards owner delete" on public.mood_boards for delete to authenticated using (user_id = auth.uid());
+create policy "mood_boards owner read"   on public.mood_boards for select to authenticated using (user_id = (select auth.uid()));
+create policy "mood_boards owner insert" on public.mood_boards for insert to authenticated with check (user_id = (select auth.uid()));
+create policy "mood_boards owner update" on public.mood_boards for update to authenticated using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
+create policy "mood_boards owner delete" on public.mood_boards for delete to authenticated using (user_id = (select auth.uid()));
 
 -- ── Curators (admin-managed roster) ───────────────────────────────────────
 create table if not exists public.mood_curators (
@@ -56,26 +56,32 @@ alter table public.mood_curators enable row level security;
 -- a signed-in user can also see their own row (to know whether they're pending).
 drop policy if exists "mood_curators public read" on public.mood_curators;
 create policy "mood_curators public read" on public.mood_curators for select to anon, authenticated
-  using (verified or user_id = auth.uid());
+  using (verified or user_id = (select auth.uid()));
 -- Deliberately NO insert/update/delete policies: with RLS on, browser clients
 -- cannot write this table at all. Admins write it from the SQL editor / service role.
 
+-- Belt and braces: browser roles can never write the roster.
+revoke insert, update, delete on public.mood_curators from anon, authenticated;
+
 -- Security-definer helper so policies can check curator status without
--- tripping over mood_curators' own RLS. search_path pinned for safety.
-create or replace function public.mood_is_curator()
+-- tripping over mood_curators' own RLS. It lives in a schema that is NOT
+-- exposed through the Data API, with an empty search_path (Supabase guidance).
+create schema if not exists private;
+grant usage on schema private to anon, authenticated;
+create or replace function private.mood_is_curator()
 returns boolean
 language sql
 stable
 security definer
-set search_path = public
+set search_path = ''
 as $$
   select exists (
     select 1 from public.mood_curators c
-    where c.user_id = auth.uid() and c.verified
+    where c.user_id = (select auth.uid()) and c.verified
   );
 $$;
-revoke all on function public.mood_is_curator() from public;
-grant execute on function public.mood_is_curator() to anon, authenticated;
+revoke all on function private.mood_is_curator() from public;
+grant execute on function private.mood_is_curator() to anon, authenticated;
 
 -- ── Approved image library ────────────────────────────────────────────────
 create table if not exists public.mood_approvals (
@@ -91,6 +97,7 @@ create table if not exists public.mood_approvals (
 );
 create index if not exists mood_approvals_tags_idx on public.mood_approvals using gin (tags);
 create index if not exists mood_approvals_image_idx on public.mood_approvals (image_id);
+create index if not exists mood_approvals_curator_idx on public.mood_approvals (curator_id);
 alter table public.mood_approvals enable row level security;
 
 drop policy if exists "mood_approvals public read"     on public.mood_approvals;
@@ -102,12 +109,12 @@ drop policy if exists "mood_approvals curator delete"  on public.mood_approvals;
 create policy "mood_approvals public read" on public.mood_approvals for select to anon, authenticated
   using (exists (select 1 from public.mood_curators c where c.user_id = curator_id and c.verified));
 create policy "mood_approvals curator insert" on public.mood_approvals for insert to authenticated
-  with check (curator_id = auth.uid() and public.mood_is_curator());
+  with check (curator_id = (select auth.uid()) and (select private.mood_is_curator()));
 create policy "mood_approvals curator update" on public.mood_approvals for update to authenticated
-  using (curator_id = auth.uid() and public.mood_is_curator())
-  with check (curator_id = auth.uid() and public.mood_is_curator());
+  using (curator_id = (select auth.uid()) and (select private.mood_is_curator()))
+  with check (curator_id = (select auth.uid()) and (select private.mood_is_curator()));
 create policy "mood_approvals curator delete" on public.mood_approvals for delete to authenticated
-  using (curator_id = auth.uid() and public.mood_is_curator());
+  using (curator_id = (select auth.uid()) and (select private.mood_is_curator()));
 
 -- ── Review requests (user → curator queue) ────────────────────────────────
 create table if not exists public.mood_review_requests (
@@ -129,17 +136,20 @@ drop policy if exists "mood_reviews curator update"   on public.mood_review_requ
 drop policy if exists "mood_reviews requester delete" on public.mood_review_requests;
 -- Requesters create open requests for themselves only (they cannot pre-fill decisions).
 create policy "mood_reviews requester insert" on public.mood_review_requests for insert to authenticated
-  with check (requester_id = auth.uid() and status = 'open' and decisions = '{}'::jsonb and reviewed_by is null);
+  with check (requester_id = (select auth.uid()) and status = 'open' and decisions = '{}'::jsonb and reviewed_by is null);
 -- Requesters read their own; verified curators read the whole queue.
 create policy "mood_reviews read" on public.mood_review_requests for select to authenticated
-  using (requester_id = auth.uid() or public.mood_is_curator());
+  using (requester_id = (select auth.uid()) or (select private.mood_is_curator()));
 -- Only verified curators record decisions, and only in their own name.
 create policy "mood_reviews curator update" on public.mood_review_requests for update to authenticated
-  using (public.mood_is_curator())
-  with check (public.mood_is_curator() and reviewed_by = auth.uid());
+  using ((select private.mood_is_curator()))
+  with check ((select private.mood_is_curator()) and reviewed_by = (select auth.uid()));
 -- Curators may only touch the review columns — never the requester or snapshot.
 revoke update on public.mood_review_requests from anon, authenticated;
 grant update (status, decisions, reviewed_by, updated_at) on public.mood_review_requests to authenticated;
 -- Requesters may withdraw their own request.
 create policy "mood_reviews requester delete" on public.mood_review_requests for delete to authenticated
-  using (requester_id = auth.uid());
+  using (requester_id = (select auth.uid()));
+
+-- Earlier versions of this file put the helper in the exposed public schema.
+drop function if exists public.mood_is_curator();

@@ -1,5 +1,5 @@
 // Scout Mood smoke test: serve the production build, open /moodboard/ in a
-// real browser with every /api/mood-* call and every image host intercepted
+// real browser with every /api/mood/* call and every image host intercepted
 // (no live AI, no image APIs), and walk the core flow at phone and desktop
 // widths: compose a direction → brief + stories + palette → curated masonry →
 // story filter → closeup → "More like this" → Save to a new board → board
@@ -68,21 +68,21 @@ function svg(url) {
 }
 
 async function mockRoutes(page, calls) {
-  await page.route("**/api/mood-brief", async (route) => {
+  await page.route("**/api/mood/brief", async (route) => {
     calls.brief++;
     const body = route.request().postDataJSON();
     if (!body?.direction) return route.fulfill({ status: 400, json: { error: "no-direction" } });
     await wait(300);
     return route.fulfill({ json: { brief: { ...brief, title: body.refine ? "Night Shift II" : brief.title } } });
   });
-  await page.route("**/api/mood-search", async (route) => {
+  await page.route("**/api/mood/search", async (route) => {
     calls.search++;
     const { queries } = route.request().postDataJSON();
     const candidates = queries.flatMap((q) => Array.from({ length: 5 }, (_, i) => candidate(q.storyId, q.q, i)));
     await wait(150);
     return route.fulfill({ json: { candidates, sources: { unsplash: "ok", pexels: "ok", met: "ok", cma: "ok" } } });
   });
-  await page.route("**/api/mood-curate", async (route) => {
+  await page.route("**/api/mood/curate", async (route) => {
     calls.curate++;
     const { candidates, keep } = route.request().postDataJSON();
     await wait(250);
@@ -131,35 +131,70 @@ async function run(browser, vp, problems) {
   }
   if (calls.brief !== 1 || calls.search !== 3 || calls.curate !== 6) fail(`unexpected API call counts ${JSON.stringify(calls)}`);
   if (!(await noHorizontalScroll(page))) fail("board page scrolls horizontally");
-  const cols = await page.$$eval(".masonry > .masonry-col", (c) => c.length);
+  const cols = await page.$eval(".masonry", (m) => Number(m.dataset.cols));
   if (vp.label === "phone" && cols !== 2) fail(`phone masonry should have 2 columns, has ${cols}`);
   if (vp.label === "desktop" && cols < 4) fail(`desktop masonry should have ≥4 columns, has ${cols}`);
+  // One section per story, each with its own masonry, in brief order.
+  const heads = await page.$$eval(".story-section h2", (h) => h.map((x) => x.textContent));
+  if (heads.length !== 3 || !/anchor/i.test(heads[0]) || !/Sodium Glow/.test(heads[0])) fail(`story sections wrong: ${JSON.stringify(heads)}`);
+  // Masonry must never overlap tiles.
+  const overlap = await page.$$eval(".story-section:first-of-type .masonry-item", (els) => {
+    const r = els.map((e) => e.getBoundingClientRect());
+    for (let i = 0; i < r.length; i++) for (let j = i + 1; j < r.length; j++) {
+      if (r[i].left < r[j].right - 1 && r[j].left < r[i].right - 1 && r[i].top < r[j].bottom - 1 && r[j].top < r[i].bottom - 1) return true;
+    }
+    return false;
+  });
+  if (overlap) fail("masonry tiles overlap");
   await shot("2-board");
 
-  // Story filter
+  // Story filter shows just that section
   await page.click(".story-bar button.chip:has-text('Quiet Tech')");
+  const sectionsShown = await page.$$eval(".story-section", (s) => s.length);
   const storyTiles = await page.$$eval(".masonry .tile", (t) => t.length);
-  if (storyTiles < 4 || storyTiles > 12) fail(`story filter shows ${storyTiles} tiles`);
+  if (sectionsShown !== 1 || storyTiles < 4 || storyTiles > 12) fail(`story filter shows ${sectionsShown} sections / ${storyTiles} tiles`);
   await page.click(".story-bar button.chip:has-text('All')");
+
+  // "Not this" by keyboard (X on the focused tile), then Undo
+  const before = await page.$$eval(".masonry .tile", (t) => t.length);
+  await page.focus(".masonry .tile-open >> nth=1");
+  await page.keyboard.press("x");
+  await page.waitForSelector(".toast:has-text('Removed from the board')", { timeout: 3000 }).catch(() => fail("X didn't remove the tile"));
+  const afterHide = await page.$$eval(".masonry .tile", (t) => t.length);
+  if (afterHide !== before - 1) fail(`hide removed ${before - afterHide} tiles`);
+  await page.click(".toast button:has-text('Undo')");
+  await page.waitForFunction((n) => document.querySelectorAll(".masonry .tile").length === n, before, { timeout: 3000 }).catch(() => fail("Undo didn't restore the tile"));
 
   // Closeup + More like this
   await page.click(".masonry .tile-open >> nth=0");
   await page.waitForSelector(".modal .closeup-note", { timeout: 5000 }).catch(() => fail("closeup didn't open"));
   const cutxt = await page.textContent(".modal");
   if (!/AI-curated/.test(cutxt)) fail("closeup is missing the honest AI-curated label");
+  if (!/AI curator's note/.test(cutxt)) fail("closeup doesn't attribute the note to the AI curator");
   if (!/Public domain|License/i.test(cutxt)) fail("closeup is missing the license");
   await shot("3-closeup");
   await page.click(".modal button:has-text('More like this')");
   await page.waitForFunction(() => document.querySelectorAll(".related .tile").length >= 4, null, { timeout: 8000 }).catch(() => fail("More like this produced no tiles"));
 
-  // Save → new board
+  // First Save (no boards yet) → picker → create a board → Done
   await page.click(".modal .closeup-actions button:has-text('Save')");
-  await page.waitForSelector(".popover[aria-label='Save to board']", { timeout: 3000 }).catch(() => fail("board picker didn't open"));
+  await page.waitForSelector(".popover[aria-label='Save to boards']", { timeout: 3000 }).catch(() => fail("board picker didn't open"));
   await page.fill(".popover input", "SP28 Final");
   await page.click(".popover button:has-text('Create')");
   await page.waitForSelector(".toast:has-text('Saved to SP28 Final')", { timeout: 3000 }).catch(() => fail("save toast missing"));
-  await page.keyboard.press("Escape");
-  await page.waitForSelector(".modal", { state: "detached", timeout: 3000 }).catch(() => fail("Escape didn't close the closeup"));
+  await page.waitForSelector(".popover [role='checkbox'][aria-checked='true']", { timeout: 2000 }).catch(() => fail("picker doesn't show the new board as checked"));
+  await page.click(".popover button:has-text('Done')");
+  await page.waitForSelector(".popover", { state: "detached", timeout: 2000 }).catch(() => fail("Done didn't close the picker"));
+  // Browser back closes the closeup (it owns one history entry), board stays.
+  await page.goBack();
+  await page.waitForSelector(".modal", { state: "detached", timeout: 3000 }).catch(() => fail("Back didn't close the closeup"));
+  if (!(await page.$("h1.board-title:has-text('Night Shift')"))) fail("Back left the board instead of closing the closeup");
+
+  // Second Save is one click to the last-used board
+  await page.hover(".masonry .tile >> nth=2");
+  await page.click(".masonry .tile >> nth=2 >> .tile-save:not(.tile-save-caret)");
+  await page.waitForSelector(".toast:has-text('Saved to SP28 Final')", { timeout: 3000 }).catch(() => fail("quick save didn't go to the last board"));
+  if (await page.$(".popover")) fail("quick save opened the picker");
 
   // Save all as board, then visit Boards
   await page.click("button:has-text('Save as board')");
@@ -171,15 +206,16 @@ async function run(browser, vp, problems) {
   await page.click(".cover:has-text('SP28 Final')");
   await page.waitForSelector("h1.board-title:has-text('SP28 Final')", { timeout: 4000 }).catch(() => fail("saved board didn't open"));
   const pins = await page.$$eval(".masonry .tile", (t) => t.length);
-  if (pins !== 1) fail(`saved board should have 1 pin, has ${pins}`);
+  if (pins !== 2) fail(`saved board should have 2 pins, has ${pins}`);
 
   // Persistence across reload
   await page.reload({ waitUntil: "load" });
   await page.waitForSelector("h1.board-title:has-text('SP28 Final')", { timeout: 4000 }).catch(() => fail("board didn't survive a reload"));
+  if ((await page.$$eval(".masonry .tile", (t) => t.length)) !== 2) fail("board lost pins across a reload");
 
   // Error path: brief failure shows a retry, never a blank page.
-  await page.unroute("**/api/mood-brief");
-  await page.route("**/api/mood-brief", (route) => route.fulfill({ status: 503, json: { error: "ai-not-configured" } }));
+  await page.unroute("**/api/mood/brief");
+  await page.route("**/api/mood/brief", (route) => route.fulfill({ status: 503, json: { error: "ai-not-configured" } }));
   await page.goto(URL, { waitUntil: "load" });
   await page.fill("#direction", "Arctic archive for the city.");
   await page.click("button:has-text('Build the mood board')");
@@ -211,7 +247,7 @@ async function main() {
     console.error("✗ Mood smoke FAILED\n  " + problems.join("\n  "));
     process.exitCode = 1;
   } else {
-    console.log("✓ Mood smoke passed — compose → brief → curated board → closeup → more like this → save → boards, at phone and desktop widths.");
+    console.log("✓ Mood smoke passed — compose → brief → story sections → filter → not-this/undo → closeup → more like this → save (picker + one-click) → boards → reload, at phone and desktop widths.");
   }
 }
 main();

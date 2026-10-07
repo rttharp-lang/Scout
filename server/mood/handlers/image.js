@@ -1,5 +1,5 @@
-// Scout Mood — image download proxy.
-// GET /api/mood-image?u=<image url>&name=<file name>&track=<Unsplash download_location>
+// Scout Mood — GET /api/mood/image: image download proxy.
+// GET /api/mood/image?u=<image url>&name=<file name>&track=<Unsplash download_location>
 // Streams an image from an ALLOW-LISTED source host back as a same-origin
 // attachment, so the browser can save it (cross-origin <a download> is ignored)
 // and the zip export can read it. Only https URLs on the source hosts are
@@ -7,7 +7,7 @@
 // capped — this can never be used to reach arbitrary or internal hosts.
 // When `track` is an Unsplash download_location, it is pinged server-side
 // (Unsplash API guidelines require it whenever a user downloads a photo).
-import { fetchAllowedImage, isAllowedImageUrl, sniffImageType, trackUnsplashDownload } from "../server/mood/sources.js";
+import { fetchAllowedImage, isAllowedImageUrl, sniffImageType, trackUnsplashDownload } from "../sources.js";
 
 // Vercel caps a function response at 4.5 MB; stay under it.
 const MAX_BYTES = 4_400_000;
@@ -17,6 +17,10 @@ const EXT = { "image/jpeg": "jpg", "image/png": "png", "image/gif": "gif", "imag
 const safeName = (s) => String(s || "").replace(/\.[a-z0-9]{2,4}$/i, "").replace(/[^a-z0-9._-]+/gi, "-").replace(/^-+|-+$/g, "").slice(0, 80) || "scout-mood";
 
 export default async function handler(req, res) {
+  if (req.method && req.method !== "GET") { res.status(405).json({ error: "method-not-allowed" }); return; }
+  // Only this site's own pages may use the proxy (browsers send Sec-Fetch-Site).
+  const site = String(req.headers?.["sec-fetch-site"] || "");
+  if (site && site !== "same-origin" && site !== "none") { res.status(403).json({ error: "cross-site" }); return; }
   const u = (req.query.u || "").toString();
   if (!isAllowedImageUrl(u)) { res.status(400).json({ error: "bad-url" }); return; }
   try {
@@ -33,9 +37,14 @@ export default async function handler(req, res) {
     res.setHeader("Content-Length", String(buf.length));
     res.setHeader("Content-Disposition", `attachment; filename="${safeName(req.query.name)}.${EXT[type]}"`);
     res.setHeader("X-Content-Type-Options", "nosniff");
-    res.setHeader("Cache-Control", "public, max-age=86400");
+    res.setHeader("Content-Security-Policy", "default-src 'none'; sandbox");
+    res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
+    res.setHeader("Referrer-Policy", "no-referrer");
+    // A CDN-cached copy would skip Unsplash's required download ping.
+    res.setHeader("Cache-Control", track ? "private, no-store" : "private, max-age=86400");
     res.status(200).send(buf);
   } catch (e) {
-    res.status(502).json({ error: "image-failed", detail: String(e?.message || e) });
+    const code = String(e?.message || "");
+    res.status(502).json({ error: "image-failed", detail: /^(http-\d+|too-large|host-not-allowed|too-many-redirects|bad-redirect)$/.test(code) ? code : "fetch-failed" });
   }
 }

@@ -1,4 +1,4 @@
-// Unit tests for the Scout Mood server code (api/mood-*.js, server/mood/*).
+// Unit tests for the Scout Mood server code (api/mood/[op].js, server/mood/*).
 // No network: global fetch is replaced per test, and Claude is mocked at the
 // HTTP layer (the SDK's request to api.anthropic.com is intercepted).
 // Source fixtures in scripts/fixtures/mood/ are real captured API responses.
@@ -15,10 +15,11 @@ import {
   isAllowedImageUrl, fetchAllowedImage, sniffImageType, planQueries, searchAll, trackUnsplashDownload,
 } from "../server/mood/sources.js";
 import { scoreDecision, cleanQuery, describeSeason, BRIEF_SCHEMA, CURATE_SCHEMA } from "../server/mood/prompts.js";
-import briefHandler, { normalizeBrief } from "../api/mood-brief.js";
-import curateHandler from "../api/mood-curate.js";
-import searchHandler from "../api/mood-search.js";
-import imageHandler from "../api/mood-image.js";
+import briefHandler, { normalizeBrief } from "../server/mood/handlers/brief.js";
+import curateHandler from "../server/mood/handlers/curate.js";
+import searchHandler from "../server/mood/handlers/search.js";
+import imageHandler from "../server/mood/handlers/image.js";
+import router, { config as routerConfig } from "../api/mood/[op].js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const fx = (name) => JSON.parse(fs.readFileSync(path.join(here, "fixtures", "mood", name), "utf8"));
@@ -403,6 +404,30 @@ test("mood-image: rejects non-allow-listed URLs, streams allowed ones as attachm
   const track = calls.find((c) => c.url.startsWith("https://api.unsplash.com/"));
   assert.ok(track, "Unsplash download was tracked");
   assert.equal(track.init.headers.get("authorization"), "Client-ID u");
+});
+
+test("router: one function, four ops, 60s ceiling; unknown ops 404", async () => {
+  assert.deepEqual(routerConfig, { maxDuration: 60 });
+  const r1 = fakeRes();
+  await router({ method: "GET", query: { op: "__proto__" } }, r1);
+  assert.equal(r1.statusCode, 404);
+  const r2 = fakeRes();
+  await router({ method: "POST", query: { op: "search" }, body: { queries: [] } }, r2);
+  assert.equal(r2.statusCode, 400, "dispatches to the search handler");
+  const apiFiles = fs.readdirSync(path.join(here, "..", "api"), { recursive: true }).filter((f) => /\.js$/.test(f) && !/(^|\/)_/.test(f));
+  assert.ok(apiFiles.length <= 12, `Vercel Hobby allows 12 functions; found ${apiFiles.length}: ${apiFiles.join(", ")}`);
+});
+
+test("mood-image: refuses cross-site use and never CDN-caches tracked downloads", async () => {
+  const r1 = fakeRes();
+  await imageHandler({ method: "GET", headers: { "sec-fetch-site": "cross-site" }, query: { u: "https://images.unsplash.com/x" } }, r1);
+  assert.equal(r1.statusCode, 403);
+  mockFetch(() => image());
+  const r2 = fakeRes();
+  await imageHandler({ method: "GET", headers: { "sec-fetch-site": "same-origin" }, query: { u: "https://images.pexels.com/x" } }, r2);
+  assert.equal(r2.statusCode, 200);
+  assert.match(r2.headers["cache-control"], /^private/);
+  assert.match(r2.headers["content-security-policy"], /sandbox/);
 });
 
 test("trackUnsplashDownload ignores anything that isn't an Unsplash download endpoint", async () => {

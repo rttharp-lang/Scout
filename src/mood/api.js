@@ -1,5 +1,5 @@
 // Client for the Scout Mood functions + the board-generation pipeline.
-// Keys never reach the browser: everything goes through /api/mood-*.
+// Keys never reach the browser: everything goes through /api/mood/*.
 
 export class ApiError extends Error {
   constructor(status, code, detail) {
@@ -37,12 +37,12 @@ export function explainError(e) {
 }
 
 export const fetchBrief = (input, refine, signal) =>
-  post("/api/mood-brief", { ...input, refine: refine || undefined }, signal).then((d) => d.brief);
+  post("/api/mood/brief", { ...input, refine: refine || undefined }, signal).then((d) => d.brief);
 
 export const searchImages = (queries, { page = 1, perQuery = 8 } = {}, signal) =>
-  post("/api/mood-search", { queries, page, perQuery }, signal);
+  post("/api/mood/search", { queries, page, perQuery }, signal);
 
-export const curateImages = (payload, signal) => post("/api/mood-curate", payload, signal);
+export const curateImages = (payload, signal) => post("/api/mood/curate", payload, signal);
 
 // The slice of the brief the curator needs (keeps request bodies small).
 export const briefSummary = (b) => ({ title: b.title, tagline: b.tagline, concept: b.concept, palette: b.palette, avoid: b.avoid });

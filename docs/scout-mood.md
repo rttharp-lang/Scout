@@ -10,7 +10,7 @@ project, and shares its design system and optional Supabase project.
 
 ## How a board is made
 
-1. **Brief** (`api/mood-brief.js`, one Claude call). An AI creative director /
+1. **Brief** (`/api/mood/brief`, one Claude call). An AI creative director /
    trend forecaster turns the direction into a point of view that traces
    macro driver → consumer mindset → story → colour, material, silhouette and
    detail:
@@ -28,10 +28,10 @@ project, and shares its design system and optional Supabase project.
    The season code (SP/SU/FA/HO, SS/FW, Resort, Pre-Fall) is resolved to a
    delivery window and lead time. The default is the season about 18 months
    out.
-2. **Search** (`api/mood-search.js`). Each story's queries are spread across
+2. **Search** (`/api/mood/search`). Each story's queries are spread across
    the configured sources (below). Every result is normalized with its real
    credit, license and source link. One failing source never fails the board.
-3. **Cull** (`api/mood-curate.js`, Claude vision). Candidate thumbnails are
+3. **Cull** (`/api/mood/curate`, Claude vision). Candidate thumbnails are
    fetched server-side from allow-listed hosts and scored like a design
    director would score them:
    - **hard rejects**: watermarks, text, logos, stock clichés, AI artefacts,
@@ -132,6 +132,12 @@ Vercel → Project → Settings → Environment Variables:
 
 ## Limits worth knowing
 
+- **Vercel plan.** Hobby allows at most 12 serverless functions per
+  deployment, and the trip planner already uses 10. That is why Scout Mood
+  serves all four operations from one dynamic route, `api/mood/[op].js`.
+  Hobby is also limited to non-commercial use, so a tool for a brand's design
+  team belongs on Pro, which lifts both limits and allows longer
+  `maxDuration`.
 - **Function time.** Every Claude call is sized to fit Vercel Hobby's 60s
   ceiling (`maxDuration: 60`). With Fluid Compute or Pro you can raise
   `maxDuration` and the batch sizes in `server/mood/*` / `src/mood/api.js`.
@@ -155,7 +161,9 @@ npm run smoke          # every smoke test (trip planner + Scout Mood)
 
 Code map:
 
-- `api/mood-*.js`: Vercel functions.
+- `api/mood/[op].js`: the single Vercel function. It routes `/api/mood/brief`,
+  `/api/mood/search`, `/api/mood/curate` and `/api/mood/image` to
+  `server/mood/handlers/`.
 - `server/mood/`: shared server code, outside `/api` so it isn't deployed as
   functions. It holds the Claude client, prompts and schemas, the source
   adapters, and validation.
@@ -163,3 +171,6 @@ Code map:
   pipeline, `store.js` for persistence, `library.js` for designer approval,
   `exportBoard.js`, `components/`).
 - `supabase/mood.sql`: tables and RLS.
+- `supabase/tests/mood_rls_test.sql`: 32 assertions. Users can't make
+  themselves curators, and can't approve or sign a review in someone else's
+  name. Revoked curators' approvals disappear. Boards stay private.

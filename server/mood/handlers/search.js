@@ -1,14 +1,13 @@
-// Scout Mood — story queries → normalized, openly licensed image candidates.
+// Scout Mood — POST /api/mood/search: story queries → normalized, openly licensed image candidates.
 // POST { queries: [{ q, kind: "photo"|"archive", storyId }] (≤12), perQuery?: 4..30, page?: 1..10 }
 // → 200 { candidates: Candidate[], sources: { [source]: "ok"|"error"|"not-configured" } }
 // Photo queries go to the configured photography APIs, archive queries to the
 // open-access museum APIs (see server/mood/sources.js). A failing source is
 // reported, never fatal.
-import { searchAll } from "../server/mood/sources.js";
-import { sendError } from "../server/mood/claude.js";
-import { body, str, int } from "../server/mood/validate.js";
+import { searchAll } from "../sources.js";
+import { sendError } from "../claude.js";
+import { body, str, int } from "../validate.js";
 
-export const config = { maxDuration: 30 };
 
 export default async function handler(req, res) {
   try {
