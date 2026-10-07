@@ -21,6 +21,7 @@ THE BAR — every claim must pass all of these:
 - RESPECT: no stereotypes or caricature. When a cue comes from a specific community (Black, Latino, Indigenous, Asian, Pacific Islander, LGBTQ+, immigrant communities), say how to engage authentically: partner with, credit and pay its creators; never lift sacred or ceremonial imagery. Flag third-party IP that would need licensing.
 - PEOPLE: name public figures, artists, athletes, chefs, designers, collectives and businesses. Never name private individuals.
 - TIGHT: one to three sentences per field. No filler, no hedging boilerplate. Fewer, stronger items beat padded lists.
+- OWN WORDS: never reproduce song lyrics, poems, slogans beyond a few words, or passages from articles verbatim — describe and name the work instead.
 - SOURCES: list the URLs you actually used.`;
 
 // Swapped in for the CURRENT and SOURCES rules when live web research is
