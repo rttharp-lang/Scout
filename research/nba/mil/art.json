@@ -1,0 +1,119 @@
+{
+  "team": "mil",
+  "lens": "art",
+  "headline": "Milwaukee looks like Cream City brick, Lake Michigan steel-blue and breweries' hand-lettered signage, and its art scene is artist-run, Walker's Point-to-Bronzeville and proudly unpolished.",
+  "summary": "Milwaukee's visual identity is industrial and civic rather than glossy: cream-colored brick, brewery and machine-shop lettering, the Calatrava wings on the lakefront, and a mural culture rooted in the Black North Side and Latino South Side. The scene runs through artist-run spaces in Walker's Point and Bay View, MIAD, and the Milwaukee Art Museum, with quarterly Gallery Night & Day as the shared calendar. With Giannis gone and a rebuild starting, the city's story shifts from superstar worship to local pride and craft, which favors makers-first, neighborhood-specific design over player-led graphics.",
+  "insights": [
+    {
+      "title": "Cream City brick is the city's real color",
+      "detail": "Milwaukee's nickname comes from the pale yellow-cream clay brick that faces its older buildings in the Third Ward, Walker's Point and the North Side. It is warmer and more specific than the Bucks' official cream.",
+      "implication": "Build a Cream City palette (brick cream, soot, lake blue) as a base for apparel and a City Edition story that reads as place, not just team colors."
+    },
+    {
+      "title": "Brewery and machine-shop lettering is the typographic vernacular",
+      "detail": "Milwaukee's civic graphics come from beer, tools and rail: the Pabst and Miller heritage, the Allen-Bradley (Rockwell Automation) clock tower in Walker's Point, Harley-Davidson, and corner-tavern hand-painted signs.",
+      "implication": "Draw from tavern-sign scripts and bold industrial block lettering for wordmarks and chest graphics; avoid licensed brewery marks without a deal."
+    },
+    {
+      "title": "Murals are neighborhood-owned, not tourist-driven",
+      "detail": "Muralists like Tia Richardson and Mauricio Ramirez work on the Black North Side and Latino South Side, and spaces like the Sherman Phoenix in Sherman Park reclaim buildings for Black-owned business and art.",
+      "implication": "Co-create with these communities and pay the artists; a Bronzeville or Sherman Park mural wall could anchor an activation more credibly than any Deer District takeover."
+    },
+    {
+      "title": "Artist-run spaces drive the scene",
+      "detail": "Walker's Point Center for the Arts, Var Gallery, INOVA at UWM and MIAD's galleries seed emerging makers, while the Milwaukee Art Museum, with its Calatrava Quadracci Pavilion, is the civic icon.",
+      "implication": "Source collaborators from MIAD alumni and Walker's Point studios; use the Calatrava wing silhouette as a graphic, mindful of the museum's rights to its image."
+    },
+    {
+      "title": "Post-Giannis, local identity matters more than a player",
+      "detail": "The Bucks open 2026-27 without Giannis Antetokounmpo, with Tyler Herro as the centerpiece and Jan 28, 2027 set for Giannis' first return to Fiserv Forum. Fans' emotions are mixed and the market is in a rebuild.",
+      "implication": "Lead with city pride and craft, not Giannis-era iconography; avoid anything that reads as trading on or mocking the departure."
+    },
+    {
+      "title": "Milwaukee loves a sports logo as folk art",
+      "detail": "The Brewers' ball-in-glove mark, designed by Tom Meindl while a student, and the Bucks' deer lineage show a city that embraces hand-drawn, characterful sports graphics.",
+      "implication": "A hand-drawn, illustrated approach (local illustrator-led) will land better than a clean corporate wordmark."
+    }
+  ],
+  "places": [
+    {"name": "Milwaukee Art Museum", "kind": "museum", "neighborhood": "Lakefront / Downtown", "why": "Home of the Calatrava-designed Quadracci Pavilion and its Burke Brise Soleil wings, the city's defining architectural image."},
+    {"name": "Walker's Point Center for the Arts", "kind": "arts center", "neighborhood": "Walker's Point", "why": "Long-running Latino-rooted community arts center on the South Side with exhibitions and youth programming."},
+    {"name": "Var Gallery", "kind": "gallery", "neighborhood": "Walker's Point", "why": "Artist-run, street-and-contemporary gallery hub in the Walker's Point arts corridor."},
+    {"name": "INOVA (UWM Peck School of the Arts)", "kind": "gallery", "neighborhood": "East Side / UWM", "why": "University contemporary art space showing experimental and emerging artists."},
+    {"name": "Milwaukee Institute of Art & Design (MIAD)", "kind": "art school", "neighborhood": "Historic Third Ward", "why": "The city's main design school and the likeliest source of illustration, apparel and graphic talent."},
+    {"name": "Sherman Phoenix", "kind": "marketplace", "neighborhood": "Sherman Park", "why": "Black-owned marketplace in a rebuilt gas-station site that blends commerce, art and community healing."},
+    {"name": "Allen-Bradley Clock Tower", "kind": "landmark", "neighborhood": "Walker's Point", "why": "Four-faced industrial clock tower, a signature piece of Milwaukee's skyline graphics."},
+    {"name": "Historic Third Ward", "kind": "district", "neighborhood": "Third Ward", "why": "Cream City brick warehouses, galleries and design studios."},
+    {"name": "Bay View", "kind": "district", "neighborhood": "Bay View", "why": "Artist-heavy neighborhood with its own gallery night, studios and indie shops."},
+    {"name": "Fiserv Forum / Deer District", "kind": "arena district", "neighborhood": "Downtown", "why": "The Bucks' home and game-day public square, where branded graphics reach the most fans."}
+  ],
+  "people": [
+    {"name": "Tia Richardson", "role": "Milwaukee muralist and artist", "why": "Known for large-scale murals in the city and a credible local collaborator."},
+    {"name": "Mauricio Ramirez", "role": "Milwaukee muralist", "why": "South Side mural artist tied to Latino community art."},
+    {"name": "Tom Meindl", "role": "Designer of the Brewers' ball-in-glove logo", "why": "Proof that Milwaukee's sports-graphic heritage is local and hand-drawn."},
+    {"name": "Santiago Calatrava", "role": "Architect of the Milwaukee Art Museum's Quadracci Pavilion", "why": "His wing form is the city's most recognized modern image."},
+    {"name": "MIAD alumni network", "role": "Designers and illustrators", "why": "A pipeline of local talent for apparel and graphic collaborations."}
+  ],
+  "moments": [
+    {"name": "Gallery Night & Day", "timing": "Quarterly (Jan, Apr, Jul, Oct)", "month": 10, "why": "Multi-neighborhood gallery open house, the best point for scouting local artists."},
+    {"name": "Lakefront Festival of Art", "timing": "Mid-June", "month": 6, "why": "Juried art fair at the Milwaukee Art Museum drawing makers from around the country."},
+    {"name": "Summerfest", "timing": "Late June to July", "month": 6, "why": "Massive lakefront festival with a strong poster and graphic tradition."},
+    {"name": "Wisconsin State Fair", "timing": "Early August", "month": 8, "why": "Cream-puff, ribbon and fair-sign vernacular in West Allis."},
+    {"name": "Giannis' first return to Fiserv Forum", "timing": "Jan 28, 2027", "month": 1, "why": "Emotional flashpoint to be handled with care, not as a merchandise opportunity."},
+    {"name": "Bucks home opener period and NBA Cup nights", "timing": "Late Oct to Nov 2026", "month": 10, "why": "First chance to show new art-led Bucks product at Fiserv Forum."}
+  ],
+  "vocabulary": [
+    {"term": "Cream City", "meaning": "Nickname from the pale local brick."},
+    {"term": "Brew City", "meaning": "Brewing-heritage nickname for Milwaukee."},
+    {"term": "414", "meaning": "Milwaukee area code, used as local shorthand."},
+    {"term": "Deer District", "meaning": "The Bucks' game-day plaza around Fiserv Forum."},
+    {"term": "Fear the Deer", "meaning": "Bucks fan rallying phrase."},
+    {"term": "Bubbler", "meaning": "Wisconsin word for a drinking fountain."},
+    {"term": "Sconnie", "meaning": "Informal term for a Wisconsinite."}
+  ],
+  "designCues": [
+    {"cue": "Cream City brick cream as a base color", "type": "color", "hex": "#E9D8A6", "source": "Milwaukee's pale clay brick buildings", "use": "Use as the primary body color or as a tonal accent on warm-up and tees."},
+    {"cue": "Lake Michigan steel blue", "type": "color", "hex": "#4A6E8A", "source": "The lake and lakefront skyline", "use": "Use as a secondary color paired with cream and Bucks green."},
+    {"cue": "Bucks Good Land green", "type": "color", "hex": "#00471B", "source": "Team identity", "use": "Anchor team connection in every colorway."},
+    {"cue": "Allen-Bradley clock face", "type": "motif", "hex": "", "source": "Walker's Point industrial landmark", "use": "Reduce to a four-sided clock icon for a tag or sleeve graphic."},
+    {"cue": "Calatrava wing silhouette", "type": "silhouette", "hex": "", "source": "Milwaukee Art Museum Quadracci Pavilion", "use": "Abstract the wing line into piping or a side-panel shape; check rights with the museum."},
+    {"cue": "Tavern-sign hand lettering", "type": "typography", "hex": "", "source": "Corner bars and brewery signage", "use": "Commission a local sign painter to draw a script and block set for jersey and tee graphics."},
+    {"cue": "Cream brick texture", "type": "texture", "hex": "", "source": "Third Ward and North Side brick", "use": "Use as a subtle jacquard or print on hoodies and bags."}
+  ],
+  "productHooks": [
+    "A Cream City capsule (tees, hoodies, warm-ups) in brick cream, lake blue and Bucks green with a hand-drawn tavern-sign wordmark by a MIAD-trained or local illustrator.",
+    "A neighborhood artist series pairing Bucks product with paid mural artists from the North Side and South Side, with a mural wall at a community site.",
+    "A City Edition concept referencing the Calatrava wing line and Allen-Bradley clock as subtle trim and tag details.",
+    "Gallery Night & Day pop-up with a limited local-artist tee and printed poster."
+  ],
+  "watchouts": [
+    "Giannis imagery is emotionally charged this season; do not build product that celebrates or mocks his exit.",
+    "Brewery marks (Pabst, Miller), Harley-Davidson, Rockwell Automation and the Art Museum's architecture may need licensing or permission.",
+    "Pay and credit Black and Latino muralists and communities; do not copy existing murals.",
+    "Do not treat Milwaukee as a Chicago satellite or as only beer and cheese."
+  ],
+  "sources": [
+    {"title": "Milwaukee Art Museum", "url": "https://mam.org/"},
+    {"title": "Milwaukee Institute of Art & Design", "url": "https://www.miad.edu/"},
+    {"title": "Milwaukee Bucks", "url": "https://www.nba.com/bucks/"},
+    {"title": "Milwaukee on Wikipedia", "url": "https://en.wikipedia.org/wiki/Milwaukee"},
+    {"title": "Walker's Point Center for the Arts", "url": "https://www.wpca-milwaukee.org/"}
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Bucks 2026-27 City Edition uniform theme and release date",
+      "Tia Richardson and Mauricio Ramirez current mural projects and willingness to collaborate",
+      "Gallery Night & Day current months and organizer",
+      "Sherman Phoenix still operating and its current tenants",
+      "Walker's Point Center for the Arts and Var Gallery still open at current addresses and URLs",
+      "Lakefront Festival of Art 2027 dates",
+      "Summerfest 2027 dates and poster program",
+      "Rights and licensing status for Calatrava Pavilion, Allen-Bradley tower and brewery marks",
+      "Fiserv Forum current arena naming and Deer District plans",
+      "Tom Meindl credit as Brewers logo designer"
+    ]
+  }
+}

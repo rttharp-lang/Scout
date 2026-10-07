@@ -1,0 +1,125 @@
+{
+  "team": "okc",
+  "lens": "underground",
+  "headline": "OKC's underground is a prairie-modern mashup where Stockyards City western wear, Southside lowrider and car-club pride, Plaza District DIY art and Gayborhood nightlife all share the same plainspoken, work-boot attitude.",
+  "summary": "Oklahoma City's scenes are small enough to overlap: the same people show up at a Plaza District art night, a Tower Theatre or Diamond Ballroom show, and a Paycom Center game. The deepest local taste engines are western and rodeo dress remixed as streetwear, Latino car and lowrider culture on the Southside, a long-running mural and gallery community in the Plaza and Paseo, and a visible LGBTQ+ nightlife district along NW 39th. The Thunder's rise under Shai Gilgeous-Alexander made team gear a civic uniform that scenes now customize rather than merely wear. Nike's credible lane is craft, durability and local credit, not a manufactured hype story.",
+  "insights": [
+    {
+      "title": "Western wear is the local streetwear base layer",
+      "detail": "Stockyards City, home of long-running outfitters like Langston's Western Wear and the Oklahoma National Stockyards, keeps pearl snaps, boot-cut denim, felt hats and tooled leather in everyday circulation, and young locals pair them with Thunder jerseys and Jordan or Nike retros. Rodeo and ranch dress is worn without irony here, unlike coastal western trend cycles.",
+      "implication": "Build Thunder product that sits next to boots and denim: heavy canvas, snap-button details, tooled-leather-texture graphics. Treat it as work-and-ranch heritage, not costume."
+    },
+    {
+      "title": "Southside lowrider and truck culture is the car scene to respect",
+      "detail": "OKC's Latino communities, centered on the Southside and Capitol Hill corridor, have lowrider, custom truck and quinceanera-car traditions with club plaques, candy paint and pinstriping. Cruising and shows are family events, not sideshows.",
+      "implication": "Candy-paint gradients, pinstripe line work and club-plaque badging can inform a capsule, but only through paid collaboration with local clubs and painters."
+    },
+    {
+      "title": "Plaza District and Paseo are the DIY art engine",
+      "detail": "The Plaza District's annual Plaza Walls mural festival and the Paseo Arts District's First Friday gallery walks put muralists, zine makers, screen printers and vinyl-sticker artists in front of a young crowd. Immersive art collective Factory Obscura in Bricktown and the Flaming Lips orbit (Wayne Coyne's psychedelic, DIY aesthetic) give the state a weird-and-proud streak.",
+      "implication": "Commission local muralists and screen printers for limited tees and hangtags. Psychedelic color pops against the Thunder's blue-and-sunset palette make a credible, non-corporate drop."
+    },
+    {
+      "title": "Queer nightlife is concentrated and community-run",
+      "detail": "The NW 39th Street Gayborhood anchors OKC's LGBTQ+ nightlife, drag and Pride, with Oklahoma City Pride in June, in a state where visibility carries real political stakes. Nightlife crews there prize bold, glam, customized looks.",
+      "implication": "Engage through venue and organizer partnerships with visible funding rather than rainbow-washing. A Pride-month moment should be donated and co-credited, not a slogan tee."
+    },
+    {
+      "title": "Thunder gear is being customized, not just bought",
+      "detail": "Since the 2025 title and SGA's back-to-back MVPs, local fans screen print, embroider and thrift-flip Thunder pieces, with sunset-orange and electric blue now read as OKC colors rather than just team colors. Thrift and vintage buyers hunt Seattle-era and early Oklahoma City SuperSonics-to-Thunder gear.",
+      "implication": "Lean into repairable, remixable product: blank panels, patch-ready jackets and tees. A thrift-style vintage-wash line honors the early Thunder years."
+    },
+    {
+      "title": "Native Oklahoma is a living culture that stays off-limits as a motif",
+      "detail": "Oklahoma is home to 39 tribal nations, and events like the Red Earth Festival in OKC and the Native-led art in the Plaza and Paseo are community, not aesthetics. The Thunder and the Paycom Center area sit within this living history.",
+      "implication": "Do not lift regalia, beadwork patterns or sacred imagery. If engaged, work only through tribal-nation or Native-artist-led partnerships with pay, credit and approval."
+    }
+  ],
+  "places": [
+    {"name": "Stockyards City", "kind": "district", "neighborhood": "Stockyards City, south OKC", "why": "Western-wear and boot stores plus the livestock auction make it the physical home of working western style."},
+    {"name": "Langston's Western Wear", "kind": "shop", "neighborhood": "Stockyards City", "why": "Long-standing western outfitter whose aesthetic young locals now cross with sportswear."},
+    {"name": "Plaza District", "kind": "district", "neighborhood": "NW 16th and Classen area", "why": "Murals, indie shops, vintage and DIY shows; home of the Plaza Walls mural festival."},
+    {"name": "Paseo Arts District", "kind": "district", "neighborhood": "Paseo, north of Midtown", "why": "Spanish-revival gallery strip with First Friday gallery walks and working studios."},
+    {"name": "Tower Theatre", "kind": "venue", "neighborhood": "Uptown 23rd", "why": "Mid-size independent music venue for punk, indie, hip-hop and metal crowds."},
+    {"name": "Diamond Ballroom", "kind": "venue", "neighborhood": "Southeast OKC", "why": "Long-running venue for rock, metal and Tejano and regional Mexican shows."},
+    {"name": "Factory Obscura", "kind": "gallery", "neighborhood": "Bricktown / Automobile Alley", "why": "Local immersive-art collective that draws a young creative crowd."},
+    {"name": "NW 39th Street Gayborhood", "kind": "district", "neighborhood": "Midtown / Gayborhood", "why": "Center of OKC LGBTQ+ nightlife, drag and Pride."},
+    {"name": "Scissortail Park", "kind": "park", "neighborhood": "Downtown", "why": "Skate, roller and community gatherings downtown, within walking distance of Paycom Center."},
+    {"name": "Wheeler District", "kind": "district", "neighborhood": "Wheeler Park / Wheeler District", "why": "Riverfront district with skate and bike culture and the big Ferris wheel backdrop."}
+  ],
+  "people": [
+    {"name": "Wayne Coyne and The Flaming Lips", "role": "Musician and band", "why": "OKC's best-known psychedelic, DIY art exports, with a gallery and installation streak."},
+    {"name": "Shai Gilgeous-Alexander", "role": "Thunder guard, back-to-back MVP", "why": "His tailored, fashion-forward tunnel style makes high-end tailoring a local sports-fashion reference."},
+    {"name": "Jalen Williams", "role": "Thunder wing", "why": "Local fans tie his low-key style to Thunder-branded streetwear."},
+    {"name": "Chet Holmgren", "role": "Thunder big", "why": "Gaming and anime crossover reputation in the fanbase."},
+    {"name": "Jabee", "role": "OKC rapper and community organizer", "why": "Long-time hip-hop voice of Northeast OKC and the Black creative scene."},
+    {"name": "Oklahoma City Pride organizers", "role": "Pride event and community group", "why": "Anchor LGBTQ+ gathering each June."},
+    {"name": "Red Earth organizers", "role": "Native arts festival", "why": "Annual showcase of Native artists and dancers in OKC."}
+  ],
+  "moments": [
+    {"name": "Thunder home opener and preseason", "timing": "Late October 2026", "month": 10, "why": "Season opens Oct 20 at San Antonio; local watch parties and gear customization spike around the first home games."},
+    {"name": "Plaza Walls mural festival", "timing": "Typically early fall", "month": 9, "why": "Muralists transform the Plaza District; best time for artist collabs."},
+    {"name": "Paseo First Friday Gallery Walk", "timing": "First Friday monthly", "month": 0, "why": "Recurring art walk that draws the creative crowd."},
+    {"name": "Oklahoma City Pride", "timing": "June", "month": 6, "why": "Largest LGBTQ+ celebration in the state, near the NBA Finals window."},
+    {"name": "Red Earth Festival", "timing": "Typically June", "month": 6, "why": "Native art and dance showcase; engagement only through community partners."},
+    {"name": "Oklahoma State Fair", "timing": "Mid-to-late September", "month": 9, "why": "Western, 4-H, and car culture cross over here."},
+    {"name": "Juneteenth in Deep Deuce and Northeast OKC", "timing": "June 19", "month": 6, "why": "Black heritage celebration tied to OKC's jazz history and Greenwood in Tulsa."},
+    {"name": "Playoff runs", "timing": "April to June", "month": 4, "why": "Downtown block parties and watch parties produce the biggest customization moments."}
+  ],
+  "vocabulary": [
+    {"term": "Okie", "meaning": "Prideful self-label for Oklahomans, now reclaimed as a badge in local merch."},
+    {"term": "Thunder Up", "meaning": "The team rallying call used at the arena and on local social feeds."},
+    {"term": "Stockyards", "meaning": "Short for Stockyards City, shorthand for western-wear shopping and steak."},
+    {"term": "The Plaza", "meaning": "The Plaza District, local shorthand for the arts and shop strip."},
+    {"term": "The Paseo", "meaning": "The Paseo Arts District."},
+    {"term": "SoSo", "meaning": "Southside, as in the Latino neighborhoods and car culture of south OKC."}
+  ],
+  "designCues": [
+    {"cue": "Thunder sunset orange against prairie-sky blue", "type": "color", "hex": "#EF3B24", "source": "Thunder brand and Oklahoma sunset skies", "use": "Use as an accent on graphic panels and linings, not as a replacement for team primaries."},
+    {"cue": "Red-dirt rust", "type": "color", "hex": "#9B3B22", "source": "Oklahoma's iron-rich red clay soil", "use": "Earth-tone colorway for washed canvas and cord pieces."},
+    {"cue": "Candy-paint blue-to-violet gradient", "type": "color", "hex": "#4B3FA0", "source": "Southside lowrider paint tradition", "use": "Sublimated gradients on a limited run, made with local painters credited."},
+    {"cue": "Tooled-leather basket-weave texture", "type": "texture", "hex": "", "source": "Stockyards City saddle and boot culture", "use": "Emboss on heel panels, tongue labels or patch leather."},
+    {"cue": "Pearl-snap and yoke western shirt detailing", "type": "silhouette", "hex": "", "source": "Rodeo and ranch wear", "use": "Snap placket and yoke seams on a warm-up jacket or shirt-jacket."},
+    {"cue": "Hand-lettered sign painter script", "type": "typography", "hex": "", "source": "Plaza District murals and Route 66 signage", "use": "Commission a local sign painter for wordmarks on drops."},
+    {"cue": "Weathered Route 66 shield and plains road signs", "type": "graphic", "hex": "", "source": "Route 66 heritage through OKC", "use": "Use as a generic road-sign motif; check that route shields are not trademarked in specific uses."}
+  ],
+  "productHooks": [
+    "A Western warm-up capsule: snap-front shell jacket, canvas shorts and tooled-leather-texture patches in Thunder blue and red-dirt rust.",
+    "A local-artist screen-print tee series tied to Plaza Walls and Paseo First Friday, with each artist named on the hangtag.",
+    "A candy-paint sneaker colorway developed with Southside lowrider painters, produced as a numbered release.",
+    "Blank-panel and patch-ready Thunder jackets that invite fans to customize, with in-store embroidery at pop-ups."
+  ],
+  "watchouts": [
+    "Never use Native regalia, beadwork patterns or sacred symbols; engage only via Native-led partners with pay and credit.",
+    "Do not use lowrider and club imagery without club or painter partnerships; avoid conflating car culture with street racing.",
+    "Avoid cowboy caricature; western is working-class heritage in Oklahoma.",
+    "LGBTQ+ engagement in Oklahoma carries political risk for local partners; fund and follow their lead.",
+    "Route 66 and venue logos may need licensing."
+  ],
+  "sources": [
+    {"title": "Oklahoma City Thunder (official)", "url": "https://www.nba.com/thunder"},
+    {"title": "Plaza District (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Plaza_District"},
+    {"title": "Stockyards City (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Stockyards_City"},
+    {"title": "Paseo Arts District (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Paseo_Arts_District"},
+    {"title": "Red Earth Festival (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Red_Earth_Festival"}
+  ],
+  "confidence": "low",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Plaza Walls mural festival still runs and its 2026 dates",
+      "Langston's Western Wear still operating in Stockyards City",
+      "Tower Theatre and Diamond Ballroom are still operating as live venues",
+      "Factory Obscura still operating and its current location",
+      "Oklahoma City Pride 2027 date and the NW 39th Gayborhood nightlife venues still open",
+      "Red Earth Festival 2027 dates and format",
+      "Jabee still active in OKC and his current projects",
+      "Southside lowrider clubs and show calendar for 2026-27",
+      "Local thrift and sneaker shops still open (none named here because unverified)",
+      "Skate scene status at Scissortail Park and Wheeler District",
+      "Thunder 2026-27 City Edition design and release date",
+      "Oklahoma State Fair 2026 dates"
+    ]
+  }
+}
