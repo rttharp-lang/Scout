@@ -38,8 +38,8 @@
   "places": [
     {"name": "Kilby Court", "kind": "all-ages venue", "neighborhood": "Granary District, Salt Lake City", "why": "A tiny backyard-style all-ages room that launched many Utah indie bands and is the emotional center of the DIY scene."},
     {"name": "The Depot", "kind": "venue", "neighborhood": "Downtown / Gateway, Salt Lake City", "why": "A converted historic rail depot, a mid-size room for touring and national acts."},
-    {"name": "Urban Lounge", "kind": "club", "neighborhood": "Central 9th / Downtown", "why": "A long-running indie and punk club on the Salt Lake club strip."},
-    {"name": "The Complex", "kind": "venue", "neighborhood": "Central 9th, Salt Lake City", "why": "A multi-room venue for hip-hop, EDM and touring shows."},
+    {"name": "Urban Lounge", "kind": "club", "neighborhood": "Central City, 500 East", "why": "A long-running indie and punk club east of downtown."},
+    {"name": "The Complex", "kind": "venue", "neighborhood": "Downtown west, near Gateway", "why": "A multi-room venue for hip-hop, EDM and touring shows."},
     {"name": "Metro Music Hall", "kind": "venue", "neighborhood": "Downtown, Salt Lake City", "why": "A mid-size club room for touring acts and local showcases."},
     {"name": "Abravanel Hall", "kind": "concert hall", "neighborhood": "Downtown, Salt Lake City", "why": "Home of the Utah Symphony, the city's institutional musical heart, a short walk from the Delta Center."},
     {"name": "KRCL 90.9 FM", "kind": "community radio", "neighborhood": "Salt Lake City", "why": "Independent community station that champions local artists and world music."},
@@ -62,7 +62,7 @@
     {"name": "Home games at Delta Center", "timing": "Every home game", "month": 0, "why": "In-arena music, DJ and halftime culture, the most scalable local music stage."},
     {"name": "Salt Lake Pride", "timing": "Early June", "month": 6, "why": "A major community and music weekend downtown."},
     {"name": "Deer Valley Music Festival", "timing": "Summer", "month": 7, "why": "Utah Symphony summer season in Park City."},
-    {"name": "Twilight and summer outdoor concerts", "timing": "Summer", "month": 7, "why": "Outdoor concert tradition in the valley."}
+    {"name": "Red Butte Garden summer concerts", "timing": "Summer", "month": 7, "why": "Long-running outdoor amphitheater concert series at the foot of the Wasatch."}
   ],
   "vocabulary": [
     {"term": "Wasatch Front", "meaning": "The urban strip along the mountains from Provo to Ogden, the scene's geography."},
@@ -110,7 +110,7 @@
       "Graywhale and Randy's Records locations still open",
       "Utah Arts Festival 2027 dates and Salt Lake Pride 2027 dates",
       "Deer Valley Music Festival 2027 season dates and Utah Symphony residency",
-      "Whether the Twilight outdoor concert series still runs",
+      "Red Butte Garden concert series dates for summer 2027",
       "KRCL 90.9 and SLUG Magazine remain active and independent",
       "Imagine Dragons and Neon Trees current Utah ties and touring status",
       "Whether the Jazz have named a local artist or in-arena music partner for 2026-27",

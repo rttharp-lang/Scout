@@ -54,7 +54,7 @@
   ],
   "people": [
     {"name": "Cooper Flagg", "role": "Mavericks franchise forward", "why": "The central driver of jersey, tee and youth demand in 2026-27."},
-    {"name": "Kyrie Irving", "role": "Mavericks guard", "why": "A top seller of signature product and a name that moves Nike shoppers regardless of team results."},
+    {"name": "Kyrie Irving", "role": "Mavericks guard", "why": "A name that moves jersey and apparel interest regardless of team results; his signature shoe is not a Nike product."},
     {"name": "Dirk Nowitzki", "role": "Mavericks legend", "why": "The franchise's emotional anchor (No. 41, statue outside AAC), driving heritage and throwback demand."},
     {"name": "Masai Ujiri", "role": "Mavericks president", "why": "The new front-office face tied to a rebuild narrative."},
     {"name": "Dusty May", "role": "Mavericks head coach", "why": "Fresh coach from a 2026 NCAA title at Michigan, with name recognition among college fans."},
@@ -74,7 +74,7 @@
     {"term": "Big D", "meaning": "Local nickname for Dallas."},
     {"term": "DFW", "meaning": "The Dallas-Fort Worth metroplex, how fans define the market."},
     {"term": "Mavs", "meaning": "Standard short name for the Mavericks."},
-    {"term": "Mavs Ballers", "meaning": "Fan-community phrase tied to the team's supporters and dance and entertainment brand."},
+    {"term": "MFFL", "meaning": "Mavs Fans For Life, the fan rallying acronym from the Dirk and Cuban era."},
     {"term": "Y'all", "meaning": "Regional voice for plural address, usable in light copy."},
     {"term": "Dallas Cowboys Sundays", "meaning": "Fall weekends dominated by football attention."}
   ],
@@ -142,7 +142,7 @@
       "Dates of the State Fair of Texas and Red River Rivalry in fall 2026",
       "Status of the new-arena plan and any move from American Airlines Center",
       "Current Mavs jersey sales rank and Flagg and Irving product demand",
-      "Mavs Ballers naming and current fan-community usage"
+      "Whether MFFL is still the active fan rallying label"
     ]
   }
 }

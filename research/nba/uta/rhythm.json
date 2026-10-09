@@ -185,11 +185,11 @@
       "use": "Use as trim and drawcord accents to link product to the uniform."
     },
     {
-      "cue": "Jazz gold and purple heritage palette",
+      "cue": "Jazz gold and purple heritage palette (New Orleans and Note eras)",
       "type": "color",
       "hex": "#F9A01B",
       "source": "The team's classic color heritage",
-      "use": "Use gold as the retro accent on Icon and heritage product for older fans."
+      "use": "Use gold as the retro accent from the New Orleans and Note eras for older fans; the current Icon is purple, not gold."
     },
     {
       "cue": "Wasatch snow-and-granite texture",
@@ -251,7 +251,7 @@
       {"month": 4, "intensity": 48, "phase": "Season end and play-in", "team": ["Regular season ends Apr 11", "Play-in Apr 13-16"], "local": ["LDS General Conference early April", "Spring weather"], "fanBehavior": "Engagement depends on play-in status; otherwise it falls.", "retailSignal": "Clearance and any play-in capsule."},
       {"month": 5, "intensity": 28, "phase": "Offseason", "team": ["Playoffs without Utah likely", "Lottery and draft prep"], "local": ["Outdoor season opens", "Graduations"], "fanBehavior": "Low engagement; fans follow the draft order.", "retailSignal": "Minimal."},
       {"month": 6, "intensity": 45, "phase": "Draft", "team": ["NBA Draft late June"], "local": ["Utah Arts Festival", "Pride festival season"], "fanBehavior": "Spike on draft night as fans react to picks.", "retailSignal": "Draft-pick shirts and player product."},
-      {"month": 7, "intensity": 42, "phase": "Free agency and Summer League", "team": ["Free agency opens", "Salt Lake City Summer League"], "local": ["Pioneer Day July 24", "Peak hiking and lake season"], "fanBehavior": "Summer League sells out for the faithful.", "retailSignal": "Rookie and summer-league gear."},
+      {"month": 7, "intensity": 42, "phase": "Free agency and Summer League", "team": ["Free agency opens", "Salt Lake City Summer League"], "local": ["Pioneer Day July 24", "Peak hiking and lake season"], "fanBehavior": "Summer League draws the most engaged fans.", "retailSignal": "Rookie and summer-league gear."},
       {"month": 8, "intensity": 22, "phase": "Offseason lull", "team": ["Schedule release mid-August", "Quiet roster"], "local": ["Peak outdoor recreation", "Back-to-school"], "fanBehavior": "Lowest of the year; schedule release is the main spark.", "retailSignal": "Back-to-school and little team gear."},
       {"month": 9, "intensity": 38, "phase": "Training camp and media day", "team": ["Media day late September", "Training camp"], "local": ["College football starts", "Fall color in the canyons"], "fanBehavior": "Rising hope as camp opens, competing with football.", "retailSignal": "Preseason gear and jersey previews."},
       {"month": 10, "intensity": 88, "phase": "Preseason and opener", "team": ["Opener Oct 20 league-wide", "Cup play begins Oct 30 vs. Denver at home"], "local": ["General Conference early October", "Utes and BYU football"], "fanBehavior": "Hope peaks as the rookies debut.", "retailSignal": "Big jersey and new-season launch spike."},

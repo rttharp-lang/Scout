@@ -41,7 +41,7 @@
     {"name": "Diabolical Records", "kind": "record shop", "neighborhood": "Downtown / Central City", "why": "Independent record store tied to local metal, punk and collector circles."},
     {"name": "Randy's Records", "kind": "record shop", "neighborhood": "Central City", "why": "Vintage vinyl institution where music and thrift style cross."},
     {"name": "Fairmont Park skatepark", "kind": "skatepark", "neighborhood": "Sugar House", "why": "A neighborhood skate gathering point in a walkable, hip district."},
-    {"name": "Sugar Space Arts Warehouse", "kind": "arts and DIY event space", "neighborhood": "Central 9th area", "why": "Warehouse venue for zines, shows and small fashion events."},
+    {"name": "Sugar Space Arts Warehouse", "kind": "arts and DIY event space", "neighborhood": "Downtown west (moved from Sugar House)", "why": "Warehouse venue for zines, shows and small fashion events."},
     {"name": "Bonneville Salt Flats", "kind": "land-speed site", "neighborhood": "Wendover, west of SLC", "why": "Home of Speed Week and Utah's hot-rod identity."},
     {"name": "Rose Park and Glendale", "kind": "district", "neighborhood": "West Side", "why": "Polynesian and Latino neighborhoods where cruising, church and football style shape local taste."}
   ],
@@ -64,7 +64,7 @@
   ],
   "vocabulary": [
     {"term": "The Wasatch", "meaning": "The mountain range above the valley that defines local identity and weekends."},
-    {"term": "Jazz Note", "meaning": "Shorthand for the 1990s music-note logo era."},
+    {"term": "Jazz Note", "meaning": "Shorthand for the 1979-96 music-note logo era."},
     {"term": "West Side", "meaning": "SLC's historically immigrant and working-class neighborhoods west of I-15."},
     {"term": "Speed Week", "meaning": "The annual land-speed event at the Bonneville Salt Flats."},
     {"term": "Pow", "meaning": "Fresh Wasatch powder, central to snowboard and ski life."}
@@ -88,7 +88,7 @@
     "Pacific Islander tatau, tapa and ceremonial imagery are cultural property; do not lift them, and only engage through approved community partners.",
     "Jazz vintage graphics and the note logo are third-party team IP requiring licensing.",
     "Do not trade on the religious majority culture or stereotype Utah as monolithic; the queer and immigrant scenes are strong.",
-    "Skip generic Utah ski kitsch such as beehives and Delicate Arch; locals read it as tourism."
+    "Skip literal beehive and Delicate Arch kitsch; locals read it as tourism. Abstract beehive geometry is acceptable."
   ],
   "sources": [
     {"title": "Salt Lake City Wikipedia", "url": "https://en.wikipedia.org/wiki/Salt_Lake_City"},

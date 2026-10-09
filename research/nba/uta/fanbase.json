@@ -21,7 +21,7 @@
     },
     {
       "title": "Color loyalty is split across eras",
-      "detail": "Purple and teal with the copper mountain stir 1990s nostalgia, the navy and yellow of the recent Association looks signals the current team, and the gray-gradient City Edition with baby blue trim is the newest layer. Fans debate eras like they debate coaching.",
+      "detail": "Purple and teal with the copper mountain stir 1990s nostalgia, the short-lived highlighter-yellow looks of the early 2020s are history, and the current Mountain Purple, Midnight Black and Sky Blue identity plus the gray-gradient City Edition with baby blue trim are the newest layer. Fans debate eras like they debate coaching.",
       "implication": "Offer clearly separated era capsules so nostalgic and current fans each see their own team; avoid mixing palettes in one piece."
     },
     {
@@ -43,7 +43,7 @@
       "why": "The home of the Jazz and the center of the fan year; the Delta name returned in 2023 and fans treat it as restored heritage."
     },
     {
-      "name": "Salt Lake Stars",
+      "name": "Salt Lake City Stars",
       "kind": "G League team and community touchpoint",
       "neighborhood": "Salt Lake Valley",
       "why": "The Jazz's G League affiliate is where fans watch prospects develop closer up and for less money."
@@ -67,10 +67,10 @@
       "why": "Pacific Islander and Latino communities on the West Side hold the city's pickup basketball culture."
     },
     {
-      "name": "Ogden Union Station area",
+      "name": "Historic 25th Street",
       "kind": "district",
       "neighborhood": "Ogden",
-      "why": "A northern anchor for fans who drive down I-15 for games and gather for watch parties."
+      "why": "The northern Wasatch Front's main bar-and-shop corridor, a plausible base for fans who drive down I-15 for games."
     }
   ],
   "people": [
@@ -172,11 +172,11 @@
     },
     {
       "term": "Jazz Note",
-      "meaning": "The musical-note logo from the purple-and-teal era, used by fans for nostalgia pieces."
+      "meaning": "The musical-note logo from the original 1979-96 purple, gold and green era, used by fans for nostalgia pieces."
     },
     {
       "term": "The Mountain",
-      "meaning": "Fan shorthand for the mountain-themed marks and the Wasatch-inspired identity on recent uniforms."
+      "meaning": "Shorthand for the mountain-themed marks, from the 1996 skyline logo to the current Mountain Purple identity."
     }
   ],
   "designCues": [
@@ -188,17 +188,17 @@
       "use": "Heritage capsule base color, paired with copper and teal accents, kept apart from the current palette."
     },
     {
-      "cue": "Jazz yellow and navy of the current Association identity",
+      "cue": "Mountain Purple of the current Icon identity",
       "type": "color",
-      "hex": "#F9A01B",
-      "source": "Recent Association and Icon uniforms",
+      "hex": "#4E008E",
+      "source": "Current Icon uniform",
       "use": "Current-team color story for youth-movement and rookie product."
     },
     {
-      "cue": "Navy ground for the modern jersey",
+      "cue": "Midnight Black ground for the current Statement look",
       "type": "color",
-      "hex": "#002B5C",
-      "source": "Current team palette",
+      "hex": "#111111",
+      "source": "Current Statement uniform",
       "use": "Base for fleece, shooting shirts and warm-ups."
     },
     {
@@ -219,13 +219,13 @@
       "cue": "Jazz Note script in a retro serif-and-note mark",
       "type": "graphic",
       "hex": "",
-      "source": "1990s Jazz Note logo",
+      "source": "1979-96 Jazz Note logo",
       "use": "Vintage-wash tees and crewnecks; license the mark and do not redraw it."
     }
   ],
   "productHooks": [
     "Heritage capsule: purple-mountain Finals-era warm-ups, tees and a fleece in vintage wash, built with licensed archival art.",
-    "Youth-movement capsule: Peterson and Bailey tees and hoodies in navy and yellow, timed to the home opener and the Oct 30 Cup night.",
+    "Youth-movement capsule: Peterson and Bailey tees and hoodies in purple, black and sky blue, timed to the home opener and the Oct 30 Cup night.",
     "City Edition gray-gradient outerwear: a technical shell and a quarter-zip with baby blue trim aimed at the outdoor-oriented fan.",
     "Family and kids set: matching youth jerseys and parent-and-child hoodies for holiday games."
   ],
@@ -266,7 +266,7 @@
         "name": "Families and youth",
         "description": "Parents and kids from across the Wasatch Front who attend a few games a year.",
         "share": "Largest by attendance",
-        "wears": "Youth jerseys, team caps, hoodies in current navy and yellow.",
+        "wears": "Youth jerseys, team caps, hoodies in current purple and black.",
         "reach": "Jazz Bear events, school and community programs, holiday games."
       },
       {
@@ -366,7 +366,7 @@
       }
     ],
     "sentiment": "Impatient but curious: fans are tired after a 22-60 season, energized by Peterson, Bailey, Markkanen and Jackson Jr., and wary of a rebuild that has asked a lot of patience; the 35.5-win expectation frames this as a year of progress, with Will Hardy's development of the young core under the microscope.",
-    "gamedayLook": "A mix of navy and yellow Jazz hoodies and caps, throwback purple Stockton and Malone jerseys, family sets with youth jerseys, and layered outerwear in cold months; the newest crowd wears gray City Edition pieces and rookie tees."
+    "gamedayLook": "A mix of purple and black Jazz hoodies and caps, throwback purple Stockton and Malone jerseys, family sets with youth jerseys, and layered outerwear in cold months; the newest crowd wears gray City Edition pieces and rookie tees."
   },
   "provenance": {
     "mode": "knowledge",
@@ -375,11 +375,11 @@
       "Arena and ownership status: Delta Center name, Smith Entertainment Group ownership and the NHL team sharing the arena.",
       "Whether the Jazz team store at the Delta Center is still the main retail point and its current name.",
       "Whether the Salt Lake Stars still operate as the Jazz G League affiliate under that name.",
-      "Current hex values and naming of the Association, Icon and Statement uniforms and the Jazz Note and mountain marks.",
+      "Current hex values of the Mountain Purple, Midnight Black and Sky Blue identity and the Jazz Note and mountain marks.",
       "Whether Ace Bailey is still on the Jazz roster and the exact roles of Peterson and Jackson Jr.",
       "Home opener date and opponent, and any heritage or throwback nights scheduled in 2026-27.",
       "Current status of Jazz Bear programming and gameday entertainment traditions.",
-      "Whether the Ogden Union Station area and the West Side courts are still active fan gathering spots.",
+      "Whether Historic 25th Street in Ogden and the West Side courts are still active fan gathering spots.",
       "Fan-community channels such as r/UtahJazz, SLC Dunk and local podcasts still active in 2026-27.",
       "Licensing status for Stockton, Malone and Sloan imagery."
     ]

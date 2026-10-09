@@ -1,0 +1,132 @@
+{
+  "team": "det",
+  "issues": [
+    {
+      "target": "collection.themes[0] (Shift Change) / opportunities[2]",
+      "type": "weak-link",
+      "severity": "high",
+      "problem": "The signature product is a duck-canvas chore coat with a corduroy collar in duck brown. That is, almost item for item, the Carhartt Detroit Jacket, made by a Dearborn company that Detroit treats as its own. The brief says 'never echo Carhartt marks' but gives no way to avoid competing with the hero garment on its home turf. A Pistons logo on a Carhartt silhouette reads as imitation. The duck brown and safety yellow palette also sits outside the Pistons' royal, red and navy, which invites NBA/Pistons brand-approval friction.",
+      "fix": "Pick one. Either approach Carhartt (Dearborn) for a licensed, credited collaboration, or move away from its codes: knit, fleece and technical shell constructions, a Pistons-blue field with a plant-floor stencil, and brown or yellow only as small hits. Get the palette cleared with the Pistons and NBA before it anchors a collection."
+    },
+    {
+      "target": "topInsights[3] / headline / opportunities[0] and [3]",
+      "type": "generic",
+      "severity": "high",
+      "problem": "'Unfinished business' and 'run it back' are the swap-test failures of this brief. Cleveland, Boston or any team that lost a second-round Game 7 could use them, and 'April revenge pack' assumes a Cleveland rematch that may never happen. The 125-94 margin is also still raw, so selling it back to fans can feel like salt in the wound. What is Detroit-specific is the work-first, counted-out voice (Goin' to Work, the Detroit vs. Everybody stance), not the loss.",
+      "fix": "Make the campaign voice Detroit labor language: shift, clock-in, overtime, punch card, built to be worn in. Keep 'unfinished business' as a quiet subtext, not a graphic. Rename the April pack for work or the playoffs, not Cleveland, and keep any Cleveland-specific copy out of the pre-built line."
+    },
+    {
+      "target": "opportunities[0] and calendar[0]/[1] (Specter launch)",
+      "type": "inaccurate",
+      "severity": "high",
+      "problem": "The brief treats opening night as the 'Specter launch' with a 'Specter-companion' hoodie and a Specter collector capsule sold 'on wear dates only'. Per the verified facts, Specter was revealed on Sep 9 with its merchandise collection released at the same time, and the wear games have not been captured. Launching something that is already on shelves, and promising wear-date-only availability for product already sold, misreads the calendar and Nike's own release.",
+      "fix": "Reframe Oct 20 as the first Detroit moment after the Sep 9 reveal and build around the confirmed national game, not a launch claim. Replace the wear-date-only capsule with in-arena storytelling and sell-in support, and confirm wear dates before any product is tied to one."
+    },
+    {
+      "target": "uniform (Glaze)",
+      "type": "timing",
+      "severity": "high",
+      "problem": "Uniform designs for 2026-27 are locked and already in production, and Detroit's 2026-27 City Edition is unverified. Glaze can only be a 2027-28 concept, and a City Edition slot is not Nike's to give: the NBA and the Pistons approve every set. Yet the calendar sells Glaze satin bombers, motto crewnecks and a Glaze shoe from Black Friday through March, so Pewabic's story would be spent on lifestyle product a year before any uniform exists.",
+      "fix": "State the uniform as a 2027-28 pitch to the NBA and Pistons, with a lead-time plan. Run only a small, test-and-learn Pewabic lifestyle story this season, and hold the shoe and hero pieces until the uniform is approved."
+    },
+    {
+      "target": "topInsights[4] / uniform",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "The claim that Pewabic teal is 'a Detroit color nobody else owns' overreaches. Pewabic is known for iridescent glazes across greens, blues and golds, and the link to the 1990s Pistons teal is Nike's own designer logic, not something the dossiers show any fan making. It also risks pleasing no one: teal-era fans may read it as a back-door reissue and design-literate locals as co-opted craft.",
+      "fix": "Test it with named Detroit fans and Pewabic before it carries the uniform. Lead with the real stories (the glaze process, the tile in Detroit buildings and People Mover stations) and use teal as one accent, not the base, until the fan link is proven."
+    },
+    {
+      "target": "collection.themes[1] (Glaze) – satin 'Avenue of Fashion' bomber",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "The bomber is named for Livernois' Avenue of Fashion, a Black-owned dress-culture corridor, but no Livernois designer, tailor or boutique is named in the partners list or credited on the product.",
+      "fix": "Name and pay a Livernois-based designer or shop as co-designer, credit them on the tag, and put the first release in their door. Otherwise drop the Avenue of Fashion name."
+    },
+    {
+      "target": "opportunities[5] / collection.themes[2] (Machine Lane)",
+      "type": "appropriation",
+      "severity": "high",
+      "problem": "The techno capsule is the highest-risk lane. Underground Resistance has a long anti-corporate stance, and the brief's palette (black, signal red), photocopy-flyer prints and anonymous-collective aesthetic are close to UR's own visual language even without its marks. The brief's KPI also includes 'renew for 2028', which assumes a partner who may decline. Movement is run by its own promoter, so Nike cannot simply 'own' the weekend, and the Memorial Day overlap with a conference-finals run is speculative.",
+      "fix": "Make the lane contingent: first test a few Detroit techno artists and labels, including newer ones, and only proceed with a written, paid, co-owned agreement. Plan a no-go branch. Drop the red/black flyer look if UR is not involved, and treat the arena walk-in track as the lower-risk, higher-value piece."
+    },
+    {
+      "target": "opportunities[0] ambassadors",
+      "type": "other",
+      "severity": "medium",
+      "problem": "Naming Tee Grizzley and Sada Baby as opening-night ambassadors in a Nike brief commits to people before any vetting. The music dossier flags Detroit rap's Eastside/Westside rivalries and street-content baggage, and the brief does not say how a pairing would be chosen or what happens if it goes wrong.",
+      "fix": "Name a vetted shortlist instead of individuals, include non-rap Detroit voices (a producer, a chef, a PSL alum), and choose on fit, conduct and local standing, with a clear approval step."
+    },
+    {
+      "target": "opportunities[1] / partners[0] / calendar[6]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "Detroit vs. Everybody is the only collaborator named for the biggest city-first opportunity, and 'status to confirm' recurs. Black History Month is also the only point where Black Detroit creators get a dedicated drop, which can read as seasonal gesture rather than commitment. A one-brand dependency means a no from DVE collapses the pillar.",
+      "fix": "Name two or three alternates now (other Black-owned Detroit labels, shops and designers) and run the collab as a rolling roster across the season with a standing revenue share, not a single February drop."
+    },
+    {
+      "target": "opportunities[4] / calendar (Jan 18)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "Three Eras is launched on MLK Day, an away game at noon in Cleveland, with watch parties tied to a revenge angle. Launching a retail line on that holiday sits badly with the brief's own 'respectful' note. The sales window for the line (Feb-March) is also a month later, and the watch-party venues are shaky: Hockeytown Cafe is a Red Wings bar, and its operating status is unverified.",
+      "fix": "Use MLK Day for community and civic giving, not a product launch. Move the Three Eras launch to early February, ahead of the deadline and the profit-sharing window, and use Checker Bar or a Pistons-neutral Detroit venue for watch parties."
+    },
+    {
+      "target": "opportunities[3] (playoff pack)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The pack leads with Duren and Ausar Thompson 'rather than star worship', but the retail-behavior dossier says Cade dominates jersey demand, and he is the All-NBA First Team face of the franchise. The playoff pack's own customer, the bandwagon fan, buys the star. The Spirit of Detroit jersey moment also depends on the city and on a protected work (the culture dossier says to check rights).",
+      "fix": "Lead with Cade in the playoff jersey line and use effort graphics for the rest. Treat the Spirit of Detroit moment as the city's own tradition, with any product use cleared with the city, not a Nike activation."
+    },
+    {
+      "target": "calendar (Feb-March) and whole plan",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Ramadan 2027 should fall roughly Feb 8 to Mar 9, with Eid al-Fitr around Mar 9-10, directly across the brief's Feb-March premium push. Dearborn, Hamtramck and Southwest Detroit have core Pistons fans, yet the brief mentions Arab American and Bangladeshi communities only as a risk and has no partner, product or timing for them. Pączki Day (Feb 9) is the only community moment used, and it is a weak product link.",
+      "fix": "Check game tip times against iftar (late-day starts matter), plan an Eid gifting and family-sizing push for Fairlane and Dearborn with named Arab American and Bangladeshi Detroit creators as paid partners, and verify moon-sighting dates. Cut the Pączki speckle tee or make it a community donation only."
+    },
+    {
+      "target": "opportunities[6] and footwear",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The underground dossier's jit/ghettotech idea is one of the few Detroit-only footwear and apparel briefs (traction, ankle freedom, low-profile court shoes with dancers), and the brief reduces it to nothing. Instead the only shoe proposed is a Pewabic 'Glaze' colorway, which is a color story, not a product insight.",
+      "fix": "Add a credited, paid test program with Detroit jit dancers and choreographers and PSL players for traction and fit, and use that, not a colorway, as the footwear story."
+    },
+    {
+      "target": "opportunities / collection (food and neighborhood)",
+      "type": "missed-opportunity",
+      "severity": "low",
+      "problem": "The food dossier's strongest local argument, Lafayette vs. American Coney, and the pan-pizza and Little Caesars Arena naming link get no activation. The brief is also silent on Detroit Shock heritage and the Motor City Cruise, and on the departure of Isaiah Stewart, the longest-tenured Piston and a natural grit symbol.",
+      "fix": "Add a light, licensed Coney 'pick a side' graphic idea or leave it out deliberately. Add a heritage women's line. Note Stewart jerseys now need a clear-out plan, with a respectful send-off, not a feature."
+    },
+    {
+      "target": "calendar[2] and calendar[4] (Cup)",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "Cup-night limited tees at LCA and a Hinkle Fieldhouse road-trip pack are padding. Cup merchandise belongs to the NBA's Cup program and not to a Nike Detroit plan, and the knockout contingency depends on seeding that cannot be planned.",
+      "fix": "Cut the road-trip pack. Keep only an unbranded Cup contingency with pre-approved blanks that costs nothing if Detroit is not a higher seed."
+    },
+    {
+      "target": "calendar[7] and retailPlaybook",
+      "type": "timing",
+      "severity": "low",
+      "problem": "The Feb-March premium push assumes Detroit Three profit-sharing and tax refunds, but payout size and timing are unverified for the 2026 cycle and are not tied to a named source. Four of seven opportunities are priority 1, which dilutes the plan, and the rhythm dossier advises saving the peak for April.",
+      "fix": "Confirm 2026 payout news before building the push on it. Cap priority 1 to opening night, the winter outerwear program and the April pack, and move the rest to priority 2."
+    },
+    {
+      "target": "scorecard",
+      "type": "other",
+      "severity": "low",
+      "problem": "Culture 93 against retail 58 is defensible, but 'among the league's deepest' is a comparison across markets that this single-market brief cannot support, and the retail score rests on partner doors that are unverified (DVE, Burn Rubber, Inner State, Nike Factory at Great Lakes Crossing).",
+      "fix": "Qualify the cultural score as a judgment, and lower the confidence on the retail score until the doors are confirmed."
+    }
+  ],
+  "strengths": [
+    "Detroit-first, city-before-crest is the right insight and is well evidenced across lenses, with a named, paid, credited maker approach rather than imitation.",
+    "Workwear as sportswear and a seven-month coat-and-hoodie season gives the assortment a real, local reason to exist and a sensible price ladder with a suburban volume split.",
+    "Three era lanes (Bad Boys, teal, Cade) respect a genuine generation gap and avoid blending them.",
+    "The brief repeatedly steers clear of ruin imagery, 'comeback city' language and Rust Belt cliches, and flags IP and licensing for Motown, Carhartt, UR and the city seal.",
+    "The calendar correctly respects the Lions' Thanksgiving, the missing Christmas Day game, the Oct 20 national tipoff and the April peak."
+  ],
+  "summary": "A strong, locally grounded brief whose core (Detroit-first, workwear, paid local co-authors) holds up, but it needs fixing in four places: the Shift Change coat is too close to Carhartt's own Detroit Jacket, 'unfinished business' is a generic sports line, the Specter launch framing ignores the Sep 9 release, and the Glaze uniform is a 2027-28 pitch, not a 2026-27 product. The techno lane is the riskiest partnership, and Arab American and Bangladeshi Detroit, jit dance, and Ramadan/Eid timing are the biggest missed openings."
+}
