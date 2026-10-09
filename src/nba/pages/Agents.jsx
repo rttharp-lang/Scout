@@ -2,10 +2,19 @@
 // console to run the whole workflow live for any market.
 import React, { useRef, useState } from "react";
 import { LENS_AGENTS, SYNTHESIS_AGENTS, AGENT_BY_ID, STANDARDS } from "../agents/roster.js";
-import { TEAMS, TEAM_BY_ID } from "../teams.js";
+import { TEAMS, TEAM_BY_ID, teamLabel } from "../teams.js";
 import { publishedCount } from "../data.js";
 import { runMarket } from "../live.js";
 import { Chip, SectionHead, href } from "../ui.jsx";
+
+// The cross-market pass (scripts/nba/workflows/home-court-league.js and
+// home-court-strengthen.js), run after every market has a brief.
+const LEAGUE_STAGE = [
+  ["1 · Audit — six in parallel", "Division auditors", "One per division. Each checks every market file against the live-verified league calendar and League Pulse, fixes date and fact drift, and makes sure every partner a brief names appears in its dossiers."],
+  ["2 · Synthesize", "League Strategist", "Reads all 30 briefs and writes the league read: themes, fandom clusters, tentpoles, the priority board, the Portland playbook and scores calibrated so markets compare (50 = league average)."],
+  ["3 · Critique", "Completeness Critic", "Attacks the league read for inconsistent scores, generic themes, wrong dates and missing markets, and names the weakest briefs."],
+  ["4 · Edit and strengthen", "League Editor + strategists", "The editor resolves every high and medium issue. The weakest briefs then go back to their strategists, and a reviewer checks each revision."],
+];
 
 const GROUPS = ["Culture", "Basketball", "Fandom", "Retail"];
 
@@ -89,13 +98,29 @@ export default function Agents({ preselect }) {
           <div className="hc-row hc-no-print" style={{ gap: 10 }}>
             <label className="hc-small" htmlFor="hc-run-team" style={{ fontWeight: 600 }}>Run live for</label>
             <select id="hc-run-team" className="hc-select" value={team} onChange={(e) => setTeam(e.target.value)} disabled={running}>
-              {TEAMS.map((t) => <option key={t.id} value={t.id}>{t.place || t.city} {t.name}</option>)}
+              {TEAMS.map((t) => <option key={t.id} value={t.id}>{teamLabel(t)}</option>)}
             </select>
             {!running ? <button className="hc-btn" onClick={start}>Run all 15 agents</button> : <button className="hc-btn hc-btn-ghost" onClick={stop}>Stop</button>}
             {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>View the live brief →</a>}
           </div>
           {message && <p className="hc-small" role="status" style={{ marginTop: 10, color: message.ok ? "var(--good)" : "var(--text)" }}>{message.text}</p>}
           <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}>Live runs use the Claude API with web search, take a few minutes, and are saved only in this browser; the published research doesn't change.</p>
+        </div>
+      </section>
+
+      {/* League stage */}
+      <section className="hc-section">
+        <SectionHead eyebrow="Once all 30 markets are in" title="The league stage">
+          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("league")}>Open the league read →</a>
+        </SectionHead>
+        <div className="hc-grid hc-grid-4">
+          {LEAGUE_STAGE.map(([step, name, what]) => (
+            <div key={step} className="hc-card hc-stack">
+              <div className="hc-kv-label">{step}</div>
+              <h3 className="hc-h3">{name}</h3>
+              <p className="hc-small hc-muted">{what}</p>
+            </div>
+          ))}
         </div>
       </section>
 
