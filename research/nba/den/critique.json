@@ -1,0 +1,131 @@
+{
+  "team": "den",
+  "issues": [
+    {
+      "target": "opportunities[game-to-trailhead-layers], calendar[month 10]",
+      "type": "other",
+      "severity": "high",
+      "problem": "The priority-1 plan launches a new ripstop shell, gold-lined fleece, a Flatiron Red jacquard beanie and a possible Topo Designs co-branded pack on the Oct 22 OKC game, which is 13 days from today. Apparel at that spec is design-locked many months out, and a Topo collab needs NBA, team, Topo and Nike sign-off that cannot close by Oct 22.",
+      "fix": "Split the program. For Oct 22, pick from what is already in the 2026-27 line, such as existing fleece and shells re-merchandised with a Denver weather story. Make the true Game-to-Trailhead build and any Topo conversation a 2027-28 fall program, with design lock in early 2027. Mark the Topo pack as an exploratory partnership, not a launch."
+    },
+    {
+      "target": "opportunities[rino-cup-night-artist-drop], calendar[month 9]",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The Cup-night mural print is revealed at CRUSH Walls in September and sold from Oct 30. It is now Oct 9, so this year's September reveal has passed and no artist has been commissioned. A numbered all-over-print shooting shirt cannot be designed, approved and made in three weeks. The first Cup Friday is also an away game at Utah, so the first Ball Arena Cup nights come later in November.",
+      "fix": "Reframe as an artist-print pilot: a small run of digital-print or screen-printed tees, sold only at home Cup nights in November. Treat the September CRUSH Walls reveal as a 2027 mechanic. Check which Cup Fridays are home dates before naming any one as the debut."
+    },
+    {
+      "target": "uniform (5,280: Contour), topInsights[0], risks[0]",
+      "type": "other",
+      "severity": "high",
+      "problem": "The brief rests on three unverified assumptions. First, that 5,280 and elevation contours are 'ownable' and unused on a prior Nuggets uniform, although the uniform dossier admits it cannot recall earlier City Edition concepts and says Mile High numerals have appeared in team marketing. Second, that the 2026-27 alternate is not a skyline, although the live facts only say a fan-favorite alternate is returning, which may be a powder-blue or rainbow look. Third, that the NBA and Nike will approve a future City Edition slot that nobody has booked. The thesis ('the next City Edition cannot be another skyline') is stated as fact.",
+      "fix": "Make a City Edition history check the first action item. Present Contour as one of two or three concepts, not the answer, and add a branch for the case where the returning alternate is the skyline. State the uniform timeline: a concept for the 2027-28 set must be pitched to the NBA and the team in early 2027."
+    },
+    {
+      "target": "uniform (Alpenglow, Red Rocks Sandstone palette), uniform.avoid",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The avoid list bans 'anything orange that reads as a Broncos or ski-resort graphic', but the concept's accents are Alpenglow #E8765A (coral-orange) and Red Rocks Sandstone #B5502D (burnt orange), with an alpenglow gradient across the side panels. Sunset gradients are also strongly tied to Phoenix, a Cup group opponent. The colour name 'Red Rocks' also points at a venue owned by the City and County of Denver.",
+      "fix": "Cut Sandstone, narrow Alpenglow to a thin trim or a number shadow, and let Flatiron Red and Midnight Blue carry the set. Run an orange-adjacency check against Broncos orange before any hex is locked. Rename the colour so it does not use the venue name."
+    },
+    {
+      "target": "collection[Game to Trailhead, 303 Native], uniform.motifs",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "The brief says 'insider codes beat mountains', but the Game to Trailhead graphics are a single-line Front Range ridge, ridge-line jacquard and tonal contour lines. Any mountain-town team could use these (Utah, Portland, Minnesota), and contour and topo graphics are already the visual language of the outdoor brands Nuggets gear has to sit next to. The layering insight also belongs to any cold-weather market unless it is anchored to the specific Denver swing and the I-70 weekend.",
+      "fix": "Drop the ridge-line and contour graphics from the layering line and let fabric, pocket and hood engineering carry it, with only the small gold Nuggets mark and a 5,280 inside-neck print. Keep contour lines out of the shirts and reserve them for the one uniform concept."
+    },
+    {
+      "target": "collection[303 Native], opportunities[front-range-value-line]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "'303 Native' and its story line ('the people who were here before the transplants') sets natives against transplants. The culture dossier flags that tension, but transplants and Front Range newcomers are a large share of today's ticket and merch buyers. 'Native' as a product name also sits badly next to the brief's own Indigenous-imagery warnings and invites a misreading of Native American identity.",
+      "fix": "Rename the line (for example '303' or 'Mile High Code') and write the story as pride in the place that anyone can earn, with a dry nod to the native-vs-transplant joke. Run the name past Native and Indigenous partners if any variant of 'Native' stays."
+    },
+    {
+      "target": "opportunities[welton-street-cocreation], calendar[month 1]",
+      "type": "appropriation",
+      "severity": "high",
+      "problem": "The Welton Street capsule is announced at the MLK Day Marade, then released at the Five Points Jazz Festival. A civil-rights remembrance march is not a corporate announcement stage, and a sneaker-and-apparel company 'announcing a co-creation residency' there can read as using the holiday for brand value. The plan also names Blair-Caldwell (a Denver Public Library branch) as a research partner, although a public library is a research resource, not a commercial collaborator, and imagery from its archive would need city and rights-holder licensing. Neither Glenarm nor Hiawatha Davis Jr. is validated as a recipient (they are Denver Parks and Recreation centres, not independent nonprofits).",
+      "fix": "Do not announce at the Marade. Start with listening sessions and paid commissions through Black-owned Denver design studios and Black Denver arts organisations first, and announce only when the artists are signed and ready to speak. Use the library for research with a written use agreement, not as a 'partner'. Route giving through a Denver nonprofit youth basketball organisation or the Nuggets' foundation, and confirm with the City how Parks and Recreation can accept it."
+    },
+    {
+      "target": "opportunities[welton-street-cocreation, westside-cocreation], calendar[month 5]",
+      "type": "timing",
+      "severity": "high",
+      "problem": "Two paid, credited community collaborations are slotted to release the same early-May week, mid-playoffs, from a January start. That is a rushed timeline for real co-creation with contracts, samples and approvals, and it ties community-owned releases to a bracket nobody controls. If Denver is in a second-round series, game schedules, not the Five Points Jazz Festival or Cinco de Mayo, will set the news cycle. Cinco de Mayo is also a heavily commercial holiday that many Mexican American Denverites see as marketing-driven.",
+      "fix": "Decouple the two capsules from the playoff window and stagger them. Give Welton Street a long runway toward Juneteenth or the following fall, and give Westside a Chicano-owned occasion that the community chooses rather than Cinco de Mayo. Contract the artists first and let them set the launch date, with release as a small community event and no tie to a playoff series."
+    },
+    {
+      "target": "opportunities[christmas-chile-nightcap], collection[Welton and Westside]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The link between Christmas and the red-or-green chile ritual is a pun on the date, and Dec 25 is an away game at Golden State that tips at 8:30 p.m. Mountain, long after gifts are bought. Peak gifting for jerseys and hoodies is early to mid December, not Dec 25. Putting a chile tab and a foil 'burrito-wrapper' lining on a hoodie risks reading as food kitsch, and the dossier flags that Pueblo and New Mexico each claim chile, so the 'Christmas' term is contested. Filing this under the Westside community capsule also ties a pun to Chicano food culture.",
+      "fix": "Make Dec 1 to Dec 18 the gifting window, with the Dec 25 tip only as a content moment. Cut the burrito-wrapper lining. Only keep the chile reference if a Chicano Denver food business or artist wants it and is paid and credited. Otherwise lead the holiday window with Jokic and Murray gifting and kids sets."
+    },
+    {
+      "target": "opportunities[skyline-heirloom-platform]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The platform assumes Nike can run reissues of the 1980s skyline as a lifestyle line. Throwback jerseys sit in a separate licensed line (Mitchell & Ness under Fanatics), the skyline needs NBA and team approval, and an Alex English front role needs a paid likeness agreement through him or the alumni group. The core drop at the season opener also competes head-on with the fan-favorite alternate returning on court, which could be the same graphic. The brief's own risk section notes this but the opportunity still schedules the drop at the opener. Also, 'ABA-era hangtag story' does not match the skyline, which is a 1980s NBA look, not an ABA one.",
+      "fix": "Hold the opener drop until the alternate is confirmed and align the stripe and colour with it. Limit Nike's lane to tees, warm-ups, fleece and socks, and leave jerseys to the licensed throwback line. Open a paid conversation with Alex English before any press. Fix the hangtag story to the 1982-93 NBA look, or build a separate ABA Rockets-to-Nuggets story if there is appetite."
+    },
+    {
+      "target": "calendar (December, Cup knockout)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The confirmed 2026 Cup format puts quarterfinals on Dec 4-5 and semifinals on Dec 8-9 in the higher seed's home arena, with the final on Dec 11 at Hinkle Fieldhouse. Denver is a top seed in West Group A, so it could host two Cup games in the week before the main gifting window. The brief covers group play only and has no Cup-knockout trigger.",
+      "fix": "Add a Cup knockout contingency: staged Cup-night product, a short-run graphic bank and a Ball Arena store plan that can switch on within a day of Denver clinching a home knockout game."
+    },
+    {
+      "target": "calendar (March, June), topInsights[4]",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The calendar has no March entry, even though the dossiers call out Colorado high school state tournaments and CU, CSU and Air Force conference tournaments as the peak of local prep and college pride, plus Denver DPS programmes with deep ties to the Nuggets. There is also no June Denver PrideFest plan. The brief only lists the rainbow-as-Pride risk and never decides what to do about it, even though June is the month the skyline carries the most meaning to LGBTQ+ Denver.",
+      "fix": "Add a March grassroots window (state tournament, youth and prep product tied to the rec centres). For June, choose a position: either stay deliberately out of Pride, or make a community-led LGBTQ+ Denver capsule with paid creators who decide the rainbow framing. Do not co-opt the skyline stripes in Pride month on the team's behalf."
+    },
+    {
+      "target": "opportunities[westside-cocreation], collection[Welton and Westside]",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "The Westside capsule reduces Chicano Denver to lowriders, pinstriping, candy-apple red and a burrito wrapper. The dossiers also describe the Crusade for Justice and Su Teatro, a much richer story of Chicano political and cultural history that the capsule avoids. Chicano culture in Denver is not only lowrider culture. 'Su Teatro as co-lead' plus 'lowrider painters commissioned through its network' also hands one arts organisation a role in commissioning that it may not want.",
+      "fix": "Open with a listening round with Su Teatro and other Westside groups and let them decide the story. Pay for the creative, not just the licence of an aesthetic. Treat lowrider art as one possible entry only if lowrider club members want it, never plaques or religious imagery."
+    },
+    {
+      "target": "topInsights, collection, calendar (Jokic, Serbian community)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Jokic is the single biggest demand driver, but his product plan is a muted tee and a Feb drop. The dossiers name Serbian and Balkan diaspora buyers and Serbian-language touches, and a live unsigned extension of roughly $290M. A signing, an MVP-type announcement or a Serbian Orthodox Christmas on Jan 7 are real triggers, yet none is staged.",
+      "fix": "Pre-approve a Jokic extension-news graphic bank and a diaspora-aware drop with Serbian-language copy from a Serbian American designer, handled with community input. Keep it dry and utility-led, and avoid horse-racing costume or flag gimmicks."
+    },
+    {
+      "target": "retailPlaybook, calendar[month 4]",
+      "type": "other",
+      "severity": "low",
+      "problem": "Series-win graphic tees 'within days' and a 'playoff-edition 303 cap' assume Nike can print and distribute postseason graphics at a speed that is usually run by the league's licensed fast-turn partners. The 'unfinished business' Minnesota graphic also reminds fans of a loss, which the brief's own insight says Denver fans would rather not wear.",
+      "fix": "Confirm who owns playoff fast-turn product and design inside that process. Replace the revenge graphic with a proof-over-bravado line that does not mention Minnesota."
+    },
+    {
+      "target": "collection palettes, uniform.palette",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "The powder blue is #85B9E3 in the strategy and #8DA9D4 in the uniform dossier, and the official Nuggets secondary 'Skyline Blue' is a much darker #1D428A, so the brief's own palette tables are inconsistent. 'Sunshine Gold' is also not the official 'Sunshine Yellow' name.",
+      "fix": "Match powder blue to archival jerseys and settle on one hex. Use the team's official colour names in anything shown outside Nike."
+    },
+    {
+      "target": "opportunities[game-to-trailhead-layers], partners[Topo Designs, Rockmount]",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The Topo Designs idea is attached to the layering line without any sign that Topo wants a Nike and Nuggets collaboration, and Rockmount Ranch Wear is slotted for a snap-yoke warm-up at the Stock Show without explaining why the Stock Show belongs to Nuggets fans. The Stock Show is a 'western' cue and the dossiers warn it can slide into costume. Both partners are also named from memory with open or ownership status unverified.",
+      "fix": "Treat both as candidates, not plans. Confirm that Topo Designs and Rockmount are operating and independent, and that they want the work, before they appear in anything outward-facing. Cut the Stock Show warm-up unless Rockmount or another Western maker leads the design."
+    }
+  ],
+  "strengths": [
+    "The thesis understands Denver's real fault lines: a fan-owned rainbow skyline, transplants against natives, and weather that decides what sells. It treats the heirloom as something to protect rather than redraw.",
+    "The commitment to pay, credit and name creators on every neighbourhood story, with partners leading Five Points and the Westside rather than the swoosh, is the right default, and the Indigenous-imagery and cannabis exclusions are explicit.",
+    "Retail and calendar logic is grounded in Denver's behaviour: the arena store as the emotional flagship, outlets as Nike's real footprint, no tax holiday, and April playoffs as the real tip-off, with a lean fall buy and staged playoff inventory.",
+    "The brief anchors the Jokic voice (dry, stat-led, no hype) and treats DeRozan as a limited-run tee story, with the Oct 22 OKC game, the Oct 30 Utah Cup opener and the Dec 25 Golden State tip all correct against the live facts."
+  ],
+  "summary": "A distinctive, mostly respectful brief with a strong core in the skyline heirloom and Denver's weather and playoff rhythm. Its biggest weaknesses are feasibility and timing: an Oct 22 launch of new technical product, a September-reveal print plan that has already passed, two community capsules rushed into the same playoff week, and a uniform concept that depends on unverified City Edition history. The Welton Street rollout at the MLK Marade and the Westside lowrider framing need re-working with community partners before anything is announced. The brief also skips the Cup knockout, March, Pride and Jokic news triggers, and ignores its own rule against generic mountain graphics."
+}

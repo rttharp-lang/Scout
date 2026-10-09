@@ -21,7 +21,7 @@
     },
     {
       "title": "The scene is neighborhood-by-neighborhood and artist-run",
-      "detail": "78th Street Studios (with its monthly Third Friday openings), the Gordon Square Arts District around the Capitol Theatre and Cleveland Public Theatre, Waterloo Arts in Collinwood, and SPACES in Ohio City-adjacent Flats territory each have their own crowd.",
+      "detail": "78th Street Studios (with its monthly Third Friday openings), the Gordon Square Arts District around the Capitol Theatre and Cleveland Public Theatre, Waterloo Arts in Collinwood, and SPACES near the Flats and Ohio City each have their own crowd.",
       "implication": "Activate in several neighborhoods instead of one downtown pop-up; pair a west-side and an east-side maker so neither side reads as an afterthought."
     },
     {
@@ -40,7 +40,7 @@
     {"name": "Cleveland Institute of Art", "kind": "art and design school", "neighborhood": "University Circle", "why": "The region's design, illustration and industrial design pipeline, and a source of credible young collaborators."},
     {"name": "78th Street Studios", "kind": "artist studios and galleries", "neighborhood": "Detroit Shoreway / Hingetown edge", "why": "Large converted warehouse of studios and galleries known for its monthly Third Friday open nights."},
     {"name": "Gordon Square Arts District", "kind": "arts district", "neighborhood": "Detroit Shoreway", "why": "Capitol Theatre, Cleveland Public Theatre and street-level murals and signage make it the west-side hub of the scene."},
-    {"name": "SPACES", "kind": "contemporary art gallery", "neighborhood": "Flats / Superior Viaduct area", "why": "Long-running experimental art space that gives emerging local artists their first serious shows."},
+    {"name": "SPACES", "kind": "contemporary art gallery", "neighborhood": "Cleveland (Flats / Ohio City area; confirm current location)", "why": "Long-running experimental art space that gives emerging local artists their first serious shows."},
     {"name": "Zygote Press", "kind": "printmaking studio", "neighborhood": "Superior Avenue corridor", "why": "Community fine-art print shop; the most direct line to Cleveland's printmaking tradition."},
     {"name": "Waterloo Arts District", "kind": "arts district", "neighborhood": "Collinwood", "why": "East-side arts strip with galleries, murals and Beachland Ballroom-style music posters; hosts a summer street fest."},
     {"name": "Karamu House", "kind": "Black arts center and theater", "neighborhood": "Fairfax", "why": "Historic center of Black arts in Cleveland, essential for any respectful community partnership."},
@@ -59,9 +59,9 @@
     {"name": "Parade the Circle", "timing": "Mid-June", "month": 6, "why": "University Circle's handmade costume, puppet and float parade, a prime showcase of local craft and bright color."},
     {"name": "Waterloo Arts Fest", "timing": "June", "month": 6, "why": "Collinwood's neighborhood street festival, a way to reach east-side makers."},
     {"name": "Third Friday at 78th Street Studios", "timing": "Third Friday of each month", "month": 0, "why": "Recurring open-studio night, easy for pop-up and artist-meets-designer sessions."},
-    {"name": "Cleveland International Film Festival", "timing": "Late March to early April", "month": 3, "why": "Large film event that fills Playhouse Square and the Tower City area with design-minded visitors."},
+    {"name": "Cleveland International Film Festival", "timing": "Late March to early April", "month": 3, "why": "Large film event that draws design-minded visitors to Playhouse Square and downtown."},
     {"name": "MLK Day Cavs vs. Pistons", "timing": "Monday Jan 18, 2027, noon ET", "month": 1, "why": "Home game on NBC/Peacock and a natural date for a Karamu-linked art or Black history activation."},
-    {"name": "Dyngus Day", "timing": "Easter Monday (April)", "month": 4, "why": "Polish-American celebration with Cleveland pussy-willow and polka graphics, a legitimate Slavic Village and Gordon Square tradition."}
+    {"name": "Dyngus Day", "timing": "Easter Monday (March 29, 2027)", "month": 3, "why": "Polish-American celebration with Cleveland pussy-willow and polka graphics, a legitimate Slavic Village and Gordon Square tradition."}
   ],
   "vocabulary": [
     {"term": "The Land", "meaning": "Cleveland's nickname, popularized in Black Cleveland and tied to LeBron-era pride; deliberately absent from the 2026-27 City Edition wordmark."},

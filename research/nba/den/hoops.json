@@ -2,7 +2,7 @@
   "team": "den",
   "lens": "hoops",
   "headline": "Denver hoops is a high-altitude, adopted-champion culture: Jokic's 2023 title sits on top of a Black-rooted Park Hill and Five Points court tradition, the ABA-era rainbow heritage, and a Mountain West college scene that all feel like one underdog story.",
-  "summary": "Denver's basketball identity is built from the outside in: a team that was never a destination, an ABA lineage (Denver Rockets to Nuggets, David Thompson, Alex English, Dan Issel), and a 2023 championship led by a Serbian MVP the city treats as its own. The street layer lives in Denver Parks and Recreation gyms and in Denver Public Schools programs in Park Hill, Five Points, Montbello and the Westside, plus a growing Aurora and suburban AAU scene. The college map is regional (Colorado, Colorado State, Air Force, Denver, Wyoming) and tied to the Mountain West and Big 12. There is no WNBA team here, the Nuggets' G League affiliate is out of state, and locals therefore claim the NBA team as the whole pro ecosystem. Dress is practical and layered, shaped by altitude, big temperature swings and outdoor life, so function and mountain-adjacent aesthetics land better than loud streetball flash.",
+  "summary": "Denver's basketball identity is built from the outside in: a team that was never a destination, an ABA lineage (Denver Rockets to Nuggets, David Thompson, Alex English, Dan Issel), and a 2023 championship led by a Serbian MVP the city treats as its own. The street layer lives in Denver Parks and Recreation gyms and in Denver Public Schools programs in Park Hill, Five Points, Montbello and the Westside, plus a growing Aurora and suburban AAU scene. The college map is regional (Colorado, Colorado State, Air Force, Denver, Wyoming) and split across the Big 12 (Colorado), the new Pac-12 (Colorado State), the Mountain West (Air Force, Wyoming) and the Summit League (Denver). There is no WNBA team here, the Nuggets' G League affiliate is out of state, and locals therefore claim the NBA team as the whole pro ecosystem. Dress is practical and layered, shaped by altitude, big temperature swings and outdoor life, so function and mountain-adjacent aesthetics land better than loud streetball flash.",
   "insights": [
     {
       "title": "The rainbow skyline is the one local graphic everyone owns",
@@ -21,7 +21,7 @@
     },
     {
       "title": "The college map is regional and rivalry-driven",
-      "detail": "Colorado (Boulder) and Colorado State (Fort Collins) share the in-state rivalry; Air Force, Denver and Wyoming fill out the Mountain West and Rocky Mountain map. Derrick White (Parker, Legend High School, then CU) is a local-kid-made-good claimed by Colorado hoopers.",
+      "detail": "Colorado (Boulder, Big 12) and Colorado State (Fort Collins, moving to the rebuilt Pac-12 for 2026-27) share the in-state rivalry; Air Force and Wyoming (Mountain West) and Denver (Summit League) fill out the Rocky Mountain map. Derrick White (Parker, Legend High School, then CU) is a local-kid-made-good claimed by Colorado hoopers.",
       "implication": "Mountain-state school colors and a college-to-NBA pipeline story can support a regional collection, but any university marks need licensing."
     },
     {
@@ -110,8 +110,8 @@
     },
     {
       "name": "Chauncey Billups",
-      "role": "Hall of Famer and coach, Denver native",
-      "why": "George Washington High and CU alum who is the clearest local-kid-to-legend story."
+      "role": "Hall of Famer, Denver native",
+      "why": "George Washington High and CU alum and the clearest local-kid-to-legend story, but he is a defendant in a pending federal poker and gambling case, so do not build product or campaigns around his name."
     },
     {
       "name": "Alex English",
@@ -165,10 +165,10 @@
       "why": "The peak of local prep pride, when Denver Public Schools and suburban programs chase state titles."
     },
     {
-      "name": "Mountain West and Big 12 college tournaments",
+      "name": "Conference tournaments and March Madness",
       "timing": "March",
       "month": 3,
-      "why": "CU, CSU, Air Force and Denver fans activate around conference tournaments and March Madness."
+      "why": "CU, CSU, Air Force, Wyoming and Denver fans activate around their different conference tournaments and March Madness."
     },
     {
       "name": "NBA playoffs and title-anniversary run",
@@ -207,10 +207,6 @@
     {
       "term": "The Front Range",
       "meaning": "The Boulder-Denver-Fort Collins corridor that defines the regional college and prep map."
-    },
-    {
-      "term": "Mile High Magic",
-      "meaning": "Fan shorthand for late-game home runs at altitude."
     }
   ],
   "designCues": [
@@ -267,7 +263,7 @@
   "productHooks": [
     "Rainbow skyline throwback warm-up and short set, timed to the 2026-27 City Edition once confirmed.",
     "Altitude shell: a technical shooting jacket with fleece liner in midnight blue and gold, built for rec-center and outdoor use.",
-    "Front Range college-to-pro capsule linking Colorado hoopers (such as Derrick White and Chauncey Billups) to local courts, with licensing for any university marks.",
+    "Front Range college-to-pro capsule linking Colorado hoopers (such as Derrick White) to local courts, with licensing for any university marks.",
     "Park Hill and Five Points community court capsule co-created with local coaches and rec-center programs, with proceeds returning to neighborhood gyms."
   ],
   "watchouts": [
@@ -309,12 +305,12 @@
     "verify": [
       "Which 2026-27 Nuggets City Edition or alternate uniform is confirmed and its release date",
       "Whether Hiawatha Davis Jr. and Glenarm Recreation Centers still run open gym and youth hoops programs",
-      "Current coaches and records for Colorado, Colorado State, Air Force and Denver men's and women's programs",
+      "Current coaches and records for Colorado, Colorado State (Pac-12 move), Air Force, Wyoming and Denver programs",
       "Whether any WNBA expansion bid or franchise for Denver has advanced",
       "Current G League affiliate of the Nuggets (Grand Rapids Gold) and any change",
       "Names and schedules of Denver summer pro-am and rec leagues, including any run by Denver Parks and Recreation",
       "Current Altitude Sports broadcasters and Nuggets radio voices",
-      "Whether Chauncey Billups is still tied to any coaching role or lawsuit status that affects use of his name",
+      "Chauncey Billups federal poker-case status (trial was set for Nov 2026, delay requested) before any use of his name",
       "Current Colorado high school state tournament venues and dates",
       "Derrick White's current team and status"
     ]

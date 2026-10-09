@@ -11,7 +11,7 @@
     },
     {
       "title": "Inglewood is finally theirs",
-      "detail": "The Intuit Dome moved the franchise out of downtown into Inglewood, next to SoFi Stadium and the Kia Forum, and gave fans a building built for them, including the Halo Board and a loud standing-room section called the Wall. Local identity is now tied to Inglewood, South LA and the South Bay rather than to Staples Center.",
+      "detail": "The Intuit Dome moved the franchise out of downtown into Inglewood, next to SoFi Stadium and the Kia Forum, and gave fans a building built for them, including the Halo Board and a steep single-sided seating section behind the basket called the Wall. Local identity is now tied to Inglewood, South LA and the South Bay rather than to Staples Center.",
       "implication": "Build Inglewood-specific graphics and a gameday-in-Inglewood capsule; the downtown-era look is the past, not the brand."
     },
     {
@@ -40,7 +40,7 @@
       "name": "Intuit Dome",
       "kind": "venue",
       "neighborhood": "Inglewood",
-      "why": "The Clippers' home since 2024, built around the Halo Board and a standing-room section called the Wall."
+      "why": "The Clippers' home since 2024, built around the Halo Board and a steep seating section called the Wall."
     },
     {
       "name": "Kia Forum",
@@ -67,7 +67,7 @@
       "why": "The Venice Beach courts are the global image of LA hoops and a mixed-fan gathering point."
     },
     {
-      "name": "Crenshaw Mall district",
+      "name": "Baldwin Hills Crenshaw Plaza district",
       "kind": "district",
       "neighborhood": "Crenshaw",
       "why": "Heart of Black LA retail and culture where fans from South LA gather and shop."
@@ -139,7 +139,7 @@
   ],
   "vocabulary": [
     {
-      "term": "Clippers Nation",
+      "term": "Clipper Nation",
       "meaning": "The team's own name for its supporters."
     },
     {
@@ -152,11 +152,11 @@
     },
     {
       "term": "The Wall",
-      "meaning": "The standing-room, loud-fan section at Intuit Dome."
+      "meaning": "The steep, loud-fan seating section behind the basket at Intuit Dome."
     },
     {
       "term": "The Halo",
-      "meaning": "The giant two-sided board that circles the Intuit Dome's upper bowl."
+      "meaning": "The giant ring-shaped, two-sided video board above the Intuit Dome court."
     },
     {
       "term": "Other team in LA",
@@ -279,7 +279,7 @@
     "traditions": [
       {
         "name": "The Wall",
-        "detail": "A standing-room section behind the basket where the loudest fans gather."
+        "detail": "A steep seating section behind the basket where the loudest fans gather."
       },
       {
         "name": "Halo Board gameday visuals",

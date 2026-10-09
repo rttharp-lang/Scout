@@ -51,7 +51,7 @@
       "name": "Tower City Center",
       "kind": "mall and transit hub",
       "neighborhood": "Downtown Cleveland",
-      "why": "Walkable downtown retail and RTA hub connected to the arena district, useful for pop-up foot traffic."
+      "why": "RTA hub and events space connected to the arena district; its retail is thin, so treat it as a pop-up footprint, not a volume door."
     },
     {
       "name": "Beachwood Place",
@@ -93,7 +93,7 @@
   "people": [
     {
       "name": "Donovan Mitchell",
-      "role": "Cavs guard, extended through the 2027-28 option",
+      "role": "Cavs guard, on a new 3-year, $150.3M extension",
       "why": "The face of current Cavs jerseys and Spida-era product demand."
     },
     {
@@ -138,8 +138,8 @@
     },
     {
       "name": "Dyngus Day",
-      "timing": "Monday after Easter",
-      "month": 4,
+      "timing": "Monday after Easter (March 29, 2027)",
+      "month": 3,
       "why": "Cleveland's Polish-American celebration, centered in Slavic Village and a spring street-culture and gifting moment."
     },
     {
@@ -259,8 +259,8 @@
       "url": "https://www.nba.com/cavaliers"
     },
     {
-      "title": "Rocket Arena",
-      "url": "https://www.rocketarena.com"
+      "title": "Rocket Arena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Rocket_Arena"
     },
     {
       "title": "Ohio Department of Taxation - Sales and Use Tax",
@@ -311,7 +311,7 @@
       {
         "window": "Mid April",
         "month": 4,
-        "driver": "Regular season ends April 11, Play-In runs April 13-16, Dyngus Day, and playoff tee demand begins.",
+        "driver": "Regular season ends April 11, Play-In runs April 13-16 and playoff tee demand begins.",
         "impact": "medium"
       },
       {

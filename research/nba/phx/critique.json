@@ -1,0 +1,125 @@
+{
+  "team": "phx",
+  "issues": [
+    {
+      "target": "uniform (After the Heat) and calendar",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The brief treats the neon City Edition as a 2026-27 product, but it is Oct 9 and the 2026-27 City Edition is already designed, approved and about to be revealed. Nike and the NBA lock uniform designs many months ahead. The jersey cannot carry a Feb 2027 All-Star launch, so the 'Full Van Buren Neon release' has no hero piece to anchor it.",
+      "fix": "Label the uniform concept as a 2027-28 City Edition pitch. Run the All-Star 2027 window on non-uniform apparel, and check the 2026-27 City Edition first (the brief's own risk list asks for this). If it uses neon or a sunset, change the Feb story to the ground-level lens rather than repeating it."
+    },
+    {
+      "target": "opportunities[all-star-valley-made].when and calendar (Jan-Feb)",
+      "type": "other",
+      "severity": "high",
+      "problem": "Feasibility. Artists are signed Oct-Nov, locals get a mid-January pre-release and the First Friday launch is Feb 5. That is roughly 8-12 weeks from contract to retail for new Nike apparel with NBA All-Star marks, artist hangtags and revenue-share paperwork. League and team licensing approval for All-Star and Suns marks, plus third-party artist IP, will not clear on that clock.",
+      "fix": "Split the plan into what is possible on this clock and what is not. Possible: a small-run artist mural and screenprint pop-up with no NBA marks, plus existing Suns blanks with artist-designed hangtags and patches. Not possible: new cut-and-sew with All-Star marks. Start the NBA and Suns licensing conversation now, and move the larger capsule to the 2027-28 cycle."
+    },
+    {
+      "target": "calendar (Oct) and opportunities[sun-faded-sunburst]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The October window starts Oct 10 (the Spurs preseason game), which is tomorrow. Product, a Melrose vintage-door drop and a Majerle's diehard night cannot be developed in that time. The brief also leaves the Suns' regular-season opener unstated, and opening night (Oct 20) has no Suns game.",
+      "fix": "Make October a sell-in and merchandising play using existing heritage and throwback stock. Build the sunburst capsule for Black Friday and holiday. Tie any event to the Oct 30 Cup opener vs Dallas, which is a real home date and the first Suns marquee of the season."
+    },
+    {
+      "target": "calendar (Nov 24-27) and opportunities[area-code-hubs]",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The brief says Cup Nights against Denver, Houston, Dallas and Utah fall Nov 24-27. In the Cup, Phoenix plays each of those four teams once across the Friday group-play dates from Oct 30 to Nov 27. Dallas is the Oct 30 opener. Only the Nov 27 Friday (Black Friday weekend) is a sure Phoenix date, with Nov 24-25 as extra Cup Nights for some teams.",
+      "fix": "Replace the sentence with 'Oct 30 Dallas opener through the Nov 27 Cup Friday'. Anchor the area-code watch parties on the home dates in that run, and use Nov 27 as the Black Friday tie-in. Confirm the Suns' Cup home and away schedule."
+    },
+    {
+      "target": "opportunities[los-suns-year-round].when and calendar (Sept 15-16)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The Los Suns line is introduced with a Sept 15-16 launch. That is a year away for this season, since the 2026 window just closed. The first real Los Suns moment for the 2026-27 season is Noche Latina, whose date the brief admits it does not know, and the Cinco de Mayo anniversary may fall after the Suns' season has ended.",
+      "fix": "Make Noche Latina the launch and Sept 15-16, 2027 the second drop. Put the Noche Latina date at the top of the verify queue, and get the commissioned artists signed in the fall so a spring in-arena drop can be developed on a realistic clock."
+    },
+    {
+      "target": "calendar (Jan, Barrett-Jackson)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The Los Suns club jacket is paired with Barrett-Jackson car week. Barrett-Jackson is a high-dollar collector auction in Scottsdale built around hot rods and muscle cars. It is not the Chicano lowrider scene the jacket is drawn from, and it sits in the affluent Scottsdale ecosystem rather than Maryvale or South Phoenix. This is a weak link between the insight and the activation.",
+      "fix": "Tie the jacket to lowrider-specific gatherings through a named car club (the brief admits none is confirmed). Treat the club as a paid partner who leads the graphics. Keep Barrett-Jackson only as a Scottsdale visitor-tier tie-in if at all."
+    },
+    {
+      "target": "topInsights[2] (Move from the sky to the ground) and collection[Los Suns Ranfla]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Lowrider, pinstripe and club-plaque script carry the Los Suns line, yet the brief names no car club, pinstriper or maker. It names Lalo Cota (a muralist) and Hugo Medina as candidates, and the verify list admits car clubs are unconfirmed. The hero craft has no credited practitioner, which is the repeated standard in the brief's own risk section.",
+      "fix": "Identify a pinstriper and a car-club-affiliated lettering artist through the Arizona Latino Arts and Cultural Center, or drop 'Ranfla' as a name until one is signed. Also note the pinstripe and plaque script lineage is a Chicano craft tradition shared across the Southwest, so 'only Phoenix' claims need to rest on the 2010 Los Suns story, not on lowriders."
+    },
+    {
+      "target": "thesis, topInsights[1], uniform.json framing",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The brief repeats a 'Latino-majority youth base' for the whole Valley. For Phoenix city proper and parts of the West Valley that may hold, but for Maricopa County as a whole Hispanic residents are a large plurality (well under a majority), and the Suns' fan base is not all Mexican American. Separately, the dossiers split on whether the first Los Suns game was 2010 or 2011. 2010 (May 5 vs San Antonio) is the date in the brief's text; the uniform dossier says 2011.",
+      "fix": "Say 'the largest single youth group in Phoenix and the West Valley' and cite the geography. Use 2010 throughout and keep the 2010 date at the top of the verify list."
+    },
+    {
+      "target": "calendar (Feb 5) and insight[0] (WM Phoenix Open run-up)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "Feb 5 First Friday falls on or near WM Phoenix Open weekend in Scottsdale (early February), when Valley hotels, rideshare and attention are consumed. The brief also lists the Heard's hoop dance contest as part of the All-Star stretch, but that contest is held in early February, before All-Star weekend. The Indian Fair and Market follows in March.",
+      "fix": "Check the 2027 WM Phoenix Open and Hoop Dance Contest dates before locking Feb 5. Consider the March First Friday or the Feb 19 weekend itself, and fold in Cactus League only after verifying its dates."
+    },
+    {
+      "target": "partners[Heard Museum] and topInsights[0] (hoop dance)",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "Indigenous engagement runs through a museum (Heard) and a single designer (Jared Yazzie, Din\u00e9). The Heard is an institution, not a tribe, and the brief adds the hoop dance contest to the basketball backdrop. A hoop-dance-and-hoops pun, or any use of the contest as scenery for a basketball brand, risks trivializing a ceremonial and competitive art. The brief also omits the nearest sovereign neighbors, Salt River Pima-Maricopa and Gila River, as relationships to approach on their own terms.",
+      "fix": "Drop hoop dance from any marketing language. Treat the Heard as an introduction, not a clearance, and approach Native-owned businesses and the communities directly for any 2027-28 work, with the Native partner holding creative control. Salt River previously held the naming rights to the Suns' arena (as Talking Stick Resort Arena), so check whether an existing team relationship can be a respectful door."
+    },
+    {
+      "target": "uniform.motifs (stepped textile-block geometry) and uniform.details",
+      "type": "appropriation",
+      "severity": "low",
+      "problem": "The Arizona Biltmore block pattern is cited as neutral Valley geometry. It is a protected architectural design associated with Frank Lloyd Wright's legacy and the hotel, so it is third-party IP. Stepped-fret geometry also reads close to Southwest and Mesoamerican Indigenous patterns, which the brief says it will avoid.",
+      "fix": "Cut the Biltmore reference or license it. Replace it with original canal-and-grid geometry the brief already has, and keep stepped motifs off the trim so no one has to argue about the source."
+    },
+    {
+      "target": "collection[Area-code hubs] and uniform.details (602 / 480 / 623 jock tag)",
+      "type": "generic",
+      "severity": "low",
+      "problem": "Area-code graphics fail the swap test: Los Angeles, Chicago, Houston and Atlanta all have them, and brands have done them repeatedly. The Phoenix-specific claim is that people place themselves by side of the Valley, but nothing in the product makes that unmistakably Phoenix.",
+      "fix": "Keep 602, 480 and 623 as a small detail, not a collection. Make the product about the three Valley sides with real landmarks per door (Desert Sky, Arizona Mills, Chandler), or add the 'Valley' sub-neighborhood names locals use."
+    },
+    {
+      "target": "partners and opportunities (Black Phoenix, Mercury, G League, Asian Valley)",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The dossiers (hoops, fanbase, food) surface Black South Phoenix history (Eastlake Park, Juneteenth), the Mercury and women's hoops, the Valley Suns G League affiliate, and the Vietnamese and Asian communities in Mesa and Chandler. The brief names no Black partner at all and mentions none of the Mercury, Valley Suns or the Asian-American Valley as an activation. That leaves the plan resting on Chicano and Indigenous cues and a downtown arts scene.",
+      "fix": "Add a Black Phoenix thread (a South Phoenix and Eastlake Park partner for a credited, paid court project and a Juneteenth moment, not a one-off). Add a Mercury and women's line for the Feb All-Star timing. Add a Chandler and Mesa food-and-court door, and keep each as a named partner, not a tagline."
+    },
+    {
+      "target": "opportunities[night-court-heat]",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The night-court line is driven by an insight (heat dictates play) that is true of Las Vegas, Tucson, Houston in summer and most of the Sun Belt. The Phoenix-specific proof is thin: no named court, league or school. The refurbishments are promised without a court partner, and the verify list says none is confirmed.",
+      "fix": "Name two or three real Valley courts or organizations as partners (Eastlake Park is the strongest candidate from the dossier), or call this a performance line rather than a culture story. Launch on a timeline that fits real court work, not at All-Star."
+    },
+    {
+      "target": "collection[Sun-Faded Sunburst] and pieces",
+      "type": "other",
+      "severity": "low",
+      "problem": "The near-miss tee (1976, 1993, 2021) is smart insider framing, but it states 'near-misses' in print on licensed product and the 'sun-bleached purple' (#8E7BB0) moves off the official Suns purple, which the league and team control. A factory-faded finish on team colors also needs approval.",
+      "fix": "Run the finish and palette by the team and NBA licensing early, and test the near-miss date stack with real fans, since it can read as celebrating the heartbreak or rubbing it in."
+    },
+    {
+      "target": "headline, collection, uniform ('Valley' usage)",
+      "type": "generic",
+      "severity": "low",
+      "problem": "The brief tells designers to avoid 'Valley' as a headline graphic because past City Editions used it, then names its own programs 'Valley Made' and 'Valley After Dark'. The word is the right local vocabulary but it is also what the brief says is overused.",
+      "fix": "Keep 'Valley' for internal naming and give consumer-facing names their own local words (a street, a sign, a neighborhood)."
+    }
+  ],
+  "strengths": [
+    "The central move from sky to ground (Van Buren motel neon, lowrider pinstripe, canal-and-grid street plan) passes the swap test and gives designers hex colors, materials and graphics they can use.",
+    "Los Suns is correctly treated as the one story only Phoenix can tell, with a credit-and-pay plan, a no-political-messaging guardrail and named candidate artists.",
+    "Faded and sun-bleached heritage as the local signal, with the near-miss dates (1976, 1993, 2021) as an insider detail, shows real fan knowledge.",
+    "The risk section is honest: no Indigenous imagery without a native lead, no stock calaveras, no Day of the Dead product, and a flag to confirm the City Edition before locking the brief.",
+    "The Booker good-better-best tiering is realistic for a bubble team (40.5 win total, no opening-night or Christmas slot), and the Cup opener vs Dallas on Oct 30 is correctly identified."
+  ],
+  "summary": "A culturally literate brief with a sharp, ownable visual thesis, undercut by calendar and feasibility problems. The neon City Edition cannot be a 2026-27 jersey, the Jan-Feb All-Star timeline is too short for licensed product, the October launch starts tomorrow, the Cup Night dates are misstated, and the Barrett-Jackson pairing misses the lowrider audience. The brief is also thin on Black Phoenix, the Mercury and the Asian Valley, and its Indigenous engagement should go through communities, not just the Heard. Reframe the uniform as a 2027-28 pitch, make the All-Star window a small-run local activation, and add named partners where the dossiers point."
+}

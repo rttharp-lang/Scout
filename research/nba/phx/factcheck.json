@@ -1,0 +1,273 @@
+{
+  "team": "phx",
+  "checked": 62,
+  "verdicts": [
+    {
+      "lens": "uniform",
+      "claim": "Los Suns jerseys first worn in 2011 as a protest of SB 1070",
+      "verdict": "corrected",
+      "note": "First worn May 5, 2010 in the playoffs against San Antonio; Noche Latina uses came later. Fixed in summary, insight, vocabulary and cityEditions of uniform.json to match fanbase and culture.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Los Suns branding described as 2011-era",
+      "verdict": "corrected",
+      "note": "Changed to first worn May 2010.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Heard Hoop Dance Contest overlaps the Feb 19-21 All-Star window",
+      "verdict": "corrected",
+      "note": "Live check: the Heard lists the 37th contest for Feb 6-7, 2027, two weeks before All-Star. Reworded as a relationship window, not an overlap. The brief repeats the overlap claim.",
+      "source": "https://heard.org/who/all-ages/page/3/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Top insight says All-Star lands inside the Heard's hoop dance contest (and the Heard partner idea cites it)",
+      "verdict": "corrected",
+      "note": "Hoop Dance is Feb 6-7, 2027, not Feb 19-21. WM Phoenix Open is also early February (before, not during, All-Star week). Editor should say the run-up weeks, not the same weekend.",
+      "source": "https://heard.org/who/all-ages/page/3/"
+    },
+    {
+      "lens": "underground",
+      "claim": "Roosevelt Row First Friday art walk runs monthly",
+      "verdict": "confirmed",
+      "note": "Artlink runs the walk on the first Friday monthly (about 6-10 pm, Roosevelt St closed to cars Central to 7th, free shuttles). Feb 5, 2027 is a first Friday. Confirm the Feb 2027 format closer to date.",
+      "source": "https://inbusinessphx.com/?p=179100"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Majerle's Sports Grill downtown is the diehard pre-game spot and still open",
+      "verdict": "unverifiable",
+      "note": "Live search found no 2026 status; the chain's site calls downtown the original location, a 2019 piece shows it operating, and the Old Town (Scottsdale) location is listed closed. Strategy builds a launch night on it, so call before planning.",
+      "source": "https://majerles.com/our-story/majerles-sports-grill/"
+    },
+    {
+      "lens": "food",
+      "claim": "Barrio Cafe is on Grand Avenue",
+      "verdict": "corrected",
+      "note": "Barrio Cafe is on N 16th Street in Midtown/Central Phoenix, not Grand Avenue. Fixed neighborhood and chef insight; fanbase and culture already said Central Phoenix.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Sam Fox is Phoenix-born",
+      "verdict": "corrected",
+      "note": "Birthplace not confident; changed to Phoenix-based.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Macayo's flagship on Central Avenue",
+      "verdict": "corrected",
+      "note": "Not confident the Central Avenue flagship is open; changed to multiple Valley locations with a confirm note. Founding 1946 and chimichanga claim kept as claims.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Latino-majority metro",
+      "verdict": "corrected",
+      "note": "Metro Phoenix is large Latino but not majority overall (city roughly 40 percent, county about a third); youth in South Phoenix and Maryvale skew much higher. Softened in headline of insight and summary. Strategy thesis and scorecard repeat 'Latino-majority youth base'.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Latino-majority youth base / Latino-majority",
+      "verdict": "unverifiable",
+      "note": "Soften to 'large, youth-heavy Latino base' unless a live census check supports a youth majority.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "South Mountain Park courts as everyday hooping place",
+      "verdict": "corrected",
+      "note": "South Mountain Park is a hiking preserve, not a court site. Replaced with South Phoenix, Maryvale and Mesa park and school courts.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Lalo Guerrero lived and recorded in Arizona",
+      "verdict": "corrected",
+      "note": "He was born in Tucson but spent much of his career in California; reworded to Tucson-born Arizona roots.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "WM Phoenix Open collides with All-Star week",
+      "verdict": "corrected",
+      "note": "The tournament is in early February, about two weeks earlier; reworded.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Waste Management Phoenix Open",
+      "verdict": "corrected",
+      "note": "Tournament is now the WM Phoenix Open.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Suns: 45-37, lost play-in to Portland, OKC 4-0 sweep, Bridges/Kennard/Peat added, Brooks through 2029-30, 40.5 win total, coach Ott",
+      "verdict": "confirmed",
+      "note": "Matches CURRENT FACTS verified 2026-10-07 across fanbase, rhythm, hoops and retail dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "All-Star Feb 19-21 2027, Oct 20 opener, Oct 30 Mavericks Cup opener, Cup final Dec 11 Indianapolis, no Christmas game, Apr 13-16 play-in",
+      "verdict": "confirmed",
+      "note": "All match CURRENT FACTS; arena renamed Mortgage Matchup Center Oct 2025 (UWM, 10 years) also confirmed.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Hugo Medina as Phoenix muralist (named as a Los Suns candidate in the brief)",
+      "verdict": "unverifiable",
+      "note": "Least certain of the three muralists; confirm identity, work and representation before naming in outreach. Joe Pagac and Lalo Cota are better established.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Lalo Cota and Joe Pagac as lead All-Star commission candidates",
+      "verdict": "unverifiable",
+      "note": "Active and available as of 2026? Confirm representation and any NBA/Suns exclusivity for All-Star murals.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Arizona Latino Arts and Cultural Center is an operating downtown venue",
+      "verdict": "unverifiable",
+      "note": "Brief makes it the central Los Suns partner and Sept 16 / Noche Latina host. Confirm it is open, its location and programming capacity.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Roosevelt Row CDC runs mural programming and can permit the All-Star mural",
+      "verdict": "unverifiable",
+      "note": "First Friday itself is Artlink-run; confirm which organization permits murals and organizes the walk before the brief assigns this to RoRo CDC.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Roosevelt Row CDC 'hosts First Friday' (partners list)",
+      "verdict": "corrected",
+      "note": "Live result shows Artlink founded and runs the First Friday Art Walk. Editor should add Artlink as the First Friday contact.",
+      "source": "https://inbusinessphx.com/?p=179100"
+    },
+    {
+      "lens": "music",
+      "claim": "Innings Festival (Tempe Beach Park) and M3F (Hance Park) still run in 2027",
+      "verdict": "unverifiable",
+      "note": "Festival existence, dates and venues must be confirmed; the brief times a March music window to them.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Crescent Ballroom, Valley Bar, The Van Buren, Rhythm Room, Marquee, Club Red, Celebrity Theatre all open",
+      "verdict": "unverifiable",
+      "note": "All long-running as of 2025; confirm operating status, especially Club Red and Valley Bar.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Stinkweeds is in Phoenix and open",
+      "verdict": "unverifiable",
+      "note": "Location has moved over the years and a small independent shop is fragile; confirm current address and that it is open.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Welcome Diner on Roosevelt Row",
+      "verdict": "unverifiable",
+      "note": "Small independent; confirm it is open and the neighborhood description.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Los Dos Molinos (1947), Little Miss BBQ (Sunnyslope and Tempe-area), Matt's Big Breakfast, Filiberto's operating",
+      "verdict": "unverifiable",
+      "note": "Confirm each is open and Little Miss BBQ's current locations (its original is on East University Dr, Phoenix, near Tempe).",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Nephi Craig and Cafe Gozhoo / Native American Culinary Association work",
+      "verdict": "unverifiable",
+      "note": "Confirm his current projects and whether Cafe Gozhoo is operating before naming it.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Factory Store at Arizona Mills is open",
+      "verdict": "unverifiable",
+      "note": "Brief's volume channel for Booker tiers rests on it; confirm the store and its basketball assortment.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Desert Sky Mall and Park 'n Swap still operating",
+      "verdict": "unverifiable",
+      "note": "Desert Sky has been in decline/redevelopment and the swap meet's status is uncertain; the brief names Desert Sky as the 623 hub and Los Suns launch venue, so confirm before use.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Past Suns City Editions repeated a sunset gradient and the word 'Valley'",
+      "verdict": "unverifiable",
+      "note": "Dossier admits it cannot list each season. The brief's whole 'sky to ground' thesis depends on it, as does the 2026-27 City Edition (not verified). Pull the full City Edition history live.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "After the Heat neon concept does not collide with the 2026-27 City Edition",
+      "verdict": "unverifiable",
+      "note": "2026-27 Phoenix City Edition not verified in CURRENT FACTS; confirm before locking the brief.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Palette hexes Purple #1D1160, Orange #E56020, Light Orange #F9AD1B, Gray #63727A",
+      "verdict": "unverifiable",
+      "note": "Match published team palette as remembered; verify against the official brand guide.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Booker's Nike signature line is current (Book 1 and successors)",
+      "verdict": "unverifiable",
+      "note": "Brief's Book in every tier anchor assumes it; confirm the 2026-27 model and colorways.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Noche Latina typically spring; Los Suns still used in 2026-27",
+      "verdict": "unverifiable",
+      "note": "No 2026-27 date or jersey plan verified; the brief schedules a launch and restock around it.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Barrett-Jackson Scottsdale mid to late January; Fiesta Bowl around New Year's; Arizona State Fair and Phoenix Pride in October",
+      "verdict": "unverifiable",
+      "note": "Recurring but 2027 dates are not verified; WM Phoenix Open 2027 likely Feb 4-7 or similar.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Phoenix Fashion Week still held",
+      "verdict": "unverifiable",
+      "note": "Event has been inconsistent; listed under people. Confirm or drop before any outreach.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Valley Suns G League team and the Mercury roster/Taurasi status",
+      "verdict": "unverifiable",
+      "note": "Confirm affiliate name, home venue and Mercury 2026 status before building women's/G League product plans.",
+      "source": ""
+    }
+  ],
+  "summary": "The Phoenix dossiers are factually sound on the Suns team facts, schedule dates, arena naming and All-Star details, all of which match the verified CURRENT FACTS. I corrected the Los Suns first-worn year (2011 to May 2010) in uniform and rhythm, Barrio Cafe's location (16th Street, not Grand Avenue), the Heard Hoop Dance Contest date (Feb 6-7, 2027, not an All-Star overlap, confirmed live), the WM Phoenix Open name and timing, a non-court South Mountain Park entry, Lalo Guerrero's origin and the 'Latino-majority' wording. Live checks confirmed First Friday is Artlink-run and monthly, and could not confirm Majerle's downtown status. The brief needs edits: the hoop dance overlap, Roosevelt Row CDC vs Artlink for First Friday, the Latino-majority wording, and a hard dependency on the unverified 2026-27 City Edition, Arizona Latino Arts and Cultural Center, Desert Sky Mall, Nike Factory Store and Majerle's."
+}
