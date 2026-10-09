@@ -6,7 +6,7 @@
   "insights": [
     {
       "title": "Zone numbers are the local ID system",
-      "detail": "Atlanta rap identifies by area code and police-zone shorthand (404, 678, 770, and zones like Zone 6 for the east side and Zone 1 for the west) rather than by neighborhood slogans. Artists like Gucci Mane (Zone 6), Future and Migos built identity on this geography.",
+      "detail": "Atlanta rap identifies by area code and police-zone shorthand (404, 678, 770, and zones like Zone 6 for the east side and Zone 1 for the west) rather than by neighborhood slogans. Gucci Mane is the Zone 6 voice, while Future (Kirkwood) and Migos (Gwinnett, 770) show how neighborhood and suburb identity both travel in the music.",
       "implication": "Area-code and zone graphics are more authentic than a generic 'ATL' wordmark; a limited 404/678/770 capsule maps metro-wide fandom including Gwinnett and the southside."
     },
     {
@@ -36,55 +36,244 @@
     }
   ],
   "places": [
-    {"name": "State Farm Arena", "kind": "arena", "neighborhood": "Downtown (Castleberry Hill edge)", "why": "Hawks home and Atlanta's major concert arena, so it is where team culture and the touring rap circuit overlap."},
-    {"name": "The Tabernacle", "kind": "venue", "neighborhood": "Downtown", "why": "Converted Baptist temple turned mid-size concert hall that hosts major hip-hop and R&B nights."},
-    {"name": "Fox Theatre", "kind": "venue", "neighborhood": "Midtown", "why": "Moorish-revival 1929 landmark and a symbol of Atlanta live entertainment for every genre."},
-    {"name": "The Masquerade", "kind": "venue", "neighborhood": "Old Fourth Ward", "why": "Multi-room independent venue where underground rap, rock and electronic acts have come up."},
-    {"name": "Magic City", "kind": "club", "neighborhood": "Midtown/Southside Atlanta (Forsyth Street area)", "why": "Historically an influential rap-breaking club (Magic City Mondays) whose DJ plays shaped hits; treat with discretion given its adult nature."},
-    {"name": "Criminal Records", "kind": "record store", "neighborhood": "Little Five Points", "why": "Long-standing independent music and comics store at the heart of Atlanta's alternative scene."},
-    {"name": "Wax n Facts", "kind": "record store", "neighborhood": "Little Five Points", "why": "Local vinyl institution known for deep soul, hip-hop and funk crates."},
-    {"name": "Hot 107.9 and V-103", "kind": "radio station", "neighborhood": "Metro Atlanta", "why": "The two stations most associated with breaking Atlanta rap and R&B to the city."},
-    {"name": "Atlanta University Center (Morehouse, Spelman, Clark Atlanta)", "kind": "district", "neighborhood": "West End / Vine City", "why": "Historically Black campuses whose homecoming and step-show culture feeds the city's party and style scene."},
-    {"name": "Variety Playhouse", "kind": "venue", "neighborhood": "Little Five Points", "why": "Mid-size room beloved by local artists for hometown showcases."}
+    {
+      "name": "State Farm Arena",
+      "kind": "arena",
+      "neighborhood": "Downtown (Castleberry Hill edge)",
+      "why": "Hawks home and Atlanta's major concert arena, so it is where team culture and the touring rap circuit overlap."
+    },
+    {
+      "name": "The Tabernacle",
+      "kind": "venue",
+      "neighborhood": "Downtown",
+      "why": "Converted Baptist temple turned mid-size concert hall that hosts major hip-hop and R&B nights."
+    },
+    {
+      "name": "Fox Theatre",
+      "kind": "venue",
+      "neighborhood": "Midtown",
+      "why": "Moorish-revival 1929 landmark and a symbol of Atlanta live entertainment for every genre."
+    },
+    {
+      "name": "The Masquerade",
+      "kind": "venue",
+      "neighborhood": "Old Fourth Ward",
+      "why": "Multi-room independent venue where underground rap, rock and electronic acts have come up."
+    },
+    {
+      "name": "Magic City",
+      "kind": "club",
+      "neighborhood": "Downtown edge (Forsyth Street SW, near Castleberry Hill)",
+      "why": "Historically an influential rap-breaking club (Magic City Mondays) whose DJ plays shaped hits; treat with discretion given its adult nature."
+    },
+    {
+      "name": "Criminal Records",
+      "kind": "record store",
+      "neighborhood": "Little Five Points",
+      "why": "Long-standing independent music and comics store at the heart of Atlanta's alternative scene."
+    },
+    {
+      "name": "Wax n Facts",
+      "kind": "record store",
+      "neighborhood": "Little Five Points",
+      "why": "Local vinyl institution known for deep soul, hip-hop and funk crates."
+    },
+    {
+      "name": "Hot 107.9 and V-103",
+      "kind": "radio station",
+      "neighborhood": "Metro Atlanta",
+      "why": "The two stations most associated with breaking Atlanta rap and R&B to the city."
+    },
+    {
+      "name": "Atlanta University Center (Morehouse, Spelman, Clark Atlanta)",
+      "kind": "district",
+      "neighborhood": "West End / Vine City",
+      "why": "Historically Black campuses whose homecoming and step-show culture feeds the city's party and style scene."
+    },
+    {
+      "name": "Variety Playhouse",
+      "kind": "venue",
+      "neighborhood": "Little Five Points",
+      "why": "Mid-size room beloved by local artists for hometown showcases."
+    }
   ],
   "people": [
-    {"name": "OutKast (Big Boi and Andre 3000)", "role": "rap duo", "why": "Cultural cornerstone of Atlanta; 'The South got something to say' moment of 1995 is the origin myth for Southern rap's national rise."},
-    {"name": "Killer Mike", "role": "rapper, activist, entrepreneur", "why": "Run the Jewels member and Atlanta civic voice who ties music to Black business and ownership."},
-    {"name": "T.I.", "role": "rapper, trap pioneer", "why": "Self-styled King of the South and long-time Atlanta public figure."},
-    {"name": "Gucci Mane", "role": "rapper, label founder (1017)", "why": "Zone 6 originator whose label discovered a generation of Atlanta rappers."},
-    {"name": "Future", "role": "rapper", "why": "Defined the melodic, tormented trap sound for the 2010s and 2020s."},
-    {"name": "Jermaine Dupri", "role": "producer, label founder (So So Def)", "why": "Built the Atlanta R&B and hip-hop machine and is a visible civic presence."},
-    {"name": "Young Thug and YSL collective", "role": "rapper and label collective", "why": "Reshaped flow and fashion in the city, though the YSL case makes association delicate."},
-    {"name": "Lil Baby", "role": "rapper", "why": "Current Atlanta street-rap star with major crossover and visible ties to local sport."}
+    {
+      "name": "OutKast (Big Boi and Andre 3000)",
+      "role": "rap duo",
+      "why": "Cultural cornerstone of Atlanta; 'The South got something to say' moment of 1995 is the origin myth for Southern rap's national rise."
+    },
+    {
+      "name": "Killer Mike",
+      "role": "rapper, activist, entrepreneur",
+      "why": "Run the Jewels member and Atlanta civic voice who ties music to Black business and ownership."
+    },
+    {
+      "name": "T.I.",
+      "role": "rapper, trap pioneer",
+      "why": "Self-styled King of the South and long-time Atlanta public figure."
+    },
+    {
+      "name": "Gucci Mane",
+      "role": "rapper, label founder (1017)",
+      "why": "Zone 6 originator whose label discovered a generation of Atlanta rappers."
+    },
+    {
+      "name": "Future",
+      "role": "rapper",
+      "why": "Defined the melodic, tormented trap sound for the 2010s and 2020s."
+    },
+    {
+      "name": "Jermaine Dupri",
+      "role": "producer, label founder (So So Def)",
+      "why": "Built the Atlanta R&B and hip-hop machine and is a visible civic presence."
+    },
+    {
+      "name": "Young Thug and YSL collective",
+      "role": "rapper and label collective",
+      "why": "Reshaped flow and fashion in the city, though the YSL case makes association delicate."
+    },
+    {
+      "name": "Lil Baby",
+      "role": "rapper",
+      "why": "Current Atlanta street-rap star with major crossover and visible ties to local sport."
+    }
   ],
   "moments": [
-    {"name": "Atlanta Jazz Festival", "timing": "Memorial Day weekend, Piedmont Park", "month": 5, "why": "Free, long-running city festival that anchors the Black music tradition beyond rap."},
-    {"name": "MLK Day Hawks home game", "timing": "Third Monday of January", "month": 1, "why": "Traditional Hawks home game with civic framing; 2027 edition is Jan 18 vs the 76ers."},
-    {"name": "Morehouse/Spelman and AUC homecomings", "timing": "Fall", "month": 10, "why": "Massive Black-college homecoming week with parties, DJs and fashion."},
-    {"name": "Atlanta Black Pride weekend", "timing": "Labor Day weekend", "month": 9, "why": "Large LGBTQ+ Black celebration with a heavy club and DJ presence."},
-    {"name": "Juneteenth and summer block-party season", "timing": "June through August", "month": 6, "why": "Neighborhood and citywide cultural programming that features local artists."},
-    {"name": "Hawks home-game DJ and halftime culture", "timing": "Every home game", "month": 0, "why": "Local DJs, artist courtside appearances and Atlanta-only playlists define the game-night feel."},
-    {"name": "Fall festival season", "timing": "Sept to Oct", "month": 10, "why": "Historically Atlanta has hosted large hip-hop and R&B festivals in the fall (such as Music Midtown, A3C and One Musicfest), but their current status must be checked."}
+    {
+      "name": "Atlanta Jazz Festival",
+      "timing": "Memorial Day weekend, Piedmont Park",
+      "month": 5,
+      "why": "Free, long-running city festival that anchors the Black music tradition beyond rap."
+    },
+    {
+      "name": "MLK Day Hawks home game",
+      "timing": "Third Monday of January",
+      "month": 1,
+      "why": "Traditional Hawks home game with civic framing; 2027 edition is Jan 18 vs the 76ers."
+    },
+    {
+      "name": "Morehouse/Spelman and AUC homecomings",
+      "timing": "Fall",
+      "month": 10,
+      "why": "Massive Black-college homecoming week with parties, DJs and fashion."
+    },
+    {
+      "name": "Atlanta Black Pride weekend",
+      "timing": "Labor Day weekend",
+      "month": 9,
+      "why": "Large LGBTQ+ Black celebration with a heavy club and DJ presence."
+    },
+    {
+      "name": "Juneteenth and summer block-party season",
+      "timing": "June through August",
+      "month": 6,
+      "why": "Neighborhood and citywide cultural programming that features local artists."
+    },
+    {
+      "name": "Hawks home-game DJ and halftime culture",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "Local DJs, artist courtside appearances and Atlanta-only playlists define the game-night feel."
+    },
+    {
+      "name": "Fall festival season",
+      "timing": "Sept to Oct",
+      "month": 10,
+      "why": "Historically Atlanta has hosted large hip-hop and R&B festivals in the fall (such as Music Midtown, A3C and One Musicfest), but their current status must be checked."
+    }
   ],
   "vocabulary": [
-    {"term": "ATL / A-Town / Hotlanta", "meaning": "Common nicknames; 'ATL' is the default and widest-used."},
-    {"term": "The A", "meaning": "Local shorthand for the city, also used to claim Atlanta pride in lyrics."},
-    {"term": "404 / 678 / 770", "meaning": "Area codes used as identity; 404 for the city core, 678 and 770 for the suburbs."},
-    {"term": "Trap", "meaning": "From trap house; both a place and a sound. Respect its street origins."},
-    {"term": "Crunk", "meaning": "Early-2000s high-energy party rap associated with Lil Jon and the Ying Yang Twins."},
-    {"term": "Dirty South", "meaning": "Umbrella term for Southern hip-hop, embraced after OutKast and Goodie Mob."},
-    {"term": "Freaknik", "meaning": "Historic spring-break gathering for Black college students in Atlanta, now a nostalgia reference with complicated history."},
-    {"term": "Bankhead / Zone 6", "meaning": "Neighborhood and police-zone references used in rap for west and east Atlanta."}
+    {
+      "term": "ATL / A-Town / Hotlanta",
+      "meaning": "Common nicknames; 'ATL' is the default and widest-used."
+    },
+    {
+      "term": "The A",
+      "meaning": "Local shorthand for the city, also used to claim Atlanta pride in lyrics."
+    },
+    {
+      "term": "404 / 678 / 770",
+      "meaning": "Area codes used as identity; 404 for the city core, 678 and 770 for the suburbs."
+    },
+    {
+      "term": "Trap",
+      "meaning": "From trap house; both a place and a sound. Respect its street origins."
+    },
+    {
+      "term": "Crunk",
+      "meaning": "Early-2000s high-energy party rap associated with Lil Jon and the Ying Yang Twins."
+    },
+    {
+      "term": "Dirty South",
+      "meaning": "Umbrella term for Southern hip-hop, embraced after OutKast and Goodie Mob."
+    },
+    {
+      "term": "Freaknik",
+      "meaning": "Historic spring-break gathering for Black college students in Atlanta, now a nostalgia reference with complicated history."
+    },
+    {
+      "term": "Bankhead / Zone 6",
+      "meaning": "Neighborhood and police-zone references used in rap for west and east Atlanta."
+    }
   ],
   "designCues": [
-    {"cue": "Hawks volt green and Atlanta night black", "type": "color", "hex": "#C1D32F", "source": "Hawks identity and Atlanta's neon night-club glow", "use": "Keep as the base and use volt as a highlight rather than a wash."},
-    {"cue": "Dungeon Family cosmic purple", "type": "color", "hex": "#4B2E83", "source": "ATLiens and Aquemini-era sci-fi album art mood (a mood, not copied art)", "use": "Secondary color for an art-forward Statement piece; commission local artists for original work."},
-    {"cue": "Grillz gold", "type": "color", "hex": "#D4AF37", "source": "Atlanta's grillz and jewelry culture", "use": "Metallic foil trims and drawcord tips; avoid caricature."},
-    {"cue": "Area code and zone numerals", "type": "typography", "hex": "", "source": "404, 678, 770 and zone identity in lyrics and merch", "use": "Large numeral graphics on tees, back-yoke or hem tape."},
-    {"cue": "Photocopied club-flyer typography", "type": "graphic", "hex": "", "source": "Atlanta party flyers and mixtape covers of the 2000s", "use": "Bold condensed type, halftone, stacked info blocks; hire local graphic artists."},
-    {"cue": "Peach and Peachtree motif", "type": "motif", "hex": "#F4A583", "source": "City iconography reclaimed by local streetwear", "use": "Small peach accent as a soft R&B counterpoint to hard black-and-volt."},
-    {"cue": "Satin and velour tracksuit", "type": "material", "hex": "", "source": "R&B and So So Def-era Atlanta style", "use": "Warm-up and tunnel pieces for game-night walk-ins."},
-    {"cue": "MLK tribute storytelling", "type": "story", "hex": "", "source": "Hawks MLK City Edition and MLK Day game", "use": "Partner with Atlanta Black artists and the King Center for any tribute graphics; confirm licensing first."}
+    {
+      "cue": "Hawks volt green and Atlanta night black",
+      "type": "color",
+      "hex": "#C1D32F",
+      "source": "Hawks identity and Atlanta's neon night-club glow",
+      "use": "Keep as the base and use volt as a highlight rather than a wash."
+    },
+    {
+      "cue": "Dungeon Family cosmic purple",
+      "type": "color",
+      "hex": "#4B2E83",
+      "source": "ATLiens and Aquemini-era sci-fi album art mood (a mood, not copied art)",
+      "use": "Secondary color for an art-forward Statement piece; commission local artists for original work."
+    },
+    {
+      "cue": "Grillz gold",
+      "type": "color",
+      "hex": "#D4AF37",
+      "source": "Atlanta's grillz and jewelry culture",
+      "use": "Metallic foil trims and drawcord tips; avoid caricature."
+    },
+    {
+      "cue": "Area code and zone numerals",
+      "type": "typography",
+      "hex": "",
+      "source": "404, 678, 770 and zone identity in lyrics and merch",
+      "use": "Large numeral graphics on tees, back-yoke or hem tape."
+    },
+    {
+      "cue": "Photocopied club-flyer typography",
+      "type": "graphic",
+      "hex": "",
+      "source": "Atlanta party flyers and mixtape covers of the 2000s",
+      "use": "Bold condensed type, halftone, stacked info blocks; hire local graphic artists."
+    },
+    {
+      "cue": "Peach and Peachtree motif",
+      "type": "motif",
+      "hex": "#F4A583",
+      "source": "City iconography reclaimed by local streetwear",
+      "use": "Small peach accent as a soft R&B counterpoint to hard black-and-volt."
+    },
+    {
+      "cue": "Satin and velour tracksuit",
+      "type": "material",
+      "hex": "",
+      "source": "R&B and So So Def-era Atlanta style",
+      "use": "Warm-up and tunnel pieces for game-night walk-ins."
+    },
+    {
+      "cue": "MLK tribute storytelling",
+      "type": "story",
+      "hex": "",
+      "source": "Hawks MLK City Edition and MLK Day game",
+      "use": "Partner with Atlanta Black artists and the King Center for any tribute graphics; confirm licensing first."
+    }
   ],
   "productHooks": [
     "404/678/770 area-code capsule tee and hoodie sold through Atlanta retail and Hawks arena shops, with a metro-wide map graphic.",
@@ -101,12 +290,30 @@
     "MLK Jr.'s name, image and quotes are controlled by the King estate; licensing is mandatory for any MLK-themed graphic."
   ],
   "sources": [
-    {"title": "Atlanta Hawks (official)", "url": "https://www.nba.com/hawks"},
-    {"title": "State Farm Arena (official)", "url": "https://www.statefarmarena.com"},
-    {"title": "Music of Atlanta (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Music_of_Atlanta"},
-    {"title": "Trap music (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Trap_music"},
-    {"title": "Dungeon Family (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Dungeon_Family"},
-    {"title": "Atlanta Jazz Festival (City of Atlanta)", "url": "https://www.atlantaga.gov"}
+    {
+      "title": "Atlanta Hawks (official)",
+      "url": "https://www.nba.com/hawks"
+    },
+    {
+      "title": "State Farm Arena (official)",
+      "url": "https://www.statefarmarena.com"
+    },
+    {
+      "title": "Music of Atlanta (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Music_of_Atlanta"
+    },
+    {
+      "title": "Trap music (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Trap_music"
+    },
+    {
+      "title": "Dungeon Family (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Dungeon_Family"
+    },
+    {
+      "title": "Atlanta Jazz Festival (City of Atlanta)",
+      "url": "https://www.atlantaga.gov"
+    }
   ],
   "confidence": "medium",
   "provenance": {

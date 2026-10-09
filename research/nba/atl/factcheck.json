@@ -1,0 +1,287 @@
+{
+  "team": "atl",
+  "checked": 95,
+  "verdicts": [
+    {
+      "lens": "hoops",
+      "claim": "Atlanta Dream play at State Farm Arena; Gateway Center Arena is only practice/some-game use",
+      "verdict": "corrected",
+      "note": "Reversed. Gateway Center Arena (College Park) is the Dream and Skyhawks primary home; State Farm is occasional. Hoops places fixed.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Trill is Atlanta hip-hop slang (hoops vocabulary)",
+      "verdict": "corrected",
+      "note": "Trill is Houston/UGK-rooted, fails the swap test for Atlanta. Replaced with Zone 6.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Trill is Atlanta hip-hop slang (fanbase vocabulary)",
+      "verdict": "corrected",
+      "note": "Same error; replaced with 404 / 678 / 770.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Trill Hawks / Hawks Nation as fan self-reference",
+      "verdict": "removed",
+      "note": "Trill is not Atlanta slang and Trill Hawks is unsupported; replaced with Dirty South.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Trill Fam is an Atlanta rap collective",
+      "verdict": "corrected",
+      "note": "Trill Fam is Baton Rouge. Entry reduced to Dungeon Family.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Trill / Dirty South as Atlanta phrases",
+      "verdict": "corrected",
+      "note": "Trill removed; Dirty South kept. Also replaced the watchout wording \"ghetto-coded\".",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Pac-Man hawk uniforms were the 1995-2007 era, volt-yellow and red",
+      "verdict": "corrected",
+      "note": "Pac-Man hawk is the 1970s to 1995 red/yellow/white look; 1995 replaced it. Cue, source and hex fixed (#FDB927 approximate).",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Hawks Talon / Pac-Man era fan term",
+      "verdict": "removed",
+      "note": "Hawks Talon is not a term I can support; renamed Pac-Man hawk.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Magic City is in Midtown/Southside, Forsyth Street area",
+      "verdict": "corrected",
+      "note": "Magic City sits on Forsyth Street SW at the downtown/Castleberry Hill edge. Neighborhood fixed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Future and Migos built identity on Zone 6/Zone 1 geography",
+      "verdict": "corrected",
+      "note": "Future is Kirkwood and Migos is Gwinnett (770); only Gucci Mane is the Zone 6 voice. Detail rewritten.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Paschal's is in West End, tied to Civil Rights meeting history",
+      "verdict": "corrected",
+      "note": "Live check: current restaurant is at 180 Northside Dr SW in Castleberry Hill (since 2002); the movement-era site was West Hunter St (now MLK Jr. Dr). Fixed in food.",
+      "source": "https://www.georgiaencyclopedia.org/articles/arts-culture/paschals-restaurant/"
+    },
+    {
+      "lens": "underground",
+      "claim": "Cascade Skating Rink is a Black-owned-feeling institution with adult nights",
+      "verdict": "corrected",
+      "note": "Live check: open, 18+ adult sessions listed through summer 2026 (Cascade Family Skating, MLK Jr. Dr SW); ownership phrasing removed. Under-18 weekend chaperone policy reported March 2026.",
+      "source": "https://exploregeorgia.org/atlanta/food-drink/casual-full-service/cascade-skating"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Swag Shop (Killer Mike) is in Southwest Atlanta",
+      "verdict": "corrected",
+      "note": "Live check: original Roosevelt Hwy shop closed; an Edgewood Ave shop and a State Farm Arena location are reported, none confirmed for 2026. Door neighborhood changed to reported locations; strategy should not call it a Southwest door.",
+      "source": "https://blackenterprise.com/kille-mike-interview-swag-barbershop-airport-atlanta/"
+    },
+    {
+      "lens": "culture",
+      "claim": "Killer Mike owns Greedy Smith's",
+      "verdict": "removed",
+      "note": "Could not support the restaurant claim; role trimmed to SWAG Shop founder.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Volt green hex #C4D600",
+      "verdict": "corrected",
+      "note": "Aligned to #C1D32F used by every other dossier.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Atlantic Station is near the arena corridor",
+      "verdict": "corrected",
+      "note": "It is northwest Midtown, a few miles from the arena. Reworded.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "A deep 2025-26 run raises playoff-tee demand",
+      "verdict": "corrected",
+      "note": "Hawks lost in the first round 4-2 to the Knicks; reworded per CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "MLK heritage palette (warm gold, black, cream) comes from the 2020-21 City Edition",
+      "verdict": "corrected",
+      "note": "Actual colors of that edition are unverified; relabeled as a proposed palette.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "January local calendar includes college football title games",
+      "verdict": "corrected",
+      "note": "No national title game in Atlanta in Jan 2027; reworded to bowl season winding down.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Walk-In Closet-style boutiques and Sneaker Politics-era culture as Atlanta label scene",
+      "verdict": "removed",
+      "note": "Vague and unverifiable; replaced with generic Black-owned local labels. Hawks as only NBA team with volt softened.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Hawks of the ATL work has drawn on local artists in the past",
+      "verdict": "removed",
+      "note": "No basis found; replaced with the reported MLK edition note.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Wish Atlanta is an active sneaker boutique",
+      "verdict": "unverifiable",
+      "note": "Location blank and status unknown; downgraded in dossier. Strategy leans on it as a partner and launch door.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Trap Music Museum location (Westside)",
+      "verdict": "unverifiable",
+      "note": "Location uncertain; confirm open and address.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "City Edition 2020-21 honored MLK and is returning in 2026-27",
+      "verdict": "unverifiable",
+      "note": "CURRENT FACTS call it a single report with no design detail; keep every product and palette claim conditional.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Era palettes: 1995-2007 navy/red/silver, 2007-2015 red/navy/silver",
+      "verdict": "unverifiable",
+      "note": "Era boundaries and colors from memory; check Hawks uniform history.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Fall festivals Music Midtown, A3C, One Musicfest still run",
+      "verdict": "unverifiable",
+      "note": "Music Midtown was cancelled in recent years; confirm each exists in fall 2026.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Peach Drop at Underground Atlanta on New Year's Eve continues",
+      "verdict": "unverifiable",
+      "note": "Venue and sponsorship have changed; confirm 2026 programming.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Taste of Atlanta falls near the season opener",
+      "verdict": "unverifiable",
+      "note": "Date and venue for 2026 unknown.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Atlanta Celebrates Photography, Goat Farm Arts Center, Hammonds House still operating",
+      "verdict": "unverifiable",
+      "note": "All fragile institutions; confirm before any partnership.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Greenbriar Mall, Peachtree Hoops still active",
+      "verdict": "unverifiable",
+      "note": "Greenbriar has been under redevelopment pressure and the blog may have shrunk; confirm.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Factory Store at North Georgia Premium Outlets and Foot Locker at Lenox are open",
+      "verdict": "unverifiable",
+      "note": "Chain doors turn over; confirm. Dawsonville is about 60 miles out, not a metro door.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Tony Ressler is still principal owner; State Farm Arena naming unchanged",
+      "verdict": "unverifiable",
+      "note": "CURRENT FACTS leave ownership/arena blank; confirm before quoting.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Dream roster still includes Allisha Gray and Rhyne Howard",
+      "verdict": "unverifiable",
+      "note": "WNBA moves happen yearly; confirm.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Trae Young left the Hawks (2018 to 2026)",
+      "verdict": "unverifiable",
+      "note": "Consistent with McCollum re-signing and my recollection of a January 2026 trade to Washington, but not in CURRENT FACTS; confirm before naming the destination.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cup Friday home nights: arena exclusives on each Cup Friday home night; first home night launch",
+      "verdict": "unverifiable",
+      "note": "Opener is at Boston; with four group games only two are home and dates are unknown. Editor should reword and drop any claim of a Hawks home Cup Friday until the schedule is checked.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Wish Atlanta and Swag Shop as launch/raffle doors and partners; Swag Shop in Westside/Southwest",
+      "verdict": "unverifiable",
+      "note": "Wish status unknown; Swag Shop locations reported as Edgewood Ave and arena, not confirmed open. Treat as leads.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cascade Skating Rink as launch partner",
+      "verdict": "confirmed",
+      "note": "Open with adult sessions in 2026 listings, but ownership and willingness to partner unknown; do not state launch is arranged.",
+      "source": "https://exploregeorgia.org/atlanta/food-drink/casual-full-service/cascade-skating"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Paschal's hosts MLK-week meal as a Civil Rights meeting place",
+      "verdict": "corrected",
+      "note": "Fine as a partner, but current restaurant is the Castleberry Hill location; describe the legacy as originating at the West Hunter St site.",
+      "source": "https://www.georgiaencyclopedia.org/articles/arts-culture/paschals-restaurant/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "MLK edition palette black, warm gold and cream; Heritage Gold #FDB927",
+      "verdict": "unverifiable",
+      "note": "2020-21 edition colors are unverified, and uniform dossier uses #F9A01B for the same heritage gold; reconcile and label as proposed.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Specter uniforms, MLK Day 2:30 ET vs 76ers on NBC/Peacock, No. 6 seed 46-36 loss to Knicks, Cup East Group C opener at Boston",
+      "verdict": "confirmed",
+      "note": "Matches CURRENT FACTS.",
+      "source": ""
+    }
+  ],
+  "summary": "Eleven dossiers were audited against CURRENT FACTS, which the team, schedule and roster claims matched. The real errors were Atlanta slang and facts borrowed from elsewhere (Trill and Trill Fam are Houston and Baton Rouge, not Atlanta), a mis-dated Pac-Man hawk era, a reversed Dream/Gateway arrangement, Magic City and Paschal's locations, and unsupported colors attributed to the 2020-21 MLK edition. Three live checks confirmed Cascade is operating, moved Paschal's to Castleberry Hill, and left Swag Shop locations unconfirmed. The strategy brief overstates Hawks home Cup Fridays and leans on Wish Atlanta and Swag Shop; those are logged for the editor."
+}

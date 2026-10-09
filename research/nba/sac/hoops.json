@@ -45,7 +45,7 @@
     {
       "name": "Sacramento High School",
       "kind": "high school",
-      "neighborhood": "Land Park / Curtis Park",
+      "neighborhood": "Oak Park / Curtis Park edge",
       "why": "Kevin Johnson's alma mater and home of the St. HOPE Public Schools network that he championed."
     },
     {
@@ -79,7 +79,7 @@
       "why": "Sacramento State Hornets basketball home, a local college option for community events."
     },
     {
-      "name": "UC Davis Pavilion",
+      "name": "University Credit Union Center (UC Davis)",
       "kind": "college gym",
       "neighborhood": "Davis",
       "why": "Home of the UC Davis Aggies, a regional Big West program."
@@ -94,7 +94,7 @@
     {
       "name": "Yolanda Griffith",
       "role": "Former Sacramento Monarchs star",
-      "why": "Anchor of the 2005 WNBA champion Monarchs and a Hall of Famer tied to the city's women's hoops memory."
+      "why": "Anchor and Finals MVP of the 2005 WNBA champion Monarchs, tied to the city's women's hoops memory."
     },
     {
       "name": "Ticha Penicheiro",
@@ -119,10 +119,10 @@
   ],
   "moments": [
     {
-      "name": "NBA preseason: Kings at Lakers",
+      "name": "NBA preseason: Kings at Lakers (played)",
       "timing": "Oct 8, 2026",
       "month": 10,
-      "why": "National preseason game that gives an early read on the rebuild and the Specter uniforms."
+      "why": "National preseason game on Oct 8 that gave an early read on the rebuild; already played as of Oct 9, so use it as content reference, not a planning date."
     },
     {
       "name": "Season opener / tipoff",
@@ -162,7 +162,7 @@
     },
     {
       "term": "Beam Team",
-      "meaning": "Name for the Kings' vibrant, community-driven fan culture around the purple beam of light after wins."
+      "meaning": "Nickname for the 2022-23 Kings team that ended the 16-year playoff drought, tied to the Light the Beam ritual."
     },
     {
       "term": "Light the Beam",
@@ -268,7 +268,8 @@
       "St. HOPE Public Schools and Kevin Johnson's current involvement.",
       "Active Sacramento pro-am, summer and streetball leagues and their dates.",
       "Kings home opener date and Kings' West Group C Cup schedule.",
-      "Sacramento State and UC Davis current arena names."
+      "Sacramento State and UC Davis current arena names (UC Davis is the University Credit Union Center)",
+      "Kevin Johnson's current public standing and any brand risk before naming him in a partnership"
     ]
   }
 }

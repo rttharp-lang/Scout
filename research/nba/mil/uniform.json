@@ -36,7 +36,7 @@
     }
   ],
   "places": [
-    { "name": "Fiserv Forum and the Deer District", "kind": "arena and plaza", "neighborhood": "Downtown / Westown", "why": "The shared fan space where watch parties, the Deer statue and jersey culture all happen outside the building." },
+    { "name": "Fiserv Forum and the Deer District", "kind": "arena and plaza", "neighborhood": "Downtown / Westown", "why": "The shared fan space where watch parties and jersey culture all happen outside the building." },
     { "name": "Milwaukee Art Museum (Quadracci Pavilion)", "kind": "landmark", "neighborhood": "Lakefront", "why": "The Calatrava wings are the city's signature silhouette and a recurring graphic on civic and team product." },
     { "name": "Third Ward warehouses", "kind": "district", "neighborhood": "Historic Third Ward", "why": "Cream City brick, loading-dock lettering and industrial signage are the visual root of the cream color." },
     { "name": "Bronzeville", "kind": "district", "neighborhood": "Bronzeville / Halyard Park", "why": "Historic Black cultural and business corridor along King Drive, central to Black Milwaukee's identity and hoops culture." },
@@ -58,7 +58,7 @@
     { "name": "Emirates NBA Cup group play", "timing": "Fridays, Oct 30 to Nov 27", "month": 11, "why": "Bucks are in East Group A, so Cup-themed court and uniform moments hit Milwaukee in November." },
     { "name": "Giannis' first return to Fiserv Forum", "timing": "Jan 28, 2027", "month": 1, "why": "The highest-emotion night of the season and a flashpoint for jersey culture, tributes and boos." },
     { "name": "Summerfest", "timing": "Late June to mid July", "month": 6, "why": "The summer civic festival, and a natural lane for an off-season Milwaukee-brand drop." },
-    { "name": "Wisconsin State Fair", "timing": "Early August", "month": 8, "why": "A statewide gathering where cream-puff and fairground graphics run deep in local memory." },
+    { "name": "Wisconsin State Fair", "timing": "Late July to mid August", "month": 8, "why": "A statewide gathering where cream-puff and fairground graphics run deep in local memory." },
     { "name": "Anniversary of the 2021 championship", "timing": "July", "month": 7, "why": "The July 2021 title parade is the modern high point and a retail evergreen." }
   ],
   "vocabulary": [
@@ -77,7 +77,7 @@
     { "cue": "Brick coursing pattern", "type": "pattern", "hex": "", "source": "Third Ward and Bay View Cream City brick", "use": "Subtle tonal brick lines on jersey side panels or hoodie lining." },
     { "cue": "Calatrava-wing silhouette line", "type": "graphic", "hex": "", "source": "Milwaukee Art Museum Quadracci Pavilion", "use": "A single-line illustration on warm-ups or tees, with a license check if used as a direct reproduction." },
     { "cue": "Script Bucks lettering from the 1970s-80s", "type": "typography", "hex": "", "source": "The green, red and white eras of Johnson and Moncrief", "use": "Revive in heritage and Classic Edition product with the original red kept as a small accent." },
-    { "cue": "MECCA parquet floor pattern", "type": "pattern", "hex": "", "source": "The old MECCA/Bradley-era court's distinctive design", "use": "Use as an all-over print or jersey trim, confirming the exact original pattern before use." }
+    { "cue": "MECCA parquet floor pattern", "type": "pattern", "hex": "", "source": "The old MECCA court's distinctive design", "use": "Use as an all-over print or jersey trim, confirming the exact original pattern before use." }
   ],
   "productHooks": [
     "Cream City brick-textured hoodie in Cream City Cream with a tone-on-tone Milwaukee skyline drawn in line art.",
@@ -112,12 +112,15 @@
       { "era": "2015-present", "look": "Good Land Green, Cream City Cream and Great Lakes Blue with a refined buck", "legacy": "Praised as a place-rooted rebrand and the uniform of the 2021 title." }
     ],
     "cityEditions": [
-      { "season": "2019-20", "concept": "Inspired by the MECCA floor pattern from the franchise's older home court", "reception": "liked", "note": "Added from memory, low confidence; concept and year need a live check." },
-      { "season": "2018-19", "concept": "A cream-based Milwaukee look leaning on Cream City heritage", "reception": "unknown", "note": "Added from memory, low confidence; verify against the Bucks' official uniform history." }
+      { "season": "2018-19", "concept": "Inspired by the pop-art MECCA floor pattern from the old Milwaukee Arena court, in yellows and red", "reception": "unknown", "note": "Checked against Radio Milwaukee and NBA.com coverage; reception not verified." },
+      { "season": "2019-20", "concept": "Cream City: honors the pale brick the city was built on", "reception": "unknown", "note": "Checked against press coverage; reception not verified." },
+      { "season": "2021-22", "concept": "Franchise-history look with 1970s-80s green and white striping, Great Lakes Blue and purple nods, a 1971 logo on the waistband", "reception": "unknown", "note": "Checked against Milwaukee Record and Fox 6 coverage; 2020-21, 2022-23 and 2023-24 entries not found." },
+      { "season": "2024-25", "concept": "Wisconsin statewide theme with a line tracing the state's northern border, paired with a City Edition alternate court", "reception": "unknown", "note": "Checked against Milwaukee Record and Fox 6 coverage." },
+      { "season": "2025-26", "concept": "Cream City look returned in the league-wide remix year", "reception": "unknown", "note": "Checked against ESPN round-up; confirm details." }
     ],
     "fanFavorites": [
       "Green, red and white script throwbacks from the Marques Johnson and Moncrief era",
-      "The 1971 championship green-and-cream look",
+      "The 1971 championship green look",
       "The 2021 title Association and Icon jerseys",
       "Cream Statement-style jerseys that lean on the Cream City name"
     ],
@@ -134,9 +137,9 @@
     "verify": [
       "The 2026-27 Bucks uniform set, including the Association, Icon and Statement looks, and any Specter or Classic Edition selection",
       "The 2026-27 Bucks City Edition concept, reveal date and fan reception",
-      "Every City Edition entry in extra.cityEditions (years, concepts and reception are from memory)",
+      "Reception of past City Editions (concepts and years were checked against press coverage; reception was not)",
       "Official palette names and hex codes against the Bucks' brand guidelines",
-      "Whether the MECCA-floor-inspired design is the right reference for the 2019-20 City Edition",
+      "Whether the 2026-27 City Edition repeats the Cream City or MECCA ideas",
       "Current availability of Milwaukee Brand and other local merch makers named or implied",
       "Date and details of the 2021 championship parade and anniversary events",
       "Fiserv Forum current name and Deer District current layout",

@@ -177,8 +177,8 @@
       "meaning": "The tangled I-85 and I-285 interchange, a traffic and city-identity joke."
     },
     {
-      "term": "Hawks Talon / Pac-Man era",
-      "meaning": "Fan shorthand for the retro yellow and red 1970s-80s Hawks look."
+      "term": "Pac-Man hawk",
+      "meaning": "Fan shorthand for the retro red, yellow and white 1970s-90s Hawks look."
     }
   ],
   "designCues": [
@@ -238,41 +238,305 @@
     "The 'Hotlanta' nickname reads as outsider shorthand to many locals."
   ],
   "sources": [
-    { "title": "Atlanta Hawks (official site)", "url": "https://www.nba.com/hawks" },
-    { "title": "State Farm Arena", "url": "https://www.statefarmarena.com" },
-    { "title": "Atlanta Hawks (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Atlanta_Hawks" },
-    { "title": "The King Center", "url": "https://thekingcenter.org" },
-    { "title": "Atlanta Jazz Festival (City of Atlanta)", "url": "https://www.atlantaga.gov" }
+    {
+      "title": "Atlanta Hawks (official site)",
+      "url": "https://www.nba.com/hawks"
+    },
+    {
+      "title": "State Farm Arena",
+      "url": "https://www.statefarmarena.com"
+    },
+    {
+      "title": "Atlanta Hawks (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Atlanta_Hawks"
+    },
+    {
+      "title": "The King Center",
+      "url": "https://thekingcenter.org"
+    },
+    {
+      "title": "Atlanta Jazz Festival (City of Atlanta)",
+      "url": "https://www.atlantaga.gov"
+    }
   ],
   "confidence": "medium",
   "extra": {
     "months": [
-      { "month": 1, "intensity": 88, "phase": "MLK Day and mid-season", "team": ["MLK Day 76ers at Hawks Jan 18", "Standings and playoff-race talk"], "local": ["MLK Day weekend events on Auburn Avenue", "College football title games", "Cold weather"], "fanBehavior": "Big home-crowd spike for the MLK game; casual fans re-engage after football.", "retailSignal": "MLK-themed apparel and fresh-year jersey buying peak around the holiday." },
-      { "month": 2, "intensity": 72, "phase": "Trade deadline and All-Star", "team": ["Trade deadline Feb 11", "All-Star Weekend Feb 19-21 in Phoenix"], "local": ["Black History Month events", "Cold, short days"], "fanBehavior": "Trade chatter and All-Star voting for Jalen Johnson; moderate game attendance.", "retailSignal": "Valentine's gifts, All-Star player gear and Black History Month capsules." },
-      { "month": 3, "intensity": 78, "phase": "Playoff push", "team": ["Late-season seeding fight", "Spring road trips"], "local": ["March Madness (Georgia and Georgia Tech)", "Spring weather", "Braves spring training ends"], "fanBehavior": "Interest builds as seeding clarifies, competing with college hoops.", "retailSignal": "Spring-weight apparel and early playoff-bound gear." },
-      { "month": 4, "intensity": 100, "phase": "Regular-season finish, Play-In, playoffs", "team": ["Regular season ends Apr 11", "Play-In Apr 13-16", "First-round playoffs"], "local": ["Braves season underway", "Dogwood and warm weather", "Masters week in Georgia"], "fanBehavior": "Peak intensity with watch parties, packed downtown and strong social buzz.", "retailSignal": "Playoff tees, rally towels and jersey surges; the year's biggest buying window." },
-      { "month": 5, "intensity": 80, "phase": "Playoffs", "team": ["Second round or offseason depending on result"], "local": ["Atlanta Jazz Festival", "Memorial Day weekend", "School year ends"], "fanBehavior": "High if the Hawks advance, sharply lower if they are out.", "retailSignal": "Playoff gear while alive; otherwise summer lifestyle pieces." },
-      { "month": 6, "intensity": 55, "phase": "Draft and Finals", "team": ["NBA Finals", "NBA Draft late June"], "local": ["Juneteenth celebrations", "Summer heat and school out"], "fanBehavior": "Draft-night interest and offseason speculation.", "retailSignal": "Draft-pick jerseys and Juneteenth cultural drops." },
-      { "month": 7, "intensity": 48, "phase": "Free agency and Summer League", "team": ["Free agency opens", "Summer League"], "local": ["Peachtree Road Race July 4", "Peak heat and vacation season"], "fanBehavior": "Low engagement outside trade and signing news.", "retailSignal": "Summer sales, signing-day tees and Fourth of July lifestyle apparel." },
-      { "month": 8, "intensity": 42, "phase": "Offseason", "team": ["Schedule release", "Training-camp prep"], "local": ["Back to school", "Falcons and college football preseason", "Bronner Bros hair show"], "fanBehavior": "Lowest team attention; football takes over.", "retailSignal": "Back-to-school and schedule-release hype; little jersey demand." },
-      { "month": 9, "intensity": 45, "phase": "Offseason and media day", "team": ["Media day late September", "Specter uniform reveal Sep 9"], "local": ["Dragon Con and Black Pride Labor Day weekend", "Football season"], "fanBehavior": "Interest creeps up with uniform reveals and media day.", "retailSignal": "Specter uniform collection and early new-season fan gear." },
-      { "month": 10, "intensity": 58, "phase": "Preseason and opener", "team": ["Preseason games", "Regular season opens Oct 20 without the Hawks in the tripleheader", "NBA Cup begins Oct 30"], "local": ["AUC homecomings", "Atlanta Pride", "Braves and football"], "fanBehavior": "Cautious optimism; the Cup opener at Boston gives the first big night.", "retailSignal": "New-season jerseys and homecoming-linked apparel." },
-      { "month": 11, "intensity": 66, "phase": "NBA Cup group play", "team": ["Cup Fridays through Nov 27", "Cup Nights Nov 24-25"], "local": ["Thanksgiving", "Football season peak", "Cooler weather"], "fanBehavior": "Friday-night energy; Cup stakes bring casual fans in.", "retailSignal": "Cold-weather jackets and Black Friday gift buying." },
-      { "month": 12, "intensity": 62, "phase": "Cup knockouts and holidays", "team": ["Cup knockouts Dec 4-11 if qualified", "No Christmas Day game"], "local": ["SEC Championship Game", "Peach Bowl and holidays", "Holiday tourism"], "fanBehavior": "Gift-driven; the team shares the stage with football and bowl season.", "retailSignal": "Holiday gift-giving peak for jerseys, hoodies and the MLK capsule preorder." }
+      {
+        "month": 1,
+        "intensity": 88,
+        "phase": "MLK Day and mid-season",
+        "team": [
+          "MLK Day 76ers at Hawks Jan 18",
+          "Standings and playoff-race talk"
+        ],
+        "local": [
+          "MLK Day weekend events on Auburn Avenue",
+          "College football bowl season winding down",
+          "Cold weather"
+        ],
+        "fanBehavior": "Big home-crowd spike for the MLK game; casual fans re-engage after football.",
+        "retailSignal": "MLK-themed apparel and fresh-year jersey buying peak around the holiday."
+      },
+      {
+        "month": 2,
+        "intensity": 72,
+        "phase": "Trade deadline and All-Star",
+        "team": [
+          "Trade deadline Feb 11",
+          "All-Star Weekend Feb 19-21 in Phoenix"
+        ],
+        "local": [
+          "Black History Month events",
+          "Cold, short days"
+        ],
+        "fanBehavior": "Trade chatter and All-Star voting for Jalen Johnson; moderate game attendance.",
+        "retailSignal": "Valentine's gifts, All-Star player gear and Black History Month capsules."
+      },
+      {
+        "month": 3,
+        "intensity": 78,
+        "phase": "Playoff push",
+        "team": [
+          "Late-season seeding fight",
+          "Late-season road trips"
+        ],
+        "local": [
+          "March Madness (Georgia and Georgia Tech)",
+          "Spring weather",
+          "Braves spring training ends"
+        ],
+        "fanBehavior": "Interest builds as seeding clarifies, competing with college hoops.",
+        "retailSignal": "Spring-weight apparel and early playoff-bound gear."
+      },
+      {
+        "month": 4,
+        "intensity": 100,
+        "phase": "Regular-season finish, Play-In, playoffs",
+        "team": [
+          "Regular season ends Apr 11",
+          "Play-In Apr 13-16",
+          "First-round playoffs"
+        ],
+        "local": [
+          "Braves season underway",
+          "Dogwood and warm weather",
+          "Masters week in Georgia"
+        ],
+        "fanBehavior": "Peak intensity with watch parties, packed downtown and strong social buzz.",
+        "retailSignal": "Playoff tees, rally towels and jersey surges; the year's biggest buying window."
+      },
+      {
+        "month": 5,
+        "intensity": 80,
+        "phase": "Playoffs",
+        "team": [
+          "Second round or offseason depending on result"
+        ],
+        "local": [
+          "Atlanta Jazz Festival",
+          "Memorial Day weekend",
+          "School year ends"
+        ],
+        "fanBehavior": "High if the Hawks advance, sharply lower if they are out.",
+        "retailSignal": "Playoff gear while alive; otherwise summer lifestyle pieces."
+      },
+      {
+        "month": 6,
+        "intensity": 55,
+        "phase": "Draft and Finals",
+        "team": [
+          "NBA Finals",
+          "NBA Draft late June"
+        ],
+        "local": [
+          "Juneteenth celebrations",
+          "Summer heat and school out"
+        ],
+        "fanBehavior": "Draft-night interest and offseason speculation.",
+        "retailSignal": "Draft-pick jerseys and Juneteenth cultural drops."
+      },
+      {
+        "month": 7,
+        "intensity": 48,
+        "phase": "Free agency and Summer League",
+        "team": [
+          "Free agency opens",
+          "Summer League"
+        ],
+        "local": [
+          "Peachtree Road Race July 4",
+          "Peak heat and vacation season"
+        ],
+        "fanBehavior": "Low engagement outside trade and signing news.",
+        "retailSignal": "Summer sales, signing-day tees and Fourth of July lifestyle apparel."
+      },
+      {
+        "month": 8,
+        "intensity": 42,
+        "phase": "Offseason",
+        "team": [
+          "Schedule release",
+          "Training-camp prep"
+        ],
+        "local": [
+          "Back to school",
+          "Falcons and college football preseason",
+          "Bronner Bros hair show"
+        ],
+        "fanBehavior": "Lowest team attention; football takes over.",
+        "retailSignal": "Back-to-school and schedule-release hype; little jersey demand."
+      },
+      {
+        "month": 9,
+        "intensity": 45,
+        "phase": "Offseason and media day",
+        "team": [
+          "Media day late September",
+          "Specter uniform reveal Sep 9"
+        ],
+        "local": [
+          "Dragon Con and Black Pride Labor Day weekend",
+          "Football season"
+        ],
+        "fanBehavior": "Interest creeps up with uniform reveals and media day.",
+        "retailSignal": "Specter uniform collection and early new-season fan gear."
+      },
+      {
+        "month": 10,
+        "intensity": 58,
+        "phase": "Preseason and opener",
+        "team": [
+          "Preseason games",
+          "Regular season opens Oct 20 without the Hawks in the tripleheader",
+          "NBA Cup begins Oct 30"
+        ],
+        "local": [
+          "AUC homecomings",
+          "Atlanta Pride",
+          "Braves and football"
+        ],
+        "fanBehavior": "Cautious optimism; the Cup opener at Boston gives the first big night.",
+        "retailSignal": "New-season jerseys and homecoming-linked apparel."
+      },
+      {
+        "month": 11,
+        "intensity": 66,
+        "phase": "NBA Cup group play",
+        "team": [
+          "Cup Fridays through Nov 27",
+          "Cup Nights Nov 24-25"
+        ],
+        "local": [
+          "Thanksgiving",
+          "Football season peak",
+          "Cooler weather"
+        ],
+        "fanBehavior": "Friday-night energy; Cup stakes bring casual fans in.",
+        "retailSignal": "Cold-weather jackets and Black Friday gift buying."
+      },
+      {
+        "month": 12,
+        "intensity": 62,
+        "phase": "Cup knockouts and holidays",
+        "team": [
+          "Cup knockouts Dec 4-11 if qualified",
+          "No Christmas Day game"
+        ],
+        "local": [
+          "SEC Championship Game",
+          "Peach Bowl and holidays",
+          "Holiday tourism"
+        ],
+        "fanBehavior": "Gift-driven; the team shares the stage with football and bowl season.",
+        "retailSignal": "Holiday gift-giving peak for jerseys, hoodies and the MLK capsule preorder."
+      }
     ],
     "keyDates": [
-      { "name": "Specter uniform reveal", "date": "Sep 9, 2026", "month": 9, "type": "league", "why": "Hawks are one of eight franchises getting the new uniform; collection released with the reveal." },
-      { "name": "NBA season opens", "date": "Oct 20, 2026", "month": 10, "type": "league", "why": "Hawks are not in the opening tripleheader, so Atlanta's start is quieter." },
-      { "name": "Hawks at Celtics, Cup opener", "date": "Oct 30, 2026", "month": 10, "type": "team", "why": "First Cup night and first big Hawks national moment." },
-      { "name": "NBA Cup Nights", "date": "Nov 24-25, 2026", "month": 11, "type": "league", "why": "Thanksgiving-week Cup games, a gifting and travel overlap." },
-      { "name": "NBA Cup quarterfinals and semifinals", "date": "Dec 4-9, 2026", "month": 12, "type": "league", "why": "Home-market knockout games if Atlanta advances; final Dec 11 in Indianapolis." },
-      { "name": "No Christmas Day game", "date": "Dec 25, 2026", "month": 12, "type": "league", "why": "Gift-season jersey sales will rely on stars and local pride, not national exposure." },
-      { "name": "MLK Day: 76ers at Hawks", "date": "Jan 18, 2027, 2:30 ET", "month": 1, "type": "team", "why": "The key cultural activation of the year, with LeBron James visiting on NBC/Peacock." },
-      { "name": "Trade deadline", "date": "Feb 11, 2027", "month": 2, "type": "league", "why": "Roster change risk for jersey inventory." },
-      { "name": "NBA All-Star Weekend", "date": "Feb 19-21, 2027", "month": 2, "type": "league", "why": "Phoenix host; Jalen Johnson attention and player-gear window." },
-      { "name": "Regular season ends", "date": "Apr 11, 2027", "month": 4, "type": "league", "why": "Start of the playoff buying peak." },
-      { "name": "Play-In Tournament", "date": "Apr 13-16, 2027", "month": 4, "type": "league", "why": "Matters only if Atlanta finishes seventh to tenth." },
-      { "name": "Atlanta Jazz Festival", "date": "Memorial Day weekend 2027", "month": 5, "type": "local", "why": "Spring festival culture crossover in Piedmont Park." }
+      {
+        "name": "Specter uniform reveal",
+        "date": "Sep 9, 2026",
+        "month": 9,
+        "type": "league",
+        "why": "Hawks are one of eight franchises getting the new uniform; collection released with the reveal."
+      },
+      {
+        "name": "NBA season opens",
+        "date": "Oct 20, 2026",
+        "month": 10,
+        "type": "league",
+        "why": "Hawks are not in the opening tripleheader, so Atlanta's start is quieter."
+      },
+      {
+        "name": "Hawks at Celtics, Cup opener",
+        "date": "Oct 30, 2026",
+        "month": 10,
+        "type": "team",
+        "why": "First Cup night and first big Hawks national moment."
+      },
+      {
+        "name": "NBA Cup Nights",
+        "date": "Nov 24-25, 2026",
+        "month": 11,
+        "type": "league",
+        "why": "Thanksgiving-week Cup games, a gifting and travel overlap."
+      },
+      {
+        "name": "NBA Cup quarterfinals and semifinals",
+        "date": "Dec 4-9, 2026",
+        "month": 12,
+        "type": "league",
+        "why": "Home-market knockout games if Atlanta advances; final Dec 11 in Indianapolis."
+      },
+      {
+        "name": "No Christmas Day game",
+        "date": "Dec 25, 2026",
+        "month": 12,
+        "type": "league",
+        "why": "Gift-season jersey sales will rely on stars and local pride, not national exposure."
+      },
+      {
+        "name": "MLK Day: 76ers at Hawks",
+        "date": "Jan 18, 2027, 2:30 ET",
+        "month": 1,
+        "type": "team",
+        "why": "The key cultural activation of the year, with LeBron James visiting on NBC/Peacock."
+      },
+      {
+        "name": "Trade deadline",
+        "date": "Feb 11, 2027",
+        "month": 2,
+        "type": "league",
+        "why": "Roster change risk for jersey inventory."
+      },
+      {
+        "name": "NBA All-Star Weekend",
+        "date": "Feb 19-21, 2027",
+        "month": 2,
+        "type": "league",
+        "why": "Phoenix host; Jalen Johnson attention and player-gear window."
+      },
+      {
+        "name": "Regular season ends",
+        "date": "Apr 11, 2027",
+        "month": 4,
+        "type": "league",
+        "why": "Start of the playoff buying peak."
+      },
+      {
+        "name": "Play-In Tournament",
+        "date": "Apr 13-16, 2027",
+        "month": 4,
+        "type": "league",
+        "why": "Matters only if Atlanta finishes seventh to tenth."
+      },
+      {
+        "name": "Atlanta Jazz Festival",
+        "date": "Memorial Day weekend 2027",
+        "month": 5,
+        "type": "local",
+        "why": "Spring festival culture crossover in Piedmont Park."
+      }
     ]
   },
   "provenance": {

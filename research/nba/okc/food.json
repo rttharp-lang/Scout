@@ -16,7 +16,7 @@
     },
     {
       "title": "Classen's Asian District is the corridor insiders mean",
-      "detail": "The Asian District along N. Classen Blvd (roughly NW 23rd to 30th) grew from the Vietnamese community after 1975 and is anchored by Super Cao Nguyen market and a dense run of pho, banh mi and Chinese-Vietnamese spots; it hosts the Lunar New Year Festival and Asian night-market style events. Chef Jeff Chanchaleune's Ma Der Lao Kitchen has made Lao food a nationally recognized OKC story.",
+      "detail": "The Asian District along N. Classen Blvd (roughly NW 23rd to 30th) grew from the Vietnamese community after 1975 and is anchored by Super Cao Nguyen market and a dense run of pho, banh mi and Chinese-Vietnamese spots; it hosts the Lunar New Year Festival and Asian night-market style events. Chef Jeff Chanchaleune's Ma Der Lao Kitchen (opened 2021 in the Plaza District, with sister noodle bar Bar Sen) has made Lao food a nationally recognized OKC story.",
       "implication": "Engage by partnering with and paying Vietnamese and Lao creators and business owners for any graphic work; never lift script or temple imagery decoratively."
     },
     {
@@ -37,11 +37,11 @@
   ],
   "places": [
     {"name": "Cattlemen's Steakhouse", "kind": "restaurant", "neighborhood": "Stockyards City", "why": "The cowboy-and-cattle institution beside the stockyards with the iconic neon sign."},
-    {"name": "Nic's Grill", "kind": "diner", "neighborhood": "Downtown / Film Row", "why": "A tiny, long-running onion-burger counter beloved by locals."},
+    {"name": "Nic's Grill", "kind": "diner", "neighborhood": "Central OKC", "why": "A tiny, long-running onion-burger counter beloved by locals."},
     {"name": "Tucker's Onion Burgers", "kind": "restaurant", "neighborhood": "Metro OKC", "why": "A local chain keeping the onion-burger tradition visible to families."},
     {"name": "Sid's Diner", "kind": "diner", "neighborhood": "El Reno", "why": "The pilgrimage stop for the original fried onion burger, a short drive west on Route 66."},
     {"name": "Pops 66 Soda Ranch", "kind": "restaurant / shop", "neighborhood": "Arcadia", "why": "Route 66 roadside landmark with a giant soda bottle sign and hundreds of sodas."},
-    {"name": "Ma Der Lao Kitchen", "kind": "restaurant", "neighborhood": "Asian District", "why": "Lao cooking by Chef Jeff Chanchaleune, a leading chef-driven OKC story."},
+    {"name": "Ma Der Lao Kitchen", "kind": "restaurant", "neighborhood": "Plaza District", "why": "Lao cooking by Chef Jeff Chanchaleune, a leading chef-driven OKC story."},
     {"name": "Super Cao Nguyen Supermarket", "kind": "market", "neighborhood": "Asian District, N. Classen", "why": "Anchor Asian grocery of the Classen corridor."},
     {"name": "Plaza District", "kind": "district", "neighborhood": "NW 16th & Blackwelder", "why": "Independent restaurants, bars and shops, plus the annual Plaza Festival."},
     {"name": "Bricktown", "kind": "district", "neighborhood": "Downtown", "why": "Canal-side pregame district for Thunder and Paycom Center crowds."},
@@ -54,7 +54,7 @@
     {"name": "Mark Daigneault", "role": "Thunder head coach", "why": "Embodies the team's low-key, process-first identity that suits local food partners."}
   ],
   "moments": [
-    {"name": "Fried Onion Burger Day", "timing": "Early May, El Reno", "month": 5, "why": "The state's signature dish gets a festival with a Guinness-style giant burger tradition."},
+    {"name": "Fried Onion Burger Day", "timing": "Early May, El Reno", "month": 5, "why": "The state's signature dish gets a festival with a giant-burger tradition."},
     {"name": "Paseo Arts Festival", "timing": "Memorial Day weekend", "month": 5, "why": "A long-running arts weekend in the Paseo district with food vendors."},
     {"name": "Plaza Festival", "timing": "Fall, Plaza District", "month": 9, "why": "A neighborhood street festival with local restaurants and makers."},
     {"name": "Oklahoma State Fair", "timing": "Mid to late September", "month": 9, "why": "Fried-everything and Indian taco rituals across the state."},

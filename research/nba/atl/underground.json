@@ -2,7 +2,7 @@
   "team": "atl",
   "lens": "underground",
   "headline": "Atlanta's underground is rolling, not just rapping: roller rinks, HBCU homecomings, Little Five Points thrift and trap-era customization set taste long before it reaches a Hawks jersey.",
-  "summary": "Atlanta's strongest subcultures are Black-led and Southern: roller-skating (Cascade and the adult-night rinks), car culture (candy-paint box Chevys, donks, old Cadillacs), the Atlanta University Center HBCU style ecosystem, and a sneaker and streetwear scene that runs through boutiques like Wish. Little Five Points holds the vintage, punk and zine side, while Dragon Con and Anime Weekend Atlanta make the city a quiet capital of cosplay and anime. Queer nightlife and ballroom thrive around Midtown and the Southern Fried Queer Pride orbit. The Hawks sit at the crossroads of these scenes through the MLK Day tradition and a Black-culture-first identity rather than a skyline one. The opportunity is credibility: pay and credit local crews instead of borrowing the aesthetic.",
+  "summary": "Atlanta's strongest subcultures are Black-led and Southern: roller-skating (Cascade and the adult-night rinks), car culture (candy-paint box Chevys, donks, old Cadillacs), the Atlanta University Center HBCU style ecosystem, and a sneaker and streetwear scene that runs through local boutiques. Little Five Points holds the vintage, punk and zine side, while Dragon Con and Anime Weekend Atlanta make the city a quiet capital of cosplay and anime. Queer nightlife and ballroom thrive around Midtown and the Southern Fried Queer Pride orbit. The Hawks sit at the crossroads of these scenes through the MLK Day tradition and a Black-culture-first identity rather than a skyline one. The opportunity is credibility: pay and credit local crews instead of borrowing the aesthetic.",
   "insights": [
     {
       "title": "Roller rink is the city's real sportswear runway",
@@ -40,7 +40,7 @@
       "name": "Cascade Skating Rink",
       "kind": "roller rink",
       "neighborhood": "Cascade / Southwest Atlanta",
-      "why": "A long-running Black-owned-feeling institution of Atlanta skate culture and adult skate nights."
+      "why": "Long-running Southwest Atlanta rink (Cascade Family Skating) and the home of 18+ adult skate nights; live check shows adult sessions on the 2026 calendar."
     },
     {
       "name": "Historic Fourth Ward Skate Park",
@@ -63,8 +63,8 @@
     {
       "name": "Wish Atlanta",
       "kind": "sneaker boutique",
-      "neighborhood": "Atlanta",
-      "why": "A local sneaker and streetwear boutique with deep roots in the city's sneaker community."
+      "neighborhood": "Atlanta (location unverified)",
+      "why": "Local sneaker and streetwear boutique tied to the city's sneaker community; current operating status is unverified, so treat as a lead, not a partner."
     },
     {
       "name": "Atlanta University Center",
@@ -75,7 +75,7 @@
     {
       "name": "Trap Music Museum",
       "kind": "museum",
-      "neighborhood": "Westside",
+      "neighborhood": "Downtown/Westside edge (location unverified)",
       "why": "A hip-hop museum that frames trap culture and is a stop for visiting fans and creators."
     },
     {
@@ -208,7 +208,7 @@
     {
       "cue": "Volt green accent",
       "type": "color",
-      "hex": "#C4D600",
+      "hex": "#C1D32F",
       "source": "Hawks volt tradition and neon rink fits",
       "use": "Use as a bold accent on roller-rink-style warm-up sets."
     },

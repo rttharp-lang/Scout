@@ -36,50 +36,220 @@
     }
   ],
   "places": [
-    {"name": "Lenox Square", "kind": "mall", "neighborhood": "Buckhead", "why": "The city's best-known mall and the default stop for premium sneakers, flagship brand doors and visiting athletes."},
-    {"name": "Phipps Plaza", "kind": "mall", "neighborhood": "Buckhead", "why": "Upscale counterpart to Lenox that skews luxury and fashion-forward shoppers."},
-    {"name": "Atlantic Station", "kind": "district", "neighborhood": "Midtown", "why": "Walkable outdoor retail near the arena corridor with a younger, intown crowd."},
-    {"name": "Greenbriar Mall", "kind": "mall", "neighborhood": "Southwest Atlanta", "why": "A longtime Black-community shopping and sneaker destination on the southside."},
-    {"name": "Mall of Georgia", "kind": "mall", "neighborhood": "Buford, Gwinnett County", "why": "Large suburban mall that anchors volume for Gwinnett and north-east metro families."},
-    {"name": "Stonecrest Mall", "kind": "mall", "neighborhood": "Lithonia, DeKalb County", "why": "Major east-side volume mall serving DeKalb and Rockdale shoppers."},
-    {"name": "Little Five Points", "kind": "district", "neighborhood": "Inman Park / Candler Park", "why": "Alternative and vintage retail strip with long-running resale and costume-adjacent shops."},
-    {"name": "State Farm Arena", "kind": "venue", "neighborhood": "Downtown", "why": "Hawks home and site of the arena team store."},
-    {"name": "Ponce City Market", "kind": "market", "neighborhood": "Old Fourth Ward", "why": "Design-forward retail and pop-up hub for the intown creative class."},
-    {"name": "West End", "kind": "district", "neighborhood": "Southwest Atlanta", "why": "Historic Black neighborhood with community retail and a hometown-pride streetwear scene."}
+    {
+      "name": "Lenox Square",
+      "kind": "mall",
+      "neighborhood": "Buckhead",
+      "why": "The city's best-known mall and the default stop for premium sneakers, flagship brand doors and visiting athletes."
+    },
+    {
+      "name": "Phipps Plaza",
+      "kind": "mall",
+      "neighborhood": "Buckhead",
+      "why": "Upscale counterpart to Lenox that skews luxury and fashion-forward shoppers."
+    },
+    {
+      "name": "Atlantic Station",
+      "kind": "district",
+      "neighborhood": "Midtown",
+      "why": "Walkable outdoor retail in northwest Midtown, a short drive from the arena, with a younger intown crowd."
+    },
+    {
+      "name": "Greenbriar Mall",
+      "kind": "mall",
+      "neighborhood": "Southwest Atlanta",
+      "why": "A longtime Black-community shopping and sneaker destination on the southside."
+    },
+    {
+      "name": "Mall of Georgia",
+      "kind": "mall",
+      "neighborhood": "Buford, Gwinnett County",
+      "why": "Large suburban mall that anchors volume for Gwinnett and north-east metro families."
+    },
+    {
+      "name": "Stonecrest Mall",
+      "kind": "mall",
+      "neighborhood": "Lithonia, DeKalb County",
+      "why": "Major east-side volume mall serving DeKalb and Rockdale shoppers."
+    },
+    {
+      "name": "Little Five Points",
+      "kind": "district",
+      "neighborhood": "Inman Park / Candler Park",
+      "why": "Alternative and vintage retail strip with long-running resale and costume-adjacent shops."
+    },
+    {
+      "name": "State Farm Arena",
+      "kind": "venue",
+      "neighborhood": "Downtown",
+      "why": "Hawks home and site of the arena team store."
+    },
+    {
+      "name": "Ponce City Market",
+      "kind": "market",
+      "neighborhood": "Old Fourth Ward",
+      "why": "Design-forward retail and pop-up hub for the intown creative class."
+    },
+    {
+      "name": "West End",
+      "kind": "district",
+      "neighborhood": "Southwest Atlanta",
+      "why": "Historic Black neighborhood with community retail and a hometown-pride streetwear scene."
+    }
   ],
   "people": [
-    {"name": "Killer Mike", "role": "Rapper and entrepreneur", "why": "His Swag Shop barbershop-retail concept ties Atlanta hip-hop to Black-owned commerce and community credibility."},
-    {"name": "Big Boi", "role": "Rapper", "why": "Outkast and the Dungeon Family define Atlanta's sound and its style cues for sneaker and streetwear culture."},
-    {"name": "Jalen Johnson", "role": "Hawks forward and All-Star", "why": "The franchise face whose jersey and signature-adjacent product leads the team line."},
-    {"name": "Nickeil Alexander-Walker", "role": "Hawks guard", "why": "2025-26 Most Improved Player and a rising name for apparel storytelling."},
-    {"name": "Dyson Daniels", "role": "Hawks guard", "why": "Defense-first identity piece that fits the new Snyder-built roster."},
-    {"name": "Kingston Flemings", "role": "Hawks rookie guard", "why": "No. 8 pick and a new-jersey-number launch opportunity."},
-    {"name": "Morehouse College, Spelman College and Clark Atlanta University", "role": "HBCU campuses", "why": "AUC culture drives homecoming demand, campus retail and a heritage-conscious shopper."}
+    {
+      "name": "Killer Mike",
+      "role": "Rapper and entrepreneur",
+      "why": "His Swag Shop barbershop-retail concept ties Atlanta hip-hop to Black-owned commerce and community credibility."
+    },
+    {
+      "name": "Big Boi",
+      "role": "Rapper",
+      "why": "Outkast and the Dungeon Family define Atlanta's sound and its style cues for sneaker and streetwear culture."
+    },
+    {
+      "name": "Jalen Johnson",
+      "role": "Hawks forward and All-Star",
+      "why": "The franchise face whose jersey and signature-adjacent product leads the team line."
+    },
+    {
+      "name": "Nickeil Alexander-Walker",
+      "role": "Hawks guard",
+      "why": "2025-26 Most Improved Player and a rising name for apparel storytelling."
+    },
+    {
+      "name": "Dyson Daniels",
+      "role": "Hawks guard",
+      "why": "Defense-first identity piece that fits the new Snyder-built roster."
+    },
+    {
+      "name": "Kingston Flemings",
+      "role": "Hawks rookie guard",
+      "why": "No. 8 pick and a new-jersey-number launch opportunity."
+    },
+    {
+      "name": "Morehouse College, Spelman College and Clark Atlanta University",
+      "role": "HBCU campuses",
+      "why": "AUC culture drives homecoming demand, campus retail and a heritage-conscious shopper."
+    }
   ],
   "moments": [
-    {"name": "Hawks home opener and Emirates NBA Cup group nights", "timing": "Late October through November", "month": 10, "why": "First test of the new Specter and City Edition product in arena retail."},
-    {"name": "Specter uniform collection window", "timing": "Select 2026-27 games", "month": 9, "why": "Atlanta is one of eight historic franchises in the Specter reveal, so collection demand runs from launch through the season."},
-    {"name": "MLK Day home game", "timing": "Monday, January 18, 2027", "month": 1, "why": "Atlanta's signature game, hosting the 76ers, and the natural stage for MLK-honoring product and AUC activations."},
-    {"name": "AUC homecomings", "timing": "Fall", "month": 10, "why": "Campus pop-up and heritage-merch demand peaks."},
-    {"name": "Holiday gifting", "timing": "Black Friday through December", "month": 12, "why": "Peak spend at Lenox, Phipps, Mall of Georgia and online."},
-    {"name": "Playoff push", "timing": "April 2027", "month": 4, "why": "Playoff-run and Play-In product, and the Hawks' 6-seed history, keep apparel demand elevated."},
-    {"name": "Atlanta hip-hop and album-release weeks", "timing": "Year-round", "month": 0, "why": "Local music moments routinely turn into streetwear and sneaker drops."}
+    {
+      "name": "Hawks home opener and Emirates NBA Cup group nights",
+      "timing": "Late October through November",
+      "month": 10,
+      "why": "First test of the new Specter and City Edition product in arena retail."
+    },
+    {
+      "name": "Specter uniform collection window",
+      "timing": "Select 2026-27 games",
+      "month": 9,
+      "why": "Atlanta is one of eight historic franchises in the Specter reveal, so collection demand runs from launch through the season."
+    },
+    {
+      "name": "MLK Day home game",
+      "timing": "Monday, January 18, 2027",
+      "month": 1,
+      "why": "Atlanta's signature game, hosting the 76ers, and the natural stage for MLK-honoring product and AUC activations."
+    },
+    {
+      "name": "AUC homecomings",
+      "timing": "Fall",
+      "month": 10,
+      "why": "Campus pop-up and heritage-merch demand peaks."
+    },
+    {
+      "name": "Holiday gifting",
+      "timing": "Black Friday through December",
+      "month": 12,
+      "why": "Peak spend at Lenox, Phipps, Mall of Georgia and online."
+    },
+    {
+      "name": "Playoff push",
+      "timing": "April 2027",
+      "month": 4,
+      "why": "Playoff-run and Play-In product, and the Hawks' 6-seed history, keep apparel demand elevated."
+    },
+    {
+      "name": "Atlanta hip-hop and album-release weeks",
+      "timing": "Year-round",
+      "month": 0,
+      "why": "Local music moments routinely turn into streetwear and sneaker drops."
+    }
   ],
   "vocabulary": [
-    {"term": "ATL", "meaning": "Atlanta shorthand for the city and its culture, a graphic in its own right."},
-    {"term": "The A", "meaning": "Common local nickname for Atlanta."},
-    {"term": "Dirty South", "meaning": "Regional hip-hop identity and aesthetic that Atlanta helped define."},
-    {"term": "Hotlanta", "meaning": "Older nickname for Atlanta, used by tourists and locals ironically."},
-    {"term": "Trill Fam / Dungeon Family", "meaning": "Collectives that shaped Atlanta rap identity and style."}
+    {
+      "term": "ATL",
+      "meaning": "Atlanta shorthand for the city and its culture, a graphic in its own right."
+    },
+    {
+      "term": "The A",
+      "meaning": "Common local nickname for Atlanta."
+    },
+    {
+      "term": "Dirty South",
+      "meaning": "Regional hip-hop identity and aesthetic that Atlanta helped define."
+    },
+    {
+      "term": "Hotlanta",
+      "meaning": "Older nickname for Atlanta, used by tourists and locals ironically."
+    },
+    {
+      "term": "Dungeon Family",
+      "meaning": "The OutKast and Goodie Mob collective that shaped Atlanta rap identity and style."
+    }
   ],
   "designCues": [
-    {"cue": "Hawks volt-and-red core with deep navy", "type": "color", "hex": "#E03A3E", "source": "Hawks primary palette", "use": "Use as the team anchor across basketball staples."},
-    {"cue": "Volt yellow accent", "type": "color", "hex": "#C1D32F", "source": "Hawks secondary color", "use": "Use as an accent on tees, caps and sneaker details."},
-    {"cue": "Peach and Georgia clay warmth", "type": "color", "hex": "#FFB78A", "source": "Georgia peach and red-clay landscape", "use": "Soft seasonal accent for lifestyle drops, never as the main team color."},
-    {"cue": "Peachtree and skyline linework", "type": "graphic", "hex": "", "source": "Atlanta street names and skyline", "use": "Fine-line graphics for city-pride tees, lightly stylized."},
-    {"cue": "MLK-era civil-rights typography and photography", "type": "story", "hex": "", "source": "Atlanta's civil-rights history and the MLK Day game", "use": "Work with the King Center-linked and local Black creatives and secure licensing for any image or quote."},
-    {"cue": "Barbershop-sign hand lettering", "type": "typography", "hex": "", "source": "Atlanta Black-owned barbershop and shop signage", "use": "Commission local letterers for caps and hoodies."},
-    {"cue": "Heavyweight fleece and varsity wool", "type": "material", "hex": "", "source": "HBCU homecoming and campus style", "use": "Premium heritage jackets and crewnecks for AUC-adjacent drops."}
+    {
+      "cue": "Hawks red as team anchor on black",
+      "type": "color",
+      "hex": "#E03A3E",
+      "source": "Hawks primary palette",
+      "use": "Use as the team anchor across basketball staples."
+    },
+    {
+      "cue": "Volt yellow accent",
+      "type": "color",
+      "hex": "#C1D32F",
+      "source": "Hawks secondary color",
+      "use": "Use as an accent on tees, caps and sneaker details."
+    },
+    {
+      "cue": "Peach and Georgia clay warmth",
+      "type": "color",
+      "hex": "#FFB78A",
+      "source": "Georgia peach and red-clay landscape",
+      "use": "Soft seasonal accent for lifestyle drops, never as the main team color."
+    },
+    {
+      "cue": "Peachtree and skyline linework",
+      "type": "graphic",
+      "hex": "",
+      "source": "Atlanta street names and skyline",
+      "use": "Fine-line graphics for city-pride tees, lightly stylized."
+    },
+    {
+      "cue": "MLK-era civil-rights typography and photography",
+      "type": "story",
+      "hex": "",
+      "source": "Atlanta's civil-rights history and the MLK Day game",
+      "use": "Work with the King Center-linked and local Black creatives and secure licensing for any image or quote."
+    },
+    {
+      "cue": "Barbershop-sign hand lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Atlanta Black-owned barbershop and shop signage",
+      "use": "Commission local letterers for caps and hoodies."
+    },
+    {
+      "cue": "Heavyweight fleece and varsity wool",
+      "type": "material",
+      "hex": "",
+      "source": "HBCU homecoming and campus style",
+      "use": "Premium heritage jackets and crewnecks for AUC-adjacent drops."
+    }
   ],
   "productHooks": [
     "An MLK City Edition capsule sold at the State Farm Arena store, AUC pop-ups and Black-owned boutiques, with a paid local-creative collaboration and licensing handled with the right estate partners.",
@@ -94,30 +264,110 @@
     "Verify every store listed before planning activations since mall retail turns over quickly."
   ],
   "sources": [
-    {"title": "Atlanta Hawks official site", "url": "https://www.nba.com/hawks"},
-    {"title": "State Farm Arena official site", "url": "https://www.statefarmarena.com"},
-    {"title": "Lenox Square official site", "url": "https://www.simon.com/mall/lenox-square"},
-    {"title": "Atlanta (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Atlanta"},
-    {"title": "Little Five Points (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Little_Five_Points"}
+    {
+      "title": "Atlanta Hawks official site",
+      "url": "https://www.nba.com/hawks"
+    },
+    {
+      "title": "State Farm Arena official site",
+      "url": "https://www.statefarmarena.com"
+    },
+    {
+      "title": "Lenox Square official site",
+      "url": "https://www.simon.com/mall/lenox-square"
+    },
+    {
+      "title": "Atlanta (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Atlanta"
+    },
+    {
+      "title": "Little Five Points (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Little_Five_Points"
+    }
   ],
   "confidence": "low",
   "extra": {
     "districts": [
-      {"name": "Buckhead (Lenox Square and Phipps Plaza)", "profile": "Premium mall and luxury cluster.", "shopper": "Higher-income locals, tourists, visiting athletes.", "role": "tourist"},
-      {"name": "Greenbriar Mall and Southwest Atlanta", "profile": "Long-running Black-community mall and surrounding retail.", "shopper": "Southside families, students and sneaker collectors.", "role": "community"},
-      {"name": "Mall of Georgia (Gwinnett)", "profile": "Large suburban mall with mainstream and athletic chains.", "shopper": "Gwinnett families and teens.", "role": "volume"},
-      {"name": "Stonecrest Mall (DeKalb)", "profile": "East-side volume mall.", "shopper": "DeKalb and Rockdale families.", "role": "volume"},
-      {"name": "Little Five Points", "profile": "Vintage, record and alternative retail strip.", "shopper": "Creatives, students, vintage hunters.", "role": "tastemaker"},
-      {"name": "Atlantic Station", "profile": "Outdoor retail and dining district.", "shopper": "Young intown professionals.", "role": "mixed"}
+      {
+        "name": "Buckhead (Lenox Square and Phipps Plaza)",
+        "profile": "Premium mall and luxury cluster.",
+        "shopper": "Higher-income locals, tourists, visiting athletes.",
+        "role": "tourist"
+      },
+      {
+        "name": "Greenbriar Mall and Southwest Atlanta",
+        "profile": "Long-running Black-community mall and surrounding retail.",
+        "shopper": "Southside families, students and sneaker collectors.",
+        "role": "community"
+      },
+      {
+        "name": "Mall of Georgia (Gwinnett)",
+        "profile": "Large suburban mall with mainstream and athletic chains.",
+        "shopper": "Gwinnett families and teens.",
+        "role": "volume"
+      },
+      {
+        "name": "Stonecrest Mall (DeKalb)",
+        "profile": "East-side volume mall.",
+        "shopper": "DeKalb and Rockdale families.",
+        "role": "volume"
+      },
+      {
+        "name": "Little Five Points",
+        "profile": "Vintage, record and alternative retail strip.",
+        "shopper": "Creatives, students, vintage hunters.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Atlantic Station",
+        "profile": "Outdoor retail and dining district.",
+        "shopper": "Young intown professionals.",
+        "role": "mixed"
+      }
     ],
     "doors": [
-      {"name": "Hawks Team Store at State Farm Arena", "type": "team-store", "neighborhood": "Downtown", "why": "First-access door for City Edition and Specter product on game nights."},
-      {"name": "Nike Factory Store at North Georgia Premium Outlets", "type": "nike-owned", "neighborhood": "Dawsonville", "why": "Nike-owned outlet door pulling northern metro and travel volume."},
-      {"name": "Foot Locker at Lenox Square", "type": "athletic-chain", "neighborhood": "Buckhead", "why": "Core Nike and Jordan basketball door in the metro's top mall."},
-      {"name": "Dick's Sporting Goods", "type": "big-box", "neighborhood": "Metro locations", "why": "Family and youth-sports volume across the suburbs."},
-      {"name": "Fanatics / Lids", "type": "athletic-chain", "neighborhood": "Mall locations", "why": "Everyday team-gear door for Hawks caps and tees."},
-      {"name": "Garment District", "type": "vintage", "neighborhood": "Little Five Points", "why": "Long-running vintage store with real local credibility for retro sports apparel."},
-      {"name": "Swag Shop (Killer Mike)", "type": "other", "neighborhood": "Southwest Atlanta", "why": "Barbershop-retail hybrid that carries cultural weight in Black Atlanta."}
+      {
+        "name": "Hawks Team Store at State Farm Arena",
+        "type": "team-store",
+        "neighborhood": "Downtown",
+        "why": "First-access door for City Edition and Specter product on game nights."
+      },
+      {
+        "name": "Nike Factory Store at North Georgia Premium Outlets",
+        "type": "nike-owned",
+        "neighborhood": "Dawsonville",
+        "why": "Nike-owned outlet door pulling northern metro and travel volume."
+      },
+      {
+        "name": "Foot Locker at Lenox Square",
+        "type": "athletic-chain",
+        "neighborhood": "Buckhead",
+        "why": "Core Nike and Jordan basketball door in the metro's top mall."
+      },
+      {
+        "name": "Dick's Sporting Goods",
+        "type": "big-box",
+        "neighborhood": "Metro locations",
+        "why": "Family and youth-sports volume across the suburbs."
+      },
+      {
+        "name": "Fanatics / Lids",
+        "type": "athletic-chain",
+        "neighborhood": "Mall locations",
+        "why": "Everyday team-gear door for Hawks caps and tees."
+      },
+      {
+        "name": "Garment District",
+        "type": "vintage",
+        "neighborhood": "Little Five Points",
+        "why": "Long-running vintage store with real local credibility for retro sports apparel."
+      },
+      {
+        "name": "Swag Shop (Killer Mike)",
+        "type": "other",
+        "neighborhood": "Edgewood Avenue / State Farm Arena (reported, verify)",
+        "why": "Barbershop-retail hybrid that carries cultural weight in Black Atlanta."
+      }
     ]
   },
   "provenance": {

@@ -1,0 +1,287 @@
+{
+  "team": "orl",
+  "checked": 60,
+  "verdicts": [
+    {
+      "lens": "food",
+      "claim": "Domu ramen is a Mills 50 restaurant",
+      "verdict": "corrected",
+      "note": "Live check: Domu is at East End Market (Audubon Park Garden District) and a Dr. Phillips location, not Mills 50. Place and insight text fixed.",
+      "source": "https://guide.michelin.com/us/en/florida/orlando"
+    },
+    {
+      "lens": "food",
+      "claim": "The Ravenous Pig (Winter Park) is still operating",
+      "verdict": "confirmed",
+      "note": "Moved from N. Orange Ave to 565 W. Fairbanks Ave, Winter Park (about 2016); listings still show it open. Hours and current status still worth a call.",
+      "source": "https://guide.michelin.com/us/en/florida/winter-park/restaurant/the-ravenous-pig"
+    },
+    {
+      "lens": "art",
+      "claim": "Puerto Rican parade season is mid-June (art, food, retail-landscape dossiers)",
+      "verdict": "corrected",
+      "note": "Florida Puerto Rican Parade and Festival is held in downtown Orlando in late April (Apr 22 2023, Apr 27 2024, Apr 25 2026). Moments and product-hook timing changed in art, food and retail-landscape.",
+      "source": "https://www.wftv.com/news/local/florida-puerto-rican-parade-2026-guide-what-you-need-know/OY5M4SSCPBBODC7V2XZW5YNLTM/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Brief schedules Puerto Rican parade season in June (calendar month 6, boricua-orlando-co-design 'carried into June parade season', topInsights 'June parade season')",
+      "verdict": "corrected",
+      "note": "The parade is late April, so it collides with 407 Day and the Play-In window rather than June. Editor should move the parade beat to April and re-time the co-design carry-through.",
+      "source": "https://www.wftv.com/news/local/florida-puerto-rican-parade-2026-guide-what-you-need-know/OY5M4SSCPBBODC7V2XZW5YNLTM/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "City Edition 'The Trail' avoids 'sky, space, star-field, lake or City Beautiful concepts already used in past City Editions'",
+      "verdict": "unverifiable",
+      "note": "No dossier verified any past Orlando City Edition concept (uniform lens says so itself). Editor should drop the claim about past concepts or confirm them live before asserting.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Archive swap at Webster Flea Market as a Penny pop-up and a Webster hook in the Penny insight",
+      "verdict": "corrected",
+      "note": "Webster (Sumter County) is roughly an hour northwest of Orlando, a destination trip rather than an in-town door. Underground dossier now says so; brief should present it as a one-off road trip or swap in an Orlando door.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Arena store is the launch point for 'Specter-adjacent' product",
+      "verdict": "corrected",
+      "note": "Specter uniforms cover eight franchises (Celtics, Lakers, Warriors, Knicks, 76ers, Kings, Pistons, Hawks); the Magic are not included. Wording fixed.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "PGA Merchandise Show traffic is in early January",
+      "verdict": "corrected",
+      "note": "The show runs in Orlando in the second half of January. Calendar text fixed; exact 2027 dates still unverified.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Vocabulary term 'Magic Kingdom, Magic Basketball' as fan wordplay",
+      "verdict": "removed",
+      "note": "Looks invented and sits on Disney IP; replaced with 'Parranda'.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Vocabulary 'Mouse-free' as a local expression",
+      "verdict": "removed",
+      "note": "No known basis as local slang; replaced with OBT. 'The O' softened because O-Town and 407 are the common nicknames.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "'Magic Mayhem' as a fan phrase",
+      "verdict": "removed",
+      "note": "Unsourced and flagged 'verify' by the dossier itself.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Zora Neale Hurston is an Eatonville native",
+      "verdict": "corrected",
+      "note": "Born in Alabama and raised in Eatonville; role line changed to 'Author raised in Eatonville'.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Dwight Howard defined 'the Kia-era identity'",
+      "verdict": "corrected",
+      "note": "Howard left in 2012; the arena was the Amway Center until 2023. Text fixed.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Orlando City Editions drew on Space Coast, City Beautiful, sky and lakes",
+      "verdict": "removed",
+      "note": "Not verified and likely invented; insight rewritten to say past concepts are unverified.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Pinstripe was dropped in 2000 and returned in 2010",
+      "verdict": "corrected",
+      "note": "The change likely came around 2003 (McGrady wore pinstripes early in his Orlando years); era row softened to c.2003-2010. Exact years still need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Camping World Stadium is UCF-adjacent",
+      "verdict": "corrected",
+      "note": "UCF plays on its own campus in east Orlando; Camping World Stadium hosts the Florida Classic and bowl games. Text fixed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Plaza Live is a restored 1920s theater",
+      "verdict": "corrected",
+      "note": "Construction date not confidently known; changed to 'restored historic theater'. Also corrected the Kia Center link to kiacenter.com.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Kia Center source URL kiacenterorlando.com",
+      "verdict": "corrected",
+      "note": "Replaced with kiacenter.com, matching the other dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Fandom described as 'young, Black and Latino, working-class-adjacent'",
+      "verdict": "corrected",
+      "note": "Demographic generalization removed in favor of 'diverse and price-aware'. Anime Festival Orlando also dropped as unsure it still runs.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Magic have no opening-night, Christmas or MLK Day game; Cup East Group A with Detroit, Toronto, Milwaukee, Brooklyn; Cup final Dec 11 at Hinkle",
+      "verdict": "confirmed",
+      "note": "Matches the verified CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "45-37 season, Play-In win over Charlotte, first-round loss to Detroit, Sweeney hired June 1, Vucevic back, Wagner 34 games",
+      "verdict": "confirmed",
+      "note": "Matches the verified CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Kia Center name dates from 2023; opened as Amway Center in 2010",
+      "verdict": "confirmed",
+      "note": "Long-established; the 2023 rename is consistent with the brief.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Penny Hardaway line: Air Penny and Foamposite One tied to Orlando",
+      "verdict": "confirmed",
+      "note": "Long-established history.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Wells'Built Museum and Zora Neale Hurston National Museum of Fine Arts are open and programming",
+      "verdict": "unverifiable",
+      "note": "A live check must confirm both are open and their current programming; Parramore and Eatonville partner plans depend on them.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "EDC Orlando runs each November at Tinker Field",
+      "verdict": "unverifiable",
+      "note": "Confirm the 2026 dates and venue; the music timing hook depends on it.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Will's Pub, The Beacham, Plaza Live and Park Ave CDs still operating",
+      "verdict": "unverifiable",
+      "note": "Check each is open; Will's Pub is a named partner in the brief.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Black Bean Deli (Orange Ave) and Bubbalou's Bodacious BBQ still operating",
+      "verdict": "unverifiable",
+      "note": "Long-standing but not confirmed for 2026; confirm before naming in any product story.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Gideon's Bakehouse is a locally rooted brand (Disney Springs location)",
+      "verdict": "unverifiable",
+      "note": "Check the current locations; the Disney Springs address cuts against the dossier's no-Disney framing.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Norman Van Aken is an active Orlando-area culinary voice",
+      "verdict": "unverifiable",
+      "note": "Confirm his current Orlando activity or swap for a newer chef.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Factory Stores open at both Orlando International and Vineland Premium Outlets",
+      "verdict": "unverifiable",
+      "note": "Both are the brief's core volume doors; confirm each is open.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Kia Center team store run with Fanatics",
+      "verdict": "unverifiable",
+      "note": "Confirm operator, location and hours.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Lake Buena Vista Factory Stores still operating",
+      "verdict": "unverifiable",
+      "note": "Some of the center has been redeveloped; confirm before listing as a channel.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Florida August back-to-school exemption is permanent with a $100 clothing cap",
+      "verdict": "unverifiable",
+      "note": "Recent legislation is understood to have made it permanent; confirm the rule and the cap, since the brief builds a youth kit around $100 per item.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Orlando Summer League is held at Kia Center in early July",
+      "verdict": "unverifiable",
+      "note": "Confirm 2027 dates and venue; strategy uses it as an activation venue.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Florida Classic in mid-November at Camping World Stadium",
+      "verdict": "unverifiable",
+      "note": "Confirm 2026 date and venue; it may fall on a Cup weekend.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Osceola Magic still play in Kissimmee as the Magic's G League affiliate",
+      "verdict": "unverifiable",
+      "note": "Confirm the affiliation and arena.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Callahan Neighborhood Center, Jones High and Evans High programs and courts are active",
+      "verdict": "unverifiable",
+      "note": "The brief's court program rests on these; confirm programming and a named community lead.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Magic hold a dedicated Noche Latina or Puerto Rican heritage night",
+      "verdict": "unverifiable",
+      "note": "Dossiers reference it loosely; confirm name, date and format for 2026-27.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Magic 2026-27 City Edition uniform, and which Specter or Classic sets apply",
+      "verdict": "unverifiable",
+      "note": "CURRENT FACTS gives no City Edition; the brief's 'The Trail' concept must be checked against it.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Iron Lion Firm is active; Daytona Turkey Run is a relevant Orlando activation",
+      "verdict": "unverifiable",
+      "note": "Confirm the group is active; the Turkey Run is a distant Daytona event of marginal relevance.",
+      "source": ""
+    }
+  ],
+  "summary": "The Orlando dossiers hold up on team facts (record, coach, Cup group, Vucevic, Wagner's 34 games all match verified data), but had several local errors. Live spot-checks found the Puerto Rican parade is in late April, not June, and Domu is not in Mills 50 (the Ravenous Pig is confirmed open). Other fixes: a wrong Specter reference, Hurston as an Eatonville native, a Kia-era Dwight Howard line, a UCF-adjacent stadium, invented slang, the PGA Show timing and unverified City Edition history. The brief's June parade beat, its claim about past City Edition concepts and the Webster Flea Market archive swap need editor fixes. The remaining risk sits in small businesses, heritage nights and the 2026-27 City Edition, all queued as unverifiable."
+}

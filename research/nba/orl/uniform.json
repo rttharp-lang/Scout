@@ -15,8 +15,8 @@
       "implication": "Pair Magic pinstripe throwback apparel with Penny Nike heritage product. A Penny-era capsule speaks to older fans and sneaker collectors in the same drop."
     },
     {
-      "title": "City Edition has had trouble finding an Orlando story beyond space and theme parks",
-      "detail": "Orlando's City Editions have drawn on the broad civic imagery (the Space Coast, the 'City Beautiful' nickname, the sky and the lakes). Fans respond best to designs that read as the Magic first and a concept second.",
+      "title": "Orlando needs a City Edition story rooted in a specific place",
+      "detail": "Past Orlando City Edition concepts were not verified for this dossier. Fans tend to respond best to designs that read as the Magic first and a concept second.",
       "implication": "Anchor future City Editions in a specific local community or place rather than tourism iconography. Lead with the team's colors and let the concept sit in a secondary graphic."
     },
     {
@@ -36,48 +36,207 @@
     }
   ],
   "places": [
-    {"name": "Kia Center", "kind": "arena", "neighborhood": "Parramore / Downtown Orlando", "why": "The Magic's home since 2010 and the physical stage for any uniform launch."},
-    {"name": "Parramore", "kind": "historic neighborhood", "neighborhood": "Downtown Orlando", "why": "Historically Black community beside the arena, and the most direct local story for a community capsule."},
-    {"name": "Eatonville", "kind": "historic town", "neighborhood": "Eatonville, Orange County", "why": "Home of Zora Neale Hurston and one of the oldest incorporated Black towns in the US."},
-    {"name": "Lake Eola Park", "kind": "park", "neighborhood": "Downtown Orlando", "why": "The downtown icon, with its fountain and swan boats, and a staple of local imagery."},
-    {"name": "Mills 50 District", "kind": "district", "neighborhood": "Mills 50", "why": "The Vietnamese and Asian restaurant and arts corridor along Mills Avenue."},
-    {"name": "Thornton Park", "kind": "district", "neighborhood": "Thornton Park", "why": "Brick streets and independent shops east of Lake Eola."},
-    {"name": "Camping World Stadium", "kind": "stadium", "neighborhood": "Parramore", "why": "The big-event venue close to the arena, tied to Orlando's wider sports and festival calendar."},
-    {"name": "Orlando Science Center", "kind": "museum", "neighborhood": "Loch Haven Park", "why": "A local landmark for space and science motifs that fit the Magic's star imagery."}
+    {
+      "name": "Kia Center",
+      "kind": "arena",
+      "neighborhood": "Parramore / Downtown Orlando",
+      "why": "The Magic's home since 2010 and the physical stage for any uniform launch."
+    },
+    {
+      "name": "Parramore",
+      "kind": "historic neighborhood",
+      "neighborhood": "Downtown Orlando",
+      "why": "Historically Black community beside the arena, and the most direct local story for a community capsule."
+    },
+    {
+      "name": "Eatonville",
+      "kind": "historic town",
+      "neighborhood": "Eatonville, Orange County",
+      "why": "Home of Zora Neale Hurston and one of the oldest incorporated Black towns in the US."
+    },
+    {
+      "name": "Lake Eola Park",
+      "kind": "park",
+      "neighborhood": "Downtown Orlando",
+      "why": "The downtown icon, with its fountain and swan boats, and a staple of local imagery."
+    },
+    {
+      "name": "Mills 50 District",
+      "kind": "district",
+      "neighborhood": "Mills 50",
+      "why": "The Vietnamese and Asian restaurant and arts corridor along Mills Avenue."
+    },
+    {
+      "name": "Thornton Park",
+      "kind": "district",
+      "neighborhood": "Thornton Park",
+      "why": "Brick streets and independent shops east of Lake Eola."
+    },
+    {
+      "name": "Camping World Stadium",
+      "kind": "stadium",
+      "neighborhood": "Parramore",
+      "why": "The big-event venue close to the arena, tied to Orlando's wider sports and festival calendar."
+    },
+    {
+      "name": "Orlando Science Center",
+      "kind": "museum",
+      "neighborhood": "Loch Haven Park",
+      "why": "A local landmark for space and science motifs that fit the Magic's star imagery."
+    }
   ],
   "people": [
-    {"name": "Penny Hardaway", "role": "Former Magic guard, Nike signature athlete", "why": "The face of Orlando's best era and a Nike heritage link."},
-    {"name": "Shaquille O'Neal", "role": "Former Magic center", "why": "Drafted first overall in 1992, he took Orlando to the 1995 Finals."},
-    {"name": "Tracy McGrady", "role": "Former Magic wing", "why": "Seven-time All-Star who led the early-2000s teams and an icon of that era's look."},
-    {"name": "Dwight Howard", "role": "Former Magic center", "why": "Led Orlando to the 2009 Finals and the Kia-era identity."},
-    {"name": "Nick Anderson", "role": "Former Magic guard", "why": "A franchise-defining 1990s player whose jersey fans still wear."},
-    {"name": "Paolo Banchero", "role": "Magic forward", "why": "The current face of the franchise and the most marketable player on the roster."},
-    {"name": "Franz Wagner", "role": "Magic forward", "why": "Co-star of the current core, with a growing international following."},
-    {"name": "Zora Neale Hurston", "role": "Author, Eatonville native", "why": "The most famous voice of Eatonville; any use needs estate and community engagement."}
+    {
+      "name": "Penny Hardaway",
+      "role": "Former Magic guard, Nike signature athlete",
+      "why": "The face of Orlando's best era and a Nike heritage link."
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "role": "Former Magic center",
+      "why": "Drafted first overall in 1992, he took Orlando to the 1995 Finals."
+    },
+    {
+      "name": "Tracy McGrady",
+      "role": "Former Magic wing",
+      "why": "Seven-time All-Star who led the early-2000s teams and an icon of that era's look."
+    },
+    {
+      "name": "Dwight Howard",
+      "role": "Former Magic center",
+      "why": "Led Orlando to the 2009 Finals, the franchise's second peak."
+    },
+    {
+      "name": "Nick Anderson",
+      "role": "Former Magic guard",
+      "why": "A franchise-defining 1990s player whose jersey fans still wear."
+    },
+    {
+      "name": "Paolo Banchero",
+      "role": "Magic forward",
+      "why": "The current face of the franchise and the most marketable player on the roster."
+    },
+    {
+      "name": "Franz Wagner",
+      "role": "Magic forward",
+      "why": "Co-star of the current core, with a growing international following."
+    },
+    {
+      "name": "Zora Neale Hurston",
+      "role": "Author raised in Eatonville",
+      "why": "The most famous voice of Eatonville; any use needs estate and community engagement."
+    }
   ],
   "moments": [
-    {"name": "Home opener and season tip-off", "timing": "Late October", "month": 10, "why": "The first chance to debut uniforms and a product drop; the regular season begins Oct 20."},
-    {"name": "Hispanic Heritage Month and Noche Latina", "timing": "Mid-September to mid-October", "month": 10, "why": "The natural window for a Puerto Rican and Latin capsule."},
-    {"name": "Emirates NBA Cup group play", "timing": "Fridays, Oct 30 to Nov 27", "month": 11, "why": "Orlando is in East Group A, with special court and sometimes uniform treatment."},
-    {"name": "Zora! Festival", "timing": "Late January", "month": 1, "why": "Eatonville's annual celebration of Zora Neale Hurston, a respectful route for community partnership."},
-    {"name": "Hurricane season", "timing": "June to November", "month": 9, "why": "Storms like Ian and Milton shape local life and any relief-linked product."},
-    {"name": "Playoffs", "timing": "April to June", "month": 4, "why": "The peak window for pinstripe and star merch demand."}
+    {
+      "name": "Home opener and season tip-off",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The first chance to debut uniforms and a product drop; the regular season begins Oct 20."
+    },
+    {
+      "name": "Hispanic Heritage Month and Noche Latina",
+      "timing": "Mid-September to mid-October",
+      "month": 10,
+      "why": "The natural window for a Puerto Rican and Latin capsule."
+    },
+    {
+      "name": "Emirates NBA Cup group play",
+      "timing": "Fridays, Oct 30 to Nov 27",
+      "month": 11,
+      "why": "Orlando is in East Group A, with special court and sometimes uniform treatment."
+    },
+    {
+      "name": "Zora! Festival",
+      "timing": "Late January",
+      "month": 1,
+      "why": "Eatonville's annual celebration of Zora Neale Hurston, a respectful route for community partnership."
+    },
+    {
+      "name": "Hurricane season",
+      "timing": "June to November",
+      "month": 9,
+      "why": "Storms like Ian and Milton shape local life and any relief-linked product."
+    },
+    {
+      "name": "Playoffs",
+      "timing": "April to June",
+      "month": 4,
+      "why": "The peak window for pinstripe and star merch demand."
+    }
   ],
   "vocabulary": [
-    {"term": "O-Town", "meaning": "Common local shorthand for Orlando."},
-    {"term": "407", "meaning": "The Orlando-area code, used as a local badge on shirts and in graphics."},
-    {"term": "The City Beautiful", "meaning": "Orlando's official nickname."},
-    {"term": "Pinstripes", "meaning": "What fans call the classic Magic look."},
-    {"term": "Magic Mayhem", "meaning": "A fan-facing phrase for game-day energy; verify before using."}
+    {
+      "term": "O-Town",
+      "meaning": "Common local shorthand for Orlando."
+    },
+    {
+      "term": "407",
+      "meaning": "The Orlando-area code, used as a local badge on shirts and in graphics."
+    },
+    {
+      "term": "The City Beautiful",
+      "meaning": "Orlando's official nickname."
+    },
+    {
+      "term": "Pinstripes",
+      "meaning": "What fans call the classic Magic look."
+    },
+    {
+      "term": "Boricua",
+      "meaning": "Self-identifier for Puerto Ricans; use only with Puerto Rican partners."
+    }
   ],
   "designCues": [
-    {"cue": "Magic blue as the lead color", "type": "color", "hex": "#0077C0", "source": "Official Magic blue", "use": "Use as the dominant field on Icon and the base of any City Edition."},
-    {"cue": "Silver accent", "type": "color", "hex": "#C4CED4", "source": "Official team silver", "use": "Apply to trim, numbers and metallic or reflective details."},
-    {"cue": "Black as a statement base", "type": "color", "hex": "#000000", "source": "Official team black", "use": "Use for Statement and nighttime-theme City Editions."},
-    {"cue": "Blue pinstripe, scaled and tonal variants", "type": "pattern", "hex": "", "source": "Original 1989 uniform", "use": "Treat the stripe as a spine; test tonal, reflective or woven versions."},
-    {"cue": "Star with orbit or flame", "type": "graphic", "hex": "", "source": "1990s star mark", "use": "Use as a secondary graphic and in a Penny-era throwback capsule."},
-    {"cue": "Sunset-sky gradient over Lake Eola", "type": "texture", "hex": "", "source": "Downtown Orlando evening skyline", "use": "A subtle gradient on shooting shirts or warm-ups, secondary to team colors."},
-    {"cue": "Parramore and Eatonville storytelling", "type": "story", "hex": "", "source": "Historic Black neighborhoods of Central Florida", "use": "Build with local historians and artists, credited and paid."}
+    {
+      "cue": "Magic blue as the lead color",
+      "type": "color",
+      "hex": "#0077C0",
+      "source": "Official Magic blue",
+      "use": "Use as the dominant field on Icon and the base of any City Edition."
+    },
+    {
+      "cue": "Silver accent",
+      "type": "color",
+      "hex": "#C4CED4",
+      "source": "Official team silver",
+      "use": "Apply to trim, numbers and metallic or reflective details."
+    },
+    {
+      "cue": "Black as a statement base",
+      "type": "color",
+      "hex": "#000000",
+      "source": "Official team black",
+      "use": "Use for Statement and nighttime-theme City Editions."
+    },
+    {
+      "cue": "Blue pinstripe, scaled and tonal variants",
+      "type": "pattern",
+      "hex": "",
+      "source": "Original 1989 uniform",
+      "use": "Treat the stripe as a spine; test tonal, reflective or woven versions."
+    },
+    {
+      "cue": "Star with orbit or flame",
+      "type": "graphic",
+      "hex": "",
+      "source": "1990s star mark",
+      "use": "Use as a secondary graphic and in a Penny-era throwback capsule."
+    },
+    {
+      "cue": "Sunset-sky gradient over Lake Eola",
+      "type": "texture",
+      "hex": "",
+      "source": "Downtown Orlando evening skyline",
+      "use": "A subtle gradient on shooting shirts or warm-ups, secondary to team colors."
+    },
+    {
+      "cue": "Parramore and Eatonville storytelling",
+      "type": "story",
+      "hex": "",
+      "source": "Historic Black neighborhoods of Central Florida",
+      "use": "Build with local historians and artists, credited and paid."
+    }
   ],
   "productHooks": [
     "Penny Hardaway pinstripe capsule: throwback apparel plus Air Penny heritage footwear.",
@@ -92,25 +251,63 @@
     "Keep Pulse nightclub remembrance out of commercial product."
   ],
   "sources": [
-    {"title": "Orlando Magic official site", "url": "https://www.nba.com/magic"},
-    {"title": "Orlando Magic (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Orlando_Magic"},
-    {"title": "Kia Center (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Kia_Center"},
-    {"title": "Orlando Magic logos and uniforms (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Orlando_Magic#Logos_and_uniforms"}
+    {
+      "title": "Orlando Magic official site",
+      "url": "https://www.nba.com/magic"
+    },
+    {
+      "title": "Orlando Magic (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Orlando_Magic"
+    },
+    {
+      "title": "Kia Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Kia_Center"
+    },
+    {
+      "title": "Orlando Magic logos and uniforms (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Orlando_Magic#Logos_and_uniforms"
+    }
   ],
   "confidence": "low",
   "extra": {
     "palette": [
-      {"name": "Magic Blue", "hex": "#0077C0"},
-      {"name": "Black", "hex": "#000000"},
-      {"name": "Silver", "hex": "#C4CED4"}
+      {
+        "name": "Magic Blue",
+        "hex": "#0077C0"
+      },
+      {
+        "name": "Black",
+        "hex": "#000000"
+      },
+      {
+        "name": "Silver",
+        "hex": "#C4CED4"
+      }
     ],
     "eras": [
-      {"era": "1989-2000", "look": "Blue pinstripes with the star-and-flame mark, in white and black alternates.", "legacy": "The Shaq and Penny era and the 1995 Finals; the look all later designs are measured against."},
-      {"era": "2000-2010", "look": "Dropped the pinstripe for a blue-and-black modern look with a star-and-wordmark mark.", "legacy": "Mixed; tied to McGrady and Dwight Howard, but often called a detour from the pinstripe."},
-      {"era": "2010-present", "look": "Return of the pinstripe and updated blue, with Nike as the supplier since 2017.", "legacy": "Seen as a restoration; the base of the current Association and Icon looks."}
+      {
+        "era": "1989-2000",
+        "look": "Blue pinstripes with the star-and-flame mark, in white and black alternates.",
+        "legacy": "The Shaq and Penny era and the 1995 Finals; the look all later designs are measured against."
+      },
+      {
+        "era": "c.2003-2010",
+        "look": "Dropped the pinstripe for a blue-and-black modern look with a star-and-wordmark mark (exact change year to be verified).",
+        "legacy": "Mixed; tied to McGrady and Dwight Howard, but often called a detour from the pinstripe."
+      },
+      {
+        "era": "2010-present",
+        "look": "Return of the pinstripe and updated blue, with Nike as the supplier since 2017.",
+        "legacy": "Seen as a restoration; the base of the current Association and Icon looks."
+      }
     ],
     "cityEditions": [
-      {"season": "2017-18 to 2025-26", "concept": "Broad Orlando civic themes (sky, city nickname, black-and-blue modern looks). I cannot verify the concept season by season.", "reception": "unknown", "note": "Pull each year's concept and fan reception from a live check before citing."}
+      {
+        "season": "2017-18 to 2025-26",
+        "concept": "Not verified; pull each season's concept and reception from a live check before citing.",
+        "reception": "unknown",
+        "note": "Pull each year's concept and fan reception from a live check before citing."
+      }
     ],
     "fanFavorites": [
       "1995 Finals-era pinstripe jersey (Shaq and Penny)",
@@ -119,10 +316,22 @@
       "Tracy McGrady-era blue jersey"
     ],
     "untoldStories": [
-      {"story": "Parramore: the neighborhood beside the arena, its history and its residents", "why": "It is the most direct and least-told local story, and one the arena era reshaped."},
-      {"story": "Eatonville and Zora Neale Hurston's legacy", "why": "Orlando's richest cultural story, and one with a clear, respectful route through the town's partners."},
-      {"story": "Orlando's Puerto Rican community, especially after Hurricane Maria brought families to Central Florida", "why": "It reflects who actually lives in Orlando and who fills the arena."},
-      {"story": "The Space Coast tie that goes beyond a cliche: local NASA-era families", "why": "A real regional link that gives the star motif a local meaning."}
+      {
+        "story": "Parramore: the neighborhood beside the arena, its history and its residents",
+        "why": "It is the most direct and least-told local story, and one the arena era reshaped."
+      },
+      {
+        "story": "Eatonville and Zora Neale Hurston's legacy",
+        "why": "Orlando's richest cultural story, and one with a clear, respectful route through the town's partners."
+      },
+      {
+        "story": "Orlando's Puerto Rican community, especially after Hurricane Maria brought families to Central Florida",
+        "why": "It reflects who actually lives in Orlando and who fills the arena."
+      },
+      {
+        "story": "The Space Coast tie that goes beyond a cliche: local NASA-era families",
+        "why": "A real regional link that gives the star motif a local meaning."
+      }
     ]
   },
   "provenance": {
@@ -136,7 +345,8 @@
       "Arena name and ownership (Kia Center, DeVos family) for 2026-27",
       "Whether Noche Latina and Latin heritage nights are still run",
       "Zora! Festival timing and organizer for 2027",
-      "Current status of listed places and districts"
+      "Current status of listed places and districts",
+      "Year the pinstripe was dropped (c.2000-03) and the 1990s alternate (black pinstripe) details."
     ]
   }
 }

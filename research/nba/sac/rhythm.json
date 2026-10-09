@@ -16,7 +16,7 @@
     },
     {
       "title": "Opening month is the first and best spike",
-      "detail": "The season tips off Oct 20 but the Kings are not on the opening-night or Christmas Day slates, so the home opener and the NBA Cup Friday games (West Group C with SAS, LAL, POR and GSW starting Oct 30) are the local peaks. Lakers and Warriors visits bring the most neutral-fan and rival energy.",
+      "detail": "The season tips off Oct 20 but the Kings are not on the opening-night or Christmas Day slates, so the home opener and the home NBA Cup group games (West Group C with SAS, LAL, POR and GSW, Oct 30 to Nov 27) are the local peaks. Lakers and Warriors visits bring the most neutral-fan and rival energy.",
       "implication": "Stage the Specter uniform and apparel collection and in-market retail around the first home weekend and the Cup Fridays rather than waiting for the holidays."
     },
     {
@@ -39,7 +39,7 @@
     {
       "name": "Golden 1 Center",
       "kind": "arena",
-      "neighborhood": "Downtown, Docks area / Downtown Commons",
+      "neighborhood": "Downtown / Downtown Commons",
       "why": "The home arena with the Beam, the center of every game-night ritual and the Downtown Commons fan corridor."
     },
     {
@@ -57,8 +57,8 @@
     {
       "name": "Heart Health Park",
       "kind": "stadium",
-      "neighborhood": "Railyards / Downtown Sacramento",
-      "why": "Where Sacramento Republic FC plays, a fervent supporter culture with its own scarf and flag aesthetic."
+      "neighborhood": "Cal Expo / Arden-Arcade",
+      "why": "Where Sacramento Republic FC currently plays (a planned Railyards stadium is separate), with a fervent supporter culture and its own scarf and flag aesthetic."
     },
     {
       "name": "Cal Expo",
@@ -119,7 +119,7 @@
     {
       "name": "Vivek Ranadive",
       "role": "Kings majority owner",
-      "why": "The owner who introduced the Beam and the franchise's modern identity; verify current ownership details."
+      "why": "Bought the team in 2013 and opened Golden 1 Center and the Beam; verify current ownership details."
     }
   ],
   "moments": [
@@ -133,7 +133,7 @@
       "name": "NBA Cup Fridays (West Group C)",
       "timing": "Oct 30 to Nov 27",
       "month": 11,
-      "why": "Five weeks of Friday games against SAS, LAL, POR and GSW that give a rival-driven rhythm."
+      "why": "Four group games against SAS, LAL, POR and GSW spread across Oct 30 to Nov 27 (including possible Tue/Wed Nov 24-25 Cup nights); only some are home dates."
     },
     {
       "name": "Farm-to-Fork Festival",
@@ -264,8 +264,14 @@
         "month": 1,
         "intensity": 50,
         "phase": "Midseason",
-        "team": ["MLK Day league games", "Mid-season stretch of the rebuild"],
-        "local": ["Cold, foggy Valley winter", "Post-holiday lull"],
+        "team": [
+          "MLK Day league games",
+          "Mid-season stretch of the rebuild"
+        ],
+        "local": [
+          "Cold, foggy Valley winter",
+          "Post-holiday lull"
+        ],
         "fanBehavior": "Steady home attendance; fans measure progress of the rookie and young core.",
         "retailSignal": "Post-Christmas clearance and gift-card redemption, light new product demand."
       },
@@ -273,8 +279,14 @@
         "month": 2,
         "intensity": 48,
         "phase": "Trade deadline and All-Star",
-        "team": ["Trade deadline Feb 11", "All-Star in Phoenix Feb 19-21"],
-        "local": ["Winter rain", "Valentine's Day"],
+        "team": [
+          "Trade deadline Feb 11",
+          "All-Star in Phoenix Feb 19-21"
+        ],
+        "local": [
+          "Winter rain",
+          "Valentine's Day"
+        ],
         "fanBehavior": "Trade-rumor chatter about veterans on a rebuilding team; casual fans tune out.",
         "retailSignal": "Low, with some All-Star capsule interest."
       },
@@ -282,8 +294,14 @@
         "month": 3,
         "intensity": 42,
         "phase": "Late-season push or tank",
-        "team": ["Final stretch of the season", "Lottery standings watch"],
-        "local": ["Spring weather arrives", "March Madness bracket culture"],
+        "team": [
+          "Final stretch of the season",
+          "Lottery standings watch"
+        ],
+        "local": [
+          "Spring weather arrives",
+          "March Madness bracket culture"
+        ],
         "fanBehavior": "College basketball absorbs attention while the Kings play out the season.",
         "retailSignal": "Soft, mostly spring layers and bracket-related college gear."
       },
@@ -291,8 +309,14 @@
         "month": 4,
         "intensity": 38,
         "phase": "Regular season ends",
-        "team": ["Regular season ends Apr 11", "Play-In Apr 13-16 if qualified"],
-        "local": ["River Cats and A's baseball begin", "Warm spring weather"],
+        "team": [
+          "Regular season ends Apr 11",
+          "Play-In Apr 13-16 if qualified"
+        ],
+        "local": [
+          "River Cats and A's baseball begin",
+          "Warm spring weather"
+        ],
         "fanBehavior": "Disengagement as the team is likely out of the playoff picture.",
         "retailSignal": "Low; fans buy other-team playoff gear only incidentally."
       },
@@ -300,8 +324,14 @@
         "month": 5,
         "intensity": 35,
         "phase": "Offseason and lottery",
-        "team": ["Draft Lottery", "Coach and roster evaluation"],
-        "local": ["Warm Valley days", "Graduation season"],
+        "team": [
+          "Draft Lottery",
+          "Coach and roster evaluation"
+        ],
+        "local": [
+          "Warm Valley days",
+          "Graduation season"
+        ],
         "fanBehavior": "Hope-and-rumor mode around lottery odds.",
         "retailSignal": "Light; a lottery capsule is the only spike."
       },
@@ -309,8 +339,14 @@
         "month": 6,
         "intensity": 52,
         "phase": "Draft",
-        "team": ["NBA Draft", "NBA Finals on TV"],
-        "local": ["Heat building", "School ends"],
+        "team": [
+          "NBA Draft",
+          "NBA Finals on TV"
+        ],
+        "local": [
+          "Heat building",
+          "School ends"
+        ],
         "fanBehavior": "Draft-night energy and rookie welcome.",
         "retailSignal": "Draft pick tee and hat spike."
       },
@@ -318,8 +354,14 @@
         "month": 7,
         "intensity": 40,
         "phase": "Free agency and Summer League",
-        "team": ["Free agency", "Summer League"],
-        "local": ["California State Fair", "Triple-digit heat"],
+        "team": [
+          "Free agency",
+          "Summer League"
+        ],
+        "local": [
+          "California State Fair",
+          "Triple-digit heat"
+        ],
         "fanBehavior": "Fans follow free agency online while heat limits outdoor activity.",
         "retailSignal": "Low; Summer League jersey interest for the rookie."
       },
@@ -327,8 +369,14 @@
         "month": 8,
         "intensity": 35,
         "phase": "Offseason",
-        "team": ["Schedule release", "Training camp prep"],
-        "local": ["Peak heat", "Back-to-school shopping"],
+        "team": [
+          "Schedule release",
+          "Training camp prep"
+        ],
+        "local": [
+          "Peak heat",
+          "Back-to-school shopping"
+        ],
         "fanBehavior": "Quiet period, schedule release talk.",
         "retailSignal": "Back-to-school and early gear browsing."
       },
@@ -336,8 +384,15 @@
         "month": 9,
         "intensity": 58,
         "phase": "Media day and Specter release",
-        "team": ["Media day", "Training camp opens", "Specter uniform reveal Sept 9"],
-        "local": ["Farm-to-Fork Festival", "Football season begins"],
+        "team": [
+          "Media day",
+          "Training camp opens",
+          "Specter uniform reveal Sept 9"
+        ],
+        "local": [
+          "Farm-to-Fork Festival",
+          "Football season begins"
+        ],
         "fanBehavior": "Rising anticipation and curiosity about the Specter uniform.",
         "retailSignal": "Specter collection launch interest and pre-season gear."
       },
@@ -345,8 +400,15 @@
         "month": 10,
         "intensity": 85,
         "phase": "Preseason and opener",
-        "team": ["Preseason Kings at Lakers Oct 8", "Opening night Oct 20", "Cup play begins Oct 30"],
-        "local": ["Cooling weather", "Harvest season"],
+        "team": [
+          "Preseason Kings at Lakers Oct 8",
+          "Opening night Oct 20",
+          "Cup play begins Oct 30"
+        ],
+        "local": [
+          "Cooling weather",
+          "Harvest season"
+        ],
         "fanBehavior": "Peak hope and ticket purchasing for the home opener.",
         "retailSignal": "Strong jersey, Specter and hat sales around the opener."
       },
@@ -354,8 +416,14 @@
         "month": 11,
         "intensity": 90,
         "phase": "NBA Cup group play",
-        "team": ["Cup Fridays with SAS, LAL, POR and GSW", "Thanksgiving week Cup nights"],
-        "local": ["Thanksgiving", "Cool Valley evenings"],
+        "team": [
+          "Cup Fridays with SAS, LAL, POR and GSW",
+          "Thanksgiving week Cup nights"
+        ],
+        "local": [
+          "Thanksgiving",
+          "Cool Valley evenings"
+        ],
         "fanBehavior": "Highest engagement of the year with Cup stakes and rival visits.",
         "retailSignal": "Gift buying starts; hoodies and Cup-night items sell."
       },
@@ -363,8 +431,15 @@
         "month": 12,
         "intensity": 100,
         "phase": "Cup knockouts and Christmas",
-        "team": ["Cup quarterfinals Dec 4-5 if advancing", "Christmas Day games without the Kings", "Cup final Dec 11"],
-        "local": ["Holiday season", "Downtown lights"],
+        "team": [
+          "Cup quarterfinals Dec 4-5 if advancing",
+          "Christmas Day games without the Kings",
+          "Cup final Dec 11"
+        ],
+        "local": [
+          "Holiday season",
+          "Downtown lights"
+        ],
         "fanBehavior": "Peak gifting and family attendance despite a rebuild.",
         "retailSignal": "Biggest retail month for jerseys, hoodies and gifts."
       }

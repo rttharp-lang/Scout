@@ -44,22 +44,22 @@
     { "name": "Lakefront Brewery", "kind": "brewery and fish fry", "neighborhood": "Riverwest", "why": "Local craft pioneer with a Friday fish fry and polka tradition." },
     { "name": "Milwaukee Public Market", "kind": "food hall", "neighborhood": "Third Ward", "why": "Local vendor hub and a pre-game or visitor stop." },
     { "name": "Good City Brewing", "kind": "taproom", "neighborhood": "Deer District / Downtown", "why": "Local brewery with a taproom by Fiserv Forum; a game-night anchor." },
-    { "name": "Sobelman's Pub & Grill", "kind": "bar and grill", "neighborhood": "Downtown / Walker's Point area", "why": "Known for burgers and Bloody Marys, a familiar local watch spot." },
+    { "name": "Sobelman's Pub & Grill", "kind": "bar and grill", "neighborhood": "Near West Side / downtown edge", "why": "Known for burgers and Bloody Marys, a familiar local watch spot." },
     { "name": "Wisconsin State Fair Park", "kind": "fairgrounds", "neighborhood": "West Allis", "why": "Home of the Original Cream Puff, an annual August food pilgrimage." }
   ],
   "people": [
     { "name": "Usinger's", "role": "heritage sausage maker", "why": "Family-linked brand that signals Milwaukee brat craft." },
     { "name": "Dan Jacobs and Dan Van Rite", "role": "chefs and restaurateurs (DanDan, EsterEv)", "why": "Nationally recognized Milwaukee chefs shaping the chef-driven scene." },
-    { "name": "Justin Carlisle", "role": "chef (Ardent)", "why": "Regional award-recognized chef who helped raise the city's fine-dining profile." },
+    { "name": "Mary Kastman", "role": "chef (Purslane)", "why": "James Beard-nominated Milwaukee chef whose eastern Mediterranean restaurant Purslane took over the former Ardent space on the East Side; confirm it is open and operating." },
     { "name": "Tory Miller", "role": "chef (Madison, statewide)", "why": "James Beard Award-winning Wisconsin voice, relevant to statewide fan outreach." },
     { "name": "Lakefront Brewery", "role": "brewery", "why": "Community-rooted brand with strong local merch and fish fry culture." },
     { "name": "Hmong American Friendship Association and local Hmong food vendors", "role": "community organization and food businesses", "why": "Entry points for respectful engagement with the Hmong community around food and cultural identity." }
   ],
   "moments": [
-    { "name": "Friday fish fry through Lent", "timing": "Every Friday, peaking Feb to early April", "month": 3, "why": "Overlaps the back half of the Bucks season." },
+    { "name": "Friday fish fry through Lent", "timing": "Every Friday, peaking Feb 12 to Mar 26, 2027 (Lent)", "month": 3, "why": "Overlaps the back half of the Bucks season." },
     { "name": "Giannis' return to Fiserv Forum (Miami visit)", "timing": "Jan 28, 2027", "month": 1, "why": "Biggest emotional home night; local bars and Deer District will be full." },
     { "name": "Home opener and Emirates NBA Cup group nights", "timing": "Late Oct to late Nov", "month": 10, "why": "Cold-weather comfort food season begins and Cup games frame early engagement." },
-    { "name": "Wisconsin State Fair", "timing": "Early to mid August", "month": 8, "why": "Cream puffs and fair food are a state-wide shared memory for offseason drops." },
+    { "name": "Wisconsin State Fair", "timing": "Late July to mid August", "month": 8, "why": "Cream puffs and fair food are a state-wide shared memory for offseason drops." },
     { "name": "Summerfest", "timing": "Late June to mid July", "month": 6, "why": "Milwaukee's biggest festival and an offseason brand moment." },
     { "name": "Irish Fest, German Fest, Polish Fest, Festa Italiana and Mexican Fiesta", "timing": "June to August", "month": 7, "why": "Ethnic lakefront festivals on the Henry Maier Festival Park grounds are the city's food-heritage calendar." },
     { "name": "Thanksgiving and holiday season", "timing": "Late Nov to Dec", "month": 11, "why": "Home games around the holidays and Kringle from Racine are a statewide tradition." }
@@ -114,7 +114,7 @@
       "Fiserv Forum arena name and current in-arena food vendors and concessions partners for 2026-27.",
       "The 2026-27 Bucks City Edition uniform concept and release timing.",
       "Dan Jacobs and Dan Van Rite restaurants (DanDan, EsterEv) are still open and operating.",
-      "Justin Carlisle's Ardent is still open under the same concept.",
+      "Purslane (Mary Kastman) opened in the former Ardent space and is still operating.",
       "Gilles Frozen Custard, Leon's and Kopp's locations and operating season hours.",
       "Mader's Restaurant and Sobelman's Pub & Grill are still open at the same locations.",
       "Lakefront Brewery fish fry and Friday polka schedule.",

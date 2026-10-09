@@ -16,7 +16,7 @@
     },
     {
       "title": "Plaza District and Paseo are the DIY art engine",
-      "detail": "The Plaza District's annual Plaza Walls mural festival and the Paseo Arts District's First Friday gallery walks put muralists, zine makers, screen printers and vinyl-sticker artists in front of a young crowd. Immersive art collective Factory Obscura in Bricktown and the Flaming Lips orbit (Wayne Coyne's psychedelic, DIY aesthetic) give the state a weird-and-proud streak.",
+      "detail": "The Plaza District's annual Plaza Walls mural festival and the Paseo Arts District's First Friday gallery walks put muralists, zine makers, screen printers and vinyl-sticker artists in front of a young crowd. Immersive art collective Factory Obscura (OKC-based) and the Flaming Lips orbit (Wayne Coyne's psychedelic, DIY aesthetic) give the state a weird-and-proud streak.",
       "implication": "Commission local muralists and screen printers for limited tees and hangtags. Psychedelic color pops against the Thunder's blue-and-sunset palette make a credible, non-corporate drop."
     },
     {
@@ -26,7 +26,7 @@
     },
     {
       "title": "Thunder gear is being customized, not just bought",
-      "detail": "Since the 2025 title and SGA's back-to-back MVPs, local fans screen print, embroider and thrift-flip Thunder pieces, with sunset-orange and electric blue now read as OKC colors rather than just team colors. Thrift and vintage buyers hunt Seattle-era and early Oklahoma City SuperSonics-to-Thunder gear.",
+      "detail": "Since the 2025 title and SGA's back-to-back MVPs, local fans screen print, embroider and thrift-flip Thunder pieces, with sunset-orange and electric blue now read as OKC colors rather than just team colors. Thrift and vintage buyers hunt Seattle SuperSonics-era and 2008-09 first-season Thunder gear.",
       "implication": "Lean into repairable, remixable product: blank panels, patch-ready jackets and tees. A thrift-style vintage-wash line honors the early Thunder years."
     },
     {
@@ -42,7 +42,7 @@
     {"name": "Paseo Arts District", "kind": "district", "neighborhood": "Paseo, north of Midtown", "why": "Spanish-revival gallery strip with First Friday gallery walks and working studios."},
     {"name": "Tower Theatre", "kind": "venue", "neighborhood": "Uptown 23rd", "why": "Mid-size independent music venue for punk, indie, hip-hop and metal crowds."},
     {"name": "Diamond Ballroom", "kind": "venue", "neighborhood": "Southeast OKC", "why": "Long-running venue for rock, metal and Tejano and regional Mexican shows."},
-    {"name": "Factory Obscura", "kind": "gallery", "neighborhood": "Bricktown / Automobile Alley", "why": "Local immersive-art collective that draws a young creative crowd."},
+    {"name": "Factory Obscura", "kind": "gallery", "neighborhood": "Central OKC", "why": "Local immersive-art collective that draws a young creative crowd."},
     {"name": "NW 39th Street Gayborhood", "kind": "district", "neighborhood": "Midtown / Gayborhood", "why": "Center of OKC LGBTQ+ nightlife, drag and Pride."},
     {"name": "Scissortail Park", "kind": "park", "neighborhood": "Downtown", "why": "Skate, roller and community gatherings downtown, within walking distance of Paycom Center."},
     {"name": "Wheeler District", "kind": "district", "neighborhood": "Wheeler Park / Wheeler District", "why": "Riverfront district with skate and bike culture and the big Ferris wheel backdrop."}
@@ -72,7 +72,7 @@
     {"term": "Stockyards", "meaning": "Short for Stockyards City, shorthand for western-wear shopping and steak."},
     {"term": "The Plaza", "meaning": "The Plaza District, local shorthand for the arts and shop strip."},
     {"term": "The Paseo", "meaning": "The Paseo Arts District."},
-    {"term": "SoSo", "meaning": "Southside, as in the Latino neighborhoods and car culture of south OKC."}
+    {"term": "South Side", "meaning": "South OKC, home of the Latino neighborhoods and car culture."}
   ],
   "designCues": [
     {"cue": "Thunder sunset orange against prairie-sky blue", "type": "color", "hex": "#EF3B24", "source": "Thunder brand and Oklahoma sunset skies", "use": "Use as an accent on graphic panels and linings, not as a replacement for team primaries."},
