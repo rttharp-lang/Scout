@@ -1,0 +1,163 @@
+{
+  "issues": [
+    {
+      "target": "scores (all 30) vs strategy.json scorecards",
+      "severity": "high",
+      "problem": "League scores are a rank-stretch of the brief scorecards, but nothing says so, and the gaps are large enough to read as contradictions. Brief culture scores of 63-66 become 12-18 (Sacramento 63->12, Utah 66->14, Oklahoma City 66->16, Charlotte 66->18), Phoenix fandom 64->36, Miami fandom 72->54, Clippers opportunity 60->22. At the top the scores move the other way: New York opportunity 91->96 and retail 84->96, Lakers retail 88->94. A market page showing culture 66 next to an overview showing 16 looks like an error.",
+      "fix": "Add a scoring note to league.json (and the site) saying league scores are calibrated across markets and brief scores are judged within one market, or publish the brief score and the league score side by side. Do not stretch only the bottom: cap any move away from the brief at about 25 points unless the note gives an evidence-based reason."
+    },
+    {
+      "target": "scores.nyk (retail 96)",
+      "severity": "medium",
+      "problem": "The NYK brief scores retail 84 and says it is held down because New York is 'the most crowded, license-heavy market'. The league raises it to 96, the top of the league, while its own note says MSG, Puma's Clyde and Fanatics 'crowd Nike's lane'. The score contradicts both the brief and the note.",
+      "fix": "Set NYK retail at or below Lakers (94) and Chicago (88), or rewrite the note to argue that door density outweighs license crowding. Use the same rule for every two-team and license-heavy market."
+    },
+    {
+      "target": "scores.por vs scores.okc (opportunity)",
+      "severity": "medium",
+      "problem": "This is the only real rank inversion in opportunity. The Portland brief scores 76 (equal to Boston and Houston, above Oklahoma City's 70), but the league puts Portland at 56, below Oklahoma City's 58. Portland still sits 7th on the priority board ahead of Detroit (66), so the score and the board disagree about the home market.",
+      "fix": "Either raise Portland to about 64-66, in line with its brief and its board slot, or move blazermania-50 below the higher-scored markets and explain the order (for example, a once-only date)."
+    },
+    {
+      "target": "scores.gsw / scores.phx / scores.phi (culture)",
+      "severity": "medium",
+      "problem": "Like-for-like the cuts are uneven. GSW's brief culture (92) ties Atlanta, Miami and Brooklyn, yet the league gives it 60 against their 80/74/74. Phoenix (82) drops to 34, below the Clippers (80->36). Philadelphia (91) drops to 60, below Memphis (88->68) and Washington (90->68). The notes for Philadelphia and Phoenix cite rival-brand icons, thin independents, sprawl and a sunset-gradient habit. Those are retail and brand reasons, not 'depth of distinct local culture to design from', which is how the schema defines culture.",
+      "fix": "Re-score culture using only design-material evidence and move brand and door factors to retail or opportunity. On that basis GSW should land near the Atlanta, Miami and Brooklyn band, and Phoenix and Philadelphia near the 50s-60s."
+    },
+    {
+      "target": "scores.okc (opportunity 58) and portland principle 5",
+      "severity": "medium",
+      "problem": "Oklahoma City is a 64-18 co-title favorite with a back-to-back MVP from the Nike family (Converse) and the league's second-highest fandom (88). The league still scores its opportunity at 58, below Boston (62) and Phoenix (62), and principle 5 files it as a 'small loyal volume-and-value' market next to Utah and Sacramento. That counts small-metro retail twice, once in retail (26) and again in opportunity.",
+      "fix": "Score opportunity on demand plus Nike's rights position, and leave door quality to the retail axis. That puts OKC in the 66-72 band. In principle 5, list OKC as a contender running a value-ladder program, not as a small market."
+    },
+    {
+      "target": "watchlist.Seattle / watchlist.Las Vegas",
+      "severity": "high",
+      "problem": "The watchlist says that as of this knowledge draft the league had only said it was exploring expansion and that no vote was confirmed. The live-verified league-calendar.json records that the Board of Governors voted 30-0 on Mar 25, 2026 to explore Seattle and Las Vegas bids for 2028-29 and that Silver aims to decide by the end of 2026. The knowledge-mode text overrides a verified fact.",
+      "fix": "Rewrite both entries from the calendar's structural fact: the 30-0 exploratory vote, the 2028-29 target, the $7-10B fees and a decision expected by end of 2026. Add the end-of-2026 decision as a dated trigger for a Sonics heritage contingency plan in Portland."
+    },
+    {
+      "target": "thesis / themes[3] / tentpoles (reshuffle facts)",
+      "severity": "high",
+      "problem": "The thesis, a theme, the Jan return-nights tentpole and two priorities (giannis-305-arrival, the Jan 28 Milwaukee night) rest on roster moves that only knowledge-mode briefs support. The verified calendar confirms LeBron to Philadelphia and Ball to Minnesota, has Brown to Philadelphia from a single source, and says Giannis' destination 'was not captured'. Ja to Portland, Kawhi to Toronto and the Jan 21 and Jan 28 dates have no live check. The league file states all of them as settled fact.",
+      "fix": "Tag each reshuffle claim with its verification status (verified, single-source or knowledge) and add a verify list to league.json: Giannis to MIA and the Jan 28 date, Brown to PHI, Ja to POR, Kawhi to TOR, the Jan 21 PHI-at-BOS date. Do not commit Giannis-dependent buys until these are confirmed."
+    },
+    {
+      "target": "watchlist (Clippers Aspiration ruling) / scores.lac note",
+      "severity": "medium",
+      "problem": "Ballmer's suspension, the $30M fine and the stripped 2029-2033 firsts drive the Clippers' opportunity score (22), their fandom note and a watchlist entry. These facts come only from a knowledge-mode brief and are not in the verified calendar.",
+      "fix": "Mark the ruling as unverified in the score note and the watchlist, and give a fallback Clippers score that does not depend on it."
+    },
+    {
+      "target": "tentpoles[month 4] Spring city days",
+      "severity": "high",
+      "problem": "The tentpole proposes template drops for other code days 'such as 313, 414 and 713' in April. Only 414 Day (Apr 14) falls in April. 313 Day is March 13 and 713 Day is July 13, and neither the Detroit nor the Houston brief plans an April code day. Listing det and hou here puts the drops in the wrong month.",
+      "fix": "Build a code-day calendar for the Codes template and place each market on its real date: 313 Day Mar 13, 305 Mar 5, 216 Feb 16, 202 Feb 2, 404 Apr 4, 407 Apr 7, 414 Apr 14, 504 May 4, 612 Jun 12, 713 Jul 13, 901 Sep 1, and so on. Remove det and hou from the April tentpole, or move them to their own months."
+    },
+    {
+      "target": "tentpoles[month 11] Cup Nights / 'Cup Friday weekly drop'",
+      "severity": "medium",
+      "problem": "Each team plays four group games and only two at home, and the Nov 24-25 Cup nights are a Tuesday and a Wednesday. A 'weekly' home Cup Friday drop is impossible for any single market. Several market critiques (cha, mem, sac, dal, phx) already flagged home-Cup miscounts, and the league plan repeats the mistake at scale.",
+      "fix": "Recast it as two home-Cup drops per market, mapped to the actual home dates in each group (for example, Oct 30 home teams are WAS, IND, TOR, BOS, MIN, PHX, SAS, UTA, LAC and POR), with one national weekly story stitched from those dates."
+    },
+    {
+      "target": "tentpoles[month 1] Reshuffle return nights / themes[3]",
+      "severity": "medium",
+      "problem": "The theme lists mem, por, lac and tor as reshuffle markets, but the tentpole has no Morant-Memphis or Leonard-Clippers return date, and neither departing brief plans one. 'LeBron's Cleveland visits' sits in the January window, but the Cleveland brief schedules its lebron-returns beat for Oct-Nov, and PHI and CLE also share Cup East Group B.",
+      "fix": "Add the POR-MEM and TOR-LAC meetings with dates (or flag them as TBC), and add a 'thank-you, city' line to the Memphis and Clippers plans. Move the Cleveland beat to its real game dates, including the Group B Cup game."
+    },
+    {
+      "target": "clusters['One-Team States']",
+      "severity": "medium",
+      "problem": "The label is false for most members. Denver and Minnesota have teams in all four major leagues, Utah now shares its building with the NHL's Mammoth, Sacramento hosts the Athletics at Sutter Health Park through 2027, and Portland has the Timbers and Thorns. Only Oklahoma City is truly a one-team state. The description also says 'cold or weather-driven' while Sacramento's brief describes triple-digit summers and a light-layer winter.",
+      "fix": "Rename the cluster 'Statewide Loyalists' (the fan base is regional or statewide, not the only team) and drop the climate clause, or move Sacramento's climate note to the Sun Belt theme where it already sits."
+    },
+    {
+      "target": "clusters['Sun Belt Arrival Cities'] (lac, cha) and clusters['Contender Melting Pots'] (hou)",
+      "severity": "medium",
+      "problem": "The Clippers are not a heat-inverted, transplant or souvenir market. Their brief is about being the second team in a two-team metro, which is Brooklyn's situation too (fandom 14 and 12). The Clippers and Charlotte are also missing from the Sun Belt calendar theme that their own cluster claims. Houston, on a 47.5-win total its brief calls a 'flatter outlook', sits in the contender cluster while Detroit (60-22, No. 1 seed), Oklahoma City and Cleveland do not.",
+      "fix": "Create a 'Second Team in a Two-Team Town' treatment for LAC and BKN, or at least move LAC out of the Sun Belt cluster. Add or remove cha so the theme and cluster agree. Either rename 'Contender Melting Pots' to 'Diaspora Metros' or move Houston to the Sun Belt cluster."
+    },
+    {
+      "target": "themes[1] Winter is the real uniform (gsw) / themes[2] Sun Belt (lal, sac vs lac, cha)",
+      "severity": "low",
+      "problem": "The winter theme claims a 'five-to-seven-month layering season' and includes the Bay, whose brief describes 50-degree fog nights and light layers, while it leaves out Brooklyn, Philadelphia and DC. The Sun Belt theme includes the Lakers but not the Clippers in the same climate, and includes Sacramento but not Charlotte or Memphis.",
+      "fix": "Split the outerwear platform into 'deep winter' and 'fog/shoulder layer' tiers. Apply climate themes by metro, not by team, so LAL and LAC (and NYK and BKN) always share one."
+    },
+    {
+      "target": "themes[6] The maker is part of the product",
+      "severity": "low",
+      "problem": "With 19 of 30 markets tagged, the theme is the house operating model (pay and credit artists) rather than a market insight, and its implication repeats Portland principle 3 almost word for word.",
+      "fix": "Keep the co-author model as a Portland principle only. Narrow the theme to the hand-lettering and sign-painting markets where lettering is the product (mem, lal, sas, hou, orl, phx, nop), or cut it."
+    },
+    {
+      "target": "Specter coverage (themes[4], tentpoles, clusters)",
+      "severity": "medium",
+      "problem": "The verified calendar names eight Specter clubs: Celtics, Lakers, Warriors, Knicks, 76ers, Kings, Pistons and Hawks. The league plan only uses Specter as background for the giants. Sacramento's (18 mentions) and Atlanta's (10) Specter plans never surface, and there is no Specter-game-night tentpole even though the games are still to be announced.",
+      "fix": "Add a Specter line: one league-wide rollout tied to the first Specter game in each of the eight markets once the schedule is known, including Sacramento and Atlanta, which have few other national hooks."
+    },
+    {
+      "target": "priorities (board composition)",
+      "severity": "medium",
+      "problem": "All 15 board items do exist as priority-1 opportunities in their briefs, with matching ids and months. But Minnesota appears in 8 tentpoles and 6 themes, hosts a Christmas game and is cited as the Cup ready-swap template, yet has no board item. Cleveland (heat 72, all-in contender) and Denver are also absent, while Indiana (score 46) and Atlanta (52) made it. The board does not follow the 'calibrated scores' rule in principle 5.",
+      "fix": "Add one Minnesota item from its brief (the Christmas and Cup layer program), give each board item an explicit ranking key (score plus unique-date bonus), and state why each market below the cut was left off."
+    },
+    {
+      "target": "priorities.hou (red-and-gold-clutch-heritage) 'revealed 2026-27 throwback'",
+      "severity": "medium",
+      "problem": "The board calls the red-and-gold throwback 'revealed'. The Houston critique says the uniform designation is unconfirmed and the brief is knowledge-mode. The board item rests on an unverified uniform.",
+      "fix": "Change 'revealed' to 'reported (verify)' and gate the item on confirmation of the Classic/throwback designation and the Olajuwon likeness clearance."
+    },
+    {
+      "target": "portland[0] three sweeps",
+      "severity": "medium",
+      "problem": "Sweep one runs 'September to the Oct 20 opener' to lock partners and seed the opener and Cup Fridays. Today is Oct 9, so most of that window is gone and no brief has a signed partner. The principle is a calendar outline with no owner, budget or exit criteria.",
+      "fix": "Re-baseline sweep one to Oct 9-Nov 27 (opener plus Cup) and limit it to the few markets with this-season decoration. Give each sweep named owners, a market list, a travel budget and a go/no-go checklist."
+    },
+    {
+      "target": "portland[4] resource by calibrated scores",
+      "severity": "medium",
+      "problem": "'The five contender and heritage giants' are never named; the Heirloom cluster and the Contender cluster each have five members. Putting OKC with Utah and Sacramento contradicts its contender status. The principle gives no thresholds, so it cannot be applied.",
+      "fix": "Name the tiers and put numbers on them, for example Tier 1 opportunity >= 75 (nyk, lal, mia, phi, sas), Tier 2 55-74 and Tier 3 below 55, each with a budget share and a re-score date."
+    },
+    {
+      "target": "src/nba/teams.js city field -> market names in digest, site headers and agent prompts",
+      "severity": "medium",
+      "problem": "teamLabel and the prompt teamLine build names as city + name, which produces 'San Francisco Warriors', 'Salt Lake City Jazz', 'Indianapolis Pacers' and 'Minneapolis Timberwolves'. These show in the digest and on the Market page h1. The research prompts were also seeded with the wrong franchise names, and they appear in gsw and uta dossiers.",
+      "fix": "Add a 'place' field (Golden State, Utah, Indiana, Minnesota; the city for everyone else), use it in teamLabel, the document title and the prompt teamLine, and scrub the wrong names from the gsw and uta dossiers."
+    },
+    {
+      "target": "tentpoles[month 2] All-Star 'market-specific warm-ups'",
+      "severity": "low",
+      "problem": "All-Star uniforms and warm-ups are league-designed for every participant, so 'dressing their All-Stars in market-specific warm-ups' is not something a market team can do.",
+      "fix": "Swap in home-market watch-party and 'our All-Star' tees from in-line blanks, with the trade-deadline (Feb 11) quick-turn slot unchanged."
+    },
+    {
+      "target": "research/nba/mem/critique.json (Tony Allen)",
+      "severity": "low",
+      "problem": "The Memphis critique says Tony Allen died in August 2024, while the Memphis factcheck says the rhythm dossier 'wrongly said Tony Allen died in 2024 (corrected)'. The package now contradicts itself on whether a former player is alive, a brand-safety risk if the critique text is shown on the site.",
+      "fix": "Correct or annotate the critique entry to match the factcheck, and make sure no league or site copy repeats the claim. Keep any Grindfather product gated on direct confirmation with Allen."
+    },
+    {
+      "target": "scores.phx note",
+      "severity": "low",
+      "problem": "The note says retail is 'below average', but Phoenix's retail score of 48 sits above the league median of 46.",
+      "fix": "Either lower the score or change the note to 'around average'."
+    }
+  ],
+  "weakMarkets": [
+    {
+      "team": "lac",
+      "why": "It is the thinnest brief in the corpus (the shortest strategy.json, with 18 hedges on 34k characters), and its own critique calls the central 'Sign Language' idea thinner and more generic than it claims. The whole opportunity case rests on an unverified Aspiration ruling. Three of its eight opportunities are priority 1 with no fallback if that ruling or the Oct 30 decorator timeline fails, and it has no reshuffle or return-night plan despite losing Kawhi."
+    },
+    {
+      "team": "cle",
+      "why": "Five of eight opportunities are priority 1, so nothing is actually prioritized. Its critique says Lake Effect and the archetype could belong to any Great Lakes city, and its winter line repeats Chicago's, Detroit's and Milwaukee's. The 'unfinished business' playoff frame is a generic sports line (Detroit's critique flags the same phrase), and its LeBron-return beat is timed Oct-Nov while the league tentpole puts it in January."
+    },
+    {
+      "team": "uta",
+      "why": "It has the fewest opportunities (7) and the smallest fact-check sample (58 claims), and only one league tentpole uses it. Its uniform concept is pushed out to 2028-29, and most dated hooks (opener, Cup home nights, partner status) are still on the verify list. Next to its peers it gives Portland the least to act on this season beyond a family pack and a puffer."
+    }
+  ],
+  "summary": "The league file is structurally complete. All 30 markets are clustered once, every priority-board id exists as a priority-1 opportunity in its brief with matching months, and the holiday, MLK, Lunar New Year (Feb 6, Year of the Goat), Mardi Gras (Feb 9), Presidents' Day, All-Star (Feb 19-21) and Cup dates match the verified calendar. The main faults are these. (1) Scores: league scores are an unexplained rank-stretch of the brief scores, with gaps of up to 52 points, a few like-for-like inconsistencies (GSW, PHX and PHI culture; NYK retail; POR below OKC on opportunity) and an OKC opportunity score that counts its retail twice. (2) Verification: the watchlist contradicts the verified 30-0 expansion vote, and the reshuffle story (Giannis to MIA, Ja, Kawhi, the Jan 21 and 28 dates) plus the Clippers ruling are stated as fact on knowledge-mode evidence. (3) Dates and mechanics: 313 and 713 Day sit in an April tentpole although they fall on Mar 13 and Jul 13, a 'weekly' Cup Friday drop is impossible with two home Cup games per team, and the Memphis and Clippers return nights are missing. (4) Clustering: 'One-Team States' is false for DEN, MIN, UTA, SAC and POR, and LAC and HOU are mis-placed. (5) Portland principles: sweep one is mostly past, and the resourcing tiers are unnamed. Also, teams.js produces the wrong franchise names ('San Francisco Warriors', 'Salt Lake City Jazz', 'Indianapolis Pacers', 'Minneapolis Timberwolves'), and the weakest briefs are LAC, CLE and UTA."
+}

@@ -2,7 +2,7 @@
 // markets, the league read (themes + clusters), and every market as a card.
 import React, { useMemo, useState } from "react";
 import { markets, league, publishedCount, currentMonth, MONTHS_LONG, MONTHS } from "../data.js";
-import { DIVISIONS } from "../teams.js";
+import { DIVISIONS, placeOf } from "../teams.js";
 import { ALL_AGENTS } from "../agents/roster.js";
 import { Chip, Meter, Priority, TeamBand, href, SectionHead } from "../ui.jsx";
 
@@ -18,7 +18,7 @@ export default function Overview() {
   const rows = useMemo(() => {
     const ql = q.trim().toLowerCase();
     const list = markets.filter((m) => (conf === "All" || m.team.conference === conf) && (division === "All" || m.team.division === division)
-      && (!ql || `${m.team.city} ${m.team.name} ${m.team.abbr} ${m.archetype?.name || ""} ${m.headline || ""}`.toLowerCase().includes(ql)));
+      && (!ql || `${placeOf(m.team)} ${m.team.name} ${m.team.abbr} ${m.archetype?.name || ""} ${m.headline || ""}`.toLowerCase().includes(ql)));
     const score = (m) => (m.scorecard ? m.scorecard[sort] : -1);
     return [...list].sort((a, b) => (sort === "az" ? a.team.city.localeCompare(b.team.city) : score(b) - score(a) || a.team.city.localeCompare(b.team.city)));
   }, [conf, division, sort, q]);
@@ -61,7 +61,7 @@ export default function Overview() {
             {thisMonth.slice(0, 9).map((c, i) => (
               <a key={i} href={href("m", c.m.id)} className="hc-card hc-stack" style={{ textDecoration: "none", display: "block" }}>
                 <div className="hc-row" style={{ justifyContent: "space-between" }}>
-                  <span className="hc-row"><span className="hc-dot" style={{ background: c.m.team.colors[0] }} /><b>{c.m.team.city} {c.m.team.name}</b></span>
+                  <span className="hc-row"><span className="hc-dot" style={{ background: c.m.team.colors[0] }} /><b>{placeOf(c.m.team)} {c.m.team.name}</b></span>
                   <Priority p={c.priority} />
                 </div>
                 <h3 className="hc-h3">{c.moment}</h3>
@@ -105,7 +105,7 @@ function MarketCard({ m }) {
   const t = m.team;
   const top = m.opportunities ? [...m.opportunities].sort((a, b) => a.priority - b.priority)[0] : null;
   return (
-    <a href={href("m", t.id)} className="hc-market-card" aria-label={`${t.city} ${t.name}`}>
+    <a href={href("m", t.id)} className="hc-market-card" aria-label={`${placeOf(t)} ${t.name}`}>
       <TeamBand colors={t.colors} />
       <div className="hc-market-body">
         <div className="hc-row" style={{ justifyContent: "space-between" }}>
@@ -116,7 +116,7 @@ function MarketCard({ m }) {
             : <Chip tone="line" title="Written from agent knowledge (to mid-2026) — verify before acting">Knowledge draft</Chip>}
         </div>
         <div>
-          <h3 className="hc-market-city">{t.city}</h3>
+          <h3 className="hc-market-city">{placeOf(t)}</h3>
           <div style={{ fontWeight: 700, marginTop: 4 }}>{t.name}</div>
         </div>
         {m.status === "complete" ? (
@@ -139,7 +139,7 @@ function MarketCard({ m }) {
 
 function LeagueRead() {
   const byId = Object.fromEntries(markets.map((m) => [m.id, m.team]));
-  const name = (id) => (byId[id] ? (["Los Angeles", "New York"].includes(byId[id].city) ? byId[id].name : byId[id].city) : id);
+  const name = (id) => (byId[id] ? (["Los Angeles", "New York"].includes(byId[id].city) ? byId[id].name : placeOf(byId[id])) : id);
   return (
     <section className="hc-section">
       <SectionHead eyebrow="Across the league" title={league.headline} />

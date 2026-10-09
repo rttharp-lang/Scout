@@ -21,7 +21,7 @@ for (const team of TEAMS) {
   const peaks = [...months].sort((a, b) => b.intensity - a.intensity).slice(0, 3).map((m) => `${MON[m.month]} ${m.intensity}`);
   const lows = [...months].sort((a, b) => a.intensity - b.intensity).slice(0, 2).map((m) => `${MON[m.month]} ${m.intensity}`);
   const sc = s.scorecard || {};
-  out.push(`## ${team.id} — ${team.city} ${team.name} (${team.conference}, ${team.division})`);
+  out.push(`## ${team.id} — ${team.place || team.city} ${team.name} (${team.conference}, ${team.division})`);
   out.push(`Archetype: ${s.archetype?.name}: ${s.archetype?.description}`);
   out.push(`Headline: ${s.headline}`);
   out.push(`Thesis: ${s.thesis}`);

@@ -3,7 +3,7 @@
 // (collection + City Edition), then the agent dossiers that back it all up.
 import React, { useEffect, useMemo, useState } from "react";
 import { loadMarket, loadLiveRun, clearLiveRun, currentMonth, inkOn, heroColor, MONTHS, MONTHS_LONG, SEASON_ORDER } from "../data.js";
-import { TEAM_BY_ID } from "../teams.js";
+import { TEAM_BY_ID, placeOf } from "../teams.js";
 import { AGENT_BY_ID, LENS_AGENTS } from "../agents/roster.js";
 import { Chip, Scorecard, PaletteRow, MonthStrip, Priority, Confidence, Provenance, SectionHead, KV, href } from "../ui.jsx";
 import { verificationOf } from "../agents/provenance.js";
@@ -49,11 +49,11 @@ export default function Market({ id }) {
   const data = useLive && liveComplete ? live : published;
 
   if (!team) return <div className="hc-empty">Unknown market.</div>;
-  if (published === undefined) return <div className="hc-empty">Loading {team.city}…</div>;
+  if (published === undefined) return <div className="hc-empty">Loading {placeOf(team)}…</div>;
   if (!data) {
     return (
       <div className="hc-empty">
-        <h1 className="hc-h1" style={{ color: "var(--text)" }}>{team.city} {team.name}</h1>
+        <h1 className="hc-h1" style={{ color: "var(--text)" }}>{placeOf(team)} {team.name}</h1>
         <p style={{ marginTop: 12 }}>The agents haven't published this market yet.</p>
         <p style={{ marginTop: 16 }}><a className="hc-btn" style={{ textDecoration: "none", display: "inline-block" }} href={href("agents", team.id)}>Run the agents live</a></p>
       </div>
@@ -88,7 +88,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
               <Chip>{team.conference} · {team.division}</Chip>
               <Chip>{team.arena}</Chip>
             </div>
-            <h1 className="hc-display hc-hero-city">{team.city}</h1>
+            <h1 className="hc-display hc-hero-city">{placeOf(team)}</h1>
             <div style={{ fontFamily: "var(--font-display)", fontWeight: 900, textTransform: "uppercase", fontSize: "clamp(1.6rem, 3.6vw, 2.8rem)", lineHeight: 1, marginTop: 6, opacity: 0.85 }}>{team.name}</div>
             <p style={{ marginTop: 22, fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)", lineHeight: 1.3, fontWeight: 600, maxWidth: "34ch" }}>{s.headline}</p>
           </div>

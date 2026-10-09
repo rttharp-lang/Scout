@@ -5,6 +5,7 @@
 // on hover.
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { MONTHS, MONTHS_LONG, SEASON_ORDER } from "./data.js";
+import { placeOf } from "./teams.js";
 
 const RAMP = ["var(--seq-1)", "var(--seq-2)", "var(--seq-3)", "var(--seq-4)", "var(--seq-5)", "var(--seq-6)", "var(--seq-7)", "var(--seq-8)"];
 export const rampFor = (v) => RAMP[Math.max(0, Math.min(7, Math.floor((Number(v) || 0) / 12.5)))];
@@ -130,16 +131,16 @@ export function LeagueHeatmap({ rows, mode = "intensity", now, onSelect }) {
               <tr key={r.id}>
                 <th scope="row" className="hc-heat-team">
                   <a href={`#/m/${r.id}`} style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 }}>
-                    <span className="hc-dot" style={{ background: r.team.colors[0] }} />{r.team.city === "Los Angeles" || r.team.city === "New York" || r.team.city === "Brooklyn" ? `${r.team.name}` : r.team.city}
+                    <span className="hc-dot" style={{ background: r.team.colors[0] }} />{r.team.city === "Los Angeles" || r.team.city === "New York" || r.team.city === "Brooklyn" ? `${r.team.name}` : placeOf(r.team)}
                   </a>
                 </th>
                 {SEASON_ORDER.map((m) => {
                   const v = valueOf(r, m);
                   const p1 = (r.calendar || []).some((c) => c.month === m && c.priority === 1);
-                  if (v == null) return <td key={m} style={{ background: "var(--surface)" }} aria-label={`${r.team.city}: not yet researched`} />;
+                  if (v == null) return <td key={m} style={{ background: "var(--surface)" }} aria-label={`${placeOf(r.team)}: not yet researched`} />;
                   return (
                     <td key={m} tabIndex={0} style={{ background: rampFor(v) }}
-                      aria-label={`${r.team.city} ${r.team.name}, ${MONTHS_LONG[m - 1]}: ${mode === "intensity" ? `fan intensity ${v}` : `activation load ${v}`}${p1 ? ", priority-1 activation" : ""}`}
+                      aria-label={`${placeOf(r.team)} ${r.team.name}, ${MONTHS_LONG[m - 1]}: ${mode === "intensity" ? `fan intensity ${v}` : `activation load ${v}`}${p1 ? ", priority-1 activation" : ""}`}
                       onMouseEnter={(e) => show(e, r, m)} onMouseLeave={() => setTip(null)} onFocus={(e) => show(e, r, m)} onBlur={() => setTip(null)}
                       onClick={() => onSelect && onSelect(m)}>
                       {p1 && <span className="hc-heat-dot" />}
@@ -163,7 +164,7 @@ export function LeagueHeatmap({ rows, mode = "intensity", now, onSelect }) {
         const acts = (r.calendar || []).filter((c) => c.month === m);
         return (
           <div className="hc-tooltip" style={{ position: "fixed", left: Math.max(150, Math.min(window.innerWidth - 150, tip.x)), top: tip.y }}>
-            <div><strong>{valueOf(r, m)}</strong> <span className="hc-muted">· {r.team.city} {r.team.name}, {MONTHS_LONG[m - 1]}</span></div>
+            <div><strong>{valueOf(r, m)}</strong> <span className="hc-muted">· {placeOf(r.team)} {r.team.name}, {MONTHS_LONG[m - 1]}</span></div>
             {d && <div style={{ fontWeight: 600, marginTop: 2 }}>{d.phase}</div>}
             {acts.length > 0 && <div style={{ marginTop: 6, borderTop: "1px solid var(--border)", paddingTop: 6 }}>{acts.map((c, k) => <div key={k}>P{c.priority} · {c.moment}</div>)}</div>}
           </div>

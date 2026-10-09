@@ -18,7 +18,7 @@ function currentFacts(team) {
   if (!validatePulse(conf).errors.length) {
     const pulse = JSON.parse(fs.readFileSync(path.join(RESEARCH, `league-pulse-${conf}.json`), "utf8"));
     const entry = pulse.teams.find((t) => t.team === team.id);
-    if (entry) out.push(`${team.city} ${team.name}, verified ${pulse.asOf}:\n${JSON.stringify(entry, null, 1)}`);
+    if (entry) out.push(`${team.place || team.city} ${team.name}, verified ${pulse.asOf}:\n${JSON.stringify(entry, null, 1)}`);
   }
   const calFile = path.join(RESEARCH, "league-calendar.json");
   if (fs.existsSync(calFile)) {

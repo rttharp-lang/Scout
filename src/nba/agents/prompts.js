@@ -6,7 +6,7 @@
 //                     returns the same JSON via structured outputs
 import { STANDARDS, KNOWLEDGE_MODE, SEASON, AGENT_BY_ID, LENS_AGENTS, LENS_IDS, schemaFor } from "./roster.js";
 
-const teamLine = (t) => `${t.city} ${t.name} (${t.abbr}) — ${t.conference}ern Conference, ${t.division} Division. Home arena: ${t.arena}.`;
+const teamLine = (t) => `${t.place || t.city} ${t.name} (${t.abbr}; home city ${t.city}) — ${t.conference}ern Conference, ${t.division} Division. Home arena: ${t.arena}.`;
 
 // Knowledge mode drops the live-web CURRENT and SOURCES rules for KNOWLEDGE_MODE.
 const standardsFor = (knowledge) => (knowledge

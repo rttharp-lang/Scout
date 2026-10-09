@@ -89,7 +89,7 @@ export default function Agents({ preselect }) {
           <div className="hc-row hc-no-print" style={{ gap: 10 }}>
             <label className="hc-small" htmlFor="hc-run-team" style={{ fontWeight: 600 }}>Run live for</label>
             <select id="hc-run-team" className="hc-select" value={team} onChange={(e) => setTeam(e.target.value)} disabled={running}>
-              {TEAMS.map((t) => <option key={t.id} value={t.id}>{t.city} {t.name}</option>)}
+              {TEAMS.map((t) => <option key={t.id} value={t.id}>{t.place || t.city} {t.name}</option>)}
             </select>
             {!running ? <button className="hc-btn" onClick={start}>Run all 15 agents</button> : <button className="hc-btn hc-btn-ghost" onClick={stop}>Stop</button>}
             {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>View the live brief →</a>}

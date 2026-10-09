@@ -16,7 +16,7 @@ export default function App() {
 
   useEffect(() => {
     const t = section === "m" && TEAM_BY_ID[arg];
-    document.title = t ? `${t.city} ${t.name} · Home Court` : section === "calendar" ? "League calendar · Home Court" : section === "opportunities" ? "Opportunity board · Home Court" : section === "compare" ? "Compare markets · Home Court" : section === "agents" ? "Agents · Home Court" : "Home Court · Scout";
+    document.title = t ? `${t.place || t.city} ${t.name} · Home Court` : section === "calendar" ? "League calendar · Home Court" : section === "opportunities" ? "Opportunity board · Home Court" : section === "compare" ? "Compare markets · Home Court" : section === "agents" ? "Agents · Home Court" : "Home Court · Scout";
     if (section !== "m") window.scrollTo(0, 0);
   }, [section, arg]);
 

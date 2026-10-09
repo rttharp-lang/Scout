@@ -15,12 +15,18 @@
   },
   "verifiedMoment": "Jalen Johnson's Hawks reloaded around defense after a 6-seed season: No. 8 pick Kingston Flemings, plus trades for Lu Dort, Ryan Nembhard, Aaron Wiggins and Devin Carter, with 2024 No. 1 pick Zaccharie Risacher shipped to Dallas.",
   "scorecard": {
-   "opportunity": 74,
-   "culture": 92,
-   "retail": 64,
-   "fandom": 52,
-   "rationale": "Atlanta has one of the league's deepest design wells (Black Mecca, hip-hop, HBCU, rink and car culture, an immigrant 770) and a big, style-literate metro, but Hawks fandom runs below the city's cultural heat and arrives in spikes. Retail is broad yet car-dependent and split by trade area, with taste set in small independent doors whose status needs checking.",
-   "calibrated": false
+   "opportunity": 54,
+   "culture": 82,
+   "retail": 56,
+   "fandom": 30,
+   "rationale": "One of the league's deepest design wells sits on one of its softest fan bases, because Atlanta's pride runs to the city rather than the Hawks, so culture is top-five while fandom sits in the bottom quarter (brief scores: opportunity 74, culture 92, retail 64, fandom 52). Atlanta has one of the league's deepest design wells (Black Mecca, hip-hop, HBCU, rink and car culture, an immigrant 770) and a big, style-literate metro, but Hawks fandom runs below the city's cultural heat and arrives in spikes. Retail is broad yet car-dependent and split by trade area, with taste set in small independent doors whose status needs checking.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 74,
+    "culture": 92,
+    "retail": 64,
+    "fandom": 52
+   }
   },
   "palette": [
    {
@@ -506,12 +512,18 @@
   },
   "verifiedMoment": "The Tatum-Brown era is over: after a 3-1 first-round collapse against Philadelphia, Brad Stevens traded Jaylen Brown to the 76ers for Paul George and picks and rebuilt the roster around Jayson Tatum.",
   "scorecard": {
-   "opportunity": 76,
-   "culture": 84,
-   "retail": 78,
-   "fandom": 86,
-   "rationale": "Boston pairs one of the league's most intense, heritage-driven fan bases and a deep, distinct civic and neighborhood culture with strong retail (the Garden, Newbury, Concepts, regional outlets), but the opportunity is capped this season by roster doubt and by rival brands' home-turf claims.",
-   "calibrated": false
+   "opportunity": 64,
+   "culture": 60,
+   "retail": 80,
+   "fandom": 84,
+   "rationale": "Elite heritage fandom and strong New England retail, but roster doubt after the Brown trade and Nike playing away to New Balance and adidas cap opportunity, and its design well is narrower than the Black-led design capitals' (brief scores: opportunity 76, culture 84, retail 78, fandom 86). Boston pairs one of the league's most intense, heritage-driven fan bases and a deep, distinct civic and neighborhood culture with strong retail (the Garden, Newbury, Concepts, regional outlets), but the opportunity is capped this season by roster doubt and by rival brands' home-turf claims.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 76,
+    "culture": 84,
+    "retail": 78,
+    "fandom": 86
+   }
   },
   "palette": [
    {
@@ -985,12 +997,18 @@
   },
   "verifiedMoment": "The Nets are still rebuilding, but with more veteran scoring: Julius Randle returns to New York alongside Michael Porter Jr., and No. 6 pick Mikel Brown Jr. leads a very young roster under a newly extended Jordi Fernandez.",
   "scorecard": {
-   "opportunity": 66,
-   "culture": 92,
-   "retail": 72,
-   "fandom": 40,
-   "rationale": "Brooklyn's culture is among the deepest and most designable in the league, but the Nets' fandom is thin after 20-62 in a Knicks title year and most partners and doors are unchecked. The opportunity rests on the borough mark selling without wins, and is conditional on local co-authorship and a 2027 build rather than this season.",
-   "calibrated": false
+   "opportunity": 42,
+   "culture": 80,
+   "retail": 66,
+   "fandom": 16,
+   "rationale": "Brooklyn's borough culture and New York retail rank high, but after 20-62 in a Knicks title year Nets fandom is the league's second-thinnest and the real opportunity is a 2027 build (brief scores: opportunity 66, culture 92, retail 72, fandom 40). Brooklyn's culture is among the deepest and most designable in the league, but the Nets' fandom is thin after 20-62 in a Knicks title year and most partners and doors are unchecked. The opportunity rests on the borough mark selling without wins, and is conditional on local co-authorship and a 2027 build rather than this season.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 66,
+    "culture": 92,
+    "retail": 72,
+    "fandom": 40
+   }
   },
   "palette": [
    {
@@ -1428,12 +1446,18 @@
   },
   "verifiedMoment": "The LaMelo Ball era is over: Charlotte traded him to Minnesota and handed the team to Brandon Miller and second-year Kon Knueppel, with Coby White and Naz Reid in support.",
   "scorecard": {
-   "opportunity": 58,
-   "culture": 66,
-   "retail": 52,
-   "fandom": 50,
-   "rationale": "Charlotte's culture is deeper and less used than its 'Banktown' reputation suggests, and Hive and Hugo nostalgia sell beyond the market, but non-Nike player faces, a single scheduled national window and college and Panthers competition cap fandom and opportunity. Retail is mall-and-outlet heavy with few tastemaker doors.",
-   "calibrated": false
+   "opportunity": 34,
+   "culture": 42,
+   "retail": 38,
+   "fandom": 28,
+   "rationale": "Hive nostalgia is real, but non-Nike faces, one national window and a college-first, mall-and-outlet metro put Charlotte in the bottom fifth on opportunity and fandom and below average on culture and retail (brief scores: opportunity 58, culture 66, retail 52, fandom 50). Charlotte's culture is deeper and less used than its 'Banktown' reputation suggests, and Hive and Hugo nostalgia sell beyond the market, but non-Nike player faces, a single scheduled national window and college and Panthers competition cap fandom and opportunity. Retail is mall-and-outlet heavy with few tastemaker doors.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 58,
+    "culture": 66,
+    "retail": 52,
+    "fandom": 50
+   }
   },
   "palette": [
    {
@@ -1908,12 +1932,18 @@
   },
   "verifiedMoment": "A new regime in Chicago: Billy Donovan stepped down, Tiago Splitter took over as coach and new EVP Bryson Graham is building for 'SLAP' (size, length, athleticism, physicality) around Josh Giddey, Matas Buzelis and No. 4 pick Caleb Wilson.",
   "scorecard": {
-   "opportunity": 82,
-   "culture": 93,
-   "retail": 84,
-   "fandom": 74,
-   "rationale": "Chicago is one of the league's deepest design cultures and a global heritage retail engine with a full flagship, arena, boutique and suburban-mall network. Fan intensity scores high on legacy but is held back by a 31-51 rebuild and ownership fatigue, so the near-term upside is in civic and outerwear product, mostly in the 2027-28 cycle, more than in current-player demand.",
-   "calibrated": false
+   "opportunity": 66,
+   "culture": 82,
+   "retail": 88,
+   "fandom": 60,
+   "rationale": "The six-banner heritage engine and a full flagship-to-mall network put Chicago's retail second in the league and culture in the top five, but a 31-51 rebuild and a 2027-28 build window hold opportunity and fandom nearer the middle (brief scores: opportunity 82, culture 93, retail 84, fandom 74). Chicago is one of the league's deepest design cultures and a global heritage retail engine with a full flagship, arena, boutique and suburban-mall network. Fan intensity scores high on legacy but is held back by a 31-51 rebuild and ownership fatigue, so the near-term upside is in civic and outerwear product, mostly in the 2027-28 cycle, more than in current-player demand.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 82,
+    "culture": 93,
+    "retail": 84,
+    "fandom": 74
+   }
   },
   "palette": [
    {
@@ -2385,12 +2415,18 @@
   },
   "verifiedMoment": "Cleveland is all in. The Cavs reached their first conference finals since 2018, then re-signed James Harden, extended Donovan Mitchell and spent their last tradable first on Peyton Watson. It is a title-or-bust season.",
   "scorecard": {
-   "opportunity": 64,
-   "culture": 76,
-   "retail": 48,
-   "fandom": 72,
-   "rationale": "Cleveland has unusually deep, designable local culture (punk and rap lineage, ore-dock steel and Deco civic stone, immigrant food rituals, a distinct Akron identity) and a loyal, title-hungry regional fan base, but a drive-to-the-mall retail map with no downtown sneaker district, a Browns-first fall wallet and a LeBron storyline Nike must handle carefully cap the near-term upside.",
-   "calibrated": false
+   "opportunity": 50,
+   "culture": 52,
+   "retail": 36,
+   "fandom": 60,
+   "rationale": "Title-or-bust loyalty puts fandom above average and its punk, rap, steel and Akron material sits below the league median, but a drive-to-the-mall retail map with no sneaker district and a Browns-first fall keep retail below the line and opportunity at it (brief scores: opportunity 64, culture 76, retail 48, fandom 72). Cleveland has unusually deep, designable local culture (punk and rap lineage, ore-dock steel and Deco civic stone, immigrant food rituals, a distinct Akron identity) and a loyal, title-hungry regional fan base, but a drive-to-the-mall retail map with no downtown sneaker district, a Browns-first fall wallet and a LeBron storyline Nike must handle carefully cap the near-term upside.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 64,
+    "culture": 76,
+    "retail": 48,
+    "fandom": 72
+   }
   },
   "palette": [
    {
@@ -2859,12 +2895,18 @@
   },
   "verifiedMoment": "After a 60-win, No. 1-seed season ended in a Game 7 blowout loss to Cleveland, Detroit kept its core: Jalen Duren signed for $200M. The open question is whether Cade Cunningham has enough help without a second star.",
   "scorecard": {
-   "opportunity": 80,
-   "culture": 90,
-   "retail": 55,
-   "fandom": 80,
-   "rationale": "A 60-win No. 1 seed in a Specter year, three heritage wardrobes and a seven-month outerwear season put opportunity well above average, and in our judgment Detroit's design well (Motown, techno, jit, Dilla, Pewabic, Deco, workwear, immigrant corridors) is unusually deep. Retail is scored cautiously because the city core is thin and key partner doors (Detroit vs. Everybody, Two18, Nike Factory at Great Lakes Crossing) are unconfirmed; fandom is intense but shares winter with the Lions and Red Wings and is anxious after the Game 7 rout.",
-   "calibrated": false
+   "opportunity": 68,
+   "culture": 74,
+   "retail": 44,
+   "fandom": 72,
+   "rationale": "A 60-win No. 1 seed in a Specter year with a seven-month outerwear season and a deep maker culture lifts opportunity, culture and fandom well above average, while a thin city-core retail map and unconfirmed partner doors keep retail below the line (brief scores: opportunity 80, culture 90, retail 55, fandom 80). A 60-win No. 1 seed in a Specter year, three heritage wardrobes and a seven-month outerwear season put opportunity well above average, and in our judgment Detroit's design well (Motown, techno, jit, Dilla, Pewabic, Deco, workwear, immigrant corridors) is unusually deep. Retail is scored cautiously because the city core is thin and key partner doors (Detroit vs. Everybody, Two18, Nike Factory at Great Lakes Crossing) are unconfirmed; fandom is intense but shares winter with the Lions and Red Wings and is anxious after the Game 7 rout.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 80,
+    "culture": 90,
+    "retail": 55,
+    "fandom": 80
+   }
   },
   "palette": [
    {
@@ -3338,12 +3380,18 @@
   },
   "verifiedMoment": "Tyrese Haliburton is back from the torn Achilles he suffered in Game 7 of the 2025 Finals ('I am healthy, ready to go,' Sept 28). He rejoins the Siakam-led 2025 Finals core, now with Ivica Zubac at center, after a lost 19-63 year.",
   "scorecard": {
-   "opportunity": 68,
-   "culture": 76,
-   "retail": 45,
-   "fandom": 72,
-   "rationale": "Indiana has one of the league's deepest basketball cultures and a one-off Hinkle Cup final in a comeback season, which lifts opportunity above average despite a small market. Retail sits below average: no destination flagship, a mall-first, value-led buyer, a star with a rival footwear deal and key cues that need third-party clearance.",
-   "calibrated": false
+   "opportunity": 48,
+   "culture": 52,
+   "retail": 30,
+   "fandom": 58,
+   "rationale": "A Hinkle Cup final and Haliburton's return give a small market near-average opportunity and above-average gym-faith fandom, while value-led, mall-first retail with no destination door sits in the bottom tier (brief scores: opportunity 68, culture 76, retail 45, fandom 72). Indiana has one of the league's deepest basketball cultures and a one-off Hinkle Cup final in a comeback season, which lifts opportunity above average despite a small market. Retail sits below average: no destination flagship, a mall-first, value-led buyer, a star with a rival footwear deal and key cues that need third-party clearance.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 68,
+    "culture": 76,
+    "retail": 45,
+    "fandom": 72
+   }
   },
   "palette": [
    {
@@ -3800,11 +3848,17 @@
   "verifiedMoment": "Miami landed Giannis Antetokounmpo in one of the biggest trades in NBA history and added Klay Thompson. It is now a Giannis-Bam Adebayo contender on paper, and anything short of a deep run will read as failure.",
   "scorecard": {
    "opportunity": 86,
-   "culture": 92,
-   "retail": 78,
-   "fandom": 72,
-   "rationale": "A Nike signature superstar arriving in a gateway shopping market, with some of the league's deepest multicultural design material and a real park-court culture, puts opportunity and culture near the top of the league. Retail is strong but sprawling and knockoff-pressured, and fandom peaks on White Hot playoff nights but is more front-running than the league's most loyal markets.",
-   "calibrated": false
+   "culture": 80,
+   "retail": 76,
+   "fandom": 58,
+   "rationale": "Top-three opportunity because Giannis is Nike's biggest signature star in a gateway shopping market with deep Cuban, Haitian and Latin design material, but fandom is just above average because Miami's crowd is playoff-and-winning driven rather than lifer-loyal (brief scores: opportunity 86, culture 92, retail 78, fandom 72). A Nike signature superstar arriving in a gateway shopping market, with some of the league's deepest multicultural design material and a real park-court culture, puts opportunity and culture near the top of the league. Retail is strong but sprawling and knockoff-pressured, and fandom peaks on White Hot playoff nights but is more front-running than the league's most loyal markets.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 86,
+    "culture": 92,
+    "retail": 78,
+    "fandom": 72
+   }
   },
   "palette": [
    {
@@ -4287,12 +4341,18 @@
   },
   "verifiedMoment": "Milwaukee faces its first season without Giannis Antetokounmpo in more than a decade, with a new coach in Taylor Jenkins. The Bucks are starting a long rebuild around Tyler Herro, the young pieces from the Miami trade and two lottery picks.",
   "scorecard": {
-   "opportunity": 50,
-   "culture": 70,
-   "retail": 40,
-   "fandom": 56,
-   "rationale": "Milwaukee has one of the league's most place-specific palettes and a deep tavern and neighborhood vernacular, but a small, value-minded market in a low-expectation rebuild, a thin sneaker scene and no Nike-owned door in the city keep opportunity average and retail below average, which is why the plan runs only three priority-1 bets. Fandom is loyal and statewide but at low heat until Jan 28.",
-   "calibrated": false
+   "opportunity": 26,
+   "culture": 48,
+   "retail": 24,
+   "fandom": 36,
+   "rationale": "Life after Giannis in a small, value-minded rebuild gives Milwaukee the league's second-lowest opportunity, with Cream City brick and fish-fry Fridays as its main design assets and fandom below average until Jan 28 (brief scores: opportunity 50, culture 70, retail 40, fandom 56). Milwaukee has one of the league's most place-specific palettes and a deep tavern and neighborhood vernacular, but a small, value-minded market in a low-expectation rebuild, a thin sneaker scene and no Nike-owned door in the city keep opportunity average and retail below average, which is why the plan runs only three priority-1 bets. Fandom is loyal and statewide but at low heat until Jan 28.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 50,
+    "culture": 70,
+    "retail": 40,
+    "fandom": 56
+   }
   },
   "palette": [
    {
@@ -4747,12 +4807,18 @@
   },
   "verifiedMoment": "The defending champions: the Knicks won their first title since 1973, with Jalen Brunson as Finals MVP. They kept most of the roster under the second apron, and the defense starts with a ring night against LeBron James and Jaylen Brown's new-look 76ers.",
   "scorecard": {
-   "opportunity": 91,
-   "culture": 96,
-   "retail": 84,
-   "fandom": 94,
-   "rationale": "The league's biggest market defending its first title in 53 years, with the deepest homegrown basketball, music and art culture to design from. Scores are held down because it is also the most crowded, license-heavy market (MSG, MTA, Puma's Clyde, Fanatics, a 2026-27 City Edition that is unverified and likely already set), so Nike's real lanes are the AF1 Uptowns and Flax, Specter, the park circuit and the borough doors, all assuming rights and doors check out.",
-   "calibrated": false
+   "opportunity": 94,
+   "culture": 94,
+   "retail": 86,
+   "fandom": 95,
+   "rationale": "The league ceiling on opportunity, culture and fandom: the biggest market defending its first title since 1973 with the deepest homegrown basketball, music and art culture, while retail sits just behind the Lakers and Chicago because MSG, Puma's Clyde and Fanatics crowd Nike's lane in the most license-heavy market (brief scores: opportunity 91, culture 96, retail 84, fandom 94). The league's biggest market defending its first title in 53 years, with the deepest homegrown basketball, music and art culture to design from. Scores are held down because it is also the most crowded, license-heavy market (MSG, MTA, Puma's Clyde, Fanatics, a 2026-27 City Edition that is unverified and likely already set), so Nike's real lanes are the AF1 Uptowns and Flax, Specter, the park circuit and the borough doors, all assuming rights and doors check out.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 91,
+    "culture": 96,
+    "retail": 84,
+    "fandom": 94
+   }
   },
   "palette": [
    {
@@ -5235,12 +5301,18 @@
   },
   "verifiedMoment": "Orlando chose continuity over a splash: it fired Jamahl Mosley, hired Spurs defensive architect Sean Sweeney and is betting he can make the Banchero-Wagner-Bane trio work. Vucevic is back for his second Magic stint.",
   "scorecard": {
-   "opportunity": 64,
-   "culture": 72,
-   "retail": 58,
-   "fandom": 56,
-   "rationale": "Opportunity sits above average because Nike owns the Penny-pinstripe nostalgia and Central Florida's Puerto Rican and tourist audiences are large, but no national-TV stage, modest local incomes and a prove-it season cap it. Culture is deep (Parramore, OBT signage, Mills 50, Boricua Orlando), though the score assumes partners the brief has not yet signed; retail is outlet-heavy with a thin taste layer, and fandom is loyal but playoff-gated.",
-   "calibrated": false
+   "opportunity": 40,
+   "culture": 50,
+   "retail": 46,
+   "fandom": 36,
+   "rationale": "Penny pinstripes and a large Boricua base give Orlando a real lane and design material below the median, but no national stage, outlet-heavy retail and playoff-gated loyalty keep opportunity, retail and fandom in the bottom half (brief scores: opportunity 64, culture 72, retail 58, fandom 56). Opportunity sits above average because Nike owns the Penny-pinstripe nostalgia and Central Florida's Puerto Rican and tourist audiences are large, but no national-TV stage, modest local incomes and a prove-it season cap it. Culture is deep (Parramore, OBT signage, Mills 50, Boricua Orlando), though the score assumes partners the brief has not yet signed; retail is outlet-heavy with a thin taste layer, and fandom is loyal but playoff-gated.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 64,
+    "culture": 72,
+    "retail": 58,
+    "fandom": 56
+   }
   },
   "palette": [
    {
@@ -5707,11 +5779,17 @@
   "verifiedMoment": "Philadelphia had the summer's biggest swing: Jaylen Brown arrived by trade from Boston and LeBron James signed as a free agent, joining Joel Embiid, Tyrese Maxey and VJ Edgecombe. The questions are health and age, and Nick Nurse is under maximum pressure.",
   "scorecard": {
    "opportunity": 86,
-   "culture": 91,
-   "retail": 68,
-   "fandom": 85,
-   "rationale": "A title-contending superteam with Nike's LeBron, a Specter season and a new arena coming to the Spectrum site make this one of the league's biggest 2026-27 openings, and few markets offer as deep a culture to design from. Retail is broad but the taste-setting independents are thin since Ubiq closed and the throwback lane belongs to Mitchell & Ness, and fan intensity is elite but shares the winter with the Eagles.",
-   "calibrated": false
+   "culture": 66,
+   "retail": 64,
+   "fandom": 78,
+   "rationale": "A LeBron-and-Brown contender in a Specter year gives Philadelphia top-four opportunity and elite-adjacent fandom; its design material (Philly soul, the mural program, North Fifth Street, Iverson-era street style) is real but less distinct than the top culture band, and retail is held down by thin taste-setting independents and a throwback lane owned by Mitchell & Ness (brief scores: opportunity 86, culture 91, retail 68, fandom 85). A title-contending superteam with Nike's LeBron, a Specter season and a new arena coming to the Spectrum site make this one of the league's biggest 2026-27 openings, and few markets offer as deep a culture to design from. Retail is broad but the taste-setting independents are thin since Ubiq closed and the throwback lane belongs to Mitchell & Ness, and fan intensity is elite but shares the winter with the Eagles.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 86,
+    "culture": 91,
+    "retail": 68,
+    "fandom": 85
+   }
   },
   "palette": [
    {
@@ -6199,12 +6277,18 @@
   },
   "verifiedMoment": "Kawhi Leonard is back in Toronto, acquired from the Clippers to pair with All-Star Scottie Barnes after a surprise 5-seed season, with coach Darko Rajakovic newly extended through 2028-29.",
   "scorecard": {
-   "opportunity": 78,
-   "culture": 88,
-   "retail": 70,
-   "fandom": 80,
-   "rationale": "A country-sized, diaspora-majority fanbase with the 2019 memory reopened, a Leonard jersey spike and Nike's own Carter archive, plus an unusually deep design vocabulary (transit, winter, borough, heritage), puts culture and fandom well above average. Retail is strong in malls and national chains but held back by CAD pricing, cross-border and resale leakage, and the anti-US mood.",
-   "calibrated": false
+   "opportunity": 72,
+   "culture": 64,
+   "retail": 66,
+   "fandom": 70,
+   "rationale": "A country-sized market with the Leonard reunion and Nike's own Carter archive sits above average everywhere, held below the US giants by CAD pricing, cross-border leakage and post-'Elbows Up' wariness of US brands (brief scores: opportunity 78, culture 88, retail 70, fandom 80). A country-sized, diaspora-majority fanbase with the 2019 memory reopened, a Leonard jersey spike and Nike's own Carter archive, plus an unusually deep design vocabulary (transit, winter, borough, heritage), puts culture and fandom well above average. Retail is strong in malls and national chains but held back by CAD pricing, cross-border and resale leakage, and the anti-US mood.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 78,
+    "culture": 88,
+    "retail": 70,
+    "fandom": 80
+   }
   },
   "palette": [
    {
@@ -6703,12 +6787,18 @@
   },
   "verifiedMoment": "Washington jumped from the NBA's worst record to a fascinating build: lottery winner AJ Dybantsa joins Trae Young (re-signed long term), Anthony Davis and young core pieces Alex Sarr, Kyshawn George and Tre Johnson.",
   "scorecard": {
-   "opportunity": 66,
-   "culture": 90,
-   "retail": 58,
-   "fandom": 44,
-   "rationale": "DC has one of the league's deepest and most ownable local cultures (an official music, a beloved civic flag and type system, Chocolate City and DMV hoops), and the Dybantsa reset makes this an above-average opening. Fandom sits below average after 17-65 in a hockey-first, visiting-fan-heavy arena, and retail is a wealthy but fragmented suburban mall-and-DTLR market, so the plan is held to three priorities with gates.",
-   "calibrated": false
+   "opportunity": 42,
+   "culture": 72,
+   "retail": 46,
+   "fandom": 22,
+   "rationale": "DC's go-go, flag and ward culture sits in the league's top third, but a 17-65 hangover in a hockey-first, visiting-fan-heavy arena gives it the fourth-softest fandom until Dybantsa proves out (brief scores: opportunity 66, culture 90, retail 58, fandom 44). DC has one of the league's deepest and most ownable local cultures (an official music, a beloved civic flag and type system, Chocolate City and DMV hoops), and the Dybantsa reset makes this an above-average opening. Fandom sits below average after 17-65 in a hockey-first, visiting-fan-heavy arena, and retail is a wealthy but fragmented suburban mall-and-DTLR market, so the plan is held to three priorities with gates.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 66,
+    "culture": 90,
+    "retail": 58,
+    "fandom": 44
+   }
   },
   "palette": [
    {
@@ -7132,12 +7222,18 @@
   },
   "verifiedMoment": "A full reset under new president Masai Ujiri and first-year coach Dusty May, built around Cooper Flagg with Kyrie Irving back from his ACL tear.",
   "scorecard": {
-   "opportunity": 64,
-   "culture": 70,
-   "retail": 58,
-   "fandom": 54,
-   "rationale": "A huge, majority-minority metro with distinct design languages (the Fair Park Centennial, Deep Ellum, Oak Cliff) and a fresh Flagg reason to buy, held back by football's grip on the fall, a car-bound retail map, a wounded fan base coming off 26-56 and partners not yet confirmed.",
-   "calibrated": false
+   "opportunity": 40,
+   "culture": 50,
+   "retail": 48,
+   "fandom": 32,
+   "rationale": "A huge metro with Flagg and distinct Oak Cliff and Fair Park languages has average retail scale and design material below the median, but a wounded 26-56 fan base and football's grip on the fall put opportunity and fandom in the bottom half (brief scores: opportunity 64, culture 70, retail 58, fandom 54). A huge, majority-minority metro with distinct design languages (the Fair Park Centennial, Deep Ellum, Oak Cliff) and a fresh Flagg reason to buy, held back by football's grip on the fall, a car-bound retail map, a wounded fan base coming off 26-56 and partners not yet confirmed.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 64,
+    "culture": 70,
+    "retail": 58,
+    "fandom": 54
+   }
   },
   "palette": [
    {
@@ -7615,12 +7711,18 @@
   },
   "verifiedMoment": "Denver is betting on continuity around three-time MVP Nikola Jokic after a first-round upset. It added DeMar DeRozan for scoring, and Jokic is eligible for a roughly $290M extension he has said he aims to sign.",
   "scorecard": {
-   "opportunity": 64,
-   "culture": 68,
-   "retail": 48,
-   "fandom": 64,
-   "rationale": "A three-time MVP, a recent title, one of the league's most loved vintage graphics and a long outerwear season make Denver an above-average opportunity with deep design material. Retail is below average (no downtown Nike door, thin sneaker-boutique scene, volume on the suburban edges), and fandom is loyal but quiet until the playoffs.",
-   "calibrated": false
+   "opportunity": 48,
+   "culture": 46,
+   "retail": 36,
+   "fandom": 48,
+   "rationale": "A three-time MVP, a 49.5-win total and a long outerwear season keep opportunity close to the pack, but a quiet, understated base, an edge-of-metro retail map and a narrower design well than most put Denver just below average (brief scores: opportunity 64, culture 68, retail 48, fandom 64). A three-time MVP, a recent title, one of the league's most loved vintage graphics and a long outerwear season make Denver an above-average opportunity with deep design material. Retail is below average (no downtown Nike door, thin sneaker-boutique scene, volume on the suburban edges), and fandom is loyal but quiet until the playoffs.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 64,
+    "culture": 68,
+    "retail": 48,
+    "fandom": 64
+   }
   },
   "palette": [
    {
@@ -8095,12 +8197,18 @@
   },
   "verifiedMoment": "Stephen Curry's aging core ran it back after failing to land another star (the Warriors explored Giannis and Anthony Davis). Jimmy Butler and Moses Moody are still recovering from injuries.",
   "scorecard": {
-   "opportunity": 72,
-   "culture": 92,
-   "retail": 78,
-   "fandom": 70,
-   "rationale": "Culture is near the top (two cities, three subcultural lineages, huge Asian American communities), but opportunity is held to the low 70s by a 40.5 win total, injured Butler and Moody, an open Curry deal and a winter-only window. A Curry-Nike deal, confirmed Specter game dates and a hot November would move it back toward 80.",
-   "calibrated": false
+   "opportunity": 54,
+   "culture": 78,
+   "retail": 74,
+   "fandom": 52,
+   "rationale": "Oakland, San Francisco and Asian American lineages put the Bay's design well in the league's top band and its spending keeps retail high, but a 40.5-win total and an open Curry shoe deal hold opportunity and fandom at the league middle (brief scores: opportunity 72, culture 92, retail 78, fandom 70). Culture is near the top (two cities, three subcultural lineages, huge Asian American communities), but opportunity is held to the low 70s by a 40.5 win total, injured Butler and Moody, an open Curry deal and a winter-only window. A Curry-Nike deal, confirmed Specter game dates and a hot November would move it back toward 80.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 72,
+    "culture": 92,
+    "retail": 78,
+    "fandom": 70
+   }
   },
   "palette": [
    {
@@ -8555,12 +8663,18 @@
   },
   "verifiedMoment": "Houston kept Ime Udoka and the Kevin Durant-Alperen Sengun core, locked up Amen Thompson and Tari Eason, and added veterans Marcus Smart and Bogdan Bogdanovic after a first-round exit.",
   "scorecard": {
-   "opportunity": 76,
-   "culture": 90,
-   "retail": 62,
-   "fandom": 64,
-   "rationale": "Houston has one of the league's deepest and most specific design wells (slab, grillz, Black cowboy style, a full basketball lineage and the country's most diverse neighborhoods) and a 52-win team with Durant and a newly extended young core. Retail is big but car-dependent and spread thin, the 47.5 win total signals a flatter outlook, and the Rockets fight football, the Astros and the rodeo for attention.",
-   "calibrated": false
+   "opportunity": 60,
+   "culture": 74,
+   "retail": 52,
+   "fandom": 44,
+   "rationale": "One of the most complete local design languages in the league and a Durant-Sengun playoff team keep culture high and opportunity above average, but car-bound sprawl and a football-Astros-rodeo attention war keep retail near average and fandom below it (brief scores: opportunity 76, culture 90, retail 62, fandom 64). Houston has one of the league's deepest and most specific design wells (slab, grillz, Black cowboy style, a full basketball lineage and the country's most diverse neighborhoods) and a 52-win team with Durant and a newly extended young core. Retail is big but car-dependent and spread thin, the 47.5 win total signals a flatter outlook, and the Rockets fight football, the Astros and the rodeo for attention.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 76,
+    "culture": 90,
+    "retail": 62,
+    "fandom": 64
+   }
   },
   "palette": [
    {
@@ -9042,12 +9156,18 @@
   },
   "verifiedMoment": "A post-Kawhi reset around Darius Garland, Brandon Ingram and No. 5 pick Keaton Wagler, overshadowed by the NBA's Aspiration penalties: Steve Ballmer is suspended for a year and the team forfeits five first-round picks.",
   "scorecard": {
-   "opportunity": 60,
-   "culture": 80,
-   "retail": 72,
-   "fandom": 41,
-   "rationale": "The footprint (Inglewood signage, South and Southeast LA, Long Beach, the SGV, Little Saigon, the IE) is one of the league's richest wells and LA retail runs every tier, but Nike doors are thin near Inglewood, launch lead times are short and the Lakers own the volume. Fandom sits well below average: a small, loyal, bruised base with no star, no national stage and an owner suspended.",
-   "calibrated": false
+   "opportunity": 36,
+   "culture": 56,
+   "retail": 60,
+   "fandom": 18,
+   "rationale": "The Inglewood-to-SGV footprint gives the Clippers real design material below the league median and LA retail keeps retail above average, but a starless post-Kawhi reset in the Lakers' shadow gives them the league's third-thinnest fandom and a low opportunity, a score that holds with or without the Aspiration penalties (brief scores: opportunity 60, culture 80, retail 72, fandom 41). The footprint (Inglewood signage, South and Southeast LA, Long Beach, the SGV, Little Saigon, the IE) is one of the league's richest wells and LA retail runs every tier, but Nike doors are thin near Inglewood, launch lead times are short and the Lakers own the volume. Fandom sits well below average: a small, loyal, bruised base with no star, no national stage and an owner suspended.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 60,
+    "culture": 80,
+    "retail": 72,
+    "fandom": 41
+   }
   },
   "palette": [
    {
@@ -9513,11 +9633,17 @@
   "verifiedMoment": "The full Luka Doncic era begins after LeBron James left for Philadelphia. The Lakers rebuilt around Doncic and max-extended Austin Reaves with Walker Kessler at center, and none of their top five playoff-minutes players returned, a first in NBA history.",
   "scorecard": {
    "opportunity": 90,
-   "culture": 94,
-   "retail": 88,
-   "fandom": 86,
-   "rationale": "The NBA's most mythologized brand is resetting its jersey wall in a vast, multilingual market with design traditions (South Central signage, Chicano lettering and serigraphs, lowriders, Kobe murals, immigrant food color) few cities can match, and every retail tier from Fairfax to Citadel is already there. Fandom sits a notch lower this season because grief over LeBron and a 46.5-win projection temper the heat.",
-   "calibrated": false
+   "culture": 88,
+   "retail": 90,
+   "fandom": 74,
+   "rationale": "Second only to New York on opportunity and first on retail because a reset jersey wall in the league's most mythologized brand meets every retail tier, while fandom sits below the true elite this season on grief over LeBron and a 46.5-win projection (brief scores: opportunity 90, culture 94, retail 88, fandom 86). The NBA's most mythologized brand is resetting its jersey wall in a vast, multilingual market with design traditions (South Central signage, Chicano lettering and serigraphs, lowriders, Kobe murals, immigrant food color) few cities can match, and every retail tier from Fairfax to Citadel is already there. Fandom sits a notch lower this season because grief over LeBron and a 46.5-win projection temper the heat.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 90,
+    "culture": 94,
+    "retail": 88,
+    "fandom": 86
+   }
   },
   "palette": [
    {
@@ -9984,12 +10110,18 @@
   },
   "verifiedMoment": "A full reset: Ja Morant and Jaren Jackson Jr. are gone, and No. 3 pick Cameron Boozer leads a young core with Zach Edey and Cedric Coward.",
   "scorecard": {
-   "opportunity": 64,
-   "culture": 88,
-   "retail": 38,
-   "fandom": 66,
-   "rationale": "Memphis has one of the league's deepest and most ownable design wells (soul, living rap, jookin, civil-rights memory, sign-painted lettering, dry-rub barbecue) and a fiercely loyal fan base, but a rebuild year, a small, price-conscious metro and no confirmed Nike-owned door cap retail readiness, so every priority-1 line carries a Nov 30 stop-loss. The opportunity is real because Penny and a city-first story can sell without a star.",
-   "calibrated": false
+   "opportunity": 40,
+   "culture": 72,
+   "retail": 22,
+   "fandom": 46,
+   "rationale": "Memphis's design well (soul, living rap, jookin, sign painting) is in the league's top third, but a post-Ja reset in a small, price-conscious metro with no Nike door puts retail second from the bottom (brief scores: opportunity 64, culture 88, retail 38, fandom 66). Memphis has one of the league's deepest and most ownable design wells (soul, living rap, jookin, civil-rights memory, sign-painted lettering, dry-rub barbecue) and a fiercely loyal fan base, but a rebuild year, a small, price-conscious metro and no confirmed Nike-owned door cap retail readiness, so every priority-1 line carries a Nov 30 stop-loss. The opportunity is real because Penny and a city-first story can sell without a star.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 64,
+    "culture": 88,
+    "retail": 38,
+    "fandom": 66
+   }
   },
   "palette": [
    {
@@ -10458,12 +10590,18 @@
   },
   "verifiedMoment": "Minnesota doubled down on Anthony Edwards by trading for LaMelo Ball, creating one of the league's most electric backcourts. The Wolves have 27 national TV games and host OKC on Christmas.",
   "scorecard": {
-   "opportunity": 72,
-   "culture": 84,
-   "retail": 58,
-   "fandom": 76,
-   "rationale": "Minnesota has one of the league's deepest design vernaculars (the Minneapolis Sound, Mill City, winter craft and strong Somali, Hmong, Native and Northside scenes) and a newly loud Edwards-Ball fan base. Retail is suburban and mall-led with few taste doors, and both stars' rival shoe deals cap Nike's athlete-led upside.",
-   "calibrated": false
+   "opportunity": 58,
+   "culture": 62,
+   "retail": 46,
+   "fandom": 64,
+   "rationale": "A loud Edwards-Ball team with a Christmas home game, Garnett's retirement and a deep Minneapolis Sound, Mill City and Somali, Hmong and Native design well put opportunity, culture and fandom above average, but both stars wear rival brands and retail is suburban-mall led (brief scores: opportunity 72, culture 84, retail 58, fandom 76). Minnesota has one of the league's deepest design vernaculars (the Minneapolis Sound, Mill City, winter craft and strong Somali, Hmong, Native and Northside scenes) and a newly loud Edwards-Ball fan base. Retail is suburban and mall-led with few taste doors, and both stars' rival shoe deals cap Nike's athlete-led upside.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 72,
+    "culture": 84,
+    "retail": 58,
+    "fandom": 76
+   }
   },
   "palette": [
    {
@@ -10934,12 +11072,18 @@
   },
   "verifiedMoment": "New coach Jamahl Mosley inherits Zion Williamson, breakout Trey Murphy III and young Derik Queen and Jeremiah Fears after a quiet offseason with no first-round pick.",
   "scorecard": {
-   "opportunity": 46,
-   "culture": 96,
-   "retail": 34,
-   "fandom": 38,
-   "rationale": "Few NBA cities have a deeper or more design-ready local culture, and its calendar lines up with the season. But retail is thin (few destination sneaker doors, a modest arena store, a price-conscious core), and Pelicans fandom is small, Saints-first and weary after 26-56. The opportunity sits just below average, held up by city-first product that can sell regardless of the standings.",
-   "calibrated": false
+   "opportunity": 24,
+   "culture": 90,
+   "retail": 18,
+   "fandom": 14,
+   "rationale": "The starkest split in the league: New Orleans's culture is second only to New York's, but thin retail, a Saints-first city and a 26-56 team put opportunity, retail and fandom at the floor, so it is a craft market, not a volume market (brief scores: opportunity 46, culture 96, retail 34, fandom 38). Few NBA cities have a deeper or more design-ready local culture, and its calendar lines up with the season. But retail is thin (few destination sneaker doors, a modest arena store, a price-conscious core), and Pelicans fandom is small, Saints-first and weary after 26-56. The opportunity sits just below average, held up by city-first product that can sell regardless of the standings.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 46,
+    "culture": 96,
+    "retail": 34,
+    "fandom": 38
+   }
   },
   "palette": [
    {
@@ -11394,11 +11538,17 @@
   "verifiedMoment": "Back-to-back MVP Shai Gilgeous-Alexander's Thunder are 2026-27 co-title favorites after a seven-game West finals loss to San Antonio ended their title defense. Payroll is rising toward about $260M, and Sam Presti says he won't cut to avoid it.",
   "scorecard": {
    "opportunity": 70,
-   "culture": 66,
-   "retail": 40,
-   "fandom": 86,
-   "rationale": "A champion that is the only big-league team in an entire state gives OKC near-top fan intensity and a large statewide opportunity for a small metro, with distinct red-dirt, Skydance, Route 66 and community stories to design from. Retail lags: a car-based, value-minded market with no Nike community door and a small sneaker scene.",
-   "calibrated": false
+   "culture": 42,
+   "retail": 30,
+   "fandom": 88,
+   "rationale": "The league's second-most intense fandom and a 60.5-win co-favorite with a Converse-signed star put opportunity in the top ten (scored on demand and Nike's rights position, not doors), while small-metro, value-minded retail and a thinner design well than the culture capitals keep retail and culture below average (brief scores: opportunity 70, culture 66, retail 40, fandom 86). A champion that is the only big-league team in an entire state gives OKC near-top fan intensity and a large statewide opportunity for a small metro, with distinct red-dirt, Skydance, Route 66 and community stories to design from. Retail lags: a car-based, value-minded market with no Nike community door and a small sneaker scene.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 70,
+    "culture": 66,
+    "retail": 40,
+    "fandom": 86
+   }
   },
   "palette": [
    {
@@ -11870,12 +12020,18 @@
   },
   "verifiedMoment": "The Devin Booker-Jalen Green Suns re-signed their own (Brooks, Gillespie, Mark Williams, Goodwin) and added Miles Bridges, trying to climb out of the West's middle tier.",
   "scorecard": {
-   "opportunity": 78,
-   "culture": 82,
-   "retail": 62,
-   "fandom": 64,
-   "rationale": "A home All-Star Weekend, a large youth-heavy Latino base the assortment under-serves and an unused street-level visual language push opportunity and culture well above average, tempered by a short licensing clock this season. Retail is sprawling and mall-led with few taste doors, and fandom is loyal but conditioned by a bubble roster and no title.",
-   "calibrated": false
+   "opportunity": 62,
+   "culture": 58,
+   "retail": 50,
+   "fandom": 42,
+   "rationale": "Hosting All-Star (Feb 19-21) and an under-served Latino base lift opportunity above average; the Valley's Chicano, Indigenous and Van Buren neon material puts culture just below the league median, retail is around average, and a bubble roster holds fandom below it (brief scores: opportunity 78, culture 82, retail 62, fandom 64). A home All-Star Weekend, a large youth-heavy Latino base the assortment under-serves and an unused street-level visual language push opportunity and culture well above average, tempered by a short licensing clock this season. Retail is sprawling and mall-led with few taste doors, and fandom is loyal but conditioned by a bubble roster and no title.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 78,
+    "culture": 82,
+    "retail": 62,
+    "fandom": 64
+   }
   },
   "palette": [
    {
@@ -12348,12 +12504,18 @@
   },
   "verifiedMoment": "New owner Tom Dundon's Blazers add Ja Morant to a backcourt with Damian Lillard, back from a torn Achilles, under first-year coach Micah Nori. The Moda Center renovation lease is still being negotiated.",
   "scorecard": {
-   "opportunity": 76,
-   "culture": 84,
-   "retail": 56,
-   "fandom": 80,
-   "rationale": "A once-only heritage year, an empty City Edition slot and a deep roster in Nike's own hometown make the opportunity large, and Albina, Rip City broadcast lore, maker craft and supporter culture give unusually deep design material. Retail lags because the metro has few public Nike doors, a thinned downtown and a Rose Quarter retail desert, and this season's lead times limit what can ship before February; fandom is intense and statewide but guarded about Morant and the owner.",
-   "calibrated": false
+   "opportunity": 66,
+   "culture": 60,
+   "retail": 42,
+   "fandom": 72,
+   "rationale": "Nike's hometown, a once-only '77-at-50 year, a Lillard-Morant backcourt and intense statewide loyalty lift opportunity and fandom well above average, while few public Nike doors and a Rose Quarter retail desert put retail below it (brief scores: opportunity 76, culture 84, retail 56, fandom 80). A once-only heritage year, an empty City Edition slot and a deep roster in Nike's own hometown make the opportunity large, and Albina, Rip City broadcast lore, maker craft and supporter culture give unusually deep design material. Retail lags because the metro has few public Nike doors, a thinned downtown and a Rose Quarter retail desert, and this season's lead times limit what can ship before February; fandom is intense and statewide but guarded about Morant and the owner.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 76,
+    "culture": 84,
+    "retail": 56,
+    "fandom": 80
+   }
   },
   "palette": [
    {
@@ -12836,12 +12998,18 @@
   },
   "verifiedMoment": "A youth movement led by No. 7 pick Darius Acuff Jr. around holdovers Domantas Sabonis, Zach LaVine and Malik Monk. Sacramento is widely projected near the bottom of the West.",
   "scorecard": {
-   "opportunity": 52,
-   "culture": 63,
-   "retail": 44,
-   "fandom": 70,
-   "rationale": "Loyalty is well above league average because fans saved the team, and the bridge, the Beam and the neighborhood scenes give real design material. A likely bottom-West season (fewer home wins, softer attendance), a value-leaning Valley and no full-price Nike door or dense boutique scene hold opportunity and retail near or below average.",
-   "calibrated": false
+   "opportunity": 28,
+   "culture": 40,
+   "retail": 30,
+   "fandom": 54,
+   "rationale": "Fans who saved the team keep fandom just above average, but a likely bottom-West season, a value-leaning Valley and a lighter design well than its California neighbors put Sacramento near the floor on the other three axes, with Specter its main national hook (brief scores: opportunity 52, culture 63, retail 44, fandom 70). Loyalty is well above league average because fans saved the team, and the bridge, the Beam and the neighborhood scenes give real design material. A likely bottom-West season (fewer home wins, softer attendance), a value-leaning Valley and no full-price Nike door or dense boutique scene hold opportunity and retail near or below average.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 52,
+    "culture": 63,
+    "retail": 44,
+    "fandom": 70
+   }
   },
   "palette": [
    {
@@ -13330,12 +13498,18 @@
   },
   "verifiedMoment": "The 2026 West champions and Finals runners-up run back their core after locking up Victor Wembanyama and De'Aaron Fox. They are title co-favorites with OKC as Project Marvel downtown-arena planning continues.",
   "scorecard": {
-   "opportunity": 82,
-   "culture": 86,
-   "retail": 56,
-   "fandom": 90,
-   "rationale": "A title co-favorite led by Wembanyama, in a one-team region that runs to Mexico, with some of the league's most specific design material (Fiesta, conjunto, West Side craft, the East Side's Iceman lineage), puts opportunity, culture and fandom well above average. Retail is ordinary: mall, Academy and arena-store volume in a price-aware market with a thin independent sneaker scene and a real bootleg channel.",
-   "calibrated": false
+   "opportunity": 80,
+   "culture": 62,
+   "retail": 46,
+   "fandom": 86,
+   "rationale": "A title co-favorite led by Wembanyama in a one-team region that runs to Mexico puts fandom and opportunity near the top, while retail is ordinary mall-and-Academy volume and its Fiesta and West Side culture is distinctive but narrower than the coastal giants' (brief scores: opportunity 82, culture 86, retail 56, fandom 90). A title co-favorite led by Wembanyama, in a one-team region that runs to Mexico, with some of the league's most specific design material (Fiesta, conjunto, West Side craft, the East Side's Iceman lineage), puts opportunity, culture and fandom well above average. Retail is ordinary: mall, Academy and arena-store volume in a price-aware market with a thin independent sneaker scene and a real bootleg channel.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 82,
+    "culture": 86,
+    "retail": 56,
+    "fandom": 90
+   }
   },
   "palette": [
    {
@@ -13799,12 +13973,18 @@
   },
   "verifiedMoment": "Utah's youth movement speeds up with No. 2 pick Darryn Peterson and Ace Bailey alongside veterans Lauri Markkanen and Jaren Jackson Jr., and Will Hardy is under pressure to develop them.",
   "scorecard": {
-   "opportunity": 52,
-   "culture": 66,
-   "retail": 40,
-   "fandom": 68,
-   "rationale": "A small metro but a whole-state, family-sized, youth-heavy buyer base with deep one-team loyalty and an unusually distinct design vocabulary (salt, snow, all-ages DIY, West Side hoops). Retail is dispersed along I-15 with a thin boutique layer, and a rebuild year with no national stage caps the near-term upside.",
-   "calibrated": false
+   "opportunity": 30,
+   "culture": 42,
+   "retail": 28,
+   "fandom": 50,
+   "rationale": "Whole-state, family-sized loyalty keeps fandom near the league average, but a small metro in a rebuild with no national stage and a thin boutique layer sits near the bottom on opportunity, culture and retail (brief scores: opportunity 52, culture 66, retail 40, fandom 68). A small metro but a whole-state, family-sized, youth-heavy buyer base with deep one-team loyalty and an unusually distinct design vocabulary (salt, snow, all-ages DIY, West Side hoops). Retail is dispersed along I-15 with a thin boutique layer, and a rebuild year with no national stage caps the near-term upside.",
+   "calibrated": true,
+   "self": {
+    "opportunity": 52,
+    "culture": 66,
+    "retail": 40,
+    "fandom": 68
+   }
   },
   "palette": [
    {

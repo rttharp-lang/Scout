@@ -22,7 +22,7 @@ export const TEAMS = [
     focus: "Cleveland and Northeast Ohio — Ohio City, Tremont, Gordon Square, Slavic Village, East Cleveland, Akron (LeBron's hometown) and the wider 'The Land' identity." },
   { id: "det", abbr: "DET", name: "Pistons", city: "Detroit", state: "MI", conference: "East", division: "Central", arena: "Little Caesars Arena", colors: ["#C8102E", "#1D42BA", "#BEC0C2"],
     focus: "Detroit and metro Detroit — Midtown, Corktown, Eastern Market, the West Side and East Side, Southwest Detroit, plus suburbs (Oakland County, Dearborn)." },
-  { id: "ind", abbr: "IND", name: "Pacers", city: "Indianapolis", state: "IN", conference: "East", division: "Central", arena: "Gainbridge Fieldhouse", colors: ["#002D62", "#FDBB30", "#BEC0C2"],
+  { id: "ind", abbr: "IND", name: "Pacers", place: "Indiana", city: "Indianapolis", state: "IN", conference: "East", division: "Central", arena: "Gainbridge Fieldhouse", colors: ["#002D62", "#FDBB30", "#BEC0C2"],
     focus: "Indianapolis and the state of Indiana — 'Hoosier Hysteria', small-town gyms, Fountain Square, Mass Ave, Broad Ripple, and the statewide basketball religion." },
   { id: "mia", abbr: "MIA", name: "Heat", city: "Miami", state: "FL", conference: "East", division: "Southeast", arena: "Kaseya Center", colors: ["#98002E", "#F9A01B", "#000000"],
     focus: "Miami-Dade and South Florida — Little Havana, Little Haiti, Wynwood, Overtown, Liberty City, Hialeah, Miami Beach, plus Broward — Latin America's capital in the US." },
@@ -44,7 +44,7 @@ export const TEAMS = [
     focus: "Dallas and DFW — Deep Ellum, Oak Cliff, South Dallas, Bishop Arts, the large Mexican-American community, plus the sprawling DFW suburbs." },
   { id: "den", abbr: "DEN", name: "Nuggets", city: "Denver", state: "CO", conference: "West", division: "Northwest", arena: "Ball Arena", colors: ["#0E2240", "#FEC524", "#8B2131"],
     focus: "Denver and Colorado/the Mountain West — RiNo, Five Points, the Westside, Colfax, plus mountain-town and outdoor culture across the region." },
-  { id: "gsw", abbr: "GSW", name: "Warriors", city: "San Francisco", state: "CA", conference: "West", division: "Pacific", arena: "Chase Center", colors: ["#1D428A", "#FFC72C", "#FFFFFF"],
+  { id: "gsw", abbr: "GSW", name: "Warriors", place: "Golden State", city: "San Francisco", state: "CA", conference: "West", division: "Pacific", arena: "Chase Center", colors: ["#1D428A", "#FFC72C", "#FFFFFF"],
     focus: "The Bay Area — San Francisco (Mission, Bayview, Fillmore), Oakland (the team's 47-year home and its enduring fan base), San Jose and Silicon Valley." },
   { id: "hou", abbr: "HOU", name: "Rockets", city: "Houston", state: "TX", conference: "West", division: "Southwest", arena: "Toyota Center", colors: ["#CE1141", "#000000", "#C4CED4"],
     focus: "Houston — Third Ward, Fifth Ward, Southwest (Alief, Sharpstown), the Heights, East End/Second Ward — slab and screw culture, and one of America's most diverse metros." },
@@ -54,7 +54,7 @@ export const TEAMS = [
     focus: "Los Angeles as the Lakers' footprint — Downtown, East LA and Boyle Heights, Koreatown, Hollywood, the Valley, the Westside — Showtime-to-now celebrity and Latino fan culture." },
   { id: "mem", abbr: "MEM", name: "Grizzlies", city: "Memphis", state: "TN", conference: "West", division: "Southwest", arena: "FedExForum", colors: ["#5D76A9", "#12173F", "#F5B112"],
     focus: "Memphis and the Mid-South — Beale Street, Orange Mound, North Memphis, Whitehaven, Cooper-Young, Soulsville — 'Grit and Grind', jookin, and Memphis rap." },
-  { id: "min", abbr: "MIN", name: "Timberwolves", city: "Minneapolis", state: "MN", conference: "West", division: "Northwest", arena: "Target Center", colors: ["#0C2340", "#236192", "#78BE20"],
+  { id: "min", abbr: "MIN", name: "Timberwolves", place: "Minnesota", city: "Minneapolis", state: "MN", conference: "West", division: "Northwest", arena: "Target Center", colors: ["#0C2340", "#236192", "#78BE20"],
     focus: "Minneapolis–St. Paul and Minnesota — North Minneapolis, Uptown, Lake Street, Cedar-Riverside's Somali community, St. Paul's Hmong community, and statewide Minnesotans." },
   { id: "nop", abbr: "NOP", name: "Pelicans", city: "New Orleans", state: "LA", conference: "West", division: "Southwest", arena: "Smoothie King Center", colors: ["#0C2340", "#C8102E", "#85714D"],
     focus: "New Orleans and the Gulf South — the Seventh Ward, Tremé, Central City, the Ninth Ward, the West Bank, Mardi Gras Indian and second-line culture, bounce music." },
@@ -68,7 +68,7 @@ export const TEAMS = [
     focus: "Sacramento and the Central Valley — Oak Park, Del Paso Heights, Midtown, South Sac, Elk Grove — 'Sactown', farm-to-fork, and a fan base that fought to keep its team." },
   { id: "sas", abbr: "SAS", name: "Spurs", city: "San Antonio", state: "TX", conference: "West", division: "Southwest", arena: "Frost Bank Center", colors: ["#C4CED4", "#000000", "#8A8D8F"],
     focus: "San Antonio and South Texas — the West Side, East Side, Southtown, the Pearl, Fiesta, Tejano and Chicano culture, the military community, and fans across South Texas and Mexico." },
-  { id: "uta", abbr: "UTA", name: "Jazz", city: "Salt Lake City", state: "UT", conference: "West", division: "Northwest", arena: "Delta Center", colors: ["#4E008E", "#000000", "#8FC1E3"],
+  { id: "uta", abbr: "UTA", name: "Jazz", place: "Utah", city: "Salt Lake City", state: "UT", conference: "West", division: "Northwest", arena: "Delta Center", colors: ["#4E008E", "#000000", "#8FC1E3"],
     focus: "Salt Lake City and Utah — Sugar House, Central 9th, the West Side (Rose Park, Glendale), Ogden, Provo — Mountain West outdoor life, the Pacific Islander and Latino communities." },
 ];
 
@@ -76,4 +76,7 @@ export const TEAM_BY_ID = Object.fromEntries(TEAMS.map((t) => [t.id, t]));
 
 export const DIVISIONS = ["Atlantic", "Central", "Southeast", "Northwest", "Pacific", "Southwest"];
 
-export const teamLabel = (t) => `${t.city} ${t.name}`;
+// `place` is the franchise name where it differs from the home city
+// (Golden State, Utah, Indiana, Minnesota); `city` stays the metro.
+export const placeOf = (t) => t.place || t.city;
+export const teamLabel = (t) => `${placeOf(t)} ${t.name}`;

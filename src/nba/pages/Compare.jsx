@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from "react";
 import { markets, loadMarket, MONTHS, SEASON_ORDER } from "../data.js";
 import { Chip, Scorecard, PaletteRow, Priority, TeamBand, href } from "../ui.jsx";
+import { placeOf } from "../teams.js";
 
 const MAX = 3;
 
@@ -34,7 +35,7 @@ export default function Compare({ ids }) {
             {sel.map((id, i) => (
               <span key={i} className="hc-row" style={{ gap: 4 }}>
                 <select className="hc-select" value={id} onChange={(e) => setAt(i, e.target.value)} aria-label={`Market ${i + 1}`}>
-                  {published.map((m) => <option key={m.id} value={m.id} disabled={m.id !== id && sel.includes(m.id)}>{m.team.city} {m.team.name}</option>)}
+                  {published.map((m) => <option key={m.id} value={m.id} disabled={m.id !== id && sel.includes(m.id)}>{placeOf(m.team)} {m.team.name}</option>)}
                 </select>
                 {sel.length > 1 && <button className="hc-pill-btn" onClick={() => remove(i)} aria-label={`Remove ${id}`}>×</button>}
               </span>
@@ -47,7 +48,7 @@ export default function Compare({ ids }) {
               <div key={id} className="hc-card" style={{ padding: 0, overflow: "hidden" }}>
                 <TeamBand colors={m.team.colors} />
                 <div style={{ padding: "18px 20px 22px" }} className="hc-stack">
-                  <a href={href("m", id)} style={{ textDecoration: "none" }}><h2 className="hc-market-city">{m.team.city}</h2><div style={{ fontWeight: 700 }}>{m.team.name}</div></a>
+                  <a href={href("m", id)} style={{ textDecoration: "none" }}><h2 className="hc-market-city">{placeOf(m.team)}</h2><div style={{ fontWeight: 700 }}>{m.team.name}</div></a>
                   <Chip tone="ink">{m.archetype.name}</Chip>
                   <p className="hc-small">{m.headline}</p>
                   <Scorecard scorecard={m.scorecard} />

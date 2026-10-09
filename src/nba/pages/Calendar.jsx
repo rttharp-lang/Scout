@@ -69,7 +69,7 @@ export default function Calendar() {
             {acts.map((c, i) => (
               <a key={i} href={href("m", c.m.id)} className="hc-card hc-stack" style={{ textDecoration: "none", display: "block" }}>
                 <div className="hc-row" style={{ justifyContent: "space-between" }}>
-                  <span className="hc-row"><span className="hc-dot" style={{ background: c.m.team.colors[0] }} /><b>{c.m.team.city} {c.m.team.name}</b></span>
+                  <span className="hc-row"><span className="hc-dot" style={{ background: c.m.team.colors[0] }} /><b>{c.m.team.place || c.m.team.city} {c.m.team.name}</b></span>
                   <Priority p={c.priority} />
                 </div>
                 <h3 className="hc-h3">{c.moment}</h3>

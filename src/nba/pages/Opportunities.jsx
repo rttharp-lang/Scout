@@ -34,7 +34,7 @@ export default function Opportunities() {
     return all
       .filter((o) => (!month || o.months.includes(month)) && (!priority || o.priority === priority) && (size === "all" || o.size === size)
         && (conf === "All" || o.m.team.conference === conf) && (!fam || o.products.some((p) => fam.test(p)))
-        && (!ql || `${o.title} ${o.summary} ${o.how} ${o.products.join(" ")} ${o.where.join(" ")} ${o.segment} ${o.m.team.city} ${o.m.team.name}`.toLowerCase().includes(ql)))
+        && (!ql || `${o.title} ${o.summary} ${o.how} ${o.products.join(" ")} ${o.where.join(" ")} ${o.segment} ${o.m.team.place || o.m.team.city} ${o.m.team.name}`.toLowerCase().includes(ql)))
       .sort((a, b) => a.priority - b.priority || ({ high: 0, medium: 1, low: 2 }[a.size] - { high: 0, medium: 1, low: 2 }[b.size]) || a.m.team.city.localeCompare(b.m.team.city));
   }, [all, month, priority, size, conf, family, q]);
 
@@ -69,7 +69,7 @@ export default function Opportunities() {
         {rows.map((o) => (
           <article key={`${o.m.id}-${o.id}`} className="hc-card hc-opp">
             <div className="hc-row" style={{ justifyContent: "space-between" }}>
-              <a href={href("m", o.m.id)} className="hc-row" style={{ textDecoration: "none", fontWeight: 700 }}><span className="hc-dot" style={{ background: o.m.team.colors[0] }} />{o.m.team.city} {o.m.team.name}</a>
+              <a href={href("m", o.m.id)} className="hc-row" style={{ textDecoration: "none", fontWeight: 700 }}><span className="hc-dot" style={{ background: o.m.team.colors[0] }} />{o.m.team.place || o.m.team.city} {o.m.team.name}</a>
               <span className="hc-row"><Priority p={o.priority} /><Chip tone="line">{o.size} upside</Chip></span>
             </div>
             <h3 className="hc-h2" style={{ fontSize: "clamp(1.3rem, 2vw, 1.7rem)" }}>{o.title}</h3>
