@@ -2,7 +2,7 @@
   "team": "det",
   "lens": "rhythm",
   "headline": "Detroit's fan year is a long winter slow-burn that detonates in April: a 60-win No. 1 seed with Game 7 unfinished business, sharing the calendar with the Lions, Thanksgiving and Hockeytown.",
-  "summary": "Detroit watches the Pistons through a Lions-and-Red-Wings winter, and its basketball peak is compressed into April and May, when Tigers season is only warming up and the weather finally lets the city outside. After a 60-22 year ended in a 125-94 Game 7 loss at home to Cleveland, 2026-27 is framed as a revenge-and-leap season, opening Oct 20 at home against Boston on NBC. The buy cycle runs on three spikes: opening-night and the new Specter uniform in October, gift season in Nov-Dec (no Christmas Day game, so local gifting matters more than national TV), and playoff gear from mid-April. The sharpest local twist is the team's own history: Bad Boys grit, the 2004 title and the teal era give Detroit more heritage product leverage than almost any market.",
+  "summary": "Detroit watches the Pistons through a Lions-and-Red-Wings winter, and its basketball peak is compressed into April and May, when Tigers season is only warming up and the weather finally lets the city outside. After a 60-22 year ended in a 125-94 Game 7 loss at home to Cleveland, 2026-27 is framed as a leap season with the Game 7 as quiet subtext, opening Oct 20 at home against Boston on NBC. The buy cycle runs on three spikes: opening-night and the new Specter uniform in October, gift season in Nov-Dec (no Christmas Day game, so local gifting matters more than national TV), and playoff gear from mid-April. The sharpest local twist is the team's own history: Bad Boys grit, the 2004 title and the teal era give Detroit more heritage product leverage than almost any market.",
   "insights": [
     {
       "title": "April is the real opening night",
@@ -27,7 +27,7 @@
     {
       "title": "No Christmas Day game, but a MLK Day Cleveland rematch",
       "detail": "Detroit has no Christmas game, so December holiday buying is local and gift-driven. The Jan 18 noon trip to Cleveland on NBC and Peacock is a direct rematch of the 2026 second-round Game 7 and will be the loudest regular-season hate-watch of the winter.",
-      "implication": "Hold the MLK Day game for a rivalry-themed content push, with a respectful MLK Day tone, and use December for giftable accessories and kids product."
+      "implication": "Hold the MLK Day game for a respectful community and civic-giving moment with team-first content, leaving the Game 7 revenge angle to the fans, and use December for giftable accessories and kids product."
     },
     {
       "title": "A summer festival city that rarely thinks about basketball in July",
@@ -361,7 +361,7 @@
         "month": 11,
         "intensity": 68,
         "phase": "NBA Cup group play",
-        "team": ["Friday Cup Nights", "East Group A: Toronto, Orlando, Milwaukee, Brooklyn"],
+        "team": ["Friday Cup Nights through Nov 27, plus Tue Nov 24 and Wed Nov 25", "East Group A: Toronto, Orlando, Milwaukee, Brooklyn"],
         "local": ["Lions Thanksgiving game", "Michigan-Ohio State weekend", "Black Friday"],
         "fanBehavior": "Pistons are an easy watch alongside football; Cup games bring extra stakes.",
         "retailSignal": "Black Friday and Cyber Monday are the main buying spikes; outerwear and gifting."
@@ -393,7 +393,7 @@
       },
       {
         "name": "NBA Cup group play begins",
-        "date": "Oct 30 to Nov 27, 2026",
+        "date": "Oct 30 to Nov 27, 2026 (Fridays, plus Tue Nov 24 and Wed Nov 25)",
         "month": 10,
         "type": "league",
         "why": "Detroit is in East Group A with Toronto, Orlando, Milwaukee and Brooklyn; knockout games stream on Prime Video."
@@ -417,7 +417,7 @@
         "date": "Fri, Dec 11, 2026",
         "month": 12,
         "type": "league",
-        "why": "Hinkle Fieldhouse in Indianapolis, two hours from Detroit, would be a driveable destination for fans."
+        "why": "Hinkle Fieldhouse in Indianapolis, roughly a four-hour drive from Detroit, is a long but driveable trip for fans."
       },
       {
         "name": "No Christmas Day game",

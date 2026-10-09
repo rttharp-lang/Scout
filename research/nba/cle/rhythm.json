@@ -1,7 +1,7 @@
 {
   "team": "cle",
   "lens": "rhythm",
-  "headline": "Cleveland's fan year is a Browns-to-Cavs relay with a title-or-bust payoff: the buy spike is the Cup-and-Christmas gift window and a playoff run that peaked in the East Finals last May.",
+  "headline": "Cleveland's fan year is a Browns-to-Cavs relay with a title-or-bust payoff: the buy spike is the Cup-and-December gift window and a playoff run that peaked in the East Finals last May.",
   "summary": "The Cavs are a winter-and-spring team in a football town. Engagement is lowest in July and August when the Guardians and Browns camp own the conversation, and climbs from the October preseason through a Browns-season handoff in December and January. Last season's 52-30 finish, two Game 7 wins and a sweep by the Knicks left fans hungry rather than satisfied, and the 2026-27 team is framed as championship-or-bust. The City Edition returns the 2018-19 Earned design with a 'Cleveland' wordmark, so product timing should lean on nostalgia and civic pride rather than 'The Land' language. With no opening-night or Christmas Day game, Cleveland's national moments are the noon MLK Day game against Detroit and the playoff run.",
   "insights": [
     {
@@ -55,7 +55,7 @@
   ],
   "moments": [
     { "name": "Preseason: Magic at Cavaliers", "timing": "Oct 11, 2026", "month": 10, "why": "National preseason broadcast and the first look at the new roster in Cleveland." },
-    { "name": "Emirates NBA Cup group play", "timing": "Fridays Oct 30 to Nov 27", "month": 11, "why": "Cleveland's East Group B includes the Knicks, 76ers, Heat and Pacers, so rivalry stakes arrive early." },
+    { "name": "Emirates NBA Cup group play", "timing": "Fridays Oct 30 to Nov 27, plus Tue Nov 24 and Wed Nov 25", "month": 11, "why": "Cleveland's East Group B includes the Knicks, 76ers, Heat and Pacers, so rivalry stakes arrive early." },
     { "name": "Browns season peak", "timing": "September to early January", "month": 11, "why": "The dominant competing attention source; Cavs marketing should avoid football Sundays." },
     { "name": "MLK Day: Pistons at Cavaliers", "timing": "Jan 18, 2027, noon ET", "month": 1, "why": "National NBC/Peacock stage at Rocket Arena and the best mid-winter activation moment." },
     { "name": "Guardians home opener", "timing": "Early April", "month": 4, "why": "Baseball returns just as playoff basketball starts; downtown shares fans and foot traffic." },
@@ -79,7 +79,7 @@
     { "cue": "Industrial rust and steel", "type": "texture", "hex": "", "source": "Cuyahoga River steel and manufacturing history", "use": "Washed or heathered fabrics and utilitarian trims for hoodies and jackets." }
   ],
   "productHooks": [
-    "Early-December gift capsule built on the Cup run: Mitchell and Mobley tees, hoodies and warm-up layers in wine, gold and navy.",
+    "Early-December gift capsule built on the Cup run: Mitchell, Harden and Mobley tees, hoodies and warm-up layers in wine, gold and navy.",
     "City Edition launch pack tied to the 2018-19 Earned heritage story, with a 'Cleveland' wordmark tee and hoodie set.",
     "MLK Day Jan 18 local drop timed to the noon Pistons game, with warm-up and shooting-shirt pieces.",
     "Spring playoff gear in lighter tees and caps, staged to ship by mid-April for a deep run.",
@@ -105,18 +105,18 @@
       { "month": 3, "intensity": 74, "phase": "Playoff push", "team": ["Seeding race", "Late-season rivalry games"], "local": ["Snow season ending", "College basketball March Madness competes"], "fanBehavior": "Attention rises as seeding matters and spring weather returns.", "retailSignal": "Playoff pre-orders and lighter spring layers." },
       { "month": 4, "intensity": 88, "phase": "Regular season ends, Play-In, playoffs begin", "team": ["Season ends Apr 11", "Playoffs begin mid-April"], "local": ["Guardians home opener", "Spring thaw"], "fanBehavior": "The city flips to playoff mode; Rocket Arena and downtown watch parties build.", "retailSignal": "Playoff tees, caps and shirts spike; rally towels." },
       { "month": 5, "intensity": 100, "phase": "Playoffs", "team": ["Conference semifinals and finals window"], "local": ["Cleveland Marathon and spring festivals", "Guardians season"], "fanBehavior": "Peak intensity if the team advances; last year's East Finals run is the benchmark.", "retailSignal": "Playoff gear and limited drops sell fastest; jersey demand peaks." },
-      { "month": 6, "intensity": 70, "phase": "Finals, draft, June 19 anniversary", "team": ["NBA Finals", "Draft late June", "June 19 anniversary of 2016 title"], "local": ["Summer festivals begin", "Lakefront season"], "fanBehavior": "Engagement stays high only if the team is still alive; the anniversary and draft keep a baseline.", "retailSignal": "Anniversary and draft-related items; clearance on playoff gear." },
+      { "month": 6, "intensity": 70, "phase": "Finals, draft, June 19 anniversary", "team": ["NBA Finals", "Draft (2027 date not yet announced)", "June 19 anniversary of 2016 title"], "local": ["Summer festivals begin", "Lakefront season"], "fanBehavior": "Engagement stays high only if the team is still alive; the anniversary and draft keep a baseline.", "retailSignal": "Anniversary and draft-related items; clearance on playoff gear." },
       { "month": 7, "intensity": 40, "phase": "Free agency, Summer League", "team": ["Free agency", "Summer League"], "local": ["Guardians season", "Summer lakefront events"], "fanBehavior": "Rumors and roster updates; casual fans disengage.", "retailSignal": "Low volume; new-roster jersey updates." },
       { "month": 8, "intensity": 32, "phase": "Offseason", "team": ["Schedule release", "Roster quiet"], "local": ["Browns camp and preseason", "Ohio State football opens"], "fanBehavior": "Football talk overtakes basketball; hardcore fans track the schedule drop.", "retailSignal": "Back-to-school and early-fall lines; season-ticket and schedule-tied product." },
       { "month": 9, "intensity": 38, "phase": "Media day, training camp", "team": ["Media day", "Training camp"], "local": ["Browns season begins", "School year starts"], "fanBehavior": "Football-first; Cavs buzz returns slowly around media day.", "retailSignal": "Preview content; City Edition and new season gear teasers." },
       { "month": 10, "intensity": 55, "phase": "Preseason, regular season start", "team": ["Magic at Cavaliers preseason Oct 11", "Season tips Oct 20 league-wide (Cavs have no opener)", "Cup group play begins Oct 30"], "local": ["Browns season", "Guardians postseason if in", "Halloween"], "fanBehavior": "Renewed optimism; season-ticket holders and hardcore fans engage first.", "retailSignal": "New-season tees and the City Edition reveal-related items." },
-      { "month": 11, "intensity": 58, "phase": "Cup group play", "team": ["Cup Fridays through Nov 27", "Knicks and Sixers group games"], "local": ["Browns Sundays", "Thanksgiving week"], "fanBehavior": "Cavs share space with football; Cup Friday nights draw fans.", "retailSignal": "Holiday pre-shopping and Black Friday weekend." },
+      { "month": 11, "intensity": 58, "phase": "Cup group play", "team": ["Cup Nights: Fridays through Nov 27, plus Tue Nov 24 and Wed Nov 25", "Knicks and Sixers group games"], "local": ["Browns Sundays", "Thanksgiving week"], "fanBehavior": "Cavs share space with football; Cup Friday nights draw fans.", "retailSignal": "Holiday pre-shopping and Black Friday weekend." },
       { "month": 12, "intensity": 72, "phase": "Cup knockouts, holidays", "team": ["Cup quarterfinals Dec 4-5", "Cup semifinals Dec 8-9", "Cup final Dec 11 in Indianapolis", "No Christmas Day game"], "local": ["Browns stretch run", "Holiday season downtown"], "fanBehavior": "Gift-buying and Cup energy peak; Christmas without a Cavs game.", "retailSignal": "Biggest gift-buy month: jerseys, hoodies, City Edition." }
     ],
     "keyDates": [
       { "name": "Magic at Cavaliers preseason (ESPN)", "date": "Oct 11, 2026", "month": 10, "type": "team", "why": "First national look at the new roster in Cleveland." },
       { "name": "NBA regular season opens (Cavs not in opening-night games)", "date": "Oct 20, 2026", "month": 10, "type": "league", "why": "Season starts without a Cavs opener, so the local launch needs its own moment." },
-      { "name": "Emirates NBA Cup group play begins", "date": "Oct 30, 2026", "month": 10, "type": "league", "why": "East Group B: Knicks, 76ers, Heat, Pacers; Fridays through Nov 27." },
+      { "name": "Emirates NBA Cup group play begins", "date": "Oct 30, 2026", "month": 10, "type": "league", "why": "East Group B: Knicks, 76ers, Heat, Pacers; Fridays through Nov 27, plus Tue Nov 24 and Wed Nov 25." },
       { "name": "Cup quarterfinals and semifinals", "date": "Dec 4-9, 2026", "month": 12, "type": "league", "why": "Higher seeds host; semifinals are in home markets this year." },
       { "name": "Cup final at Hinkle Fieldhouse", "date": "Dec 11, 2026", "month": 12, "type": "league", "why": "Stage for the first Cup final outside Las Vegas." },
       { "name": "Christmas Day (no Cavs game)", "date": "Dec 25, 2026", "month": 12, "type": "league", "why": "Cleveland is absent from the slate; do not plan a national Christmas moment." },

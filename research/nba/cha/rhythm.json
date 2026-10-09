@@ -246,8 +246,15 @@
         "month": 1,
         "intensity": 50,
         "phase": "Midseason",
-        "team": ["Regular season home stand", "MLK Day slate (Jan 18)"],
-        "local": ["Panthers season ends", "Cold weather", "School back in session"],
+        "team": [
+          "Regular season home stand",
+          "MLK Day slate (Jan 18)"
+        ],
+        "local": [
+          "Panthers season ends",
+          "Cold weather",
+          "School back in session"
+        ],
         "fanBehavior": "Casual attention; fans react to the standings and trade rumors.",
         "retailSignal": "Post-holiday discount buying; low jersey demand."
       },
@@ -255,8 +262,15 @@
         "month": 2,
         "intensity": 85,
         "phase": "Trade deadline, Presidents' Day and All-Star",
-        "team": ["Trade deadline Feb 11", "Minnesota at Charlotte Feb 15 on NBC", "All-Star Feb 19-21 in Phoenix"],
-        "local": ["CIAA Tournament season in late winter", "Winter weather"],
+        "team": [
+          "Trade deadline Feb 11",
+          "Minnesota at Charlotte Feb 15 on NBC",
+          "All-Star Feb 19-21 in Phoenix"
+        ],
+        "local": [
+          "CIAA Tournament season in late winter",
+          "Winter weather"
+        ],
         "fanBehavior": "Highest-energy night of the regular season for the Ball return; attention strong into All-Star.",
         "retailSignal": "Spike in Charlotte and player tees and holiday-weekend gear."
       },
@@ -264,8 +278,14 @@
         "month": 3,
         "intensity": 65,
         "phase": "Playoff push",
-        "team": ["Late-season standings push", "Seeding fight for the Play-In"],
-        "local": ["College basketball March conference tournaments and NCAA Tournament", "Spring weather"],
+        "team": [
+          "Late-season standings push",
+          "Seeding fight for the Play-In"
+        ],
+        "local": [
+          "College basketball March conference tournaments and NCAA Tournament",
+          "Spring weather"
+        ],
         "fanBehavior": "Fans split attention with college hoops; pays closer attention if Charlotte is in the Play-In picture.",
         "retailSignal": "Moderate; March gear is mostly college."
       },
@@ -273,8 +293,14 @@
         "month": 4,
         "intensity": 100,
         "phase": "Regular season end and Play-In",
-        "team": ["Regular season ends Apr 11", "Play-In Apr 13-16"],
-        "local": ["Spring weather", "Baseball and MLS seasons underway"],
+        "team": [
+          "Regular season ends Apr 11",
+          "Play-In Apr 13-16"
+        ],
+        "local": [
+          "Spring weather",
+          "Baseball and MLS seasons underway"
+        ],
         "fanBehavior": "Peak intensity if Charlotte is in the Play-In; last year's OT win over Miami raised expectations.",
         "retailSignal": "Play-In and playoff-push gear spike; scenario-based sell-through."
       },
@@ -282,8 +308,14 @@
         "month": 5,
         "intensity": 30,
         "phase": "Offseason, or playoffs if Charlotte advances",
-        "team": ["Draft lottery", "Playoffs elsewhere"],
-        "local": ["Coca-Cola 600 on Memorial Day weekend", "Warm weather"],
+        "team": [
+          "Draft lottery",
+          "Playoffs elsewhere"
+        ],
+        "local": [
+          "Coca-Cola 600 on Memorial Day weekend",
+          "Warm weather"
+        ],
         "fanBehavior": "Attention shifts to NASCAR and the draft lottery.",
         "retailSignal": "Low; racing and summer-lifestyle gear dominate."
       },
@@ -291,8 +323,14 @@
         "month": 6,
         "intensity": 35,
         "phase": "Draft and NBA Finals",
-        "team": ["NBA Draft", "Finals"],
-        "local": ["School out", "Summer heat"],
+        "team": [
+          "NBA Draft",
+          "Finals"
+        ],
+        "local": [
+          "School out",
+          "Summer heat"
+        ],
         "fanBehavior": "Draft-night buzz; fans pick up Draft-class talk.",
         "retailSignal": "Draft-pick jerseys and tees."
       },
@@ -300,8 +338,14 @@
         "month": 7,
         "intensity": 45,
         "phase": "Free agency and Summer League",
-        "team": ["Free agency", "Las Vegas Summer League"],
-        "local": ["July 4th", "Extreme heat"],
+        "team": [
+          "Free agency",
+          "Las Vegas Summer League"
+        ],
+        "local": [
+          "July 4th",
+          "Extreme heat"
+        ],
         "fanBehavior": "Online-heavy; fans follow roster moves and rookies.",
         "retailSignal": "New-player tee and jersey sales after signings."
       },
@@ -309,8 +353,15 @@
         "month": 8,
         "intensity": 25,
         "phase": "Dead period",
-        "team": ["Schedule release", "Training camp prep"],
-        "local": ["Back to school", "Charlotte Pride", "Panthers camp"],
+        "team": [
+          "Schedule release",
+          "Training camp prep"
+        ],
+        "local": [
+          "Back to school",
+          "Charlotte Pride",
+          "Panthers camp"
+        ],
         "fanBehavior": "Lowest attention; football takes over.",
         "retailSignal": "Back-to-school and nostalgia tees."
       },
@@ -318,8 +369,15 @@
         "month": 9,
         "intensity": 35,
         "phase": "Media day and training camp",
-        "team": ["Media day", "Training camp"],
-        "local": ["Panthers season begins", "Charlotte FC stretch run", "Hurricane season"],
+        "team": [
+          "Media day",
+          "Training camp"
+        ],
+        "local": [
+          "Panthers season begins",
+          "Charlotte FC stretch run",
+          "Hurricane season"
+        ],
         "fanBehavior": "Football-first; basketball interest starts building late in the month.",
         "retailSignal": "Early preseason gear and City Edition anticipation."
       },
@@ -327,8 +385,16 @@
         "month": 10,
         "intensity": 60,
         "phase": "Preseason and opener",
-        "team": ["Preseason", "Opener Oct 20 league-wide", "Cup play starts Oct 30 at Washington"],
-        "local": ["Panthers season", "Fall weather", "Halloween"],
+        "team": [
+          "Preseason",
+          "Opener Oct 20 league-wide",
+          "Cup play starts Oct 30 at Washington"
+        ],
+        "local": [
+          "Panthers season",
+          "Fall weather",
+          "Halloween"
+        ],
         "fanBehavior": "Optimism around the new core; first-look interest in the new team.",
         "retailSignal": "Opening-week tees, jerseys and Cup gear."
       },
@@ -336,8 +402,15 @@
         "month": 11,
         "intensity": 55,
         "phase": "NBA Cup group play",
-        "team": ["Cup Fridays through Nov 27", "Group C with Boston, Atlanta, Chicago and Washington"],
-        "local": ["Panthers season", "Thanksgiving", "Black Friday"],
+        "team": [
+          "Cup Fridays through Nov 27",
+          "Group C with Boston, Atlanta, Chicago and Washington"
+        ],
+        "local": [
+          "Panthers season",
+          "Thanksgiving",
+          "Black Friday"
+        ],
         "fanBehavior": "Cup games get attention; casual fans start gift shopping.",
         "retailSignal": "Black Friday and gift buying start."
       },
@@ -345,8 +418,15 @@
         "month": 12,
         "intensity": 70,
         "phase": "Cup knockouts and holidays",
-        "team": ["Cup quarterfinals Dec 4-5", "Cup final Dec 11", "No Christmas Day game"],
-        "local": ["Holiday season", "Uptown lights"],
+        "team": [
+          "Cup quarterfinals Dec 4-5",
+          "Cup final Dec 11",
+          "No Christmas Day game"
+        ],
+        "local": [
+          "Holiday season",
+          "Uptown lights"
+        ],
         "fanBehavior": "Gift-driven engagement; Hornets without Christmas exposure.",
         "retailSignal": "Biggest gifting window; jerseys and holiday gear peak."
       }
@@ -357,7 +437,7 @@
         "date": "Oct 20, 2026",
         "month": 10,
         "type": "league",
-        "why": "Season begins; Charlotte's own opener is a few days later, so check the schedule."
+        "why": "Season begins; Charlotte's own opener date was not captured; confirm it from the schedule (the Cup opener is Oct 30 at Washington)."
       },
       {
         "name": "Hornets at Wizards, opening Cup night",

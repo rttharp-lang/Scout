@@ -337,7 +337,7 @@
         "month": 6,
         "intensity": 40,
         "phase": "Draft and Finals",
-        "team": ["NBA Draft", "NBA Finals"],
+        "team": ["NBA Draft (date TBA)", "NBA Finals (June; Game 1 date unconfirmed)"],
         "local": ["Odunde Festival", "School ends", "Phillies season"],
         "fanBehavior": "Draft and offseason speculation; casual fans drift away.",
         "retailSignal": "Light; clearance and Finals-neutral buying."
@@ -346,7 +346,7 @@
         "month": 7,
         "intensity": 32,
         "phase": "Free agency and Summer League",
-        "team": ["Free agency", "Las Vegas Summer League"],
+        "team": ["Free agency (negotiating window expected to open June 30)", "Las Vegas Summer League (dates TBA)"],
         "local": ["Wawa Welcome America", "Jersey Shore season", "Phillies and All-Star break"],
         "fanBehavior": "Engagement is news-driven; fans follow roster moves online.",
         "retailSignal": "Spikes only if a star signs or is traded; otherwise low."
@@ -382,7 +382,7 @@
         "month": 11,
         "intensity": 72,
         "phase": "NBA Cup group play",
-        "team": ["Cup Nights every Friday Oct 30-Nov 27", "Thanksgiving week Cup games"],
+        "team": ["Cup Fridays Oct 30-Nov 27 (four group games)", "Thanksgiving week Cup games"],
         "local": ["Thanksgiving Day Parade", "Eagles season", "Colder weather"],
         "fanBehavior": "Steady engagement with Cup stakes versus New York, Cleveland, Miami and Indiana.",
         "retailSignal": "Black Friday and early gifting; Cup court-themed merch for fans."

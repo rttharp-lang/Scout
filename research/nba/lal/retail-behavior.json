@@ -7,7 +7,7 @@
     {
       "title": "Narrative beats beat the weather",
       "detail": "With mild weather, Lakers shopping is driven by moments: Doncic's first full season as the face after LeBron's departure, Christmas Day against Philadelphia and LeBron's first return, the Oct 21 Warriors game, and playoff pushes. LeBron-era gear is now a nostalgia and resale category while Luka and Reaves product is the growth category.",
-      "implication": "Stage drops around the Oct 20-21 opener, Christmas week and the playoff run. Pair Doncic hero product with a legacy-respect LeBron/Showtime archive capsule so neither fan group feels dropped."
+      "implication": "Stage drops around the Oct 21 Warriors game (league opening night, Oct 20, is not a Lakers game), Christmas week and the playoff run. Pair Doncic hero product with a legacy-respect LeBron/Showtime archive capsule so neither fan group feels dropped."
     },
     {
       "title": "Mamba Day is a second calendar",
@@ -130,7 +130,7 @@
   "moments": [
     {
       "name": "Lakers season opener window",
-      "timing": "Oct 20-21",
+      "timing": "Oct 21",
       "month": 10,
       "why": "The home opener period vs Golden State on Oct 21 starts the first full Luka-led jersey cycle."
     },
@@ -289,9 +289,9 @@
   "extra": {
     "calendar": [
       {
-        "window": "Oct 20-21",
+        "window": "Oct 21",
         "month": 10,
-        "driver": "Season opener and Oct 21 home game vs Golden State; first full Doncic-era jersey cycle",
+        "driver": "League opening night is Oct 20 (not a Lakers game); Oct 21 home game vs Golden State; first full Doncic-era jersey cycle",
         "impact": "high"
       },
       {

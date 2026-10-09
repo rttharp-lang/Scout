@@ -2,15 +2,15 @@
   "team": "cle",
   "lens": "retail-landscape",
   "headline": "Cleveland buys team gear in volume at the arena shop, Lids and big-box chains, while taste is set by a thin layer of local-brand pop-ups and by Akron-rooted LeBron loyalty that Nike already owns.",
-  "summary": "Northeast Ohio is a drive-to-the-mall market: the real volume sits in suburban centers (Beachwood Place, Legacy Village, Southpark, Crocker Park) and the Aurora Farms outlet, not in a single downtown flagship district. Fans pair Cavs wine-and-gold with Browns and Guardians gear, so basketball competes for the same wallet and the same Lids and Fanatics doors. Cultural taste is set in Ohio City, Gordon Square, Tremont, Lakewood and Akron through local-pride apparel, vintage and pop-ups rather than a deep sneaker-boutique scene. The market's star footwear picture is split: LeBron is Nike for life and the Akron story is Nike's to tell, while Donovan Mitchell is an Adidas athlete and James Harden's footwear deal needs checking, so team-first rather than player-first product is Nike's lane here. Everything below is written from knowledge and flagged for a live door-by-door check.",
+  "summary": "Northeast Ohio is a drive-to-the-mall market: the real volume sits in suburban centers (Beachwood Place, Legacy Village, Southpark, Crocker Park) and the Aurora Premium Outlets, not in a single downtown flagship district. Fans pair Cavs wine-and-gold with Browns and Guardians gear, so basketball competes for the same wallet and the same Lids and Fanatics doors. Cultural taste is set in Ohio City, Gordon Square, Tremont, Lakewood and Akron through local-pride apparel, vintage and pop-ups rather than a deep sneaker-boutique scene. The market's star footwear picture is split: LeBron is Nike for life and the Akron story is Nike's to tell, while Donovan Mitchell is an Adidas athlete and James Harden's footwear deal needs checking, so team-first rather than player-first product is Nike's lane here. Everything below is written from knowledge and flagged for a live door-by-door check.",
   "insights": [
     {
       "title": "Suburban malls, not a downtown flagship, carry the volume",
-      "detail": "Cleveland shoppers drive to Beachwood Place and Legacy Village on the east side, Southpark in Strongsville, Crocker Park in Westlake and the Aurora Farms outlet to the southeast. Downtown around Rocket Arena has little sneaker or team-gear retail beyond the arena shop.",
+      "detail": "Cleveland shoppers drive to Beachwood Place and Legacy Village on the east side, Southpark in Strongsville, Crocker Park in Westlake and the Aurora Premium Outlets to the southeast. Downtown around Rocket Arena has little sneaker or team-gear retail beyond the arena shop.",
       "implication": "Plan assortments and launch windows around mall and outlet doors, and treat the arena team store as the single downtown brand moment on game nights."
     },
     {
-      "title": "Aurora Farms is the Nike-owned door that matters",
+      "title": "Aurora Premium Outlets is the Nike-run door that matters",
       "detail": "The Nike Factory Store at Aurora Premium Outlets (formerly Aurora Farms) sits between Cleveland and Akron, so it catches both metros, including the Akron LeBron base. Price-conscious families make it a volume and discovery stop rather than a taste-setter.",
       "implication": "Use it for basketball seasonal capsules, youth sizing depth and Akron-aware LeBron merchandising; do not expect it to launch heat."
     },
@@ -43,7 +43,7 @@
       "why": "Home of the Cavs and the arena team store, the highest-intent gear door on game nights, with the MLK Day noon game against Detroit on January 18 as a gift-season peak."
     },
     {
-      "name": "Aurora Farms Premium Outlets",
+      "name": "Aurora Premium Outlets",
       "kind": "outlet center",
       "neighborhood": "Aurora, Portage County",
       "why": "Home of the Nike Factory Store and the discount-minded shopper who drives from both Cleveland and Akron."
@@ -139,7 +139,7 @@
     },
     {
       "name": "Emirates NBA Cup East Group B",
-      "timing": "Fridays, October 30 to November 27",
+      "timing": "Fridays, October 30 to November 27, plus Tue Nov 24 and Wed Nov 25",
       "month": 11,
       "why": "Cavs face the champion Knicks, Sixers, Heat and Pacers in Cup play, a stretch for tournament-specific product."
     },
@@ -198,14 +198,14 @@
     {
       "cue": "Cavaliers wine",
       "type": "color",
-      "hex": "#6F263D",
+      "hex": "#860038",
       "source": "The team's primary color, anchoring the franchise's visual identity.",
       "use": "Use as the lead color in Association and Icon-adjacent apparel; check against the current team palette before locking."
     },
     {
       "cue": "Cavaliers gold",
       "type": "color",
-      "hex": "#FFB81C",
+      "hex": "#FDBB30",
       "source": "The team's accent color seen on trim and wordmarks.",
       "use": "Use as trim, number color and small graphic accents; confirm exact values against the current team palette."
     },
@@ -240,7 +240,7 @@
   ],
   "productHooks": [
     "A Cavs team-first capsule built around the 2026-27 City Edition 'Cleveland' wordmark, sold through the arena shop, Lids and Aurora Farms.",
-    "An Akron-Cleveland LeBron heritage capsule sold at the Aurora Farms Nike Factory Store, with I PROMISE School-aligned giving if cleared with the school and the LeBron team.",
+    "An Akron-Cleveland LeBron heritage capsule sold at the Aurora Premium Outlets Nike Factory Store, with I PROMISE School-aligned giving if cleared with the school and the LeBron team.",
     "A co-branded local-partner pop-up and tee drop timed to Small Business Saturday and the MLK Day game against Detroit.",
     "Youth and family-size basketball fleece and track pieces in wine, gold and navy for the mall chains' holiday window."
   ],
@@ -290,7 +290,7 @@
         "role": "volume"
       },
       {
-        "name": "Aurora Farms outlet",
+        "name": "Aurora Premium Outlets",
         "profile": "Premium outlet center with a Nike Factory Store, between Cleveland and Akron.",
         "shopper": "Price-conscious families from both metros.",
         "role": "volume"
@@ -322,7 +322,7 @@
         "why": "The highest-intent team-gear door and the place for limited, on-site releases."
       },
       {
-        "name": "Nike Factory Store, Aurora Farms",
+        "name": "Nike Factory Store, Aurora Premium Outlets",
         "type": "nike-owned",
         "neighborhood": "Aurora",
         "why": "The Nike-owned volume door nearest the Akron-Cleveland corridor."
@@ -357,7 +357,7 @@
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Confirm a Nike Factory Store is still operating at Aurora Farms Premium Outlets and find any other Nike-owned or Nike Well Collective doors in Northeast Ohio.",
+      "Confirm a Nike Factory Store is still operating at Aurora Premium Outlets and find any other Nike-owned or Nike Well Collective doors in Northeast Ohio.",
       "Confirm the Cavs team store at Rocket Arena: its name, location and whether any other team stores operate in the metro.",
       "Confirm that James Harden and Donovan Mitchell are both still signed to Adidas.",
       "Confirm that Foot Locker, Finish Line, JD Sports, Lids and Dick's still operate in Beachwood Place, Legacy Village, Southpark and Crocker Park.",
