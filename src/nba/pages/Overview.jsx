@@ -2,7 +2,7 @@
 // markets, a teaser of the league read (full read on #/league), and every market as a card.
 import React, { useMemo, useState } from "react";
 import { markets, league, publishedCount, currentMonth, MONTHS_LONG, MONTHS } from "../data.js";
-import { DIVISIONS, placeOf } from "../teams.js";
+import { DIVISIONS, TEAM_BY_ID, placeOf, shortLabel } from "../teams.js";
 import { ALL_AGENTS } from "../agents/roster.js";
 import { Chip, Meter, Priority, TeamBand, href, SectionHead } from "../ui.jsx";
 
@@ -139,8 +139,7 @@ function MarketCard({ m }) {
 
 // Themes and clusters at a glance; the full read lives on the League page.
 function LeagueTeaser() {
-  const byId = Object.fromEntries(markets.map((m) => [m.id, m.team]));
-  const name = (id) => (byId[id] ? (["Los Angeles", "New York"].includes(byId[id].city) ? byId[id].name : placeOf(byId[id])) : id);
+  const name = (id) => (TEAM_BY_ID[id] ? shortLabel(TEAM_BY_ID[id]) : id);
   return (
     <section className="hc-section">
       <SectionHead eyebrow="The league read" title="Across the league">

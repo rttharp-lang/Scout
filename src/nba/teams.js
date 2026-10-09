@@ -80,3 +80,5 @@ export const DIVISIONS = ["Atlantic", "Central", "Southeast", "Northwest", "Paci
 // (Golden State, Utah, Indiana, Minnesota); `city` stays the metro.
 export const placeOf = (t) => t.place || t.city;
 export const teamLabel = (t) => `${placeOf(t)} ${t.name}`;
+// Chip-sized label: the team name in two-team cities, otherwise the place.
+export const shortLabel = (t) => (["Los Angeles", "New York"].includes(t.city) ? t.name : placeOf(t));

@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from "react";
 import { markets, league, currentMonth, MONTHS_LONG, SEASON_ORDER, MONTHS } from "../data.js";
 import { LeagueHeatmap } from "../charts.jsx";
+import { TEAM_BY_ID, shortLabel } from "../teams.js";
 import { Chip, Priority, SectionHead, href } from "../ui.jsx";
 
 export default function Calendar() {
@@ -52,6 +53,9 @@ export default function Calendar() {
                 <div className="hc-row" style={{ justifyContent: "space-between" }}><span className="hc-eyebrow">{MONTHS_LONG[t.month - 1]} · {t.window}</span>{t.month === now && <Chip tone="pop">Now</Chip>}</div>
                 <h3 className="hc-h3">{t.moment}</h3>
                 <p className="hc-small">{t.play}</p>
+                {t.teams && t.teams.length > 0 && (
+                  <div className="hc-row" style={{ gap: 6 }}>{t.teams.filter((id) => TEAM_BY_ID[id]).map((id) => <a key={id} href={href("m", id)} className={`hc-chip${t.month === now ? "" : " hc-chip-line"}`} style={{ textDecoration: "none" }}>{shortLabel(TEAM_BY_ID[id])}</a>)}</div>
+                )}
               </article>
             ))}
           </div>

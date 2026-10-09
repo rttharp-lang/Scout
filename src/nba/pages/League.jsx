@@ -3,7 +3,7 @@
 // playbook and the watchlist. Tentpoles live on the Calendar page.
 import React, { useMemo, useState } from "react";
 import { markets, league, MONTHS } from "../data.js";
-import { placeOf } from "../teams.js";
+import { TEAM_BY_ID, placeOf, shortLabel } from "../teams.js";
 import { SCORE_LABELS, href, SectionHead } from "../ui.jsx";
 
 const SORTS = [...SCORE_LABELS, ["az", "A–Z"]];
@@ -13,9 +13,7 @@ export default function League() {
   if (!league) {
     return <div className="hc-empty">The league stage hasn't run yet: it needs all 30 markets researched first.</div>;
   }
-  const byId = Object.fromEntries(markets.map((m) => [m.id, m.team]));
-  // Short labels for chips: the team name in two-team cities, otherwise the place.
-  const name = (id) => (byId[id] ? (["Los Angeles", "New York"].includes(byId[id].city) ? byId[id].name : placeOf(byId[id])) : id);
+  const name = (id) => (TEAM_BY_ID[id] ? shortLabel(TEAM_BY_ID[id]) : id);
 
   return (
     <div>
