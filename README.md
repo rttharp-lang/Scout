@@ -12,6 +12,7 @@ Home Court helps the Nike Basketball team, based in Portland, become experts in 
 
 League views:
 
+- **League read** (`#/league`): the League Strategist's cross-market synthesis, with themes, fandom clusters, calibrated scores for all 30 markets, the priority board, the Portland team's playbook and the watchlist.
 - **Opportunity board** (`#/opportunities`): every opportunity across the league, filterable by month, product family, priority and upside.
 - **League calendar** (`#/calendar`): a heatmap of all 30 fan rhythms and every activation, broken down by month.
 - **Agents** (`#/agents`): the roster, the workflow, and a console that runs it live.

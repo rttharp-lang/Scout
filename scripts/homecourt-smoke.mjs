@@ -1,6 +1,6 @@
 // Home Court smoke test: serve the production build, open /nba/ in a real
 // browser at phone and desktop widths, walk every route (overview, a published
-// market, calendar, agents), and fail on uncaught errors, missing content or
+// market, league, calendar, agents), and fail on uncaught errors, missing content or
 // horizontal page overflow. Uses the published research in src/nba/data.
 //
 // Run with:  npm run smoke   (builds first)
@@ -18,6 +18,7 @@ const PORT = 4176, BASE = `http://localhost:${PORT}/nba/`;
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 const summary = JSON.parse(fs.readFileSync(new URL("../src/nba/data/summary.json", import.meta.url), "utf8"));
 const published = summary.filter((s) => s.status === "complete").map((s) => s.id);
+const hasLeague = fs.existsSync(new URL("../src/nba/data/league.json", import.meta.url));
 const SHOTS = process.env.HC_SHOTS; // optional dir for screenshots
 
 async function main() {
@@ -30,6 +31,7 @@ async function main() {
     const market = published.includes("por") ? "por" : published[0];
     const routes = [
       ["overview", "#/", /Home\s*Court/i],
+      ["league", "#/league", hasLeague ? /Themes[\s\S]*Clusters[\s\S]*Scores[\s\S]*priority board/i : /league stage hasn/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
       ["compare", "#/compare", /Compare\s*markets/i],

@@ -1,5 +1,5 @@
 // League overview: what Home Court is, what to activate this month across all
-// markets, the league read (themes + clusters), and every market as a card.
+// markets, a teaser of the league read (full read on #/league), and every market as a card.
 import React, { useMemo, useState } from "react";
 import { markets, league, publishedCount, currentMonth, MONTHS_LONG, MONTHS } from "../data.js";
 import { DIVISIONS, placeOf } from "../teams.js";
@@ -35,7 +35,7 @@ export default function Overview() {
           <div className="hc-eyebrow" style={{ marginBottom: 14 }}>Nike Basketball · Local fandom intelligence</div>
           <h1 className="hc-display" style={{ fontSize: "clamp(3.6rem, 12vw, 10rem)" }}>Home<br />Court</h1>
           <p className="hc-lede" style={{ marginTop: 22 }}>
-            {league ? league.thesis : "Every NBA market, researched by a team of agents — music, art, food, culture, the underground, grassroots hoops, the fan base and its yearly rhythm, uniforms, and retail — then synthesized into where to play, when to activate, and which products to make."}
+            {league ? league.headline : "Every NBA market, researched by a team of agents — music, art, food, culture, the underground, grassroots hoops, the fan base and its yearly rhythm, uniforms, and retail — then synthesized into where to play, when to activate, and which products to make."}
           </p>
         </div>
         <div className="hc-card-invert">
@@ -74,7 +74,7 @@ export default function Overview() {
         ) : <div className="hc-card hc-muted">No priority-1 activations published for {MONTHS_LONG[now - 1]} yet.</div>}
       </section>
 
-      {league && <LeagueRead />}
+      {league && <LeagueTeaser />}
 
       {/* Markets */}
       <section className="hc-section">
@@ -137,55 +137,37 @@ function MarketCard({ m }) {
   );
 }
 
-function LeagueRead() {
+// Themes and clusters at a glance; the full read lives on the League page.
+function LeagueTeaser() {
   const byId = Object.fromEntries(markets.map((m) => [m.id, m.team]));
   const name = (id) => (byId[id] ? (["Los Angeles", "New York"].includes(byId[id].city) ? byId[id].name : placeOf(byId[id])) : id);
   return (
     <section className="hc-section">
-      <SectionHead eyebrow="Across the league" title={league.headline} />
+      <SectionHead eyebrow="The league read" title="Across the league">
+        <a className="hc-btn" style={{ textDecoration: "none" }} href={href("league")}>Open the league read →</a>
+      </SectionHead>
       <div className="hc-grid hc-grid-2">
-        {league.themes.map((t, i) => (
-          <article key={i} className="hc-card hc-stack">
-            <h3 className="hc-h3">{t.title}</h3>
-            <p>{t.insight}</p>
-            <p className="hc-implication">{t.implication}</p>
-            <div className="hc-row">{t.teams.slice(0, 10).map((id) => <a key={id} href={href("m", id)} className="hc-chip hc-chip-line" style={{ textDecoration: "none" }}>{name(id)}</a>)}</div>
-          </article>
-        ))}
-      </div>
-      <h3 className="hc-h2" style={{ marginTop: 36, marginBottom: 14 }}>Fandom clusters</h3>
-      <div className="hc-grid hc-grid-3">
-        {league.clusters.map((c, i) => (
-          <article key={i} className="hc-card-invert hc-stack">
-            <h4 className="hc-h3">{c.name}</h4>
-            <p className="hc-small hc-muted">{c.description}</p>
-            <div className="hc-row">{c.teams.map((id) => <a key={id} href={href("m", id)} className="hc-chip" style={{ textDecoration: "none" }}>{name(id)}</a>)}</div>
-            <p className="hc-small" style={{ borderLeft: "3px solid var(--pop)", paddingLeft: 10 }}>{c.playbook}</p>
-          </article>
-        ))}
-      </div>
-      <div className="hc-grid hc-grid-2" style={{ marginTop: 36 }}>
         <div className="hc-card">
-          <h3 className="hc-h2">League priority board</h3>
-          <ol className="hc-list" style={{ marginTop: 12 }}>
-            {league.priorities.map((p, i) => (
-              <li key={i} style={{ display: "grid", gridTemplateColumns: "28px 1fr", gap: 10 }}>
+          <div className="hc-eyebrow">{league.themes.length} themes</div>
+          <ol className="hc-list" style={{ marginTop: 10 }}>
+            {league.themes.map((t, i) => (
+              <li key={i} style={{ display: "grid", gridTemplateColumns: "28px minmax(0, 1fr)", gap: 10 }}>
                 <b className="hc-insight-num" style={{ fontSize: 22 }}>{i + 1}</b>
-                <span><a href={href("m", p.team)} style={{ fontWeight: 700 }}>{name(p.team)}</a> — {p.title}<div className="hc-small hc-muted">{p.why} · {p.months.map((x) => MONTHS[x - 1]).join(", ")}</div></span>
+                <span><b>{t.title}</b><div className="hc-small hc-muted">{t.teams.length} markets</div></span>
               </li>
             ))}
           </ol>
         </div>
         <div className="hc-card-invert">
-          <h3 className="hc-h2">Playbook for the Portland team</h3>
-          <ul className="hc-list" style={{ marginTop: 12 }}>{league.portland.map((p, i) => <li key={i}><b>{p.title}</b><div className="hc-small hc-muted" style={{ marginTop: 4 }}>{p.detail}</div></li>)}</ul>
-          {league.watchlist.length > 0 && (
-            <>
-              <hr className="hc-divider" style={{ background: "#2a2a2a" }} />
-              <div className="hc-eyebrow">Watchlist</div>
-              <ul className="hc-list" style={{ marginTop: 8 }}>{league.watchlist.map((w, i) => <li key={i}><b>{w.market}</b><div className="hc-small hc-muted">{w.why}</div></li>)}</ul>
-            </>
-          )}
+          <div className="hc-eyebrow">{league.clusters.length} fandom clusters</div>
+          <ul className="hc-list" style={{ marginTop: 10 }}>
+            {league.clusters.map((c, i) => (
+              <li key={i}>
+                <b>{c.name}</b>
+                <div className="hc-row" style={{ marginTop: 6 }}>{c.teams.map((id) => <a key={id} href={href("m", id)} className="hc-chip" style={{ textDecoration: "none" }}>{name(id)}</a>)}</div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

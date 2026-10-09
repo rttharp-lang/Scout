@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { MONTHS, SEASON_ORDER } from "./data.js";
 
 // ── Router ────────────────────────────────────────────────────────
-// Hash routes so the site works on any static host: #/, #/m/por, #/opportunities, #/calendar, #/agents
+// Hash routes so the site works on any static host: #/, #/m/por, #/league, #/opportunities, #/calendar, #/agents
 export function useRoute() {
   const parse = () => (window.location.hash.replace(/^#\/?/, "") || "").split("?")[0].split("/").filter(Boolean);
   const [route, setRoute] = useState(parse);
@@ -42,6 +42,7 @@ export function Header({ route }) {
       </a>
       <nav className="hc-nav" aria-label="Primary">
         {link(href(), "Markets", section === "" || section === "m")}
+        {link(href("league"), "League", section === "league")}
         {link(href("opportunities"), "Opportunities", section === "opportunities")}
         {link(href("calendar"), "Calendar", section === "calendar")}
         {link(href("compare"), "Compare", section === "compare")}

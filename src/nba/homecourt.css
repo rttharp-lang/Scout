@@ -199,6 +199,32 @@
 
 .hc-empty { padding: 48px 24px; text-align: center; color: var(--text-muted); }
 
+/* League page: calibrated score table. Each row is a disclosure with the note. */
+.hc-scores { padding: 6px 0; }
+.hc-scores-row { display: grid; grid-template-columns: minmax(170px, 1.3fr) repeat(4, minmax(0, 1fr)); gap: 16px; align-items: center; padding: 10px 20px; }
+.hc-scores-head { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--hc-ink-2); }
+.hc-scores-item { border-top: 1px solid var(--border); }
+.hc-scores-item > summary { cursor: pointer; list-style: none; }
+.hc-scores-item > summary::-webkit-details-marker { display: none; }
+.hc-scores-item > summary:hover, .hc-scores-item[open] > summary { background: var(--surface); }
+.hc-scores-item > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.hc-scores-name { display: flex; align-items: center; gap: 8px; font-weight: 700; min-width: 0; }
+.hc-scores-cell { display: grid; grid-template-columns: minmax(0, 1fr) 24px; gap: 8px; align-items: center; font-size: 13px; font-variant-numeric: tabular-nums; }
+.hc-scores-cell b { text-align: right; }
+.hc-scores-cell .hc-meter-fill { background: var(--seq-4); }
+.hc-scores-cell[data-sorted] .hc-meter-fill { background: var(--accent); }
+.hc-scores-note { padding: 2px 20px 16px; max-width: 90ch; color: var(--hc-ink-2); }
+.hc-scores-short { display: none; }
+@media (max-width: 760px) {
+  .hc-scores-row { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; padding: 10px 14px; }
+  .hc-scores-name { grid-column: 1 / -1; }
+  .hc-scores-head > span:first-child, .hc-scores-long { display: none; }
+  .hc-scores-short { display: inline; }
+  .hc-scores-cell { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .hc-scores-cell b { text-align: left; }
+  .hc-scores-note { padding: 2px 14px 14px; }
+}
+
 @media print {
   .hc-header nav, .hc-subnav, .hc-footer, .hc-no-print { display: none !important; }
   .hc-section { break-inside: avoid-page; }
