@@ -176,7 +176,7 @@
     },
     {
       "term": "Believe Memphis",
-      "meaning": "The rallying slogan of the 2013 Western Conference Finals run, still used nostalgically."
+      "meaning": "The rallying slogan that began with the 2011 upset run and carried through the 2013 Western Conference Finals, still used nostalgically."
     },
     {
       "term": "Whoop That Trick",
@@ -193,10 +193,6 @@
     {
       "term": "The Mid-South",
       "meaning": "How locals describe the region around Memphis that the team represents."
-    },
-    {
-      "term": "Zeus",
-      "meaning": "Fan nickname for Zach Randolph's presence and for the post-game dominance he stood for."
     }
   ],
   "designCues": [
@@ -215,7 +211,7 @@
       "use": "Pair with Beale Street Blue on jerseys, jackets and fleece."
     },
     {
-      "cue": "Sunrise Yellow accent",
+      "cue": "Sunset Yellow accent",
       "type": "color",
       "hex": "#F5B112",
       "source": "Grizzlies accent color",
@@ -244,7 +240,7 @@
     }
   ],
   "productHooks": [
-    "Grit and Grind heritage capsule: heavyweight fleece and workwear-inspired jackets in Beale Street Blue and Midnight, with a Sunrise Yellow accent.",
+    "Grit and Grind heritage capsule: heavyweight fleece and workwear-inspired jackets in Beale Street Blue and Midnight, with a Sunset Yellow accent.",
     "Rookie and young-core gameday tee drops built around Boozer, Edey and Coward, timed to the home opener and Cup nights.",
     "Penny Hardaway and Memphis Tigers crossover capsule that bridges Grizzlies and Tigers fans, with Penny heritage graphics.",
     "MLK Day community capsule developed with local partners and tied to the January 18 game, with proceeds or credit going to Memphis organizations.",
@@ -324,7 +320,7 @@
       },
       {
         "name": "Believe Memphis nostalgia",
-        "detail": "The 2013 run's slogan and the memory of the 2011 upset of San Antonio are invoked whenever hope is needed."
+        "detail": "The 2011-era slogan, the 2013 conference finals run and the memory of the 2011 upset of San Antonio are invoked whenever hope is needed."
       },
       {
         "name": "BBQ and Beale pregame",
@@ -401,7 +397,7 @@
       "The 2026-27 City Edition design and release timing.",
       "Home opener date and opponent for Memphis, and who hosts the Jan 18 Rockets-Grizzlies MLK game.",
       "Whoop That Trick is still the in-arena victory tradition.",
-      "Brand hex values for Beale Street Blue, Midnight Blue and Sunrise Yellow match current team branding.",
+      "Brand hex values for Beale Street Blue, Midnight Blue and Sunset Yellow match current team branding.",
       "Zach Randolph's number retirement and other legend honors are as described.",
       "Central BBQ locations and Memphis in May dates remain operating and scheduled.",
       "Penny Hardaway remains Memphis Tigers head coach and a Nike athlete.",

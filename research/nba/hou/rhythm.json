@@ -1,7 +1,7 @@
 {
   "team": "hou",
   "lens": "rhythm",
-  "headline": "Houston's Rockets year is a two-peak calendar, a November-December Cup-and-holiday surge and an April playoff push, wedged around Texans Sundays, Astros October and the six-week rodeo that empties the Toyota Center schedule in February-March.",
+  "headline": "Houston's Rockets year is a two-peak calendar, a November-December Cup-and-holiday surge and an April playoff push, wedged around Texans Sundays, Astros October and the three-week rodeo that sends the Rockets on a February-March road trip.",
   "summary": "Houston is a football-first, Astros-loyal sports town in the fall, so the Rockets win attention in the cracks: opening week, Cup Fridays, MLK Day and the March-April stretch run. The rodeo (late Feb into mid-March) is the city's biggest civic ritual and historically pulls the Rockets onto a long road trip, which makes it a rare moment when Houston's own look, western and slab-adjacent, can sit next to the team. Durant, Sengun and a young Amen Thompson-Tari Eason core coming off a 52-30 season and a first-round loss to the Lakers give 2026-27 a prove-it tone, with a 47.5 win total. Summer is heat, hurricane season and the draft and free-agency news cycle, so spend there is jersey-for-the-moment, not apparel-for-the-season.",
   "insights": [
     {
@@ -42,7 +42,7 @@
     {"name": "Project Row Houses", "kind": "arts organization", "neighborhood": "Third Ward", "why": "Long-running Black community art and housing project; a model for authentic partnership."},
     {"name": "Discovery Green", "kind": "park", "neighborhood": "Downtown", "why": "Public gathering and watch-party space steps from Toyota Center."},
     {"name": "Hong Kong City Mall", "kind": "shopping center", "neighborhood": "Southwest / Sharpstown", "why": "Anchor of Houston's Asian community along Bellaire Boulevard, central to Lunar New Year engagement."},
-    {"name": "Screwed Up Records & Tapes", "kind": "record shop", "neighborhood": "Third Ward / Southside", "why": "DJ Screw legacy shop, a pilgrimage point for chopped-and-screwed culture."},
+    {"name": "Screwed Up Records & Tapes", "kind": "record shop", "neighborhood": "South Park / Southside (Cullen Blvd)", "why": "DJ Screw legacy shop, a pilgrimage point for chopped-and-screwed culture."},
     {"name": "Texas Southern University", "kind": "HBCU campus", "neighborhood": "Third Ward", "why": "Campus calendar (homecoming in the fall) shapes Third Ward energy and apparel demand."}
   ],
   "people": [
@@ -76,7 +76,7 @@
     {"term": "Trill", "meaning": "Houston-originated word, a blend of true and real, tied to UGK."}
   ],
   "designCues": [
-    {"cue": "Rockets red", "type": "color", "hex": "#CE1141", "source": "Franchise primary color since the 1995 redesign.", "use": "Anchor color for team-specific product and opening-week capsule."},
+    {"cue": "Rockets red", "type": "color", "hex": "#CE1141", "source": "Franchise primary color, with the modern Rockets red codified in the 2003 redesign.", "use": "Anchor color for team-specific product and opening-week capsule."},
     {"cue": "Mustard gold (ketchup and mustard throwback)", "type": "color", "hex": "#FFC72C", "source": "Throwback palette from the revealed 2026-27 uniform and earlier eras.", "use": "Trim, tonal accents and retro warm-ups; confirm uniform status first."},
     {"cue": "Candy-paint slab purple-to-teal shift", "type": "color", "hex": "#5B2A86", "source": "Slab candy paint finishes seen at Houston car shows.", "use": "Accent gradients on culture product; credit local painters and avoid drug-linked imagery."},
     {"cue": "Pinstripe and star wordmark lettering", "type": "typography", "hex": "", "source": "Houston Rockets' 1990s Clutch City uniforms.", "use": "Retro-script graphics for Clutch City tribute tees."},
@@ -115,7 +115,7 @@
       {"month": 7, "intensity": 40, "phase": "Free agency and Summer League", "team": ["Free agency", "Summer League"], "local": ["Peak heat", "Astros all-star break", "Vacations"], "fanBehavior": "Roster news drives online talk; few in-person events.", "retailSignal": "New-signing jersey demand; otherwise slow."},
       {"month": 8, "intensity": 35, "phase": "Offseason lull", "team": ["Schedule release", "Pre-camp quiet"], "local": ["Back-to-school", "Hurricane season ramps up", "High school football begins"], "fanBehavior": "Lowest engagement of the year.", "retailSignal": "Back-to-school sneakers and apparel."},
       {"month": 9, "intensity": 48, "phase": "Media day and training camp", "team": ["Media day late September", "Training camp"], "local": ["Texans and college football start", "Hurricane peak"], "fanBehavior": "Optimism builds; football dominates weekends.", "retailSignal": "Preview jersey and tee demand, early City Edition hype."},
-      {"month": 10, "intensity": 72, "phase": "Preseason and opener", "team": ["Preseason", "League opens Oct 20", "Cup begins Oct 30"], "local": ["Astros postseason (if qualified)", "Texans", "Halloween"], "fanBehavior": "Excitement for a new-look team with Durant; Astros can steal focus.", "retailSignal": "Opening-week jerseys, tip-off capsule."},
+      {"month": 10, "intensity": 72, "phase": "Preseason and opener", "team": ["Preseason", "League opens Oct 20", "Cup begins Oct 30"], "local": ["Astros postseason (if qualified)", "Texans", "Halloween"], "fanBehavior": "Excitement for a team with Durant plus new veterans Smart and Bogdanovic; Astros can steal focus.", "retailSignal": "Opening-week jerseys, tip-off capsule."},
       {"month": 11, "intensity": 75, "phase": "NBA Cup group play", "team": ["Cup Fridays vs. DEN, PHX, DAL, UTA through Nov 27", "Thanksgiving Cup nights Nov 24-25"], "local": ["Texans Sundays", "Homecoming at TSU and UH", "Thanksgiving"], "fanBehavior": "Friday Cup games compete with high school football; strong gifting build.", "retailSignal": "Black Friday jersey and hoodie sales."},
       {"month": 12, "intensity": 82, "phase": "Cup knockouts and holidays", "team": ["Cup quarterfinals Dec 4-5", "Semifinals Dec 8-9", "Final Dec 11", "Not on Christmas Day slate"], "local": ["Holiday lights and Christmas markets", "Mild weather"], "fanBehavior": "Gifting season; a Cup run would lift engagement.", "retailSignal": "Peak jersey and apparel gifting."}
     ],

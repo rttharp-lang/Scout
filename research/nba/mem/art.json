@@ -82,7 +82,7 @@
       "name": "Sun Studio",
       "kind": "landmark studio",
       "neighborhood": "Midtown",
-      "why": "Its yellow sun logo, Marion Keisker-era signage and retro type are widely recognized."
+      "why": "Its yellow sun logo, vintage signage and retro type are widely recognized."
     },
     {
       "name": "Cooper-Young",
@@ -91,10 +91,10 @@
       "why": "Independent shops, galleries and murals, and host of an annual street festival."
     },
     {
-      "name": "Memphis-Arkansas Bridge and Hernando de Soto Bridge",
+      "name": "Hernando de Soto Bridge",
       "kind": "landmark",
       "neighborhood": "Downtown riverfront",
-      "why": "The twin-arch 'M' silhouette of the I-40 bridge is a skyline-defining shape."
+      "why": "The twin-arch 'M' silhouette of the I-40 Hernando de Soto Bridge is a skyline-defining shape."
     }
   ],
   "people": [
@@ -131,7 +131,7 @@
     {
       "name": "Young Dolph (estate and Paper Route Empire)",
       "role": "late rapper and label",
-      "why": "A beloved local legend whose memorial murals and Makeda's Cookies ties make him sacred; approach only with the family and label."
+      "why": "A beloved local legend whose memorials make him sacred ground; approach only with the family and label."
     },
     {
       "name": "Crosstown Arts artist community",
@@ -148,7 +148,7 @@
     },
     {
       "name": "Mempho Festival",
-      "timing": "Early October (historically)",
+      "timing": "Historically early October; not confirmed to be running",
       "month": 10,
       "why": "A music festival where local visual artists and merchandise are visible."
     },
@@ -216,10 +216,10 @@
       "use": "Base color for City-style graphics, paired with navy for contrast."
     },
     {
-      "cue": "Stax gold-yellow for soul and Sun Studio signage",
+      "cue": "Grizzlies Sunset Yellow, near the yellow of Sun Studio signage",
       "type": "color",
       "hex": "#F5B112",
-      "source": "Sun Studio and Stax branding",
+      "source": "Grizzlies palette; Sun Studio signage is a similar yellow",
       "use": "Accent for stripes, numerals and trim."
     },
     {
@@ -318,7 +318,8 @@
       "Lil Buck's current activities and appropriate representation for collaborations.",
       "Rockets vs. Grizzlies MLK Day home team and tip time.",
       "Eggleston Artistic Trust and Withers archive licensing contacts.",
-      "Current Grizzlies brand hex values for Beale Street Blue and Sunrise Yellow."
+      "Current Grizzlies brand hex values for Beale Street Blue and Sunset Yellow.",
+      "Whether Mempho Festival still runs (it may have paused) before citing it as a local art or merch venue."
     ]
   }
 }

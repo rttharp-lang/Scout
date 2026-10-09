@@ -2,7 +2,7 @@
   "team": "hou",
   "lens": "uniform",
   "headline": "Houston's uniform story is a red-and-gold ketchup-and-mustard memory colliding with a long red/silver/black modern identity, and 2026-27 is the season the old palette comes back.",
-  "summary": "The Rockets have worn three distinct identities: the 1970s-80s red-and-gold look (ketchup and mustard) of the Moses Malone and Twin Towers era, the 1990s Clutch City redesign around back-to-back titles, and the red, silver and black rocket-forward system that has defined the franchise since 2003. Fans have long asked for the red-and-gold return, and a 2026-27 ketchup-and-mustard throwback look has now been revealed. The untold stories are the ones outside the arena: slab and screw culture, Third Ward, Southwest Houston's immigrant communities and the Space City label as lived in the neighborhoods rather than at NASA.",
+  "summary": "The Rockets have worn three distinct identities: the 1970s-80s red-and-gold look (ketchup and mustard) of the Moses Malone and Twin Towers era, the 1995 redesign that followed the back-to-back titles, and the red, silver and black rocket-forward system that has defined the franchise since 2003. Fans have long asked for the red-and-gold return, and a 2026-27 ketchup-and-mustard throwback look has now been revealed. The untold stories are the ones outside the arena: slab and screw culture, Third Ward, Southwest Houston's immigrant communities and the Space City label as lived in the neighborhoods rather than at NASA.",
   "insights": [
     {
       "title": "Ketchup and mustard is the emotional core",
@@ -11,7 +11,7 @@
     },
     {
       "title": "Clutch City is a fan-authored brand",
-      "detail": "The Clutch City name came from a Houston sportswriter-and-fan joke after the 1994 Finals run and was adopted by the city as a badge of resilience; it is bigger in bootleg shirts than on official uniforms.",
+      "detail": "The Clutch City name grew out of the 1994 title run and was adopted by fans as a badge of resilience; it is bigger in bootleg shirts than on official uniforms.",
       "implication": "Use Clutch City as a graphic and story pillar on lifestyle product and credit the local fan-made tradition instead of presenting it as new."
     },
     {
@@ -110,17 +110,17 @@
       {"name": "White", "hex": "#FFFFFF"}
     ],
     "eras": [
-      {"era": "1971-1995", "look": "Red and gold (ketchup and mustard) with striping and Rockets script.", "legacy": "Moses Malone and Twin Towers era; the look fans most want back."},
-      {"era": "1995-2003", "look": "Redesign with pinstripes and a rocket-forward logo, red/navy/silver.", "legacy": "Clutch City title years, Hakeem and Drexler, and a fan-favorite bootleg source."},
-      {"era": "2003-2020", "look": "Red, silver and black with a sweeping rocket wordmark.", "legacy": "Yao, McGrady and Harden-era identity, the modern Rockets look."},
-      {"era": "2020-present", "look": "Nike-era Icon red, Association white, Statement black with refined wordmark.", "legacy": "Current baseline system; Houston's youth movement era."}
+      {"era": "1971-1995", "look": "Red and gold (ketchup and mustard) with striping and Rockets script.", "legacy": "Moses Malone, Twin Towers and the 1994-95 Clutch City title teams; the look fans most want back."},
+      {"era": "1995-2003", "look": "Redesign with pinstripes and a rocket-forward logo, red/navy/silver.", "legacy": "Hakeem and Drexler's later years, Barkley and Francis; a fan-favorite bootleg source."},
+      {"era": "2003-2017", "look": "Red, silver and black with a sweeping rocket wordmark.", "legacy": "Yao and McGrady-era identity, the modern Rockets look."},
+      {"era": "2017-present", "look": "Nike-era (supplier since 2017-18) Icon red, Association white, Statement black with refined wordmark.", "legacy": "Harden era through the current Udoka-era baseline system."}
     ],
     "cityEditions": [
       {"season": "2026-27", "concept": "A ketchup-and-mustard throwback look was revealed for 2026-27 (Secret Houston). Whether it is the City Edition is not confirmed.", "reception": "unknown", "note": "Fans have long asked for red and gold; verify designation, concept and reception."}
     ],
     "fanFavorites": [
       "Ketchup-and-mustard red-and-gold 1970s-80s uniform",
-      "1990s Clutch City era red and pinstripe look",
+      "Red-and-gold look of the 1994-95 Clutch City title teams",
       "Yao-era red and white Association uniform"
     ],
     "untoldStories": [
@@ -138,7 +138,7 @@
       "Full 2026-27 uniform set (Icon, Association, Statement, City) and any Specter-style special uniforms.",
       "Exact hex values for current Rockets red, silver and black on the 2026-27 uniforms.",
       "History and fan reception of each past Houston City Edition from 2017-18 to 2025-26.",
-      "Years and details of the 1990s redesign and navy usage in the 1995-2003 era.",
+      "Years and details of the 1995 redesign and navy usage in the 1995-2003 era, and which set the 1994-95 title teams wore.",
       "Current Rockets Toyota Center ownership and arena name status.",
       "Current Houston local merch brands and bootleg creators operating and licensing status.",
       "Houston Livestock Show and Rodeo 2027 dates and Juneteenth event plans."

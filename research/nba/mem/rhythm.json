@@ -2,7 +2,7 @@
   "team": "mem",
   "lens": "rhythm",
   "headline": "Memphis' year is a loyalty calendar, not a hype calendar: the 2026-27 reset after Ja Morant and Jaren Jackson Jr. makes October's Cameron Boozer debut and the January MLK Day game the emotional peaks, while Memphis in May and the fall football and Tigers calendar keep the city's pride high when the Grizzlies are not the story.",
-  "summary": "With Ja Morant traded to Portland, Jaren Jackson Jr. gone to Utah and a 25-57 season behind them, the Grizzlies enter 2026-27 as a young rebuild around No. 3 pick Cameron Boozer, Zach Edey and Cedric Coward under Tuomas Iisalo, so fan energy is about curiosity and identity rather than contention. Memphis has the league's strongest tie between team and city identity (Grit and Grind, the Grindhouse, 901), which keeps FedExForum culture and nostalgia gear alive even in lottery years. The city's own calendar is dense and often louder than the team's: Memphis in May, the Southern Heritage Classic, Tigers football and basketball, Elvis Week and MLK-related remembrance. Retail will spike around the opener, the Boozer rookie narrative, holiday gifting and the MLK Day game, and will soften sharply if the team is out of the race by March. Nike should plan a Boozer-and-new-core launch window plus a heritage layer, and hold playoff-gear spend until the standings justify it.",
+  "summary": "With Ja Morant traded to Portland, Jaren Jackson Jr. gone to Utah and a 25-57 season behind them, the Grizzlies enter 2026-27 as a young rebuild around No. 3 pick Cameron Boozer, Zach Edey and Cedric Coward under Tuomas Iisalo, so fan energy is about curiosity and identity rather than contention. Memphis has one of the league's strongest ties between team and city identity (Grit and Grind, the Grindhouse, 901), which keeps FedExForum culture and nostalgia gear alive even in lottery years. The city's own calendar is dense and often louder than the team's: Memphis in May, the Southern Heritage Classic, Tigers football and basketball, Elvis Week and MLK-related remembrance. Retail will spike around the opener, the Boozer rookie narrative, holiday gifting and the MLK Day game, and will soften sharply if the team is out of the race by March. Nike should plan a Boozer-and-new-core launch window plus a heritage layer, and hold playoff-gear spend until the standings justify it.",
   "insights": [
     {
       "title": "The post-Morant reset resets the jersey market",
@@ -55,7 +55,7 @@
       "why": "The emotional center of MLK Day and April 4 remembrance in Memphis, and the right partner for any MLK-related storytelling."
     },
     {
-      "name": "Liberty Bowl Memorial Stadium",
+      "name": "Simmons Bank Liberty Stadium (formerly Liberty Bowl Memorial Stadium)",
       "kind": "stadium",
       "neighborhood": "Midtown / Fairgrounds",
       "why": "Home of Tigers football and the Southern Heritage Classic, the fall events that compete with the preseason and opener for attention."
@@ -103,8 +103,8 @@
     },
     {
       "name": "Tony Allen",
-      "role": "Grit and Grind icon, the Grindfather (died 2024)",
-      "why": "A permanent emblem of Memphis defensive identity, so any use must be handled with care and community input."
+      "role": "Grit and Grind icon, the Grindfather (No. 9 retired March 2025)",
+      "why": "An emblem of Memphis defensive identity, so any use needs his approval, licensing and community input."
     },
     {
       "name": "Zach Randolph",
@@ -223,10 +223,10 @@
       "use": "Pair with Beale Street Blue on jackets and warm-ups for the rebuild-era look."
     },
     {
-      "cue": "Sunrise Yellow accent",
+      "cue": "Sunset Yellow accent",
       "type": "color",
       "hex": "#F5B112",
-      "source": "Grizzlies accent yellow, associated with the rising new core.",
+      "source": "Grizzlies Sunset Yellow accent.",
       "use": "Use sparingly on trims and numbers to signal the new era without overpowering the blue."
     },
     {
@@ -261,7 +261,7 @@
     "Do not trade on Morant-era product or the trade drama; many fans are still processing the move.",
     "MLK Day and April 4 call for restraint and partnership with local institutions, not seasonal marketing.",
     "Memphis music, jookin and Black cultural traditions must be engaged through paid, credited local collaborators, not lifted.",
-    "Tony Allen and other Grit and Grind figures involve likeness and estate or licensing concerns; check before use.",
+    "Tony Allen, Zach Randolph and other Grit and Grind figures involve likeness and licensing; clear rights before use.",
     "Third-party marks (Stax, Memphis in May, the Tigers) require licensing."
   ],
   "sources": [
@@ -293,8 +293,15 @@
         "month": 1,
         "intensity": 75,
         "phase": "Midseason, MLK Day game",
-        "team": ["Rockets vs. Grizzlies on MLK Day, Jan 18", "Rookie of the Year narrative around Boozer"],
-        "local": ["MLK Day remembrance", "Cold, wet winter", "Tigers conference play"],
+        "team": [
+          "Rockets vs. Grizzlies on MLK Day, Jan 18",
+          "Rookie of the Year narrative around Boozer"
+        ],
+        "local": [
+          "MLK Day remembrance",
+          "Cold, wet winter",
+          "Tigers conference play"
+        ],
         "fanBehavior": "Engagement rises around the national MLK game; fans track Boozer's rookie season more than the standings.",
         "retailSignal": "Post-holiday sales and MLK-themed community items; moderate demand for rookie player gear."
       },
@@ -302,8 +309,14 @@
         "month": 2,
         "intensity": 60,
         "phase": "Trade deadline and All-Star",
-        "team": ["Trade deadline Feb 11", "All-Star Weekend Feb 19 to 21 in Phoenix"],
-        "local": ["Tigers basketball stretch run", "Late winter"],
+        "team": [
+          "Trade deadline Feb 11",
+          "All-Star Weekend Feb 19 to 21 in Phoenix"
+        ],
+        "local": [
+          "Tigers basketball stretch run",
+          "Late winter"
+        ],
         "fanBehavior": "Attention shifts to deadline rumors given last year's JJJ trade; All-Star is a modest draw unless a Grizzly participates.",
         "retailSignal": "Quiet, with a bump for any All-Star or Rising Stars participant."
       },
@@ -311,8 +324,13 @@
         "month": 3,
         "intensity": 45,
         "phase": "Late season push, March Madness",
-        "team": ["Lottery positioning for a rebuilding team"],
-        "local": ["Tigers postseason hopes", "Spring weather arrives"],
+        "team": [
+          "Lottery positioning for a rebuilding team"
+        ],
+        "local": [
+          "Tigers postseason hopes",
+          "Spring weather arrives"
+        ],
         "fanBehavior": "Fans disengage if the team is out of the race; college hoops takes the lead.",
         "retailSignal": "Soft; promotions and clearance are more effective than launches."
       },
@@ -320,8 +338,14 @@
         "month": 4,
         "intensity": 40,
         "phase": "Season end, Play-In window",
-        "team": ["Regular season ends Apr 11", "Play-In Apr 13 to 16"],
-        "local": ["April 4 MLK remembrance", "Spring festivals begin"],
+        "team": [
+          "Regular season ends Apr 11",
+          "Play-In Apr 13 to 16"
+        ],
+        "local": [
+          "April 4 MLK remembrance",
+          "Spring festivals begin"
+        ],
         "fanBehavior": "Interest depends on whether Memphis is in the Play-In race; otherwise attention goes to lottery odds and the city's remembrance.",
         "retailSignal": "Minimal unless the team is competing."
       },
@@ -329,8 +353,14 @@
         "month": 5,
         "intensity": 25,
         "phase": "Offseason, draft lottery",
-        "team": ["Draft lottery"],
-        "local": ["Memphis in May", "Barbecue contest", "Spring festival season"],
+        "team": [
+          "Draft lottery"
+        ],
+        "local": [
+          "Memphis in May",
+          "Barbecue contest",
+          "Spring festival season"
+        ],
         "fanBehavior": "The city is loud but not about basketball; fans follow the lottery.",
         "retailSignal": "City-first and festival gear outperform team product."
       },
@@ -338,8 +368,14 @@
         "month": 6,
         "intensity": 55,
         "phase": "Draft and trade window",
-        "team": ["NBA Draft", "Offseason trades"],
-        "local": ["Juneteenth events", "Summer heat arrives"],
+        "team": [
+          "NBA Draft",
+          "Offseason trades"
+        ],
+        "local": [
+          "Juneteenth events",
+          "Summer heat arrives"
+        ],
         "fanBehavior": "A spike of attention around draft night and any major trade.",
         "retailSignal": "Draft-pick jerseys and shirts spike briefly after the draft."
       },
@@ -347,8 +383,14 @@
         "month": 7,
         "intensity": 40,
         "phase": "Free agency and Summer League",
-        "team": ["Summer League", "Free agency"],
-        "local": ["Heat and humidity", "Redbirds season"],
+        "team": [
+          "Summer League",
+          "Free agency"
+        ],
+        "local": [
+          "Heat and humidity",
+          "Redbirds season"
+        ],
         "fanBehavior": "Streaming-led interest in rookies; low in-person engagement.",
         "retailSignal": "Light; some rookie product."
       },
@@ -356,8 +398,14 @@
         "month": 8,
         "intensity": 15,
         "phase": "Deep offseason",
-        "team": ["Schedule release"],
-        "local": ["Elvis Week", "Early-August school start", "Peak heat"],
+        "team": [
+          "Schedule release"
+        ],
+        "local": [
+          "Elvis Week",
+          "Early-August school start",
+          "Peak heat"
+        ],
         "fanBehavior": "Minimal; fans disengage as the school year starts and tourism takes over.",
         "retailSignal": "Back-to-school apparel and city-first goods; little team product."
       },
@@ -365,8 +413,15 @@
         "month": 9,
         "intensity": 25,
         "phase": "Media day and training camp",
-        "team": ["Media day", "Training camp"],
-        "local": ["Southern Heritage Classic", "Tigers football", "Cooler weather"],
+        "team": [
+          "Media day",
+          "Training camp"
+        ],
+        "local": [
+          "Southern Heritage Classic",
+          "Tigers football",
+          "Cooler weather"
+        ],
         "fanBehavior": "Football leads local attention; camp reports build interest.",
         "retailSignal": "Pre-season product teasers and Southern Heritage Classic gear."
       },
@@ -374,8 +429,16 @@
         "month": 10,
         "intensity": 100,
         "phase": "Preseason and opener",
-        "team": ["Opening night Oct 20 league-wide", "Cup opener Oct 30 at Minnesota", "Boozer debut"],
-        "local": ["Tigers football", "Fall weather", "Mempho-style music events"],
+        "team": [
+          "Opening night Oct 20 league-wide",
+          "Cup opener Oct 30 at Minnesota",
+          "Boozer debut"
+        ],
+        "local": [
+          "Tigers football",
+          "Fall weather",
+          "Mempho-style music events"
+        ],
         "fanBehavior": "The season's peak: fans want first looks at Boozer, Edey and Coward.",
         "retailSignal": "Biggest spike for new-era jerseys, fan gear and the City Edition reveal."
       },
@@ -383,8 +446,14 @@
         "month": 11,
         "intensity": 85,
         "phase": "NBA Cup group play",
-        "team": ["Cup Fridays through Nov 27", "West Group B with OKC, MIN, LAC and NOP"],
-        "local": ["Tigers basketball starts", "Thanksgiving"],
+        "team": [
+          "Cup Fridays through Nov 27",
+          "West Group B with OKC, MIN, LAC and NOP"
+        ],
+        "local": [
+          "Tigers basketball starts",
+          "Thanksgiving"
+        ],
         "fanBehavior": "Engaged and curious; early results shape sentiment.",
         "retailSignal": "Steady jersey and tee sales, and early holiday gifting."
       },
@@ -392,8 +461,15 @@
         "month": 12,
         "intensity": 80,
         "phase": "Cup knockouts and holidays",
-        "team": ["Cup quarterfinals Dec 4 to 5", "Cup final Dec 11", "Not on the Christmas Day slate"],
-        "local": ["Holiday season", "Christmas break"],
+        "team": [
+          "Cup quarterfinals Dec 4 to 5",
+          "Cup final Dec 11",
+          "Not on the Christmas Day slate"
+        ],
+        "local": [
+          "Holiday season",
+          "Christmas break"
+        ],
         "fanBehavior": "Gift-driven, with casual fans buying for family.",
         "retailSignal": "Peak gifting window for jerseys, hoodies and heritage items."
       }
@@ -500,7 +576,7 @@
       "Current Grizzlies team colors and hex values used on 2026-27 uniforms.",
       "Memphis Tigers 2026-27 basketball and football schedules.",
       "Memphis-Shelby County Schools 2026-27 calendar.",
-      "Whether Tony Allen and Zach Randolph likeness or estate permissions apply to any planned product."
+      "Whether Tony Allen and Zach Randolph likeness permissions apply to any planned product."
     ]
   }
 }

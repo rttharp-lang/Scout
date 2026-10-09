@@ -43,23 +43,23 @@
     {"name": "Hugo's", "kind": "restaurant", "neighborhood": "Montrose", "why": "Hugo Ortega's regional Mexican cooking, a Houston fine-dining anchor."},
     {"name": "Crawfish & Noodles", "kind": "restaurant", "neighborhood": "Southwest Houston (Bellaire Blvd corridor)", "why": "Prominent Viet-Cajun crawfish restaurant tied to the city's signature fusion."},
     {"name": "Killen's BBQ", "kind": "restaurant", "neighborhood": "Pearland", "why": "Nationally known Texas barbecue from Ronnie Killen, widely cited by locals."},
-    {"name": "Truth BBQ", "kind": "restaurant", "neighborhood": "Heights / Brenham area", "why": "Leopold Brown's Texas barbecue brand with a strong Houston following."},
+    {"name": "Truth BBQ", "kind": "restaurant", "neighborhood": "Heights (original in Brenham)", "why": "Houston native Leonard Botello IV's Central Texas-style barbecue, with a Heights location and a strong Houston following."},
     {"name": "Mahatma Gandhi District", "kind": "district", "neighborhood": "Hillcroft, Southwest Houston", "why": "South Asian restaurant and sweet-shop corridor."},
     {"name": "Toyota Center", "kind": "arena", "neighborhood": "Downtown", "why": "Home arena where game-day food rituals begin and end."}
   ],
   "people": [
-    {"name": "Chris Shepherd", "role": "Chef, Underbelly Hospitality founder", "why": "Champion of Houston's immigrant food identity and a James Beard winner."},
+    {"name": "Chris Shepherd", "role": "Chef, James Beard winner, founder of the original Underbelly", "why": "Champion of Houston's immigrant food identity and a James Beard winner."},
     {"name": "Hugo Ortega", "role": "Chef and restaurateur", "why": "Mexican regional cuisine leader with Hugo's, Xochi and Backstreet Cafe."},
     {"name": "Marcus Davis", "role": "Owner, The Breakfast Klub", "why": "Public face of a Black-owned Houston institution."},
     {"name": "Ronnie Killen", "role": "Pitmaster and restaurateur", "why": "Built Killen's into a Texas barbecue name."},
-    {"name": "Leopold Brown", "role": "Pitmaster, Truth BBQ", "why": "Fast-rising Houston-area Texas barbecue brand."},
-    {"name": "Justin Yu", "role": "Chef", "why": "Houston fine-dining voice, known for vegetable-forward cooking and Better Luck Tomorrow."},
+    {"name": "Leonard Botello IV", "role": "Owner and pitmaster, Truth BBQ", "why": "Houston native who built Truth from a Brenham shack into one of the state's top-ranked barbecue names."},
+    {"name": "Chris Williams", "role": "Chef and restaurateur, Lucille's", "why": "Black Houston chef whose Lucille's honors his grandmother and Southern-Gulf cooking."},
     {"name": "Mama Ninfa Laurenzo", "role": "Founder of Ninfa's", "why": "Posthumous icon of Houston Tex-Mex and fajita history."}
   ],
   "moments": [
     {"name": "Houston Livestock Show and Rodeo World Championship BBQ Contest", "timing": "Late February to early March", "month": 2, "why": "City's biggest barbecue and western event at NRG Park, overlapping the NBA stretch run."},
     {"name": "Crawfish season", "timing": "Roughly February through June", "month": 4, "why": "Peak of Viet-Cajun and Gulf boil culture, aligned with playoff time."},
-    {"name": "Taste of Texas / Houston restaurant weeks", "timing": "Late summer (Houston Restaurant Weeks)", "month": 8, "why": "Citywide dining promotion that surfaces chef-driven spots."},
+    {"name": "Houston Restaurant Weeks", "timing": "Late summer (Houston Restaurant Weeks)", "month": 8, "why": "Citywide dining promotion that surfaces chef-driven spots."},
     {"name": "Rockets home games", "timing": "Every home game, Oct-Apr", "month": 0, "why": "Pre-game barbecue, Tex-Mex and wing rituals around Downtown and EaDo."},
     {"name": "Houston Rockets vs. Memphis Grizzlies, MLK Day", "timing": "Monday Jan 18, 2027", "month": 1, "why": "Nationally featured date suited to Black-owned Houston food partnerships."}
   ],
@@ -110,7 +110,7 @@
       "Current Houston Livestock Show and Rodeo dates and the BBQ Contest schedule for 2027.",
       "Whether the 'ketchup and mustard' throwback uniform is the City Edition and its color story.",
       "Houston Restaurant Weeks timing for 2026 and whether it falls in August.",
-      "Whether Hugo's, Xochi and Justin Yu's Better Luck Tomorrow are still operating under the same owners.",
+      "Whether Hugo's, Xochi and Lucille's are still operating under the same owners.",
       "Whether Ninfa's on Navigation is operating at its original East End location.",
       "Crawfish season timing and pricing for 2027."
     ]
