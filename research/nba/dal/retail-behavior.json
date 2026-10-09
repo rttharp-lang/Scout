@@ -64,7 +64,7 @@
     {"name": "Texas sales tax holiday", "timing": "Early to mid August, a Friday through Sunday", "month": 8, "why": "Clothing and footwear under $100 are exempt, the biggest back-to-school spending window."},
     {"name": "State Fair of Texas", "timing": "Late September to mid October", "month": 10, "why": "Mass-audience fall event at Fair Park for a Mavs or Nike activation."},
     {"name": "Red River Rivalry weekend", "timing": "Mid October", "month": 10, "why": "Texas and Oklahoma at the Cotton Bowl fills Dallas with visitors and spending."},
-    {"name": "Mavericks tip-off and NBA Cup Fridays", "timing": "Oct 20 opening; Cup group games Oct 30 to Nov 27", "month": 10, "why": "Mavs open in West Group A with DEN, HOU, PHX and UTA, giving early-season Friday retail hooks."},
+    {"name": "Mavericks tip-off and NBA Cup Fridays", "timing": "League opening week from Oct 20 (Dallas opener date to confirm); Cup group games Oct 30 to Nov 27", "month": 10, "why": "Mavs open in West Group A with DEN, HOU, PHX and UTA, giving early-season Friday retail hooks."},
     {"name": "Dia de Muertos", "timing": "Nov 1 to 2", "month": 11, "why": "A major cultural and gifting moment for the Mexican-American community."},
     {"name": "Black Friday and Christmas", "timing": "Late Nov to Dec 24", "month": 12, "why": "The largest overall retail peak, with heavy family gifting of jerseys and sneakers."},
     {"name": "Dieciseis de Septiembre", "timing": "Sept 16", "month": 9, "why": "Mexican Independence Day events across Oak Cliff and Pleasant Grove."},
@@ -111,7 +111,7 @@
     "calendar": [
       {"window": "Early to mid Aug (Fri to Sun)", "month": 8, "driver": "Texas sales tax holiday on clothing and footwear under $100 plus back-to-school as DFW schools start", "impact": "high"},
       {"window": "Late Sep to mid Oct", "month": 10, "driver": "State Fair of Texas, Red River Rivalry and football season", "impact": "medium"},
-      {"window": "Late Oct", "month": 10, "driver": "Mavs tip-off Oct 20 and NBA Cup Friday group games", "impact": "medium"},
+      {"window": "Late Oct", "month": 10, "driver": "Mavs opening week (league tips off Oct 20) and four NBA Cup group games", "impact": "medium"},
       {"window": "Nov 1 to 2", "month": 11, "driver": "Dia de Muertos and family gatherings", "impact": "low"},
       {"window": "Black Friday to Dec 24", "month": 12, "driver": "Holiday gifting and Nochebuena", "impact": "high"},
       {"window": "Jan 6", "month": 1, "driver": "Three Kings Day gifts in Latino households", "impact": "low"},
