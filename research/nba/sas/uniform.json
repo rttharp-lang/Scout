@@ -1,7 +1,7 @@
 {
   "team": "sas",
   "lens": "uniform",
-  "headline": "The Spurs are a silver-and-black institution whose most loved color story is the 1990s-2000s Fiesta stripe, which is why the 2025 Fiesta City Edition landed and why its return for 2026-27 is the market's live design conversation.",
+  "headline": "The Spurs are a silver-and-black institution whose most loved color story is the 1989-2002 Fiesta stripe, which is why the 2025 Fiesta City Edition landed and why its return for 2026-27 is the market's live design conversation.",
   "summary": "San Antonio's official palette is deliberately austere (black, silver, white), a look tied to the Duncan-Popovich dynasty and Wembanyama's arrival. The emotional counterweight is Fiesta: the teal, orange and fuchsia of the late 1980s-2002 era and the papel picado, cascarón and Fiesta medal culture it echoed. The Fiesta-stripe City Edition (black base, Fiesta-colored chest and shorts stripes) was unveiled in November 2025 and returns in 2026-27. Los Spurs and Noche Latina are the other proven bridge to Tejano, Chicano and Mexican fans. With the team coming off a 2026 Finals run, demand is at a peak and the open question is which untold local stories get told next.",
   "insights": [
     {
@@ -38,7 +38,7 @@
   "places": [
     {"name": "Frost Bank Center", "kind": "arena", "neighborhood": "East Side", "why": "The current home arena, with a lease under negotiation as the team plans Project Marvel downtown."},
     {"name": "The Alamo and Alamo Plaza", "kind": "landmark", "neighborhood": "Downtown", "why": "The state's most famous shrine and a frequent City Edition symbol; handle with care."},
-    {"name": "Market Square (El Mercado)", "kind": "market", "neighborhood": "West Side / Downtown", "why": "The largest Mexican market in the US, a color and papel picado source and a Fiesta hub."},
+    {"name": "Market Square (El Mercado)", "kind": "market", "neighborhood": "West Side / Downtown", "why": "One of the largest Mexican markets in the US, a color and papel picado source and a Fiesta hub."},
     {"name": "Pearl", "kind": "district", "neighborhood": "Pearl / Northtown", "why": "The old brewery turned dining and retail district, a natural pop-up site."},
     {"name": "San Antonio River Walk", "kind": "district", "neighborhood": "Downtown", "why": "Fiesta River Parade and the city's postcard setting."},
     {"name": "La Villita", "kind": "historic district", "neighborhood": "Downtown", "why": "A historic arts village that hosts Fiesta's A Night in Old San Antonio."}
@@ -104,7 +104,7 @@
       {"name": "White", "hex": "#FFFFFF"}
     ],
     "eras": [
-      {"era": "1973-1989", "look": "Early Spurs in the ABA/NBA transition era with the red-white-blue lineage giving way to silver and black.", "legacy": "Remembered as the pre-dynasty era with the iconic Gervin years."},
+      {"era": "1973-1989", "look": "The move to San Antonio in 1973 and the ABA-to-NBA merger years, with the early red-white-blue lineage giving way to silver and black (exact switch year to verify).", "legacy": "Remembered as the pre-dynasty era with the iconic Gervin years."},
       {"era": "1989-2002", "look": "Teal, orange and fuchsia Fiesta-stripe uniforms with desert-inspired colors.", "legacy": "A fan-beloved look associated with the David Robinson era."},
       {"era": "2002-present", "look": "Return to black, silver and white with a cleaner modern look.", "legacy": "The dynasty-era identity of Duncan, Ginobili and Parker, and now Wembanyama."}
     ],
