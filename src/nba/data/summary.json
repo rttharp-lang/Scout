@@ -1,7 +1,482 @@
 [
  {
   "id": "atl",
-  "status": "pending"
+  "status": "complete",
+  "updated": "2026-10-07",
+  "headline": "Sell Atlanta first, the Hawks second: city codes, the MLK night, and taste doors at the rink, the AUC and the barbershop.",
+  "archetype": {
+   "name": "The Culture Capital's Swing Fans",
+   "description": "A Black-led, metro-wide crowd that treats the arena as a runway and Atlanta itself as the team; loyal in spirit, loud only when the night means something (MLK Day, a Cup Friday, a playoff series)."
+  },
+  "pulse": {
+   "teamMoment": "Jalen Johnson's Hawks (46-36, No. 6 seed, lost 4-2 to the champion Knicks after leading 2-1) reloaded around defense under Quin Snyder with No. 8 pick Kingston Flemings, Lu Dort, Ryan Nembhard, Aaron Wiggins and Devin Carter, while 2024 No. 1 pick Zaccharie Risacher went to Dallas.",
+   "sentiment": "Cautiously optimistic: an All-NBA Johnson, a Most Improved Alexander-Walker and a deep defense give hope, but the 2-1 collapse to New York and the end of the Trae Young chapter keep fans guarded and waiting for proof.",
+   "heat": 60
+  },
+  "verifiedMoment": "Jalen Johnson's Hawks reloaded around defense after a 6-seed season: No. 8 pick Kingston Flemings, plus trades for Lu Dort, Ryan Nembhard, Aaron Wiggins and Devin Carter, with 2024 No. 1 pick Zaccharie Risacher shipped to Dallas.",
+  "scorecard": {
+   "opportunity": 74,
+   "culture": 92,
+   "retail": 66,
+   "fandom": 52,
+   "rationale": "Atlanta has one of the league's deepest design wells (Black Mecca, hip-hop, HBCU, rink and car culture) and a big, style-literate metro, but Hawks fandom runs below the city's cultural heat and arrives in spikes. Retail is broad yet car-dependent and mall-split, with taste set in small independent doors.",
+   "calibrated": false
+  },
+  "palette": [
+   {
+    "name": "Volt Green",
+    "hex": "#C1D32F"
+   },
+   {
+    "name": "Torch Red",
+    "hex": "#E03A3E"
+   },
+   {
+    "name": "Black",
+    "hex": "#26282A"
+   }
+  ],
+  "opportunities": [
+   {
+    "id": "mlk-beloved-community-program",
+    "title": "MLK Day partnership program around the returning City Edition",
+    "summary": "Turn the reported return of the 2020-21 MLK City Edition into a co-created capsule and community program for the Jan 18 home game, built with the King Center, AUC and Black-owned Sweet Auburn businesses.",
+    "where": [
+     "State Farm Arena Hawks Team Store",
+     "Sweet Auburn and Sweet Auburn Curb Market",
+     "Atlanta University Center pop-up",
+     "Swag Shop and Black-owned boutiques",
+     "Nike app (Atlanta geo-targeted)"
+    ],
+    "when": "Preorder in mid-December, in doors by early January, peak on MLK Day weekend (Jan 16-18, 2027), extend through Black History Month.",
+    "how": "Clear licensing with the King estate first; commission AUC student and alumni designers for a supporting graphic series, credited on hangtags; host a community meal with a Black-owned soul food institution such as Paschal's or The Busy Bee Cafe; route a share of proceeds to a named Atlanta education or Black-business cause.",
+    "segment": "Longtime Atlanta diehards, AUC alumni and heritage-minded families",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     12,
+     1,
+     2
+    ],
+    "products": [
+     "MLK City Edition swingman jersey",
+     "Warm-up jacket in black, warm gold and cream",
+     "Artist-series heritage tee",
+     "Heavyweight crewneck with Auburn Avenue-inspired lettering",
+     "Kids City Edition tee"
+    ]
+   },
+   {
+    "id": "area-code-metro-capsule",
+    "title": "404 / 678 / 770 metro capsule",
+    "summary": "An ATL-first graphic system using area codes and neighborhood names, with the hawk as signature, that claims both intown and OTP fans for holiday gifting.",
+    "where": [
+     "Greenbriar Mall (Southwest Atlanta)",
+     "Stonecrest Mall (DeKalb)",
+     "Mall of Georgia (Gwinnett)",
+     "Foot Locker at Lenox Square",
+     "Fanatics and Lids mall doors"
+    ],
+    "when": "Launch on the first Cup Friday home night, push through Black Friday and holiday gifting, replenish for back-to-school.",
+    "how": "Commission a local graphic artist for photocopied club-flyer and sign-painter type; split SKUs into 404 and 678/770 plus a neighborhood pack (Westside, East Point, College Park, Decatur, Gwinnett); depth in kids and entry tees at southside and Gwinnett volume doors.",
+    "segment": "Suburban families and Gen Z locals who wear city pride before team pride",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     11,
+     12,
+     8
+    ],
+    "products": [
+     "Area-code graphic tee (sub-$40)",
+     "Area-code fleece hoodie",
+     "Neighborhood-name tee pack",
+     "Kids area-code tee",
+     "Fitted cap with area-code side patch"
+    ]
+   },
+   {
+    "id": "cup-fridays-specter-heritage",
+    "title": "Cup Fridays: Specter and Pac-Man heritage launch",
+    "summary": "Use the Emirates NBA Cup Friday nights (Oct 30-Nov 27, East Group C) as the season launch Atlanta lacks, leading with the Specter collection and a red-gold Pac-Man heritage drop.",
+    "where": [
+     "State Farm Arena Hawks Team Store",
+     "Westside Provisions District pop-up",
+     "Little Five Points vintage partners",
+     "Nike app"
+    ],
+    "when": "Watch-party seeding for the Oct 30 opener at Boston, then arena exclusives on each Cup Friday home night through Nov 27, with knockout-round reserve product for Dec 4-9.",
+    "how": "Night-of-game arena exclusives; a Dominique Wilkins and Spud Webb heritage story told through the Pac-Man hawk; thrift-flipped and reworked archive pieces with Little Five Points vintage dealers for the alt crowd; Friday drops timed for after-work, pre-going-out fits.",
+    "segment": "Dominique-era diehards, streetwear collectors and the alt and vintage crowd",
+    "priority": 1,
+    "size": "medium",
+    "months": [
+     10,
+     11,
+     12
+    ],
+    "products": [
+     "Specter-coordinated warm-up jacket",
+     "Pac-Man hawk shooting shirt in red, gold and cream",
+     "Dominique 21 throwback tee",
+     "Satin bomber with tonal hawk embroidery",
+     "Reworked archive-panel crewneck (limited)"
+    ]
+   },
+   {
+    "id": "rink-night-capsule",
+    "title": "Rink Night: satin, mesh and candy-pearl capsule",
+    "summary": "A rink-ready capsule launched with Atlanta skate crews at Cascade Skating Rink, translating adult-night color-matched fits, R&B satin and car-culture candy paint into Hawks product.",
+    "where": [
+     "Cascade Skating Rink (Southwest Atlanta)",
+     "Wish Atlanta",
+     "Swag Shop",
+     "Nike app and creator social"
+    ],
+    "when": "Summer launch for the warm season and Labor Day weekend, with a satin warm-up reprise for MLK-to-spring game nights.",
+    "how": "Cast and style with paid skate crews and rink DJs; launch on an adult night at the rink, not a flagship; co-present the candy-pearl footwear colorway with a local car club; extend jersey-dress and mesh styling with Black Pride and ballroom creatives as paid partners.",
+    "segment": "Southwest Atlanta grown-folks skaters, R&B and nightlife crowd, women fans",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     6,
+     7,
+     8,
+     9
+    ],
+    "products": [
+     "Athletic-mesh Hawks jersey with candy-apple pearl trim",
+     "Satin warm-up jacket with grillz-gold piping",
+     "Velour track pant",
+     "Candy-pearl basketball shoe colorway (limited)",
+     "Wrist and knee-pad colorway set"
+    ]
+   },
+   {
+    "id": "auc-homecoming-varsity",
+    "title": "AUC homecoming varsity drop",
+    "summary": "Licensed, co-created Hawks varsity pieces for Morehouse, Spelman and Clark Atlanta homecoming season, the city's second Black Friday.",
+    "where": [
+     "Atlanta University Center campus pop-ups",
+     "West End",
+     "Forbes Arena at Morehouse",
+     "Swag Shop"
+    ],
+    "when": "October homecoming weekends; with licensing lead times, a small existing-product pop-up in Oct 2026 and the full co-created drop in Oct 2027.",
+    "how": "Work through school licensing offices; pay AUC student designers to co-create chenille and felt lettering; pair with SIAC basketball storytelling in winter; never imitate school marks or Greek letters without license.",
+    "segment": "AUC students and alumni, Black Atlanta Gen Z tastemakers",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     10
+    ],
+    "products": [
+     "Varsity jacket with chenille Hawks lettering",
+     "Heavyweight homecoming crewneck",
+     "Collegiate-lettered tee",
+     "Licensed HBCU warm-up top"
+    ]
+   },
+   {
+    "id": "defense-first-player-line",
+    "title": "Defense-first player line",
+    "summary": "Player-graphic tees and hoodies for the new core (Johnson, Alexander-Walker, Daniels, Flemings, Dort), replacing stranded Risacher inventory and selling the turnover-forcing Snyder identity.",
+    "where": [
+     "State Farm Arena Hawks Team Store",
+     "Dick's Sporting Goods metro doors",
+     "Fanatics and Lids",
+     "Nike app"
+    ],
+    "when": "Opening weeks through holiday (Flemings rookie drop for gifting), refresh after the Feb 11 trade deadline and All-Star weekend.",
+    "how": "Lead with Johnson and Alexander-Walker, test Flemings and Dort demand early before deepening; defense-themed graphics (steals, deflections) in flyer typography; buy shallow ahead of the trade deadline.",
+    "segment": "Suburban families, Gen Z digital fans, gift buyers",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     10,
+     11,
+     12,
+     2
+    ],
+    "products": [
+     "Jalen Johnson Icon swingman",
+     "Player-graphic tee series",
+     "Kingston Flemings rookie tee",
+     "Player-number hoodie",
+     "Kids swingman"
+    ]
+   },
+   {
+    "id": "spring-playoff-watch-parties",
+    "title": "Spring playoff reserve and watch parties",
+    "summary": "A held-back spring capsule and rapid-response graphics for April, activated through watch parties at wing spots and sports bars where the city gathers.",
+    "where": [
+     "State Farm Arena Hawks Team Store",
+     "Wing joints and sports bars near downtown",
+     "Atlantic Station",
+     "Nike app"
+    ],
+    "when": "Regular season ends Apr 11, Play-In Apr 13-16, playoffs from late April; hold graphics until a series is won.",
+    "how": "Pre-approve rapid-response tees for series wins; avoid triumphant 'finally' language given the 2-1 collapse memory; partner with local wing spots on watch parties without lifting their branding.",
+    "segment": "Casual and returning fans who decide in April",
+    "priority": 2,
+    "size": "high",
+    "months": [
+     4,
+     5
+    ],
+    "products": [
+     "Playoff tee",
+     "Spring-weight coaches jacket",
+     "Mesh shorts",
+     "Rally towel"
+    ]
+   },
+   {
+    "id": "red-clay-artist-capsule",
+    "title": "Red Clay artist capsule",
+    "summary": "A paid, credited Atlanta artist collaboration in red clay, kudzu and peach with a freshly drawn phoenix-wing motif and BeltLine overpaint texture.",
+    "where": [
+     "Ponce City Market pop-up",
+     "Little Five Points",
+     "Atlanta Contemporary or High Museum programming",
+     "Westside Provisions District"
+    ],
+    "when": "Black History Month into spring, timed with Inman Park Festival season.",
+    "how": "Commission Fahamu Pecou, Hense or Greg Mike for placement art with named credit and revenue share; pair with a SCAD Atlanta or Georgia State student design competition for small-batch drops; never reproduce an existing mural or the city seal without approval.",
+    "segment": "Intown creatives, design-literate young professionals, art collectors",
+    "priority": 3,
+    "size": "medium",
+    "months": [
+     2,
+     3,
+     4
+    ],
+    "products": [
+     "Clay-dyed heavyweight tee",
+     "Kudzu coaches jacket with peach lining",
+     "Phoenix-wing hoodie",
+     "Tonal basketball shoe in clay with peach lining (limited)"
+    ]
+   }
+  ],
+  "calendar": [
+   {
+    "month": 10,
+    "window": "Oct 2026 homecoming weekends",
+    "moment": "AUC homecomings (Morehouse, Spelman, Clark Atlanta)",
+    "play": "Small campus pop-up with in-line Hawks crewnecks and tees now; start licensing and student-designer work for the full Oct 2027 varsity drop.",
+    "products": [
+     "Heavyweight crewneck",
+     "Collegiate-lettered tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 10,
+    "window": "Fri Oct 30, 2026",
+    "moment": "Cup opener: Hawks at Celtics",
+    "play": "Watch-party seeding with local DJs and V-103 / Hot 107.9 personalities; first Specter-coordinated drop on the Nike app.",
+    "products": [
+     "Specter-coordinated warm-up jacket",
+     "Area-code tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "Cup Friday home nights through Nov 27, plus Nov 24-25 Cup Nights",
+    "moment": "Emirates NBA Cup group play",
+    "play": "Night-of-game arena exclusives for the Pac-Man heritage drop; launch the area-code capsule in the arena store.",
+    "products": [
+     "Pac-Man hawk shooting shirt",
+     "Heritage satin bomber",
+     "Area-code hoodie"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "Black Friday weekend",
+    "moment": "Holiday gifting opens",
+    "play": "Deep kids and entry depth of the area-code capsule and player tees at southside and Gwinnett volume doors.",
+    "products": [
+     "Kids area-code tee",
+     "Player-graphic tee",
+     "Jalen Johnson swingman"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 12,
+    "window": "Dec 1-24",
+    "moment": "Holiday gifting and Cup knockouts (Dec 4-9 if qualified)",
+    "play": "Kingston Flemings rookie drop; MLK capsule preorder; premium heritage gifting at Lenox and Phipps.",
+    "products": [
+     "Flemings rookie tee",
+     "Heritage quarter-zip",
+     "MLK City Edition swingman (preorder)"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 1,
+    "window": "Jan 11-18, 2027",
+    "moment": "MLK week and the Jan 18 home game vs. 76ers",
+    "play": "MLK partnership program: capsule in arena and Sweet Auburn partner doors, AUC designer series, community meal with a Black-owned soul food institution.",
+    "products": [
+     "MLK City Edition swingman",
+     "Warm-up jacket in black, gold and cream",
+     "Artist-series heritage tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 2,
+    "window": "Feb 2027 (trade deadline Feb 11, All-Star Feb 19-21)",
+    "moment": "Black History Month and All-Star",
+    "play": "Open the Red Clay artist capsule with a credited Atlanta artist; Johnson All-Star player gear; rebalance player inventory after the deadline.",
+    "products": [
+     "Phoenix-wing hoodie",
+     "Clay-dyed tee",
+     "Jalen Johnson player tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 3,
+    "window": "March 2027",
+    "moment": "Playoff push and spring weather",
+    "play": "Spring-weight layering in team and Red Clay colors; preload playoff reserve stock.",
+    "products": [
+     "Kudzu coaches jacket",
+     "Mesh shorts",
+     "Quarter-zip"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 4,
+    "window": "Apr 11 season end, Play-In Apr 13-16, playoffs from late April",
+    "moment": "Playoffs",
+    "play": "Release the held spring capsule; rapid-response tees after series wins; watch parties at wing spots and sports bars.",
+    "products": [
+     "Playoff tee",
+     "Rally towel",
+     "Spring coaches jacket"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 5,
+    "window": "Memorial Day weekend 2027",
+    "moment": "Atlanta Jazz Festival in Piedmont Park",
+    "play": "Soft R&B-toned summer pieces in peach and cream for the festival crowd and older fans.",
+    "products": [
+     "Peach-and-cream tee",
+     "Lightweight warm-up"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 6,
+    "window": "Mid-June 2027",
+    "moment": "Juneteenth and NBA Draft",
+    "play": "Black-owned collaboration tee with a local label; open the Rink Night capsule with a Cascade adult-night launch.",
+    "products": [
+     "Satin warm-up jacket",
+     "Mesh rink jersey",
+     "Collab tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 7,
+    "window": "July 4 to early August",
+    "moment": "Peachtree Road Race and early Georgia back-to-school",
+    "play": "Hot-weather mesh shorts and tees; back-to-school kids footwear and area-code replenishment.",
+    "products": [
+     "Mesh shorts",
+     "Kids area-code tee",
+     "Basketball shoe (core)"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 9,
+    "window": "Labor Day weekend 2027",
+    "moment": "Atlanta Black Pride and Dragon Con downtown",
+    "play": "Rink Night mesh and jersey-dress styling with paid Black Pride and ballroom creatives; candy-pearl shoe drop.",
+    "products": [
+     "Mesh rink jersey",
+     "Candy-pearl basketball shoe",
+     "Velour track pant"
+    ],
+    "priority": 2
+   }
+  ],
+  "rhythm": [
+   {
+    "intensity": 88,
+    "phase": "MLK Day and mid-season"
+   },
+   {
+    "intensity": 72,
+    "phase": "Trade deadline and All-Star"
+   },
+   {
+    "intensity": 78,
+    "phase": "Playoff push"
+   },
+   {
+    "intensity": 100,
+    "phase": "Regular-season finish, Play-In, playoffs"
+   },
+   {
+    "intensity": 80,
+    "phase": "Playoffs"
+   },
+   {
+    "intensity": 55,
+    "phase": "Draft and Finals"
+   },
+   {
+    "intensity": 48,
+    "phase": "Free agency and Summer League"
+   },
+   {
+    "intensity": 42,
+    "phase": "Offseason"
+   },
+   {
+    "intensity": 45,
+    "phase": "Offseason and media day"
+   },
+   {
+    "intensity": 58,
+    "phase": "Preseason and opener"
+   },
+   {
+    "intensity": 66,
+    "phase": "NBA Cup group play"
+   },
+   {
+    "intensity": 62,
+    "phase": "Cup knockouts and holidays"
+   }
+  ],
+  "sources": 31,
+  "verification": {
+   "live": 0,
+   "knowledge": 11,
+   "briefMode": "knowledge",
+   "queue": 119
+  },
+  "checks": {
+   "checked": 0,
+   "corrected": 0,
+   "removed": 0
+  }
  },
  {
   "id": "bos",
@@ -2841,7 +3316,456 @@
  },
  {
   "id": "mil",
-  "status": "pending"
+  "status": "complete",
+  "updated": "2026-10-07",
+  "headline": "With Giannis gone, the Bucks belong to Cream City again: sell the brick, the cold and the neighborhoods, not a new star.",
+  "archetype": {
+   "name": "The Working-City Loyalist",
+   "description": "A statewide, blue-collar fan base that expects to be overlooked, values effort over glamour and stays loyal through a rebuild, but punishes anything that talks down to it or cashes in on its grief."
+  },
+  "pulse": {
+   "teamMoment": "Milwaukee opens 2026-27 rebuilding after trading Giannis Antetokounmpo and Bobby Portis to Miami, with new coach Taylor Jenkins and a core of Tyler Herro, Jaime Jaquez Jr., Kel'el Ware, Myles Turner, Kyle Kuzma and rookie Brayden Burries, coming off a 32-50 season.",
+   "sentiment": "Grief and some anger over the trade, resignation about a long rebuild, and cautious curiosity about Herro and the rookies; nostalgia for 2021 is the safest emotion, and Jan 28 is circled by everyone.",
+   "heat": 42
+  },
+  "verifiedMoment": "Milwaukee faces its first season without Giannis Antetokounmpo in more than a decade, with a new coach in Taylor Jenkins. The Bucks are starting a long rebuild around Tyler Herro, the young pieces from the Miami trade and two lottery picks.",
+  "scorecard": {
+   "opportunity": 50,
+   "culture": 70,
+   "retail": 40,
+   "fandom": 56,
+   "rationale": "Milwaukee has one of the league's most place-specific palettes and a deep working-class and neighborhood vernacular, but a small, value-minded market in a low-expectation rebuild, a thin sneaker scene and no Nike-owned door in the city keep opportunity average and retail below average. Fandom is loyal and statewide but at low heat until Jan 28.",
+   "calibrated": false
+  },
+  "palette": [
+   {
+    "name": "Good Land Green",
+    "hex": "#00471B"
+   },
+   {
+    "name": "Cream City Cream",
+    "hex": "#EEE1C6"
+   },
+   {
+    "name": "Great Lakes Blue",
+    "hex": "#0077C0"
+   },
+   {
+    "name": "Black",
+    "hex": "#000000"
+   }
+  ],
+  "opportunities": [
+   {
+    "id": "jan-28-thank-you-milwaukee",
+    "title": "Return-night 'Thank You, Milwaukee' capsule",
+    "summary": "A limited, gratitude-led drop for Miami's Jan 28 visit that honors the 2021 title and the city, giving fans something to wear whether they cheer or boo.",
+    "where": [
+     "Bucks Pro Shop at Fiserv Forum",
+     "Deer District plaza pop-up",
+     "Nike and Bucks online",
+     "Mayfair Mall Foot Locker"
+    ],
+    "when": "Reveal mid-January, sell through Jan 28 and the week after",
+    "how": "Co-develop with the Bucks so team and league approvals are in place; tell the 2021 Deer District story with no Giannis name, number or likeness, and add a dated return-night graphic sold only that week.",
+    "segment": "Lifelong diehards and statewide fans attending or watching Jan 28",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     1
+    ],
+    "products": [
+     "2021-title archive tee in green and cream",
+     "Heavyweight crew with Deer District coordinates",
+     "Dated return-night beanie",
+     "Kids 2021 archive tee"
+    ]
+   },
+   {
+    "id": "cream-city-cold-layer",
+    "title": "Cream City cold-weather layer program",
+    "summary": "The always-on volume line: heavyweight fleece, quilted shells, warm-ups and knit hats in Good Land green and textured Cream City cream, built for lake wind and drive-in fans.",
+    "where": [
+     "Bucks Pro Shop at Fiserv Forum",
+     "Mayfair Mall and suburban Dick's",
+     "Nike Factory Store, Pleasant Prairie",
+     "Online for statewide fans"
+    ],
+    "when": "Launch late October with the first cold snap, replenish through the holidays, mark down in March",
+    "how": "Lead with brick-course jacquard and tonal antler embroidery rather than loud logos; merchandise beside outdoor and workwear in suburban doors so it bridges Packers season to Bucks season.",
+    "segment": "Statewide and rural fans, suburban families",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     10,
+     11,
+     12,
+     1,
+     2
+    ],
+    "products": [
+     "Brick-course jacquard fleece hoodie",
+     "Quilted shell with blaze-orange lining",
+     "Knit cuff beanie",
+     "Heavyweight warm-up pant",
+     "Youth fleece hoodie"
+    ]
+   },
+   {
+    "id": "neighborhood-collab-series",
+    "title": "Many Milwaukees neighborhood collaboration series",
+    "summary": "Quarterly small-batch drops co-designed and paid with local artists and institutions, one neighborhood at a time, timed to Gallery Night & Day.",
+    "where": [
+     "Sherman Phoenix (Sherman Park)",
+     "Bronzeville Center for the Arts",
+     "Walker's Point Center for the Arts",
+     "Riverwest and Bay View independents",
+     "Rochambeau"
+    ],
+    "when": "One drop per Gallery Night & Day weekend (Oct, Jan, Apr, Jul)",
+    "how": "Each drop is led by a credited local artist and sold first in the neighborhood, with a share of revenue to the partner; start with Bronzeville and the South Side so Black and Latino creators lead rather than follow.",
+    "segment": "Local creatives, Gen Z and neighborhood loyalists",
+    "priority": 1,
+    "size": "medium",
+    "months": [
+     10,
+     1,
+     4,
+     7
+    ],
+    "products": [
+     "Artist graphic tee",
+     "Neighborhood chenille-patch crew",
+     "Screen-printed poster",
+     "Embroidered cap"
+    ]
+   },
+   {
+    "id": "keep-the-jersey-restitch",
+    "title": "Keep the Jersey customization station",
+    "summary": "A pop-up service where fans patch, re-dye or re-number older Bucks gear, turning the post-trade closet into heritage pieces instead of resale.",
+    "where": [
+     "Deer District plaza on game nights",
+     "Historic Third Ward pop-up",
+     "Mitchell Street South Side print and embroidery shops"
+    ],
+    "when": "Cup Night Fridays in November through the Jan 28 return",
+    "how": "Staff with credited local seamstresses and South Side embroidery shops; sell patch-ready shooting shirts and licensed heritage patches (1971, 2021, Mecca era) cleared with the team and league.",
+    "segment": "Diehards with Giannis-era gear and Gen Z thrift-and-remix fans",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     11,
+     12,
+     1
+    ],
+    "products": [
+     "Heritage patch kits",
+     "Patch-ready shooting shirt",
+     "Re-dye service in Good Land green",
+     "Name-and-number restitch on blank jerseys"
+    ]
+   },
+   {
+    "id": "north-side-courts",
+    "title": "North Side courts and youth hoops",
+    "summary": "Court refurbishment and youth-program support on the North Side, with a co-credited court collection whose profits return to the courts.",
+    "where": [
+     "Sherman Park",
+     "Washington Park",
+     "Boys & Girls Clubs of Greater Milwaukee",
+     "Bayshore (Glendale) for North Side families"
+    ],
+    "when": "Indoor winter runs Nov-Mar; court unveilings in early summer",
+    "how": "Work through Boys & Girls Clubs and named North Side organizers, never using courts as a backdrop; unveil a refurbished court in June and stock the court line in youth sizes at accessible prices.",
+    "segment": "North Side families and youth hoopers",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     3,
+     6,
+     7,
+     8
+    ],
+    "products": [
+     "Rec-center gym-floor print shooting shirt",
+     "Youth warm-up set",
+     "Court collection tee",
+     "Outdoor ball and backpack"
+    ]
+   },
+   {
+    "id": "fish-fry-cup-fridays",
+    "title": "Fish Fry Fridays on Cup Nights and through Lent",
+    "summary": "A playful Friday graphic program tying Bucks Friday nights to the Wisconsin fish-fry ritual, from Emirates NBA Cup group Fridays through Lent.",
+    "where": [
+     "Deer District bars and plaza",
+     "Bucks Pro Shop",
+     "Bucks and Nike social"
+    ],
+    "when": "Cup group Fridays Oct 30 to Nov 27, then Lenten Fridays Feb to early April",
+    "how": "Original paper-basket, gingham-liner and tartar-cup graphics drawn by a local illustrator; no brewery or restaurant marks, and keep any beer tie-ins out of youth product.",
+    "segment": "Local game-night crowd and Gen Z fans",
+    "priority": 2,
+    "size": "low",
+    "months": [
+     10,
+     11,
+     2,
+     3
+    ],
+    "products": [
+     "Fish Fry Friday tee",
+     "Gingham-lined warm-up jacket",
+     "Five-panel cap",
+     "Crew socks"
+    ]
+   },
+   {
+    "id": "summer-city-season",
+    "title": "Summer city season: festivals, 414 and the 2021 anniversary",
+    "summary": "Keep the audience through the Bucks' quietest months with Milwaukee-culture product around Juneteenth, PrideFest, Summerfest, Riverwest24 and the July 20 title anniversary.",
+    "where": [
+     "Henry Maier Festival Park area",
+     "Bronzeville for Juneteenth Day",
+     "Walker's Point for PrideFest",
+     "Riverwest",
+     "Online"
+    ],
+    "when": "Mid-June through mid-August",
+    "how": "Partner with organizers and pay community designers for each moment rather than branding the festival; seed a Riverwest24 team kit quietly, and release a no-names 2021 anniversary tee on July 20.",
+    "segment": "Local creatives, Gen Z and summer-festival crowds",
+    "priority": 3,
+    "size": "medium",
+    "months": [
+     6,
+     7,
+     8
+    ],
+    "products": [
+     "Lake-blue and cream mesh shorts",
+     "Bucks in Six anniversary tee",
+     "Riverwest24 cycling cap",
+     "PrideFest collaboration tee with Walker's Point designers"
+    ]
+   }
+  ],
+  "calendar": [
+   {
+    "month": 10,
+    "window": "Late October, around the Bucks home opener",
+    "moment": "First home games of the post-Giannis era and the first cold snap",
+    "play": "Launch the Brick and Soot layer line in arena, mall and outlet doors; keep Herro and rookie tees to a small reactive run.",
+    "products": [
+     "Brick-course jacquard hoodie",
+     "Cuff beanie",
+     "Herro and Burries youth tees"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 10,
+    "window": "October Gallery Night & Day weekend",
+    "moment": "Quarterly gallery open house across Walker's Point, the Third Ward and Bay View",
+    "play": "First Many Milwaukees drop with a paid local artist, sold first in the neighborhood.",
+    "products": [
+     "Artist graphic tee",
+     "Screen-printed poster"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 11,
+    "window": "Cup Night Fridays, Oct 30 to Nov 27",
+    "moment": "Emirates NBA Cup East Group A games against Detroit, Toronto, Orlando and Brooklyn",
+    "play": "Fish Fry Friday graphics and the Keep the Jersey restitch station on the Deer District plaza on home Cup Fridays.",
+    "products": [
+     "Fish Fry Friday tee",
+     "Heritage patch kit",
+     "Patch-ready shooting shirt"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 11,
+    "window": "Nov 18",
+    "moment": "Bucks at Miami, the first meeting with Giannis",
+    "play": "Support Deer District and neighborhood-bar watch parties with 2021 archive tees; read the mood before finalizing Jan 28 product.",
+    "products": [
+     "2021 archive tee",
+     "Cuff beanie"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 11,
+    "window": "Gun-deer opener through Black Friday",
+    "moment": "Statewide deer season and the start of holiday shopping",
+    "play": "Push the quilted shell with blaze-orange lining and outerwear bundles in suburban and outlet doors.",
+    "products": [
+     "Quilted shell jacket",
+     "Heavyweight warm-up pant",
+     "Youth fleece hoodie"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 12,
+    "window": "Dec 1 to Dec 24",
+    "moment": "Peak gifting month with no Bucks Christmas Day game",
+    "play": "Gift-ready Cream City bundles and kids sizes; add Cup knockout product only if Milwaukee advances.",
+    "products": [
+     "Brick-course jacquard hoodie",
+     "Cuff beanie",
+     "Youth court tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 1,
+    "window": "Mid-January reveal through Jan 28",
+    "moment": "Giannis' first return to Fiserv Forum with Miami",
+    "play": "Thank You, Milwaukee capsule built on the 2021 title and the city, cleared with the team, with a dated return-night item sold that week only.",
+    "products": [
+     "2021 archive tee",
+     "Deer District coordinates crew",
+     "Dated return-night beanie"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 1,
+    "window": "January Gallery Night & Day weekend",
+    "moment": "Winter gallery weekend",
+    "play": "Bronzeville-led Many Milwaukees drop with Black Milwaukee artists, sold first at Sherman Phoenix or the Bronzeville Center for the Arts.",
+    "products": [
+     "Artist graphic tee",
+     "Neighborhood patch crew"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 3,
+    "window": "Lenten Fridays and March",
+    "moment": "Fish-fry peak, WIAA state tournament and Marquette's postseason",
+    "play": "Second Fish Fry Friday wave and North Side court-collection launch in youth sizes; mark down outerwear.",
+    "products": [
+     "Fish Fry Friday tee",
+     "Court shooting shirt",
+     "Youth warm-up set"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 4,
+    "window": "April 14 and the April Gallery Night & Day",
+    "moment": "414 Day local pride and the end of the regular season on Apr 11",
+    "play": "414 Day drop with a South Side or Riverwest artist as the season's send-off.",
+    "products": [
+     "414 stencil tee",
+     "Tavern-script five-panel cap"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 6,
+    "window": "Early to late June",
+    "moment": "PrideFest, Juneteenth Day in Bronzeville and the start of Summerfest",
+    "play": "Paid collaborations with Walker's Point designers and Bronzeville creators; unveil a refurbished North Side court.",
+    "products": [
+     "PrideFest collaboration tee",
+     "Lake-blue and cream mesh shorts",
+     "Court collection tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 7,
+    "window": "July 20 and the Riverwest24 weekend",
+    "moment": "2021 title anniversary and the 24-hour Riverwest bike race",
+    "play": "Bucks in Six anniversary tee and quiet Riverwest24 team-kit seeding.",
+    "products": [
+     "Bucks in Six anniversary tee",
+     "Riverwest24 cycling cap",
+     "Script-era warm-up jacket"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 8,
+    "window": "Early to mid August",
+    "moment": "Wisconsin State Fair, Mexican Fiesta and back to school",
+    "play": "Family and youth value tiers for the statewide crowd; South Side collaboration with Mitchell Street print shops around Mexican Fiesta.",
+    "products": [
+     "Youth court tee",
+     "Artist graphic tee",
+     "Tavern-script five-panel cap"
+    ],
+    "priority": 3
+   }
+  ],
+  "rhythm": [
+   {
+    "intensity": 85,
+    "phase": "Midseason; Giannis return"
+   },
+   {
+    "intensity": 55,
+    "phase": "Trade deadline and All-Star"
+   },
+   {
+    "intensity": 40,
+    "phase": "Late regular season"
+   },
+   {
+    "intensity": 35,
+    "phase": "Season end; play-in"
+   },
+   {
+    "intensity": 30,
+    "phase": "Offseason; draft lottery"
+   },
+   {
+    "intensity": 40,
+    "phase": "Draft and free agency"
+   },
+   {
+    "intensity": 35,
+    "phase": "Summer League and free agency"
+   },
+   {
+    "intensity": 25,
+    "phase": "Dead period"
+   },
+   {
+    "intensity": 30,
+    "phase": "Pre-camp"
+   },
+   {
+    "intensity": 50,
+    "phase": "Preseason and opener"
+   },
+   {
+    "intensity": 55,
+    "phase": "NBA Cup group play"
+   },
+   {
+    "intensity": 60,
+    "phase": "Cup knockouts and holidays"
+   }
+  ],
+  "sources": 32,
+  "verification": {
+   "live": 0,
+   "knowledge": 11,
+   "briefMode": "knowledge",
+   "queue": 133
+  },
+  "checks": {
+   "checked": 0,
+   "corrected": 0,
+   "removed": 0
+  }
  },
  {
   "id": "nyk",
@@ -3333,7 +4257,445 @@
  },
  {
   "id": "orl",
-  "status": "pending"
+  "status": "complete",
+  "updated": "2026-10-07",
+  "headline": "Win the 407, not the postcard: Penny pinstripes, Boricua co-design and storm-proof gear for a city of arrivals.",
+  "archetype": {
+   "name": "The Transplant City's Flag",
+   "description": "A fan base of arrivals (Northeast transplants, Boricua families, park workers, Gen Z Banchero kids) who share little except the Magic and the 407. They are loyal to 'our guys', nostalgic for Penny's pinstripes, and allergic to being mistaken for tourists."
+  },
+  "pulse": {
+   "teamMoment": "Orlando chose continuity: Jamahl Mosley was fired after a 45-37 season that ended with a Play-In escape and a first-round loss to No. 1 Detroit, Sean Sweeney arrived from San Antonio, and Vucevic is back beside Banchero, Wagner and Bane. The open questions are Wagner's health after 34 games and three ball-dominant stars with no true point guard.",
+   "sentiment": "Cautiously hopeful but impatient: fans like the core and Vucevic's return, but the mood has moved from 'rebuild' to 'prove it', and nobody wants hype before results.",
+   "heat": 50
+  },
+  "verifiedMoment": "Orlando chose continuity over a splash: it fired Jamahl Mosley, hired Spurs defensive architect Sean Sweeney and is betting he can make the Banchero-Wagner-Bane trio work. Vucevic is back for his second Magic stint.",
+  "scorecard": {
+   "opportunity": 64,
+   "culture": 76,
+   "retail": 58,
+   "fandom": 56,
+   "rationale": "Opportunity sits above average because Nike owns the Penny-pinstripe nostalgia outright and Central Florida's Puerto Rican and tourist audiences are large, but no national-TV stage, modest local incomes and a prove-it season cap it. Culture is deep but under-designed (Eatonville, Parramore, OBT signage, Boricua Orlando), retail is outlet-heavy with a thin taste layer, and fandom is loyal but playoff-gated in a transplant market.",
+   "calibrated": false
+  },
+  "palette": [
+   {
+    "name": "Magic Blue",
+    "hex": "#0077C0"
+   },
+   {
+    "name": "Black",
+    "hex": "#000000"
+   },
+   {
+    "name": "Silver",
+    "hex": "#C4CED4"
+   }
+  ],
+  "opportunities": [
+   {
+    "id": "penny-pinstripe-archive",
+    "title": "Pinstripe Era: Penny and the 1995 Magic as one Nike story",
+    "summary": "A heritage capsule that pairs pinstripe warm-ups and 1990s star graphics with Air Penny and Foamposite heritage footwear, aimed at older locals, collectors and the thrift crowd who already hunt this era.",
+    "where": [
+     "Kia Center team store",
+     "Foot Locker, The Florida Mall",
+     "Nike digital and SNKRS",
+     "Webster Flea Market archive pop-up"
+    ],
+    "when": "Tease with existing Penny product during holiday gifting; full capsule from mid-March into 407 Day and the Play-In",
+    "how": "Ask Penny Hardaway, through Nike athlete marketing, for an Orlando-tied colorway and storytelling, and clear 1990s marks and the pinstripe with the NBA and team. Run an archive swap at Webster Flea Market, where Central Florida vintage hunters already gather, and tell the story as a 90s music-video wardrobe, not a museum piece.",
+    "segment": "Local diehards who remember 1995 and 2009, sneaker collectors and 90s-nostalgia thrift buyers",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     11,
+     12,
+     3,
+     4
+    ],
+    "products": [
+     "Air Penny or Foamposite Orlando heritage colorway",
+     "Tonal pinstripe warm-up jacket with silver trim",
+     "Pinstripe vented mesh short",
+     "1995-era star graphic tee",
+     "Pinstripe-lined 5-panel cap"
+    ]
+   },
+   {
+    "id": "boricua-orlando-co-design",
+    "title": "Hecho en el 407: a year-round Puerto Rican co-design program",
+    "summary": "A paid, credited partnership with Central Florida Puerto Rican designers that starts with a quick-turn Navidad-to-Reyes gift box this season and grows into a full Hispanic Heritage Month 2027 capsule.",
+    "where": [
+     "Kissimmee and Osceola County community pop-ups",
+     "East Orlando",
+     "The Florida Mall",
+     "Kia Center team store",
+     "Nike digital in Spanish"
+    ],
+    "when": "Gift box Dec 15 to Jan 6; full capsule Sep 15 to Oct 15, 2027, carried into June parade season",
+    "how": "Recruit two or three Central Florida Boricua illustrators and sign painters, pay them and credit them on the hang tag, and share proceeds with a local community group. Use bilingual packaging inspired by the string-tied pasteles bundle, launch with Spanish-language creators, and keep the flag and vejigante imagery out unless the designers lead it.",
+    "segment": "Puerto Rican and Caribbean families in Kissimmee, Osceola and east Orlando, including gifts shipped to the island",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     12,
+     1,
+     6,
+     9,
+     10
+    ],
+    "products": [
+     "Navidad-a-Reyes gift box: tee, cap and crew socks",
+     "Co-designed lightweight hoodie",
+     "Panadería-script 'Orlando' tee",
+     "Youth tee for family gifting"
+    ]
+   },
+   {
+    "id": "407-day-into-play-in",
+    "title": "407 Day into the Play-In",
+    "summary": "A locals-only 407 drop on April 7 that carries straight into the regular-season finale (Apr 11) and the Play-In (Apr 13-16), with quick-turn rally gear ready if the Magic clinch.",
+    "where": [
+     "Kia Center team store",
+     "Mills 50 pop-up",
+     "Thornton Park and Lake Eola pre-game route",
+     "Nike digital"
+    ],
+    "when": "Apr 7 drop through the Play-In and any playoff run, Apr-May 2027",
+    "how": "Commission a Mills 50 lettering artist for 407 numerals and an Orlando illustrator for a one-line Lake Eola swan, and sell it only in local doors and online, not at outlets. Pre-produce blank rally tees so clinch and series graphics can print within 48 hours.",
+    "segment": "Year-round locals and transplants who claim the 407, plus Gen Z Banchero fans",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     4,
+     5
+    ],
+    "products": [
+     "407 numerals tee in Magic blue and citrus",
+     "407 mesh short",
+     "Lake Eola swan line-art tee",
+     "407 snapback",
+     "Quick-turn Play-In rally tee"
+    ]
+   },
+   {
+    "id": "parramore-court-program",
+    "title": "Next Door: Parramore and Pine Hills court program",
+    "summary": "A community-led court refresh and youth program on the arena's doorstep, so Nike shows up in Parramore before it ever puts Parramore on product.",
+    "where": [
+     "Callahan Neighborhood Center, Parramore",
+     "Jones High School, Parramore",
+     "Evans High School, Pine Hills",
+     "Barnett Park, West Orlando"
+    ],
+    "when": "Announce around the ZORA! Festival and MLK in January; run clinics through the February high-school postseason; summer runs in July",
+    "how": "Let Callahan staff, Jones and Evans coaches and Parramore residents set the scope: a resurfaced, covered or lit court for storm-season play, Magic player visits and coaching clinics. Any commemorative graphic is designed by Parramore artists with the Wells'Built Museum, credited and paid.",
+    "segment": "Parramore, Pine Hills and West Orlando youth hoopers and families",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     1,
+     2,
+     7
+    ],
+    "products": [
+     "Storm-gray packable shell for youth teams",
+     "Vented mesh practice kit",
+     "Community-designed Parramore tee with proceeds to the program"
+    ]
+   },
+   {
+    "id": "storm-season-pack",
+    "title": "Storm Season: heat-and-thunderstorm performance pack",
+    "summary": "A lightweight, packable, quick-dry line built for Orlando's afternoon storms and hurricane season, priced for the August tax holiday and sold where summer basketball happens.",
+    "where": [
+     "ESPN Wide World of Sports AAU tournament pop-ups",
+     "Orlando Summer League at Kia Center",
+     "Dick's Sporting Goods, Central Florida",
+     "Nike Factory Stores, Vineland and International Drive outlets"
+    ],
+    "when": "June launch at the start of hurricane season, through Summer League and the late-July to mid-August back-to-school window",
+    "how": "Tell it as the locals' answer to the 3 p.m. storm, with a subtle star graphic and storm-cloud print, and price youth pieces at or under $100 to fit the August clothing exemption. Stock deep youth sizes at AAU weekends, where out-of-market hoopers take Orlando product home.",
+    "segment": "Local and visiting youth hoopers, AAU families and summer fans",
+    "priority": 2,
+    "size": "high",
+    "months": [
+     6,
+     7,
+     8
+    ],
+    "products": [
+     "Packable storm shell in storm gray",
+     "Vented mesh shooting shirt in lake-twilight gradient",
+     "Quick-dry shell short",
+     "Youth back-to-school kit under $100"
+    ]
+   },
+   {
+    "id": "visitor-gift-lane",
+    "title": "The souvenir lane, done locally",
+    "summary": "A travel-friendly, giftable Magic tier for the visitors who buy one piece per trip, designed from Orlando cues (pinstripe, citrus crate label, 407) so it stays clear of theme-park imagery.",
+    "where": [
+     "Nike Factory Store, Orlando International Premium Outlets",
+     "Nike Factory Store, Orlando Vineland Premium Outlets",
+     "Disney Springs",
+     "Kia Center team store"
+    ],
+    "when": "Holiday travel peak, spring break and Easter, and the summer family-travel peak",
+    "how": "Build packable, carry-on-sized pieces at souvenir price points, and add authentication tags to compete with tourist-corridor counterfeits. Keep local-only graphics out of this lane so the 407 line stays credible.",
+    "segment": "Domestic and Latin American visitors and families on park trips",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     12,
+     3,
+     7
+    ],
+    "products": [
+     "Citrus crate-label Orlando tee",
+     "Pinstripe dad cap",
+     "Packable Magic blue windbreaker",
+     "Kids' Banchero Swingman jersey"
+    ]
+   },
+   {
+    "id": "sign-painters-series",
+    "title": "Signs of the City: sign-painter and poster-artist tee series",
+    "summary": "A rotating game-night tee series by Orlando lettering and poster artists, drawn from Mills 50 neon, OBT roadside signs and Will's Pub flyer culture, that seeds the City Edition's visual language with locals.",
+    "where": [
+     "Mills 50 District pop-up",
+     "Will's Pub",
+     "Kia Center team store",
+     "Orlando Fringe, Loch Haven"
+    ],
+    "when": "Starts at Lunar New Year in Mills 50, runs through Fringe in May, returns on Cup Fridays next fall",
+    "how": "Commission one artist per drop through Crealde School of Art and the Mills 50 and Will's Pub poster scenes, sign each tee and pay a royalty. Photograph and credit real signs rather than copying any business's logo.",
+    "segment": "Young creatives, Mills 50 regulars and the local music and arts crowd",
+    "priority": 3,
+    "size": "low",
+    "months": [
+     2,
+     3,
+     5,
+     11
+    ],
+    "products": [
+     "Artist-signed poster tee",
+     "Neon-script long sleeve",
+     "Screen-printed tote"
+    ]
+   }
+  ],
+  "calendar": [
+   {
+    "month": 10,
+    "window": "Oct 7-31 (Magic at Cavaliers on ESPN Oct 11; league tips Oct 20; Magic home opener date to confirm)",
+    "moment": "Sweeney-era tip-off, the tail of Hispanic Heritage Month (to Oct 15) and Come Out With Pride",
+    "play": "No new capsule; production cannot hit late October. Push existing Banchero, Wagner and Bane jerseys, add a quick-turn Vucevic 'second stint' tee, and run Spanish-language player content.",
+    "products": [
+     "Banchero Icon Swingman",
+     "Vucevic return tee",
+     "Youth Banchero jersey"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "Cup Fridays Oct 30-Nov 27, plus Thanksgiving-week Cup Nights Nov 24-25",
+    "moment": "Emirates NBA Cup East Group A, including Detroit, last spring's first-round winner; Florida Classic weekend; Black Friday",
+    "play": "Print a Cup Friday tee on existing blanks for each home group game, and open Black Friday with Penny heritage footwear already in the line next to pinstripe tees.",
+    "products": [
+     "Cup Friday quick-turn tee",
+     "Existing Penny heritage footwear",
+     "Pinstripe graphic tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 12,
+    "window": "Dec 15 to Jan 6",
+    "moment": "Noche Buena, Christmas and Three Kings Day gifting, plus the holiday tourism peak",
+    "play": "Launch the Navidad-a-Reyes gift box co-designed with a Puerto Rican artist, keep it stocked through Jan 6, and restock the souvenir lane at the outlets for holiday travelers.",
+    "products": [
+     "Navidad-a-Reyes gift box",
+     "Lightweight hoodie",
+     "Kids' Banchero Swingman",
+     "Pinstripe dad cap"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 1,
+    "window": "Jan 6 (Three Kings Day) to late January (ZORA! Festival)",
+    "moment": "End of the Reyes gift window, MLK Day and Eatonville's ZORA! Festival",
+    "play": "Announce the Parramore court program with Callahan Neighborhood Center and Jones High, and show up at ZORA! as a sponsor and listener, not a seller.",
+    "products": [
+     "Community-designed Parramore tee (proceeds to the program)",
+     "Youth practice kits for partner teams"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 2,
+    "window": "Lunar New Year through the late-February high-school postseason; trade deadline Feb 11",
+    "moment": "Tet in Mills 50, and Jones and Evans playoff runs",
+    "play": "Drop the first Signs of the City artist tee at a Mills 50 pop-up, and run clinics with the Parramore and Pine Hills partner schools.",
+    "products": [
+     "Artist-signed poster tee",
+     "Neon-script long sleeve",
+     "Vented mesh practice kit"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 3,
+    "window": "Mid-March to Apr 6",
+    "moment": "Spring break tourism, the Winter Park Sidewalk Art Festival and the playoff push",
+    "play": "Release the Pinstripe Era capsule with the Penny Orlando colorway, and restock the visitor lane for spring-break crowds.",
+    "products": [
+     "Air Penny or Foamposite Orlando colorway",
+     "Pinstripe warm-up jacket",
+     "Pinstripe mesh short",
+     "Citrus crate-label tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 4,
+    "window": "Apr 7 (407 Day) through the Apr 11 finale and the Apr 13-16 Play-In",
+    "moment": "407 Day into the Play-In",
+    "play": "Drop the locals-only 407 line in local doors only, then switch to 48-hour rally tees if the Magic clinch or reach the Play-In.",
+    "products": [
+     "407 numerals tee",
+     "407 mesh short",
+     "Lake Eola swan line-art tee",
+     "Quick-turn rally tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 5,
+    "window": "Playoffs (if qualified); Orlando Fringe in mid-May",
+    "moment": "Playoff run or early offseason",
+    "play": "Keep rally-tee printing on standby, and sponsor a Fringe poster-artist tee so the Signs series carries into the offseason.",
+    "products": [
+     "Series rally tee",
+     "Fringe artist poster tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 6,
+    "window": "June 1 onward; Pulse remembrance June 12; Puerto Rican parade season",
+    "moment": "Start of hurricane season, Puerto Rican heritage season and Gay Days",
+    "play": "Launch the Storm Season pack, join parade season with the Boricua co-designers, and support Gay Days only through paid LGBTQ+ community partners. Go quiet around June 12.",
+    "products": [
+     "Packable storm shell",
+     "Lake-twilight shooting shirt",
+     "Quick-dry shell short"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 7,
+    "window": "Early July (Orlando Summer League) and AAU weekends",
+    "moment": "Orlando Summer League and national AAU events at ESPN Wide World of Sports",
+    "play": "Run tournament-weekend pop-ups with deep youth sizing and Storm Season product, and host summer runs at the Parramore partner court.",
+    "products": [
+     "Youth storm shell",
+     "Shooting shirt",
+     "Quick-dry shell short"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 8,
+    "window": "Late July to mid-August",
+    "moment": "Back-to-school and Florida's August clothing tax exemption",
+    "play": "Sell a youth kit priced at or under $100 per item, with Banchero youth product as the hero.",
+    "products": [
+     "Youth back-to-school kit",
+     "Youth Banchero jersey",
+     "407 youth tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 9,
+    "window": "Sep 15 to Oct 15, 2027",
+    "moment": "Hispanic Heritage Month at the start of the 2027-28 season",
+    "play": "Launch the full Hecho en el 407 capsule with the Puerto Rican co-designers, timed to the 2027-28 tip-off and any Magic Latin night, with a share of proceeds to a local community group. Build ship windows around hurricane risk.",
+    "products": [
+     "Co-designed lightweight hoodie",
+     "Panadería-script Orlando tee",
+     "Co-designed cap"
+    ],
+    "priority": 1
+   }
+  ],
+  "rhythm": [
+   {
+    "intensity": 55,
+    "phase": "Regular season, MLK Day games"
+   },
+   {
+    "intensity": 62,
+    "phase": "Trade deadline and All-Star"
+   },
+   {
+    "intensity": 72,
+    "phase": "Playoff push"
+   },
+   {
+    "intensity": 95,
+    "phase": "Playoff push, Play-In and playoffs"
+   },
+   {
+    "intensity": 100,
+    "phase": "Playoffs"
+   },
+   {
+    "intensity": 55,
+    "phase": "Offseason and NBA Finals, draft prep"
+   },
+   {
+    "intensity": 42,
+    "phase": "Summer League and free agency"
+   },
+   {
+    "intensity": 28,
+    "phase": "Dead offseason"
+   },
+   {
+    "intensity": 30,
+    "phase": "Media day and training camp"
+   },
+   {
+    "intensity": 45,
+    "phase": "Preseason and opener"
+   },
+   {
+    "intensity": 60,
+    "phase": "NBA Cup group play"
+   },
+   {
+    "intensity": 65,
+    "phase": "Cup knockouts and holidays"
+   }
+  ],
+  "sources": 31,
+  "verification": {
+   "live": 0,
+   "knowledge": 11,
+   "briefMode": "knowledge",
+   "queue": 122
+  },
+  "checks": {
+   "checked": 0,
+   "corrected": 0,
+   "removed": 0
+  }
  },
  {
   "id": "phi",
@@ -6650,7 +8012,449 @@
  },
  {
   "id": "okc",
-  "status": "pending"
+  "status": "complete",
+  "updated": "2026-10-07",
+  "headline": "Oklahoma's only big-league team: sell its sky and red dirt in Thunder blue, statewide and under $100.",
+  "archetype": {
+   "name": "The One-Team State",
+   "description": "A whole state that adopted a franchise in 2008 and now treats a champion as its civic uniform. Loud, loyal, value-minded and allergic to flash that the team has not earned."
+  },
+  "pulse": {
+   "teamMoment": "Back-to-back MVP Shai Gilgeous-Alexander's Thunder went 64-18 and are 2026-27 co-title favorites (BetMGM win total 60.5) after San Antonio beat them 4-3 in the West finals. Luguentz Dort, Isaiah Joe and Aaron Wiggins were traded, Aday Mara arrived at No. 12, and Sam Presti says he won't cut a payroll heading toward about $260M.",
+   "sentiment": "Confident but stung. Fans expect a title, see the Oct 20 opener at San Antonio as a grudge match, and trust Presti and Daigneault's patient build even as familiar rotation players leave.",
+   "heat": 82
+  },
+  "verifiedMoment": "Back-to-back MVP Shai Gilgeous-Alexander's Thunder are 2026-27 co-title favorites after a seven-game West finals loss to San Antonio ended their title defense. Payroll is rising toward about $260M, and Sam Presti says he won't cut to avoid it.",
+  "scorecard": {
+   "opportunity": 70,
+   "culture": 66,
+   "retail": 40,
+   "fandom": 86,
+   "rationale": "A champion that is the only big-league team in an entire state gives OKC near-top fan intensity and a large statewide opportunity for a small metro, with distinct red-dirt, sky, Route 66 and community stories to design from. Retail lags: a car-based, value-minded metro with no Nike community door and a small sneaker scene.",
+   "calibrated": false
+  },
+  "palette": [
+   {
+    "name": "Thunder Blue",
+    "hex": "#007AC1"
+   },
+   {
+    "name": "Sunset",
+    "hex": "#EF3B24"
+   },
+   {
+    "name": "Yellow",
+    "hex": "#FDBB30"
+   },
+   {
+    "name": "Dark Blue",
+    "hex": "#002D62"
+   }
+  ],
+  "opportunities": [
+   {
+    "id": "unfinished-business-opener",
+    "title": "Unfinished Business opening-night drop",
+    "summary": "A redemption-toned storm-front capsule for the Oct 20 rematch at San Antonio and the first home nights, turning a road opener into a statewide watch-party moment.",
+    "where": [
+     "Thunder Team Store at Paycom Center",
+     "Thunder Alley and Bricktown watch parties",
+     "Tulsa pop-up (Brookside)",
+     "Nike app and Nike.com"
+    ],
+    "when": "Launch the week of Oct 12, peak Oct 20 (at San Antonio) through Oct 22 (vs Denver on ESPN) and the first home games",
+    "how": "Drop midweek, clear of the Red River Rivalry weekend; seed watch parties in Bricktown and Tulsa with tees and towels; use copy about work still to do rather than banners.",
+    "segment": "Diehards, statewide fans and Gen Z SGA followers",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     10
+    ],
+    "products": [
+     "Storm-front gradient tee",
+     "Thunder-blue packable windbreaker",
+     "SGA name-and-number tee",
+     "Blue-out hoodie"
+    ]
+   },
+   {
+    "id": "loud-city-playoff-fast-turn",
+    "title": "Loud City playoff fast-turn",
+    "summary": "Pre-approved, blue-first graphics and blanks held in reserve so series and round tees hit shelves within 48 hours of every series win.",
+    "where": [
+     "Paycom Center plaza watch parties",
+     "Academy, Dick's and Hibbett statewide",
+     "Penn Square Mall Foot Locker",
+     "Nike.com with ship-to-store"
+    ],
+    "when": "Mid-April through the Finals window, restocking after each series win",
+    "how": "Lock graphics in March, hold blank inventory, and print to demand; push e-commerce and ship-to-store during storm weeks; keep tone quiet around the Memorial Marathon and Apr 19.",
+    "segment": "Families, casual and statewide fans",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     4,
+     5,
+     6
+    ],
+    "products": [
+     "Loud City blue-out tee",
+     "Series-win tee",
+     "Breathable mesh short",
+     "Lightweight hoodie",
+     "Youth playoff tee"
+    ]
+   },
+   {
+    "id": "oklahoma-under-100",
+    "title": "Oklahoma Under $100 statewide ladder",
+    "summary": "An 'Oklahoma' wordmark and state-outline Thunder line built entirely at or under $99 per item for the August tax-free weekend and back-to-school, then carried all season.",
+    "where": [
+     "Academy Sports + Outdoors and Hibbett statewide",
+     "Outlet Shoppes of Oklahoma City (Nike Factory Store)",
+     "Penn Square Mall",
+     "Utica Square and Woodland Hills, Tulsa"
+    ],
+    "when": "On shelves by late July for the first weekend of August, then a Statehood Day (Nov 16) re-push",
+    "how": "Flag the line with a clear under-$100 shelf talker; weight allocation toward Tulsa and small-town doors; size deep into youth.",
+    "segment": "Value-minded families and statewide and rural fans",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     7,
+     8,
+     11
+    ],
+    "products": [
+     "Oklahoma wordmark tee",
+     "405 state-outline hoodie",
+     "Thunder-blue mesh short",
+     "Youth SGA name-and-number tee",
+     "Kids' basketball shoe in Thunder blue"
+    ]
+   },
+   {
+    "id": "holiday-and-cup",
+    "title": "Cup Fridays into holiday gifting",
+    "summary": "Use the NBA Cup Group B Fridays (MIN, LAC, NOP, MEM) as mini-playoffs to build demand into the Black Friday to Dec 24 gift peak and the Christmas game at Minnesota.",
+    "where": [
+     "Paycom Center team store on Cup nights",
+     "Penn Square and Quail Springs malls",
+     "Academy and Dick's metro doors",
+     "Nike.com gifting"
+    ],
+    "when": "Cup Fridays Oct 30 to Nov 27, Black Friday through Dec 24, and Christmas Day at Minnesota",
+    "how": "Sell a Cup-court piece at home Cup nights, then switch to gift bundles and youth jerseys; hold a contingent run in case OKC hosts a Dec 4-9 knockout as the higher seed.",
+    "segment": "Families, gift buyers and youth",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     11,
+     12
+    ],
+    "products": [
+     "Youth SGA, Williams and Holmgren jerseys",
+     "Storm-front quarter-zip",
+     "Cup-night hoodie",
+     "Gift-boxed cap and sock set"
+    ]
+   },
+   {
+    "id": "red-dirt-capsule",
+    "title": "Red Dirt capsule",
+    "summary": "A premium garment-dyed rust and canvas line with western work details and a gig-poster back print of the home schedule by a commissioned Oklahoma poster artist.",
+    "where": [
+     "Plaza District (Shop Good and pop-ups)",
+     "Stockyards City",
+     "Automobile Alley",
+     "The Jones Assembly show nights"
+    ],
+    "when": "Preview at Plaza Walls and the State Fair in September, launch with the October opener, restock for spring",
+    "how": "Commission and credit a local poster artist and a sign painter for the type; launch through a Plaza District pop-up and a Red Dirt-booked show; position as heritage, not costume.",
+    "segment": "Young creatives and the Okie-pride lifestyle crowd",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     9,
+     10,
+     4
+    ],
+    "products": [
+     "Red-clay garment-dyed hoodie",
+     "Canvas snap-front warm-up shell",
+     "Gig-poster schedule tee",
+     "Tooled-leather-patch cap"
+    ]
+   },
+   {
+    "id": "district-artist-series",
+    "title": "District artist series",
+    "summary": "One limited release per district, each designed by a paid, credited local artist: Plaza, Paseo, Deep Deuce and Northeast OKC, the Classen Asian District, and the Southside.",
+    "where": [
+     "Plaza District",
+     "Paseo Arts District (First Friday)",
+     "Deep Deuce and Northeast OKC",
+     "Asian District on Classen"
+    ],
+    "when": "Timed to each community's own moment: Lunar New Year, Festival of the Arts, Juneteenth, Plaza Walls",
+    "how": "Recruit through the Plaza District Association, Paseo Arts Association, Jabee and Asian District business owners; hangtag credits plus royalties; each release launches at a community event, not only online.",
+    "segment": "Arts crowd, collectors and community members",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     2,
+     4,
+     6,
+     9
+    ],
+    "products": [
+     "Limited artist tee",
+     "Artist-printed tote",
+     "Numbered hoodie",
+     "Hangtag artist card"
+    ]
+   },
+   {
+    "id": "gym-pride-statewide",
+    "title": "Oklahoma gym-pride program",
+    "summary": "Varsity-style Thunder warm-ups and community team sets that meet the state in high school and Native community gyms, not only at Paycom Center.",
+    "where": [
+     "OSSAA state tournament sites",
+     "Douglass and Millwood in Northeast OKC",
+     "Booker T. Washington, Tulsa",
+     "Native community gyms via nation partners"
+    ],
+    "when": "March state tournaments, then summer pro-am and rec-league season",
+    "how": "Equip a set of community programs each year with a Thunder-blue varsity kit; work with Native community organizations and designers (credited and paid) on any nation-specific set.",
+    "segment": "High school hoopers, families and Native community players",
+    "priority": 3,
+    "size": "low",
+    "months": [
+     3,
+     6,
+     7
+    ],
+    "products": [
+     "Varsity block-letter warm-up",
+     "Prairie-sky shooting shirt",
+     "Community team reversible set",
+     "Youth practice short"
+    ]
+   }
+  ],
+  "calendar": [
+   {
+    "month": 8,
+    "window": "First weekend of August, stock by late July",
+    "moment": "Oklahoma sales-tax holiday and back-to-school",
+    "play": "Launch the Oklahoma Under $100 ladder with shelf talkers and deep youth sizing.",
+    "products": [
+     "Oklahoma wordmark tee",
+     "405 state-outline hoodie",
+     "Thunder-blue mesh short",
+     "Kids' basketball shoe"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 9,
+    "window": "Mid to late September",
+    "moment": "Plaza Walls and the State Fair of Oklahoma",
+    "play": "Preview the Red Dirt capsule with a live-painted Plaza District pop-up and reveal the commissioned poster artist.",
+    "products": [
+     "Gig-poster schedule tee",
+     "Red-clay garment-dyed hoodie"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 10,
+    "window": "Oct 12-20",
+    "moment": "Opening night at San Antonio, the West finals rematch",
+    "play": "Drop Unfinished Business midweek after Red River weekend; seed Bricktown and Tulsa watch parties.",
+    "products": [
+     "Storm-front gradient tee",
+     "Packable windbreaker",
+     "SGA name-and-number tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 10,
+    "window": "Oct 22 and the first home games",
+    "moment": "OKC vs Denver on ESPN and the first Loud City nights",
+    "play": "Arena-exclusive Red Dirt shell and blue-out hoodie at the Paycom Center store.",
+    "products": [
+     "Canvas snap-front warm-up shell",
+     "Blue-out hoodie"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "Cup Fridays Oct 30 to Nov 27; Nov 16",
+    "moment": "NBA Cup West Group B and Oklahoma Statehood Day",
+    "play": "Cup-night pieces at home games; Statehood Day re-push of the Oklahoma line in Tulsa and small-town doors.",
+    "products": [
+     "Cup-night hoodie",
+     "Oklahoma wordmark tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 12,
+    "window": "Black Friday to Dec 25",
+    "moment": "Holiday gifting and Christmas Day at Minnesota",
+    "play": "Gift bundles and youth jerseys, with a contingent run if OKC hosts a Cup knockout Dec 4-9.",
+    "products": [
+     "Youth SGA, Williams and Holmgren jerseys",
+     "Wind-line quarter-zip",
+     "Gift-boxed cap and sock set"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 1,
+    "window": "January cold snaps",
+    "moment": "Mid-season grind and ice-storm weather",
+    "play": "Restock outer layers and run a layering story for arena nights.",
+    "products": [
+     "Packable windbreaker",
+     "Wind-line quarter-zip"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 2,
+    "window": "Late January to February",
+    "moment": "Lunar New Year in the Asian District",
+    "play": "First District Series release, designed with a Vietnamese or Lao OKC artist and launched at a community event on Classen.",
+    "products": [
+     "Numbered artist tee",
+     "Artist-printed tote"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 3,
+    "window": "March state tournaments",
+    "moment": "OSSAA high school basketball tournaments",
+    "play": "Equip community programs with varsity kits; tease playoff graphics.",
+    "products": [
+     "Varsity block-letter warm-up",
+     "Community team reversible set"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 4,
+    "window": "Mid-April onward; Festival of the Arts late April",
+    "moment": "Playoffs begin; Festival of the Arts; Memorial Marathon",
+    "play": "Start the Loud City fast-turn program and a Festival of the Arts artist release; stand down activations around the Memorial Marathon and Apr 19.",
+    "products": [
+     "Loud City blue-out tee",
+     "Series-win tee",
+     "Numbered artist tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 5,
+    "window": "May, through Memorial Day weekend",
+    "moment": "Playoff peak and the Paseo Arts Festival",
+    "play": "Restock within 48 hours of each series win; Paseo release at the festival.",
+    "products": [
+     "Breathable mesh short",
+     "Lightweight hoodie",
+     "Youth playoff tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 6,
+    "window": "June",
+    "moment": "Juneteenth in Deep Deuce and Northeast OKC, Red Earth, OKC Pride, the draft",
+    "play": "Community-led releases only where invited: a Deep Deuce artist piece with partner-set proceeds; funded, co-credited Pride and Red Earth support rather than slogan tees.",
+    "products": [
+     "Artist hoodie",
+     "Draft-pick tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 7,
+    "window": "Mid-July",
+    "moment": "Summer pro-am season and Woody Guthrie Folk Festival in Okemah",
+    "play": "Prairie-sky shooting shirt for summer runs; load tax-free stock into doors.",
+    "products": [
+     "Prairie-sky shooting shirt",
+     "Oklahoma wordmark tee"
+    ],
+    "priority": 3
+   }
+  ],
+  "rhythm": [
+   {
+    "intensity": 72,
+    "phase": "Regular season, MLK Day"
+   },
+   {
+    "intensity": 70,
+    "phase": "Trade deadline and All-Star"
+   },
+   {
+    "intensity": 78,
+    "phase": "Playoff push"
+   },
+   {
+    "intensity": 92,
+    "phase": "Season end, Play-In and playoffs begin"
+   },
+   {
+    "intensity": 100,
+    "phase": "Playoffs"
+   },
+   {
+    "intensity": 68,
+    "phase": "Finals or early offseason, Draft"
+   },
+   {
+    "intensity": 35,
+    "phase": "Free agency and Summer League"
+   },
+   {
+    "intensity": 22,
+    "phase": "Offseason"
+   },
+   {
+    "intensity": 30,
+    "phase": "Media day and training camp"
+   },
+   {
+    "intensity": 75,
+    "phase": "Preseason and opener"
+   },
+   {
+    "intensity": 72,
+    "phase": "NBA Cup group play"
+   },
+   {
+    "intensity": 85,
+    "phase": "Cup knockouts and Christmas"
+   }
+  ],
+  "sources": 32,
+  "verification": {
+   "live": 0,
+   "knowledge": 11,
+   "briefMode": "knowledge",
+   "queue": 120
+  },
+  "checks": {
+   "checked": 0,
+   "corrected": 0,
+   "removed": 0
+  }
  },
  {
   "id": "phx",
@@ -7146,7 +8950,457 @@
  },
  {
   "id": "sac",
-  "status": "pending"
+  "status": "complete",
+  "updated": "2026-10-07",
+  "headline": "Sell Sacramento the team it kept: purple for the Kings, Tower Bridge gold for the city, the Beam for every win.",
+  "archetype": {
+   "name": "The Keepers",
+   "description": "A fan base that personally rescued its team and now treats every home game as civic duty. It forgives losing but not condescension, and it punishes anything that reads as Bay Area, Lakers or outsider."
+  },
+  "pulse": {
+   "teamMoment": "A youth movement after a 22-60 season and a lost lottery tiebreak: No. 7 pick Darius Acuff Jr. joins Domantas Sabonis, Zach LaVine and Malik Monk under Doug Christie in his second full season, with no opening-night or Christmas Day game and a Cup group with the Spurs, Lakers, Warriors and Trail Blazers.",
+   "sentiment": "Patient, defiant and a little sour. Fans are tired of losing and wary of the roster, but they quote the 'going to be bad' forecasts back with a chip on their shoulder and are ready to back Acuff, Sabonis and Christie.",
+   "heat": 44
+  },
+  "verifiedMoment": "A youth movement led by No. 7 pick Darius Acuff Jr. around holdovers Domantas Sabonis, Zach LaVine and Malik Monk. Sacramento is widely projected near the bottom of the West.",
+  "scorecard": {
+   "opportunity": 54,
+   "culture": 63,
+   "retail": 44,
+   "fandom": 72,
+   "rationale": "Fan loyalty is well above league average because the city saved the team and treats attendance as civic duty, and the Tower Bridge, Beam and neighborhood scenes give real design material. A rebuild year, a value-leaning Valley and the lack of a full-price Nike door or a dense boutique scene hold the opportunity and retail readiness near or below average.",
+   "calibrated": false
+  },
+  "palette": [
+   {
+    "name": "Purple",
+    "hex": "#5A2D81"
+   },
+   {
+    "name": "Gray (Silver)",
+    "hex": "#63727A"
+   },
+   {
+    "name": "Black",
+    "hex": "#000000"
+   }
+  ],
+  "opportunities": [
+   {
+    "id": "beam-night-drops",
+    "title": "Lit: Beam-night drops after home wins",
+    "summary": "A limited, quick-turn line in purple and black with a single glow or reflective beam stripe, released only after home wins so every Beam night is a buying moment.",
+    "where": [
+     "Kings Team Store at Golden 1 Center",
+     "Downtown Commons (DOCO) pop-up",
+     "Kings and Nike app push to in-market fans"
+    ],
+    "when": "From the late-October home opener through the April 11 finale, triggered by home wins",
+    "how": "Hold printed blanks at the arena and unlock each run with a post-win push, with a small numbered count per Beam night. Requires NBA and team approval of beam artwork; no copy about contention.",
+    "segment": "Diehards, Arco-era veterans and Gen Z game-goers",
+    "priority": 1,
+    "size": "medium",
+    "months": [
+     10,
+     11,
+     12,
+     1,
+     2,
+     3,
+     4
+    ],
+    "products": [
+     "Glow-ink beam tee",
+     "Reflective beam-stripe hoodie",
+     "Beam heel-tab sock",
+     "Beam-night numbered cap"
+    ]
+   },
+   {
+    "id": "specter-greatest-show",
+    "title": "Specter meets the Greatest Show on Court",
+    "summary": "Merchandise the September Specter collection as Sacramento's heritage moment, flanked by 1994-2008-proportion warm-ups and early-2000s-numeral tees and tied to Christie's dual role.",
+    "where": [
+     "Kings Team Store at Golden 1 Center",
+     "DOCO",
+     "Westfield Galleria at Roseville",
+     "Arden Fair partner doors"
+    ],
+    "when": "Opener week through the Cup Fridays, then Specter wear dates once confirmed",
+    "how": "Launch at the home opener and rivalry Cup nights against the Lakers and Warriors, with heritage-night storytelling in the bowl. Route any Webber, Bibby, Peja or Divac name use through NBA and players' licensing, and keep the 2002 series off the product.",
+    "segment": "Heritage fans and affluent suburban jersey buyers",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     10,
+     11,
+     12
+    ],
+    "products": [
+     "Specter Swingman jersey",
+     "Specter authentic jersey (premium)",
+     "Purple-black-silver warm-up jacket",
+     "Early-2000s numeral heritage tee",
+     "Acuff Jr. Specter youth jersey"
+    ]
+   },
+   {
+    "id": "valley-gift-ladder",
+    "title": "Valley family gifting ladder",
+    "summary": "A good-better-best holiday assortment that leads with kids' Acuff and Sabonis product and purple hoodies for families who make a Kings game a regional outing.",
+    "where": [
+     "Nike Factory Store, Folsom Premium Outlets",
+     "Nike Factory Store, Vacaville Premium Outlets",
+     "Arden Fair Mall",
+     "Westfield Galleria at Roseville",
+     "Dick's Sporting Goods (Sacramento metro)"
+    ],
+    "when": "Thanksgiving-week Cup nights (Nov 24-25) and Black Friday through Christmas",
+    "how": "Entry kids' tees and beanies at the outlets, Swingman and hoodies in the malls, and a Thanksgiving-week Cup-night bundle at the arena. Plan around promotions, since California has no tax holiday, and cap player-name depth because the Kings are not on Christmas Day.",
+    "segment": "Valley families from Elk Grove, Roseville, Folsom, Davis and Stockton",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     11,
+     12
+    ],
+    "products": [
+     "Acuff Jr. youth jersey",
+     "Sabonis youth tee",
+     "Purple Club fleece hoodie",
+     "916 beanie",
+     "Family-pack crew tees"
+    ]
+   },
+   {
+    "id": "sactown-sound-makers",
+    "title": "Sactown Sound: the neighborhood tour capsule",
+    "summary": "A washed-black and faded-purple lifestyle capsule with a tour-poster back-print listing Oak Park, Del Paso, Midtown, South Sac and Elk Grove as if they were dates, made with Sacramento printers, embroiderers and sign painters.",
+    "where": [
+     "Second Saturday ArtWalk, Midtown",
+     "Sol Collective, Oak Park",
+     "Dimple Records",
+     "Ace of Spades show nights",
+     "Kings Team Store"
+    ],
+    "when": "Quick-turn tees for holiday 2026; full cut-and-sew capsule for the 2027-28 opener",
+    "how": "Commission Black, Latino and Southeast Asian Sacramento designers (credited on hangtags and paid), sell first at Second Saturday and a record-store drop, then the arena. No Deftones, Mozzy or Tower Records marks without licenses, and no violence-adjacent imagery.",
+    "segment": "Gen Z, rock and skate kids, Midtown creatives and Oak Park and Del Paso locals",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     12,
+     1,
+     2,
+     10
+    ],
+    "products": [
+     "Tour-print washed-black tee",
+     "Garment-dyed faded-purple hoodie",
+     "Chain-stitch Sactown cap",
+     "Neighborhood-name crewneck"
+    ]
+   },
+   {
+    "id": "hometown-hoopers",
+    "title": "Hometown Hoopers: courts from Oak Park to Elk Grove",
+    "summary": "Youth and rec-league uniforms, clinics and practice-tee programs in Kings purple and silver, crediting the Kevin Johnson and St. HOPE lineage and opening a women's lane through the 2005 champion Monarchs.",
+    "where": [
+     "Sacramento High School and St. HOPE (Oak Park)",
+     "Grant Union High School (Del Paso Heights)",
+     "Hiram W. Johnson High School (South Sac)",
+     "Sheldon High School (Elk Grove)",
+     "Stockton Kings games at Stockton Arena"
+    ],
+    "when": "Winter rec-league season, Black History Month and Women's History Month, then summer leagues",
+    "how": "Fund uniforms and clinics through St. HOPE and school partners, with neighborhood-stencil practice tees designed by local creators. A Monarchs capsule goes ahead only with Yolanda Griffith or Ticha Penicheiro taking part and the marks licensed.",
+    "segment": "Young hoopers, girls' basketball, Black and Latino neighborhoods, Elk Grove families",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     1,
+     2,
+     3,
+     6,
+     7
+    ],
+    "products": [
+     "Rec-league uniform kit",
+     "Neighborhood-stencil practice tee",
+     "Youth shooting shirt",
+     "Monarchs heritage women's tee (licensed)"
+    ]
+   },
+   {
+    "id": "bridge-gold-long-table",
+    "title": "Bridge Gold: the Valley heat and Farm-to-Fork city capsule",
+    "summary": "A lightweight Sactown city line in Kings purple, Tower Bridge gold, Delta fog and almond, built for back-to-school heat and launched at Farm-to-Fork as the bridge between seasons.",
+    "where": [
+     "Kings Team Store and DOCO",
+     "Sacramento Certified Farmers Market (under the freeway)",
+     "Folsom and Vacaville Nike Factory Stores (kids and basics)",
+     "Westfield Galleria at Roseville"
+    ],
+    "when": "Back-to-school in mid-August through the September 2027 Farm-to-Fork Festival and Tower Bridge Dinner",
+    "how": "Draw an original lift-span and long-table illustration (no Farm-to-Fork or restaurant marks), co-sign with Patrick Mulvaney or local growers, and give a share to a local food bank. Use it to tease the 2027-28 City Edition.",
+    "segment": "Valley families, downtown and state workers, civic-pride locals",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     8,
+     9
+    ],
+    "products": [
+     "Long Table gold-on-purple tee",
+     "Lift-span jacquard shorts",
+     "Delta-fog warm-up shell",
+     "Bridge-gold bucket hat",
+     "Harvest-colorway basketball shoe (limited)"
+    ]
+   },
+   {
+    "id": "lottery-hope-capsule",
+    "title": "Hope night: lottery and draft capsule",
+    "summary": "A small, ready-to-print Sactown hope graphic and a pick-number tee for the May lottery and June draft, when a rebuilding fan base re-engages after the last tiebreak loss.",
+    "where": [
+     "Kings app and online store",
+     "Kings Team Store",
+     "Midtown draft watch parties"
+    ],
+    "when": "May 2027 lottery night through the June draft",
+    "how": "Pre-approve artwork and blanks, print pick-number tees within 24 hours of the draft, and keep the tone defiant rather than promising wins.",
+    "segment": "Diehards and digital fans",
+    "priority": 3,
+    "size": "low",
+    "months": [
+     5,
+     6
+    ],
+    "products": [
+     "Lottery-night Sactown tee",
+     "Draft-pick number tee",
+     "Rookie welcome cap"
+    ]
+   }
+  ],
+  "calendar": [
+   {
+    "month": 10,
+    "window": "Oct 7-19, around the Oct 8 Kings at Lakers ESPN preseason game",
+    "moment": "Preseason and Specter collection on the floor",
+    "play": "Place quick-turn Beam and 916 graphic orders now; move Specter product to the front of the team store and DOCO; brief Valley mall and outlet partners on the price ladder.",
+    "products": [
+     "Specter Swingman jersey",
+     "Beam-stripe shooting shirt",
+     "Lightweight 916 tee"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 10,
+    "window": "Home opener week (date to confirm)",
+    "moment": "First Beam night of the season",
+    "play": "Launch Specter meets the Greatest Show on Court with heritage storytelling in the bowl; unlock the first numbered Beam-night run after the first home win.",
+    "products": [
+     "Specter authentic jersey",
+     "Heritage numeral tee",
+     "Glow beam hoodie",
+     "Acuff Jr. youth jersey"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "Cup Fridays, Oct 30 to Nov 27",
+    "moment": "West Group C rivalry nights with the Lakers, Warriors, Spurs and Trail Blazers",
+    "play": "Limited arena and DOCO drops on home Cup nights, with the most depth against the Lakers and Warriors, when rival jerseys fill the building.",
+    "products": [
+     "Cup-night purple-out tee",
+     "Beam-night numbered cap",
+     "Purple warm-up jacket"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 11,
+    "window": "Late November to early December",
+    "moment": "Hmong New Year season",
+    "play": "Paid listening sessions with Hmong community organizations and designers ahead of any 2027 community capsule; no product lifted from textiles or ceremony.",
+    "products": [
+     "Existing kids' and family Kings tees for community events"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 11,
+    "window": "Nov 24-25 Cup nights through Black Friday",
+    "moment": "Thanksgiving week and the start of gifting",
+    "play": "Roll out the Valley family gifting ladder: outlet entry tier, mall Swingman tier and an arena Cup-night family bundle.",
+    "products": [
+     "Acuff Jr. youth jersey",
+     "Sabonis youth tee",
+     "Purple Club fleece hoodie",
+     "916 beanie"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 12,
+    "window": "December through Christmas",
+    "moment": "Gifting peak with no Kings game on Christmas Day",
+    "play": "Lean on gifting rather than national exposure; drop Sactown Sound quick-turn tees at Second Saturday and a record-store event for the under-30 gift buyer.",
+    "products": [
+     "Tour-print washed-black tee",
+     "Chain-stitch Sactown cap",
+     "Kids' beam tee",
+     "Glow beam hoodie"
+    ],
+    "priority": 1
+   },
+   {
+    "month": 1,
+    "window": "January, tule-fog season",
+    "moment": "Midseason and the foggy Valley winter",
+    "play": "Push the light-layer story and kick off Hometown Hoopers rec-league uniforms with St. HOPE and school partners.",
+    "products": [
+     "Packable warm-up shell",
+     "Rec-league uniform kit",
+     "Neighborhood-stencil practice tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 2,
+    "window": "February, around the Feb 11 trade deadline",
+    "moment": "Black History Month and trade-deadline churn",
+    "play": "Honor Oak Park and Del Paso Heights hoopers and the Kevin Johnson lineage through community clinics; hold player-name reorders until the deadline passes.",
+    "products": [
+     "Neighborhood-stencil practice tee",
+     "Youth shooting shirt"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 3,
+    "window": "March",
+    "moment": "Camellia Festival and Women's History Month",
+    "play": "A camellia-pink accent women's and youth drop, and a Monarchs heritage capsule only if former players take part and the marks are licensed.",
+    "products": [
+     "Camellia-accent women's tee",
+     "Monarchs heritage women's tee (licensed)"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 4,
+    "window": "Apr 11 regular-season finale",
+    "moment": "End of the rebuild year",
+    "play": "A 'we stayed' fan thank-you night and tee for season-ticket holders and diehards, with no playoff framing.",
+    "products": [
+     "We Stayed thank-you tee"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 5,
+    "window": "May lottery night through the June draft",
+    "moment": "Hope night",
+    "play": "Print lottery-night and pick-number tees within 24 hours on pre-approved art.",
+    "products": [
+     "Lottery-night Sactown tee",
+     "Draft-pick number tee",
+     "Rookie welcome cap"
+    ],
+    "priority": 3
+   },
+   {
+    "month": 8,
+    "window": "Early to mid-August",
+    "moment": "Back-to-school in triple-digit heat",
+    "play": "Kids' and youth basketball footwear and lightweight Bridge Gold basics at the outlets and malls, priced to the entry tier.",
+    "products": [
+     "Long Table tee",
+     "Lift-span jacquard shorts",
+     "Youth basketball shoes"
+    ],
+    "priority": 2
+   },
+   {
+    "month": 9,
+    "window": "September 2027 Farm-to-Fork Festival and Tower Bridge Dinner",
+    "moment": "The city's signature civic month and next-season reveals",
+    "play": "Launch the full Bridge Gold capsule with a Patrick Mulvaney or grower co-sign and a food-bank donation, and use it to tease the Here We Stay City Edition.",
+    "products": [
+     "Delta-fog warm-up shell",
+     "Bridge-gold bucket hat",
+     "916 crewneck",
+     "Harvest-colorway basketball shoe"
+    ],
+    "priority": 2
+   }
+  ],
+  "rhythm": [
+   {
+    "intensity": 50,
+    "phase": "Midseason"
+   },
+   {
+    "intensity": 48,
+    "phase": "Trade deadline and All-Star"
+   },
+   {
+    "intensity": 42,
+    "phase": "Late-season push or tank"
+   },
+   {
+    "intensity": 38,
+    "phase": "Regular season ends"
+   },
+   {
+    "intensity": 35,
+    "phase": "Offseason and lottery"
+   },
+   {
+    "intensity": 52,
+    "phase": "Draft"
+   },
+   {
+    "intensity": 40,
+    "phase": "Free agency and Summer League"
+   },
+   {
+    "intensity": 35,
+    "phase": "Offseason"
+   },
+   {
+    "intensity": 58,
+    "phase": "Media day and Specter release"
+   },
+   {
+    "intensity": 85,
+    "phase": "Preseason and opener"
+   },
+   {
+    "intensity": 90,
+    "phase": "NBA Cup group play"
+   },
+   {
+    "intensity": 100,
+    "phase": "Cup knockouts and Christmas"
+   }
+  ],
+  "sources": 25,
+  "verification": {
+   "live": 0,
+   "knowledge": 11,
+   "briefMode": "knowledge",
+   "queue": 126
+  },
+  "checks": {
+   "checked": 0,
+   "corrected": 0,
+   "removed": 0
+  }
  },
  {
   "id": "sas",
