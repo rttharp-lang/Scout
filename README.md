@@ -20,12 +20,14 @@ League views:
 
 Every market is researched by 15 agents, defined once in `src/nba/agents/roster.js` with their missions, questions and JSON output contracts:
 
-1. **Research (in parallel).** Eleven lens agents research the live web, and each writes a dossier to `research/nba/<team>/<lens>.json`.
+1. **Research (in parallel).** Eleven lens agents research the live web, and each writes a dossier to `research/nba/<team>/<lens>.json`. In knowledge mode, used when search is unavailable, they write from model knowledge instead. Live-verified team facts (the League Pulse) are injected as ground truth, and every time-sensitive claim is queued for verification.
 2. **Synthesize.** The Market Strategist turns the eleven dossiers into the Nike Basketball brief (`strategy.json`).
 3. **Verify (in parallel).** The Fact-Check Critic checks the riskiest claims and corrects dossiers in place. The Authenticity Critic attacks the brief for generic, stereotyped or unfounded recommendations.
 4. **Edit.** The Brief Editor resolves every high- and medium-severity issue.
 
-A league stage then reads all 30 briefs. It audits league-wide dates, calibrates scores across markets and writes `research/nba/league.json`.
+A league stage then audits each division against the verified league calendar and League Pulse. It reads all 30 briefs, calibrates scores across markets and writes `research/nba/league.json`. A completeness critic and an editor review it.
+
+The published corpus is mostly knowledge drafts. Every dossier is labelled on the site, and [research/nba/README.md](research/nba/README.md) explains what was verified live and how to work through the verification queues.
 
 ```bash
 node scripts/nba/brief.mjs music por        # print an agent's full brief

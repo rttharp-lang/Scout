@@ -1,10 +1,22 @@
 # Home Court research corpus
 
-This directory holds the agent research behind Home Court, for all 30 NBA markets in the 2026-27 season. It was researched on the live web in October 2026.
+This directory holds the agent research behind Home Court, for all 30 NBA markets in the 2026-27 season. It was produced in October 2026.
+
+## Provenance: what was checked live and what wasn't
+
+The research session ran out of web-search budget early, so most of this corpus is a **knowledge draft**:
+
+- **Live-verified:** the League Pulse (`league-pulse-east.json`, `league-pulse-west.json`) was checked on the live web on 2026-10-07. It covers each team's 2026-27 situation: last season, coach, stars, offseason moves, arena, City Edition and marquee games. The confirmed entries in `league-calendar.json` (15 of 24) were also checked live, as were Portland's music, art and food dossiers.
+- **Knowledge drafts:** the other 357 dossiers and briefs were written from model knowledge, with the League Pulse given to every agent as authoritative current facts. Each file carries `provenance.mode: "knowledge"` and a `provenance.verify` list of time-sensitive claims to confirm before use (3,858 claims in all).
+- **Fact-checked:** every market's Fact-Check Critic logged 35-40 verdicts and corrected dossiers in place, with up to three live spot-checks per market.
+
+The site labels every dossier "Live-verified" or "Knowledge draft". Each market's Agent review tab lists its verification queue.
 
 ```
 research/nba/
-  league-calendar.json        verified 2026-27 league dates and structural facts (ground truth for audits)
+  league-calendar.json        2026-27 league dates and structural facts; "confirmed" entries were verified live
+  league-pulse-east.json      ┐ each team's 2026-27 situation, verified live on 2026-10-07; injected into
+  league-pulse-west.json      ┘ every agent's brief as CURRENT FACTS
   league.json                 cross-market synthesis: themes, clusters, tentpoles, priority board,
                               Portland playbook, calibrated scores
   league-critique.json        completeness critic's review of league.json
@@ -35,6 +47,6 @@ node scripts/nba/assemble.mjs           # publish to src/nba/data/ for the site
 
 ## Reading it responsibly
 
-Agents verified current facts with web search, and the Fact-Check Critic audited the riskiest claims. Before you commit spend, still re-confirm three things: venues and stores, which open, close and move; event dates, which shift year to year; and third-party IP and talent conflicts, which every dossier flags under `watchouts`.
+Treat knowledge drafts as a well-informed starting point, not as verified research: work through a market's verification queue before acting on it. Even for live-verified material, re-confirm three things before you commit spend: venues and stores, which open, close and move; event dates, which shift year to year; and third-party IP and talent conflicts, which every dossier flags under `watchouts`.
 
 Partnership ideas name real creators and institutions only as candidates to approach. None of them implies an existing relationship.

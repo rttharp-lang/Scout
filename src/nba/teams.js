@@ -68,7 +68,7 @@ export const TEAMS = [
     focus: "Sacramento and the Central Valley — Oak Park, Del Paso Heights, Midtown, South Sac, Elk Grove — 'Sactown', farm-to-fork, and a fan base that fought to keep its team." },
   { id: "sas", abbr: "SAS", name: "Spurs", city: "San Antonio", state: "TX", conference: "West", division: "Southwest", arena: "Frost Bank Center", colors: ["#C4CED4", "#000000", "#8A8D8F"],
     focus: "San Antonio and South Texas — the West Side, East Side, Southtown, the Pearl, Fiesta, Tejano and Chicano culture, the military community, and fans across South Texas and Mexico." },
-  { id: "uta", abbr: "UTA", name: "Jazz", city: "Salt Lake City", state: "UT", conference: "West", division: "Northwest", arena: "Delta Center", colors: ["#4E008E", "#000000", "#FFFFFF"],
+  { id: "uta", abbr: "UTA", name: "Jazz", city: "Salt Lake City", state: "UT", conference: "West", division: "Northwest", arena: "Delta Center", colors: ["#4E008E", "#000000", "#8FC1E3"],
     focus: "Salt Lake City and Utah — Sugar House, Central 9th, the West Side (Rose Park, Glendale), Ogden, Provo — Mountain West outdoor life, the Pacific Islander and Latino communities." },
 ];
 
