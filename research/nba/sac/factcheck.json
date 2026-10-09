@@ -1,0 +1,287 @@
+{
+  "team": "sac",
+  "checked": 118,
+  "verdicts": [
+    {
+      "lens": "music",
+      "claim": "Dimple Records is a long-running local record shop",
+      "verdict": "removed",
+      "note": "Live search: Dimple Records closed all locations in 2019 after 45 years. Replaced with Armadillo Music (Davis) and queued for confirmation.",
+      "source": "https://www.cbsnews.com/sacramento/news/after-45-years-dimple-records-is-closing-for-good"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Dimple Records is a partner and drop venue (opportunities[3], partners[5], retailPlaybook)",
+      "verdict": "corrected",
+      "note": "Dimple closed in 2019. Editor must replace with an operating independent shop or a Midtown pop-up, and drop the record-store phrase tied to Dimple.",
+      "source": "https://www.cbsnews.com/sacramento/news/after-45-years-dimple-records-is-closing-for-good"
+    },
+    {
+      "lens": "food",
+      "claim": "Mulvaney's B&L is Patrick Mulvaney's flagship and he is a co-sign partner",
+      "verdict": "corrected",
+      "note": "Live search: restaurant still open but founders are stepping back, with a new managing partner and chef. Dossier note updated; his availability as a co-sign needs checking.",
+      "source": "https://www.aol.com/mother-empress-tavern-founder-returns-225506874.html"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Patrick Mulvaney co-signs the Long Table tee and Bridge Gold launch (partners[4], calendar[12])",
+      "verdict": "unverifiable",
+      "note": "Mulvaney's is in a handover; confirm his role or pivot the co-sign to growers or the new team.",
+      "source": "https://www.aol.com/mother-empress-tavern-founder-returns-225506874.html"
+    },
+    {
+      "lens": "art",
+      "claim": "Sol Collective is in Oak Park",
+      "verdict": "corrected",
+      "note": "Live search: Sol Collective is at 2574 21st St near Broadway, on the Land Park/Curtis Park and Oak Park edge, and moved there around 2009 after a Del Paso Blvd fire. Neighborhood label softened.",
+      "source": "https://en.wikipedia.org/wiki/Sol_Collective"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Sol Collective, Oak Park (opportunities[3].where)",
+      "verdict": "corrected",
+      "note": "Label as 21st Street near Broadway, not strictly Oak Park; confirm it is currently operating and booking.",
+      "source": "https://en.wikipedia.org/wiki/Sol_Collective"
+    },
+    {
+      "lens": "culture",
+      "claim": "Beam Team was the nickname of the 2001-02 Kings",
+      "verdict": "corrected",
+      "note": "Beam Team is the 2022-23 team nickname; 2001-02 was the Greatest Show on Court. Fixed culture text, vocabulary, hooks and watchouts, and the hoops vocabulary entry that called it fan culture.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Beam Team = fan culture around the beam",
+      "verdict": "corrected",
+      "note": "Rewritten as the 2022-23 team nickname, consistent with fanbase and uniform dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Heart Health Park is in the Railyards / Downtown",
+      "verdict": "corrected",
+      "note": "Heart Health Park is Republic FC's current Cal Expo stadium; the Railyards stadium is a separate planned project. Place corrected.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Cup Fridays are five weeks of Friday games vs SAS, LAL, POR, GSW",
+      "verdict": "corrected",
+      "note": "Each team plays four group games between Oct 30 and Nov 27 (plus Tue/Wed Nov 24-25 Cup nights); not every Friday and only some are home. Oct 30 opening slate does not include the Kings.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cup Fridays Oct 30-Nov 27 and Nov 24-25 Cup nights as Kings home retail windows with depth on Lakers/Warriors",
+      "verdict": "unverifiable",
+      "note": "Only four Kings Cup games exist and the Oct 30 slate lacks the Kings; confirm which are home games and whether the Kings play Nov 24-25 before planning drops.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Sacramento is a market with no other NBA, NFL or MLB team (topInsights[0])",
+      "verdict": "corrected",
+      "note": "The Athletics play at Sutter Health Park in West Sacramento through 2027, which other dossiers acknowledge. Reword to no other long-term major-league team.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Sacramento has no other major-league team",
+      "verdict": "corrected",
+      "note": "Reworded to no other long-term major-league team; Athletics are a temporary tenant through 2027.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Calendar window Oct 7-19 around the Oct 8 Kings at Lakers preseason game",
+      "verdict": "corrected",
+      "note": "Oct 8 has already passed as of Oct 9. Restate as post-preseason prep; note preseason game as played.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Kings at Lakers preseason Oct 8 as a forward moment",
+      "verdict": "corrected",
+      "note": "Marked as already played.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Aftershock overlaps the start of the Kings season",
+      "verdict": "corrected",
+      "note": "Aftershock is typically early-to-mid October at Discovery Park, ahead of the Oct 20 tipoff; may already be over. Reworded and queued.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Ace of Spades is in Alkali Flat edge",
+      "verdict": "corrected",
+      "note": "It sits on R Street in Midtown; neighborhood corrected.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Tower Cafe is in Land Park / Tower District",
+      "verdict": "corrected",
+      "note": "Tower District is Fresno; Tower Cafe is on Broadway beside Tower Theatre. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Ettore's bakery as old-school institution",
+      "verdict": "removed",
+      "note": "Not confident it is still operating; removed from the nostalgia list.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Del Paso Boulevard Arts District is in Del Paso Heights / Oak Park",
+      "verdict": "corrected",
+      "note": "It is in North Sacramento, not Oak Park. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "UC Davis Pavilion",
+      "verdict": "corrected",
+      "note": "Arena is now the University Credit Union Center.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Yolanda Griffith is a Hall of Famer",
+      "verdict": "corrected",
+      "note": "Could not confirm Hall of Fame status; recast as 2005 Finals MVP.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Crocker is the oldest art museum in the West",
+      "verdict": "corrected",
+      "note": "Softened to one of the oldest.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Old Sacramento adds Tower Records heritage",
+      "verdict": "corrected",
+      "note": "Tower Records began at Broadway and 16th, not Old Sacramento; removed the clause.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "1994-2008 mark is a lion and sword",
+      "verdict": "corrected",
+      "note": "Reworded to sword-and-basketball mark; lion is the Slamson mascot.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Doug Christie as a Nike-era defender",
+      "verdict": "corrected",
+      "note": "Nonsensical descriptor; now former Kings defender and current coach.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Kevin Johnson as clean civic hero (culture, hoops, strategy hometown-hoopers and Black History Month play)",
+      "verdict": "unverifiable",
+      "note": "He led the 2013 save, but his public record includes past misconduct allegations; brand risk needs a live check before naming him as a partner or honoree.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Specter product on floor, 2026-27 City Edition, Here We Stay pitch not repeating past City Edition",
+      "verdict": "unverifiable",
+      "note": "2026-27 City design and prior editions unverified; also whether Here We Stay is team IP.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Individual City Edition history 2018-19 to 2025-26",
+      "verdict": "unverifiable",
+      "note": "Dossier admits it cannot recall; needs a live audit of every Kings City Edition.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Sacramento Music Festival (formerly Jazz Jubilee) runs Memorial Day weekend in Old Sacramento",
+      "verdict": "unverifiable",
+      "note": "Festival has had gaps and rebrands; confirm it still runs and its 2027 dates.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Tower Bridge Dinner still held annually",
+      "verdict": "unverifiable",
+      "note": "Format and location have changed over the years; confirm the Farm-to-Fork Festival and dinner for September 2027.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Courtland Pear Fair and Isleton Crawdad Festival still run",
+      "verdict": "unverifiable",
+      "note": "Small Delta festivals that paused in recent years; confirm dates or drop.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Kru (Billy Ngo) and Localis (Chris Barnum-Dentoni) are open",
+      "verdict": "unverifiable",
+      "note": "Chef-driven restaurants turn over fast; confirm both before naming.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Fixins Soul Kitchen is open in Oak Park",
+      "verdict": "unverifiable",
+      "note": "Small business; confirm status and location.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Wide Open Walls still runs a Sacramento festival",
+      "verdict": "unverifiable",
+      "note": "Confirm 2026 edition and that it is open to paid partnership (strategy partner).",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Verge Center for the Arts and Second Saturday ArtWalk are active",
+      "verdict": "unverifiable",
+      "note": "Confirm both still operate in Midtown.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Sacramento Bike Kitchen operating in Midtown",
+      "verdict": "unverifiable",
+      "note": "Weak, low-signal entry; confirm or replace.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Vivek Ranadive owns the team and Golden 1 Center name is unchanged",
+      "verdict": "unverifiable",
+      "note": "Ownership and arena naming not verified in current facts.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Sacramento Republic FC stadium status",
+      "verdict": "unverifiable",
+      "note": "Confirm Heart Health Park use and Railyards stadium timeline.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Westfield Galleria at Roseville name and Nike Factory Stores at Folsom and Vacaville",
+      "verdict": "unverifiable",
+      "note": "Mall may have been rebranded; confirm outlet stores and Foot Locker, Dick's, Nordstrom doors.",
+      "source": ""
+    }
+  ],
+  "summary": "Dossiers were broadly sound on roster, coach, 22-60 record, Specter reveal and Cup group (all match the verified facts), but had real errors: the Beam Team nickname was misapplied to the 2001-02 team in two dossiers, Dimple Records closed in 2019 (live-checked) yet anchors the strategy record-store play, Heart Health Park, Tower Cafe, Ace of Spades, Del Paso Boulevard and UC Davis arena labels were wrong, the Cup was described as five Friday home games, and several files claimed Sacramento has no other major-league team despite the Athletics. Fixed in place across 10 dossiers. Strategy.json needs edits for Dimple, the Athletics line, the Oct 8 preseason window, Cup home-date assumptions, Sol Collective location, Mulvaney's transition and Kevin Johnson brand risk. Fragile small businesses and festival dates are queued as unverifiable."
+}
