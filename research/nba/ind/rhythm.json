@@ -12,12 +12,12 @@
     {
       "title": "Comeback narrative sets the fall launch",
       "detail": "Haliburton returning from the Game 7 Achilles tear after a lost 19-63 season, with Siakam, Nembhard, Zubac and the 2025 Finals core, makes October to December a redemption story. Fans who stuck through the lost year are the ones buying.",
-      "implication": "Lead with player-driven and resilience-themed product in Oct-Nov (Haliburton signature-adjacent lifestyle, tunnel-fit pieces) rather than generic opener merch."
+      "implication": "Lead with team-first, resilience-themed 'Home' product in Oct-Nov and NBA-licensed jerseys once Haliburton has played at home (he is a Puma athlete, so no signature-adjacent lifestyle product), rather than generic opener merch."
     },
     {
       "title": "The Cup final at Hinkle is the local jackpot",
       "detail": "The Emirates NBA Cup final is Friday Dec 11 at Butler's Hinkle Fieldhouse, the 1928 barn tied to the Milan 1954 championship and the film Hoosiers legacy. Indiana is also in Cup East Group B with the champion Knicks, and opens Cup play at home on Oct 30 vs the 76ers.",
-      "implication": "Build a Hinkle-rooted capsule (brick, wood floor, arched-roof graphics, Butler blue is NOT ours so keep it Pacers navy and gold) with licensing check on Butler marks; time retail to early December."
+      "implication": "Build a Pacers-marks-only winter capsule (brick, wood floor, arched-roof graphics in Pacers navy and gold, never Butler blue) that sells from Nov 1, and add a Hinkle-named layer only if Butler and the NBA clear it; peak retail at the Dec 11 final."
     },
     {
       "title": "Winter belongs to college and high school hoops",
@@ -217,7 +217,7 @@
   ],
   "productHooks": [
     "October return-of-Haliburton drop with tonal navy and gold lifestyle pieces and a one-line resilience graphic.",
-    "Dec 11 Hinkle Cup-final capsule: wood-grain and brick tee, hoodie, and warm-up, released the first week of December.",
+    "Fieldhouse Winter capsule (wood-grain and brick tee, hoodie and warm-up, Pacers marks only) selling from Nov 1 and peaking at the Dec 11 Hinkle final; a Hinkle-named layer only if Butler and the NBA clear it.",
     "Playoff-readiness pack staged for April: pre-printed tees, hats and a May flex-graphic that nods to the 500.",
     "Holiday gift set around the Cup and a youth jersey push, since Christmas has no Pacers national game.",
     "City Edition accessories (hats, shooting shirts) matched to the returning Moments Mixtape palette."
@@ -420,7 +420,7 @@
         "intensity": 72,
         "phase": "NBA Cup group play",
         "team": [
-          "Friday Cup Nights through Nov 27",
+          "Friday Cup Nights through Nov 27, plus Tue Nov 24 and Wed Nov 25",
           "Games vs Knicks, Cavaliers, Heat"
         ],
         "local": [
@@ -466,7 +466,7 @@
       },
       {
         "name": "Cup group play with Knicks, Cavaliers, 76ers, Heat",
-        "date": "Oct 30 to Nov 27, 2026",
+        "date": "Oct 30 to Nov 27, 2026 (Fridays, plus Tue Nov 24 and Wed Nov 25)",
         "month": 11,
         "type": "team",
         "why": "Friday games including a clash with the reigning champion Knicks, a historic Reggie Miller rivalry."
