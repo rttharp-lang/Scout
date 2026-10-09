@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "smoke": "vite build && node scripts/smoke.mjs && node scripts/review-smoke.mjs && node scripts/hub-smoke.mjs && node scripts/homecourt-smoke.mjs",
     "research:validate": "node scripts/nba/validate.mjs --all",
-    "research:assemble": "node scripts/nba/assemble.mjs"
+    "research:assemble": "node scripts/nba/assemble.mjs",
+    "research:digest": "node scripts/nba/digest.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

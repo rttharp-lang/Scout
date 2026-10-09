@@ -43,6 +43,7 @@ Every file follows an output contract in `src/nba/agents/roster.js`. To check th
 node scripts/nba/validate.mjs --all     # every market file
 node scripts/nba/validate.mjs league    # league.json
 node scripts/nba/assemble.mjs           # publish to src/nba/data/ for the site
+node scripts/nba/digest.mjs             # one-page-per-market digest the league agents start from
 ```
 
 ## Reading it responsibly

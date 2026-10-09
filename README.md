@@ -29,6 +29,8 @@ A league stage then audits each division against the verified league calendar an
 
 The published corpus is mostly knowledge drafts. Every dossier is labelled on the site, and [research/nba/README.md](research/nba/README.md) explains what was verified live and how to work through the verification queues.
 
+The orchestration lives in `scripts/nba/workflows/`. `home-court-research.js` runs markets end to end, and can resume a market from any stage. `home-court-league.js` runs the division audits and the league synthesis. Both run under Claude Code's Workflow tool.
+
 ```bash
 node scripts/nba/brief.mjs music por        # print an agent's full brief
 node scripts/nba/brief.mjs --schema strategy # print an output contract
