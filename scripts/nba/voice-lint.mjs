@@ -33,6 +33,11 @@ function lint(t) {
     if (at === "$.headline" && value.length > HEADLINE_MAX[kindOf] && !t.label.endsWith("factcheck") && !t.label.endsWith("critique")) {
       fix.push(`${at}: headline is ${value.length} characters (max ${HEADLINE_MAX[kindOf]})`);
     }
+    if (at === "$.summary" && kindOf === "lens" && !/\/(factcheck|critique)$/.test(t.label)) {
+      const n = words(value).length;
+      if (n > 85) fix.push(`${at}: the dek is ${n} words (aim for about 60; move detail into the insights)`);
+      else if (n > 70) notes.push(`${at}: the dek is ${n} words (aim for about 60)`);
+    }
     for (const re of HARD) { const m = value.match(re); if (m) fix.push(`${at}: "${m[0]}"`); }
     for (const re of SOFT) { const m = value.match(re); if (m && !(re.source === "!" && /Rip City!/.test(value))) notes.push(`${at}: "${m[0]}"`); }
     const dashes = (value.match(/ — | – |—/g) || []).length;

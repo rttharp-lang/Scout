@@ -2,12 +2,18 @@
 // research file with its pre-rewrite version at a git ref and fails if:
 //   - the shape changed (keys, list lengths, order),
 //   - any data field changed (ids, enums, hex, months, names, URLs…),
-//   - a number or hex code in the prose vanished from the file.
+//   - a number or hex code in the prose vanished from the file,
+//   - it names an NBA city the original never mentioned (another market's text).
 // Proper nouns that vanished are listed as CHECK lines for an editor to resolve.
 //   node scripts/nba/fact-guard.mjs <team> <name> | <team> | league | pulse [east|west] | --all
 //   options: --base <git ref> (default: $HC_BASE, else a2e7372, the last commit
 //   before the October 2026 voice rewrite)
 import { targets, walk, readJSON, readAt, sentences } from "./prose.mjs";
+import { TEAMS } from "../../src/nba/teams.js";
+
+// NBA city and place names. A copy edit never adds a market the original
+// didn't mention, so a new one means text from another market's file.
+const PLACES = [...new Set(TEAMS.flatMap((t) => [t.city, t.place].filter(Boolean)))];
 
 const argv = process.argv.slice(2);
 const bi = argv.indexOf("--base");
@@ -68,6 +74,9 @@ function guard(t) {
   if (lostNums.length) errors.push(`numbers dropped from the file: ${lostNums.join(", ")} (keep every number, as numerals)`);
   const lostHex = [...new Set(hexes(oldProse))].filter((h) => !newHex.has(h));
   if (lostHex.length) errors.push(`hex codes dropped: ${lostHex.join(", ")}`);
+  const oldAll = [...a.values()].map((x) => String(x.value)).join("\n");
+  const strays = PLACES.filter((p) => newAll.includes(p) && !oldAll.includes(p));
+  if (strays.length) errors.push(`mentions ${strays.join(", ")}, which the original file never did: text from another market's file? Restore this market's own text.`);
   const checks = [...names(oldProse)].filter((w) => !newAll.includes(w));
   return { errors, checks };
 }
