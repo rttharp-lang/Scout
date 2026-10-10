@@ -291,41 +291,6 @@
    "by": "agent"
   },
   {
-   "id": "nyk-nyk-c2",
-   "market": "nyk",
-   "found": "2026-10-10",
-   "was": "Nike SoHo is an open Nike-owned door (strategy Brick outerwear where, retail playbook, retail-landscape doors and places, retail-behavior doors).",
-   "now": "Nike SoHo at 529 Broadway closed Jan 10, 2026. Nike's downtown door is now a new store at 611 Broadway, opened April 16, 2026.",
-   "sources": [
-    {
-     "title": "Loja flagship Nike SoHo em Nova York fecha oficialmente as portas para dar lugar à nova IKEA",
-     "url": "https://hypebeast.com/pt/2026/1/nike-soho-nyc-flagship-store-officially-closed-news",
-     "publisher": "Hypebeast",
-     "published": "2026-01"
-    },
-    {
-     "title": "Nike returns to SoHo with new single-level store",
-     "url": "https://ww.fashionnetwork.com/news/Nike-returns-to-soho-with-new-single-level-store,1823664.html",
-     "publisher": "FashionNetwork",
-     "published": ""
-    },
-    {
-     "title": "Nike Is Back in SoHo With a New Store, Designed to Transform Throughout The year",
-     "url": "https://retailboss.co/nike-soho-noho-store-611-broadway-launch/",
-     "publisher": "RetailBoss",
-     "published": ""
-    }
-   ],
-   "files": [
-    "strategy.json",
-    "retail-landscape.json",
-    "retail-behavior.json",
-    "factcheck.json"
-   ],
-   "status": "applied",
-   "by": "agent"
-  },
-  {
    "id": "phi-phi-c2",
    "market": "phi",
    "found": "2026-10-10",
@@ -870,16 +835,16 @@
   }
  ],
  "totals": {
-  "claims": 142,
-  "verified": 84,
-  "contradicted": 25,
-  "unclear": 33,
-  "observations": 30,
-  "references": 21,
-  "searches": 154,
-  "markets": 28,
+  "claims": 132,
+  "verified": 78,
+  "contradicted": 24,
+  "unclear": 30,
+  "observations": 20,
+  "references": 14,
+  "searches": 136,
+  "markets": 27,
   "plans": 30,
-  "checkedSources": 419
+  "checkedSources": 392
  },
  "pulse": {
   "asOf": "2026-10-07",
