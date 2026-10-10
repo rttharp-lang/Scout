@@ -2288,7 +2288,8 @@ function Logo({ size = 24, color = ACCENT }) {
 
 // Persistent top bar on every screen: Scout logo on the left (a real link home),
 // menu on the right. The logo link rewrites the saved session's screen to the
-// landing page before navigating, so "/" always lands on start-from-scratch.
+// landing page before navigating, so home always lands on start-from-scratch.
+// Home is /scout/ when Scout was opened there (links from NBA Fandom).
 function AppHeader({ onMenu, showMenu }) {
   const goHome = () => {
     try {
@@ -2298,7 +2299,7 @@ function AppHeader({ onMenu, showMenu }) {
   };
   return (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-      <a href="/" onClick={goHome} aria-label="Scout — home" style={{ textDecoration: "none", display: "inline-flex" }}><Logo /></a>
+      <a href={window.location.pathname.startsWith("/scout") ? "/scout/" : "/"} onClick={goHome} aria-label="Scout — home" style={{ textDecoration: "none", display: "inline-flex" }}><Logo /></a>
       {showMenu && (
         <button onClick={onMenu} aria-label="Menu" style={{ ...SANS, cursor: "pointer", background: "none", border: "none", boxShadow: "none", padding: 11, margin: -11, display: "flex", alignItems: "center", justifyContent: "center", color: INK }}>
           <Menu size={22} />

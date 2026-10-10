@@ -31,6 +31,8 @@ try {
   u = await go(ctx, "http://fandomscout.com/?city=Portland%2C%20OR"); check("trip deep link stays in Scout", !/\/nba\//.test(u), u);
   await ctx.close(); ctx = await browser.newContext();
   u = await go(ctx, "http://fandomscout.com/#access_token=abc&refresh_token=def"); check("sign-in return stays in Scout", !/\/nba\//.test(u), u);
+  u = await go(ctx, "http://fandomscout.com/scout/"); check("Scout's own address stays in Scout", /\/scout\/$/.test(u), u);
+  u = await go(ctx, "http://fandomscout.com/scout/?city=Chicago%2C%20IL"); check("trip link to /scout/ stays in Scout", /\/scout\/$/.test(u), u);
   await ctx.close(); ctx = await browser.newContext();
   const p = await ctx.newPage();
   await p.goto("http://fandomscout.com/?app=scout", { waitUntil: "load" }); await wait(600);
@@ -38,6 +40,17 @@ try {
   await p.goto("http://fandomscout.com/", { waitUntil: "load" }); await wait(600);
   check("Scout home after that, same tab, stays in Scout", !/\/nba\//.test(p.url()), p.url());
   await ctx.close(); ctx = await browser.newContext();
+  // The links NBA Fandom actually renders open Scout, not NBA Fandom.
+  {
+    const q = await ctx.newPage();
+    await q.goto("http://fandomscout.com/nba/#/m/por", { waitUntil: "load" }); await wait(1200);
+    await q.getByText("Plan a scouting trip in Scout").click(); await wait(1500);
+    check("NBA market page trip button opens Scout", /\/scout\/$/.test(q.url()) && (await q.title()) === "Scout", q.url());
+    await q.goto("http://fandomscout.com/nba/#/", { waitUntil: "load" }); await wait(800);
+    await q.getByText("Scout trip planner").click(); await wait(1500);
+    check("NBA footer link opens Scout", /\/scout\/$/.test(q.url()) && (await q.title()) === "Scout", q.url());
+    await q.close();
+  }
   u = await go(ctx, "http://fandomscout.com/nba/#/m/por"); check("deep link to a market works", /\/nba\/#\/m\/por$/.test(u), u);
   u = await go(ctx, "http://other.example/"); check("other hosts are untouched", !/\/nba\//.test(u), u);
   await browser.close();
