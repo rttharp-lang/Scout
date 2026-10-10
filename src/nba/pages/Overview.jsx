@@ -26,7 +26,7 @@ export default function Overview() {
     return [...list].sort((a, b) => (sort === "az" ? a.team.city.localeCompare(b.team.city) : score(b) - score(a) || a.team.city.localeCompare(b.team.city)));
   }, [conf, division, sort, q]);
 
-  const moments = useMemo(() => monthMoments(happeningIn(now.ym)), [now.ym]);
+  const moments = useMemo(() => monthMoments(happeningIn(now.ym), now.ym), [now.ym]);
 
   return (
     <div>
@@ -105,8 +105,8 @@ function MarketWall() {
         <div key={c}>
           <div className="hc-eyebrow hc-wall-label">{c}ern Conference</div>
           <div className="hc-wall-grid">
-            {markets.filter((m) => m.team.conference === c).sort((a, b) => a.team.city.localeCompare(b.team.city)).map((m) => {
-              const bg = heroColor(m.team);
+            {markets.filter((m) => m.team.conference === c).sort((a, b) => placeOf(a.team).localeCompare(placeOf(b.team))).map((m) => {
+              const bg = wallColor(m.team);
               return (
                 <a key={m.id} href={href("m", m.id)} className="hc-wall-tile" style={{ background: bg, color: inkOn(bg) }} title={`${placeOf(m.team)} ${m.team.name}`} aria-label={`${m.team.abbr}, ${placeOf(m.team)} ${m.team.name}`}>
                   <span>{m.team.abbr}</span>
@@ -119,6 +119,13 @@ function MarketWall() {
     </nav>
   );
 }
+
+// A tile color that stands off the black panel: a team whose main color is
+// black (the Nets) shows its next non-white color instead.
+const wallColor = (team) => {
+  const c = heroColor(team);
+  return /^#0{6}$/i.test(c) ? team.colors.find((x) => !/^#(0{6}|F{6})$/i.test(x)) || "#2A2A2A" : c;
+};
 
 // What's inside, in four doors.
 function Inside() {
@@ -154,17 +161,19 @@ const latestUpdate = () => markets.map((m) => m.updated).filter(Boolean).sort().
 // most half the row.
 const MAX_MOMENTS = 8;
 const escapeRe = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-function monthMoments(list) {
+function monthMoments(list, ym) {
   const rank = (c) => (c.priority === 1 ? 0 : 10) + ({ event: 0, launch: 1, season: 2 }[c.timing.kind] ?? 3)
-    + (dayOf(c) ? 0 : 3) + (c.moment.length > 80 ? 2 : 0);
+    + (dayOf(c) ? 0 : 3) + (c.moment.length > 80 ? 2 : 0) + ((c.timing.end || c.timing.start).slice(0, 7) > ym ? 3 : 0);
   const best = new Map();
   for (const c of list) { const b = best.get(c.m.id); if (!b || rank(c) < rank(b)) best.set(c.m.id, c); }
   const order = [...best.values()].sort((a, b) => rank(a) - rank(b) || (b.m.scorecard?.fandom ?? 0) - (a.m.scorecard?.fandom ?? 0) || a.m.team.city.localeCompare(b.m.team.city));
   const names = published().map((m) => ({ id: m.id, re: new RegExp(`\\b(${[m.team.city, placeOf(m.team), m.team.name].map(escapeRe).join("|")})\\b`) }));
   const picked = [], covered = new Set(), per = { East: 0, West: 0 };
+  const cup = (c) => /\bCup\b/.test(c.moment);
   for (const c of order) {
     const conf = c.m.team.conference;
     if (picked.length >= MAX_MOMENTS || covered.has(c.m.id) || per[conf] >= MAX_MOMENTS / 2) continue;
+    if (cup(c) && picked.filter(cup).length >= 2) continue; // one league night shouldn't fill the row
     picked.push(c);
     per[conf]++;
     covered.add(c.m.id);
@@ -174,14 +183,15 @@ function monthMoments(list) {
 }
 const dayOf = (c) => (c.timing.certainty === "confirmed" && c.timing.start.length === 10 ? c.timing.start : "");
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-// "Tue Oct 20", "Oct 20–30", "Oct 30 – Nov 27", "Apr 11 – Jun", or simply
-// "This month" when the brief has no fixed day.
+// An event shows its first night ("Tue Oct 20"); a season or launch window
+// shows its span ("Oct 20–30", "Oct 30 – Nov 27", "Apr 11 – Jun"). Without a
+// fixed day it says "This month".
 function momentDate(c) {
   const t = c.timing;
   if (!dayOf(c)) return "This month";
   const mon = (s) => MONTHS[Number(s.slice(5, 7)) - 1];
   const d = (s) => `${mon(s)} ${Number(s.slice(8, 10))}`;
-  if (t.end && t.end !== t.start) {
+  if (t.end && t.end !== t.start && t.kind !== "event") {
     if (t.end.length === 7) return t.end > t.start.slice(0, 7) ? `${d(t.start)} – ${mon(t.end)}` : d(t.start);
     return t.end.slice(0, 7) === t.start.slice(0, 7) ? `${d(t.start)}–${Number(t.end.slice(8, 10))}` : `${d(t.start)} – ${d(t.end)}`;
   }
