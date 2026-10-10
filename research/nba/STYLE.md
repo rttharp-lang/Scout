@@ -34,7 +34,7 @@ Home Court should read like a good city guide or a magazine's city issue. The wr
 | Field | How to write it |
 |---|---|
 | Dossier `headline` | A magazine headline of 90 characters at most. Make one point, not a summary of the whole file. |
-| `summary` | A dek: 2-4 sentences on what's going on and why it matters to the team. |
+| `summary` | A dek: 2-4 sentences, about 60 words at most, on what's going on and why it matters to the team. Not a list of everything in the file. |
 | Brief `headline` | 120 characters at most: the market's story in a line. |
 | Brief `thesis` | A short opening paragraph, 4-7 sentences, no semicolon chains. End on what to do, in order. |
 | `title` (insights, opportunities) | 2-8 words, specific. Use a colon only when it earns its place. |
@@ -48,7 +48,7 @@ Home Court should read like a good city guide or a magazine's city issue. The wr
 
 ## Rules that never bend
 
-1. **Keep every fact.** Every name, number, date, place, hex code, price and statistic stays. Cutting words is fine; cutting facts isn't. A fact repeated in the same file may be kept just once.
+1. **Keep every fact, once.** Every name, number, date, place, hex code, price and statistic stays somewhere in the file. Cutting words is fine; losing facts isn't. The fact guard checks the whole file, so a fact that's covered in the insights, places or people can and should be cut from the headline and summary. Those are the front of the piece: pick the story and leave the detail to the fields below. If a fact appears only in the summary and the summary would be better without it, move it to the field where it belongs (an insight's detail, a place's why) rather than dropping it.
 2. **Keep numbers as numerals** ("3 or 4 pieces", "June 5", "the '77 title").
 3. **Keep the JSON shape:** the same keys, the same number of items in every list, the same order.
 4. **Don't touch data fields:**
@@ -63,12 +63,21 @@ Home Court should read like a good city guide or a magazine's city issue. The wr
 
 `node scripts/nba/fact-guard.mjs <team> <file> [--base <git ref>]` enforces rules 1-4 against an earlier version of the file (by default, the text before the October 2026 rewrite). `node scripts/nba/voice-lint.mjs <team> <file>` flags the "cut on sight" list, long sentences and long headlines.
 
+## Don't just chop
+
+Splitting a long sentence into three short ones is a start, not the job. Read each field aloud and rewrite it the way you'd say it to a colleague who knows the city. Lead with the most interesting thing. Cut throat-clearing ("It is worth noting that", "In terms of"). Prefer the specific verb ("re-wears", "sells out", "papers the poles") to the general one ("has", "features", "is home to"). Vary how sentences open; don't start three in a row with "The" or with the city's name.
+
 ## Before and after
 
 **Dossier headline** (New Orleans, music)
 - *Before:* In New Orleans music runs on a street calendar rather than a playlist: Sunday second lines, Carnival marching bands and bounce's ward call-outs keep the same October-to-June clock as the Pelicans, so Nike should co-sign the clubs, bands and artists who own that sound instead of sampling it.
 - *After:* New Orleans music runs on a street calendar, and it keeps the Pelicans' hours.
 - The second lines, Carnival bands and bounce live on in the summary and insights.
+
+**Dossier summary** (Portland, music)
+- *Before:* Portland music runs on two engines: the Black Albina tradition (1940s 'Jumptown' jazz on Williams Avenue, 1970s funk born out of Jefferson High's soul scene, now archived and remixed by Albina Music Trust) and a DIY punk/indie/record-store culture that still papers wooden telephone poles with screenprinted gig posters. The Blazers plug into both through DJ O.G. ONE… [five more sentences]
+- *After:* Portland music runs on two engines: the Black Albina tradition, from 1940s "Jumptown" jazz to 1970s funk, and a DIY scene that still papers telephone poles with screenprinted gig posters. The Blazers plug into both through DJ O.G. ONE and "The Trumpets." The team's two biggest music names, Lillard and Aminé, wear rival brands, so Nike's way in is the scene itself: its institutions, its print artists and Albina's summer festivals.
+- (The Williams Avenue, Jefferson High, Albina Music Trust, Oct. 21 and City Council facts already live in the insights, so the dek can leave them there.)
 
 **Brief thesis** (Portland)
 - *Before:* Portland is a loyalty-first, one-team region whose crowd includes a large share of the people who design sportswear for a living, so it rewards craft and punishes anything that feels like a corporate template. In 2026-27 it has no new City Edition (the 2019-20 design is being re-worn), no Specter kit and no opening-night or Christmas game, yet June 5, 2027 is the 50th anniversary of the only title…
