@@ -189,13 +189,12 @@
 .hc-wall { display: grid; gap: 16px; background: var(--surface-invert); border-radius: var(--radius-card); padding: clamp(16px, 2.2vw, 24px); }
 .hc-wall-label { color: var(--text-muted-invert); margin-bottom: 8px; }
 .hc-wall-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-.hc-wall-tile { position: relative; aspect-ratio: 1.35 / 1; border-radius: 12px; display: flex; align-items: flex-end; padding: 7px 9px; text-decoration: none; font-family: var(--font-display); font-weight: 900; font-size: clamp(14px, 1.5vw, 19px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.hc-wall-tile { position: relative; aspect-ratio: 1.35 / 1; border-radius: 12px; display: grid; place-items: center; padding: 8px; text-decoration: none; font-family: var(--font-display); font-weight: 900; font-size: clamp(14px, 1.5vw, 19px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); transition: transform 0.12s ease, box-shadow 0.12s ease; }
 .hc-wall-tile:hover, .hc-wall-tile:focus-visible { transform: translateY(-2px); box-shadow: inset 0 0 0 2px #fff; }
-.hc-wall-logo { position: absolute; top: 7px; right: 7px; width: 46%; aspect-ratio: 1; border-radius: 999px; background: #fff; display: grid; place-items: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); }
-.hc-wall-logo img { width: 78%; height: 78%; object-fit: contain; display: block; }
+.hc-wall-logo { width: 72%; height: 78%; object-fit: contain; display: block; filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.35)); }
 .hc-home-title { font-size: clamp(2.6rem, 12vw, 7.4rem); }
 .hc-home-title span { display: block; white-space: nowrap; }
-@media (max-width: 520px) { .hc-wall-logo { top: 4px; right: 4px; width: 50%; } .hc-wall-grid { gap: 4px; } .hc-wall-tile { border-radius: 9px; padding: 5px 6px; font-size: 13px; } }
+@media (max-width: 520px) { .hc-wall-grid { gap: 4px; } .hc-wall-tile { border-radius: 9px; padding: 5px 6px; font-size: 13px; } }
 
 /* What's inside: four doors */
 .hc-inside { display: grid; gap: var(--grid-gap); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: clamp(28px, 4vw, 44px); }
