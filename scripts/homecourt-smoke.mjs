@@ -71,7 +71,7 @@ async function main() {
     const routes = [
       ["overview", "#/", /NBA\s*Fandom[\s\S]*moments[\s\S]*The markets/i],
       ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top opportunities/i : /league read isn/i],
-      ["calendar", "#/calendar", /League\s*calendar/i],
+      ["calendar", "#/calendar", /League\s*calendar[\s\S]*Who peaks when[\s\S]*October/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
       ["compare", "#/compare", /Opportunity\s*board[\s\S]*Compare ideas[\s\S]*The pick/i],
       ["agents", "#/agents", /Fifteen agents[\s\S]*Method[\s\S]*Known gaps/i],
@@ -164,6 +164,17 @@ async function main() {
       await wait(700);
       const seasons = await page.locator("[aria-label=Season] button").count();
       if (seasons < 1) problems.push(`[${vp.label}] calendar has no season selector`);
+      // Pick a team: its year chart with peaks; then the month view.
+      await page.getByLabel("Team", { exact: true }).selectOption("mem");
+      await wait(600);
+      if (!/#\/calendar\/mem\/year/.test(page.url()) || !(await page.getByText("The peaks: where to focus").count())) problems.push(`[${vp.label}] picking Memphis didn't open its year (${page.url()})`);
+      await page.getByRole("group", { name: "View" }).getByRole("button", { name: "Month" }).click();
+      await wait(400);
+      if (!(await page.getByText(/Memphis in /).count())) problems.push(`[${vp.label}] Memphis month view didn't render`);
+      await page.goto(BASE + "#/calendar/all/month/12", { waitUntil: "load" });
+      await wait(500);
+      const ranked = await page.locator(".hc-cal-rank li").count();
+      if (ranked !== published.length) problems.push(`[${vp.label}] December across the league ranks ${ranked} teams, expected ${published.length}`);
       // Board: the full view filters by route and target season.
       await page.goto(BASE + "#/opportunities", { waitUntil: "load" });
       await wait(700);
