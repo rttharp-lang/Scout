@@ -20,11 +20,11 @@ export function useRoute() {
 export const href = (...parts) => `#/${parts.filter(Boolean).join("/")}`;
 
 // ── Brand ─────────────────────────────────────────────────────────
-// Expert lockup (wordmark + swoosh riding the cap line), then NBA FANDOM.
-export function ExpertMark({ size = 22, color = "var(--accent)" }) {
+// Research lockup (wordmark + swoosh riding the cap line), then NBA FANDOM.
+export function ResearchMark({ size = 22, color = "var(--accent)" }) {
   return (
-    <span style={{ display: "inline-flex", alignItems: "flex-start", gap: "0.12em", fontSize: size }}>
-      <span style={{ fontFamily: "var(--font-wordmark)", fontSize: "1em", fontWeight: 400, letterSpacing: "-0.01em", color, textTransform: "uppercase", lineHeight: 1 }}>Expert</span>
+    <span className="hc-mark" style={{ display: "inline-flex", alignItems: "flex-start", gap: "0.12em", fontSize: size }}>
+      <span style={{ fontFamily: "var(--font-wordmark)", fontSize: "1em", fontWeight: 400, letterSpacing: "-0.01em", color, textTransform: "uppercase", lineHeight: 1 }}>Research</span>
       <svg viewBox="0 0 413.62 144.78" aria-hidden="true" style={{ display: "block", height: "0.68em", width: "auto", transform: "translateY(0.06em)" }}>
         <path fill={color} transform="translate(-49.19 -183.61)" d="M462.81,183.61,160.21,312.47Q122.57,328.39,97,328.39q-29,0-42-20.27-8.2-13-4.83-33.06T68,232.35Q80.1,214,107.61,184.09a105.53,105.53,0,0,0-13.51,31.85q-7.24,30.89,13,45.37,9.65,6.76,26.54,6.76a123.37,123.37,0,0,0,30.4-4.34Z" />
       </svg>
@@ -37,8 +37,8 @@ export function Header({ route }) {
   const link = (to, label, active) => <a href={to} aria-current={active ? "page" : undefined}>{label}</a>;
   return (
     <header className="hc-header">
-      <a className="hc-brand" href={href()} aria-label="Expert Product Excellence &amp; Intelligence: home">
-        <ExpertMark />
+      <a className="hc-brand" href={href()} aria-label="Research Product Excellence &amp; Intelligence: home">
+        <ResearchMark />
         <span className="hc-brand-divider" />
         <span className="hc-brand-name">Product Excellence &amp; Intelligence</span>
       </a>
@@ -59,7 +59,7 @@ export function Header({ route }) {
 export function Footer() {
   return (
     <footer className="hc-footer">
-      <span>NBA Fandom by Expert · Built for Nike Basketball</span>
+      <span>NBA Fandom by Research · Built for Nike Basketball</span>
       <span>Updated {fmtDate(markets.map((m) => m.updated).filter(Boolean).sort().pop())} · <a href={href("method")}>How it was researched and checked</a></span>
     </footer>
   );
