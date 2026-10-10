@@ -37,14 +37,17 @@ export function targets(args) {
 
 // Walks a value alongside its schema, calling visit(kind, path, key, value, base)
 // for every leaf: kind is "prose" for rewritable text, "fixed" for data.
-export function walk(value, schema, visit, at = "$", key = "", fixed = false) {
-  // `teams` is a list of team ids in league.json but a list of entries in the
-  // pulse; `months` is a list of month numbers, except in rhythm.json, where it
-  // holds the twelve monthly write-ups.
+export function walk(value, schema, visit, at = "$", key = "", fixed = false, item = false) {
+  // Some keys mean different things in different files. `teams` is a list of
+  // team ids in league.json but a list of entries in the pulse. `months` is a
+  // list of month numbers, except in rhythm.json, where it holds the twelve
+  // monthly write-ups. `team` is a team id, except inside those write-ups,
+  // where it's a list of the month's team moments.
   const listKey = key === "teams" || key === "months";
   const idList = Array.isArray(value) && value.every((v) => v === null || typeof v !== "object");
-  const isFixed = fixed || (FIXED_KEYS.has(key) && (!listKey || idList)) || !!(schema && schema.enum);
-  if (Array.isArray(value)) { value.forEach((v, i) => walk(v, schema && schema.items, visit, `${at}[${i}]`, key, isFixed)); return; }
+  const keyFixed = key === "team" ? typeof value === "string" && !item : listKey ? idList : FIXED_KEYS.has(key);
+  const isFixed = fixed || keyFixed || !!(schema && schema.enum);
+  if (Array.isArray(value)) { value.forEach((v, i) => walk(v, schema && schema.items, visit, `${at}[${i}]`, key, isFixed, true)); return; }
   if (value && typeof value === "object") {
     for (const [k, v] of Object.entries(value)) walk(v, schema && schema.properties && schema.properties[k], visit, `${at}.${k}`, k, isFixed);
     return;
