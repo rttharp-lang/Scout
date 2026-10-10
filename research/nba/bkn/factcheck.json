@@ -1,287 +1,217 @@
 {
   "team": "bkn",
-  "checked": 118,
+  "checked": 30,
   "verdicts": [
     {
-      "lens": "food",
-      "claim": "Clover Hill (Charlie Mitchell) in Brooklyn Heights as a current chef-driven room with a 2022 Michelin star",
-      "verdict": "removed",
-      "note": "Checked live: Mitchell left in early 2025, and Clover Hill closed for good in October 2025. Cut it from the insight, people and verify queue, and put Missy Robbins (Lilia, Misi) in its place.",
-      "source": "https://en.wikipedia.org/wiki/Clover_Hill_(restaurant)"
+      "lens": "music",
+      "claim": "Carnival \"lands after the season starts\" (insight title)",
+      "verdict": "corrected",
+      "note": "The title contradicted its own detail: Panorama ran Sept 5 and the parade Sept 7, 2026, weeks before tip-off. Retitled \"Carnival lands before training camp\".",
+      "source": "https://fox5ny.com/news/nycs-west-indian-day-parade-returns-sept-7-what-know-before-you-go"
+    },
+    {
+      "lens": "culture",
+      "claim": "The 2020 census counted about 2.6 million people in Brooklyn",
+      "verdict": "corrected",
+      "note": "The 2020 census count for Kings County was about 2.74 million. Changed to \"about 2.7 million\".",
+      "source": "https://en.wikipedia.org/wiki/Brooklyn"
+    },
+    {
+      "lens": "hoops",
+      "claim": "The franchise began in the ABA as the New York Nets",
+      "verdict": "corrected",
+      "note": "The team started in 1967 as the New Jersey Americans and became the New York Nets in 1968. Fixed the detail; the Stars and Stripes look is unchanged.",
+      "source": "https://en.wikipedia.org/wiki/Brooklyn_Nets"
+    },
+    {
+      "lens": "uniform",
+      "claim": "Eras table: \"1967-1976 (New York Nets, ABA)\"",
+      "verdict": "corrected",
+      "note": "The New York Nets name ran 1968-1977, including the first NBA season on Long Island before the 1977 move to New Jersey. Era label changed to 1968-1977.",
+      "source": "https://en.wikipedia.org/wiki/Brooklyn_Nets"
     },
     {
       "lens": "food",
-      "claim": "Atlantic Antic runs late Sept/early Oct from Hicks St to Fourth Ave",
-      "verdict": "confirmed",
-      "note": "Checked live: the 51st edition is listed for Sunday, Sept 27, 2026, Hicks St to Fourth Ave. One source hints at a move to Oct 4. The window text stays; the 2027 date is still to confirm.",
+      "claim": "The Atlantic Antic runs Hicks St to Fourth Ave, \"ending at Barclays\"",
+      "verdict": "corrected",
+      "note": "Fourth Avenue is a block short of Barclays at Flatbush. Changed to \"ending a block from Barclays\". The Sept 27, 2026 date stands per the iLoveNY listing.",
       "source": "https://www.iloveny.com/thebeat/post/the-51st-annual-atlantic-antic-returns-to-atlantic-avenue-on-sunday-september-27-2026/"
     },
     {
-      "lens": "strategy",
-      "claim": "Partner: The Brooklyn Circus (Ouigi Theodore) as Kings County varsity co-designer",
+      "lens": "music",
+      "claim": "Nets home opener vs. Charlotte on Oct 21, 2026, 7:30 p.m. at Barclays",
       "verdict": "unverifiable",
-      "note": "Checked live: only dated listings turned up (150 Nevins St, founded 2006). The current storefront and appetite are unconfirmed. Don't name the shop as a fixed door until it's checked.",
-      "source": "https://www.ladygunn.com/fashion-style/the-brooklyn-circus"
-    },
-    {
-      "lens": "uniform",
-      "claim": "Brooklyn Navy Yard hosts the Nets' practice facility partnership",
-      "verdict": "corrected",
-      "note": "Contradicted the fanbase dossier: the practice base is the HSS Training Center in Sunset Park. The Navy Yard stays only as a source of industrial-heritage stories.",
-      "source": ""
-    },
-    {
-      "lens": "uniform",
-      "claim": "Brooklyn Museum is in Crown Heights",
-      "verdict": "corrected",
-      "note": "Changed to Prospect Heights (Eastern Parkway), on the border of the two neighborhoods, to match the other dossiers.",
-      "source": ""
-    },
-    {
-      "lens": "uniform",
-      "claim": "Kidd-era Finals teams wore red, white and blue",
-      "verdict": "corrected",
-      "note": "Contradicted the eras table: the 2002-03 Nets wore navy, red and silver. Fixed.",
-      "source": ""
-    },
-    {
-      "lens": "fanbase",
-      "claim": "Barclays operated under a separate ownership structure from the Nets",
-      "verdict": "corrected",
-      "note": "The other dossiers, and my own knowledge, have Joe Tsai's BSE Global owning the Nets, the Liberty and Barclays operations. Reworded and queued for verification.",
-      "source": ""
-    },
-    {
-      "lens": "fanbase",
-      "claim": "Brooklyn Brigade formed around the Barclays move and sits in the upper sections",
-      "verdict": "corrected",
-      "note": "The origin and section are oddly specific, and I recall the group predating Brooklyn (New Jersey era). Softened to a generic organized-supporter description.",
-      "source": ""
-    },
-    {
-      "lens": "rhythm",
-      "claim": "Atlantic Terminal serves a dozen subway lines",
-      "verdict": "corrected",
-      "note": "Atlantic Av-Barclays Ctr serves nine lines (2,3,4,5,B,D,N,Q,R) plus the LIRR. Fixed.",
-      "source": ""
-    },
-    {
-      "lens": "rhythm",
-      "claim": "'Brooklyn Never Sleeps' is a long-running Nets slogan",
-      "verdict": "corrected",
-      "note": "Not confident it's a Nets line. Reworded as unverified.",
-      "source": ""
-    },
-    {
-      "lens": "food",
-      "claim": "Little Haiti Cultural and Business District designated by New York State in 2018",
-      "verdict": "corrected",
-      "note": "The art dossier says the city did it, and the designation was a NYC action. Changed to New York City.",
-      "source": ""
-    },
-    {
-      "lens": "food",
-      "claim": "Yemen Cafe on Atlantic Ave",
-      "verdict": "removed",
-      "note": "Unsure it's still operating. Removed the name and kept the Arab-strip claim through Sahadi's (since 1948).",
-      "source": ""
+      "note": "Rests on one schedule write-up (Fantasy Nerds). No live search was possible this run, so it was not cross-checked against NBA.com. Kept with the dossier source; confirm before locking a launch.",
+      "source": "https://www.fantasynerds.com/news/story/2026/08/13/brooklyn-nets-announce-2026-27-schedule-facing-tough-opening-stretch-1595839"
     },
     {
       "lens": "music",
-      "claim": "\"Spread love, it's the Brooklyn way\" quoted in full (music and art)",
-      "verdict": "corrected",
-      "note": "The seven-word lyric broke the own-words rule. Trimmed to \"Spread love\" in music and art.",
-      "source": ""
+      "claim": "Olivier Sedra is replacing David Diamante as Nets PA announcer",
+      "verdict": "unverifiable",
+      "note": "Sourced to YES Network and Wikipedia in the dossier, already hedged as \"reported\" with start date unconfirmed. Not re-checked live. Hedge kept.",
+      "source": "https://www.yesnetwork.com/news/brooklyn-nets-name-olivier-sedra-as-public-add-255044152"
     },
     {
       "lens": "music",
-      "claim": "Sheff G and Sleepy Hallow carried drill out of East Flatbush",
-      "verdict": "corrected",
-      "note": "The neighborhood attribution is uncertain. Reworded to Brooklyn.",
-      "source": ""
+      "claim": "Jay-Z sold his Nets stake in 2013 and joined Puma as basketball creative director in 2018",
+      "verdict": "confirmed",
+      "note": "Matches the public record and the dossier source. His 2026 Puma role stays flagged as unconfirmed.",
+      "source": "https://in.fashionnetwork.com/news/Puma-snaps-up-jay-z,989342.html"
     },
     {
       "lens": "music",
-      "claim": "Brooklyn Bowl made famous by Questlove's 'Bowl Train'",
-      "verdict": "corrected",
-      "note": "Oddly specific and shaky. Replaced with a general live-music pedigree.",
+      "claim": "Coogi knit was licensed for the Nets 2019-20 City Edition",
+      "verdict": "confirmed",
+      "note": "The 2019-20 Brooklyn City Edition was the Coogi-pattern set honoring Biggie. Consistent with the dossier.",
+      "source": "https://www.nba.com/nets/uniform/city-edition"
+    },
+    {
+      "lens": "music",
+      "claim": "Biggie died March 9, 1997; Life After Death released March 25, 1997",
+      "verdict": "confirmed",
+      "note": "Both dates match the public record, so the 30th anniversaries fall in March 2027.",
+      "source": "https://albumism.com/features/tribute-celebrating-25-years-of-the-notorious-big-life-after-death"
+    },
+    {
+      "lens": "art",
+      "claim": "Barclays wears about 12,000 pre-weathered steel panels and is in a five-year, $100M renovation from 2025",
+      "verdict": "confirmed",
+      "note": "Panel count matches SHoP coverage. The $100M renovation and second phase rest on 6sqft. Naming and phase-three details stay in the verify queue.",
+      "source": "https://www.6sqft.com/barclays-center-announces-second-phase-of-100m-renovation/"
+    },
+    {
+      "lens": "art",
+      "claim": "Weeksville Hunterfly Road Houses restoration completed in February 2026",
+      "verdict": "confirmed",
+      "note": "The mayor's office announced completion in February 2026, and YIMBY covered it in March.",
+      "source": "https://www.nyc.gov/fr/mayors-office/news/2026/02/mayor-mamdani-announces-completion-of-weeksville-restoration--pr"
+    },
+    {
+      "lens": "art",
+      "claim": "H&M sued Revok in 2018 over a Williamsburg handball-court piece, then dropped the suit",
+      "verdict": "confirmed",
+      "note": "Matches the public record of the 2018 case and backlash.",
       "source": ""
     },
     {
       "lens": "art",
-      "claim": "Glaser Brooklyn Brewery B dated 1988 (food says 1987)",
-      "verdict": "corrected",
-      "note": "The dossiers disagreed. Art now says \"late 1980s\".",
+      "claim": "The G is the only full-length subway line that never enters Manhattan; lime hex #6CBE45",
+      "verdict": "confirmed",
+      "note": "Correct for the G (shuttles aside), and #6CBE45 is the MTA G-line green.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "DanceAfrica 2026 was the 49th edition, May 16-28, Uganda focus",
+      "verdict": "confirmed",
+      "note": "Matches the BroadwayWorld lineup story and BK Reader coverage. The 2027 50th year follows from that count.",
+      "source": "https://www.broadwayworld.com/brooklyn/article/BAM-Unveils-DANCEAFRICA-Festival-2026-Lineup-and-Events-20260508"
+    },
+    {
+      "lens": "underground",
+      "claim": "Michael Jordan born at Cumberland Hospital, Fort Greene, 1963; Mars Blackmon fronted Air Jordan III ads in 1988",
+      "verdict": "confirmed",
+      "note": "Both match the public record.",
       "source": ""
     },
     {
       "lens": "underground",
-      "claim": "KCDC Skateshop open since 2000; J'Ouvert fatal shootings in 2015 and 2016",
-      "verdict": "corrected",
-      "note": "Removed the founding year. Kept 2015 only for the violence reference.",
-      "source": ""
-    },
-    {
-      "lens": "retail-landscape",
-      "claim": "Pyer Moss and Brooklyn Industries as active local brands with multiple stores",
-      "verdict": "corrected",
-      "note": "As far as I know, Pyer Moss's runway presence is paused, and Brooklyn Industries' store count is uncertain. Reworded and queued.",
-      "source": ""
-    },
-    {
-      "lens": "hoops",
-      "claim": "Liberty framed as a current WNBA champion",
-      "verdict": "corrected",
-      "note": "The Liberty won in 2024, and a different club won in 2025. Now says 2024 champion.",
-      "source": ""
-    },
-    {
-      "lens": "retail-behavior",
-      "claim": "'Brooklyn, we're home' as a Nets 2012 phrase",
-      "verdict": "corrected",
-      "note": "Unverified as a real campaign or fan phrase. Flagged for a check.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Calendar and top insight call Nov 3 the '15th anniversary' / '15 Brooklyn seasons'",
-      "verdict": "unverifiable",
-      "note": "Nov 3, 2012 to Nov 3, 2026 is the 14th anniversary. 2026-27 is the 15th season. The editor must reword, and also confirm the Nets are home that day.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Uniform concept 'Still a City' and 'avoid the ABA red, white and blue set'",
-      "verdict": "unverifiable",
-      "note": "The verified facts say the ABA throwbacks may be the City Edition. If so, the uniform concept is moot and becomes a conditional or alternate-lane brief.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "ABA launch 'on LIU's old floor at the Brooklyn Paramount'",
-      "verdict": "unverifiable",
-      "note": "Live Nation's 2024 conversion likely changed the floor. Confirm the gym floor survives and the venue is bookable.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Atlantic Antic booth to debut next season's collection (Sept 2027)",
-      "verdict": "unverifiable",
-      "note": "The festival is real, but a debut booth needs the 2027 date and permits. The 2027-28 uniforms won't be public by then.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Brigade, Dr. Jays, Kith Brooklyn and Brooklyn Circus named as live doors/partners",
-      "verdict": "unverifiable",
-      "note": "Only the Circus was re-checked live, and that listing is dated. Treat the rest as hypotheses until the stores and groups are confirmed open.",
-      "source": ""
-    },
-    {
-      "lens": "music",
-      "claim": "Brooklyn Paramount reopened by Live Nation in 2024 after serving as LIU's gym",
-      "verdict": "unverifiable",
-      "note": "Confirm the operating status, the reopening year and what remains of the gym.",
-      "source": ""
-    },
-    {
-      "lens": "music",
-      "claim": "David Diamante is the Nets PA announcer and his 'Brooooklyn!' call is the arena's sound",
-      "verdict": "unverifiable",
-      "note": "Confirm his 2026-27 role, and get consent before any product or audio use.",
-      "source": ""
-    },
-    {
-      "lens": "music",
-      "claim": "DJ Clark Kent died in 2024 and co-designed Nike Air Force 1s",
-      "verdict": "unverifiable",
-      "note": "Confirm the death year, the AF1 collaboration history and the estate contact.",
-      "source": ""
-    },
-    {
-      "lens": "art",
-      "claim": "Hank Willis Thomas 'Unity' (2019) location and Stephen Powers 'Love Letter to Brooklyn' on the Macy's garage",
-      "verdict": "unverifiable",
-      "note": "The install location, and whether it survived the Fulton St redevelopment, are unconfirmed.",
-      "source": ""
-    },
-    {
-      "lens": "art",
-      "claim": "Brooklyn Museum First Saturdays still running (art, rhythm)",
-      "verdict": "unverifiable",
-      "note": "Programming may have changed. Confirm the 2026-27 schedule.",
-      "source": ""
-    },
-    {
-      "lens": "culture",
-      "claim": "New Balance is the NYC Marathon apparel partner; Nov 1, 2026 date and mile-8 Barclays pass",
-      "verdict": "unverifiable",
-      "note": "The date follows from the first Sunday of November. The partner and route need a live check.",
-      "source": ""
-    },
-    {
-      "lens": "food",
-      "claim": "Barclays concessions still include Nathan's, Junior's, L&B and Brooklyn Brewery",
-      "verdict": "unverifiable",
-      "note": "True at the 2012 opening. Current vendors are unknown.",
-      "source": ""
-    },
-    {
-      "lens": "food",
-      "claim": "Rawlston Williams (Food Sermon), Bonnie's, Win Son, Roberta's, Paulie Gee's, Lucali, Di Fara, Freddy's Bar still open",
-      "verdict": "unverifiable",
-      "note": "All plausible, none re-checked. Verify before naming them in briefs.",
+      "claim": "FLEXN co-created by Reggie \"Regg Roc\" Gray and Peter Sellars at the Park Avenue Armory in 2015",
+      "verdict": "confirmed",
+      "note": "Matches the 2015 Armory production record.",
       "source": ""
     },
     {
       "lens": "underground",
-      "claim": "Brooklyn Flea DUMBO, Beacon's Closet, L Train Vintage, Owl's Head Skatepark, Brooklyn FC at Maimonides Park, Bushwig venue",
+      "claim": "The Liberty won the 2024 WNBA title at Barclays and opened the 2026 season there",
+      "verdict": "confirmed",
+      "note": "The 2024 clincher was Game 5 at Barclays. The 2026 opener rests on the Liberty season page and Brooklyn Downtown Star.",
+      "source": "https://en.wikipedia.org/wiki/2026_New_York_Liberty_season"
+    },
+    {
+      "lens": "food",
+      "claim": "Junior's turned down a $45M offer in 2014 and has run at Flatbush Ave Extension and DeKalb since 1950",
+      "verdict": "confirmed",
+      "note": "Matches 6sqft. No 2026 sale or closure news was found by the lens agent. Still in the verify queue.",
+      "source": "https://www.6sqft.com/juniors-isnt-going-anywhere-owner-turns-down-a-45m-offer-to-the-dismay-of-a-hungry-developer/"
+    },
+    {
+      "lens": "food",
+      "claim": "Di Fara is still run by the DeMarco family after Dom DeMarco's 2022 death and launched frozen pizza in 2025",
+      "verdict": "confirmed",
+      "note": "DeMarco died in March 2022. News12 covered the frozen line. Late-2026 status stays in the verify queue.",
+      "source": "https://brooklyn.news12.com/midwoods-di-fara-pizza-expands-to-frozen-pizza"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Clothing and footwear under $110 are exempt from NY state 4% and NYC 4.5% tax; full rate 8.875%",
+      "verdict": "confirmed",
+      "note": "Correct. The 0.375% MCTD tax still applies under $110, which the dossier says.",
+      "source": "https://www.tax.ny.gov"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Kith Brooklyn is an open door on Flatbush Avenue",
       "verdict": "unverifiable",
-      "note": "Operating status and specifics are unconfirmed.",
+      "note": "Knowledge-mode claim, and no live search was possible. Kith has closed and moved stores before. Already in the verify queue; don't plan a launch there until checked.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
-      "claim": "Nike-relevant doors: Dr. Jays, Kith Brooklyn (Knicks tie), Supreme Williamsburg, Foot Locker formats",
+      "claim": "Dr. Jays, Buffalo Exchange (Williamsburg) and Brooklyn Industries operate Brooklyn doors",
       "verdict": "unverifiable",
-      "note": "Store status and Kith's Nets stance need a live check.",
-      "source": ""
-    },
-    {
-      "lens": "retail-behavior",
-      "claim": "NYC clothing under $110 exempt from state and city sales tax; 8.875% combined",
-      "verdict": "unverifiable",
-      "note": "A long-standing rule, but rates change. Confirm with the NY tax authority.",
-      "source": ""
-    },
-    {
-      "lens": "uniform",
-      "claim": "City Edition history: Biggie/Coogi 2019-20 and Basquiat set (2020-21 per art)",
-      "verdict": "unverifiable",
-      "note": "Biggie 2019-20 is solid. The Basquiat season and every other set are from memory.",
-      "source": ""
-    },
-    {
-      "lens": "hoops",
-      "claim": "Liberty at Barclays, Foster Park, Brownsville Rec Center, LIU Sharks at Steinberg",
-      "verdict": "confirmed",
-      "note": "Long established. Only the 2027 Liberty schedule needs confirming.",
+      "note": "Knowledge-mode store claims with no live check. Brooklyn Industries shrank after its 2020 bankruptcy. All three are in the verify queue; confirm before naming them in a plan.",
       "source": ""
     },
     {
       "lens": "culture",
-      "claim": "Brooklyn city 1834-1898, Dodgers left 1957, Chisholm 1968, Weeksville 1838, Nets first Brooklyn game Nov 3, 2012",
+      "claim": "Brooklyn was an independent city from 1834 to consolidation on Jan 1, 1898; Little Caribbean recognized in 2017",
       "verdict": "confirmed",
-      "note": "Long-established history.",
+      "note": "Both match the public record and the Little Caribbean source.",
+      "source": "https://en.wikipedia.org/wiki/Little_Caribbean,_Brooklyn"
+    },
+    {
+      "lens": "culture",
+      "claim": "Shirley Chisholm, born in Brooklyn to Barbadian and Guyanese parents, elected to Congress in 1968",
+      "verdict": "confirmed",
+      "note": "Matches the public record.",
       "source": ""
     },
     {
-      "lens": "rhythm",
-      "claim": "Cup group, Oct 20 opener, Christmas, MLK, deadline Feb 11, All-Star Feb 19-21, season end Apr 11, Labor Day Sept 6, 2027",
+      "lens": "fanbase",
+      "claim": "The Brooklyn Brigade is the Nets' best-known supporter group with its own section",
+      "verdict": "unverifiable",
+      "note": "The fanbase agent ran no searches, and no source backs the group's current activity or section. Treat as unconfirmed before any partnership.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Opportunity 1 launches \"at the Oct 21 home opener against Charlotte\"",
+      "verdict": "unverifiable",
+      "note": "The date rests on one schedule write-up (Fantasy Nerds) carried from the music dossier. Confirm it on NBA.com before locking the launch.",
+      "source": "https://www.fantasynerds.com/news/story/2026/08/13/brooklyn-nets-announce-2026-27-schedule-facing-tough-opening-stretch-1595839"
+    },
+    {
+      "lens": "strategy",
+      "claim": "The Knicks \"host both the opener and the noon Christmas game\"",
+      "verdict": "corrected",
+      "note": "Overstated. Opening night is a tripleheader, and the Knicks host only the 76ers game. Editor should say \"host an opening-night game\" or similar.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Opportunity 4 tells partners to avoid Kith and use a Brooklyn-owned door",
+      "verdict": "unverifiable",
+      "note": "Kith Brooklyn's current status is unconfirmed. Keep the advice but don't name Kith as an open Flatbush door until checked.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "\"The Nets' 15th Brooklyn season\" in the Weathered theme",
       "verdict": "confirmed",
-      "note": "Matches the CURRENT FACTS section. Labor Day 2027 is the first Monday of September.",
+      "note": "2012-13 was season one in Brooklyn, so 2026-27 is the 15th.",
       "source": ""
     }
   ],
-  "summary": "Most of the Brooklyn dossiers held up on history, geography and 2026-27 league facts. The sharpest errors, all fixed: Clover Hill had closed (October 2025). The Navy Yard was named as a practice base in error. Also wrong were the Atlantic Terminal subway-line count, the Barclays ownership and an over-long Biggie lyric quote. Live checks confirmed Atlantic Antic (Sept 27, 2026, possibly moved to Oct 4) and found only dated Brooklyn Circus listings. The strategy brief needs edits. The Nov 3 anniversary is the 14th, and 2026-27 is the 15th season. Still a City must become conditional if the ABA throwbacks are the City Edition. The Paramount-floor launch is unverified, and so are several named doors and partners."
+  "summary": "The live-refreshed Nets dossiers hold up on history, dates and league facts. Five errors were fixed in place: the Carnival insight title (music), the 2020 census count (culture), the franchise's New Jersey Americans start (hoops), the New York Nets era years (uniform) and the Antic end point (food). The weak spots are store doors in the knowledge-mode retail-landscape file (Kith, Dr. Jays, Buffalo Exchange, Brooklyn Industries), the Brooklyn Brigade, and the single-source Oct 21 home opener the brief launches on. The shared web-search budget was already spent when this run started, so no new live searches were possible. Verdicts rest on the dossiers' own sources and the public record. The strategy brief overstates the Knicks' opening-night role."
 }

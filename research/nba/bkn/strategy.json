@@ -1,699 +1,755 @@
 {
   "team": "bkn",
-  "headline": "Brooklyn was its own city once. Sell the Nets as its team, not New York's other one.",
-  "thesis": "Brooklyn was a city until 1898, was robbed of the Dodgers in 1957 and got the Nets at Atlantic and Flatbush in 2012. Now Manhattan is celebrating the Knicks' first title since 1973 while the Nets rebuild off 20-62. Nets fans buy the borough, not the box score. The monochrome mark sells as streetwear with no player attached, and people rep a block, a 112 ZIP code and often a home flag before New York. With only quick-turn graphics, personalization and partner events possible this season, use 2026-27 to prove the borough voice and listen to Caribbean, Latino, Chinese and Arab Brooklyn. The real design window is a Kings County line for Labor Day and holiday 2027 and a 2027-28 uniform pitch. Co-author that line with the borough's own institutions and creators. Own Brooklyn's calendar, not national windows the Nets don't have.",
+  "headline": "Brooklyn buys the borough before the box score. Sell its stoops, steel and flags while the Knicks hold the title.",
+  "thesis": "Brooklyn was its own city until 1898, and it still acts like one. Fans wear Nets black and white as a borough badge, and a 20-62 season barely dents that. The Knicks are champions across the river, and the Nets have no opening-night or Christmas game. They were also left off Nike's Specter list, unveiled in Brooklyn on Sept 9. So sell Brooklyn itself: its 112 ZIP codes, brownstone stoops, Caribbean flags and the weathered steel of Barclays. First, launch the 112 program at the first confirmed Barclays game and own the home Cup Nights. Next, sign the panyards for Carnival 2027. Chase Biggie's 30th with the estate, but build a no-license fallback.",
   "archetype": {
-    "name": "The Borough Separatists",
-    "description": "An outnumbered, style-literate tribe that treats the Nets as proof Brooklyn is its own city. Loyalty runs borough first, roster third. It survives losing but punishes anything that reads as Manhattan, tourist or transplant."
+    "name": "The Borough Loyalist",
+    "description": "Fans who back Brooklyn first and the Nets second. They wear black and white to say where they're from, whatever the standings say."
   },
   "pulse": {
-    "teamMoment": "A development year after a 20-62 season. No. 6 pick Mikel Brown Jr. and Egor Demin lead a very young roster, beside veteran scorers Julius Randle and Michael Porter Jr. and new guard Keon Ellis. Jordi Fernandez is newly extended. There's no opening-night or Christmas Day game.",
-    "sentiment": "Patient, wry and mildly hopeful about the kids. Defiantly Brooklyn while the defending-champion Knicks own the city's attention.",
-    "heat": 38
+    "teamMoment": "A development year after 20-62. Rookie Mikel Brown Jr. and Egor Demin lead a young roster, with Julius Randle and Michael Porter Jr. adding veteran scoring under newly extended coach Jordi Fernandez.",
+    "sentiment": "Patient, wry and mildly hopeful. The Knicks' title still rings across the river, and Randle's return to New York gives the rivalry a subplot.",
+    "heat": 42
   },
   "topInsights": [
     {
-      "title": "Brooklyn, never New York",
-      "insight": "The season after the Knicks' parade, the Nets can only win as Brooklyn's team. Locals still call Manhattan 'the city', rep neighborhood names and 112 ZIP codes, and reject the skyline, the Brooklyn Bridge postcard and generic 718 imagery. The independent City of Brooklyn (1834-1898) gives the brand a civic voice no other NBA market has.",
+      "title": "Brooklyn first, Nets second",
+      "insight": "The black-and-white mark sells on borough pride, not on player attachment or wins. Players name Coney Island, Bed-Stuy or Flatbush before the Nets, and fans name a ZIP code before New York. Every Brooklyn ZIP starts with 112, while 718 is shared with three other boroughs.",
       "evidence": [
-        "culture",
         "fanbase",
+        "retail-behavior",
+        "culture",
+        "hoops",
+        "retail-landscape"
+      ],
+      "implication": "Lead with neighborhood names, 112 codes and BK lettering. Keep Brown Jr., Demin, Randle and Porter Jr. to small, quick-turn drops.",
+      "confidence": "high"
+    },
+    {
+      "title": "The Knicks title makes black and white a choice",
+      "insight": "The Knicks won the 2026 title, their first since 1973. They host an opening-night game and the noon Christmas game, and they made Nike's Specter list of eight on Sept 9. The Nets got none of the three. Brooklyn fans answer by being the other, calmer New York crowd.",
+      "evidence": [
         "rhythm",
-        "art",
-        "retail-behavior",
-        "food"
-      ],
-      "implication": "Build the language from inside the borough: City of Brooklyn civic type, 112 ZIP numerals, Kings County, neighborhood names. Never put 'New York' or the Manhattan skyline on Brooklyn product. Have Weeksville and Restoration review any 'Est. 1834' line before it ships.",
-      "confidence": "high"
-    },
-    {
-      "title": "Monochrome sells, so materials carry the story",
-      "insight": "The 2012 monochrome identity is worn borough-wide as streetwear, whatever the standings. Added color reads as noise unless it has a reason. The ownable upgrade is Brooklyn's own surfaces: weathered steel, the herringbone court, brownstone and gilt transom numerals.",
-      "evidence": [
-        "uniform",
-        "art",
         "fanbase",
         "retail-behavior",
-        "music"
+        "retail-landscape",
+        "culture"
       ],
-      "implication": "Hold color to black, bone and one metal, gilt. Keep rust to tonal texture and trim. Allow one accent per theme, with a stated reason.",
+      "implication": "Stay out of orange, blue and the skyline. Build a Brooklyn-only story that doesn't need the Specter eight. For the first Nets-Knicks game, run one capped, quick-turn Randle drop, and keep the rivalry to quiet wit.",
       "confidence": "high"
     },
     {
-      "title": "ABA throwbacks: a Long Island story in a Knicks year",
-      "insight": "The reported red, white and blue throwbacks honor the franchise's only titles (1974 and 1976, Julius Erving). But that team never played in Brooklyn, and 'New York' across the chest the season after the Knicks' title invites confusion. Whether it's the City Edition or a Classic set is unconfirmed.",
+      "title": "The arena and the stoop are the materials",
+      "insight": "SHoP wrapped Barclays in roughly 12,000 pre-weathered steel panels set in horizontal bands. A few blocks away, brownstone doors carry gilt, black-shadowed transom numbers. No other NBA market has either.",
       "evidence": [
-        "culture",
         "art",
         "music",
+        "fanbase",
+        "rhythm",
+        "retail-landscape"
+      ],
+      "implication": "Build rust-and-black tonal colorways, banded knits and gilt numerals drawn by a paid Brooklyn sign painter. Use the facade's banding, never the sponsor's name.",
+      "confidence": "high"
+    },
+    {
+      "title": "Caribbean Brooklyn wears its own flag",
+      "insight": "Flatbush, Crown Heights, East Flatbush and Canarsie hold one of the largest Caribbean communities outside the Caribbean. Fans knot their own flag over a jersey as a cape or waist-tie. Carnival lands on Labor Day, Sept 6, 2027, a month before camp, and the 2026 parade saw shootings nearby.",
+      "evidence": [
+        "culture",
+        "underground",
+        "music",
+        "art",
+        "food",
+        "retail-behavior"
+      ],
+      "implication": "Design for the fan's flag: tie loops, a blank chest shield and neutral bases. Let caribBEING, steelbands and mas camps set nation-by-nation accents, and plan safety with WIADCA.",
+      "confidence": "high"
+    },
+    {
+      "title": "Brooklyn hoops has more accents than one",
+      "insight": "Coney Island's Lincoln High sent Marbury, Telfair and Stephenson to the NBA, and Boys High gave Bed-Stuy Connie Hawkins. Egor Demin adds a Russian-speaking thread that runs to Brighton Beach and Coney Island. Latino Brooklyn lives in Bushwick, Southside Williamsburg and Sunset Park, home of the Nets' HSS Training Center.",
+      "evidence": [
+        "hoops",
+        "fanbase",
+        "culture",
+        "art"
+      ],
+      "implication": "Give Demin a Coney Island and Brighton Beach drop made with paid Russian-speaking creators. Build a Latino Brooklyn lane with the Bushwick Collective and Sunset Park partners, and tie Jordan's Fort Greene birth to these courts.",
+      "confidence": "medium"
+    },
+    {
+      "title": "The ABA throwback is Long Island, not Brooklyn",
+      "insight": "One report says the red, white and blue New York Nets throwbacks return in 2026-27. Nobody has confirmed whether they are the City Edition or a Classic set. The look comes from Dr. J's 1974 and 1976 titles on Long Island, and older fans and collectors love it.",
+      "evidence": [
         "uniform",
+        "hoops",
+        "music",
+        "art",
         "fanbase",
         "retail-landscape"
       ],
-      "implication": "Treat it as franchise heritage, with modest, quick-turn volume. Let Brooklyn-only product carry the season's identity. If it is the City Edition, the borough uniform becomes a 2027-28 pitch, which is the honest timeline anyway.",
+      "implication": "Run ABA red, white and blue as a separate, small heritage lane until it's confirmed. Keep Brooklyn art on black and white, and tell the 1970s story through uprock and block-party graphics.",
       "confidence": "medium"
     },
     {
-      "title": "Only Randle reaches split Knicks-Nets households",
-      "insight": "Julius Randle is a former Knick now on Fulton Street, a rare crossover in the borough-versus-Manhattan war. Brown Jr., Demin and Ellis are new names with no Brooklyn roots. Player product here is a quick-turn bet, not the story.",
-      "evidence": [
-        "fanbase",
-        "retail-behavior",
-        "hoops"
-      ],
-      "implication": "Give Randle a quiet, Brooklyn-first player tee and jersey run, sized off the first two weeks of sales. No revenge framing, no Knicks references. Keep Brown Jr. to youth replica, and keep every player lane under the borough mark.",
-      "confidence": "medium"
-    },
-    {
-      "title": "Caribbean Brooklyn: flags yes, Nets loyalty unproven",
-      "insight": "In Flatbush, Crown Heights and East Flatbush, fans knot Haitian, Jamaican, Trinidadian and other flags over jerseys. Labor Day on Eastern Parkway draws the borough's biggest crowd. The dossiers show the habit, not that these households follow the Nets rather than the Knicks or a home-island favorite.",
+      "title": "The loudest fans in the building wear seafoam",
+      "insight": "The Liberty won the 2024 WNBA title at Barclays and opened 2026 there. Their crowd is visibly queer and women-led, though no survey measures it. Joe and Clara Wu Tsai own both teams, and the Liberty fill the arena while the Nets are dark, May to September.",
       "evidence": [
         "underground",
-        "culture",
-        "music",
-        "food",
-        "rhythm",
-        "retail-behavior"
+        "hoops"
       ],
-      "implication": "Start with a paid listening phase with caribBEING and the steelbands, plus in-season dates (Jan 1, a Caribbean heritage night). Build the flag-ready pack for Labor Day 2027 only if partners ask for it. Flags stay fan-supplied.",
-      "confidence": "medium"
-    },
-    {
-      "title": "Brooklyn makes its own tentpoles",
-      "insight": "With no opener, no Christmas game and no contention story, the Nets lean on dates the Knicks can't touch. Nov 3 is the 14th anniversary of the first Brooklyn game and opens the 15th Brooklyn season. March 2027 marks 30 years since Biggie's death and 'Life After Death', and the Cup group runs every Friday in November.",
-      "evidence": [
-        "rhythm",
-        "music",
-        "culture",
-        "retail-behavior",
-        "fanbase"
-      ],
-      "implication": "Plan graphic drops on Brooklyn's calendar. Judge the market on borough-mark sell-through, not Christmas Day volume.",
-      "confidence": "medium"
-    },
-    {
-      "title": "The $110 tax line sets the entry tier",
-      "insight": "NYC clothing under $110 an item skips most sales tax. Income swings block by block from Park Slope to Brownsville, and Fulton Street carries knockoffs. Kith, a Nike partner near the arena, is read locally as Knicks-aligned.",
-      "evidence": [
-        "retail-behavior",
-        "retail-landscape",
-        "fanbase"
-      ],
-      "implication": "Keep tees, kids and entry fleece under $110. Price the 2027 varsity and puffer honestly, as premium. Offer Kith a Brooklyn-only, non-team capsule, not a Nets tie-in.",
+      "implication": "Share designers and drops across the Nets and Liberty. Build women's fits and a Pride capsule with Papi Juice and Bushwig as paid co-designers, once Pride Night is dated.",
       "confidence": "medium"
     }
   ],
   "opportunities": [
     {
-      "id": "still-a-city-112",
-      "title": "Still a City: 112 quick-turn graphics this season",
-      "summary": "This season's only real product lane: screen-printed tees, crewnecks and print-on-demand 112 ZIP numerals in black and bone, in the voice of the City of Brooklyn. Launch around the Nov 3 anniversary and the start of the 15th Brooklyn season.",
+      "id": "zip-112-made-to-order",
+      "title": "The 112 made-to-order program",
+      "summary": "Print the buyer's Brooklyn ZIP code as a player number on Nets tees and hoodies. A fan wears 11217, 11216 or 11224, not a generic BK.",
       "where": [
         "Nets Shop at Barclays Center (11217)",
-        "Fulton Street and Atlantic Terminal",
-        "Church Avenue, Flatbush",
-        "Knickerbocker Avenue, Bushwick",
-        "Nets online store"
+        "Fulton Street pop-up, Downtown Brooklyn",
+        "Church Avenue pop-up, Flatbush",
+        "Atlantic Terminal"
       ],
-      "when": "First November home dates through holiday gifting, 2026",
+      "when": "Launch at the first confirmed Barclays game. One schedule report puts the opener on Oct 21 against Charlotte, still unconfirmed. Run it through the December gifting peak.",
       "months": [
-        11,
-        12
-      ],
-      "how": "Run on existing licensed blanks through the NBA licensing channel. Print ZIPs on site only if BSE Global and the Nets Shop operator agree. Hangtags tell the civic story through lettering, never Dodgers marks.",
-      "products": [
-        "112 ZIP tee (under $110)",
-        "City of Brooklyn civic-type crewneck",
-        "Print-on-demand ZIP hoodie",
-        "Brigade-designed scarf",
-        "Randle quick-turn player tee"
-      ],
-      "segment": "Style-forward Brooklyn locals and borough diehards",
-      "size": "medium",
-      "priority": 1,
-      "kpi": "Units and sell-through by door. Share of ZIP orders outside 11217. Randle reorder within two weeks."
-    },
-    {
-      "id": "kings-county-fh27",
-      "title": "Kings County: the Fall/Holiday 2027 build",
-      "summary": "The full premium line, designed this winter for Labor Day and holiday 2027. Expect a wool varsity, a long platform puffer, banded tonal knits, women's cuts throughout and a Brooklyn Courts youth line.",
-      "where": [
-        "Fulton Street corridor",
-        "Nets Shop at Barclays Center",
-        "Kings Plaza",
-        "Brooklyn taste partners (to confirm)"
-      ],
-      "when": "Design lock in spring 2027. Launch Labor Day 2027, peaking Thanksgiving through December 2027.",
-      "months": [
-        9,
         10,
         11,
         12
       ],
-      "how": "Source local designers through Pratt and paid open calls. The 2026-27 graphics sell-through decides depth. Any facade-derived pattern needs BSE Global sign-off, so keep motifs to material and texture.",
+      "how": "Clear on-site printing with the NBA and the arena before you set up at the Nets Shop. Add Fulton Street and Church Avenue pop-ups for home Cup Nights. Offer optional neighborhood mottos, but test lines like Do or Die Bed-Stuy with local partners first. Keep tees, hoodies and kids pieces under $110. Sell the puffer as a premium tier above it.",
       "products": [
-        "Kings County wool varsity jacket",
-        "Long platform puffer",
-        "Banded tonal-rust hoodie",
-        "Women's cropped varsity and fleece",
-        "Brooklyn Courts youth shorts"
+        "112 ZIP-number tee",
+        "112 ZIP-number hoodie",
+        "Kids 112 tee",
+        "Premium tier: long black puffer with a reflective 112 code"
       ],
-      "segment": "Style-forward locals, gift buyers and women fans",
+      "segment": "Style-forward Brooklyn locals and the diehard core",
       "size": "high",
       "priority": 1,
-      "kpi": "Full-price premium sell-through. Women's share of units. Holiday 2027 outerwear revenue versus 2026."
+      "kpi": "Units per home game, orders by ZIP code and sell-through of the sub-$110 tier. It works without wins."
     },
     {
-      "id": "latino-sunset-park-brooklyn",
-      "title": "Home base: Sunset Park and Latino Brooklyn",
-      "summary": "The Nets practice at the HSS Training Center in Sunset Park, home to large Chinese, Mexican and Puerto Rican communities. Yet the brand barely shows up there, or in Dominican and Puerto Rican Bushwick.",
+      "id": "cup-nights-holiday",
+      "title": "Weathered for Cup Nights and the holidays",
+      "summary": "Own November and December with a rust-and-black capsule. The Nets miss the Christmas spotlight, so the borough's doors carry the gifting season.",
       "where": [
-        "Sunset Park: Fifth and Eighth avenues",
-        "HSS Training Center open practice",
-        "Knickerbocker Avenue, Bushwick",
-        "Southside Williamsburg",
-        "Barclays heritage nights"
+        "Nets Shop at Barclays Center",
+        "Fulton Street chains and Dr. Jays",
+        "Kings Plaza",
+        "Nike online with borough pickup"
       ],
-      "when": "Listening now, as Hispanic Heritage Month wraps (to Oct 15). Lunar New Year around Feb 6, 2027. A Latino heritage night in spring.",
+      "when": "Cup group play from Oct 30 to Nov 27, plus Nov 24-25. Only the Oct 30 road opener at Toronto is confirmed. Then Black Friday through December.",
       "months": [
         10,
-        2,
-        4
+        11,
+        12
       ],
-      "how": "Hire UPROSE and El Puente for Latino Brooklyn and the Brooklyn Chinese-American Association for Sunset Park as paid co-hosts. They name the designers and the beneficiary. Open the practice facility to neighborhood kids, and have a paid local artist design each item.",
+      "how": "Drop the Weathered warm-up and tee online on Oct 30, the Toronto night. Run the Nets Shop launch at the first home Cup Night once the schedule confirms it. Restock for Thanksgiving week. Add the heavyweight fleece and varsity tier for Black Friday and Small Business Saturday. Close December with a sorrel-red pack made with a paid Caribbean bakery partner.",
       "products": [
-        "Lunar New Year artist tee",
-        "Heritage-night artist tee",
-        "Youth practice tee",
-        "Fitted cap"
+        "Weathered warm-up jacket",
+        "Banded-knit shooting shirt",
+        "Heavyweight rust-and-black hoodie",
+        "Wool-blend varsity jacket",
+        "Sorrel-red fleece in bakery-box packaging"
       ],
-      "segment": "Chinese, Mexican, Dominican and Puerto Rican Brooklyn families",
-      "size": "medium",
-      "priority": 2,
-      "kpi": "Heritage-night attendance from 11220 and 11237. Partner renewal. Artist-tee sell-through."
+      "segment": "Gift buyers, families and game-night fans",
+      "size": "high",
+      "priority": 1,
+      "kpi": "November-December sell-through against last season, and the share of sales from Brooklyn doors"
     },
     {
-      "id": "caribbean-brooklyn-listen-first",
-      "title": "Caribbean Brooklyn: listen first, then Bring Your Flag",
-      "summary": "A partner-led test of whether Caribbean Brooklyn wants a flag-ready Nets pack. In-season dates now, a product decision before Labor Day 2027.",
+      "id": "biggie-30th",
+      "title": "Biggie's 30th, if the estate signs",
+      "summary": "March 9, 2027 marks 30 years since Christopher Wallace's death, and Life After Death turns 30 on March 25. It's the season's strongest Brooklyn music date, but the estate has shown no 2027 plans.",
       "where": [
-        "Flatbush and Church avenues (Little Caribbean, Little Haiti)",
-        "Nostrand Avenue, Crown Heights",
-        "Barclays Caribbean heritage night",
-        "Flatbush and Crown Heights panyards"
+        "Barclays home game nearest March 9",
+        "Fulton Street, Bed-Stuy",
+        "Raffle with Nike-controlled pickup in Brooklyn"
       ],
-      "when": "Listening sessions this winter. Jan 1 content. A heritage night in-season. Product for Labor Day 2027 only if partners ask.",
+      "when": "Ask this fall. Decide by December. Drop in March 2027 either way.",
       "months": [
-        1,
-        3,
+        3
+      ],
+      "how": "Open talks with the estate, Bad Boy, Rhino and Atlantic, using their 2022 25th-anniversary campaign as the model. Frame a white and black pair after the two album covers, with an original Brooklyn knit, not Coogi. If the estate passes, release a no-license Bed-Stuy music capsule drawn by a paid Bed-Stuy artist, with no names or lyrics. Confirm the home date before you lock the drop.",
+      "products": [
+        "White warm-up and black warm-up pair",
+        "Original Brooklyn-knit panel jacket",
+        "Fallback: Bed-Stuy block-party tee with no names or lyrics"
+      ],
+      "segment": "Bed-Stuy, hip-hop and collector fans",
+      "size": "high",
+      "priority": 2,
+      "kpi": "Estate answer by December, then raffle entries and sell-out time for whichever capsule ships"
+    },
+    {
+      "id": "carnival-2027-panyard",
+      "title": "Carnival 2027 pack from the panyards",
+      "summary": "Co-design a Caribbean pack with steelbands, a mas camp and Flatbush designers. Release it before Labor Day, Sept 6, 2027, as the preseason launch.",
+      "where": [
+        "Flatbush and Crown Heights panyards",
+        "Church and Flatbush avenues, Little Caribbean",
+        "Eastern Parkway and the Brooklyn Museum grounds",
+        "Crown Heights independents"
+      ],
+      "when": "Sign partners in spring. Seed product during August panyard season. Release before Panorama and Labor Day.",
+      "months": [
         5,
+        6,
+        7,
+        8,
         9
       ],
-      "how": "Pay caribBEING, CASYM Steel Orchestra and Despers USA to run listening sessions and host a heritage night. Any steelpan print pays a fee plus revenue share and uses a tuner's layout they own. No J'Ouvert product.",
+      "how": "Sign CASYM Steel Orchestra, Despers USA and caribBEING with a fee plus a revenue share. Give them a veto over every graphic and the right to walk away. Have a pan tuner draw the steelpan note map. Let fans bring their own flags and print no national flags. Plan safety and placement with WIADCA before any Labor Day event. Add a Slight Pepper tee with a Nostrand Avenue doubles shop.",
       "products": [
-        "Partner-designed heritage-night tee",
-        "Flag-ready hoodie (2027, partner-approved)",
-        "Steelpan note-map shorts (2027)"
+        "Steelpan note-map shorts",
+        "Bring Your Flag hoodie with flag-tie loops",
+        "Black string-mesh tank",
+        "Bucket hat with pan-chrome trims",
+        "Slight Pepper heat-dial tee"
       ],
-      "segment": "Caribbean and Haitian Brooklyn fans and diaspora households",
+      "segment": "Caribbean Brooklyn fans in Flatbush, Crown Heights, East Flatbush and Canarsie",
+      "size": "high",
+      "priority": 2,
+      "kpi": "Partner contracts signed by June, sell-through at Flatbush and Crown Heights doors and revenue paid to partners. It works without wins."
+    },
+    {
+      "id": "born-in-brooklyn-jordan",
+      "title": "Born in Brooklyn: Jordan on local courts",
+      "summary": "Jordan was born in Fort Greene, and Brooklyn makes guards. Pitch it to Jordan Brand as its own story, tied to the borough's courts rather than the Nets.",
+      "where": [
+        "Fort Greene Park courts",
+        "Boys High, Bed-Stuy",
+        "Lincoln High, Coney Island",
+        "SNKRS-style raffle with Brooklyn pickup"
+      ],
+      "when": "Holiday sneaker window, late November into December.",
+      "months": [
+        11,
+        12
+      ],
+      "how": "Build the story on Cumberland Hospital, Fort Greene Park, Boys High and Lincoln High. Pay and credit the school programs. Leave out Mars Blackmon and the Do the Right Thing scenes unless 40 Acres and a Mule signs on. Lead with Brooklyn-owned doors such as The Brooklyn Circus. Treat Kith as a door to confirm, not a ban.",
+      "products": [
+        "Brooklyn-black Jordan sneaker colorway",
+        "Born in Brooklyn tee",
+        "Fort Greene coach jacket"
+      ],
+      "segment": "Brooklyn sneakerheads, school-hoops families and style-forward locals",
       "size": "medium",
       "priority": 2,
-      "kpi": "Share of heritage-night buyers who already own Nets gear. Partner go or no-go by May 2027. Revenue shared with partners."
+      "kpi": "Raffle entries from Brooklyn ZIP codes and resale premium"
     },
     {
       "id": "brooklyn-firsts-bhm",
       "title": "Brooklyn Firsts for Black History Month",
-      "summary": "A February artist-tee series on the borough's own firsts (Weeksville 1838, Jackie Robinson in Brooklyn 1947, Restoration 1967, Shirley Chisholm 1968), co-authored with Weeksville Heritage Center and Restoration Plaza.",
+      "summary": "Build February on Brooklyn's own firsts: Weeksville in 1838, Robinson in 1947 and Chisholm in 1968. Skip national stock imagery.",
       "where": [
         "Weeksville Heritage Center, Crown Heights",
-        "Restoration Plaza, Bed-Stuy",
+        "Brooklyn Museum First Saturdays",
         "Barclays February home games"
       ],
-      "when": "February 2027 home stretch",
+      "when": "February 2027, with a Jackie Robinson nod at the final home games before Apr 11.",
       "months": [
-        2
+        2,
+        4
       ],
-      "how": "License names and likenesses through the Jackie Robinson Foundation and Chisholm's estate, with no Dodgers or Ebbets marks. The institutions set the story and beneficiary. Paid Bed-Stuy and Crown Heights artists draw the graphics.",
+      "how": "Co-author the capsule with Weeksville Heritage Center. License Chisholm through her estate and Robinson through the Jackie Robinson Foundation. Hire paid Bed-Stuy and Crown Heights artists. Keep Dodgers marks out.",
       "products": [
-        "Artist-designed tee series",
-        "Warm-up shooting shirt",
-        "Archival-type crewneck"
+        "Brooklyn Firsts tee",
+        "Est. 1838 crewneck",
+        "Next Year warm-up with an Ebbets Field arch band"
       ],
-      "segment": "Black Brooklyn families and culturally invested fans",
+      "segment": "Black Brooklyn families and heritage-minded fans",
       "size": "medium",
       "priority": 2,
-      "kpi": "Partner satisfaction and renewal. February sell-through. Funds raised for partner institutions."
+      "kpi": "Sell-through, proceeds to Weeksville and repeat buyers from Bed-Stuy and Crown Heights"
     },
     {
-      "id": "biggie-30-life-after-death",
-      "title": "Biggie at 30: celebrate the work, honor the loss",
-      "summary": "A licensed tee capsule with the Wallace estate for the 30th anniversary of 'Life After Death' (March 25, 2027) and his May 21 birthday. March 9 stays a quiet, community-led moment.",
+      "id": "nets-liberty-pride",
+      "title": "Nets x Liberty Pride capsule",
+      "summary": "One capsule for both Barclays teams, designed with Bushwick's queer collectives. It starts at the Nets' Pride Night and carries into the Liberty's June games.",
       "where": [
-        "Restoration Plaza, Bed-Stuy",
-        "Barclays home game near March 25",
-        "Fulton Street, Bed-Stuy and Clinton Hill"
+        "Barclays Center",
+        "Brooklyn Pride, Fifth Avenue, Park Slope",
+        "House of Yes, Bushwick"
       ],
-      "when": "Lock estate terms in November 2026. Release late March 2027, with a birthday follow-up in May.",
+      "when": "Nets Pride Night, once the team dates it, into early June's Brooklyn Pride.",
       "months": [
         3,
-        5
+        6
       ],
-      "how": "Co-create with the estate, with proceeds to Brooklyn youth music programs. No lyrics without publisher licenses, and no repeat of the 2019-20 Coogi uniform idea.",
+      "how": "Pay Papi Juice and Bushwig artists as co-designers and let them pick the beneficiary. Don't date the drop until Pride Night is confirmed. Use seafoam only as an accent, matched to the Liberty's spec. Don't borrow ballroom language without its community.",
       "products": [
-        "Licensed anniversary tee",
-        "White and black warm-up pair (album-cover cues)"
+        "Black string-mesh tank with seafoam accents",
+        "Barclays tee",
+        "Women's-fit warm-up"
       ],
-      "segment": "Brooklyn rap generation, Bed-Stuy and Clinton Hill locals, collectors",
+      "segment": "Queer and women fans who fill Barclays for the Liberty",
       "size": "medium",
       "priority": 2,
-      "kpi": "Estate approval by end of November. Launch-weekend sell-through. Proceeds delivered."
+      "kpi": "Sales across both teams' games and new buyers who had no Nets purchase"
     },
     {
-      "id": "liberty-shared-roof",
-      "title": "Nets x Liberty: one roof, women's cuts all year",
-      "summary": "The 2024 WNBA champion Liberty bring Barclays' freshest crowd. Make women's fits and a shared Nets-Liberty designer roster a core lane, not a summer afterthought.",
+      "id": "hat-trick-fitted",
+      "title": "The Hat Trick, starting with a tee",
+      "summary": "Flex grew out of Jamaican bruk-up in Flatbush, and its hat tricks spin a cap mid-routine. Start with a flexer-designed tee and warm-up, and add a fitted only if the headwear rights allow it.",
       "where": [
-        "Barclays Center Liberty games",
+        "Flatbush Avenue door",
         "Nets Shop at Barclays Center",
-        "Brooklyn Pride, Park Slope",
-        "Bushwick nightlife and Papi Juice events"
+        "Barclays halftime, if the arena and league approve"
       ],
-      "when": "Women's cuts in the 2026-27 graphics. A Liberty tip-off moment in May 2027. Pride as one chapter in June.",
+      "when": "Launch at a winter home game, then restock for the spring.",
       "months": [
-        11,
-        5,
-        6,
-        7
-      ],
-      "how": "Commission shared designers for both teams. Papi Juice and Bushwig artists co-design the Pride chapter and choose the beneficiary.",
-      "products": [
-        "Women's-cut 112 tee",
-        "Shared Nets-Liberty crewneck",
-        "Pride tee",
-        "String-mesh tank with seafoam accent"
-      ],
-      "segment": "Women fans, queer Brooklyn and summer arena-goers",
-      "size": "medium",
-      "priority": 2,
-      "kpi": "Women's share of Nets units. Off-season Barclays revenue. Pride sell-through and partner reach."
-    },
-    {
-      "id": "aba-heritage-conditional",
-      "title": "ABA heritage, held modest",
-      "summary": "If the red, white and blue New York Nets throwbacks ship, a small companion run. It honors Dr. J's 1974 and 1976 titles without letting 'New York' become the season's message.",
-      "where": [
-        "Nets Shop at Barclays Center",
-        "Nets online store",
-        "Brooklyn vintage and resale pop-ups"
-      ],
-      "when": "Timed to the throwback's game dates once confirmed",
-      "months": [
-        12,
         1,
         2
       ],
-      "how": "Quick-turn only, with capped buys. Stage an uprock or block-party showcase at a Brooklyn venue confirmed available, in original script rather than traced signage.",
+      "how": "Confirm who holds NBA headwear before you promise a cap. Hire, credit and pay Brooklyn flexers to design the tee and warm-up. Pay any named dancer, such as Storyboard P, for the use of their craft. Get arena and league sign-off before staging a halftime flex battle.",
       "products": [
-        "Vintage-wash heritage tee",
-        "Throwback cap",
-        "ABA-palette warm-up jacket"
+        "Flexer-designed tee",
+        "Flex warm-up jacket",
+        "High-crown fitted with a white undervisor, if headwear rights allow"
       ],
-      "segment": "Long-memory diehards, collectors and Long Island commuters",
-      "size": "low",
+      "segment": "Young Flatbush and East Flatbush fans",
+      "size": "medium",
       "priority": 3,
-      "kpi": "Sell-through within two weeks of the first throwback game. Markdown rate versus the 112 line."
+      "kpi": "Units sold and dancer-led content views"
     }
   ],
   "collection": {
     "name": "Kings County",
-    "story": "Brooklyn was a city before it was a borough, and this collection dresses fans as its citizens in black, bone and gilt. Graphics ship this season. The premium line is the Fall/Holiday 2027 build, and every theme is co-authored with the people it comes from.",
+    "story": "Built from what only Brooklyn has: the weathered steel of Barclays, gilt numbers on brownstone transoms, the panyards of Flatbush and the 2012 tees now on resale racks. Black and white stays the base. Each theme earns one more color.",
     "themes": [
       {
-        "name": "Still a City",
-        "story": "The City of Brooklyn (1834-1898), told in civic type, brownstone gilt and weathered-steel texture. The 2012 arrival gets told honestly, displacement debate included.",
-        "segment": "Borough diehards and style-forward locals",
-        "graphics": "Borough Hall-era civic serif. 112 ZIP numerals in gilt with a black drop shadow. Tonal banding as texture. No seal artwork, no traceable facade pattern, no Dodgers marks.",
+        "name": "Weathered",
+        "story": "The Nets' 15th Brooklyn season, told in the rusted steel of their arena. It's the one material story only the Nets own.",
+        "segment": "Style-forward locals and season-ticket diehards",
+        "graphics": "Offset horizontal bands with daylight gaps, abstracted from the facade. No arena name or sponsor mark.",
         "palette": [
           {
-            "name": "Nets Black",
+            "name": "Nets black",
             "hex": "#000000"
           },
           {
-            "name": "Stoop Bone",
-            "hex": "#F2F0EB"
+            "name": "Barclays rust",
+            "hex": "#7A3B1E"
           },
           {
-            "name": "Transom Gilt",
+            "name": "Court white",
+            "hex": "#FFFFFF"
+          },
+          {
+            "name": "Silver",
+            "hex": "#A2AAAD"
+          }
+        ],
+        "materials": "Engineered knit and jacquard banding, oxidized-look metal trims and a suede heel tab in rust.",
+        "pieces": [
+          {
+            "item": "Warm-up jacket",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Banded engineered-knit panels in rust on black."
+          },
+          {
+            "item": "Shooting shirt",
+            "category": "tee",
+            "tier": "core",
+            "detail": "Tonal banded-lattice jacquard across the chest."
+          },
+          {
+            "item": "Heavyweight hoodie",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Rust-and-black tonal, priced under $110."
+          },
+          {
+            "item": "Sneaker colorway",
+            "category": "footwear",
+            "tier": "limited",
+            "detail": "Black upper with a rust suede heel tab and silver eyelets."
+          }
+        ]
+      },
+      {
+        "name": "Stoop Numbers",
+        "story": "Every block has a stoop and a gilt number over the door. This theme puts the fan's own street and ZIP code on Nets gear.",
+        "segment": "Neighborhood-proud fans, families and gift buyers",
+        "graphics": "Gilded, black-shadowed serif numerals hand-drawn by a credited Brooklyn sign painter. City of Brooklyn, Est. 1834 and Kings County set in a new civic serif.",
+        "palette": [
+          {
+            "name": "Brownstone",
+            "hex": "#6B4A3A"
+          },
+          {
+            "name": "Transom gilt",
             "hex": "#C9A44C"
           },
           {
-            "name": "Tonal Rust (texture only)",
-            "hex": "#4A2616"
+            "name": "Nets black",
+            "hex": "#000000"
+          },
+          {
+            "name": "Bone",
+            "hex": "#F2F0EB"
           }
         ],
-        "materials": "Heavyweight loopback fleece, wool-blend varsity body with chain-stitch, tonal engineered knit bands, metallic gilt foil numbers.",
+        "materials": "Heathered brownstone fleece, suede overlays, metallic foil numerals and wool-blend varsity bodies.",
         "pieces": [
+          {
+            "item": "Name-and-number fan jersey",
+            "category": "jersey",
+            "tier": "premium",
+            "detail": "Gilt transom numerals with a black drop shadow."
+          },
           {
             "item": "112 ZIP tee",
             "category": "tee",
             "tier": "entry",
-            "detail": "This season: the buyer's ZIP as a back number in gilt with a black drop shadow. Under $110, women's cut included."
+            "detail": "The buyer's ZIP code printed as a player number."
           },
           {
-            "item": "Civic-type crewneck",
+            "item": "Est. 1834 crewneck",
             "category": "fleece",
             "tier": "core",
-            "detail": "This season: 'City of Brooklyn' in civic serif, wording reviewed by Weeksville and Restoration."
+            "detail": "City of Brooklyn lettering in heathered brownstone."
           },
           {
-            "item": "Kings County varsity jacket",
+            "item": "Varsity jacket",
             "category": "outerwear",
             "tier": "premium",
-            "detail": "FH27: wool body, chain-stitched B shield, tonal-rust leather sleeve trims."
+            "detail": "Chain-stitched Nets B in gilt on black wool."
           },
           {
-            "item": "Long platform puffer",
-            "category": "outerwear",
-            "tier": "premium",
-            "detail": "FH27: a long cut against the wind on Brooklyn's elevated platforms, with a reflective 112 tab."
-          },
-          {
-            "item": "Transom-numeral fitted",
-            "category": "headwear",
-            "tier": "core",
-            "detail": "Black crown, bone undervisor, gilt numeral side hit."
-          }
-        ]
-      },
-      {
-        "name": "Bring Your Flag (2027, partner-gated)",
-        "story": "If Caribbean partners ask for it, the Nets supply a neutral canvas and the fan supplies the nation. No flag is printed on a Nets mark.",
-        "segment": "Caribbean and Haitian Brooklyn fans in Flatbush, Crown Heights and Canarsie",
-        "graphics": "A blank chest shield and a steelpan note map drawn with a credited Brooklyn pan tuner. No coats of arms, mashed flags, Vodou vévé or J'Ouvert branding.",
-        "palette": [
-          {
-            "name": "Nets Black",
-            "hex": "#000000"
-          },
-          {
-            "name": "Court White",
-            "hex": "#FFFFFF"
-          },
-          {
-            "name": "Pan Chrome (the drum's steel)",
-            "hex": "#C9CCCF"
-          }
-        ],
-        "materials": "Breathable string mesh, lightweight French terry, low-profile flag-tie loops at shoulder and hip.",
-        "pieces": [
-          {
-            "item": "Flag-ready hoodie",
-            "category": "fleece",
-            "tier": "core",
-            "detail": "Loops for knotting a fan's own flag, and a blank chest shield. Built only on partner go-ahead."
-          },
-          {
-            "item": "Steelpan note-map shorts",
-            "category": "shorts",
-            "tier": "core",
-            "detail": "Tenor-pan layout licensed from the partner steelband, credited on the tag."
-          },
-          {
-            "item": "Heritage-night tee",
-            "category": "tee",
-            "tier": "entry",
-            "detail": "This season: designed by a caribBEING-selected artist for the Barclays heritage night."
-          }
-        ]
-      },
-      {
-        "name": "Brooklyn Courts",
-        "story": "The borough's game lives in its schools and parks, from Lincoln High in Coney Island to Boys and Girls High in Bed-Stuy and the PSAL and CHSAA gyms between them.",
-        "segment": "Gen Z fans, park and high school players, kids",
-        "graphics": "Collegiate block lettering for Coney, Bed-Stuy, Brownsville and Flatbush. Chain-link and asphalt textures. Park court lines in the linings.",
-        "palette": [
-          {
-            "name": "Nets Black",
-            "hex": "#000000"
-          },
-          {
-            "name": "Court White",
-            "hex": "#FFFFFF"
-          },
-          {
-            "name": "Asphalt",
-            "hex": "#3A3A3A"
-          }
-        ],
-        "materials": "Lightweight mesh, debossed chain-link texture, structured high-crown fitted.",
-        "pieces": [
-          {
-            "item": "Neighborhood block-letter shorts",
-            "category": "shorts",
-            "tier": "entry",
-            "detail": "One neighborhood per colorway, court-line lining, under $110."
-          },
-          {
-            "item": "Hat-trick fitted",
-            "category": "headwear",
-            "tier": "core",
-            "detail": "Fit signed off through a paid open call to Flatbush and East Flatbush flex crews."
-          },
-          {
-            "item": "Youth replica jersey",
+            "item": "Kids 112 tee",
             "category": "kids",
             "tier": "entry",
-            "detail": "Brown Jr. in kids sizes only, under $110."
+            "detail": "Same ZIP program, sized for kids."
+          }
+        ]
+      },
+      {
+        "name": "Panyard",
+        "story": "Made with the steelbands that rehearse every August night in Flatbush and Crown Heights. The fan brings the flag, and the gear is built to carry it.",
+        "segment": "Caribbean Brooklyn fans in Flatbush, Crown Heights, East Flatbush and Canarsie",
+        "graphics": "A steelpan note map drawn by a credited pan tuner, as a radial print or emboss. Nation-specific accents only where partners choose them.",
+        "palette": [
+          {
+            "name": "Nets black",
+            "hex": "#000000"
+          },
+          {
+            "name": "Pan chrome",
+            "hex": "#C9CCCF"
+          },
+          {
+            "name": "Court white",
+            "hex": "#FFFFFF"
+          },
+          {
+            "name": "Patty gold",
+            "hex": "#E3A33A"
+          }
+        ],
+        "materials": "String mesh, lightweight shorts fabric, metallic chrome trims matched by lab dip and flag-tie loops in black, white or heather gray.",
+        "pieces": [
+          {
+            "item": "Note-map shorts",
+            "category": "shorts",
+            "tier": "core",
+            "detail": "Steelpan note-map print with pan-chrome trims."
+          },
+          {
+            "item": "Bring Your Flag hoodie",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Flag-tie loops at shoulder and hip, with a blank chest shield."
+          },
+          {
+            "item": "String-mesh tank",
+            "category": "other",
+            "tier": "core",
+            "detail": "Black mesh over white that works at a fete and a game."
+          },
+          {
+            "item": "Bucket hat",
+            "category": "headwear",
+            "tier": "entry",
+            "detail": "Pan-chrome eyelets and a note-map lining."
+          },
+          {
+            "item": "Slight Pepper tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Heat-dial graphic co-written with a Nostrand Avenue doubles shop."
           }
         ]
       },
       {
         "name": "First Season",
-        "story": "The 2012-13 launch gear is the only Nets era that says Brooklyn. It's now old enough to sit on the borough's resale racks as vintage.",
-        "segment": "Vintage hunters and resale-literate young locals",
-        "graphics": "A faithful reissue of the inaugural black-and-white wordmarks with cracked prints. A stretched-O 'Brooklyn' call only with the announcer's consent.",
+        "story": "The 2012-13 Brooklyn launch gear is now vintage. Reissue it faded, as if it had been worn for a decade.",
+        "segment": "Vintage hunters and early-Brooklyn diehards",
+        "graphics": "Cracked-print 2012 wordmarks on garment-dyed bodies. Keep crisp official black for jerseys so the reissue reads as found.",
         "palette": [
           {
-            "name": "First-Season Fade",
+            "name": "First-season fade",
             "hex": "#34302E"
           },
           {
-            "name": "Stoop Bone",
+            "name": "Bone",
             "hex": "#F2F0EB"
-          },
-          {
-            "name": "Silver Gray",
-            "hex": "#A2AAAD"
           }
         ],
-        "materials": "Garment-dyed cotton jersey and fleece, cracked plastisol prints, washed twill.",
+        "materials": "Garment-dyed cotton jersey and fleece with cracked plastisol prints.",
         "pieces": [
           {
-            "item": "First Season reissue tee",
+            "item": "Faded logo tee",
             "category": "tee",
             "tier": "entry",
-            "detail": "Garment-dyed faded black with cracked 2012 wordmark."
+            "detail": "Garment-dyed #34302E with a cracked 2012 wordmark."
           },
           {
             "item": "Reissue crewneck",
             "category": "fleece",
             "tier": "core",
-            "detail": "Washed fleece, sold with a trade-in credit for old Nets pieces."
+            "detail": "Recreates the inaugural Brooklyn crew."
+          },
+          {
+            "item": "Reissue warm-up",
+            "category": "outerwear",
+            "tier": "limited",
+            "detail": "Seeded through the Brooklyn Flea and resale shops with a trade-in."
           }
         ]
       }
     ]
   },
   "uniform": {
-    "concept": "Still a City (2027-28 City Edition pitch)",
-    "narrative": "A pitch for 2027-28, not this season. The Nets dress as the civic team of a borough that was its own city until 1898, in Borough Hall-era lettering and brownstone gilt. The 2012 arrival at Atlantic and Flatbush is told as contested history, displacement included, so locals wear it as their civic flag, not a victory lap.",
+    "concept": "Stoop and Steel (a 2027-28 pitch)",
+    "narrative": "Every Brooklyn block has a brownstone stoop with a gold number over the door. The Nets play a few blocks away inside about 12,000 panels of weathered steel. Pitch this for 2027-28 and run it now as fan jerseys and warm-ups, since the reported ABA set may hold this season's slot.",
     "palette": [
       {
-        "name": "Nets Black",
+        "name": "Nets black",
         "hex": "#000000",
         "role": "base"
       },
       {
-        "name": "Stoop Bone",
-        "hex": "#F2F0EB",
-        "role": "accent"
+        "name": "Barclays rust",
+        "hex": "#7A3B1E",
+        "role": "trim"
       },
       {
-        "name": "Transom Gilt",
+        "name": "Transom gilt",
         "hex": "#C9A44C",
         "role": "number"
       },
       {
-        "name": "Tonal Rust",
-        "hex": "#4A2616",
-        "role": "trim"
+        "name": "Brownstone",
+        "hex": "#6B4A3A",
+        "role": "accent"
       }
     ],
     "motifs": [
-      "Gilt, black-shadowed brownstone transom numerals",
-      "Weathered-steel banding as knit texture, not a traceable facade pattern",
-      "112 ZIP codes",
-      "Eendraght Maeckt Maght ('Unity makes strength') in custom type, without the seal"
+      "Banded steel from the Barclays facade: the one motif a fan reads from row 20",
+      "Transom-style numerals with a black drop shadow",
+      "Jock tag and neck tape only: the borough motto, the Atlantic and Flatbush corner and 112 ZIP codes"
     ],
-    "typography": "An evolved 'BROOKLYN' chest wordmark in bone, set in a 19th-century civic serif from Borough Hall-era lettering. Gilt numbers with a black drop shadow for broadcast contrast, hand-drawn by a credited, paid Brooklyn gilder or sign painter.",
+    "typography": "BROOKLYN in a newly drawn 19th-century civic serif, after the City of Brooklyn era. Numbers hand-drawn by a credited, paid Brooklyn sign painter. Use flat gold on the game jersey and save gilt foil for fan jerseys and warm-ups.",
     "details": [
-      "Waistband: tonal-rust banded engineered knit",
-      "Neck tape: City of Brooklyn civic line, wording approved by Weeksville and Restoration",
-      "Jock tag: 112 ZIP grid",
-      "Court tie-in: gilt banding at the baseline of the herringbone floor, subject to BSE Global approval"
+      "Jock tag: City of Brooklyn, Est. 1834, with Eendraght Maeckt Maght in custom type, never the official seal",
+      "Neck tape: the Atlantic and Flatbush corner where the Dodgers once wanted to build",
+      "Side panel: banded-lattice engineered knit, rust on black",
+      "Court tie-in: rust bands along the apron beside the herringbone floor",
+      "Check NBA rules on metallic numbers and waistband text before any on-court spec"
     ],
     "avoid": [
-      "Repeating recent concepts: Coogi or Biggie knits, the Basquiat crown, or the ABA red, white and blue if it is this season's City Edition",
-      "Manhattan skyline, Brooklyn Bridge postcard towers or 'New York' anywhere on the uniform",
-      "Dodgers script or 'B', Ebbets Field imagery, Glaser's Brooklyn Brewery 'B', the borough seal artwork or MTA bullets",
-      "Caribbean flags, carnival costume or religious imagery as decoration",
-      "Atlantic Yards triumphalism or facade-derived art without BSE Global sign-off"
+      "Repeating past City Editions: the Coogi Biggie set, Basquiat, the KAWS run or the Brooklyn Camo set with Eric Haze's BED-STUY mark",
+      "Manhattan skyline and Brooklyn Bridge postcard views",
+      "The Dodgers B or script, which belong to MLB",
+      "The arena sponsor's name, national coats of arms and any Hasidic, Chabad or Vodou imagery",
+      "Any on-court spec for 2026-27, or building on the ABA red, white and blue, until the team confirms that set's lane"
     ],
     "alternates": [
       {
-        "name": "Eastern Parkway (reserve)",
-        "idea": "A black uniform with pan-chrome numbers. Pitch it only if the 2026-27 listening phase shows Caribbean partners want it and will co-design it."
+        "name": "Panyard",
+        "idea": "Black with pan-chrome numbers and a steelpan note-map side panel, co-designed with paid partners CASYM and Despers USA."
+      },
+      {
+        "name": "Crosstown",
+        "idea": "Black with one G-line lime (#6CBE45) accent for the only line that skips Manhattan, with an MTA license for any bullet."
+      },
+      {
+        "name": "Next Year",
+        "idea": "An Ebbets Field arch band across the chest for a rebuild built on patience, with no Dodgers marks or colors."
       }
     ]
   },
   "calendar": [
     {
       "month": 10,
-      "window": "Now to Oct 15, then the Oct 20 opener week",
-      "moment": "Hispanic Heritage Month wrap and tip-off in a Knicks title-defense week",
-      "play": "This season: open paid listening sessions with UPROSE, El Puente, caribBEING and the Brooklyn Chinese-American Association. Place the quick-turn 112 and Randle graphic orders. No new design launches.",
+      "window": "First confirmed Barclays game (reported Oct 21 vs. Charlotte, unconfirmed)",
+      "moment": "The first home game of a development year",
+      "play": "Launch 112 printing at the Nets Shop once the NBA and arena clear it. Sell the stretched-O BROOOOOKLYN tee. Use no PA audio until Diamante consents and Sedra's start is confirmed.",
       "products": [
-        "Existing licensed core tees",
-        "Brown Jr. youth jersey"
+        "112 ZIP tee and hoodie",
+        "Stretched-O BROOOOOKLYN tee",
+        "Kids 112 tee"
       ],
-      "channel": "Community and arena",
+      "channel": "Arena",
+      "priority": 1
+    },
+    {
+      "month": 10,
+      "window": "Oct 30, Cup opener at Toronto",
+      "moment": "The first Cup Night in East Group A with Detroit, Toronto, Orlando and Milwaukee",
+      "play": "Drop the Weathered capsule online only, since the Nets are on the road. Save the Nets Shop launch for the first home Cup Night. Time the online drop to the late-October Bushwick Halloween weekend too.",
+      "products": [
+        "Weathered warm-up jacket",
+        "Banded-knit shooting shirt"
+      ],
+      "channel": "Digital",
       "priority": 1
     },
     {
       "month": 11,
-      "window": "Nov 3 and the nearest home date",
-      "moment": "14th anniversary of the first Brooklyn game, opening the 15th Brooklyn season",
-      "play": "This season: drop the 112 tee, civic crewneck and a Brigade-designed scarf at a 'still a city' night. Set Randle depth on two weeks of sales.",
+      "window": "Early Nov, the franchise's 60th season and the Nov 1 NYC Marathon",
+      "moment": "The marathon runs through Bay Ridge, Sunset Park, Park Slope, Williamsburg and Greenpoint. The franchise turns 60, from the 1967 ABA start to Brooklyn in 2012, and this is its 15th Brooklyn season.",
+      "play": "Launch the Still a City heritage line on the 60th-season story. Use the 15th Brooklyn season as a tag line only.",
       "products": [
-        "112 ZIP tee",
-        "Civic-type crewneck",
-        "Brigade scarf",
-        "Randle player tee"
+        "Est. 1834 crewneck",
+        "Kings County cap",
+        "Varsity jacket"
       ],
-      "channel": "Arena, Fulton Street and digital",
-      "priority": 1
+      "channel": "Fulton Street pop-up and Nets Shop",
+      "priority": 2
     },
     {
       "month": 11,
-      "window": "Nov 24-28: Thanksgiving-week Cup Nights, Black Friday, Small Business Saturday",
-      "moment": "First gifting peak and the end of Cup group play",
-      "play": "This season: gift bundles from quick-turn graphics and existing fleece. Allocate stock to Bed-Stuy and Crown Heights independents for Small Business Saturday.",
+      "window": "Nov 24-28, Thanksgiving Cup Nights, Black Friday and Small Business Saturday",
+      "moment": "Extra Cup Nights in holiday week and the first gifting wave",
+      "play": "Run the Nets Shop on the home Cup Nights once they're confirmed. Add the heavyweight fleece and varsity tier. Put Small Business Saturday product in Bed-Stuy and Crown Heights independents.",
       "products": [
-        "112 ZIP tee bundle",
-        "First Season reissue tee",
-        "Women's-cut 112 tee"
+        "Heavyweight rust-and-black hoodie",
+        "Wool-blend varsity jacket",
+        "Premium long black puffer with reflective 112"
       ],
-      "channel": "Fulton Street, Atlantic Terminal, Kings Plaza, independents",
+      "channel": "Doors: Fulton Street, Kings Plaza and Brooklyn independents",
       "priority": 1
     },
     {
       "month": 12,
-      "window": "December home dates (to confirm)",
-      "moment": "Holiday gifting; the Knicks own Christmas Day",
-      "play": "This season: a quiet Brooklyn gifting drop on the Nets' own home dates. Don't counter-program the Knicks.",
+      "window": "December, with no Nets Christmas game",
+      "moment": "Peak gifting, and sorrel and black cake season in the Nostrand Avenue bakeries",
+      "play": "Release the sorrel-red pack with a paid Caribbean bakery partner. Run the Born in Brooklyn Jordan raffle with borough pickup.",
       "products": [
-        "Print-on-demand ZIP hoodie",
-        "Kids replica jerseys",
-        "Transom-numeral fitted"
+        "Sorrel-red fleece and warm-up",
+        "Born in Brooklyn sneaker colorway",
+        "Born in Brooklyn tee"
       ],
-      "channel": "Arena, Fulton Street and digital",
-      "priority": 2
+      "channel": "Digital raffle and Nostrand and Flatbush doors",
+      "priority": 1
     },
     {
       "month": 1,
-      "window": "Jan 1 and a January home game",
-      "moment": "Haitian Independence Day soup joumou in Flatbush; Caribbean heritage night at Barclays",
-      "play": "This season: content with a commissioned Haitian Brooklyn artist and chef. Plus a heritage night co-hosted by caribBEING and the steelbands, with a partner-designed tee.",
+      "window": "Jan 1 and the weeks after",
+      "moment": "Haitian Independence Day with soup joumou in Flatbush, and the Polar Bear Club plunge at Coney Island",
+      "play": "Launch a flexer-designed tee at a January home game. Drop a Demin tee for Coney Island and Brighton Beach, made with paid Russian-speaking creators. Shoot winter content with Haitian community partners, credited and paid.",
       "products": [
-        "Partner-designed heritage-night tee"
+        "Flexer-designed tee",
+        "Flex warm-up jacket",
+        "Egor Demin Coney Island tee"
       ],
-      "channel": "Arena, digital and community",
-      "priority": 2
+      "channel": "Arena and community",
+      "priority": 3
     },
     {
       "month": 2,
-      "window": "February home stretch, with Lunar New Year around Feb 6 and Ramadan roughly Feb 8 to Mar 9, 2027",
-      "moment": "Black History Month, Lunar New Year in Sunset Park, Ramadan evenings in Bay Ridge and on Atlantic Avenue",
-      "play": "This season: Brooklyn Firsts with Weeksville and Restoration. A Lunar New Year night with the Brooklyn Chinese-American Association and a Sunset Park artist. Schedule heritage nights around iftar with the Arab American Association of New York.",
+      "window": "February, with Lunar New Year on Feb 6 and the trade deadline on Feb 11",
+      "moment": "Black History Month and Sunset Park's Lunar New Year",
+      "play": "Release Brooklyn Firsts with Weeksville. Run a Lunar New Year night with Sunset Park community partners. Keep player product quick-turn around the deadline.",
       "products": [
-        "Artist-designed tee series",
-        "Lunar New Year artist tee",
-        "Archival-type crewneck"
+        "Brooklyn Firsts tee",
+        "Est. 1838 crewneck",
+        "Mikel Brown Jr. and Egor Demin tees"
       ],
-      "channel": "Arena and community",
+      "channel": "Weeksville, Brooklyn Museum First Saturdays and Barclays",
       "priority": 2
     },
     {
       "month": 3,
-      "window": "March 9 (quiet) and March 25, 2027",
-      "moment": "30 years since Biggie's death and since 'Life After Death'",
-      "play": "This season: a community-led remembrance at Restoration Plaza on March 9. Then the licensed estate capsule on March 25, with proceeds to youth music programs.",
+      "window": "March 9 to March 25",
+      "moment": "Biggie's 30th: the anniversary of his death and of Life After Death",
+      "play": "If the estate signs, drop the white and black pair at the home game nearest March 9. If not, release the Bed-Stuy fallback capsule. Run the raffle with Bed-Stuy pickup.",
       "products": [
-        "Licensed anniversary tee",
-        "White and black warm-up pair"
+        "White and black warm-up pair",
+        "Original Brooklyn-knit panel jacket",
+        "Bed-Stuy block-party fallback tee"
       ],
-      "channel": "Bed-Stuy community, arena and digital",
+      "channel": "Arena and digital raffle",
       "priority": 2
     },
     {
       "month": 4,
       "window": "Final home games before Apr 11",
-      "moment": "Season end in a rebuild year; FH27 design lock",
-      "play": "Build: lock the Kings County line and the 2027-28 uniform pitch. This season: a small thank-you tee in original Brooklyn type, written with Brooklyn voices, and a Latino heritage night with UPROSE and El Puente.",
+      "moment": "The season closes four days before Jackie Robinson Day on April 15",
+      "play": "Honor Robinson at the last home games, licensed through the Jackie Robinson Foundation. Clear winter stock and preview the Next Year capsule.",
       "products": [
-        "Thank-you tee",
-        "Heritage-night artist tee"
+        "Next Year warm-up",
+        "Ebbets arch tee"
       ],
-      "channel": "Arena and digital",
-      "priority": 2
+      "channel": "Arena",
+      "priority": 3
     },
     {
       "month": 5,
-      "window": "Brooklyn Half (mid-May), May 18, Liberty tip-off",
-      "moment": "Brooklyn's own half marathon, Haitian Flag Day, Liberty season",
-      "play": "Build test: a Nike running cheer zone and a Brooklyn-only run tee on the Half course, with no NYRR marks. Show partners a Haiti-led flag-ready prototype for a go or no-go. Drop the women's Nets-Liberty crossover.",
+      "window": "May 18 to late May",
+      "moment": "Haitian Flag Day, the Bushwick Collective Block Party and DanceAfrica's 50th year at BAM",
+      "play": "Release Bring Your Flag for Haitian Flag Day only if a Haitian partner such as Kerby Jean-Raymond co-signs it. If not, move it to preseason. Commission a Nets wall through Joe Ficalora, with paid Latino and Black Bushwick artists and written releases.",
       "products": [
-        "Brooklyn run tee",
-        "Shared Nets-Liberty crewneck",
-        "Flag-ready hoodie prototype"
+        "Bring Your Flag hoodie",
+        "Flag-tie warm-up"
       ],
-      "channel": "Community, arena and running stores",
+      "channel": "Community: Flatbush, Canarsie and Bushwick",
       "priority": 2
     },
     {
       "month": 6,
-      "window": "Early to late June",
-      "moment": "Brooklyn Pride in Park Slope, Liberty at Barclays, Coney Island Mermaid Parade, summer park leagues",
-      "play": "Pride chapter with Papi Juice and Bushwig artists; a Brooklyn Courts park run with a paid, credited court-restoration partner.",
+      "window": "Early June to late June",
+      "moment": "Brooklyn Pride on Fifth Avenue, the Liberty's season and the Coney Island Mermaid Parade",
+      "play": "Carry the Nets x Liberty Pride capsule into June. Launch a Coney Island summer drop with Coney Island USA as a paid partner.",
       "products": [
-        "Pride tee",
-        "String-mesh tank with seafoam accent",
-        "Neighborhood block-letter shorts"
+        "String-mesh tank with seafoam accents",
+        "Sign-painted boardwalk tee",
+        "Summer shorts"
       ],
-      "channel": "Arena, Park Slope and Brooklyn parks",
-      "priority": 3
+      "channel": "Barclays, Park Slope and Coney Island",
+      "priority": 2
+    },
+    {
+      "month": 8,
+      "window": "August panyard nights to Panorama, the Saturday before Labor Day",
+      "moment": "Steelbands rehearse nightly in Flatbush and Crown Heights, and school starts in early September",
+      "play": "Seed the Panyard pack with CASYM and Despers USA players. Add kids sizes for back-to-school.",
+      "products": [
+        "Note-map shorts",
+        "Bucket hat",
+        "Kids Panyard tee"
+      ],
+      "channel": "Community panyards and Flatbush doors",
+      "priority": 2
     },
     {
       "month": 9,
-      "window": "Labor Day weekend 2027 and late-September Atlantic Antic",
-      "moment": "West Indian American Day Carnival; Atlantic Avenue's street festival to Barclays",
-      "play": "Build launch: the Kings County FH27 line goes live. Bring Your Flag ships only if partners said go. A community booth at the Antic sells current product with merchant co-promotions.",
+      "window": "Labor Day, Sept 6, 2027, then the Atlantic Antic in late September",
+      "moment": "Carnival and J'Ouvert on Eastern Parkway, then the street fair that ends a block from Barclays",
+      "play": "Release the full Panyard pack before Labor Day, with partner approval and safety planned with WIADCA. Use the Antic booth to preview next season's product.",
       "products": [
-        "Kings County varsity jacket",
-        "Banded tonal-rust hoodie",
-        "Flag-ready hoodie (if approved)"
+        "Bring Your Flag hoodie",
+        "String-mesh tank",
+        "Slight Pepper tee"
       ],
-      "channel": "Fulton Street, community doors and street festival",
+      "channel": "Crown Heights and Flatbush doors, and an Atlantic Avenue booth",
       "priority": 1
     }
   ],
@@ -701,94 +757,95 @@
     {
       "name": "caribBEING (Shelley Worrell)",
       "type": "Cultural organization",
-      "why": "The insider bridge to Flatbush's Caribbean designers and businesses behind the Little Caribbean district.",
-      "idea": "Paid to run listening sessions and the January heritage night, choose the artists and decide whether Bring Your Flag ships. A share of proceeds goes to Little Caribbean businesses."
+      "why": "Worrell led the push for the Little Caribbean designation and connects Flatbush's designers, shops and storytellers.",
+      "idea": "Co-design the Bring Your Flag and Panyard pieces with Flatbush designers, with a share of proceeds to Little Caribbean businesses."
     },
     {
       "name": "CASYM Steel Orchestra and Despers USA",
       "type": "Steelbands",
-      "why": "Their Flatbush and Crown Heights panyards make Carnival's music, and the steelpan note map is their craft to license.",
-      "idea": "Perform at the heritage night and, if they agree, license a credited note-map print for a fee plus revenue share."
+      "why": "They rehearse in Flatbush and Crown Heights panyards each August and compete at Panorama.",
+      "idea": "Pay a fee and a revenue share for a pan tuner's note-map graphic and a panyard launch night."
     },
     {
       "name": "Weeksville Heritage Center",
       "type": "Historic site and cultural center",
-      "why": "It preserves the 1838 free Black community, which makes it the right reviewer for any 'City of Brooklyn, Est. 1834' civic framing.",
-      "idea": "Co-author Brooklyn Firsts, choosing story and beneficiary, and review civic wording on neck tape and hangtags."
+      "why": "Its restored Hunterfly Road Houses reopened in February 2026, and it is the home of Brooklyn's own Black history.",
+      "idea": "Co-author the Brooklyn Firsts capsule and route proceeds to its free programming."
     },
     {
-      "name": "Restoration Plaza (Bedford Stuyvesant Restoration Corporation)",
-      "type": "Community and arts center",
-      "why": "Fulton Street's civic heart in Bed-Stuy and a credible host for Biggie and Black history programming.",
-      "idea": "Host the March 9 remembrance and the Black History Month launch, with Bed-Stuy artists paid as designers."
+      "name": "The Notorious B.I.G. estate",
+      "type": "Artist estate",
+      "why": "It holds approval for any Biggie product and ran the 2022 25th-anniversary campaign with Bad Boy, Rhino and Atlantic.",
+      "idea": "Build the March 2027 white and black capsule together, launched at the nearest home game."
     },
     {
-      "name": "UPROSE and El Puente",
-      "type": "Latino-led community organizations",
-      "why": "UPROSE has long spoken for Latino Sunset Park and El Puente for Southside Williamsburg, communities the brief has ignored.",
-      "idea": "Paid co-hosts of listening sessions and a spring Latino heritage night. They name the local artists who design the tee."
+      "name": "The Bushwick Collective (Joe Ficalora)",
+      "type": "Mural curator",
+      "why": "Ficalora has curated Bushwick's best-known walls since 2012 and controls the commissions.",
+      "idea": "Commission a Nets wall for the late-May Block Party, with paid artists and signed releases."
     },
     {
-      "name": "Brooklyn Chinese-American Association",
-      "type": "Sunset Park community organization",
-      "why": "Rooted in the neighborhood around the Nets' own practice facility.",
-      "idea": "Co-host the Lunar New Year night and a youth open practice, with a Sunset Park artist on the tee."
+      "name": "Papi Juice and Bushwig",
+      "type": "Queer party collective and drag festival",
+      "why": "Papi Juice has run parties for queer and trans people of color since 2013, and Bushwig has been Bushwick's drag summit since 2012.",
+      "idea": "Pay their artists as co-designers of the Nets x Liberty Pride capsule, with a set fee, and let them choose the beneficiary."
     },
     {
       "name": "Brooklyn Brigade",
-      "type": "Nets supporter group",
-      "why": "The loudest organized fans in the building, and the credibility check on any supporter product.",
-      "idea": "Paid, credited designers of a supporter scarf and bucket hat for the 15th-season night."
+      "type": "Supporter group",
+      "why": "It reportedly drives the chants, drums and flags at Barclays, though its current activity is unconfirmed.",
+      "idea": "Co-create a credited supporter capsule of scarves, bucket hats and flags."
     },
     {
-      "name": "Papi Juice",
-      "type": "Queer and trans POC party and art collective",
-      "why": "Brooklyn-born with its own illustrated merch language and the credible voice for Bushwick after dark.",
-      "idea": "Paid co-designers of the Nets-Liberty Pride chapter who choose the beneficiary."
+      "name": "Kerby Jean-Raymond",
+      "type": "Designer, founder of Pyer Moss",
+      "why": "A Flatbush-raised Haitian-American designer, and the partner Haitian Flag Day product needs.",
+      "idea": "Co-sign the Bring Your Flag drop for Haitian Flag Day, paid and credited, if his current activity checks out."
     }
   ],
   "retailPlaybook": {
     "where": [
-      "Fulton Street and Atlantic Terminal for sub-$110 volume to Bed-Stuy, Crown Heights and Flatbush families and commuters",
-      "Nets Shop at Barclays Center as the launch and personalization door, run with BSE Global and its merchandise operator",
-      "Flatbush, Church and Nostrand avenues, Fifth Avenue in Sunset Park and Knickerbocker Avenue: sell where each community shops",
-      "Kith with a Brooklyn-only, non-team capsule, and local taste and resale doors only once confirmed open and willing",
-      "Kings Plaza for south Brooklyn family gifting"
+      "Fulton Street and Atlantic Terminal for volume, including Dr. Jays and the Foot Locker doors, once confirmed open",
+      "The Nets Shop at Barclays as the launch stage and, once cleared, the 112 print station",
+      "Church, Flatbush and Nostrand avenues and Crown Heights independents for flag and Carnival product",
+      "Brooklyn-owned taste doors first, such as The Brooklyn Circus. Treat Kith on Flatbush as a conditional door, since its status is unconfirmed and its NBA deal runs through the Knicks",
+      "Beacon's Closet and the Brooklyn Flea for the First Season reissue, and Coney Island for the Demin drop"
     ],
     "when": [
-      "Nov 3 through December 2026 for quick-turn graphics and gifting",
-      "February heritage programming and late-March Biggie anniversary on the home stretch",
-      "April 2027 design lock for the Kings County line",
-      "Labor Day through holiday 2027 as the real premium launch"
+      "The first confirmed Barclays game to December: fleece, outerwear and the 112 program while it's cold",
+      "Cup Nights from Oct 30 to Nov 27: online for the Toronto opener, the Nets Shop for home nights, then Black Friday",
+      "The first Nets-Knicks game: one capped, quick-turn Randle drop, kept out of orange and blue",
+      "March 9-25 for Biggie's 30th or its fallback",
+      "May to September on the borough's calendar: Flag Day, Pride, the Mermaid Parade and Carnival"
     ],
     "how": [
-      "Keep tees, kids and entry fleece under the $110 sales-tax line. Price the 2027 varsity and puffer as premium, with visible quality",
-      "Pair every drop with in-borough pickup and a credited, paid local creator, not national e-commerce alone",
-      "Lead with the borough mark and neighborhood graphics. Size player runs (Randle, Brown Jr.) on early sales",
-      "Beat Fulton Street knockoffs with personalization, materials and partner stories on the hangtag",
-      "Plan drops around Sabbath and holiday closures in Williamsburg and Crown Heights and around Ramadan evenings"
+      "Price tees, hoodies, shorts and kids pieces under the $110 sales-tax line, and justify anything above it with quality",
+      "Pair every limited drop with a raffle, Nike-controlled pickup in Brooklyn and a local creator",
+      "Lead with the neighborhood, not the player, and keep player drops small and quick-turn",
+      "Make official product easy to tell from Fulton Street knockoffs with premium trims and a hangtag story",
+      "Schedule drops around Sabbath and Yom Tov closures in Williamsburg and Crown Heights"
     ]
   },
   "risks": [
     {
-      "risk": "Timing: fall/holiday 2026 product is already locked. The 2026-27 City Edition is unverified (likely set well ahead), and the ABA throwback may be that City Edition.",
-      "mitigation": "Ship only quick-turn graphics and personalization this season. Label every new design as FH27 or a 2027-28 pitch. Hold ABA volume modest until its status is confirmed."
+      "risk": "The ABA throwback rests on a single report, and its City Edition or Classic status is unknown.",
+      "mitigation": "Keep the heritage lane small and separate. Pitch Stoop and Steel for 2027-28 and hold any on-court spec until the team confirms the ABA set's lane."
     },
     {
-      "risk": "Third-party IP: Biggie's estate and lyrics, Basquiat, Coogi, Dodgers and Ebbets marks, MTA bullets, Glaser's Brewery 'B', the arena's facade trade dress and NYRR marathon marks.",
-      "mitigation": "Clear licenses before design lock, and lock Biggie terms by end of November. Get BSE Global sign-off on any arena-derived art. Draw original type instead of tracing."
+      "risk": "Third-party rights run through the best Brooklyn stories: the Biggie estate, Coogi, Basquiat, Spike Lee's films, Dodgers marks, MTA bullets and Eric Haze's BED-STUY mark. NBA headwear and well-known lyrics such as Spread Love need clearing too. Jay-Z became Puma's basketball creative director in 2018.",
+      "mitigation": "License each one or draw original work. Never use Jay-Z's name, likeness or lyrics, and plan a no-license fallback for every licensed drop."
     },
     {
-      "risk": "Brand conflicts: Jay-Z is tied to Puma Basketball, and Spike Lee is the Knicks' most famous fan. Named dancers or creators may hold other brand contracts.",
-      "mitigation": "Tell the 2012 story through Brooklyn and the arena, not their names. Check every creator's contracts and consent, and use paid open calls to flex crews."
+      "risk": "Carnival carries emancipation history and real danger. The 2026 J'Ouvert and parade saw three people shot and three stabbed.",
+      "mitigation": "Work only through WIADCA, steelbands and mas camps, and plan safety with them. Keep flags fan-supplied, and never sell Carnival as a party look."
     },
     {
-      "risk": "Gentrification and caricature: Atlantic Yards displacement, transplant 'Brooklyn' aesthetics, J'Ouvert and drill violence headlines, and religious community imagery.",
-      "mitigation": "Center born-and-raised Black, Caribbean, Latino, Chinese and Arab Brooklyn creators, paid and credited. No J'Ouvert product, drill signifiers, Hasidic imagery or vévé. Flags stay fan-supplied."
+      "risk": "Gentrification is the live wire. Barclays sits on the contested Atlantic Yards site, and natives spot transplant Brooklyn fast.",
+      "mitigation": "Cast born-and-raised Brooklynites and launch on Fulton Street and in Flatbush as well as Williamsburg. Pay Black, Caribbean and Latino creators, and never style Hasidic Williamsburg."
     },
     {
-      "risk": "Thin fandom: 20-62 and the Knicks' title gravity cap volume, and Caribbean or Latino households may not be Nets buyers.",
-      "mitigation": "Size buys on borough-mark sell-through. Test community capsules before scaling them, and treat partner go or no-go as a gate."
+      "risk": "Drill, bike life and the arena voice can all turn on the brand. Drill signs map to real rivalries, and the PA call is changing hands.",
+      "mitigation": "Keep street signifiers off product. Use Diamante's call only with his consent, and no Sedra audio until his start is confirmed."
     }
   ],
   "scorecard": {
@@ -796,24 +853,24 @@
     "culture": 92,
     "retail": 72,
     "fandom": 40,
-    "rationale": "Brooklyn's culture is among the deepest and most designable in the league. But the Nets' fandom is thin after 20-62 in a Knicks title year, and most partners and doors are unchecked. The opportunity rests on the borough mark selling without wins. It depends on local co-authorship and a 2027 build, not this season."
+    "rationale": "Few markets match Brooklyn's depth of culture, and its dense, walkable doors make it easy to sell in, once the home schedule is confirmed. Fan heat is low after 20-62, so lead with the plays that work without wins: the 112 program and the Panyard pack."
   },
   "provenance": {
-    "mode": "knowledge",
-    "asOf": "Model knowledge, mid-2026",
+    "mode": "live",
+    "asOf": "Live web, Oct 2026 (dossiers refreshed Oct 10; no new searches by the strategist)",
     "verify": [
-      "Confirm whether the red, white and blue ABA-era throwbacks are the 2026-27 City Edition or a Classic set, and their game dates.",
-      "Confirm Nets 2026-27 home dates: Nov 3 or nearest, December, late March, and the heritage-night schedule (Caribbean, Black History Month, Lunar New Year, Latino).",
-      "Confirm who runs the Nets Shop and fan-gear channel under BSE Global, and whether on-site ZIP printing and quick-turn licensed graphics can ship by November.",
-      "Get the full list of past Nets City Editions so the 2027-28 pitch doesn't repeat one.",
-      "Check Wallace estate plans and licensing terms for the March 2027 anniversaries.",
-      "Confirm that caribBEING, CASYM, Despers USA, Weeksville, Restoration, UPROSE, El Puente, the Brooklyn Chinese-American Association, the Arab American Association of New York, the Brooklyn Brigade and Papi Juice are active and open to paid partnership.",
-      "Confirm Kith's Brooklyn store location and its NBA team ties, and the status of Dr. Jays, The Brooklyn Circus and other local doors.",
-      "Confirm the NYC clothing sales-tax exemption under $110 per item and current replica jersey prices.",
-      "Confirm 2027 dates for Lunar New Year (Feb 6), Ramadan (about Feb 8 to Mar 9), the Brooklyn Half, Haitian Flag Day events, Brooklyn Pride, Labor Day Carnival and Atlantic Antic.",
-      "Confirm that the Liberty play 2027 at Barclays, and the official seafoam spec.",
-      "Confirm HSS Training Center in Sunset Park as the Nets' practice base, and whether it can host community open practices.",
-      "Check Jay-Z's current Puma role, David Diamante's PA status and consent, and brand contracts of any named flex dancers."
+      "Confirm the Nets 2026-27 home schedule first: the reported Oct 21 opener vs. Charlotte, the home Cup Nights, the first Knicks game, the game nearest March 9, Pride Night and any Caribbean, Haitian, Black History Month or Lunar New Year nights.",
+      "Confirm whether the red, white and blue ABA New York Nets throwbacks are the 2026-27 City Edition or a Classic set, and their game dates.",
+      "Confirm any 30th-anniversary plans and licensing terms from the Wallace estate, Bad Boy, Rhino and Atlantic.",
+      "Get the full list of past Nets City Editions, including the Basquiat set, so the Stoop and Steel pitch repeats none of them.",
+      "Confirm Olivier Sedra's start date as PA announcer, and whether David Diamante consents to use of his call.",
+      "Confirm the 2027 Carnival, J'Ouvert and Panorama dates and WIADCA partnership terms.",
+      "Confirm caribBEING, CASYM, Despers USA, Weeksville, Papi Juice, Bushwig, the Brooklyn Brigade, The Brooklyn Circus and Kerby Jean-Raymond are active and open to paid partnership.",
+      "Confirm the NYC clothing sales-tax exemption under $110 per item, current jersey prices, who holds NBA headwear, and NBA and arena rules on on-site printing, metallic numbers and waistband text.",
+      "Confirm Kith Brooklyn, Dr. Jays, Beacon's Closet and the Brooklyn Flea are operating, and which Foot Locker formats run in Downtown Brooklyn.",
+      "Confirm the Liberty's official seafoam spec and their 2027 Barclays dates.",
+      "Confirm the date of the Nets' first Brooklyn game in 2012 before marking the 15th season.",
+      "Check Jay-Z's 2026 role at Puma and the availability of named flexers such as Storyboard P and Regg Roc."
     ]
   }
 }

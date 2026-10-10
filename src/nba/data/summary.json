@@ -1313,14 +1313,14 @@
   "league": "nba",
   "status": "complete",
   "updated": "2026-10-10",
-  "headline": "Boston backs the banners and doubts the roster: sell heritage, winter gear and neighborhoods, not players",
+  "headline": "Boston trusts the banners, not the roster: sell green heritage, winter layers and the neighborhoods",
   "archetype": {
    "name": "The Banner Counters",
-   "description": "A multigenerational fan base that measures itself in titles and treats Celtics history as family property. Loyalty goes to the green, the banners and the parquet first, and to players a distant second. That's exactly what a reset season needs."
+   "description": "A six-state, multigenerational fan base that measures itself in titles. Loyalty goes to the green, the banners and the parquet first, and to players a distant second."
   },
   "pulse": {
-   "teamMoment": "The Tatum-Brown era is over. A 56-26 season ended in a 3-1 first-round collapse to Philadelphia. Brad Stevens then traded Jaylen Brown to the 76ers for Paul George and picks. The rebuild centers on Jayson Tatum, with Mitchell Robinson, Mike Conley and an extended Neemias Queta.",
-   "sentiment": "Unsettled and skeptical. Fans are proud of Banner 18, bruised by the collapse and split on the Brown trade. They're wary of George's age and contract, too, after Tatum's father publicly criticized the roster and national free-agency grades panned the summer.",
+   "teamMoment": "The Tatum-Brown era is over. After blowing a 3-1 first-round lead to Philadelphia, the Celtics traded Jaylen Brown to the 76ers for Paul George and picks. The roster now runs through Jayson Tatum under Joe Mazzulla.",
+   "sentiment": "Unsettled. Fans are proud of Banner 18, angry about the Brown trade and doubtful about George's age and $57.7M salary. Tatum's father publicly ripping the roster didn't help, and national grades told the Celtics they may need to retake class.",
    "heat": 64
   },
   "verifiedMoment": "The Tatum-Brown era is over. After blowing a 3-1 first-round lead to Philadelphia, Brad Stevens traded Jaylen Brown to the 76ers for Paul George and picks. The roster now runs through Jayson Tatum.",
@@ -1329,13 +1329,13 @@
    "culture": 60,
    "retail": 80,
    "fandom": 84,
-   "rationale": "Boston has elite heritage fandom and strong New England retail. Roster doubt after the Brown trade and Nike playing away to New Balance and adidas cap opportunity. Its design well is narrower than the Black-led design capitals' (brief scores: opportunity 76, culture 84, retail 78, fandom 86). Boston pairs one of the league's most intense, heritage-driven fan bases with a deep, distinct civic and neighborhood culture and strong retail: the Garden, Newbury, Concepts and regional outlets. This season, roster doubt and rival brands' home-turf claims cap the opportunity.",
+   "rationale": "Boston has elite heritage fandom and strong New England retail. Roster doubt after the Brown trade and Nike playing away to New Balance and adidas cap opportunity. Its design well is narrower than the Black-led design capitals' (brief scores: opportunity 76, culture 84, retail 78, fandom 86). Few markets have this much material to design from. Fandom stays high on loyalty to the banners, not to this roster, which the Brown trade and the 3-1 collapse have unsettled. Rival brands at home and a doubted roster hold the near-term size down.",
    "calibrated": true,
    "self": {
-    "opportunity": 76,
+    "opportunity": 74,
     "culture": 84,
     "retail": 78,
-    "fandom": 86
+    "fandom": 78
    }
   },
   "palette": [
@@ -1344,7 +1344,7 @@
     "hex": "#007A33"
    },
    {
-    "name": "Hardwood",
+    "name": "Hardwood Gold",
     "hex": "#BA9653"
    },
    {
@@ -1358,46 +1358,49 @@
   ],
   "opportunities": [
    {
-    "id": "specter-banner-heritage",
-    "title": "Specter and the Rafters: the heritage layer",
-    "summary": "Wrap the Specter merchandise, on shelves since Sept 9, in a Celtics heritage story: banner counts, retired-number rows, honey-oak parquet jacquard and the dates of Johnny Most's calls. Fans can back the franchise while they make up their minds about the roster.",
+    "id": "banner-heritage-core",
+    "title": "Heritage first: banners, parquet, green",
+    "summary": "A team-first core line built on the 18 banners, tonal parquet and the retired numbers. It sells whatever the roster does. Specter merchandise has been on shelves since Sept 9, so this line gives it a green heritage frame.",
     "where": [
-     "Celtics Pro Shop at TD Garden",
-     "Nike Boston, Newbury Street",
-     "Online team shop",
-     "Converse at Lovejoy Wharf (event, if still operating)"
+     "ProShop at The Hub on Causeway, 84 Causeway St",
+     "bostonproshop.com",
+     "Nike Boston, 200 Newbury St (once confirmed open)",
+     "Nike Factory Store, Wrentham Village"
     ],
-    "when": "Lock the assortment now for tip-off week (Oct 20-30) through holiday. Add a Specter on-court moment only once the wear schedule is confirmed.",
-    "how": "Treat Oct 20-30 as a heritage refresh on product fans can already buy, not a launch. Build the story to work with or without Specter on court on Dec 25. A UV-reactive interior reveals the retired-number row for fans to decode online. Keep the parquet tonal, and tie every graphic to a named Garden reference.",
-    "segment": "Lifelong diehards and holiday gift buyers",
+    "when": "Tatum up front at the ProShop for the Oct 20 opener at Detroit. A heritage restock for the Oct 23 home opener, then on through Christmas Day and again for the April playoffs.",
+    "how": "Lock the October assortment now, with no Brown product. Put Tatum jerseys and tees up front at the ProShop for the Oct 20 NBC opener. Treat Oct 23 against the Knicks as a restock and push of green heritage next to the Specter pieces already on sale. Approve the Oct 30 Cup Night tee art before Oct 23. Clear the parquet and team marks with the NBA and the Celtics first.",
+    "segment": "Lifelong diehards, and the Gen Z fans who came in with Banner 18",
     "priority": 1,
     "size": "high",
     "months": [
      10,
      11,
-     12
+     12,
+     4
     ],
     "products": [
-     "Honey-oak parquet-jacquard warm-up jacket",
-     "17/18 banner-count tee",
-     "Retired-number-row crewneck",
-     "Specter replica jersey",
-     "Team-mark dad hat"
+     "Banner 17-and-18 stacked warm-up in green and cream",
+     "Parquet jacquard hoodie, tone on tone",
+     "Retired-numbers back-neck tee",
+     "Garden-floor tee: Tatum and the team in Nike on the parquet, with the floor named",
+     "Tatum Icon jersey with a team-first hangtag",
+     "Small player tier: a Queta No. 88 tee, plus a White tee if he stays on the roster"
     ],
-    "kpi": "Sell-through of heritage pieces versus player pieces at the Pro Shop and Newbury by Dec 26. Specter jersey units in the first confirmed wear week.",
+    "kpi": "Heritage sell-through at the ProShop and online by Dec 31, tracked against Tatum jersey and player-tier sales.",
     "handoff": {
-     "id": "specter-banner-heritage",
-     "consumer": "Lifelong Celtics diehards and holiday gift buyers who back the franchise while they make up their minds about the roster.",
+     "id": "banner-heritage-core",
+     "status": "hypothesis",
+     "consumer": "Lifelong diehards, and the Gen Z fans who came in with Banner 18",
      "insights": [
       0,
-      6
+      1,
+      2
      ],
      "categories": [
-      "outerwear",
+      "jersey",
       "tee",
       "fleece",
-      "jersey",
-      "headwear"
+      "outerwear"
      ],
      "fit": [
       "to define"
@@ -1405,32 +1408,25 @@
      "targetSeason": "2026-27",
      "firstInMarket": "2026-10",
      "actBy": "2026-10",
-     "actNote": "Lock the heritage assortment now for tip-off week (Oct 20-30) through holiday.",
+     "actNote": "Lock the October assortment now, with no Brown product, before the Oct 20 opener.",
      "routes": [
       "existing-inventory",
-      "quick-turn-graphics",
-      "new-development"
+      "quick-turn-graphics"
      ],
      "validation": [
-      "Confirm which 2026-27 games the Celtics wear Specter, especially Dec 25.",
-      "Confirm what Boston's Specter merchandise includes and how deep the stock is.",
-      "Clear the Johnny Most estate before printing any call dates.",
-      "Test heritage pieces against player pieces with Pro Shop and Newbury buyers."
+      "Test the heritage-first lineup against Specter pieces with diehards and Gen Z fans.",
+      "Check ProShop stock depth on Tatum jerseys and tees before the Oct 20 broadcast.",
+      "Clear the parquet and team marks with the NBA and the Celtics."
      ],
      "dependencies": [
       "stock-availability",
+      "production-capacity",
       "league-or-team-rights",
       "player-or-estate-rights",
-      "production-capacity",
-      "nike-calendar-approval",
-      "partner-agreement",
       "date-confirmation"
      ],
      "owner": "Licensed team apparel",
-     "partners": [
-      "Bodega"
-     ],
-     "status": "hypothesis",
+     "partners": [],
      "reviewed": true
     },
     "support": {
@@ -1443,18 +1439,18 @@
     }
    },
    {
-    "id": "noreaster-layering",
-    "title": "Nor'easter layering system with a snow-emergency drop",
-    "summary": "A green-led outerwear and knit line built for wet Boston winters. It includes a four-colorway set keyed to the Berkeley Building weather beacon and a 'Space Saver' puffer that drops the morning after the city's first snow emergency.",
+    "id": "noreaster-layers",
+    "title": "The nor'easter line under $175",
+    "summary": "Winter layers in Celtics green, priced to stay under the Massachusetts clothing-tax line. Boston buys hats, quarter-zips and shells from November into April.",
     "where": [
-     "Nike Boston, Newbury Street",
-     "Nike Factory Store Wrentham",
-     "Celtics Pro Shop at TD Garden",
-     "Assembly Row and Prudential Center"
+     "ProShop at The Hub on Causeway",
+     "Wrentham Village Premium Outlets",
+     "Assembly Row, Somerville",
+     "Online, for premium outerwear"
     ],
-    "when": "The core line runs from the first November cold snap through March. The Space Saver drop fires on the first snow emergency or nor'easter forecast, with a mid-January backstop date.",
-    "how": "Tie the colorways to the beacon rhyme printed inside the collar, and reserve Space Saver stock early. If nothing triggers by mid-January, release on the backstop date so stock never strands. Use lawn-chair webbing as a pattern, in the locals' own humor rather than mockery. Price hero pieces at or under $175.",
-    "segment": "Commuting fans, suburban families and New England regional fans",
+    "when": "Black Friday through the playoffs, with a snow drop the morning after the first snow emergency.",
+    "how": "Land the core layers by mid-November. Price quarter-zips, fleece and beanies at or under $175. Hold the Space Saver pack and release it the morning after the city's first snow emergency. Tell the lawn-chair joke with locals, not at them.",
+    "segment": "Suburban families, regional fans and anyone waiting on a frozen T platform",
     "priority": 1,
     "size": "high",
     "months": [
@@ -1462,28 +1458,30 @@
      12,
      1,
      2,
-     3
+     3,
+     4
     ],
     "products": [
-     "Reversible green-and-granite shell",
-     "Celtics-green quarter-zip",
-     "Space Saver puffer",
-     "Aran cable-knit beanie",
-     "Oversized jersey cut to fit over a hoodie"
+     "Space Saver green shell with lawn-chair webbing trim",
+     "Celtics-green fleece quarter-zip with a Boston wordmark",
+     "Aran cable-knit beanie in green and cream",
+     "Heavyweight fleece hoodie in park-court gray",
+     "Playoff shooting shirt cut to layer over a hoodie"
     ],
-    "kpi": "Outerwear and knit share of Boston Celtics revenue, Nov-Mar. Sell-out time of the Space Saver drop.",
+    "kpi": "Share of outerwear units sold at or under $175, and snow-drop sell-through within 48 hours.",
     "handoff": {
-     "id": "noreaster-layering",
-     "consumer": "Commuting fans, suburban families and New England regional fans who need Celtics gear for wet winters.",
+     "id": "noreaster-layers",
+     "status": "hypothesis",
+     "consumer": "Suburban families, regional fans and anyone waiting on a frozen T platform",
      "insights": [
       4,
-      6
+      5,
+      1
      ],
      "categories": [
       "outerwear",
       "fleece",
-      "headwear",
-      "jersey"
+      "headwear"
      ],
      "fit": [
       "to define"
@@ -1491,28 +1489,25 @@
      "targetSeason": "2026-27",
      "firstInMarket": "2026-11",
      "actBy": "2026-11",
-     "actNote": "Reserve Space Saver stock early, before the core line opens with the first November cold snap.",
+     "actNote": "Land the core layers by mid-November.",
      "routes": [
       "new-development",
       "quick-turn-graphics"
      ],
      "validation": [
-      "Cost the shell, puffer and knit to land at or under $175.",
-      "Confirm Space Saver stock can be held until the first snow emergency or the mid-January backstop.",
-      "Test the over-the-hoodie jersey fit with commuting fans.",
-      "Confirm Nike Boston and Nike Factory Store Wrentham are open to carry the line."
+      "Test price points at or under $175 with suburban and regional buyers.",
+      "Size the volume for Wrentham, Assembly Row and online.",
+      "Confirm the Space Saver shell can be made in time for the first snow emergency."
      ],
      "dependencies": [
       "production-capacity",
       "nike-calendar-approval",
       "league-or-team-rights",
       "stock-availability",
-      "retailer-agreement",
       "date-confirmation"
      ],
-     "owner": "Licensed team apparel",
+     "owner": "Merchandising",
      "partners": [],
-     "status": "hypothesis",
      "reviewed": true
     },
     "support": {
@@ -1525,163 +1520,70 @@
     }
    },
    {
-    "id": "concepts-converse-tatum",
-    "title": "Boston-only Nike-family capsule through Concepts",
-    "summary": "A Celtics capsule co-designed with Concepts: one Jordan Brand Tatum colorway in Roxbury puddingstone speckle and State House gold, plus a Converse 'Malden 1908' dynasty-era high-top. It's Boston's own answer to New Balance's home-turf claim.",
+    "id": "concepts-new-england",
+    "title": "A Concepts capsule with a new story",
+    "summary": "A co-designed Celtics capsule with Concepts, Boston's most credible Nike collaborator. Build it on a fresh New England idea, not another lobster.",
     "where": [
-     "Concepts, Cambridge",
-     "Bodega, Clearway Street",
-     "Converse at Lovejoy Wharf (if still operating)"
+     "Concepts, 18 Newbury St",
+     "Concepts, Harvard Square (if still open)",
+     "Bodega, 6 Clearway St (if still trading)"
     ],
-    "when": "Holiday restock before Dec 25 at the earliest. NBA and Celtics approval of team marks and the Jordan colorway calendar set the real date.",
-    "how": "Let Concepts write a new New England story, not a reheated lobster, and build NBA and Celtics licensing approval into the schedule. Host live chain-stitch personalization of a Causeway satin bomber, run by a credited Boston embroidery shop. Keep volume small so it reads as a taste signal.",
-    "segment": "Sneakerheads, students and Gen Z Tatum fans",
+    "when": "Pitch this fall and release for the holiday window.",
+    "how": "Pitch Concepts before any citywide Nike launch. Bring the iced regular, Boston's cream-and-sugar coffee order, with two alternates such as a puddingstone speckle or a Beacon Hill violet pair. Make the tan and cream palette work without the coffee story or any Dunkin' marks, so it can't read as a Dunkin' Dunk or another lobster joke. Release one Nike Basketball colorway with a small apparel run. Confirm both shops are trading before you sign.",
+    "segment": "Sneaker collectors and the Newbury Street taste crowd",
     "priority": 1,
     "size": "medium",
     "months": [
-     12,
-     2
+     11,
+     12
     ],
     "products": [
-     "Jordan Tatum puddingstone colorway",
-     "Converse dynasty-era Celtics high-top",
-     "Causeway satin bomber with blank chain-stitch panel",
-     "Co-branded capsule tee"
+     "Iced Regular sneaker: cream-coffee tan with a clear ice-cube outsole",
+     "Celtics satin bomber with a blank chest panel for live chain-stitching",
+     "Co-branded hoodie with a Beacon Hill violet lining"
     ],
-    "kpi": "Sell-out speed, resale premium and social reach of the capsule. Personalization appointments booked.",
+    "kpi": "Time to sell out, resale premium on the colorway, and chain-stitch sessions booked.",
     "handoff": {
-     "id": "concepts-converse-tatum",
-     "consumer": "Sneakerheads, students and Gen Z Tatum fans who shop Concepts and Bodega.",
+     "id": "concepts-new-england",
+     "status": "hypothesis",
+     "consumer": "Sneaker collectors and the Newbury Street taste crowd",
      "insights": [
-      1,
-      0
+      2,
+      6
      ],
      "categories": [
       "footwear",
       "outerwear",
-      "tee"
+      "fleece"
      ],
      "fit": [
       "to define"
      ],
      "targetSeason": "2026-27",
      "firstInMarket": "2026-12",
-     "actBy": "2026-12",
-     "actNote": "Get NBA and Celtics approval of team marks and a Jordan colorway slot. A holiday restock before Dec 25 is the earliest date.",
+     "actBy": "2026-10",
+     "actNote": "Pitch Concepts this fall, before any citywide Nike launch, and confirm both shops are trading.",
      "routes": [
       "new-development",
       "quick-turn-graphics"
      ],
      "validation": [
-      "Confirm Tatum's health and 2026-27 Jordan Brand colorway slots.",
-      "Confirm NBA and Celtics approval timelines for a co-branded capsule.",
-      "Confirm Bodega's operation and New Balance commitments before it carries the drop.",
-      "Confirm Converse is still at Lovejoy Wharf and whether it has a customization space."
+      "Pitch the iced regular and two alternates to Concepts before any citywide Nike launch.",
+      "Confirm the Newbury Street, Cambridge and Bodega shops are trading before signing.",
+      "Check the colorway reads without Dunkin' marks or a lobster joke."
      ],
      "dependencies": [
-      "league-or-team-rights",
-      "player-or-estate-rights",
       "partner-agreement",
       "nike-calendar-approval",
-      "production-capacity",
-      "third-party-ip",
       "retailer-agreement",
-      "date-confirmation"
-     ],
-     "owner": "Marketing",
-     "partners": [
-      "Concepts",
-      "Bodega",
-      "Boston embroidery shop (to be named)"
-     ],
-     "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 1,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [
-      "bos-c4"
-     ],
-     "strength": "partial"
-    }
-   },
-   {
-    "id": "russells-boston-firsts",
-    "title": "Russell's Boston, made in Roxbury",
-    "summary": "A February capsule on the Celtics' firsts (Chuck Cooper, the 1964 all-Black starting five, Russell as the first Black head coach) and Russell's Slade's years. Roxbury artists and institutions co-author it.",
-    "where": [
-     "Nubian Square, Roxbury",
-     "Slade's Bar & Grill, 958 Tremont Street",
-     "Museum of African American History, Beacon Hill",
-     "Bill Russell statue, City Hall Plaza"
-    ],
-    "when": "Black History Month, timed to the Celtics' February heritage home game once its date is confirmed",
-    "how": "Commission Ekua Holmes or Rob 'Problak' Gibbs, working with Artists For Humanity's paid youth studio. License Russell's name and story through his estate. Shoot the lookbook at Slade's with its current owners as paid partners, with Hibernian Hall in Nubian Square as the fallback. Send a share of proceeds to Roxbury youth basketball, and let Russell's own story justify the moment.",
-    "segment": "Roxbury, Dorchester and Mattapan fans and Black Boston creatives",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     2
-    ],
-    "products": [
-     "'Russell 6' crewneck in Quincy granite gray and green",
-     "Artist-collage graphic tee",
-     "Supper-club menu-card gift box",
-     "Youth tee"
-    ],
-    "kpi": "Share of revenue returned to partners, partner renewal for a second year, and units sold through Nubian Square doors versus the Garden.",
-    "handoff": {
-     "id": "russells-boston-firsts",
-     "consumer": "Roxbury, Dorchester and Mattapan fans and Black Boston creatives.",
-     "insights": [
-      3,
-      0
-     ],
-     "categories": [
-      "fleece",
-      "tee",
-      "kids",
-      "accessory"
-     ],
-     "fit": [
-      "to define",
-      "youth"
-     ],
-     "targetSeason": "2026-27",
-     "firstInMarket": "2027-02",
-     "actBy": "2027-02",
-     "actNote": "Confirm the Celtics' February heritage home date and license Russell's name and story through his estate before launch.",
-     "routes": [
-      "quick-turn-graphics"
-     ],
-     "validation": [
-      "Check licensing from the Bill Russell estate.",
-      "Confirm Slade's current owners want a paid partnership, with Hibernian Hall as the fallback.",
-      "Check whether Ekua Holmes or Rob 'Problak' Gibbs and Artists For Humanity's youth studio are available.",
-      "Agree the share of proceeds returned to partners and Roxbury youth basketball."
-     ],
-     "dependencies": [
-      "player-or-estate-rights",
-      "league-or-team-rights",
       "third-party-ip",
-      "partner-agreement",
-      "venue-or-permit",
       "production-capacity",
       "date-confirmation"
      ],
      "owner": "Partnerships and community",
      "partners": [
-      "Ekua Holmes",
-      "Rob 'Problak' Gibbs",
-      "Artists For Humanity",
-      "Slade's Bar & Grill",
-      "Museum of African American History",
-      "Hibernian Hall"
+      "Concepts"
      ],
-     "status": "hypothesis",
      "reviewed": true
     },
     "support": {
@@ -1694,150 +1596,153 @@
     }
    },
    {
-    "id": "rivalry-archive-sixers",
-    "title": "Rivalry archive for the Jan 21 Sixers night",
-    "summary": "Numbers-and-dates product that turns the Jan 21 visit by Brown and LeBron into a chapter of a 60-year feud. Set Johnny Most's 1965 call date and the 1982 'Beat L.A.!' date in plain period type. Add a one-ink hardcore-flyer shooting shirt by a credited local scene artist.",
+    "id": "firsts-nubian-square",
+    "title": "The Celtics' firsts, launched in Nubian Square",
+    "summary": "A February collection on the team's firsts: Chuck Cooper in 1950, the first all-Black starting five in 1964 and Russell as the first Black head coach in 1966. Roxbury artists are paid co-authors.",
     "where": [
-     "Celtics Pro Shop at TD Garden",
-     "Causeway Street pre-game pubs",
-     "Nike Boston, Newbury Street"
+     "Nubian Square, Roxbury",
+     "National Center of Afro-American Artists",
+     "Museum of African American History, Beacon Hill",
+     "Reggie Lewis Track and Athletic Center"
     ],
-    "when": "Jan 21. Use the Oct 10 preseason crowd only as a social listen to shape this plan.",
-    "how": "No player names, no opponent marks and no mockery of Brown or LeBron. Commission a Boston flyer artist and credit them on the hang tag. Clear the Most estate before setting any call text. Hold any Lakers rivalry product until a Lakers home date is confirmed.",
-    "segment": "Diehards and rivalry-night crowds",
-    "priority": 2,
+    "when": "Black History Month, timed to the Celtics' February game once its date is set.",
+    "how": "Commission Ekua Holmes or Rob 'Problak' Gibbs through Artists For Humanity's paid youth studio. Sign the artists and the Russell estate, with the Museum of African American History, before anyone announces the collection. Give the artists approval over the 'Russell 11' graphic. If the estate declines, drop Russell by name and keep the Chuck Cooper and 1964 starting-five story. Launch in Nubian Square, not at the Garden. Send proceeds to Roxbury youth basketball.",
+    "segment": "Black Boston, Roxbury and Dorchester hoopers, and fans who know the history",
+    "priority": 1,
     "size": "medium",
     "months": [
-     1
+     1,
+     2
     ],
     "products": [
-     "Period-type '1965 / 1982' archive tee",
-     "One-ink Celtics-green shooting shirt",
-     "Knit scarf in supporter style"
+     "'Russell 11' tee in Quincy granite gray and green",
+     "Collage-print hoodie by a Roxbury artist",
+     "1964 starting-five warm-up with an artist-credited hangtag",
+     "Youth tee for BNBL players"
     ],
-    "kpi": "In-arena sell-through on Jan 21, and the share of rivalry-night social posts that are positive about Nike product.",
+    "kpi": "Artist fees paid, dollars sent to Roxbury youth basketball and Nubian Square launch turnout.",
     "handoff": {
-     "id": "rivalry-archive-sixers",
-     "consumer": "Celtics diehards and rivalry-night crowds at the Garden and Causeway Street pubs.",
-     "insights": [
-      2,
-      6
-     ],
-     "categories": [
-      "tee",
-      "accessory"
-     ],
-     "fit": [
-      "to define"
-     ],
-     "targetSeason": "2026-27",
-     "firstInMarket": "2027-01",
-     "actBy": "2026-10",
-     "actNote": "Use the Oct 10 preseason crowd only as a social listen to shape the Jan 21 plan.",
-     "routes": [
-      "new-development",
-      "quick-turn-graphics"
-     ],
-     "validation": [
-      "Read the Oct 10 social listen for how fans feel about Brown and LeBron.",
-      "Test the date-only product with diehards for any read as a dig at Brown.",
-      "Confirm the Jan 21 game date and Pro Shop allocation.",
-      "Clear the Johnny Most estate before setting any call text."
-     ],
-     "dependencies": [
-      "league-or-team-rights",
-      "player-or-estate-rights",
-      "third-party-ip",
-      "brand-safety",
-      "production-capacity",
-      "nike-calendar-approval",
-      "date-confirmation"
-     ],
-     "owner": "Licensed team apparel",
-     "partners": [
-      "Boston flyer artist (to be commissioned)"
-     ],
+     "id": "firsts-nubian-square",
      "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 0,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [],
-     "strength": "unchecked"
-    }
-   },
-   {
-    "id": "new-england-area-codes",
-    "title": "New England area-code line",
-    "summary": "A full area-code set: 617, 857, 781, 339, 508, 774, 978, 351, 413, 401, 603, 802, 207 and Connecticut's codes. It leads with two variants only New England has: Mazzulla's Rhode Island 401 and the Maine Celtics' 207.",
-    "where": [
-     "Nike Factory Store Wrentham",
-     "Pheasant Lane Mall, Nashua NH",
-     "Dick's Sporting Goods suburban doors",
-     "Portland, Maine (Maine Celtics market)",
-     "Online team shop"
-    ],
-    "when": "Black Friday through Christmas, then the playoff run",
-    "how": "Sell the full set online and in every door, holding a small numbered run of each code for its home market. Pair it with a North Shore / South Shore tee set in original roast-beef-stand and bar-pizza lettering. Check Hartford-area fan data before counting on Connecticut, the border with the champion Knicks.",
-    "segment": "Suburban families and New England regional fans",
-    "priority": 2,
-    "size": "high",
-    "months": [
-     11,
-     12,
-     4,
-     5
-    ],
-    "products": [
-     "Area-code block-numeral tee",
-     "Regional dad hat",
-     "North Shore / South Shore tee pair",
-     "Kids replica jersey"
-    ],
-    "kpi": "Units by area code and state, outlet comp growth versus downtown doors, and sell-out time of the numbered runs.",
-    "handoff": {
-     "id": "new-england-area-codes",
-     "consumer": "Suburban families and New England regional fans who rep an area code, from 781, 508 and 978 out to 401 and 207.",
+     "consumer": "Black Boston, Roxbury and Dorchester hoopers, and fans who know the history",
      "insights": [
-      5,
-      4
+      0,
+      3
      ],
      "categories": [
       "tee",
-      "headwear",
-      "jersey",
+      "fleece",
+      "outerwear",
       "kids"
      ],
      "fit": [
-      "to define",
+      "youth",
+      "to define"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-02",
+     "actBy": "2026-10",
+     "actNote": "Confirm the artists, the Russell estate and the Museum are available, and the Celtics' February game date.",
+     "routes": [
+      "quick-turn-graphics"
+     ],
+     "validation": [
+      "Confirm Artists For Humanity, Ekua Holmes and Problak can take paid commissions.",
+      "Secure the Russell estate and museum agreement before any announcement.",
+      "Test the story with Roxbury and Dorchester fans and the artists."
+     ],
+     "dependencies": [
+      "player-or-estate-rights",
+      "partner-agreement",
+      "third-party-ip",
+      "venue-or-permit",
+      "brand-safety",
+      "date-confirmation"
+     ],
+     "owner": "Partnerships and community",
+     "partners": [
+      "Artists For Humanity",
+      "Ekua Holmes",
+      "Rob 'Problak' Gibbs",
+      "Museum of African American History",
+      "Russell estate"
+     ],
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "christmas-gifting",
+    "title": "Christmas Day at the Garden",
+    "summary": "Boston hosts Giannis Antetokounmpo's Heat at 2:30 p.m. ET on Dec 25. It's a home game on the NBA's biggest retail date.",
+    "where": [
+     "ProShop at The Hub on Causeway",
+     "bostonproshop.com",
+     "Wrentham Village Premium Outlets",
+     "Nike Boston, 200 Newbury St (once confirmed open)"
+    ],
+    "when": "Assortment in by mid-November, gifting peak Dec 1-24, game on Dec 25.",
+    "how": "Land gift sets and kids' sizes by mid-November, and order deep on youth. Make one Christmas Day warm-up shirt the headline. Pack it with a string-tied, waxed-paper insert borrowed from the North End pastry box, with no bakery marks.",
+    "segment": "Suburban families and New England gift buyers",
+    "priority": 1,
+    "size": "high",
+    "months": [
+     11,
+     12
+    ],
+    "products": [
+     "Christmas Day warm-up shirt in green and banner gold",
+     "Kids' Tatum and Queta jersey set",
+     "Ornament gift set",
+     "Holiday hoodie in pastry-box packaging"
+    ],
+    "kpi": "Holiday sell-through by Dec 24 and youth-size stockouts.",
+    "handoff": {
+     "id": "christmas-gifting",
+     "status": "hypothesis",
+     "consumer": "Suburban families and New England gift buyers",
+     "insights": [
+      5,
+      0
+     ],
+     "categories": [
+      "tee",
+      "kids",
+      "accessory",
+      "fleece"
+     ],
+     "fit": [
+      "youth",
       "kids"
      ],
      "targetSeason": "2026-27",
      "firstInMarket": "2026-11",
      "actBy": "2026-11",
-     "actNote": "Open the area-code set for Black Friday in outlet and mall doors.",
+     "actNote": "Land gift sets and kids' sizes by mid-November, and order deep on youth.",
      "routes": [
       "quick-turn-graphics",
       "existing-inventory"
      ],
      "validation": [
-      "Check Hartford-area fan data before counting on Connecticut.",
-      "Check the Maine Celtics' affiliation before leading with 207.",
-      "Confirm Nike Factory Store Wrentham and the Pheasant Lane doors are operating.",
-      "Set numbered run sizes by home market and track units by code and state."
+      "Size youth and gift-set depth against last Christmas sell-through.",
+      "Test the Christmas Day warm-up shirt as the headline piece with gift buyers.",
+      "Confirm packaging insert has no bakery marks."
      ],
      "dependencies": [
-      "league-or-team-rights",
-      "production-capacity",
       "stock-availability",
-      "retailer-agreement"
+      "production-capacity",
+      "league-or-team-rights",
+      "player-or-estate-rights"
      ],
      "owner": "Merchandising",
      "partners": [],
-     "status": "hypothesis",
      "reviewed": true
     },
     "support": {
@@ -1850,163 +1755,227 @@
     }
    },
    {
-    "id": "neighborhood-courts",
-    "title": "Neighborhood courts: BNBL to dawn open runs",
-    "summary": "Show up year-round in Boston's own leagues and gyms. Put BNBL x Celtics reversible jerseys, designed with Roxbury and Dorchester artists, on the court, and give a girls' school and AAU program its own fit. Add free dawn open runs in the show-up spirit of November Project.",
+    "id": "this-is-boston-rivalry",
+    "title": "'This Is Boston' rivalry nights",
+    "summary": "One-ink rivalry shooting shirts for the Knicks, 76ers and Lakers games. A local hardcore flyer artist draws them on Boston's own vocabulary.",
     "where": [
-     "Reggie Lewis Track and Athletic Center, Roxbury",
-     "Franklin Park courts",
-     "BCYF gyms",
-     "Catholic Memorial, BC High and Cambridge Rindge and Latin"
+     "ProShop at The Hub on Causeway",
+     "The Middle East, Central Square",
+     "Paradise Rock Club, Allston"
     ],
-    "when": "BNBL summer season, launching at Dorchester Day in June. Outfit the girls before the winter high-school season.",
-    "how": "Fund the leagues and pay the designers directly. Cut a women's and girls' fit of every court piece. Build any Reggie Lewis tribute only with his family and Roxbury partners, and screen partners for New Balance ties first. Tie into Boston's WNBA story only once its status is confirmed.",
-    "segment": "Roxbury, Dorchester and Mattapan hoopers, girls' school and AAU teams, youth programs",
+    "when": "The Knicks home opener and the Lakers' Garden visit. The 'Gahden broadside' tee drops a week before or after Jan 21, never on Brown's night.",
+    "how": "Commission a Boston hardcore-scene flyer artist and credit them. Print flat Celtics green on black or heather, with banner counts and no opponent marks. Don't copy the 1982 compilation's cover or title. Draw Johnny Most's 1965 Havlicek call as a graphic, with the numbers and no quoted words. Clear it with the Celtics and the Most estate before design lock. Keep Jan 21 itself free of new product.",
+    "segment": "Diehards, plus the hardcore and punk crowd",
     "priority": 2,
     "size": "medium",
     "months": [
-     6,
-     7,
-     8,
-     11
+     10,
+     1
     ],
     "products": [
-     "BNBL x Celtics reversible jersey",
-     "Women's and girls' fit shooting shirt",
-     "Court-gray shooting shirt",
-     "Dot-and-Rox capsule tee",
-     "Youth basketball shorts"
+     "One-ink green rivalry shooting shirt with xerox grain",
+     "'Gahden broadside' tee: Havlicek's 1965 steal drawn over parquet, after Johnny Most's call, with no quoted text",
+     "Launch-show tee for The Middle East"
     ],
-    "kpi": "Players and teams outfitted (with the girls' share tracked), open-run attendance and partner renewal year over year.",
+    "kpi": "Rivalry-night sell-through at the ProShop and launch-show turnout.",
     "handoff": {
-     "id": "neighborhood-courts",
-     "consumer": "Roxbury, Dorchester and Mattapan hoopers, girls' school and AAU teams, and youth programs.",
-     "insights": [
-      3,
-      5
-     ],
-     "categories": [
-      "jersey",
-      "shorts",
-      "tee",
-      "kids",
-      "event"
-     ],
-     "fit": [
-      "unisex adult",
-      "women's",
-      "youth"
-     ],
-     "targetSeason": "2026-27",
-     "firstInMarket": "2027-06",
-     "actBy": "2027-06",
-     "actNote": "Screen partners for New Balance ties, then fund the leagues for the Dorchester Day launch in June.",
-     "routes": [
-      "new-development",
-      "quick-turn-graphics",
-      "no-product"
-     ],
-     "validation": [
-      "Screen BNBL, gym and school partners for New Balance ties.",
-      "Confirm 2027 dates for the BNBL season and Dorchester Day.",
-      "Build any Reggie Lewis tribute only with his family and Roxbury partners.",
-      "Check Boston's WNBA status before tying in."
-     ],
-     "dependencies": [
-      "partner-agreement",
-      "league-or-team-rights",
-      "player-or-estate-rights",
-      "third-party-ip",
-      "production-capacity",
-      "nike-calendar-approval",
-      "venue-or-permit",
-      "date-confirmation"
-     ],
-     "owner": "Partnerships and community",
-     "partners": [
-      "Boston Neighborhood Basketball League",
-      "Reggie Lewis Track and Athletic Center",
-      "BCYF",
-      "Catholic Memorial",
-      "BC High",
-      "Cambridge Rindge and Latin",
-      "Reggie Lewis's family"
-     ],
+     "id": "this-is-boston-rivalry",
      "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 0,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [],
-     "strength": "unchecked"
-    }
-   },
-   {
-    "id": "queta-cape-verdean-community",
-    "title": "Queta and Portuguese-speaking Boston",
-    "summary": "Neemias Queta, the Portuguese center just extended for four years, is a natural bridge to Boston's large Cape Verdean and Portuguese-speaking communities in Dorchester, Roxbury and Brockton. The brief otherwise treats those communities only as a risk.",
-    "where": [
-     "Dorchester (Bowdoin-Geneva and Uphams Corner)",
-     "Brockton",
-     "Celtics community programs"
-    ],
-    "when": "Test a community program in the winter. Decide on any product around Cape Verdean Independence Day (July 5), and only if partners want it.",
-    "how": "Confirm Queta's heritage and willingness first. Then, before any graphic, build a paid, credited program with Cape Verdean and Portuguese-language community organizations: clinics, bilingual youth content. No flags or national symbols on product.",
-    "segment": "Cape Verdean and Portuguese-speaking fans in Dorchester and Brockton",
-    "priority": 2,
-    "size": "low",
-    "months": [
-     1,
-     2,
-     7
-    ],
-    "products": [
-     "Bilingual clinic tee",
-     "Queta player tee (if demand shows)"
-    ],
-    "kpi": "Clinic attendance, partner sentiment, and whether partners ask for a second-year program or product.",
-    "handoff": {
-     "id": "queta-cape-verdean-community",
-     "consumer": "Cape Verdean and Portuguese-speaking fans in Dorchester and Brockton.",
+     "consumer": "Diehards, plus the hardcore and punk crowd",
      "insights": [
+      6,
       0
      ],
      "categories": [
-      "event",
       "tee"
      ],
      "fit": [
       "to define"
      ],
      "targetSeason": "2026-27",
-     "firstInMarket": "2027-01",
-     "actBy": "2027-01",
-     "actNote": "Confirm Queta's heritage and willingness before the winter community test.",
+     "firstInMarket": "2026-10",
+     "actBy": "2026-10",
+     "actNote": "Commission a Boston flyer artist and clear the art with the Celtics and the Most estate before design lock.",
      "routes": [
-      "no-product",
       "quick-turn-graphics"
      ],
      "validation": [
-      "Confirm Queta's heritage, footwear deal and interest in a community program.",
-      "Identify Cape Verdean and Portuguese-language partners with the Celtics' community team.",
-      "Track clinic attendance and whether partners ask for product."
+      "Test the one-ink flyer look with diehards and the hardcore crowd.",
+      "Clear the Havlicek and Most references with the Celtics and the Most estate.",
+      "Check the compilation cover is not copied."
      ],
      "dependencies": [
+      "league-or-team-rights",
+      "third-party-ip",
       "player-or-estate-rights",
+      "brand-safety",
+      "date-confirmation"
+     ],
+     "owner": "Design",
+     "partners": [
+      "The Middle East",
+      "Paradise Rock Club",
+      "Most estate"
+     ],
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "dot-to-eastie",
+    "title": "'Dot to Eastie' neighborhood capsule",
+    "summary": "Neighborhood pieces co-designed with local makers. Each one rests on a real marker: three-decker porches, Dot Ave, Fields Corner, Nubian Square.",
+    "where": [
+     "Dorchester Avenue and Fields Corner",
+     "Nubian Square, Roxbury",
+     "East Boston",
+     "Mathmatik Athletics and Madrugada pop-ups"
+    ],
+    "when": "Brands verified in October, deals signed by winter, pre-orders in May, launch at the Dorchester Day Parade in early June.",
+    "how": "Verify Mathmatik Athletics and Madrugada this month, then sign them as paid co-designers. Cap the first run at what a small maker can carry, and pay up front. Find a backup maker in Mattapan and one in East Boston, where the brief has none yet. Commission each neighborhood's three-decker from a local illustrator. Sell by pre-order, then at the parade and in neighborhood shops. Never print a neighborhood's name without a maker from it.",
+    "segment": "Neighborhood-proud locals in Dorchester, Roxbury, Mattapan, East Boston and Southie",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     5,
+     6
+    ],
+    "products": [
+     "Three-decker tee, one per neighborhood",
+     "Neighborhood-name jersey with Mathmatik Athletics",
+     "Puddingstone-speckle hoodie",
+     "617 area-code cap"
+    ],
+    "kpi": "Pre-orders by neighborhood and the share of revenue paid to local makers.",
+    "handoff": {
+     "id": "dot-to-eastie",
+     "status": "hypothesis",
+     "consumer": "Neighborhood-proud locals in Dorchester, Roxbury, Mattapan, East Boston and Southie",
+     "insights": [
+      3,
+      6
+     ],
+     "categories": [
+      "tee",
+      "jersey",
+      "headwear",
+      "fleece"
+     ],
+     "fit": [
+      "to define"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-06",
+     "actBy": "2026-10",
+     "actNote": "Verify Mathmatik Athletics and Madrugada this month.",
+     "routes": [
+      "new-development",
+      "quick-turn-graphics"
+     ],
+     "validation": [
+      "Verify Mathmatik Athletics and Madrugada are still trading and can carry the run.",
+      "Find backup makers in Mattapan and East Boston.",
+      "Test pre-order demand by neighborhood before sizing the run."
+     ],
+     "dependencies": [
       "partner-agreement",
       "venue-or-permit",
-      "brand-safety",
-      "league-or-team-rights"
+      "production-capacity",
+      "nike-calendar-approval",
+      "date-confirmation"
      ],
      "owner": "Partnerships and community",
      "partners": [
-      "Neemias Queta",
-      "Cape Verdean and Portuguese-language community organizations (to be identified)"
+      "Mathmatik Athletics",
+      "Madrugada"
      ],
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "summer-to-move-in",
+    "title": "From BNBL summer to Allston Christmas",
+    "summary": "Fill the quiet summer with the city's youth league. Then meet the students on Sept 1 with city-pride gear and upcycled one-of-ones.",
+    "where": [
+     "BNBL gyms and parks in Roxbury, Dorchester and Mattapan",
+     "Harvard Avenue and Brighton Avenue, Allston",
+     "Campus pop-ups near Boston University and Northeastern"
+    ],
+    "when": "BNBL runs July to late August. Move-in ran Aug 28 to Sept 7 in 2026, after the Aug 8-9 tax holiday.",
+    "how": "Sponsor BNBL jerseys and clinics through the city's process. Design reversible jerseys with Roxbury and Dorchester artists. In late August, open campus pop-ups with harbor-navy city-pride tees. On Sept 1, collect move-out Celtics gear, rework it with local chain-stitch and screen shops, and send the proceeds to BNBL.",
+    "segment": "BNBL families, and students who wear Boston before they pick a roster",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     7,
+     8,
+     9
+    ],
+    "products": [
+     "BNBL reversible jersey by Roxbury and Dorchester artists",
+     "Harbor-navy Boston city-pride tee and hoodie",
+     "Upcycled one-of-ones with a 'FREE' curb-sign hangtag",
+     "Collegiate Boston wordmark tote"
+    ],
+    "kpi": "BNBL teams outfitted, move-in-week pop-up sales and dollars sent to BNBL.",
+    "handoff": {
+     "id": "summer-to-move-in",
      "status": "hypothesis",
+     "consumer": "BNBL families, and students who wear Boston before they pick a roster",
+     "insights": [
+      5,
+      3
+     ],
+     "categories": [
+      "jersey",
+      "tee",
+      "accessory",
+      "kids"
+     ],
+     "fit": [
+      "youth",
+      "to define"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-07",
+     "actBy": "2026-10",
+     "actNote": "Start the city process for BNBL sponsorship and confirm 2027 dates.",
+     "routes": [
+      "new-development",
+      "quick-turn-graphics"
+     ],
+     "validation": [
+      "Confirm the 2027 BNBL season dates and the city sponsorship process.",
+      "Test harbor-navy city-pride gear with students.",
+      "Check rights for upcycling Celtics gear."
+     ],
+     "dependencies": [
+      "partner-agreement",
+      "venue-or-permit",
+      "league-or-team-rights",
+      "third-party-ip",
+      "production-capacity",
+      "date-confirmation"
+     ],
+     "owner": "Partnerships and community",
+     "partners": [
+      "Boston Neighborhood Basketball League"
+     ],
      "reviewed": true
     },
     "support": {
@@ -2022,138 +1991,196 @@
   "calendar": [
    {
     "month": 10,
-    "window": "Oct 20-30 (assortment locked now)",
-    "moment": "Opening night at Detroit and the Oct 30 Cup home opener vs. Atlanta",
-    "play": "Refresh the Pro Shop and Nike Boston with the Rafters heritage layer around the Specter merchandise already on sale, plus Tatum jerseys. Nothing Brown-related. Treat the Oct 10 preseason crowd as a social listen for Jan 21 only.",
+    "window": "Oct 16-18",
+    "moment": "Fort Point Open Studios and the Head of the Charles",
+    "play": "Commission Fort Point artists for the 2027 Open Studios. Use this year's weekend only to meet artists and pick partners.",
     "products": [
-     "Banner-count tee",
+     "Artist-made Fort Point tee, for 2027"
+    ],
+    "priority": 3,
+    "channel": "community",
+    "timing": {
+     "end": "2026-10-18",
+     "actBy": "",
+     "actNote": "",
+     "kind": "event",
+     "start": "2026-10-16",
+     "recurring": true,
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
+     "route": "quick-turn-graphics",
+     "targetSeason": "2027-28",
+     "dependencies": [
+      "partner-agreement",
+      "third-party-ip",
+      "date-confirmation"
+     ],
+     "reviewed": true
+    }
+   },
+   {
+    "month": 10,
+    "window": "Oct 20 opener at Detroit (NBC), Oct 23 home opener vs. the Knicks, Oct 30 Cup opener vs. Atlanta",
+    "moment": "Opening week: the NBC opener, the Garden opener against the champs and the first Cup Night",
+    "play": "Lock the assortment now, with no Brown product. Put Tatum jerseys and tees up front at the ProShop for the Oct 20 broadcast. Restock and push green heritage next to Specter for the Knicks game. Approve the Cup Night tee art before Oct 23.",
+    "products": [
+     "Banner 17-and-18 warm-up",
      "Tatum Icon jersey",
-     "Parquet-jacquard warm-up jacket",
-     "Specter replica jersey"
+     "One-ink rivalry shooting shirt",
+     "Cup Night tee"
     ],
     "priority": 1,
-    "channel": "Arena, Nike Boston, digital",
+    "channel": "arena and ProShop",
     "timing": {
+     "end": "2026-10-30",
+     "actBy": "2026-10",
+     "actNote": "Lock the assortment now, with no Brown product.",
      "kind": "event",
      "start": "2026-10-20",
-     "end": "2026-10-30",
-     "recurring": true,
-     "certainty": "confirmed",
-     "basis": "league-calendar",
-     "basisNote": "Opening night (regular season tips off); Emirates NBA Cup 2026 group play lists Hawks at Celtics on Oct 30",
-     "actBy": "2026-10",
-     "actNote": "Lock the tip-off assortment now, with nothing Brown-related.",
-     "route": "new-development",
+     "recurring": false,
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
+     "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
       "stock-availability",
+      "production-capacity",
       "league-or-team-rights",
       "player-or-estate-rights",
-      "production-capacity",
-      "nike-calendar-approval"
+      "date-confirmation"
      ],
      "reviewed": true
     }
    },
    {
     "month": 11,
-    "window": "First cold snap; Black Friday and Nov 24-25 Cup Nights",
-    "moment": "Winter arrives and the holiday spend starts",
-    "play": "Open the Nor'easter layering line and the area-code set for Black Friday in outlet and mall doors, with Space Saver inventory reserved for the first snow trigger.",
+    "window": "Nov 24-30: Cup Nights, Black Friday Nov 27, Cyber Monday Nov 30",
+    "moment": "Thanksgiving week shopping",
+    "play": "Push the nor'easter line at Wrentham, Assembly Row and online. Keep most layers at or under $175. Have the Christmas assortment in by mid-November.",
     "products": [
-     "Reversible beacon shell",
-     "Celtics-green quarter-zip",
-     "Area-code tee",
-     "Kids fleece set"
+     "Fleece quarter-zip",
+     "Aran cable-knit beanie",
+     "Space Saver shell"
     ],
     "priority": 1,
-    "channel": "Nike Factory Store Wrentham, Nike Boston, digital",
+    "channel": "outlets, malls and online",
     "timing": {
-     "kind": "season",
-     "start": "2026-11",
-     "end": "",
+     "end": "2026-11-30",
+     "actBy": "2026-11",
+     "actNote": "Have the Christmas assortment in by mid-November.",
+     "kind": "event",
+     "start": "2026-11-24",
      "recurring": true,
      "certainty": "confirmed",
-     "basis": "fixed-holiday",
-     "basisNote": "Black Friday is the day after Thanksgiving (fourth Thursday in November): Nov 27, 2026. The Nov 24-25 Cup Nights are also in league-calendar.json. The first cold snap has no date.",
-     "actBy": "",
-     "actNote": "",
+     "basis": "league-calendar",
+     "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
      "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "stock-availability",
-      "league-or-team-rights",
       "production-capacity",
-      "nike-calendar-approval"
+      "nike-calendar-approval",
+      "league-or-team-rights",
+      "stock-availability"
+     ],
+     "reviewed": true
+    }
+   },
+   {
+    "month": 11,
+    "window": "November, in the first season of his extension",
+    "moment": "Queta court anniversary in Cambridge",
+    "play": "Ask Queta's camp first which community he wants credited: Portugal, where he was raised, Guinea-Bissau, his family's heritage, or both. Then build a small capsule with those partners, credited and paid. Tie it to his new extension, and keep it clear of September's move-in rush. Don't frame it as Cape Verdean.",
+    "products": [
+     "Queta No. 88 tee, colors set by the partners his camp names"
+    ],
+    "priority": 3,
+    "channel": "community: Cambridge",
+    "timing": {
+     "end": "",
+     "actBy": "",
+     "actNote": "",
+     "kind": "event",
+     "start": "2026-11",
+     "recurring": false,
+     "certainty": "unknown",
+     "basis": "none",
+     "basisNote": "",
+     "route": "quick-turn-graphics",
+     "targetSeason": "2026-27",
+     "dependencies": [
+      "player-or-estate-rights",
+      "partner-agreement",
+      "league-or-team-rights",
+      "date-confirmation"
      ],
      "reviewed": true
     }
    },
    {
     "month": 12,
-    "window": "Dec 1-25",
-    "moment": "Holiday gifting and Christmas Day vs. Giannis Antetokounmpo's Heat at 2:30 p.m. ET",
-    "play": "Run the heritage gift story on the national Christmas game, whether or not Specter is worn. Go deep on kids sizes, and restock the Concepts capsule if approvals land.",
+    "window": "Dec 1-25 (game Dec 25, 2:30 p.m. ET)",
+    "moment": "Christmas Day vs. Miami",
+    "play": "Make the Christmas Day warm-up shirt the headline. Stock deep in youth sizes and gift sets, packed in pastry-box inserts.",
     "products": [
-     "Specter replica jersey",
-     "Kids fleece set",
-     "Aran cable beanie",
-     "Banner-count tee",
-     "Concepts capsule"
+     "Christmas Day warm-up shirt",
+     "Kids' Tatum and Queta jersey set",
+     "Ornament gift set"
     ],
     "priority": 1,
-    "channel": "Arena, Nike Boston, Concepts, digital",
+    "channel": "ProShop, online and Nike Boston",
     "timing": {
-     "kind": "season",
-     "start": "2026-12-01",
      "end": "2026-12-25",
+     "actBy": "",
+     "actNote": "",
+     "kind": "event",
+     "start": "2026-12-01",
      "recurring": true,
      "certainty": "confirmed",
      "basis": "league-calendar",
-     "basisNote": "Christmas Day games (Heat at Celtics, 2:30 p.m. ET)",
-     "actBy": "",
-     "actNote": "",
-     "route": "new-development",
+     "basisNote": "Christmas Day games",
+     "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
       "stock-availability",
-      "league-or-team-rights",
-      "player-or-estate-rights",
-      "partner-agreement",
       "production-capacity",
-      "nike-calendar-approval"
+      "league-or-team-rights",
+      "player-or-estate-rights"
      ],
      "reviewed": true
     }
    },
    {
-    "month": 1,
-    "window": "First snow emergency or nor'easter forecast; mid-January backstop",
-    "moment": "Deep winter",
-    "play": "Release the Space Saver puffer on the trigger, or on the backstop date if winter stays mild.",
+    "month": 12,
+    "window": "Early December",
+    "moment": "Concepts holiday release",
+    "play": "Release the Concepts capsule on Newbury Street. Book live chain-stitch sessions for the satin bomber.",
     "products": [
-     "Space Saver puffer",
-     "Cream-and-green fleece"
+     "Iced Regular sneaker",
+     "Townie satin bomber",
+     "Co-branded violet-lined hoodie"
     ],
-    "priority": 1,
-    "channel": "Nike Boston, Pro Shop, digital",
+    "priority": 2,
+    "channel": "door: Concepts, 18 Newbury St",
     "timing": {
-     "kind": "launch",
-     "start": "2027-01",
      "end": "",
-     "recurring": false,
-     "certainty": "tentative",
-     "basis": "brief-unchecked",
-     "basisNote": "Weather trigger, with a mid-January backstop the team sets itself.",
      "actBy": "",
      "actNote": "",
+     "kind": "launch",
+     "start": "2026-12",
+     "recurring": false,
+     "certainty": "unknown",
+     "basis": "none",
+     "basisNote": "",
      "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "stock-availability",
-      "league-or-team-rights",
-      "production-capacity",
+      "partner-agreement",
       "nike-calendar-approval",
+      "retailer-agreement",
+      "third-party-ip",
+      "production-capacity",
       "date-confirmation"
      ],
      "reviewed": true
@@ -2161,33 +2188,64 @@
    },
    {
     "month": 1,
-    "window": "Jan 21",
-    "moment": "Jaylen Brown's first regular-season return, with LeBron James, in Sixers colors",
-    "play": "Make the night about the 60-year Sixers rivalry, with 1965 and 1982 date product and a one-ink hardcore-flyer shooting shirt. No player names, no opponent marks, no mockery.",
+    "window": "The morning after the first snow emergency",
+    "moment": "The first big storm",
+    "play": "Drop the Space Saver pack online and at the ProShop. Put the lawn chair on the hangtag and let locals tell the joke.",
     "products": [
-     "Period-type '1965 / 1982' archive tee",
-     "One-ink shooting shirt",
-     "Supporter-style knit scarf"
+     "Space Saver shell",
+     "Green puffer",
+     "Aran cable-knit beanie"
     ],
     "priority": 2,
-    "channel": "Arena and Causeway Street pubs",
+    "channel": "digital and ProShop",
     "timing": {
-     "kind": "event",
-     "start": "2027-01-21",
      "end": "",
-     "recurring": false,
-     "certainty": "tentative",
-     "basis": "brief-unchecked",
-     "basisNote": "Jan 21 Sixers game is not in league-calendar.json or evidence.json.",
      "actBy": "",
      "actNote": "",
+     "kind": "event",
+     "start": "2027-01",
+     "recurring": true,
+     "certainty": "unknown",
+     "basis": "none",
+     "basisNote": "",
      "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "league-or-team-rights",
       "production-capacity",
       "nike-calendar-approval",
+      "league-or-team-rights",
+      "stock-availability",
+      "date-confirmation"
+     ],
+     "reviewed": true
+    }
+   },
+   {
+    "month": 1,
+    "window": "Jan 21 (the call is made in December)",
+    "moment": "Brown's return with Philadelphia",
+    "play": "Decide the night's plan in December, using the Oct 10 preseason crowd as a social listen only. Keep Jan 21 free of new product, and keep Brown off product and out of ads. Release the 'Gahden broadside' tee a week before or after.",
+    "products": [
+     "One-ink rivalry shooting shirt, core stock only"
+    ],
+    "priority": 2,
+    "channel": "arena",
+    "timing": {
+     "end": "",
+     "actBy": "2026-12",
+     "actNote": "Decide the night's plan in December.",
+     "kind": "event",
+     "start": "2027-01-21",
+     "recurring": false,
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
+     "route": "existing-inventory",
+     "targetSeason": "2026-27",
+     "dependencies": [
+      "stock-availability",
       "brand-safety",
+      "player-or-estate-rights",
       "date-confirmation"
      ],
      "reviewed": true
@@ -2195,34 +2253,34 @@
    },
    {
     "month": 2,
-    "window": "February, Celtics Black History home game (date to confirm)",
-    "moment": "Black History Month",
-    "play": "Launch the Russell's Boston capsule in Nubian Square and at Slade's, with Hibernian Hall as the fallback. Credit the artist and the Artists For Humanity youth, and send a share of proceeds to Roxbury youth basketball.",
+    "window": "February, on the Celtics' Black History Month game (date to confirm)",
+    "moment": "The Celtics' firsts",
+    "play": "Launch the firsts collection in Nubian Square with its Roxbury co-authors, once the artists and the Russell estate have signed. Without the estate, run it as the Chuck Cooper and 1964 starting-five story. Send proceeds to Roxbury youth basketball.",
     "products": [
-     "Russell 6 crewneck",
-     "Artist-collage tee",
-     "Youth tee"
+     "'Russell 11' tee",
+     "Collage-print hoodie",
+     "1964 starting-five warm-up"
     ],
-    "priority": 2,
-    "channel": "Community: Nubian Square, Slade's, Museum of African American History",
+    "priority": 1,
+    "channel": "community: Nubian Square",
     "timing": {
-     "kind": "launch",
-     "start": "2027-02",
      "end": "",
-     "recurring": true,
-     "certainty": "confirmed",
-     "basis": "fixed-holiday",
-     "basisNote": "Black History Month is February. The Celtics' heritage home game date is still to confirm.",
      "actBy": "",
      "actNote": "",
+     "kind": "launch",
+     "start": "2027-02",
+     "recurring": true,
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
      "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
       "player-or-estate-rights",
-      "league-or-team-rights",
       "partner-agreement",
+      "third-party-ip",
       "venue-or-permit",
-      "production-capacity",
+      "brand-safety",
       "date-confirmation"
      ],
      "reviewed": true
@@ -2230,34 +2288,33 @@
    },
    {
     "month": 3,
-    "window": "Week of the South Boston parade (expected Sunday, Mar 14) and the home game nearest Mar 17",
-    "moment": "Evacuation Day and St. Patrick's Day",
-    "play": "Lead with Evacuation Day 1776 and Dorchester Heights. Make a knit pack and a flash sheet of Southie place stories, drawn by a credited Boston tattoo artist and reviewed by local creators. No dockworker or caricature figures.",
+    "window": "Week of March 17, with the parade on the Sunday nearest",
+    "moment": "St. Patrick's and Evacuation Day",
+    "play": "Release a small Aran-knit pack, beanie and sweater only, marked 17 March 1776 for the home game nearest March 17. Treat Evacuation Day as South Boston's holiday, not a theme. Bring in the Dropkick Murphys only as a credited, paid creative partner, with a share to the Claddagh Fund, or leave them out. Hold any dockworker tee until a South Boston maker designs it. No leprechauns or pints.",
     "products": [
-     "Evacuation Day Aran beanie",
-     "Cable-knit sweater",
-     "Southie flash-sheet tee"
+     "Aran cable-knit sweater",
+     "Aran cable-knit beanie"
     ],
     "priority": 2,
-    "channel": "Arena, Nike Boston, Southie and Dorchester pop-ups",
+    "channel": "ProShop and community",
     "timing": {
-     "kind": "event",
-     "start": "2027-03",
-     "end": "",
+     "end": "2027-03-21",
+     "actBy": "",
+     "actNote": "",
+     "kind": "launch",
+     "start": "2027-03-15",
      "recurring": true,
      "certainty": "tentative",
      "basis": "brief-unchecked",
-     "basisNote": "Parade expected Sunday, Mar 14, 2027. The home game nearest Mar 17 is not checked.",
-     "actBy": "",
-     "actNote": "",
+     "basisNote": "",
      "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "league-or-team-rights",
       "third-party-ip",
-      "production-capacity",
-      "nike-calendar-approval",
+      "partner-agreement",
       "brand-safety",
+      "nike-calendar-approval",
+      "production-capacity",
       "date-confirmation"
      ],
      "reviewed": true
@@ -2265,100 +2322,66 @@
    },
    {
     "month": 4,
-    "window": "Apr 11 season end through the first round; avoid Marathon Monday, Apr 19",
-    "moment": "Play-In and playoffs begin",
-    "play": "Stage a playoff pack before the bracket sets, with replenishment ready, plus a warm-up layer for damp April nights. Stay off the Marathon course and its marks.",
+    "window": "Staged by Apr 11, Play-In Apr 13-16, first round after",
+    "moment": "Playoffs",
+    "play": "Stage the playoff pack before the regular season ends. Restock fast on a deep run. Don't launch anything on Marathon Monday, Apr 19.",
     "products": [
-     "Playoff tee",
+     "Playoff shooting shirt",
      "Playoff cap",
-     "Rally towel",
-     "Reversible beacon shell"
+     "Rally towel"
     ],
     "priority": 1,
-    "channel": "Arena, digital, all doors",
+    "channel": "arena, ProShop and online",
     "timing": {
-     "kind": "season",
-     "start": "2027-04",
-     "end": "",
+     "end": "2027-04-18",
+     "actBy": "2027-04-11",
+     "actNote": "Stage the playoff pack before the regular season ends.",
+     "kind": "launch",
+     "start": "2027-04-11",
      "recurring": true,
-     "certainty": "confirmed",
-     "basis": "league-calendar",
-     "basisNote": "Regular season ends (Apr 11, 2027); Play-In Tournament Apr 13-16. Playoff start (Apr 17 or 18) is still tentative.",
-     "actBy": "2027-04",
-     "actNote": "Stage the playoff pack, with replenishment ready, before the bracket sets.",
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
      "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
       "stock-availability",
-      "league-or-team-rights",
-      "third-party-ip",
-      "production-capacity"
-     ],
-     "reviewed": true
-    }
-   },
-   {
-    "month": 5,
-    "window": "Conference rounds; Haitian Flag Day May 18",
-    "moment": "Deep-run peak, with Haitian Flag Day in the same window",
-    "play": "Restock playoff product across New England. For Haitian Flag Day, fund and credit Haitian Boston organizers and artists in Mattapan and Hyde Park. Make product only if they ask for it, and never use flag imagery.",
-    "products": [
-     "Playoff tee",
-     "Regional area-code tee"
-    ],
-    "priority": 2,
-    "channel": "Digital, suburban doors, community partners",
-    "timing": {
-     "kind": "season",
-     "start": "2027-05",
-     "end": "",
-     "recurring": true,
-     "certainty": "confirmed",
-     "basis": "fixed-holiday",
-     "basisNote": "Haitian Flag Day is May 18 every year. Conference-round dates are not set.",
-     "actBy": "",
-     "actNote": "",
-     "route": "quick-turn-graphics",
-     "targetSeason": "2026-27",
-     "dependencies": [
-      "stock-availability",
-      "league-or-team-rights",
       "production-capacity",
-      "partner-agreement",
-      "brand-safety"
+      "league-or-team-rights",
+      "date-confirmation"
      ],
      "reviewed": true
     }
    },
    {
     "month": 6,
-    "window": "Early June",
+    "window": "Early June (Dorchester Day was June 7 in 2026)",
     "moment": "Dorchester Day Parade",
-    "play": "Launch the Dot-and-Rox and three-decker neighborhood capsule in the neighborhoods, not on Newbury Street, in unisex and women's fits.",
+    "play": "Launch 'Dot to Eastie' with Mathmatik Athletics, Madrugada and the neighborhood illustrators. Fill pre-orders first, then sell along Dot Ave.",
     "products": [
      "Three-decker neighborhood tee",
-     "Youth Dot-and-Rox tee",
-     "Court-gray shooting shirt"
+     "Neighborhood-name jersey",
+     "617 cap"
     ],
     "priority": 2,
-    "channel": "Community: Dot Ave, Franklin Park",
+    "channel": "community: Dorchester Avenue",
     "timing": {
+     "end": "",
+     "actBy": "",
+     "actNote": "",
      "kind": "event",
      "start": "2027-06",
-     "end": "",
      "recurring": true,
      "certainty": "tentative",
      "basis": "brief-unchecked",
-     "basisNote": "Brief says early June. The 2027 Dorchester Day date is not checked.",
-     "actBy": "",
-     "actNote": "",
-     "route": "quick-turn-graphics",
+     "basisNote": "",
+     "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "league-or-team-rights",
-      "third-party-ip",
-      "production-capacity",
+      "partner-agreement",
       "venue-or-permit",
+      "production-capacity",
+      "nike-calendar-approval",
       "date-confirmation"
      ],
      "reviewed": true
@@ -2366,66 +2389,32 @@
    },
    {
     "month": 7,
-    "window": "July-August",
-    "moment": "BNBL summer season and Cape Verdean Independence Day (July 5)",
-    "play": "Outfit BNBL teams in Celtics reversibles and run free dawn open runs at the Reggie Lewis Center and city gyms. Continue the Queta community program if partners want it.",
+    "window": "July to late August",
+    "moment": "BNBL summer season",
+    "play": "Outfit BNBL teams in reversible jerseys designed with Roxbury and Dorchester artists. Run free clinics through the Parks Department.",
     "products": [
      "BNBL reversible jersey",
-     "Youth basketball shorts",
-     "Bilingual clinic tee"
+     "Youth tee"
     ],
     "priority": 2,
-    "channel": "Community courts and gyms",
+    "channel": "community gyms and parks",
     "timing": {
+     "end": "2027-08",
+     "actBy": "",
+     "actNote": "",
      "kind": "season",
      "start": "2027-07",
-     "end": "2027-08",
      "recurring": true,
      "certainty": "tentative",
      "basis": "brief-unchecked",
-     "basisNote": "BNBL 2027 season dates are not checked. Cape Verdean Independence Day is July 5.",
-     "actBy": "",
-     "actNote": "",
-     "route": "quick-turn-graphics",
+     "basisNote": "",
+     "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "league-or-team-rights",
-      "player-or-estate-rights",
       "partner-agreement",
-      "production-capacity",
       "venue-or-permit",
-      "date-confirmation"
-     ],
-     "reviewed": true
-    }
-   },
-   {
-    "month": 8,
-    "window": "Late August",
-    "moment": "Boston Caribbean Carnival and the Massachusetts sales tax holiday weekend (if held)",
-    "play": "Fund the Carnival organizers and keep costume and flag imagery off product. Price back-to-school basics for the tax holiday.",
-    "products": [
-     "Celtics basics tee",
-     "Youth jersey"
-    ],
-    "priority": 3,
-    "channel": "Community and outlet doors",
-    "timing": {
-     "kind": "event",
-     "start": "2027-08",
-     "end": "",
-     "recurring": true,
-     "certainty": "tentative",
-     "basis": "brief-unchecked",
-     "basisNote": "Late August. Carnival dates are not checked, and the 2027 sales tax holiday may not be held.",
-     "actBy": "",
-     "actNote": "",
-     "route": "existing-inventory",
-     "targetSeason": "2026-27",
-     "dependencies": [
-      "stock-availability",
-      "partner-agreement",
-      "brand-safety",
+      "production-capacity",
+      "league-or-team-rights",
       "date-confirmation"
      ],
      "reviewed": true
@@ -2433,34 +2422,34 @@
    },
    {
     "month": 9,
-    "window": "Sept 1, 2027 and the first weeks of the semester",
-    "moment": "Allston Christmas and student move-in",
-    "play": "A 2027 test: upcycled one-of-ones from move-out gear, with 'FREE' curb-sign hang tags, once NBA licensing for reworked marks clears. Add a student-price city-pride tier.",
+    "window": "Aug 28 to Sept 7, with Allston Christmas on Sept 1",
+    "moment": "Student move-in",
+    "play": "Open campus pop-ups with harbor-navy city-pride gear. Sell upcycled Celtics one-of-ones from move-out gear, with proceeds to BNBL.",
     "products": [
-     "Reworked one-of-one jackets",
-     "Thrift-kelly garment-dyed tee",
-     "Student-price cap"
+     "Harbor-navy city-pride tee",
+     "Upcycled one-of-ones",
+     "Collegiate Boston tote"
     ],
-    "priority": 3,
-    "channel": "Allston pop-up, The Garment District, campus-adjacent",
+    "priority": 2,
+    "channel": "campus pop-ups and Allston",
     "timing": {
-     "kind": "event",
-     "start": "2027-09",
-     "end": "",
-     "recurring": true,
-     "certainty": "confirmed",
-     "basis": "fixed-holiday",
-     "basisNote": "Allston Christmas is Sept 1, Boston's standard lease turnover day.",
+     "end": "2027-09-07",
      "actBy": "",
      "actNote": "",
-     "route": "new-development",
+     "kind": "event",
+     "start": "2027-08-28",
+     "recurring": true,
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
+     "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
+      "venue-or-permit",
+      "partner-agreement",
       "league-or-team-rights",
-      "production-capacity",
-      "nike-calendar-approval",
-      "retailer-agreement",
-      "venue-or-permit"
+      "third-party-ip",
+      "date-confirmation"
      ],
      "reviewed": true
     }
@@ -2469,10 +2458,10 @@
   "rhythm": [
    {
     "intensity": 70,
-    "phase": "Mid-season, MLK Day and Jaylen Brown's return"
+    "phase": "Mid-season; MLK Day games and Jaylen Brown's Garden return"
    },
    {
-    "intensity": 66,
+    "intensity": 60,
     "phase": "Trade deadline and All-Star break"
    },
    {
@@ -2504,8 +2493,8 @@
     "phase": "Offseason into media day"
    },
    {
-    "intensity": 65,
-    "phase": "Preseason and opening night"
+    "intensity": 66,
+    "phase": "Preseason and opening stretch"
    },
    {
     "intensity": 62,
@@ -2516,27 +2505,19 @@
     "phase": "Cup knockouts and Christmas"
    }
   ],
-  "readingList": 70,
-  "checkedSources": 14,
+  "readingList": 125,
+  "checkedSources": 8,
   "verification": {
-   "live": 0,
-   "knowledge": 11,
-   "briefMode": "knowledge",
-   "queue": 160
+   "live": 11,
+   "knowledge": 0,
+   "briefMode": "live",
+   "queue": 130
   },
-  "evidence": {
-   "checkedOn": "2026-10-10",
-   "claims": 4,
-   "verified": 1,
-   "contradicted": 0,
-   "unclear": 3,
-   "observations": 0,
-   "references": 0
-  },
+  "evidence": null,
   "planReviewed": true,
   "checks": {
-   "checked": 112,
-   "corrected": 6,
+   "checked": 30,
+   "corrected": 12,
    "removed": 0
   },
   "stewardship": {
@@ -2551,15 +2532,15 @@
   "league": "nba",
   "status": "complete",
   "updated": "2026-10-10",
-  "headline": "Brooklyn was its own city once. Sell the Nets as its team, not New York's other one.",
+  "headline": "Brooklyn buys the borough before the box score. Sell its stoops, steel and flags while the Knicks hold the title.",
   "archetype": {
-   "name": "The Borough Separatists",
-   "description": "An outnumbered, style-literate tribe that treats the Nets as proof Brooklyn is its own city. Loyalty runs borough first, roster third. It survives losing but punishes anything that reads as Manhattan, tourist or transplant."
+   "name": "The Borough Loyalist",
+   "description": "Fans who back Brooklyn first and the Nets second. They wear black and white to say where they're from, whatever the standings say."
   },
   "pulse": {
-   "teamMoment": "A development year after a 20-62 season. No. 6 pick Mikel Brown Jr. and Egor Demin lead a very young roster, beside veteran scorers Julius Randle and Michael Porter Jr. and new guard Keon Ellis. Jordi Fernandez is newly extended. There's no opening-night or Christmas Day game.",
-   "sentiment": "Patient, wry and mildly hopeful about the kids. Defiantly Brooklyn while the defending-champion Knicks own the city's attention.",
-   "heat": 38
+   "teamMoment": "A development year after 20-62. Rookie Mikel Brown Jr. and Egor Demin lead a young roster, with Julius Randle and Michael Porter Jr. adding veteran scoring under newly extended coach Jordi Fernandez.",
+   "sentiment": "Patient, wry and mildly hopeful. The Knicks' title still rings across the river, and Randle's return to New York gives the rivalry a subplot.",
+   "heat": 42
   },
   "verifiedMoment": "Still rebuilding, now with more veteran scoring. Julius Randle comes back to New York to join Michael Porter Jr. No. 6 pick Mikel Brown Jr. leads a very young roster under Jordi Fernandez, who just got an extension.",
   "scorecard": {
@@ -2567,7 +2548,7 @@
    "culture": 80,
    "retail": 66,
    "fandom": 16,
-   "rationale": "Brooklyn's borough culture and New York retail rank high. After 20-62 in a Knicks title year, Nets fandom is the league's second-thinnest, and the real opportunity is a 2027 build (brief scores: opportunity 66, culture 92, retail 72, fandom 40). Brooklyn's culture is among the deepest and most designable in the league. But the Nets' fandom is thin after 20-62 in a Knicks title year, and most partners and doors are unchecked. The opportunity rests on the borough mark selling without wins. It depends on local co-authorship and a 2027 build, not this season.",
+   "rationale": "Brooklyn's borough culture and New York retail rank high. After 20-62 in a Knicks title year, Nets fandom is the league's second-thinnest, and the real opportunity is a 2027 build (brief scores: opportunity 66, culture 92, retail 72, fandom 40). Few markets match Brooklyn's depth of culture, and its dense, walkable doors make it easy to sell in, once the home schedule is confirmed. Fan heat is low after 20-62, so lead with the plays that work without wins: the 112 program and the Panyard pack.",
    "calibrated": true,
    "self": {
     "opportunity": 66,
@@ -2586,164 +2567,80 @@
     "hex": "#FFFFFF"
    },
    {
-    "name": "Silver/Gray accent",
+    "name": "Silver",
     "hex": "#A2AAAD"
    }
   ],
   "opportunities": [
    {
-    "id": "still-a-city-112",
-    "title": "Still a City: 112 quick-turn graphics this season",
-    "summary": "This season's only real product lane: screen-printed tees, crewnecks and print-on-demand 112 ZIP numerals in black and bone, in the voice of the City of Brooklyn. Launch around the Nov 3 anniversary and the start of the 15th Brooklyn season.",
+    "id": "zip-112-made-to-order",
+    "title": "The 112 made-to-order program",
+    "summary": "Print the buyer's Brooklyn ZIP code as a player number on Nets tees and hoodies. A fan wears 11217, 11216 or 11224, not a generic BK.",
     "where": [
      "Nets Shop at Barclays Center (11217)",
-     "Fulton Street and Atlantic Terminal",
-     "Church Avenue, Flatbush",
-     "Knickerbocker Avenue, Bushwick",
-     "Nets online store"
+     "Fulton Street pop-up, Downtown Brooklyn",
+     "Church Avenue pop-up, Flatbush",
+     "Atlantic Terminal"
     ],
-    "when": "First November home dates through holiday gifting, 2026",
-    "how": "Run on existing licensed blanks through the NBA licensing channel. Print ZIPs on site only if BSE Global and the Nets Shop operator agree. Hangtags tell the civic story through lettering, never Dodgers marks.",
-    "segment": "Style-forward Brooklyn locals and borough diehards",
-    "priority": 1,
-    "size": "medium",
-    "months": [
-     11,
-     12
-    ],
-    "products": [
-     "112 ZIP tee (under $110)",
-     "City of Brooklyn civic-type crewneck",
-     "Print-on-demand ZIP hoodie",
-     "Brigade-designed scarf",
-     "Randle quick-turn player tee"
-    ],
-    "kpi": "Units and sell-through by door. Share of ZIP orders outside 11217. Randle reorder within two weeks.",
-    "handoff": {
-     "id": "still-a-city-112",
-     "consumer": "Style-forward Brooklyn locals and borough diehards buying borough graphics under $110.",
-     "insights": [
-      0,
-      5,
-      6
-     ],
-     "categories": [
-      "tee",
-      "fleece",
-      "accessory"
-     ],
-     "fit": [
-      "to define"
-     ],
-     "targetSeason": "2026-27",
-     "firstInMarket": "2026-11",
-     "actBy": "2026-10",
-     "actNote": "Place the quick-turn 112 and Randle graphic orders.",
-     "routes": [
-      "quick-turn-graphics"
-     ],
-     "validation": [
-      "Confirm with BSE Global and the Nets Shop operator that quick-turn licensed graphics can ship by November.",
-      "Ask the same partners whether on-site ZIP printing is allowed.",
-      "Test the under-$110 price on the 112 tee and crewneck with Fulton Street buyers.",
-      "Set Randle tee depth from the first two weeks of sales."
-     ],
-     "dependencies": [
-      "production-capacity",
-      "league-or-team-rights",
-      "player-or-estate-rights",
-      "partner-agreement",
-      "retailer-agreement"
-     ],
-     "owner": "Licensed team apparel",
-     "partners": [
-      "BSE Global",
-      "Brooklyn Brigade"
-     ],
-     "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 1,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [
-      "bkn-c2"
-     ],
-     "strength": "partial"
-    }
-   },
-   {
-    "id": "kings-county-fh27",
-    "title": "Kings County: the Fall/Holiday 2027 build",
-    "summary": "The full premium line, designed this winter for Labor Day and holiday 2027. Expect a wool varsity, a long platform puffer, banded tonal knits, women's cuts throughout and a Brooklyn Courts youth line.",
-    "where": [
-     "Fulton Street corridor",
-     "Nets Shop at Barclays Center",
-     "Kings Plaza",
-     "Brooklyn taste partners (to confirm)"
-    ],
-    "when": "Design lock in spring 2027. Launch Labor Day 2027, peaking Thanksgiving through December 2027.",
-    "how": "Source local designers through Pratt and paid open calls. The 2026-27 graphics sell-through decides depth. Any facade-derived pattern needs BSE Global sign-off, so keep motifs to material and texture.",
-    "segment": "Style-forward locals, gift buyers and women fans",
+    "when": "Launch at the first confirmed Barclays game. One schedule report puts the opener on Oct 21 against Charlotte, still unconfirmed. Run it through the December gifting peak.",
+    "how": "Clear on-site printing with the NBA and the arena before you set up at the Nets Shop. Add Fulton Street and Church Avenue pop-ups for home Cup Nights. Offer optional neighborhood mottos, but test lines like Do or Die Bed-Stuy with local partners first. Keep tees, hoodies and kids pieces under $110. Sell the puffer as a premium tier above it.",
+    "segment": "Style-forward Brooklyn locals and the diehard core",
     "priority": 1,
     "size": "high",
     "months": [
-     9,
      10,
      11,
      12
     ],
     "products": [
-     "Kings County wool varsity jacket",
-     "Long platform puffer",
-     "Banded tonal-rust hoodie",
-     "Women's cropped varsity and fleece",
-     "Brooklyn Courts youth shorts"
+     "112 ZIP-number tee",
+     "112 ZIP-number hoodie",
+     "Kids 112 tee",
+     "Premium tier: long black puffer with a reflective 112 code"
     ],
-    "kpi": "Full-price premium sell-through. Women's share of units. Holiday 2027 outerwear revenue versus 2026.",
+    "kpi": "Units per home game, orders by ZIP code and sell-through of the sub-$110 tier. It works without wins.",
     "handoff": {
-     "id": "kings-county-fh27",
-     "consumer": "Style-forward locals, gift buyers and women fans ready to pay premium for a Brooklyn line.",
+     "id": "zip-112-made-to-order",
+     "consumer": "Style-forward Brooklyn locals and the diehard core who wear their ZIP code.",
      "insights": [
-      1,
       0,
-      6
+      2
      ],
      "categories": [
-      "outerwear",
+      "tee",
       "fleece",
-      "shorts",
-      "kids"
+      "kids",
+      "outerwear"
      ],
      "fit": [
-      "women's",
-      "youth"
+      "unisex adult",
+      "kids"
      ],
-     "targetSeason": "2027-28",
-     "firstInMarket": "2027-09",
-     "actBy": "2027-04",
-     "actNote": "Lock the Kings County line at the spring 2027 design lock. The brief sets no earlier date for sourcing designers this winter.",
+     "targetSeason": "2026-27",
+     "firstInMarket": "2026-10",
+     "actBy": "2026-10",
+     "actNote": "Clear on-site printing with the NBA and the arena before setting up at the Nets Shop; confirm the home opener date.",
      "routes": [
+      "quick-turn-graphics",
       "new-development"
      ],
      "validation": [
-      "Read 2026-27 borough-graphics sell-through before setting depth.",
-      "Test premium prices for the varsity and puffer with Fulton Street and Kings Plaza buyers.",
-      "Get BSE Global sign-off on any facade-derived pattern.",
-      "Confirm which Brooklyn taste doors are open and willing to carry it."
+      "Confirm NBA and arena rules on on-site printing and numbers.",
+      "Test the under-$110 price point against the NYC clothing sales-tax exemption.",
+      "Test neighborhood mottos such as Do or Die Bed-Stuy with local partners.",
+      "Confirm Nets Shop print-station capacity for home Cup Nights."
      ],
      "dependencies": [
-      "nike-calendar-approval",
-      "production-capacity",
+      "venue-or-permit",
       "league-or-team-rights",
-      "retailer-agreement",
-      "partner-agreement"
+      "production-capacity",
+      "stock-availability",
+      "date-confirmation"
      ],
-     "owner": "Design",
+     "owner": "Licensed team apparel",
      "partners": [
-      "Pratt"
+      "Nets Shop at Barclays Center",
+      "Local pop-up hosts on Fulton Street and Church Avenue"
      ],
      "status": "hypothesis",
      "reviewed": true
@@ -2758,400 +2655,157 @@
     }
    },
    {
-    "id": "latino-sunset-park-brooklyn",
-    "title": "Home base: Sunset Park and Latino Brooklyn",
-    "summary": "The Nets practice at the HSS Training Center in Sunset Park, home to large Chinese, Mexican and Puerto Rican communities. Yet the brand barely shows up there, or in Dominican and Puerto Rican Bushwick.",
+    "id": "cup-nights-holiday",
+    "title": "Weathered for Cup Nights and the holidays",
+    "summary": "Own November and December with a rust-and-black capsule. The Nets miss the Christmas spotlight, so the borough's doors carry the gifting season.",
     "where": [
-     "Sunset Park: Fifth and Eighth avenues",
-     "HSS Training Center open practice",
-     "Knickerbocker Avenue, Bushwick",
-     "Southside Williamsburg",
-     "Barclays heritage nights"
+     "Nets Shop at Barclays Center",
+     "Fulton Street chains and Dr. Jays",
+     "Kings Plaza",
+     "Nike online with borough pickup"
     ],
-    "when": "Listening now, as Hispanic Heritage Month wraps (to Oct 15). Lunar New Year around Feb 6, 2027. A Latino heritage night in spring.",
-    "how": "Hire UPROSE and El Puente for Latino Brooklyn and the Brooklyn Chinese-American Association for Sunset Park as paid co-hosts. They name the designers and the beneficiary. Open the practice facility to neighborhood kids, and have a paid local artist design each item.",
-    "segment": "Chinese, Mexican, Dominican and Puerto Rican Brooklyn families",
-    "priority": 2,
-    "size": "medium",
+    "when": "Cup group play from Oct 30 to Nov 27, plus Nov 24-25. Only the Oct 30 road opener at Toronto is confirmed. Then Black Friday through December.",
+    "how": "Drop the Weathered warm-up and tee online on Oct 30, the Toronto night. Run the Nets Shop launch at the first home Cup Night once the schedule confirms it. Restock for Thanksgiving week. Add the heavyweight fleece and varsity tier for Black Friday and Small Business Saturday. Close December with a sorrel-red pack made with a paid Caribbean bakery partner.",
+    "segment": "Gift buyers, families and game-night fans",
+    "priority": 1,
+    "size": "high",
     "months": [
      10,
-     2,
-     4
+     11,
+     12
     ],
     "products": [
-     "Lunar New Year artist tee",
-     "Heritage-night artist tee",
-     "Youth practice tee",
-     "Fitted cap"
+     "Weathered warm-up jacket",
+     "Banded-knit shooting shirt",
+     "Heavyweight rust-and-black hoodie",
+     "Wool-blend varsity jacket",
+     "Sorrel-red fleece in bakery-box packaging"
     ],
-    "kpi": "Heritage-night attendance from 11220 and 11237. Partner renewal. Artist-tee sell-through.",
+    "kpi": "November-December sell-through against last season, and the share of sales from Brooklyn doors",
     "handoff": {
-     "id": "latino-sunset-park-brooklyn",
-     "consumer": "Chinese, Mexican, Dominican and Puerto Rican Brooklyn families in Sunset Park, Bushwick and Southside Williamsburg.",
+     "id": "cup-nights-holiday",
+     "consumer": "Gift buyers, families and game-night fans.",
      "insights": [
       0,
-      5
+      2
      ],
      "categories": [
+      "outerwear",
+      "fleece",
       "tee",
-      "headwear",
-      "kids"
+      "shorts"
      ],
      "fit": [
-      "youth",
       "to define"
      ],
      "targetSeason": "2026-27",
-     "firstInMarket": "2027-02",
+     "firstInMarket": "2026-10-30",
      "actBy": "2026-10",
-     "actNote": "Open paid listening sessions with UPROSE, El Puente and the Brooklyn Chinese-American Association.",
+     "actNote": "Confirm the Nets home Cup Night schedule and lock the Oct 30 online drop.",
      "routes": [
-      "quick-turn-graphics"
+      "new-development",
+      "existing-inventory"
      ],
      "validation": [
-      "Confirm UPROSE, El Puente and the Brooklyn Chinese-American Association are active and open to paid partnership.",
-      "Confirm the HSS Training Center in Sunset Park is the Nets' practice base and can host open practices.",
-      "Confirm Lunar New Year 2027 falls on Feb 6 and lock the heritage-night dates.",
-      "Ask in listening sessions whether these families will buy Nets product."
+      "Confirm the Nets home Cup Nights before committing a Nets Shop launch.",
+      "Test the heavyweight fleece and varsity price tier with gift buyers.",
+      "Confirm stock depth for Thanksgiving-week restocks.",
+      "Agree terms and packaging with the Caribbean bakery partner."
      ],
      "dependencies": [
-      "partner-agreement",
       "production-capacity",
+      "nike-calendar-approval",
       "league-or-team-rights",
-      "venue-or-permit",
+      "partner-agreement",
+      "retailer-agreement",
+      "stock-availability",
       "date-confirmation"
      ],
-     "owner": "Partnerships and community",
+     "owner": "Merchandising",
      "partners": [
-      "UPROSE",
-      "El Puente",
-      "Brooklyn Chinese-American Association"
+      "A Caribbean bakery partner (to be named)",
+      "Fulton Street chains and Dr. Jays"
      ],
      "status": "hypothesis",
      "reviewed": true
     },
     "support": {
-     "verified": 1,
+     "verified": 0,
      "corrected": 0,
      "observed": 0,
      "conflicting": 0,
-     "ids": [
-      "bkn-c2"
-     ],
-     "strength": "partial"
+     "ids": [],
+     "strength": "unchecked"
     }
    },
    {
-    "id": "caribbean-brooklyn-listen-first",
-    "title": "Caribbean Brooklyn: listen first, then Bring Your Flag",
-    "summary": "A partner-led test of whether Caribbean Brooklyn wants a flag-ready Nets pack. In-season dates now, a product decision before Labor Day 2027.",
+    "id": "biggie-30th",
+    "title": "Biggie's 30th, if the estate signs",
+    "summary": "March 9, 2027 marks 30 years since Christopher Wallace's death, and Life After Death turns 30 on March 25. It's the season's strongest Brooklyn music date, but the estate has shown no 2027 plans.",
     "where": [
-     "Flatbush and Church avenues (Little Caribbean, Little Haiti)",
-     "Nostrand Avenue, Crown Heights",
-     "Barclays Caribbean heritage night",
-     "Flatbush and Crown Heights panyards"
+     "Barclays home game nearest March 9",
+     "Fulton Street, Bed-Stuy",
+     "Raffle with Nike-controlled pickup in Brooklyn"
     ],
-    "when": "Listening sessions this winter. Jan 1 content. A heritage night in-season. Product for Labor Day 2027 only if partners ask.",
-    "how": "Pay caribBEING, CASYM Steel Orchestra and Despers USA to run listening sessions and host a heritage night. Any steelpan print pays a fee plus revenue share and uses a tuner's layout they own. No J'Ouvert product.",
-    "segment": "Caribbean and Haitian Brooklyn fans and diaspora households",
+    "when": "Ask this fall. Decide by December. Drop in March 2027 either way.",
+    "how": "Open talks with the estate, Bad Boy, Rhino and Atlantic, using their 2022 25th-anniversary campaign as the model. Frame a white and black pair after the two album covers, with an original Brooklyn knit, not Coogi. If the estate passes, release a no-license Bed-Stuy music capsule drawn by a paid Bed-Stuy artist, with no names or lyrics. Confirm the home date before you lock the drop.",
+    "segment": "Bed-Stuy, hip-hop and collector fans",
     "priority": 2,
-    "size": "medium",
+    "size": "high",
     "months": [
-     1,
-     3,
-     5,
-     9
+     3
     ],
     "products": [
-     "Partner-designed heritage-night tee",
-     "Flag-ready hoodie (2027, partner-approved)",
-     "Steelpan note-map shorts (2027)"
+     "White warm-up and black warm-up pair",
+     "Original Brooklyn-knit panel jacket",
+     "Fallback: Bed-Stuy block-party tee with no names or lyrics"
     ],
-    "kpi": "Share of heritage-night buyers who already own Nets gear. Partner go or no-go by May 2027. Revenue shared with partners.",
+    "kpi": "Estate answer by December, then raffle entries and sell-out time for whichever capsule ships",
     "handoff": {
-     "id": "caribbean-brooklyn-listen-first",
-     "consumer": "Caribbean and Haitian Brooklyn fans and diaspora households in Flatbush and Crown Heights.",
+     "id": "biggie-30th",
+     "consumer": "Bed-Stuy, hip-hop and collector fans.",
      "insights": [
-      4,
-      5
+      0,
+      2
      ],
      "categories": [
-      "tee",
+      "outerwear",
       "fleece",
-      "shorts",
+      "tee",
       "event"
      ],
      "fit": [
       "to define"
      ],
      "targetSeason": "2026-27",
-     "firstInMarket": "2027-01",
-     "actBy": "2026-10",
-     "actNote": "Open paid listening sessions with caribBEING.",
-     "routes": [
-      "quick-turn-graphics",
-      "new-development"
-     ],
-     "validation": [
-      "Ask in listening sessions whether these households follow the Nets over the Knicks or a home-island favorite.",
-      "Confirm CASYM Steel Orchestra and Despers USA are active and open to paid work.",
-      "Agree a fee and revenue share before any steelpan note-map print.",
-      "Get a go or no-go from partners on the flag-ready hoodie in May 2027."
-     ],
-     "dependencies": [
-      "partner-agreement",
-      "third-party-ip",
-      "production-capacity",
-      "nike-calendar-approval",
-      "league-or-team-rights",
-      "brand-safety",
-      "date-confirmation"
-     ],
-     "owner": "Partnerships and community",
-     "partners": [
-      "caribBEING (Shelley Worrell)",
-      "CASYM Steel Orchestra",
-      "Despers USA"
-     ],
-     "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 2,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [
-      "bkn-c2",
-      "bkn-c4"
-     ],
-     "strength": "sourced"
-    }
-   },
-   {
-    "id": "brooklyn-firsts-bhm",
-    "title": "Brooklyn Firsts for Black History Month",
-    "summary": "A February artist-tee series on the borough's own firsts (Weeksville 1838, Jackie Robinson in Brooklyn 1947, Restoration 1967, Shirley Chisholm 1968), co-authored with Weeksville Heritage Center and Restoration Plaza.",
-    "where": [
-     "Weeksville Heritage Center, Crown Heights",
-     "Restoration Plaza, Bed-Stuy",
-     "Barclays February home games"
-    ],
-    "when": "February 2027 home stretch",
-    "how": "License names and likenesses through the Jackie Robinson Foundation and Chisholm's estate, with no Dodgers or Ebbets marks. The institutions set the story and beneficiary. Paid Bed-Stuy and Crown Heights artists draw the graphics.",
-    "segment": "Black Brooklyn families and culturally invested fans",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     2
-    ],
-    "products": [
-     "Artist-designed tee series",
-     "Warm-up shooting shirt",
-     "Archival-type crewneck"
-    ],
-    "kpi": "Partner satisfaction and renewal. February sell-through. Funds raised for partner institutions.",
-    "handoff": {
-     "id": "brooklyn-firsts-bhm",
-     "consumer": "Black Brooklyn families and culturally invested fans.",
-     "insights": [
-      0,
-      5
-     ],
-     "categories": [
-      "tee",
-      "fleece"
-     ],
-     "fit": [
-      "to define"
-     ],
-     "targetSeason": "2026-27",
-     "firstInMarket": "2027-02",
-     "actBy": "2027-02",
-     "actNote": "Have the series ready for the February 2027 home stretch. The brief sets no earlier deadline for licensing or partners.",
-     "routes": [
-      "quick-turn-graphics"
-     ],
-     "validation": [
-      "Confirm Weeksville Heritage Center and Restoration Plaza are open to paid co-authorship.",
-      "Clear Jackie Robinson and Shirley Chisholm names and likenesses with the Jackie Robinson Foundation and Chisholm's estate.",
-      "Confirm the Nets' February 2027 home dates and heritage-night schedule."
-     ],
-     "dependencies": [
-      "partner-agreement",
-      "player-or-estate-rights",
-      "third-party-ip",
-      "production-capacity",
-      "league-or-team-rights",
-      "date-confirmation"
-     ],
-     "owner": "Partnerships and community",
-     "partners": [
-      "Weeksville Heritage Center",
-      "Restoration Plaza (Bedford Stuyvesant Restoration Corporation)",
-      "Jackie Robinson Foundation",
-      "Shirley Chisholm's estate"
-     ],
-     "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 1,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [
-      "bkn-c2"
-     ],
-     "strength": "partial"
-    }
-   },
-   {
-    "id": "biggie-30-life-after-death",
-    "title": "Biggie at 30: celebrate the work, honor the loss",
-    "summary": "A licensed tee capsule with the Wallace estate for the 30th anniversary of 'Life After Death' (March 25, 2027) and his May 21 birthday. March 9 stays a quiet, community-led moment.",
-    "where": [
-     "Restoration Plaza, Bed-Stuy",
-     "Barclays home game near March 25",
-     "Fulton Street, Bed-Stuy and Clinton Hill"
-    ],
-    "when": "Lock estate terms in November 2026. Release late March 2027, with a birthday follow-up in May.",
-    "how": "Co-create with the estate, with proceeds to Brooklyn youth music programs. No lyrics without publisher licenses, and no repeat of the 2019-20 Coogi uniform idea.",
-    "segment": "Brooklyn rap generation, Bed-Stuy and Clinton Hill locals, collectors",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     3,
-     5
-    ],
-    "products": [
-     "Licensed anniversary tee",
-     "White and black warm-up pair (album-cover cues)"
-    ],
-    "kpi": "Estate approval by end of November. Launch-weekend sell-through. Proceeds delivered.",
-    "handoff": {
-     "id": "biggie-30-life-after-death",
-     "consumer": "Brooklyn's rap generation, Bed-Stuy and Clinton Hill locals, and collectors.",
-     "insights": [
-      5,
-      0
-     ],
-     "categories": [
-      "tee",
-      "outerwear",
-      "pants"
-     ],
-     "fit": [
-      "to define"
-     ],
-     "targetSeason": "2026-27",
      "firstInMarket": "2027-03",
-     "actBy": "2026-11",
-     "actNote": "Lock estate terms with the Wallace estate.",
+     "actBy": "2026-10",
+     "actNote": "Open talks with the estate, Bad Boy, Rhino and Atlantic this fall; decide by December.",
      "routes": [
+      "new-development",
       "quick-turn-graphics"
      ],
      "validation": [
-      "Check the Wallace estate's own plans and licensing terms for March 2027.",
-      "Clear any lyrics with publishers or leave them off.",
-      "Review the March 9 plan with Restoration Plaza so it stays quiet and community-led.",
-      "Confirm a Nets home game near March 25, 2027."
+      "Confirm whether the estate, Bad Boy, Rhino and Atlantic will license a 2027 capsule and on what terms.",
+      "Confirm the Barclays home date nearest March 9 before locking the drop.",
+      "Test the white and black pair and the fallback Bed-Stuy tee with hip-hop collectors.",
+      "Set the raffle volume and Nike-controlled pickup in Brooklyn."
      ],
      "dependencies": [
       "player-or-estate-rights",
       "third-party-ip",
-      "partner-agreement",
-      "production-capacity",
-      "brand-safety",
       "league-or-team-rights",
+      "nike-calendar-approval",
+      "production-capacity",
       "date-confirmation"
      ],
      "owner": "Licensing and legal",
      "partners": [
-      "Wallace estate",
-      "Restoration Plaza (Bedford Stuyvesant Restoration Corporation)"
-     ],
-     "status": "hypothesis",
-     "reviewed": true
-    },
-    "support": {
-     "verified": 1,
-     "corrected": 0,
-     "observed": 0,
-     "conflicting": 0,
-     "ids": [
-      "bkn-c2"
-     ],
-     "strength": "partial"
-    }
-   },
-   {
-    "id": "liberty-shared-roof",
-    "title": "Nets x Liberty: one roof, women's cuts all year",
-    "summary": "The 2024 WNBA champion Liberty bring Barclays' freshest crowd. Make women's fits and a shared Nets-Liberty designer roster a core lane, not a summer afterthought.",
-    "where": [
-     "Barclays Center Liberty games",
-     "Nets Shop at Barclays Center",
-     "Brooklyn Pride, Park Slope",
-     "Bushwick nightlife and Papi Juice events"
-    ],
-    "when": "Women's cuts in the 2026-27 graphics. A Liberty tip-off moment in May 2027. Pride as one chapter in June.",
-    "how": "Commission shared designers for both teams. Papi Juice and Bushwig artists co-design the Pride chapter and choose the beneficiary.",
-    "segment": "Women fans, queer Brooklyn and summer arena-goers",
-    "priority": 2,
-    "size": "medium",
-    "months": [
-     11,
-     5,
-     6,
-     7
-    ],
-    "products": [
-     "Women's-cut 112 tee",
-     "Shared Nets-Liberty crewneck",
-     "Pride tee",
-     "String-mesh tank with seafoam accent"
-    ],
-    "kpi": "Women's share of Nets units. Off-season Barclays revenue. Pride sell-through and partner reach.",
-    "handoff": {
-     "id": "liberty-shared-roof",
-     "consumer": "Women fans, queer Brooklyn and summer arena-goers at Nets and Liberty games.",
-     "insights": [
-      0,
-      1
-     ],
-     "categories": [
-      "tee",
-      "fleece"
-     ],
-     "fit": [
-      "women's"
-     ],
-     "targetSeason": "2026-27",
-     "firstInMarket": "2026-11",
-     "actBy": "2026-10",
-     "actNote": "Put women's cuts into the 2026-27 112 graphics order.",
-     "routes": [
-      "quick-turn-graphics",
-      "new-development"
-     ],
-     "validation": [
-      "Confirm the Liberty play 2027 at Barclays.",
-      "Get the official seafoam spec.",
-      "Confirm Papi Juice and Bushwig artists are open to paid co-design.",
-      "Track women's-cut sell-through on the 112 tee."
-     ],
-     "dependencies": [
-      "league-or-team-rights",
-      "production-capacity",
-      "nike-calendar-approval",
-      "partner-agreement",
-      "date-confirmation"
-     ],
-     "owner": "Merchandising",
-     "partners": [
-      "Papi Juice",
-      "Bushwig"
+      "The Notorious B.I.G. estate",
+      "Bad Boy",
+      "Rhino",
+      "Atlantic",
+      "A paid Bed-Stuy artist"
      ],
      "status": "hypothesis",
      "reviewed": true
@@ -3166,175 +2820,543 @@
     }
    },
    {
-    "id": "aba-heritage-conditional",
-    "title": "ABA heritage, held modest",
-    "summary": "If the red, white and blue New York Nets throwbacks ship, a small companion run. It honors Dr. J's 1974 and 1976 titles without letting 'New York' become the season's message.",
+    "id": "carnival-2027-panyard",
+    "title": "Carnival 2027 pack from the panyards",
+    "summary": "Co-design a Caribbean pack with steelbands, a mas camp and Flatbush designers. Release it before Labor Day, Sept 6, 2027, as the preseason launch.",
     "where": [
-     "Nets Shop at Barclays Center",
-     "Nets online store",
-     "Brooklyn vintage and resale pop-ups"
+     "Flatbush and Crown Heights panyards",
+     "Church and Flatbush avenues, Little Caribbean",
+     "Eastern Parkway and the Brooklyn Museum grounds",
+     "Crown Heights independents"
     ],
-    "when": "Timed to the throwback's game dates once confirmed",
-    "how": "Quick-turn only, with capped buys. Stage an uprock or block-party showcase at a Brooklyn venue confirmed available, in original script rather than traced signage.",
-    "segment": "Long-memory diehards, collectors and Long Island commuters",
-    "priority": 3,
-    "size": "low",
+    "when": "Sign partners in spring. Seed product during August panyard season. Release before Panorama and Labor Day.",
+    "how": "Sign CASYM Steel Orchestra, Despers USA and caribBEING with a fee plus a revenue share. Give them a veto over every graphic and the right to walk away. Have a pan tuner draw the steelpan note map. Let fans bring their own flags and print no national flags. Plan safety and placement with WIADCA before any Labor Day event. Add a Slight Pepper tee with a Nostrand Avenue doubles shop.",
+    "segment": "Caribbean Brooklyn fans in Flatbush, Crown Heights, East Flatbush and Canarsie",
+    "priority": 2,
+    "size": "high",
     "months": [
-     12,
-     1,
-     2
+     5,
+     6,
+     7,
+     8,
+     9
     ],
     "products": [
-     "Vintage-wash heritage tee",
-     "Throwback cap",
-     "ABA-palette warm-up jacket"
+     "Steelpan note-map shorts",
+     "Bring Your Flag hoodie with flag-tie loops",
+     "Black string-mesh tank",
+     "Bucket hat with pan-chrome trims",
+     "Slight Pepper heat-dial tee"
     ],
-    "kpi": "Sell-through within two weeks of the first throwback game. Markdown rate versus the 112 line.",
+    "kpi": "Partner contracts signed by June, sell-through at Flatbush and Crown Heights doors and revenue paid to partners. It works without wins.",
     "handoff": {
-     "id": "aba-heritage-conditional",
-     "consumer": "Long-memory diehards, collectors and Long Island commuters.",
+     "id": "carnival-2027-panyard",
+     "consumer": "Caribbean Brooklyn fans in Flatbush, Crown Heights, East Flatbush and Canarsie.",
      "insights": [
-      2
+      3,
+      0
      ],
      "categories": [
-      "tee",
+      "shorts",
+      "outerwear",
       "headwear",
+      "tee",
+      "accessory"
+     ],
+     "fit": [
+      "unisex adult",
+      "kids"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-08",
+     "actBy": "2027-03",
+     "actNote": "Sign the steelbands and caribBEING in spring 2027, before panyard season.",
+     "routes": [
+      "new-development",
+      "quick-turn-graphics"
+     ],
+     "validation": [
+      "Confirm the 2027 Carnival, J'Ouvert and Panorama dates and WIADCA terms.",
+      "Confirm CASYM, Despers USA and caribBEING are open to a paid fee and revenue-share deal.",
+      "Test the flag-tie hoodie design with fans who knot their own flags.",
+      "Agree a safety and placement plan with WIADCA before any Labor Day event."
+     ],
+     "dependencies": [
+      "partner-agreement",
+      "third-party-ip",
+      "venue-or-permit",
+      "brand-safety",
+      "production-capacity",
+      "nike-calendar-approval",
+      "league-or-team-rights",
+      "date-confirmation"
+     ],
+     "owner": "Partnerships and community",
+     "partners": [
+      "CASYM Steel Orchestra",
+      "Despers USA",
+      "caribBEING",
+      "WIADCA",
+      "A pan tuner",
+      "A Nostrand Avenue doubles shop"
+     ],
+     "status": "hypothesis",
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "born-in-brooklyn-jordan",
+    "title": "Born in Brooklyn: Jordan on local courts",
+    "summary": "Jordan was born in Fort Greene, and Brooklyn makes guards. Pitch it to Jordan Brand as its own story, tied to the borough's courts rather than the Nets.",
+    "where": [
+     "Fort Greene Park courts",
+     "Boys High, Bed-Stuy",
+     "Lincoln High, Coney Island",
+     "SNKRS-style raffle with Brooklyn pickup"
+    ],
+    "when": "Holiday sneaker window, late November into December.",
+    "how": "Build the story on Cumberland Hospital, Fort Greene Park, Boys High and Lincoln High. Pay and credit the school programs. Leave out Mars Blackmon and the Do the Right Thing scenes unless 40 Acres and a Mule signs on. Lead with Brooklyn-owned doors such as The Brooklyn Circus. Treat Kith as a door to confirm, not a ban.",
+    "segment": "Brooklyn sneakerheads, school-hoops families and style-forward locals",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     11,
+     12
+    ],
+    "products": [
+     "Brooklyn-black Jordan sneaker colorway",
+     "Born in Brooklyn tee",
+     "Fort Greene coach jacket"
+    ],
+    "kpi": "Raffle entries from Brooklyn ZIP codes and resale premium",
+    "handoff": {
+     "id": "born-in-brooklyn-jordan",
+     "consumer": "Brooklyn sneakerheads, school-hoops families and style-forward locals.",
+     "insights": [
+      0,
+      4
+     ],
+     "categories": [
+      "footwear",
+      "tee",
       "outerwear"
      ],
      "fit": [
       "to define"
      ],
      "targetSeason": "2026-27",
-     "firstInMarket": "2026-12",
-     "actBy": "2026-12",
-     "actNote": "Confirm whether the throwbacks are the City Edition or a Classic set, and their game dates, before any buy. The brief gives no deadline, so this is the first month the run could sell.",
+     "firstInMarket": "2026-11",
+     "actBy": "2026-10",
+     "actNote": "Pitch the story to Jordan Brand and confirm Brooklyn-owned doors for a late-November window.",
      "routes": [
-      "quick-turn-graphics"
+      "new-development"
      ],
      "validation": [
-      "Confirm whether the red, white and blue throwbacks are the 2026-27 City Edition or a Classic set, and their game dates.",
-      "Cap the buy and track sell-through against Brooklyn-only product.",
-      "Confirm a Brooklyn venue is available for the uprock or block-party showcase."
+      "Test whether Brooklyn fans buy a borough-owned Jordan story that is not about the Nets.",
+      "Confirm Jordan Brand interest and the late-November raffle slot.",
+      "Confirm Brooklyn-owned doors such as The Brooklyn Circus, and Kith's status.",
+      "Agree credit and payment for Boys High and Lincoln High programs."
      ],
      "dependencies": [
-      "league-or-team-rights",
+      "nike-calendar-approval",
       "production-capacity",
-      "venue-or-permit",
-      "brand-safety",
-      "date-confirmation"
+      "third-party-ip",
+      "partner-agreement",
+      "retailer-agreement",
+      "brand-safety"
      ],
-     "owner": "Licensed team apparel",
-     "partners": [],
+     "owner": "Marketing",
+     "partners": [
+      "Jordan Brand",
+      "Boys High",
+      "Lincoln High",
+      "The Brooklyn Circus"
+     ],
      "status": "hypothesis",
      "reviewed": true
     },
     "support": {
-     "verified": 1,
+     "verified": 0,
      "corrected": 0,
      "observed": 0,
      "conflicting": 0,
-     "ids": [
-      "bkn-c3"
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "brooklyn-firsts-bhm",
+    "title": "Brooklyn Firsts for Black History Month",
+    "summary": "Build February on Brooklyn's own firsts: Weeksville in 1838, Robinson in 1947 and Chisholm in 1968. Skip national stock imagery.",
+    "where": [
+     "Weeksville Heritage Center, Crown Heights",
+     "Brooklyn Museum First Saturdays",
+     "Barclays February home games"
+    ],
+    "when": "February 2027, with a Jackie Robinson nod at the final home games before Apr 11.",
+    "how": "Co-author the capsule with Weeksville Heritage Center. License Chisholm through her estate and Robinson through the Jackie Robinson Foundation. Hire paid Bed-Stuy and Crown Heights artists. Keep Dodgers marks out.",
+    "segment": "Black Brooklyn families and heritage-minded fans",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     2,
+     4
+    ],
+    "products": [
+     "Brooklyn Firsts tee",
+     "Est. 1838 crewneck",
+     "Next Year warm-up with an Ebbets Field arch band"
+    ],
+    "kpi": "Sell-through, proceeds to Weeksville and repeat buyers from Bed-Stuy and Crown Heights",
+    "handoff": {
+     "id": "brooklyn-firsts-bhm",
+     "consumer": "Black Brooklyn families and heritage-minded fans.",
+     "insights": [
+      0,
+      4
      ],
-     "strength": "partial"
+     "categories": [
+      "tee",
+      "fleece",
+      "outerwear"
+     ],
+     "fit": [
+      "to define"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-02",
+     "actBy": "2026-12",
+     "actNote": "Sign Weeksville and open licensing with the Chisholm estate and the Jackie Robinson Foundation before February.",
+     "routes": [
+      "quick-turn-graphics",
+      "new-development"
+     ],
+     "validation": [
+      "Confirm Weeksville Heritage Center will co-author the capsule.",
+      "Confirm licensing terms with the Chisholm estate and the Jackie Robinson Foundation.",
+      "Test the Brooklyn Firsts tee with heritage-minded families.",
+      "Confirm the Barclays February home dates and the final home games before Apr 11."
+     ],
+     "dependencies": [
+      "partner-agreement",
+      "player-or-estate-rights",
+      "third-party-ip",
+      "league-or-team-rights",
+      "production-capacity",
+      "date-confirmation"
+     ],
+     "owner": "Partnerships and community",
+     "partners": [
+      "Weeksville Heritage Center",
+      "Shirley Chisholm estate",
+      "Jackie Robinson Foundation",
+      "Paid Bed-Stuy and Crown Heights artists"
+     ],
+     "status": "hypothesis",
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "nets-liberty-pride",
+    "title": "Nets x Liberty Pride capsule",
+    "summary": "One capsule for both Barclays teams, designed with Bushwick's queer collectives. It starts at the Nets' Pride Night and carries into the Liberty's June games.",
+    "where": [
+     "Barclays Center",
+     "Brooklyn Pride, Fifth Avenue, Park Slope",
+     "House of Yes, Bushwick"
+    ],
+    "when": "Nets Pride Night, once the team dates it, into early June's Brooklyn Pride.",
+    "how": "Pay Papi Juice and Bushwig artists as co-designers and let them pick the beneficiary. Don't date the drop until Pride Night is confirmed. Use seafoam only as an accent, matched to the Liberty's spec. Don't borrow ballroom language without its community.",
+    "segment": "Queer and women fans who fill Barclays for the Liberty",
+    "priority": 2,
+    "size": "medium",
+    "months": [
+     3,
+     6
+    ],
+    "products": [
+     "Black string-mesh tank with seafoam accents",
+     "Barclays tee",
+     "Women's-fit warm-up"
+    ],
+    "kpi": "Sales across both teams' games and new buyers who had no Nets purchase",
+    "handoff": {
+     "id": "nets-liberty-pride",
+     "consumer": "Queer and women fans who fill Barclays for the Liberty.",
+     "insights": [
+      6,
+      0
+     ],
+     "categories": [
+      "tee",
+      "accessory",
+      "outerwear"
+     ],
+     "fit": [
+      "women's",
+      "unisex adult"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-03",
+     "actBy": "2026-12",
+     "actNote": "Get the Nets to date Pride Night, then sign the Bushwick collectives as paid co-designers.",
+     "routes": [
+      "quick-turn-graphics",
+      "new-development"
+     ],
+     "validation": [
+      "Confirm the Nets Pride Night date with the team.",
+      "Confirm the Liberty's official seafoam spec and 2027 Barclays dates.",
+      "Confirm Papi Juice and Bushwig are open to a paid co-design deal and pick the beneficiary.",
+      "Test the women's-fit warm-up with Liberty and Nets fans."
+     ],
+     "dependencies": [
+      "league-or-team-rights",
+      "partner-agreement",
+      "brand-safety",
+      "third-party-ip",
+      "production-capacity",
+      "date-confirmation"
+     ],
+     "owner": "Partnerships and community",
+     "partners": [
+      "Papi Juice",
+      "Bushwig",
+      "The Liberty",
+      "House of Yes"
+     ],
+     "status": "hypothesis",
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
+    }
+   },
+   {
+    "id": "hat-trick-fitted",
+    "title": "The Hat Trick, starting with a tee",
+    "summary": "Flex grew out of Jamaican bruk-up in Flatbush, and its hat tricks spin a cap mid-routine. Start with a flexer-designed tee and warm-up, and add a fitted only if the headwear rights allow it.",
+    "where": [
+     "Flatbush Avenue door",
+     "Nets Shop at Barclays Center",
+     "Barclays halftime, if the arena and league approve"
+    ],
+    "when": "Launch at a winter home game, then restock for the spring.",
+    "how": "Confirm who holds NBA headwear before you promise a cap. Hire, credit and pay Brooklyn flexers to design the tee and warm-up. Pay any named dancer, such as Storyboard P, for the use of their craft. Get arena and league sign-off before staging a halftime flex battle.",
+    "segment": "Young Flatbush and East Flatbush fans",
+    "priority": 3,
+    "size": "medium",
+    "months": [
+     1,
+     2
+    ],
+    "products": [
+     "Flexer-designed tee",
+     "Flex warm-up jacket",
+     "High-crown fitted with a white undervisor, if headwear rights allow"
+    ],
+    "kpi": "Units sold and dancer-led content views",
+    "handoff": {
+     "id": "hat-trick-fitted",
+     "consumer": "Young Flatbush and East Flatbush fans.",
+     "insights": [
+      4,
+      0
+     ],
+     "categories": [
+      "tee",
+      "outerwear",
+      "headwear"
+     ],
+     "fit": [
+      "to define"
+     ],
+     "targetSeason": "2026-27",
+     "firstInMarket": "2027-01",
+     "actBy": "2026-11",
+     "actNote": "Confirm who holds NBA headwear and hire the flexers before a January launch.",
+     "routes": [
+      "quick-turn-graphics",
+      "new-development"
+     ],
+     "validation": [
+      "Confirm who holds NBA headwear before promising a cap.",
+      "Confirm pay and credit terms with Brooklyn flexers and any named dancer.",
+      "Get arena and league sign-off for any halftime flex battle.",
+      "Test the flexer-designed tee with young Flatbush fans."
+     ],
+     "dependencies": [
+      "league-or-team-rights",
+      "player-or-estate-rights",
+      "partner-agreement",
+      "venue-or-permit",
+      "production-capacity"
+     ],
+     "owner": "Design",
+     "partners": [
+      "Brooklyn flexers (to be hired)",
+      "Storyboard P (prospect)"
+     ],
+     "status": "hypothesis",
+     "reviewed": true
+    },
+    "support": {
+     "verified": 0,
+     "corrected": 0,
+     "observed": 0,
+     "conflicting": 0,
+     "ids": [],
+     "strength": "unchecked"
     }
    }
   ],
   "calendar": [
    {
     "month": 10,
-    "window": "Now to Oct 15, then the Oct 20 opener week",
-    "moment": "Hispanic Heritage Month wrap and tip-off in a Knicks title-defense week",
-    "play": "This season: open paid listening sessions with UPROSE, El Puente, caribBEING and the Brooklyn Chinese-American Association. Place the quick-turn 112 and Randle graphic orders. No new design launches.",
+    "window": "First confirmed Barclays game (reported Oct 21 vs. Charlotte, unconfirmed)",
+    "moment": "The first home game of a development year",
+    "play": "Launch 112 printing at the Nets Shop once the NBA and arena clear it. Sell the stretched-O BROOOOOKLYN tee. Use no PA audio until Diamante consents and Sedra's start is confirmed.",
     "products": [
-     "Existing licensed core tees",
-     "Brown Jr. youth jersey"
+     "112 ZIP tee and hoodie",
+     "Stretched-O BROOOOOKLYN tee",
+     "Kids 112 tee"
     ],
     "priority": 1,
-    "channel": "Community and arena",
+    "channel": "Arena",
     "timing": {
-     "kind": "action",
-     "start": "2026-10",
+     "kind": "launch",
+     "start": "2026-10-21",
      "end": "",
      "recurring": false,
-     "certainty": "confirmed",
-     "basis": "league-calendar",
-     "basisNote": "Opening night (regular season tips off)",
-     "actBy": "2026-10",
-     "actNote": "Open paid listening sessions with UPROSE, El Puente, caribBEING and the Brooklyn Chinese-American Association. Place the quick-turn 112 and Randle graphic orders.",
-     "route": "quick-turn-graphics",
-     "targetSeason": "2026-27",
-     "dependencies": [
-      "production-capacity",
-      "stock-availability",
-      "league-or-team-rights",
-      "player-or-estate-rights",
-      "partner-agreement"
-     ],
-     "reviewed": true
-    }
-   },
-   {
-    "month": 11,
-    "window": "Nov 3 and the nearest home date",
-    "moment": "14th anniversary of the first Brooklyn game, opening the 15th Brooklyn season",
-    "play": "This season: drop the 112 tee, civic crewneck and a Brigade-designed scarf at a 'still a city' night. Set Randle depth on two weeks of sales.",
-    "products": [
-     "112 ZIP tee",
-     "Civic-type crewneck",
-     "Brigade scarf",
-     "Randle player tee"
-    ],
-    "priority": 1,
-    "channel": "Arena, Fulton Street and digital",
-    "timing": {
-     "kind": "event",
-     "start": "2026-11-03",
-     "end": "",
-     "recurring": false,
-     "certainty": "confirmed",
-     "basis": "checked-live",
-     "basisNote": "bkn-c2",
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
      "actBy": "",
      "actNote": "",
      "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
-      "production-capacity",
+      "venue-or-permit",
       "league-or-team-rights",
-      "player-or-estate-rights",
-      "partner-agreement"
+      "production-capacity",
+      "date-confirmation"
+     ],
+     "reviewed": true
+    }
+   },
+   {
+    "month": 10,
+    "window": "Oct 30, Cup opener at Toronto",
+    "moment": "The first Cup Night in East Group A with Detroit, Toronto, Orlando and Milwaukee",
+    "play": "Drop the Weathered capsule online only, since the Nets are on the road. Save the Nets Shop launch for the first home Cup Night. Time the online drop to the late-October Bushwick Halloween weekend too.",
+    "products": [
+     "Weathered warm-up jacket",
+     "Banded-knit shooting shirt"
+    ],
+    "priority": 1,
+    "channel": "Digital",
+    "timing": {
+     "kind": "launch",
+     "start": "2026-10-30",
+     "end": "",
+     "recurring": false,
+     "certainty": "confirmed",
+     "basis": "league-calendar",
+     "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+     "actBy": "",
+     "actNote": "",
+     "route": "new-development",
+     "targetSeason": "2026-27",
+     "dependencies": [
+      "production-capacity",
+      "nike-calendar-approval",
+      "league-or-team-rights"
      ],
      "reviewed": true
     }
    },
    {
     "month": 11,
-    "window": "Nov 24-28: Thanksgiving-week Cup Nights, Black Friday, Small Business Saturday",
-    "moment": "First gifting peak and the end of Cup group play",
-    "play": "This season: gift bundles from quick-turn graphics and existing fleece. Allocate stock to Bed-Stuy and Crown Heights independents for Small Business Saturday.",
+    "window": "Early Nov, the franchise's 60th season and the Nov 1 NYC Marathon",
+    "moment": "The marathon runs through Bay Ridge, Sunset Park, Park Slope, Williamsburg and Greenpoint. The franchise turns 60, from the 1967 ABA start to Brooklyn in 2012, and this is its 15th Brooklyn season.",
+    "play": "Launch the Still a City heritage line on the 60th-season story. Use the 15th Brooklyn season as a tag line only.",
     "products": [
-     "112 ZIP tee bundle",
-     "First Season reissue tee",
-     "Women's-cut 112 tee"
+     "Est. 1834 crewneck",
+     "Kings County cap",
+     "Varsity jacket"
+    ],
+    "priority": 2,
+    "channel": "Fulton Street pop-up and Nets Shop",
+    "timing": {
+     "kind": "launch",
+     "start": "2026-11-01",
+     "end": "",
+     "recurring": false,
+     "certainty": "tentative",
+     "basis": "brief-unchecked",
+     "basisNote": "",
+     "actBy": "",
+     "actNote": "",
+     "route": "new-development",
+     "targetSeason": "2026-27",
+     "dependencies": [
+      "league-or-team-rights",
+      "nike-calendar-approval",
+      "production-capacity",
+      "venue-or-permit",
+      "date-confirmation"
+     ],
+     "reviewed": true
+    }
+   },
+   {
+    "month": 11,
+    "window": "Nov 24-28, Thanksgiving Cup Nights, Black Friday and Small Business Saturday",
+    "moment": "Extra Cup Nights in holiday week and the first gifting wave",
+    "play": "Run the Nets Shop on the home Cup Nights once they're confirmed. Add the heavyweight fleece and varsity tier. Put Small Business Saturday product in Bed-Stuy and Crown Heights independents.",
+    "products": [
+     "Heavyweight rust-and-black hoodie",
+     "Wool-blend varsity jacket",
+     "Premium long black puffer with reflective 112"
     ],
     "priority": 1,
-    "channel": "Fulton Street, Atlantic Terminal, Kings Plaza, independents",
+    "channel": "Doors: Fulton Street, Kings Plaza and Brooklyn independents",
     "timing": {
      "kind": "event",
      "start": "2026-11-24",
      "end": "2026-11-28",
      "recurring": true,
      "certainty": "confirmed",
-     "basis": "fixed-holiday",
-     "basisNote": "Thanksgiving is the fourth Thursday of November (Nov 26, 2026). Black Friday and Small Business Saturday follow on Nov 27-28.",
+     "basis": "league-calendar",
+     "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
      "actBy": "",
      "actNote": "",
-     "route": "quick-turn-graphics",
+     "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
       "production-capacity",
-      "stock-availability",
+      "nike-calendar-approval",
       "league-or-team-rights",
       "retailer-agreement"
      ],
@@ -3343,33 +3365,34 @@
    },
    {
     "month": 12,
-    "window": "December home dates (to confirm)",
-    "moment": "Holiday gifting; the Knicks own Christmas Day",
-    "play": "This season: a quiet Brooklyn gifting drop on the Nets' own home dates. Don't counter-program the Knicks.",
+    "window": "December, with no Nets Christmas game",
+    "moment": "Peak gifting, and sorrel and black cake season in the Nostrand Avenue bakeries",
+    "play": "Release the sorrel-red pack with a paid Caribbean bakery partner. Run the Born in Brooklyn Jordan raffle with borough pickup.",
     "products": [
-     "Print-on-demand ZIP hoodie",
-     "Kids replica jerseys",
-     "Transom-numeral fitted"
+     "Sorrel-red fleece and warm-up",
+     "Born in Brooklyn sneaker colorway",
+     "Born in Brooklyn tee"
     ],
-    "priority": 2,
-    "channel": "Arena, Fulton Street and digital",
+    "priority": 1,
+    "channel": "Digital raffle and Nostrand and Flatbush doors",
     "timing": {
      "kind": "season",
      "start": "2026-12",
      "end": "",
      "recurring": true,
-     "certainty": "tentative",
-     "basis": "brief-unchecked",
+     "certainty": "unknown",
+     "basis": "none",
      "basisNote": "",
      "actBy": "",
      "actNote": "",
-     "route": "quick-turn-graphics",
+     "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
+      "partner-agreement",
+      "nike-calendar-approval",
       "production-capacity",
-      "stock-availability",
       "league-or-team-rights",
-      "player-or-estate-rights",
+      "third-party-ip",
       "date-confirmation"
      ],
      "reviewed": true
@@ -3377,14 +3400,16 @@
    },
    {
     "month": 1,
-    "window": "Jan 1 and a January home game",
-    "moment": "Haitian Independence Day soup joumou in Flatbush; Caribbean heritage night at Barclays",
-    "play": "This season: content with a commissioned Haitian Brooklyn artist and chef. Plus a heritage night co-hosted by caribBEING and the steelbands, with a partner-designed tee.",
+    "window": "Jan 1 and the weeks after",
+    "moment": "Haitian Independence Day with soup joumou in Flatbush, and the Polar Bear Club plunge at Coney Island",
+    "play": "Launch a flexer-designed tee at a January home game. Drop a Demin tee for Coney Island and Brighton Beach, made with paid Russian-speaking creators. Shoot winter content with Haitian community partners, credited and paid.",
     "products": [
-     "Partner-designed heritage-night tee"
+     "Flexer-designed tee",
+     "Flex warm-up jacket",
+     "Egor Demin Coney Island tee"
     ],
-    "priority": 2,
-    "channel": "Arena, digital and community",
+    "priority": 3,
+    "channel": "Arena and community",
     "timing": {
      "kind": "event",
      "start": "2027-01-01",
@@ -3392,65 +3417,67 @@
      "recurring": true,
      "certainty": "confirmed",
      "basis": "fixed-holiday",
-     "basisNote": "Haitian Independence Day is Jan 1.",
+     "basisNote": "Jan 1 is Haitian Independence Day and New Year's Day every year",
      "actBy": "",
      "actNote": "",
-     "route": "quick-turn-graphics",
+     "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "production-capacity",
       "league-or-team-rights",
+      "player-or-estate-rights",
       "partner-agreement",
-      "date-confirmation"
+      "production-capacity",
+      "nike-calendar-approval"
      ],
      "reviewed": true
     }
    },
    {
     "month": 2,
-    "window": "February home stretch, with Lunar New Year around Feb 6 and Ramadan roughly Feb 8 to Mar 9, 2027",
-    "moment": "Black History Month, Lunar New Year in Sunset Park, Ramadan evenings in Bay Ridge and on Atlantic Avenue",
-    "play": "This season: Brooklyn Firsts with Weeksville and Restoration. A Lunar New Year night with the Brooklyn Chinese-American Association and a Sunset Park artist. Schedule heritage nights around iftar with the Arab American Association of New York.",
+    "window": "February, with Lunar New Year on Feb 6 and the trade deadline on Feb 11",
+    "moment": "Black History Month and Sunset Park's Lunar New Year",
+    "play": "Release Brooklyn Firsts with Weeksville. Run a Lunar New Year night with Sunset Park community partners. Keep player product quick-turn around the deadline.",
     "products": [
-     "Artist-designed tee series",
-     "Lunar New Year artist tee",
-     "Archival-type crewneck"
+     "Brooklyn Firsts tee",
+     "Est. 1838 crewneck",
+     "Mikel Brown Jr. and Egor Demin tees"
     ],
     "priority": 2,
-    "channel": "Arena and community",
+    "channel": "Weeksville, Brooklyn Museum First Saturdays and Barclays",
     "timing": {
-     "kind": "season",
-     "start": "2027-02",
-     "end": "2027-03-09",
+     "kind": "launch",
+     "start": "2027-02-01",
+     "end": "2027-02-28",
      "recurring": true,
-     "certainty": "tentative",
-     "basis": "brief-unchecked",
-     "basisNote": "",
+     "certainty": "confirmed",
+     "basis": "fixed-holiday",
+     "basisNote": "Black History Month is February",
      "actBy": "",
      "actNote": "",
      "route": "quick-turn-graphics",
      "targetSeason": "2026-27",
      "dependencies": [
-      "production-capacity",
       "league-or-team-rights",
       "player-or-estate-rights",
       "partner-agreement",
-      "date-confirmation"
+      "third-party-ip",
+      "production-capacity"
      ],
      "reviewed": true
     }
    },
    {
     "month": 3,
-    "window": "March 9 (quiet) and March 25, 2027",
-    "moment": "30 years since Biggie's death and since 'Life After Death'",
-    "play": "This season: a community-led remembrance at Restoration Plaza on March 9. Then the licensed estate capsule on March 25, with proceeds to youth music programs.",
+    "window": "March 9 to March 25",
+    "moment": "Biggie's 30th: the anniversary of his death and of Life After Death",
+    "play": "If the estate signs, drop the white and black pair at the home game nearest March 9. If not, release the Bed-Stuy fallback capsule. Run the raffle with Bed-Stuy pickup.",
     "products": [
-     "Licensed anniversary tee",
-     "White and black warm-up pair"
+     "White and black warm-up pair",
+     "Original Brooklyn-knit panel jacket",
+     "Bed-Stuy block-party fallback tee"
     ],
     "priority": 2,
-    "channel": "Bed-Stuy community, arena and digital",
+    "channel": "Arena and digital raffle",
     "timing": {
      "kind": "event",
      "start": "2027-03-09",
@@ -3459,16 +3486,16 @@
      "certainty": "tentative",
      "basis": "brief-unchecked",
      "basisNote": "",
-     "actBy": "2026-11",
-     "actNote": "Lock estate terms with the Wallace estate.",
-     "route": "quick-turn-graphics",
+     "actBy": "",
+     "actNote": "",
+     "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
       "player-or-estate-rights",
       "third-party-ip",
-      "partner-agreement",
+      "league-or-team-rights",
+      "nike-calendar-approval",
       "production-capacity",
-      "brand-safety",
       "date-confirmation"
      ],
      "reviewed": true
@@ -3477,51 +3504,51 @@
    {
     "month": 4,
     "window": "Final home games before Apr 11",
-    "moment": "Season end in a rebuild year; FH27 design lock",
-    "play": "Build: lock the Kings County line and the 2027-28 uniform pitch. This season: a small thank-you tee in original Brooklyn type, written with Brooklyn voices, and a Latino heritage night with UPROSE and El Puente.",
+    "moment": "The season closes four days before Jackie Robinson Day on April 15",
+    "play": "Honor Robinson at the last home games, licensed through the Jackie Robinson Foundation. Clear winter stock and preview the Next Year capsule.",
     "products": [
-     "Thank-you tee",
-     "Heritage-night artist tee"
+     "Next Year warm-up",
+     "Ebbets arch tee"
     ],
-    "priority": 2,
-    "channel": "Arena and digital",
+    "priority": 3,
+    "channel": "Arena",
     "timing": {
-     "kind": "action",
-     "start": "2027-04",
-     "end": "2027-04-11",
-     "recurring": false,
+     "kind": "event",
+     "start": "2027-04-11",
+     "end": "",
+     "recurring": true,
      "certainty": "confirmed",
      "basis": "league-calendar",
      "basisNote": "Regular season ends",
-     "actBy": "2027-04",
-     "actNote": "Lock the Kings County line and the 2027-28 uniform pitch.",
-     "route": "future-uniform",
-     "targetSeason": "2027-28",
+     "actBy": "",
+     "actNote": "",
+     "route": "new-development",
+     "targetSeason": "2026-27",
      "dependencies": [
-      "nike-calendar-approval",
       "league-or-team-rights",
-      "production-capacity",
-      "partner-agreement"
+      "third-party-ip",
+      "player-or-estate-rights",
+      "nike-calendar-approval",
+      "production-capacity"
      ],
      "reviewed": true
     }
    },
    {
     "month": 5,
-    "window": "Brooklyn Half (mid-May), May 18, Liberty tip-off",
-    "moment": "Brooklyn's own half marathon, Haitian Flag Day, Liberty season",
-    "play": "Build test: a Nike running cheer zone and a Brooklyn-only run tee on the Half course, with no NYRR marks. Show partners a Haiti-led flag-ready prototype for a go or no-go. Drop the women's Nets-Liberty crossover.",
+    "window": "May 18 to late May",
+    "moment": "Haitian Flag Day, the Bushwick Collective Block Party and DanceAfrica's 50th year at BAM",
+    "play": "Release Bring Your Flag for Haitian Flag Day only if a Haitian partner such as Kerby Jean-Raymond co-signs it. If not, move it to preseason. Commission a Nets wall through Joe Ficalora, with paid Latino and Black Bushwick artists and written releases.",
     "products": [
-     "Brooklyn run tee",
-     "Shared Nets-Liberty crewneck",
-     "Flag-ready hoodie prototype"
+     "Bring Your Flag hoodie",
+     "Flag-tie warm-up"
     ],
     "priority": 2,
-    "channel": "Community, arena and running stores",
+    "channel": "Community: Flatbush, Canarsie and Bushwick",
     "timing": {
      "kind": "event",
-     "start": "2027-05",
-     "end": "",
+     "start": "2027-05-18",
+     "end": "2027-05-31",
      "recurring": true,
      "certainty": "tentative",
      "basis": "brief-unchecked",
@@ -3531,11 +3558,11 @@
      "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "nike-calendar-approval",
-      "production-capacity",
-      "league-or-team-rights",
       "partner-agreement",
+      "third-party-ip",
       "venue-or-permit",
+      "production-capacity",
+      "brand-safety",
       "date-confirmation"
      ],
      "reviewed": true
@@ -3543,18 +3570,18 @@
    },
    {
     "month": 6,
-    "window": "Early to late June",
-    "moment": "Brooklyn Pride in Park Slope, Liberty at Barclays, Coney Island Mermaid Parade, summer park leagues",
-    "play": "Pride chapter with Papi Juice and Bushwig artists; a Brooklyn Courts park run with a paid, credited court-restoration partner.",
+    "window": "Early June to late June",
+    "moment": "Brooklyn Pride on Fifth Avenue, the Liberty's season and the Coney Island Mermaid Parade",
+    "play": "Carry the Nets x Liberty Pride capsule into June. Launch a Coney Island summer drop with Coney Island USA as a paid partner.",
     "products": [
-     "Pride tee",
-     "String-mesh tank with seafoam accent",
-     "Neighborhood block-letter shorts"
+     "String-mesh tank with seafoam accents",
+     "Sign-painted boardwalk tee",
+     "Summer shorts"
     ],
-    "priority": 3,
-    "channel": "Arena, Park Slope and Brooklyn parks",
+    "priority": 2,
+    "channel": "Barclays, Park Slope and Coney Island",
     "timing": {
-     "kind": "season",
+     "kind": "event",
      "start": "2027-06",
      "end": "",
      "recurring": true,
@@ -3566,32 +3593,31 @@
      "route": "new-development",
      "targetSeason": "2026-27",
      "dependencies": [
-      "nike-calendar-approval",
-      "production-capacity",
-      "league-or-team-rights",
       "partner-agreement",
       "venue-or-permit",
+      "production-capacity",
+      "league-or-team-rights",
       "date-confirmation"
      ],
      "reviewed": true
     }
    },
    {
-    "month": 9,
-    "window": "Labor Day weekend 2027 and late-September Atlantic Antic",
-    "moment": "West Indian American Day Carnival; Atlantic Avenue's street festival to Barclays",
-    "play": "Build launch: the Kings County FH27 line goes live. Bring Your Flag ships only if partners said go. A community booth at the Antic sells current product with merchant co-promotions.",
+    "month": 8,
+    "window": "August panyard nights to Panorama, the Saturday before Labor Day",
+    "moment": "Steelbands rehearse nightly in Flatbush and Crown Heights, and school starts in early September",
+    "play": "Seed the Panyard pack with CASYM and Despers USA players. Add kids sizes for back-to-school.",
     "products": [
-     "Kings County varsity jacket",
-     "Banded tonal-rust hoodie",
-     "Flag-ready hoodie (if approved)"
+     "Note-map shorts",
+     "Bucket hat",
+     "Kids Panyard tee"
     ],
-    "priority": 1,
-    "channel": "Fulton Street, community doors and street festival",
+    "priority": 2,
+    "channel": "Community panyards and Flatbush doors",
     "timing": {
-     "kind": "launch",
-     "start": "2027-09",
-     "end": "",
+     "kind": "season",
+     "start": "2027-08",
+     "end": "2027-09-04",
      "recurring": true,
      "certainty": "tentative",
      "basis": "brief-unchecked",
@@ -3599,14 +3625,48 @@
      "actBy": "",
      "actNote": "",
      "route": "new-development",
-     "targetSeason": "2027-28",
+     "targetSeason": "2026-27",
      "dependencies": [
-      "nike-calendar-approval",
+      "partner-agreement",
       "production-capacity",
+      "nike-calendar-approval",
       "league-or-team-rights",
+      "date-confirmation"
+     ],
+     "reviewed": true
+    }
+   },
+   {
+    "month": 9,
+    "window": "Labor Day, Sept 6, 2027, then the Atlantic Antic in late September",
+    "moment": "Carnival and J'Ouvert on Eastern Parkway, then the street fair that ends a block from Barclays",
+    "play": "Release the full Panyard pack before Labor Day, with partner approval and safety planned with WIADCA. Use the Antic booth to preview next season's product.",
+    "products": [
+     "Bring Your Flag hoodie",
+     "String-mesh tank",
+     "Slight Pepper tee"
+    ],
+    "priority": 1,
+    "channel": "Crown Heights and Flatbush doors, and an Atlantic Avenue booth",
+    "timing": {
+     "kind": "event",
+     "start": "2027-09-06",
+     "end": "",
+     "recurring": true,
+     "certainty": "confirmed",
+     "basis": "fixed-holiday",
+     "basisNote": "Labor Day is the first Monday of September: Sept 6, 2027",
+     "actBy": "",
+     "actNote": "",
+     "route": "new-development",
+     "targetSeason": "2026-27",
+     "dependencies": [
       "partner-agreement",
       "venue-or-permit",
-      "date-confirmation"
+      "brand-safety",
+      "production-capacity",
+      "nike-calendar-approval",
+      "league-or-team-rights"
      ],
      "reviewed": true
     }
@@ -3631,7 +3691,7 @@
    },
    {
     "intensity": 35,
-    "phase": "Playoffs (not for Nets unless they qualify)"
+    "phase": "Playoffs (not for Nets)"
    },
    {
     "intensity": 40,
@@ -3662,28 +3722,20 @@
     "phase": "Holiday / Cup knockouts"
    }
   ],
-  "readingList": 63,
-  "checkedSources": 16,
+  "readingList": 77,
+  "checkedSources": 7,
   "verification": {
-   "live": 0,
-   "knowledge": 11,
-   "briefMode": "knowledge",
-   "queue": 148
+   "live": 8,
+   "knowledge": 3,
+   "briefMode": "live",
+   "queue": 132
   },
-  "evidence": {
-   "checkedOn": "2026-10-10",
-   "claims": 4,
-   "verified": 3,
-   "contradicted": 0,
-   "unclear": 1,
-   "observations": 0,
-   "references": 0
-  },
+  "evidence": null,
   "planReviewed": true,
   "checks": {
-   "checked": 118,
-   "corrected": 16,
-   "removed": 2
+   "checked": 30,
+   "corrected": 6,
+   "removed": 0
   },
   "stewardship": {
    "owner": null,

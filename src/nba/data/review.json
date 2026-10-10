@@ -870,16 +870,16 @@
   }
  ],
  "totals": {
-  "claims": 150,
-  "verified": 88,
+  "claims": 142,
+  "verified": 84,
   "contradicted": 25,
-  "unclear": 37,
+  "unclear": 33,
   "observations": 30,
   "references": 21,
-  "searches": 162,
-  "markets": 30,
+  "searches": 154,
+  "markets": 28,
   "plans": 30,
-  "checkedSources": 434
+  "checkedSources": 419
  },
  "pulse": {
   "asOf": "2026-10-07",

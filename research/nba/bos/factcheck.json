@@ -1,252 +1,217 @@
 {
   "team": "bos",
-  "checked": 112,
+  "checked": 30,
   "verdicts": [
     {
-      "lens": "food",
-      "claim": "Slade's Bar & Grill is a Black-owned Lower Roxbury institution since 1935, owned by Bill Russell in the 1960s",
+      "lens": "retail-landscape",
+      "claim": "Concepts opened a roughly 440-square-metre, three-floor flagship at 18 Newbury Street in April 2026.",
       "verdict": "corrected",
-      "note": "Checked live: Slade's opened in 1928. Russell bought it in 1964 and ran it as a jazz room. It closed in 1992, then reopened under new ownership and now operates at 958 Tremont St. Dates and wording fixed in food.json.",
-      "source": "https://www.bostonglobe.com/2025/01/31/metro/since-opening-1928-slades-has-been-haven-community"
+      "note": "Wrong year. The 4,700-square-foot, three-floor flagship at 18 Newbury Street opened to the public on Oct 24, 2020, ahead of the brand's 25th anniversary. Fixed the summary, insight, place, district and door text.",
+      "source": "https://shop-eat-surf.com/2020/10/concepts-to-open-flagship-store-in-boston/"
     },
     {
-      "lens": "strategy",
-      "claim": "Slade's described as 'Black-owned Lower Roxbury institution since 1935' (partners list, russells-boston-firsts, calendar)",
+      "lens": "fanbase",
+      "claim": "Concepts opened a three-floor Boston flagship at 18 Newbury Street in April 2026.",
       "verdict": "corrected",
-      "note": "Change the line to \"Roxbury institution since 1928, Russell-owned from 1964, reopened under current Black ownership.\" Slade's is open, so the partnership idea stands. Contact the current owners.",
-      "source": "https://baystatebanner.com/2025/07/09/slades-owners-carry-on-legacy-of-good-food-and-community"
+      "note": "Same error. Changed it to October 2020 in the insight and the place entry. Dropped the source that gave the 2026 date and added the 2020 opening release.",
+      "source": "https://shop-eat-surf.com/2020/10/concepts-to-open-flagship-store-in-boston/"
     },
     {
       "lens": "art",
-      "claim": "Bodega is hidden behind a fake corner store at Clearway Street, Back Bay, since 2006",
-      "verdict": "confirmed",
-      "note": "Checked live: Bodega is open at 6 Clearway St. The 2006 start date was not re-verified.",
-      "source": "https://bostonuncovered.com/bodega-streetwear-hidden-store/"
+      "claim": "A new Concepts flagship opened at 18 Newbury Street in 2026.",
+      "verdict": "corrected",
+      "note": "Changed it to October 2020 in the insight, the place and the people entry. The Sneaker Freaker source already listed describes that 2020 opening.",
+      "source": "https://www.sneakerfreaker.com/news/a-look-inside-concepts-new-flashy-boston-flagship"
     },
     {
-      "lens": "uniform",
-      "claim": "Bodega is in the South End",
+      "lens": "strategy",
+      "claim": "Partners list: Concepts 'opened its 18 Newbury St flagship in April 2026'.",
       "verdict": "corrected",
-      "note": "Art, underground and retail-landscape all contradicted this. Bodega is on Clearway Street (Fenway/Back Bay). Fixed in uniform.json (insight, place, verify).",
-      "source": "https://bostonuncovered.com/bodega-streetwear-hidden-store/"
+      "note": "Editor: change it to 'opened its 18 Newbury St flagship in October 2020'. The partnership advice still stands.",
+      "source": "https://shop-eat-surf.com/2020/10/concepts-to-open-flagship-store-in-boston/"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Boston's minority owner has a pending deal for the Connecticut Sun, which could move a WNBA team to Boston.",
+      "verdict": "corrected",
+      "note": "Outdated. The WNBA blocked Steve Pagliuca's $325M Boston bid. The WNBA and NBA approved Tilman Fertitta's $300M purchase and a 2027 move to Houston. Fixed the summary, insight, watchout and verify item.",
+      "source": "https://africa.espn.com/wnba/story/_/id/48763788/wnba-nba-approve-sun-sale-fertitta-relocation-houston"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Boston gave Brown a key to the city at a Boston Common sendoff on Aug. 31.",
+      "verdict": "corrected",
+      "note": "The 741 Frequency Fest on Boston Common was Sunday, Aug 30. State Rep. Christopher Worrell presented the key, and Mayor Wu gave him a 'Jaylen Brown Way' sign. Text and source fixed.",
+      "source": "https://www.boston.com/sports/boston-celtics/2026/08/31/jaylen-brown-receives-key-to-the-city-at-741-frequency-fest/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Top insight: 'Boston threw him an Aug 31 sendoff on Boston Common.'",
+      "verdict": "corrected",
+      "note": "Editor: change the date to Aug 30. The event was organized by Brown's 741 Performance brand with the city.",
+      "source": "https://www.boston.com/sports/boston-celtics/2026/08/31/jaylen-brown-receives-key-to-the-city-at-741-frequency-fest/"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "The Knicks are defending champions and signed Mitchell Robinson away.",
+      "verdict": "corrected",
+      "note": "The direction was reversed. Boston signed Robinson away from the Knicks. Changed the text to 'lost Mitchell Robinson to Boston in free agency'.",
+      "source": "https://www.nbcsportsboston.com/nba/boston-celtics/celtics-2026-27-regular-season-schedule-key-takeaways-dates/798982/"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Specter reaction: SI called it mostly hideous, ClutchPoints quoted harsh fan posts, and Yahoo Sports called the Celtics reaction mixed.",
+      "verdict": "corrected",
+      "note": "Confirmed SI's 'mostly hideous' line. No ClutchPoints piece could be found, and the Yahoo-cited coverage reported widespread criticism, not a mixed reaction. Rewrote the line to match.",
+      "source": "https://si.com/nba/nba-nike-released-worst-new-uniforms-one-simple-question"
     },
     {
       "lens": "underground",
-      "claim": "Converse is headquartered at Lovejoy Wharf beside TD Garden (also cited in culture, art, music, retail-landscape, strategy)",
-      "verdict": "unverifiable",
-      "note": "Live search turned up only 2015-2018 coverage of the move to 160 N Washington St. Confirm Converse hasn't relocated, downsized or closed the public store, since strategy uses Lovejoy Wharf as a launch and customization base.",
-      "source": "https://bankerandtradesman.com/converse-store-opens-at-lovejoy-wharf/"
+      "claim": "Boston Legacy FC's permanent home, the renovated White Stadium, is slated for 2027.",
+      "verdict": "corrected",
+      "note": "On Aug 27, 2026 the club announced it will play 2027 at Centreville Bank Stadium in Pawtucket and move into White Stadium in 2028. Fixed the summary, insight, product hook and verify item.",
+      "source": "https://bostonlegacyfc.com/blogs/press/boston-legacy-fc-announces-centreville-bank-stadium-as-2027-venue-ahead-of-move-home-to-white-stadium-in-2028"
     },
     {
-      "lens": "strategy",
-      "claim": "Concepts, Harvard Square, as lead local partner (opportunity concepts-converse-tatum)",
+      "lens": "underground",
+      "claim": "Legacy debuted in 2026 at Gillette Stadium, with some matches at Centreville Bank Stadium in Pawtucket.",
       "verdict": "confirmed",
-      "note": "Checked live 2026-10-10: Concepts' own Cambridge location page lists stores at 37 Brattle Street and 9 JFK Street in Cambridge, open 10AM-7PM daily. The page's last update date isn't shown.",
-      "source": "https://cncpts.com/blogs/locations/41379331-concepts-cambridge"
-    },
-    {
-      "lens": "strategy",
-      "claim": "Celtics wear Specter at the Oct 30 Cup opener and Dec 25 (headline Specter story on Christmas)",
-      "verdict": "unverifiable",
-      "note": "The brief says which games carry Specter was not captured. Strategy builds launches around specific games, so phrase it as \"first wear once confirmed\" and don't hard-code Dec 25.",
-      "source": "https://www.nbcboston.com/nba/nike-nba-specter-uniforms-new-historic-franchises/4015023/"
-    },
-    {
-      "lens": "strategy",
-      "claim": "Uniform concept 'The Hub' and claim 'every recent Celtics alternate has turned inward to the Garden and the parquet'",
-      "verdict": "unverifiable",
-      "note": "The uniform dossier says past City Edition concepts weren't verified from memory. The 2026-27 City Edition is also unknown and may already be set. Soften the claim and check for a collision before committing.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Lakers' visit to TD Garden and a February Celtics Black History game used as calendar anchors",
-      "verdict": "unverifiable",
-      "note": "Neither date is in the verified facts. Confirm both on the Celtics home schedule before dating any drops.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Nike Boston on Newbury Street and a Nike Factory Store at Wrentham as primary Nike doors",
-      "verdict": "unverifiable",
-      "note": "Not verified live. Confirm both are open and still carry basketball. Newbury is the lead storytelling door in retail-landscape and strategy.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Oct 20 opening night tip time and the Dec 25 2:30 p.m. time",
-      "verdict": "confirmed",
-      "note": "Dec 25 Heat at Celtics at 2:30 p.m. ET is verified. The Oct 20 Celtics-Pistons 3:00 p.m. time looks unusual, so re-check it before quoting.",
-      "source": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
-    },
-    {
-      "lens": "rhythm",
-      "claim": "MLK Day games on Jan 18: Celtics participation not confirmed",
-      "verdict": "corrected",
-      "note": "The verified MLK Day slate is Pistons-Cavaliers, 76ers-Hawks, Timberwolves-Knicks and Rockets-Grizzlies. The Celtics aren't in it. Rhythm key date updated.",
-      "source": ""
-    },
-    {
-      "lens": "rhythm",
-      "claim": "Head of the Charles falls in late October and overlaps the season opener",
-      "verdict": "corrected",
-      "note": "The race is held the third weekend of October (likely Oct 17-18), before the Oct 20 opener. Fixed in rhythm.json and culture.json.",
-      "source": ""
-    },
-    {
-      "lens": "hoops",
-      "claim": "Parquet floor tone labelled 'maple'",
-      "verdict": "corrected",
-      "note": "The Garden parquet is oak. Renamed the cue \"honey oak\" in hoops.json.",
-      "source": ""
+      "note": "Gillette was the primary 2026 venue, with select home matches in Pawtucket.",
+      "source": "https://bostonlegacyfc.com/blogs/press/boston-legacy-football-club-play-select-matches-centreville-bank-stadium-gillette-2026"
     },
     {
       "lens": "food",
-      "claim": "Comfort Kitchen in Upham's Corner is open with chef Kwasi Kwaa",
-      "verdict": "unverifiable",
-      "note": "High risk of closure or a chef change, and not verified. Don't name it as a partner until a live check confirms. The dossier lists it as both a place and a person.",
-      "source": ""
+      "claim": "In September 2026 the Celtics and the local Portuguese-American community unveiled a custom Queta court in Cambridge.",
+      "verdict": "corrected",
+      "note": "Queta and the Portuguese company Hoopers opened the renovated court at Cambridge's King Open School on Sept 12, 2026. It was backed by the city and the Portuguese consulate, and no Celtics team role was reported. Text fixed.",
+      "source": "https://www.bostonglobe.com/2026/09/12/sports/neemias-queta-celtics-cambridge-basketball-court/"
     },
     {
       "lens": "food",
-      "claim": "Chef partners: Fox & the Knife, MIDA, Flour, Myers + Chang still operating",
-      "verdict": "unverifiable",
-      "note": "Restaurants close often. Confirm each is open and under the same chef before pitching a collaboration.",
-      "source": ""
-    },
-    {
-      "lens": "music",
-      "claim": "Roadrunner, Paradise Rock Club, The Middle East, Wally's Cafe, Club Passim, MGM Music Hall at Fenway are operating",
-      "verdict": "unverifiable",
-      "note": "All are long-running except the Middle East, which has had recent ownership churn. Check each is open. Confirm Van Buren Records (Brockton collective) is still active, or cut it.",
-      "source": ""
-    },
-    {
-      "lens": "music",
-      "claim": "Boston Calling 2027 on Memorial Day weekend at the Harvard Athletic Complex; BAMS Fest in June at Franklin Park",
-      "verdict": "unverifiable",
-      "note": "Festival dates, sites and even whether they run in 2027 are unconfirmed. The venue has changed before.",
-      "source": ""
+      "claim": "Sullivan's Castle Island reopened for its 75th season on February 27, 2026.",
+      "verdict": "corrected",
+      "note": "Coverage says it opened on a Saturday, after a nor'easter. Feb 27, 2026 was a Friday, and the stand had announced Feb 28. Changed it to Saturday, Feb 28 in food.json (3 places) and culture.json.",
+      "source": "https://www.nbcboston.com/news/local/sign-of-spring-sullivans-castle-island-opened-on-saturday/3907627/"
     },
     {
       "lens": "rhythm",
-      "claim": "Beanpot first two Mondays of February at TD Garden. St. Patrick's parade, Haitian Flag Day and Caribbean Carnival 2027 dates",
-      "verdict": "unverifiable",
-      "note": "These are recurring events, but the 2027 dates aren't confirmed. The Southie parade is expected Sunday, Mar 14, 2027.",
-      "source": ""
-    },
-    {
-      "lens": "fanbase",
-      "claim": "Banners Kitchen & Tap, The Harp, Concepts and Sean Grande/Cedric Maxwell on 98.5 The Sports Hub",
-      "verdict": "unverifiable",
-      "note": "Check that the bars still operate and the radio crew is unchanged for 2026-27 before naming them.",
-      "source": ""
-    },
-    {
-      "lens": "fanbase",
-      "claim": "Derrick White and Sam Hauser remain on the roster",
-      "verdict": "unverifiable",
-      "note": "The brief says White is on the roster per reports, but this wasn't re-verified. Hauser isn't in the verified facts. Rhythm and retail-landscape hedge White correctly. Don't design White product until he's confirmed.",
-      "source": "https://www.nbcsportsboston.com/nba/boston-celtics/updated-roster-depth-chart-contracts-jaylen-brown-trade/794057/"
-    },
-    {
-      "lens": "hoops",
-      "claim": "Boston WNBA expansion status and Maine Celtics as G League affiliate in Portland",
-      "verdict": "unverifiable",
-      "note": "Boston's WNBA expansion timing and name weren't confirmed, and the Maine Celtics' status wasn't rechecked. Soften the WNBA line.",
-      "source": ""
-    },
-    {
-      "lens": "hoops",
-      "claim": "Brown returns for an Oct 10 preseason game and on Jan 21, 2027 at TD Garden. Also: Dec 25 Heat, Oct 30 Hawks Cup opener, East Group C",
+      "claim": "The Celtics open at Detroit on Oct 20 at 3 p.m. ET, then host the Knicks at TD Garden on Friday, Oct 23.",
       "verdict": "confirmed",
-      "note": "All match CURRENT FACTS.",
+      "note": "NBC Sports Boston lists the Oct 23 home opener at 7 p.m. ET and the 3 p.m. Tuesday opener at Detroit. It is Robinson's first game against his old team.",
+      "source": "https://www.nbcsportsboston.com/nba/boston-celtics/celtics-2026-27-regular-season-schedule-key-takeaways-dates/798982/"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Paul George wears No. 13 in Boston, and Brad Stevens said retiring Brown's No. 7 is likely.",
+      "verdict": "confirmed",
+      "note": "The team posted George in No. 13, and Bleacher Report quotes Stevens saying Brown's number will likely be retired.",
+      "source": "https://bleacherreport.com/articles/25493225-jaylen-browns-no-7-likely-be-retired-celtics-future-brad-stevens-says"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Luke Murray was hired at Boston College in 2026 after five years under Dan Hurley at UConn.",
+      "verdict": "confirmed",
+      "note": "BC hired him in late March 2026 to replace the fired Earl Grant. It is his first head-coaching job.",
+      "source": "https://www.wbur.org/news/2026/03/27/boston-college-luke-murray-uconn-head-coach"
+    },
+    {
+      "lens": "underground",
+      "claim": "Club Cafe's founder, Frank Ribaudo, died in July 2026.",
+      "verdict": "confirmed",
+      "note": "He died at 81 in July 2026. He helped open Club Cafe in 1983, and the venue still operates.",
+      "source": "https://www.wgbh.org/news/local/2026-07-10/club-cafe-founder-dies-at-81"
+    },
+    {
+      "lens": "underground",
+      "claim": "Converse faced 2026 layoff and sale reports.",
+      "verdict": "confirmed",
+      "note": "Bloomberg reported deep Converse job cuts after a roughly 30% revenue drop. Sale talk is analyst speculation, not a Nike announcement. No cuts specific to Lovejoy Wharf were found, so the watchout stays.",
+      "source": "https://jingdaily.com/intels/2026-03/09/converse-sale-speculation-grows-as-nike-s-costs-mount"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Madrugada, Nan James's Roxbury label, ran a Downtown Crossing pop-up in 2026 and plans a Columbus Avenue storefront with the lease pending.",
+      "verdict": "confirmed",
+      "note": "Axios reported this in September 2026. No signed lease or opening was found after that.",
+      "source": "https://www.axios.com/local/boston/2026/09/04/madrugada-roxbury-clothing-south-end"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "The official ProShop is at 84 Causeway Street in The Hub on Causeway, at street level by the TD Garden entrance.",
+      "verdict": "confirmed",
+      "note": "The address and location are confirmed. The 10:30 a.m. to 6 p.m. non-game-day hours were not found in any source, so check them before a launch.",
+      "source": "https://bostonproshop.com/about-us"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Boston is at 200 Newbury Street, a two-story door that reopened in 2014, and its page shows an 'Opening Soon' banner.",
+      "verdict": "unverifiable",
+      "note": "Nike's page lists 200 Newbury St with hours and an undated 'Opening Soon' banner. A Nike By You event ran there in April 2026, so the store looks open. The existing watchout to confirm before a launch stays.",
+      "source": "https://www.nike.com/hr/retail/s/nike-boston"
+    },
+    {
+      "lens": "music",
+      "claim": "There is no Boston Calling in 2026, and it returns June 4-6, 2027 at the Harvard Athletic Complex.",
+      "verdict": "confirmed",
+      "note": "This was announced in June 2025, and no later change was found.",
+      "source": "https://www.wbur.org/news/2025/06/20/no-2026-boston-calling"
+    },
+    {
+      "lens": "uniform",
+      "claim": "Concepts runs a 4,700-square-foot flagship on Newbury Street.",
+      "verdict": "confirmed",
+      "note": "The size matches the 2020 opening coverage. No date change was needed in uniform.json.",
+      "source": "https://shop-eat-surf.com/2020/10/concepts-to-open-flagship-store-in-boston/"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Specter uniforms were unveiled for eight historic franchises, the Celtics included.",
+      "verdict": "confirmed",
+      "note": "The eight franchises are the Celtics, Hawks, Kings, Knicks, Lakers, Pistons, Warriors and 76ers. Which games they will be worn in is still unpublished.",
+      "source": "https://www.si.com/nba/new-nba-jerseys-specter-best-worst-ranked"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Opportunity 'where': Nike Boston, 200 Newbury St (once confirmed open).",
+      "verdict": "unverifiable",
+      "note": "No 2026 closure or reopening news was found. Nike's listing is live and the store hosted an April 2026 event. Keep the hedge.",
+      "source": "https://www.nike.com/hr/retail/s/nike-boston"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Brown returns to TD Garden for an Oct 10 preseason game and on Jan 21, 2027.",
+      "verdict": "confirmed",
+      "note": "This matches the verified current facts and the schedule coverage.",
       "source": "https://bleacherreport.com/articles/25470813-jaylen-browns-return-boston-76ers-face-celtics-revealed-2026-27-nba-schedule-release"
     },
     {
-      "lens": "culture",
-      "claim": "Boston is majority people of color and roughly a quarter foreign-born. Haitian and Cape Verdean rankings",
-      "verdict": "unverifiable",
-      "note": "Census figures drift: foreign-born is nearer 28 percent. Verify or drop the figures before they appear in copy.",
-      "source": ""
-    },
-    {
-      "lens": "culture",
-      "claim": "13 titles across four leagues since 2002. Celtics 9-3 in Finals vs Lakers. 18 banners vs Lakers' 17",
+      "lens": "food",
+      "claim": "Queta is on a four-year, $56M extension and wears No. 88.",
       "verdict": "confirmed",
-      "note": "The counts check out (Patriots 6, Red Sox 4, Celtics 2, Bruins 1; Celtics won 1959, 62, 63, 65, 66, 68, 69, 84, 2008). They change if a team wins.",
-      "source": ""
+      "note": "The Globe confirms the July extension and the No. 88 painted on the court.",
+      "source": "https://www.bostonglobe.com/2026/09/12/sports/neemias-queta-celtics-cambridge-basketball-court/"
     },
     {
-      "lens": "culture",
-      "claim": "Michelle Wu re-elected in 2025 and current space-saver rules",
-      "verdict": "unverifiable",
-      "note": "Confirm the 2025 election result and the current snow-parking rules.",
-      "source": ""
+      "lens": "fanbase",
+      "claim": "The Brown farewell included Mayor Wu and a street sign.",
+      "verdict": "confirmed",
+      "note": "Wu presented a 'Jaylen Brown Way' sign. Lil Jon, Lil Baby and A$AP Ferg performed. The trade happened on July 1.",
+      "source": "https://www.boston25news.com/news/local/celtics-fans-boston-leaders-honor-jaylen-brown-with-block-party-key-city/HZGH73VVWVBX3PROXVNN6AFMXI/"
+    },
+    {
+      "lens": "hoops",
+      "claim": "The Sun play part of their 2026 schedule in Boston.",
+      "verdict": "confirmed",
+      "note": "One 2026 Sun home game was set for TD Garden before the move to Houston. It is a one-off, not a Boston team.",
+      "source": "https://africa.espn.com/wnba/story/_/id/48763788/wnba-nba-approve-sun-sale-fertitta-relocation-houston"
     },
     {
       "lens": "art",
-      "claim": "Massachusetts flag and seal redesign status, Greenway Dewey Square mural holder, Berkeley Building beacon",
+      "claim": "The Greenway's 2026 Dewey Square mural is by Rixy, and Ekua Holmes has the 2027 wall.",
       "verdict": "unverifiable",
-      "note": "Redesign status moved through 2025-26, and the mural rotates. Confirm both before use.",
-      "source": ""
-    },
-    {
-      "lens": "underground",
-      "claim": "Boston Legacy FC 2026 debut at White Stadium, Franklin Park, and its supporters' scene",
-      "verdict": "unverifiable",
-      "note": "Venue, litigation outcome and supporters' group name all need a live check. Stadium use may have been delayed.",
-      "source": ""
-    },
-    {
-      "lens": "uniform",
-      "claim": "Pitino-era 1996-2006 alternate black and gold set called an awkward departure",
-      "verdict": "unverifiable",
-      "note": "Era boundaries and the black alternate's debut year are shaky. Soften the line or verify it against uniform history.",
-      "source": ""
-    },
-    {
-      "lens": "retail-landscape",
-      "claim": "Bill Chisholm group completed the Celtics purchase in 2025",
-      "verdict": "confirmed",
-      "note": "CURRENT FACTS state that a Chisholm-led group completed the purchase in 2025. Not re-verified in October 2026.",
-      "source": ""
-    },
-    {
-      "lens": "retail-landscape",
-      "claim": "'Green Teamers' as fan self-description",
-      "verdict": "unverifiable",
-      "note": "The term is weakly sourced. Check usage or drop it.",
-      "source": ""
-    },
-    {
-      "lens": "retail-behavior",
-      "claim": "Massachusetts clothing exemption at $175 per item, 6.25 percent sales tax, August tax holiday",
-      "verdict": "unverifiable",
-      "note": "These are long-standing rules, but thresholds and the holiday weekend change by year. Re-check for 2026-27. Tax applies only to the excess above $175.",
-      "source": ""
-    },
-    {
-      "lens": "retail-behavior",
-      "claim": "Pheasant Lane Mall, Mall at Rockingham Park, Wrentham Village, Foot Locker at Downtown Crossing still operating",
-      "verdict": "unverifiable",
-      "note": "Mall tenants change. Confirm each door before routing product.",
-      "source": ""
-    },
-    {
-      "lens": "music",
-      "claim": "Gino Time (Bandstand clip, Bee Gees song) is still part of 2026-27 game presentation",
-      "verdict": "unverifiable",
-      "note": "It has run since about 2008 but wasn't rechecked. The clip and song need rights clearance.",
-      "source": ""
-    },
-    {
-      "lens": "strategy",
-      "claim": "Brown trade, Paul George, Robinson, Conley, Queta, Oct 20, Dec 25, Jan 21, Cup group, Specter reveal Sept 9",
-      "verdict": "confirmed",
-      "note": "Consistent with CURRENT FACTS throughout the brief.",
-      "source": "https://www.wbur.org/news/2026/07/02/celtics-trade-jaylen-brown-76ers-paul-george"
+      "note": "Not re-searched within the budget. The dossier's Beacon Hill Times and Massachusetts 250 sources cover the 2026 mural. Confirm the 2027 Holmes commission with the Conservancy.",
+      "source": "https://beaconhilltimes.com/2026/05/08/artist-rixy-to-bring-2026-dewey-square-mural-to-life/"
     }
   ],
-  "summary": "The dossiers largely match the verified facts: trade, roster, schedule, Cup group and Specter details all hold. Five errors are corrected. Slade's opened in 1928, not 1935, and has new owners. Bodega's neighborhood is fixed in the uniform file. So are the Head of the Charles timing, the MLK Day line and the parquet wood. Live checks confirmed Slade's and Bodega are open. Converse HQ and Concepts stay unverified. Strategy still needs fixes: the Slade's description, hard-coded Specter dates, the Lakers and Black History game dates, and the Concepts location."
+  "summary": "The live refresh holds up on the team facts: the schedule, the Oct 23 Knicks home opener, George's No. 13, the Queta extension and the BC coach all check out. The biggest error ran through four dossiers and the brief: Concepts' 18 Newbury Street flagship opened in October 2020, not April 2026. Other fixes: the Connecticut Sun story was stale (the team is going to Houston, not Boston), Legacy FC's White Stadium move slipped to 2028, the Brown sendoff was Aug 30 and the key came from a state rep, a reversed Mitchell Robinson line, an overstated Celtics role in the Queta court and the Castle Island date. Two strategy lines need the editor (the Concepts date and the Aug 31 sendoff). The Nike Boston status and the ProShop hours remain unconfirmed."
 }

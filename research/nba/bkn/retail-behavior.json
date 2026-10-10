@@ -17,7 +17,7 @@
     {
       "title": "The Knicks title lifts New York and squeezes Brooklyn",
       "detail": "The Knicks' 2026 championship, their first since 1973, makes New York basketball apparel a citywide gifting and trend category this winter. Many Brooklyn households buy Knicks gear alongside Nets gear, or instead of it. The Nets have no opening-night or Christmas Day game, so they miss the two biggest national retail moments.",
-      "implication": "Don't fight the Knicks wave head-on. Sell Brooklyn product as the borough-pride alternative. Own the Oct 30 Cup opener at Toronto and the home Cup Nights."
+      "implication": "Don't fight the Knicks wave head-on. Sell Brooklyn product as the borough-pride alternative. Own the Oct 30 Cup opener at Toronto and the home Cup Nights. The Knicks are on the Specter uniform list; the Nets are not."
     },
     {
       "title": "Cold weather makes mid-November outerwear season",
@@ -283,6 +283,14 @@
     {
       "title": "West Indian American Day Carnival (Wikipedia)",
       "url": "https://en.wikipedia.org/wiki/West_Indian_Day_Parade"
+    },
+    {
+      "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+      "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+    },
+    {
+      "title": "Brooklyn Nets revive classic ABA throwback jerseys (Roundtable)",
+      "url": "https://roundtable.io/sports/nba/nets/community/news/brooklyn-nets-revive-classic-aba-throwback-jerseys"
     }
   ],
   "confidence": "medium",
@@ -368,7 +376,7 @@
   },
   "provenance": {
     "mode": "knowledge",
-    "asOf": "Model knowledge, mid-2026",
+    "asOf": "Model knowledge, mid-2026, with league and Nets facts from harness CURRENT FACTS (verified 2026-10-07 to 2026-10-10). No live searches completed in this run.",
     "verify": [
       "Confirm whether the reported red, white and blue ABA-era New York Nets throwbacks are the 2026-27 City Edition or a Classic set, and their release date.",
       "Confirm the NYC and New York State sales-tax exemption on clothing and footwear: under $110 an item, 4% state and 4.5% city exempt, 0.375% MCTD still applied, combined rate 8.875%.",
@@ -379,9 +387,9 @@
       "Get the 2026 and 2027 dates and route for the West Indian American Day Carnival (Labor Day weekend, Eastern Parkway).",
       "Get the 2026-27 season dates and location for Smorgasburg Williamsburg.",
       "Get the NYC public school opening dates for the 2026-27 and 2027-28 school years.",
-      "Get the Nets home dates and home Cup Night schedule. Only the Oct 30 road opener at Toronto is confirmed.",
       "Check the Dyker Heights Christmas lights and Lunar New Year events scheduled for the 2026-27 holiday season.",
-      "Check for Nike 'Specter' uniforms and any Nets-related Nike merchandise tie-ins announced since September 2026."
+      "Nets home dates and home Cup Night schedule. Only the Oct 30 road opener at Toronto (Cup East A) is confirmed.",
+      "Check Nike Specter or other Nets-related Nike merchandise tie-ins announced since September 2026. The Specter list in CURRENT FACTS does not include the Nets."
     ]
   }
 }
