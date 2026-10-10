@@ -1,9 +1,9 @@
 # Scout
 Travel Planning
 
-## Home Court — local NBA fandom intelligence (`/nba/`)
+## NBA Fandom — local NBA fandom intelligence (`/nba/`)
 
-Home Court helps the Nike Basketball team, based in Portland, become experts in every NBA team's local fandom. Each market page covers:
+NBA Fandom (formerly Home Court) helps the Nike Basketball team, based in Portland, become experts in every NBA team's local fandom. Each market page covers:
 
 - **Where the opportunities are**: the brief, its top insights, and 5–8 opportunities, each with where, when, how and which products.
 - **When to activate**: the fan base's month-by-month rhythm, the activation calendar, and key 2026-27 dates.
@@ -47,4 +47,4 @@ This requires `ANTHROPIC_API_KEY` on the server. Without it, the published resea
 
 ### Checks
 
-`npm run smoke` builds the app and runs the Scout smoke tests plus `scripts/homecourt-smoke.mjs`. The Home Court test opens every route at phone and desktop widths. It fails on runtime errors, missing content or horizontal overflow.
+`npm run smoke` builds the app and runs the Scout smoke tests plus `scripts/homecourt-smoke.mjs`. The NBA Fandom test opens every route at phone and desktop widths. It fails on runtime errors, missing content or horizontal overflow.

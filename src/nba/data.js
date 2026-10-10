@@ -1,4 +1,4 @@
-// Data access for Home Court. The overview + calendar read the small summary
+// Data access for NBA Fandom. The overview + calendar read the small summary
 // index; each market's full dossier set is a separate JSON chunk loaded on
 // demand. A live agent run (see live.js) is kept per market in localStorage
 // and can be shown in place of the published research.

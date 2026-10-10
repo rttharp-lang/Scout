@@ -14,7 +14,7 @@ const standardsFor = (knowledge) => (knowledge
   : STANDARDS);
 
 function header(agent, team, today, knowledge) {
-  return `You are the ${agent.name} agent on Home Court, Nike Basketball's local-fandom intelligence system.
+  return `You are the ${agent.name} agent on NBA Fandom, Nike Basketball's local-fandom intelligence system.
 
 MARKET: ${teamLine(team)}
 MARKET FOCUS: ${team.focus}

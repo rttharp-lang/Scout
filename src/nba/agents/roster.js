@@ -1,4 +1,4 @@
-// Home Court agent roster — the single source of truth for every agent that
+// NBA Fandom agent roster — the single source of truth for every agent that
 // researches an NBA market. Three consumers read it:
 //   1. scripts/nba/brief.mjs   → prints an agent's full brief for the offline
 //                                research workflow (research/nba/<team>/*.json)

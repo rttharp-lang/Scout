@@ -1,4 +1,4 @@
-// Method: how Home Court was researched and checked, what every label and
+// Method: how NBA Fandom was researched and checked, what every label and
 // number means, what has been corrected, and what is still unknown. The agent
 // architecture lives here rather than on the front page.
 import React, { useEffect } from "react";
@@ -21,7 +21,7 @@ export default function Method({ anchor }) {
 
   return (
     <div>
-      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>How Home Court works</div>
+      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>How NBA Fandom works</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Method</h1>
       <p className="hc-lede" style={{ marginTop: 18 }}>How the research was done, what was checked, what every label and number means, and what we still don't know.</p>
       <nav className="hc-row" aria-label="On this page" style={{ marginTop: 20 }}>
