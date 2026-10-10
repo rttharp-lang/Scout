@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(() => {
     const t = section === "m" && TEAM_BY_ID[arg];
-    document.title = t ? `${teamLabel(t)} · NBA Fandom` : section === "league" ? "League read · NBA Fandom" : section === "calendar" ? "League calendar · NBA Fandom" : section === "opportunities" ? "Opportunity board · NBA Fandom" : section === "compare" ? "Compare ideas · NBA Fandom" : section === "method" ? "Agents and method · NBA Fandom" : section === "agents" ? "Agents · NBA Fandom" : "NBA Fandom · Research";
+    document.title = t ? `${teamLabel(t)} · NBA Fandom` : section === "league" ? "League read · NBA Fandom" : section === "calendar" ? "League calendar · NBA Fandom" : section === "opportunities" ? "Opportunity board · NBA Fandom" : section === "compare" ? "Compare ideas · NBA Fandom" : section === "method" ? "Agents and method · NBA Fandom" : section === "agents" ? "Agents · NBA Fandom" : "NBA Fandom · Consumer Lab";
     if (section !== "m" && section !== "method" && section !== "compare" && !(section === "calendar" && arg)) window.scrollTo(0, 0);
   }, [section, arg]);
 
