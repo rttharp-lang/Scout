@@ -1,9 +1,8 @@
 // NBA Fandom agent roster — the single source of truth for every agent that
-// researches an NBA market. Three consumers read it:
+// researches an NBA market. Two consumers read it:
 //   1. scripts/nba/brief.mjs   → prints an agent's full brief for the offline
 //                                research workflow (research/nba/<team>/*.json)
-//   2. api/homecourt-agent.js  → runs the same agents live via the Claude API
-//   3. the site's Agents page  → shows the roster and the pipeline
+//   2. the site's Agents page  → shows the roster and the pipeline
 // Each LENS agent owns one slice of a market and writes a dossier. The
 // SYNTHESIS agents turn eleven dossiers into the Nike Basketball brief.
 

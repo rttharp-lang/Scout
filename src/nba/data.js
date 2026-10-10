@@ -1,7 +1,6 @@
 // Data access for NBA Fandom. The overview + calendar read the small summary
 // index; each market's full dossier set is a separate JSON chunk loaded on
-// demand. A live agent run (see live.js) is kept per market in localStorage
-// and can be shown in place of the published research.
+// demand.
 import summaryData from "./data/summary.json";
 import { TEAMS, TEAM_BY_ID } from "./teams.js";
 
@@ -51,15 +50,3 @@ export function heroColor(team) {
   return c;
 }
 
-// Live runs (per market) persisted in this browser only. They are experiments:
-// never shared with teammates and never part of the reviewed build.
-const LIVE_KEY = (id) => `homecourt.live.${id}`;
-export function loadLiveRun(id) {
-  try { const raw = localStorage.getItem(LIVE_KEY(id)); return raw ? JSON.parse(raw) : null; } catch { return null; }
-}
-export function saveLiveRun(id, run) {
-  try { localStorage.setItem(LIVE_KEY(id), JSON.stringify(run)); } catch {}
-}
-export function clearLiveRun(id) {
-  try { localStorage.removeItem(LIVE_KEY(id)); } catch {}
-}

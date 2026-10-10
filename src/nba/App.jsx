@@ -26,7 +26,7 @@ export default function App() {
   else if (section === "league") page = <League />;
   else if (section === "calendar") page = <Calendar args={route.slice(1)} />;
   else if (section === "opportunities" || section === "compare") page = <Opportunities anchor={section === "compare" ? "compare-ideas" : undefined} />;
-  else if (section === "agents") page = <Agents preselect={arg} />;
+  else if (section === "agents") page = <Agents />;
   else if (section === "method") page = <Agents methodAnchor={arg || "method"} />;
   else page = <Overview />;
 

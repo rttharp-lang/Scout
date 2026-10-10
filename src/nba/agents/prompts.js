@@ -1,9 +1,7 @@
-// Builds each agent's brief from the roster. Two modes share the same mission
-// text so offline research and live runs ask the same questions:
-//   mode "workflow" → a Claude Code agent with web search + file tools that
-//                     writes research/nba/<team>/<agent>.json and validates it
-//   mode "api"      → a Claude API call with the web_search server tool that
-//                     returns the same JSON via structured outputs
+// Builds each agent's brief from the roster for the offline research
+// workflow: a Claude Code agent with web search + file tools that writes
+// research/nba/<team>/<agent>.json and validates it. (mode "api" is kept for
+// a future server-side runner; nothing on the site calls one.)
 import { STANDARDS, KNOWLEDGE_MODE, SEASON, AGENT_BY_ID, LENS_AGENTS, LENS_IDS, schemaFor } from "./roster.js";
 
 const teamLine = (t) => `${t.place || t.city} ${t.name} (${t.abbr}; home city ${t.city}) — ${t.conference}ern Conference, ${t.division} Division. Home arena: ${t.arena}.`;
@@ -156,15 +154,6 @@ export function buildBrief(agentId, team, { mode = "workflow", today, knowledge 
     ? `\n\nPROVENANCE: the brief carries provenance (mode "knowledge") whose verify list holds the claims the brief depends on that a live check must confirm before Nike acts on them.`
     : "";
   return `${header(agent, team, day, knowledge)}\n\n${task}${prov}\n\n${io}\n`;
-}
-
-// API mode: which schema an agent returns.
-export function apiSchemaFor(agentId) {
-  if (LENS_IDS.includes(agentId)) return schemaFor(agentId);
-  if (agentId === "strategist" || agentId === "editor") return schemaFor("strategy");
-  if (agentId === "factcheck") return schemaFor("factcheck");
-  if (agentId === "authenticity") return schemaFor("critique");
-  return null;
 }
 
 export { LENS_AGENTS };
