@@ -151,8 +151,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
 
       <nav className="hc-subnav hc-no-print" aria-label="Sections">
         {SECTIONS.map(([sid, label]) => <a key={sid} href={`#/m/${team.id}`} className={active === sid ? "is-active" : ""} onClick={(e) => jump(e, sid)}>{label}</a>)}
-        <a href={href("compare", team.id)} style={{ marginLeft: "auto" }}>Compare</a>
-        <a href={`#/m/${team.id}`} onClick={(e) => { e.preventDefault(); print("brief"); }}>Print brief</a>
+        <a href={`#/m/${team.id}`} style={{ marginLeft: "auto" }} onClick={(e) => { e.preventDefault(); print("brief"); }}>Print brief</a>
         <a href={`#/m/${team.id}`} onClick={(e) => { e.preventDefault(); print("full"); }}>Print all</a>
       </nav>
 

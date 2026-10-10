@@ -6,7 +6,7 @@ import { SCORE_DEFS, tierOf, moodOf, STRENGTH, EVIDENCE_KIND, KIND_LABEL, CERTAI
 import { STATUSES } from "./agents/review-schema.js";
 
 // ── Router ────────────────────────────────────────────────────────
-// Hash routes so the site works on any static host: #/, #/m/por, #/opportunities, #/calendar, #/compare, #/agents
+// Hash routes so the site works on any static host: #/, #/m/por, #/opportunities, #/calendar, #/agents, #/league
 export function useRoute() {
   const parse = () => (window.location.hash.replace(/^#\/?/, "") || "").split("?")[0].split("/").filter(Boolean);
   const [route, setRoute] = useState(parse);
@@ -44,9 +44,8 @@ export function Header({ route }) {
       </a>
       <nav className="hc-nav" aria-label="Primary">
         {link(href(), "Markets", section === "" || section === "m")}
-        {link(href("opportunities"), "Opportunities", section === "opportunities")}
+        {link(href("opportunities"), "Opportunities", section === "opportunities" || section === "compare")}
         {link(href("calendar"), "Calendar", section === "calendar")}
-        {link(href("compare"), "Compare", section === "compare" || section === "league")}
         {link(href("agents"), "Agents", section === "agents" || section === "method")}
       </nav>
     </header>

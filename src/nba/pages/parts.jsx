@@ -134,14 +134,17 @@ export function Jersey({ palette, team }) {
 }
 
 // ── Opportunity card with the hand-off fields ──────────────────────
-export function Opportunity({ o, insights, market }) {
+export function Opportunity({ o, insights, market, compare }) {
   const h = o.handoff;
   return (
     <article className="hc-card hc-opp" id={market ? undefined : `opp-${o.id}`}>
       {market && <a href={href("m", market.id)} className="hc-row" style={{ textDecoration: "none", fontWeight: 700 }}><span className="hc-dot" style={{ background: market.team.colors[0] }} />{market.team.place || market.team.city} {market.team.name}</a>}
       <div className="hc-row" style={{ justifyContent: "space-between" }}>
         <div className="hc-row"><Priority p={o.priority} /><Status status={h ? h.status : "hypothesis"} /><Strength support={o.support} /></div>
-        <Chip tone="line" title="The brief's editorial estimate of size, separate from evidence strength">{o.size} upside (estimate)</Chip>
+        <span className="hc-row" style={{ gap: 6 }}>
+          <Chip tone="line" title="The brief's editorial estimate of size, separate from evidence strength">{o.size} upside (estimate)</Chip>
+          {compare && <button className="hc-pill-btn" aria-pressed={compare.on} disabled={!compare.on && compare.full} title={!compare.on && compare.full ? "Compare holds three ideas. Remove one first." : undefined} onClick={compare.toggle}>{compare.on ? "✓ Comparing" : "+ Compare"}</button>}
+        </span>
       </div>
       <h3 className="hc-h2" style={{ fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)" }}>{o.title}</h3>
       <p>{o.summary}</p>

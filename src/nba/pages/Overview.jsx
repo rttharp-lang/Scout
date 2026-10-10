@@ -121,7 +121,7 @@ function Inside() {
   const moments = pub.reduce((n, m) => n + (m.calendar || []).length, 0);
   const doors = [
     ["City briefs", `What sets each of the ${pub.length} fan bases apart, on one screen.`, "#markets"],
-    ["Compare markets", "Any markets side by side, plus the patterns and fan types across all 30.", href("compare")],
+    ["League read", "The patterns that run across markets, and the fan types they add up to.", href("league")],
     ["Opportunity board", `${ideas} product ideas, sorted by the season they're for.`, href("opportunities")],
     ["League calendar", `${moments} moments across the season, from tip-off to the summer runs.`, href("calendar")],
   ];
