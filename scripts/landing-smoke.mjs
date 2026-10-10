@@ -21,11 +21,13 @@ let fail = 0;
 const check = (name, ok, got) => { console.log(`${ok ? "PASS" : "FAIL"} ${name} → ${got}`); if (!ok) fail++; };
 try {
   await wait(800);
-  const browser = await chromium.launch({ executablePath: findChromium(), args: ["--host-resolver-rules=MAP fandomscout.com 127.0.0.1:4193, MAP www.fandomscout.com 127.0.0.1:4193, MAP other.example 127.0.0.1:4193"] });
+  const browser = await chromium.launch({ executablePath: findChromium(), args: ["--host-resolver-rules=MAP fandomscout.com 127.0.0.1:4193, MAP www.fandomscout.com 127.0.0.1:4193, MAP source.fan 127.0.0.1:4193, MAP www.source.fan 127.0.0.1:4193, MAP other.example 127.0.0.1:4193"] });
   const go = async (ctx, url) => { const p = await ctx.newPage(); await p.goto(url, { waitUntil: "load" }); await wait(600); const u = p.url(); await p.close(); return u; };
   let ctx = await browser.newContext();
   let u = await go(ctx, "http://fandomscout.com/"); check("plain visit lands on NBA Fandom", /\/nba\/$/.test(u), u);
   u = await go(ctx, "http://www.fandomscout.com/"); check("www lands on NBA Fandom", /\/nba\/$/.test(u), u);
+  u = await go(ctx, "http://source.fan/"); check("Source.fan lands on NBA Fandom", /\/nba\/$/.test(u), u);
+  u = await go(ctx, "http://www.source.fan/"); check("www.source.fan lands on NBA Fandom", /\/nba\/$/.test(u), u);
   u = await go(ctx, "http://fandomscout.com/?city=Portland%2C%20OR"); check("trip deep link stays in Scout", !/\/nba\//.test(u), u);
   await ctx.close(); ctx = await browser.newContext();
   u = await go(ctx, "http://fandomscout.com/#access_token=abc&refresh_token=def"); check("sign-in return stays in Scout", !/\/nba\//.test(u), u);

@@ -7,13 +7,13 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Scout</title>
     <script>
-      // FandomScout.com opens on NBA Fandom (/nba/). Scout stays reachable on that
-      // domain: links that carry ?app=scout or ?city=, sign-in returns
+      // FandomScout.com and Source.fan open on NBA Fandom (/nba/). Scout stays
+      // reachable on those domains: links that carry ?app=scout or ?city=, sign-in returns
       // (#access_token, ?code=, errors), and anyone who has already opened Scout
       // in this tab. Other hosts are untouched.
       (function () {
         try {
-          if (location.hostname.replace(/^www\./, "") !== "fandomscout.com") return;
+          if (["fandomscout.com", "source.fan"].indexOf(location.hostname.replace(/^www\./, "")) < 0) return;
           var toScout = /[?&](app=scout|city=|code=|error=)/.test(location.search) || /access_token|refresh_token|error_description/.test(location.hash);
           if (toScout) { sessionStorage.setItem("scout.app", "1"); return; }
           if (sessionStorage.getItem("scout.app") === "1") return;
