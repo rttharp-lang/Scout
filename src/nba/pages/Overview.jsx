@@ -121,7 +121,7 @@ function WallTile({ m }) {
   const [failed, setFailed] = useState(false);
   const bg = wallColor(m.team);
   return (
-    <a href={href("m", m.id)} className="hc-wall-tile" style={{ background: bg, color: inkOn(bg) }} title={`${placeOf(m.team)} ${m.team.name}`} aria-label={`${m.team.abbr}, ${placeOf(m.team)} ${m.team.name}`}>
+    <a href={href("m", m.id)} className={`hc-wall-tile${isBlack(bg) ? " hc-wall-tile-black" : ""}`} style={{ background: bg, color: inkOn(bg) }} title={`${placeOf(m.team)} ${m.team.name}`} aria-label={`${m.team.abbr}, ${placeOf(m.team)} ${m.team.name}`}>
       {failed
         ? <span className="hc-wall-abbr">{m.team.abbr}</span>
         : <img className="hc-wall-logo" src={logoUrl(m.team)} alt="" loading="lazy" decoding="async" onError={() => setFailed(true)} />}
@@ -131,12 +131,13 @@ function WallTile({ m }) {
 
 // A tile color that stands off the black panel: a team whose main color is
 // black (the Nets) shows its next non-white color instead. Teams whose logo
-// would vanish on their own main color get a set tile color.
-const WALL_TILE = { uta: "#D9CCEB", tor: "#E2E2E4", phi: "#DCE6F2" };
+// would vanish on their own main color use their official secondary color.
+const WALL_SECONDARY = new Set(["uta", "tor", "phi"]);
+const isBlack = (c) => /^#0{6}$/i.test(c);
 const wallColor = (team) => {
-  if (WALL_TILE[team.id]) return WALL_TILE[team.id];
+  if (WALL_SECONDARY.has(team.id)) return team.colors[1];
   const c = heroColor(team);
-  return /^#0{6}$/i.test(c) ? team.colors.find((x) => !/^#(0{6}|F{6})$/i.test(x)) || "#2A2A2A" : c;
+  return isBlack(c) ? team.colors.find((x) => !/^#(0{6}|F{6})$/i.test(x)) || "#2A2A2A" : c;
 };
 
 // What's inside, in four doors.
