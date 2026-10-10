@@ -23,6 +23,7 @@
 .hc-brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .hc-brand-divider { width: 1px; height: 22px; background: var(--border); }
 .hc-brand-name { font-family: var(--font-display); font-weight: 900; font-size: 22px; letter-spacing: 0.01em; text-transform: uppercase; line-height: 1; padding-top: 3px; }
+@media (max-width: 520px) { .hc-brand { gap: 10px; } .hc-brand-name { font-size: 15px; line-height: 1.05; max-width: 10.5em; } .hc-brand-divider { height: 30px; } }
 .hc-nav { display: flex; gap: 6px; flex-wrap: wrap; }
 .hc-nav a { text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: var(--radius-pill); color: var(--text); }
 .hc-nav a:hover { background: var(--surface); }
@@ -193,8 +194,8 @@
 .hc-wall-tile-black { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
 .hc-wall-tile:hover, .hc-wall-tile:focus-visible { transform: translateY(-2px); box-shadow: inset 0 0 0 2px #fff; }
 .hc-wall-logo { position: absolute; inset: 14% 16%; width: 68%; height: 72%; object-fit: contain; display: block; filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.35)); }
-.hc-home-title { font-size: clamp(2.6rem, 12vw, 7.4rem); }
-.hc-home-title span { display: block; white-space: nowrap; }
+.hc-home-hero > div:first-child { container-type: inline-size; }
+.hc-home-title { font-size: min(24.5cqi, 11rem); white-space: nowrap; }
 @media (max-width: 520px) { .hc-wall-grid { gap: 4px; } .hc-wall-tile { border-radius: 9px; padding: 5px 6px; font-size: 13px; } }
 
 /* What's inside: four doors */

@@ -37,10 +37,10 @@ export function Header({ route }) {
   const link = (to, label, active) => <a href={to} aria-current={active ? "page" : undefined}>{label}</a>;
   return (
     <header className="hc-header">
-      <a className="hc-brand" href={href()} aria-label="Expert NBA Fandom: home">
+      <a className="hc-brand" href={href()} aria-label="Expert Product Excellence &amp; Intelligence: home">
         <ExpertMark />
         <span className="hc-brand-divider" />
-        <span className="hc-brand-name">NBA Fandom</span>
+        <span className="hc-brand-name">Product Excellence &amp; Intelligence</span>
       </a>
       <nav className="hc-nav" aria-label="Primary">
         {link(href(), "Markets", section === "" || section === "m")}
