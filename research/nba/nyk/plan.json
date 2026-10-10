@@ -3,29 +3,28 @@
   "calendar": [
     {
       "i": 0,
-      "window": "Oct 13-20, ring night Tuesday Oct 20 (7 p.m. ET, recheck)",
+      "window": "Oct 10-20",
       "kind": "event",
-      "start": "2026-10-20",
-      "end": "",
+      "start": "2026-10-10",
+      "end": "2026-10-20",
       "recurring": false,
       "certainty": "confirmed",
       "basis": "league-calendar",
       "basisNote": "Opening night (regular season tips off)",
-      "actBy": "2026-10-13",
-      "actNote": "Audit the June champion line and Specter and confirm champion-mark clearance this week, so the bookend tees, hoodie and tote can be on shelf Oct 13.",
+      "actBy": "",
+      "actNote": "",
       "route": "quick-turn-graphics",
       "targetSeason": "2026-27",
       "dependencies": [
-        "league-or-team-rights",
+        "stock-availability",
         "production-capacity",
-        "retailer-agreement",
-        "venue-or-permit"
+        "league-or-team-rights"
       ]
     },
     {
       "i": 1,
-      "window": "Cup Fridays Oct 30-Nov 27, Black Friday weekend",
-      "kind": "season",
+      "window": "Oct 30 to Nov 27, Fridays",
+      "kind": "event",
       "start": "2026-10-30",
       "end": "2026-11-27",
       "recurring": true,
@@ -34,68 +33,105 @@
       "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
       "actBy": "",
       "actNote": "",
-      "route": "new-development",
+      "route": "quick-turn-graphics",
       "targetSeason": "2026-27",
       "dependencies": [
         "production-capacity",
-        "nike-calendar-approval",
-        "league-or-team-rights",
-        "stock-availability",
-        "retailer-agreement"
+        "league-or-team-rights"
       ]
     },
     {
       "i": 2,
-      "window": "Pre-Thanksgiving to Dec 18 ship cut-off; game Dec 25 noon ET",
+      "window": "Nov 20-27",
+      "kind": "launch",
+      "start": "2026-11-20",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Thanksgiving is the fourth Thursday of November (Nov 26, 2026); Black Friday is the next day",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "retailer-agreement",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Dec 4-9, final Dec 11",
       "kind": "event",
-      "start": "2026-11",
-      "end": "2026-12-25",
+      "start": "2026-12-04",
+      "end": "2026-12-11",
       "recurring": false,
       "certainty": "confirmed",
       "basis": "league-calendar",
-      "basisNote": "Christmas Day games",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals",
       "actBy": "",
       "actNote": "",
       "route": "new-development",
       "targetSeason": "2026-27",
       "dependencies": [
-        "production-capacity",
         "nike-calendar-approval",
+        "production-capacity",
         "league-or-team-rights",
-        "player-or-estate-rights",
+        "stock-availability"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 1-25, shipping cutoff Dec 18",
+      "kind": "event",
+      "start": "2026-12-01",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games",
+      "actBy": "2026-12-18",
+      "actNote": "Restock the ring-night run and open the borough program by the Dec 18 shipping cutoff.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
         "stock-availability",
+        "league-or-team-rights",
         "retailer-agreement"
       ]
     },
     {
-      "i": 3,
-      "window": "Mid-December, timed to window season",
-      "kind": "launch",
-      "start": "2026-12",
+      "i": 5,
+      "window": "Jan 6",
+      "kind": "event",
+      "start": "2027-01-06",
       "end": "",
-      "recurring": false,
+      "recurring": true,
       "certainty": "tentative",
       "basis": "brief-unchecked",
       "basisNote": "",
       "actBy": "",
       "actNote": "",
-      "route": "new-development",
+      "route": "quick-turn-graphics",
       "targetSeason": "2026-27",
       "dependencies": [
-        "production-capacity",
-        "nike-calendar-approval",
         "partner-agreement",
-        "retailer-agreement",
+        "third-party-ip",
+        "production-capacity",
         "date-confirmation"
       ]
     },
     {
-      "i": 4,
-      "window": "Jan 6 Three Kings Day through MLK Day Jan 18 (5 p.m. ET vs. Minnesota)",
-      "kind": "season",
-      "start": "2027-01-06",
-      "end": "2027-01-18",
-      "recurring": true,
+      "i": 6,
+      "window": "Jan 18",
+      "kind": "launch",
+      "start": "2027-01-18",
+      "end": "",
+      "recurring": false,
       "certainty": "confirmed",
       "basis": "league-calendar",
       "basisNote": "MLK Day games",
@@ -104,66 +140,65 @@
       "route": "new-development",
       "targetSeason": "2026-27",
       "dependencies": [
-        "production-capacity",
         "nike-calendar-approval",
-        "league-or-team-rights",
-        "third-party-ip",
-        "retailer-agreement"
-      ]
-    },
-    {
-      "i": 5,
-      "window": "Black History Month; Linsanity 15th anniversary early Feb; Lunar New Year Feb 6; Dominican Independence Day Feb 27",
-      "kind": "season",
-      "start": "2027-02",
-      "end": "",
-      "recurring": true,
-      "certainty": "confirmed",
-      "basis": "fixed-holiday",
-      "basisNote": "Black History Month is February",
-      "actBy": "",
-      "actNote": "",
-      "route": "quick-turn-graphics",
-      "targetSeason": "2026-27",
-      "dependencies": [
         "production-capacity",
-        "partner-agreement",
-        "player-or-estate-rights",
-        "third-party-ip",
         "league-or-team-rights",
-        "retailer-agreement"
-      ]
-    },
-    {
-      "i": 6,
-      "window": "PSAL and CHSAA championships late Feb-March",
-      "kind": "event",
-      "start": "2027-02",
-      "end": "2027-03",
-      "recurring": true,
-      "certainty": "tentative",
-      "basis": "brief-unchecked",
-      "basisNote": "",
-      "actBy": "",
-      "actNote": "",
-      "route": "quick-turn-graphics",
-      "targetSeason": "2026-27",
-      "dependencies": [
-        "production-capacity",
         "partner-agreement",
-        "third-party-ip",
-        "player-or-estate-rights",
-        "league-or-team-rights",
-        "date-confirmation"
+        "third-party-ip"
       ]
     },
     {
       "i": 7,
-      "window": "Regular season ends Apr 11; playoffs from mid-April",
-      "kind": "event",
-      "start": "2027-04-11",
-      "end": "",
+      "window": "Feb 1-28",
+      "kind": "season",
+      "start": "2027-02-01",
+      "end": "2027-02-28",
       "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February",
+      "actBy": "2027-02-11",
+      "actNote": "Hold flexible jersey stock through the Feb 11 deadline.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Late Feb to March",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-03",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "future-uniform",
+      "targetSeason": "2028-29",
+      "dependencies": [
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11 to June",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-06",
+      "recurring": false,
       "certainty": "confirmed",
       "basis": "league-calendar",
       "basisNote": "Regular season ends",
@@ -172,19 +207,41 @@
       "route": "quick-turn-graphics",
       "targetSeason": "2026-27",
       "dependencies": [
-        "production-capacity",
         "league-or-team-rights",
-        "partner-agreement",
         "third-party-ip",
-        "venue-or-permit"
+        "partner-agreement",
+        "production-capacity",
+        "date-confirmation"
       ]
     },
     {
-      "i": 8,
-      "window": "Second round and East Finals; Frieze art week mid-May",
-      "kind": "season",
-      "start": "2027-05",
-      "end": "",
+      "i": 10,
+      "window": "June 1-30",
+      "kind": "event",
+      "start": "2027-06-01",
+      "end": "2027-06-30",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "July to Aug 17",
+      "kind": "event",
+      "start": "2027-07",
+      "end": "2027-08-17",
       "recurring": true,
       "certainty": "tentative",
       "basis": "brief-unchecked",
@@ -194,102 +251,53 @@
       "route": "new-development",
       "targetSeason": "2026-27",
       "dependencies": [
-        "production-capacity",
         "nike-calendar-approval",
-        "league-or-team-rights",
+        "production-capacity",
         "partner-agreement",
         "venue-or-permit",
+        "third-party-ip",
         "date-confirmation"
       ]
     },
     {
-      "i": 9,
-      "window": "Finals window; Puerto Rican Day Parade June 13; Go Skateboarding Day June 21",
-      "kind": "season",
-      "start": "2027-06",
+      "i": 12,
+      "window": "Early September",
+      "kind": "event",
+      "start": "2027-09",
       "end": "",
-      "recurring": true,
-      "certainty": "tentative",
-      "basis": "brief-unchecked",
-      "basisNote": "",
-      "actBy": "2026-10",
-      "actNote": "Bring Nike SB in now for any Knicks-colored Dunk.",
-      "route": "new-development",
-      "targetSeason": "2026-27",
-      "dependencies": [
-        "production-capacity",
-        "nike-calendar-approval",
-        "league-or-team-rights",
-        "partner-agreement",
-        "venue-or-permit",
-        "date-confirmation"
-      ]
-    },
-    {
-      "i": 10,
-      "window": "EBC and Dyckman summer nights",
-      "kind": "season",
-      "start": "2027-07",
-      "end": "2027-08",
       "recurring": true,
       "certainty": "unknown",
       "basis": "none",
       "basisNote": "",
       "actBy": "",
       "actNote": "",
-      "route": "quick-turn-graphics",
+      "route": "new-development",
       "targetSeason": "2026-27",
       "dependencies": [
+        "nike-calendar-approval",
         "production-capacity",
         "partner-agreement",
-        "venue-or-permit",
         "third-party-ip",
-        "player-or-estate-rights",
         "date-confirmation"
       ]
     },
     {
-      "i": 11,
-      "window": "Hip-hop's birthday Aug 11; Dominican Day Parade in August",
-      "kind": "event",
-      "start": "2027-08",
-      "end": "",
-      "recurring": true,
-      "certainty": "tentative",
-      "basis": "brief-unchecked",
-      "basisNote": "",
-      "actBy": "",
-      "actNote": "",
-      "route": "quick-turn-graphics",
-      "targetSeason": "2026-27",
-      "dependencies": [
-        "production-capacity",
-        "partner-agreement",
-        "third-party-ip",
-        "league-or-team-rights",
-        "date-confirmation"
-      ]
-    },
-    {
-      "i": 12,
-      "window": "Armory Week early September; training camp late September",
-      "kind": "season",
+      "i": 13,
+      "window": "Late September",
+      "kind": "action",
       "start": "2027-09",
       "end": "",
       "recurring": true,
-      "certainty": "tentative",
-      "basis": "brief-unchecked",
+      "certainty": "unknown",
+      "basis": "none",
       "basisNote": "",
       "actBy": "",
       "actNote": "",
-      "route": "future-uniform",
-      "targetSeason": "2027-28",
+      "route": "no-product",
+      "targetSeason": "",
       "dependencies": [
         "nike-calendar-approval",
-        "league-or-team-rights",
         "partner-agreement",
-        "production-capacity",
-        "stock-availability",
         "date-confirmation"
       ]
     }
@@ -297,236 +305,102 @@
   "opportunities": [
     {
       "id": "ring-night-1973-2026",
-      "consumer": "Legacy diehards and Villanova-era new believers, at the Garden, Herald Square and the borough doors.",
+      "consumer": "Diehards who stayed through the 53-year drought, and the families who came with them.",
       "insights": [
         0,
-        4
+        3
       ],
       "categories": [
         "tee",
         "fleece",
-        "accessory",
         "outerwear",
-        "kids"
+        "accessory"
       ],
       "fit": [
-        "to define",
-        "youth"
+        "to define"
       ],
       "targetSeason": "2026-27",
       "firstInMarket": "2026-10",
       "actBy": "2026-10",
-      "actNote": "This week, audit what the June champion line and Specter already cover, and confirm champion-mark clearance.",
+      "actNote": "Audit this week what the June champion line and the Specter collection cover, and get the league and Fanatics limits in writing before Oct 20.",
       "routes": [
         "quick-turn-graphics",
         "new-development"
       ],
       "validation": [
-        "Confirm with the league which champion marks are cleared for Oct 20. If they're blocked, sell the bookend through dates alone.",
-        "Audit the June champion line and the Specter collection for overlap.",
-        "Test the under-$110 hoodie and tee against the league champion tee at the same doors.",
-        "Check paid deals with Earl Monroe and other living 1973 champions before using them."
+        "Audit what the June champion line and the Specter collection already cover.",
+        "Get the league and Fanatics limits on Nike champion and playoff tees in writing before Oct 20.",
+        "Confirm stock-blank availability for the rafter-line tee and hoodie at the Garden and 611 Broadway."
       ],
       "dependencies": [
-        "league-or-team-rights",
+        "stock-availability",
         "production-capacity",
-        "nike-calendar-approval",
-        "player-or-estate-rights",
-        "retailer-agreement",
-        "venue-or-permit"
+        "league-or-team-rights",
+        "third-party-ip",
+        "nike-calendar-approval"
       ],
       "owner": "Licensed team apparel",
       "partners": [
-        "Earl Monroe"
+        "MSG archive",
+        "Fanatics (limits to confirm)",
+        "Jimmy Jazz (only if confirmed open)"
       ],
       "status": "hypothesis"
     },
     {
       "id": "christmas-finals-rematch",
-      "consumer": "Tri-state and suburban families, plus holiday tourists, buying Christmas gifts.",
+      "consumer": "Tri-state families, gift buyers and holiday tourists.",
       "insights": [
         0,
-        4
+        6
       ],
       "categories": [
-        "tee",
-        "jersey",
-        "headwear",
         "kids",
+        "tee",
+        "headwear",
         "accessory"
       ],
       "fit": [
-        "to define",
-        "youth"
+        "youth",
+        "to define"
       ],
       "targetSeason": "2026-27",
       "firstInMarket": "2026-11",
-      "actBy": "2026-11",
-      "actNote": "Have the gift drop in stores before Thanksgiving. The brief sets no earlier step.",
+      "actBy": "2026-11-26",
+      "actNote": "Release the gift box before Thanksgiving on Nov 26; set the shipping cutoff at Dec 18.",
       "routes": [
         "quick-turn-graphics",
         "existing-inventory"
       ],
       "validation": [
-        "Confirm youth Brunson and Towns jersey stock for December.",
-        "Price the gift box for families and test it with the North Jersey malls.",
-        "Check the 'Back Page' tee uses Nike-owned type and no tabloid masthead.",
-        "Confirm Brunson's and Towns' deals and NBPA rules, and keep likeness to licensed jerseys."
+        "Test the under-$110 gift box price with tri-state gift buyers.",
+        "Check North Jersey mall and outlet volume and tax-line pricing against the NJ clothing exemption.",
+        "Confirm Spurs-facing wording is respectful and cleared by the league.",
+        "Confirm youth jersey and beanie stock for the box."
       ],
       "dependencies": [
-        "league-or-team-rights",
-        "player-or-estate-rights",
-        "third-party-ip",
-        "production-capacity",
         "stock-availability",
-        "retailer-agreement"
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "brand-safety"
       ],
-      "owner": "Licensed team apparel",
-      "partners": [],
+      "owner": "Merchandising",
+      "partners": [
+        "Westfield Garden State Plaza",
+        "Woodbury Common Premium Outlets",
+        "Fanatics"
+      ],
       "status": "hypothesis"
     },
     {
       "id": "borough-door-network",
-      "consumer": "Hoops-first borough buyers in Harlem, the Bronx and Queens, and the downtown fashion tier.",
+      "consumer": "Bronx, Queens, Uptown and suburban fans who rarely shop Midtown.",
       "insights": [
         4,
-        2,
-        3
+        6
       ],
       "categories": [
-        "footwear",
-        "tee",
-        "outerwear"
-      ],
-      "fit": [
-        "to define"
-      ],
-      "targetSeason": "2026-27",
-      "firstInMarket": "2026-10",
-      "actBy": "2026-10",
-      "actNote": "Confirm each named Harlem, Bronx and Queens door is open before the small Banner '26 run on Oct 20.",
-      "routes": [
-        "quick-turn-graphics",
-        "new-development"
-      ],
-      "validation": [
-        "Confirm each named door on 125th Street, Fordham Road and Jamaica Avenue, and Kith SoHo, is open.",
-        "Check Kith's current brand exclusivities before a reservation launch.",
-        "Set reservations and pickups with each door so no line forms.",
-        "Read Flight Club and Stadium Goods resale to size later runs."
-      ],
-      "dependencies": [
-        "retailer-agreement",
-        "partner-agreement",
-        "brand-safety",
-        "production-capacity",
-        "nike-calendar-approval",
-        "league-or-team-rights"
-      ],
-      "owner": "Nike retail",
-      "partners": [
-        "Kith (Ronnie Fieg)"
-      ],
-      "status": "hypothesis"
-    },
-    {
-      "id": "summer-park-circuit",
-      "consumer": "Uptown and Bronx hoopers, and Dominican Washington Heights and Inwood, at the summer parks.",
-      "insights": [
-        1,
-        6,
-        5
-      ],
-      "categories": [
-        "jersey",
-        "footwear",
-        "shorts",
-        "tee",
-        "event"
-      ],
-      "fit": [
-        "to define"
-      ],
-      "targetSeason": "2026-27",
-      "firstInMarket": "2027-06",
-      "actBy": "2026-10",
-      "actNote": "Bring Nike SB in now for any Knicks-colored Dunk. Lock product by winter for summer 2027.",
-      "routes": [
-        "new-development",
-        "quick-turn-graphics",
-        "future-uniform"
-      ],
-      "validation": [
-        "Confirm 2027 operators, schedules and sponsor exclusivity for the EBC, Dyckman and West 4th.",
-        "Sign paid agreements before any park name goes on product.",
-        "Test on-site nickname printing: units and prints per night.",
-        "Confirm Brunson's deals and NBPA rules before the 'Guard New York Claimed' tee."
-      ],
-      "dependencies": [
-        "partner-agreement",
-        "venue-or-permit",
-        "third-party-ip",
-        "player-or-estate-rights",
-        "production-capacity",
-        "nike-calendar-approval",
-        "league-or-team-rights",
-        "date-confirmation"
-      ],
-      "owner": "Partnerships and community",
-      "partners": [
-        "Entertainers Basketball Classic (EBC) at Rucker Park",
-        "Dyckman tournament",
-        "West 4th Street league",
-        "Bobbito Garcia"
-      ],
-      "status": "hypothesis"
-    },
-    {
-      "id": "brick-commuter-outerwear",
-      "consumer": "LIRR, NJ Transit and Metro-North commuters, and the corporate Garden crowd.",
-      "insights": [
-        5,
-        4
-      ],
-      "categories": [
-        "outerwear",
-        "fleece",
-        "headwear"
-      ],
-      "fit": [
-        "to define"
-      ],
-      "targetSeason": "2026-27",
-      "firstInMarket": "2026-11",
-      "actBy": "2026-11",
-      "actNote": "Launch in November with a small numbered run of the taxed puffer before scaling. The brief sets no earlier step.",
-      "routes": [
-        "new-development"
-      ],
-      "validation": [
-        "Test the taxed puffer in a small numbered run before scaling.",
-        "Keep vests, quarter-zips and beanies under $110 and check the margin there.",
-        "Confirm the NYC clothing exemption under $110 and the 8.875% rate, and New Jersey's exemption.",
-        "Confirm Foot Locker Herald Square is open. Live checks were unclear."
-      ],
-      "dependencies": [
-        "production-capacity",
-        "nike-calendar-approval",
-        "league-or-team-rights",
-        "retailer-agreement"
-      ],
-      "owner": "Design",
-      "partners": [],
-      "status": "hypothesis"
-    },
-    {
-      "id": "harlem-heritage-february",
-      "consumer": "Harlem and Black New York legacy fans.",
-      "insights": [
-        5
-      ],
-      "categories": [
-        "outerwear",
         "tee",
         "fleece"
       ],
@@ -534,110 +408,237 @@
         "to define"
       ],
       "targetSeason": "2026-27",
-      "firstInMarket": "2027-01",
-      "actBy": "2027-01-18",
-      "actNote": "Show an early look around MLK Day. Check for any 'Rens' trademark first.",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Open the borough program in the Christmas run-up, by Dec 18.",
       "routes": [
-        "new-development",
         "quick-turn-graphics"
       ],
       "validation": [
-        "Check for any 'Rens' trademark.",
-        "Confirm the Studio Museum or the Schomburg will co-author, and agree the proceeds share.",
-        "Clear use of Sweetwater Clifton's name and credit the Rens apart from Knicks branding.",
-        "Track sell-through in Harlem doors and proceeds paid to the institution."
+        "Test borough naming and area-code neck tape with fans outside Midtown.",
+        "Agree pay, credit and royalty with each local artist.",
+        "Confirm Jimmy Jazz on 125th Street is open and name a signed retailer for phase two.",
+        "Check the Brooklyn piece carries no Nets-coded icons."
       ],
       "dependencies": [
         "partner-agreement",
+        "retailer-agreement",
         "third-party-ip",
-        "player-or-estate-rights",
-        "production-capacity",
-        "nike-calendar-approval",
-        "league-or-team-rights",
-        "retailer-agreement"
+        "brand-safety",
+        "production-capacity"
       ],
       "owner": "Partnerships and community",
       "partners": [
-        "Schomburg Center for Research in Black Culture",
-        "The Studio Museum in Harlem",
+        "Tats Cru",
+        "Lady Pink",
+        "Jimmy Jazz (confirm open)",
+        "Shirt Kings / Phade (confirm active)",
         "Harlem's Fashion Row"
       ],
       "status": "hypothesis"
     },
     {
-      "id": "playoff-rapid-turn",
-      "consumer": "The street-level playoff crowd on Seventh Avenue, Queens nightlife and families.",
+      "id": "brick-commuter-outerwear",
+      "consumer": "Commuters from Long Island, North Jersey and Westchester, and borough fans on the subway.",
       "insights": [
-        3,
-        5,
-        6
+        6,
+        4
       ],
       "categories": [
-        "tee",
-        "headwear",
+        "outerwear",
+        "pants",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-11",
+      "actNote": "Start the November-to-February run; test the puffer in a small run first.",
+      "routes": [
+        "new-development",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Test the puffer price above the $110 line in a small run.",
+        "Check how \"Brick\" reads in Newark before it goes on 201/973 product.",
+        "Confirm the train-line map carries no MTA marks.",
+        "Confirm fleece and quarter-zip volume under $110."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "stock-availability"
+      ],
+      "owner": "Design",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "summer-park-circuit",
+      "consumer": "Uptown and Bronx hoopers, park crowds and Gen Z fans.",
+      "insights": [
+        1,
+        2
+      ],
+      "categories": [
         "jersey",
+        "tee",
+        "footwear",
         "event"
       ],
       "fit": [
         "to define"
       ],
       "targetSeason": "2026-27",
-      "firstInMarket": "2027-04",
-      "actBy": "2027-04",
-      "actNote": "Confirm with the NBA and Fanatics who controls round-by-round tee turnaround before promising speed. The brief sets no earlier date.",
+      "firstInMarket": "2027-07",
+      "actBy": "2026-10",
+      "actNote": "Sign the EBC, Dyckman organizers and the West 4th league this fall, before designing.",
       "routes": [
         "quick-turn-graphics",
         "new-development"
       ],
       "validation": [
-        "Confirm with the NBA and Fanatics who controls round-by-round tee turnaround.",
-        "Confirm Nowadays, Knockdown Center, Mister Sunday, Papi Juice and Queens Night Market are operating in spring 2027.",
-        "Hold the maker tee at Nike's normal entry price and check the margin after maker payments."
+        "Confirm 2027 dates and organizers for the EBC, Dyckman, West 4th and NY vs. NY.",
+        "Have Bobbito Garcia vet the story.",
+        "Agree league credit and terms with each organizer.",
+        "Bring Nike SB in before any Knicks-colored Dunk."
       ],
       "dependencies": [
-        "league-or-team-rights",
         "partner-agreement",
-        "production-capacity",
-        "nike-calendar-approval",
         "venue-or-permit",
-        "date-confirmation"
+        "third-party-ip",
+        "nike-calendar-approval",
+        "production-capacity",
+        "date-confirmation",
+        "league-or-team-rights"
       ],
-      "owner": "Licensed team apparel",
+      "owner": "Partnerships and community",
       "partners": [
-        "Mister Sunday",
-        "Papi Juice",
-        "Queens Night Market"
+        "Rucker EBC organizers",
+        "Dyckman tournament organizers",
+        "West 4th Street Summer League (Kenny Graham)",
+        "Bobbito Garcia",
+        "Nike SB"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "uptown-and-el-barrio",
+      "consumer": "Dominican and Puerto Rican fans Uptown, in El Barrio and in the Bronx.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "jersey"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Commission the Dominican designers and the El Barrio artist ahead of the Jan 6 coquito launch.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Test both capsules with Dominican and Puerto Rican fans without a parade tie-in.",
+        "Agree pay, credit and royalty with each artist.",
+        "License the Fania-style cover art.",
+        "Confirm 2027 parade dates (expected June 13 and Aug 8)."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation",
+        "production-capacity"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "El Museo del Barrio",
+        "United Palace, Washington Heights (confirm calendar)",
+        "Dominican designers and illustrators from the Heights",
+        "Licensed Puerto Rican artist"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "harlem-heritage-february",
+      "consumer": "Harlem fans, older diehards and Black New York institutions.",
+      "insights": [],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Secure Studio Museum or Schomburg as co-author and the Ringgold estate before the Jan 18 reveal.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Studio Museum or Schomburg interest and proceeds split.",
+        "Check whether anyone holds a Harlem Rens mark.",
+        "Agree credit and royalty with the Ringgold estate and a Harlem quilter.",
+        "Have credited historians research the Rens story."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "nike-calendar-approval",
+        "production-capacity",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "The Studio Museum in Harlem",
+        "Schomburg Center",
+        "Faith Ringgold estate",
+        "Harlem quilter or textile artist",
+        "Credited historians"
       ],
       "status": "hypothesis"
     },
     {
       "id": "house-led-ballroom",
-      "consumer": "Black and Latino LGBTQ+ New Yorkers and the downtown fashion tier.",
-      "insights": [
-        2,
-        5
-      ],
+      "consumer": "Black and Latino LGBTQ+ New Yorkers and the city's club crowd.",
+      "insights": [],
       "categories": [
         "jersey",
         "shorts",
         "tee",
-        "event"
+        "headwear"
       ],
       "fit": [
         "to define"
       ],
       "targetSeason": "2026-27",
       "firstInMarket": "2027-02",
-      "actBy": "2027-02",
-      "actNote": "Ask the houses and Leiomy Maldonado to lead as co-designers. The brief sets no date; February is its first listed month.",
+      "actBy": "2026-10",
+      "actNote": "Ask the houses first, starting with LaBeija and Xtravaganza.",
       "routes": [
         "new-development",
         "quick-turn-graphics"
       ],
       "validation": [
-        "Confirm the houses and Leiomy Maldonado will co-design, with label credit and a royalty.",
-        "Get the houses' approval for any ballroom phrase or product name.",
-        "Keep corporate branding away from the Queer Liberation March."
+        "Confirm the houses and Leiomy Maldonado are active and open to the partnership.",
+        "Agree co-design credit and royalty.",
+        "Test a dancer-cut kit with voguers before it ships."
       ],
       "dependencies": [
         "partner-agreement",
@@ -645,14 +646,16 @@
         "brand-safety",
         "production-capacity",
         "nike-calendar-approval",
-        "league-or-team-rights",
-        "venue-or-permit"
+        "date-confirmation"
       ],
       "owner": "Partnerships and community",
       "partners": [
-        "House of LaBeija",
-        "House of Xtravaganza",
-        "Leiomy Maldonado"
+        "LaBeija",
+        "Xtravaganza",
+        "Leiomy Maldonado",
+        "Papi Juice",
+        "Nowadays",
+        "Knockdown Center"
       ],
       "status": "hypothesis"
     }
