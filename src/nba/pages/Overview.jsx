@@ -130,8 +130,11 @@ function WallTile({ m }) {
 }
 
 // A tile color that stands off the black panel: a team whose main color is
-// black (the Nets) shows its next non-white color instead.
+// black (the Nets) shows its next non-white color instead. Teams whose logo
+// would vanish on their own main color get a set tile color.
+const WALL_TILE = { uta: "#D9CCEB" };
 const wallColor = (team) => {
+  if (WALL_TILE[team.id]) return WALL_TILE[team.id];
   const c = heroColor(team);
   return /^#0{6}$/i.test(c) ? team.colors.find((x) => !/^#(0{6}|F{6})$/i.test(x)) || "#2A2A2A" : c;
 };
