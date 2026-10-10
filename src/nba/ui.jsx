@@ -1,4 +1,4 @@
-// Shared Home Court UI: brand lockup, header/footer, tiny hash router, and the
+// Shared NBA Fandom UI: brand lockup, header/footer, tiny hash router, and the
 // small building blocks (chips, meters, swatches, month strips) every page uses.
 import React, { useEffect, useState } from "react";
 import { MONTHS, SEASON_ORDER } from "./data.js";
@@ -20,7 +20,7 @@ export function useRoute() {
 export const href = (...parts) => `#/${parts.filter(Boolean).join("/")}`;
 
 // ── Brand ─────────────────────────────────────────────────────────
-// Same lockup as Scout (wordmark + swoosh riding the cap line), then HOME COURT.
+// Same lockup as Scout (wordmark + swoosh riding the cap line), then NBA FANDOM.
 export function ScoutMark({ size = 22, color = "var(--accent)" }) {
   return (
     <span style={{ display: "inline-flex", alignItems: "flex-start", gap: "0.12em", fontSize: size }}>
@@ -37,10 +37,10 @@ export function Header({ route }) {
   const link = (to, label, active) => <a href={to} aria-current={active ? "page" : undefined}>{label}</a>;
   return (
     <header className="hc-header">
-      <a className="hc-brand" href={href()} aria-label="Home Court: all markets">
+      <a className="hc-brand" href={href()} aria-label="Scout NBA Fandom: home">
         <ScoutMark />
         <span className="hc-brand-divider" />
-        <span className="hc-brand-name">Home Court</span>
+        <span className="hc-brand-name">NBA Fandom</span>
       </a>
       <nav className="hc-nav" aria-label="Primary">
         {link(href(), "Markets", section === "" || section === "m")}
@@ -59,7 +59,7 @@ export function Header({ route }) {
 export function Footer() {
   return (
     <footer className="hc-footer">
-      <span>Home Court · Nike Basketball's guide to local NBA fandom · Portland, Oregon</span>
+      <span>Scout · NBA Fandom · Local NBA fandom intelligence for Nike Basketball</span>
       <span>Shared reviewed build · <a href={href("method")}>How it was researched and checked</a></span>
     </footer>
   );

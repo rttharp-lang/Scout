@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/", "has": [{ "type": "host", "value": "fandomscout.com" }], "destination": "/nba/", "permanent": false },
+    { "source": "/", "has": [{ "type": "host", "value": "www.fandomscout.com" }], "destination": "/nba/", "permanent": false }
+  ]
+}

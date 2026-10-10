@@ -1,4 +1,4 @@
-// Charts for Home Court, built to the dataviz rules: one sequential hue (Scout
+// Charts for NBA Fandom, built to the dataviz rules: one sequential hue (Scout
 // ultramarine) for magnitude, thin capped columns with 4px rounded data-ends,
 // hairline recessive grid, a hover/focus tooltip on every mark, text in ink
 // tokens (never the series color), and a table/labels path that doesn't gate

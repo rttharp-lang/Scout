@@ -69,7 +69,7 @@ async function main() {
     browser = await chromium.launch({ headless: true, executablePath: findChromium() });
     const market = published.includes("por") ? "por" : published[0];
     const routes = [
-      ["overview", "#/", /Home\s*Court/i],
+      ["overview", "#/", /NBA\s*Fandom[\s\S]*moments[\s\S]*The markets/i],
       ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top opportunities/i : /league read isn/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
@@ -131,7 +131,11 @@ async function main() {
       await wait(700);
       const ym = await page.evaluate(() => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`; });
       const later = summary.filter((x) => x.status === "complete").flatMap((m) => m.calendar).filter((c) => c.timing && c.timing.start.slice(0, 7) > ym && (c.timing.end || c.timing.start).slice(0, 7) > ym && c.timing.start.slice(5, 7) === ym.slice(5, 7)).map((c) => c.moment);
-      const monthText = (await page.locator("section", { hasText: "Happening in" }).first().textContent()) || "";
+      const monthText = (await page.locator("section", { hasText: "across the league" }).first().textContent()) || "";
+      // The front page carries no research-status counts or internal labels.
+      const front = (await page.textContent("#root")) || "";
+      for (const bad of [/claims still unverified/i, /Date confirmed/i, /Research status/i, /Three reads/i, /Home Court/i]) if (bad.test(front)) problems.push(`[${vp.label}] front page still shows ${bad}`);
+      if ((await page.locator(".hc-wall-tile").count()) !== 30) problems.push(`[${vp.label}] market wall doesn't show 30 tiles`);
       const leaked = later.filter((mo) => monthText.includes(mo));
       if (leaked.length) problems.push(`[${vp.label}] this month shows later-year moments: ${leaked.slice(0, 3).join(" | ")}`);
       // Team search opens a market.
@@ -164,10 +168,10 @@ async function main() {
       if (errors.length) problems.push(`[${vp.label}] page errors: ${errors.join("; ")}`);
       await page.close();
     }
-    if (problems.length) { console.error("✗ Home Court smoke FAILED\n  " + problems.join("\n  ")); process.exitCode = 1; }
-    else console.log(`✓ Home Court smoke passed — ${published.length} published market(s), all routes render at phone + desktop with no errors or overflow.`);
+    if (problems.length) { console.error("✗ NBA Fandom smoke FAILED\n  " + problems.join("\n  ")); process.exitCode = 1; }
+    else console.log(`✓ NBA Fandom smoke passed — ${published.length} published market(s), all routes render at phone + desktop with no errors or overflow.`);
   } catch (e) {
-    console.error("✗ Home Court smoke errored:", e.message);
+    console.error("✗ NBA Fandom smoke errored:", e.message);
     process.exitCode = 1;
   } finally {
     if (browser) await browser.close();

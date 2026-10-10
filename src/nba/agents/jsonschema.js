@@ -1,4 +1,4 @@
-// Minimal JSON Schema checker for the subset the Home Court roster uses
+// Minimal JSON Schema checker for the subset the NBA Fandom roster uses
 // (type, properties, required, additionalProperties:false, items, enum,
 // minItems/maxItems, minimum/maximum, pattern). Returns a list of
 // human-readable errors with JSON paths; empty means valid.

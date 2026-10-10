@@ -1,4 +1,4 @@
-// The 30 NBA markets Home Court covers. Static identity only (who/where/colors);
+// The 30 NBA markets NBA Fandom covers. Static identity only (who/where/colors);
 // everything interpretive lives in the agent research under research/nba/<id>/
 // and the assembled market files in src/nba/data/markets/. `focus` scopes the
 // research agents: shared metros (LA, New York) are split by each team's real

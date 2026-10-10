@@ -1,4 +1,4 @@
-// Home Court — local NBA fandom intelligence for Nike Basketball.
+// NBA Fandom — local NBA fandom intelligence for Nike Basketball.
 // Routes: #/ (markets), #/m/<team> (one market), #/league, #/opportunities, #/calendar, #/compare[/<a,b,c>], #/method[/<section>], #/agents[/<team>]
 import React, { useEffect } from "react";
 import { useRoute, Header, Footer } from "./ui.jsx";
@@ -18,7 +18,7 @@ export default function App() {
 
   useEffect(() => {
     const t = section === "m" && TEAM_BY_ID[arg];
-    document.title = t ? `${teamLabel(t)} · Home Court` : section === "league" ? "League read · Home Court" : section === "calendar" ? "League calendar · Home Court" : section === "opportunities" ? "Opportunity board · Home Court" : section === "compare" ? "Compare markets · Home Court" : section === "method" ? "Method · Home Court" : section === "agents" ? "Agents · Home Court" : "Home Court · Scout";
+    document.title = t ? `${teamLabel(t)} · NBA Fandom` : section === "league" ? "League read · NBA Fandom" : section === "calendar" ? "League calendar · NBA Fandom" : section === "opportunities" ? "Opportunity board · NBA Fandom" : section === "compare" ? "Compare markets · NBA Fandom" : section === "method" ? "Method · NBA Fandom" : section === "agents" ? "Agents · NBA Fandom" : "NBA Fandom · Scout";
     if (section !== "m" && !(section === "method" && arg)) window.scrollTo(0, 0);
   }, [section, arg]);
 

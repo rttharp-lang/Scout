@@ -1,4 +1,4 @@
-/* Home Court — built on Scout's design tokens (src/theme.css): warm monochrome
+/* NBA Fandom — built on Scout's design tokens (src/theme.css): warm monochrome
    base, electric-blue accent, lime pop, Druk display + General Sans. Market
    pages layer the team's own colors on top via --team / --team-ink. */
 
@@ -184,7 +184,36 @@
 
 /* Overview hero */
 .hc-home-hero { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 1024px) { .hc-home-hero { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: end; } }
+@media (min-width: 1024px) { .hc-home-hero { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: end; } }
+/* The 30-market wall beside the title */
+.hc-wall { display: grid; gap: 16px; background: var(--surface-invert); border-radius: var(--radius-card); padding: clamp(16px, 2.2vw, 24px); }
+.hc-wall-label { color: var(--text-muted-invert); margin-bottom: 8px; }
+.hc-wall-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.hc-wall-tile { aspect-ratio: 1.35 / 1; border-radius: 12px; display: flex; align-items: flex-end; padding: 7px 9px; text-decoration: none; font-family: var(--font-display); font-weight: 900; font-size: clamp(14px, 1.5vw, 19px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.hc .hc-wall-tile { color: inherit; }
+.hc-wall-tile:hover, .hc-wall-tile:focus-visible { transform: translateY(-2px); box-shadow: inset 0 0 0 2px #fff; }
+@media (max-width: 520px) { .hc-wall-grid { gap: 4px; } .hc-wall-tile { border-radius: 9px; padding: 5px 6px; font-size: 13px; } }
+
+/* What's inside: four doors */
+.hc-inside { display: grid; gap: var(--grid-gap); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: clamp(28px, 4vw, 44px); }
+@media (max-width: 520px) { .hc-door { padding: 14px 14px; } .hc-door-title { font-size: 0.98rem; } .hc-door .hc-small { font-size: 13px; } }
+@media (min-width: 1024px) { .hc-inside { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.hc-door { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-radius: var(--radius-card); background: var(--surface); text-decoration: none; transition: background 0.15s ease; }
+.hc-door:hover, .hc-door:focus-visible { background: var(--hc-surface-2); }
+.hc-door-title { font-weight: 700; font-size: 1.05rem; }
+
+/* This month: one moment per market */
+.hc-moments { display: grid; gap: var(--grid-gap); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .hc-moments { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .hc-moments { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.hc-moment { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 18px 18px 16px; border-radius: var(--radius-card); background: var(--surface); text-decoration: none; overflow: hidden; min-height: 100%; transition: transform 0.15s ease; }
+.hc-moment:hover, .hc-moment:focus-visible { transform: translateY(-2px); }
+.hc-moment-band { position: absolute; left: 0; right: 0; top: 0; height: 6px; }
+.hc-moment-team { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+.hc-moment-title { font-weight: 700; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.hc-moment-date { margin-top: auto; font-size: 13px; font-weight: 600; color: var(--hc-ink-2); }
+@media (max-width: 520px) { .hc-moment { padding: 14px 12px 12px; } .hc-moment-title { font-size: 14px; } }
+
 .hc-stat { display: flex; flex-direction: column; gap: 2px; }
 .hc-stat b { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
 
@@ -279,7 +308,9 @@
 .hc-def dt { font-weight: 700; }
 .hc-def dd { margin: 0 0 10px; color: var(--hc-ink-2); }
 .hc-search { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; position: relative; }
-.hc-search .hc-input { flex: 1 1 260px; max-width: 460px; font-size: 16px; padding: 12px 18px; background: var(--hc-card); }
+.hc-search { flex-wrap: nowrap; max-width: 560px; }
+.hc-search .hc-input { flex: 1 1 0; min-width: 0; max-width: 460px; font-size: 16px; padding: 12px 18px; background: var(--hc-card); }
+.hc-search .hc-btn { flex: 0 0 auto; }
 .hc-suggest { position: absolute; top: calc(100% + 6px); left: 0; z-index: 40; width: min(460px, 100%); background: var(--hc-card); border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16); list-style: none; margin: 0; padding: 6px; }
 .hc-suggest a { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 10px; text-decoration: none; font-weight: 600; }
 .hc-suggest a:hover, .hc-suggest a:focus { background: var(--surface); outline: none; }
