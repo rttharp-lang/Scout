@@ -19,6 +19,10 @@ const SECTIONS = [
   ["fandom", "Fans"], ["culture", "City"], ["retail", "Shopping"], ["partners", "Partners"], ["review", "Evidence"],
 ];
 const CULTURE_LENSES = ["music", "art", "food", "culture", "underground", "hoops"];
+// Where a section's research came from: a live refresh (with sources) or the
+// desk research written from agent knowledge.
+const isLive = (x) => !!(x && x.provenance && x.provenance.mode && x.provenance.mode !== "knowledge");
+const origin = (x, unverified) => (isLive(x) ? "researched live" : unverified ? "desk research, unverified" : "desk research");
 
 export default function Market({ id }) {
   const team = TEAM_BY_ID[id];
@@ -115,7 +119,7 @@ function MarketView({ team, data, active }) {
         <span>Last reviewed {data.updated ? fmtDate(data.updated) : "not yet"} (automated check)</span>
         <span>Owner: {data.stewardship?.owner || "unassigned"}</span>
         <span>Human sign-off: {data.stewardship?.signedOff || "none yet"}</span>
-        <span>{ev ? `${ev.claims.length} claims checked live` : "No live checks"} · {ver.queue.length} still unverified</span>
+        <span>{ev ? `${ev.claims.length} claims checked live` : ver.live.length ? `${ver.live.length} of ${ver.live.length + ver.knowledge.length} dossiers researched live` : "No live checks"} · {ver.queue.length} still unverified</span>
         <a href={`#/m/${team.id}`} onClick={(e) => jump(e, "review")}>See the evidence</a>
       </div>
 
@@ -196,7 +200,7 @@ function MarketView({ team, data, active }) {
 
         <References refs={ev ? ev.references.filter((r) => r.kind === "historic-uniform" || r.kind === "lettering-art-materials") : []} title="Observed references: uniforms, lettering, art and materials" insights={s.topInsights} />
         <details className="hc-fold">
-          <summary>The uniform archive (desk research, unverified)</summary>
+          <summary>The uniform archive ({origin(d.uniform, true)})</summary>
           <UniformArchive u={d.uniform} />
         </details>
       </section>
@@ -209,7 +213,7 @@ function MarketView({ team, data, active }) {
 
       {/* ── Culture ──────────────────────────────────── */}
       <section className="hc-section" id="culture">
-        <SectionHead eyebrow="Six scenes, desk research" title="The city" />
+        <SectionHead eyebrow={`Six scenes, ${CULTURE_LENSES.every((l) => isLive(d[l])) ? "researched live" : CULTURE_LENSES.some((l) => isLive(d[l])) ? "partly researched live" : "desk research"}`} title="The city" />
         <div className="hc-tabs" role="tablist">
           {CULTURE_LENSES.map((l) => <button key={l} role="tab" aria-selected={lens === l} aria-pressed={lens === l} className="hc-pill-btn" onClick={() => setLens(l)}>{AGENT_BY_ID[l].name}</button>)}
         </div>
@@ -221,7 +225,7 @@ function MarketView({ team, data, active }) {
         <SectionHead eyebrow="Where, when and how they shop" title="Shopping">
           <a className="hc-btn hc-btn-ghost hc-no-print" style={{ textDecoration: "none" }} href={`/scout/?city=${encodeURIComponent(`${team.city}, ${team.state}`)}`}>Best retail in {team.city} on Scout ↗</a>
         </SectionHead>
-        <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 16, maxWidth: "80ch" }}>Stores come from desk research. Only those listed under Evidence were checked live. Confirm a door is open, and will carry the product, before planning a launch there.</p>
+        <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 16, maxWidth: "80ch" }}>{isLive(d["retail-landscape"]) ? "Stores come from live research, with sources in the Evidence section." : "Stores come from desk research. Only those listed under Evidence were checked live."} Confirm a door is open, and will carry the product, before planning a launch there.</p>
         <div className="hc-grid hc-grid-3">
           {[["Where to sell", s.retailPlaybook.where], ["When to sell", s.retailPlaybook.when], ["How to sell", s.retailPlaybook.how]].map(([t, items]) => (
             <div key={t} className="hc-card-invert"><h3 className="hc-h2">{t}</h3><ul className="hc-list" style={{ marginTop: 10 }}>{items.map((x, i) => <li key={i}>{x}</li>)}</ul></div>
@@ -229,7 +233,7 @@ function MarketView({ team, data, active }) {
         </div>
         <References refs={ev ? ev.references.filter((r) => r.kind === "court-store-space") : []} title="Observed references: courts, stores and community spaces" insights={s.topInsights} />
         <details className="hc-fold">
-          <summary>Districts, stores and shopping habits (desk research)</summary>
+          <summary>Districts, stores and shopping habits ({origin(d["retail-landscape"])})</summary>
           <Retail land={d["retail-landscape"]} beh={d["retail-behavior"]} />
         </details>
       </section>
@@ -354,7 +358,7 @@ function ExecutiveBrief({ team, data, now, ver, corrections }) {
             <ul className="hc-bullets hc-small" style={{ marginTop: 8 }}>
               <li>{ev ? `${ev.claims.length} claims checked live on ${fmtDate(ev.checkedOn)}: ${count(ev.claims, "verified")} verified, ${count(ev.claims, "contradicted")} corrected, ${count(ev.claims, "unclear")} unsettled.` : "No claims checked live for this market yet."}</li>
               <li>{corrections.length ? `${corrections.length} correction${corrections.length > 1 ? "s" : ""} made at the source.` : "No corrections logged."}</li>
-              <li>{ver.queue.length} dated claims in the desk research are still unverified.</li>
+              <li>{ver.queue.length} claims the research flagged are still unverified.</li>
               <li>Team facts {data.pulse ? `checked live on ${fmtDate(data.pulse.asOf)}` : "not checked"}. Scores, fan mood and fan heat are editorial estimates.</li>
               <li>Owner {data.stewardship?.owner || "unassigned"}; reviewer {data.stewardship?.reviewer || "unassigned"}; no human sign-off{data.stewardship?.signedOff ? `: ${data.stewardship.signedOff}` : " yet"}.</li>
             </ul>
@@ -457,7 +461,7 @@ function FanYear({ s, d, now }) {
         ))}
       </div>
       <details className="hc-fold">
-        <summary>Dates to know (desk research, unverified)</summary>
+        <summary>Dates to know ({origin(d.rhythm, true)})</summary>
         <div className="hc-card">
           <ul className="hc-list">
             {[...d.rhythm.extra.keyDates].sort((a, b) => [10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9].indexOf(a.month) - [10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9].indexOf(b.month)).map((k, i) => (
@@ -545,10 +549,10 @@ function UniformArchive({ u }) {
           <div className="hc-kv-label">Eras</div>
           <ul className="hc-list">{x.eras.map((e, i) => <li key={i}><b>{e.era}</b> — {e.look}<div className="hc-small hc-muted">{e.legacy}</div></li>)}</ul>
         </div>
-        <KV label="Fan favorites (desk research)"><div className="hc-row">{x.fanFavorites.map((f, i) => <Chip key={i}>{f}</Chip>)}</div></KV>
+        <KV label={`Fan favorites (${origin(u)})`}><div className="hc-row">{x.fanFavorites.map((f, i) => <Chip key={i}>{f}</Chip>)}</div></KV>
       </div>
       <div className="hc-card hc-stack">
-        <div className="hc-kv-label">Past City Editions and how they landed (desk research)</div>
+        <div className="hc-kv-label">Past City Editions and how they landed ({origin(u)})</div>
         {x.cityEditions.length ? (
           <ul className="hc-list">{x.cityEditions.map((c, i) => <li key={i}><div className="hc-row" style={{ justifyContent: "space-between" }}><b>{c.season}</b><Chip tone={tone[c.reception]}>{c.reception}</Chip></div><div style={{ marginTop: 4 }}>{c.concept}</div><div className="hc-small hc-muted">{c.note}</div></li>)}</ul>
         ) : <p className="hc-muted">No past City Editions confirmed.</p>}
@@ -577,7 +581,7 @@ function Fanbase({ f, ev, insights }) {
           <ul className="hc-list">
             {obs.filter((o) => !conflicts.includes(o)).map((o, i) => <Observation key={i} o={o} insights={insights} />)}
           </ul>
-        ) : <p className="hc-small hc-muted">No observed fan evidence logged for this market yet. Everything about fans below is desk research. Treat it as a hypothesis about how fans dress and buy.</p>}
+        ) : <p className="hc-small hc-muted">No observed fan evidence logged for this market yet. {isLive(f) ? "The fan read below comes from live research; treat it as a hypothesis about how fans dress and buy until it's observed." : "Everything about fans below is desk research. Treat it as a hypothesis about how fans dress and buy."}</p>}
         {conflicts.length > 0 && (
           <div>
             <div className="hc-kv-label">Conflicting evidence and segment differences</div>
@@ -592,7 +596,7 @@ function Fanbase({ f, ev, insights }) {
           <div className="hc-row" style={{ justifyContent: "space-between" }}><h3 className="hc-h3">{f.headline}</h3><EvidenceTag kind="unverified" /></div>
           <p>{f.summary}</p>
           <KV label="Mood heading into 2026-27">{x.sentiment}</KV>
-          <KV label="The gameday look (desk research)">{x.gamedayLook}</KV>
+          <KV label={`The gameday look (${origin(f)})`}>{x.gamedayLook}</KV>
         </div>
         <div className="hc-card-invert">
           <div className="hc-eyebrow">Rivalries</div>
@@ -600,8 +604,8 @@ function Fanbase({ f, ev, insights }) {
         </div>
       </div>
       <details className="hc-fold">
-        <summary>The crowd by type, traditions and legends (desk research)</summary>
-        <p className="hc-small hc-muted" style={{ marginBottom: 14, maxWidth: "80ch" }}>These segments are a desk-research sketch, not a survey. Their sizes were never measured, so none are shown. A city has more than one look: women, younger fans, families and style-led buyers may dress differently from the crowd described here.</p>
+        <summary>The crowd by type, traditions and legends ({origin(f)})</summary>
+        <p className="hc-small hc-muted" style={{ marginBottom: 14, maxWidth: "80ch" }}>These segments are a research sketch, not a survey. Their sizes were never measured, so none are shown. A city has more than one look: women, younger fans, families and style-led buyers may dress differently from the crowd described here.</p>
         <div className="hc-grid hc-grid-3">
           {x.segments.map((sg, i) => (
             <div key={i} className="hc-card hc-stack">
@@ -687,7 +691,7 @@ function Review({ data, ver, corrections }) {
           <div><div className="hc-eyebrow">Checked live{ev ? ` · ${fmtDate(ev.checkedOn)}` : ""}</div><h3 className="hc-h3" style={{ marginTop: 4 }}>{ev ? `${ev.claims.length} claims checked against live sources` : "No live checks for this market yet"}</h3></div>
           {ev && <div className="hc-row">{["verified", "contradicted", "unclear"].map((k) => <Chip key={k} tone={CLAIM_TONE[k]} title={CLAIM_STATUS[k]}>{count(ev.claims, k)} {k === "contradicted" ? "corrected" : k === "unclear" ? "unsettled" : k}</Chip>)}</div>}
         </div>
-        <p className="hc-small hc-muted">A claim counts as verified only when a dated source returned by a live search states it. The research environment can't open pages directly, so each check records what the search returned and the link to open. Searches were capped, so most of the desk research is still unchecked.</p>
+        <p className="hc-small hc-muted">A claim counts as verified only when a dated source returned by a live search states it. The research environment can't open pages directly, so each check records what the search returned and the link to open. {ver.knowledge.length === 0 ? `All ${ver.live.length} dossiers for this market were researched live, with their sources listed below.` : ver.live.length ? `${ver.live.length} of ${ver.live.length + ver.knowledge.length} dossiers were researched live; the rest are desk research.` : "Searches were capped, so most of the desk research is still unchecked."}</p>
         {ev && ev.claims.length > 0 && (
           <ul className="hc-list">
             {ev.claims.map((c) => (
