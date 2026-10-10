@@ -29,7 +29,10 @@
 .hc-nav a { text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: var(--radius-pill); color: var(--text); }
 .hc-nav a:hover { background: var(--surface); }
 .hc-nav a[aria-current="page"] { background: var(--text); color: var(--bg); }
-/* Phones: every section visible at once, wrapped onto two rows, no hidden scroll. */
+/* Phones: all five sections visible at once, three over two, no hidden scroll. */
+@media (max-width: 560px) {
+  .hc-nav { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; justify-items: start; gap: 6px 4px; }
+}
 @media (max-width: 760px) {
   .hc-nav { gap: 6px 4px; }
   .hc-nav a { white-space: nowrap; font-size: 13px; padding: 7px 9px; }

@@ -73,8 +73,8 @@ async function main() {
       ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top opportunities/i : /league read isn/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
-      ["compare", "#/compare", /Compare\s*markets/i],
-      ["agents", "#/agents", /Fifteen agents/i],
+      ["compare", "#/compare", hasLeague ? /Compare\s*markets[\s\S]*Themes[\s\S]*Fan types/i : /Compare\s*markets/i],
+      ["agents", "#/agents", /Fifteen agents[\s\S]*Method[\s\S]*Known gaps/i],
       ["method", "#/method", /Method[\s\S]*Evidence[\s\S]*Scores[\s\S]*Corrections[\s\S]*Known gaps/i],
       ...(market ? [["market", `#/m/${market}`, /What to know[\s\S]*Opportunities[\s\S]*Product[\s\S]*Evidence/i]] : []),
       ...(published.includes("det") ? [["market-det", "#/m/det", /What to know/i]] : []),
@@ -147,9 +147,18 @@ async function main() {
       // Every nav item is on screen; nothing hides behind a sideways scroll.
       const navHidden = await page.locator(".hc-nav a").evaluateAll((as) => as.filter((x) => x.getBoundingClientRect().right > innerWidth + 1).map((x) => x.textContent));
       if (navHidden.length) problems.push(`[${vp.label}] nav items off screen: ${navHidden.join(", ")}`);
+      const navItems = (await page.locator(".hc-nav a").allTextContents()).join(" | ");
+      if (navItems !== "Markets | Opportunities | Calendar | Compare | Agents") problems.push(`[${vp.label}] nav is "${navItems}"`);
       await page.locator('.hc-wall-tile[href="#/m/det"]').click();
       await wait(700);
       if (!/#\/m\/det/.test(page.url())) problems.push(`[${vp.label}] Detroit tile went to ${page.url()}`);
+      // Old links still land: #/league on Compare's league read, #/method/<x> on Agents' method.
+      for (const [hash, id] of [["#/league", "league"], ["#/method/evidence", "evidence"]]) {
+        await page.goto(BASE + hash, { waitUntil: "load" });
+        await wait(1200);
+        const top = await page.evaluate((x) => document.getElementById(x)?.getBoundingClientRect().top, id);
+        if (top == null || Math.abs(top) > 120) problems.push(`[${vp.label}] ${hash} didn't scroll to #${id} (top ${top})`);
+      }
       // Calendar: the season switch moves next season's moments out of this season.
       await page.goto(BASE + "#/calendar", { waitUntil: "load" });
       await wait(700);

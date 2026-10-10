@@ -1,6 +1,7 @@
 // Method: how NBA Fandom was researched and checked, what every label and
 // number means, what has been corrected, and what is still unknown. The agent
-// architecture lives here rather than on the front page.
+// architecture lives here rather than on the front page. Shown at the bottom
+// of the Agents page.
 import React, { useEffect } from "react";
 import { markets, review, league, LEAGUE } from "../data.js";
 import { LENS_AGENTS, SYNTHESIS_AGENTS } from "../agents/roster.js";
@@ -20,9 +21,9 @@ export default function Method({ anchor }) {
   const reading = pub.reduce((s, m) => s + (m.readingList || 0), 0);
 
   return (
-    <div>
+    <div className="hc-section" id="method">
       <div className="hc-eyebrow" style={{ marginBottom: 12 }}>How NBA Fandom works</div>
-      <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Method</h1>
+      <h2 className="hc-display" style={{ fontSize: "clamp(2.6rem, 7vw, 5.5rem)" }}>Method</h2>
       <p className="hc-lede" style={{ marginTop: 18 }}>How the research was done, what was checked, what every label and number means, and what we still don't know.</p>
       <nav className="hc-row" aria-label="On this page" style={{ marginTop: 20 }}>
         {SECTIONS.map(([id, label]) => <a key={id} className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("method", id)}>{label}</a>)}

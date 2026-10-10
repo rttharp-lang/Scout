@@ -1,15 +1,17 @@
 // Side-by-side comparison of up to three markets: archetype, score tiers, the
 // shape of each fan year (each scaled to its own peak), the best-supported
-// insights and top opportunities, and the City Edition direction.
+// insights and top opportunities, and the City Edition direction. The league
+// read (themes, fan types, scores, top opportunities) follows underneath.
 import React, { useEffect, useState } from "react";
 import { markets, loadMarket, MONTHS, SEASON_ORDER } from "../data.js";
 import { Chip, Scorecard, PaletteRow, Priority, TeamBand, href, Strength, Status, EvidenceTag } from "../ui.jsx";
 import { STRENGTH_RANK } from "../review.js";
 import { placeOf } from "../teams.js";
+import League from "./League.jsx";
 
 const MAX = 3;
 
-export default function Compare({ ids }) {
+export default function Compare({ ids, anchor }) {
   const published = markets.filter((m) => m.status === "complete");
   const initial = (ids || "").split(",").filter((id) => published.some((m) => m.id === id)).slice(0, MAX);
   const [sel, setSel] = useState(initial.length ? initial : published.slice(0, 2).map((m) => m.id));
@@ -23,13 +25,20 @@ export default function Compare({ ids }) {
 
   const setAt = (i, id) => setSel((s) => { const n = [...s]; n[i] = id; return n.filter((x, k) => x && n.indexOf(x) === k); });
   const remove = (i) => setSel((s) => s.filter((_, k) => k !== i));
+  // Old #/league links land here; scroll again once the market cards above have loaded.
+  useEffect(() => {
+    if (!anchor) return;
+    const go = () => document.getElementById(anchor)?.scrollIntoView();
+    const t = [setTimeout(go, 50), setTimeout(go, 700)];
+    return () => t.forEach(clearTimeout);
+  }, [anchor]);
   const cols = sel.map((id) => ({ id, m: markets.find((x) => x.id === id), d: data[id] }));
 
   return (
     <div>
       <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Side by side</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Compare<br />markets</h1>
-      <p className="hc-lede" style={{ marginTop: 18 }}>Up to three markets side by side. Scores are editorial tiers ranked across all 30. Each fan-year chart is scaled to its own city's peak, so compare when a city peaks, not how big it is.</p>
+      <p className="hc-lede" style={{ marginTop: 18 }}>Up to three markets side by side, then the patterns, fan types and scores that run across all 30. Scores are editorial tiers ranked across all 30. Each fan-year chart is scaled to its own city's peak, so compare when a city peaks, not how big it is.</p>
 
       {published.length < 2 ? <div className="hc-empty">Compare needs at least two published markets.</div> : (
         <>
@@ -69,6 +78,8 @@ export default function Compare({ ids }) {
           </div>
         </>
       )}
+
+      <League />
     </div>
   );
 }

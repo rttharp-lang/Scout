@@ -1,4 +1,5 @@
-// The league read: the League Strategist's cross-market synthesis — thesis,
+// The league read, shown on the Compare page under the side-by-side view:
+// the League Strategist's cross-market synthesis — thesis,
 // themes, fandom clusters, calibrated scores, the priority board, the Portland
 // playbook and the watchlist. Tentpoles live on the Calendar page.
 import React, { useMemo, useState } from "react";
@@ -21,9 +22,9 @@ export default function League() {
 
   return (
     <div>
-      <section className="hc-section" style={{ paddingTop: 8 }}>
-        <div className="hc-eyebrow" style={{ marginBottom: 12 }}>The league read · 30 markets · 2026-27 · an interpretation of desk research</div>
-        <h1 className="hc-h1" style={{ maxWidth: "32ch", fontSize: "clamp(2rem, 4.2vw, 3.4rem)" }}>{league.headline}</h1>
+      <section className="hc-section" id="league">
+        <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Across the league · 30 markets · 2026-27 · an interpretation of desk research</div>
+        <h2 className="hc-h1" style={{ maxWidth: "32ch", fontSize: "clamp(2rem, 4.2vw, 3.4rem)" }}>{league.headline}</h2>
         <p className="hc-lede" style={{ marginTop: 18, maxWidth: "75ch" }}>{league.thesis}</p>
         <nav className="hc-row" aria-label="On this page" style={{ marginTop: 20 }}>
           {SECTIONS.filter(([id]) => id !== "watchlist" || league.watchlist.length).map(([id, label]) => (
