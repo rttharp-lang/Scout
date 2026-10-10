@@ -171,11 +171,11 @@ export const LENS_AGENTS = [
 
 export const SYNTHESIS_AGENTS = [
   { id: "strategist", name: "Market Strategist", group: "Synthesis", icon: "target",
-    mission: "Turn eleven dossiers into the Nike Basketball brief: insights, opportunities, collection, uniform and calendar of launches." },
+    mission: "Turn eleven dossiers into the Nike Basketball brief: insights, opportunities, collection, uniform and launch calendar." },
   { id: "factcheck", name: "Fact-Check Critic", group: "Verification", icon: "shield-check",
-    mission: "Test the riskiest claims in every dossier hard, then fix or cut whatever fails." },
+    mission: "Check the riskiest claims in every dossier as a skeptic would, then fix or cut whatever fails." },
   { id: "authenticity", name: "Authenticity Critic", group: "Verification", icon: "scale",
-    mission: "Go after the brief for generic insights, stereotypes, borrowing without credit, weak product links and missed chances." },
+    mission: "Attack the brief for generic insights, stereotypes, appropriation, weak product links and missed chances." },
   { id: "editor", name: "Brief Editor", group: "Synthesis", icon: "pen-tool",
     mission: "Revise the brief against both critiques so every recommendation is specific, verified and ready to act on." },
 ];
