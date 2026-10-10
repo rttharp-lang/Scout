@@ -106,18 +106,26 @@ function MarketWall() {
           <div className="hc-eyebrow hc-wall-label">{c}ern Conference</div>
           <div className="hc-wall-grid">
             {markets.filter((m) => m.team.conference === c).sort((a, b) => placeOf(a.team).localeCompare(placeOf(b.team))).map((m) => {
-              const bg = wallColor(m.team);
-              return (
-                <a key={m.id} href={href("m", m.id)} className="hc-wall-tile" style={{ background: bg, color: inkOn(bg) }} title={`${placeOf(m.team)} ${m.team.name}`} aria-label={`${m.team.abbr}, ${placeOf(m.team)} ${m.team.name}`}>
-                  <span className="hc-wall-logo" aria-hidden="true"><img src={logoUrl(m.team)} alt="" loading="lazy" decoding="async" onError={(e) => { e.currentTarget.parentElement.style.display = "none"; }} /></span>
-                  <span>{m.team.abbr}</span>
-                </a>
-              );
+              return <WallTile key={m.id} m={m} />;
             })}
           </div>
         </div>
       ))}
     </nav>
+  );
+}
+
+// A team tile: the logo centered on the team color. If the logo can't load,
+// the abbreviation takes its place.
+function WallTile({ m }) {
+  const [failed, setFailed] = useState(false);
+  const bg = wallColor(m.team);
+  return (
+    <a href={href("m", m.id)} className="hc-wall-tile" style={{ background: bg, color: inkOn(bg) }} title={`${placeOf(m.team)} ${m.team.name}`} aria-label={`${m.team.abbr}, ${placeOf(m.team)} ${m.team.name}`}>
+      {failed
+        ? <span className="hc-wall-abbr">{m.team.abbr}</span>
+        : <img className="hc-wall-logo" src={logoUrl(m.team)} alt="" loading="lazy" decoding="async" onError={() => setFailed(true)} />}
+    </a>
   );
 }
 
