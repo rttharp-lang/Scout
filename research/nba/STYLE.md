@@ -61,7 +61,21 @@ Home Court should read like a good city guide or a magazine's city issue. The wr
 5. **Add nothing new:** no new facts, places, people or claims.
 6. **Own words:** never quote lyrics, poems or slogans beyond a few words.
 
-`node scripts/nba/fact-guard.mjs <team> <file> [--base <git ref>]` enforces rules 1-4 against an earlier version of the file (by default, the text before the October 2026 rewrite). `node scripts/nba/voice-lint.mjs <team> <file>` flags the "cut on sight" list, long sentences and long headlines.
+## Tools
+
+| Command | What it does |
+|---|---|
+| `node scripts/nba/fact-guard.mjs <team> <file> [--base <git ref>]` | Enforces rules 1-4 against an earlier version of the file (by default, the text before the October 2026 rewrite). It also fails a file that names an NBA city its original never mentioned. |
+| `node scripts/nba/voice-lint.mjs <team> <file>` | Flags the "cut on sight" list, long sentences, long headlines and long decks. |
+| `node scripts/nba/meaning-diff.mjs <repo> <team> <file> [field-regex]` | Prints every changed prose field, old above new, for a meaning check. |
+| `node scripts/nba/cross-market.mjs <repo> [team …]` | Flags fields that picked up another market's names, the sign that text landed in the wrong file. |
+| `node scripts/nba/voice-digest.mjs <repo> [team …]` | Lists every headline and title, and counts the patterns that turn into tics across markets. |
+| `node scripts/nba/normalize-dates.mjs <repo>` | Puts dates in prose into house style: "Oct 21". |
+
+Workflows in `scripts/nba/workflows/` run the edit at scale:
+- `home-court-voice.js` assigns six editors and a copy chief to each market.
+- `home-court-meaning-check.js` runs a meaning check on each market.
+- `home-court-voice-league.js` rewrites the league read.
 
 ## Don't just chop
 
