@@ -69,7 +69,9 @@ function reviewChecks(team, name, data) {
     const c = cal[t.i];
     if (!c) return;
     if (c.window !== t.window) errs.push(`${at}.window: does not match strategy.json`);
-    if (Number(t.start.slice(5, 7)) !== c.month) errs.push(`${at}.start: month ${t.start.slice(5, 7)} but the entry is month ${c.month}`);
+    // The entry's month has to fall inside start..end (a window can open the month before).
+    const months = []; for (let y = +t.start.slice(0, 4), m = +t.start.slice(5, 7), stop = (t.end || t.start).slice(0, 7); ; ) { const k = `${y}-${String(m).padStart(2, "0")}`; months.push(m); if (k >= stop || months.length > 24) break; m = m === 12 ? 1 : m + 1; if (m === 1) y++; }
+    if (!months.includes(c.month)) errs.push(`${at}: the entry is month ${c.month}, outside ${t.start}..${t.end || t.start}`);
     if (t.end && t.end < t.start) errs.push(`${at}.end: before start`);
     if (t.certainty === "confirmed" && !["checked-live", "league-calendar", "fixed-holiday"].includes(t.basis)) errs.push(`${at}: confirmed needs basis checked-live, league-calendar or fixed-holiday`);
     if (t.basis === "checked-live" && !verified.has(t.basisNote)) errs.push(`${at}.basisNote: "${t.basisNote}" is not a verified claim in evidence.json`);
