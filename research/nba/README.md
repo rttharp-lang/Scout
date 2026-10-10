@@ -7,7 +7,7 @@ This directory holds the agent research behind Home Court, for all 30 NBA market
 The research session ran out of web-search budget early, so most of this corpus is a **knowledge draft**:
 
 - **Live-verified:** the League Pulse (`league-pulse-east.json`, `league-pulse-west.json`) was checked on the live web on 2026-10-07. It covers each team's 2026-27 situation: last season, coach, stars, offseason moves, arena, City Edition and marquee games. The confirmed entries in `league-calendar.json` (15 of 24) were also checked live, as were Portland's music, art and food dossiers.
-- **Knowledge drafts:** the other 357 dossiers and briefs were written from model knowledge, with the League Pulse given to every agent as authoritative current facts. Each file carries `provenance.mode: "knowledge"` and a `provenance.verify` list of time-sensitive claims to confirm before use (3,858 claims in all).
+- **Knowledge drafts:** the other 357 dossiers and briefs were written from model knowledge, with the League Pulse given to every agent as authoritative current facts. Each file carries `provenance.mode: "knowledge"` and a `provenance.verify` list of time-sensitive claims to confirm before use (3,858 claims in all). The site adds the fact-checkers' "unverifiable" verdicts to those lists and removes duplicates, so its verification queues hold 4,390 claims.
 - **Fact-checked:** every market's Fact-Check Critic logged 35-40 verdicts and corrected dossiers in place, with up to three live spot-checks per market.
 
 The site labels every dossier "Live-verified" or "Knowledge draft". Each market's Agent review tab lists its verification queue.
@@ -45,6 +45,10 @@ node scripts/nba/validate.mjs league    # league.json
 node scripts/nba/assemble.mjs           # publish to src/nba/data/ for the site
 node scripts/nba/digest.mjs             # one-page-per-market digest the league agents start from
 ```
+
+## House voice
+
+In October 2026 every file was rewritten into one plain, magazine-style voice. The rules are in [STYLE.md](STYLE.md). The rewrite kept every fact: `scripts/nba/fact-guard.mjs` confirms each file's names, numbers, data fields and shape match the text as researched. A meaning check by one reader per market then fixed lines where the rewording had shifted a hedge, an order or a negation.
 
 ## Reading it responsibly
 
