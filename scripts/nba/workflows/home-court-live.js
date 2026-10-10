@@ -42,6 +42,8 @@ THIS IS A LIVE REFRESH dated ${TODAY}. The file you will write already exists fr
 
 TOOLS: load WebSearch with ToolSearch (query "select:WebSearch,WebFetch") if it isn't loaded. Opening pages directly (WebFetch) is usually blocked by the network proxy; verify through search results instead and don't retry blocked fetches.
 
+IF SEARCH IS BLOCKED: if your first searches come back as "budget used up", quota or limit errors, stop. Do not rewrite or touch the file; the published version stays. Return ok=false with searches=0 and problems="search unavailable".
+
 SEARCH BUDGET: about ${budget} searches, never more than ${budget + 5}. Run independent searches in parallel batches. Spend them on the specific places, businesses, people, events and dates you name, especially anything that could have changed in 2026. Don't spend searches re-confirming well-established history. If the budget runs out, keep only items you could support and list the rest in provenance.verify.
 
 ISOLATION: other agents are writing sibling files in research/nba/${team}/ at the same time. Only write the file(s) your brief names. Do not commit.
