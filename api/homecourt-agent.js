@@ -10,13 +10,16 @@
 //
 // stage "research": web search on, returns { notes } — verified facts + URLs.
 // stage "compose":  no tools, structured output against the agent's schema,
-//                   returns { data, warnings } (warnings = full-schema checks
-//                   the API's structured outputs can't enforce).
+//                   returns { data, warnings } (warnings = the same checks the
+//                   build runs, from src/nba/agents/validate-core.js). Send
+//                   { previous, problems } to have the agent repair its output.
+// agent "planner" (compose only) writes the plan: timing and hand-off for the
+// brief in inputs.strategy, with inputs.leagueCalendar.
 // Anthropic key stays server-side (ANTHROPIC_API_KEY).
 import Anthropic from "@anthropic-ai/sdk";
 import { AGENT_BY_ID, LENS_IDS } from "../src/nba/agents/roster.js";
-import { buildBrief, apiSchemaFor } from "../src/nba/agents/prompts.js";
-import { check } from "../src/nba/agents/jsonschema.js";
+import { buildBrief, planBrief, apiSchemaFor, outputNameFor } from "../src/nba/agents/prompts.js";
+import { validateData } from "../src/nba/agents/validate-core.js";
 import { TEAM_BY_ID } from "../src/nba/teams.js";
 
 export const config = { maxDuration: 60 };
@@ -62,11 +65,19 @@ function inputsBlock(inputs) {
   return `\n\nINPUTS (JSON):\n${json}`;
 }
 
+// A repair pass: the agent's previous output and the checks it failed.
+function repairBlock(body) {
+  if (!body.previous || !Array.isArray(body.problems) || !body.problems.length) return "";
+  const prev = JSON.stringify(body.previous);
+  if (prev.length > MAX_INPUT_CHARS) throw new Error("inputs-too-large");
+  return `\n\nREPAIR: your previous output failed these checks. Return the full corrected JSON, changing only what the checks require:\n- ${body.problems.slice(0, 20).map(String).join("\n- ")}\n\nPREVIOUS OUTPUT:\n${prev}`;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") { res.status(405).json({ error: "post-only" }); return; }
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   const { agent: agentId, team: teamId, stage, notes } = body;
-  const agent = AGENT_BY_ID[agentId];
+  const agent = agentId === "planner" ? { id: "planner" } : AGENT_BY_ID[agentId];
   const team = TEAM_BY_ID[teamId];
   if (!agent || !team) { res.status(400).json({ error: "bad-agent-or-team" }); return; }
   if (stage !== "research" && stage !== "compose") { res.status(400).json({ error: "bad-stage" }); return; }
@@ -75,7 +86,7 @@ export default async function handler(req, res) {
 
   const client = new Anthropic();
   const today = new Date().toISOString().slice(0, 10);
-  const system = buildBrief(agentId, team, { mode: "api", today });
+  const system = agentId === "planner" ? planBrief(team, today) : buildBrief(agentId, team, { mode: "api", today });
 
   try {
     if (stage === "research") {
@@ -98,12 +109,13 @@ export default async function handler(req, res) {
       max_tokens: 16000,
       system,
       output_config: { effort: "low", format: { type: "json_schema", schema: apiSchema(schema) } },
-      messages: [{ role: "user", content: `COMPOSE PHASE. Produce your output for ${team.city} (team id "${team.id}"${LENS_IDS.includes(agentId) ? `, lens "${agentId}"` : ""}). This is a live run: if you include provenance, set mode "live" and asOf "Live web, ${today}", and list in verify only claims your research could not confirm.${notes ? `\n\nYOUR RESEARCH NOTES:\n${String(notes).slice(0, 60000)}` : ""}${inputsBlock(body.inputs)}` }],
+      messages: [{ role: "user", content: `COMPOSE PHASE. Produce your output for ${team.city} (team id "${team.id}"${LENS_IDS.includes(agentId) ? `, lens "${agentId}"` : ""}). This is a live run: if you include provenance, set mode "live" and asOf "Live web, ${today}", and list in verify only claims your research could not confirm.${notes ? `\n\nYOUR RESEARCH NOTES:\n${String(notes).slice(0, 60000)}` : ""}${inputsBlock(body.inputs)}${repairBlock(body)}` }],
     });
     if (msg.stop_reason === "refusal") { res.status(422).json({ error: "refused" }); return; }
     if (msg.stop_reason === "max_tokens") { res.status(502).json({ error: "truncated" }); return; }
     const data = JSON.parse(textOf(msg.content));
-    res.status(200).json({ data, warnings: check(schema, data).slice(0, 20) });
+    const ctx = agentId === "planner" ? { strategy: body.inputs && body.inputs.strategy } : {};
+    res.status(200).json({ data, warnings: validateData(team.id, outputNameFor(agentId), data, ctx).slice(0, 20) });
   } catch (e) {
     if (e instanceof Anthropic.RateLimitError) { res.status(429).json({ error: "rate-limited" }); return; }
     if (e instanceof Anthropic.APIError) { res.status(502).json({ error: "agent-request-failed", status: e.status, detail: e.message }); return; }
