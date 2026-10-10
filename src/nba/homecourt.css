@@ -20,19 +20,19 @@
 
 /* ── Header ─────────────────────────────────────────────── */
 .hc-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
-.hc-brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-.hc-brand-divider { width: 1px; height: 22px; background: var(--border); }
-.hc-brand-name { font-family: var(--font-display); font-weight: 900; font-size: 22px; letter-spacing: 0.01em; text-transform: uppercase; line-height: 1; padding-top: 3px; }
+.hc-brand { display: flex; flex: 1 1 100%; align-items: center; gap: 12px; text-decoration: none; }
+.hc-brand-divider { width: 1px; height: 22px; background: var(--border); margin-left: auto; }
+.hc-brand-name { font-family: var(--font-display); font-weight: 900; font-size: 22px; letter-spacing: 0.01em; text-transform: uppercase; line-height: 1; padding-top: 3px; text-align: right; }
 @media (max-width: 520px) { .hc-brand { gap: 9px; } .hc-brand .hc-mark { font-size: 17px !important; } .hc-brand-name { font-size: 14px; line-height: 1.05; max-width: 11em; } .hc-brand-divider { height: 30px; } }
 @media (max-width: 360px) { .hc-brand .hc-mark { font-size: 15px !important; } .hc-brand-name { font-size: 12.5px; } }
 .hc-nav { display: flex; gap: 6px; flex-wrap: wrap; }
 .hc-nav a { text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: var(--radius-pill); color: var(--text); }
 .hc-nav a:hover { background: var(--surface); }
 .hc-nav a[aria-current="page"] { background: var(--text); color: var(--bg); }
+/* Phones: every section visible at once, wrapped onto two rows, no hidden scroll. */
 @media (max-width: 760px) {
-  .hc-nav { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; width: calc(100% + 2 * var(--container-pad)); margin: 0 calc(-1 * var(--container-pad)); padding: 0 var(--container-pad); }
-  .hc-nav::-webkit-scrollbar { display: none; }
-  .hc-nav a { white-space: nowrap; }
+  .hc-nav { gap: 6px 4px; }
+  .hc-nav a { white-space: nowrap; font-size: 13px; padding: 7px 9px; }
 }
 
 /* ── Type ───────────────────────────────────────────────── */

@@ -144,6 +144,9 @@ async function main() {
       if (await page.getByLabel("Find a team or city").count()) problems.push(`[${vp.label}] front page still shows team search`);
       const title = await page.locator(".hc-home-title").evaluate((h) => ({ text: h.textContent, over: h.scrollWidth - h.clientWidth }));
       if (title.text !== "NBA Fandom" || title.over > 1) problems.push(`[${vp.label}] front title is "${title.text}" and overflows by ${title.over}px`);
+      // Every nav item is on screen; nothing hides behind a sideways scroll.
+      const navHidden = await page.locator(".hc-nav a").evaluateAll((as) => as.filter((x) => x.getBoundingClientRect().right > innerWidth + 1).map((x) => x.textContent));
+      if (navHidden.length) problems.push(`[${vp.label}] nav items off screen: ${navHidden.join(", ")}`);
       await page.locator('.hc-wall-tile[href="#/m/det"]').click();
       await wait(700);
       if (!/#\/m\/det/.test(page.url())) problems.push(`[${vp.label}] Detroit tile went to ${page.url()}`);
