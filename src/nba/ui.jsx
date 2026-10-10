@@ -6,7 +6,7 @@ import { SCORE_DEFS, tierOf, moodOf, STRENGTH, EVIDENCE_KIND, KIND_LABEL, CERTAI
 import { STATUSES } from "./agents/review-schema.js";
 
 // ── Router ────────────────────────────────────────────────────────
-// Hash routes so the site works on any static host: #/, #/m/por, #/league, #/opportunities, #/calendar, #/agents
+// Hash routes so the site works on any static host: #/, #/m/por, #/opportunities, #/calendar, #/compare, #/agents
 export function useRoute() {
   const parse = () => (window.location.hash.replace(/^#\/?/, "") || "").split("?")[0].split("/").filter(Boolean);
   const [route, setRoute] = useState(parse);
@@ -44,13 +44,10 @@ export function Header({ route }) {
       </a>
       <nav className="hc-nav" aria-label="Primary">
         {link(href(), "Markets", section === "" || section === "m")}
-        {link(href("league"), "League", section === "league")}
         {link(href("opportunities"), "Opportunities", section === "opportunities")}
         {link(href("calendar"), "Calendar", section === "calendar")}
-        {link(href("compare"), "Compare", section === "compare")}
-        {link(href("method"), "Method", section === "method")}
-        {link(href("agents"), "Agents", section === "agents")}
-        <a href="/?app=scout">Scout ↗</a>
+        {link(href("compare"), "Compare", section === "compare" || section === "league")}
+        {link(href("agents"), "Agents", section === "agents" || section === "method")}
       </nav>
     </header>
   );
@@ -59,7 +56,7 @@ export function Header({ route }) {
 export function Footer() {
   return (
     <footer className="hc-footer">
-      <span>NBA Fandom by Research · Built for Nike Basketball</span>
+      <span>NBA Fandom by Research · Built for Nike Basketball · <a href="/?app=scout">Scout trip planner ↗</a></span>
       <span>Updated {fmtDate(markets.map((m) => m.updated).filter(Boolean).sort().pop())} · <a href={href("method")}>How it was researched and checked</a></span>
     </footer>
   );

@@ -6,6 +6,7 @@ import { TEAMS, TEAM_BY_ID, teamLabel } from "../teams.js";
 import { publishedCount } from "../data.js";
 import { runMarket } from "../live.js";
 import { Chip, SectionHead, href } from "../ui.jsx";
+import Method from "./Method.jsx";
 
 // The cross-market pass (scripts/nba/workflows/home-court-league.js and
 // home-court-strengthen.js), run after every market has a brief.
@@ -18,7 +19,7 @@ const LEAGUE_STAGE = [
 
 const GROUPS = ["Culture", "Basketball", "Fandom", "Retail"];
 
-export default function Agents({ preselect }) {
+export default function Agents({ preselect, methodAnchor }) {
   const [team, setTeam] = useState(preselect && TEAM_BY_ID[preselect] ? preselect : "por");
   const [state, setState] = useState({});
   const [running, setRunning] = useState(false);
@@ -111,7 +112,7 @@ export default function Agents({ preselect }) {
       {/* League stage */}
       <section className="hc-section">
         <SectionHead eyebrow="Once all 30 markets are in" title="The league read">
-          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("league")}>Go to the league read →</a>
+          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("league")}>See the league read →</a>
         </SectionHead>
         <div className="hc-grid hc-grid-4">
           {LEAGUE_STAGE.map(([step, name, what]) => (
@@ -158,6 +159,8 @@ export default function Agents({ preselect }) {
           </ul>
         </div>
       </section>
+
+      <Method anchor={methodAnchor} />
     </div>
   );
 }
