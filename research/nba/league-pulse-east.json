@@ -4,8 +4,8 @@
   "teams": [
     {
       "team": "atl",
-      "teamMoment": "Jalen Johnson's Hawks reloaded around defense after a 6-seed season: No. 8 pick Kingston Flemings, plus trades for Lu Dort, Ryan Nembhard, Aaron Wiggins and Devin Carter, with 2024 No. 1 pick Zaccharie Risacher shipped to Dallas.",
-      "lastSeason": "46-36, No. 6 seed in the East; lost 4-2 to the eventual-champion Knicks in the first round after leading the series 2-1.",
+      "teamMoment": "Jalen Johnson's Hawks went defense-first after a 6-seed season. They drafted Kingston Flemings at No. 8 and traded for Lu Dort, Ryan Nembhard, Aaron Wiggins and Devin Carter. Zaccharie Risacher, the 2024 No. 1 pick, went to Dallas.",
+      "lastSeason": "46-36, the East's No. 6 seed. Led the eventual-champion Knicks 2-1 in the first round, then lost the series 4-2.",
       "headCoach": "Quin Snyder",
       "stars": [
         "Jalen Johnson (2025-26 All-Star and All-NBA)",
@@ -16,32 +16,53 @@
         "Kingston Flemings (No. 8 pick, rookie)"
       ],
       "keyMoves": [
-        "Drafted Kingston Flemings (Houston) at No. 8 with the pick from New Orleans; also drafted Zuby Ejiofor and Henri Veesaar",
-        "Three-team trade (July 19) with OKC and Dallas: acquired Lu Dort and Ryan Nembhard and sent Zaccharie Risacher to Dallas",
-        "Acquired Aaron Wiggins from OKC (July 6) and Devin Carter from Sacramento (June 30)",
+        "Drafted Kingston Flemings (Houston) at No. 8 with New Orleans' pick. Also drafted Zuby Ejiofor and Henri Veesaar",
+        "Landed Lu Dort and Ryan Nembhard in a July 19 three-team trade with OKC and Dallas. Zaccharie Risacher went to Dallas",
+        "Got Aaron Wiggins from OKC on July 6 and Devin Carter from Sacramento on June 30",
         "Re-signed CJ McCollum and Jock Landale"
       ],
-      "expectations": "Deep, defense-first playoff team built around Snyder's turnover-forcing, high-3PA system. A Reddit thread reports ESPN gave the offseason an A (not independently verified).",
+      "expectations": "A deep, defense-first playoff team, built on Snyder's system of forced turnovers and heavy 3-point volume. A Reddit thread says ESPN gave the offseason an A. That isn't independently verified.",
       "ownershipArena": "",
-      "cityEdition": "Reported to be bringing back its 2020-21 City Edition, which honored Martin Luther King Jr. (single report; design details not verified). Separately, Atlanta is one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
+      "cityEdition": "Reportedly bringing back the 2020-21 City Edition that honored Martin Luther King Jr. That rests on a single report, and the design details aren't verified. Atlanta is also one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
       "marquee": [
-        "Emirates NBA Cup East Group C with Boston, Charlotte, Chicago and Washington; group play runs on Fridays from Oct 30 to Nov 27, plus Cup Nights on Nov 24 and 25",
+        "Emirates NBA Cup East Group C with Boston, Charlotte, Chicago and Washington. Group play runs Fridays, Oct 30 to Nov 27, plus Cup Nights on Nov 24 and 25",
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Hawks acquire Lu Dort and Ryan Nembhard in three-team trade with OKC and Dallas (SI)", "url": "https://www.si.com/nba/hawks/onsi/hawks-acquire-lu-dort-and-ryan-nembhard-in-three-team-trade-with-okc-and-dallas-01kxxhyedmvq" },
-        { "title": "2026-27 Atlanta Hawks roster, contracts and depth chart (SI)", "url": "https://www.si.com/nba/hawks/onsi/2026-27-atlanta-hawks-roster-contracts-salaries-options-and-depth-chart-01kz6jmdtnw3" },
-        { "title": "2026-27 season preview: Atlanta Hawks (NBA.com)", "url": "https://www.nba.com/news/2026-27-season-preview-atl" },
-        { "title": "2026 NBA draft: complete list of every pick (NBC Sports)", "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2" },
-        { "title": "2026 NBA playoff bracket, matchups and schedule (CBS Sports)", "url": "https://new.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" },
-        { "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC)", "url": "https://www.nbcnewyork.com/nba/nike-nba-specter-uniforms-new-historic-franchises/6547929/" }
+        {
+          "title": "Hawks acquire Lu Dort and Ryan Nembhard in three-team trade with OKC and Dallas (SI)",
+          "url": "https://www.si.com/nba/hawks/onsi/hawks-acquire-lu-dort-and-ryan-nembhard-in-three-team-trade-with-okc-and-dallas-01kxxhyedmvq"
+        },
+        {
+          "title": "2026-27 Atlanta Hawks roster, contracts and depth chart (SI)",
+          "url": "https://www.si.com/nba/hawks/onsi/2026-27-atlanta-hawks-roster-contracts-salaries-options-and-depth-chart-01kz6jmdtnw3"
+        },
+        {
+          "title": "2026-27 season preview: Atlanta Hawks (NBA.com)",
+          "url": "https://www.nba.com/news/2026-27-season-preview-atl"
+        },
+        {
+          "title": "2026 NBA draft: complete list of every pick (NBC Sports)",
+          "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2"
+        },
+        {
+          "title": "2026 NBA playoff bracket, matchups and schedule (CBS Sports)",
+          "url": "https://new.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        },
+        {
+          "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC)",
+          "url": "https://www.nbcnewyork.com/nba/nike-nba-specter-uniforms-new-historic-franchises/6547929/"
+        }
       ]
     },
     {
       "team": "bos",
-      "teamMoment": "The Tatum-Brown era is over: after a 3-1 first-round collapse against Philadelphia, Brad Stevens traded Jaylen Brown to the 76ers for Paul George and picks and rebuilt the roster around Jayson Tatum.",
-      "lastSeason": "56-26, No. 2 seed in the East; lost in the first round to the No. 7 Philadelphia 76ers after leading the series 3-1.",
+      "teamMoment": "The Tatum-Brown era is over. After blowing a 3-1 first-round lead to Philadelphia, Brad Stevens traded Jaylen Brown to the 76ers for Paul George and picks. The roster now runs through Jayson Tatum.",
+      "lastSeason": "56-26, the East's No. 2 seed. Led the No. 7 Philadelphia 76ers 3-1 in the first round, then lost the series.",
       "headCoach": "Joe Mazzulla",
       "stars": [
         "Jayson Tatum",
@@ -52,35 +73,59 @@
         "Mike Conley"
       ],
       "keyMoves": [
-        "Traded Jaylen Brown to Philadelphia for Paul George plus draft capital (reported as up to two firsts and two seconds)",
+        "Traded Jaylen Brown to Philadelphia for Paul George and draft capital, reported as up to two firsts and two seconds",
         "Signed center Mitchell Robinson away from the Knicks in free agency",
         "Signed veteran guard Mike Conley",
-        "Agreed with Neemias Queta on a 4-year, $56M extension"
+        "Agreed to a 4-year, $56M extension with Neemias Queta"
       ],
-      "expectations": "Murky: George's age and contract drew criticism, Tatum's father publicly ripped the roster, and NBC Sports' free-agency grades said the Celtics 'may need to retake class.'",
+      "expectations": "Murky. George's age and contract drew criticism, and Tatum's father publicly ripped the roster. NBC Sports' free-agency grades said the Celtics 'may need to retake class.'",
       "ownershipArena": "Background, not re-verified in October 2026: a group led by Bill Chisholm completed its purchase of the team in 2025, and the Celtics play at TD Garden.",
-      "cityEdition": "The 2026-27 City Edition was not verified. Boston is one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
+      "cityEdition": "The 2026-27 City Edition isn't verified. Boston is one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
       "marquee": [
-        "Opening night, Oct 20: at Detroit, a rematch of the East's top two regular-season teams that opens NBC/Peacock's tripleheader",
+        "Opening night, Oct 20: at Detroit, a rematch of the East's top two regular-season teams, opening NBC/Peacock's tripleheader",
         "Christmas Day, 2:30 p.m. ET: hosts Giannis Antetokounmpo's Miami Heat",
-        "Jan 21, 2027: hosts Philadelphia in Jaylen Brown's first regular-season return to TD Garden (he also returns for an Oct 10 preseason game)",
+        "Jan 21, 2027: hosts Philadelphia for Jaylen Brown's first regular-season game back at TD Garden. He also returns for an Oct 10 preseason game",
         "Emirates NBA Cup East Group C with Atlanta, Charlotte, Chicago and Washington"
       ],
       "sources": [
-        { "title": "Celtics trade Jaylen Brown to 76ers for Paul George (WBUR)", "url": "https://www.wbur.org/news/2026/07/02/celtics-trade-jaylen-brown-76ers-paul-george" },
-        { "title": "Celtics updated roster, depth chart and contracts after Jaylen Brown trade (NBC Sports Boston)", "url": "https://www.nbcsportsboston.com/nba/boston-celtics/updated-roster-depth-chart-contracts-jaylen-brown-trade/794057/" },
-        { "title": "Jayson Tatum's father rips Celtics roster after Jaylen Brown trade (Newsweek)", "url": "https://www.newsweek.com/sports/nba/jayson-tatums-father-rips-celtics-roster-after-jaylen-brown-trade-12361775" },
-        { "title": "2026 NBA free agency grades: Lakers, 76ers earn an A; Celtics may need to retake class (NBC Sports)", "url": "https://nbcsports.com/nba/news/2026-nba-free-agency-grades-lakers-76ers-earn-an-a-celtics-may-need-to-retake-class" },
-        { "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/" },
-        { "title": "Jaylen Brown's return to Boston revealed in 2026-27 schedule (Bleacher Report)", "url": "https://bleacherreport.com/articles/25470813-jaylen-browns-return-boston-76ers-face-celtics-revealed-2026-27-nba-schedule-release" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" },
-        { "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC Boston)", "url": "https://www.nbcboston.com/nba/nike-nba-specter-uniforms-new-historic-franchises/4015023/" }
+        {
+          "title": "Celtics trade Jaylen Brown to 76ers for Paul George (WBUR)",
+          "url": "https://www.wbur.org/news/2026/07/02/celtics-trade-jaylen-brown-76ers-paul-george"
+        },
+        {
+          "title": "Celtics updated roster, depth chart and contracts after Jaylen Brown trade (NBC Sports Boston)",
+          "url": "https://www.nbcsportsboston.com/nba/boston-celtics/updated-roster-depth-chart-contracts-jaylen-brown-trade/794057/"
+        },
+        {
+          "title": "Jayson Tatum's father rips Celtics roster after Jaylen Brown trade (Newsweek)",
+          "url": "https://www.newsweek.com/sports/nba/jayson-tatums-father-rips-celtics-roster-after-jaylen-brown-trade-12361775"
+        },
+        {
+          "title": "2026 NBA free agency grades: Lakers, 76ers earn an A; Celtics may need to retake class (NBC Sports)",
+          "url": "https://nbcsports.com/nba/news/2026-nba-free-agency-grades-lakers-76ers-earn-an-a-celtics-may-need-to-retake-class"
+        },
+        {
+          "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)",
+          "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
+        },
+        {
+          "title": "Jaylen Brown's return to Boston revealed in 2026-27 schedule (Bleacher Report)",
+          "url": "https://bleacherreport.com/articles/25470813-jaylen-browns-return-boston-76ers-face-celtics-revealed-2026-27-nba-schedule-release"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        },
+        {
+          "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC Boston)",
+          "url": "https://www.nbcboston.com/nba/nike-nba-specter-uniforms-new-historic-franchises/4015023/"
+        }
       ]
     },
     {
       "team": "bkn",
-      "teamMoment": "The Nets are still rebuilding, but with more veteran scoring: Julius Randle returns to New York alongside Michael Porter Jr., and No. 6 pick Mikel Brown Jr. leads a very young roster under a newly extended Jordi Fernandez.",
-      "lastSeason": "20-62; missed the playoffs (13th in the East by record).",
+      "teamMoment": "Still rebuilding, now with more veteran scoring. Julius Randle comes back to New York to join Michael Porter Jr. No. 6 pick Mikel Brown Jr. leads a very young roster under Jordi Fernandez, who just got an extension.",
+      "lastSeason": "20-62, 13th in the East by record. Missed the playoffs.",
       "headCoach": "Jordi Fernandez (signed a contract extension this offseason)",
       "stars": [
         "Michael Porter Jr.",
@@ -90,33 +135,54 @@
         "Egor Demin"
       ],
       "keyMoves": [
-        "Three-team trade with Minnesota and Chicago: acquired Julius Randle and the No. 28 pick (used on Joshua Jefferson), sent Nic Claxton to Chicago and the No. 33 pick to Minnesota",
-        "Drafted guard Mikel Brown Jr. (Louisville) at No. 6; also added Joshua Jefferson and Tyler Bilodeau",
+        "Three-team trade with Minnesota and Chicago: got Julius Randle and the No. 28 pick, used on Joshua Jefferson. Nic Claxton went to Chicago and the No. 33 pick to Minnesota",
+        "Drafted Louisville guard Mikel Brown Jr. at No. 6. Also added Joshua Jefferson and Tyler Bilodeau",
         "Signed Keon Ellis (2 years, $19M) on the opening night of free agency",
         "Signed Moritz Wagner",
         "Extended head coach Jordi Fernandez"
       ],
-      "expectations": "Development year. Previews ask whether the Nets can be a surprise team in the East, but the roster is mostly first- and second-year players.",
+      "expectations": "A development year. Previews ask whether the Nets can surprise the East, but most of the roster is in its first or second year.",
       "ownershipArena": "",
-      "cityEdition": "Reportedly bringing back the red, white and blue ABA-era New York Nets throwbacks (single report; not verified whether this is the City Edition or a Classic set).",
+      "cityEdition": "Reportedly bringing back the red, white and blue ABA-era New York Nets throwbacks. That's a single report, and it isn't verified whether they're the City Edition or a Classic set.",
       "marquee": [
         "Emirates NBA Cup East Group A with Detroit, Toronto, Orlando and Milwaukee",
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Nets acquiring Julius Randle, sending Nic Claxton to Bulls in three-team trade (SNY)", "url": "https://sny.tv/articles/nets-acquiring-julius-randle-sending-nic-claxton-to-bulls-in-three-team-trade-report" },
-        { "title": "Nets acquire Julius Randle and draft rights to Joshua Jefferson (YES Network)", "url": "https://www.yesnetwork.com/brooklyn-nets-acquire-two-time-all-nba-forward-julius-randle-and-draft-rights-to-joshua-jefferson-in-four-team-trade/" },
-        { "title": "Brooklyn Nets sign Keon Ellis to two-year contract (Heavy)", "url": "https://heavy.com/sports/nba/brooklyn-nets/sign-keon-ellis-two-year-contract/" },
-        { "title": "Grading the Brooklyn Nets' offseason (Fadeaway World)", "url": "https://fadeawayworld.net/nba/brooklyn-nets/grading-the-brooklyn-nets-offseason-will-they-be-a-surprise-team-in-the-east" },
-        { "title": "How the Brooklyn Nets will look in 2026-27 (OnNJ)", "url": "https://www.onnj.com/how-the-brooklyn-nets-will-look-in-the-2026-2027-nba-season/" },
-        { "title": "Brooklyn Nets revive classic ABA throwback jerseys (Roundtable)", "url": "https://roundtable.io/sports/nba/nets/community/news/brooklyn-nets-revive-classic-aba-throwback-jerseys" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Nets acquiring Julius Randle, sending Nic Claxton to Bulls in three-team trade (SNY)",
+          "url": "https://sny.tv/articles/nets-acquiring-julius-randle-sending-nic-claxton-to-bulls-in-three-team-trade-report"
+        },
+        {
+          "title": "Nets acquire Julius Randle and draft rights to Joshua Jefferson (YES Network)",
+          "url": "https://www.yesnetwork.com/brooklyn-nets-acquire-two-time-all-nba-forward-julius-randle-and-draft-rights-to-joshua-jefferson-in-four-team-trade/"
+        },
+        {
+          "title": "Brooklyn Nets sign Keon Ellis to two-year contract (Heavy)",
+          "url": "https://heavy.com/sports/nba/brooklyn-nets/sign-keon-ellis-two-year-contract/"
+        },
+        {
+          "title": "Grading the Brooklyn Nets' offseason (Fadeaway World)",
+          "url": "https://fadeawayworld.net/nba/brooklyn-nets/grading-the-brooklyn-nets-offseason-will-they-be-a-surprise-team-in-the-east"
+        },
+        {
+          "title": "How the Brooklyn Nets will look in 2026-27 (OnNJ)",
+          "url": "https://www.onnj.com/how-the-brooklyn-nets-will-look-in-the-2026-2027-nba-season/"
+        },
+        {
+          "title": "Brooklyn Nets revive classic ABA throwback jerseys (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/nets/community/news/brooklyn-nets-revive-classic-aba-throwback-jerseys"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "cha",
-      "teamMoment": "The LaMelo Ball era is over: Charlotte traded him to Minnesota and handed the team to Brandon Miller and second-year Kon Knueppel, with Coby White and Naz Reid in support.",
-      "lastSeason": "44-38, No. 9 seed in the East. Beat Miami 127-126 in overtime in the Play-In, then lost 121-90 at Orlando for the No. 8 seed, so missed the playoffs.",
+      "teamMoment": "The LaMelo Ball era is over. Charlotte traded him to Minnesota and handed the team to Brandon Miller and second-year Kon Knueppel, with Coby White and Naz Reid in support.",
+      "lastSeason": "44-38, the East's No. 9 seed. Beat Miami 127-126 in overtime in the Play-In, then lost 121-90 at Orlando for the No. 8 seed and missed the playoffs.",
       "headCoach": "Charles Lee (inferred: no Charlotte change appears in the reported list of six new head coaches; not directly re-verified)",
       "stars": [
         "Brandon Miller",
@@ -127,13 +193,13 @@
         "Grayson Allen"
       ],
       "keyMoves": [
-        "Traded LaMelo Ball and Josh Green to Minnesota for Naz Reid, a 2033 unprotected first, three first-round swaps and three seconds",
-        "Traded Miles Bridges and two picks to Phoenix for Grayson Allen, Royce O'Neale and a future first",
-        "Re-signed Coby White, who arrived in a trade at the 2026 deadline",
-        "Traded Tre Mann to Cleveland for Dennis Schroder; acquired Dorian Finney-Smith from Houston",
-        "Drafted Hannes Steinbach (Washington) at No. 14 and Christian Anderson"
+        "Traded LaMelo Ball and Josh Green to Minnesota for Naz Reid, an unprotected 2033 first, three first-round swaps and three seconds",
+        "Sent Miles Bridges and two picks to Phoenix for Grayson Allen, Royce O'Neale and a future first",
+        "Re-signed Coby White, who came over in a trade at the 2026 deadline",
+        "Traded Tre Mann to Cleveland for Dennis Schroder. Acquired Dorian Finney-Smith from Houston",
+        "Drafted Hannes Steinbach (Washington) at No. 14, plus Christian Anderson"
       ],
-      "expectations": "Split views: ESPN projects 34-48, while David Aldridge rated it the NBA's third-best offseason and The Athletic ranked Charlotte No. 19 overall.",
+      "expectations": "Opinions split. ESPN projects 34-48. David Aldridge rated it the NBA's third-best offseason, and The Athletic ranked Charlotte No. 19 overall.",
       "ownershipArena": "",
       "cityEdition": "",
       "marquee": [
@@ -141,18 +207,39 @@
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Hornets get brutal 2026-27 projection from ESPN after LaMelo Ball trade (Roundtable)", "url": "https://roundtable.io/sports/nba/hornets/news/hornets-get-brutal-2026-27-season-projection-from-espn-after-lamelo-ball-trade" },
-        { "title": "Charlotte Hornets projected starting lineup after LaMelo Ball trade (Heavy)", "url": "https://heavy.com/sports/nba/charlotte-hornets/starting-lineup-lamelo-ball-trade/" },
-        { "title": "Miles Bridges trade: Hornets and Suns (NBA.com)", "url": "https://api-hub.nba.com/news/miles-bridges-trade-hornets-suns" },
-        { "title": "Hornets ranked top-20 team after flurry of offseason moves (Roundtable)", "url": "https://roundtable.io/sports/nba/hornets/news/hornets-ranked-top-20-nba-team-after-flurry-of-offseason-moves" },
-        { "title": "NBA playoff picture after Hornets beat Heat (Bleacher Report)", "url": "https://bleacherreport.com/articles/25418029-nba-playoff-picture-2026-east-west-bracket-after-hornets-beat-heat-advance" },
-        { "title": "NBA play-in games set: Heat, Hornets, Magic, 76ers (KSAT/AP)", "url": "https://www.ksat.com/sports/2026/04/13/nba-play-in-games-are-set-heat-hornets-magic-76ers-suns-blazers-clippers-warriors/" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Hornets get brutal 2026-27 projection from ESPN after LaMelo Ball trade (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/hornets/news/hornets-get-brutal-2026-27-season-projection-from-espn-after-lamelo-ball-trade"
+        },
+        {
+          "title": "Charlotte Hornets projected starting lineup after LaMelo Ball trade (Heavy)",
+          "url": "https://heavy.com/sports/nba/charlotte-hornets/starting-lineup-lamelo-ball-trade/"
+        },
+        {
+          "title": "Miles Bridges trade: Hornets and Suns (NBA.com)",
+          "url": "https://api-hub.nba.com/news/miles-bridges-trade-hornets-suns"
+        },
+        {
+          "title": "Hornets ranked top-20 team after flurry of offseason moves (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/hornets/news/hornets-ranked-top-20-nba-team-after-flurry-of-offseason-moves"
+        },
+        {
+          "title": "NBA playoff picture after Hornets beat Heat (Bleacher Report)",
+          "url": "https://bleacherreport.com/articles/25418029-nba-playoff-picture-2026-east-west-bracket-after-hornets-beat-heat-advance"
+        },
+        {
+          "title": "NBA play-in games set: Heat, Hornets, Magic, 76ers (KSAT/AP)",
+          "url": "https://www.ksat.com/sports/2026/04/13/nba-play-in-games-are-set-heat-hornets-magic-76ers-suns-blazers-clippers-warriors/"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "chi",
-      "teamMoment": "A new regime in Chicago: Billy Donovan stepped down, Tiago Splitter took over as coach and new EVP Bryson Graham is building for 'SLAP' (size, length, athleticism, physicality) around Josh Giddey, Matas Buzelis and No. 4 pick Caleb Wilson.",
+      "teamMoment": "New regime. Billy Donovan stepped down and Tiago Splitter took over as coach. New EVP Bryson Graham is building for 'SLAP' (size, length, athleticism, physicality) around Josh Giddey, Matas Buzelis and No. 4 pick Caleb Wilson.",
       "lastSeason": "31-51; missed the postseason.",
       "headCoach": "Tiago Splitter (hired June 16, 2026; previously Portland's interim head coach)",
       "stars": [
@@ -164,12 +251,12 @@
         "Dailyn Swain (No. 15 pick, rookie)"
       ],
       "keyMoves": [
-        "Billy Donovan stepped down on April 21; hired Tiago Splitter as head coach and Bryson Graham as EVP",
-        "Drafted Caleb Wilson (North Carolina) at No. 4 and Dailyn Swain (Texas) at No. 15, the latter with Portland's pick",
-        "Signed All-Star Norman Powell from Miami (2 years, about $45M, team option for 2027-28)",
-        "Acquired Nic Claxton from Brooklyn in a three-team deal, sending Mo Gueye to Minnesota"
+        "Billy Donovan stepped down on April 21. The Bulls hired Tiago Splitter as head coach and Bryson Graham as EVP",
+        "Drafted Caleb Wilson (North Carolina) at No. 4 and Dailyn Swain (Texas) at No. 15, using Portland's pick for Swain",
+        "Signed All-Star Norman Powell from Miami: 2 years, about $45M, with a team option for 2027-28",
+        "Got Nic Claxton from Brooklyn in a three-team deal and sent Mo Gueye to Minnesota"
       ],
-      "expectations": "Rebuild with an eye on size. The Bulls are rated low in power rankings even though their draft drew positive grades.",
+      "expectations": "A rebuild with an eye on size. Power rankings rate the Bulls low, even though their draft drew good grades.",
       "ownershipArena": "",
       "cityEdition": "",
       "marquee": [
@@ -177,19 +264,40 @@
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Central Division offseason recap and look ahead (NBA.com)", "url": "https://www.nba.com/news/central-division-offseason-recap-look-ahead" },
-        { "title": "Caleb Wilson becomes centerpiece of Bulls roster transformation (SI)", "url": "https://www.si.com/nba/nba-draft/caleb-wilson-becomes-centerpiece-bulls-roster-transformation-since-trade-deadline" },
-        { "title": "Heat lose Norman Powell as guard agrees to deal with Bulls (Local 10)", "url": "https://www.local10.com/sports/local/2026/07/01/heat-lose-norman-powell-as-guard-agrees-to-deal-with-bulls-report-says/" },
-        { "title": "Sources: Wolves trade Randle to Nets; Claxton off to Bulls (ABC7 Chicago)", "url": "https://abc7chicago.com/post/sources-wolves-trade-randle-nets-claxton-off-bulls/19358698/" },
-        { "title": "NBA coaching carousel: firings, hirings (ABC7 Chicago)", "url": "https://abc7chicago.com/18934688/" },
-        { "title": "Rebuilding Chicago Bulls disrespected in latest power rankings (Roundtable)", "url": "https://roundtable.io/sports/nba/bulls/opinion/rebuilding-chicago-bulls-disrespected-in-latest-nba-power-rankings" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Central Division offseason recap and look ahead (NBA.com)",
+          "url": "https://www.nba.com/news/central-division-offseason-recap-look-ahead"
+        },
+        {
+          "title": "Caleb Wilson becomes centerpiece of Bulls roster transformation (SI)",
+          "url": "https://www.si.com/nba/nba-draft/caleb-wilson-becomes-centerpiece-bulls-roster-transformation-since-trade-deadline"
+        },
+        {
+          "title": "Heat lose Norman Powell as guard agrees to deal with Bulls (Local 10)",
+          "url": "https://www.local10.com/sports/local/2026/07/01/heat-lose-norman-powell-as-guard-agrees-to-deal-with-bulls-report-says/"
+        },
+        {
+          "title": "Sources: Wolves trade Randle to Nets; Claxton off to Bulls (ABC7 Chicago)",
+          "url": "https://abc7chicago.com/post/sources-wolves-trade-randle-nets-claxton-off-bulls/19358698/"
+        },
+        {
+          "title": "NBA coaching carousel: firings, hirings (ABC7 Chicago)",
+          "url": "https://abc7chicago.com/18934688/"
+        },
+        {
+          "title": "Rebuilding Chicago Bulls disrespected in latest power rankings (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/bulls/opinion/rebuilding-chicago-bulls-disrespected-in-latest-nba-power-rankings"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "cle",
-      "teamMoment": "Cleveland is all in. The Cavs reached their first conference finals since 2018, then re-signed James Harden, extended Donovan Mitchell and spent their last tradable first on Peyton Watson. It is a title-or-bust season.",
-      "lastSeason": "52-30, No. 4 seed in the East. Beat No. 5 Toronto in 7 games, then upset No. 1 Detroit in 7 (won Game 7 125-94), then were swept by the Knicks in the East Finals.",
+      "teamMoment": "All in. The Cavs reached their first conference finals since 2018. Then they re-signed James Harden, extended Donovan Mitchell and spent their last tradable first on Peyton Watson. It's title or bust.",
+      "lastSeason": "52-30, the East's No. 4 seed. Beat No. 5 Toronto in 7 games, then upset No. 1 Detroit in 7, winning Game 7 125-94. The Knicks swept them in the East Finals.",
       "headCoach": "Kenny Atkinson (reported as returning)",
       "stars": [
         "Donovan Mitchell (3-year, $150.3M max extension)",
@@ -200,33 +308,54 @@
         "Peyton Watson (acquired from Denver)"
       ],
       "keyMoves": [
-        "Extended Donovan Mitchell (3 years, $150.3M, player option for 2027-28)",
+        "Extended Donovan Mitchell: 3 years, $150.3M, with a player option for 2027-28",
         "Re-signed James Harden to a large contract",
-        "Traded their last tradable first-round pick to Denver for Peyton Watson",
-        "Lost Dean Wade (to Philadelphia), Keon Ellis (to Brooklyn) and Larry Nance Jr. (to Indiana); signed Mario Hezonja"
+        "Sent their last tradable first-round pick to Denver for Peyton Watson",
+        "Lost Dean Wade to Philadelphia, Keon Ellis to Brooklyn and Larry Nance Jr. to Indiana. Signed Mario Hezonja"
       ],
-      "expectations": "Championship-or-bust in a deeper East. One NBA scout told SI he doesn't think the roster has enough for a 2027 title.",
+      "expectations": "Championship or bust, in a deeper East. One NBA scout told SI he doesn't think the roster has enough for a 2027 title.",
       "ownershipArena": "Background, not re-verified in October 2026: the Cavs' arena was renamed Rocket Arena in 2025.",
-      "cityEdition": "Announced: the 2026-27 City Edition brings back the 2018-19 'Earned Edition' design with a 'Cleveland' wordmark, the first in five City Editions not to say 'The Land.'",
+      "cityEdition": "Announced: the 2026-27 City Edition revives the 2018-19 'Earned Edition' design with a 'Cleveland' wordmark. It's the first in five City Editions not to say 'The Land.'",
       "marquee": [
-        "At Philadelphia for the 76ers' home opener, LeBron James' first home game in Philly against his former team (date not verified)",
+        "At Philadelphia for the 76ers' home opener: LeBron James' first home game in Philly against his former team (date not verified)",
         "Emirates NBA Cup East Group B with New York, Philadelphia, Miami and Indiana",
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Cleveland Cavaliers 2026-27 City Edition jerseys announced (Yardbarker)", "url": "https://www.yardbarker.com/nba/articles/cleveland_cavaliers_2026_27_city_edition_jerseys_announced/s1_17132_44237418" },
-        { "title": "Why an NBA scout doesn't believe the Cavaliers have enough for a 2027 title run (SI)", "url": "https://www.si.com/nba/cavaliers/why-nba-scout-doesnt-believe-cavaliers-have-enough-for-a-2027-title-run" },
-        { "title": "Donovan Mitchell contract extension: Cavaliers keep star guard (CBS Sports)", "url": "https://www.cbssports.com/nba/news/donovan-mitchell-contract-extension-cavaliers-keep-star-guard-with-150m-deal-following-trade-rumors" },
-        { "title": "2025-26 Toronto Raptors results (Land of Basketball)", "url": "https://www.landofbasketball.com/results_by_team/2025_2026_raptors.htm" },
-        { "title": "Where the Detroit Pistons stand after the East's wild offseason (SI)", "url": "https://www.si.com/nba/pistons/onsi/where-the-detroit-pistons-stand-after-the-eastern-conference-s-wild-offseason-01kz6j50qkyh" },
-        { "title": "Sixers open at Knicks, host Cavaliers in James-Brown home debut (AP via Post Guam)", "url": "https://www.postguam.com/sports/nation/sixers-open-at-knicks-host-cavaliers-in-james-brown-home-debut/article_e33f21ac-98fa-4ffc-ba84-b379a0de4670.html" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Cleveland Cavaliers 2026-27 City Edition jerseys announced (Yardbarker)",
+          "url": "https://www.yardbarker.com/nba/articles/cleveland_cavaliers_2026_27_city_edition_jerseys_announced/s1_17132_44237418"
+        },
+        {
+          "title": "Why an NBA scout doesn't believe the Cavaliers have enough for a 2027 title run (SI)",
+          "url": "https://www.si.com/nba/cavaliers/why-nba-scout-doesnt-believe-cavaliers-have-enough-for-a-2027-title-run"
+        },
+        {
+          "title": "Donovan Mitchell contract extension: Cavaliers keep star guard (CBS Sports)",
+          "url": "https://www.cbssports.com/nba/news/donovan-mitchell-contract-extension-cavaliers-keep-star-guard-with-150m-deal-following-trade-rumors"
+        },
+        {
+          "title": "2025-26 Toronto Raptors results (Land of Basketball)",
+          "url": "https://www.landofbasketball.com/results_by_team/2025_2026_raptors.htm"
+        },
+        {
+          "title": "Where the Detroit Pistons stand after the East's wild offseason (SI)",
+          "url": "https://www.si.com/nba/pistons/onsi/where-the-detroit-pistons-stand-after-the-eastern-conference-s-wild-offseason-01kz6j50qkyh"
+        },
+        {
+          "title": "Sixers open at Knicks, host Cavaliers in James-Brown home debut (AP via Post Guam)",
+          "url": "https://www.postguam.com/sports/nation/sixers-open-at-knicks-host-cavaliers-in-james-brown-home-debut/article_e33f21ac-98fa-4ffc-ba84-b379a0de4670.html"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "det",
-      "teamMoment": "After a 60-win, No. 1-seed season ended in a Game 7 blowout loss to Cleveland, Detroit kept its core: Jalen Duren signed for $200M. The open question is whether Cade Cunningham has enough help without a second star.",
-      "lastSeason": "60-22, No. 1 seed in the East. Beat No. 8 Orlando in the first round (series length not verified), then lost 4-3 to Cleveland in the second round, 125-94 in Game 7.",
+      "teamMoment": "A 60-win, No. 1-seed season ended in a Game 7 blowout by Cleveland. Detroit kept its core anyway, signing Jalen Duren for $200M. The open question: does Cade Cunningham have enough help without a second star?",
+      "lastSeason": "60-22, the East's No. 1 seed. Beat No. 8 Orlando in the first round (series length not verified). Lost 4-3 to Cleveland in the second round, 125-94 in Game 7.",
       "headCoach": "J.B. Bickerstaff",
       "stars": [
         "Cade Cunningham (2025-26 All-NBA First Team)",
@@ -237,35 +366,59 @@
         "Ebuka Okorie (No. 17 pick, rookie)"
       ],
       "keyMoves": [
-        "Re-signed Jalen Duren (5 years, $200M fully guaranteed), ending his restricted free agency",
+        "Re-signed Jalen Duren for 5 years, $200M fully guaranteed, ending his restricted free agency",
         "Traded Isaiah Stewart, the longest-tenured Piston, to Memphis",
-        "Signed John Collins (3 years); added Isaiah Joe, Taurean Prince and Gary Harris",
-        "Acquired the No. 17 pick, Ebuka Okorie (Stanford), from OKC in a draft-night trade",
-        "Tobias Harris and Caris LeVert reportedly departed (not independently verified)"
+        "Signed John Collins for 3 years. Added Isaiah Joe, Taurean Prince and Gary Harris",
+        "Got the No. 17 pick, Ebuka Okorie (Stanford), from OKC in a draft-night trade",
+        "Tobias Harris and Caris LeVert reportedly left (not independently verified)"
       ],
-      "expectations": "Still a top seed, but analysts are uneasy that the Pistons added no second creator next to Cunningham. Growth from Duren and Ausar Thompson has to carry the playoff leap.",
+      "expectations": "Still a top seed. Analysts are uneasy that the Pistons added no second creator next to Cunningham. Growth from Duren and Ausar Thompson has to carry the playoff leap.",
       "ownershipArena": "",
       "cityEdition": "The 2026-27 City Edition was not verified. Detroit is one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
       "marquee": [
-        "Opening night, Oct 20: hosts Boston to open NBC/Peacock's tripleheader, a rematch of the East's top two regular-season teams",
+        "Opening night, Oct 20: hosts Boston in a rematch of the East's top two regular-season teams, opening NBC/Peacock's tripleheader",
         "Emirates NBA Cup East Group A with Toronto, Orlando, Milwaukee and Brooklyn",
         "No Christmas Day game"
       ],
       "sources": [
-        { "title": "Where the Detroit Pistons stand after the East's wild offseason (SI)", "url": "https://www.si.com/nba/pistons/onsi/where-the-detroit-pistons-stand-after-the-eastern-conference-s-wild-offseason-01kz6j50qkyh" },
-        { "title": "Detroit Pistons analyst sounds alarm over lack of offseason moves (SI)", "url": "https://www.si.com/nba/pistons/onsi/detroit-pistons-analyst-sounds-alarms-over-lack-of-offseason-moves-01kyqp71gb6y" },
-        { "title": "Jalen Duren agrees to five-year, $200 million deal with Pistons (RotoBaller)", "url": "https://www.rotoballer.com/?p=1955955" },
-        { "title": "Reports: Pistons sign forward John Collins to 3-year deal (FOX 2 Detroit)", "url": "https://www.fox2detroit.com/news/reports-pistons-sign-forward-john-collins-3-year-deal.amp" },
-        { "title": "Detroit Pistons 2026-27 depth chart following free agency (The Game Haus)", "url": "https://thegamehaus.com/nba/detroit-pistons-2026-27-depth-chart-following-free-agency/2026/07/29/" },
-        { "title": "2026 NBA draft: complete list of every pick (NBC Sports)", "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2" },
-        { "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/" },
-        { "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC)", "url": "https://www.nbcnewyork.com/nba/nike-nba-specter-uniforms-new-historic-franchises/6547929/" }
+        {
+          "title": "Where the Detroit Pistons stand after the East's wild offseason (SI)",
+          "url": "https://www.si.com/nba/pistons/onsi/where-the-detroit-pistons-stand-after-the-eastern-conference-s-wild-offseason-01kz6j50qkyh"
+        },
+        {
+          "title": "Detroit Pistons analyst sounds alarm over lack of offseason moves (SI)",
+          "url": "https://www.si.com/nba/pistons/onsi/detroit-pistons-analyst-sounds-alarms-over-lack-of-offseason-moves-01kyqp71gb6y"
+        },
+        {
+          "title": "Jalen Duren agrees to five-year, $200 million deal with Pistons (RotoBaller)",
+          "url": "https://www.rotoballer.com/?p=1955955"
+        },
+        {
+          "title": "Reports: Pistons sign forward John Collins to 3-year deal (FOX 2 Detroit)",
+          "url": "https://www.fox2detroit.com/news/reports-pistons-sign-forward-john-collins-3-year-deal.amp"
+        },
+        {
+          "title": "Detroit Pistons 2026-27 depth chart following free agency (The Game Haus)",
+          "url": "https://thegamehaus.com/nba/detroit-pistons-2026-27-depth-chart-following-free-agency/2026/07/29/"
+        },
+        {
+          "title": "2026 NBA draft: complete list of every pick (NBC Sports)",
+          "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2"
+        },
+        {
+          "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)",
+          "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
+        },
+        {
+          "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC)",
+          "url": "https://www.nbcnewyork.com/nba/nike-nba-specter-uniforms-new-historic-franchises/6547929/"
+        }
       ]
     },
     {
       "team": "ind",
-      "teamMoment": "Tyrese Haliburton is back from the torn Achilles he suffered in Game 7 of the 2025 Finals ('I am healthy, ready to go,' Sept 28). He rejoins the Siakam-led 2025 Finals core, now with Ivica Zubac at center, after a lost 19-63 year.",
-      "lastSeason": "19-63, 14th in the East; missed the playoffs with Haliburton out all season.",
+      "teamMoment": "Tyrese Haliburton is back from the torn Achilles he suffered in Game 7 of the 2025 Finals. 'I am healthy, ready to go,' he said Sept 28. After a lost 19-63 year, he rejoins the Siakam-led 2025 Finals core, with Ivica Zubac now at center.",
+      "lastSeason": "19-63, 14th in the East. Missed the playoffs with Haliburton out all season.",
       "headCoach": "Rick Carlisle",
       "stars": [
         "Tyrese Haliburton (returning from Achilles tear)",
@@ -276,32 +429,53 @@
         "T.J. McConnell"
       ],
       "keyMoves": [
-        "Haliburton cleared to return; the team expects him available on opening night",
+        "Haliburton is cleared to return, and the team expects him to be available on opening night",
         "Signed Kelly Oubre Jr. and Larry Nance Jr.",
-        "Their 2026 first (No. 5) went to the LA Clippers, who took Keaton Wagler",
-        "Took Purdue PG Braden Smith in the second round on a two-way deal"
+        "Their 2026 first, No. 5, went to the LA Clippers, who took Keaton Wagler",
+        "Took Purdue point guard Braden Smith in the second round on a two-way deal"
       ],
-      "expectations": "A healthy bounce-back candidate. An SI insider sees a 'clear path toward contention,' and Knicks previews name a healthy Indiana as a threat in the East.",
+      "expectations": "A bounce-back candidate if healthy. An SI insider sees a 'clear path toward contention,' and Knicks previews name a healthy Indiana as a threat in the East.",
       "ownershipArena": "",
-      "cityEdition": "Reported to be bringing back its 2025-26 'Moments Mixtape' City Edition (white, royal blue and gold) for 2026-27.",
+      "cityEdition": "Reportedly bringing back its 2025-26 'Moments Mixtape' City Edition, in white, royal blue and gold, for 2026-27.",
       "marquee": [
         "Emirates NBA Cup East Group B with New York, Cleveland, Philadelphia and Miami",
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "2026-27 season preview: Indiana Pacers (NBA.com)", "url": "https://www.nba.com/news/2026-27-season-preview-ind" },
-        { "title": "Pacers have clear path toward contention after Haliburton return, insider says (SI)", "url": "https://www.si.com/nba/pacers/news/pacers-have-clear-path-towards-contention-after-tyrese-haliburton-return-insider-says" },
-        { "title": "Pacers star Tyrese Haliburton: 'I am healthy, ready to go' (Roundtable)", "url": "https://roundtable.io/sports/nba/pacers/news/pacers-star-tyrese-haliburton-i-am-healthy-ready-to-go" },
-        { "title": "Indiana Pacers 2026-27 depth chart following free agency (The Game Haus)", "url": "https://thegamehaus.com/nba/indiana-pacers-2026-27-depth-chart-following-free-agency/2026/07/29/" },
-        { "title": "Pacers bringing back 'Moments Mixtape' City Edition uniform for 2026-27 (Roundtable)", "url": "https://roundtable.io/sports/nba/pacers/news/pacers-bringing-back-moments-mixtape-city-edition-uniform-for-2026-27" },
-        { "title": "2026 NBA draft: complete list of every pick (NBC Sports)", "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "2026-27 season preview: Indiana Pacers (NBA.com)",
+          "url": "https://www.nba.com/news/2026-27-season-preview-ind"
+        },
+        {
+          "title": "Pacers have clear path toward contention after Haliburton return, insider says (SI)",
+          "url": "https://www.si.com/nba/pacers/news/pacers-have-clear-path-towards-contention-after-tyrese-haliburton-return-insider-says"
+        },
+        {
+          "title": "Pacers star Tyrese Haliburton: 'I am healthy, ready to go' (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/pacers/news/pacers-star-tyrese-haliburton-i-am-healthy-ready-to-go"
+        },
+        {
+          "title": "Indiana Pacers 2026-27 depth chart following free agency (The Game Haus)",
+          "url": "https://thegamehaus.com/nba/indiana-pacers-2026-27-depth-chart-following-free-agency/2026/07/29/"
+        },
+        {
+          "title": "Pacers bringing back 'Moments Mixtape' City Edition uniform for 2026-27 (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/pacers/news/pacers-bringing-back-moments-mixtape-city-edition-uniform-for-2026-27"
+        },
+        {
+          "title": "2026 NBA draft: complete list of every pick (NBC Sports)",
+          "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "mia",
-      "teamMoment": "Miami landed Giannis Antetokounmpo in one of the biggest trades in NBA history and added Klay Thompson. It is now a Giannis-Bam Adebayo contender on paper, and anything short of a deep run will read as failure.",
-      "lastSeason": "43-39, No. 10 seed in the East; eliminated by Charlotte 127-126 in overtime in the Play-In.",
+      "teamMoment": "Miami landed Giannis Antetokounmpo in one of the biggest trades in NBA history, then added Klay Thompson. On paper it's a Giannis-Bam Adebayo contender. Anything short of a deep run will read as failure.",
+      "lastSeason": "43-39, the East's No. 10 seed. Charlotte knocked them out 127-126 in overtime in the Play-In.",
       "headCoach": "Erik Spoelstra",
       "stars": [
         "Giannis Antetokounmpo (acquired from Milwaukee)",
@@ -315,9 +489,9 @@
         "Acquired Giannis Antetokounmpo and Bobby Portis from Milwaukee for Tyler Herro, Jaime Jaquez Jr., Kel'el Ware, Kasparas Jakučionis, the No. 13 pick (Nate Ament), unprotected 2031 and 2033 firsts, a 2030 swap and a 2033 second",
         "Signed Klay Thompson (2 years, about $11.5M) after his Mavericks buyout",
         "Lost All-Star Norman Powell to Chicago in free agency",
-        "Added Tim Hardaway Jr. and Nick Richards; retained Andrew Wiggins and Simone Fontecchio"
+        "Added Tim Hardaway Jr. and Nick Richards. Kept Andrew Wiggins and Simone Fontecchio"
       ],
-      "expectations": "Title-or-bust rhetoric (Giannis: 'the goal is to win a championship'), though ESPN's preview questions whether the supporting cast can lift a Play-In team to a title threat. The Giannis-Bam frontcourt projects as elite defensively.",
+      "expectations": "Title or bust, in Giannis' words: 'the goal is to win a championship.' ESPN's preview asks whether the supporting cast can lift a Play-In team to a title threat. The Giannis-Bam frontcourt projects as elite on defense.",
       "ownershipArena": "Background, not re-verified in October 2026: the Heat play at Kaseya Center.",
       "cityEdition": "",
       "marquee": [
@@ -327,20 +501,44 @@
         "Emirates NBA Cup East Group B with New York, Cleveland, Philadelphia and Indiana"
       ],
       "sources": [
-        { "title": "Heat acquire Giannis Antetokounmpo in blockbuster trade with Bucks (NBC)", "url": "https://www.nbcnewyork.com/nba/heat-acquire-giannis-antetokounmpo-in-blockbuster-trade-with-bucks/6451324/" },
-        { "title": "Milwaukee Bucks trade Giannis Antetokounmpo to Miami Heat (Wausau Pilot & Review)", "url": "https://wausaupilotandreview.com/2026/06/23/milwaukee-bucks-trade-superstar-giannis-antetokounmpo-to-miami-heat/" },
-        { "title": "Miami Heat offseason recap, early 2026-27 season preview (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49754660" },
-        { "title": "Klay Thompson joins Heat alongside Giannis Antetokounmpo (ABC News/AP)", "url": "https://abcnews.com/Sports/wireStory/klay-thompson-joins-heat-set-team-alongside-newly-135893852" },
-        { "title": "Heat lose Norman Powell as guard agrees to deal with Bulls (Local 10)", "url": "https://www.local10.com/sports/local/2026/07/01/heat-lose-norman-powell-as-guard-agrees-to-deal-with-bulls-report-says/" },
-        { "title": "Bucks schedule released; Giannis returns to Milwaukee on Jan. 28 (FOX 11)", "url": "https://fox11online.com/sports/bucks-and-nba/bucks-schedule-released-giannis-returns-to-milwaukee-on-jan-28" },
-        { "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/" },
-        { "title": "NBA play-in: 76ers beat Magic; Hornets beat Heat (6abc)", "url": "https://6abc.com/amp/post/76ers-clinch-playoff-spot-defeating-magic-play-tournament/18895164/" }
+        {
+          "title": "Heat acquire Giannis Antetokounmpo in blockbuster trade with Bucks (NBC)",
+          "url": "https://www.nbcnewyork.com/nba/heat-acquire-giannis-antetokounmpo-in-blockbuster-trade-with-bucks/6451324/"
+        },
+        {
+          "title": "Milwaukee Bucks trade Giannis Antetokounmpo to Miami Heat (Wausau Pilot & Review)",
+          "url": "https://wausaupilotandreview.com/2026/06/23/milwaukee-bucks-trade-superstar-giannis-antetokounmpo-to-miami-heat/"
+        },
+        {
+          "title": "Miami Heat offseason recap, early 2026-27 season preview (ESPN)",
+          "url": "https://www.espn.com/nba/story/_/id/49754660"
+        },
+        {
+          "title": "Klay Thompson joins Heat alongside Giannis Antetokounmpo (ABC News/AP)",
+          "url": "https://abcnews.com/Sports/wireStory/klay-thompson-joins-heat-set-team-alongside-newly-135893852"
+        },
+        {
+          "title": "Heat lose Norman Powell as guard agrees to deal with Bulls (Local 10)",
+          "url": "https://www.local10.com/sports/local/2026/07/01/heat-lose-norman-powell-as-guard-agrees-to-deal-with-bulls-report-says/"
+        },
+        {
+          "title": "Bucks schedule released; Giannis returns to Milwaukee on Jan. 28 (FOX 11)",
+          "url": "https://fox11online.com/sports/bucks-and-nba/bucks-schedule-released-giannis-returns-to-milwaukee-on-jan-28"
+        },
+        {
+          "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)",
+          "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
+        },
+        {
+          "title": "NBA play-in: 76ers beat Magic; Hornets beat Heat (6abc)",
+          "url": "https://6abc.com/amp/post/76ers-clinch-playoff-spot-defeating-magic-play-tournament/18895164/"
+        }
       ]
     },
     {
       "team": "mil",
-      "teamMoment": "Milwaukee faces its first season without Giannis Antetokounmpo in more than a decade, with a new coach in Taylor Jenkins. The Bucks are starting a long rebuild around Tyler Herro, the young pieces from the Miami trade and two lottery picks.",
-      "lastSeason": "32-50, 11th in the East; missed the playoffs. Doc Rivers resigned April 13.",
+      "teamMoment": "For the first time in more than a decade, Milwaukee starts a season without Giannis Antetokounmpo. New coach Taylor Jenkins leads a long rebuild around Tyler Herro, the young pieces from the Miami trade and two lottery picks.",
+      "lastSeason": "32-50, 11th in the East. Missed the playoffs, and Doc Rivers resigned April 13.",
       "headCoach": "Taylor Jenkins (hired April 30, 2026; formerly Memphis head coach)",
       "stars": [
         "Tyler Herro (acquired from Miami)",
@@ -353,10 +551,10 @@
       "keyMoves": [
         "Traded Giannis Antetokounmpo and Bobby Portis to Miami for Tyler Herro, Jaime Jaquez Jr., Kel'el Ware, Kasparas Jakučionis, the No. 13 pick, 2031 and 2033 unprotected firsts, a 2030 swap and a 2033 second",
         "Drafted Brayden Burries (Arizona) at No. 10 and acquired No. 13 Nate Ament (Tennessee) from Miami",
-        "Doc Rivers resigned; hired Taylor Jenkins",
+        "Doc Rivers resigned. Hired Taylor Jenkins",
         "Projected starters: Ryan Rollins, Herro, Jaquez, Kuzma, Turner"
       ],
-      "expectations": "Low. Previews frame it as a down-to-the-studs rebuild, with another finish around 11th in the East plausible.",
+      "expectations": "Low. Previews call it a down-to-the-studs rebuild, and another finish around 11th in the East is plausible.",
       "ownershipArena": "",
       "cityEdition": "",
       "marquee": [
@@ -366,19 +564,40 @@
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Bucks schedule released; Giannis returns to Milwaukee on Jan. 28 (FOX 11)", "url": "https://fox11online.com/sports/bucks-and-nba/bucks-schedule-released-giannis-returns-to-milwaukee-on-jan-28" },
-        { "title": "Bucks release 2026-27 schedule, including Giannis' return (CBS 58)", "url": "https://cbs58.com/news/bucks-release-2026-27-schedule-including-giannis-return-to-milwaukee" },
-        { "title": "Projecting Bucks' best starting lineup of 2026-27 (Roundtable)", "url": "https://roundtable.io/sports/nba/bucks/opinion/projecting-bucks-best-starting-lineup-of-2026-27-season" },
-        { "title": "Can Bucks exceed their low expectations for 2026-27? (Roundtable)", "url": "https://roundtable.io/sports/nba/bucks/news/can-bucks-exceed-their-low-expectations-for-2026-27-season" },
-        { "title": "Report: Giannis traded to Heat (WEAU)", "url": "https://www.weau.com/2026/06/23/report-giannis-traded-heat/" },
-        { "title": "NBA coaching carousel: firings, hirings (ABC7 Chicago)", "url": "https://abc7chicago.com/18934688/" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Bucks schedule released; Giannis returns to Milwaukee on Jan. 28 (FOX 11)",
+          "url": "https://fox11online.com/sports/bucks-and-nba/bucks-schedule-released-giannis-returns-to-milwaukee-on-jan-28"
+        },
+        {
+          "title": "Bucks release 2026-27 schedule, including Giannis' return (CBS 58)",
+          "url": "https://cbs58.com/news/bucks-release-2026-27-schedule-including-giannis-return-to-milwaukee"
+        },
+        {
+          "title": "Projecting Bucks' best starting lineup of 2026-27 (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/bucks/opinion/projecting-bucks-best-starting-lineup-of-2026-27-season"
+        },
+        {
+          "title": "Can Bucks exceed their low expectations for 2026-27? (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/bucks/news/can-bucks-exceed-their-low-expectations-for-2026-27-season"
+        },
+        {
+          "title": "Report: Giannis traded to Heat (WEAU)",
+          "url": "https://www.weau.com/2026/06/23/report-giannis-traded-heat/"
+        },
+        {
+          "title": "NBA coaching carousel: firings, hirings (ABC7 Chicago)",
+          "url": "https://abc7chicago.com/18934688/"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "nyk",
-      "teamMoment": "The defending champions: the Knicks won their first title since 1973, with Jalen Brunson as Finals MVP. They kept most of the roster under the second apron, and the defense starts with a ring night against LeBron James and Jaylen Brown's new-look 76ers.",
-      "lastSeason": "53-29, No. 3 seed in the East; won the 2026 NBA title. Beat Atlanta 4-2, swept Philadelphia, swept Cleveland in the East Finals and beat San Antonio 4-1 in the Finals, clinching 94-90 in Game 5 behind Brunson's 45 points.",
+      "teamMoment": "The champs. The Knicks won their first title since 1973, with Jalen Brunson as Finals MVP, and kept most of the roster under the second apron. The title defense opens with ring night against LeBron James and Jaylen Brown's new-look 76ers.",
+      "lastSeason": "53-29, the East's No. 3 seed, and 2026 NBA champions. Beat Atlanta 4-2, then swept Philadelphia and swept Cleveland in the East Finals. Beat San Antonio 4-1 in the Finals, clinching Game 5 94-90 behind Brunson's 45 points.",
       "headCoach": "Mike Brown",
       "stars": [
         "Jalen Brunson (2026 Finals MVP)",
@@ -389,33 +608,57 @@
       ],
       "keyMoves": [
         "Re-signed Jordan Clarkson",
-        "Lost Mitchell Robinson (signed with Boston) and Ariel Hukporti (to Philadelphia)",
+        "Lost Mitchell Robinson to Boston and Ariel Hukporti to Philadelphia",
         "Signed Bruce Brown, James Wiseman and Ochai Agbaji to training-camp contracts",
-        "Stayed under the second apron while keeping the title core intact"
+        "Stayed under the second apron and kept the title core intact"
       ],
-      "expectations": "Title defense, the franchise's first in 53 years. Among the top four title favorites behind the Thunder and Spurs, with a tougher East (healthier Pacers, improved 76ers, all-in Cavs).",
+      "expectations": "The franchise's first title defense in 53 years. The Knicks rank among the top four title favorites, behind the Thunder and Spurs. The East is tougher: healthier Pacers, improved 76ers, all-in Cavs.",
       "ownershipArena": "",
       "cityEdition": "The 2026-27 City Edition was not verified. New York is one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
       "marquee": [
-        "Opening night, Oct 20: hosts Philadelphia on ring night at MSG in LeBron James' and Jaylen Brown's 76ers debuts (NBC/Peacock tripleheader)",
+        "Opening night, Oct 20: hosts Philadelphia on ring night at MSG, in LeBron James' and Jaylen Brown's 76ers debuts (NBC/Peacock tripleheader)",
         "Christmas Day, noon ET: hosts San Antonio in a Finals rematch",
         "Emirates NBA Cup East Group B with Cleveland, Philadelphia, Miami and Indiana"
       ],
       "sources": [
-        { "title": "Knicks pull out 94-90 Game 5 win over Spurs, secure first title since 1973 (SNY)", "url": "https://sny.tv/articles/knicks-spurs-game-5-nba-finals-takeaways" },
-        { "title": "What the Knicks need to do this season to defend title (SI)", "url": "https://www.si.com/nba/knicks/what-knicks-need-to-do-this-season-to-defend-title-og-anunoby" },
-        { "title": "Knicks sign James Wiseman, Bruce Brown ahead of training camp (Bleacher Report)", "url": "https://bleacherreport.com/articles/25499974-knicks-sign-james-wiseman-bruce-brown-contracts-updated-roster-ahead-nba-training-camp" },
-        { "title": "2026-27 NBA Finals odds: Spurs, Thunder favored; Knicks fourth (FOX Sports)", "url": "https://amp.foxsports.com/stories/nba/2026-27-nba-finals-odds" },
-        { "title": "2026 NBA playoff bracket, matchups and schedule (CBS Sports)", "url": "https://new.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/" },
-        { "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" },
-        { "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC New York)", "url": "https://www.nbcnewyork.com/nba/nike-nba-specter-uniforms-new-historic-franchises/6547929/" }
+        {
+          "title": "Knicks pull out 94-90 Game 5 win over Spurs, secure first title since 1973 (SNY)",
+          "url": "https://sny.tv/articles/knicks-spurs-game-5-nba-finals-takeaways"
+        },
+        {
+          "title": "What the Knicks need to do this season to defend title (SI)",
+          "url": "https://www.si.com/nba/knicks/what-knicks-need-to-do-this-season-to-defend-title-og-anunoby"
+        },
+        {
+          "title": "Knicks sign James Wiseman, Bruce Brown ahead of training camp (Bleacher Report)",
+          "url": "https://bleacherreport.com/articles/25499974-knicks-sign-james-wiseman-bruce-brown-contracts-updated-roster-ahead-nba-training-camp"
+        },
+        {
+          "title": "2026-27 NBA Finals odds: Spurs, Thunder favored; Knicks fourth (FOX Sports)",
+          "url": "https://amp.foxsports.com/stories/nba/2026-27-nba-finals-odds"
+        },
+        {
+          "title": "2026 NBA playoff bracket, matchups and schedule (CBS Sports)",
+          "url": "https://new.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/"
+        },
+        {
+          "title": "NBA 2026-27 schedule: opening night and Christmas Day (Dunkest)",
+          "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        },
+        {
+          "title": "Nike, NBA unveil Specter uniforms for historic franchises (NBC New York)",
+          "url": "https://www.nbcnewyork.com/nba/nike-nba-specter-uniforms-new-historic-franchises/6547929/"
+        }
       ]
     },
     {
       "team": "orl",
-      "teamMoment": "Orlando chose continuity over a splash: it fired Jamahl Mosley, hired Spurs defensive architect Sean Sweeney and is betting he can make the Banchero-Wagner-Bane trio work. Vucevic is back for his second Magic stint.",
-      "lastSeason": "45-37. Lost the 7-8 Play-In game at Philadelphia, then beat Charlotte 121-90 for the No. 8 seed; lost to No. 1 Detroit in the first round (series length not verified).",
+      "teamMoment": "Orlando picked continuity over a splash. It fired Jamahl Mosley and hired Sean Sweeney, the Spurs' defensive architect, betting he can make the Banchero-Wagner-Bane trio work. Nikola Vucevic is back for a second Magic stint.",
+      "lastSeason": "45-37. Lost the 7-8 Play-In game at Philadelphia, then beat Charlotte 121-90 for the No. 8 seed. Lost to No. 1 Detroit in the first round (series length not verified).",
       "headCoach": "Sean Sweeney (hired June 1, 2026; previously San Antonio associate head coach)",
       "stars": [
         "Paolo Banchero",
@@ -424,11 +667,11 @@
         "Nikola Vucevic (returned to Orlando)"
       ],
       "keyMoves": [
-        "Fired Jamahl Mosley on May 4 after five seasons (he went to New Orleans); hired Sean Sweeney",
+        "Fired Jamahl Mosley on May 4 after five seasons, and he landed in New Orleans. Hired Sean Sweeney",
         "Brought back former All-Star center Nikola Vucevic",
-        "Otherwise a quiet offseason that kept the core intact"
+        "Otherwise a quiet offseason that kept the core together"
       ],
-      "expectations": "Internal growth plus a healthy Wagner. A scout's critique in SI: Banchero, Wagner and Bane all need the ball, and there is no true point guard.",
+      "expectations": "Internal growth plus a healthy Wagner. A scout's critique in SI: Banchero, Wagner and Bane all need the ball, and there's no true point guard.",
       "ownershipArena": "",
       "cityEdition": "",
       "marquee": [
@@ -436,19 +679,40 @@
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "What the Magic need to become a true contender, according to an NBA scout (SI)", "url": "https://www.si.com/nba/magic/what-magic-need-become-true-contender-according-to-nba-scout" },
-        { "title": "LeBron, Giannis, Jaylen, Kawhi: where do the Magic now fall in the East? (SI)", "url": "https://www.si.com/nba/magic/onsi/lebron-giannis-jaylen-kawhi-where-do-magic-now-fall-in-east-01kyfhzt8z0n" },
-        { "title": "Will 2026-27 be it for the Banchero and Wagner duo? (Roundtable)", "url": "https://roundtable.io/sports/nba/magic/players/will-2026-27-be-it-for-the-paolo-banchero-and-franz-wagner-duo" },
-        { "title": "NBA coaching carousel: firings, hirings (ABC7 Chicago)", "url": "https://abc7chicago.com/18934688/" },
-        { "title": "76ers clinch playoff spot after defeating Magic in play-in (6abc)", "url": "https://6abc.com/amp/post/76ers-clinch-playoff-spot-defeating-magic-play-tournament/18895164/" },
-        { "title": "Where the Detroit Pistons stand after the East's wild offseason (SI)", "url": "https://www.si.com/nba/pistons/onsi/where-the-detroit-pistons-stand-after-the-eastern-conference-s-wild-offseason-01kz6j50qkyh" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "What the Magic need to become a true contender, according to an NBA scout (SI)",
+          "url": "https://www.si.com/nba/magic/what-magic-need-become-true-contender-according-to-nba-scout"
+        },
+        {
+          "title": "LeBron, Giannis, Jaylen, Kawhi: where do the Magic now fall in the East? (SI)",
+          "url": "https://www.si.com/nba/magic/onsi/lebron-giannis-jaylen-kawhi-where-do-magic-now-fall-in-east-01kyfhzt8z0n"
+        },
+        {
+          "title": "Will 2026-27 be it for the Banchero and Wagner duo? (Roundtable)",
+          "url": "https://roundtable.io/sports/nba/magic/players/will-2026-27-be-it-for-the-paolo-banchero-and-franz-wagner-duo"
+        },
+        {
+          "title": "NBA coaching carousel: firings, hirings (ABC7 Chicago)",
+          "url": "https://abc7chicago.com/18934688/"
+        },
+        {
+          "title": "76ers clinch playoff spot after defeating Magic in play-in (6abc)",
+          "url": "https://6abc.com/amp/post/76ers-clinch-playoff-spot-defeating-magic-play-tournament/18895164/"
+        },
+        {
+          "title": "Where the Detroit Pistons stand after the East's wild offseason (SI)",
+          "url": "https://www.si.com/nba/pistons/onsi/where-the-detroit-pistons-stand-after-the-eastern-conference-s-wild-offseason-01kz6j50qkyh"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "phi",
-      "teamMoment": "Philadelphia had the summer's biggest swing: Jaylen Brown arrived by trade from Boston and LeBron James signed as a free agent, joining Joel Embiid, Tyrese Maxey and VJ Edgecombe. The questions are health and age, and Nick Nurse is under maximum pressure.",
-      "lastSeason": "45-37, No. 7 seed via the Play-In (beat Orlando 109-97). Upset No. 2 Boston in the first round after trailing 3-1, then were swept by the Knicks in the second round.",
+      "teamMoment": "The summer's biggest swing. Jaylen Brown arrived by trade from Boston, and LeBron James signed as a free agent to join Joel Embiid, Tyrese Maxey and VJ Edgecombe. Health and age are the questions, and Nick Nurse is under maximum pressure.",
+      "lastSeason": "45-37, the No. 7 seed via the Play-In, where they beat Orlando 109-97. Came back from 3-1 down to upset No. 2 Boston in the first round, then got swept by the Knicks in the second.",
       "headCoach": "Nick Nurse",
       "stars": [
         "Joel Embiid",
@@ -458,37 +722,61 @@
         "VJ Edgecombe"
       ],
       "keyMoves": [
-        "Traded Paul George plus picks (two firsts and two seconds, per reports) to Boston for Jaylen Brown",
-        "Signed LeBron James, who left the Lakers in free agency (reported minimum deal, about $3.9M)",
-        "Signed Anfernee Simons, Dean Wade and Kentavious Caldwell-Pope; added Ariel Hukporti",
+        "Traded Paul George and picks to Boston for Jaylen Brown. Reports put the picks at two firsts and two seconds",
+        "Signed LeBron James after he left the Lakers in free agency, on a reported minimum deal of about $3.9M",
+        "Signed Anfernee Simons, Dean Wade and Kentavious Caldwell-Pope. Added Ariel Hukporti",
         "Drafted LaBaron Philon Jr. at No. 22",
         "Out: Paul George, Quentin Grimes, Kelly Oubre Jr. (to Indiana) and Andre Drummond"
       ],
-      "expectations": "Contender if healthy: title odds moved from +2000 to +1000 after LeBron signed, about fourth-best in the league. CBS gave the East's top offseason grade (A). Embiid's availability and James' age decide it.",
-      "ownershipArena": "In September 2026 the 76ers and Flyers unveiled the first renderings of a privately funded arena on the former Spectrum site in South Philadelphia. It is a 50-50 venture of Josh Harris' group and Comcast Spectacor, Comcast holds the naming rights, completion is reported for 2030 (earlier plans said 2031), and it will also house Philadelphia's WNBA team.",
+      "expectations": "A contender if healthy. Title odds moved from +2000 to +1000 after LeBron signed, about fourth-best in the league. CBS gave them the East's top offseason grade, an A. Embiid's availability and James' age decide it.",
+      "ownershipArena": "In September 2026 the 76ers and Flyers unveiled the first renderings of a privately funded arena on the old Spectrum site in South Philadelphia. It's a 50-50 venture of Josh Harris' group and Comcast Spectacor, and Comcast holds the naming rights. Completion is reported for 2030 (earlier plans said 2031). Philadelphia's WNBA team will play there too.",
       "cityEdition": "The 2026-27 City Edition was not verified. Philadelphia is one of eight historic franchises getting Nike's new 'Specter' uniforms for select 2026-27 games.",
       "marquee": [
-        "Opening night, Oct 20: at the Knicks on their ring night, the James and Brown 76ers debuts (NBC/Peacock)",
-        "Home opener: hosts Cleveland, James and Brown's Philly home debut against LeBron's former team (date not verified)",
+        "Opening night, Oct 20: at the Knicks on their ring night, in the James and Brown 76ers debuts (NBC/Peacock)",
+        "Home opener: hosts Cleveland, LeBron's former team, in his and Brown's Philly home debut (date not verified)",
         "Christmas Day, 5 p.m. ET: at the Lakers, LeBron's first game back in Los Angeles",
         "Jan 21, 2027: at Boston, Jaylen Brown's return to TD Garden",
         "Emirates NBA Cup East Group B with New York, Cleveland, Miami and Indiana"
       ],
       "sources": [
-        { "title": "Sixers season preview: Joel Embiid health, LeBron James (NBC Sports Philadelphia)", "url": "https://www.nbcsportsphiladelphia.com/nba/philadelphia-76ers/sixers-season-preview-joel-embiid-health-lebron-james/750167/" },
-        { "title": "Sixers bench: Dean Wade, Anfernee Simons, LaBaron Philon (NBC Sports Philadelphia)", "url": "https://www.nbcsportsphiladelphia.com/nba/philadelphia-76ers/sixers-season-preview-sixers-bench-dean-wade-anfernee-simons-labaron-philon/751180/" },
-        { "title": "Jaylen Brown traded by Celtics to 76ers for Paul George, draft picks (WHYY/AP)", "url": "https://whyy.org/articles/jaylen-brown-philadelphia-76ers-paul-george/" },
-        { "title": "Predicting 76ers' lineup and depth chart after LeBron James signing (PrizePicks)", "url": "https://www.prizepicks.com/playbook-article/philadelphia-76ers-lineup-deprth-chart-starters-lebron-james-signing" },
-        { "title": "NBA offseason grades for every East team, 2026 (CBS Sports)", "url": "https://picks-s6.cbssports.com/nba/news/nba-offseason-grades-for-every-east-team-2026-76ers-celtics/" },
-        { "title": "76ers, Flyers unveil first renderings of future arena (theScore)", "url": "https://thescore-web-gcp.thescore.com/nba/news/3595049/76-ers-flyers-unveil-1-st-renderings-of-future-arena" },
-        { "title": "2026-27 opening night and Christmas Day schedule: LeBron, Sixers (Awful Announcing)", "url": "https://awfulannouncing.com/nba/2026-27-opening-night-christmas-day-schedule-lebron-sixers.html" },
-        { "title": "Sixers open at Knicks, host Cavaliers in James-Brown home debut (AP via Post Guam)", "url": "https://www.postguam.com/sports/nation/sixers-open-at-knicks-host-cavaliers-in-james-brown-home-debut/article_e33f21ac-98fa-4ffc-ba84-b379a0de4670.html" }
+        {
+          "title": "Sixers season preview: Joel Embiid health, LeBron James (NBC Sports Philadelphia)",
+          "url": "https://www.nbcsportsphiladelphia.com/nba/philadelphia-76ers/sixers-season-preview-joel-embiid-health-lebron-james/750167/"
+        },
+        {
+          "title": "Sixers bench: Dean Wade, Anfernee Simons, LaBaron Philon (NBC Sports Philadelphia)",
+          "url": "https://www.nbcsportsphiladelphia.com/nba/philadelphia-76ers/sixers-season-preview-sixers-bench-dean-wade-anfernee-simons-labaron-philon/751180/"
+        },
+        {
+          "title": "Jaylen Brown traded by Celtics to 76ers for Paul George, draft picks (WHYY/AP)",
+          "url": "https://whyy.org/articles/jaylen-brown-philadelphia-76ers-paul-george/"
+        },
+        {
+          "title": "Predicting 76ers' lineup and depth chart after LeBron James signing (PrizePicks)",
+          "url": "https://www.prizepicks.com/playbook-article/philadelphia-76ers-lineup-deprth-chart-starters-lebron-james-signing"
+        },
+        {
+          "title": "NBA offseason grades for every East team, 2026 (CBS Sports)",
+          "url": "https://picks-s6.cbssports.com/nba/news/nba-offseason-grades-for-every-east-team-2026-76ers-celtics/"
+        },
+        {
+          "title": "76ers, Flyers unveil first renderings of future arena (theScore)",
+          "url": "https://thescore-web-gcp.thescore.com/nba/news/3595049/76-ers-flyers-unveil-1-st-renderings-of-future-arena"
+        },
+        {
+          "title": "2026-27 opening night and Christmas Day schedule: LeBron, Sixers (Awful Announcing)",
+          "url": "https://awfulannouncing.com/nba/2026-27-opening-night-christmas-day-schedule-lebron-sixers.html"
+        },
+        {
+          "title": "Sixers open at Knicks, host Cavaliers in James-Brown home debut (AP via Post Guam)",
+          "url": "https://www.postguam.com/sports/nation/sixers-open-at-knicks-host-cavaliers-in-james-brown-home-debut/article_e33f21ac-98fa-4ffc-ba84-b379a0de4670.html"
+        }
       ]
     },
     {
       "team": "tor",
-      "teamMoment": "Kawhi Leonard is back in Toronto, acquired from the Clippers to pair with All-Star Scottie Barnes after a surprise 5-seed season, with coach Darko Rajakovic newly extended through 2028-29.",
-      "lastSeason": "46-36, No. 5 seed in the East; lost 4-3 to Cleveland in the first round.",
+      "teamMoment": "Kawhi Leonard is back in Toronto. After a surprise 5-seed season, the Raptors got him from the Clippers to pair with All-Star Scottie Barnes. Coach Darko Rajakovic is newly extended through 2028-29.",
+      "lastSeason": "46-36, the East's No. 5 seed. Lost 4-3 to Cleveland in the first round.",
       "headCoach": "Darko Rajakovic (multi-year extension through 2028-29)",
       "stars": [
         "Scottie Barnes (2026 All-Star; All-Defensive Second Team)",
@@ -497,10 +785,10 @@
         "RJ Barrett (on the roster per reports; not re-verified)"
       ],
       "keyMoves": [
-        "Acquired Kawhi Leonard from the LA Clippers for Brandon Ingram, Gradey Dick, unprotected 2031 and 2033 firsts, a 2027 first-round swap and two seconds",
+        "Got Kawhi Leonard from the LA Clippers for Brandon Ingram, Gradey Dick, unprotected 2031 and 2033 firsts, a 2027 first-round swap and two seconds",
         "Extended head coach Darko Rajakovic through 2028-29"
       ],
-      "expectations": "Pushing up from a 46-win 5 seed into the East's upper tier. The risk is that the 35-year-old Leonard's health and the long-dated unprotected picks could age badly.",
+      "expectations": "Aiming to climb from a 46-win 5 seed into the East's upper tier. The risk: the 35-year-old Leonard's health and those long-dated unprotected picks could age badly.",
       "ownershipArena": "",
       "cityEdition": "",
       "marquee": [
@@ -509,18 +797,36 @@
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Kawhi Leonard trade: Clippers deal star to Raptors for Brandon Ingram, Gradey Dick (Fantasy Alarm)", "url": "https://www.fantasyalarm.com/articles/nba/nba-offseason/kawhi-leonard-traded-to-raptors/192272" },
-        { "title": "Kawhi Leonard going back to Toronto after Raptors make deal with Clippers (Las Vegas Sun/AP)", "url": "https://lasvegassun.com/news/2026/jun/30/kawhi-leonard-going-back-to-toronto-after-raptors-/" },
-        { "title": "Raptors sign Darko Rajakovic to extension (NBC Sports)", "url": "https://www.nbcsports.com/fantasy/basketball/player-news/2026-07-02/raptors-sign-darko-rajakovic-to-extension" },
-        { "title": "2025-26 Toronto Raptors results (Land of Basketball)", "url": "https://www.landofbasketball.com/results_by_team/2025_2026_raptors.htm" },
-        { "title": "Raptors F Barnes makes NBA's Second All-Defensive Team (TSN)", "url": "https://www.tsn.ca/nba/article/raptors-f-barnes-makes-nbas-second-all-defensive-team/" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Kawhi Leonard trade: Clippers deal star to Raptors for Brandon Ingram, Gradey Dick (Fantasy Alarm)",
+          "url": "https://www.fantasyalarm.com/articles/nba/nba-offseason/kawhi-leonard-traded-to-raptors/192272"
+        },
+        {
+          "title": "Kawhi Leonard going back to Toronto after Raptors make deal with Clippers (Las Vegas Sun/AP)",
+          "url": "https://lasvegassun.com/news/2026/jun/30/kawhi-leonard-going-back-to-toronto-after-raptors-/"
+        },
+        {
+          "title": "Raptors sign Darko Rajakovic to extension (NBC Sports)",
+          "url": "https://www.nbcsports.com/fantasy/basketball/player-news/2026-07-02/raptors-sign-darko-rajakovic-to-extension"
+        },
+        {
+          "title": "2025-26 Toronto Raptors results (Land of Basketball)",
+          "url": "https://www.landofbasketball.com/results_by_team/2025_2026_raptors.htm"
+        },
+        {
+          "title": "Raptors F Barnes makes NBA's Second All-Defensive Team (TSN)",
+          "url": "https://www.tsn.ca/nba/article/raptors-f-barnes-makes-nbas-second-all-defensive-team/"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     },
     {
       "team": "was",
-      "teamMoment": "Washington jumped from the NBA's worst record to a fascinating build: lottery winner AJ Dybantsa joins Trae Young (re-signed long term), Anthony Davis and young core pieces Alex Sarr, Kyshawn George and Tre Johnson.",
-      "lastSeason": "17-65, the NBA's worst record (one source says 15 wins, but most report 17-65); won the 2026 draft lottery.",
+      "teamMoment": "From the NBA's worst record to one of its most interesting builds. Lottery winner AJ Dybantsa joins Trae Young, re-signed long term, and Anthony Davis. Alex Sarr, Kyshawn George and Tre Johnson round out the young core.",
+      "lastSeason": "17-65, the NBA's worst record. One source says 15 wins, but most report 17-65. Won the 2026 draft lottery.",
       "headCoach": "Brian Keefe (GM Will Dawkins said he is expected to return)",
       "stars": [
         "AJ Dybantsa (No. 1 pick, rookie)",
@@ -533,24 +839,45 @@
       "keyMoves": [
         "Drafted AJ Dybantsa (BYU) No. 1 overall",
         "Trae Young declined his $49M 2026-27 option and re-signed for 4 years, about $212M",
-        "Kept Anthony Davis (acquired from Dallas at the 2026 trade deadline); the GM said the team doesn't intend to trade him",
+        "Kept Anthony Davis, acquired from Dallas at the 2026 trade deadline. The GM said the team doesn't intend to trade him",
         "Reportedly added Deandre Ayton for a small package (details not verified)"
       ],
-      "expectations": "Volatile. Some previews call the Wizards one of the NBA's most fascinating teams and a possible playoff contender after years as an afterthought, but that depends on Davis' and Young's health and fit.",
+      "expectations": "Volatile. Some previews call the Wizards one of the NBA's most fascinating teams and a possible playoff contender after years as an afterthought. That depends on the health and fit of Davis and Young.",
       "ownershipArena": "Background, not re-verified in October 2026: the Wizards stayed at Capital One Arena under Monumental Sports, with renovations planned.",
-      "cityEdition": "Reported to be reviving its 2022-23 cherry-blossom City Edition for 2026-27 (single report).",
+      "cityEdition": "A single report says it's reviving its 2022-23 cherry-blossom City Edition for 2026-27.",
       "marquee": [
         "Emirates NBA Cup East Group C with Boston, Atlanta, Charlotte and Chicago",
         "No opening-night or Christmas Day game"
       ],
       "sources": [
-        { "title": "Washington Wizards: AJ Dybantsa, Trae Young (The Baltimore Banner)", "url": "https://www.thebanner.com/sports/wizards-nba/washington-wizards-aj-dybantsa-trae-young-ZQPBAJQHWNHAZDV2IFYKOI7VCU/" },
-        { "title": "Wizards expect coach Keefe to return next season, GM says (TSN)", "url": "https://www.tsn.ca/nba/article/wizards-expect-coach-keefe-to-return-next-season-gm-says-n1-48505144/" },
-        { "title": "Trae Young re-signs with the Wizards (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/trades/241943/trae-young-re-signs-with-the-wizards-i-want-to-win-in-washington" },
-        { "title": "Anthony Davis trade rumors addressed by Wizards GM after Trae Young contract (Bleacher Report)", "url": "https://www.bleacherreport.com/articles/25445333-anthony-davis-trade-rumors-addressed-wizards-gm-after-trae-young-contract-2026-nba-draft" },
-        { "title": "Grading every Washington Wizards move in 2026 NBA free agency (Fadeaway World)", "url": "https://fadeawayworld.net/nba-trade-rumors/grading-every-washington-wizards-move-in-2026-nba-free-agency" },
-        { "title": "2026 NBA draft: complete list of every pick (NBC Sports)", "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2" },
-        { "title": "Emirates NBA Cup 2026 groups announced (NBA.com)", "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced" }
+        {
+          "title": "Washington Wizards: AJ Dybantsa, Trae Young (The Baltimore Banner)",
+          "url": "https://www.thebanner.com/sports/wizards-nba/washington-wizards-aj-dybantsa-trae-young-ZQPBAJQHWNHAZDV2IFYKOI7VCU/"
+        },
+        {
+          "title": "Wizards expect coach Keefe to return next season, GM says (TSN)",
+          "url": "https://www.tsn.ca/nba/article/wizards-expect-coach-keefe-to-return-next-season-gm-says-n1-48505144/"
+        },
+        {
+          "title": "Trae Young re-signs with the Wizards (Dunkest)",
+          "url": "https://www.dunkest.com/en/nba/news/trades/241943/trae-young-re-signs-with-the-wizards-i-want-to-win-in-washington"
+        },
+        {
+          "title": "Anthony Davis trade rumors addressed by Wizards GM after Trae Young contract (Bleacher Report)",
+          "url": "https://www.bleacherreport.com/articles/25445333-anthony-davis-trade-rumors-addressed-wizards-gm-after-trae-young-contract-2026-nba-draft"
+        },
+        {
+          "title": "Grading every Washington Wizards move in 2026 NBA free agency (Fadeaway World)",
+          "url": "https://fadeawayworld.net/nba-trade-rumors/grading-every-washington-wizards-move-in-2026-nba-free-agency"
+        },
+        {
+          "title": "2026 NBA draft: complete list of every pick (NBC Sports)",
+          "url": "https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2"
+        },
+        {
+          "title": "Emirates NBA Cup 2026 groups announced (NBA.com)",
+          "url": "https://www.nba.com/news/emirates-nba-cup-2026-groups-announced"
+        }
       ]
     }
   ]
