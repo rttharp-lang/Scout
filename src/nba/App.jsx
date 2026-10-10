@@ -1,5 +1,5 @@
 // NBA Fandom — local NBA fandom intelligence for Nike Basketball.
-// Routes: #/ (markets), #/m/<team> (one market), #/opportunities, #/calendar, #/agents[/<team>], #/league.
+// Routes: #/ (markets), #/m/<team> (one market), #/opportunities, #/calendar[/<team|all>[/year|month[/<1-12>]]], #/agents[/<team>], #/league.
 // #/compare opens Opportunities at Compare ideas; #/method[/<section>] opens Agents at the method.
 import React, { useEffect } from "react";
 import { useRoute, Header, Footer } from "./ui.jsx";
@@ -24,7 +24,7 @@ export default function App() {
   let page;
   if (section === "m") page = <Market id={arg} />;
   else if (section === "league") page = <League />;
-  else if (section === "calendar") page = <Calendar />;
+  else if (section === "calendar") page = <Calendar args={route.slice(1)} />;
   else if (section === "opportunities" || section === "compare") page = <Opportunities anchor={section === "compare" ? "compare-ideas" : undefined} />;
   else if (section === "agents") page = <Agents preselect={arg} />;
   else if (section === "method") page = <Agents methodAnchor={arg || "method"} />;
