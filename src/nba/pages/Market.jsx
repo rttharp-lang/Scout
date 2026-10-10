@@ -137,7 +137,15 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
           </div>
           <div className="hc-card-invert">
             <div className="hc-eyebrow">Right now · {data.updated ? fmtDay(data.updated) : "2026-27"}</div>
-            <div className="hc-h3" style={{ marginTop: 8 }}>{s.pulse.teamMoment}</div>
+            {(() => {
+              const [lead, rest] = splitLead(s.pulse.teamMoment);
+              return (
+                <>
+                  <div className="hc-h3" style={{ marginTop: 8 }}>{lead}</div>
+                  {rest && <p className="hc-small" style={{ marginTop: 8 }}>{rest}</p>}
+                </>
+              );
+            })()}
             <p className="hc-small hc-muted" style={{ marginTop: 10 }}>{s.pulse.sentiment}</p>
             <div style={{ marginTop: 14 }}><div className="hc-meter" style={{ gridTemplateColumns: "84px 1fr 26px" }}><span>Fan heat</span><span className="hc-meter-track"><span className="hc-meter-fill" style={{ display: "block", width: `${s.pulse.heat}%` }} /></span><span className="hc-meter-value">{s.pulse.heat}</span></div></div>
             {nowItems.length > 0 && (
@@ -349,6 +357,15 @@ const SEVERITY = { high: "serious", medium: "moderate", low: "minor" };
 
 // The League Pulse entry: this team's 2026-27 situation, checked live.
 // Shows an ISO date (2026-10-07) as "Oct 7, 2026"; anything else passes through.
+// The first sentence as a sidebar headline, the rest as body copy.
+const ABBREV = /(?:^|\s)(?:No|St|Mt|Ft|Jr|Sr|Dr|Mr|Mrs|Ms|vs|Inc|Co|U\.S|[A-Z])\.$/;
+const splitLead = (text = "") => {
+  for (const m of text.matchAll(/[.!?]\s+(?=[A-Z0-9"“'‘])/g)) {
+    const head = text.slice(0, m.index + 1);
+    if (!ABBREV.test(head)) return [head, text.slice(m.index + m[0].length)];
+  }
+  return [text, ""];
+};
 const fmtDay = (s) => { const x = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || ""); return x ? `${MONTHS[Number(x[2]) - 1]} ${Number(x[3])}, ${x[1]}` : s; };
 
 function VerifiedSnapshot({ p }) {
