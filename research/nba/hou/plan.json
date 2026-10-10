@@ -1,0 +1,689 @@
+{
+  "team": "hou",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Home opener, Oct 21 vs. Mavericks, through the first Cup Friday, Oct 30",
+      "kind": "launch",
+      "start": "2026-10-21",
+      "end": "2026-10-30",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "hou-c3",
+      "actBy": "2026-10",
+      "actNote": "Confirm the throwback's edition and the Clutch City licensing path before the home-opener launch.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup nights through Nov 27. Houston's home Cup games are Nov 13 (Utah) and Nov 25 (Phoenix)",
+      "kind": "event",
+      "start": "2026-11-13",
+      "end": "2026-11-27",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Dec 1-24 cold-front gifting weeks",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Gifting weeks run Dec 1-24, before Christmas on Dec 25",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Cup quarterfinals Dec 4-5 and semifinals Dec 8-9 (contingency)",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-09",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals; Emirates NBA Cup 2026 — semifinals",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "MLK week, Jan 11-18, 2027",
+      "kind": "event",
+      "start": "2027-01-11",
+      "end": "2027-01-18",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "MLK Day games",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Lunar New Year and Tet, Feb 6, 2027",
+      "kind": "event",
+      "start": "2027-02-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Mid-February through RodeoHouston (about three weeks, late Feb to mid-March)",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-03",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "NCAA tournament weeks",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "third-party-ip",
+        "partner-agreement",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Apr 11 season end and Play-In (Apr 13-16) through the first home playoff game",
+      "kind": "season",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11, 2027); Play-In Tournament (Apr 13-16, 2027)",
+      "actBy": "2027-03",
+      "actNote": "Pre-produce the red blanks in March, ready to print the day seeding sets.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Art Car Parade weekend (April, date to confirm)",
+      "kind": "event",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Juneteenth week and the June Clutch City title anniversaries",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Juneteenth is June 19",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "WNBA midseason and the 1997 first-title anniversary window",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Early-August tax-free weekend (2027 dates to confirm)",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2027-07",
+      "actNote": "Get the heat pack into stores two weeks before the tax-free weekend.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Hispanic Heritage Month (from Sep 15) and fall 2027 product window",
+      "kind": "launch",
+      "start": "2027-09-15",
+      "end": "2027-10-15",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Hispanic Heritage Month runs Sep 15 to Oct 15",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "candy-paint-capsule",
+      "consumer": "Gen Z digital fans and Black Southside tastemakers who know slab finishes.",
+      "insights": [
+        0,
+        6,
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "headwear",
+        "tee",
+        "footwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Build the named shortlist of slab clubs, builders and painters before anything else, ahead of the Nov 13 or Nov 25 reveal.",
+      "routes": [
+        "new-development",
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm which builders and painters will sign on as paid, credited co-designers.",
+        "Check with Nike footwear whether any team model or Thompson or Sengun edition can carry a candy-pearl colorway, and when.",
+        "Confirm Johnny Dang & Co. at 6224 Richmond Ave is still open before planning the event.",
+        "Review palettes and type with Houston voices so nothing reads as a drank reference."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety",
+        "stock-availability",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Houston slab builders and painters (named shortlist to build)",
+        "Johnny Dang & Co.",
+        "Bun B",
+        "Paul Wall"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "red-and-gold-clutch-heritage",
+      "consumer": "Heritage diehards, millennial parents and suburban families who remember Clutch City.",
+      "insights": [
+        1,
+        4
+      ],
+      "categories": [
+        "fleece",
+        "outerwear",
+        "jersey",
+        "kids",
+        "headwear",
+        "tee"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Confirm the throwback's edition with the Rockets and Nike uniform team, and the Clutch City licensing path, before the Oct 21 home opener.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm whether the 2026-27 throwback is a City, Classic or Statement edition.",
+        "Clear Clutch City and retro marks through the Rockets and NBA, and Hakeem's likeness through his team before any Dream Shake piece.",
+        "Pull last season's Rockets heritage sales as the baseline.",
+        "Check Academy and team-shop stock of kids sizes for the holidays."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "stock-availability",
+        "retailer-agreement",
+        "partner-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Hakeem Olajuwon's team",
+        "Houston fan-art and screen-print creators (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "houston-hoops-lineage",
+      "consumer": "Heritage diehards, women and girls who play, UH students and alumni, and youth hoopers.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "jersey",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "women's",
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2027-03",
+      "actNote": "Clear UH and Phi Slama Jama marks for the March crossover tee. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm Cynthia Cooper-Dyke and Sheryl Swoopes are available for paid roles.",
+        "Map the licensing path for Comets marks through the WNBA and UH marks through the university.",
+        "Test the women's-fit warm-up with women and girls who play.",
+        "Pick the Sunnyside, Third Ward and Fifth Ward courts and coaches for refurbishments and clinics."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Cynthia Cooper-Dyke",
+        "Sheryl Swoopes",
+        "University of Houston Athletics",
+        "WNBA (Comets marks)",
+        "Sunnyside, Third Ward and Fifth Ward high school and rec-center coaches"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "tax-free-heat-pack",
+      "consumer": "Price-sensitive families across Southwest Houston, Aldine, the East End and the suburbs.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "jersey",
+        "kids",
+        "accessory",
+        "footwear"
+      ],
+      "fit": [
+        "youth",
+        "kids"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-07",
+      "actBy": "2027-07",
+      "actNote": "Have the pack in stores two weeks before the tax-free weekend (2027 dates to confirm).",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the 2027 Texas tax-free weekend dates and clothing cap.",
+        "Price every piece under the cap and test the basket with Academy and Nike Factory buyers.",
+        "Sign one Alief or Aldine youth-court or league partner to choose the face and colorway accents.",
+        "Check kids-size stock at Academy and Nike Factory."
+      ],
+      "dependencies": [
+        "date-confirmation",
+        "retailer-agreement",
+        "partner-agreement",
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "An Alief or Aldine community-court or youth-league program (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "southwest-mosaic",
+      "consumer": "Diaspora fans and Southwest youth hoopers in Alief, Sharpstown, Gulfton and along Bellaire Boulevard.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Sign one named Chinese or Vietnamese Houston creator or organization for the Feb 6, 2027 Lunar New Year and Tet drop. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Hong Kong City Mall and the Southwest organizations are open and willing to take part.",
+        "Agree a flat fee or revenue share with each creator before design starts.",
+        "Have native speakers check every line of lettering.",
+        "Track sell-through at Southwest doors against new Nike app members with Southwest ZIP codes."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Native-speaking Southwest Houston letterers (to name)",
+        "Southwest Houston creators and community organizations (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "trail-ride-rodeo",
+      "consumer": "Black Houston families and every community that dresses western for the rodeo.",
+      "insights": [
+        5,
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "headwear",
+        "accessory",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Shortlist and confirm a trail-ride club and a Black-owned western outfitter before the mid-February launch. The brief sets no earlier deadline.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm RodeoHouston 2027 dates and the Rockets' rodeo road trip.",
+        "Confirm the Prairie View Trail Riders Association is active and willing to co-design for pay.",
+        "Check that a western-yoke warm-up can be developed in time for February.",
+        "Keep Rodeo marks off every piece and its marketing."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Prairie View Trail Riders Association (to confirm)",
+        "A Black-owned Houston western outfitter (to name)",
+        "Bun B"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "third-ward-heritage",
+      "consumer": "Black Third Ward and Fifth Ward families, and TSU and UH students and alumni.",
+      "insights": [
+        4,
+        2
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Set up the Project Row Houses residency and paid TSU designers for MLK week, Jan 11-18, 2027. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm Project Row Houses is operating and open to an artist residency.",
+        "Clear proceeds language and any MLK Day marks with Nike community and NBA partnerships.",
+        "Confirm whether Houston hosts Memphis on Jan 18 before planning an arena layer.",
+        "Book Emancipation Park for the court day, with a rain date."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "production-capacity",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Project Row Houses",
+        "Texas Southern University (with KTSU 90.9)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "clutch-playoff-flip",
+      "consumer": "All Rockets fans, peaking with heritage diehards and suburban families at watch parties.",
+      "insights": [
+        4,
+        1
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-03",
+      "actNote": "Pre-produce the red blanks and Clutch City graphics in March.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Test how many days print and ship take from seeding to shelf.",
+        "Size blank stock so home games don't stock out.",
+        "Clear player name-and-number tees for Durant, Sengun and Thompson, and keep hero graphics player-free.",
+        "Confirm the Discovery Green watch parties and their dates."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    }
+  ]
+}

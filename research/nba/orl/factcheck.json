@@ -208,9 +208,9 @@
     {
       "lens": "retail-landscape",
       "claim": "Nike Factory Stores open at both Orlando International and Vineland Premium Outlets",
-      "verdict": "unverifiable",
-      "note": "Both are the brief's core volume doors. Confirm each is open.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: Simon's Nike Factory Store page lists both Orlando International and Orlando Vineland Premium Outlets among its locations.",
+      "source": "https://www.simon.com/brands/nike-factory-store"
     },
     {
       "lens": "retail-landscape",
@@ -243,9 +243,9 @@
     {
       "lens": "rhythm",
       "claim": "Florida Classic in mid-November at Camping World Stadium",
-      "verdict": "unverifiable",
-      "note": "Confirm the 2026 date and venue. It may fall on a Cup weekend.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: FAMU says the 2026 Florida Blue Florida Classic is Saturday, Nov 21 at Camping World Stadium. Added the date to the November calendar window.",
+      "source": "https://news.famu.edu/2026/florida-blue-florida-classic-set-for-saturday-nov-2-at-3-30-p-m-et-at-camping-world-stadium-in-orlando.php"
     },
     {
       "lens": "hoops",

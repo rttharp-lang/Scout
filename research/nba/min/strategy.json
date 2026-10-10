@@ -62,7 +62,7 @@
         "art",
         "music"
       ],
-      "implication": "Heritage-neutral tees and pins can ship on any date, so have them ready. Add jersey product only once the team confirms the retirement date and a Classic Edition. Write it as belief and 'finally,' never a victory lap.",
+      "implication": "Heritage-neutral tees and pins can ship now. The retirement is set for Feb 28, 2027 against Boston. Add jersey product only once the team confirms a Classic Edition. Write it as belief and 'finally,' never a victory lap.",
       "confidence": "medium"
     },
     {
@@ -147,7 +147,7 @@
         "First Avenue (screenprint series, if the club and team agree)",
         "Mall of America"
       ],
-      "when": "Heritage tees and pins are ready to ship from November for whatever home date the team announces. Classic Edition jersey product comes only after the team confirms the date and set. The tree-line jacquard warmup is a 2027-28 item.",
+      "when": "Heritage tees and pins are ready to ship from November for the Feb 28, 2027 retirement game against Boston. Classic Edition jersey product comes only after the team confirms the set. The tree-line jacquard warmup is a 2027-28 item.",
       "months": [
         11,
         12,
@@ -155,7 +155,7 @@
         2,
         3
       ],
-      "how": "Make heritage-neutral product that doesn't depend on a date: a 'Dome '89' crewneck and a Big Ticket screenprint tee. Use Rhymesayers- and Doomtree-orbit artists, paid and credited. Once the facts are checked, put the 1986 name-the-team contest on the hangtags. Move #21 jersey product into production only when the team confirms the date and any Classic Edition. Given his adidas and ANTA shoe history, keep Garnett on team product.",
+      "how": "Make heritage-neutral product that doesn't depend on a date: a 'Dome '89' crewneck and a Big Ticket screenprint tee. Use Rhymesayers- and Doomtree-orbit artists, paid and credited. Once the facts are checked, put the 1986 name-the-team contest on the hangtags. Move #21 jersey product into production only when the team confirms any Classic Edition. Given his adidas and ANTA shoe history, keep Garnett on team product.",
       "products": [
         "Big Ticket artist screenprint tee (ships anytime)",
         "Dome '89 heritage crewneck (ships anytime)",
@@ -470,7 +470,7 @@
             "item": "Garnett #21 jersey",
             "category": "jersey",
             "tier": "premium",
-            "detail": "Conditional: only once the team confirms the retirement date and a Classic Edition set."
+            "detail": "Conditional: only once the team confirms a Classic Edition set for the Feb 28 retirement game."
           }
         ]
       },
@@ -657,10 +657,10 @@
       "priority": 2
     },
     {
-      "month": 1,
-      "window": "Placeholder month: goes live whenever the team announces the home date",
+      "month": 2,
+      "window": "Sunday, Feb 28, 2027: home game vs Boston on NBC. The team announced the date on Aug 14, 2026",
       "moment": "Kevin Garnett jersey retirement",
-      "play": "Push the ready-anytime heritage tees, crewneck and pin on announcement. Add #21 jersey product only if the team confirms a Classic Edition and lead time allows.",
+      "play": "Push the ready-anytime heritage tees, crewneck and pin now that the date is set. Add #21 jersey product only if the team confirms a Classic Edition and lead time allows.",
       "products": [
         "Big Ticket screenprint tee",
         "Dome '89 heritage crewneck",
@@ -833,7 +833,7 @@
     "when": [
       "Late October: the opener and the Oct 30 home Cup night for player-name product.",
       "Dec 4-11 if the Wolves advance in the Cup. Then early December to Dec 25: the first hard cold plus Christmas night against OKC, the biggest regular-season spike.",
-      "Garnett retirement week, whenever it's set. National windows at the Knicks on MLK Day (Jan 18) and at Charlotte on Feb 15, Ball's return.",
+      "Garnett retirement on Feb 28 against Boston. National windows at the Knicks on MLK Day (Jan 18) and at Charlotte on Feb 15, Ball's return.",
       "Playoff gear staged by the Apr 11 season finale. Then the Play-In (Apr 13-16) and playoffs run into May, starting about Apr 17-18, not yet confirmed. Record Store Day and Art-A-Whirl fall in the same stretch. Nothing sold on April 21.",
       "July to September is a dead zone. Use the Lynx, community leagues, the State Fair and Hispanic Heritage Month, not heavy team pushes."
     ],
@@ -859,7 +859,7 @@
       "mitigation": "Let partners lead community programs, with no fixed launch date or sales KPI in year one. Keep civic trauma off product and never sell on April 21. Have a fallback if a partner says no or asks for a delay."
     },
     {
-      "risk": "Big dates and designs are unconfirmed: the Garnett retirement date, any Classic Edition, the 2026-27 City Edition and most home dates beyond Oct 30.",
+      "risk": "Big dates and designs are unconfirmed: any Classic Edition, the 2026-27 City Edition and most home dates beyond Oct 30.",
       "mitigation": "Ship heritage-neutral pieces that work on any date. Confirm the announced City Edition before any Mill City product, and treat Mill City Lights as a 2027-28 pitch."
     },
     {
@@ -879,7 +879,7 @@
     "asOf": "Model knowledge, mid-2026",
     "verify": [
       "Confirm the announced 2026-27 Timberwolves City Edition and whether a 2027-28 concept slot is open. Confirm the full Purple Rain history, including whether it first ran in 2019-20.",
-      "Confirm the Wolves' full 2026-27 home schedule: the true home opener, their remaining Cup group dates, the Kevin Garnett retirement date and any Classic Edition set.",
+      "Confirm the Wolves' full 2026-27 home schedule: the true home opener, their remaining Cup group dates, and any Classic Edition set for the Feb 28 Garnett retirement game.",
       "Confirm Edwards' adidas and Ball's PUMA deals for 2026-27, and the brand ties of Gobert, McDaniels, Dosunmu, Kuminga, Josh Green and Garnett.",
       "Confirm who runs the Target Center team store and Wolves licensed retail, the NBA and team approval paths for local co-brands, and Target Center naming and ownership for 2026-27.",
       "Check community conditions and partner consent in Somali, Latino and Hmong neighborhoods after the 2025-26 federal immigration enforcement surge.",

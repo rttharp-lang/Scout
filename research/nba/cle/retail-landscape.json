@@ -2,16 +2,16 @@
   "team": "cle",
   "lens": "retail-landscape",
   "headline": "Cleveland buys at the mall, but local pop-ups and LeBron's Akron set the taste",
-  "summary": "Northeast Ohio drives to the mall. Volume sits in suburban centers and the Aurora Premium Outlets, not in a downtown flagship district. Local-pride apparel, vintage and pop-ups set the taste. LeBron is Nike for life, but Mitchell wears Adidas and Harden's deal needs checking, so team-first product is Nike's lane. This map comes from knowledge and needs a live door-by-door check.",
+  "summary": "Northeast Ohio drives to the mall. Volume sits in suburban centers and the Aurora Farms Premium Outlets, not in a downtown flagship district. Local-pride apparel, vintage and pop-ups set the taste. LeBron is Nike for life, but Mitchell wears Adidas and Harden's deal needs checking, so team-first product is Nike's lane. This map comes from knowledge and needs a live door-by-door check.",
   "insights": [
     {
       "title": "Mall and outlet doors carry the volume, not a downtown flagship",
-      "detail": "Shoppers drive to Beachwood Place and Legacy Village on the east side, Southpark in Strongsville, Crocker Park in Westlake and the Aurora Premium Outlets to the southeast. Downtown around Rocket Arena has little sneaker or team-gear retail beyond the arena shop.",
+      "detail": "Shoppers drive to Beachwood Place and Legacy Village on the east side, Southpark in Strongsville, Crocker Park in Westlake and the Aurora Farms Premium Outlets to the southeast. Downtown around Rocket Arena has little sneaker or team-gear retail beyond the arena shop.",
       "implication": "Plan assortments and launch windows around the mall and outlet doors. Treat the arena team store as the one downtown brand moment on game nights."
     },
     {
-      "title": "Aurora Premium Outlets: the Nike door that matters",
-      "detail": "The Nike Factory Store at Aurora Premium Outlets (formerly Aurora Farms) sits between Cleveland and Akron, so it catches both metros, including the Akron LeBron base. Price-conscious families make it a place for volume and discovery, not for setting taste.",
+      "title": "Aurora Farms Premium Outlets: the Nike door that matters",
+      "detail": "The Nike Factory Store at Aurora Farms Premium Outlets sits between Cleveland and Akron, so it catches both metros, including the Akron LeBron base. Price-conscious families make it a place for volume and discovery, not for setting taste.",
       "implication": "Stock basketball seasonal capsules, deep youth sizing and Akron-aware LeBron product. Don't expect it to launch heat."
     },
     {
@@ -43,7 +43,7 @@
       "why": "Home of the Cavs and the arena team store, the highest-intent gear door on game nights. The MLK Day noon game against Detroit on January 18 is a gift-season peak."
     },
     {
-      "name": "Aurora Premium Outlets",
+      "name": "Aurora Farms Premium Outlets",
       "kind": "outlet center",
       "neighborhood": "Aurora, Portage County",
       "why": "Home of the Nike Factory Store, and of the discount-minded shopper who drives in from both Cleveland and Akron."
@@ -240,7 +240,7 @@
   ],
   "productHooks": [
     "Team-first Cavs capsule built around the 2026-27 City Edition 'Cleveland' wordmark, sold through the arena shop, Lids and Aurora Farms.",
-    "Akron-Cleveland LeBron heritage capsule for the Nike Factory Store at Aurora Premium Outlets, with I Promise School-aligned giving if the school and the LeBron team clear it.",
+    "Akron-Cleveland LeBron heritage capsule for the Nike Factory Store at Aurora Farms Premium Outlets, with I Promise School-aligned giving if the school and the LeBron team clear it.",
     "Co-branded pop-up and tee drop with a local partner, timed to Small Business Saturday and the MLK Day game against Detroit.",
     "Youth and family-size basketball fleece and track pieces in wine, gold and navy, for the mall chains' holiday window."
   ],
@@ -290,7 +290,7 @@
         "role": "volume"
       },
       {
-        "name": "Aurora Premium Outlets",
+        "name": "Aurora Farms Premium Outlets",
         "profile": "Premium outlet center with a Nike Factory Store, between Cleveland and Akron.",
         "shopper": "Price-conscious families from both metros.",
         "role": "volume"
@@ -322,7 +322,7 @@
         "why": "The highest-intent team-gear door, and the place for limited, on-site releases."
       },
       {
-        "name": "Nike Factory Store, Aurora Premium Outlets",
+        "name": "Nike Factory Store, Aurora Farms Premium Outlets",
         "type": "nike-owned",
         "neighborhood": "Aurora",
         "why": "The Nike-owned volume door nearest the Akron-Cleveland corridor."
@@ -357,7 +357,7 @@
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Confirm a Nike Factory Store is still operating at Aurora Premium Outlets, and find any other Nike-owned or Nike Well Collective doors in Northeast Ohio.",
+      "Confirm a Nike Factory Store is still operating at Aurora Farms Premium Outlets, and find any other Nike-owned or Nike Well Collective doors in Northeast Ohio.",
       "Confirm the Cavs team store at Rocket Arena: its name, its location and whether any other team stores operate in the metro.",
       "Confirm that James Harden and Donovan Mitchell are both still signed to Adidas.",
       "Confirm that Foot Locker, Finish Line, JD Sports, Lids and Dick's still operate in Beachwood Place, Legacy Village, Southpark and Crocker Park.",

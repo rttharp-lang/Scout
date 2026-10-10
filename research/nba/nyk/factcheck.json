@@ -138,9 +138,9 @@
     {
       "lens": "retail-landscape",
       "claim": "Nike Fifth Avenue flagship ('House of Innovation 000') and Nike SoHo still open under those names",
-      "verdict": "unverifiable",
-      "note": "Store names and numbering are shaky, and strategy cites 'Nike NYC (Fifth Avenue)' as a launch door. Confirm addresses and status.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Nike SoHo at 529 Broadway closed Jan 10, 2026, and Nike opened a new store at 611 Broadway on April 16, 2026. The Fifth Avenue flagship still runs. Fixed in strategy, retail-landscape and retail-behavior.",
+      "source": "https://hypebeast.com/pt/2026/1/nike-soho-nyc-flagship-store-officially-closed-news"
     },
     {
       "lens": "fanbase",
@@ -201,9 +201,9 @@
     {
       "lens": "art",
       "claim": "Studio Museum in Harlem new W 125th St building opened Nov 2025",
-      "verdict": "unverifiable",
-      "note": "Planned for late 2025. Confirm the opening date and hours.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the new building at 144 W 125th St opened to the public on Saturday, Nov 15, 2025. Hours are Wednesday to Sunday.",
+      "source": "https://www.studiomuseum.org/press/studio-museum-in-harlem-opening-date-and-community-day"
     },
     {
       "lens": "art",

@@ -68,9 +68,9 @@
     {
       "lens": "culture",
       "claim": "1989-90 Metrodome attendance of about 1.07 million, an NBA single-season record",
-      "verdict": "unverifiable",
-      "note": "Widely cited. Verify the figure, and that the record still stands, before it goes on product.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the team's April 18, 1990 release says the inaugural season drew 1,072,572 fans, an NBA regular-season record that beat Detroit's 1987-88 mark. Whether the record still stands wasn't checked.",
+      "source": "https://www.nba.com/timberwolves/news/attendance_record_900418.html"
     },
     {
       "lens": "retail-landscape",
@@ -181,7 +181,7 @@
       "lens": "retail-landscape",
       "claim": "Nike store at Mall of America and Nike Factory Store at Albertville Premium Outlets",
       "verdict": "unverifiable",
-      "note": "Strategy.json names both as launch doors. A live check must confirm each exists and is operating.",
+      "note": "Checked live 2026-10-10: Nike's own store locator lists Nike Mall of America (227 West Market, Bloomington). Still unchecked: the Nike Factory Store at Albertville Premium Outlets. Strategy.json names both as launch doors. A live check must confirm each exists and is operating.",
       "source": ""
     },
     {
@@ -194,9 +194,9 @@
     {
       "lens": "strategy",
       "claim": "Garnett jersey retirement date and how the brief schedules it (January placeholder)",
-      "verdict": "unverifiable",
-      "note": "The game is confirmed on the schedule, but its date isn't. Strategy puts it in month 1 as a placeholder. Keep it undated.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the team announced on Aug 14, 2026 that Garnett's No. 21 is retired on Sunday, Feb 28, 2027, at home against Boston on NBC. strategy.json now dates calendar[5] to Feb 28 and moves it to month 2. Dossier verify lists updated.",
+      "source": "https://www.valleynewslive.com/2026/08/14/timberwolves-retire-kevin-garnetts-no-21-february-28/"
     },
     {
       "lens": "fanbase",

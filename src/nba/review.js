@@ -72,7 +72,7 @@ export function inferTiming(calendar, startYear = 2026) {
   return calendar.map((c) => {
     if (prev != null && c.month < prev) y++;
     prev = c.month;
-    const text = `${c.window} ${c.moment}`;
+    const text = c.window; // a year in the moment text may be about something else ("2026 payouts")
     const season = /\b(20\d\d)-(\d\d)\b/.exec(text);
     const year = /\b(20\d\d)\b/.exec(text);
     let yr = y;
@@ -93,8 +93,8 @@ export const EVIDENCE_KIND = {
 // Evidence strength is about how well-supported a read is, never about how big
 // the opportunity is. Agent agreement and agent confidence don't count.
 export const STRENGTH = {
-  sourced: { label: "Sourced", detail: "Two or more supporting facts checked against live sources." },
-  partial: { label: "Partly sourced", detail: "One supporting fact checked against a live source." },
+  sourced: { label: "Sourced", detail: "Two or more of the facts it rests on were verified against live sources." },
+  partial: { label: "Partly sourced", detail: "One of the facts it rests on was verified against a live source." },
   unchecked: { label: "Not yet checked", detail: "Desk research only. No supporting fact has been checked live yet." },
 };
 export const strengthOf = (verified) => (verified >= 2 ? "sourced" : verified === 1 ? "partial" : "unchecked");

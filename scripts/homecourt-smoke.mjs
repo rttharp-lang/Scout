@@ -30,13 +30,19 @@ function dataRegressions() {
   const out = [];
   const dir = new URL("../src/nba/data/markets/", import.meta.url);
   const text = (id) => fs.readFileSync(new URL(`${id}.json`, dir), "utf8");
+  // The brief and dossiers only: the evidence log and fact-check quote the old text on purpose.
+  const advice = (id) => { const m = JSON.parse(text(id)); return JSON.stringify([m.strategy, m.dossiers]); };
   const forbidden = [
     ["por", /Nike Community Store, NE MLK Jr\. Blvd/, "Portland still lists the closed NE MLK Nike store as a door"],
     ["por", /debut door for every Portland-specific drop/, "Portland's playbook still sends launches to a debut door that closed"],
     ["por", /launch(?:es|ed)? at the (?:NE MLK |MLK )?(?:Nike )?Community Store/i, "Portland still launches at the closed Community Store"],
     ["nyk", /1973 at the Garden|Game 5 at the Garden/, "New York still puts the 1973 clincher at the Garden"],
+    ["phx", /Oct 30 Cup opener vs\.? Dallas|Mavericks at Suns on Oct 30/, "Phoenix still opens the Cup against Dallas on Oct 30 (it's Denver)"],
+    ["dal", /Oct 30 at Phoenix/, "Dallas still opens the Cup at Phoenix on Oct 30 (it's home vs. Houston)"],
+    ["uta", /Oct 30 (?:home )?Cup night against Denver|confirmed Fri Oct 30 game against Denver/, "Utah still has an Oct 30 home Cup game (it doesn't play that night)"],
+    ["phi", /Spectrum is (?:the building )?where Dr\. J and Moses won/, "Philadelphia still puts the 1983 clincher at the Spectrum"],
   ];
-  for (const [id, re, msg] of forbidden) if (re.test(text(id))) out.push(msg);
+  for (const [id, re, msg] of forbidden) if (re.test(advice(id))) out.push(msg);
   const nyk = JSON.parse(text("nyk"));
   if (!/Forum/.test(nyk.strategy.topInsights.map((t) => t.insight).join(" "))) out.push("New York's brief lost the Forum correction");
   const review = JSON.parse(fs.readFileSync(new URL("../src/nba/data/review.json", import.meta.url), "utf8"));

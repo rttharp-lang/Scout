@@ -72,8 +72,8 @@ function asLive(run) {
   const strategy = JSON.parse(JSON.stringify(run.strategy));
   const t = inferTiming(strategy.calendar);
   strategy.calendar.forEach((c, i) => { c.timing = t[i]; });
-  strategy.topInsights.forEach((x) => { x.support = { verified: 0, corrected: 0, observed: 0, ids: [], strength: "unchecked" }; });
-  strategy.opportunities.forEach((o) => { o.handoff = null; o.support = { verified: 0, corrected: 0, observed: 0, ids: [], strength: "unchecked" }; });
+  strategy.topInsights.forEach((x) => { x.support = { verified: 0, corrected: 0, observed: 0, conflicting: 0, ids: [], strength: "unchecked" }; });
+  strategy.opportunities.forEach((o) => { o.handoff = null; o.support = { verified: 0, corrected: 0, observed: 0, conflicting: 0, ids: [], strength: "unchecked" }; });
   return { ...run, strategy, evidence: null, stewardship: null, updated: run.ranAt ? run.ranAt.slice(0, 10) : null, isLive: true };
 }
 
@@ -161,7 +161,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
       {/* ── Opportunities ────────────────────────────── */}
       <section className="hc-section" id="opportunities">
         <SectionHead eyebrow="Product hypotheses, not approved plans" title="Opportunities" />
-        <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 16, maxWidth: "80ch" }}>Every idea here is a hypothesis until a named owner tests it. Upside is the brief's editorial estimate of size; evidence strength is how many of its supporting facts were checked live. They are separate on purpose.</p>
+        <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 16, maxWidth: "80ch" }}>Every idea here is a hypothesis until a named owner tests it. Upside is the brief's editorial estimate of size; evidence strength counts how many of the facts it rests on were verified live. They are separate on purpose.</p>
         <div className="hc-grid hc-grid-2">
           {[...s.opportunities].sort((a, b) => a.priority - b.priority).map((o) => <Opportunity key={o.id} o={o} insights={s.topInsights} />)}
         </div>
@@ -331,6 +331,7 @@ function ExecutiveBrief({ team, data, now, ver, corrections }) {
                     <b>{t.title}</b>
                     <p className="hc-small" style={{ marginTop: 4 }}>{t.insight}</p>
                     <div className="hc-row" style={{ marginTop: 8 }}><EvidenceTag kind="interpretation" /><Strength support={t.support} /></div>
+                    <Backing ids={t.support.ids} evidence={ev} />
                   </div>
                 </li>
               ))}
@@ -402,6 +403,7 @@ function ExecutiveBrief({ team, data, now, ver, corrections }) {
               <h3 className="hc-h3">{t.title}</h3>
               <p>{t.insight}</p>
               <p className="hc-implication">{t.implication}</p>
+              <Backing ids={t.support.ids} evidence={data.evidence} />
               <div className="hc-row" style={{ marginTop: "auto" }}>
                 <EvidenceTag kind="interpretation" />
                 <Strength support={t.support} />
@@ -416,6 +418,28 @@ function ExecutiveBrief({ team, data, now, ver, corrections }) {
 }
 
 const count = (list, status) => list.filter((c) => c.status === status).length;
+
+// The live-checked facts behind a read: what the source says, who published
+// it and when, and when it was checked.
+function Backing({ ids, evidence }) {
+  if (!evidence || !ids || !ids.length) return null;
+  const claims = ids.map((id) => evidence.claims.find((c) => c.id === id)).filter(Boolean);
+  if (!claims.length) return null;
+  return (
+    <details className="hc-more" style={{ marginTop: 10 }}>
+      <summary>The checked facts behind it ({claims.length})</summary>
+      <ul className="hc-list">
+        {claims.map((c) => (
+          <li key={c.id} className="hc-small">
+            <div className="hc-row"><Chip tone={c.status === "verified" ? "pop" : "ink"}>{c.status === "verified" ? "Verified fact" : "Corrected"}</Chip><span className="hc-tiny hc-muted">Checked {fmtDate(evidence.checkedOn)}</span></div>
+            <div style={{ marginTop: 4 }}>{c.evidence}</div>
+            <div className="hc-tiny" style={{ marginTop: 4 }}>{c.sources.map((x, i) => <React.Fragment key={i}>{i ? " · " : ""}<SourceLink s={x} /></React.Fragment>)}</div>
+          </li>
+        ))}
+      </ul>
+    </details>
+  );
+}
 
 // ── The fan year: rhythm plus the calendar, by season and year ────────
 function FanYear({ s, d, now }) {
@@ -485,7 +509,7 @@ function References({ refs, title, insights }) {
   if (!refs || !refs.length) return null;
   return (
     <div className="hc-card" style={{ marginTop: "var(--grid-gap)" }}>
-      <div className="hc-row" style={{ justifyContent: "space-between" }}><div className="hc-kv-label">{title}</div><EvidenceTag kind="fact" /></div>
+      <div className="hc-row" style={{ justifyContent: "space-between" }}><div className="hc-kv-label">{title}</div><Chip tone="line" title="Observed, existing things found by live search, kept apart from proposed concepts">Observed · sourced links</Chip></div>
       <p className="hc-tiny hc-muted" style={{ marginBottom: 10 }}>Things that exist, found by live search. Open the source to see them; images belong to their owners and aren't copied here.</p>
       <ul className="hc-list">
         {refs.map((r, i) => (
@@ -578,7 +602,7 @@ function Fanbase({ f, ev, insights }) {
       <div className="hc-card hc-stack">
         <div className="hc-row" style={{ justifyContent: "space-between" }}>
           <div><div className="hc-eyebrow">Fan evidence</div><h3 className="hc-h3" style={{ marginTop: 4 }}>What fans were seen wearing, saying and buying</h3></div>
-          {obs.length > 0 && <EvidenceTag kind="fact" />}
+          {obs.length > 0 && <Chip tone="line" title="Each item is what a dated source reported. It shows direction, not size or share.">Sourced observations · directional</Chip>}
         </div>
         {obs.length ? (
           <ul className="hc-list">

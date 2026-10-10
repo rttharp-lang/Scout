@@ -1,0 +1,641 @@
+{
+  "team": "ind",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 2026: the Oct 23 home opener vs. Dallas through the Oct 30 Cup Night vs. Philadelphia",
+      "kind": "launch",
+      "start": "2026-10-23",
+      "end": "2026-10-30",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Oct 30 vs. Philadelphia is a confirmed Cup Night in league-calendar.json. The Oct 23 opener vs. Dallas comes from the correction to ind-c3, a contradicted claim, so no verified claim states it. One schedule source lists a Philadelphia home game on Oct 28.",
+      "actBy": "2026-10-20",
+      "actNote": "Close the Butler and NBA go/no-go on the Hinkle layer.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Nov 1, 2026 onward: Fieldhouse Winter tease and sell",
+      "kind": "launch",
+      "start": "2026-11-01",
+      "end": "2026-12-11",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Nov 1 is the brief's own launch date. The Dec 11 Cup final it runs to is confirmed in league-calendar.json.",
+      "actBy": "2026-10-20",
+      "actNote": "Get Butler and NBA go/no-go on the Hinkle layer. The base capsule runs either way.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Early-to-mid Nov 2026: ISSMA and BOA Grand Nationals weeks",
+      "kind": "event",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief gives early-to-mid November. The 2026 ISSMA and BOA Grand Nationals dates are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Nov 2026: Cup Group B game vs. the Knicks (date and site to confirm). Cup Nights are Fridays Oct 30-Nov 27, plus Nov 24-25.",
+      "kind": "event",
+      "start": "2026-11",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 1-11, 2026, peaking at the Dec 11 Cup final at Hinkle",
+      "kind": "event",
+      "start": "2026-12-01",
+      "end": "2026-12-11",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — championship",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Jan 2027 post-holiday lull",
+      "kind": "season",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Early Feb 2027 girls' state finals through late-Feb boys' sectionals",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The 2027 IHSAA girls' finals and boys' sectional dates are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Late Mar 2027: boys' state-finals week at the Fieldhouse (confirm), the 1955 title's anniversary window",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief says to confirm the 2027 boys' state-finals dates and that they're at Gainbridge Fieldhouse.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Apr 11, 2027 season end through the Apr 13-16 Play-In and playoff tip",
+      "kind": "event",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11) and Play-In Tournament (Apr 13-16). The playoff start is not confirmed.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "May 2027 Race Month (Indy 500 expected May 30)",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief says the 2027 Indy 500 is expected May 30. Unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "June 2027, Indy Pride (skip by default)",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Mid-July 2027 Indiana Black Expo Summer Celebration; late July back-to-school",
+      "kind": "event",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief gives mid-July for the 2027 Summer Celebration and late July for back-to-school. Unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Early Oct 2027, Circle City Classic",
+      "kind": "event",
+      "start": "2027-10",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief gives early October 2027. Unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "hinkle-cup-final-week",
+      "consumer": "Statewide Pacers diehards, gym-hoppers, Cup visitors and holiday gift buyers.",
+      "insights": [
+        0,
+        2,
+        6
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-01",
+      "actBy": "2026-10-20",
+      "actNote": "Get a go/no-go from Butler and the NBA on the Hinkle layer. The base capsule ships either way.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Get Butler and NBA terms on Hinkle imagery and any presence near the final, and find out if the area is a league-controlled zone.",
+        "Confirm licensed blank stock and print capacity for a Nov 1 ship.",
+        "Ask Lids and Finish Line which doors outside Marion County will carry the capsule.",
+        "Test the heavyweight hoodie at a strong entry price with mall buyers."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "back-home-again-opener",
+      "consumer": "Lifelong Pacers diehards, Gen Z digital fans and families.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "jersey",
+        "kids",
+        "outerwear"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Launch the team-level Home capsule at the home opener. Hold player jerseys until Haliburton has played at home.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the home opener and the Philadelphia home date against the Pacers' published schedule.",
+        "Check swingman and youth jersey stock for Haliburton, Siakam and Nembhard.",
+        "Clear the plain 'Home' lockup with the Pacers and NBA, away from the 'Back Home Again' song title.",
+        "Show the graphics to diehards and check nothing reads as hype or uses the injury."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "92-counties-hoosier-hysteria",
+      "consumer": "Small-town Pacers fans and high school families across Indiana's 92 counties.",
+      "insights": [
+        2,
+        6
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Agree county customization and in-store patch rules with the Pacers and NBA before the early-February launch. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Get Pacers and NBA rules on 'Indiana' wordmarking, county customization and in-store patch application.",
+        "Confirm the 2027 IHSAA girls' finals and boys' sectional dates.",
+        "Ask Lids, Finish Line and Dick's which doors will take pre-made top-county runs.",
+        "Test county-roundel demand in a few doors outside Indianapolis before sizing the top-20 run."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Catch the Stars Foundation (Tamika Catchings)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "attucks-55-avenue",
+      "consumer": "Black Indianapolis fans and heritage collectors citywide.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Contract a Black Indianapolis design lead with the partners and publish the fee and revenue-share schedule before any art. The brief sets no deadline before the February teaser.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Ask the Madam Walker Legacy Center and Crispus Attucks Museum if they want to co-author, and get written consent for the Attucks name and the Walker ornament.",
+        "Confirm the 2027 boys' state-finals dates and that they're at Gainbridge Fieldhouse.",
+        "Agree the design lead's fee and the partners' revenue share before any art.",
+        "Ask whether Oscar Robertson wants to take part, without assuming his name or likeness."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Madam Walker Legacy Center",
+        "Crispus Attucks Museum",
+        "Indiana Black Expo",
+        "A Black Indianapolis design lead (to be chosen with the partners)",
+        "Oscar Robertson (invitation only)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "knicks-8-9",
+      "consumer": "Lifelong Pacers diehards and Reggie-era adults.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "jersey"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Pin the date and site of the Cup Group B Knicks game before the drop. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the date and site of the Cup Group B Knicks game.",
+        "Verify the 2025 East finals clinch date and that the Pacers were the last team to knock out the Knicks before their 2026 title.",
+        "Review the '8.9' and '5.7.95' graphics with the Pacers and NBA for taunt and likeness risk.",
+        "Check Reggie 31 replica stock for the optional add-on."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "boom-baby-aba",
+      "consumer": "Lifelong diehards, Gen Z fans and band families downtown for the November marching finals.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "fleece",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Book a paid Indiana high school drumline and agree the proceeds with Music for All before the November game night. The brief sets no earlier deadline.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Clear 'Boom Baby' with Slick Leonard's estate and the Pacers, and ABA-ball trim with the NBA.",
+        "Match every piece to the actual Moments Mixtape colors and confirm its 2026-27 game nights.",
+        "Confirm the 2026 ISSMA state finals and BOA Grand Nationals dates.",
+        "Check whether the drumline warmup, a new style, can land by mid-November."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Music for All",
+        "Luna Music",
+        "A paid Indiana high school drumline (to name)",
+        "Slick Leonard's estate",
+        "An Indy DJ for the commissioned mix (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "pace-line-racing",
+      "consumer": "Racing-and-hoops locals, younger lifestyle buyers and May visitors.",
+      "insights": [],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2027-05",
+      "actNote": "Commission and credit Indiana race-car letterers for the numerals before the early-May launch. The brief sets no earlier deadline.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Clear any IMS, USAC or NHRA mark with its owner, or leave it out.",
+        "Confirm the 2027 Indy 500 date.",
+        "Test the pit-crew jacket at full price with racing-and-hoops locals.",
+        "Check the line doesn't repeat the 2019-20 racing City Edition."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Indiana race-car letterers (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "braden-smith-765",
+      "consumer": "Purdue-leaning Pacers fans in West Lafayette and the 765.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Get Braden Smith's and the NBA's approval before making anything, and hold stock until his first home NBA appearance. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Get Braden Smith's and the NBA's approval for name-and-number product.",
+        "Check whether he is with the Pacers or in the G League before any buy.",
+        "Ask Lafayette-area Lids and Dick's doors whether they will carry it.",
+        "Keep the run small and hold it until his first home NBA appearance."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    }
+  ]
+}

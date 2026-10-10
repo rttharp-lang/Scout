@@ -1,0 +1,148 @@
+{
+  "team": "mia",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "mia-c1",
+      "claim": "Nike Factory Store at Dolphin Mall is a volume and launch door for White Hot Linen, youth back-to-school and the retail playbook.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "nike factory store",
+          "url": "https://www.simon.com/mall/dolphin-mall/map/nike-factory-store/",
+          "publisher": "Simon (Dolphin Mall)",
+          "published": ""
+        },
+        {
+          "title": "Nike Factory Store - Miami, Florida 33172 - Dolphin Mall",
+          "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/miami--florida--dolphin-mall",
+          "publisher": "MallsCenters",
+          "published": ""
+        }
+      ],
+      "evidence": "Dolphin Mall's own Simon store map lists a Nike Factory Store, and a mall directory places it at 11401 NW 12th St, Suite N100. Neither page is dated, so the listing is current but not a dated opening confirmation.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "white-hot-linen-playoffs",
+          "back-to-school-youth"
+        ],
+        "calendar": [
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "id": "mia-c2",
+      "claim": "Nike Factory Store at Sawgrass Mills is a volume and launch door for White Hot Linen, youth back-to-school and the retail playbook.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Find a Nike Store",
+          "url": "https://www.nike.com/ca/retail/directory/united-states/florida",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "www.simon.com",
+          "url": "https://www.simon.com/mall/sawgrass-mills/stores/print",
+          "publisher": "Simon (Sawgrass Mills)",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's Florida store directory and the Sawgrass Mills store list include a Nike Factory Store at 12801 W Sunrise Blvd, Suite 1005, Sunrise.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "white-hot-linen-playoffs",
+          "back-to-school-youth"
+        ],
+        "calendar": [
+          11,
+          13
+        ]
+      }
+    },
+    {
+      "id": "mia-c3",
+      "claim": "Shoe Gallery is a family-run downtown sneaker shop at 244 NE First Ave, the launch door for the Nov 18 Giannis allocation.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Sneakers - hypebeast - shoe gallery",
+          "url": "https://www.timeout.com/miami/shopping/shoe-gallery",
+          "publisher": "Time Out Miami",
+          "published": ""
+        },
+        {
+          "title": "Best Sneaker Store",
+          "url": "https://www.miaminewtimes.com/best-of-miami/2017/shopping-and-services/best-sneaker-store-9404509",
+          "publisher": "Miami New Times",
+          "published": "2017"
+        }
+      ],
+      "evidence": "Listings give Shoe Gallery at 244 NE 1st Ave, Miami 33132, selling raffle-only releases and local team collaborations. Miami New Times traces the family business to Abram Waserstein's shop, opened in 1979. No result is dated 2026, so check the door is trading before the Nov 18 allocation.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "giannis-305-arrival"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "mia-c4",
+      "claim": "The Heat home opener date is still to confirm within the Oct 20-31 tip-off window.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Miami Heat release 2026-27 regular season schedule",
+          "url": "https://local10.com/sports/local/2026/08/13/miami-heat-release-2026-27-regular-season-schedule/",
+          "publisher": "Local 10",
+          "published": "2026-08-13"
+        },
+        {
+          "title": "www.nba.com",
+          "url": "https://www.nba.com/team/1610612748/schedule/",
+          "publisher": "NBA.com",
+          "published": ""
+        }
+      ],
+      "evidence": "Local 10 reports the Heat open the regular season at home on Wednesday, Oct 21, 2026, against Minnesota at Kaseya Center. NBA.com lists the game at 7:30 p.m. ET.",
+      "action": "Filled in the date: strategy.json calendar[0] window and rhythm.json now give Oct 21 vs. Minnesota at Kaseya Center. factcheck.json verdict set to confirmed.",
+      "supports": {
+        "insights": [
+          0,
+          1
+        ],
+        "opportunities": [
+          "park-courts-heat-culture",
+          "giannis-305-arrival"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

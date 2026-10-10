@@ -77,7 +77,7 @@ export default function Opportunities() {
 
       {view === "shortlist" ? (
         <>
-          <p className="hc-small hc-muted" style={{ marginTop: 14, maxWidth: "85ch" }}>For each target season, the six ideas with the most live-checked support, then the brief's priority, then its size estimate. Evidence strength is about support, not size. <a href={href("method", "evidence")}>How it's worked out</a>.</p>
+          <p className="hc-small hc-muted" style={{ marginTop: 14, maxWidth: "85ch" }}>For each target season, the six ideas with the most verified support, then the brief's priority, then its size estimate. Evidence strength is about support, not size. <a href={href("method", "evidence")}>How it's worked out</a>.</p>
           {windows.map((w) => {
             const pick = all.filter((o) => seasonOfOpp(o) === w).sort(credible).slice(0, 6);
             return (

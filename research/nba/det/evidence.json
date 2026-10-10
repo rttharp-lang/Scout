@@ -1,0 +1,838 @@
+{
+  "team": "det",
+  "checkedOn": "2026-10-10",
+  "searches": 18,
+  "claims": [
+    {
+      "id": "det-c1",
+      "claim": "Two18 by Burn Rubber is a sneaker boutique across from Eastern Market, sister to Royal Oak's Burn Rubber",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Brand profile",
+          "url": "https://www.discobrands.co/brands/two18",
+          "publisher": "discobrands.co",
+          "published": ""
+        },
+        {
+          "title": "Burn Rubber Sneaker Boutique expands into Detroit with sister store Two18",
+          "url": "https://metrotimes.com/arts/burn-rubber-sneaker-boutique-expands-into-detroit-with-sister-store-two18-29286775",
+          "publisher": "Metro Times",
+          "published": ""
+        }
+      ],
+      "evidence": "Two18 opened Feb 18, 2022 at 1400 E. Fisher Freeway Service Drive, across a pedestrian bridge from Eastern Market. Roland 'Ro Spit' Coit runs it as Burn Rubber's sister store and it carries limited Nike and Jordan releases. No 2026-dated status turned up, so the brief's 'to confirm' flags stay.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "detroit-maker-roster",
+          "three-eras-heritage"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "id": "det-c2",
+      "claim": "A Nike Factory Store operates at Great Lakes Crossing Outlets in Auburn Hills",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "new nike shop opens at great lakes crossing outlets",
+          "url": "https://www.auburnhills.org/new-nike-shop-opens-at-great-lakes-crossing-outlets/",
+          "publisher": "City of Auburn Hills",
+          "published": ""
+        },
+        {
+          "title": "great lakes crossing stores",
+          "url": "https://www.legolanddiscoverycenter.com/michigan/post/great-lakes-crossing-stores/",
+          "publisher": "LEGOLAND Discovery Center Michigan",
+          "published": ""
+        }
+      ],
+      "evidence": "Auburn Hills reported the Nike Factory Store moving to a 14,000 sq ft space in District 9 of the mall, north of Bass Pro Shops. Mall-related pages still list it among the stores. The city item dates from 2017 and no 2026-dated status was shown.",
+      "action": "factcheck.json verdict on the Nike Factory Store set to confirmed.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "shift-change-winter"
+        ],
+        "calendar": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "det-c3",
+      "claim": "Detroit vs. Everybody (Tommey Walker) is operating with its own doors for the first maker-roster drop",
+      "topic": "partner",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Detroit Vs. Everybody expands Downtown after building collapse at Eastern Market",
+          "url": "https://fox2detroit.com/news/detroit-vs-everybody-expands-downtown-after-building-collapse-at-eastern-market",
+          "publisher": "FOX 2 Detroit",
+          "published": ""
+        },
+        {
+          "title": "Detroit vs. Everybody’s new line",
+          "url": "https://www.bridgedetroit.com/detroit-vs-everybody-new-line-313-day/",
+          "publisher": "BridgeDetroit",
+          "published": ""
+        }
+      ],
+      "evidence": "After a partial collapse of its Eastern Market building, the brand opened a flagship at 44 W. Columbia St. in The District Detroit, and Walker launched a '313 vs. Everybody' line. None of the results is dated 2026, so current store status is not settled.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "detroit-maker-roster"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "det-c4",
+      "claim": "The Oct 20 opener vs. Boston at Little Caesars Arena tips at 3:00 p.m. ET on NBC",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Boston Celtics",
+          "url": "https://www.nbcsportsboston.com/nba/boston-celtics/celtics-schedule-opening-night-2026/798828/",
+          "publisher": "NBC Sports Boston",
+          "published": ""
+        },
+        {
+          "title": "Celtics to open NBA season with early game against Pistons on NBC",
+          "url": "https://turnto10.com/sports/boston-celtics/celtics-to-open-the-nba-season-with-early-game-against-the-pistons-aug-11-2026",
+          "publisher": "Turn to 10 (WJAR)",
+          "published": ""
+        },
+        {
+          "title": "Sign up for the Today newsletter",
+          "url": "https://www.boston.com/sports/boston-celtics/2026/08/13/boston-celtics-2026-27-schedule-nba-basketball-jaylen-brown-sixers/",
+          "publisher": "Boston.com",
+          "published": "2026-08-13"
+        }
+      ],
+      "evidence": "Several outlets list Celtics at Pistons on Tuesday Oct 20 at 3 p.m. ET at Little Caesars Arena, opening the NBC and Peacock tripleheader.",
+      "action": "Removed the 'reportedly' and 'to confirm' hedges on the tip time in strategy.json (calendar 0 and the clock-in-opener when) and rhythm.json. factcheck.json verdict set to confirmed.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "clock-in-opener"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "det-c5",
+      "claim": "Detroit Hustles Harder is an operating Detroit-pride apparel label with its own doors",
+      "topic": "partner",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "7 Places to Splurge on Detroit Swag",
+          "url": "https://visitdetroit.com/places-to-splurge-on-detroit-swag",
+          "publisher": "Visit Detroit",
+          "published": ""
+        },
+        {
+          "title": "detroit hustles harder to host grand opening party in new digs 22243209",
+          "url": "https://www.metrotimes.com/arts/detroit-hustles-harder-to-host-grand-opening-party-in-new-digs-22243209/",
+          "publisher": "Metro Times",
+          "published": ""
+        }
+      ],
+      "evidence": "An undated Visit Detroit listing puts the flagship at 1353 Division St. in Eastern Market. J.P. O'Grady and Brendan Blumentritt co-founded it in 2007. Coverage is older and undated, so current status is not settled.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "detroit-maker-roster"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "det-c6",
+      "claim": "Carhartt was founded in Detroit in 1889 and is headquartered in Dearborn",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "carhartt history",
+          "url": "https://www.carhartt.com/carhartt-history",
+          "publisher": "Carhartt",
+          "published": ""
+        },
+        {
+          "title": "Historic Detroit",
+          "url": "https://historicdetroit.org/buildings/carhartt-factory",
+          "publisher": "Historic Detroit",
+          "published": ""
+        },
+        {
+          "title": "Carhartt",
+          "url": "https://en.wikipedia.org/wiki/Carhartt",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "Carhartt's own history page says Hamilton Carhartt & Company began making overalls in a Detroit loft in 1889. Historic Detroit and Built In place the headquarters in Dearborn.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "shift-change-winter"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "det-c7",
+      "claim": "Pewabic Pottery has made iridescent glazes on Detroit's East Side since 1903",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Pewabic Pottery",
+          "url": "https://en.wikipedia.org/wiki/Pewabic_Pottery",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "pewabic pottery",
+          "url": "https://www.nps.gov/places/pewabic-pottery.htm",
+          "publisher": "National Park Service",
+          "published": ""
+        },
+        {
+          "title": "Encyclopedia Of Detroit",
+          "url": "https://detroithistorical.org/node/472",
+          "publisher": "Detroit Historical Society",
+          "published": ""
+        }
+      ],
+      "evidence": "Mary Chase Perry Stratton and Horace Caulkins founded Pewabic in 1903. It moved to its East Jefferson building around 1907, became known for iridescent glazes, and still operates. One source gives 1904, but most say 1903.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [],
+        "calendar": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "det-c8",
+      "claim": "Checker Bar downtown is open for watch parties",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "detroits checker bar reopens after 2025 fire prompts year long closure",
+          "url": "https://clickondetroit.com/news/local/2026/03/04/detroits-checker-bar-reopens-after-2025-fire-prompts-year-long-closure",
+          "publisher": "ClickOnDetroit (WDIV)",
+          "published": "2026-03-04"
+        },
+        {
+          "title": "checker bar reopens in detroits cadillac square after fire forced closure",
+          "url": "https://www.wxyz.com/news/region/detroit/checker-bar-reopens-in-detroits-cadillac-square-after-fire-forced-closure",
+          "publisher": "WXYZ",
+          "published": ""
+        }
+      ],
+      "evidence": "Checker Bar at 124 Cadillac Square closed after a basement fire in January 2025 and reopened on March 4, 2026, with a renovated second floor.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "overtime-playoff-pack"
+        ],
+        "calendar": [
+          5,
+          9
+        ]
+      }
+    },
+    {
+      "id": "det-c9",
+      "claim": "Ramadan 2027 runs about Feb 8 to Mar 9, with Eid al-Fitr about Mar 9-10",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "ramadan 2027 dates eid al fitr holiday",
+          "url": "https://www.thenationalnews.com/news/uae/2026/09/09/ramadan-2027-dates-eid-al-fitr-holiday/",
+          "publisher": "The National",
+          "published": "2026-09-09"
+        },
+        {
+          "title": "When is Ramadan 2027?",
+          "url": "https://www.zakat.org/when-is-ramadan-2027-1",
+          "publisher": "Zakat Foundation of America",
+          "published": ""
+        },
+        {
+          "title": "When is Ramadan 2027?",
+          "url": "https://blog.wego.com/ramadan-2027/",
+          "publisher": "Wego",
+          "published": ""
+        }
+      ],
+      "evidence": "Astronomical projections put the start of Ramadan around Feb 8, 2027 and Eid al-Fitr on Mar 9, or Mar 10 if the month runs 30 days. Final dates depend on moon sighting.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "eid-dearborn-hamtramck"
+        ],
+        "calendar": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "det-c10",
+      "claim": "Fairlane Town Center is a major Dearborn mall where spending power sits, and the volume door for Dearborn families and the Eid push",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Fairlane Town Center",
+          "url": "https://en.wikipedia.org/wiki/Fairlane_Town_Center",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "fairlanes uncertain future greektowns new gateway and detroit brands head north",
+          "url": "https://www.dailydetroit.com/fairlanes-uncertain-future-greektowns-new-gateway-and-detroit-brands-head-north/",
+          "publisher": "Daily Detroit",
+          "published": ""
+        },
+        {
+          "title": "How Dearborn’s Fairlane Mall is reimagining itself for a new era",
+          "url": "https://metromodemedia.com/?p=9992",
+          "publisher": "Metro Mode",
+          "published": ""
+        }
+      ],
+      "evidence": "A Wayne County judge appointed a receiver for the mall at its lender's request in January 2026, partly to audit missing rents. Three of its five anchor spaces are listed as vacant, and the former Sears space is for lease. The mall still operates, but its future and sale are uncertain.",
+      "action": "Reworded strategy.json (insight 6, calendar 3 and 7, retail playbook, shift-change-winter and eid-dearborn-hamtramck where) so Fairlane is flagged as in receivership and the plan does not rest on it. Updated the Fairlane entries in retail-landscape.json and retail-behavior.json.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "shift-change-winter",
+          "eid-dearborn-hamtramck"
+        ],
+        "calendar": [
+          3,
+          7
+        ]
+      }
+    },
+    {
+      "id": "det-c11",
+      "claim": "Detroit techno has no formal Pistons tie.",
+      "topic": "partner",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "techno pioneers belleville three collab with pistons",
+          "url": "https://www.axios.com/local/detroit/2026/01/28/techno-pioneers-belleville-three-collab-with-pistons",
+          "publisher": "Axios Detroit",
+          "published": "2026-01-28"
+        }
+      ],
+      "evidence": "Axios Detroit reports a Pistons Black History Month hat, T-shirt and hoodie with the Belleville Three and artist Sheefy McFly, sold on Pistons313Shop.com and at the team store in January 2026.",
+      "action": "Corrected top insight 6 and the Machine Lane opportunity in strategy.json.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "machine-lane-movement"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "det-c12",
+      "claim": "A Detroit maker roster is open ground for the Pistons.",
+      "topic": "partner",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "detroit pistons malcolm x capsule collection 1234827173",
+          "url": "https://www.sportico.com/business/commerce/2025/detroit-pistons-malcolm-x-capsule-collection-1234827173/",
+          "publisher": "Sportico",
+          "published": "2025"
+        }
+      ],
+      "evidence": "Sportico reports a 2025 Pistons capsule with the Malcolm X estate, designed by Detroit artist Wesley Taylor and made by DETail Threads.",
+      "action": "Added the existing capsule to the maker-roster opportunity in strategy.json.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "detroit-maker-roster"
+        ],
+        "calendar": []
+      }
+    }
+  ],
+  "observations": [
+    {
+      "type": "uniform-reaction",
+      "observation": "Fantasy Nerds, citing Yahoo Sports, reported that Nike's Specter Edition alternates for 2026-27 drew wide online backlash once the designs leaked. The report is league-wide and names no Pistons-specific reaction.",
+      "audience": "Online NBA fans across the eight Specter teams, not Detroit fans in particular",
+      "timeframe": "Published Sept 10, 2026, the day after the reveal",
+      "limitations": "Secondhand summary of social media reaction, so directional only. No Detroit sample, no poll, and early reaction may soften by the first wear date.",
+      "source": {
+        "title": "nikes latest nba alternate uniforms face widespread criticism 1619633",
+        "url": "https://fantasynerds.com/news/story/2026/09/10/nikes-latest-nba-alternate-uniforms-face-widespread-criticism-1619633",
+        "publisher": "Fantasy Nerds",
+        "published": "2026-09-10"
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "three-eras-heritage"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "uniform-reaction",
+      "observation": "Vintage Detroit describes the 1996-2001 teal horsehead look as polarizing, and notes the team went back to blue, white and red after five seasons.",
+      "audience": "Detroit fans who lived through the teal era, as told by a local history site",
+      "timeframe": "Covers 1996-2001; the page shows no publication date",
+      "limitations": "One writer's retrospective, not a survey. It shows the teal look was divisive then, which tempers the brief's 'cult favorite' framing but says nothing about demand today.",
+      "source": {
+        "title": "the teal era when everything went wrong for the pistons",
+        "url": "https://www.vintagedetroit.com/the-teal-era-when-everything-went-wrong-for-the-pistons/",
+        "publisher": "Vintage Detroit",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "three-eras-heritage"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "type": "commercial-signal",
+      "observation": "The Big Lead lists Cade Cunningham 14th among the NBA's top-selling jerseys for 2025-26. The Game PH also places him 14th for the 2025-26 regular season.",
+      "audience": "National jersey buyers, including Pistons fans who buy through league channels",
+      "timeframe": "2025-26 season; The Big Lead labels its list 'so far', so it may be a mid-season snapshot",
+      "limitations": "Rank only, no unit numbers. Not split by city, so it can't show how much of the demand is local or which jersey edition sold.",
+      "source": {
+        "title": "NBA: Top-selling jerseys so far in 2025-26 season",
+        "url": "https://www.thebiglead.com/nba-top-selling-jerseys-so-far-in-2025-26-season-v/",
+        "publisher": "The Big Lead",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "clock-in-opener"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "type": "commercial-signal",
+      "observation": "The NBA's 2023-24 team merchandise ranking had the Lakers first and the Celtics second, with the Pistons outside the top 10. Its top-15 jersey list did not include Cunningham.",
+      "audience": "National buyers of NBA team merchandise",
+      "timeframe": "2023-24 season, before the turnaround; no publication date shown",
+      "limitations": "Two seasons old and from a losing year. Useful only as a baseline, not as a read on 2026-27 demand.",
+      "source": {
+        "title": "top selling jerseys first half 2023 24",
+        "url": "https://api-hub.nba.com/news/top-selling-jerseys-first-half-2023-24",
+        "publisher": "NBA",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "shift-change-winter"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "type": "commercial-signal",
+      "observation": "Crain's Detroit reported that playoff buzz was driving a jump in Pistons merchandise sales, with fans buying team apparel and tickets. The excerpt gives no sales figures and quotes no retailer.",
+      "audience": "Metro Detroit fans buying team gear during a playoff run",
+      "timeframe": "No date shown; the excerpt mentions a 2025 playoffs hat and a Knicks series, so it likely covers the 2025 run",
+      "limitations": "No numbers, no named store and an uncertain date. It shows direction, not size.",
+      "source": {
+        "title": "Pistons playoffs buzz drives exploding team merchandise sales",
+        "url": "https://prod.crainsdetroit.com/node/920186",
+        "publisher": "Crain's Detroit Business",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "overtime-playoff-pack"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "type": "retailer",
+      "observation": "For the 2026 playoffs the Pistons team store added postseason tees, including a 'Detroit Dub' shirt sold only right after wins. It also carried team-store-exclusive playoff hats from a Twozzday collaboration.",
+      "audience": "Fans shopping the Little Caesars Arena team store during the 2026 playoffs",
+      "timeframe": "Spring 2026 playoff run; no publication date shown",
+      "limitations": "A team announcement, not a sales report. It says what was offered, not what sold. The Twozzday detail came from the same set of announcement pages and should be confirmed on the original.",
+      "source": {
+        "title": "Detroit Pistons Announce 2026 NBA Playoff Activations and New Offerings",
+        "url": "https://www.dbusiness.com/daily-news/detroit-pistons-announce-2026-nba-playoff-activations-and-new-offerings/",
+        "publisher": "DBusiness",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          0,
+          3,
+          1
+        ],
+        "opportunities": [
+          "overtime-playoff-pack",
+          "detroit-maker-roster"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "type": "conflict",
+      "observation": "WDIV reported that the team handed out two different 'All Dawg' T-shirts at Game 1 against Cleveland, and called the phrase a signature rallying cry for Pistons fans. The fans' own 2026 voice is dog talk, not the shift language the brief proposes.",
+      "audience": "Fans at the 2026 playoff Fan Fest outside Little Caesars Arena",
+      "timeframe": "May 5, 2026, Game 1 of the series with Cleveland",
+      "limitations": "One local news report of one playoff night. The shirts were team giveaways, so the phrase's spread may be partly team-driven.",
+      "source": {
+        "title": "detroit pistons fan fest draws massive crowds ahead of game 1 vs cavs outside little caesars arena",
+        "url": "https://gmg-wdiv-prod.cdn.arcpublishing.com/news/local/2026/05/05/detroit-pistons-fan-fest-draws-massive-crowds-ahead-of-game-1-vs-cavs-outside-little-caesars-arena/",
+        "publisher": "WDIV ClickOnDetroit",
+        "published": "2026-05-05"
+      },
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "clock-in-opener"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "type": "conflict",
+      "observation": "Axios Detroit reported a Pistons collaboration with the Belleville Three: a hat, T-shirt and hoodie designed with local artist and DJ Sheefy McFly for Black History Month. It sold on Pistons313Shop.com and at the team store. That contradicts the brief's claim that techno has no formal Pistons tie.",
+      "audience": "Detroit techno fans and Pistons fans buying team-store capsules",
+      "timeframe": "Published Jan 28, 2026",
+      "limitations": "Shows the deal existed, not how it sold or how the techno community received it.",
+      "source": {
+        "title": "techno pioneers belleville three collab with pistons",
+        "url": "https://www.axios.com/local/detroit/2026/01/28/techno-pioneers-belleville-three-collab-with-pistons",
+        "publisher": "Axios Detroit",
+        "published": "2026-01-28"
+      },
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "machine-lane-movement"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "type": "conflict",
+      "observation": "Sportico reported a 2025 Pistons capsule with the Malcolm X estate, designed by Detroit artist Wesley Taylor, with sweatshirts and tees from local clothier DETail Threads. The team already runs local-maker capsules, so a maker roster is not open ground.",
+      "audience": "Pistons fans who buy team-store capsules made with Detroit designers",
+      "timeframe": "2025",
+      "limitations": "One capsule. It shows the team's own practice, not fan demand or sales.",
+      "source": {
+        "title": "detroit pistons malcolm x capsule collection 1234827173",
+        "url": "https://www.sportico.com/business/commerce/2025/detroit-pistons-malcolm-x-capsule-collection-1234827173/",
+        "publisher": "Sportico",
+        "published": "2025"
+      },
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "detroit-maker-roster"
+        ],
+        "calendar": [
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "type": "segment",
+      "observation": "Metro Times reported that Detroit designer Mia Ray of Glam-Aholic made a line of Pistons-themed handbags for 313 Day, and that the team also worked with designer Ty Mopkins. It is a women's accessories lane the brief's three era lanes leave out.",
+      "audience": "Style-led Pistons fans, including women buying accessories rather than jerseys",
+      "timeframe": "313 Day; the article's Monday, March 13 date points to 2023",
+      "limitations": "One team promotion from about 2023. No sales data, and it shows what the team offered rather than what women fans asked for.",
+      "source": {
+        "title": "detroit pistons partner with local brand glam aholic for custom handbags on 313 day 32577640",
+        "url": "https://www.metrotimes.com/arts/detroit-pistons-partner-with-local-brand-glam-aholic-for-custom-handbags-on-313-day-32577640/",
+        "publisher": "Metro Times",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          0,
+          2,
+          1
+        ],
+        "opportunities": [
+          "detroit-maker-roster"
+        ],
+        "calendar": []
+      }
+    }
+  ],
+  "references": [
+    {
+      "kind": "historic-uniform",
+      "title": "Uni Watch on the Pistons bringing back the late-1990s teal uniform",
+      "note": "Look at the teal jersey trim and flaming horsehead as revived for 2022-23. Supports insight 2's teal lane, and shows teal has already been reissued.",
+      "credit": "Uni Watch",
+      "source": {
+        "title": "the real teal deal pistons reviving late 90s favorite",
+        "url": "https://uni-watch.com/2022/07/25/the-real-teal-deal-pistons-reviving-late-90s-favorite/",
+        "publisher": "Uni Watch",
+        "published": "2022-07-25"
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "three-eras-heritage"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "kind": "historic-uniform",
+      "title": "The Pistons' 1997 horsehead primary logo",
+      "note": "Check the horsehead mark and teal palette before any teal-era graphic. Supports insight 2.",
+      "credit": "See source",
+      "source": {
+        "title": "Primary Logo",
+        "url": "https://www.sportslogos.net:443/logos/view/enfhamkfyk1vfvdjuzg67fpeg/Detroit_Pistons/1997/Primary_Logo/",
+        "publisher": "SportsLogos.net",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "three-eras-heritage"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "kind": "historic-uniform",
+      "title": "Detroit Historical Society shop's youth Bad Boys classic T-shirt",
+      "note": "A Bad Boys graphic already sold in kids' sizes by a Detroit museum. Supports insight 2 and the youth sizing in the heritage lane.",
+      "credit": "Detroit Historical Society",
+      "source": {
+        "title": "youth detroit bad boys classic t shirt",
+        "url": "https://shop.detroithistorical.org/products/youth-detroit-bad-boys-classic-t-shirt",
+        "publisher": "Detroit Historical Society",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "three-eras-heritage"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "kind": "lettering-art-materials",
+      "title": "Encyclopedia of Detroit entry on Pewabic Pottery",
+      "note": "Read the history of the iridescent glaze and the buildings that carry Pewabic tile. Supports insight 4's glaze-process story.",
+      "credit": "Detroit Historical Society",
+      "source": {
+        "title": "Pewabic Pottery",
+        "url": "https://detroithistorical.org/learn/encyclopedia-of-detroit/pewabic-pottery",
+        "publisher": "Detroit Historical Society",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "kind": "court-store-space",
+      "title": "National Park Service page on the Pewabic Pottery building",
+      "note": "The East Jefferson pottery, a National Historic Landmark since 1991. Supports insight 4 as the real place behind the glaze story.",
+      "credit": "National Park Service",
+      "source": {
+        "title": "pewabic pottery",
+        "url": "https://www.nps.gov/places/pewabic-pottery.htm",
+        "publisher": "National Park Service",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [],
+        "calendar": []
+      }
+    },
+    {
+      "kind": "lettering-art-materials",
+      "title": "Palace Skateboards' seven-piece '313' capsule with the Detroit Tigers",
+      "note": "Look at how another brand already uses the 313 area code with a Detroit team logo. Check any Pistons 313 graphic against it. Supports insight 0.",
+      "credit": "Hypebeast",
+      "source": {
+        "title": "Palace Skateboards Celebrates the Detroit Tigers With a Seven-Piece \"313\" Capsule",
+        "url": "https://hypebeast.com/2026/6/detroit-tigers-mlb-palace-skateboards-collaboration-collection-release-info",
+        "publisher": "Hypebeast",
+        "published": "2026-06"
+      },
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "clock-in-opener",
+          "detroit-maker-roster"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "kind": "fan-styling",
+      "title": "WDIV report on Fan Fest crowds outside Little Caesars Arena before Game 1",
+      "note": "See what the playoff crowd wears outside the arena, including the 'All Dawg' giveaway tees. Supports insight 3 on fan voice.",
+      "credit": "See source",
+      "source": {
+        "title": "detroit pistons fan fest draws massive crowds ahead of game 1 vs cavs outside little caesars arena",
+        "url": "https://gmg-wdiv-prod.cdn.arcpublishing.com/news/local/2026/05/05/detroit-pistons-fan-fest-draws-massive-crowds-ahead-of-game-1-vs-cavs-outside-little-caesars-arena/",
+        "publisher": "WDIV ClickOnDetroit",
+        "published": "2026-05-05"
+      },
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "clock-in-opener"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "claim": "Fairlane Town Center is a major mall where Dearborn spending power sits, and the door for Dearborn families and the Eid push.",
+      "correction": "The mall has been run by a court-appointed receiver since January 2026, with most anchor space empty. It is kept as a door only after its tenants are confirmed, and the Eid push now targets Dearborn and Hamtramck doors.",
+      "files": [
+        "strategy.json",
+        "retail-landscape.json",
+        "retail-behavior.json"
+      ],
+      "claimId": "det-c10"
+    },
+    {
+      "claim": "Detroit techno and jit have no formal Pistons tie.",
+      "correction": "The Pistons sold a Belleville Three Black History Month collaboration with Sheefy McFly in January 2026. Jit has no known tie.",
+      "files": [
+        "strategy.json"
+      ],
+      "claimId": "det-c11"
+    },
+    {
+      "claim": "A rolling Detroit maker program would be new ground for the team.",
+      "correction": "The team already ran a 2025 Malcolm X estate capsule with Detroit artist Wesley Taylor and DETail Threads.",
+      "files": [
+        "strategy.json"
+      ],
+      "claimId": "det-c12"
+    }
+  ]
+}

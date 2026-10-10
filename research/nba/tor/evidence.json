@@ -1,0 +1,136 @@
+{
+  "team": "tor",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "tor-c1",
+      "claim": "Nike Toronto Eaton Centre is an open Nike store downtown, used as a launch and drop-day door",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Nike Opens Canadian Flagship at CF Toronto Eaton Centre",
+          "url": "https://retail-insider.com/retail-insider/2025/10/nike-opens-canadian-flagship-at-cf-toronto-eaton-centre/",
+          "publisher": "Retail Insider",
+          "published": "2025-10"
+        },
+        {
+          "title": "nike toronto eaton centre store opening canadian flagship",
+          "url": "https://sharpmagazine.com/2025/10/22/nike-toronto-eaton-centre-store-opening-canadian-flagship/",
+          "publisher": "Sharp Magazine",
+          "published": "2025-10-22"
+        }
+      ],
+      "evidence": "Nike opened a two-level Canadian flagship of about 21,000 sq ft in part of the former Nordstrom space at CF Toronto Eaton Centre in October 2025, replacing a smaller store in the mall. Retail Insider says Fox Group, Nike's Canadian licensee, operates it, so it is Nike-branded but licensee-run.",
+      "action": "No change needed. The store's operator (a licensee, not Nike directly) is noted here for whoever confirms 'Nike-owned' wording.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "winter-blackout-north",
+          "crowd-owned-homecoming",
+          "purple-era-carter"
+        ],
+        "calendar": [
+          0,
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "id": "tor-c2",
+      "claim": "A Nike store at CF Yorkdale is open as a premium, draw and drop-day door",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "nike opens massive flagship store at torontos yorkdale shopping centre",
+          "url": "https://retail-insider.com/retail-insider/2021/08/nike-opens-massive-flagship-store-at-torontos-yorkdale-shopping-centre/",
+          "publisher": "Retail Insider",
+          "published": "2021-08"
+        }
+      ],
+      "evidence": "A Nike flagship of about 25,000 sq ft opened at Yorkdale in August 2021, operated by Fox-Wizel. The results date from 2019 to 2021 and do not show whether it is still open in 2026.",
+      "action": "No change. Current status stays in the verify queue.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "winter-blackout-north"
+        ],
+        "calendar": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "tor-c3",
+      "claim": "Toronto retired Vince Carter's #15 on Nov 2, 2024",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "vince carters no 15 jersey retired by toronto raptors in mid game ceremony",
+          "url": "https://www.cp24.com/news/sports/2024/11/03/vince-carters-no-15-jersey-retired-by-toronto-raptors-in-mid-game-ceremony/",
+          "publisher": "CP24",
+          "published": "2024-11-03"
+        },
+        {
+          "title": "raptors vince carter jersey retirement",
+          "url": "https://www.nba.com/news/raptors-vince-carter-jersey-retirement",
+          "publisher": "NBA.com",
+          "published": ""
+        }
+      ],
+      "evidence": "The Raptors retired Carter's No. 15 on Saturday, Nov 2, 2024, at halftime of a home game against Sacramento at Scotiabank Arena. He was the first Raptor to get the honour.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "purple-era-carter"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "tor-c4",
+      "claim": "Black History Month in Canada came from Toronto MP Jean Augustine's 1995 motion",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "jean augustine",
+          "url": "https://www.thecanadianencyclopedia.ca/article/jean-augustine/",
+          "publisher": "The Canadian Encyclopedia",
+          "published": ""
+        },
+        {
+          "title": "January 29, 2020",
+          "url": "https://crrf-fcrr.ca/?p=745",
+          "publisher": "Canadian Race Relations Foundation",
+          "published": ""
+        }
+      ],
+      "evidence": "Augustine moved a motion in the House of Commons on Dec 14, 1995 to recognize February as Black History Month. It passed unanimously, and the first national observance was February 1996.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "heritage-nights-coauthored"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

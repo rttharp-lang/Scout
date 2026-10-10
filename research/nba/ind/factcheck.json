@@ -145,9 +145,9 @@
     {
       "lens": "strategy",
       "claim": "Oct 30 is Haliburton's first home game and 'Back Home Again' home-opener anchor",
-      "verdict": "unverifiable",
-      "note": "Only Oct 30 (76ers) is a confirmed home date. The season opens Oct 20 and the Pacers have no opener, so an earlier home game may exist. Say 'first home game (confirm)'.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the home opener is Fri Oct 23 vs. Dallas, where Haliburton returns. Oct 30 is not the first home game. Fixed strategy, culture, rhythm and the verify lists.",
+      "source": "https://www.wrtv.com/sports/pacers-announce-full-2026-2027-regular-season-schedule"
     },
     {
       "lens": "strategy",
@@ -222,9 +222,9 @@
     {
       "lens": "retail-landscape",
       "claim": "Nike Factory Store at Edinburgh; Silver in the City on Mass Ave; Circle Centre tenant mix",
-      "verdict": "unverifiable",
-      "note": "Strategy's volume door and independent seeding rely on these.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Nike Factory Store is a tenant at Indiana Premium Outlets in Edinburgh. Circle Centre Mall closed Dec 31, 2025 for redevelopment, so its Foot Locker is out of the plan. Silver in the City is still unchecked.",
+      "source": "https://en.wikipedia.org/wiki/Circle_Centre_Mall"
     },
     {
       "lens": "retail-landscape",
@@ -258,8 +258,8 @@
       "lens": "hoops",
       "claim": "Hinkle (1928) hosted state finals through 1971; Milan 1954; Attucks 1955-56 first all-Black champion",
       "verdict": "confirmed",
-      "note": "Long-established history.",
-      "source": ""
+      "note": "Checked live 2026-10-10: Butler Fieldhouse opened in 1928, hosted the boys' finals through 1971 and saw Milan win on March 20, 1954.",
+      "source": "https://stories.butler.edu/HinkleFieldhouseHistory"
     },
     {
       "lens": "culture",

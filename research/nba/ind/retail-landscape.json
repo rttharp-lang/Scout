@@ -2,7 +2,7 @@
   "team": "ind",
   "lens": "retail-landscape",
   "headline": "Indiana buys basketball at the arena, the mall and the gym, not at one flagship.",
-  "summary": "Indianapolis is a mid-size, drive-everywhere market with no sneaker mecca. Game-night buyers use the Pacers team store and Circle Centre, but the volume sits in the suburban malls and the Edinburgh outlets. Loyalty splits across the Pacers, IU, Purdue and the high school gym. With a healthy Haliburton and a returning Moments Mixtape City Edition, 2026-27 is the best window in years to concentrate launches.",
+  "summary": "Indianapolis is a mid-size, drive-everywhere market with no sneaker mecca. Game-night buyers use the Pacers team store. Circle Centre Mall closed at the end of 2025 for redevelopment, and the volume sits in the suburban malls and the Edinburgh outlets. Loyalty splits across the Pacers, IU, Purdue and the high school gym. With a healthy Haliburton and a returning Moments Mixtape City Edition, 2026-27 is the best window in years to concentrate launches.",
   "insights": [
     {
       "title": "The arena store is the team-gear flagship",
@@ -41,12 +41,6 @@
       "kind": "venue",
       "neighborhood": "Downtown Indianapolis",
       "why": "Home of the Pacers and the Pacers Team Store, the highest-intent point of sale for team gear."
-    },
-    {
-      "name": "Circle Centre Mall",
-      "kind": "shopping mall",
-      "neighborhood": "Downtown Indianapolis",
-      "why": "Downtown mall steps from the arena. Its athletic-chain doors catch pregame and tourist traffic."
     },
     {
       "name": "Fashion Mall at Keystone",
@@ -293,10 +287,6 @@
       "url": "https://www.gainbridgefieldhouse.com"
     },
     {
-      "title": "Circle Centre (Simon)",
-      "url": "https://www.simon.com/mall/circle-centre"
-    },
-    {
       "title": "Edinburgh Premium Outlets (Simon)",
       "url": "https://www.premiumoutlets.com/outlet/edinburgh"
     },
@@ -313,8 +303,8 @@
   "extra": {
     "districts": [
       {
-        "name": "Downtown / Circle Centre and Gainbridge",
-        "profile": "Arena-adjacent mall and team store cluster.",
+        "name": "Downtown / Gainbridge",
+        "profile": "Team store cluster by the arena. Circle Centre Mall closed at the end of 2025 for redevelopment.",
         "shopper": "Game-night fans, convention and tourist visitors, office workers.",
         "role": "tourist"
       },
@@ -363,9 +353,9 @@
         "why": "Nike-owned volume door for basketball footwear and apparel across the region."
       },
       {
-        "name": "Foot Locker (Circle Centre and area malls)",
+        "name": "Foot Locker (area malls)",
         "type": "athletic-chain",
-        "neighborhood": "Downtown and suburban malls",
+        "neighborhood": "Suburban malls",
         "why": "Main athletic-chain partner for basketball footwear and Pacers jerseys."
       },
       {
@@ -406,11 +396,11 @@
     "verify": [
       "Confirm the Gainbridge Fieldhouse arena name and the Pacers Team Store location and hours.",
       "Confirm whether a Nike-owned community or Well Collective door exists in Indianapolis, and whether the Nike Factory Store is still open at Edinburgh Premium Outlets.",
-      "Confirm Foot Locker, Finish Line/JD and Dick's door counts and locations at Circle Centre, Castleton, Fashion Mall and Greenwood Park.",
+      "Confirm Foot Locker, Finish Line/JD and Dick's door counts and locations at Castleton, Fashion Mall and Greenwood Park.",
       "Confirm whether Finish Line and Lids are still Indianapolis-headquartered, and who owns them now.",
       "Confirm Silver in the City is still open on Mass Ave.",
       "Confirm Homefield Apparel is still Indiana-based with current retail presence.",
-      "Check Circle Centre Mall's tenant mix and current vacancies.",
+      "Check what opens first in the Circle Centre redevelopment, and when.",
       "Check whether Pacers navy and gold hex values match the current brand guide.",
       "Confirm Hinkle Fieldhouse Cup final retail and licensing plans.",
       "Confirm Pacers team store pop-ups and Cup Night events on Oct 30."

@@ -145,9 +145,9 @@
     {
       "lens": "strategy",
       "claim": "Nike Center City store and Nike Factory Store at Philadelphia Mills as owned doors",
-      "verdict": "unverifiable",
-      "note": "Addresses and formats are unverified. Confirm both stores are open before routing launches.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: a store directory flags the Philadelphia Mills Nike Factory Store as probably closed, and Nike's own list names Downtown Philadelphia (901 Market Street) and Pottstown instead. Swapped the door in retail-landscape.json. The Center City store is still unconfirmed: Nike's Center City doors are the Jordan World of Flight store at 1617 Walnut and the 901 Market factory store.",
+      "source": "https://www.mallscenters.com/brands/stores/nike-factory-store/philadelphia--pennsylvania--philadelphia-mills"
     },
     {
       "lens": "retail-landscape",

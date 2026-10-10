@@ -53,15 +53,16 @@ const stewardship = fs.existsSync(path.join(RESEARCH, "review-status.json")) ? r
 const editorCorrections = fs.existsSync(path.join(RESEARCH, "corrections.json")) ? read(path.join(RESEARCH, "corrections.json")).corrections : [];
 
 // How many live-checked facts stand behind an insight or an opportunity.
-// Contradicted claims were corrected at the source, so they're counted apart.
+// Only verified claims raise strength. Contradicted claims were corrected at
+// the source and are counted apart. Fan observations can cut either way, so
+// they're counted as evidence that bears on the read, not as support.
 function supportFor(evidence, match) {
-  if (!evidence) return { verified: 0, corrected: 0, observed: 0, ids: [], strength: "unchecked" };
+  if (!evidence) return { verified: 0, corrected: 0, observed: 0, conflicting: 0, ids: [], strength: "unchecked" };
   const claims = evidence.claims.filter((c) => match(c.supports));
   const verified = claims.filter((c) => c.status === "verified");
   const corrected = claims.filter((c) => c.status === "contradicted");
   const observed = evidence.observations.filter((o) => match(o.supports));
-  const n = verified.length + observed.length;
-  return { verified: verified.length, corrected: corrected.length, observed: observed.length, ids: [...verified, ...corrected].map((c) => c.id), strength: strengthOf(n) };
+  return { verified: verified.length, corrected: corrected.length, observed: observed.length, conflicting: observed.filter((o) => o.type === "conflict").length, ids: [...verified, ...corrected].map((c) => c.id), strength: strengthOf(verified.length) };
 }
 
 const summary = [];

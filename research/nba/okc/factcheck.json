@@ -27,15 +27,15 @@
       "lens": "retail-landscape",
       "claim": "Shop Good is a Plaza District local-pride shop",
       "verdict": "corrected",
-      "note": "Checked live: Shop Good is at 1007 N Broadway in Midtown, near the Plaza District but not in it. Fixed in retail-landscape.",
-      "source": "https://www.travelok.com/listings/view.profile/id.13041"
+      "note": "Checked live 2026-10-10: Shop Good is at 1007 N Broadway in Automobile Alley, not Midtown or the Plaza District. Fixed in retail-landscape and strategy.",
+      "source": "https://www.travelok.com/de/listings/view.profile/id.18328"
     },
     {
       "lens": "strategy",
       "claim": "Red Dirt capsule and retail playbook place Shop Good in the Plaza District",
       "verdict": "corrected",
-      "note": "Shop Good is on N Broadway in Midtown. Separately, the Plaza monthly art walk is a second-Friday event (LIVE on the Plaza). The editor should relabel the door and check the event name.",
-      "source": ""
+      "note": "Checked live 2026-10-10: Shop Good is on N Broadway in Automobile Alley. Relabeled the door in the Red Dirt capsule, partners and retail playbook. The Plaza art walk (LIVE on the Plaza) still needs a check.",
+      "source": "https://www.travelok.com/de/listings/view.profile/id.18328"
     },
     {
       "lens": "retail-landscape",
@@ -138,23 +138,23 @@
     {
       "lens": "strategy",
       "claim": "Oct 22 vs Denver is the first home game and a Paycom Center event",
-      "verdict": "unverifiable",
-      "note": "Current facts list Oct 22 only as vs Denver on ESPN. Home or away, and home-opener status, are unconfirmed. Wording like first national-TV home game needs a live schedule check.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: Oct 22 vs Denver at Paycom Center is the home opener, 8:30 p.m. Central on ESPN. Updated calendar entry 1 and fanbase.",
+      "source": "https://okcfox.com/news/local/thunder-tip-off-26-27-season-at-spurs-on-nbc-then-host-nuggets-in-home-opener"
     },
     {
       "lens": "strategy",
       "claim": "Oklahoma sales-tax holiday: first weekend of August, clothing and footwear under $100 per item",
-      "verdict": "unverifiable",
-      "note": "The rule and the 2027 dates aren't confirmed live. The whole $99 ladder and the Under $100 collection depend on them. Confirm with the Oklahoma Tax Commission, including whether local taxes are waived.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the holiday falls on the first weekend of August and covers clothing and footwear under $100 per item (2025 ran Aug 1-3). The 2027 dates still need the Tax Commission's notice.",
+      "source": "https://fox23.com/news/oklahomas-sales-tax-holiday-for-2025-happening-this-weekend"
     },
     {
       "lens": "retail-behavior",
       "claim": "Oklahoma sales-tax holiday threshold and dates",
-      "verdict": "unverifiable",
-      "note": "Same as the brief: confirm the under-$100 threshold, the first-full-weekend rule and the 2026-27 dates.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the holiday falls on the first weekend of August and covers clothing and footwear under $100 per item (2025 ran Aug 1-3). The 2027 dates still need the Tax Commission's notice.",
+      "source": "https://fox23.com/news/oklahomas-sales-tax-holiday-for-2025-happening-this-weekend"
     },
     {
       "lens": "uniform",
@@ -255,5 +255,5 @@
       "source": ""
     }
   ],
-  "summary": "The dossiers were mostly sound on team facts, which match the current facts (record, West finals loss, trades, Mara, Cup group, key dates). Three live checks found location errors: the outlet center is now OKC Outlets on I-40, Ma Der Lao Kitchen is in the Plaza District, and Shop Good is in Midtown. Other fixes cover the Hornets' 2005-07 history, Durant's titles, Collison's dates, Memphis's division, the banner night, the WCWS venue name and the Jones Assembly neighborhood. An invented SoSo slang term is gone. OKC didn't get Specter. The brief still needs work on Chanchaleune as Asian District anchor, Shop Good's placement, the 2026-27 vs 2027-28 City Edition framing, past-dated 2026 windows and the Oct 22 home status. Small businesses and 2027 event dates are queued as unverifiable."
+  "summary": "The dossiers were mostly sound on team facts, which match the current facts (record, West finals loss, trades, Mara, Cup group, key dates). Three live checks found location errors: the outlet center is now OKC Outlets on I-40, Ma Der Lao Kitchen is in the Plaza District, and Shop Good is in Automobile Alley. Other fixes cover the Hornets' 2005-07 history, Durant's titles, Collison's dates, Memphis's division, the banner night, the WCWS venue name and the Jones Assembly neighborhood. An invented SoSo slang term is gone. OKC didn't get Specter. The brief still needs work on Chanchaleune as Asian District anchor, Shop Good's placement, the 2026-27 vs 2027-28 City Edition framing, past-dated 2026 windows and the Oct 22 home status. Small businesses and 2027 event dates are queued as unverifiable."
 }

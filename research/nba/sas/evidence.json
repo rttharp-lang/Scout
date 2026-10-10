@@ -1,0 +1,149 @@
+{
+  "team": "sas",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "sas-c1",
+      "claim": "The Nike Factory Store at San Marcos Premium Outlets is the nearest Nike-owned door and a youth-ladder door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Nike Factory Store - San Marcos, Texas TX 78666 - San Marcos Premium Outlets",
+          "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/san-marcos--texas--san-marcos-premium-outlets",
+          "publisher": "MallsCenters",
+          "published": ""
+        }
+      ],
+      "evidence": "A mall directory lists a Nike Factory Store at San Marcos Premium Outlets, 3939 IH-35 South #900, with current weekly hours. It is a third-party listing, so confirm with Simon before launch.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "wemby-youth-ladder",
+          "spurs-nation-border"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "sas-c2",
+      "claim": "Champs at Ingram Park Mall (and the North Star doors) are open volume doors for the stripe family and youth ladder.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "6301 nw loop 410",
+          "url": "https://stores.champssports.com/us/tx/san-antonio/6301-nw-loop-410",
+          "publisher": "Champs Sports",
+          "published": ""
+        },
+        {
+          "title": "part of ingram park mall is for sale",
+          "url": "https://www.ksat.com/news/local/2024/09/06/part-of-ingram-park-mall-is-for-sale",
+          "publisher": "KSAT",
+          "published": "2024-09-06"
+        }
+      ],
+      "evidence": "Champs' own store page lists the Ingram Park Mall store at 6301 NW Loop 410 with hours, and names North Star Mall as a nearby sister store. Ingram Park still operates with Dillard's, JCPenney and Macy's anchors, though part of the property was listed for sale in 2024. Foot Locker at North Star was not checked.",
+      "action": "No change needed. Added a note to the factcheck verdict on mall tenants.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "city-edition-return-sellthrough",
+          "wemby-youth-ladder",
+          "fiesta-playoff-drop"
+        ],
+        "calendar": [
+          1,
+          12
+        ]
+      }
+    },
+    {
+      "id": "sas-c3",
+      "claim": "The Friendly Spot Ice House in Southtown hosts Cup Friday and playoff watch parties.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Southtown San Antonio: Funky Eats, Art Streets, and Local Beats",
+          "url": "https://gocity.com/en/san-antonio/things-to-do/things-to-do-in-southtown",
+          "publisher": "Go City",
+          "published": "2026-05"
+        }
+      ],
+      "evidence": "A May 2026 Southtown guide lists The Friendly Spot Ice House as a place to go. Other listings put it at 943 S. Alamo St. with a large patio and playground. This shows it is open, not that it would host Spurs watch parties.",
+      "action": "No change needed. Added a note to the factcheck verdict on restaurants and ice houses.",
+      "supports": {
+        "insights": [],
+        "opportunities": [],
+        "calendar": [
+          2,
+          10
+        ]
+      }
+    },
+    {
+      "id": "sas-c4",
+      "claim": "Fiesta runs ten days in the second half of April, with 2027 dates still to confirm.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Fiesta San Antonio 2027",
+          "url": "https://www.visitsanantonio.com/events/arts-culture-events/fiesta-san-antonio",
+          "publisher": "Visit San Antonio",
+          "published": ""
+        },
+        {
+          "title": "FIESTA® FIESTA presented by TOYOTA",
+          "url": "https://fiestasanantonio.org/fiesta-fiesta-presented-by-toyota/",
+          "publisher": "Fiesta San Antonio Commission",
+          "published": ""
+        }
+      ],
+      "evidence": "The official Fiesta site and Visit San Antonio list Fiesta 2027 as April 15-25, an eleven-day run that opens with Fiesta Fiesta at Travis Park. That starts four days after the Apr 11 regular-season end.",
+      "action": "Changed 'ten days' to 'eleven days' and added the Apr 15-25, 2027 dates in strategy and eight dossiers. Updated verify items that asked for the dates.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "fiesta-playoff-drop"
+        ],
+        "calendar": [
+          9
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Fiesta San Antonio runs ten days, and the 2027 dates were unconfirmed.",
+      "correction": "Fiesta 2027 runs eleven days, April 15-25, 2027.",
+      "files": [
+        "strategy.json",
+        "rhythm.json",
+        "retail-behavior.json",
+        "music.json",
+        "uniform.json",
+        "underground.json",
+        "food.json",
+        "culture.json",
+        "art.json",
+        "retail-landscape.json"
+      ],
+      "claimId": "sas-c4"
+    }
+  ]
+}

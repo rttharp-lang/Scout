@@ -1,0 +1,640 @@
+{
+  "team": "orl",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 9-31 (Magic at Cavaliers on ESPN Oct 11; league tips Oct 20; home opener Oct 21 vs. Atlanta at Kia Center)",
+      "kind": "event",
+      "start": "2026-10-09",
+      "end": "2026-10-31",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "orl-c4",
+      "actBy": "2026-10",
+      "actNote": "Start listening sessions with Puerto Rican community groups in Kissimmee.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup Fridays Oct 30-Nov 27; Florida Classic Nov 21 at Camping World Stadium; Black Friday Nov 27",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Dec 1 to Jan 6",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2027-01-06",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Christmas is Dec 25 and Three Kings Day is Jan 6",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Jan 6 (Three Kings Day) to late January",
+      "kind": "action",
+      "start": "2027-01",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Three Kings Day is Jan 6; MLK Day is the third Monday in January",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Tet Feb 6; trade deadline Feb 11; Pinstripe Era Track A in late February",
+      "kind": "launch",
+      "start": "2027-02",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Trade deadline",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "March to Apr 6",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "2027-04-06",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Apr 7 (407 Day); Apr 11 finale; Apr 13-16 Play-In; Florida Puerto Rican Parade late April",
+      "kind": "launch",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "407 Day is April 7 (4/07, the 407 area code)",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Playoffs (if qualified); Orlando Fringe in May",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "June; Pulse remembrance June 12",
+      "kind": "action",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "The Pulse remembrance is June 12, the anniversary of the 2016 shooting",
+      "actBy": "2027-06",
+      "actNote": "Lock the 2027 co-design samples and pre-sell the rain pack to AAU teams.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Early July (Orlando Summer League) and AAU weekends",
+      "kind": "launch",
+      "start": "2027-07",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Late July to mid-August",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "stock-availability",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Sep 15 to Oct 15, 2027",
+      "kind": "launch",
+      "start": "2027-09-15",
+      "end": "2027-10-15",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Hispanic Heritage Month runs Sep 15 to Oct 15 every year",
+      "actBy": "2026-12",
+      "actNote": "Recruit and pay the Puerto Rican co-designers this Navidad.",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "penny-pinstripe-archive",
+      "consumer": "Local diehards who remember 1995 and 2009, sneaker collectors and 90s-nostalgia vintage buyers.",
+      "insights": [
+        0,
+        1
+      ],
+      "categories": [
+        "outerwear",
+        "shorts",
+        "tee",
+        "headwear",
+        "footwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-27",
+      "actBy": "2026-10",
+      "actNote": "Open Track B talks with Penny now through Nike athlete marketing, since colorways take 12-18 months.",
+      "routes": [
+        "existing-inventory",
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Penny Hardaway's current Nike relationship and the Air Penny and Foamposite retro plans for 2026-27.",
+        "Clear the 1990s pinstripe and star marks with the NBA and the Magic through Hardwood Classics licensing.",
+        "Confirm the Foot Locker at The Florida Mall on Foot Locker's own store locator before naming it a door.",
+        "Set full-price sell-through targets for Track A at the arena store and Foot Locker."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Penny Hardaway (Track B, through Nike athlete marketing)",
+        "Foot Locker, The Florida Mall",
+        "In-town vintage vendors (Mills 50 or Thornton Park pop-up)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "boricua-orlando-co-design",
+      "consumer": "Puerto Rican and Caribbean families in Kissimmee, Osceola and east Orlando, including those who send gifts to the island.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "other",
+        "tee",
+        "headwear",
+        "accessory",
+        "kids",
+        "fleece"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-11-27",
+      "actBy": "2026-10",
+      "actNote": "Hold listening sessions this fall with groups such as Hispanic Federation's Orlando office and Prospera.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Hispanic Federation's Orlando office and Prospera programs before booking listening sessions.",
+        "Name a Central Florida Puerto Rican illustrator who can be paid and credited this fall.",
+        "Check stock of the existing tee, cap and crew socks for the gift box.",
+        "Set a gift-run sell-through target for Jan 6."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Hispanic Federation (Orlando office)",
+        "Prospera",
+        "A Kissimmee or east Orlando illustrator (to recruit)",
+        "2 or 3 Puerto Rican co-designers for 2027 (to recruit)",
+        "Florida Puerto Rican Parade"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "407-day",
+      "consumer": "Year-round locals, park and hospitality workers, transplants who claim the 407, and Gen Z Banchero fans.",
+      "insights": [
+        1,
+        6,
+        5
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04-07",
+      "actBy": "2027-04-07",
+      "actNote": "Commission the Mills 50 lettering artist and the Lake Eola swan illustrator before the Apr 7 drop. The brief sets no earlier date.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Show the 407 numerals and swan art to locals in Mills 50 and Thornton Park, so it reads as a badge, not a souvenir.",
+        "Set a 72-hour local-door sell-through target and track the share sold outside tourist doors.",
+        "Test the 48-hour rally-tee turnaround with blanks in place before the Play-In.",
+        "Clear the commuter jacket of any park marks."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "A Mills 50 lettering artist (to commission)",
+        "An Orlando illustrator for the Lake Eola swan (to commission)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "hold-the-building",
+      "consumer": "Season-ticket holders and locals, including transplants who switched allegiance.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Run the first Hold the Building night, once the visiting-fan-heavy home dates are confirmed.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the Knicks' visit and other visiting-fan-heavy home dates on the 2026-27 schedule.",
+        "Agree the blue-out giveaway and who pays for it with the Magic.",
+        "Test the framing with season-ticket holders, so it reads as pride and not as mocking transplants.",
+        "Set a target for arena-only tee units per visiting-fan night."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Orlando Magic (blue-out giveaway)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "parramore-court-program",
+      "consumer": "Parramore, Pine Hills and West Orlando youth hoopers and families, including Haitian and Jamaican Pine Hills.",
+      "insights": [
+        4,
+        6,
+        3
+      ],
+      "categories": [
+        "event",
+        "kids",
+        "outerwear",
+        "tee"
+      ],
+      "fit": [
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-21",
+      "actBy": "2027-01",
+      "actNote": "Scope court hours, a funded coach and an equipment budget with the Orlando Magic Youth Foundation and Callahan before the MLK Day announcement.",
+      "routes": [
+        "no-product",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the Orlando Magic Youth Foundation's and Callahan Neighborhood Center's current Parramore programs, so Nike joins them rather than duplicating them.",
+        "Find a named Parramore community lead.",
+        "Let Callahan staff and the Jones and Evans coaches set the court scope and clinics.",
+        "Track dollars committed against dollars delivered, and local media sentiment."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "stock-availability",
+        "venue-or-permit",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Orlando Magic Youth Foundation",
+        "Callahan Neighborhood Center",
+        "Jones High School",
+        "Evans High School"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "three-oclock-rain-pack",
+      "consumer": "Local and visiting youth hoopers, AAU families and summer fans.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "Pre-sell the rain pack to AAU teams.",
+      "routes": [
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Florida's 2027 back-to-school sales tax exemption rules and clothing price cap.",
+        "Test the youth prices under the cap with AAU families.",
+        "Confirm 2027 dates for Orlando Summer League and ESPN Wide World of Sports AAU events.",
+        "Check that no copy or graphic uses hurricane or storm language."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "visitor-gift-lane",
+      "consumer": "Domestic and Latin American visitors and families on park trips who buy one piece per trip.",
+      "insights": [
+        1,
+        0
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "outerwear",
+        "jersey",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Restock the souvenir lane at the outlets for the holiday travel peak.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check stock of kids' Banchero Swingman jerseys and pinstripe dad caps for December.",
+        "Price-test a carry-on souvenir tier at the outlets and Disney Springs.",
+        "Set units-per-visitor and margin targets for the outlet doors.",
+        "Find a supplier and cost for the holographic authentication tag."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "sign-painters-series",
+      "consumer": "Young creatives, Mills 50 regulars and the local music and arts crowd.",
+      "insights": [
+        5,
+        1
+      ],
+      "categories": [
+        "tee",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02-06",
+      "actBy": "2027-02-06",
+      "actNote": "Sign the first artist and get Mills 50 shop owners' consent before the Tet drop.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check which Orange Blossom Trail and Mills 50 signs still stand, and get owners' permission to photograph and credit them.",
+        "Find a named sign painter and an OBT or Pine Hills business body to co-credit.",
+        "Confirm that Mills 50 District, Crealde and Will's Pub operate as described.",
+        "Set a sell-out-time target per drop and track repeat buyers."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Mills 50 District",
+        "Vietnamese-owned businesses in Mills 50",
+        "Vietnamese-American artists",
+        "Crealde School of Art",
+        "Will's Pub"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

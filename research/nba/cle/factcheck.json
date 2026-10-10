@@ -83,8 +83,8 @@
       "lens": "retail-landscape",
       "claim": "Aurora Farms Premium Outlets name",
       "verdict": "corrected",
-      "note": "Retail-behavior said 'Aurora Premium Outlets'. Standardized to Aurora Premium Outlets (formerly Aurora Farms). Strategy still says 'Aurora Farms' throughout.",
-      "source": ""
+      "note": "Checked live 2026-10-10: the center still trades as Aurora Farms Premium Outlets. The earlier rename to 'Aurora Premium Outlets (formerly Aurora Farms)' was wrong, so every file now says Aurora Farms Premium Outlets.",
+      "source": "https://www.premiumoutlets.com/outlet/aurora-farms/about"
     },
     {
       "lens": "uniform",
@@ -159,9 +159,9 @@
     {
       "lens": "strategy",
       "claim": "Nike Factory Store at Aurora Farms",
-      "verdict": "unverifiable",
-      "note": "The site is now Aurora Premium Outlets (formerly Aurora Farms). Live-check whether the Nike store still operates, and align the name across the brief.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Nike's store directory lists the Nike Factory Store at Aurora Farms Premium Outlets, 549 S. Chillicothe Rd., Aurora, Ohio, and the center lists it as a tenant. The name is now Aurora Farms Premium Outlets across the brief.",
+      "source": "https://www.nike.com/retail/directory/united-states/ohio"
     },
     {
       "lens": "strategy",

@@ -62,7 +62,7 @@
       "type": "missed-opportunity",
       "severity": "medium",
       "problem": "The plan treats Cup Fridays as launch stages but ignores the new 2026 format. Quarterfinals are at the higher seed's arena (Dec 4-5). Semifinals are in its home market (Dec 8-9). The final is Dec 11 at Hinkle Fieldhouse. West Group A has Denver, Phoenix, Dallas and Utah, so Houston has a winnable group. The plan has no scenario for hosting a Cup knockout. It also assumes November home Cup games without knowing which Fridays are at Toyota Center.",
-      "fix": "Add a contingency row: pre-built \"Cup knockout at Toyota Center\" blanks and arena giveaway product, ready for Dec 4-9 if Houston hosts. Once dates are confirmed, add a Dallas rivalry angle (Texas rivalry, the I-45 corridor) for the Cup Friday against the Mavericks."
+      "fix": "Add a contingency row: pre-built \"Cup knockout at Toyota Center\" blanks and arena giveaway product, ready for Dec 4-9 if Houston hosts. Once dates are confirmed, add a Dallas rivalry angle (Texas rivalry, the I-45 corridor) for the Oct 21 home opener against the Mavericks. The Cup game against Dallas is in Dallas on Oct 30."
     },
     {
       "target": "topInsights[3,4] and opportunities[tax-free-heat-pack]",

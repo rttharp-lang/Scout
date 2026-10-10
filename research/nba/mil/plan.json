@@ -1,0 +1,628 @@
+{
+  "team": "mil",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 16-17, Gallery Night MKE weekend",
+      "kind": "action",
+      "start": "2026-10-16",
+      "end": "2026-10-17",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10-16",
+      "actNote": "Meet Bronzeville, Sherman Park and Walker's Point partners, set fair-pay terms, open the juried artist call and agree the Jan 28 stance with the Bucks.",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "First home games at Fiserv Forum (date from schedule) and the first cold snap",
+      "kind": "launch",
+      "start": "2026-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Early November",
+      "kind": "action",
+      "start": "2026-11",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-11",
+      "actNote": "Lock the undated 2021-champions-and-city capsule with the Bucks, approve graphics and put main goods into production.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "The two home Emirates NBA Cup group games (dates from schedule)",
+      "kind": "event",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Nov 18",
+      "kind": "event",
+      "start": "2026-11-18",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Black Friday through Dec 24",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after the fourth Thursday of November (Nov 27, 2026); Christmas Eve is Dec 24",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Mid-January reveal through Jan 28",
+      "kind": "launch",
+      "start": "2027-01",
+      "end": "2027-01-28",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-11",
+      "actNote": "Lock the framing and approve graphics with the Bucks by early November.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "January Gallery Night MKE weekend",
+      "kind": "launch",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-12",
+      "actNote": "Finish partner talks, artist selection and fair-pay terms between October and December.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Lenten Fridays, Feb 12 to Mar 26, 2027",
+      "kind": "season",
+      "start": "2027-02-12",
+      "end": "2027-03-26",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Lenten Fridays run from the Friday after Ash Wednesday (Feb 10, 2027) to Good Friday (Mar 26, 2027), set by Easter on Mar 28, 2027",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "March",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "stock-availability",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "April 14 and the April Gallery Night MKE",
+      "kind": "launch",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "production-capacity",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "July 20",
+      "kind": "event",
+      "start": "2027-07-20",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "cream-city-cold-layer",
+      "consumer": "Statewide and rural fans and suburban families who drive in for games and dress for the cold.",
+      "insights": [
+        3,
+        1,
+        4
+      ],
+      "categories": [
+        "fleece",
+        "outerwear",
+        "headwear",
+        "pants",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Launch with the first home games and the first cold snap.",
+      "routes": [
+        "new-development",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Test the blaze-orange lining in a small run against the cream or Lake Steel Blue main option.",
+        "Confirm which Mayfair Mall and suburban sporting-goods doors and the Pleasant Prairie Factory Store will carry the line.",
+        "Check with statewide fans that the green reads as hunter green, not Packers green-and-gold.",
+        "Set holiday sell-through and replenishment targets by I-94 corridor door."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "stock-availability"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "jan-28-thank-you-milwaukee",
+      "consumer": "Lifelong diehards and statewide fans at or watching Miami's Jan 28 visit to Fiserv Forum.",
+      "insights": [
+        2,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Agree the Jan 28 stance with the Bucks before design, then lock the framing and approve graphics by early November.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Get the Bucks' and NBA's answer on 2021-title archive product and a community donation, with their lead times.",
+        "Check every graphic for dates, Giannis' name, number or likeness, and feud references.",
+        "Test the undated archive tee with diehards for any cashing-in backlash.",
+        "Confirm the Jan 28 Miami game date on the published schedule."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "brand-safety",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "neighborhood-collab-series",
+      "consumer": "Local creatives, Gen Z and neighborhood loyalists, starting in Bronzeville.",
+      "insights": [
+        4,
+        5,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Meet partners over the Oct 16-17 Gallery Night MKE weekend, set fair-pay terms and open the juried artist call.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm where the Bronzeville drop sells: Bronzeville Center for the Arts has no confirmed sales space, and Sherman Phoenix now has about 16 businesses.",
+        "Agree artist fees and the partner revenue share before design starts.",
+        "Confirm the January and April Gallery Night MKE dates with the Historic Third Ward Association.",
+        "Set a sell-out target for neighborhood doors and track partner revenue paid."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Sherman Phoenix",
+        "Bronzeville Center for the Arts",
+        "Walker's Point Center for the Arts",
+        "Tia Richardson (to invite to the juried call)",
+        "Mauricio Ramirez (to invite to the juried call)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "new-names-youth-first",
+      "consumer": "Kids and families, and fans curious about Herro and the rookies.",
+      "insights": [
+        0,
+        4
+      ],
+      "categories": [
+        "tee",
+        "kids"
+      ],
+      "fit": [
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Plan a small youth-first run for the first home games, with reorders only on sell-through.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Herro, Burries and Ament are on the 2026-27 roster and cleared for name-and-number product.",
+        "Set a youth player-tee sell-through target for Dec 31 and a reorder rule by player.",
+        "Confirm 88Nine's HYFIN will co-curate the tunnel-fit moment, with artists paid and credited."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "production-capacity",
+        "partner-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "88Nine Radio Milwaukee (HYFIN)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "north-side-courts",
+      "consumer": "North Side families and youth hoopers.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "kids",
+        "accessory",
+        "other"
+      ],
+      "fit": [
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2027-03",
+      "actNote": "Sign partner agreements with Boys & Girls Clubs and named North Side organizers in spring.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Boys & Girls Clubs of Greater Milwaukee and named North Side organizers want to partner, and on what terms.",
+        "Confirm which Sherman Park or Washington Park court can be refurbished, and the permits it needs.",
+        "Test accessible youth price points at Bayshore and community events."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Boys & Girls Clubs of Greater Milwaukee"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "keep-the-jersey-restitch",
+      "consumer": "Diehards with Giannis-era gear and Gen Z thrift-and-remix fans.",
+      "insights": [
+        0
+      ],
+      "categories": [
+        "accessory",
+        "tee",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Get written Bucks and NBA approval of the 1971, 2021 and Mecca-era patches before announcing the November pilot.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Get written Bucks and NBA approval for each heritage patch, and clear the Mecca floor pattern with its rights holder.",
+        "Confirm the Bucks' home Cup game dates and a Deer District plaza slot for the pilot.",
+        "Agree pay per garment with the Mitchell Street embroidery shops.",
+        "Set a go or no-go bar for January from customizations completed and patch attach rate."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "production-capacity",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Mitchell Street South Side embroidery shops"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "fish-fry-cup-fridays",
+      "consumer": "The local game-night crowd and Gen Z fans at Friday home games.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "headwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Confirm which of the two home Cup group games, if any, falls on a Friday.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm whether either Bucks home Cup group game falls on a Friday, and list the Friday home games in Lent.",
+        "Check every graphic is free of brewery and restaurant marks, with no beer tie-ins on youth product.",
+        "Compare Friday-game sell-through with other game nights."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "summer-city-season",
+      "consumer": "Local creatives, Gen Z and summer-festival crowds.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-03",
+      "actNote": "Offer paid sponsorships or donations to Northcott Neighborhood House and Milwaukee Pride Inc. in spring.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Northcott Neighborhood House runs Juneteenth Day and Milwaukee Pride Inc. runs PrideFest, with their 2027 dates.",
+        "Hold partner product until a partner asks for it and names paid, credited designers.",
+        "Compare summer Bucks apparel revenue with the prior year."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "league-or-team-rights",
+        "production-capacity",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Northcott Neighborhood House",
+        "Milwaukee Pride Inc."
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

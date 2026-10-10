@@ -139,7 +139,7 @@ function ThisMonth({ now, happening, action }) {
       <SectionHead eyebrow={`${label} · season ${now.season}`} title="This month">
         <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>The full calendar →</a>
       </SectionHead>
-      <div className="hc-grid hc-grid-2">
+      <div className="hc-grid hc-grid-2" style={{ alignItems: "start" }}>
         <div className="hc-card">
           <h3 className="hc-h3">Happening in {label}</h3>
           <p className="hc-small hc-muted" style={{ marginTop: 4, marginBottom: 12 }}>Events, launches and seasons dated to this month. Later years are left out.</p>

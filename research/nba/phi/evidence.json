@@ -1,0 +1,161 @@
+{
+  "team": "phi",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "phi-c1",
+      "claim": "A Nike Center City store is an open, Nike-owned launch and amplifier door for Sixers product",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Nike can move forward with its Center City store after making design adjustments",
+          "url": "https://inquirer.com/business/retail/nike-jordan-flight-philadelphia-center-city-20240313.html",
+          "publisher": "The Philadelphia Inquirer",
+          "published": "2024-03-13"
+        },
+        {
+          "title": "Nike's first 'World of Flight' store in U.S. coming to Philadelphia",
+          "url": "https://www.fox29.com/news/nikes-first-world-of-flight-store-in-u-s-coming-to-philadelphia",
+          "publisher": "FOX 29",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's Walnut Street door is a Jordan Brand World of Flight store at 1617 Walnut, opened Oct 10, 2025, and it sells only Jordan product. Nike also runs a factory store at 901 Market in the Fashion District. Neither result shows a full-line Nike store in Center City, so the brief's generic 'Nike Center City store' could not be pinned to one door.",
+      "action": "No change to the recommendation. The strategy verify line now asks which Center City door is meant.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "earn-philly-home-debut",
+          "spectrum-83-heritage"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "id": "phi-c2",
+      "claim": "The Nike Factory Store at Philadelphia Mills is an operating Nike-owned value door",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "NIKE Factory Store - Philadelphia, Pennsylvania PA 19154 - Philadelphia Mills",
+          "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/philadelphia--pennsylvania--philadelphia-mills",
+          "publisher": "MallsCenters",
+          "published": ""
+        },
+        {
+          "title": "www.fashiondistrictphiladelphia.com",
+          "url": "https://www.fashiondistrictphiladelphia.com/Directory/Details/818457",
+          "publisher": "Fashion District Philadelphia",
+          "published": ""
+        }
+      ],
+      "evidence": "The mall directory listing at 1455 Franklin Mills Circle flags the Nike Factory Store as probably closed. Nike's store list in the results names Nike Factory Store - Downtown Philadelphia at 901 Market Street, #1095, and Pottstown, not Philadelphia Mills. The Fashion District directory lists a Nike factory store there.",
+      "action": "Replaced the door in retail-landscape.json with the Downtown Philadelphia factory store at 901 Market. Updated the verify lines in retail-landscape.json and strategy.json and the factcheck verdict. The mall itself stays as a volume channel.",
+      "supports": {
+        "insights": [],
+        "opportunities": [],
+        "calendar": []
+      }
+    },
+    {
+      "id": "phi-c3",
+      "claim": "Villa (formerly Sneaker Villa) runs open neighborhood doors in North and West Philly",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "urban chains dtlr villa merge",
+          "url": "https://snobette.com/2017/08/urban-chains-dtlr-villa-merge/",
+          "publisher": "Snobette",
+          "published": "2017-08"
+        },
+        {
+          "title": "best sneaker stores philadelphia 20211207",
+          "url": "https://www.inquirer.com/sports/best-sneaker-stores-philadelphia-20211207.html",
+          "publisher": "The Philadelphia Inquirer",
+          "published": "2021-12-07"
+        }
+      ],
+      "evidence": "Villa merged with DTLR in 2017 and kept its banner. An undated list names Villa stores on 52nd Street, Chelten Avenue, Germantown and South Street. Nothing in the results confirms which Philadelphia doors are open in 2026.",
+      "action": "No change. The existing verify lines stand.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "earn-philly-home-debut",
+          "spectrum-83-heritage",
+          "area-code-neighborhood-courts",
+          "earn-it-fast-turn",
+          "gym-credibility"
+        ],
+        "calendar": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "phi-c4",
+      "claim": "The Spectrum is the building where Dr. J and Moses won the 1983 title",
+      "topic": "history",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "1983 NBA Finals",
+          "url": "https://en.wikipedia.org/wiki/1983_NBA_Finals",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "On This Date | Philadelphia Wins Second Title",
+          "url": "https://www.nba.com/sixers/news/date-philadelphia-wins-second-title",
+          "publisher": "NBA.com / Philadelphia 76ers",
+          "published": ""
+        }
+      ],
+      "evidence": "The 76ers swept the Lakers 4-0 and clinched with a 115-108 Game 4 win on May 31, 1983, at the Forum in Los Angeles. Moses Malone was Finals MVP. The Spectrum was their home building, not where the title was won.",
+      "action": "Reworded the Spectrum '83 collection story and top insight 2 in strategy.json so the Spectrum is the 1983 team's home, with the clincher at the Forum.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "spectrum-83-heritage"
+        ],
+        "calendar": [
+          3,
+          7
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Nike Factory Store at Philadelphia Mills as an operating Nike-owned door",
+      "correction": "A directory flags it as probably closed and Nike's list doesn't include it. Nike's listed Philadelphia factory store is Downtown Philadelphia at 901 Market Street.",
+      "files": [
+        "retail-landscape.json",
+        "strategy.json",
+        "factcheck.json"
+      ],
+      "claimId": "phi-c2"
+    },
+    {
+      "claim": "The Spectrum is where Dr. J and Moses won it all in 1983",
+      "correction": "The Sixers clinched the 1983 sweep in Game 4 at the Forum in Los Angeles on May 31, 1983. The Spectrum was their home arena.",
+      "files": [
+        "strategy.json"
+      ],
+      "claimId": "phi-c4"
+    }
+  ]
+}

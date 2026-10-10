@@ -61,9 +61,9 @@
     {
       "lens": "music",
       "claim": "Home opener Oct 21, 2026 vs Phoenix with Lillard back",
-      "verdict": "unverifiable",
-      "note": "One source, a Yahoo schedule piece. The brief and several dossiers still say the date is to confirm. Check the NBA.com schedule before dating any launch to it.",
-      "source": "https://sports.yahoo.com/articles/portland-trail-blazers-release-2026-211231259.html"
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: KATU's schedule story and the Suns' schedule both list the Blazers' home opener as Wed Oct 21 vs. Phoenix. Lillard's return that night is still reported as expected.",
+      "source": "https://katu.com/sports/trail-blazers/nba-announces-2026-27-schedule-for-the-portland-trail-blazers-oregon-portland-nba-national-basketball-association-moda-rose-center-season-2026-27-black-friday-ja-morant-dame-lillard-damian-rip-city"
     },
     {
       "lens": "strategy",
@@ -89,9 +89,9 @@
     {
       "lens": "strategy",
       "claim": "The home opener is described as reported for Oct 21 vs Phoenix, to confirm",
-      "verdict": "unverifiable",
-      "note": "Keep the hedge. Other dossiers say the week of Oct 20.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the opener is Wed Oct 21 at home vs. Phoenix, so the hedge is dropped in calendar[1]. The same source has the Blazers hosting Golden State on Nov 27.",
+      "source": "https://katu.com/sports/trail-blazers/nba-announces-2026-27-schedule-for-the-portland-trail-blazers-oregon-portland-nba-national-basketball-association-moda-rose-center-season-2026-27-black-friday-ja-morant-dame-lillard-damian-rip-city"
     },
     {
       "lens": "strategy",
@@ -110,9 +110,9 @@
     {
       "lens": "strategy",
       "claim": "The brief lists Rip City Clothing Co. as the Moda Center team store and a Blazers retail door",
-      "verdict": "unverifiable",
-      "note": "Plausible and long-standing, but it appears only in knowledge-mode dossiers. Confirm the store brand, hours and any satellite doors.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the team's site lists Rip City Clothing as the official team store at Moda Center's North Entrance, with online sales at ripcityclothing.com. Hours shown may be out of date.",
+      "source": "https://nba.com/blazers/ripcityclothing"
     },
     {
       "lens": "hoops",

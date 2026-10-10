@@ -201,9 +201,9 @@
     {
       "lens": "retail-landscape",
       "claim": "Nike Factory Store at Great Lakes Crossing",
-      "verdict": "unverifiable",
-      "note": "Hedged as \"likely\" in the dossiers and strategy. Confirm it exists and is Nike-owned.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the city of Auburn Hills reported the Nike Factory Store moving to a 14,000 sq ft space in District 9 of Great Lakes Crossing Outlets, and mall pages still list it. No 2026-dated status was found.",
+      "source": "https://www.auburnhills.org/new-nike-shop-opens-at-great-lakes-crossing-outlets/"
     },
     {
       "lens": "retail-landscape",
@@ -236,9 +236,9 @@
     {
       "lens": "rhythm",
       "claim": "Boston opening night tips at 3:00 p.m. ET Tuesday",
-      "verdict": "unverifiable",
-      "note": "The verified facts flag this as unusual. Re-check before building a Monday or Tuesday daytime takeover.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the Celtics' schedule release and other outlets list Tuesday Oct 20 at Detroit at 3 p.m. ET on NBC and Peacock. Hedges removed in strategy and rhythm.",
+      "source": "https://www.nbcsportsboston.com/nba/boston-celtics/celtics-schedule-opening-night-2026/798828/"
     },
     {
       "lens": "strategy",

@@ -29,6 +29,7 @@ export default function Compare({ ids }) {
     <div>
       <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Side by side</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Compare<br />markets</h1>
+      <p className="hc-lede" style={{ marginTop: 18 }}>Up to three markets side by side. Scores are editorial tiers ranked across all 30. Each fan-year chart is scaled to its own city's peak, so compare when a city peaks, not how big it is.</p>
 
       {published.length < 2 ? <div className="hc-empty">Compare needs at least two published markets.</div> : (
         <>

@@ -1,0 +1,658 @@
+{
+  "team": "por",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Now through November: the partner and rights sprint",
+      "kind": "action",
+      "start": "2026-10",
+      "end": "2026-11",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Ask the Albina partners to co-author under paid contracts and open rights talks with the NBA, the team, alumni and estates.",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Wed Oct 21 home opener vs. Phoenix (Lillard's expected return) through Fri Oct 30 Cup night vs. Golden State",
+      "kind": "event",
+      "start": "2026-10-21",
+      "end": "2026-10-30",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "por-c8",
+      "actBy": "2026-10",
+      "actNote": "Stock whole-roster jersey walls for the Oct 21 home opener and chase weekly.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Mid-October rains through Sun Nov 1 (clock change)",
+      "kind": "season",
+      "start": "2026-10",
+      "end": "2026-11-01",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Put existing Storm-FIT and Therma-FIT Blazers outerwear on the floor from mid-October.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Nov 25 (White Stag nose, to confirm) through Black Friday Nov 27 (last Cup Friday; the Blazers host Golden State)",
+      "kind": "event",
+      "start": "2026-11-25",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 1-24, built around ship-by deadlines (there's no Christmas game)",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Christmas is Dec 25; gifting runs Dec 1-24",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Celebration of Black History home game (date to confirm), with the first licensed Blazermania 50 drop",
+      "kind": "event",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2027-01",
+      "actNote": "Sign and pay the Albina co-authors before the first heritage drop.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Mid-March OSAA 6A state finals; clinch kit staged",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2027-03",
+      "actNote": "Finish staging pre-cleared playoff graphics and blanks with Portland Gear by mid-March.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Apr 11 finale, Apr 13-16 Play-In (Prime Video only), playoffs",
+      "kind": "event",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (2027-04-11); Play-In Tournament (2027-04-13 to 2027-04-16)",
+      "actBy": "2027-03",
+      "actNote": "Have clinch graphics and red blanks staged by mid-March.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Nike Hoop Summit week (April; 2027 date and venue to confirm)",
+      "kind": "event",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Confirm the 2027 Hoop Summit date and venue.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Mid-May Fire season start; Vanport Mosaic over Memorial Day",
+      "kind": "launch",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Sat June 5 (50th anniversary) through June 19-20 (Juneteenth Oregon and Father's Day)",
+      "kind": "event",
+      "start": "2027-06-05",
+      "end": "2027-06-20",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "por-c3",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "July to September dry season",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "2027-09",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Sneaker Week PDX and PDX Hip Hop Week (2027 dates to confirm)",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "venue-or-permit",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "albina-co-authored",
+      "consumer": "Albina and NE Portland's hoops community, and the industry insiders who watch how Nike behaves at home.",
+      "insights": [
+        2,
+        0,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids",
+        "uniform",
+        "other"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Ask Albina Vision Trust first, then sign paid partner agreements in October-November.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics",
+        "future-uniform"
+      ],
+      "validation": [
+        "Confirm Albina Vision Trust will co-author a Nike/Blazers line during its land talks.",
+        "Confirm Oregon Black Pioneers, Albina Music Trust, SEI and the Maurice Lucas Foundation are available as paid partners.",
+        "Put the proceeds commitment in writing before any announcement.",
+        "Agree the Soul Assembly archive license and revenue share with Albina Music Trust."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Albina Vision Trust",
+        "Oregon Black Pioneers",
+        "Albina Music Trust",
+        "Maurice Lucas Foundation",
+        "Jeremy Okai Davis",
+        "Intisar Abioto",
+        "Self Enhancement, Inc. (SEI)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "blazermania-50",
+      "consumer": "Blazermania lifers, Father's Day gift buyers and the Dame generation discovering 1977.",
+      "insights": [
+        0,
+        2,
+        4
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "other",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Open rights talks with the NBA, the team, alumni and estates (Walton, Lucas, Ramsay, Schonely).",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check lead times for likeness and estate rights (Walton, Lucas, Ramsay, Schonely).",
+        "Confirm whether the Blazers or NBA plan a 50th-anniversary program (patch, Classic look, June 5 event).",
+        "Check every cut against Mitchell & Ness's Walton-era replicas so none is a near-copy.",
+        "Sign the Albina co-authors before the first licensed drop."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Albina Vision Trust",
+        "Oregon Black Pioneers",
+        "Albina Music Trust",
+        "Maurice Lucas Foundation",
+        "DJ O.G. ONE (David Jackson)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "whole-roster-jersey-wall",
+      "consumer": "The Dame generation, younger fans following Avdija and Sharpe, and regional families.",
+      "insights": [
+        1
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "kids",
+        "footwear",
+        "event"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Stock Swingmans across the roster for the Oct 21 home opener and chase weekly.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm every player's 2026-27 jersey number before ordering.",
+        "Check Lillard's adidas contract and keep 'Dame Time' and his marks off product.",
+        "Get brand-safety sign-off on Morant before any Ja colorway.",
+        "Track sell-through by player each week as Nori sets the rotation."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "production-capacity",
+        "nike-calendar-approval",
+        "retailer-agreement",
+        "partner-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Deadstock Coffee (Ian Williams)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "big-dark-pack",
+      "consumer": "Weeknight season-ticket holders, MAX riders and regional fans who walk to the game in the rain.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Pull existing Storm-FIT and Therma-FIT Blazers outerwear into doors and brief the FW27 shell now.",
+      "routes": [
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm which Storm-FIT and Therma-FIT Blazers outerwear is in the 2026 assortment and can be chased.",
+        "Confirm Nike Portland downtown will carry Blazers product.",
+        "Check live Portland sunset times before printing any sunset-time hangtag.",
+        "Check that the FW27 shell is long enough to cover a Swingman."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "clinch-kit",
+      "consumer": "Casual and lapsed fans who come back for April.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2026-11",
+      "actNote": "Agree Portland Gear license terms in principle by November, with final terms by January.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Portland Gear's Blazers/NBA licensing status.",
+        "Get the 24-hour approval path and Portland Gear's creative control in writing.",
+        "Set scale-up and cancel volumes for each standings outcome.",
+        "Confirm Nike Portland downtown will carry the Portland-only drops."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Portland Gear (Marcus Harvey)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "hoop-summit-pil-summer",
+      "consumer": "Portland hoopers, PIL families and the Albina basketball community.",
+      "insights": [
+        2,
+        4
+      ],
+      "categories": [
+        "shorts",
+        "other",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2026-10",
+      "actNote": "Confirm the 2027 Hoop Summit date and venue.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm the 2027 Nike Hoop Summit date and venue.",
+        "Find out who already runs the Irving Park summer runs before funding one.",
+        "Confirm SEI will co-organize the run as a paid partner.",
+        "Check school licensing for the 'claimed by school' PIL warmups."
+      ],
+      "dependencies": [
+        "date-confirmation",
+        "venue-or-permit",
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Self Enhancement, Inc. (SEI)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "rip-city-summer",
+      "consumer": "Women fans, Thorns and Fire supporters, and summer festival crowds.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "accessory",
+        "headwear",
+        "other"
+      ],
+      "fit": [
+        "women's",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2027-05",
+      "actNote": "Confirm Fire merchandise rights and team-store terms first, before the mid-May launch.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Portland Fire merchandise rights and team-store terms.",
+        "Confirm the Fire's 2027 schedule.",
+        "Agree pay and credit with the supporter artists.",
+        "Check the women's-first tee with Thorns and Fire supporters before it ships."
+      ],
+      "dependencies": [
+        "third-party-ip",
+        "league-or-team-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "DJ O.G. ONE (David Jackson)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "regional-rip-city",
+      "consumer": "Oregon and SW Washington regional fans, including Latino families in the mid-valley.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Check Blazers Latino programming and test the 'Two Sides of Oregon' set with Eugene and Bend fans before Black Friday.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Test the reversible 'Two Sides of Oregon' set with Eugene and Bend fans.",
+        "Check what Latino and heritage programming the Blazers already run.",
+        "Confirm the Woodburn Nike Factory Store is operating.",
+        "Keep college marks off the set."
+      ],
+      "dependencies": [
+        "retailer-agreement",
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    }
+  ]
+}

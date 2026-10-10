@@ -1,0 +1,154 @@
+{
+  "team": "okc",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "okc-c1",
+      "claim": "The Nike Factory Store at OKC Outlets on I-40 is the value sell-through door for the Under $100 line.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "OKC Outlets",
+          "url": "https://www.travelok.com/de/listings/view.profile/id.15164",
+          "publisher": "TravelOK",
+          "published": ""
+        },
+        {
+          "title": "www.iexitapp.com",
+          "url": "https://www.iexitapp.com/Oklahoma/I-40/Exit%20142/48663",
+          "publisher": "iExit",
+          "published": ""
+        }
+      ],
+      "evidence": "TravelOK lists Nike Factory Store among the tenants of OKC Outlets, 7624 W Reno Ave at I-40 exit 142 (Council Rd). iExit's I-40 exit 142 directory lists Nike Factory Store - Oklahoma City at 7654 W Reno Ave. Neither listing is dated, so current hours still need a call.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "oklahoma-under-100"
+        ],
+        "calendar": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "okc-c2",
+      "claim": "Shop Good is on N Broadway in Midtown and is the tastemaker door for the Red Dirt capsule and District series.",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "www.travelok.com",
+          "url": "https://www.travelok.com/de/listings/view.profile/id.18328",
+          "publisher": "TravelOK",
+          "published": ""
+        },
+        {
+          "title": "Shop Good - Service Providers - MetroFamily Magazine",
+          "url": "https://www.metrofamilymagazine.com/?p=57163",
+          "publisher": "MetroFamily Magazine",
+          "published": ""
+        }
+      ],
+      "evidence": "Listings place Shop Good at 1007 N Broadway Ave in Automobile Alley, not Midtown. It is a family-run shop that screen prints its own shirts in the store and sells gifts and home goods. One listing says it is open seven days a week.",
+      "action": "Relabeled Shop Good's neighborhood from Midtown to Automobile Alley in strategy.json (Red Dirt capsule where, partners, retail playbook), retail-landscape.json and the factcheck.json notes.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "red-dirt-capsule",
+          "district-artist-series"
+        ],
+        "calendar": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "okc-c3",
+      "claim": "The Thunder's home opener is Oct 22 vs. Denver at Paycom Center.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Thunder tip off 26-27 season at Spurs on NBC, then host Nuggets in home opener",
+          "url": "https://okcfox.com/news/local/thunder-tip-off-26-27-season-at-spurs-on-nbc-then-host-nuggets-in-home-opener",
+          "publisher": "KOKH FOX 25 (okcfox.com)",
+          "published": ""
+        },
+        {
+          "title": "okc thunder 2026 27 full schedule 82 games",
+          "url": "https://www.news9.com/oklahoma-city-thunder/okc-thunder-2026-27-full-schedule-82-games",
+          "publisher": "News 9",
+          "published": ""
+        }
+      ],
+      "evidence": "The Thunder open at San Antonio on Oct 20 on NBC, then host Denver in the home opener at Paycom Center on Thursday, Oct 22, at 8:30 p.m. Central on ESPN.",
+      "action": "Removed the stale hedges: calendar entry 1 in strategy.json now names Oct 22 as the home opener at Paycom Center, and fanbase.json names the date. Factcheck verdict set to confirmed.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "built-here-opener"
+        ],
+        "calendar": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "okc-c4",
+      "claim": "Oklahoma's sales-tax holiday falls on the first weekend of August and covers clothing and shoes under $100 per item.",
+      "topic": "other",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Oklahoma's Sales Tax Holiday for 2025 happening this weekend",
+          "url": "https://fox23.com/news/oklahomas-sales-tax-holiday-for-2025-happening-this-weekend",
+          "publisher": "FOX23",
+          "published": ""
+        },
+        {
+          "title": "oklahoma tax free weekend 2026 guide",
+          "url": "https://www.news9.com/oklahoma-back-to-school-guide/oklahoma-tax-free-weekend-2026-guide",
+          "publisher": "News 9",
+          "published": ""
+        }
+      ],
+      "evidence": "Local reports say the holiday runs on the first weekend of August and exempts clothing and footwear priced under $100 per item. The 2025 holiday ran Aug 1-3 and the 2026 holiday Aug 7-9. Athletic gear such as cleats and sports uniforms is excluded. No 2027 dates were found.",
+      "action": "No change needed in the research. Factcheck verdicts set to confirmed; the 2027 dates still need the Tax Commission's notice.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "oklahoma-under-100"
+        ],
+        "calendar": [
+          11,
+          12
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Shop Good is on N Broadway in Midtown.",
+      "correction": "Shop Good is at 1007 N Broadway in Automobile Alley.",
+      "files": [
+        "strategy.json",
+        "retail-landscape.json",
+        "factcheck.json"
+      ],
+      "claimId": "okc-c2"
+    }
+  ]
+}

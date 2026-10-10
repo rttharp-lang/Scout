@@ -1,0 +1,614 @@
+{
+  "team": "was",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Mid-to-late October 2026 (Howard Homecoming and Yardfest)",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Open talks for a licensed Howard Homecoming 2027 capsule.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 30 (Cup Night: Hornets at Wizards)",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Cup Nights through Nov 27 (home dates to confirm), first-month gate in late November, Black Friday",
+      "kind": "season",
+      "start": "2026-11",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Dec 1-24 gifting, no Christmas Day game",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Christmas is Dec 25, so the gifting run is Dec 1-24",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "venue-or-permit",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Jan 18 (MLK Day)",
+      "kind": "event",
+      "start": "2027-01-18",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "MLK Day games",
+      "actBy": "2027-01",
+      "actNote": "Close the Eight Wards artist commissions and the go-go partner terms this month.",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "February (Black History Month, go-go law anniversary, Feb 11 deadline, late-February WCAC final)",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February",
+      "actBy": "2027-02",
+      "actNote": "Make a go/no-go call on a playoff-push capsule after the Feb 11 deadline.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Late March to early April (National Cherry Blossom Festival)",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "2027-04",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Apr 11 finale, Apr 13-16 Play-In, Apr 16 DC Emancipation Day, Kwanzan bloom",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends; Play-In Tournament",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "May (DC Black Pride on Memorial Day weekend, Mystics home opener, go-go awareness window to confirm)",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "June to August 2027 (Goodman League season)",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-12",
+      "actNote": "Sign the Salvadoran-American partner for the '108' piece by December, or drop it.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Aug 22, 2027 (Chuck Brown Day)",
+      "kind": "event",
+      "start": "2027-08-22",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "future-uniform",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Sept 11, 2027 (Enkutatash) into 2027-28 preseason",
+      "kind": "event",
+      "start": "2027-09-11",
+      "end": "2027-10",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "dybantsa-era-core",
+      "consumer": "Gen Z digital fans, suburban families and the returning Wall-and-Beal-era crowd, buying into the Dybantsa era.",
+      "insights": [
+        2,
+        3,
+        4
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-30",
+      "actBy": "2026-10",
+      "actNote": "Stage Dybantsa, Young, Davis and Sarr name-and-number depth from pipeline product for Oct 30, in gates rather than one big buy.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check pipeline stock of Dybantsa swingmans and name-and-number tees, including youth sizes, for Oct 30.",
+        "Confirm Dybantsa's and Davis's footwear and apparel deals before telling any player story.",
+        "Confirm a December clinic date at CareFirst Arena with the team and DC Parks and Recreation.",
+        "Set Oct 30 to Nov 30 sell-through targets by channel, and for the clinic tee in Anacostia versus downtown."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "DC Department of Parks and Recreation",
+        "DTLR"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "wards-and-codes",
+      "consumer": "PG County and NoVA families, District natives and gift buyers who rep their own area code or ward.",
+      "insights": [
+        0,
+        3,
+        6
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "women's",
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Commission one native artist per ward now, for a fee plus royalty, with proceeds to DPR courts.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check which area-code pieces are already tooled and in stock for Black Friday.",
+        "Have the Nike DC market lead check local sentiment on flag imagery two weeks before each civic drop.",
+        "Test DC-identity pieces against logo-only product with buyers at DTLR and the PG and NoVA malls.",
+        "Agree each ward artist's fee, royalty and credit before design."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Words Beats & Life",
+        "MuralsDC artists",
+        "DTLR",
+        "Go-Go Museum & Cafe",
+        "Anacostia Arts Center",
+        "DC Department of Parks and Recreation"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "go-go-partnership",
+      "consumer": "Black DC and PG County diehards, Gen Z DMV fans and music-first locals.",
+      "insights": [
+        1,
+        2,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "event",
+        "uniform"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10-30",
+      "actNote": "Announce the partnership at the Oct 30 Cup Night as a credited commitment with Don't Mute DC and the bands, with no product.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "future-uniform"
+      ],
+      "validation": [
+        "Sign fees, royalties, the 10% youth-program share and the Don't Mute DC veto before any design.",
+        "Confirm Don't Mute DC, Long Live GoGo, Rare Essence, Backyard Band, the Go-Go Museum & Cafe and the Howard Theatre are active.",
+        "Confirm whether the go-go awareness window falls in April or May.",
+        "Check that no 2023-26 Wizards City Edition used go-go and that a 2027-28 City slot is open."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Don't Mute DC",
+        "Long Live GoGo",
+        "Rare Essence",
+        "Backyard Band",
+        "Creative lead from the go-go poster community (to recruit)",
+        "Go-Go Museum & Cafe",
+        "Chuck Brown estate (any Chuck reference)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "ward-8-and-nike-family-hoops",
+      "consumer": "DMV hoopers, East of the River residents, school alumni and women's hoops fans.",
+      "insights": [
+        2,
+        4
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Get Team Takeover and each WCAC school to approve colors and marks for the late-February WCAC final.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Goodman League's 2027 season, venue and organizers after Barry Farm's redevelopment.",
+        "Confirm Team Takeover's EYBL status and each WCAC school's sign-off.",
+        "Check Kiki Rice's 2027 team and Jordan Brand status before any women's story uses her.",
+        "Set a May-September revenue target for DC hoops product."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Goodman League",
+        "Team Takeover",
+        "DeMatha",
+        "Gonzaga",
+        "Paul VI",
+        "Bishop O'Connell",
+        "Washington Mystics",
+        "Kiki Rice"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "late-bloom",
+      "consumer": "City Edition collectors and locals at uniform launch, then spring tourists in March and April.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "jersey",
+        "fleece",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Confirm the City Edition release date, expected November-December, and commission the Kwanzan artist before it.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the cherry-blossom City Edition's return, release date and retail timing.",
+        "Test hoodie tones beside the bright-pink jersey with local fans.",
+        "Clear the blossom artwork with the artist, and keep it botanical and DC-rooted.",
+        "Set tourist price points for the spring cap and tee with arena and Georgetown buyers."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Aniekan Udofia",
+        "Rose Jaffe",
+        "Lisa Marie Thalhammer",
+        "Words Beats & Life"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "diaspora-lane",
+      "consumer": "Ethiopian-American and Salvadoran-American DMV fans and their families.",
+      "insights": [
+        3,
+        6
+      ],
+      "categories": [
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-07",
+      "actBy": "2026-12",
+      "actNote": "Sign the community partner and the lead designer this winter. The '108' partner signs by December or the piece drops.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Ethiopian Community Development Council is active as a partner route.",
+        "Find Salvadoran-American creative partners in Langley Park and Columbia Heights.",
+        "Review every graphic with the designers: no flags, no Orthodox crosses, no 'Little Ethiopia' branding.",
+        "Confirm the 2027 Enkutatash date before fixing the launch."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Ethiopian Community Development Council",
+        "Ethiopian-American DC lead designer (to recruit)",
+        "Salvadoran-American designers and DJs from Langley Park and Columbia Heights",
+        "Dave Nada"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "1978-at-50",
+      "consumer": "Bullets-era diehards and DMV vintage hunters.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-10",
+      "actBy": "2026-10",
+      "actNote": "Brief one archive-exact Bullets-era classic now and start team approval of the marks.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm licensing and team policy for Bullets-era marks and the 1978 50th.",
+        "Match colors to archive images of the 1977-78 Bullets.",
+        "Get team sign-off by spring 2027, with no gun imagery or wordplay.",
+        "Price the pieces against the vintage resale baseline."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "DMV vintage dealers (Eastern Market weekend flea)"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

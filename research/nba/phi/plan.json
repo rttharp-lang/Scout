@@ -1,0 +1,692 @@
+{
+  "team": "phi",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 20 (opening night at the Knicks, NBC/Peacock) and the 72 hours after",
+      "kind": "event",
+      "start": "2026-10-20",
+      "end": "2026-10-23",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off)",
+      "actBy": "2026-10-20",
+      "actNote": "Have name-and-number tees and jerseys for all five names, Specter merchandise and layering deep on shelves.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Home opener vs. Cleveland (date to confirm) and the first home win",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief says the Cleveland home opener date is to confirm, and the first home win can't be dated in advance.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Cup Nights Oct 30 to Nov 27 (East Group B: Knicks, Cavaliers, Heat, Pacers) and the Knicks' first visit to Philadelphia (date to confirm)",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Cup Nights run Oct 30 to Nov 27 per league-calendar.json, but the date of the Knicks' first visit to Philadelphia is unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Black Friday through Dec 20; Big 5 Classic (date and venue to confirm)",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-20",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Black Friday is Nov 27, 2026 by rule (the day after the fourth Thursday in November). The Big 5 Classic date and venue are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 25, 5 p.m. ET at the Lakers (ESPN/ABC)",
+      "kind": "event",
+      "start": "2026-12-25",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games",
+      "actBy": "2026-12-20",
+      "actNote": "Have the LeBron Christmas-return tee and kids tee live on the app for last-minute gifts.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Jan 18 (MLK Day, at Atlanta 2:30 p.m. ET) and Jan 21 (at Boston)",
+      "kind": "event",
+      "start": "2027-01-18",
+      "end": "2027-01-21",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "MLK Day games on Jan 18 are in league-calendar.json, but the Jan 21 game at Boston is unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Black History Month game nights; Feb 15 Presidents' Day vs. the Lakers (NBC/Peacock); All-Star Feb 19-21 in Phoenix",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February. Presidents' Day games (Feb 15) and All-Star (Feb 19-21) are also confirmed in league-calendar.json; the Sixers' Black History Month game nights are not dated.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Catholic and Public League championships; the final month before the Play-In",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Regular season ends Apr 11; Play-In Apr 13-16; playoffs from mid-April",
+      "kind": "season",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11) and Play-In Tournament (Apr 13-16). The playoff start date itself is still tentative.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Later playoff rounds; Paine's Park skate season",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Roots Picnic, Black Music Month, Odunde (second Sunday)",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Black Music Month is June. The Roots Picnic date and Odunde's second-Sunday date are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Sonny Hill and Baker League summer seasons",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Aug 24 (Kobe Day)",
+      "kind": "event",
+      "start": "2027-08-24",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Kobe Day is Aug 24 (8/24, his two jersey numbers).",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Late September (Puerto Rican Day Parade) through training camp",
+      "kind": "event",
+      "start": "2027-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief says late September; the 2027 Puerto Rican Day Parade date is unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "earn-philly-home-debut",
+      "consumer": "Lifers and Process loyalists, plus Gen Z fans new to the team through LeBron and Brown.",
+      "insights": [
+        1,
+        0,
+        3
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "footwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10-20",
+      "actNote": "Have name-and-number, Specter and layering product deep on shelves for the Oct 20 debut at the Knicks.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the date of the home opener against Cleveland, which times the earned drop.",
+        "Confirm LeBron's Nike deal covers a Sixers royal-and-red colorway, and what Brown's 741 deal allows around his name.",
+        "Confirm the Nike Center City store and Villa doors are open and can carry the earned drop.",
+        "Test the \"Earn Philly\" copy with local fan voices before it prints."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Philadelphia 76ers (home-debut pregame bell idea)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "spectrum-83-heritage",
+      "consumer": "Fans over 35 who remember the Spectrum, and North and West Philly street buyers raised on the black-and-red era.",
+      "insights": [
+        2,
+        0
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "tee",
+        "footwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Clear the black-and-red layer of any Iverson name, image or Reebok cue before it goes on sale in November.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Clear Spectrum references with the Sixers and Comcast Spectacor, and keep the copy to the Spectrum as the 1983 team's home (the title was clinched at the Forum).",
+        "Confirm with the NBA and Mitchell & Ness how Classic Edition and 1997-2009 black, red and gold product is handled.",
+        "Test the black-and-red layer with North and West Philly door buyers for any read of Iverson or Reebok.",
+        "Get Philly's Specter design and game dates so Spectrum '83 doesn't collide with it."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Comcast Spectacor (approval of Spectrum references)",
+        "Julius Erving (approval for a Converse Dr. J Pro Leather)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "area-code-neighborhood-courts",
+      "consumer": "Lifers, families, and suburban and South Jersey fans who want their own area code on a Sixers piece.",
+      "insights": [
+        3,
+        5,
+        6
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Open the rolling paid call for neighborhood artists and launch around the first Knicks visit or a Cup Night home game.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm the date of the Knicks' first visit to Philadelphia or a home Cup Night for the launch.",
+        "Learn Parks and Recreation's court partnership process, Hank Gathers Recreation Center's condition and Mural Arts' terms for brand-funded walls.",
+        "Test the good-better-best price ladder with buyers at Cherry Hill and King of Prussia.",
+        "Confirm Villa runs open doors in North and West Philly."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Mural Arts Philadelphia",
+        "Philadelphia Parks and Recreation",
+        "UArts alumni artists",
+        "Tyler and Moore students"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "earn-it-fast-turn",
+      "consumer": "Lifers and Process loyalists, plus the playoff bandwagon.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Pre-approve blanks and team marks, and sign two or three local printers, before the first win over the Knicks.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Run a test turn with the local printers to prove a tee can ship 48 to 72 hours after a milestone.",
+        "Confirm what Brown's 741 deal allows before briefing the Boston-return tee.",
+        "Clear any \"Process\" wording with its owner, and check The Rights to Ricky Sanchez is still producing.",
+        "Set a sell-through target for the first 72 hours of each drop."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "The Rights to Ricky Sanchez (paid copy review)",
+        "Two or three local Philly printers (not yet named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "gym-credibility",
+      "consumer": "Hoopers, teens, girls' and women's players, and Black Philadelphia basketball culture.",
+      "insights": [
+        4,
+        6,
+        0
+      ],
+      "categories": [
+        "uniform",
+        "outerwear",
+        "fleece",
+        "shorts",
+        "tee",
+        "event"
+      ],
+      "fit": [
+        "women's",
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Show up for the Public and Catholic League playoffs, girls' and boys'.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm the 2027 Sonny Hill and Baker League seasons and whether organizers want to co-design uniforms.",
+        "Ask the Bryant family and Lower Merion School District whether they're open to a Kobe Day moment at Bryant Gymnasium.",
+        "Check Dawn Staley's and Dobbins' current apparel deals, and which Big 5 schools wear Nike.",
+        "Test Gym Wars pieces with buyers at Villa neighborhood doors."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Sonny Hill League",
+        "Baker League",
+        "Bryant family",
+        "Lower Merion School District",
+        "The Fabric Workshop and Museum",
+        "Front Street Gym and paid Philly fighters"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "home-languages",
+      "consumer": "North Philly Puerto Rican and Dominican families, South Philly's Mexican community, and West African and Cameroonian fans.",
+      "insights": [
+        5,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Agree co-design and credit terms with Taller Puertorriqueño before the winter community night.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Ask Taller Puertorriqueño whether it wants to co-design, and on what terms.",
+        "Confirm whether the Sixers hold a Latino heritage night in 2026-27, and the 2027 Puerto Rican Day Parade date.",
+        "Test the Spanish-language copy with North 5th Street families and Philly Puerto Rican and Dominican writers.",
+        "Keep Cameroonian moments to team marks, worked through the team, since Embiid is a Skechers athlete."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Taller Puertorriqueño",
+        "West African and Cameroonian community associations",
+        "Philly Puerto Rican and Dominican writers"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "sound-of-philadelphia",
+      "consumer": "Grown-folks Black Philly, music heads and the multigenerational Dell Music Center crowd.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Start rights talks with the catalog holders now for a 2027-28 licensed capsule.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check Nike athlete and artist conflicts before asking the Roots.",
+        "Confirm the Sixers' Black History Month game nights for the launch.",
+        "Check the session-credits block and track-list tee carry no PIR, MFSB or song titles.",
+        "Set a sell-through target for the numbered pieces."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Clef Club of Jazz & Performing Arts",
+        "The Met Philadelphia",
+        "A local ensemble or school band (not yet named)",
+        "The Roots (stretch ask)",
+        "PIR and MFSB catalog holders (2027-28 rights talks)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "scene-capsules",
+      "consumer": "Style-leading subcultures and Gen Z tastemakers around Philly skating and riding.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "fleece",
+        "footwear",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2027-05",
+      "actNote": "Cast and credit Philly skaters and set the Paine Skatepark Fund donation before the May SB release.",
+      "routes": [
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Fletcher Street Urban Riding Club's current site and whether it wants to lead a capsule.",
+        "Put Fletcher Street terms in writing before design starts: flat fee, per-unit royalty and a stables fund.",
+        "Check the SB pack carries no Sixers colors or LOVE sculpture letters.",
+        "Line up the Philly skate shops that would carry the pack."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Franklin's Paine Skatepark Fund",
+        "Philly skaters (to be cast)",
+        "Fletcher Street Urban Riding Club (only if it chooses to lead)"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

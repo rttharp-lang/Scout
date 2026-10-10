@@ -9,6 +9,7 @@ import { EVIDENCE_KIND, STRENGTH, SCORE_DEFS, SCORE_TIERS, MOOD_TIERS, fmtDate }
 import { Chip, SectionHead, href, SourceLink, EvidenceTag } from "../ui.jsx";
 import { placeOf } from "../teams.js";
 
+const cap = (x = "") => x.charAt(0).toUpperCase() + x.slice(1);
 const SECTIONS = [["edition", "This edition"], ["research", "How it was researched"], ["evidence", "Evidence"], ["scores", "Scores"], ["timing", "Dates and planning"], ["status", "Status and owners"], ["checks", "What was checked"], ["corrections", "Corrections"], ["gaps", "Known gaps"]];
 
 export default function Method({ anchor }) {
@@ -59,7 +60,7 @@ export default function Method({ anchor }) {
               <li><b>League calendar, {fmtDate(review.leagueCalendar?.verifiedAt)}:</b> {review.leagueCalendar?.confirmed} of {review.leagueCalendar?.events} league dates confirmed by a live source.</li>
               <li><b>League read, Oct 9, 2026:</b> a strategist compared the 30 briefs, found patterns and set the league-wide scores.</li>
               <li><b>House-style edit, Oct 10, 2026:</b> every file rewritten for clarity, with a script guarding that no name, number or date was lost.</li>
-              <li><b>Review pass, Oct 10, 2026:</b> live checks on the riskiest claims in each market (at most 4 searches a market, more for Portland, New York and Detroit), corrections at the source, and timing and hand-off fields added to every calendar entry and opportunity from the brief's own text.</li>
+              <li><b>Review pass, Oct 10, 2026:</b> live checks on the riskiest claims in each market (at most 4 searches a market, 18 for Portland, New York and Detroit), editor follow-ups where checks conflicted, corrections at the source, and timing and hand-off fields added to every calendar entry and opportunity from the brief's own text.</li>
             </ul>
           </div>
         </div>
@@ -78,13 +79,13 @@ export default function Method({ anchor }) {
             <dl className="hc-def">
               {Object.entries(STRENGTH).map(([k, v]) => <React.Fragment key={k}><dt>{v.label}</dt><dd>{v.detail}</dd></React.Fragment>)}
             </dl>
-            <p className="hc-small hc-muted">Strength counts live-checked claims and observed fan evidence linked to an insight or idea. It never counts how many agents agreed or how confident an agent said it was. It is kept apart from upside, which is the brief's estimate of how big an idea could be.</p>
+            <p className="hc-small hc-muted">Strength counts only the verified claims an insight or idea rests on. Observed fan evidence is shown beside it but doesn't raise it, because an observation can cut either way; conflicting evidence is flagged. Strength never counts how many agents agreed or how confident an agent said it was. It is kept apart from upside, which is the brief's estimate of how big an idea could be.</p>
           </div>
         </div>
         <div className="hc-grid hc-grid-2" style={{ marginTop: "var(--grid-gap)" }}>
           <div className="hc-card">
             <h3 className="hc-h3" style={{ marginBottom: 10 }}>Live checks</h3>
-            <dl className="hc-def">{Object.entries(CLAIM_STATUS).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{v.split(": ")[1]}</dd></React.Fragment>)}</dl>
+            <dl className="hc-def">{Object.entries(CLAIM_STATUS).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{cap(v.split(": ")[1])}</dd></React.Fragment>)}</dl>
             <p className="hc-small hc-muted">The research environment can't open web pages directly, so each check records what the search returned, with the title, publisher, publication date where shown, and the link for a reviewer to open.</p>
           </div>
           <div className="hc-card">
@@ -124,14 +125,14 @@ export default function Method({ anchor }) {
         <div className="hc-grid hc-grid-2">
           <div className="hc-card">
             <h3 className="hc-h3" style={{ marginBottom: 10 }}>What a date is</h3>
-            <dl className="hc-def">{Object.entries(TIMING_KINDS).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{v.split(": ")[1]}</dd></React.Fragment>)}</dl>
+            <dl className="hc-def">{Object.entries(TIMING_KINDS).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{cap(v.split(": ")[1])}</dd></React.Fragment>)}</dl>
             <h3 className="hc-h3" style={{ margin: "14px 0 10px" }}>How sure we are</h3>
-            <dl className="hc-def">{Object.entries(CERTAINTY).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{v.split(": ")[1]}</dd></React.Fragment>)}</dl>
+            <dl className="hc-def">{Object.entries(CERTAINTY).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{cap(v.split(": ")[1])}</dd></React.Fragment>)}</dl>
             <p className="hc-small hc-muted">Every entry carries a real year. A planning season runs October to September, so October 2027 belongs to 2027-28 and never shows up as this month's news in 2026. "Act by" appears only when a brief says when work must start. No lead times are assumed.</p>
           </div>
           <div className="hc-card">
             <h3 className="hc-h3" style={{ marginBottom: 10 }}>How it would get made</h3>
-            <dl className="hc-def">{Object.entries(ROUTES).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{v.split(": ")[1]}</dd></React.Fragment>)}</dl>
+            <dl className="hc-def">{Object.entries(ROUTES).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{cap(v.split(": ")[1])}</dd></React.Fragment>)}</dl>
             <h3 className="hc-h3" style={{ margin: "14px 0 10px" }}>Dependencies, none assumed</h3>
             <p className="hc-small">{Object.values(DEPENDENCIES).join(" · ")}</p>
             <p className="hc-small hc-muted" style={{ marginTop: 8 }}>The site never assumes stock, rights, capacity, partner agreement or a place on Nike's calendar. Each is listed as something to confirm.</p>
@@ -143,7 +144,7 @@ export default function Method({ anchor }) {
         <SectionHead eyebrow="Nothing is approved" title="Status and owners" />
         <div className="hc-grid hc-grid-2">
           <div className="hc-card">
-            <dl className="hc-def">{Object.entries(STATUSES).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{v.split(": ")[1]}</dd></React.Fragment>)}</dl>
+            <dl className="hc-def">{Object.entries(STATUSES).map(([k, v]) => <React.Fragment key={k}><dt>{v.split(":")[0]}</dt><dd>{cap(v.split(": ")[1])}</dd></React.Fragment>)}</dl>
             <p className="hc-small hc-muted">Every opportunity is a hypothesis today. Only a named person can move one on, and no one has yet. Partners named in the briefs are prospects: none has been contacted or agreed to anything.</p>
           </div>
           <div className="hc-card">
@@ -180,7 +181,7 @@ export default function Method({ anchor }) {
           <div className="hc-grid">
             {review.corrections.map((c, i) => (
               <article key={i} className="hc-card hc-stack">
-                <div className="hc-row"><a href={href("m", c.market)} style={{ fontWeight: 700 }}>{c.market.toUpperCase()}</a><Chip tone="line">Found {fmtDate(c.found)}</Chip><Chip tone="line">{c.by === "editor" ? "Editor" : "Review agent"}</Chip></div>
+                <div className="hc-row"><a href={href("m", c.market)} style={{ fontWeight: 700 }}>{c.market.toUpperCase()}</a><Chip tone="line">Found {fmtDate(c.found)}</Chip><Chip tone="line">{c.by === "editor" ? "Editor" : "Review pass"}</Chip></div>
                 <p className="hc-small"><b>Was:</b> {c.was}</p>
                 <p className="hc-small"><b>Now:</b> {c.now}</p>
                 {c.why && <p className="hc-small hc-muted"><b>How it happened:</b> {c.why}</p>}

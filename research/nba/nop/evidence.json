@@ -1,0 +1,169 @@
+{
+  "team": "nop",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "nop-c1",
+      "claim": "Fleurty Girl has French Quarter, Lakeside Metairie and Gretna doors that can host the Twelfth Night drop in January 2027.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "A rendering of Fleurty Girl's new flagship store planned to open in 2027. Rendering: Courtesy of Fleurty Girl",
+          "url": "https://www.axios.com/local/new-orleans/2025/12/23/fleurty-girl-to-open-new-flagship-store-in-metairie",
+          "publisher": "Axios New Orleans",
+          "published": "2025-12-23"
+        }
+      ],
+      "evidence": "Axios says the owner plans a new Metairie flagship in a former Double M Feed store for 2027 and will keep the nearby Lakeside location open through 2026. Results mention a Gretna store, but none confirms a current French Quarter door or says whether Lakeside stays open in January 2027.",
+      "action": "No change. Confirm every Fleurty Girl door, and whether Lakeside is still open in January 2027, before naming them as launch doors.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "twelfth-night-drop"
+        ],
+        "calendar": [
+          4,
+          6
+        ]
+      }
+    },
+    {
+      "id": "nop-c2",
+      "claim": "Dirty Coast runs a shop on Magazine Street that can serve as a launch door for Twelfth Night, Ward Call and Boil Season.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Thanks For Shopping Locally",
+          "url": "https://dirtycoast.com/pages/visit-our-shops",
+          "publisher": "Dirty Coast",
+          "published": ""
+        }
+      ],
+      "evidence": "Dirty Coast's own shop page lists an Uptown flagship at 5415 Magazine Street and a Lower Garden District shop at 1320 Magazine Street, plus a French Quarter shop on Chartres Street.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "twelfth-night-drop",
+          "ward-call-pack",
+          "boil-season"
+        ],
+        "calendar": [
+          4,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "id": "nop-c3",
+      "claim": "Dong Phuong Bakery in New Orleans East is operating and sells king cake, so it can supply a Carnival-night giveaway.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "dp cake slice",
+          "url": "https://www.theadvocate.com/baton_rouge/entertainment_life/food_restaurants/dong-phuong-baton-rouge/article_3e5496dd-c72f-4326-9564-9baef73c4e73.html",
+          "publisher": "The Advocate",
+          "published": ""
+        },
+        {
+          "title": "Where to get King Cakes in the New Orleans area for Mardi Gras 2026",
+          "url": "https://www.aol.com/articles/where-king-cakes-orleans-area-203919253.html",
+          "publisher": "AOL",
+          "published": ""
+        }
+      ],
+      "evidence": "Coverage of the 2026 Carnival season says Dong Phuong's online king cake orders were fully booked. Walk-in buyers could still get cakes at the 14207 Chef Menteur Highway storefront from 8 a.m. every day except Tuesday, limited to three per person.",
+      "action": "No change needed. Supply is tight, so lock the giveaway order early.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "twelfth-night-drop"
+        ],
+        "calendar": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "nop-c4",
+      "claim": "The Pelicans Team Store operates at Smoothie King Center as the launch door for Ward Call, Twelfth Night and school nights.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "www.smoothiekingcenter.com",
+          "url": "https://www.smoothiekingcenter.com/pelicans",
+          "publisher": "Smoothie King Center",
+          "published": ""
+        }
+      ],
+      "evidence": "The arena's Pelicans page says the official team store is inside Smoothie King Center, entered from Dave Dixon Drive. It opens weekdays 11 a.m. to 5 p.m., and on game days opens only to ticketed fans one hour before tip-off. Online sales run through pelicansteamstore.com.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "twelfth-night-drop",
+          "ward-call-pack",
+          "holiday-value-core"
+        ],
+        "calendar": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "nop-c5",
+      "claim": "The Pelicans' own 2026-27 opener date is still to confirm.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Pelicans announce 2026-27 regular season schedule",
+          "url": "https://crescentcitysports.com/pelicans-announce-2026-27-regular-season-schedule/",
+          "publisher": "Crescent City Sports",
+          "published": ""
+        }
+      ],
+      "evidence": "The team's schedule announcement says the Pelicans open the regular season at Smoothie King Center against the Indiana Pacers on Wednesday, Oct 21. It also lists 39 home games.",
+      "action": "Named the Oct 21 home opener against Indiana in the strategy calendar window, hoops and rhythm moments and the verify lists. Updated two factcheck verdicts.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "ward-call-pack"
+        ],
+        "calendar": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "The Pelicans' own opener date is still to confirm (strategy calendar, hoops and rhythm dossiers).",
+      "correction": "The Pelicans open at home against Indiana on Wednesday, Oct 21, 2026, at Smoothie King Center.",
+      "files": [
+        "strategy.json",
+        "hoops.json",
+        "rhythm.json",
+        "retail-landscape.json",
+        "factcheck.json"
+      ],
+      "claimId": "nop-c5"
+    }
+  ]
+}

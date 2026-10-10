@@ -1,0 +1,136 @@
+{
+  "team": "bos",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "bos-c1",
+      "claim": "Nike Boston on Newbury Street is open and serves as the lead story and launch door.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Nike Boston",
+          "url": "https://www.nike.com/hr/retail/s/nike-boston",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "nike boston gets grand reopening",
+          "url": "https://www.complex.com/sneakers/2014/04/nike-boston-gets-grand-reopening",
+          "publisher": "Complex",
+          "published": "2014-04"
+        }
+      ],
+      "evidence": "Nike's store page lists Nike Boston with daily hours and phone number, but it also carries an 'Opening Soon' label. Complex covered the reopening of the 200 Newbury Street store in April 2014. Nothing dated 2026 confirms it is open now.",
+      "action": "No change needed. The strategy verify queue already asks to confirm Nike Boston is operating.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "specter-banner-heritage",
+          "noreaster-layering",
+          "rivalry-archive-sixers"
+        ],
+        "calendar": [
+          0,
+          1,
+          2,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "id": "bos-c2",
+      "claim": "Nike Factory Store Wrentham is open and serves as the outlet door for Black Friday and the area-code set.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Nike Factory Store - Wrentham, Massachusetts MA 02093 - Wrentham Village Premium Outlets",
+          "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/wrentham--massachusetts--wrentham-village-premium-outlets",
+          "publisher": "Mallscenters",
+          "published": "2022"
+        }
+      ],
+      "evidence": "A third-party mall directory lists a Nike Factory Store at Wrentham Village Premium Outlets, One Premium Outlet Boulevard. The listing was last updated in 2022, and no Nike or Simon page in the results confirms the store today.",
+      "action": "No change needed. The strategy verify queue already asks to confirm the Wrentham door.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "noreaster-layering",
+          "new-england-area-codes"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "bos-c3",
+      "claim": "Converse is headquartered at Lovejoy Wharf beside TD Garden, with a public store usable as a launch and customization room.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "converse store opens at lovejoy wharf",
+          "url": "https://bankerandtradesman.com/converse-store-opens-at-lovejoy-wharf/",
+          "publisher": "Banker & Tradesman",
+          "published": ""
+        },
+        {
+          "title": "Visiting The New Converse Hq In Boston",
+          "url": "https://sneakerfreaker.com/news/visiting-the-new-converse-hq-in-boston",
+          "publisher": "Sneaker Freaker",
+          "published": ""
+        }
+      ],
+      "evidence": "Coverage from the 2015-2016 move puts Converse HQ at 160 North Washington Street with a 3,500-square-foot store offering custom Chucks at its base. Results also mention February 2026 reports of Converse layoffs and restructuring. Nothing confirms the HQ or the store in October 2026.",
+      "action": "No change needed. The brief already hedges Lovejoy Wharf with \"if still operating\" and names Nike Boston as fallback.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "specter-banner-heritage",
+          "concepts-converse-tatum"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "bos-c4",
+      "claim": "Concepts operates a store in Cambridge and can lead the Boston-only capsule.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "41379331 concepts cambridge",
+          "url": "https://cncpts.com/blogs/locations/41379331-concepts-cambridge",
+          "publisher": "Concepts",
+          "published": ""
+        }
+      ],
+      "evidence": "Concepts' own location page lists Cambridge stores at 37 Brattle Street and 9 JFK Street, open 10AM-7PM daily. The page shows no update date.",
+      "action": "Updated the factcheck.json Concepts verdict to confirmed. The brief already says \"Concepts, Cambridge\", so no strategy change.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "concepts-converse-tatum"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

@@ -1,0 +1,667 @@
+{
+  "team": "okc",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 12-20, 2026",
+      "kind": "launch",
+      "start": "2026-10-12",
+      "end": "2026-10-20",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 22, the home opener at Paycom Center",
+      "kind": "event",
+      "start": "2026-10-22",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "okc-c3",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Cup Fridays Oct 30 to Nov 27, plus Nov 24-25",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "November 2026 (talks) and November 2027 (release)",
+      "kind": "action",
+      "start": "2026-11",
+      "end": "2027-11",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Native American Heritage Month is November",
+      "actBy": "2026-11",
+      "actNote": "Open N7 conversations with a named nation. No product yet.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Black Friday to Dec 25; Cup knockouts Dec 4-9",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after Thanksgiving (Nov 27, 2026); Christmas is Dec 25",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "January 2027",
+      "kind": "season",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2027-03",
+      "actNote": "Lock playoff graphics with the league. The playoff plan says by March.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Feb 6-11, 2027",
+      "kind": "action",
+      "start": "2027-02-06",
+      "end": "2027-02-11",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2027-02",
+      "actNote": "Meet Asian District organizers during Lunar New Year 2027 about a 2028 release.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "March 2027",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Apr 13 onward; Festival of the Arts late April",
+      "kind": "launch",
+      "start": "2027-04-13",
+      "end": "2027-04-30",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Play-In Tournament",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "May 2027, through Memorial Day weekend",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "2027-05-31",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Memorial Day is the last Monday in May (May 31, 2027)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "June 2027",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Juneteenth is June 19 and Pride Month is June",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "July 2027",
+      "kind": "action",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2027-07",
+      "actNote": "Land the Under $100 line and the area-code set in doors by late July.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "First weekend of August 2027 (confirm)",
+      "kind": "launch",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Mid to late September 2027",
+      "kind": "launch",
+      "start": "2027-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "built-here-opener",
+      "consumer": "Diehards, statewide fans and Gen Z followers of Gilgeous-Alexander.",
+      "insights": [
+        4,
+        0,
+        1
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-12",
+      "actBy": "2026-10-12",
+      "actNote": "Pull existing Fall 2026 blue pieces forward and re-tag them with Built Here and Loud City copy before the drop goes live Oct 12.",
+      "routes": [
+        "existing-inventory"
+      ],
+      "validation": [
+        "Check in-line Fall 2026 blue stock by door before re-tagging.",
+        "Confirm the licensed format and NBPA path for the Gilgeous-Alexander name-and-number tee.",
+        "Set a 10-day sell-through baseline, including sales outside the OKC metro.",
+        "Book watch parties clear of Red River Rivalry weekend."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "holiday-and-cup",
+      "consumer": "Families, gift buyers and youth.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "headwear",
+        "accessory",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-30",
+      "actBy": "2026-10-30",
+      "actNote": "Have existing state-outline and youth pieces in the arena store for the first Cup Friday, Oct 30.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Thunder's home Group B Cup dates.",
+        "Check youth Gilgeous-Alexander, Williams and Holmgren jersey stock by door before Black Friday.",
+        "Set the trigger, blanks and print time for a contingent home quarterfinal or semifinal run.",
+        "Compare December jersey and youth units with last season."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "oklahoma-under-100",
+      "consumer": "Value-minded families and statewide and rural fans who shop big-box and mall doors.",
+      "insights": [
+        5,
+        0,
+        1
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "shorts",
+        "footwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-07",
+      "actBy": "2027-07",
+      "actNote": "Develop the line through spring 2027 and land it in doors by late July.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Test the $99 ceiling with Academy and Hibbett buyers.",
+        "Confirm the 2027 tax-holiday dates and threshold, and whether the shoe and mesh short count, since athletic gear is excluded.",
+        "Set area-code allocation by region: 405 metro, 918 Tulsa, 580 southwest.",
+        "Run fan-panel color reviews in OKC and Tulsa against OU and OSU gear."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "loud-city-playoff-fast-turn",
+      "consumer": "Families, casual fans and statewide fans following a playoff run.",
+      "insights": [
+        4,
+        1
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-03",
+      "actNote": "Lock blue-first round graphics with the league by March.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the league's playoff licensing lead times for round and series-win graphics.",
+        "Size blank holdings and print capacity to reach Nike.com and the arena within days of a series win.",
+        "Plan quiet days around Apr 19 and the Memorial Marathon.",
+        "Track youth in-stock rate and playoff unit lift against 2026."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "red-dirt-capsule",
+      "consumer": "Young creatives and Okie-pride lifestyle buyers.",
+      "insights": [
+        2,
+        1,
+        3
+      ],
+      "categories": [
+        "fleece",
+        "outerwear",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-04",
+      "actNote": "Commission and credit a poster artist and a sign painter before the late-April 2027 launch.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Test with fan panels whether rust and canvas still read as Thunder, not country or college.",
+        "Set full-price targets with Shop Good and Stockyards City doors.",
+        "Confirm Cain's Ballroom and any band names are licensed, or use them only as inspiration.",
+        "Confirm Shop Good, Langston's and Cain's Ballroom are open and willing to partner."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Shop Good",
+        "Cain's Ballroom or another Red Dirt venue"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "district-artist-series",
+      "consumer": "Arts crowd, collectors and members of each community.",
+      "insights": [
+        6,
+        3
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-04",
+      "actNote": "Pick and pay the first artist before Festival of the Arts or the Paseo Arts Festival.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm 2027 dates for Festival of the Arts, Paseo Arts Festival, Plaza Walls and Juneteenth events.",
+        "Agree artist pay and royalty terms before any design work.",
+        "Confirm Jabee is available and that community partners will direct Juneteenth proceeds.",
+        "Track sell-through, royalties paid and artist sentiment for each release."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Oklahoma Contemporary Arts Center",
+        "Plaza District Association",
+        "Paseo Arts Association",
+        "Jabee",
+        "Shop Good",
+        "Jeff Chanchaleune"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "nation-led-november",
+      "consumer": "Native fans statewide and N7 supporters.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-11",
+      "actBy": "2026-11",
+      "actNote": "Check which nations already sponsor the Thunder, then open conversations with a named nation. No product.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm which Oklahoma nations hold Thunder sponsorships.",
+        "Confirm Nike N7's current partner pathway and the First Americans Museum's introduction process.",
+        "Get written terms, pay and approval rights from the nation's cultural or commerce office before any design.",
+        "Keep the program off Statehood Day and away from the 'Red Earth' name."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "First Americans Museum (introductions only)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "gym-pride-statewide",
+      "consumer": "High school hoopers, families and community players across the state.",
+      "insights": [
+        0,
+        5,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "uniform",
+        "tee",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2027-03",
+      "actNote": "Ask each school what it wants before any Thunder branding goes in, ahead of the March state tournaments.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Ask each school and program whether it wants Thunder branding at all.",
+        "Confirm with the Greenwood Cultural Center whether and how a Booker T. Washington program happens.",
+        "Confirm OSSAA tournament sites and dates for March 2027.",
+        "Track programs equipped and youth jersey sales in those towns."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Greenwood Cultural Center"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

@@ -115,9 +115,9 @@ export function EvidenceTag({ kind }) {
 export function Strength({ support }) {
   if (!support) return null;
   const s = STRENGTH[support.strength];
-  const n = support.verified + support.observed;
-  const extra = [n ? `${n} checked` : "", support.corrected ? `${support.corrected} corrected` : ""].filter(Boolean).join(", ");
-  return <Chip tone={support.strength === "sourced" ? "pop" : "line"} title={`Evidence strength. ${s.detail}`}>{s.label}{extra ? ` · ${extra}` : ""}</Chip>;
+  const extra = [support.verified ? `${support.verified} verified` : "", support.corrected ? `${support.corrected} corrected` : "", support.conflicting ? `${support.conflicting} conflicting` : ""].filter(Boolean).join(", ");
+  const obs = support.observed ? ` ${support.observed} fan observation${support.observed > 1 ? "s" : ""} bear on it; see Evidence.` : "";
+  return <Chip tone={support.strength === "sourced" ? "pop" : "line"} title={`Evidence strength. ${s.detail}${obs}`}>{s.label}{extra ? ` · ${extra}` : ""}</Chip>;
 }
 export function Certainty({ timing }) {
   if (!timing) return null;
@@ -127,7 +127,9 @@ export function Certainty({ timing }) {
 }
 export function When({ timing, kind = true }) {
   if (!timing) return null;
-  return <span className="hc-when">{kind ? `${KIND_LABEL[timing.kind]} · ` : ""}{fmtSpan(timing)}{timing.recurring ? " · every year" : ""}</span>;
+  // "Every year" describes a recurring window, not a dated game in it.
+  const yearly = timing.recurring && !(timing.kind === "event" && /^\d{4}-\d{2}-\d{2}$/.test(timing.start));
+  return <span className="hc-when">{kind ? `${KIND_LABEL[timing.kind]} · ` : ""}{fmtSpan(timing)}{yearly ? " · recurs yearly" : ""}</span>;
 }
 export function ActBy({ timing }) {
   if (!timing || !timing.actBy) return null;

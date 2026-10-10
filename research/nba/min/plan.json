@@ -1,0 +1,646 @@
+{
+  "team": "min",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 21 at Miami through the Oct 30 home Cup opener vs Memphis",
+      "kind": "event",
+      "start": "2026-10-21",
+      "end": "2026-10-30",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Thanksgiving weekend (Black Friday Nov 27)",
+      "kind": "event",
+      "start": "2026-11-26",
+      "end": "2026-11-29",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Thanksgiving is the fourth Thursday of November (Nov 26, 2026), so Black Friday is Nov 27. The Hmong New Year dates in St. Paul are still unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Dec 4-11: quarterfinals, possible home semifinal Dec 8-9, final at Hinkle Fieldhouse Dec 11",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-11",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals, semifinals and championship",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "First hard cold in early December through Dec 25",
+      "kind": "season",
+      "start": "2026-12",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games (Oklahoma City at Minnesota, Dec 25). The first hard cold has no fixed date.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Late January",
+      "kind": "event",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Sunday, Feb 28, 2027: home game vs Boston on NBC. The team announced the date on Aug 14, 2026",
+      "kind": "event",
+      "start": "2027-02-28",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Live sources under min-c3 report Feb 28, 2027, but no verified claim states the date yet.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "February, with the studio funded year-round",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Ramadan, expected about Feb 8 to Mar 9, if partners choose",
+      "kind": "event",
+      "start": "2027-02-08",
+      "end": "2027-03-09",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "March",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Staged by Apr 11. Record Store Day in mid-April. Nothing sold on Apr 21",
+      "kind": "event",
+      "start": "2027-04-11",
+      "end": "2027-04-21",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The Apr 11 season finale is confirmed in the league calendar. The playoff start (Apr 17 or 18) and Record Store Day 2027 are not.",
+      "actBy": "2027-04-11",
+      "actNote": "Stage the ready-swap playoff graphics by the Apr 11 season finale.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Art-A-Whirl, usually the third weekend of May",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Around July 1 to mid-July",
+      "kind": "event",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "production-capacity",
+        "brand-safety",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Late August to Labor Day",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "2027-09-06",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Labor Day is the first Monday of September (Sept 6, 2027). The fair's opening date is unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Hispanic Heritage Month, Sept 15 to Oct 15, 2027",
+      "kind": "season",
+      "start": "2027-09-15",
+      "end": "2027-10-15",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Hispanic Heritage Month runs Sept 15 to Oct 15 every year.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "brand-safety"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "skyway-season-layers",
+      "consumer": "Downtown game-goers, statewide fans, families and corporate season-ticket holders who wear team gear under or over a winter coat.",
+      "insights": [
+        1,
+        4
+      ],
+      "categories": [
+        "fleece",
+        "headwear",
+        "outerwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Ship fleece and beanies on existing blanks for the October opener. Brief the skyway-to-seat parka and wool mitts now for fall 2027.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check that heavyweight fleece blanks, quarter-zips and beanies are in stock for the opener and the December restock.",
+        "Test fleece and quarter-zip prices with game-goers, and confirm Minnesota's clothing tax exemption covers hoodies.",
+        "Confirm Faribault Woolen Mill is operating and open to an NBA- and team-approved co-brand.",
+        "Confirm who runs the Target Center team store and how it approves product."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "third-party-ip"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Faribault Woolen Mill"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "big-ticket-heritage",
+      "consumer": "Lifelong diehards, lapsed buyers and older gift-givers who remember Garnett and the Metrodome years.",
+      "insights": [
+        3,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "accessory",
+        "jersey",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Have heritage tees and pins ready to ship from November for the Feb 28, 2027 retirement game.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the Feb 28 retirement date with the team and whether a Classic Edition is set before any #21 jersey goes into production.",
+        "Verify the 1986 name-the-team contest details before printing them on hangtags.",
+        "Test the Dome '89 crewneck and Big Ticket tee with lapsed buyers and older gift-givers.",
+        "Clear Garnett's name and number on team product, and keep copy to belief, not a victory lap."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "First Avenue",
+        "Rhymesayers- and Doomtree-orbit artists"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "mill-city-christmas",
+      "consumer": "Holiday gift buyers, families and statewide fans shopping for Christmas.",
+      "insights": [
+        2,
+        1
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "jersey",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Get the Mill City crewnecks and tees into stores by early December, peaking on Dec 25.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Check that stock crewneck and tee blanks cover an early-December run.",
+        "Run a trademark check of the lettering against General Mills, Pillsbury and Grain Belt signs.",
+        "Test the gift-boxed swingman price with holiday buyers at Mall of America.",
+        "Ask the Minnesota Historical Society and Dakota partners before any Mill City Museum event."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Minnesota Historical Society (Mill City Museum)",
+        "Dakota partners"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "ready-swap-pipeline",
+      "consumer": "Every Wolves fan at a peak moment, led by Gen Z digital fans and diehards.",
+      "insights": [
+        0,
+        2
+      ],
+      "categories": [
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12-04",
+      "actNote": "Pre-clear Cup-night graphics with the league and hold approved blanks before the Dec 4 quarterfinals.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Pre-clear Cup and playoff graphics with the league and prove a one-day turn from a win to the shelf.",
+        "Set held-blank volumes that limit markdowns if Minnesota goes out early.",
+        "Confirm the first-round start date once the league publishes it.",
+        "Confirm Electric Fetus will carry team-approved numbered tees for Record Store Day 2027, away from April 21."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "stock-availability",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Electric Fetus"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "northside-jxta-standing-studio",
+      "consumer": "Black North Minneapolis, Northside youth hoopers and music-minded fans.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids",
+        "uniform"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Sign a multi-year paid studio commitment with JXTA this fall.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check JXTA's current status and studio capacity before any commitment.",
+        "Agree JXTA's fee, revenue share and hangtag credit for apprentices.",
+        "Clear any Wolves marks with the team and NBA.",
+        "Set success as dollars paid and renewals, not units."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity",
+        "venue-or-permit",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Juxtaposition Arts (JXTA)",
+        "KMOJ 89.9"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "community-led-tracks",
+      "consumer": "Somali Minnesotan, Hmong and Native families, girls' and women's hoopers and youth leagues.",
+      "insights": [
+        5,
+        6
+      ],
+      "categories": [
+        "headwear",
+        "uniform",
+        "other"
+      ],
+      "fit": [
+        "women's",
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Start listening and funding this fall, including the Hmong New Year youth-sports sponsorship.",
+      "routes": [
+        "no-product",
+        "new-development"
+      ],
+      "validation": [
+        "Check community conditions and partner consent in Somali and Hmong neighborhoods after the 2025-26 immigration enforcement surge.",
+        "Confirm the status and capacity of Brian Coyle Center, Asiya, Hmong American Partnership, NACDI, All My Relations Arts and Little Earth.",
+        "Agree fees, credit and revenue share with each partner, with no sales target in year one.",
+        "Plan a fallback if a partner says no or asks for a delay."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "brand-safety",
+        "league-or-team-rights",
+        "third-party-ip",
+        "nike-calendar-approval",
+        "production-capacity",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Brian Coyle Center",
+        "Asiya",
+        "Hmong American Partnership",
+        "Native American Community Development Institute (NACDI)",
+        "All My Relations Arts",
+        "Little Earth of United Tribes"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "area-code-statewide",
+      "consumer": "St. Paul, outstate, suburban and Lake Street Latino fans who rep the state outline and area codes over skylines.",
+      "insights": [
+        4,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Ship the 612, 651 and 218 area-code tees this season.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Test the 612, 651 and 218 tees with St. Paul, suburban and outstate fans online.",
+        "Pay and credit a St. Paul artist for the 651 piece, and clear Wolves marks with the team.",
+        "Confirm Mercado Central and CLUES are able and willing, and agree the revenue share before co-design.",
+        "Confirm 2027 State Fair dates and vendor terms."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "venue-or-permit",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Mercado Central",
+        "CLUES"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

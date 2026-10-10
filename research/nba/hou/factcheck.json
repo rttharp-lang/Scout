@@ -97,8 +97,8 @@
       "lens": "retail-landscape",
       "claim": "Nike Factory Store at Houston Premium Outlets, Cypress",
       "verdict": "confirmed",
-      "note": "Nike's store directory lists 29300 Hempstead Rd, Suite 501. One search could not confirm 2026-27 status, so re-check.",
-      "source": "https://www.premiumoutlets.com/outlet/houston"
+      "note": "Checked live 2026-10-10: listings and Nike's store directory show it at 29300 Hempstead Rd, Suite 501, Cypress.",
+      "source": "https://www.mallscenters.com/brands/stores/nike-factory-store/cypress--texas--houston-premium-outlets"
     },
     {
       "lens": "hoops",
@@ -173,9 +173,9 @@
     {
       "lens": "retail-landscape",
       "claim": "Johnny Dang & Co. is a Southwest Houston (Hillcroft/Sharpstown) shop",
-      "verdict": "unverifiable",
-      "note": "Exact location, and whether it is still there, are unchecked. The strategy's Candy Paint launch depends on it.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the flagship opened in 2016 at 6224 Richmond Ave. His first store was in Sharpstown Mall in 1998. Fixed the location in retail-landscape and strategy. Current open status is still unconfirmed.",
+      "source": "https://www.papercitymag.com/fashion/shopping/tv-johnny-rap-legend-paul-wall-houston-cool-rich-people-new-grill-jewelry-store/"
     },
     {
       "lens": "retail-landscape",
@@ -264,9 +264,9 @@
     {
       "lens": "strategy",
       "claim": "Reveal the Candy Paint capsule on a November Cup Friday at Toyota Center; launch at the home opener week",
-      "verdict": "unverifiable",
-      "note": "Which Cup Fridays are home games, and the Rockets' home-opener date, are unconfirmed. The MLK Third Ward program also assumes an unconfirmed home game.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the home opener is Oct 21 vs. Mavericks. Home Cup games are Nov 13 (Utah) and Nov 25 (Phoenix); the Mavericks Cup game is in Dallas on Oct 30. Fixed the reveal date and moved the rivalry tee to the home opener. The MLK home team is still unconfirmed.",
+      "source": "https://www.thehrr.com/Houston_Rockets/News_and_Info/2026/8/13_Rockets_announce_2026-27_schedule.html"
     },
     {
       "lens": "strategy",

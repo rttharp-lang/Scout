@@ -1,0 +1,123 @@
+{
+  "team": "orl",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "orl-c1",
+      "claim": "Nike Factory Stores are open at both Orlando International Premium Outlets and Orlando Vineland Premium Outlets.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "nike factory store",
+          "url": "https://www.simon.com/brands/nike-factory-store",
+          "publisher": "Simon",
+          "published": ""
+        }
+      ],
+      "evidence": "Simon's brand page for Nike Factory Store lists Orlando International Premium Outlets and Orlando Vineland Premium Outlets among its locations.",
+      "action": "Set the factcheck verdict to confirmed. No research change needed.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "visitor-gift-lane"
+        ],
+        "calendar": [
+          2,
+          5,
+          10
+        ]
+      }
+    },
+    {
+      "id": "orl-c2",
+      "claim": "Foot Locker at The Florida Mall is an open door for Penny retros, Cup tees and family sales.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Foot Locker - Orlando, Florida FL 32809 - The Florida Mall",
+          "url": "https://www.mallscenters.com/brands/stores/foot-locker/orlando--florida--the-florida-mall",
+          "publisher": "MallsCenters",
+          "published": ""
+        }
+      ],
+      "evidence": "A third-party mall directory lists a Foot Locker at The Florida Mall, 8001 S Orange Blossom Trail. The same directory marks a SIX:02 listing there as probably closed, so its data may be stale. Foot Locker's own locator did not show a Florida Mall store in the results.",
+      "action": "No change. Confirm with Foot Locker's store locator before naming it as a launch door.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "penny-pinstripe-archive"
+        ],
+        "calendar": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "orl-c3",
+      "claim": "The Florida Classic (FAMU vs. Bethune-Cookman) is in mid-November 2026 at Camping World Stadium.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Florida Blue Florida Classic Set for Nov. 21 at Camping World Stadium",
+          "url": "https://news.famu.edu/2026/florida-blue-florida-classic-set-for-saturday-nov-2-at-3-30-p-m-et-at-camping-world-stadium-in-orlando.php",
+          "publisher": "FAMU News",
+          "published": ""
+        }
+      ],
+      "evidence": "FAMU says the 2026 Florida Classic is Saturday, Nov 21 at 3:30 p.m. at Camping World Stadium, played at reduced capacity during the stadium renovation.",
+      "action": "Replaced \"date to confirm\" with Nov 21 in the November calendar window. Set the factcheck verdict to confirmed.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "parramore-court-program"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "orl-c4",
+      "claim": "The Magic home opener is a confirmed home date for pushing Banchero, Wagner and Bane jerseys (date to confirm).",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "www.wftv.com",
+          "url": "https://www.wftv.com/news/local/magic-open-season-kia-center-vs-hawks-tv27/B6TOVG3KDVDQHAIKYBR3LGP2HY/",
+          "publisher": "WFTV",
+          "published": ""
+        },
+        {
+          "title": "www.actionnewsjax.com",
+          "url": "https://www.actionnewsjax.com/news/local/orlando-magic-release-2026-27-schedule-opening-home-vs-atlanta-hawks/LNHNLPUJNNBCXGCCXLURTCCIUU/",
+          "publisher": "Action News Jax",
+          "published": ""
+        }
+      ],
+      "evidence": "The Magic open the 2026-27 season at home on Wednesday, Oct 21 against the Atlanta Hawks at Kia Center. They host Minnesota on Oct 23.",
+      "action": "Added the Oct 21 home opener against Atlanta to the October calendar window and play.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [],
+        "calendar": [
+          0
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}
