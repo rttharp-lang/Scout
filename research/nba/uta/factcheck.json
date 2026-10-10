@@ -75,9 +75,9 @@
     {
       "lens": "food",
       "claim": "Thanksgiving-week Cup nights (Nov 24-25) involve Utah",
-      "verdict": "unverifiable",
-      "note": "League facts confirm extra Cup nights on Nov 24-25, but each team plays only four group games and Utah's schedule is unknown. The strategy calendar assumes Utah plays Nov 24-27 and should hedge.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Utah doesn't play Nov 24-25. It hosts Phoenix Nov 20 and Denver on Black Friday, Nov 27. The food moment and the strategy calendar now use those home nights.",
+      "source": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule"
     },
     {
       "lens": "music",
@@ -222,23 +222,23 @@
     {
       "lens": "rhythm",
       "claim": "Oct 30 Nuggets at Jazz, West Group A, Dec 11 Cup final at Hinkle, Feb 11 deadline, All-Star in Phoenix, Apr 11/Apr 13-16 dates",
-      "verdict": "confirmed",
-      "note": "All match CURRENT FACTS.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Utah has no Oct 30 game. Denver visits Nov 27 and Phoenix Nov 20, Utah's two home Cup nights. The other dates match CURRENT FACTS.",
+      "source": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule"
     },
     {
       "lens": "hoops",
       "claim": "Utah's home opener is Oct 30",
-      "verdict": "unverifiable",
-      "note": "Oct 30 is confirmed as the first Cup home game, but the Jazz home opener could be earlier. Dossiers and strategy use \"home opener\" and \"Cup Night\" interchangeably.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the Jazz open on the road at Memphis and play their home opener Fri Oct 23 against New Orleans at the Delta Center. Utah has no Oct 30 game at all. Its first home Cup night is Nov 20 against Phoenix. Fixed in strategy, hoops, fanbase, culture, uniform, music and retail-landscape.",
+      "source": "https://kutv.com/sports/utah-jazz/utah-jazz-release-regular-season-schedule-open-at-memphis-before-5-straight-games-at-home"
     },
     {
       "lens": "strategy",
       "claim": "Saturday Oct 31 I-15 pop-up after the Oct 30 Cup Night",
-      "verdict": "unverifiable",
-      "note": "Oct 31 is Halloween. Rethink family traffic and whether a pop-up works.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Utah has no Oct 30 Cup game, and Oct 31 is Halloween. The pop-ups now start Sat Nov 7.",
+      "source": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule"
     },
     {
       "lens": "fanbase",
@@ -276,5 +276,5 @@
       "source": ""
     }
   ],
-  "summary": "Utah's dossiers held up on history, geography and league dates; every date matches CURRENT FACTS. The big miss, caught in a live check, was a navy-and-yellow Jazz identity. It is Mountain Purple, Midnight Black and Sky Blue, with highlighter yellow retired. Fanbase, uniform, retail-behavior and rhythm are fixed, and the strategy risk note is the editor's to change. Still open: small venues, named artists, Nike and athletic doors, the 2004-2022 uniform eras, and whether Utah plays the Nov 24-25 Cup nights."
+  "summary": "Utah's dossiers held up on history, geography and league dates. A live check on 2026-10-10 found that Utah has no Oct 30 Cup game. Its home Cup nights are Nov 20 vs. Phoenix and Nov 27 vs. Denver. The big miss, caught in a live check, was a navy-and-yellow Jazz identity. It is Mountain Purple, Midnight Black and Sky Blue, with highlighter yellow retired. Fanbase, uniform, retail-behavior and rhythm are fixed, and the strategy risk note is the editor's to change. Still open: small venues, named artists, Nike and athletic doors and the 2004-2022 uniform eras."
 }

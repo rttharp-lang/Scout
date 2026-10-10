@@ -6,15 +6,15 @@
       "lens": "uniform",
       "claim": "Los Suns jerseys first worn in 2011 as a protest of SB 1070",
       "verdict": "corrected",
-      "note": "First worn May 5, 2010, in the playoffs against San Antonio. Noche Latina uses came later. Fixed in the summary, insight, vocabulary and cityEditions of uniform.json to match fanbase and culture.",
-      "source": ""
+      "note": "Checked live 2026-10-10: Los Suns was made for Noche Latina and worn twice in the 2009-10 regular season. On May 5, 2010, the Suns wore it for Game 2 against San Antonio to protest SB 1070. The earlier fix said May 5, 2010 was the first wearing, which was wrong. Fixed in strategy, uniform and rhythm.",
+      "source": "https://colorlines.com/articles/viva-los-suns-phoenix-suns-denounce-sb-1070-video"
     },
     {
       "lens": "rhythm",
       "claim": "Los Suns branding described as 2011-era",
       "verdict": "corrected",
-      "note": "Changed to first worn May 2010.",
-      "source": ""
+      "note": "Checked live 2026-10-10: Changed to first worn for Noche Latina in 2009-10, then worn against SB 1070 in May 2010.",
+      "source": "https://colorlines.com/articles/viva-los-suns-phoenix-suns-denounce-sb-1070-video"
     },
     {
       "lens": "music",
@@ -117,9 +117,9 @@
     {
       "lens": "rhythm",
       "claim": "All-Star Feb 19-21 2027, Oct 20 opener, Oct 30 Mavericks Cup opener, Cup final Dec 11 Indianapolis, no Christmas game, Apr 13-16 play-in",
-      "verdict": "confirmed",
-      "note": "All match CURRENT FACTS. The arena's October 2025 rename to Mortgage Matchup Center (UWM, 10 years) is also confirmed.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the Oct 30 Cup opener is Denver at Phoenix, not Dallas. Dallas visits Nov 27. The other dates match CURRENT FACTS, and the arena's October 2025 rename to Mortgage Matchup Center (UWM, 10 years) is confirmed.",
+      "source": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/"
     },
     {
       "lens": "art",
@@ -201,9 +201,9 @@
     {
       "lens": "retail-landscape",
       "claim": "Nike Factory Store at Arizona Mills is open",
-      "verdict": "unverifiable",
-      "note": "The brief's volume channel for Booker tiers rests on this store. Confirm it is open and carries basketball.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Nike's store directory lists the Arizona Mills store as Nike Clearance Store - Tempe, not a Factory Store. A Nike Factory Store is listed at Tempe Marketplace, 2000 E Rio Salado Pkwy, with hours. Swapped the volume door to Tempe Marketplace in strategy and retail-landscape.",
+      "source": "https://www.nike.com/ro/retail/directory/united-states/arizona"
     },
     {
       "lens": "retail-behavior",
@@ -269,5 +269,5 @@
       "source": ""
     }
   ],
-  "summary": "The Phoenix dossiers get the team facts, schedule dates, arena name and All-Star details right. Los Suns was first worn in May 2010, not 2011, and Barrio Cafe is on 16th Street. The Heard Hoop Dance is Feb 6-7, 2027, confirmed live. The brief needs edits to the hoop dance overlap, the First Friday contact and the Latino-majority line, and it leans on five unverified items."
+  "summary": "The Phoenix dossiers get the team facts, schedule dates, arena name and All-Star details right. Los Suns was first worn for Noche Latina in 2009-10 and as an SB 1070 protest on May 5, 2010, not 2011, and Barrio Cafe is on 16th Street. The Heard Hoop Dance is Feb 6-7, 2027, confirmed live. The brief needs edits to the hoop dance overlap, the First Friday contact and the Latino-majority line, and it leans on five unverified items."
 }

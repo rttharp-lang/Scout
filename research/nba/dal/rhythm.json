@@ -16,7 +16,7 @@
     },
     {
       "title": "NBA Cup Fridays anchor the early season",
-      "detail": "Dallas is in West Group A with Denver, Houston, Phoenix and Utah. It opens Oct 30 at Phoenix, with group play on Fridays through Nov 27. Houston is the in-state rival that gives Dallas a Texas-pride storyline. Knockouts run Dec 4 to Dec 11 and stream on Prime Video, with semifinals at the higher seed's arena.",
+      "detail": "Dallas is in West Group A with Denver, Houston, Phoenix and Utah. It opens Oct 30 at home against Houston, the in-state rival that gives Dallas a Texas-pride storyline. Utah visits Nov 6, then Dallas plays at Denver Nov 24 and at Phoenix Nov 27. Knockouts run Dec 4 to Dec 11 and stream on Prime Video, with semifinals at the higher seed's arena.",
       "implication": "Build a Cup-night capsule and a Texas-rivalry (Mavs-Rockets) graphic moment. Hold stock for a Cup semifinal at American Airlines Center, which would be an unplanned window."
     },
     {
@@ -398,7 +398,7 @@
         "team": [
           "League opening night Oct 20 (Dallas opener date to confirm)",
           "Preseason before it",
-          "NBA Cup group play begins Oct 30 at Phoenix"
+          "NBA Cup group play begins Oct 30 at home vs. Houston"
         ],
         "local": [
           "State Fair of Texas",
@@ -414,8 +414,8 @@
         "intensity": 78,
         "phase": "NBA Cup group play",
         "team": [
-          "Cup Fridays through Nov 27 with Denver, Houston, Phoenix, Utah",
-          "Extra Cup Nights Nov 24-25"
+          "Cup games Nov 6 vs. Utah (home) and Nov 27 at Phoenix",
+          "Tuesday Cup Night Nov 24 at Denver"
         ],
         "local": [
           "Dia de los Muertos",
@@ -458,11 +458,11 @@
         "why": "League tip-off. The Mavs aren't on the NBC tripleheader, so confirm Dallas's opener on the Mavs schedule."
       },
       {
-        "name": "NBA Cup opener at Phoenix",
+        "name": "NBA Cup opener vs. Houston",
         "date": "Oct 30, 2026",
         "month": 10,
         "type": "team",
-        "why": "Dallas's first Cup Night, and a Friday primetime event."
+        "why": "Dallas's first Cup Night, a Friday primetime home game against in-state rival Houston."
       },
       {
         "name": "NBA Cup group play ends",

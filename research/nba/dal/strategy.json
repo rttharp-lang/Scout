@@ -68,7 +68,7 @@
     },
     {
       "title": "The Mavs own an eight-week window between football and heat",
-      "insight": "Cowboys Sundays, Friday-night high school football, the State Fair and Red River weekend own the fall until mid-October. Triple-digit summers empty July and August. Dallas isn't on the Oct 20 opening-night slate or the Christmas slate. Its stage is its own opening week and four West Group A Cup games: Oct 30 at Phoenix, then Denver, Houston and Utah, two at home. A knockout run would need a top seed to bring a Dec 8-9 semifinal home.",
+      "insight": "Cowboys Sundays, Friday-night high school football, the State Fair and Red River weekend own the fall until mid-October. Triple-digit summers empty July and August. Dallas isn't on the Oct 20 opening-night slate or the Christmas slate. Its stage is its own opening week and four West Group A Cup games. Dallas hosts Houston on Oct 30 and Utah on Nov 6, then plays at Denver on Nov 24 and at Phoenix on Nov 27. A knockout run would need a top seed to bring a Dec 8-9 semifinal home.",
       "evidence": [
         "rhythm",
         "retail-behavior",
@@ -76,7 +76,7 @@
         "fanbase",
         "hoops"
       ],
-      "implication": "Concentrate 2026-27 team product from opening week through the holiday peak. Tie any Cup product to the two confirmed home dates, not a weekly cadence. Give the summer to the Dallas Wings instead of forcing Mavs product into the dead months.",
+      "implication": "Concentrate 2026-27 team product from opening week through the holiday peak. Tie any Cup product to the two home dates, Oct 30 and Nov 6, not a weekly cadence. Give the summer to the Dallas Wings instead of forcing Mavs product into the dead months.",
       "confidence": "medium"
     },
     {
@@ -106,14 +106,14 @@
     {
       "id": "flagg-opening-week",
       "title": "Flagg Opening Week and Cup Home Nights (2026-27)",
-      "summary": "Ready to run now. Stock in-line Flagg replicas and youth product for Dallas's home opener week. Add one Texas-pride Mavs-Rockets piece if the Houston Cup game is at home, and hold stock back for a knockout run.",
+      "summary": "Ready to run now. Stock in-line Flagg replicas and youth product for Dallas's home opener week. Add one Texas-pride Mavs-Rockets piece for the Oct 30 home Cup game against Houston. Hold stock back for a knockout run.",
       "where": [
         "American Airlines Center team store and Victory Park",
         "Dick's Sporting Goods (Stonebriar and suburban doors)",
         "Academy Sports + Outdoors",
         "Mavs and Nike digital"
       ],
-      "when": "Dallas home opener week (late Oct 2026, date to confirm) through the end of the Cup group stage on Nov 27. Keep a contingency for the Dec 4-11 knockouts.",
+      "when": "Dallas home opener week (Oct 24, 2026 vs. San Antonio) through the end of the Cup group stage on Nov 27. Keep a contingency for the Dec 4-11 knockouts.",
       "months": [
         10,
         11,
@@ -611,7 +611,7 @@
   "calendar": [
     {
       "month": 10,
-      "window": "Dallas home opener week, late Oct 2026 (date to confirm)",
+      "window": "Dallas home opener week: Oct 24, 2026 vs. San Antonio (road opener Oct 21 at Houston)",
       "moment": "First full Flagg season under Ujiri and May (executable this season)",
       "play": "Stock in-line Flagg replicas with fixed-price personalization and deep youth sizing. No new murals or graphics.",
       "products": [
@@ -624,9 +624,9 @@
     },
     {
       "month": 11,
-      "window": "Oct 30 at Phoenix through Nov 27, 2026, plus Cup Nights Nov 24-25",
-      "moment": "NBA Cup West Group A: four games vs. PHX, DEN, HOU and UTA, two at home (executable this season)",
-      "play": "Work the two home Cup nights in the arena. Add one Mavs-Rockets Texas-pride piece only if the Houston game is at home and rights clear.",
+      "window": "Oct 30 to Nov 27, 2026 (home nights Oct 30 vs. Houston and Nov 6 vs. Utah)",
+      "moment": "NBA Cup West Group A: HOU and UTA at home, then at DEN Nov 24 and at PHX Nov 27 (executable this season)",
+      "play": "Work the two home Cup nights in the arena, Oct 30 and Nov 6. Add one Mavs-Rockets Texas-pride piece for the Oct 30 Houston game, only if rights clear.",
       "products": [
         "Mavs-Rockets Texas-pride tee",
         "Flagg youth replica"
@@ -889,7 +889,7 @@
     "asOf": "Model knowledge, mid-2026",
     "verify": [
       "Confirm the Mavericks' 2026-27 City Edition story and release date. Pull the full City Edition history to confirm the Fair Park, Centennial and green-era concepts are unused.",
-      "Confirm the Mavs' 2026-27 home opener date and opponent, and which two West Group A Cup games (including Houston) are at American Airlines Center.",
+      "Home Cup games are confirmed at American Airlines Center: Oct 30 vs. Houston and Nov 6 vs. Utah. The home opener is confirmed as Oct 24 vs. San Antonio.",
       "Confirm the Noche Latina 2026-27 date and whether the 'Los Mavs' uniforms continue.",
       "Confirm the rights split for Cup marks and quick-turn tees between Nike, Fanatics and the NBA.",
       "Confirm Flagg's New Balance and Irving's Anta deals are current, and which Wings players (including Paige Bueckers and Arike Ogunbowale) have Nike ties.",

@@ -194,9 +194,9 @@
     {
       "lens": "uniform",
       "claim": "Nuggets Team Store at Ball Arena and Nike Factory Stores at Castle Rock and Thornton are open",
-      "verdict": "unverifiable",
-      "note": "This is the brief's core retail premise. Check both factory stores live, plus the Colorado Mills Nike door and whether Nike has any other Denver door.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: Nike's own store directory lists Nike Factory Stores at the Outlets at Castle Rock (5050 Factory Shops Blvd #905) and Denver Premium Outlets in Thornton. Ball Arena's site lists the Altitude Authentics team store, which carries Nuggets merchandise. The directory also lists Nike doors in Lakewood, Northfield and an Aurora clearance store.",
+      "source": "https://www.nike.com/no/retail/directory/usa/colorado"
     },
     {
       "lens": "retail-landscape",
@@ -243,9 +243,9 @@
     {
       "lens": "art",
       "claim": "CRUSH Walls still runs in September; Detour, Pat Milbery and Sandra Fettingis available and conflict-free",
-      "verdict": "unverifiable",
-      "note": "Festival status after 2025 and the artist deals are unconfirmed.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Westword reports the RiNo Art District cut ties with CRUSH Walls in 2020, and no 2025 or 2026 edition turned up. Split CRUSH Walls from RiNo in the partner list and made the September 2027 reveal a RiNo mural, not a CRUSH Walls event. Artist availability is still unconfirmed.",
+      "source": "https://www.westword.com/arts/denvers-street-murals-artists-have-painted-the-town-10730921"
     },
     {
       "lens": "art",

@@ -1,0 +1,656 @@
+{
+  "team": "phx",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Now to Oct 30 Cup opener vs Denver",
+      "kind": "season",
+      "start": "2026-10",
+      "end": "2026-10-30",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "phx-cup-dates",
+      "actBy": "2026-10",
+      "actNote": "Put existing Booker, Green and heritage stock into the arena, malls and vintage-leaning doors before the Oct 30 Cup opener vs Denver.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct-Nov",
+      "kind": "action",
+      "start": "2026-10",
+      "end": "2026-11",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-11",
+      "actNote": "Sign the All-Star artist, the Los Suns artists and letterer, and an Eastlake Park partner. Open NBA and Suns licensing talks.",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Nov 1-2",
+      "kind": "event",
+      "start": "2026-11-01",
+      "end": "2026-11-02",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Dia de los Muertos is Nov 1-2",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Cup Fridays Oct 30 to Nov 27 (Black Friday)",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 1-24",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Holiday gifting runs to Christmas Eve, Dec 24",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Mid to late January",
+      "kind": "action",
+      "start": "2027-01",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2027-01",
+      "actNote": "Finalize approved blanks with artist patches and hangtags.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Early February (WM Phoenix Open weekend; Heard Hoop Dance Contest Feb 6-7)",
+      "kind": "event",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Feb 19-21",
+      "kind": "event",
+      "start": "2027-02-19",
+      "end": "2027-02-21",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "NBA All-Star 2027",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Noche Latina (date to confirm)",
+      "kind": "launch",
+      "start": "2027-03",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11-16",
+      "kind": "event",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends; Play-In Tournament",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "May (around May 5; Mercury tip-off)",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June 19",
+      "kind": "event",
+      "start": "2027-06-19",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Juneteenth is June 19",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "venue-or-permit",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Early to mid July",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2027-07",
+      "actNote": "Ship kids and Booker back-to-school product to mall doors by early July.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Sept 15-16, 2027",
+      "kind": "launch",
+      "start": "2027-09-15",
+      "end": "2027-09-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Mexican Independence Day is Sept 16; Hispanic Heritage Month starts Sept 15",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "all-star-made-on-roosevelt",
+      "consumer": "Valley locals, downtown creatives and Gen Z first, then All-Star visitors.",
+      "insights": [
+        0,
+        2
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "other",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-11",
+      "actNote": "Sign the artist and open NBA and Suns licensing talks in Oct-Nov 2026.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the NBA and Suns licensing path and lead time for artist patches and hangtags on Suns blanks.",
+        "Confirm Lalo Cota or Joe Pagac is available, and who permits murals on Roosevelt Row.",
+        "Check the 2027 WM Phoenix Open dates and whether a Roosevelt Row art event runs Fri Feb 19, 2027.",
+        "Test the pop-up pieces with Arizona Nike members before setting run sizes."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "production-capacity",
+        "stock-availability"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Lalo Cota",
+        "Joe Pagac",
+        "Artlink"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "los-suns-noche-latina",
+      "consumer": "Mexican American families and Gen Z across Maryvale, South Phoenix, Mesa and Glendale.",
+      "insights": [
+        1,
+        2,
+        5
+      ],
+      "categories": [
+        "tee",
+        "kids",
+        "headwear",
+        "outerwear"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2026-11",
+      "actNote": "Sign the Los Suns artists and car-club letterer this fall, in the Oct-Nov contracting window.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the 2026-27 Noche Latina date and whether Los Suns jerseys are still worn.",
+        "Confirm the Arizona Latino Arts and Cultural Center is open before outreach.",
+        "Test the entry tee price with Maryvale and South Phoenix families.",
+        "Agree with the Suns and NBA to tell the 2010 story as community pride, not political messaging."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Arizona Latino Arts and Cultural Center"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "book-valley-tiers",
+      "consumer": "Families, kids and casual fans across the Valley.",
+      "insights": [
+        6,
+        4
+      ],
+      "categories": [
+        "jersey",
+        "footwear",
+        "tee",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Sell existing Booker product into doors now, through the Oct 30 Cup opener vs Denver.",
+      "routes": [
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm Booker's current Nike signature shoe and any planned Phoenix colorway.",
+        "Check Booker jersey and kids stock at Tempe Marketplace, Chandler Fashion Center and Dick's and Foot Locker doors.",
+        "Test member pricing and bundles against swap-meet knockoff prices.",
+        "Track sell-through by good, better and best tier."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "eastlake-night-court",
+      "consumer": "Valley hoopers, youth players and South and Central Phoenix families.",
+      "insights": [
+        4,
+        5
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2026-11",
+      "actNote": "Sign an Eastlake Park partner in the Oct-Nov contracting window.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Carver Museum is operating and who organizes the Eastlake Juneteenth celebration.",
+        "Check the Eastlake Park court condition and lighting scope with the City of Phoenix.",
+        "Test UPF and reflective product with Valley hoopers who play at dawn and after dark."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "third-party-ip",
+        "production-capacity"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "George Washington Carver Museum and Cultural Center",
+        "City of Phoenix"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "avenues-and-streets",
+      "consumer": "Transplants and locals who identify by side of the Valley, including the East Valley Asian American community.",
+      "insights": [
+        5,
+        2
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids",
+        "shorts"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-30",
+      "actBy": "2026-10-30",
+      "actNote": "Have grid and neighborhood product in door for the Oct 30 Cup opener vs Denver.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Cup dates are confirmed: home Oct 30 vs Denver and Nov 27 vs Dallas, away Nov 20 at Utah and Nov 25 at Houston. Set the Mekong Plaza watch parties for the two home nights.",
+        "Confirm Mekong Plaza suits watch parties and find a local Vietnamese or Asian American food partner.",
+        "Check new prints can reach West and East Valley doors in time for Cup Fridays.",
+        "Keep ASU and other third-party marks out in design review."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "venue-or-permit",
+        "partner-agreement",
+        "third-party-ip"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "mercury-womens-all-star",
+      "consumer": "Mercury season-ticket holders, women and girls who hoop, and LGBTQ+ fans.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "women's",
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02-19",
+      "actBy": "2027-02-19",
+      "actNote": "Merchandise existing Mercury product at the arena for All-Star, Feb 19-21.",
+      "routes": [
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the Mercury's 2026 status and the 2027 WNBA tip-off date.",
+        "Test the women's cuts and cropped hoodie with Mercury season-ticket holders.",
+        "Check existing Mercury stock for All-Star at the team store and Scottsdale Fashion Square.",
+        "Agree credit for LGBTQ+ community partners before any Pride product."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Phoenix Mercury"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "sun-faded-sunburst",
+      "consumer": "35-plus diehards and vintage-hunting Gen Z.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "fleece",
+        "headwear",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Sell in existing heritage stock this fall and take the faded palette to the team and NBA early.",
+      "routes": [
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Get team and NBA approval of the faded palette and finish.",
+        "Clear vintage marks and any player likeness through the NBA, team and NBPA.",
+        "Test the near-miss date stack with fans before committing.",
+        "Check heritage and throwback stock for Melrose District and Mill Avenue doors."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "nike-calendar-approval",
+        "production-capacity",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "late-set-music",
+      "consumer": "Downtown and Tempe creatives, students and music fans.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2026-12",
+      "actNote": "Commission a local poster artist and get venue permission, to develop this winter.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Crescent Ballroom, The Van Buren and Zia Records are operating, and the M3F and Innings 2027 dates.",
+        "Get permission from each venue named on the tour-list tee.",
+        "Test the vinyl-sleeve tee price with Zia shoppers."
+      ],
+      "dependencies": [
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Zia Records",
+        "Crescent Ballroom",
+        "The Van Buren"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

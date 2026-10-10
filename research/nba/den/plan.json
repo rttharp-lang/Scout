@@ -1,0 +1,670 @@
+{
+  "team": "den",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 11 preseason vs Chicago (ESPN) to Oct 22 vs OKC (ESPN)",
+      "kind": "season",
+      "start": "2026-10-11",
+      "end": "2026-10-22",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Oct 11 Bulls at Nuggets on ESPN is in league-calendar.json (Preseason start). Oct 22 vs OKC and whether it is the home opener are unchecked.",
+      "actBy": "2026-10",
+      "actNote": "Pick 2026-27 fleece, shells and beanies and re-merchandise them with a Denver weather story now.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Home West Group A Cup nights: Fri Nov 20 vs. Houston and Tue Nov 24 vs. Dallas",
+      "kind": "event",
+      "start": "2026-11-20",
+      "end": "2026-11-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "den-cup-dates",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Black Friday weekend and ski-area openings",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after US Thanksgiving, the fourth Thursday of November (Nov 26, 2026). Ski-area opening dates are not set.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "November to January",
+      "kind": "action",
+      "start": "2026-11",
+      "end": "2027-01",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 4-5 quarterfinals and Dec 8-9 semifinals (if Denver hosts)",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-09",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals; Emirates NBA Cup 2026 — semifinals",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Gifting Dec 1 to Dec 18; Dec 25 at Golden State, 8:30 p.m. Mountain",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games (Nuggets at Warriors, Dec 25). Dec 1 to Dec 18 is the brief's own gifting window.",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Jan 7, Serbian Orthodox Christmas",
+      "kind": "event",
+      "start": "2027-01-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Serbian Orthodox Christmas falls on Jan 7 (Dec 25 on the Julian calendar).",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "January to March 2027",
+      "kind": "action",
+      "start": "2027-01",
+      "end": "2027-03",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2027-03",
+      "actNote": "Lock the Game to Trailhead line and pitch the 2027-28 City Edition to the NBA and the team.",
+      "route": "future-uniform",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "production-capacity",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "March state high school basketball tournaments",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11 season finale through the end of Denver's run",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-06",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11, 2027). Playoff dates after that are tentative and depend on Denver's run.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "June 12 title anniversary, Juneteenth and Denver PrideFest",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "June 12 anniversary date not stated in den-c4. Juneteenth is fixed on June 19. 2027 Juneteenth Music Festival and PrideFest dates are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Aug 1 Colorado Day through back-to-school",
+      "kind": "launch",
+      "start": "2027-08-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Colorado Day is Aug 1, the anniversary of statehood in 1876. Back-to-school dates are not set.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "September 2027: media day and a live RiNo mural",
+      "kind": "launch",
+      "start": "2027-09",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Fall 2027, date set by partners",
+      "kind": "launch",
+      "start": "2027-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "game-to-trailhead-layers",
+      "status": "hypothesis",
+      "consumer": "Regional and mountain fans, Front Range families and diehards who layer for Denver weather.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear",
+        "pants"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Pick fleece, shells and beanies from the 2026-27 line and shoot them on Front Range fans for the Oct 22 OKC game.",
+      "routes": [
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Check 2026-27 Nuggets fleece, shell and beanie stock in Front Range doors before the shoot.",
+        "Track outerwear share of Nuggets apparel from October to March to size the 2027-28 buy.",
+        "Test the 2027-28 shell and quarter-zip against the REI and Patagonia layers fans already own.",
+        "Confirm Oct 22 vs OKC is the home opener before dating the story."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Topo Designs"
+      ]
+    },
+    {
+      "id": "skyline-heirloom-platform",
+      "status": "hypothesis",
+      "consumer": "Nuggets diehards and Gen Z vintage fans who claim the rainbow skyline as their own.",
+      "insights": [
+        0,
+        6
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "fleece",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-10",
+      "actNote": "Hold skyline product until the team confirms which alternate returns in 2026-27.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the returning 2026-27 alternate and match its stripe order and color.",
+        "Confirm who holds skyline throwback rights and what Nike can make.",
+        "Agree a paid likeness deal with Alex English before any press.",
+        "Track revenue per drop and repeat buyers on the holiday drop before sizing June."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Alex English"
+      ]
+    },
+    {
+      "id": "april-tip-off-playoff-chase",
+      "status": "hypothesis",
+      "consumer": "All Nuggets fans in the playoffs, led by families and watch-party crowds.",
+      "insights": [
+        4,
+        3,
+        2
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "jersey",
+        "shorts"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-04-11",
+      "actNote": "Confirm who owns playoff fast-turn product and have a pre-approved graphic bank ready by the Apr 11 finale.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm who holds playoff fast-turn rights and what Nike can make.",
+        "Time a dry run from series win to product in door with the rights holder.",
+        "Check Jokic and Murray swingman jersey stock for April.",
+        "Test the proof-over-bravado graphics with watch-party fans."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "stock-availability",
+        "nike-calendar-approval",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": []
+    },
+    {
+      "id": "jokic-moments-and-holiday",
+      "status": "hypothesis",
+      "consumer": "Gift buyers and families across Colorado, plus Serbian and Balkan diaspora fans of Jokic.",
+      "insights": [
+        3,
+        4
+      ],
+      "categories": [
+        "jersey",
+        "kids",
+        "tee",
+        "fleece",
+        "headwear"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12-01",
+      "actBy": "2026-12-01",
+      "actNote": "Have Jokic and Murray jerseys and kids gift sets in the gift guide when gifting opens Dec 1.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check Jokic and Murray swingman jersey and kids gift-set stock for Dec 1.",
+        "Review the Serbian-language tee with the designer and diaspora fans before release.",
+        "Confirm whether Jokic has signed his extension before staging the graphic.",
+        "Track gift-set attach rate against last December."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": []
+    },
+    {
+      "id": "cup-nights-artist-pilot",
+      "status": "hypothesis",
+      "consumer": "Gen Z digital fans and RiNo creatives at home Cup nights.",
+      "insights": [
+        6,
+        2
+      ],
+      "categories": [
+        "tee",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-20",
+      "actBy": "2026-10",
+      "actNote": "Commission the artist before the first home Cup night, Fri Nov 20 vs. Houston.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Home Cup nights are confirmed: Fri Nov 20 vs. Houston and Tue Nov 24 vs. Dallas.",
+        "Size the numbered run to what can be screen-printed in weeks.",
+        "Confirm Pat Milbery is free and has no conflicting deals.",
+        "Plan a store switch-on within 24 hours of a home knockout clinch."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Pat Milbery"
+      ]
+    },
+    {
+      "id": "mile-high-code-front-range",
+      "status": "hypothesis",
+      "consumer": "Price-conscious Front Range families, youth hoopers and regional fans who shop outlets and suburban malls.",
+      "insights": [
+        2,
+        6
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11-27",
+      "actNote": "Have 303 and 5,280 basics and kids tees in the factory stores for Black Friday weekend.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Test promotional price points with outlet shoppers.",
+        "Confirm Colorado still has no sales-tax holiday and check combined rates before pricing.",
+        "Clear CHSAA marks and the flag C in writing.",
+        "Check that 303 and 5,280 read as local with Front Range families."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Colorado High School Activities Association (CHSAA)"
+      ]
+    },
+    {
+      "id": "welton-street-cocreation",
+      "status": "hypothesis",
+      "consumer": "Black Denver, the Five Points community and culture-literate fans.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2026-11",
+      "actNote": "Start paid listening sessions with Black Denver designers and arts organizations this winter.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Ask the listening sessions whether the community wants a capsule at all.",
+        "Confirm Cleo Parker Robinson Dance and the Blair-Caldwell Library are operating and willing.",
+        "Agree a written use agreement and license for any archival image.",
+        "Confirm with the City how Parks and Recreation centers can accept youth-program support."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "production-capacity",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Cleo Parker Robinson Dance",
+        "Blair-Caldwell African American Research Library"
+      ]
+    },
+    {
+      "id": "westside-cocreation",
+      "status": "hypothesis",
+      "consumer": "Chicano and Latino Denver and Westside families.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-10",
+      "actBy": "2026-11",
+      "actNote": "Open a paid listening round with Su Teatro and other Westside groups this winter.",
+      "routes": [
+        "no-product",
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Ask Su Teatro and Westside groups whether a capsule should exist at all.",
+        "Agree and disclose the revenue share before any design work.",
+        "Confirm Su Teatro is operating and let it choose its own role.",
+        "Check that no club plaques, religious or movement iconography appear as decoration."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Su Teatro"
+      ]
+    }
+  ]
+}

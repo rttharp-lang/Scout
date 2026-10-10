@@ -21,7 +21,7 @@
     },
     {
       "title": "Local football crowds the opening weeks",
-      "detail": "October and November overlap with Arizona Cardinals and ASU Sun Devils football, the Arizona State Fair, Halloween and Dia de los Muertos (Nov 1-2). The Suns host the Spurs in preseason on Oct 10 (ESPN) and open the NBA Cup at home against Dallas on Oct 30. Those two games are the early anchors.",
+      "detail": "October and November overlap with Arizona Cardinals and ASU Sun Devils football, the Arizona State Fair, Halloween and Dia de los Muertos (Nov 1-2). The Suns host the Spurs in preseason on Oct 10 (ESPN) and open the NBA Cup at home against Denver on Oct 30. Those two games are the early anchors.",
       "implication": "Tie fall drops to Cup nights and Dia de los Muertos-adjacent community programming. Credit and pay Chicano artists. Don't use skull imagery as decoration."
     },
     {
@@ -113,7 +113,7 @@
       "why": "The first national look at the new roster, and the first merchandise surge."
     },
     {
-      "name": "NBA Cup opener vs. Dallas",
+      "name": "NBA Cup opener vs. Denver",
       "timing": "Oct 30, 2026",
       "month": 10,
       "why": "The first home Cup night of the Phoenix Group A run."
@@ -178,7 +178,7 @@
     },
     {
       "term": "Los Suns",
-      "meaning": "The Latin-heritage branding first worn in May 2010. The team uses it for Latino community nights."
+      "meaning": "The Latin-heritage branding first worn for Noche Latina in 2009-10, and worn against SB 1070 in May 2010. The team uses it for Latino community nights."
     }
   ],
   "designCues": [
@@ -405,7 +405,7 @@
         "team": [
           "Oct 10 Spurs at Suns (ESPN)",
           "Opening night Oct 20",
-          "Oct 30 Cup opener vs. Dallas"
+          "Oct 30 Cup opener vs. Denver"
         ],
         "local": [
           "Cooler weather arrives",
@@ -421,8 +421,8 @@
         "intensity": 65,
         "phase": "NBA Cup group play",
         "team": [
-          "Friday Cup nights",
-          "Cup Nights Nov 24-25"
+          "Cup games Nov 20 at Utah and Nov 27 vs. Dallas (home)",
+          "Wednesday Cup Night Nov 25 at Houston"
         ],
         "local": [
           "Dia de los Muertos",
@@ -465,7 +465,7 @@
         "why": "The league tips off. The Suns aren't on the opening-night slate."
       },
       {
-        "name": "Cup opener: Mavericks at Suns",
+        "name": "Cup opener: Nuggets at Suns",
         "date": "Oct 30, 2026",
         "month": 10,
         "type": "team",

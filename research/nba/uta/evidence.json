@@ -1,0 +1,260 @@
+{
+  "team": "uta",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "uta-c1",
+      "claim": "Kilby Court, the all-ages venue in the Granary District, is operating and can host the poster tee drops, starting Fri Nov 20.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "www.bandsintown.com",
+          "url": "https://www.bandsintown.com/e/1039170851",
+          "publisher": "Bandsintown",
+          "published": ""
+        },
+        {
+          "title": "Kilby Court, Salt Lake City's oldest all-ages music venue, turns 20",
+          "url": "https://www.ksl.com/article/news/entertainment/kilby-court-salt-lake-citys-oldest-all-ages-music-venue-turns-20/46547551",
+          "publisher": "KSL.com",
+          "published": ""
+        }
+      ],
+      "evidence": "Event listings show shows at Kilby Court, 741 South Kilby Court, in late September and on Oct 1, 2026. The listings call it Salt Lake's longest-running all-ages venue, run by S&S Presents. No closure or move was reported. The results did not name the neighborhood.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "group-a-cup-nights",
+          "delta-night-poster-series"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "uta-c2",
+      "claim": "The Oct 30 home Cup night against Denver is the season's only fixed in-arena stage, and the Jazz home opener may be Oct 30.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Utah Jazz release regular-season schedule, open at Memphis before 5 straight games at home",
+          "url": "https://kutv.com/sports/utah-jazz/utah-jazz-release-regular-season-schedule-open-at-memphis-before-5-straight-games-at-home",
+          "publisher": "KUTV",
+          "published": ""
+        },
+        {
+          "title": "utah jazz 2026 27 schedule best games",
+          "url": "https://www.deseret.com/sports/2026/08/13/utah-jazz-2026-27-schedule-best-games/",
+          "publisher": "Deseret News",
+          "published": ""
+        }
+      ],
+      "evidence": "The Jazz open on the road at Memphis, then play a run of home games. The home opener is Fri Oct 23 against the New Orleans Pelicans at the Delta Center. Early home games also include the Lakers on Oct 25 and the Spurs on Oct 28. Sources differ on whether the road opener at Memphis is Oct 21 or Oct 23; the Oct 23 home opener is stated directly.",
+      "action": "Strategy insight 6, its implication, calendar 0's play, the family program's timing and the timing and risk lines now name the Fri Oct 23 home opener against New Orleans. Dossier moments that called Oct 30 the home opener were fixed in hoops, fanbase, culture, uniform, music and retail-landscape. The hoops verify item was removed and the factcheck verdict set to corrected.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "family-rookie-program",
+          "group-a-cup-nights"
+        ],
+        "calendar": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uta-c3",
+      "claim": "The Delta Center team store is shared with the NHL's Utah Mammoth under Smith Entertainment Group and serves as the game-night volume door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Fanatics To Assume Operations Of Utah Jazz, Utah Mammoth Team Store At Delta Center",
+          "url": "https://kslsports.com/?p=548968",
+          "publisher": "KSL Sports",
+          "published": ""
+        },
+        {
+          "title": "Smith Entertainment Group Partners with Fanatics to Transform Utah Jazz and Utah Mammoth Fan Shopping Experiences",
+          "url": "https://www.fanaticsinc.com/press-releases/mtsjmginm3yujyydq8fwu89zku1v1b",
+          "publisher": "Fanatics",
+          "published": ""
+        },
+        {
+          "title": "utah jazz mammoth delta center team store fanatics",
+          "url": "https://www.deseret.com/sports/2025/05/30/utah-jazz-mammoth-delta-center-team-store-fanatics",
+          "publisher": "Deseret News",
+          "published": ""
+        }
+      ],
+      "evidence": "Smith Entertainment Group owns both the Jazz and the Mammoth. In a long-term deal announced in May 2025, Fanatics took over all Delta Center retail from June 1, 2025, including the main-concourse Team Store for both teams, which reopened June 9, 2025. Nike is among the brands it carries. The results are from 2025; none reported a later change.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "family-rookie-program",
+          "inversion-layer-outerwear",
+          "group-a-cup-nights"
+        ],
+        "calendar": [
+          0,
+          1,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "uta-c4",
+      "claim": "Utah has the largest average household and the youngest median age of any state.",
+      "topic": "other",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "5year ACS FactSheet Jan2021",
+          "url": "https://gardner.utah.edu/wp-content/uploads/5year-ACS-FactSheet-Jan2021.pdf",
+          "publisher": "Kem C. Gardner Policy Institute, University of Utah",
+          "published": ""
+        }
+      ],
+      "evidence": "A Gardner Policy Institute fact sheet on 2015-2019 Census survey data ranks Utah first among states for average household size (3.12) and for youngest median age (30.8). The figures are a few years old; no newer data came up.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "family-rookie-program"
+        ],
+        "calendar": [
+          0,
+          6
+        ]
+      }
+    },
+    {
+      "id": "uta-cup",
+      "claim": "Utah hosts Denver on Fri Oct 30, the confirmed opening Cup night, and its second home Group A date is unknown.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Utah Jazz announce 2026 NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        },
+        {
+          "title": "Utah Jazz 2026-27 schedule: best games",
+          "url": "https://www.deseret.com/sports/2026/08/13/utah-jazz-2026-27-schedule-best-games/",
+          "publisher": "Deseret News",
+          "published": "2026-08-13"
+        }
+      ],
+      "evidence": "Utah does not play on Oct 30. Its Cup games are Nov 6 at Dallas, Nov 13 at Houston, then Nov 20 at home against Phoenix and Nov 27 at home against Denver.",
+      "action": "Re-anchored the Cup plan on the two home nights in the thesis, topInsights[6], the family-rookie-program, group-a-cup-nights and delta-night-poster-series timing, calendar[1] and [4], the retail playbook, risks and verify list. Updated plan.json calendar[1] and [4] and the opportunity dates and notes, ten dossiers, the critique and the factcheck verdicts.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "family-rookie-program",
+          "group-a-cup-nights",
+          "delta-night-poster-series"
+        ],
+        "calendar": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "uta-cup-dates",
+      "claim": "Utah's Cup group games are Nov 6 at Dallas, Nov 13 at Houston, Nov 20 vs. Phoenix and Nov 27 vs. Denver at home. It has no Oct 30 game.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Utah Jazz announce 2026 NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        },
+        {
+          "title": "Utah Jazz 2026-27 schedule: best games",
+          "url": "https://www.deseret.com/sports/2026/08/13/utah-jazz-2026-27-schedule-best-games/",
+          "publisher": "Deseret News",
+          "published": "2026-08-13"
+        }
+      ],
+      "evidence": "The Jazz Cup schedule lists Utah at Dallas Nov 6, at Houston Nov 13, Phoenix at Utah Nov 20 and Denver at Utah on Black Friday, Nov 27.",
+      "action": "Used as the date basis for plan.json calendar[1] and [4].",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "family-rookie-program",
+          "group-a-cup-nights",
+          "delta-night-poster-series"
+        ],
+        "calendar": [
+          1,
+          4
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "The Oct 30 home Cup night against Denver is the season's only fixed in-arena stage, and several dossiers call it the Jazz home opener.",
+      "correction": "The Jazz home opener is Fri Oct 23 against New Orleans at the Delta Center. Utah has no Oct 30 game. Its home Cup nights are Nov 20 vs. Phoenix and Nov 27 vs. Denver (claim uta-cup).",
+      "files": [
+        "strategy.json",
+        "hoops.json",
+        "fanbase.json",
+        "culture.json",
+        "uniform.json",
+        "music.json",
+        "retail-landscape.json",
+        "factcheck.json"
+      ],
+      "claimId": "uta-c2"
+    },
+    {
+      "claim": "Utah hosts Denver on Fri Oct 30 to open Cup play, and its second home Cup date is unknown.",
+      "correction": "Utah has no Oct 30 game. It plays at Dallas Nov 6 and at Houston Nov 13, then hosts Phoenix Nov 20 and Denver Nov 27, Black Friday.",
+      "files": [
+        "strategy.json",
+        "plan.json",
+        "art.json",
+        "fanbase.json",
+        "food.json",
+        "hoops.json",
+        "music.json",
+        "retail-behavior.json",
+        "retail-landscape.json",
+        "rhythm.json",
+        "underground.json",
+        "uniform.json",
+        "critique.json",
+        "factcheck.json"
+      ],
+      "claimId": "uta-cup"
+    }
+  ]
+}

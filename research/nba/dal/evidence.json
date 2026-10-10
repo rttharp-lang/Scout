@@ -1,0 +1,212 @@
+{
+  "team": "dal",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "dal-c1",
+      "claim": "The Texas Theatre on Jefferson Boulevard in Oak Cliff is an active venue for the Desde la Cliff marquee night and pinstriping pop-up",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Oak Cliff Film Festival",
+          "url": "https://dallas.culturemap.com/eventdetail/oak-cliff-film-festival-2026/",
+          "publisher": "CultureMap Dallas",
+          "published": ""
+        }
+      ],
+      "evidence": "The 2026 Oak Cliff Film Festival listing, with nearly 40 programs, gives the Texas Theatre at 231 Jefferson Blvd as its venue. No closure reports turned up.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          1,
+          2
+        ],
+        "opportunities": [
+          "desde-la-cliff"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "dal-c2",
+      "claim": "Nike Factory Stores operate at Grand Prairie and Allen Premium Outlets, used as prior-season-only doors",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Find a Nike Store",
+          "url": "https://www.nike.com/gb/retail/directory/united-states/texas",
+          "publisher": "Nike",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's Texas store directory lists a Nike Factory Store at Allen Premium Outlets, 820 W Stacy Rd., Suite 356, Allen, and one at 2950 W Interstate 20, Suite 755, Grand Prairie. The directory names the Grand Prairie center Paragon Outlets Grand Prairie, not Grand Prairie Premium Outlets.",
+      "action": "No change needed. The Grand Prairie center's current name is still to confirm.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [],
+        "calendar": []
+      }
+    },
+    {
+      "id": "dal-c3",
+      "claim": "Dallas opens on Oct 20; the home opener is late October 2026, date to confirm",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Dallas Mavericks release 2026-27 season schedule",
+          "url": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+          "publisher": "FOX 4 News Dallas-Fort Worth",
+          "published": ""
+        }
+      ],
+      "evidence": "Dallas opens Oct 21 at Houston. Its home opener is Oct 24, 2026, at 7 p.m. CT against San Antonio at American Airlines Center.",
+      "action": "Set the Oct 24 home opener in the strategy calendar, the flagg-opening-week timing and verify list, and the dossier moments. Fixed the 'Oct 20 opener' line in food.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "flagg-opening-week"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "dal-c4",
+      "claim": "The Mavericks hold a 'Los Mavs' Noche Latina night in 2026-27 (date to confirm)",
+      "topic": "event-date",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "mavs.com",
+          "url": "https://mavs.com/losmavs2023",
+          "publisher": "Dallas Mavericks",
+          "published": ""
+        }
+      ],
+      "evidence": "Results show past Los Mavs nights, including a 2023 Festival de Los Mavs, but no 2026-27 Noche Latina date or announcement.",
+      "action": "No change needed. The date stays to confirm.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "desde-la-cliff"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "dal-cup",
+      "claim": "Dallas opens NBA Cup group play Oct 30 at Phoenix, and its two home Cup games are still to confirm.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Dallas Mavericks release 2026-27 season schedule",
+          "url": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+          "publisher": "FOX 4 Dallas-Fort Worth",
+          "published": ""
+        },
+        {
+          "title": "Mavs draw Jazz, Nuggets, Rockets and Suns in NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/mavericks/game-day/mavs-draw-jazz-nuggets-rockets-and-suns-in-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        }
+      ],
+      "evidence": "Dallas opens Cup play Oct 30 at home against Houston and hosts Utah Nov 6. It then plays at Denver Nov 24 and at Phoenix Nov 27.",
+      "action": "Set the real Cup dates in topInsights[4], the flagg-opening-week summary, calendar[1] and the verify list, plan.json calendar[1] and validation, and the hoops, fanbase and rhythm dossiers. Fixed the critique and factcheck notes.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "flagg-opening-week"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "dal-cup-dates",
+      "claim": "Dallas's Cup group games are Oct 30 vs. Houston and Nov 6 vs. Utah at home, Nov 24 at Denver and Nov 27 at Phoenix.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Dallas Mavericks release 2026-27 season schedule",
+          "url": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+          "publisher": "FOX 4 Dallas-Fort Worth",
+          "published": ""
+        },
+        {
+          "title": "Mavs draw Jazz, Nuggets, Rockets and Suns in NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/mavericks/game-day/mavs-draw-jazz-nuggets-rockets-and-suns-in-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        }
+      ],
+      "evidence": "Both sources list Houston at Dallas Oct 30, Utah at Dallas Nov 6, Dallas at Denver Nov 24 and Dallas at Phoenix Nov 27.",
+      "action": "Used as the date basis for plan.json calendar[1].",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "flagg-opening-week"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Dallas opens Oct 20, and its home opener date is unknown (late October).",
+      "correction": "Dallas opens Oct 21 at Houston and plays its home opener Oct 24, 2026 vs. San Antonio at American Airlines Center.",
+      "files": [
+        "strategy.json",
+        "culture.json",
+        "hoops.json",
+        "fanbase.json",
+        "uniform.json",
+        "retail-landscape.json",
+        "food.json",
+        "art.json",
+        "factcheck.json"
+      ],
+      "claimId": "dal-c3"
+    },
+    {
+      "claim": "Dallas opens Cup group play Oct 30 at Phoenix, and its home Cup games are unknown.",
+      "correction": "Dallas hosts Houston Oct 30 and Utah Nov 6, then plays at Denver Nov 24 and at Phoenix Nov 27.",
+      "files": [
+        "strategy.json",
+        "plan.json",
+        "hoops.json",
+        "fanbase.json",
+        "rhythm.json",
+        "critique.json",
+        "factcheck.json"
+      ],
+      "claimId": "dal-cup"
+    }
+  ]
+}

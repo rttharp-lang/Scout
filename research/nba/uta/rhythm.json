@@ -2,12 +2,12 @@
   "team": "uta",
   "lens": "rhythm",
   "headline": "The Jazz year peaks twice: a hopeful fall, then June's draft and July's Summer League",
-  "summary": "Coming off 22-60, the Jazz sell hope and development in 2026-27, not playoff gear. Attention peaks at the October opener and Cup night, then the holiday gift window, and spring rides on the play-in hunt. Ski season, Utes and BYU football, the Mammoth, Real Salt Lake and General Conference all compete. Draft night and Summer League are real events here, because this fan base buys into prospects.",
+  "summary": "Coming off 22-60, the Jazz sell hope and development in 2026-27, not playoff gear. Attention peaks at the October opener, the November Cup nights and the holiday gift window, and spring rides on the play-in hunt. Ski season, Utes and BYU football, the Mammoth, Real Salt Lake and General Conference all compete. Draft night and Summer League are real events here, because this fan base buys into prospects.",
   "insights": [
     {
       "title": "Opening weeks are the biggest buying window",
-      "detail": "The season tips off Oct 20. The Jazz host Denver on opening Cup night, Oct 30, in West Group A with DEN, HOU, PHX and DAL. Fans are fresh off a draft that landed the No. 2 pick, Darryn Peterson, and Ace Bailey is in year two.",
-      "implication": "Launch Peterson and Bailey player product and the new-season Association and Icon drops by mid-October, so fans have them in hand for Cup night."
+      "detail": "The season tips off Oct 20. The Jazz play in West Group A with DEN, HOU, PHX and DAL, but not on opening Cup night, Oct 30. Their home Cup nights are Nov 20 against Phoenix and Nov 27 against Denver. Fans are fresh off a draft that landed the No. 2 pick, Darryn Peterson, and Ace Bailey is in year two.",
+      "implication": "Launch Peterson and Bailey player product and the new-season Association and Icon drops by mid-October, so fans have them in hand for the home opener and the Cup nights."
     },
     {
       "title": "A repeat City Edition means no debut",
@@ -107,10 +107,10 @@
   ],
   "moments": [
     {
-      "name": "Opening Cup Night vs. Denver",
-      "timing": "Oct 30, 2026",
-      "month": 10,
-      "why": "The first big home night of the season, and the rookies' first Cup game."
+      "name": "First home Cup Night vs. Phoenix",
+      "timing": "Nov 20, 2026",
+      "month": 11,
+      "why": "The first home Cup night, after the rookies' first Cup games on the road at Dallas and Houston."
     },
     {
       "name": "NBA Draft",
@@ -214,7 +214,7 @@
     }
   ],
   "productHooks": [
-    "Peterson and Bailey rookie-year player tees and hoodies, timed for the Oct 30 home Cup night.",
+    "Peterson and Bailey rookie-year player tees and hoodies, timed for the Nov 20 home Cup night.",
     "Gray-gradient City Edition outerwear capsule (puffer vest, fleece, beanie) for the Nov-Dec gift window.",
     "Draft-night rookie capsule, released the week of the late June draft.",
     "A retro drop from the Stockton-and-Malone era for older fans, with player licensing cleared."
@@ -385,7 +385,7 @@
         "phase": "Preseason and opener",
         "team": [
           "Opener Oct 20 league-wide",
-          "Cup play begins Oct 30 vs. Denver at home"
+          "No Cup game until Nov 6 at Dallas"
         ],
         "local": [
           "General Conference early October",
@@ -399,8 +399,8 @@
         "intensity": 78,
         "phase": "NBA Cup group play",
         "team": [
-          "Cup Fridays through Nov 27",
-          "West Group A games"
+          "Cup Fridays Nov 6 to Nov 27",
+          "West Group A: at Dallas Nov 6, at Houston Nov 13, home vs. Phoenix Nov 20 and Denver Nov 27"
         ],
         "local": [
           "Ski resorts begin opening",
@@ -434,11 +434,11 @@
         "why": "The Jazz are not on the opening-night slate, so time local launch content around their own first game."
       },
       {
-        "name": "Nuggets at Jazz, opening Cup Night",
-        "date": "Oct 30, 2026",
-        "month": 10,
+        "name": "Nuggets at Jazz, Black Friday Cup Night",
+        "date": "Nov 27, 2026",
+        "month": 11,
         "type": "team",
-        "why": "A home Cup game against a strong rival, and the rookies' first big night in the arena."
+        "why": "A home Cup game against a strong rival, and Utah's last group game."
       },
       {
         "name": "NBA Cup group play ends",
