@@ -4,7 +4,7 @@
 // page, one click from the footer.
 import React, { useMemo, useRef, useState } from "react";
 import { markets, today, ymLabel, heroColor, inkOn } from "../data.js";
-import { DIVISIONS, placeOf } from "../teams.js";
+import { DIVISIONS, placeOf, logoUrl } from "../teams.js";
 import { Tier, TeamBand, href, SectionHead } from "../ui.jsx";
 import { happeningIn, published } from "../plan.js";
 import { MONTHS, fmtDate } from "../review.js";
@@ -32,8 +32,8 @@ export default function Overview() {
     <div>
       <section className="hc-home-hero">
         <div>
-          <div className="hc-eyebrow" style={{ marginBottom: 14 }}>Nike Basketball · Local NBA fandom intelligence</div>
-          <h1 className="hc-display" style={{ fontSize: "clamp(3.6rem, 12vw, 10rem)" }}>NBA<br />Fandom</h1>
+          <div className="hc-eyebrow" style={{ marginBottom: 14 }}>Nike Basketball</div>
+          <h1 className="hc-display hc-home-title"><span>NBA Fandom</span><span>Intelligence</span></h1>
           <p className="hc-lede" style={{ marginTop: 22 }}>What's true about each NBA city's fans, when it matters, and which product ideas are worth testing.</p>
           <TeamSearch />
           <p className="hc-small hc-muted" style={{ marginTop: 14 }}>All {markets.length} markets · updated {fmtDate(latestUpdate())}</p>
@@ -109,6 +109,7 @@ function MarketWall() {
               const bg = wallColor(m.team);
               return (
                 <a key={m.id} href={href("m", m.id)} className="hc-wall-tile" style={{ background: bg, color: inkOn(bg) }} title={`${placeOf(m.team)} ${m.team.name}`} aria-label={`${m.team.abbr}, ${placeOf(m.team)} ${m.team.name}`}>
+                  <span className="hc-wall-logo" aria-hidden="true"><img src={logoUrl(m.team)} alt="" loading="lazy" decoding="async" onError={(e) => { e.currentTarget.parentElement.style.display = "none"; }} /></span>
                   <span>{m.team.abbr}</span>
                 </a>
               );
