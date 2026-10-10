@@ -140,11 +140,13 @@ async function main() {
       if ((await page.locator(".hc-wall-tile").count()) !== 30) problems.push(`[${vp.label}] market wall doesn't show 30 tiles`);
       const leaked = later.filter((mo) => monthText.includes(mo));
       if (leaked.length) problems.push(`[${vp.label}] this month shows later-year moments: ${leaked.slice(0, 3).join(" | ")}`);
-      // Team search opens a market.
-      await page.getByLabel("Find a team or city").fill("Detroit");
-      await page.keyboard.press("Enter");
+      // The front page has no search box; a team tile opens its market.
+      if (await page.getByLabel("Find a team or city").count()) problems.push(`[${vp.label}] front page still shows team search`);
+      const title = await page.locator(".hc-home-title").evaluate((h) => ({ text: h.textContent, over: h.scrollWidth - h.clientWidth }));
+      if (title.text !== "NBA Fandom" || title.over > 1) problems.push(`[${vp.label}] front title is "${title.text}" and overflows by ${title.over}px`);
+      await page.locator('.hc-wall-tile[href="#/m/det"]').click();
       await wait(700);
-      if (!/#\/m\/det/.test(page.url())) problems.push(`[${vp.label}] team search for Detroit went to ${page.url()}`);
+      if (!/#\/m\/det/.test(page.url())) problems.push(`[${vp.label}] Detroit tile went to ${page.url()}`);
       // Calendar: the season switch moves next season's moments out of this season.
       await page.goto(BASE + "#/calendar", { waitUntil: "load" });
       await wait(700);

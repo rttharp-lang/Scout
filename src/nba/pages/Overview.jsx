@@ -2,7 +2,7 @@
 // glance, what you'll find inside, this month's moments across the league,
 // and every market as a card. How the research was done lives on the Method
 // page, one click from the footer.
-import React, { useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { markets, today, ymLabel, heroColor, inkOn } from "../data.js";
 import { DIVISIONS, placeOf, logoUrl } from "../teams.js";
 import { Tier, TeamBand, href, SectionHead } from "../ui.jsx";
@@ -33,9 +33,8 @@ export default function Overview() {
       <section className="hc-home-hero">
         <div>
           <div className="hc-eyebrow" style={{ marginBottom: 14 }}>Nike Basketball</div>
-          <h1 className="hc-display hc-home-title"><span>NBA Fandom</span><span>Intelligence</span></h1>
+          <h1 className="hc-display hc-home-title">NBA Fandom</h1>
           <p className="hc-lede" style={{ marginTop: 22 }}>What's true about each NBA city's fans, when it matters, and which product ideas are worth testing.</p>
-          <TeamSearch />
           <p className="hc-small hc-muted" style={{ marginTop: 14 }}>All {markets.length} markets · updated {fmtDate(latestUpdate())}</p>
         </div>
         <MarketWall />
@@ -68,31 +67,6 @@ export default function Overview() {
         {!rows.length && <div className="hc-empty">Nothing matches that search.</div>}
       </section>
     </div>
-  );
-}
-
-// Jump straight to a market from the top of the page.
-function TeamSearch() {
-  const [q, setQ] = useState("");
-  const input = useRef(null);
-  const ql = q.trim().toLowerCase();
-  const hits = ql ? markets.filter((m) => `${placeOf(m.team)} ${m.team.city} ${m.team.name} ${m.team.abbr}`.toLowerCase().includes(ql)).slice(0, 6) : [];
-  const go = (id) => { window.location.hash = href("m", id); };
-  return (
-    <form className="hc-search" role="search" onSubmit={(e) => {
-      e.preventDefault();
-      if (hits[0]) go(hits[0].id);
-      else if (!ql) document.getElementById("markets")?.scrollIntoView({ behavior: "smooth" });
-      else input.current?.focus();
-    }}>
-      <input ref={input} className="hc-input" placeholder="Find a team or city" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Find a team or city" aria-autocomplete="list" aria-controls="hc-team-suggest" />
-      <button className="hc-btn" type="submit">Open</button>
-      {hits.length > 0 && (
-        <ul className="hc-suggest" id="hc-team-suggest">
-          {hits.map((m) => <li key={m.id}><a href={href("m", m.id)}><span className="hc-dot" style={{ background: m.team.colors[0] }} />{placeOf(m.team)} {m.team.name}</a></li>)}
-        </ul>
-      )}
-    </form>
   );
 }
 
