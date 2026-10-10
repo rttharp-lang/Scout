@@ -7,8 +7,14 @@ import { TEAMS, TEAM_BY_ID } from "./teams.js";
 
 const marketLoaders = import.meta.glob("./data/markets/*.json");
 const leagueModule = import.meta.glob("./data/league.json", { eager: true });
+const reviewModule = import.meta.glob("./data/review.json", { eager: true });
 
 export const league = Object.values(leagueModule)[0]?.default || null;
+// What was checked live, what was corrected, and when (scripts/nba/assemble.mjs).
+export const review = Object.values(reviewModule)[0]?.default || { corrections: [], totals: {}, pulse: {}, leagueCalendar: null };
+// The league this edition covers. The data carries a league id so a WNBA
+// edition, with its own segments and calendar, can sit beside it later.
+export const LEAGUE = { id: "nba", name: "NBA", season: "2026-27" };
 
 // Summary rows joined to static team identity, in registry order.
 const SUMMARY_BY_ID = Object.fromEntries(summaryData.map((s) => [s.id, s]));
@@ -29,6 +35,7 @@ export const MONTHS_LONG = ["January", "February", "March", "April", "May", "Jun
 // The NBA year reads October → September (season tip-off first).
 export const SEASON_ORDER = [10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 export const currentMonth = () => new Date().getMonth() + 1;
+export { today, seasonOf, seasonMonths, runsIn, endedBefore, ymLabel, nextYM } from "./review.js";
 
 // Text color that clears contrast on a given background hex.
 export function inkOn(hex) {
@@ -44,7 +51,8 @@ export function heroColor(team) {
   return c;
 }
 
-// Live runs (per market) persisted in this browser.
+// Live runs (per market) persisted in this browser only. They are experiments:
+// never shared with teammates and never part of the reviewed build.
 const LIVE_KEY = (id) => `homecourt.live.${id}`;
 export function loadLiveRun(id) {
   try { const raw = localStorage.getItem(LIVE_KEY(id)); return raw ? JSON.parse(raw) : null; } catch { return null; }

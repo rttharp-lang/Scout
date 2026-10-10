@@ -1,0 +1,186 @@
+{
+  "note": "Who owns and reviews each market. Fill these in by pull request; the site shows them as written. Nothing here has been signed off by a person yet. signedOff takes a date (YYYY-MM-DD) and a name, only when that person has reviewed the published market.",
+  "league": "nba",
+  "markets": {
+    "atl": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "bos": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "bkn": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "cha": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "chi": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "cle": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "det": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "ind": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "mia": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "mil": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "nyk": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "orl": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "phi": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "tor": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "was": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "dal": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "den": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "gsw": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "hou": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "lac": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "lal": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "mem": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "min": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "nop": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "okc": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "phx": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "por": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "sac": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "sas": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    },
+    "uta": {
+      "owner": null,
+      "reviewer": null,
+      "signedOff": null,
+      "notes": ""
+    }
+  }
+}

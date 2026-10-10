@@ -179,7 +179,7 @@ export const SYNTHESIS_AGENTS = [
   { id: "authenticity", name: "Authenticity Critic", group: "Verification", icon: "scale",
     mission: "Attack the brief for generic insights, stereotypes, appropriation, weak product links and missed chances." },
   { id: "editor", name: "Brief Editor", group: "Synthesis", icon: "pen-tool",
-    mission: "Revise the brief against both critiques so every recommendation is specific, verified and ready to act on." },
+    mission: "Revise the brief against both critiques so every recommendation is specific and ready to test." },
 ];
 
 export const ALL_AGENTS = [...LENS_AGENTS, ...SYNTHESIS_AGENTS];

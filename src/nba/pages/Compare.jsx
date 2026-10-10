@@ -1,9 +1,10 @@
-// Side-by-side comparison of up to three markets: archetype, scores, fan
-// rhythm (small multiples on one shared 0–100 scale), top insights and
-// opportunities, and the City Edition direction.
+// Side-by-side comparison of up to three markets: archetype, score tiers, the
+// shape of each fan year (each scaled to its own peak), the best-supported
+// insights and top opportunities, and the City Edition direction.
 import React, { useEffect, useState } from "react";
 import { markets, loadMarket, MONTHS, SEASON_ORDER } from "../data.js";
-import { Chip, Scorecard, PaletteRow, Priority, TeamBand, href } from "../ui.jsx";
+import { Chip, Scorecard, PaletteRow, Priority, TeamBand, href, Strength, Status, EvidenceTag } from "../ui.jsx";
+import { STRENGTH_RANK } from "../review.js";
 import { placeOf } from "../teams.js";
 
 const MAX = 3;
@@ -55,10 +56,10 @@ export default function Compare({ ids }) {
                   <MiniRhythm rhythm={m.rhythm} />
                   {!d ? <p className="hc-muted hc-small">Loading…</p> : (
                     <>
-                      <div><div className="hc-kv-label">What to know</div><ol className="hc-bullets hc-small">{d.strategy.topInsights.slice(0, 3).map((t, i) => <li key={i}><b>{t.title}.</b> {t.insight}</li>)}</ol></div>
-                      <div><div className="hc-kv-label">Top opportunities</div><ul className="hc-list">{[...d.strategy.opportunities].sort((a, b) => a.priority - b.priority).slice(0, 4).map((o) => <li key={o.id} className="hc-small"><span className="hc-row"><Priority p={o.priority} /><b>{o.title}</b></span><div className="hc-muted" style={{ marginTop: 4 }}>{o.when} · {o.products.slice(0, 3).join(", ")}</div></li>)}</ul></div>
-                      <div><div className="hc-kv-label">The City Edition idea</div><b>{d.strategy.uniform.concept}</b><p className="hc-small" style={{ margin: "4px 0 10px" }}>{d.strategy.uniform.narrative}</p><PaletteRow palette={d.strategy.uniform.palette} /></div>
-                      <div><div className="hc-kv-label">The gameday look</div><p className="hc-small">{d.dossiers.fanbase.extra.gamedayLook}</p></div>
+                      <div><div className="hc-kv-label">Best-supported insights</div><ol className="hc-bullets hc-small">{d.strategy.topInsights.map((t, i) => ({ ...t, i })).sort((a, b) => STRENGTH_RANK[a.support.strength] - STRENGTH_RANK[b.support.strength] || a.i - b.i).slice(0, 3).map((t) => <li key={t.i}><b>{t.title}.</b> {t.insight} <Strength support={t.support} /></li>)}</ol></div>
+                      <div><div className="hc-kv-label">Top opportunities · hypotheses</div><ul className="hc-list">{[...d.strategy.opportunities].sort((a, b) => a.priority - b.priority).slice(0, 4).map((o) => <li key={o.id} className="hc-small"><span className="hc-row"><Priority p={o.priority} /><b>{o.title}</b></span><div className="hc-muted" style={{ marginTop: 4 }}>{o.handoff ? `Target ${o.handoff.targetSeason} · ` : ""}{o.products.slice(0, 3).join(", ")}</div></li>)}</ul></div>
+                      <div><div className="hc-row" style={{ justifyContent: "space-between" }}><div className="hc-kv-label">The City Edition idea</div><EvidenceTag kind="hypothesis" /></div><b>{d.strategy.uniform.concept}</b><p className="hc-small" style={{ margin: "4px 0 10px" }}>{d.strategy.uniform.narrative}</p><PaletteRow palette={d.strategy.uniform.palette} /></div>
+                      <div><div className="hc-row" style={{ justifyContent: "space-between" }}><div className="hc-kv-label">The gameday look</div><EvidenceTag kind="unverified" /></div><p className="hc-small">{d.dossiers.fanbase.extra.gamedayLook}</p></div>
                     </>
                   )}
                 </div>
@@ -71,13 +72,14 @@ export default function Compare({ ids }) {
   );
 }
 
-// Twelve thin columns, season order, shared 0–100 scale so markets compare.
+// Twelve thin columns, season order. Each market is scaled to its own peak
+// month (100), so compare the shape of the year, not the height of the bars.
 function MiniRhythm({ rhythm }) {
   const W = 240, H = 64, band = W / 12, bw = Math.min(12, band * 0.6);
   return (
     <div>
-      <div className="hc-kv-label">The fan year, Oct to Sep</div>
-      <svg width="100%" viewBox={`0 0 ${W} ${H + 14}`} role="img" aria-label={`Fan heat by month: ${SEASON_ORDER.map((m) => `${MONTHS[m - 1]} ${rhythm[m - 1].intensity}`).join(", ")}`}>
+      <div className="hc-kv-label">The fan year, Oct to Sep · scaled to this city's own peak</div>
+      <svg width="100%" viewBox={`0 0 ${W} ${H + 14}`} role="img" aria-label={`Fan heat by month, as a share of this city's own peak: ${SEASON_ORDER.map((m) => `${MONTHS[m - 1]} ${rhythm[m - 1].intensity}`).join(", ")}`}>
         <line x1="0" x2={W} y1={H} y2={H} stroke="var(--border)" />
         {SEASON_ORDER.map((m, i) => {
           const v = rhythm[m - 1].intensity, h = (H - 4) * v / 100, x = band * i + (band - bw) / 2;

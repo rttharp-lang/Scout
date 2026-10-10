@@ -2,6 +2,8 @@
 // small building blocks (chips, meters, swatches, month strips) every page uses.
 import React, { useEffect, useState } from "react";
 import { MONTHS, SEASON_ORDER } from "./data.js";
+import { SCORE_DEFS, tierOf, moodOf, STRENGTH, EVIDENCE_KIND, KIND_LABEL, CERTAINTY_LABEL, ROUTE_LABEL, fmtSpan, fmtDate } from "./review.js";
+import { STATUSES } from "./agents/review-schema.js";
 
 // ── Router ────────────────────────────────────────────────────────
 // Hash routes so the site works on any static host: #/, #/m/por, #/league, #/opportunities, #/calendar, #/agents
@@ -46,6 +48,7 @@ export function Header({ route }) {
         {link(href("opportunities"), "Opportunities", section === "opportunities")}
         {link(href("calendar"), "Calendar", section === "calendar")}
         {link(href("compare"), "Compare", section === "compare")}
+        {link(href("method"), "Method", section === "method")}
         {link(href("agents"), "Agents", section === "agents")}
         <a href="/">Scout ↗</a>
       </nav>
@@ -57,7 +60,7 @@ export function Footer() {
   return (
     <footer className="hc-footer">
       <span>Home Court · Nike Basketball's guide to local NBA fandom · Portland, Oregon</span>
-      <span>Researched by the Home Court agents · Powered by Anthropic</span>
+      <span>Shared reviewed build · <a href={href("method")}>How it was researched and checked</a></span>
     </footer>
   );
 }
@@ -77,10 +80,68 @@ export function Meter({ label, value }) {
 }
 
 export const SCORE_LABELS = [["opportunity", "Opportunity"], ["fandom", "Fandom"], ["culture", "Culture"], ["retail", "Retail"]];
-export function Scorecard({ scorecard }) {
-  if (!scorecard) return null;
-  return <div className="hc-stack" style={{ display: "grid", gap: 7 }}>{SCORE_LABELS.map(([k, l]) => <Meter key={k} label={l} value={scorecard[k]} />)}</div>;
+
+// Scores are editorial estimates, so they show as one of five broad tiers.
+export function Tier({ label, value, title }) {
+  const t = tierOf(value);
+  return (
+    <div className="hc-tier" title={title} aria-label={`${label}: ${t.label} (editorial estimate)`}>
+      <span>{label}</span>
+      <span className="hc-tier-pips" aria-hidden="true">{[1, 2, 3, 4, 5].map((i) => <i key={i} className={i <= t.bars ? "on" : ""} />)}</span>
+      <span className="hc-tier-label">{t.label}</span>
+    </div>
+  );
 }
+export function Scorecard({ scorecard, note = true }) {
+  if (!scorecard) return null;
+  return (
+    <div>
+      <div style={{ display: "grid", gap: 7 }}>{SCORE_LABELS.map(([k, l]) => <Tier key={k} label={l} value={scorecard[k]} title={`${SCORE_DEFS[k].what} ${SCORE_DEFS[k].kind}. ${SCORE_DEFS[k].baseline}`} />)}</div>
+      {note && <div className="hc-tiny" style={{ marginTop: 8, opacity: 0.75 }}>Editorial estimates, ranked against all 30 markets. <a href={href("method", "scores")} style={{ color: "inherit" }}>What the tiers mean</a></div>}
+    </div>
+  );
+}
+export function Mood({ value }) {
+  const m = moodOf(value);
+  return <Chip tone="line" title={`${SCORE_DEFS.heat.what} ${SCORE_DEFS.heat.kind}. ${SCORE_DEFS.heat.baseline}`}>Fan mood: {m.label} · editorial read</Chip>;
+}
+
+// ── Evidence, timing and status labels ────────────────────────────
+export function EvidenceTag({ kind }) {
+  const k = EVIDENCE_KIND[kind];
+  const tone = { fact: "pop", interpretation: "line", hypothesis: "ink", unverified: "warn" }[kind];
+  return <Chip tone={tone} title={k.detail}>{k.label}</Chip>;
+}
+export function Strength({ support }) {
+  if (!support) return null;
+  const s = STRENGTH[support.strength];
+  const n = support.verified + support.observed;
+  const extra = [n ? `${n} checked` : "", support.corrected ? `${support.corrected} corrected` : ""].filter(Boolean).join(", ");
+  return <Chip tone={support.strength === "sourced" ? "pop" : "line"} title={`Evidence strength. ${s.detail}`}>{s.label}{extra ? ` · ${extra}` : ""}</Chip>;
+}
+export function Certainty({ timing }) {
+  if (!timing) return null;
+  const tone = { confirmed: "pop", tentative: "line", unknown: "warn" }[timing.certainty];
+  const why = timing.basis === "checked-live" ? "Checked against a live source" : timing.basis === "league-calendar" ? "On the verified league calendar" : timing.basis === "fixed-holiday" ? "Fixed by the calendar" : timing.reviewed === false ? "Year inferred from the brief's order; not reviewed" : "As written in the brief; not checked";
+  return <Chip tone={tone} title={why}>{CERTAINTY_LABEL[timing.certainty]}</Chip>;
+}
+export function When({ timing, kind = true }) {
+  if (!timing) return null;
+  return <span className="hc-when">{kind ? `${KIND_LABEL[timing.kind]} · ` : ""}{fmtSpan(timing)}{timing.recurring ? " · every year" : ""}</span>;
+}
+export function ActBy({ timing }) {
+  if (!timing || !timing.actBy) return null;
+  return <span className="hc-actby" title={timing.actNote}>Act by {fmtDate(timing.actBy)}{timing.actNote ? `: ${timing.actNote}` : ""}</span>;
+}
+export const Route = ({ route }) => <Chip tone="line" title="How it would get made">{ROUTE_LABEL[route] || route}</Chip>;
+export function Status({ status = "hypothesis" }) {
+  return <Chip tone="ink" title={STATUSES[status]}>{STATUSES[status].split(":")[0]}</Chip>;
+}
+export function SourceLink({ s }) {
+  if (!s || !s.url) return null;
+  return <a href={s.url} target="_blank" rel="noreferrer">{s.title}{s.publisher ? ` (${s.publisher}${s.published ? `, ${fmtPublished(s.published)}` : ""})` : ""}</a>;
+}
+const fmtPublished = (p) => (/^\d{4}-\d{2}/.test(p) ? fmtDate(p) : p);
 
 export function Swatch({ name, hex, sub }) {
   return (
@@ -112,13 +173,13 @@ export const Priority = ({ p }) => <span className="hc-priority" data-p={p}>P{p}
 export function Provenance({ of }) {
   const knowledge = of && of.provenance && of.provenance.mode === "knowledge";
   return knowledge
-    ? <Chip tone="line" title="Written from the agents' own knowledge, current to mid-2026. Check anything dated before you act on it.">Knowledge draft</Chip>
-    : <Chip tone="pop" title="Researched and checked on the live web">Checked live</Chip>;
+    ? <Chip tone="warn" title="Written from the agents' own knowledge, current to mid-2026. Unverified: check anything dated before you act on it.">Desk research, unverified</Chip>
+    : <Chip tone="pop" title="Researched with live web search">Researched live</Chip>;
 }
 
+// The agent's self-rating. Shown for transparency; it is not evidence.
 export function Confidence({ level }) {
-  const tone = { high: "ink", medium: "line", low: "line" }[level] || "line";
-  return <Chip tone={tone} title="How sure the agent is">{level} confidence</Chip>;
+  return <Chip tone="line" title="The research agent's own rating of its work. It is not evidence and doesn't affect evidence strength.">Agent's confidence: {level}</Chip>;
 }
 
 export function SectionHead({ id, eyebrow, title, children }) {

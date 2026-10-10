@@ -32,7 +32,7 @@ export default function Agents({ preselect }) {
     ctrl.current = new AbortController();
     try {
       await runMarket(team, (id, patch) => setState((s) => ({ ...s, [id]: { ...s[id], ...patch } })), { signal: ctrl.current.signal });
-      setMessage({ ok: true, text: "Done. The run is saved in this browser." });
+      setMessage({ ok: true, text: "Done. The run is saved in this browser only, as an unreviewed experiment." });
     } catch (e) {
       const text = e.status === 503
         ? "Live runs aren't set up on this server yet. It needs an ANTHROPIC_API_KEY. The published research is unaffected."
@@ -62,10 +62,10 @@ export default function Agents({ preselect }) {
       <div className="hc-eyebrow" style={{ marginBottom: 12 }}>How it's made</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Fifteen agents<br />per market</h1>
       <p className="hc-lede" style={{ marginTop: 18 }}>
-        Eleven specialist agents each research one slice of a market on the live web and write a dossier. A strategist turns the dossiers into a brief for Nike Basketball. Then two critics go after it. One fact-checks the dossiers and fixes them in place. The other hunts for advice that's generic, stereotyped or unfounded. An editor settles every issue. {publishedCount} of 30 markets are published.
+        Eleven specialist agents each research one slice of a market and write a dossier. A strategist turns the dossiers into a brief. Two critics go after it: one fact-checks the riskiest claims, the other hunts for advice that's generic, stereotyped or unfounded. An editor settles the issues. {publishedCount} of 30 markets are published.
       </p>
       <p className="hc-small hc-muted" style={{ marginTop: 12, maxWidth: "70ch" }}>
-        Every dossier carries one of two labels. <b style={{ color: "var(--text)" }}>Checked live</b> means it was researched and checked on the web. <b style={{ color: "var(--text)" }}>Knowledge draft</b> means the agents wrote it from their own knowledge, current to mid-2026, because live search wasn't available. Its dated claims wait on a "still to check" list on the market page until a live run confirms them.
+        For this edition, live search was unavailable for most of the work, so all but three dossiers are <b style={{ color: "var(--text)" }}>desk research</b>: written from the agents' own knowledge, current to mid-2026, and unverified. The fact-check agents mostly worked the same way, so their verdicts don't count as verification. A separate review pass checked the riskiest claims live. <a href={href("method")}>The Method page</a> explains what was checked and what every label means.
       </p>
 
       {/* Pipeline */}
@@ -101,10 +101,10 @@ export default function Agents({ preselect }) {
               {TEAMS.map((t) => <option key={t.id} value={t.id}>{teamLabel(t)}</option>)}
             </select>
             {!running ? <button className="hc-btn" onClick={start}>Run all 15 agents</button> : <button className="hc-btn hc-btn-ghost" onClick={stop}>Stop</button>}
-            {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>See the live brief →</a>}
+            {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>See the experimental run →</a>}
           </div>
           {message && <p className="hc-small" role="status" style={{ marginTop: 10, color: message.ok ? "var(--good)" : "var(--text)" }}>{message.text}</p>}
-          <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}>Live runs use the Claude API with web search and take a few minutes. They're saved only in this browser, and the published research stays as it is.</p>
+          <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}><b>Experimental.</b> Live runs use the Claude API with web search and take a few minutes. They're saved only in this browser: not reviewed, not shared with teammates and not part of the published build, which stays as it is.</p>
         </div>
       </section>
 

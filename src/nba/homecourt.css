@@ -209,8 +209,10 @@
 .hc-scores-item > summary:hover, .hc-scores-item[open] > summary { background: var(--surface); }
 .hc-scores-item > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .hc-scores-name { display: flex; align-items: center; gap: 8px; font-weight: 700; min-width: 0; }
-.hc-scores-cell { display: grid; grid-template-columns: minmax(0, 1fr) 24px; gap: 8px; align-items: center; font-size: 13px; font-variant-numeric: tabular-nums; }
-.hc-scores-cell b { text-align: right; }
+.hc-scores-cell { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px; align-items: center; font-size: 13px; }
+.hc-scores-cell b { text-align: left; font-weight: 600; }
+.hc-scores-cell[data-sorted] .hc-tier-pips i.on { background: var(--accent); }
+.hc-scores-cell .hc-tier-pips i.on { background: var(--seq-4); }
 .hc-scores-cell .hc-meter-fill { background: var(--seq-4); }
 .hc-scores-cell[data-sorted] .hc-meter-fill { background: var(--accent); }
 .hc-scores-note { padding: 2px 20px 16px; max-width: 90ch; color: var(--hc-ink-2); }
@@ -225,7 +227,80 @@
   .hc-scores-note { padding: 2px 14px 14px; }
 }
 
+/* ── Review layer: tiers, evidence, timing, status ─────── */
+.hc-chip-warn { background: transparent; box-shadow: inset 0 0 0 1px var(--warn); color: var(--warn); }
+.hc-card-invert .hc-chip-warn, .hc-hero-panel .hc-chip-warn { background: transparent; color: #FFB347; box-shadow: inset 0 0 0 1px #FFB347; }
+.hc-tier { display: grid; grid-template-columns: 84px auto minmax(0, 1fr); align-items: center; gap: 10px; font-size: 12px; }
+.hc-tier-pips { display: inline-flex; gap: 3px; }
+.hc-tier-pips i { width: 14px; height: 6px; border-radius: 3px; background: var(--seq-1); display: block; }
+.hc-tier-pips i.on { background: var(--accent); }
+.hc-tier-label { font-weight: 700; }
+@media (max-width: 520px) {
+  .hc-tier { grid-template-columns: 70px auto auto; gap: 8px; font-size: 11.5px; }
+  .hc-tier-label { white-space: nowrap; }
+  .hc-tier-pips i { width: 9px; }
+}
+.hc-card-invert .hc-tier-pips i, .hc-hero-panel .hc-tier-pips i { background: rgba(255, 255, 255, 0.18); }
+.hc-card-invert .hc-tier-pips i.on, .hc-hero-panel .hc-tier-pips i.on { background: #fff; }
+.hc-when { font-size: var(--step-meta); font-weight: 700; }
+.hc-actby { display: inline-block; font-size: var(--step-meta); font-weight: 600; border-left: 3px solid var(--accent); padding-left: 8px; }
+.hc-card-invert .hc-actby { border-color: #8C8CFF; }
+
+/* Progressive disclosure */
+.hc-more { border-top: 1px solid var(--border); padding-top: 10px; }
+.hc-more > summary { cursor: pointer; list-style: none; font-size: 13.5px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; }
+.hc-more > summary::-webkit-details-marker { display: none; }
+.hc-more > summary::before { content: "+"; display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 999px; background: var(--text); color: var(--bg); font-size: 14px; line-height: 1; }
+.hc-more[open] > summary::before { content: "–"; }
+.hc-more[open] > summary { margin-bottom: 12px; }
+.hc-card-invert .hc-more { border-color: #2a2a2a; }
+.hc-card-invert .hc-more > summary::before { background: #fff; color: #0A0A0A; }
+.hc-fold { margin-top: var(--grid-gap); }
+.hc-fold > summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--surface); border-radius: var(--radius-card); padding: 16px 20px; font-weight: 700; }
+.hc-fold > summary::-webkit-details-marker { display: none; }
+.hc-fold > summary::after { content: "Show"; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: var(--text); color: var(--bg); }
+.hc-fold[open] > summary::after { content: "Hide"; }
+.hc-fold[open] > summary { margin-bottom: var(--grid-gap); }
+
+/* Executive brief */
+.hc-exec { display: grid; gap: var(--grid-gap); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .hc-exec { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); } }
+.hc-exec ol.hc-exec-list { list-style: none; margin: 0; padding: 0; counter-reset: x; }
+.hc-exec ol.hc-exec-list > li { counter-increment: x; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-top: 1px solid var(--border); }
+.hc-exec ol.hc-exec-list > li:first-child { border-top: 0; padding-top: 4px; }
+.hc-exec ol.hc-exec-list > li::before { content: counter(x); font-family: var(--font-display); font-weight: 900; font-size: 24px; line-height: 1; color: var(--accent); }
+.hc-card-invert ol.hc-exec-list > li { border-color: #2a2a2a; }
+.hc-card-invert ol.hc-exec-list > li::before { color: #8C8CFF; }
+.hc-statusbar { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 16px; border-radius: 18px; padding: 12px 18px; font-size: 13.5px; background: var(--hc-card); box-shadow: inset 0 0 0 1.5px var(--text); }
+.hc-statusbar b { font-weight: 700; }
+.hc-live-warning { background: var(--warn); color: #fff; }
+.hc-def { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px 18px; }
+@media (min-width: 760px) { .hc-def { grid-template-columns: 170px minmax(0, 1fr); } }
+.hc-def dt { font-weight: 700; }
+.hc-def dd { margin: 0 0 10px; color: var(--hc-ink-2); }
+.hc-search { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; position: relative; }
+.hc-search .hc-input { flex: 1 1 260px; max-width: 460px; font-size: 16px; padding: 12px 18px; background: var(--hc-card); }
+.hc-suggest { position: absolute; top: calc(100% + 6px); left: 0; z-index: 40; width: min(460px, 100%); background: var(--hc-card); border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16); list-style: none; margin: 0; padding: 6px; }
+.hc-suggest a { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 10px; text-decoration: none; font-weight: 600; }
+.hc-suggest a:hover, .hc-suggest a:focus { background: var(--surface); outline: none; }
+
+.hc-print-only { display: none; }
+.hc-deftable { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+.hc-deftable th, .hc-deftable td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--border); }
+.hc-deftable thead th { border-top: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+.hc-deftable tbody th { font-weight: 700; white-space: nowrap; }
+.hc code { font-size: 0.92em; background: var(--hc-surface-2); padding: 1px 6px; border-radius: 6px; }
+
 @media print {
   .hc-header nav, .hc-subnav, .hc-footer, .hc-no-print { display: none !important; }
   .hc-section { break-inside: avoid-page; }
+  .hc-print-only { display: block; }
+  details.hc-fold, details.hc-more { display: block; }
+  details.hc-fold > summary::after, details.hc-more > summary::before { display: none; }
+  /* Print brief: only the executive brief and the hero. */
+  body.hc-printing-brief .hc-section:not(.hc-exec-section),
+  body.hc-printing-brief .hc-notice,
+  body.hc-printing-brief .hc-banner { display: none !important; }
+  body.hc-printing-brief .hc-hero-stripes { display: none; }
+  .hc-card, .hc-card-invert, .hc-hero, .hc-hero-panel { break-inside: avoid; }
 }

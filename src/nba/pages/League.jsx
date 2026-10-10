@@ -4,7 +4,8 @@
 import React, { useMemo, useState } from "react";
 import { markets, league, MONTHS } from "../data.js";
 import { TEAM_BY_ID, placeOf, shortLabel } from "../teams.js";
-import { SCORE_LABELS, href, SectionHead } from "../ui.jsx";
+import { SCORE_LABELS, href, SectionHead, Tier, EvidenceTag, Chip } from "../ui.jsx";
+import { SCORE_DEFS, tierOf } from "../review.js";
 
 const SORTS = [...SCORE_LABELS, ["az", "A–Z"]];
 // Priority titles end with the brief's opportunity id, e.g. "Banner '26 (ring-night-1973-2026)".
@@ -21,7 +22,7 @@ export default function League() {
   return (
     <div>
       <section className="hc-section" style={{ paddingTop: 8 }}>
-        <div className="hc-eyebrow" style={{ marginBottom: 12 }}>The league read · 30 markets · 2026-27</div>
+        <div className="hc-eyebrow" style={{ marginBottom: 12 }}>The league read · 30 markets · 2026-27 · an interpretation of desk research</div>
         <h1 className="hc-h1" style={{ maxWidth: "32ch", fontSize: "clamp(2rem, 4.2vw, 3.4rem)" }}>{league.headline}</h1>
         <p className="hc-lede" style={{ marginTop: 18, maxWidth: "75ch" }}>{league.thesis}</p>
         <nav className="hc-row" aria-label="On this page" style={{ marginTop: 20 }}>
@@ -34,9 +35,11 @@ export default function League() {
 
       <section className="hc-section">
         <SectionHead id="themes" eyebrow={`${league.themes.length} patterns across the briefs`} title="What the cities share" />
+        <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 16, maxWidth: "85ch" }}>Each pattern shows up in the briefs listed under it. That's agreement between research agents working mostly from the same model knowledge, not independent proof. Treat each as an interpretation to test.</p>
         <div className="hc-grid hc-grid-2">
           {league.themes.map((t, i) => (
             <article key={i} className="hc-card hc-stack">
+              <div className="hc-row"><EvidenceTag kind="interpretation" /><Chip tone="line">{t.teams.length} of 30 briefs</Chip></div>
               <h3 className="hc-h3">{t.title}</h3>
               <p>{t.insight}</p>
               <p className="hc-implication">{t.implication}</p>
@@ -47,7 +50,7 @@ export default function League() {
       </section>
 
       <section className="hc-section">
-        <SectionHead id="clusters" eyebrow="Every market, sorted by the kind of fan base it has" title="Fan types" />
+        <SectionHead id="clusters" eyebrow="Every market, sorted by the kind of fan base it has · an interpretation" title="Fan types" />
         <div className="hc-grid hc-grid-3">
           {league.clusters.map((c, i) => (
             <article key={i} className="hc-card-invert hc-stack">
@@ -66,7 +69,7 @@ export default function League() {
         <div className="hc-grid hc-grid-2">
           <div className="hc-card" id="priorities">
             <h2 className="hc-h2">The top opportunities</h2>
-            <p className="hc-small hc-muted" style={{ marginTop: 6 }}>The best opportunities in all 30 briefs, in order.</p>
+            <p className="hc-small hc-muted" style={{ marginTop: 6 }}>The league strategist's ranking of the strongest ideas across the 30 briefs. All are hypotheses; none is approved.</p>
             <ol className="hc-list" style={{ marginTop: 12 }}>
               {league.priorities.map((p, i) => (
                 <li key={i} style={{ display: "grid", gridTemplateColumns: "28px minmax(0, 1fr)", gap: 10 }}>
@@ -78,6 +81,7 @@ export default function League() {
           </div>
           <div className="hc-card-invert" id="portland">
             <h2 className="hc-h2">For the team in Portland</h2>
+            <p className="hc-small hc-muted" style={{ marginTop: 6 }}>Proposals for how to work, not decisions. Owners named here are suggestions.</p>
             <ul className="hc-list" style={{ marginTop: 12 }}>{league.portland.map((p, i) => <li key={i}><b>{p.title}</b><div className="hc-small hc-muted" style={{ marginTop: 4 }}>{p.detail}</div></li>)}</ul>
           </div>
         </div>
@@ -100,8 +104,8 @@ export default function League() {
   );
 }
 
-// Calibrated scores: every market on the four axes, 50 = league average.
-// Each row opens to the League Strategist's note on why the market sits there.
+// Calibrated scores: every market on the four axes, shown as tiers because
+// they are editorial estimates. Each row opens to the League Strategist's note.
 function Scores() {
   const [sort, setSort] = useState("opportunity");
   const rows = useMemo(() => {
@@ -110,12 +114,12 @@ function Scores() {
   }, [sort]);
   return (
     <section className="hc-section">
-      <SectionHead id="scores" eyebrow="All 30 markets on one scale · 50 is league average" title="The scores">
+      <SectionHead id="scores" eyebrow="Editorial estimates, ranked across all 30 markets" title="The scores">
         <span className="hc-row" role="group" aria-label="Sort by">
           {SORTS.map(([k, l]) => <button key={k} className="hc-pill-btn" aria-pressed={sort === k} onClick={() => setSort(k)}>{l}</button>)}
         </span>
       </SectionHead>
-      <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 14 }}>Open a market to read the League Strategist's note on why it sits there. The note sets it against the brief's own scores.</p>
+      <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 14, maxWidth: "90ch" }}>The league calibration agent set these from the 30 briefs on {SCORE_DEFS.opportunity.updated.split(" (")[0]}. No sales, attendance or survey data went in, so each shows as one of five tiers rather than a precise number. Open a market for the note on why it sits there. <a href={href("method", "scores")}>What each score measures</a>.</p>
       <div className="hc-card hc-scores">
         <div className="hc-scores-row hc-scores-head" aria-hidden="true">
           <span>Market</span>
@@ -126,9 +130,9 @@ function Scores() {
             <summary className="hc-scores-row">
               <span className="hc-scores-name"><span className="hc-dot" style={{ background: s.team.colors[0] }} />{placeOf(s.team)} {s.team.name}</span>
               {SCORE_LABELS.map(([k, l]) => (
-                <span key={k} className="hc-scores-cell" aria-label={`${l} ${s[k]}`} data-sorted={sort === k || undefined}>
-                  <span className="hc-meter-track"><span className="hc-meter-fill" style={{ display: "block", width: `${s[k]}%` }} /></span>
-                  <b>{s[k]}</b>
+                <span key={k} className="hc-scores-cell" aria-label={`${l}: ${tierOf(s[k]).label}`} data-sorted={sort === k || undefined}>
+                  <span className="hc-tier-pips" aria-hidden="true">{[1, 2, 3, 4, 5].map((n) => <i key={n} className={n <= tierOf(s[k]).bars ? "on" : ""} />)}</span>
+                  <b className="hc-tiny">{tierOf(s[k]).label}</b>
                 </span>
               ))}
             </summary>

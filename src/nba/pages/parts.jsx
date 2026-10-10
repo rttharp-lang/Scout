@@ -2,12 +2,17 @@
 // output renders the same way) and the jersey palette study.
 import React from "react";
 import { AGENT_BY_ID } from "../agents/roster.js";
+import { DEPENDENCIES } from "../agents/review-schema.js";
 import { MONTHS } from "../data.js";
-import { Chip, Confidence, Provenance } from "../ui.jsx";
+import { fmtDate } from "../review.js";
+import { Chip, Confidence, Provenance, Priority, Status, Strength, Route, KV, href } from "../ui.jsx";
 
-export function LensView({ dossier: d, compact = false }) {
+// fold: show the headline, summary and insights, and put the rest of the
+// dossier (cues, places, people, dates, words, product hooks) behind a disclosure.
+export function LensView({ dossier: d, compact = false, fold = false }) {
   if (!d) return null;
   const agent = AGENT_BY_ID[d.lens];
+  const Rest = fold ? FoldRest : React.Fragment;
   return (
     <div className="hc-stack" style={{ display: "grid", gap: "var(--grid-gap)" }}>
       {!compact && (
@@ -30,6 +35,7 @@ export function LensView({ dossier: d, compact = false }) {
         ))}
       </div>
 
+      <Rest>
       {!compact && (
         <div className="hc-card">
           <div className="hc-kv-label">What to borrow</div>
@@ -81,7 +87,7 @@ export function LensView({ dossier: d, compact = false }) {
       {!compact && (
         <div className="hc-grid hc-grid-2">
           <div className="hc-card" style={{ background: "var(--pop)", color: "var(--pop-ink)" }}>
-            <div className="hc-kv-label" style={{ color: "var(--pop-ink)", opacity: 0.7 }}>What to make</div>
+            <div className="hc-kv-label" style={{ color: "var(--pop-ink)", opacity: 0.7 }}>What to make · product hypotheses</div>
             <ul className="hc-bullets" style={{ fontWeight: 600 }}>{d.productHooks.map((h, i) => <li key={i}>{h}</li>)}</ul>
           </div>
           {(d.watchouts.length > 0 || (d.provenance && d.provenance.verify.length > 0)) && (
@@ -92,7 +98,17 @@ export function LensView({ dossier: d, compact = false }) {
           )}
         </div>
       )}
+      </Rest>
     </div>
+  );
+}
+
+function FoldRest({ children }) {
+  return (
+    <details className="hc-fold" style={{ marginTop: 0 }}>
+      <summary>The full dossier: what to borrow, places, people, dates, words and product hooks</summary>
+      <div style={{ display: "grid", gap: "var(--grid-gap)" }}>{children}</div>
+    </details>
   );
 }
 
@@ -114,5 +130,44 @@ export function Jersey({ palette, team }) {
       <text x="100" y="92" textAnchor="middle" fontFamily="var(--font-display)" fontWeight="900" fontSize={wordmark.length > 8 ? 17 : 22} fill={trim} letterSpacing="0.5">{wordmark}</text>
       <text x="100" y="168" textAnchor="middle" fontFamily="var(--font-display)" fontWeight="900" fontSize="74" fill={accent} stroke={trim} strokeWidth="1.5">00</text>
     </svg>
+  );
+}
+
+// ── Opportunity card with the hand-off fields ──────────────────────
+export function Opportunity({ o, insights, market }) {
+  const h = o.handoff;
+  return (
+    <article className="hc-card hc-opp" id={market ? undefined : `opp-${o.id}`}>
+      {market && <a href={href("m", market.id)} className="hc-row" style={{ textDecoration: "none", fontWeight: 700 }}><span className="hc-dot" style={{ background: market.team.colors[0] }} />{market.team.place || market.team.city} {market.team.name}</a>}
+      <div className="hc-row" style={{ justifyContent: "space-between" }}>
+        <div className="hc-row"><Priority p={o.priority} /><Status status={h ? h.status : "hypothesis"} /><Strength support={o.support} /></div>
+        <Chip tone="line" title="The brief's editorial estimate of size, separate from evidence strength">{o.size} upside (estimate)</Chip>
+      </div>
+      <h3 className="hc-h2" style={{ fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)" }}>{o.title}</h3>
+      <p>{o.summary}</p>
+      {h ? (
+        <div className="hc-opp-grid">
+          <KV label="For"><span className="hc-small">{h.consumer}</span><div className="hc-tiny hc-muted" style={{ marginTop: 4 }}>Sizing and fit: {h.fit.join(", ")}</div></KV>
+          <KV label="Target and route"><span className="hc-small"><b>{h.targetSeason}</b> · first in market {fmtDate(h.firstInMarket)}</span><div className="hc-row" style={{ marginTop: 6 }}>{h.routes.map((r) => <Route key={r} route={r} />)}</div></KV>
+          <KV label="First step"><span className="hc-actby">Act by {fmtDate(h.actBy)}</span><div className="hc-small hc-muted" style={{ marginTop: 4 }}>{h.actNote}</div></KV>
+          <KV label="Proposed owner"><span className="hc-small">{h.owner}</span><div className="hc-tiny hc-muted" style={{ marginTop: 4 }}>A suggestion. No one is assigned.</div></KV>
+        </div>
+      ) : <p className="hc-small hc-muted">Hand-off fields not reviewed for this idea yet.</p>}
+      <details className="hc-more">
+        <summary>Validation, dependencies, where, when and how</summary>
+        <div className="hc-stack">
+          {h && <KV label="Test before briefing"><ul className="hc-bullets hc-small">{h.validation.map((v, i) => <li key={i}>{v}</li>)}</ul></KV>}
+          {h && h.dependencies.length > 0 && <KV label="Depends on (none confirmed)"><div className="hc-row">{h.dependencies.map((x) => <Chip key={x} tone="warn">{DEPENDENCIES[x]}</Chip>)}</div></KV>}
+          {h && h.insights.length > 0 && insights && <KV label="Built on"><ul className="hc-bullets hc-small">{h.insights.map((k) => insights[k] && <li key={k}>{insights[k].title}</li>)}</ul></KV>}
+          {h && h.insights.length > 0 && !insights && <KV label="Built on"><span className="hc-small">{h.insights.length} of the market's top insights · <a href={href("m", market.id)}>read them</a></span></KV>}
+          {h && h.partners.length > 0 && <KV label="Prospective partners (no agreements)"><div className="hc-row">{h.partners.map((p) => <Chip key={p} tone="line">{p}</Chip>)}</div></KV>}
+          <KV label="Where"><ul className="hc-bullets hc-small">{o.where.map((w, i) => <li key={i}>{w}</li>)}</ul></KV>
+          <KV label="When"><p className="hc-small">{o.when}</p></KV>
+          <KV label="How"><p className="hc-small">{o.how}</p></KV>
+          <KV label="Products"><div className="hc-row">{o.products.map((p, i) => <Chip key={i}>{p}</Chip>)}</div>{h && <div className="hc-tiny hc-muted" style={{ marginTop: 6 }}>Categories: {h.categories.join(", ")}</div>}</KV>
+          <div className="hc-small hc-muted"><b style={{ color: "var(--text)" }}>How we'd know it worked:</b> {o.kpi}</div>
+        </div>
+      </details>
+    </article>
   );
 }
