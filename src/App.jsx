@@ -2500,6 +2500,7 @@ export default function App() {
   const [selLunch, setSelLunch] = useState(null);   // chosen lunch name (single-select)
   const [selDinner, setSelDinner] = useState(null); // chosen dinner name (single-select)
   const [selectedExps, setSelectedExps] = useState(() => new Set()); // opted-in experiences (attached per-day at build)
+  const [autoCurate, setAutoCurate] = useState(false); // set by a ?city= deep link
   const hydrated = useRef(false);
   const autoTimer = useRef(null);
   const autoBusy = useRef(false);
@@ -2524,11 +2525,12 @@ export default function App() {
           setScreen(s.screen && s.screen !== "building" && s.screen !== "builderror" ? s.screen : "review");
         }
       }
-      // Deep link (e.g. from NBA Fandom: /?city=Portland, OR) starts trip setup
-      // for that city, exactly like picking it on the landing page.
+      // Deep link (e.g. from NBA Fandom: /scout/?city=Memphis, TN) skips hotel and
+      // dates and opens the city's curated best retail straight away. "Edit
+      // trip" on that screen goes back to add a hotel and dates.
       const linked = new URLSearchParams(window.location.search).get("city");
       if (linked) {
-        setCity(linked); setHotel(null); setStartDate(null); setEndDate(null); setScreen("setup");
+        setCity(linked); setHotel(null); setStartDate(null); setEndDate(null); setAutoCurate(true);
         window.history.replaceState(null, "", window.location.pathname);
       }
     } catch {}
@@ -2677,6 +2679,13 @@ export default function App() {
       setAreaLoading(false);
     }
   };
+
+  // A ?city= deep link opens the curated hub once the city is in state.
+  useEffect(() => {
+    if (!autoCurate || !city) return;
+    setAutoCurate(false);
+    startNeighborhoods();
+  }, [autoCurate, city]);
 
   const toggleStore = (name) =>
     setSelectedStores((p) => { const s = new Set(p); s.has(name) ? s.delete(name) : s.add(name); return s; });

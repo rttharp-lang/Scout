@@ -43,9 +43,14 @@ try {
   // The links NBA Fandom actually renders open Scout, not NBA Fandom.
   {
     const q = await ctx.newPage();
+    // Stand-in curation so the trip button's landing screen can render offline.
+    await q.route("**/api/**", (r) => r.fulfill({ contentType: "application/json", body: "[]" }));
+    await q.route("**/api/tripcuration**", (r) => r.fulfill({ contentType: "application/json", body: JSON.stringify({ days: [{ neighborhoods: [{ name: "Albina", stores: [{ name: "Test Shop", why: "Local", category: "Boutique" }] }] }], dining: { lunch: [], dinner: [] }, experiences: [] }) }));
     await q.goto("http://fandomscout.com/nba/#/m/por", { waitUntil: "load" }); await wait(1200);
-    await q.getByText("Plan a scouting trip in Scout").click(); await wait(1500);
+    await q.getByText("Best retail in Portland on Scout").click(); await wait(2000);
     check("NBA market page trip button opens Scout", /\/scout\/$/.test(q.url()) && (await q.title()) === "Scout", q.url());
+    const hub = (await q.textContent("body")) || "";
+    check("trip button skips hotel and dates and opens the city's best retail", /Shopping/.test(hub) && /Test Shop/.test(hub) && !/your home base/i.test(hub), hub.slice(0, 80).replace(/\s+/g, " "));
     await q.goto("http://fandomscout.com/nba/#/", { waitUntil: "load" }); await wait(800);
     await q.getByText("Scout trip planner").click(); await wait(1500);
     check("NBA footer link opens Scout", /\/scout\/$/.test(q.url()) && (await q.title()) === "Scout", q.url());
