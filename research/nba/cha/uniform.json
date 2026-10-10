@@ -31,62 +31,243 @@
     },
     {
       "title": "Teal and purple are fixed; orange is the wildcard",
-      "detail": "The palette is the franchise's strongest asset, but it has been repeated across eras, so new releases risk feeling like reruns. Orange and honeycomb-gold accents have helped recent looks stand out.",
+      "detail": "The palette is the franchise's strongest asset, but it has been repeated across eras, so new releases risk feeling like reruns. Recent looks used orange and honeycomb-gold accents to stand out.",
       "implication": "Refresh with new materials, textures and Charlotte-specific graphics. Leave the core colors alone."
     }
   ],
   "places": [
-    {"name": "Spectrum Center", "kind": "arena", "neighborhood": "Uptown", "why": "Home court, where pinstripe and Buzz City imagery meet the fan base."},
-    {"name": "Romare Bearden Park", "kind": "park", "neighborhood": "Uptown", "why": "Named for the Charlotte-born collage artist, and a natural anchor for art-meets-sport collaborations."},
-    {"name": "Camp North End", "kind": "creative district", "neighborhood": "North End", "why": "A former Ford plant turned makers' campus, and a likely site for pop-ups and local-brand partners."},
-    {"name": "NoDa", "kind": "arts district", "neighborhood": "North Davidson", "why": "Murals, galleries and breweries anchor Charlotte's independent design scene."},
-    {"name": "Plaza Midwood", "kind": "district", "neighborhood": "Plaza Midwood", "why": "Vintage shops and dive-bar culture, good for heritage resale and bootleg-tee audiences."},
-    {"name": "Beatties Ford Road corridor", "kind": "district", "neighborhood": "West End", "why": "Historic Black Charlotte, home to Johnson C. Smith University and the community's biggest gathering streets."},
-    {"name": "Johnson C. Smith University", "kind": "HBCU", "neighborhood": "West End", "why": "The anchor of Black education and CIAA culture in Charlotte."},
-    {"name": "Charlotte Motor Speedway", "kind": "racetrack", "neighborhood": "Concord", "why": "NASCAR is a core Carolinas identity, and a source of racing-stripe and numeral cues."}
+    {
+      "name": "Spectrum Center",
+      "kind": "arena",
+      "neighborhood": "Uptown",
+      "why": "Home court, where pinstripe and Buzz City imagery meet the fan base."
+    },
+    {
+      "name": "Romare Bearden Park",
+      "kind": "park",
+      "neighborhood": "Uptown",
+      "why": "Named for the Charlotte-born collage artist, and a natural anchor for art-meets-sport collaborations."
+    },
+    {
+      "name": "Camp North End",
+      "kind": "creative district",
+      "neighborhood": "North End",
+      "why": "A former Ford plant turned makers' campus, and a likely site for pop-ups and local-brand partners."
+    },
+    {
+      "name": "NoDa",
+      "kind": "arts district",
+      "neighborhood": "North Davidson",
+      "why": "Murals, galleries and breweries anchor Charlotte's independent design scene."
+    },
+    {
+      "name": "Plaza Midwood",
+      "kind": "district",
+      "neighborhood": "Plaza Midwood",
+      "why": "Vintage shops and dive-bar culture, good for heritage resale and bootleg-tee audiences."
+    },
+    {
+      "name": "Beatties Ford Road corridor",
+      "kind": "district",
+      "neighborhood": "West End",
+      "why": "Historic Black Charlotte, home to Johnson C. Smith University and the community's biggest gathering streets."
+    },
+    {
+      "name": "Johnson C. Smith University",
+      "kind": "HBCU",
+      "neighborhood": "West End",
+      "why": "The anchor of Black education and CIAA culture in Charlotte."
+    },
+    {
+      "name": "Charlotte Motor Speedway",
+      "kind": "racetrack",
+      "neighborhood": "Concord",
+      "why": "NASCAR is a core Carolinas identity, and a source of racing-stripe and numeral cues."
+    }
   ],
   "people": [
-    {"name": "Alexander Julian", "role": "Fashion designer", "why": "He designed the original Hornets uniforms and the pinstripe look."},
-    {"name": "Muggsy Bogues", "role": "Former Hornets point guard", "why": "At 5'3\" he is the most beloved face of the original teal-and-purple era."},
-    {"name": "Larry Johnson", "role": "Former Hornets forward", "why": "The 90s star whose Grandmama commercials and look became pop culture."},
-    {"name": "Alonzo Mourning", "role": "Former Hornets center", "why": "Part of the original core that defined the pinstripe teams."},
-    {"name": "Dell Curry", "role": "Former Hornets guard, broadcaster", "why": "The franchise's career three-point leader, and father of Stephen and Seth Curry, who grew up in Charlotte."},
-    {"name": "Michael Jordan", "role": "Former owner, Jordan Brand founder", "why": "He brought the Jumpman to the Hornets uniform in 2017 and shaped the modern look."},
-    {"name": "Brandon Miller", "role": "Hornets forward", "why": "The franchise face of the post-LaMelo era."},
-    {"name": "Kon Knueppel", "role": "Hornets guard or forward", "why": "A second-year shooter and a cornerstone alongside Miller."}
+    {
+      "name": "Alexander Julian",
+      "role": "Fashion designer",
+      "why": "He designed the original Hornets uniforms and the pinstripe look."
+    },
+    {
+      "name": "Muggsy Bogues",
+      "role": "Former Hornets point guard",
+      "why": "At 5'3\" he is the most beloved face of the original teal-and-purple era."
+    },
+    {
+      "name": "Larry Johnson",
+      "role": "Former Hornets forward",
+      "why": "The 90s star whose Grandmama commercials and look became pop culture."
+    },
+    {
+      "name": "Alonzo Mourning",
+      "role": "Former Hornets center",
+      "why": "Part of the original core that defined the pinstripe teams."
+    },
+    {
+      "name": "Dell Curry",
+      "role": "Former Hornets guard, broadcaster",
+      "why": "The franchise's career three-point leader, and father of Stephen and Seth Curry, who grew up in Charlotte."
+    },
+    {
+      "name": "Michael Jordan",
+      "role": "Former owner, Jordan Brand founder",
+      "why": "He brought the Jumpman to the Hornets uniform in 2017 and shaped the modern look."
+    },
+    {
+      "name": "Brandon Miller",
+      "role": "Hornets forward",
+      "why": "The franchise face of the post-LaMelo era."
+    },
+    {
+      "name": "Kon Knueppel",
+      "role": "Hornets guard or forward",
+      "why": "A second-year shooter and a cornerstone alongside Miller."
+    }
   ],
   "moments": [
-    {"name": "Home opener and season start", "timing": "Late October", "month": 10, "why": "The first look at the full 2026-27 uniform set and the new core. Charlotte has no opening-night or Christmas game."},
-    {"name": "Emirates NBA Cup group play", "timing": "Fridays Oct 30 to Nov 27", "month": 11, "why": "Cup Nights bring distinct court and uniform elements, with Charlotte in East Group C."},
-    {"name": "Presidents' Day Timberwolves game", "timing": "Feb 15, 2027", "month": 2, "why": "LaMelo Ball's return to Charlotte on NBC and Peacock, a peak attention night."},
-    {"name": "CIAA Tournament", "timing": "Late February to early March", "month": 2, "why": "An HBCU basketball festival that filled Uptown Charlotte from 2006 to 2020 and now plays in Baltimore. Confirm any return."},
-    {"name": "Mecklenburg Declaration Day", "timing": "May 20", "month": 5, "why": "The date on the NC flag and a local pride marker, ripe for a story."},
-    {"name": "Coca-Cola 600 weekend", "timing": "Memorial Day weekend", "month": 5, "why": "NASCAR's marquee night at Charlotte Motor Speedway, and a major Carolina fashion moment."},
-    {"name": "Play-In Tournament", "timing": "April 13-16, 2027", "month": 4, "why": "The Hornets reached the Play-In last year, so spring could be a launch window again."},
-    {"name": "Charlotte Pride", "timing": "Mid-August", "month": 8, "why": "A large citywide festival for LGBTQ+ fans and allies."}
+    {
+      "name": "Home opener and season start",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The first look at the full 2026-27 uniform set and the new core. Charlotte has no opening-night or Christmas game."
+    },
+    {
+      "name": "Emirates NBA Cup group play",
+      "timing": "Fridays Oct 30 to Nov 27",
+      "month": 11,
+      "why": "Cup Nights bring distinct court and uniform elements, with Charlotte in East Group C."
+    },
+    {
+      "name": "Presidents' Day Timberwolves game",
+      "timing": "Feb 15, 2027",
+      "month": 2,
+      "why": "LaMelo Ball's return to Charlotte on NBC and Peacock, a peak attention night."
+    },
+    {
+      "name": "CIAA Tournament",
+      "timing": "Late February to early March",
+      "month": 2,
+      "why": "An HBCU basketball festival that filled Uptown Charlotte from 2006 to 2020 and now plays in Baltimore. Confirm any return."
+    },
+    {
+      "name": "Mecklenburg Declaration Day",
+      "timing": "May 20",
+      "month": 5,
+      "why": "The date on the NC flag and a local pride marker, ripe for a story."
+    },
+    {
+      "name": "Coca-Cola 600 weekend",
+      "timing": "Memorial Day weekend",
+      "month": 5,
+      "why": "NASCAR's marquee night at Charlotte Motor Speedway, and a major Carolina fashion moment."
+    },
+    {
+      "name": "Play-In Tournament",
+      "timing": "April 13-16, 2027",
+      "month": 4,
+      "why": "The Hornets reached the Play-In last year, so spring could be a launch window again."
+    },
+    {
+      "name": "Charlotte Pride",
+      "timing": "Mid-August",
+      "month": 8,
+      "why": "A large citywide festival for LGBTQ+ fans and allies."
+    }
   ],
   "vocabulary": [
-    {"term": "Buzz City", "meaning": "The modern nickname for Charlotte and the team's branding."},
-    {"term": "Queen City", "meaning": "Charlotte's nickname, from Queen Charlotte of Mecklenburg-Strelitz. It's why crowns appear around town."},
-    {"term": "CLT", "meaning": "The airport code, used as the city's shorthand on local apparel."},
-    {"term": "Uptown", "meaning": "What Charlotteans call downtown."},
-    {"term": "Hugo", "meaning": "The Hornets mascot, introduced in the original era."},
-    {"term": "Hornets' nest", "meaning": "Revolutionary War-era phrase for Charlotte's rebel spirit, and the origin of the team name."},
-    {"term": "Pinstripes", "meaning": "Shorthand for the Julian-designed 1988 uniforms."}
+    {
+      "term": "Buzz City",
+      "meaning": "The modern nickname for Charlotte and the team's branding."
+    },
+    {
+      "term": "Queen City",
+      "meaning": "Charlotte's nickname, from Queen Charlotte of Mecklenburg-Strelitz. It's why crowns appear around town."
+    },
+    {
+      "term": "CLT",
+      "meaning": "The airport code, used as the city's shorthand on local apparel."
+    },
+    {
+      "term": "Uptown",
+      "meaning": "What Charlotteans call downtown."
+    },
+    {
+      "term": "Hugo",
+      "meaning": "The Hornets mascot, introduced in the original era."
+    },
+    {
+      "term": "Hornets' nest",
+      "meaning": "Revolutionary War-era phrase for Charlotte's rebel spirit, and the origin of the team name."
+    },
+    {
+      "term": "Pinstripes",
+      "meaning": "Shorthand for the Julian-designed 1988 uniforms."
+    }
   ],
   "designCues": [
-    {"cue": "Original deep purple", "type": "color", "hex": "#1D1160", "source": "Team palette since 1988, restored in 2014", "use": "Primary field color for Icon and Classic product, with teal pinstripes."},
-    {"cue": "Teal", "type": "color", "hex": "#00788C", "source": "1988 Hornets teal, the palette's signature", "use": "Accent and pinstripe color. Use it against purple and white."},
-    {"cue": "Orange accent", "type": "color", "hex": "#E56020", "source": "Recent Hornets accent color", "use": "Small trim or tag detail. Don't let it dominate."},
-    {"cue": "Julian pinstripe", "type": "pattern", "hex": "", "source": "Alexander Julian's original 1988 uniforms", "use": "Woven or jacquard stripe on jerseys, warm-ups and outerwear."},
-    {"cue": "Queen City crown", "type": "motif", "hex": "", "source": "Charlotte's crown iconography from Queen Charlotte", "use": "A subtle crown on neck tape or hangtags for a City Edition."},
-    {"cue": "Honeycomb and hornet's-nest texture", "type": "texture", "hex": "", "source": "Team name origin and hex-pattern branding", "use": "Embossed or sublimated honeycomb in tonal purple."},
-    {"cue": "Mint and gold story", "type": "story", "hex": "", "source": "Carolina gold and Charlotte's branch Mint", "use": "Metallic gold detailing that references coins and Mint heritage."},
-    {"cue": "Starter-jacket silhouette", "type": "silhouette", "hex": "", "source": "1990s hip-hop and street style", "use": "A satin bomber and half-snap jacket in 90s proportions."}
+    {
+      "cue": "Original deep purple",
+      "type": "color",
+      "hex": "#1D1160",
+      "source": "Team palette since 1988, restored in 2014",
+      "use": "Primary field color for Icon and Classic product, with teal pinstripes."
+    },
+    {
+      "cue": "Teal",
+      "type": "color",
+      "hex": "#00788C",
+      "source": "1988 Hornets teal, the palette's signature",
+      "use": "Accent and pinstripe color. Use it against purple and white."
+    },
+    {
+      "cue": "Orange accent",
+      "type": "color",
+      "hex": "#E56020",
+      "source": "Recent Hornets accent color",
+      "use": "Small trim or tag detail. Don't let it dominate."
+    },
+    {
+      "cue": "Julian pinstripe",
+      "type": "pattern",
+      "hex": "",
+      "source": "Alexander Julian's original 1988 uniforms",
+      "use": "Woven or jacquard stripe on jerseys, warm-ups and outerwear."
+    },
+    {
+      "cue": "Queen City crown",
+      "type": "motif",
+      "hex": "",
+      "source": "Charlotte's crown iconography from Queen Charlotte",
+      "use": "A subtle crown on neck tape or hangtags for a City Edition."
+    },
+    {
+      "cue": "Honeycomb and hornet's-nest texture",
+      "type": "texture",
+      "hex": "",
+      "source": "Team name origin and hex-pattern branding",
+      "use": "Embossed or sublimated honeycomb in tonal purple."
+    },
+    {
+      "cue": "Mint and gold story",
+      "type": "story",
+      "hex": "",
+      "source": "Carolina gold and Charlotte's branch Mint",
+      "use": "Metallic gold detailing that references coins and Mint heritage."
+    },
+    {
+      "cue": "Starter-jacket silhouette",
+      "type": "silhouette",
+      "hex": "",
+      "source": "1990s hip-hop and street style",
+      "use": "A satin bomber and half-snap jacket in 90s proportions."
+    }
   ],
   "productHooks": [
     "Pinstripe satin Starter-style bomber and warm-up in purple and teal, credited to Julian-era design.",
-    "A Queen City City Edition built on the hornet's nest rebellion story and the Mecklenburg date.",
+    "A Queen City-themed City Edition built on the hornet's nest rebellion story and the Mecklenburg date.",
     "Miller and Knueppel player tees and Jordan Brand-adjacent hoodies, timed to Cup Nights and the Presidents' Day game.",
     "A Hornets x local-maker capsule with Camp North End or NoDa designers, on a revenue share.",
     "A teal-and-purple NASCAR-meets-hoops crossover capsule for Coca-Cola 600 weekend."
@@ -99,28 +280,77 @@
     "NASCAR marks require licensing."
   ],
   "sources": [
-    {"title": "Charlotte Hornets official site", "url": "https://www.nba.com/hornets"},
-    {"title": "Charlotte Hornets (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Charlotte_Hornets"},
-    {"title": "Spectrum Center (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Spectrum_Center"},
-    {"title": "Alexander Julian (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Alexander_Julian"},
-    {"title": "NBA Uniform history (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Uniform_numbers_in_the_NBA"}
+    {
+      "title": "Charlotte Hornets official site",
+      "url": "https://www.nba.com/hornets"
+    },
+    {
+      "title": "Charlotte Hornets (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Charlotte_Hornets"
+    },
+    {
+      "title": "Spectrum Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Spectrum_Center"
+    },
+    {
+      "title": "Alexander Julian (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Julian"
+    },
+    {
+      "title": "NBA Uniform history (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Uniform_numbers_in_the_NBA"
+    }
   ],
   "confidence": "medium",
   "extra": {
     "palette": [
-      {"name": "Purple", "hex": "#1D1160"},
-      {"name": "Teal", "hex": "#00788C"},
-      {"name": "Gray", "hex": "#A1A1A4"},
-      {"name": "Orange", "hex": "#E56020"}
+      {
+        "name": "Purple",
+        "hex": "#1D1160"
+      },
+      {
+        "name": "Teal",
+        "hex": "#00788C"
+      },
+      {
+        "name": "Gray",
+        "hex": "#A1A1A4"
+      },
+      {
+        "name": "Orange",
+        "hex": "#E56020"
+      }
     ],
     "eras": [
-      {"era": "1988-2002", "look": "Alexander Julian's teal-and-purple pinstripes, Hugo and the original hornet logo.", "legacy": "The beloved original, and the source of nearly all Hornets nostalgia."},
-      {"era": "2004-2014", "look": "Bobcats orange, blue and black identity.", "legacy": "Largely forgotten by fans. The name returned after a rebrand."},
-      {"era": "2014-present", "look": "Hornets name restored in 2014 with the teal-and-purple palette; Jumpman on the uniform from 2017.", "legacy": "Fans welcome the identity but debate Jordan-era tweaks against the 1988 originals."}
+      {
+        "era": "1988-2002",
+        "look": "Alexander Julian's teal-and-purple pinstripes, Hugo and the original hornet logo.",
+        "legacy": "The beloved original, and the source of nearly all Hornets nostalgia."
+      },
+      {
+        "era": "2004-2014",
+        "look": "Bobcats orange, blue and black identity.",
+        "legacy": "Largely forgotten by fans. The name returned after a rebrand."
+      },
+      {
+        "era": "2014-present",
+        "look": "Hornets name restored in 2014 with the teal-and-purple palette; Jumpman on the uniform from 2017.",
+        "legacy": "Fans welcome the identity but debate Jordan-era tweaks against the 1988 originals."
+      }
     ],
     "cityEditions": [
-      {"season": "2025-26", "concept": "Not verified from knowledge.", "reception": "unknown", "note": "Check the 2025-26 and 2026-27 City Edition concepts live."},
-      {"season": "2018-19 through 2024-25", "concept": "Multiple City Editions leaned on Buzz City branding, black bases and teal-purple accents; details not individually verified.", "reception": "mixed", "note": "Fans generally felt the best Hornets looks drew on the 1988 pinstripe, not new ideas. Check each season live."}
+      {
+        "season": "2025-26",
+        "concept": "Not verified from knowledge.",
+        "reception": "unknown",
+        "note": "Check the 2025-26 and 2026-27 City Edition concepts live."
+      },
+      {
+        "season": "2018-19 through 2024-25",
+        "concept": "Multiple City Editions leaned on Buzz City branding, black bases and teal-purple accents; details not individually verified.",
+        "reception": "mixed",
+        "note": "Fans generally felt the best Hornets looks drew on the 1988 pinstripe, not new ideas. Check each season live."
+      }
     ],
     "fanFavorites": [
       "1988-style teal pinstripe Classic Edition",
@@ -129,10 +359,22 @@
       "Hugo mascot graphics"
     ],
     "untoldStories": [
-      {"story": "The hornet's nest rebellion tied to the name's origin and the Mecklenburg Declaration of May 20, 1775.", "why": "Locals know the line and the date, and it explains the team name without leaning on slogans."},
-      {"story": "Charlotte's Mint and Carolina gold history.", "why": "A metallic, coin-inspired City Edition tells a story only Charlotte can claim."},
-      {"story": "Johnson C. Smith and West End basketball, plus CIAA Tournament culture.", "why": "HBCU basketball is core Charlotte culture that has never been central to a Hornets uniform. It needs real community partners."},
-      {"story": "Muggsy Bogues and the underdog identity of the 1990s team.", "why": "A short-stature, big-heart motif suits a team that is often asked to prove itself."}
+      {
+        "story": "The hornet's nest rebellion tied to the name's origin and the Mecklenburg Declaration of May 20, 1775.",
+        "why": "Locals know the line and the date, and it explains the team name without leaning on slogans."
+      },
+      {
+        "story": "Charlotte's Mint and Carolina gold history.",
+        "why": "A metallic, coin-inspired City Edition tells a story only Charlotte can claim."
+      },
+      {
+        "story": "Johnson C. Smith and West End basketball, plus CIAA Tournament culture.",
+        "why": "HBCU basketball is core Charlotte culture that has never been central to a Hornets uniform. It needs real community partners."
+      },
+      {
+        "story": "Muggsy Bogues and the underdog identity of the 1990s team.",
+        "why": "A short-stature, big-heart motif suits a team that is often asked to prove itself."
+      }
     ]
   },
   "provenance": {
@@ -145,8 +387,8 @@
       "Confirm the Hornets still wear Jordan Brand-marked uniforms, and check the current Nike/Jordan relationship.",
       "Check current Hornets ownership and Spectrum Center naming-rights status.",
       "Check the CIAA Tournament host-city status for 2027.",
-      "Confirm Hugo and the honeycomb mark are in use as the current secondary logos.",
-      "Confirm Alexander Julian is still the credited designer, and check any licensing arrangement.",
+      "Check whether Hugo and the honeycomb mark are in use as the current secondary logos.",
+      "Check Alexander Julian's status as the credited designer, and any licensing arrangement.",
       "Check the 2027 date for the Coca-Cola 600 at Charlotte Motor Speedway.",
       "Check the Charlotte Pride 2027 dates."
     ]
