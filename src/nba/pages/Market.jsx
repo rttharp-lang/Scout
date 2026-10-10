@@ -249,7 +249,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
       {/* ── Retail ───────────────────────────────────── */}
       <section className="hc-section" id="retail">
         <SectionHead eyebrow="Where, when and how they shop" title="Shopping">
-          <a className="hc-btn hc-btn-ghost hc-no-print" style={{ textDecoration: "none" }} href={`/scout/?city=${encodeURIComponent(`${team.city}, ${team.state}`)}`}>Plan a scouting trip in Scout ↗</a>
+          <a className="hc-btn hc-btn-ghost hc-no-print" style={{ textDecoration: "none" }} href={`/scout/?city=${encodeURIComponent(`${team.city}, ${team.state}`)}`}>Best retail in {team.city} on Scout ↗</a>
         </SectionHead>
         <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 16, maxWidth: "80ch" }}>Stores come from desk research. Only those listed under Evidence were checked live. Confirm a door is open, and will carry the product, before planning a launch there.</p>
         <div className="hc-grid hc-grid-3">
