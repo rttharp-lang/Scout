@@ -56,7 +56,7 @@ export default function Compare({ ids }) {
                   {!d ? <p className="hc-muted hc-small">Loading…</p> : (
                     <>
                       <div><div className="hc-kv-label">What to know</div><ol className="hc-bullets hc-small">{d.strategy.topInsights.slice(0, 3).map((t, i) => <li key={i}><b>{t.title}.</b> {t.insight}</li>)}</ol></div>
-                      <div><div className="hc-kv-label">Top plays</div><ul className="hc-list">{[...d.strategy.opportunities].sort((a, b) => a.priority - b.priority).slice(0, 4).map((o) => <li key={o.id} className="hc-small"><span className="hc-row"><Priority p={o.priority} /><b>{o.title}</b></span><div className="hc-muted" style={{ marginTop: 4 }}>{o.when} · {o.products.slice(0, 3).join(", ")}</div></li>)}</ul></div>
+                      <div><div className="hc-kv-label">Top opportunities</div><ul className="hc-list">{[...d.strategy.opportunities].sort((a, b) => a.priority - b.priority).slice(0, 4).map((o) => <li key={o.id} className="hc-small"><span className="hc-row"><Priority p={o.priority} /><b>{o.title}</b></span><div className="hc-muted" style={{ marginTop: 4 }}>{o.when} · {o.products.slice(0, 3).join(", ")}</div></li>)}</ul></div>
                       <div><div className="hc-kv-label">The City Edition idea</div><b>{d.strategy.uniform.concept}</b><p className="hc-small" style={{ margin: "4px 0 10px" }}>{d.strategy.uniform.narrative}</p><PaletteRow palette={d.strategy.uniform.palette} /></div>
                       <div><div className="hc-kv-label">The gameday look</div><p className="hc-small">{d.dossiers.fanbase.extra.gamedayLook}</p></div>
                     </>

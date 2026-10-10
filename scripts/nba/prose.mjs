@@ -38,9 +38,12 @@ export function targets(args) {
 // Walks a value alongside its schema, calling visit(kind, path, key, value, base)
 // for every leaf: kind is "prose" for rewritable text, "fixed" for data.
 export function walk(value, schema, visit, at = "$", key = "", fixed = false) {
-  // `teams` is a list of team ids in league.json but a list of entries in the pulse.
-  const idList = key === "teams" && Array.isArray(value) && value.every((v) => typeof v === "string");
-  const isFixed = fixed || (FIXED_KEYS.has(key) && (key !== "teams" || idList)) || !!(schema && schema.enum);
+  // `teams` is a list of team ids in league.json but a list of entries in the
+  // pulse; `months` is a list of month numbers, except in rhythm.json, where it
+  // holds the twelve monthly write-ups.
+  const listKey = key === "teams" || key === "months";
+  const idList = Array.isArray(value) && value.every((v) => v === null || typeof v !== "object");
+  const isFixed = fixed || (FIXED_KEYS.has(key) && (!listKey || idList)) || !!(schema && schema.enum);
   if (Array.isArray(value)) { value.forEach((v, i) => walk(v, schema && schema.items, visit, `${at}[${i}]`, key, isFixed)); return; }
   if (value && typeof value === "object") {
     for (const [k, v] of Object.entries(value)) walk(v, schema && schema.properties && schema.properties[k], visit, `${at}.${k}`, k, isFixed);

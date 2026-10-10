@@ -11,9 +11,9 @@ import { Chip, SectionHead, href } from "../ui.jsx";
 // home-court-strengthen.js), run after every market has a brief.
 const LEAGUE_STAGE = [
   ["1 · Audit, six at once", "Division auditors", "One per division. Each checks every market file against the league calendar and League Pulse, both checked live. It fixes dates and facts that have drifted, and makes sure every partner a brief names turns up in its dossiers."],
-  ["2 · Pull it together", "League Strategist", "Reads all 30 briefs and writes the league read: themes, fan types, big dates, the top plays and the Portland playbook. It also puts every market on one scale, with 50 as league average."],
+  ["2 · Pull it together", "League Strategist", "Reads all 30 briefs and writes the league read: themes, fan types, big dates, the top opportunities and the Portland playbook. It also puts every market on one scale, with 50 as league average."],
   ["3 · Critique", "Completeness Critic", "Goes after the league read for scores that don't line up, generic themes, wrong dates and missing markets. Then it names the weakest briefs."],
-  ["4 · Edit and strengthen", "League Editor + strategists", "The editor fixes every high and medium issue. The weakest briefs go back to their strategists, and a reviewer checks each rewrite."],
+  ["4 · Edit and strengthen", "League Editor and strategists", "The editor fixes every serious and moderate issue. The weakest briefs go back to their strategists, and a reviewer checks each rewrite."],
 ];
 
 const GROUPS = ["Culture", "Basketball", "Fandom", "Retail"];
@@ -110,7 +110,7 @@ export default function Agents({ preselect }) {
 
       {/* League stage */}
       <section className="hc-section">
-        <SectionHead eyebrow="Once all 30 markets are in" title="The league stage">
+        <SectionHead eyebrow="Once all 30 markets are in" title="The league read">
           <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("league")}>Go to the league read →</a>
         </SectionHead>
         <div className="hc-grid hc-grid-4">

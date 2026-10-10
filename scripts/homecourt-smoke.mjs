@@ -31,7 +31,7 @@ async function main() {
     const market = published.includes("por") ? "por" : published[0];
     const routes = [
       ["overview", "#/", /Home\s*Court/i],
-      ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top plays/i : /league stage hasn/i],
+      ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top opportunities/i : /league read isn/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
       ["compare", "#/compare", /Compare\s*markets/i],

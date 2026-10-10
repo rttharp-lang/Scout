@@ -12,7 +12,7 @@ import { LensView, Jersey } from "./parts.jsx";
 
 const SECTIONS = [
   ["brief", "Brief"], ["opportunities", "Opportunities"], ["calendar", "Calendar"], ["product", "Product"],
-  ["fandom", "Fans"], ["culture", "Culture"], ["retail", "Shopping"], ["partners", "Partners"], ["review", "How we checked"],
+  ["fandom", "Fans"], ["culture", "City"], ["retail", "Shopping"], ["partners", "Partners"], ["review", "How we checked"],
 ];
 const CULTURE_LENSES = ["music", "art", "food", "culture", "underground", "hoops"];
 
@@ -93,7 +93,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
             <p style={{ marginTop: 22, fontSize: "clamp(1.1rem, 1.8vw, 1.5rem)", lineHeight: 1.3, fontWeight: 600, maxWidth: "34ch" }}>{s.headline}</p>
           </div>
           <div className="hc-hero-panel">
-            <div className="hc-eyebrow" style={{ color: "rgba(255,255,255,0.7)" }}>What kind of fan base</div>
+            <div className="hc-eyebrow" style={{ color: "rgba(255,255,255,0.7)" }}>Fan type</div>
             <div className="hc-h3" style={{ marginTop: 4 }}>{s.archetype.name}</div>
             <p className="hc-small" style={{ marginTop: 6, color: "rgba(255,255,255,0.82)" }}>{s.archetype.description}</p>
             <hr className="hc-divider" style={{ background: "rgba(255,255,255,0.18)" }} />
@@ -345,6 +345,7 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
 }
 
 const SEASON_LABEL = "2026-27";
+const SEVERITY = { high: "serious", medium: "moderate", low: "minor" };
 
 // The League Pulse entry: this team's 2026-27 situation, checked live.
 // Shows an ISO date (2026-10-07) as "Oct 7, 2026"; anything else passes through.
@@ -503,10 +504,10 @@ function Review({ data, ver }) {
           {cr ? (
             <>
               <p className="hc-small">{cr.summary}</p>
-              <div className="hc-row">{["high", "medium", "low"].map((sv) => <Chip key={sv} tone="line">{cr.issues.filter((x) => x.severity === sv).length} {sv}</Chip>)}</div>
+              <div className="hc-row">{["high", "medium", "low"].map((sv) => <Chip key={sv} tone="line">{cr.issues.filter((x) => x.severity === sv).length} {SEVERITY[sv]}</Chip>)}</div>
               <ul className="hc-list">{cr.issues.slice(0, 8).map((x, i) => <li key={i}><div className="hc-row"><Chip tone={x.severity === "high" ? "pop" : "line"}>{x.type}</Chip><span className="hc-small hc-muted">{x.target}</span></div><div className="hc-small" style={{ marginTop: 4 }}>{x.problem}</div><div className="hc-small hc-muted">The editor's fix: {x.fix}</div></li>)}</ul>
             </>
-          ) : <p className="hc-muted">No critique for this run.</p>}
+          ) : <p className="hc-muted">No authenticity check for this run.</p>}
         </div>
       </div>
       {ver.queue.length > 0 && (

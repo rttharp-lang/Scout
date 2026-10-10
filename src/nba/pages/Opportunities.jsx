@@ -40,12 +40,12 @@ export default function Opportunities() {
 
   return (
     <div>
-      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Every play, every market</div>
+      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Every opportunity, every market</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Opportunity<br />board</h1>
       <p className="hc-lede" style={{ marginTop: 18 }}>All {all.length} opportunities from {new Set(all.map((o) => o.m.id)).size} market briefs, in one place. Filter by the month you're planning for, the product you own or the size of the bet.</p>
 
       <div className="hc-row" style={{ marginTop: 26, gap: 10 }}>
-        <input className="hc-input" placeholder="Search plays, products, places" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search opportunities" style={{ flex: "1 1 240px", maxWidth: 340 }} />
+        <input className="hc-input" placeholder="Search opportunities, products, places" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search opportunities" style={{ flex: "1 1 240px", maxWidth: 340 }} />
         <select className="hc-select" value={month} onChange={(e) => setMonth(Number(e.target.value))} aria-label="Month">
           <option value={0}>Any month</option>
           {SEASON_ORDER.map((m) => <option key={m} value={m}>{MONTHS_LONG[m - 1]}{m === now ? " (now)" : ""}</option>)}
@@ -60,7 +60,7 @@ export default function Opportunities() {
           {[0, 1, 2, 3].map((p) => <button key={p} className="hc-pill-btn" aria-pressed={priority === p} onClick={() => setPriority(p)}>{p ? `P${p}` : "All priorities"}</button>)}
         </span>
         <span className="hc-row" role="group" aria-label="Upside">
-          {["all", "high", "medium", "low"].map((s) => <button key={s} className="hc-pill-btn" aria-pressed={size === s} onClick={() => setSize(s)}>{s === "all" ? "Any upside" : `${s} upside`}</button>)}
+          {["all", "high", "medium", "low"].map((s) => <button key={s} className="hc-pill-btn" aria-pressed={size === s} onClick={() => setSize(s)}>{s === "all" ? "Any upside" : `${s[0].toUpperCase()}${s.slice(1)} upside`}</button>)}
         </span>
       </div>
       <p className="hc-small hc-muted" style={{ margin: "14px 0 18px" }} role="status">{rows.length} match{rows.length === 1 ? "" : "es"}</p>

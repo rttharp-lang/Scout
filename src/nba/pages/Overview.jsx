@@ -43,7 +43,7 @@ export default function Overview() {
             <div className="hc-stat"><b>{publishedCount}<span className="hc-muted" style={{ fontSize: "0.5em" }}>/30</span></b><span className="hc-small hc-muted">markets published</span></div>
             <div className="hc-stat"><b>{ALL_AGENTS.length}</b><span className="hc-small hc-muted">agents per market</span></div>
             <div className="hc-stat"><b>{sources.toLocaleString()}</b><span className="hc-small hc-muted">sources cited</span></div>
-            <div className="hc-stat"><b>{checks.toLocaleString()}</b><span className="hc-small hc-muted">claims checked by critics</span></div>
+            <div className="hc-stat"><b>{checks.toLocaleString()}</b><span className="hc-small hc-muted">claims fact-checked</span></div>
             <div className="hc-stat"><b>{queued.toLocaleString()}</b><span className="hc-small hc-muted">claims still to check live</span></div>
             <div className="hc-stat"><b>{markets.filter((m) => m.verification && m.verification.knowledge === 0).length}</b><span className="hc-small hc-muted">markets fully checked live</span></div>
           </div>
@@ -112,7 +112,7 @@ function MarketCard({ m }) {
           <span className="hc-eyebrow">{t.abbr} · {t.division}</span>
           {m.status !== "complete" ? <Chip tone="line">Not researched yet</Chip>
             : m.verification && m.verification.knowledge === 0 ? <Chip tone="pop">Checked live</Chip>
-            : m.verification && m.verification.live > 0 ? <Chip tone="line" title={`${m.verification.live} of 11 dossiers checked on the live web`}>Partly checked</Chip>
+            : m.verification && m.verification.live > 0 ? <Chip tone="line" title={`${m.verification.live} of 11 dossiers checked on the live web`}>Partly checked live</Chip>
             : <Chip tone="line" title="Written from the agents' own knowledge, current to mid-2026. Check before you act.">Knowledge draft</Chip>}
         </div>
         <div>
@@ -129,7 +129,7 @@ function MarketCard({ m }) {
               <Meter label="Culture" value={m.scorecard.culture} />
               <Meter label="Retail" value={m.scorecard.retail} />
             </div>
-            {top && <div className="hc-small" style={{ borderTop: "1px solid var(--border)", paddingTop: 10 }}><span className="hc-muted">Top play: </span><b>{top.title}</b> <span className="hc-muted">({top.months.map((x) => MONTHS[x - 1]).slice(0, 3).join(", ")}{top.months.length > 3 ? "…" : ""})</span></div>}
+            {top && <div className="hc-small" style={{ borderTop: "1px solid var(--border)", paddingTop: 10 }}><span className="hc-muted">Top opportunity: </span><b>{top.title}</b> <span className="hc-muted">({top.months.map((x) => MONTHS[x - 1]).slice(0, 3).join(", ")}{top.months.length > 3 ? "…" : ""})</span></div>}
           </>
         ) : <p className="hc-small hc-muted" style={{ marginTop: "auto" }}>{t.focus}</p>}
       </div>
@@ -158,7 +158,7 @@ function LeagueTeaser() {
           </ol>
         </div>
         <div className="hc-card-invert">
-          <div className="hc-eyebrow">{league.clusters.length} kinds of fan base</div>
+          <div className="hc-eyebrow">{league.clusters.length} fan types</div>
           <ul className="hc-list" style={{ marginTop: 10 }}>
             {league.clusters.map((c, i) => (
               <li key={i}>

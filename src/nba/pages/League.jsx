@@ -10,11 +10,11 @@ const SORTS = [...SCORE_LABELS, ["az", "A–Z"]];
 // Priority titles end with the brief's opportunity id, e.g. "Banner '26 (ring-night-1973-2026)".
 const priorityTitle = (t) => t.replace(/\s*\([a-z0-9]+(?:-[a-z0-9]+)+\)\s*$/, "");
 
-const SECTIONS = [["themes", "Themes"], ["clusters", "Fan types"], ["scores", "Scores"], ["priorities", "Top plays"], ["portland", "For Portland"], ["watchlist", "Watchlist"]];
+const SECTIONS = [["themes", "Themes"], ["clusters", "Fan types"], ["scores", "Scores"], ["priorities", "Top opportunities"], ["portland", "For Portland"], ["watchlist", "Ones to watch"]];
 
 export default function League() {
   if (!league) {
-    return <div className="hc-empty">The league stage hasn't run yet. It starts once all 30 markets are researched.</div>;
+    return <div className="hc-empty">The league read isn't ready yet. It's written once all 30 markets are researched.</div>;
   }
   const name = (id) => (TEAM_BY_ID[id] ? shortLabel(TEAM_BY_ID[id]) : id);
 
@@ -65,7 +65,7 @@ export default function League() {
       <section className="hc-section">
         <div className="hc-grid hc-grid-2">
           <div className="hc-card" id="priorities">
-            <h2 className="hc-h2">The top plays</h2>
+            <h2 className="hc-h2">The top opportunities</h2>
             <p className="hc-small hc-muted" style={{ marginTop: 6 }}>The best opportunities in all 30 briefs, in order.</p>
             <ol className="hc-list" style={{ marginTop: 12 }}>
               {league.priorities.map((p, i) => (
