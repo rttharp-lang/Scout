@@ -1,0 +1,287 @@
+{
+  "team": "cle",
+  "checked": 62,
+  "verdicts": [
+    {
+      "lens": "food",
+      "claim": "Sokolowski's University Inn (Tremont) is an open Polish cafeteria",
+      "verdict": "removed",
+      "note": "Closed for good in 2020 after the pandemic shutdown. Food now lists Slyman's Tavern instead, which also needs a live open-check.",
+      "source": "https://www.ideastream.org/arts-culture/2020-10-14/iconic-cleveland-eatery-sokolowskis-calls-it-quits"
+    },
+    {
+      "lens": "food",
+      "claim": "Lola Bistro on East 4th is Michael Symon's current flagship",
+      "verdict": "removed",
+      "note": "Lola closed in November 2020. Presti's Bakery replaces it as a place, and Symon's bio now cites Mabel's BBQ only.",
+      "source": "https://news5cleveland.com/lifestyle/food/michael-symon-closes-lola-bistro-on-east-4th-street-after-more-than-20-years-in-business"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Cleveland has no WNBA team and no expansion news",
+      "verdict": "corrected",
+      "note": "Cleveland was awarded the WNBA's 16th franchise (Dan Gilbert, Rocket Arena), to start play in 2028. The name is unconfirmed; a Rockers revival is reported. Rewrote the hoops insight, hook and verify list. The Rockers capsule now leads into the 2028 launch.",
+      "source": "https://en.wikipedia.org/wiki/Cleveland_WNBA_team"
+    },
+    {
+      "lens": "art",
+      "claim": "Dyngus Day falls in April (month 4)",
+      "verdict": "corrected",
+      "note": "Easter 2027 is March 28, so Dyngus Day is Monday, March 29, 2027. Moved to month 3 in art, underground and retail-behavior. Strategy already says late March.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Musica is Akron's long-time club",
+      "verdict": "removed",
+      "note": "Not sure it still operates. Replaced with Akron Civic Theatre, a long-established room.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Kid Cudi's Cleveland-rooted festival activity",
+      "verdict": "corrected",
+      "note": "Softened to general Cleveland ties. The festival details aren't confidently current.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Tower City area hosts Cleveland International Film Festival",
+      "verdict": "corrected",
+      "note": "Tower City Cinemas is no longer a reliable venue. Reworded to Playhouse Square and downtown.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "SPACES gallery at Flats / Superior Viaduct",
+      "verdict": "corrected",
+      "note": "The location may have moved. Softened the neighborhood and flagged it for a live check.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Tower City Center is walkable downtown retail useful for foot traffic",
+      "verdict": "corrected",
+      "note": "Retail there is thin. Reframed as a transit hub and pop-up site, not a volume door.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Mitchell extended through the 2027-28 option",
+      "verdict": "corrected",
+      "note": "Current facts: a 3-year, $150.3M extension with a 2027-28 player option. Reworded in retail-behavior and rhythm.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Mitchell and Harden are Adidas athletes; Mobley is Nike-aligned",
+      "verdict": "corrected",
+      "note": "Mitchell and Adidas is long established. Harden's and Mobley's current shoe deals aren't confidently known, so the dossier now softens them. Strategy still states them as fact.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Aurora Farms Premium Outlets name",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the center still trades as Aurora Farms Premium Outlets. The earlier rename to 'Aurora Premium Outlets (formerly Aurora Farms)' was wrong, so every file now says Aurora Farms Premium Outlets.",
+      "source": "https://www.premiumoutlets.com/outlet/aurora-farms/about"
+    },
+    {
+      "lens": "uniform",
+      "claim": "Per live check the City Edition ... ending a run of five City Editions that said 'The Land'",
+      "verdict": "corrected",
+      "note": "No live check was run. Current facts say only 'first in five City Editions not to say The Land'. Removed the invented 2021-22 to 2025-26 range, the 'run of five' phrasing and the 'liked' reception for 2018-19.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Rust Belt Market makers sell Cleveland pride apparel",
+      "verdict": "removed",
+      "note": "It may no longer operate. Removed the reference.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Rock & Roll Hall of Fame is a recurring City Edition inspiration",
+      "verdict": "corrected",
+      "note": "Not a confident claim. Reworded to a Cleveland civic icon.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Carmen's Cavs-era nostalgia is a thrift touchstone",
+      "verdict": "removed",
+      "note": "No known basis, likely a hallucination. Replaced with Mark Price-era nostalgia.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Burning River name tied to a minor-league hockey era",
+      "verdict": "removed",
+      "note": "No known basis. Removed.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Cleveland Public Auditorium associated with Charge games",
+      "verdict": "corrected",
+      "note": "The Charge's venue is uncertain. Softened to 'confirm whether the Charge play here'.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Rocket Arena site rocketarena.com listed as a source",
+      "verdict": "corrected",
+      "note": "Domain unconfirmed. Replaced with the Wikipedia Rocket Arena article.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Early December hero drop lands on a Cup Friday or weekday home game",
+      "verdict": "unverifiable",
+      "note": "Cup group Fridays end Nov 27. December has only knockout games (Dec 4-5 quarterfinals, Dec 8-9 semifinals), and only if Cleveland qualifies and hosts. Editor: drop 'Cup Friday' for December.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Five straight 'The Land' editions ended; 'after a five-year run'",
+      "verdict": "corrected",
+      "note": "Current facts say only that 2026-27 is the first in five City Editions not to say The Land. 'Five straight' over-reads that. Editor: reword in the thesis, topInsights and uniform.avoid.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nike holds Mobley; Mitchell and Harden are Adidas (thesis, risks, retailPlaybook)",
+      "verdict": "unverifiable",
+      "note": "Mitchell and Adidas is established. Live-check Harden's and Mobley's footwear deals before the brief states them as fact.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nike Factory Store at Aurora Farms",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Nike's store directory lists the Nike Factory Store at Aurora Farms Premium Outlets, 549 S. Chillicothe Rd., Aurora, Ohio, and the center lists it as a tenant. The name is now Aurora Farms Premium Outlets across the brief.",
+      "source": "https://www.nike.com/retail/directory/united-states/ohio"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Friday rivalry drops on home Cup nights, leaning on the Knicks rematch",
+      "verdict": "unverifiable",
+      "note": "We don't know which of the four East Group B games (Knicks, 76ers, Heat, Pacers) are at Rocket Arena. Don't assume the Knicks game is at home.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Late-October home opener and first home stand",
+      "verdict": "unverifiable",
+      "note": "The Cavs have no opening-night game, and their home opener date is unconfirmed. The Philadelphia game is the Cavs' reported road game against LeBron, not a home opener.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cleveland Clothing Co., Ohio Knitting Mills, Hot Sauce Williams, Zygote Press and Beachland are open and open to paid partnership",
+      "verdict": "unverifiable",
+      "note": "All are real, long-running names, but none was live-checked. Confirm operating status and appetite before outreach.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Richfield '76 line needs Hardwood Classics licensing and Austin Carr",
+      "verdict": "unverifiable",
+      "note": "The licensing path and Carr's availability are untested. The hoops and uniform notes also say the WNBA expansion team may share heritage branding.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Cavs hex values wine #860038/gold #FDBB30 vs #6F263D/#FFB81C",
+      "verdict": "unverifiable",
+      "note": "The dossiers disagree. Hoops, music, underground and retail use the second set; the others use the first. Confirm against the current Cavs brand guide. Navy #041E42 is consistent.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Rocket Arena renamed in 2025 from Rocket Mortgage FieldHouse",
+      "verdict": "confirmed",
+      "note": "Matches current facts. Background only, not re-verified in October 2026.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "2016 title ended a 52-year major-sports drought; Game 7 June 19, 2016",
+      "verdict": "confirmed",
+      "note": "Long-established history.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "SVSM, Dru Joyce II, Keith Dambrot, Curry born in Akron, Rockers 1997-2003",
+      "verdict": "confirmed",
+      "note": "Long-established history. Dambrot's current Duquesne role needs a live check.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Richfield Coliseum 1974-94 and the 1976 Miracle of Richfield",
+      "verdict": "confirmed",
+      "note": "Long-established history (Carr, Chones, Thurmond).",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Hot Sauce Williams and Seti's Polish Boys as Polish Boy institutions",
+      "verdict": "unverifiable",
+      "note": "Real, long-running Black-owned spots, but their operating status and locations need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Taste of Cleveland timing and venue (late summer)",
+      "verdict": "unverifiable",
+      "note": "The event's date and venue have shifted over the years. Confirm the 2027 plans.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "MAC Tournament at Rocket Arena in March 2027",
+      "verdict": "unverifiable",
+      "note": "The men's MAC Tournament has been at Rocket Arena. Confirm the 2027 site, the dates and the women's format.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Cleveland Charge home venue for 2026-27",
+      "verdict": "unverifiable",
+      "note": "Venue and schedule are unconfirmed. Verify before any Charge-night launch.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Beachwood Place, Legacy Village, Southpark and Crocker Park tenant mix, Foot Locker/Finish Line/JD doors",
+      "verdict": "unverifiable",
+      "note": "The malls are established, but store-level presence changes fast. Verify door by door.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Cavs team store at Rocket Arena and Fanatics operator",
+      "verdict": "unverifiable",
+      "note": "Store name, operator and any pop-up programming are unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Cleveland Flea venue and schedule; Mahall's and Grog Shop operating",
+      "verdict": "unverifiable",
+      "note": "The rotating venue and the small clubs' status need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Date of Cavs at 76ers game with LeBron's Philadelphia home debut",
+      "verdict": "unverifiable",
+      "note": "Current facts say the date is unverified. Keep the 'date to be confirmed' wording.",
+      "source": ""
+    }
+  ],
+  "summary": "Long-established history held up, from Richfield and Stokes to Bone Thugs and the Rocket Arena rename, and the dossiers match current facts on roster, coach, Cup group and MLK Day. Three live checks found real errors: two closed restaurants in food and a missed WNBA expansion team in hoops. The strategy brief still needs the editor fixes below, and the Cavs hex values disagree across dossiers."
+}

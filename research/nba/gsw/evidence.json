@@ -1,0 +1,146 @@
+{
+  "team": "gsw",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "gsw-c1",
+      "claim": "Nike Union Square (San Francisco) is an open Nike-owned door for the Bay Layers bundle, holiday gifting and the 2027-28 Bay Bridge full line.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Nike San Francisco",
+          "url": "https://www.nike.com/sg/retail/s/nike-san-francisco",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "nike plans nba focused retail revamp in san francisco",
+          "url": "https://www.costar.com/article/626656127/nike-plans-nba-focused-retail-revamp-in-san-francisco/",
+          "publisher": "CoStar",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's store page lists Nike San Francisco at 278 Post Street with regular hours, but the page is undated and the snapshot looks like 2025. A CoStar report (described in the results as January 2025) says the store opened in 1997 and Nike is the building's only tenant. No result confirms the store is open in October 2026.",
+      "action": "No change needed. Confirm on Nike's store locator before planning launches there.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "bay-bridge-90",
+          "bay-layers",
+          "specter-strength-in-numbers"
+        ],
+        "calendar": [
+          2,
+          4,
+          11
+        ]
+      }
+    },
+    {
+      "id": "gsw-c2",
+      "claim": "Oaklandish runs open retail in Oakland and can be the first door for the Bay Bridge pilot and We Believe 20.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Oaklandish",
+          "url": "https://en.wikipedia.org/wiki/Oaklandish",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "oaklandish to open downtown retail shop on wednesday",
+          "url": "https://oaklandnorth.net/2011/07/05/oaklandish-to-open-downtown-retail-shop-on-wednesday/",
+          "publisher": "Oakland North",
+          "published": "2011-07-05"
+        }
+      ],
+      "evidence": "Results show Oaklandish opened a downtown store at 1444 Broadway in 2011, then Dimond (2013) and Jack London Square (2014) shops. A Wikipedia snippet mentions a space closing without saying which or when. Nothing states which stores are open now.",
+      "action": "No change needed. Confirm Oaklandish's current store addresses before naming it as a launch door.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "bay-bridge-90",
+          "we-believe-20",
+          "scraper-spokes"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "gsw-c3",
+      "claim": "Amoeba Music on Haight Street is an open door for the Christmas-night poster.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Amoeba Music",
+          "url": "https://www.afar.com/places/amoeba-music-san-francisco",
+          "publisher": "AFAR",
+          "published": ""
+        },
+        {
+          "title": "Amoeba Music San Francisco",
+          "url": "https://californiathroughmylens.com/amoeba-music-san-francisco/",
+          "publisher": "California Through My Lens",
+          "published": ""
+        }
+      ],
+      "evidence": "Undated guides place Amoeba San Francisco at 1855 Haight Street, opened in 1997, but give conflicting hours. No dated 2026 source confirms it is operating.",
+      "action": "No change needed. Confirm the store is open and willing to carry the poster.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "christmas-crab-feed"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "gsw-c4",
+      "claim": "The Bay Bridge opened Nov 12, 1936, so it turns 90 on Nov 12, 2026.",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "bay bridge anniversary 1936 opening fdr celebrations sf oakland",
+          "url": "https://kqed.org/arts/13921123/bay-bridge-anniversary-1936-opening-fdr-celebrations-sf-oakland",
+          "publisher": "KQED",
+          "published": ""
+        },
+        {
+          "title": "Bay Bridge turns 83-years-old",
+          "url": "https://abc7news.com/post/bay-bridge-turns-83-years-old/5693305/",
+          "publisher": "ABC7 News",
+          "published": ""
+        }
+      ],
+      "evidence": "KQED says President Roosevelt opened the bridge on Nov 12, 1936, six months before the Golden Gate. 1936 plus 90 is 2026. No result mentioned any planned 90th-anniversary event.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "bay-bridge-90"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

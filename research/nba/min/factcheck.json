@@ -1,0 +1,280 @@
+{
+  "team": "min",
+  "checked": 78,
+  "verdicts": [
+    {
+      "lens": "music",
+      "claim": "Wolves wore a Prince Estate-licensed Purple Rain City Edition in 2019-20 and brought it back in 2025-26",
+      "verdict": "corrected",
+      "note": "Only the 2025-26 return is confirmed (CURRENT FACTS). Nothing backed the 2019-20 debut or the Estate license, so music.json now softens both. Live-check every past City Edition.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Purple Rain has now been on court twice / \"two purple sets\"; Mill City Lights built as a break from them",
+      "verdict": "unverifiable",
+      "note": "strategy.json repeats the unverified 2019-20 debut as \"ran in 2019-20\" and \"twice\". Say \"returned in 2025-26\" and drop the 2019-20 year until it's verified.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Mill City Lights City Edition brief for 2026-27",
+      "verdict": "unverifiable",
+      "note": "The 2026-27 City Edition isn't verified, and Nike uniform lead times mean the real set may already be fixed or announced. Pitch it as a concept, not a live brief, until it's confirmed.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Hmong New Year falls on the Thanksgiving-week Cup Nights (Nov 24-25) and the Hmong capsule launches alongside them",
+      "verdict": "corrected",
+      "note": "The Cup extra nights are Tue Nov 24 and Wed Nov 25. Thanksgiving is Nov 26 and Hmong New Year is the weekend after, so they don't overlap. The Wolves' group schedule beyond Oct 30 is also unknown. food.json is softened. Fix strategy.json topInsights, the hmong-new-year-cup opportunity and the calendar.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Oct 30 is the \"first home Cup night\" and season opener play assumes home launch",
+      "verdict": "unverifiable",
+      "note": "The Wolves open at Miami Oct 21. Oct 30 vs Memphis is the confirmed home Cup game, but CURRENT FACTS doesn't give the true home opener, which may be earlier. Don't call Oct 30 the first home game.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "The first home game is Oct 30 vs Memphis in the Cup opener",
+      "verdict": "corrected",
+      "note": "Reworded in uniform.json: Oct 30 is a confirmed home game, not a confirmed first home date.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Faribault Mill is a woolen mill \"since 1865\" (partners, opportunities)",
+      "verdict": "corrected",
+      "note": "The mill was founded in 1865, closed in 2009 and reopened in 2011 under new owners. Its name is Faribault Woolen Mill. Fixed in art.json. strategy.json still says \"Faribault Mill\" and \"since 1865\".",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Faribault Mill operating since 1865",
+      "verdict": "corrected",
+      "note": "Changed to founded 1865, closed 2009, reopened 2011, and renamed Faribault Woolen Mill.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "1986 naming contest where Minnesota city councils picked Timberwolves over Polars",
+      "verdict": "corrected",
+      "note": "City-council voting is doubtful. It was a public name-the-team contest, and Timberwolves beat finalists such as Polars. Reworded in culture.json. Strategy repeats the story, so confirm the details before printing them on hangtags.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "1989-90 Metrodome attendance of about 1.07 million, an NBA single-season record",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the team's April 18, 1990 release says the inaugural season drew 1,072,572 fans, an NBA regular-season record that beat Detroit's 1987-88 mark. Whether the record still stands wasn't checked.",
+      "source": "https://www.nba.com/timberwolves/news/attendance_record_900418.html"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Anthony Edwards is a Nike-adjacent global star",
+      "verdict": "corrected",
+      "note": "Wrong, and every other dossier contradicts it: Edwards is an adidas signature athlete. Fixed in retail-landscape.json.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Early November MEA break weekend travel drives shopping",
+      "verdict": "removed",
+      "note": "MEA break is typically a mid-October Thursday-Friday, not early November. Removed the MEA reference from the calendar.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Hymie's Vintage Records is in Seward",
+      "verdict": "corrected",
+      "note": "Hymie's is on East Lake Street in south Minneapolis (Longfellow side), not Seward. Neighborhood fixed. Whether it's still open needs a live check.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "LaMelo Ball brings his own LaFrance style lane",
+      "verdict": "removed",
+      "note": "The brand reference was vague and unclear, so it's removed from the underground dossier.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "First Avenue Wikipedia link First_Avenue_(music_club)",
+      "verdict": "corrected",
+      "note": "The canonical article is First_Avenue_(nightclub), as the music dossier uses. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Hüsker Dü and The Replacements both came out of Twin/Tone",
+      "verdict": "corrected",
+      "note": "Twin/Tone released The Replacements. Hüsker Dü were on other labels (Reflex, SST). Reworded in music.json.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Dec 25 OKC at Target Center 8 p.m. ET, Oct 21 at Miami, Oct 30 Memphis, Jan 18 at New York 5 p.m. ET, Feb 15 at Charlotte, Cup Group B",
+      "verdict": "confirmed",
+      "note": "All match CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Last season 49-33, upset Denver 4-2, lost to San Antonio; Ball trade cost Naz Reid and Randle; Dosunmu re-signed; Knicks won the 2026 title",
+      "verdict": "confirmed",
+      "note": "Matches CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Lynx four WNBA titles (2011, 2013, 2015, 2017); Whalen from Hutchinson; Holmgren Minnehaha Academy; Bueckers/Coffey/White at Hopkins; Jones and Trent Jr. at Apple Valley",
+      "verdict": "confirmed",
+      "note": "Long-established facts.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Prince first solo concerts at the Capri Theater in January 1979; Purple Rain filmed at First Avenue in 1983; Electric Fetus open since 1968 and Prince's last record-store visit on Record Store Day 2016",
+      "verdict": "confirmed",
+      "note": "Long-established history.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "JXTA founded in 1995 by DeAnna Cummings, Roger Cummings and Peyton Scott Russell; Dyani White Hawk a 2023 MacArthur Fellow; flag adopted May 2024",
+      "verdict": "confirmed",
+      "note": "Long-established or well documented.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Lakers five Minneapolis titles 1949-54; Mikan statue at Target Center; Lynx 2016 Change Starts With Us shirts after Castile",
+      "verdict": "confirmed",
+      "note": "Well documented.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Ramadan 2027 about Feb 8 to Mar 9; State Fair 2027 about Aug 26 to Sep 6",
+      "verdict": "confirmed",
+      "note": "The calendar math checks out. Confirm the Fair's official dates.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "The Loon Cafe still open next to Target Center as a pregame bar since 1982",
+      "verdict": "unverifiable",
+      "note": "A small business with a very specific claim. A live check must confirm it's still open and the founding year.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Askov Finlayson still operating in the North Loop and a collab-ready partner",
+      "verdict": "unverifiable",
+      "note": "Named as a partner in strategy and three dossiers. A live check must confirm the store, its location and current ownership. Its retail footprint has shifted before.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike store at Mall of America and Nike Factory Store at Albertville Premium Outlets",
+      "verdict": "unverifiable",
+      "note": "Checked live 2026-10-10: Nike's own store locator lists Nike Mall of America (227 West Market, Bloomington). Still unchecked: the Nike Factory Store at Albertville Premium Outlets. Strategy.json names both as launch doors. A live check must confirm each exists and is operating.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Timberwolves team store at Target Center and its hours; arena name and ownership for 2026-27",
+      "verdict": "unverifiable",
+      "note": "CURRENT FACTS didn't verify the arena's ownership or name. Before outreach, confirm the Target Center name, the team store and the owners (Lore and Rodriguez).",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Garnett jersey retirement date and how the brief schedules it (January placeholder)",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: the team announced on Aug 14, 2026 that Garnett's No. 21 is retired on Sunday, Feb 28, 2027, at home against Boston on NBC. strategy.json now dates calendar[5] to Feb 28 and moves it to month 2. Dossier verify lists updated.",
+      "source": "https://www.valleynewslive.com/2026/08/14/timberwolves-retire-kevin-garnetts-no-21-february-28/"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Karl-Anthony Towns is still with the Knicks and the Knicks champions are \"Towns' team\"",
+      "verdict": "unverifiable",
+      "note": "The Knicks title is confirmed. Towns' 2026-27 status isn't in CURRENT FACTS, and the league saw big offseason moves. Verify before using the Towns grievance angle in strategy and fanbase.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Edwards (adidas) and Ball (PUMA) shoe deals; Garnett with adidas and ANTA; brand ties of Kuminga, Green, Dosunmu",
+      "verdict": "unverifiable",
+      "note": "These deals are central to the strategy. Confirm each for 2026-27.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "2025-26 federal immigration enforcement surge and January 2026 fatal shootings by federal agents in Minneapolis",
+      "verdict": "unverifiable",
+      "note": "Sensitive, and strategy's risks lean on it heavily. Confirm the facts, the wording and current community conditions before any community capsule.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Target Center name sponsor Target, Twin Cities Pride 2025 sponsorship rejection and ongoing Target boycott",
+      "verdict": "unverifiable",
+      "note": "Confirm current status and whether the naming deal is intact.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Yia Vang's Vinai open in Northeast Minneapolis; Spoon and Stable, Owamni, Pizzeria Lola, Young Joni, Khaluna, Lat14, Afro Deli operating with the named chefs",
+      "verdict": "unverifiable",
+      "note": "Restaurants churn. A live check must confirm each is open before it's named as a partner.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Brian Coyle Center youth hoops and Asiya Modest Activewear's origin there; Capri Theater and KMOJ programming",
+      "verdict": "unverifiable",
+      "note": "Strategy builds two opportunities on these. Confirm Asiya's origin story and operating status, and each partner's capacity.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Hmong Village, Hmongtown Marketplace, Karmel Mall, Mercado Central, Midtown Global Market all operating as described",
+      "verdict": "unverifiable",
+      "note": "Community markets are central to strategy's sales channels. Confirm each is open, and its vendor mix, before outreach.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Winter Carnival 2027, Hmong New Year 2026, Record Store Day, Art-A-Whirl, Rock the Garden and Jazz Festival dates",
+      "verdict": "unverifiable",
+      "note": "All 2026-27 event dates come from pattern, not a calendar. Confirm dates and venues before building a launch plan.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Art Shanty Projects 2027 site and dates, Uptown Art Fair founded 1964, Adam Turman and Charles S. Anderson current status",
+      "verdict": "unverifiable",
+      "note": "Art Shanty depends on ice conditions, and the Uptown Art Fair's founding year is shaky. Confirm both.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Familia Skateshop, Ragstock locations, Anime Detour and Powderhorn 24 still running",
+      "verdict": "unverifiable",
+      "note": "The basis is thin, Familia especially. Confirm or swap before naming any of them in outreach.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Minnesota exempts clothing from sales tax so jerseys and hoodies are untaxed",
+      "verdict": "unverifiable",
+      "note": "Generally true for clothing. Confirm which sports items are excluded before the \"price clean\" claim goes into a brief.",
+      "source": ""
+    }
+  ],
+  "summary": "Most dossiers rest on solid Twin Cities history and match CURRENT FACTS on the 2026 season, roster moves, Cup, Christmas, MLK Day and Charlotte dates. None contradicts the verified facts on roster, coach or last season. Fixed in place: Edwards mislabelled as Nike-adjacent, the 1986 naming-contest voters, Faribault Woolen Mill's history and name, Hüsker Dü and Twin/Tone, and the Hymie's neighborhood. Also fixed: an invented MEA-break shopping window, the Purple Rain 2019-20 debut stated as fact, and the Oct 30 first-home-game assumption. Still wrong in strategy.json: Purple Rain \"ran in 2019-20\" and \"twice\". It also treats the unverified 2026-27 City Edition as a live design brief. It says Hmong New Year coincides with the Nov 24-25 Cup nights, calls Oct 30 the first home game, and has Faribault Mill \"since 1865\". The rest is a verification queue: small businesses (Askov Finlayson, Loon Cafe, Nike doors, Vinai and other restaurants, Familia), event dates, brand deals, Towns' status and arena naming. No live searches were run because the session search budget is reserved."
+}

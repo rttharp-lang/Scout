@@ -1,0 +1,132 @@
+{
+  "team": "chi",
+  "issues": [
+    {
+      "target": "calendar / opportunities (all October-November launches)",
+      "type": "other",
+      "severity": "high",
+      "problem": "Today is Oct 7, and the plan launches new product on Oct 11, in mid-October (1901 W. Madison plus a commissioned mural), at the home opener and in the first week of November (a new parka system). New apparel needs 9-12 months of lead time. A Wabash Arts Corridor mural needs commissioning, permits and artist contracts. Nothing here can ship this season as written.",
+      "fix": "Re-label the brief as a 2027-28 build plan. For 2026-27, stick to what exists: heritage and current Bulls outerwear, boutique seeding of existing styles, and content that costs no inventory (partner introductions, the documentary, fieldhouse floor talks). Give the 2027 Hawk Season (Nov 2027) and a spring 2027 mural real launch dates."
+    },
+    {
+      "target": "uniform (Zero Point: 1901 W. Madison)",
+      "type": "other",
+      "severity": "high",
+      "problem": "The 2026-27 City Edition is locked and in production, and the brief never says which season this concept targets. Court inlays (grid lines on the sideline maple, the Madison line through center court) belong to the Bulls and the United Center, which the Blackhawks share, not to Nike. The \"avoid\" list also says what earlier City Editions did (flag and skyline) without checking the actual sets.",
+      "fix": "Pitch it explicitly as the 2027-28 City Edition brief, with a Bulls-and-NBA review path. Drop the court tie-in or mark it as a Bulls decision. Pull the real list of past Chicago City Editions before claiming the grid, street-sign and Sullivan ideas are unused."
+    },
+    {
+      "target": "calendar[0] (Oct 11, Bulls at Nuggets / Chicago Marathon)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "Oct 11 is a preseason road game in Denver on ESPN. Nike doesn't control that broadcast, so it can't \"tease the Lights Out pieces on air\". A marathon-weekend layering drop sells to runners and out-of-towners, who aren't Bulls buyers. It also sits at the same priority as the Cup Nights.",
+      "fix": "Cut the broadcast tease. If the marathon matters, make it a Michigan Avenue flagship moment for tourists and gifts, using existing heritage product, and confirm Nike's actual role at the marathon first. Tie the Lights Out launch to the confirmed home opener, not \"date to confirm\"."
+    },
+    {
+      "target": "opportunities[hawk-season-outerwear] / collection theme 'Hawk Season'",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "In a building shared with the Blackhawks, \"Hawk Season\" reads as hockey merchandise to anyone outside the weather joke. Bulls product under that name would invite a Blackhawks IP question. The parka also competes with Carhartt, North Face, Canada Goose and every local coat, so a licensed Bulls parka has to beat the coat fans already own. The KPI of \"share against Fanatics-run assortments\" is muddled.",
+      "fix": "Rename it around the walk or the wind that only locals say (for example the Ashland walk or lake wind), and keep \"Hawk\" to the copy. Define the parka as a coat worn over a jersey, with proof it works (a wear-test with season-ticket holders). Set the KPI as sell-through by price tier."
+    },
+    {
+      "target": "opportunities[bhm-wall-of-respect] / calendar Feb 'AfriCOBRA-principle graphic tee'",
+      "type": "appropriation",
+      "severity": "high",
+      "problem": "The brief blends two things. The 1967 Wall of Respect was made by the OBAC Visual Arts Workshop, showed real Black heroes and no longer exists. AfriCOBRA formed afterward, with its own founders, estates and a codified color and lettering aesthetic. A tee made on \"AfriCOBRA principles\" without named artists lifts a movement's style. Wall of Respect portraits also carry likeness rights. A February-only launch risks reading as a seasonal Black History Month grab by a brand with no art-world track record here.",
+      "fix": "License or commission named living AfriCOBRA members and estates (and take guidance from the South Side Community Art Center), with a revenue share and billing on the product. Otherwise drop the capsule. Never reproduce Wall of Respect portraits. Fund it year-round instead of as a one-month drop, and let the artists set the launch date."
+    },
+    {
+      "target": "opportunities[fieldhouse-public-league] / partners (Chicago Park District, CPS, IHSA)",
+      "type": "other",
+      "severity": "medium",
+      "problem": "Public agencies and school bodies move slowly and restrict commercial use. Park District co-branding and floor refurbishments need board-level approval. CPS and IHSA both limit how student-athlete names and school marks appear in advertising. A Nike-funded documentary following minors adds consent and eligibility questions. Mixing Mac Irvin Fire (a Nike-sponsored club program) into a Public League story also blurs two worlds that locals keep apart.",
+      "fix": "Sequence it. Start with a donation-led floor refurbishment and no product on the floor. License school shirts only where a school or athletic department signs. Film a program only with clearance from the school, parents and IHSA. Keep Mac Irvin Fire as the wear-test and Combine Week partner only."
+    },
+    {
+      "target": "opportunities[madison-street-one-city] area-code tees (312, 773, 708, 630, 847)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "Area-code tees are the most crowded local-shirt idea in Chicago, and indie shops and street vendors already own 312 and 773. The 630 and 847 editions risk looking like a suburban mall gimmick. The insight about sides and grid numbers is stronger than the codes.",
+      "fix": "Lead with the grid-coordinate and street-sign graphics, which are Bulls-specific. Keep area codes as one entry-priced add-on. Give 708 the real South Suburb treatment, made with a south-suburb maker, and drop 630 and 847 unless a suburban partner asks for them."
+    },
+    {
+      "target": "opportunities[lights-out-opener] 'Rebuild Mixtape' tee and two-player select-screen tees",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The brief warns that a skeptical fan base will mock rebuild hype, then puts the word \"Rebuild\" on a tee and prices a 31-51 team's pain. The select-screen duo tee leans on NBA Jam art (a Midway and Warner Bros. IP). The roster-as-mixtape idea needs NBPA group licensing for three players, one a rookie. The real insight in the arcade idea was that NBA Jam's Bulls had no Jordan.",
+      "fix": "Retitle the tee without \"Rebuild\" (a tracklist of the roster's numbers works without the word). Draw original dot-matrix numerals, and get NBPA clearance before concepting any player-pair tee. Keep the NBA Jam link in the story, not the artwork."
+    },
+    {
+      "target": "opportunities[bhm-wall-of-respect] chef series / calendar Jan",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "A \"South Side chef series\" with a patch tee has no basketball or uniform hook. Black-owned restaurant partners could read it as the brand borrowing their trade dress, which the food dossier warned against. It fills a calendar gap more than it follows an insight.",
+      "fix": "Cut the patch tee. If the series stays, make it a paid event or fund for the restaurants, with no Nike branding on their goods, and run it only if the owners ask."
+    },
+    {
+      "target": "opportunities[born-here-summer] / partners (Chosen Few DJs)",
+      "type": "other",
+      "severity": "medium",
+      "problem": "A Chosen Few capsule \"released at the July picnic\" works as a Bulls or NBA product only if the team and league license it. House heritage is not a Bulls property. Selling it as both a Nike lifestyle line and Bulls product would confuse who gets the credit and the money.",
+      "fix": "Pick the lane up front: either a Nike-credited collaboration with no NBA marks, or a Bulls-licensed piece approved by the Bulls and the NBA. Either way, name the Chosen Few DJs on the product, share revenue, and let them set dates around the picnic."
+    },
+    {
+      "target": "partners (National Museum of Mexican Art, Pilsen muralist) / risks",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "Naming a living muralist (Hector Duarte) and a Pilsen launch in a strategy document puts a neighborhood under federal immigration enforcement into a brand story before anyone has agreed. A brand drop in Pilsen also carries the gentrification optics the art dossier flagged. The brief gives it a low priority and no calendar slot.",
+      "fix": "Remove named individuals until they agree. Fund Pilsen and Little Village institutions with no product launch or crowd event. Decide Noche Latina only after talking to the museum and artists about timing and safety."
+    },
+    {
+      "target": "topInsights / opportunities",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "Matas Buzelis is the one Chicago-born face of the rebuild, he is Lithuanian-American, and Chicago has a deep Lithuanian community behind a basketball-obsessed Lithuania. The brief mentions him in an insight and a verify line but builds nothing around him. The food dossier even asks for a community night with Lithuanian bakeries and organizations.",
+      "fix": "Add a Buzelis lane built with his family's blessing and Lithuanian-Chicago groups (Lithuanian Plaza, Balzekas Museum, community schools): a fall community night and a small paid collaboration. Confirm his ties first. Don't put Lithuanian national symbols on Nike product without Lithuanian federation clearance."
+    },
+    {
+      "target": "opportunities (missing)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Four strong dossier ideas never reach an opportunity. Two are Chicago Imagist art (a Chicago-only visual language for a long, gangly roster) and JB skating, with the rink as a Bulls track suit. The others are Nike SB and Wicker Park skate culture, and queer nightlife from Northalsted to South Shore. The rink shows up only as a partner entry.",
+      "fix": "Promote the JB-rink track suit to its own opportunity. It has real uniqueness, a community partner and a ready silhouette. Use Imagism as the art direction for the Zero Point sideline graphics. Say why skate and Pride are left out instead of dropping them silently."
+    },
+    {
+      "target": "calendar[11] (Bud Billiken / Frankie Knuckles Day / Labor Day ARC)",
+      "type": "timing",
+      "severity": "low",
+      "problem": "The summer plan stacks three community moments with Bulls product in the dead zone. Two of them, the Bud Billiken parade and Frankie Knuckles Day, are community events where a brand drop can look like selling on someone else's day. Bulls-branded back-to-school products also need licensing for the parade's organizers.",
+      "fix": "Choose one summer anchor: Bud Billiken back-to-school gifts through Chicago Defender Charities. Leave Frankie Knuckles Day to the house partners, and keep Nike out of it unless invited."
+    },
+    {
+      "target": "opportunities[fieldhouse-public-league] Downstate '39 capsule",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "\"EST. 1939\" reads as the year an IHSA official coined \"March Madness\", not the start of the state boys' tournament, which began in 1908. The IHSA also splits into classes with several sites, so \"Downstate\" is not one bracket.",
+      "fix": "Use the correct 1908 tournament date or drop the date. Get IHSA permission before any bracket, and check the classes and finals sites for 2027."
+    },
+    {
+      "target": "calendar (Cup Nights)",
+      "type": "timing",
+      "severity": "low",
+      "problem": "The brief calls the Cup \"the only guaranteed branded-night slate\", but the Bulls play only four group games, probably two at home. The Cup uses the league's regular uniforms with Cup court graphics that the NBA owns. A Bulls-specific Cup product story has little to hang on.",
+      "fix": "Treat the Cup as a watch-party and gifting tie-in in the Friday slots, and plan the two home games once the schedule is out. Skip any Cup-specific Bulls apparel claim."
+    },
+    {
+      "target": "uniform.details / motifs (brown honorary street-sign tab)",
+      "type": "other",
+      "severity": "low",
+      "problem": "A brown honorary-sign tab \"saluting Chicago hoops\" could read as a memorial to a specific person. The honorary-sign system exists for named individuals, and the hoops dossier calls Benji Wilson's story off-limits for product. The tab is also hard to square with NBA uniform marking rules.",
+      "fix": "Make the tab about the street grid, not an honoree. Drop it from the on-court uniform unless the league's marking rules allow it and the Bulls approve."
+    }
+  ],
+  "strengths": [
+    "The Madison Street and grid idea passes the swap test. 1901 W. Madison, the State-and-Madison zero point, the North/South split and the Cubs-Sox sides belong only to Chicago. They give the uniform a story that doesn't need Jordan.",
+    "It handles heritage and Jordan Brand correctly, as an evergreen layer for Jordan Brand to own. It also names the areas to avoid: the rival-brand hometown heroes (Rose, Parker, Reese, Freshgoods) and the \"Chicago\" colorway.",
+    "Hawk-season outerwear is grounded in the cold, the walk to the arena and the winter spending peak. The price ladder against the 10.25% tax is realistic.",
+    "The risk register is specific on drill and gang-nation symbols, trademarked phrases (March Madness, Three-Peat, the intro song) and the Black-built origins of house, JB skating and AfriCOBRA. It states paid and credited co-authorship.",
+    "The partner list (Chosen Few DJs, Mac Irvin Fire, Park District, Notre, South Side Community Art Center, The Rink, Chicago Defender Charities) is real local institutions, not tourist-guide names."
+  ],
+  "summary": "The brief is strong on specificity and respect. The Madison Street grid and Hawk-season ideas are Chicago-only, the partners are real and the risks name the right traps. It fails on realism: today is Oct 7 and new product launches within days, so it needs reframing as a 2027-28 plan with a thin 2026-27 seeding layer. Name and pay the artists behind the AfriCOBRA and Wall of Respect capsule. Promote Buzelis's Lithuanian-Chicago lane and the JB rink suit over weaker items like the chef series and 630/847 area-code tees. Several licensing paths (Park District, CPS, IHSA, NBPA, the Bulls and NBA for court and City Edition) are assumed, not planned."
+}

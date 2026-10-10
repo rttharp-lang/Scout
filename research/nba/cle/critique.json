@@ -1,0 +1,111 @@
+{
+  "team": "cle",
+  "issues": [
+    {
+      "target": "calendar / opportunities[0] name-and-nickname",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The year's biggest sentiment event has no plan. LeBron James, now a 76er, plays the Cavs in the Cup East Group B and the regular season, and the Cavs are due in Philadelphia for his home debut. The calendar leans hardest on the Knicks Cup 'rematch', but fans feel most about LeBron coming back, not the sweep. The risks table names the LeBron problem. Nothing in the calendar answers it.",
+      "fix": "Add a 'LeBron returns' row once the date is confirmed for the first 76ers game at Rocket Arena and the Cup Friday against Philadelphia. Keep it to Akron and 2016 heritage, cleared with the LeBron James Family Foundation. Use no player-led graphics, and mix gratitude with 'we are the Cavs now' copy. Demote the Knicks rematch to a secondary Cup beat."
+    },
+    {
+      "target": "opportunities[0] name-and-nickname (co-label 'The Land' side line)",
+      "type": "weak-link",
+      "severity": "high",
+      "problem": "The side line has no named lead. 'A Black Cleveland creator leading' is unnamed. The partners list (Cleveland Clothing Co., Ohio Knitting Mills, Hot Sauce Williams, Karamu) has no Black-owned apparel or hip-hop name behind the nickname. The strategy says that nickname belongs to Black Cleveland and hip-hop. It's also unclear who may put Cavs wine and gold, Cavs marks or 'The Land' on a local brand's product. That takes NBA and Cavs licensing, not just a fee and a hangtag credit.",
+      "fix": "Fix the sourcing before design. Hold an open call vetted with Karamu and local Black-owned shops, and name a hip-hop voice from the music dossier, paid and credited. State the legal route (NBA and Cavs licensed collab, with Nike or Fanatics as manufacturer) and who owns the 'The Land' mark and revenue. Without this, the two-layer launch looks like Nike renting the nickname."
+    },
+    {
+      "target": "opportunities[2] mlk-karamu / calendar Jan",
+      "type": "other",
+      "severity": "high",
+      "problem": "Feasibility and rights. Commissioning in October and November for a Jan 11-18 release doesn't fit a normal apparel lead time. New cut-and-sew warm-up shooting shirts can't be made in 8 weeks. The risk section flags the Jesse Owens estate but not the King estate, which controls Dr. King's name, image and words. MLK Day product also invites a 'commercializing the holiday' backlash.",
+      "fix": "Make the artist series screen-print or embroidery on existing Nike blanks, so only the art is new, and say so. Keep Dr. King's name, likeness and quotes off the product, and clear anything else with the estate. Lead with Karamu's own story, tell fans where the money goes, and list who is paid in the launch copy."
+    },
+    {
+      "target": "collection / Rubber City 330 sneaker; uniform 'The Crossing'",
+      "type": "other",
+      "severity": "high",
+      "problem": "The 2026-27 City Edition is set, so 'The Crossing' can't reach a court before 2027-28 at the earliest. The brief never says so. It still schedules a Dec 1-15 Akron footwear colorway and Nov-Dec 330 apparel with Akron creators and the LeBron Foundation. A tread-outsole colorway can't be designed, approved and produced in two months. An all-new limestone base and a half-court limestone apron also fall outside Cavs trade dress and the NBA's City Edition court rules.",
+      "fix": "Label The Crossing as a 2027-28 pitch for the City Edition process, with a limestone-and-wine option and an Association-safe fallback. Make the 330 sneaker a 2027-28 or later concept. Build the December 330 range as print and embellishment on existing blanks. Treat the apron as a Cup or arena idea, not a uniform deliverable."
+    },
+    {
+      "target": "calendar Jun / opportunities[5] richfield-heritage",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "June 19 collides with Juneteenth, a Black-heritage date Nike and the NBA already mark. It also falls in the Finals window, and the 2016 title came at the end of a Game 7 that fans will already be marking on their own. The Richfield and Price-era story has a different audience from the 2016 anniversary, so tying them together weakens both.",
+      "fix": "Separate the two. Tie Richfield to a February heritage night or a Classic Edition game, which the strategy already half-proposes. Keep June 19 for a short 2016 gratitude post, with product only if the Cavs are still playing. If June 19 is used at all, check it with Karamu and the Juneteenth partners first."
+    },
+    {
+      "target": "opportunities[0] when (Small Business Saturday, Nov 28) and calendar Nov",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The local-maker launch is set for Saturday Nov 28. In 2026 that's the Ohio State-Michigan weekend (to verify), the loudest football date in Ohio. It also sits between the last Cup Friday, Nov 27, and a Browns Sunday, Nov 29. The brief says 'avoid Browns Sundays' but misses the Saturday clash. The 'Browns fade' framing for Dec 1-15 also assumes a bad Browns season that nobody can know in October.",
+      "fix": "Move the local launch to Nov 27 or the following Saturday, or run it through the tailgate with OSU-Michigan-aware messaging. Anchor December to the Cavs schedule and Cup knockouts, and drop the 'Browns fade' assumption."
+    },
+    {
+      "target": "calendar Oct / moments[0]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The October row calls the Oct 11 preseason game the first chance to 'put the new City Edition in front of fans'. City Edition uniforms have normally debuted in November, and the dossiers don't confirm a release date for this one. The row also treats a preseason game as the home opener, when Cleveland has no opening-night game. The 'Cleveland' wordmark hoodie and Lake Effect fleece seeded in the arena store depend on a reveal that may not have happened.",
+      "fix": "In October, seed only items that don't depend on the City Edition: Association-led tees, caps and Lake Effect fleece. Book the wordmark layer and any City Edition reference for the confirmed on-sale and first-wear dates, which should come from the live check."
+    },
+    {
+      "target": "topInsights[2] / risks[0]",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The Adidas risk is overstated and the remedy is wrong. Nike supplies the NBA jersey, so a Mitchell or Harden swingman is a Nike-made sale whoever signs his shoes. Telling the team to 'keep them to licensed jerseys' under-uses the market's top name-and-number demand. The Mobley-as-Nike-face call leans on a footwear deal the brief itself lists to verify. The newcomers (Peyton Watson, Mario Hezonja) aren't in the plan at all.",
+      "fix": "Say plainly that shoe deals don't affect jersey and apparel sales. Put Mitchell and Harden jerseys in the winter gift plan, and keep Adidas-linked stories out of campaigns. Add a small name-and-number window for Watson once the roster settles. Confirm each cast athlete's footwear status before casting."
+    },
+    {
+      "target": "collection / Lake Effect and Poster Ink",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "Swap test: gray lake sky, tonal Deco embossing, heavyweight fleece, waxed canvas and photocopy punk-flyer ink would fit Buffalo, Detroit, Chicago or Milwaukee. The only Cleveland proof is in the named sources (Terminal Tower, Hope Memorial Bridge, Zygote Press, Beachland). The 'Lake Erie slate' and 'overcast gray' palette is the least ownable part.",
+      "fix": "Bring in a shape only Cleveland has. The Hulett ore unloaders on the Cuyahoga are the strongest, with the stepped geometry of Terminal Tower and Hope Memorial Bridge in support. Put the Hulett silhouette or its truss diagonals on Lake Effect pieces. Replace slate and gray with a named local color source such as ore-dock rust. Tie the poster work to named Cleveland rooms, not a generic punk look."
+    },
+    {
+      "target": "opportunities[6] parish-and-plate / topInsights[5]",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The insight calls the food calendar a major finding, but the opportunity is rated priority 3 and 'low' size. Nothing in the dossiers shows fans want food-themed Cavs product. The Polish Boy credit goes only to Hot Sauce Williams and leaves out other long-standing makers (Seti's Polish Boys is the best known, to verify). The Lent Fridays and Dyngus Day work also touches church and holiday imagery.",
+      "fix": "Downgrade the insight to a local-goodwill layer, not a headline finding. Credit the full Polish Boy lineage and ask the makers who the lead partner should be. Keep it to sock and neighborhood-tee runs sold through partners. Keep church imagery off everything unless the parish asks for it."
+    },
+    {
+      "target": "partners / provenance names",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "'Cleveland Clothing Co.' may not be the exact trading name of the Cleveland pride brand, which is commonly known as CLE Clothing Co. The uniform dossier also lists 'CLE vs Everybody-style tees' as if it were a brand. Misnaming a partner in a deck for local makers costs trust in a market that rewards insider accuracy.",
+      "fix": "Confirm each local brand's exact business name, ownership and licensing status before any outreach, and correct the partner list. Drop the 'CLE vs Everybody-style' phrasing or credit a real maker."
+    },
+    {
+      "target": "risks / opportunities[3] akron-330",
+      "type": "other",
+      "severity": "low",
+      "problem": "The IP risk list leaves out the All-American Soap Box Derby, whose name, Derby Downs and marks its organization controls. 'Blimp silver' also edges toward Goodyear's trade dress, though the brief says to avoid its marks. The 330 capsule leans on both.",
+      "fix": "Add the Derby organization to the licensing list, or use plain stripe-and-numeral graphics with no Derby wording. Use a neutral metallic that can't be read as a Goodyear reference."
+    },
+    {
+      "target": "missed-opportunity: Latino West Side and AsiaTown",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The culture dossier names the Puerto Rican and Latino West Side and AsiaTown, and the food dossier names newer Latino and Asian corridors. The brief builds nothing for them, though Hispanic Heritage Month (to Oct 15) overlaps the October seeding window. It shows Cleveland as Polish, Italian and Black East Side only.",
+      "fix": "Add one small, paid, community-led item: a Latino West Side or Clark-Fulton collaboration with a named local artist or organization. Time it to the end of Hispanic Heritage Month if there's still time, or to a spring home game. Add AsiaTown as a secondary door only if a partner is identified."
+    },
+    {
+      "target": "topInsights[6] / archetype",
+      "type": "generic",
+      "severity": "low",
+      "problem": "'The Earned Believer' and 'redemption sells, swagger doesn't' could describe Buffalo, Pittsburgh or Boston. The Cleveland part sits in the evidence, not in the sentence that sets the strategy. That evidence is The Drive, The Fumble, The Shot, the 2016 comeback from 3-1 and 52 years of drought.",
+      "fix": "Rewrite the archetype around a Cleveland-only moment, such as the 3-1 comeback and the guarded reaction to a Game 7 rout of Detroit. A designer should read it as this city, not a Rust Belt type."
+    }
+  ],
+  "strengths": [
+    "It reads the 'Cleveland' for 'The Land' wordmark switch as a community-ownership question. It plans a credited, paid local layer instead of Nike reclaiming the nickname.",
+    "It uses the MLK Day game against Detroit, the Cup Friday schedule and the no-Christmas-game gap correctly, and builds around the Cavs' real national windows.",
+    "Two markets, 216 and 330, linked by the Aurora Farms Premium Outlets: a sharp retail insight with a clear product consequence.",
+    "Heavyweight winter layers with chest graphics, a good-better-best price ladder and mall-ring distribution match how Northeast Ohio buys.",
+    "The rapid-ship playoff reserve with 'unfinished business' language is realistic after the Knicks sweep and public doubts about the roster, and it doesn't promise a title."
+  ],
+  "summary": "A culturally literate brief with a sound retail map and honest framing. It is weakest on execution. The LeBron return is unplanned, and the 'The Land' side line has no named Black-led partner or licensing route. Several launches ignore apparel lead times. A few themes, Lake Effect and the archetype, could belong to any Great Lakes city. Fix those before the strategy goes to Portland."
+}

@@ -1,0 +1,660 @@
+{
+  "team": "bos",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 20-30 (assortment locked now)",
+      "kind": "event",
+      "start": "2026-10-20",
+      "end": "2026-10-30",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off); Emirates NBA Cup 2026 group play lists Hawks at Celtics on Oct 30",
+      "actBy": "2026-10",
+      "actNote": "Lock the tip-off assortment now, with nothing Brown-related.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "First cold snap; Black Friday and Nov 24-25 Cup Nights",
+      "kind": "season",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after Thanksgiving (fourth Thursday in November): Nov 27, 2026. The Nov 24-25 Cup Nights are also in league-calendar.json. The first cold snap has no date.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Dec 1-25",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games (Heat at Celtics, 2:30 p.m. ET)",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "First snow emergency or nor'easter forecast; mid-January backstop",
+      "kind": "launch",
+      "start": "2027-01",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Weather trigger, with a mid-January backstop the team sets itself.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Jan 21",
+      "kind": "event",
+      "start": "2027-01-21",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Jan 21 Sixers game is not in league-calendar.json or evidence.json.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "February, Celtics Black History home game (date to confirm)",
+      "kind": "launch",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February. The Celtics' heritage home game date is still to confirm.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "production-capacity",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Week of the South Boston parade (expected Sunday, Mar 14) and the home game nearest Mar 17",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Parade expected Sunday, Mar 14, 2027. The home game nearest Mar 17 is not checked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Apr 11 season end through the first round; avoid Marathon Monday, Apr 19",
+      "kind": "season",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11, 2027); Play-In Tournament Apr 13-16. Playoff start (Apr 17 or 18) is still tentative.",
+      "actBy": "2027-04",
+      "actNote": "Stage the playoff pack, with replenishment ready, before the bracket sets.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Conference rounds; Haitian Flag Day May 18",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Haitian Flag Day is May 18 every year. Conference-round dates are not set.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "production-capacity",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Early June",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Brief says early June. The 2027 Dorchester Day date is not checked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "production-capacity",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "July-August",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "BNBL 2027 season dates are not checked. Cape Verdean Independence Day is July 5.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Late August",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Late August. Carnival dates are not checked, and the 2027 sales tax holiday may not be held.",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Sept 1, 2027 and the first weeks of the semester",
+      "kind": "event",
+      "start": "2027-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Allston Christmas is Sept 1, Boston's standard lease turnover day.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "specter-banner-heritage",
+      "consumer": "Lifelong Celtics diehards and holiday gift buyers who back the franchise while they make up their minds about the roster.",
+      "insights": [
+        0,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "fleece",
+        "jersey",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Lock the heritage assortment now for tip-off week (Oct 20-30) through holiday.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm which 2026-27 games the Celtics wear Specter, especially Dec 25.",
+        "Confirm what Boston's Specter merchandise includes and how deep the stock is.",
+        "Clear the Johnny Most estate before printing any call dates.",
+        "Test heritage pieces against player pieces with Pro Shop and Newbury buyers."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Bodega"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "noreaster-layering",
+      "consumer": "Commuting fans, suburban families and New England regional fans who need Celtics gear for wet winters.",
+      "insights": [
+        4,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear",
+        "jersey"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Reserve Space Saver stock early, before the core line opens with the first November cold snap.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Cost the shell, puffer and knit to land at or under $175.",
+        "Confirm Space Saver stock can be held until the first snow emergency or the mid-January backstop.",
+        "Test the over-the-hoodie jersey fit with commuting fans.",
+        "Confirm Nike Boston and Nike Factory Store Wrentham are open to carry the line."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "stock-availability",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "concepts-converse-tatum",
+      "consumer": "Sneakerheads, students and Gen Z Tatum fans who shop Concepts and Bodega.",
+      "insights": [
+        1,
+        0
+      ],
+      "categories": [
+        "footwear",
+        "outerwear",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Get NBA and Celtics approval of team marks and a Jordan colorway slot. A holiday restock before Dec 25 is the earliest date.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Tatum's health and 2026-27 Jordan Brand colorway slots.",
+        "Confirm NBA and Celtics approval timelines for a co-branded capsule.",
+        "Confirm Bodega's operation and New Balance commitments before it carries the drop.",
+        "Confirm Converse is still at Lovejoy Wharf and whether it has a customization space."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Concepts",
+        "Bodega",
+        "Boston embroidery shop (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "russells-boston-firsts",
+      "consumer": "Roxbury, Dorchester and Mattapan fans and Black Boston creatives.",
+      "insights": [
+        3,
+        0
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "kids",
+        "accessory"
+      ],
+      "fit": [
+        "to define",
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Confirm the Celtics' February heritage home date and license Russell's name and story through his estate before launch.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check licensing from the Bill Russell estate.",
+        "Confirm Slade's current owners want a paid partnership, with Hibernian Hall as the fallback.",
+        "Check whether Ekua Holmes or Rob 'Problak' Gibbs and Artists For Humanity's youth studio are available.",
+        "Agree the share of proceeds returned to partners and Roxbury youth basketball."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "production-capacity",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Ekua Holmes",
+        "Rob 'Problak' Gibbs",
+        "Artists For Humanity",
+        "Slade's Bar & Grill",
+        "Museum of African American History",
+        "Hibernian Hall"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "rivalry-archive-sixers",
+      "consumer": "Celtics diehards and rivalry-night crowds at the Garden and Causeway Street pubs.",
+      "insights": [
+        2,
+        6
+      ],
+      "categories": [
+        "tee",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Use the Oct 10 preseason crowd only as a social listen to shape the Jan 21 plan.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Read the Oct 10 social listen for how fans feel about Brown and LeBron.",
+        "Test the date-only product with diehards for any read as a dig at Brown.",
+        "Confirm the Jan 21 game date and Pro Shop allocation.",
+        "Clear the Johnny Most estate before setting any call text."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "brand-safety",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Boston flyer artist (to be commissioned)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "new-england-area-codes",
+      "consumer": "Suburban families and New England regional fans who rep an area code, from 781, 508 and 978 out to 401 and 207.",
+      "insights": [
+        5,
+        4
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "jersey",
+        "kids"
+      ],
+      "fit": [
+        "to define",
+        "kids"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Open the area-code set for Black Friday in outlet and mall doors.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Check Hartford-area fan data before counting on Connecticut.",
+        "Check the Maine Celtics' affiliation before leading with 207.",
+        "Confirm Nike Factory Store Wrentham and the Pheasant Lane doors are operating.",
+        "Set numbered run sizes by home market and track units by code and state."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "stock-availability",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "neighborhood-courts",
+      "consumer": "Roxbury, Dorchester and Mattapan hoopers, girls' school and AAU teams, and youth programs.",
+      "insights": [
+        3,
+        5
+      ],
+      "categories": [
+        "jersey",
+        "shorts",
+        "tee",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "unisex adult",
+        "women's",
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "Screen partners for New Balance ties, then fund the leagues for the Dorchester Day launch in June.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Screen BNBL, gym and school partners for New Balance ties.",
+        "Confirm 2027 dates for the BNBL season and Dorchester Day.",
+        "Build any Reggie Lewis tribute only with his family and Roxbury partners.",
+        "Check Boston's WNBA status before tying in."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Boston Neighborhood Basketball League",
+        "Reggie Lewis Track and Athletic Center",
+        "BCYF",
+        "Catholic Memorial",
+        "BC High",
+        "Cambridge Rindge and Latin",
+        "Reggie Lewis's family"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "queta-cape-verdean-community",
+      "consumer": "Cape Verdean and Portuguese-speaking fans in Dorchester and Brockton.",
+      "insights": [
+        0
+      ],
+      "categories": [
+        "event",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Confirm Queta's heritage and willingness before the winter community test.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Queta's heritage, footwear deal and interest in a community program.",
+        "Identify Cape Verdean and Portuguese-language partners with the Celtics' community team.",
+        "Track clinic attendance and whether partners ask for product."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "league-or-team-rights"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Neemias Queta",
+        "Cape Verdean and Portuguese-language community organizations (to be identified)"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

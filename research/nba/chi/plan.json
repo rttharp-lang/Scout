@@ -1,0 +1,659 @@
+{
+  "team": "chi",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Bulls 2026-27 home opener: Sat Oct 24 vs Washington",
+      "kind": "event",
+      "start": "2026-10-24",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "chi-c4",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup Nights: Fridays Oct 30 to Nov 27, plus Tue Nov 24 and Wed Nov 25",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Early November 2026 through February 2027",
+      "kind": "season",
+      "start": "2026-11",
+      "end": "2027-02",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Black Friday (Nov 27) through Dec 20, 2026",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-20",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after Thanksgiving, the fourth Thursday of November (Nov 27, 2026). Dec 20 is the brief's own cut-off.",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "January 2027",
+      "kind": "action",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Start the Park District approval process now (brief's risk plan).",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "February 2027",
+      "kind": "event",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February.",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "player-or-estate-rights",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Around Feb 16, 2027 (Lithuanian State Restoration Day)",
+      "kind": "event",
+      "start": "2027-02-16",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Spring 2027, after the thaw",
+      "kind": "action",
+      "start": "2027-03",
+      "end": "2027-05",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "June 13, 2027 (30th anniversary of the 1997 title)",
+      "kind": "event",
+      "start": "2027-06-13",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Early July 2027, Chosen Few DJs Picnic in Jackson Park",
+      "kind": "event",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Bud Billiken Parade (expected Aug 14, 2027)",
+      "kind": "event",
+      "start": "2027-08-14",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Late summer 2027",
+      "kind": "launch",
+      "start": "2027-08",
+      "end": "2027-09",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Bulls 2027-28 home opener",
+      "kind": "launch",
+      "start": "2027-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "First week of November 2027, before the first freeze",
+      "kind": "launch",
+      "start": "2027-11",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "lake-wind-outerwear",
+      "consumer": "Season-ticket families, suburban fans and dynasty diehards who wear a coat over the jersey.",
+      "insights": [
+        1
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Push existing licensed outerwear from early November, and start the coat wear-test with season-ticket holders.",
+      "routes": [
+        "new-development",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Run the wear-test with season-ticket holders and rate warmth and fit over a jersey.",
+        "Test the knit, fleece and coat price tiers against the 10.25% city tax with entry buyers.",
+        "Check stock of existing licensed Bulls outerwear for early November to Dec 20."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "madison-street-one-city",
+      "consumer": "Locals on every side and in the suburbs, and tourists who want a Chicago-only souvenir.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "to define",
+        "kids"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-02",
+      "actNote": "Commission the Chicago type designer and the muralist in winter 2026-27.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check every past Bulls City Edition and the 2026-27 set to confirm the grid and street-sign idea is unused.",
+        "Map City of Chicago and CTA mark clearances before concepting the street-sign lettering.",
+        "Test whether neighborhood and south-suburb doors will carry the collection, not just downtown."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Design",
+      "partners": [
+        "A Chicago type designer (to be named)",
+        "A South or West Side muralist (to be named)",
+        "A south-suburb (708) maker (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "lights-out-basement-stock",
+      "consumer": "Gen Z digital fans, sneakerheads, vintage hunters and West Loop creatives.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Seed existing Bulls styles at boutique doors around the Oct 24 home opener.",
+      "routes": [
+        "new-development",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm that Notre and RSVP Gallery are operating and their current Nike ties.",
+        "Get NBPA clearance before any player names on the tracklist tee.",
+        "Track opener-week units and boutique reorders in 2026-27 as the baseline for the 2027-28 buy."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "third-party-ip"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Notre",
+        "RSVP Gallery",
+        "Leaders 1354",
+        "Young Chicago Authors",
+        "A paid local DJ (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "buzelis-lithuanian-chicago",
+      "consumer": "Lithuanian-American families in the city and southwest suburbs, and fans who want a homegrown core player.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "to define",
+        "kids"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-01",
+      "actNote": "Confirm Buzelis's community ties and get his family's blessing before the February community night.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Buzelis's hometown and Lithuanian-community ties, and that the Balzekas Museum and Lithuanian Plaza institutions are active.",
+        "Ask the community and the Lithuanian federation which national symbols, if any, can be used.",
+        "Route any player use through the NBPA."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Balzekas Museum of Lithuanian Culture",
+        "Lithuanian community schools and parishes",
+        "Lithuanian bakeries (to be named)",
+        "A Lithuanian-Chicago artist (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "fieldhouse-public-league",
+      "consumer": "Public League teens and families, and neighborhood hoopers who claim players by school and side.",
+      "insights": [
+        1,
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "jersey",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2028-01",
+      "actBy": "2026-10",
+      "actNote": "Start the Park District approval process for the donated floor refurbishments.",
+      "routes": [
+        "no-product",
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Map the Park District board approval path for the floor donations.",
+        "Confirm which Public League schools will sign, and the CPS and IHSA mark clearances.",
+        "Confirm the 2027 dates for the Public League final and the IHSA finals."
+      ],
+      "dependencies": [
+        "venue-or-permit",
+        "partner-agreement",
+        "third-party-ip",
+        "nike-calendar-approval",
+        "production-capacity",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Chicago Park District",
+        "Mac Irvin Fire",
+        "Public League schools that opt in (Simeon, Whitney Young, Farragut, Marshall, Morgan Park)",
+        "Kartemquin or Coodie & Chike (documentary, later)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "rink-session-jb",
+      "consumer": "JB skating crews, Black South Side families and style-setting dance and skate communities.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "pants",
+        "outerwear",
+        "tee",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-08",
+      "actBy": "2026-10",
+      "actNote": "Start co-design with the JB crews, which runs through 2026-27.",
+      "routes": [
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the current JB session schedule at The Rink and the crews to approach.",
+        "Agree with the crews and the Bulls whether it carries Bulls marks.",
+        "Test the track-suit price with South Side doors."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "The Rink Fitness Factory",
+        "Chicago JB skating crews"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "africobra-commission",
+      "consumer": "Black Chicago from Bronzeville to the 708 south suburbs, and dynasty-era diehards.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "kids"
+      ],
+      "fit": [
+        "to define",
+        "kids"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Announce the year-round SSCAC fund and start the artist commissions in February.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm which AfriCOBRA founders are living, who represents the estates, and whether SSCAC will partner.",
+        "Let the artists set the product launch date before any season is planned.",
+        "Track proceeds to SSCAC and artists, and sell-through in South Side and south-suburb doors against downtown."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ],
+      "owner": "Licensing and legal",
+      "partners": [
+        "South Side Community Art Center",
+        "Surviving AfriCOBRA members and estates",
+        "DuSable Black History Museum"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "born-here-house",
+      "consumer": "House heads, Black South Side families and dance crews.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "footwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-07",
+      "actBy": "2027-06",
+      "actNote": "Open the conversation with the Chosen Few DJs in 2026-27, ahead of their July picnic.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the 2027 Chosen Few Picnic date.",
+        "Agree the revenue share and credit with the Chosen Few, and consult the Knuckles estate.",
+        "Measure summer revenue against the August baseline near zero."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Chosen Few DJs",
+        "Frankie Knuckles estate"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

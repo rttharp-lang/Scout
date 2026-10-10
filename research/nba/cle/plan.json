@@ -1,0 +1,654 @@
+{
+  "team": "cle",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 11 preseason, Magic at Cavs on ESPN, through the Cavs' road game at Philadelphia's home opener (date to confirm)",
+      "kind": "season",
+      "start": "2026-10-11",
+      "end": "2026-10-31",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Magic at Cavaliers on Oct 11 is in league-calendar.json, but the date of the Cavs' road game at Philadelphia's home opener is unconfirmed. The end is set to Oct 31 because the brief places that game in October.",
+      "actBy": "2026-10",
+      "actNote": "Open the Karamu, side-line and Latino West Side artist calls.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup Nights: Fridays Oct 30 to Nov 27 plus Tue Nov 24 and Wed Nov 25 (East Group B: Knicks, 76ers, Heat, Pacers)",
+      "kind": "season",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "City Edition on-sale and first wear (dates to confirm) and Black Friday, Nov 27",
+      "kind": "launch",
+      "start": "2026-11",
+      "end": "2026-11-27",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "City Edition on-sale and first-wear dates are unconfirmed (league-calendar.json lists the unveil as not announced). Black Friday is the day after Thanksgiving: Nov 27, 2026.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Saturday Dec 5 side-line launch, then the Dec 1-15 gift peak",
+      "kind": "launch",
+      "start": "2026-12-01",
+      "end": "2026-12-15",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The Dec 5 launch and Dec 1-15 gift peak are the brief's own dates. cle-c4 confirms only that Ohio State-Michigan is Nov 28.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Jan 11-18, game Monday Jan 18 at noon ET",
+      "kind": "event",
+      "start": "2027-01-11",
+      "end": "2027-01-18",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "MLK Day games (Pistons at Cavaliers, noon ET, Jan 18)",
+      "actBy": "2026-11",
+      "actNote": "Pick the Karamu artists and finish the artwork by mid-November.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Paczki day (Fat Tuesday, Feb 9, 2027) and a Richfield heritage night or Classic Edition game",
+      "kind": "event",
+      "start": "2027-02-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Fat Tuesday is the day before Ash Wednesday, 47 days before Easter (Mar 28, 2027): Feb 9, 2027. The Richfield night has no date.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "216 Day, Tuesday Feb 16 (confirm locals mark it)",
+      "kind": "event",
+      "start": "2027-02-16",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief asks to confirm that locals mark 216 Day.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "330 Day on Tuesday, Mar 30 (confirm locals mark it), and MAC Tournament week at Rocket Arena (dates to confirm)",
+      "kind": "event",
+      "start": "2027-03",
+      "end": "2027-03-30",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The brief asks to confirm that locals mark 330 Day (Mar 30). MAC Tournament dates are to confirm.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Lenten Fridays through Dyngus Day (Monday Mar 29, 2027), plus a spring home game",
+      "kind": "season",
+      "start": "2027-02-12",
+      "end": "2027-03-29",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Lent runs from Ash Wednesday (Feb 10, 2027), so Lenten Fridays start Feb 12. Dyngus Day is Easter Monday: Mar 29, 2027. The spring home game has no date.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Season ends Apr 11, the Play-In runs Apr 13-16, then the playoffs open",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends; Play-In Tournament. The playoff start (Apr 17 or 18) is not confirmed.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Conference semifinals and finals",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June 19 (2016 title anniversary)",
+      "kind": "event",
+      "start": "2027-06-19",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Juneteenth and the anniversary of the 2016 title both fall on June 19.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Summer in Akron",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "name-and-nickname",
+      "consumer": "Gen Z and street-level fans, plus lifelong diehards who miss 'The Land' on the jersey.",
+      "insights": [
+        0,
+        3
+      ],
+      "categories": [
+        "fleece",
+        "jersey",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Open the side-line artist call, vetted with Karamu House and Black-owned shops, to pick the paid lead designer.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the City Edition on-sale and first-wear dates.",
+        "Agree the lead designer's fee, credit and revenue share in writing before design.",
+        "Confirm Cleveland Clothing Co.'s licensing appetite and whether Ohio Knitting Mills is operating.",
+        "Test the licensed 'The Land' tee next to the 'Cleveland' wordmark with Gen Z fans."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Karamu House",
+        "Chip tha Ripper (King Chip)",
+        "Cleveland Clothing Co.",
+        "Ohio Knitting Mills",
+        "Fanatics"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "mlk-karamu",
+      "consumer": "Black Cleveland families and East Side diehards, plus the national NBC audience for the noon Jan 18 game.",
+      "insights": [
+        3,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01-11",
+      "actBy": "2026-10",
+      "actNote": "Open the Karamu artist call, then pick the artists and finish the artwork by mid-November.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm in-stock Nike blanks can be decorated for a Jan 11 release.",
+        "Agree Karamu's fee, the money trail and every artist credit in writing.",
+        "Confirm what the King estate needs to clear anything adjacent to Dr. King.",
+        "If artwork slips past mid-November, plan a single art tee instead of a series."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Karamu House"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "lake-effect-winter",
+      "consumer": "Suburban families, gift buyers and lifelong diehards on both sides of the Cuyahoga.",
+      "insights": [
+        4,
+        3,
+        1
+      ],
+      "categories": [
+        "fleece",
+        "outerwear",
+        "headwear",
+        "jersey",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Confirm in-line Therma-FIT and Storm-FIT blanks are free for Q4 decoration, and seed the Hulett hoodie in the October window.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm in-line Cavs Therma-FIT and Storm-FIT blanks are available for Q4 decoration.",
+        "Test the entry, swingman and premium price ladder with mall-ring buyers in a taxed-apparel market.",
+        "Test the East Side and West Side label split with Beachwood Place and Crocker Park buyers.",
+        "Confirm Ohio Knitting Mills is operating and can make the beanie."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Ohio Knitting Mills"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "lebron-returns",
+      "consumer": "Every Cavs fan, especially Akron fans and lifelong diehards with mixed feelings about LeBron as a 76er.",
+      "insights": [
+        2,
+        6,
+        1
+      ],
+      "categories": [
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Confirm the site of the Cavs-76ers Cup game and the first 76ers date at Rocket Arena.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm the Cup game site and the first 76ers date at Rocket Arena, clear of MLK week.",
+        "Check the LeBron James Family Foundation's stance on Akron and 2016 heritage product.",
+        "Check local sentiment toward LeBron as a 76er before printing gratitude copy.",
+        "Size the undated gratitude tee so it can join the December gift wave."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "LeBron James Family Foundation"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "akron-330",
+      "consumer": "Akron and Summit County fans who say 330 before Cleveland.",
+      "insights": [
+        1,
+        2
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "pants",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Drop the capsule on existing blanks at Aurora Farms and Summit Mall in December.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm whether Akron fans mark 330 Day (Mar 30) before dating the restock.",
+        "Check the LeBron James Family Foundation's stance on any SVSM or I Promise reference.",
+        "Clear the tread and stripe graphics against Goodyear and Soap Box Derby marks.",
+        "Confirm the Aurora Farms Nike Factory Store and Summit Mall doors can carry the capsule."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "LeBron James Family Foundation"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "playoff-tour",
+      "consumer": "Every Cavs fan, peaking with casual fans who come back in spring.",
+      "insights": [
+        6,
+        4
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-03",
+      "actNote": "Lock the flyer art with a Zygote Press-affiliated printmaker.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Find a licensed quick-turn printer that can go from clinch to shelf in 48-72 hours.",
+        "Confirm Zygote Press's operating status and appetite for a numbered run per round.",
+        "Confirm Lids and Dick's can take round tees on the same 48-72 hour clock."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Zygote Press"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "richfield-heritage",
+      "consumer": "Lifelong diehards and Gen X collectors who remember Richfield Coliseum.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Set the February heritage night or Classic Edition game.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Hardwood Classics licensing path for Richfield-era and 1980s throwbacks.",
+        "Check whether Austin Carr is open to telling the story.",
+        "Confirm a February heritage night or Classic Edition date.",
+        "Test heritage prices with Gen X collectors through the arena store."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Austin Carr",
+        "Winking Lizard Tavern"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "parish-and-plate",
+      "consumer": "West Side and East Side neighborhood loyalists, Puerto Rican and Latino West Side families and Gen Z locals.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "accessory",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02-09",
+      "actNote": "Have the Polish Boy sock and Slavic Village tees ready for paczki day.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Ask Hot Sauce Williams and Seti's Polish Boys if they want in, and let them choose who leads.",
+        "Test demand for food-themed Cavs product with a small partner-sold run.",
+        "Confirm the Julia de Burgos Cultural Arts Center's status and availability."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Hot Sauce Williams",
+        "Seti's Polish Boys",
+        "West Side Market",
+        "Julia de Burgos Cultural Arts Center"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

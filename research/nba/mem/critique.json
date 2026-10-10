@@ -1,0 +1,146 @@
+{
+  "team": "mem",
+  "issues": [
+    {
+      "target": "risks[3] / partners / people (Tony Allen)",
+      "type": "inaccurate",
+      "severity": "high",
+      "problem": "Corrected by the factcheck. This critique first said Tony Allen died in August 2024. That's false: the factcheck removed the claim from the rhythm dossier, and his No. 9 was retired in March 2025. The real issue is that the strategy leaves his ambassador role as an open status question, not a confirmed partnership.",
+      "fix": "Treat Allen as a living alum. Gate any Grindfather or Allen-likeness product on direct confirmation and a signed agreement with him (plus Hardwood Classics/NBPA group licensing). Until then, lean on the Grit and Grind creed and other alumni (Z-Bo, Gasol, Conley). No copy should repeat the 2024 death claim."
+    },
+    {
+      "target": "topInsights[1], partners[0], opportunities.penny-city-bridge",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The brief calls Penny a \"Memphis East kid\". As best I know, he went to Treadwell High School and is tied to Memphis East as the coach who won there before taking the Tigers job. Locals would correct a \"Memphis East heritage tee\" as an origin story instantly.",
+      "fix": "Rewrite the lineage as Treadwell, Memphis State, Orlando/Air Penny, then coaching Memphis East and the Tigers. Reframe the Memphis East piece as a coaching-legacy and school-partnership product with school approval, not a hometown claim."
+    },
+    {
+      "target": "opportunities.penny-city-bridge",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The brief's strongest Nike asset is under-used. Nike already outfits the Tigers, so there's no third-party licensor fight on the Nike side. Instead the brief spends its words on licensing separation and a \"Memphis-only Penny retro\". It never says which Penny model, when it could land, or that a retro is a Nike Basketball/Jordan-brand-style calendar decision well outside this team's lane.",
+      "fix": "Name the Penny silhouette candidates (Air Penny 1, Foamposite One lineage, Penny 2). Ask Nike Basketball product for a Memphis-exclusive colorway or PE-style sample, not a new model. Use the Tigers' Nike deal as the pitch: one co-branded tee/warm-up pairing is feasible if both licensors sign."
+    },
+    {
+      "target": "calendar[1] (Cup Fridays)",
+      "type": "timing",
+      "severity": "high",
+      "problem": "\"One Crosstown Arts artist tee per home Cup night\" misreads the schedule. Memphis plays only four group games in West Group B, and the first, Oct 30, is at Minnesota. At most two are at FedExForum, and they aren't guaranteed to be Fridays (Nov 24-25 are extra Cup nights). Four weekly tee drops can't happen.",
+      "fix": "Plan two home-Cup-night tees at most (confirm the FedExForum dates). Tie the Oct 30 Minnesota game to a watch party or online drop, and use the remaining Fridays for one local-artist online series. Note the Cup knockout rule too: if Memphis advances, the semifinal is at the higher seed's home, a rare and unplanned home night."
+    },
+    {
+      "target": "calendar[0] / pulse (home opener and City Edition)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The calendar says the \"City Edition revival is on sale\" at the late-October opener and builds the whole launch on that moment. City Edition uniforms and merchandise have typically launched in early-to-mid November. Memphis isn't on the Oct 20 opening-night slate, so the true home opener and its date are still unconfirmed in the brief.",
+      "fix": "Anchor the launch to the first FedExForum home game, whatever the date. Keep the City Edition as a separate beat once its release date is known. Don't promise \"City Edition revival on sale\" at the opener until the league's on-sale date is checked."
+    },
+    {
+      "target": "opportunities.jookin-glide-pack / collection.Tape Deck",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The jookin shoe plan assumes \"wear-testing and filming in the offseason (May-Sep)\" and a release \"with the October launch window\". It's already October 9, so those months have passed. No footwear program goes from consultant hire to retail in weeks; development with contracted testers takes 12-18 months. A \"glide-outsole lifestyle shoe\" and \"high-stretch track pant\" can't be launch styles.",
+      "fix": "Re-scope 2026-27 to a credited film, a dancer-fronted content series and one no-development apparel piece (a motion-trail shooting shirt, or an existing stretch pant with a dancer-credited graphic). Open footwear as a 2027-28 research brief to Nike Sport Research, with dancers contracted now."
+    },
+    {
+      "target": "opportunities.jookin-glide-pack (partners[3])",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The whole jookin program leans on Lil Buck as the named partner. He is Memphis-raised and a major ambassador for the form, but he works nationally and isn't the community that created and sustains jookin and gangsta walking on the ground. One name risks the very \"Portland picked a celebrity and called it Memphis\" reaction the brief fears.",
+      "fix": "Make Lil Buck one voice among several. Recruit through local crews and teachers, and budget for a roster of paid consultants with an advisory seat and named credits on the pack and in store."
+    },
+    {
+      "target": "uniform (Sign-Painted 901)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "The City Edition concept passes the swap test only on its details. \"Hand-lettered city numeral plus resident-chosen neighborhood names on a cream base\" fits any city with an area code (Detroit, Houston, Brooklyn). Local-shop 901 tees are the first thing Memphians already own. The brief also names no actual sign painter, so its main promise, a credited Memphis letterer, has no person behind it.",
+      "fix": "Make the lettering lineage itself the Memphis-only element. Source named painters from Memphis storefront and church-sign traditions through Crosstown Arts and the Broad Avenue Arts District. Tie the design to a specific physical sign or street (for example a commissioned painted wall on Park Avenue in Orange Mound, with owner permission). Put the letterer's name in the brief."
+    },
+    {
+      "target": "uniform (avoid) vs. calendar",
+      "type": "other",
+      "severity": "low",
+      "problem": "The uniform brief says to avoid music-heritage themes because earlier Memphis City Editions used them. Yet it pushes Beale Street Blue and a \"Midnight Blue\" Grizzlies palette that already ties to the blues. That's fine, but it quietly drops the music lane at the City Edition, the one moment when Memphis rap and soul are the city's real flag per the music and culture dossiers.",
+      "fix": "Keep music out of the graphics but use it in the story: a short film or playlist with GloRilla, Key Glock, Moneybagg Yo or Yo Gotti's CMG roster. Clear it and pay for it. Don't leave living Memphis rap off the brief entirely."
+    },
+    {
+      "target": "partners / opportunities (rap)",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The brief's rap lane is 1990s tape nostalgia (Tape Deck, Three 6 Mafia caution). The music, art, underground and retail-behavior dossiers all name today's market-setters (GloRilla, Moneybagg Yo, Yo Gotti and CMG, Key Glock and Paper Route Empire, BlocBoy JB). None is in the partner list or the calendar. They're the artists a 16-30 year-old Memphis fan actually follows.",
+      "fix": "Add a dedicated rap-partner track. Approach artist teams (not the lyrics) for a paid Cup-night or opener appearance, a capsule collab or a content series. Keep Young Dolph's estate and Paper Route Empire as a family-led conversation only, and lift nothing from his image without consent."
+    },
+    {
+      "target": "opportunities.tape-deck-cooper-young",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Tape Deck is the thinnest link to the team and the Memphis shopper: a low-priority, small-run Midtown capsule built on Goner Records and Gonerfest garage-punk taste. It isn't built on the Black Memphis rap and jookin culture the tape aesthetic comes from. Selling the xerox-flyer look in Cooper-Young without the artists who invented it reads as extraction.",
+      "fix": "Move the capsule's credit and revenue toward the Black Memphis tape-era creators (flyer artists, producers, label alumni) and a venue in North Memphis or Orange Mound. Keep Cooper-Young as a secondary door. Otherwise cut it to a content piece."
+    },
+    {
+      "target": "opportunities.memphis-in-may-pit-team / collection.Pit and Paper",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Barbecue is the brief's most generic lane: Kansas City, Texas and the Carolinas can all claim a smoke-and-paper capsule. It has no basketball link, targets festival tourists in a month when the Grizzlies are likely out, and risks the tourist/caricature read the culture dossier warns about. The Memphis in May contest is also largely corporate and amateur teams. The canon the food dossier cites (Payne's, Cozy Corner, The Four Way, Gus's) is Black-owned and missing from the partner list.",
+      "fix": "Lead with the Black-owned institutions as consulted, paid and credited partners (or drop the restaurant specifics). Keep the product to details only a Memphian reads (dry versus wet, BBQ spaghetti). Cut priority to 3 and sell it local-first, not as a tourist capsule."
+    },
+    {
+      "target": "opportunities.mlk-day-partner-program",
+      "type": "other",
+      "severity": "high",
+      "problem": "Feasibility and tone. A shoot-around jacket with the National Civil Rights Museum by Jan 18 means design and approvals in about three months, which no apparel program achieves. The museum is a nonprofit that may decline a commercial tie, and the King estate controls his name, likeness and quotes. The league and Nike already run their own MLK and Black History Month programs, so a local product would need to be coordinated with them.",
+      "fix": "Reframe MLK week as funding and access (a museum education day, youth tickets, a Nike donation), with product only if the museum asks and the league/Nike program can absorb it. Move any jacket to Black History Month 2028 or later. Have legal confirm the King estate's position before any copy mentions him."
+    },
+    {
+      "target": "risks[0] (Morant trade)",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "\"Nike looks like it chose its home market over Memphis\" misframes the facts: the Grizzlies traded Morant, not Nike, and the fan complaint is about the club. The risk also tells Nike to \"keep Ja product a national line\". But Nike would likely still carry a Ja signature line in Portland-based national channels, and it will show up on Memphis shelves.",
+      "fix": "State the risk as this: Memphis fans see Nike and Portland as the new home of their former star, so any Portland-flavored copy lands badly. Mitigate with no Portland references in Memphis creative, a quiet markdown plan for Ja inventory at partner doors, and no Ja-era imagery in the city-first line."
+    },
+    {
+      "target": "calendar[5] (MLK) and opportunities",
+      "type": "timing",
+      "severity": "low",
+      "problem": "Black Friday and Thanksgiving week (Nov 24-25) are also Cup nights, and Memphis in May ties up Tom Lee Park. The brief still schedules Pit Team for \"late April after April 4\" and the Orange Mound drop for February. Neither is checked against the Southern Heritage Classic (Sept) or Tennessee's school calendar. The late-July tax-free pack also sits in a month with no Grizzlies content beyond Summer League.",
+      "fix": "Add a one-page conflict check (Cup nights, Thanksgiving, April 4, the Classic, the tax holiday). Put the youth pack on the school calendar, with a two-week buffer before any date the brief calls fixed."
+    },
+    {
+      "target": "collection / retailPlaybook (price)",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "The \"901 heavyweight tee kept under the $100 line with tax\" framing confuses a price point with a tax rule. Tennessee's tax holiday exempts clothing priced at $100 or less per item, so the real constraint is the per-item sticker, and only on the holiday weekend. A heavyweight tee near $100 would be too expensive for a tight-budget Memphis shopper.",
+      "fix": "Set entry tees at $35-$50 and the hoodie at $75-$95 sticker. Describe the tax-holiday rule correctly: a per-item sticker cap on the holiday weekend, outside which the full combined rate applies."
+    },
+    {
+      "target": "topInsights / opportunities (segments)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The brief ignores the immigrant corridors and Latino Memphis (Summer Avenue, Hickory Hill) that the food dossier flags as the new Memphis table. It also ignores the Mid-South Pride/queer ballroom scene the underground dossier calls real but under-credited. Both get a June footnote or nothing, leaving a growing, younger market unaddressed.",
+      "fix": "Add a co-designed Spanish-language beat for Hispanic Heritage Month (Sept 15-Oct 15), with named Summer Avenue businesses as paid partners. Treat ballroom/Pride as a funded partnership with local organizers. Make no product for either without co-design."
+    },
+    {
+      "target": "opportunities.neighborhood-shooting-shirts",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "One neighborhood a month for five neighborhoods promises resident co-design, community proceeds and local printing on a monthly cycle starting in November. That's a heavy community-process commitment for a market the brief itself scores 38 for retail. Rushing it would turn the brief's strongest ethical idea into its most obvious extraction.",
+      "fix": "Pilot one neighborhood for the full season: Orange Mound, with a named community partner such as a neighborhood association or school. Learn from it, then add others in 2027-28. Publish what share of proceeds goes where before the first drop."
+    },
+    {
+      "target": "pulse / scorecard",
+      "type": "other",
+      "severity": "low",
+      "problem": "The scorecard gives culture 88 and opportunity 64 but retail 38, for a market whose buying is regional and Hibbett-led. The brief offers no sell-through baseline for the KPIs it names (\"vs the 2025-26 launch\"). Priorities lean toward cultural events, given what a 25-57 team and a small metro can sell.",
+      "fix": "Add a sell-through floor (units and dollars) for each priority-1 opportunity, plus a stop-loss rule. Then the brief can say which initiatives to cut first if November sell-through misses."
+    }
+  ],
+  "strengths": [
+    "The city-first diagnosis is right and well evidenced. Every lens lands independently on the 901, neighborhood names and hand lettering, not Boozer, Edey or any single star, as the way to sell Memphis in a reset year.",
+    "Nike's Penny Hardaway lineage and the Tigers-and-Grizzlies overlap are the file's sharpest, most ownable idea, and no other NBA market has an equivalent. The licensing-separation instinct is correct.",
+    "The respect guardrails are strong and specific: no I Am A Man placards, Lorraine balcony or Dr. King likeness, April 4 as a no-launch date, paid and credited creators, and resident-chosen neighborhood names.",
+    "The retail realism is good. Player items get shallow buys with reorder triggers. A sub-$100 core tier suits a tight-budget tri-state catchment. Hibbett is the volume spine, not an imagined Nike flagship.",
+    "The Sign-Painted 901 uniform concept has real detail (paprika drop shadow, jock-tag credit, resident-chosen waistband) and a sensible avoid list, though it needs a named letterer."
+  ],
+  "summary": "Strong on thesis and respect, weaker on execution. The city-first, Penny-anchored strategy is credible and not generic, but several items break on facts or the calendar. Tony Allen's ambassador role is left as an open status question (an earlier draft of this critique wrongly said he died in 2024; the factcheck corrected that). Penny is mislabeled a Memphis East alumnus. The Cup-night tee plan assumes more home games than exist, and the jookin footwear and MLK jacket plans can't be built in the time left. The biggest missed opportunity is today's Memphis rap (GloRilla, Moneybagg Yo, Yo Gotti/CMG, Key Glock), which the dossiers surface and the partner list ignores. Fix those, and narrow the co-design programs to one properly resourced pilot, and this is a defensible plan for a rebuild year."
+}

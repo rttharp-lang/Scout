@@ -1,0 +1,393 @@
+{
+  "team": "lal",
+  "lens": "retail-behavior",
+  "headline": "Lakers gear sells all year in LA. Stars and stories set the spikes.",
+  "summary": "With no cold weather to anchor it, Lakers retail in LA runs on events, not seasons. Demand spikes on story beats: Mamba Day, the Luka Doncic jersey era, Christmas against LeBron's Sixers, the playoffs. Shoppers range from Westside luxury to South LA households who wear the team as identity. Tier for both, with a premium fashion level and an honest entry price.",
+  "insights": [
+    {
+      "title": "Story beats beat the weather",
+      "detail": "Mild weather means Lakers shopping follows moments. This year that means Doncic's first full season as the face after LeBron's departure. It means Christmas Day against Philadelphia and LeBron's first return, the Oct 21 Warriors game, and the playoff pushes. LeBron-era gear is now a nostalgia and resale category. Luka and Reaves product is the growth category.",
+      "implication": "Stage drops around the Oct 21 Warriors game, Christmas week and the playoff run. League opening night, Oct 20, is not a Lakers game. Pair Doncic hero product with a LeBron/Showtime archive capsule that respects the legacy, so neither fan group feels dropped."
+    },
+    {
+      "title": "Mamba Day is a second calendar",
+      "detail": "Aug 24 (8/24, the Kobe numbers) draws a huge crowd of Kobe buyers, some with no tie to the current roster. The market also reacts to the Nike Kobe sneaker line and to Vanessa Bryant's stewardship of the legacy. The cluster peaks in late summer, a dead zone for most NBA markets.",
+      "implication": "Make Mamba Day a flagship retail window, with sneaker, apparel and community programming. Route Kobe apparel decisions through the estate and Nike's existing Kobe team."
+    },
+    {
+      "title": "A channel ladder from Fairfax to Santee Alley",
+      "detail": "Buying runs through sneaker boutiques and resale on and around Fairfax and Melrose. It also runs through mall and tourist retail (The Grove, Hollywood, Santa Monica), the arena and L.A. Live team store, and outlets such as Citadel in Commerce. Fashion District wholesale and Santee Alley are where knockoffs and bootleg jerseys are a well-known presence. Social commerce and Instagram-run local brands move product too.",
+      "implication": "Use boutiques and resale as the cultural proof tier, and official and Nike channels for volume. Tell the price-ladder story to separate real product from knockoffs. Don't fight the street market."
+    },
+    {
+      "title": "Price splits by geography, identity doesn't",
+      "detail": "Buyers in the Westside, Beverly Hills and Calabasas pay for premium and collab product. Households in the Eastside, South LA, the Valley and the Inland-bound suburbs are more value-driven, yet still buy Lakers gear heavily. California has no sales-tax holidays, and combined sales tax in LA is roughly 9.5 to 10.25 percent, depending on the city.",
+      "implication": "Build a good-better-best ladder: a clear $30-60 tee and hoodie tier, a $100-130 swingman anchor, and a limited premium and authentic tier. With no tax-free relief, think in tax-inclusive prices in promos."
+    },
+    {
+      "title": "Latino and Asian American fans are core, not niche",
+      "detail": "Mexican American fandom on the Eastside and in Southeast LA, Spanish-language Lakers coverage, and large Filipino, Korean (Koreatown) and Chinese American communities make Lakers gear a family and multigenerational purchase. Kids' jerseys and matching family sets matter around holidays, quinceaneras, birthdays and graduations.",
+      "implication": "Fund bilingual, community-partnered campaigns. Offer youth and family sizing and bundles. Work with credited local creators, not generic heritage graphics."
+    },
+    {
+      "title": "Tourists are a major jersey channel",
+      "detail": "Visitors to Hollywood, Santa Monica, Venice, the Grove and downtown, domestic and international, buy a Lakers item to prove they visited LA. That demand is steady, price-tolerant and less tied to the roster.",
+      "implication": "Make a dedicated \"LA souvenir\" apparel layer with city-forward graphics and packable items: caps, tees, totes and mini-jersey items. Keep it distinct from the roster-based jersey line."
+    },
+    {
+      "title": "Layering is for evenings and indoors, not seasons",
+      "detail": "Winter days are mild, but nights, the coast and over-air-conditioned arenas call for light layers. Rain in Dec-Mar and heat waves in Sept-Oct shift buying between shorts and tees and hoodies and track jackets. Heavy outerwear barely sells locally.",
+      "implication": "Lead with warm-up shirts, shooting shirts, hoodies, coach jackets and light track tops. Skip heavy puffers, except as a fashion or travel-market item."
+    }
+  ],
+  "places": [
+    {
+      "name": "Crypto.com Arena and L.A. Live",
+      "kind": "venue and team store",
+      "neighborhood": "Downtown LA",
+      "why": "The home arena anchors game-day retail. The arena team store and the L.A. Live crowd around it both buy in volume."
+    },
+    {
+      "name": "Fairfax Avenue and Melrose corridor",
+      "kind": "streetwear and sneaker district",
+      "neighborhood": "Fairfax / Melrose",
+      "why": "The center of LA streetwear, sneaker resale and line culture, and the best place to launch a collab with local credibility."
+    },
+    {
+      "name": "Santee Alley",
+      "kind": "wholesale and bargain market",
+      "neighborhood": "Fashion District, Downtown",
+      "why": "A famous, price-driven shopping lane where counterfeit and unlicensed Lakers gear competes with licensed product."
+    },
+    {
+      "name": "Citadel Outlets",
+      "kind": "outlet mall",
+      "neighborhood": "Commerce",
+      "why": "A value hub on the Eastside side of the market, and a stop for families and visitors."
+    },
+    {
+      "name": "The Grove and Fairfax Farmers Market",
+      "kind": "open-air mall",
+      "neighborhood": "Fairfax / Mid-Wilshire",
+      "why": "A busy mix of locals and tourists, good for pop-ups and seasonal gifting."
+    },
+    {
+      "name": "Rose Bowl Flea Market",
+      "kind": "monthly flea market",
+      "neighborhood": "Pasadena",
+      "why": "A long-running vintage and resale venue where throwback and Showtime-era Lakers gear trades."
+    },
+    {
+      "name": "Westfield Century City",
+      "kind": "premium mall",
+      "neighborhood": "Westside",
+      "why": "Home to the affluent Westside shopper, who wants premium and authentic product."
+    },
+    {
+      "name": "Drew League at King/Drew Magnet",
+      "kind": "summer pro-am league",
+      "neighborhood": "Willowbrook / South LA",
+      "why": "A community hoops institution. Its summer crowds show street-level style and grassroots energy."
+    }
+  ],
+  "people": [
+    {
+      "name": "Luka Doncic",
+      "role": "Lakers franchise player",
+      "why": "The center of the new jersey cycle. His number 77 is the volume driver."
+    },
+    {
+      "name": "Austin Reaves",
+      "role": "Lakers guard on a max extension",
+      "why": "A homegrown fan favorite whose extension supports a second hero jersey."
+    },
+    {
+      "name": "LeBron James",
+      "role": "Former Laker, now with Philadelphia",
+      "why": "His Dec 25 return is a nostalgia and resale moment, and legacy gear remains a large installed base."
+    },
+    {
+      "name": "Kobe Bryant",
+      "role": "Lakers legend, Nike signature athlete",
+      "why": "The Mamba legacy anchors a parallel buyer set and calendar, handled with the Bryant family."
+    },
+    {
+      "name": "Vanessa Bryant",
+      "role": "Head of Kobe Bryant's estate and Mamba Sports Academy figure",
+      "why": "The estate's approvals shape any Kobe-linked product."
+    },
+    {
+      "name": "Magic Johnson",
+      "role": "Showtime legend and LA business figure",
+      "why": "A symbol of Showtime heritage, with a long-standing local retail and community presence."
+    },
+    {
+      "name": "JJ Redick",
+      "role": "Lakers head coach",
+      "why": "A highly visible coach who lends product the team's identity and story."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Lakers season opener window",
+      "timing": "Oct 21",
+      "month": 10,
+      "why": "The home opener against Golden State on Oct 21 starts the first full Luka-led jersey cycle."
+    },
+    {
+      "name": "Dia de los Muertos",
+      "timing": "Nov 1-2",
+      "month": 11,
+      "why": "A major Eastside cultural moment. Engage only through Mexican American creators, and never as a costume graphic."
+    },
+    {
+      "name": "Black Friday and Cyber Week",
+      "timing": "Late November",
+      "month": 11,
+      "why": "The first big promotional gifting peak, alongside NBA Cup group play."
+    },
+    {
+      "name": "Christmas Day vs Philadelphia",
+      "timing": "Dec 25",
+      "month": 12,
+      "why": "LeBron's return plus the national stage make late December a major gifting and hype window."
+    },
+    {
+      "name": "Lunar New Year",
+      "timing": "Late Jan to Feb",
+      "month": 2,
+      "why": "A gifting and red-and-gold apparel moment for LA's large Chinese, Korean and Vietnamese communities."
+    },
+    {
+      "name": "Playoffs",
+      "timing": "April-June",
+      "month": 4,
+      "why": "The strongest sustained demand for tees, hoodies and authentic jerseys, with a fast need to restock."
+    },
+    {
+      "name": "Drew League and summer league",
+      "timing": "July-August",
+      "month": 7,
+      "why": "Summer grassroots hoops and Las Vegas summer league keep a younger, hoops-first customer engaged."
+    },
+    {
+      "name": "Mamba Day",
+      "timing": "Aug 24",
+      "month": 8,
+      "why": "Kobe product and community programming peak while the NBA is otherwise quiet."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Lake Show",
+      "meaning": "A common fan nickname for the Lakers."
+    },
+    {
+      "term": "Showtime",
+      "meaning": "The fast-break 1980s Magic Johnson era, with its glamour and style."
+    },
+    {
+      "term": "Purple and Gold",
+      "meaning": "The team's colors in fan talk and jersey names."
+    },
+    {
+      "term": "Mamba",
+      "meaning": "Kobe Bryant's alter ego, tied to 8/24 and the \"Mamba Mentality\"."
+    },
+    {
+      "term": "The 213 / 310 / 818",
+      "meaning": "Area-code shorthand for Downtown, the Westside and the Valley, used in LA streetwear."
+    },
+    {
+      "term": "Laker Nation",
+      "meaning": "The fan community's name for the global base."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Lakers purple",
+      "type": "color",
+      "hex": "#552583",
+      "source": "The Lakers' primary identity color",
+      "use": "Anchor hero product in it, with tonal and washed versions for lifestyle."
+    },
+    {
+      "cue": "Lakers gold",
+      "type": "color",
+      "hex": "#FDB927",
+      "source": "The team's second primary color",
+      "use": "Use as contrast on trim, numerals and caps, and sparingly on all-over prints."
+    },
+    {
+      "cue": "Sun-bleached California wash",
+      "type": "texture",
+      "hex": "",
+      "source": "LA's sunlit, mild-climate wardrobe and vintage culture",
+      "use": "Garment-dyed, sun-faded fleece and tees for the vintage-leaning buyer."
+    },
+    {
+      "cue": "Minneapolis triangle wordmark",
+      "type": "graphic",
+      "hex": "",
+      "source": "The franchise's Minneapolis origins, per the revived 2023-24 City Edition",
+      "use": "Use as a heritage graphic in a legacy capsule, in line with the City Edition and the new Specter uniforms."
+    },
+    {
+      "cue": "Showtime-era script and numerals",
+      "type": "typography",
+      "hex": "",
+      "source": "Classic Lakers wordmark lettering from the Forum era",
+      "use": "Throwback jerseys, warm-up tops and a vintage graphic tee run."
+    },
+    {
+      "cue": "Light layering silhouette",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Warm days, cool nights, cold arenas",
+      "use": "Coach jackets, track tops, boxy hoodies and warm-up shirts, not heavy outerwear."
+    },
+    {
+      "cue": "Lunar red and gold accent",
+      "type": "color",
+      "hex": "#C8102E",
+      "source": "Lunar New Year gifting in LA's Asian American communities",
+      "use": "A seasonal limited accent only, developed with community partners."
+    }
+  ],
+  "productHooks": [
+    "A three-tier Luka and Reaves jersey ladder: kid and youth Icon/Statement, an adult swingman anchor, and a limited authentic run for the Westside buyer.",
+    "A Mamba Day capsule timed to Aug 24, built with the Kobe team and estate approvals.",
+    "A \"Christmas Day return\" graphic tee and fleece drop for Dec 25, with a LeBron-era legacy capsule that avoids picking sides.",
+    "An LA souvenir layer: caps, tees and totes with city graphics for tourist and gifting buyers.",
+    "Family and youth bundles for the holiday gifting window and back-to-school, with bilingual packaging and in-language community partners."
+  ],
+  "watchouts": [
+    "Counterfeit pressure from Santee Alley and online is intense. Don't alienate customers. Compete on authenticity and the price ladder.",
+    "Kobe imagery and the Mamba trademark need clearance from the estate and the Nike Kobe team.",
+    "Player likeness and the Lakers marks are licensed through the NBA and NBPA. The Specter and City Edition uniform artwork has its own rules.",
+    "Develop Dia de los Muertos and other cultural imagery with credited, paid Latino creators. Never use it as decoration."
+  ],
+  "sources": [
+    {
+      "title": "Los Angeles Lakers official site",
+      "url": "https://www.nba.com/lakers"
+    },
+    {
+      "title": "Los Angeles Lakers (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Los_Angeles_Lakers"
+    },
+    {
+      "title": "Crypto.com Arena (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Crypto.com_Arena"
+    },
+    {
+      "title": "California Department of Tax and Fee Administration sales tax rates",
+      "url": "https://www.cdtfa.ca.gov/taxes-and-fees/sales-use-tax-rates.htm"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "Oct 21",
+        "month": 10,
+        "driver": "League opening night is Oct 20, not a Lakers game. Oct 21 is the home game vs Golden State and the first full Luka-era jersey cycle",
+        "impact": "high"
+      },
+      {
+        "window": "Nov 1-2",
+        "month": 11,
+        "driver": "Dia de los Muertos. Community-led, with low direct jersey impact",
+        "impact": "low"
+      },
+      {
+        "window": "Late Nov",
+        "month": 11,
+        "driver": "Black Friday and Cyber Week, with NBA Cup group play in the background",
+        "impact": "high"
+      },
+      {
+        "window": "Dec 1-25",
+        "month": 12,
+        "driver": "Holiday gifting peak, Dec 25 vs Philadelphia, LeBron's return",
+        "impact": "high"
+      },
+      {
+        "window": "Late Jan to Feb",
+        "month": 2,
+        "driver": "Lunar New Year gifting, plus the All-Star and trade-deadline news cycle",
+        "impact": "medium"
+      },
+      {
+        "window": "April",
+        "month": 4,
+        "driver": "The regular season ends Apr 11. Play-in and playoffs start demand for tees and hoodies",
+        "impact": "high"
+      },
+      {
+        "window": "May-June",
+        "month": 5,
+        "driver": "Deep playoff run, Mother's and Father's Day gifting, and the start of tourism season",
+        "impact": "high"
+      },
+      {
+        "window": "July-Aug",
+        "month": 7,
+        "driver": "Summer tourism, Drew League and summer league. No sales-tax holiday exists in California",
+        "impact": "medium"
+      },
+      {
+        "window": "Mid Aug",
+        "month": 8,
+        "driver": "LAUSD and local back-to-school, and Mamba Day on Aug 24",
+        "impact": "high"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Arena and L.A. Live team store",
+        "role": "The game-day and tourist purchase point for authentic and swingman jerseys."
+      },
+      {
+        "channel": "Sneaker boutiques and resale (Fairfax/Melrose)",
+        "role": "The culture tier for collabs, limited drops and Kobe product."
+      },
+      {
+        "channel": "Official Nike and NBA online",
+        "role": "The main volume and drop channel, with SNKRS for limited Kobe releases."
+      },
+      {
+        "channel": "Wholesale and department retail",
+        "role": "Reaches family, youth and gifting shoppers in malls and big-box stores."
+      },
+      {
+        "channel": "Swap meets, Fashion District and counterfeit market",
+        "role": "A price-driven channel that sets the low end and competes with unlicensed product."
+      },
+      {
+        "channel": "Social commerce and local brands",
+        "role": "Instagram and creator-led shops steer streetwear taste and community drops."
+      }
+    ],
+    "priceProfile": "Incomes run wide, from Westside luxury to price-sensitive Eastside, South LA and Valley households, and all of them buy Lakers gear. California has no sales-tax holidays, and combined local sales tax is around 9.5-10.25 percent (verify). Tier with an accessible tee and hoodie band, a swingman anchor and a limited premium and authentic top tier.",
+    "jerseyBehavior": "Fans buy by roster hero, now Doncic 77 and Reaves 15. They also buy by legacy hero: Kobe 8/24, LeBron 23, Magic 32. Throwbacks are strong. Swingman and kids' versions drive volume, and authentics sell on the Westside and to collectors. Knockoffs are visible at Santee Alley and online. Tourists buy souvenir tees and caps more than roster jerseys."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm the current LA combined sales tax rate (about 9.75 percent in LA city; Measure A-related changes may apply) and that California has no tax-free weekends",
+      "Confirm Crypto.com Arena naming rights are in force for 2026-27, and ownership (Buss family and Mark Walter)",
+      "Confirm jersey numbers: Luka Doncic 77 and Austin Reaves 15 on the 2026-27 roster",
+      "Confirm the arena and L.A. Live team store locations and the current Lakers Store retail footprint",
+      "Confirm Santee Alley and Citadel Outlets still operate as described, and check the counterfeit enforcement posture",
+      "Check the LAUSD 2026-27 first day of school (typically mid-August)",
+      "Check the Drew League 2026 summer location and schedule at King/Drew Magnet",
+      "Check the Rose Bowl Flea Market monthly schedule (second Sunday) and current status",
+      "Check the Nike Kobe sneaker line status and Mamba Day 2026 programming",
+      "Check how Specter and City Edition uniform release windows line up with the Oct 21 and Dec 25 games",
+      "Confirm Vanessa Bryant's current role in Kobe estate approvals for product",
+      "Check current price points for Lakers swingman and authentic jerseys"
+    ]
+  }
+}

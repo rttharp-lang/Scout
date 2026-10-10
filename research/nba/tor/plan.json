@@ -1,0 +1,682 @@
+{
+  "team": "tor",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Leonard's first Scotiabank Arena game (date to confirm); fallback Oct 30, Nets at Raptors Cup Night",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Nov 1-2 (1946 first game; Carter's #15 retirement anniversary)",
+      "kind": "event",
+      "start": "2026-11-01",
+      "end": "2026-11-02",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "About Nov 8 (Diwali)",
+      "kind": "event",
+      "start": "2026-11-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Mid-November to March, one drop a month",
+      "kind": "launch",
+      "start": "2026-11",
+      "end": "2027-03",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Ship last week of November; first deep freeze through Dec 26 (Boxing Day)",
+      "kind": "season",
+      "start": "2026-11",
+      "end": "2026-12-26",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Late January (DesignTO)",
+      "kind": "event",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "February (Black History Month; Lunar New Year Feb 6)",
+      "kind": "event",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February in Canada",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "All-Star Weekend, Feb 19-21 (Phoenix)",
+      "kind": "event",
+      "start": "2027-02-19",
+      "end": "2027-02-21",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "NBA All-Star 2027",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "About Feb 8 to Mar 9 (Ramadan); March",
+      "kind": "season",
+      "start": "2027-02-08",
+      "end": "2027-03",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2027-03",
+      "actNote": "Ship playoff shells and tees to doors by the end of March.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11 season end, Play-In Apr 13-16, playoffs from mid-April",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "stock-availability",
+        "third-party-ip",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "May 12 anniversary; Tempo home opener in May (to confirm)",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June 12 (Philippine Independence Day), June 13 title anniversary and Pride in late June",
+      "kind": "event",
+      "start": "2027-06-12",
+      "end": "2027-06-30",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "July 1 (Canada Day)",
+      "kind": "event",
+      "start": "2027-07-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Canada Day is July 1",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Civic Holiday weekend (Carnival Grand Parade); back to school",
+      "kind": "season",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "winter-blackout-north",
+      "status": "hypothesis",
+      "consumer": "Fans across Canada, Gen Z digital fans and arena regulars who live in a black parka and Tech Fleece all winter.",
+      "insights": [
+        2,
+        0,
+        5
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear",
+        "footwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Ship on a fixed date in the last week of November. The brief sets no earlier step, but its 9-12 month outerwear calendar means a new parka for this winter would already have to be in the line.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Check whether a Raptors parka and the salt-line Air Force 1 can land this November on a 9-12 month calendar, or move them to 2027-28.",
+        "Set the parka's CAD halo price against Nike Canada levels and test it with Sport Chek buyers.",
+        "Confirm the CF Yorkdale Nike store is still open before allocating to it.",
+        "Track full-price sell-through by Jan 31 and the share of units sold outside Ontario."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "stock-availability",
+        "third-party-ip",
+        "brand-safety"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": []
+    },
+    {
+      "id": "crowd-owned-homecoming",
+      "status": "hypothesis",
+      "consumer": "Diehard Raptors fans, fans across Canada and diaspora families who lived the 2019 run.",
+      "insights": [
+        1,
+        5
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "kids",
+        "outerwear"
+      ],
+      "fit": [
+        "unisex adult",
+        "youth",
+        "kids"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Pre-stage the Four Bounces tee, the mural and the shell so the launch can move within 48 hours of Leonard's confirmed first home game, with Oct 30 as the fallback.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Leonard's first Scotiabank Arena game and his health before fixing the launch date.",
+        "Confirm league and players' association licensing for the Leonard jersey and any 'Fun Guy' tee.",
+        "Front-load Leonard units before the Feb 11 trade deadline and plan reorders, not deep late buys.",
+        "Get City and Waterfront Toronto sign-off for Underpass Park, or book a Mural Routes wall."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Elicser Elliott",
+        "Mural Routes"
+      ]
+    },
+    {
+      "id": "purple-era-carter",
+      "status": "hypothesis",
+      "consumer": "Collectors, millennials who grew up with Vince Carter and the GTA hoopers of the 'Carter Effect' generation.",
+      "insights": [
+        6,
+        5
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "outerwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Clear throwback rights first: Classic Edition or third-party throwback licences, Carter's name and likeness, and the Huskies marks, ahead of the Nov 1-2 launch.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm with the NBA whether Nike can reissue the 1995-2003 purple-dino and pinstripe jerseys as Classic Edition.",
+        "Agree Carter's name-and-likeness terms before any #15 product.",
+        "Check Shox BB4 retro availability on Nike's calendar before tying footwear to the All-Star chapter.",
+        "Test the numbered run size and draw demand with collectors."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Maestro Fresh Wes",
+        "Vince Carter"
+      ]
+    },
+    {
+      "id": "ends-borough-series",
+      "status": "hypothesis",
+      "consumer": "Diaspora families and youth hoopers in Toronto's inner suburbs and the 905.",
+      "insights": [
+        3,
+        0
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Recruit and pay the first borough artists through Mural Routes and StreetARToronto before the mid-November Scarborough drop. The brief sets no earlier date.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the team will wear each borough shooting shirt in home warmups.",
+        "Confirm Mural Routes, StreetARToronto, Clandestinos and Adrian Hayles are active and available.",
+        "Check each borough object for real business names and Zum, MiWay or TTC marks before design lock."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Mural Routes",
+        "StreetARToronto",
+        "Clandestinos (Shalak Attack and Bruno Smoky)",
+        "Adrian Hayles"
+      ]
+    },
+    {
+      "id": "heritage-nights-coauthored",
+      "status": "hypothesis",
+      "consumer": "Caribbean, South Asian, Chinese, Filipino, Somali and Muslim families across the GTA.",
+      "insights": [
+        4,
+        0
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "accessory",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Sign a paid GTA South Asian designer before the indicative Diwali window around Nov 8, if a partner takes that date. The brief sets no earlier date.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm each community partner wants to take part and picks the object, name and date, or declines.",
+        "Confirm Nia Centre's current status and the terms of the proceeds share.",
+        "Vet every design for religious script and contested flags before sign-off.",
+        "Confirm the 2026-27 dates for Diwali, Lunar New Year and Ramadan."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "brand-safety",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Nia Centre for the Arts"
+      ]
+    },
+    {
+      "id": "offseason-street-summer",
+      "status": "hypothesis",
+      "consumer": "Toronto's Caribbean community, Black queer Toronto and fans who wear Raptors red through the summer.",
+      "insights": [
+        4,
+        0
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "headwear",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "Agree the Pride co-design and a proceeds commitment that lasts past June with Blackness Yes! before the late-June launch. The brief sets no earlier date.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Blackness Yes! will co-author the Pride capsule and agree a multi-year proceeds share.",
+        "Confirm Saldenah Carnival's availability and the 2027 Grand Parade date.",
+        "Check every Canada Day piece for flags and government marks, and every Carnival piece for 'Caribana'."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Blackness Yes!",
+        "Saldenah Carnival (Louis Saldenah)"
+      ]
+    },
+    {
+      "id": "toronto-hoops-tempo-grassroots",
+      "status": "hypothesis",
+      "consumer": "Toronto's women's-hoops crowd and GTA youth hoopers.",
+      "insights": [],
+      "categories": [
+        "tee",
+        "fleece",
+        "shorts",
+        "other"
+      ],
+      "fit": [
+        "women's",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2027-05",
+      "actNote": "Confirm the Tempo's 2027 home opener and licensing, then co-design with its supporter groups. The brief sets no earlier date.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Tempo's 2027 home schedule and who licenses its marks.",
+        "Confirm the supporter groups want to co-design the capsule.",
+        "Test women-first sizing with the Tempo crowd."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "partner-agreement",
+        "production-capacity",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Toronto Tempo supporter groups"
+      ]
+    },
+    {
+      "id": "nocta-night-game",
+      "status": "hypothesis",
+      "consumer": "Gen Z and resale-minded sneaker fans.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Clear all four gates before any Drake Night: Drake's ambassador role, OVO's rights, NBA and MLSE licensing of a sub-brand, and post-feud sentiment. The brief sets no earlier date.",
+      "routes": [
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Drake's Global Ambassador role and a Drake Night on the 2026-27 schedule.",
+        "Confirm OVO's rights in Raptors product and whether the NBA and MLSE will license a NOCTA Raptors capsule.",
+        "Read post-feud fan sentiment before anyone briefs it."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety",
+        "nike-calendar-approval",
+        "production-capacity",
+        "date-confirmation"
+      ],
+      "owner": "Licensing and legal",
+      "partners": [
+        "Drake"
+      ]
+    }
+  ]
+}

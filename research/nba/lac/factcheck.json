@@ -1,0 +1,280 @@
+{
+  "team": "lac",
+  "checked": 62,
+  "verdicts": [
+    {
+      "lens": "fanbase",
+      "claim": "The Wall at Intuit Dome is a standing-room section",
+      "verdict": "corrected",
+      "note": "The Wall is a steep, single-sided seating section behind the basket, not standing room. Fixed in fanbase, music and uniform.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "topInsights[0] calls the Wall \"standing\"",
+      "verdict": "corrected",
+      "note": "The brief repeats the standing-room error. Reword it: the Wall is a steep seating section.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Hyphy-adjacent ratchet as an LA sound term",
+      "verdict": "corrected",
+      "note": "Hyphy is a Bay Area movement, so the term is now just \"Ratchet\".",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Vocabulary \"Clips Nation\" as a fan term",
+      "verdict": "corrected",
+      "note": "Replaced with \"Clipper Nation\", the team and fan term used in culture and rhythm. \"Clips Nation\" is a blog name.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Vocabulary \"Clippers Nation\"",
+      "verdict": "corrected",
+      "note": "Standardized to \"Clipper Nation\" to match the other dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Good Life Cafe still hosts the Project Blowed workshop",
+      "verdict": "corrected",
+      "note": "The cafe is now framed as a historical origin site. Project Blowed's present-day venue is unverified.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Culver City cluster \"around Hauser & Wirth-adjacent spaces and the Museum of Jurassic Technology\"",
+      "verdict": "corrected",
+      "note": "Hauser & Wirth is in the downtown Arts District, and the Museum of Jurassic Technology isn't a gallery. Rewritten around Art + Practice and the California African American Museum.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Kehinde Wiley has worked with Destination Crenshaw",
+      "verdict": "removed",
+      "note": "The tie couldn't be supported, so the entry now features Lauren Halsey, a South Central-raised artist.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Nipsey Hussle Day is Aug 15",
+      "verdict": "corrected",
+      "note": "Aug 15 is his birthday and Mar 31 is the anniversary of his death. The moment now covers both. Underground already used late March.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Drew League plays at Washington Preparatory High School",
+      "verdict": "corrected",
+      "note": "Web search found only older venues (Charles Drew Middle School, Washington Park) and no 2026 venue. The home gym is now marked as varying and unconfirmed. Strategy.json repeats the Washington Prep claim.",
+      "source": "https://en.wikipedia.org/wiki/Drew_League"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Opportunity hometown-summer and calendar cite \"Drew League at Washington Prep\"",
+      "verdict": "unverifiable",
+      "note": "The venue isn't confirmed. Say \"Drew League (venue to confirm)\".",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Taste of Soul date (mid-October)",
+      "verdict": "confirmed",
+      "note": "Checked live: the 21st annual is Saturday, Oct 17, 2026, 10 AM to 7 PM on Crenshaw Blvd. Dossiers updated, and the strategy calendar can state the date.",
+      "source": "https://tasteofsoul.lasentinel.net/"
+    },
+    {
+      "lens": "food",
+      "claim": "Pann's Restaurant is operating in Westchester",
+      "verdict": "unverifiable",
+      "note": "Search found no closure news and 2025 coverage describing it as open (6710 La Tijera), but no 2026 confirmation. The brief names Pann's Googie roofline twice.",
+      "source": "https://en.wikipedia.org/wiki/Pann%27s"
+    },
+    {
+      "lens": "food",
+      "claim": "Bludso's Bar & Que as Kevin Bludso's current business",
+      "verdict": "corrected",
+      "note": "The flagship is the Compton-rooted Bludso's BBQ. The dossier now names that and avoids the location-specific brand.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Paul Pierce, Westbrook, Sierra Canyon notes",
+      "verdict": "corrected",
+      "note": "Westbrook is now \"raised in Hawthorne\" (born Long Beach). The Sierra Canyon note now calls James' sons Bronny and Bryce alumni, not current players.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Slauson Swap Meet district",
+      "verdict": "corrected",
+      "note": "Renamed to a generic \"Slauson Avenue swap-meet corridor\", since the exact market name is uncertain.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Navy/red/silver refresh \"reception has been mixed\"",
+      "verdict": "corrected",
+      "note": "The reception claim had no basis. It now reads \"fan reception unverified\".",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Krump founders \"Tight Eyez's Hood Wars era\"",
+      "verdict": "corrected",
+      "note": "Removed the oddly specific \"Hood Wars\" detail. Tight Eyez and Big Mijo remain as founders.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Westside/Eastside vocabulary: South LA = Westside, East LA = Eastside",
+      "verdict": "corrected",
+      "note": "The original contradicted the art and culture dossiers, where Westside means Santa Monica. Rewritten as community-dependent shorthand.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Several home Cup Nights for the Clippers",
+      "verdict": "corrected",
+      "note": "Each team plays four group games, so about two are at home. Changed to \"two home Cup Nights\".",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Crypto.com Arena is now the Lakers' alone",
+      "verdict": "corrected",
+      "note": "The Kings and Sparks also play there. Wording fixed.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Fear of God has Nike basketball history",
+      "verdict": "corrected",
+      "note": "Added that the Nike line ran 2019-22 before Jerry Lorenzo moved to Adidas.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Clippers \"navy\" is #1D428A",
+      "verdict": "corrected",
+      "note": "#1D428A is the royal blue, so it's now \"Clippers blue\". Navy #12173F is used in rhythm, uniform, retail-behavior and strategy.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Clippers play Cup Nights on Nov 24-25",
+      "verdict": "corrected",
+      "note": "Nov 24-25 are league Cup Nights, and the Clippers play only four group games. Dossiers now say participation is unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Opportunities, calendar and retailPlaybook anchor family bundles on Clippers Cup Nights Nov 24-25",
+      "verdict": "unverifiable",
+      "note": "The Clippers may not play those nights. Only the Oct 30 home game vs NOP is confirmed. Tie the plan to confirmed home dates.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Palette mixes navy #12173F with Clippers Blue #1D428A in the Area Codes theme",
+      "verdict": "unverifiable",
+      "note": "The dossiers disagree on the primary blue. Check the current brand guide before locking hexes.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Lakers and Clippers briefs both claim Chicano lettering / City Edition history (Mister Cartoon Old English)",
+      "verdict": "unverifiable",
+      "note": "Check which past Clippers City Editions, if any, used Old English script before pitching Inglewood Neon.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Regional mall list includes \"the Pike\" (Long Beach)",
+      "verdict": "unverifiable",
+      "note": "Confirm The Pike Outlets still operates under that name. It has been in flux.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Foot Locker at Baldwin Hills Crenshaw Plaza; Flight Club, Wasteland, Round Two locations",
+      "verdict": "unverifiable",
+      "note": "Check store presence at the named addresses live. The brief builds seeding plans on these doors.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "2024 rebrand: navy/red/silver palette, new logo and wordmark, hex #12173F",
+      "verdict": "unverifiable",
+      "note": "Confirm the 2024 identity refresh exists, and check its details and exact hexes.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Braves powder blue #6FB7E9 and orange #F47B20; Braves/San Diego mark licensing",
+      "verdict": "unverifiable",
+      "note": "The hexes are approximations. Verify the archive colors and whether licensing is available.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Clipper Darrell (Darrell Bragg) still regularly attends games",
+      "verdict": "unverifiable",
+      "note": "Confirm he's still active before featuring him in any content.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Intuit Dome Halo Board, Wall and concourse vendors as described",
+      "verdict": "unverifiable",
+      "note": "Confirm current section names, the Halo Board description and 2026-27 concession vendors.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Randy's Donuts, Hawkins House, Original Tommy's, Roscoe's locations open",
+      "verdict": "unverifiable",
+      "note": "Confirm each is open at the cited address, Roscoe's locations especially.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Camp Flog Gnaw timing and venue, Long Beach Pride in May, Kendrick/SZA 2025 SoFi dates",
+      "verdict": "unverifiable",
+      "note": "Confirm 2026 dates and venue. Camp Flog Gnaw has moved before.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "POW! WOW! Long Beach runs in February, Frieze LA mid-late Feb, Art + Practice and Destination Crenshaw programming",
+      "verdict": "unverifiable",
+      "note": "Festival dates and operating status need a live check before the February artist series is scheduled.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Mooneyes Xmas Party location and date, Stoner Skate Plaza and Venice Skatepark status, sideshow-spectating ordinance",
+      "verdict": "unverifiable",
+      "note": "All of this is time-sensitive. Confirm before any launch or event.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Ontario Clippers name and Toyota Arena home for 2026-27",
+      "verdict": "unverifiable",
+      "note": "Confirm the G League club's name, arena and status.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Brief states the 2026-27 City Edition is unverified and pitches a 2028-29 City Edition",
+      "verdict": "unverifiable",
+      "note": "The brief treats the 2026-27 City Edition as unconfirmed, which is right. But every City Edition history claim needs a live check.",
+      "source": ""
+    }
+  ],
+  "summary": "The dossiers match the verified facts on roster, coach, Aspiration penalties, the 42-40 record, Cup group, Christmas slate, Specter teams and league dates. The errors were small slips, now fixed in place: the Wall's seating, hyphy, Hauser & Wirth, the date of Nipsey Hussle Day and the Drew League venue. Live searches confirmed Taste of Soul on Oct 17, 2026. The biggest strategy risks are Cup Nights on Nov 24-25 and the clash between navy #12173F and blue #1D428A."
+}

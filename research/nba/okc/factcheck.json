@@ -1,0 +1,259 @@
+{
+  "team": "okc",
+  "checked": 96,
+  "verdicts": [
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Factory Store operates at the Outlet Shoppes of Oklahoma City (I-240 corridor)",
+      "verdict": "corrected",
+      "note": "Checked live: the center is now OKC Outlets, 7624 W. Reno Ave, at I-40 exit 142 near Council Rd. That's west OKC, not I-240. Nike Factory Store is a listed tenant. Fixed the name and location in retail-landscape and retail-behavior. Store hours and current status still need a call.",
+      "source": "https://www.travelok.com/de/listings/view.profile/id.15164"
+    },
+    {
+      "lens": "food",
+      "claim": "Ma Der Lao Kitchen sits in the Asian District on Classen",
+      "verdict": "corrected",
+      "note": "Checked live: Ma Der Lao is at 1634 N Blackwelder in the Plaza District. It opened in 2021, with sister noodle bar Bar Sen following in Feb 2025. It was a James Beard finalist in 2023 and 2024. Fixed the neighborhood in food.json.",
+      "source": "https://www.exploretock.com/ma-der-lao-kitchen/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Partner Jeff Chanchaleune is an Asian District business owner who anchors the Lunar New Year District Series launch and connects Nike with Vietnamese and Lao artists",
+      "verdict": "corrected",
+      "note": "His restaurants are in the Plaza District, not on Classen, and he is Lao-American, not a Vietnamese community voice. Reframe him as a Plaza District partner. Add a real Classen Asian District partner for Lunar New Year, such as a district business association. The editor should fix partners, the District Series collection and calendar month 2.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Shop Good is a Plaza District local-pride shop",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Shop Good is at 1007 N Broadway in Automobile Alley, not Midtown or the Plaza District. Fixed in retail-landscape and strategy.",
+      "source": "https://www.travelok.com/de/listings/view.profile/id.18328"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Red Dirt capsule and retail playbook place Shop Good in the Plaza District",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Shop Good is on N Broadway in Automobile Alley. Relabeled the door in the Red Dirt capsule, partners and retail playbook. The Plaza art walk (LIVE on the Plaza) still needs a check.",
+      "source": "https://www.travelok.com/de/listings/view.profile/id.18328"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Thunder Sunset orange hex #EF6B2E",
+      "verdict": "corrected",
+      "note": "Official Thunder Sunset is #EF3B24, the value every other dossier and the brief use. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "No NBA team in Oklahoma before 2008",
+      "verdict": "corrected",
+      "note": "The New Orleans/Oklahoma City Hornets played in OKC in 2005-07 after Katrina, and the culture dossier already says so. Corrected the headline and first insight.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Kevin Durant was a three-time scoring champion in OKC",
+      "verdict": "corrected",
+      "note": "Durant won four scoring titles as a Thunder player (2010-12, 2014). Softened the claim to multiple-time.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Nick Collison era 2004-2018",
+      "verdict": "corrected",
+      "note": "Collison was drafted in 2003 and played 2003-2018, first for the Sonics and then the Thunder. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Memphis is a division-adjacent foe",
+      "verdict": "corrected",
+      "note": "Memphis is in the Southwest Division and OKC is in the Northwest. Replaced it with the 2025 first-round sweep plus Cup Group B.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Home opener and championship banner era in late October",
+      "verdict": "corrected",
+      "note": "The 2025 banner went up in 2025-26, and there is no banner night in 2026-27. Renamed the item Home opener window and noted that the home opener date is unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Women's College World Series venue is Devon Softball Stadium (Hall of Fame Stadium)",
+      "verdict": "corrected",
+      "note": "The venue is branded Devon Park (USA Softball Hall of Fame Stadium). Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Open question whether the Thunder wear Specter uniforms in 2026-27",
+      "verdict": "corrected",
+      "note": "Current facts: Specter went to eight franchises (Celtics, Lakers, Warriors, Knicks, 76ers, Kings, Pistons, Hawks). OKC is not one of them. Updated the verify lines in rhythm and uniform. The brief's verify list still asks about Specter for OKC and should drop it.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "The Jones Assembly is in Automobile Alley",
+      "verdict": "corrected",
+      "note": "It is in Film Row (Sheridan Ave). Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Local slang SoSo for the Southside",
+      "verdict": "removed",
+      "note": "Nothing supports this as an OKC term. Replaced it with plain South Side.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Early Oklahoma City SuperSonics gear",
+      "verdict": "corrected",
+      "note": "The franchise was the Seattle SuperSonics until 2008. Reworded to Sonics-era and 2008-09 first-season Thunder gear.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Nic's Grill is in Downtown / Film Row",
+      "verdict": "corrected",
+      "note": "The neighborhood isn't reliably known. Changed it to Central OKC and queued an address check.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Red Dirt Horizon City Edition framed as the story that follows the 2025-26 recolor",
+      "verdict": "unverifiable",
+      "note": "A 2026-27 City Edition almost certainly exists, and it's usually revealed from late October to November. The uniform dossier targets 2027-28. The editor should say so explicitly and confirm the 2026-27 set before the brief claims novelty. The 2018-19 set concept is also unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Calendar and opportunities list late-July and September 2026 windows (tax-free weekend, Plaza Walls, State Fair previews)",
+      "verdict": "unverifiable",
+      "note": "Today is 2026-10-09, so those windows have passed. They only work as 2027 plans. The editor should label them 2027 and make the October 12-22 opener window the live action.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Oct 22 vs Denver is the first home game and a Paycom Center event",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: Oct 22 vs Denver at Paycom Center is the home opener, 8:30 p.m. Central on ESPN. Updated calendar entry 1 and fanbase.",
+      "source": "https://okcfox.com/news/local/thunder-tip-off-26-27-season-at-spurs-on-nbc-then-host-nuggets-in-home-opener"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Oklahoma sales-tax holiday: first weekend of August, clothing and footwear under $100 per item",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the holiday falls on the first weekend of August and covers clothing and footwear under $100 per item (2025 ran Aug 1-3). The 2027 dates still need the Tax Commission's notice.",
+      "source": "https://fox23.com/news/oklahomas-sales-tax-holiday-for-2025-happening-this-weekend"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Oklahoma sales-tax holiday threshold and dates",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the holiday falls on the first weekend of August and covers clothing and footwear under $100 per item (2025 ran Aug 1-3). The 2027 dates still need the Tax Commission's notice.",
+      "source": "https://fox23.com/news/oklahomas-sales-tax-holiday-for-2025-happening-this-weekend"
+    },
+    {
+      "lens": "uniform",
+      "claim": "2025-26 City Edition recolored the 2018-19 set; 2018-19 concept",
+      "verdict": "unverifiable",
+      "note": "The recolor claim is in current facts. The 2018-19 design itself and fan reception are unverified, and the 2026-27 City Edition is unknown.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Champion-patch and banner details on 2026-27 sets",
+      "verdict": "unverifiable",
+      "note": "OKC wore the 2025 champion patch in 2025-26, and the Knicks are the 2026-27 champions. Confirm that no OKC patch applies.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Specific 2026-27 dates: Red River Rivalry, State Fair, Memorial Marathon, Festival of the Arts, WCWS, Paseo Arts Festival, Red Earth",
+      "verdict": "unverifiable",
+      "note": "These dates come from recurring patterns, not 2026-27 calendars. Check each organizer.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "OKC Blue home arena and branding; Lloyd Noble Center still OU home; OSSAA state tournament venues and dates",
+      "verdict": "unverifiable",
+      "note": "Not checked live. New OU arena plans and OSSAA site assignments change.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Beer City Music Hall in Plaza District, Tower Theatre, The Criterion, ACM@UCO Lab operating",
+      "verdict": "unverifiable",
+      "note": "Beer City Music Hall's location and status are especially uncertain. Venues churn often.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Diamond Ballroom, Langston's Western Wear, Factory Obscura (location), Plaza Walls still running",
+      "verdict": "unverifiable",
+      "note": "Not checked live. The Factory Obscura address and the Plaza Walls timing are unsure.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Pops 66 sign and Route 66 centennial programming; Oklahoma flag redesign debate",
+      "verdict": "unverifiable",
+      "note": "Landmark status and any state flag redesign activity are unverified.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Cattlemen's Steakhouse, Nic's Grill, Tucker's, Super Cao Nguyen, Sid's Diner, Fried Onion Burger Day date",
+      "verdict": "unverifiable",
+      "note": "Operating status and the early-May festival date weren't checked live.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "405/572 overlay, Skydance Bridge, First Americans Museum programming, Plaza Walls and First Friday",
+      "verdict": "unverifiable",
+      "note": "Mostly stable but not checked live. The dossiers also disagree on Plaza cross streets. Blackwelder is correct.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Thunder Alley and Rumble pregame program, SGA top jersey, ownership (Clay Bennett group) and Paycom Center name",
+      "verdict": "unverifiable",
+      "note": "Current facts did not verify ownership or the arena. Check the team site and NBA store rankings.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Foot Locker at Penn Square, Hibbett, Dick's, Academy door lineups; Quail Springs lineups",
+      "verdict": "unverifiable",
+      "note": "Specific store presence wasn't checked live.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Thunder team store location and Tulsa pop-up partners",
+      "verdict": "unverifiable",
+      "note": "Team store presence beyond Paycom Center is unknown.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Aday Mara, Dort, Joe, Wiggins roster statements",
+      "verdict": "confirmed",
+      "note": "Consistent with current facts: Dort, Joe and Wiggins were traded, and Mara went No. 12. The destinations of Joe and Wiggins aren't stated, so keep the copy to traded.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Seattle origin, Hornets after Katrina, Clara Luper 1958 sit-ins, Oklahoma name Choctaw origin, FAM opened 2021",
+      "verdict": "confirmed",
+      "note": "Long-established history.",
+      "source": ""
+    }
+  ],
+  "summary": "The dossiers were mostly sound on team facts, which match the current facts (record, West finals loss, trades, Mara, Cup group, key dates). Three live checks found location errors: the outlet center is now OKC Outlets on I-40, Ma Der Lao Kitchen is in the Plaza District, and Shop Good is in Automobile Alley. Other fixes cover the Hornets' 2005-07 history, Durant's titles, Collison's dates, Memphis's division, the banner night, the WCWS venue name and the Jones Assembly neighborhood. An invented SoSo slang term is gone. OKC didn't get Specter. The brief still needs work on Chanchaleune as Asian District anchor, Shop Good's placement, the 2026-27 vs 2027-28 City Edition framing, past-dated 2026 windows and the Oct 22 home status. Small businesses and 2027 event dates are queued as unverifiable."
+}

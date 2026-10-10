@@ -1,0 +1,673 @@
+{
+  "team": "dal",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Dallas home opener week: Oct 24, 2026 vs. San Antonio (road opener Oct 21 at Houston)",
+      "kind": "event",
+      "start": "2026-10-24",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 30 to Nov 27, 2026 (home nights Oct 30 vs. Houston and Nov 6 vs. Utah)",
+      "kind": "season",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "dal-cup-dates",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Noche Latina 2026-27 (date to confirm)",
+      "kind": "event",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Commission the Oak Cliff painters now for a flat fee plus name credit.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Black Friday 2026 to Dec 24, 2026",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after the fourth Thursday in November; Christmas Eve is Dec 24",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 4-11, 2026",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-11",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals, semifinals and championship",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Jan 6, 2027",
+      "kind": "event",
+      "start": "2027-01-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Three Kings Day is January 6",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Feb to Mar 2027",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-03",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Spring 2027 (Dallas Art Fair and Deep Ellum Arts Festival)",
+      "kind": "action",
+      "start": "2027-03",
+      "end": "2027-05",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "June 12, 2027 and the 2027 NBA Draft",
+      "kind": "launch",
+      "start": "2027-06-12",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "The 2011 title was won on June 12, so the anniversary falls on June 12",
+      "actBy": "2026-10",
+      "actNote": "Start the Dirk likeness and 41 talks with his camp and the team now.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "May to Sept 2027",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "2027-09",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Aug 2027 Texas sales tax holiday (dates to confirm)",
+      "kind": "launch",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Sept 16, 2027",
+      "kind": "event",
+      "start": "2027-09-16",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Mexican Independence Day (Dieciseis de Septiembre) is September 16",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Late Sept to mid-Oct 2027",
+      "kind": "season",
+      "start": "2027-09",
+      "end": "2027-10",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Mavs opening week, fall 2027",
+      "kind": "launch",
+      "start": "2027-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "flagg-opening-week",
+      "consumer": "Suburban families, Gen Z digital fans and returning Dirk-era diehards buying Flagg replicas and kids' gear.",
+      "insights": [
+        3,
+        4,
+        1
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "kids",
+        "fleece"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Stock in-line Flagg replicas, deep youth sizing and fixed-price personalization for the Oct 24 home opener.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Home Cup games are confirmed: Oct 30 vs. Houston and Nov 6 vs. Utah. Confirm the Mavs-Rockets piece can be ready for Oct 30.",
+        "Clear the Cup mark rights and the Nike-Fanatics quick-turn split before committing to the Mavs-Rockets tee.",
+        "Check youth replica depth at the AAC team store, Dick's and Academy before opening week."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "big-d-heritage-gifts",
+      "consumer": "Dirk-era diehards (35+), gift buyers and international fans.",
+      "insights": [
+        3,
+        1
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Start the Dirk likeness and 41 talks with his camp and the team now.",
+      "routes": [
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Check existing licensed Dirk stock for the 2026 holiday gift boxes.",
+        "Confirm the license path for Dirk's likeness and 41, and Classic Edition approvals.",
+        "Test the 1980s Blackman-Aguirre-Harper green and the mid-1990s Triple J look with fans before choosing an era.",
+        "Pull archive hex values for the 1980s and 1990s greens."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Dirk Nowitzki's camp"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "desde-la-cliff",
+      "consumer": "Mexican-American and Latino families across Oak Cliff, West Dallas, Pleasant Grove, Irving and Garland.",
+      "insights": [
+        2,
+        1
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "headwear",
+        "kids",
+        "footwear",
+        "event"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Commission Oak Cliff painters now for a flat fee plus name credit.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the 2026-27 Noche Latina date and whether the 'Los Mavs' uniforms continue.",
+        "Agree fees, credit and the Jefferson Boulevard pop-up with the painters and the Texas Theatre.",
+        "Test Spanish-first designs with Oak Cliff and Pleasant Grove families.",
+        "Check that the car-club-plaque warm-up is an original design."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Oak Cliff lowrider painters, pinstripers and sign letterers (to name)",
+        "Texas Theatre"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "dfw-back-to-school",
+      "consumer": "Suburban and Southern Dallas families and value-minded households shopping the tax-free weekend.",
+      "insights": [
+        5,
+        6,
+        1
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "footwear",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-08",
+      "actBy": "2027-08",
+      "actNote": "Confirm the 2027 Texas sales tax holiday dates and the under-$100 rule. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the 2027 tax holiday dates and that the under-$100 per-item rule is unchanged.",
+        "Cost every hero piece against the $99.99 target with Nike costing.",
+        "Confirm Flagg's footwear deal before leaving him out of the line.",
+        "Agree doors with Academy, Dick's and Stonebriar and keep the line out of the outlets."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Local rec-center and church-league coaches (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "wings-summer",
+      "consumer": "Girls' and youth hoopers, families and the younger, more diverse Wings crowd.",
+      "insights": [
+        4,
+        6
+      ],
+      "categories": [
+        "tee",
+        "kids",
+        "accessory",
+        "headwear"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2027-05",
+      "actNote": "Agree the volt-and-navy range with the Dallas Wings, a separate franchise with its own approvals. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Wings' 2027 home arena and roster.",
+        "Confirm which Wings players, including Paige Bueckers and Arike Ogunbowale, have Nike ties before featuring them.",
+        "Test youth and family pieces at Texas Legends events before a wider rollout."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "partner-agreement",
+        "player-or-estate-rights",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Dallas Wings",
+        "Texas Legends"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "ellum-wall",
+      "consumer": "18-30 creatives, music fans and sneaker collectors in and around Deep Ellum.",
+      "insights": [
+        1,
+        4
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-10",
+      "actBy": "2027-03",
+      "actNote": "Commission the walls with the lead artist in spring 2027. The brief sets no earlier deadline.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Jeremy Biggers is available for a flat up-front commission.",
+        "Confirm Kettle Art Gallery and The Black Academy of Arts and Letters are open to the launch and proceeds roles.",
+        "Confirm the Deep Ellum Community Association's mural role before routing work through it.",
+        "Check every design against existing murals so nothing is copied."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Jeremy Biggers",
+        "Frank Campagna",
+        "Kettle Art Gallery",
+        "The Black Academy of Arts and Letters"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "fair-park-centennial",
+      "consumer": "South Dallas residents and metroplex-wide families who are not yet Mavs buyers.",
+      "insights": [
+        0
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "outerwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-09",
+      "actBy": "2027-09",
+      "actNote": "Fund the paid advisory role with the African American Museum, Dallas. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the African American Museum, Dallas and Fair Park First are willing to take the roles.",
+        "Check the Hall of Negro Life and Aaron Douglas mural history for the advisory brief.",
+        "Confirm the 2027 State Fair of Texas dates.",
+        "Check the Centennial lettering is original and uses no State Fair, Big Tex or Pegasus marks."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "brand-safety",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "African American Museum, Dallas",
+        "Fair Park First",
+        "Black Dallas letterer or architectural historian (to name)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "made-in-the-metroplex",
+      "consumer": "Black Dallas hoops fans, high school and AAU players and their families in Southern Dallas County.",
+      "insights": [
+        6,
+        5
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "accessory",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Get district sign-off and school licensing first. The brief sets no earlier deadline.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Get district sign-off and school licensing for Duncanville and Southern Dallas County schools.",
+        "Check NIL and eligibility rules before featuring any student athlete.",
+        "Agree paid partner roles with rec-center directors, AAU coaches and church-league organizers."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "third-party-ip",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Southern Dallas County school districts",
+        "Rec-center directors, AAU coaches and church-league organizers (to name)"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

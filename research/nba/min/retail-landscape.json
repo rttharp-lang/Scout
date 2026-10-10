@@ -1,0 +1,368 @@
+{
+  "team": "min",
+  "lens": "retail-landscape",
+  "headline": "Minnesotans buy Wolves gear at the mall, but a small \"North\" scene sets taste.",
+  "summary": "The Twin Cities shop big-box and mall. Mall of America is the biggest door for Nike and team gear, and fans stop at the Target Center store on game nights. Taste starts in a few pockets: Uptown, Lake Street, North Loop, and the Black-owned and immigrant-owned shops of North Minneapolis, Cedar-Riverside and University Avenue. Seed those first, then fill the volume doors.",
+  "insights": [
+    {
+      "title": "Mall of America is the volume anchor",
+      "detail": "The Bloomington megamall draws shoppers from across the state, the Upper Midwest and abroad. Nike, Foot Locker, Lids and other athletic chains share its roof. For many Minnesotans outside the metro, it is the one yearly trip for sneakers and Wolves gear.",
+      "implication": "Launch broad-appeal Wolves, Icon and Statement product and City Edition drops at MOA. Don't expect it to set taste."
+    },
+    {
+      "title": "The arena store is the ritual door",
+      "detail": "The Timberwolves team store at Target Center in downtown Minneapolis is where game-night fans buy jerseys, tees and fresh-release gear. Sales rise with playoff runs. Last season's 49-33 record and a second-round run kept demand high going into the Edwards-LaMelo Ball era.",
+      "implication": "Debut LaMelo Ball and Edwards player drops here, plus Christmas Day (vs OKC) and Garnett-retirement product. This is the door for emotional, game-night pieces."
+    },
+    {
+      "title": "Taste is set in a few independent pockets",
+      "detail": "Local creatives trust the boutiques, vintage shops and pop-up markets in Uptown/Lake Street, the North Loop, the Northeast Minneapolis arts district and University Avenue in St. Paul. The North Loop is home to Askov Finlayson's \"The North\" apparel. These shoppers care more about Minnesota than team logos.",
+      "implication": "Before any wide release, seed limited Minnesota capsules and local-maker collaborations in these pockets. Credit and pay the creators."
+    },
+    {
+      "title": "Big-box and Target gravity",
+      "detail": "Target is headquartered in Minneapolis, and the arena carries its name. Mass retail (Target, Dick's, Scheels-style sporting goods, department stores) shapes family shopping for youth and value-priced Wolves product. Suburban malls like Southdale, Ridgedale, Rosedale and Eden Prairie Center serve family and youth-basketball buyers.",
+      "implication": "Build a clear youth and value tier for big-box and suburban doors: kids' Wolves tees and team-color basics. Keep it apart from the taste tier."
+    },
+    {
+      "title": "Winter dictates the product and the shop trip",
+      "detail": "Long cold seasons make outerwear, fleece, beanies and layers the core purchase. From November to March, shoppers often fold sneaker and gear buying into indoor mall trips. That overlaps the basketball season.",
+      "implication": "Warmth and hockey-style layering should lead Wolves apparel: heavy hoodies, shell jackets, knit hats. Sell sneakers through indoor-mall winter moments."
+    },
+    {
+      "title": "Purple Rain gives retail a second lane",
+      "detail": "The 2025-26 City Edition revived the Purple Rain set, tying the Wolves to Prince's legacy, Paisley Park in Chanhassen and First Avenue in downtown Minneapolis. Prince merch is a proven Minnesota gift category.",
+      "implication": "Pair any purple City Edition product with retail and pop-ups near First Avenue and Paisley Park. Get proper licensing from the Prince estate."
+    }
+  ],
+  "places": [
+    {
+      "name": "Mall of America",
+      "kind": "mall",
+      "neighborhood": "Bloomington",
+      "why": "The state's largest retail destination and the top volume door for athletic footwear and tourist Wolves gear."
+    },
+    {
+      "name": "Target Center",
+      "kind": "venue",
+      "neighborhood": "Downtown Minneapolis (Warehouse District)",
+      "why": "Home arena and team store, and the main place fans buy on game nights."
+    },
+    {
+      "name": "Uptown / Lake Street",
+      "kind": "district",
+      "neighborhood": "Uptown, Minneapolis",
+      "why": "A longtime strip for youth streetwear, vintage and sneaker browsing along Lake Street and Hennepin."
+    },
+    {
+      "name": "North Loop",
+      "kind": "district",
+      "neighborhood": "North Loop, Minneapolis",
+      "why": "Boutiques and Minnesota-pride apparel, home to Askov Finlayson."
+    },
+    {
+      "name": "Nicollet Mall / downtown skyway",
+      "kind": "district",
+      "neighborhood": "Downtown Minneapolis",
+      "why": "Office and arena foot traffic, plus Target's flagship presence. Good for pre-game and winter walking retail."
+    },
+    {
+      "name": "Cedar-Riverside",
+      "kind": "district",
+      "neighborhood": "West Bank, Minneapolis",
+      "why": "Somali-owned malls and shops (the Karmel Mall area on Lake and Pillsbury) with deep basketball culture and community trust."
+    },
+    {
+      "name": "University Avenue and Frogtown",
+      "kind": "district",
+      "neighborhood": "St. Paul",
+      "why": "Hmong and East African owned businesses and Hmong Village-style markets anchor St. Paul's community commerce."
+    },
+    {
+      "name": "Albertville Premium Outlets",
+      "kind": "outlet mall",
+      "neighborhood": "Albertville, northwest of the metro",
+      "why": "Outlet destination for discounted Nike and team gear."
+    }
+  ],
+  "people": [
+    {
+      "name": "Anthony Edwards",
+      "role": "Timberwolves guard, adidas signature athlete, global star",
+      "why": "Drives demand for signature product and jerseys at every door."
+    },
+    {
+      "name": "LaMelo Ball",
+      "role": "Timberwolves guard acquired June 2026",
+      "why": "New jersey and sneaker interest; drives first-wave Wolves sales."
+    },
+    {
+      "name": "Prince",
+      "role": "Late Minneapolis musical icon",
+      "why": "His estate and brand shape Purple Rain licensing and gift retail."
+    },
+    {
+      "name": "Kevin Garnett",
+      "role": "Wolves legend, jersey retirement honoree",
+      "why": "Drives nostalgia and heritage merchandise for a multi-generational fanbase."
+    },
+    {
+      "name": "Askov Finlayson",
+      "role": "North Loop Minnesota-pride apparel brand",
+      "why": "Set the template for \"The North\" local apparel identity and collab pop-ups."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Opening night and home opener",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The first gear rush of the Edwards-LaMelo Ball season."
+    },
+    {
+      "name": "Black Friday and holiday shopping",
+      "timing": "Late November",
+      "month": 11,
+      "why": "Peak mall season at MOA and big-box doors, during NBA Cup group play."
+    },
+    {
+      "name": "Christmas Day vs OKC",
+      "timing": "December 25",
+      "month": 12,
+      "why": "A national stage at Target Center and a major gifting window for Wolves apparel."
+    },
+    {
+      "name": "Kevin Garnett jersey retirement",
+      "timing": "2026-27 home game, date to be confirmed",
+      "month": 0,
+      "why": "A heritage merchandise moment likely to dominate team-store traffic."
+    },
+    {
+      "name": "Playoffs",
+      "timing": "April to June",
+      "month": 4,
+      "why": "The biggest surge in team-store and fan-gear sales, as in the 2024 conference finals run."
+    },
+    {
+      "name": "Minnesota State Fair",
+      "timing": "Late August to Labor Day",
+      "month": 8,
+      "why": "A statewide gathering with a big local merchandise and vendor presence."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Wolves",
+      "meaning": "The everyday team name. Fans say \"Wolves,\" not \"Timberwolves.\""
+    },
+    {
+      "term": "The North",
+      "meaning": "Minnesota's local-pride shorthand, and a brand identity too."
+    },
+    {
+      "term": "The Cities",
+      "meaning": "Minneapolis and St. Paul together."
+    },
+    {
+      "term": "Ant-Man",
+      "meaning": "Fan nickname for Anthony Edwards."
+    },
+    {
+      "term": "Minnesota nice",
+      "meaning": "A stereotype locals use ironically. Don't lean on it in product copy."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Lake Blue and Midnight Blue with Aurora Green accents",
+      "type": "color",
+      "hex": "#236192",
+      "source": "Timberwolves modern palette, lakes and northern sky",
+      "use": "Base tone for core Wolves apparel and mall-door product."
+    },
+    {
+      "cue": "Aurora green",
+      "type": "color",
+      "hex": "#78BE20",
+      "source": "Northern lights and Wolves accent color",
+      "use": "Accent for trims, outsoles and drawcords on taste-tier drops."
+    },
+    {
+      "cue": "Purple Rain violet",
+      "type": "color",
+      "hex": "#5B2C83",
+      "source": "Prince and the Purple Rain City Edition",
+      "use": "Seasonal purple capsule, licensed and tied to First Avenue and Paisley Park partners."
+    },
+    {
+      "cue": "Winter layering: heavy fleece and shell textures",
+      "type": "material",
+      "hex": "",
+      "source": "Minnesota winters",
+      "use": "Heavy-gauge hoodies, quilted liners and knit beanies for the Oct-Mar season."
+    },
+    {
+      "cue": "'The North' badge-style typography",
+      "type": "typography",
+      "hex": "",
+      "source": "Local pride apparel tradition",
+      "use": "Collab graphic language made with local makers, not copied from them."
+    },
+    {
+      "cue": "Lakes-and-skyway map graphic",
+      "type": "graphic",
+      "hex": "",
+      "source": "Chain of Lakes and downtown skyway system",
+      "use": "Tonal all-over print on tees and shorts for Minneapolis boutique drops."
+    }
+  ],
+  "productHooks": [
+    "Mall of America and Target Center \"Wolves Winter\" capsule: heavyweight fleece, shell jacket and knit hat in Lake Blue and Midnight, with aurora trim.",
+    "Purple Rain City Edition apparel for retail near First Avenue and Paisley Park, with Prince estate licensing.",
+    "Collab capsule with North Loop and North Minneapolis designers, sold at pop-ups and select independent doors.",
+    "Garnett jersey-retirement heritage collection, sold through the team store.",
+    "Youth and value tier for Target, Dick's and suburban mall doors."
+  ],
+  "watchouts": [
+    "Prince's imagery, name and symbol need estate licensing. Don't use them without clearance.",
+    "Somali and Hmong commerce areas are community institutions, not marketing backdrops. Partner with local creators and pay them.",
+    "Skip the \"Minnesota nice\" and \"frozen tundra\" clichés. Avoid Vikings and Twins IP crossover too.",
+    "Several door names and statuses here come from model knowledge. Verify them before any outreach."
+  ],
+  "sources": [
+    {
+      "title": "Minnesota Timberwolves official site",
+      "url": "https://www.nba.com/timberwolves"
+    },
+    {
+      "title": "Target Center official site",
+      "url": "https://www.targetcentermn.com"
+    },
+    {
+      "title": "Mall of America official site",
+      "url": "https://www.mallofamerica.com"
+    },
+    {
+      "title": "Mall of America (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mall_of_America"
+    },
+    {
+      "title": "Askov Finlayson official site",
+      "url": "https://askovfinlayson.com"
+    }
+  ],
+  "confidence": "low",
+  "extra": {
+    "districts": [
+      {
+        "name": "Mall of America",
+        "profile": "Mega-mall in Bloomington with Nike, Foot Locker, Lids and a large sneaker and apparel footprint.",
+        "shopper": "Families from across the state, tourists, youth and visiting Upper Midwest fans.",
+        "role": "volume"
+      },
+      {
+        "name": "Uptown / Lake Street",
+        "profile": "Independent boutiques, vintage and streetwear along Lake Street and Hennepin.",
+        "shopper": "Gen Z and millennial creatives, sneaker-curious locals.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "North Loop",
+        "profile": "Warehouse-district boutiques and Minnesota-pride apparel.",
+        "shopper": "Young professionals, design-minded locals, tourists.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Downtown / Target Center",
+        "profile": "Arena team store and skyway retail.",
+        "shopper": "Game-night fans and office workers.",
+        "role": "mixed"
+      },
+      {
+        "name": "Cedar-Riverside",
+        "profile": "Somali-owned malls and shops on the West Bank.",
+        "shopper": "East African community and neighbors.",
+        "role": "community"
+      },
+      {
+        "name": "University Avenue, St. Paul",
+        "profile": "Hmong, East African and Southeast Asian businesses and markets.",
+        "shopper": "St. Paul immigrant communities and families.",
+        "role": "community"
+      },
+      {
+        "name": "Suburban malls (Southdale, Ridgedale, Rosedale, Eden Prairie Center)",
+        "profile": "Regional malls with athletic chains and department stores.",
+        "shopper": "Suburban families and youth hoopers.",
+        "role": "volume"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Timberwolves Team Store at Target Center",
+        "type": "team-store",
+        "neighborhood": "Downtown Minneapolis",
+        "why": "The primary team-gear door and the game-night ritual stop."
+      },
+      {
+        "name": "Nike store at Mall of America",
+        "type": "nike-owned",
+        "neighborhood": "Bloomington",
+        "why": "The market's top Nike-owned door for footwear and apparel launches."
+      },
+      {
+        "name": "Foot Locker at Mall of America",
+        "type": "athletic-chain",
+        "neighborhood": "Bloomington",
+        "why": "Core partner for performance basketball and launch drops."
+      },
+      {
+        "name": "Lids / Fanatics",
+        "type": "athletic-chain",
+        "neighborhood": "Mall of America and suburban malls",
+        "why": "Volume door for caps and fan gear. Fanatics online is the main digital channel."
+      },
+      {
+        "name": "Dick's Sporting Goods",
+        "type": "big-box",
+        "neighborhood": "Metro suburbs",
+        "why": "Volume door for youth and mainstream Nike basketball product."
+      },
+      {
+        "name": "Target",
+        "type": "big-box",
+        "neighborhood": "Citywide, HQ in Minneapolis",
+        "why": "The hometown mass retailer, for youth and value fan apparel."
+      },
+      {
+        "name": "Askov Finlayson",
+        "type": "local-brand",
+        "neighborhood": "North Loop",
+        "why": "Local pride apparel brand, ready to collaborate."
+      },
+      {
+        "name": "Albertville Premium Outlets Nike Factory Store",
+        "type": "nike-owned",
+        "neighborhood": "Albertville",
+        "why": "Nike-owned outlet door for value shoppers."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm the team store's location and hours at Target Center, and the arena's ownership and name for 2026-27",
+      "Confirm a Nike store operates at Mall of America, and check for any Nike Well Collective or community door in the Twin Cities",
+      "Confirm a Nike Factory Store at Albertville Premium Outlets, and whether Woodbury has one",
+      "Confirm the Foot Locker, Lids and Dick's locations named here still operate",
+      "Confirm Askov Finlayson still operates in the North Loop and is open to collabs",
+      "Audit independent sneaker, vintage and consignment shops in Uptown, Northeast and St. Paul for current credibility (none are named here)",
+      "Confirm the 2026-27 City Edition identity and release date",
+      "Check the status of Somali-owned mall retail in Cedar-Riverside and on Lake Street, and the best community partners",
+      "Find Prince estate licensing contacts for any Purple Rain product",
+      "List local pop-up markets and recurring maker events in Minneapolis and St. Paul",
+      "Check whether Scheels or other sporting goods chains have Twin Cities doors worth including"
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "team": "was",
+  "issues": [
+    {
+      "target": "calendar / opportunities[0].when",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The plan is dated against windows that have closed or are about to. Today is Oct 7. The Aug 22 Chuck Brown Day seed and most of Hispanic Heritage Month are gone. Howard Homecoming is days to weeks away. The Oct 30 Cup Night is 23 days out. A co-created go-go capsule can't be designed, cleared, made and shipped by then. It needs band contracts, Chuck Brown estate and MICA Globe permissions, an original wood-type alphabet and lab-dipped neon inks.",
+      "fix": "Re-baseline the calendar to what's real. For Oct 30, use only product already in the pipeline: Dybantsa and Young name-and-number, and Wards & Codes if it's already tooled. Announce the go-go partnership that night as a credited commitment. Time the first drop to the February official-music anniversary or Go-Go Month in May, with Chuck Brown Day in Aug 2027 as the true seed."
+    },
+    {
+      "target": "opportunities[1] / calendar Oct 30",
+      "type": "weak-link",
+      "severity": "high",
+      "problem": "Oct 30 carries five launches at once: Dybantsa, Tonight Only, Eight Wards, a 7th Street pop-up and a mambo-sauce carryout. The brief also calls it the era's first \"national-scale\" home moment. It's a Friday Cup group game against Charlotte with no national window. The Wizards host only two of the four Cup Fridays through Nov 27, so \"weekly Cup Friday drops\" don't match the home schedule. The Nov 24-25 Cup Nights may not include Washington.",
+      "fix": "Pick one hero for Oct 30: the Wards & Codes civic capsule or the Dybantsa name-and-number moment, not both plus go-go. Tie Cup drops to the actual home dates. Stage the rest behind the first-month sell-through gate."
+    },
+    {
+      "target": "uniform / opportunities[4] (Late Bloom)",
+      "type": "timing",
+      "severity": "high",
+      "problem": "A City Edition revival is a November-to-April product, but the brief times blossom product to late March. Pink product launched with the uniform in the Nov-Dec gifting window will sit four months before the tourist peak. Product held for March misses the uniform's launch spike. The brief also says the blossom is the tourist side of the line and that visitors don't buy NBA gear. Yet it ranks Late Bloom a high-size priority and adds a tourist cap.",
+      "fix": "Split the plan in two. At the City Edition launch, sell the uniform and one local-first piece: Kwanzan pink and Hains Point, not the Mall. In March-April, add only a small tourist-price souvenir tier through the arena and Georgetown. Treat Late Bloom as medium size. Keep the dependency explicit: the revival is a single report."
+    },
+    {
+      "target": "uniform (The Pocket)",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The go-go uniform is built for \"the next new City slot,\" which is 2027-28 at the earliest, since 2026-27 is reportedly the blossom revival. So it isn't an actionable 2026-27 item, yet it drives the headline thesis, opportunity 1 and the Oct 30 story. The design also leans on fluorescent split-fountain panels, a hem-to-armpit gradient, a roto-tom emboss and a live pocket band. None is checked against NBA uniform rules on color, contrast and manufacturing.",
+      "fix": "Reframe The Pocket as a 2027-28 concept brief with a 12 to 18 month partner timeline. Prove it first on non-uniform product in 2026-27: warm-ups, shooting shirts, court graphics. Check the neon palette with Nike's NBA uniform team before the partners see it."
+    },
+    {
+      "target": "opportunities[0] / topInsights[1]",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "The go-go plan is the right call but still has extractive edges. The \"cowbell zipper pull,\" the roto-tom emboss and \"PA Tape\" turn instruments and a recording practice into trim. A revenue share to \"youth music programs\" is unnamed. Naming the Globe poster style invites the question of who owns the archive. Go-go is Black DC's music, and the plan leans on a few well-known bands and organizers to speak for it.",
+      "fix": "Put the terms in the brief. Name a paid creative lead from the poster community. Pay band fees plus royalty. Give a fixed percentage to a named go-go youth program. Give Don't Mute DC veto power over the final graphics. Keep the instruments off the product as decoration. Credit the poster artist by name on the hangtag."
+    },
+    {
+      "target": "calendar Sept-Oct (108 shirt)",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "The moombahton \"108\" shirt credits Dave Nada, a DJ who is not Salvadoran-American, as the origin story. That puts the credit on the producer, not on the Salvadoran and Latino community whose party scene in Maryland and Northern Virginia the sound grew from. The window (Sept 15-Oct 15) is also mostly over, and Fiesta DC and Hispanic Heritage Month are themselves a tight slot.",
+      "fix": "Lead the credit with Salvadoran-American designers and DJs from Langley Park and Columbia Heights, and treat Nada as one named contributor. Move to a spring or summer slot with a named local partner and a clear payment plan. Drop it if there's no partner by December."
+    },
+    {
+      "target": "calendar Oct 27 (Pride warm-up)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The 17th Street High Heel Race is a Dupont Circle event with its own audience. The Center for Black Equity runs DC Black Pride. The plan treats them as one partnership and gives CBE approval over a product tied to a different community's event, three days before a game. A Pride-colored warm-up also has no tie to the team or the Wizards fan base.",
+      "fix": "Decide which community this is for. If it's Black Pride, run it in May with CBE and Black LGBTQ+ DC designers, and tie it to the Mystics. If it's Dupont, work with that event's organizers, or drop the Oct 27 slot."
+    },
+    {
+      "target": "topInsights[6] / collection.themes (Justitia Omnibus)",
+      "type": "other",
+      "severity": "medium",
+      "problem": "The brief says restraint is part of the design brief, but the lead civic product is the \"Justitia Omnibus\" hoodie with motto neck tape. The motto and flag are the statehood and home-rule movement's own symbols. The 2025 federal police takeover, the shutdown and job cuts make them harder to read as neutral in fall 2026. The risk is higher because the commuter capsule targets the same federal workers this section says are hurt.",
+      "fix": "Keep the flag as an identity mark. Drop the motto from product unless a DC-based partner co-signs it. Give \"check local sentiment before each civic drop\" a named owner and date. Take federal-worker framing out of the commuter capsule."
+    },
+    {
+      "target": "opportunities[5] (red-line-commuter)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "A packable navy coaches jacket, a waffle quarter-zip, a heather-gray fleece and a tonal cap would work for any city with a subway. Only the fare-card sleeve is DC, and it needs WMATA/SmarTrip clearance. No dossier insight grounds the capsule beyond \"commuters exist.\"",
+      "fix": "Cut it, or fold the fare-card sleeve and one office-to-arena colorway into the core Wards & Codes range. If it stays, ground it in a specific local ritual (the Gallery Place-Chinatown gameday transfer, Metro Center) and clear WMATA before design lock."
+    },
+    {
+      "target": "uniform.alternates (Steamed)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "A blue-crab gradient and R-month oysters read as Maryland and Chesapeake more than the District, and Baltimore and Under Armour own that territory. Only the Maine Avenue Fish Market tie is DC. A navy-to-red gradient fleece is a color story with a crab label on it.",
+      "fix": "Drop Steamed from the uniform alternates. If food is wanted, use mambo sauce, half-smokes and Ben's Chili Bowl (license needed). The swap test confirms those are DC."
+    },
+    {
+      "target": "opportunities[3] (ward-8-hoops-corridor)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The \"Pivot\" lifestyle hoops shoe with a suede pivot circle ties to no insight, and it's a footwear brief inside an apparel strategy. The Goodman League licensing assumes organizers control the marks and a venue that Barry Farm's redevelopment has changed. Mystics product assumes a 2027 relationship the dossiers didn't confirm.",
+      "fix": "Remove the shoe. Keep the Goodman kit and the Ward 8 women's hoops shooting shirt, with a signed agreement and a fee before any announcement. Verify the 2027 Goodman venue and the Mystics' status first."
+    },
+    {
+      "target": "opportunities[1] (Dybantsa launch)",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "Swap the city name and the Dybantsa plan still works: a No. 1 pick, name-and-number jerseys, youth tees and an aglet pack. He isn't from the DMV, and the brief gives him no local story. The \"Mambo\" orange drawcord pack puts a Black DC food brand on a colorway, which is closer to a gimmick than a collaboration.",
+      "fix": "Give him a DC hook the dossiers can support. Options: a local high-school or Goodman court appearance, a ward-and-county graphic made with his teammates, or a Ward 8 youth clinic at CareFirst Arena. Either make the sauce partnership a real co-brand or remove the aglet pack."
+    },
+    {
+      "target": "topInsights / partners",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The food and culture dossiers name DC's diaspora corridors: Ethiopian Shaw and Silver Spring, Vietnamese Eden Center, Salvadoran Columbia Heights and Langley Park. They also flag sacred and political imagery to avoid. The brief uses only the Salvadoran \"108\" idea. The roster has Alex Sarr and a No. 1 pick with African roots (verify heritage before saying anything public), and DC has one of the largest Ethiopian communities outside Africa.",
+      "fix": "Add one diaspora lane with a named community partner and a payment plan. An Ethiopian-American designer-led capsule or a Little Ethiopia gameday partnership would work, with no flags, crosses or national symbols. Run it by the culture dossier's avoid list."
+    },
+    {
+      "target": "risks / partners",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The brief underuses Nike's own DC assets. It lists Georgetown as a licensing risk when the school is a Jordan Brand program. The ties to Team Takeover, the Mystics and Kiki Rice stop at one line in the insights. The DMV scholastic scene (WCAC, Paul VI, DeMatha, Gonzaga, Bishop O'Connell) is where DMV fans claim players, yet it appears only as a February warm-up.",
+      "fix": "Make the Nike family the spine of the Ward 8 and hoops plan. Build a Jordan Brand and Georgetown heritage piece, a Team Takeover and WCAC school-colors capsule, and a Kiki Rice Mystics story. Check the Georgetown and Howard apparel deals before naming either."
+    },
+    {
+      "target": "opportunities[7] (three-eras-heritage)",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "\"Wizards Arcade\" black-and-bronze with MAGFest (held in Maryland) is a niche tie-in to the Jordan-era look, which the uniform dossier calls polarizing. \"Faded royal\" for 1978 may not match the Bullets' actual colors. The Bullets name is still a gun-violence issue and needs team sign-off.",
+      "fix": "Merge into one Bullets-era classic with the team's approval: red, white and blue stripes, Unseld and Hayes-era numerals. Drop the arcade idea unless there's local gaming-community evidence. Check 1978 colors against archive images."
+    },
+    {
+      "target": "opportunities[6] (homecoming)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "A licensed Howard capsule with student designers and a WHUR \"Quiet Storm\" velour set can't clear licensing and production by mid-to-late October. A velour set has no link to basketball or the Wizards. It also lands the same week as the Dybantsa and Oct 30 launches.",
+      "fix": "Treat Homecoming 2026 as a relationship-building presence only: credited student designers, no product. Plan the licensed capsule for Homecoming 2027. Keep velour out unless WHUR co-signs and the story is the team's."
+    },
+    {
+      "target": "scorecard / retailPlaybook",
+      "type": "other",
+      "severity": "low",
+      "problem": "Fandom scores 44 and retail 58, yet the playbook assumes four themes, eight opportunities and a three-tier ladder across PG, NoVA and the District. A hedged, health-dependent roster can't support that much, and the brief leaves out the first buy sizing.",
+      "fix": "Cut to three priorities: Wards & Codes, the Dybantsa/Young core, and the go-go partnership build. Put the rest in a \"later\" tier with the gates the brief already describes."
+    },
+    {
+      "target": "pulse / calendar Dec",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "The December plan includes a \"Steamed\" fleece launch and a contingency for a Cup quarterfinal. Quarterfinals are Dec 4-5 and go to the higher seeds' homes. Washington is unlikely to host, given its group (Boston, Atlanta, Charlotte, Chicago, with the Celtics seeded higher). The Dec 11 final is in Indianapolis, so there's no DC Cup event to plan around.",
+      "fix": "Delete the Cup quarterfinal contingency, or keep it as a one-line reserve with no product commitment. Spend December on gifting and the area-code and ward range."
+    }
+  ],
+  "strengths": [
+    "The thesis is right and specific: DC civic type, the flag, wards and area codes outsell the Wizards wordmark, and no other market can claim that system.",
+    "Go-go is treated as a paid, credited co-creation, launched in Shaw or Anacostia before downtown. That shows real respect for who owns the culture.",
+    "The Ward 8 corridor (CareFirst Arena, Goodman League, the Go-Go Museum & Cafe) is a local finding that passes the swap and insider tests.",
+    "The risk section is honest about adidas and Under Armour, the Bullets name, the licensing minefield and a volatile roster. The \"no crew names, no gun wordplay\" rules are good.",
+    "Staged replenishment and the three-ring view (District, PG County, NoVA) fit a 17-65 team with a health-dependent core."
+  ],
+  "summary": "The brief is stronger on culture than on calendar. Civic type, Wards & Codes, a co-created go-go story and Ward 8 are specific, respectful and DC-only. But it plans as if there were months to launch, and it piles too much onto Oct 30, a Friday Cup game against Charlotte. Fix the timing, cut the generic and Maryland-flavored padding and add the diaspora and Nike-family lanes the dossiers support."
+}

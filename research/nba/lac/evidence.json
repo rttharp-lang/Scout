@@ -1,0 +1,129 @@
+{
+  "team": "lac",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "lac-c1",
+      "claim": "A Nike Factory Store at Citadel Outlets in Commerce is a value door for youth jerseys and the 909 back-to-school drop.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Citadel Outlets Los Angeles Visitor Guide",
+          "url": "https://daytrippen.com/citadel-outlet-mall-los-angeles-discounts-coupons/",
+          "publisher": "daytrippen.com",
+          "published": ""
+        },
+        {
+          "title": "Black Friday shoppers flock to Citadel Outlets in Commerce",
+          "url": "https://abc7.com/post/black-friday-shoppers-flock-to-citadel-outlets-in-commerce/5725276/",
+          "publisher": "ABC7",
+          "published": ""
+        }
+      ],
+      "evidence": "A visitor guide lists a Nike Factory Store among the mall's major stores, and an older ABC7 Black Friday report shows a crowd at the Nike store there. No Nike or mall source confirms the store is open in October 2026.",
+      "action": "No change. Keep the Citadel door on the verify list until Nike's store locator confirms it.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "youth-and-player-ladder"
+        ],
+        "calendar": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "lac-c2",
+      "claim": "Foot Locker operates a door at Baldwin Hills Crenshaw Plaza.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Foot Locker - stores located in California",
+          "url": "https://www.mallscenters.com/brands/foot-locker/california",
+          "publisher": "mallscenters.com",
+          "published": ""
+        },
+        {
+          "title": "Baldwin Hills Crenshaw Plaza",
+          "url": "https://en.wikipedia.org/wiki/Baldwin_Hills_Crenshaw_Plaza",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "A mall directory lists a Foot Locker at the plaza's address, 3650 W. Martin Luther King Jr. Blvd, but directories can be stale. Foot Locker's community store opened separately in February 2022 at 3222 W. Slauson Ave. Nothing confirms the plaza store is open now.",
+      "action": "No change. The factcheck verdict stays unverifiable. Confirm with Foot Locker before seeding.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "youth-and-player-ladder"
+        ],
+        "calendar": [
+          13
+        ]
+      }
+    },
+    {
+      "id": "lac-c3",
+      "claim": "The arena district sits on the old Hollywood Park racetrack ground (1938-2013).",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Hollywood Park Racetrack",
+          "url": "https://en.wikipedia.org/wiki/Hollywood_Park_Racetrack",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "Hollywood Park opened in Inglewood on June 10, 1938, and ran its last race on December 22, 2013. It was demolished from 2014 to 2016, and the site is now the Hollywood Park development.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "cup-night-inglewood-launch"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "lac-c4",
+      "claim": "Residency Art Gallery is an Inglewood gallery for Black and Latino artists, the local partner for the Inglewood artist series.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Inglewood’s Residency Art Gallery Makes a New Home in Hollywood Park",
+          "url": "https://www.sofistadium.com/news/detail/inglewood-s-residency-art-gallery-makes-a-new-home-in-hollywood-park",
+          "publisher": "SoFi Stadium",
+          "published": ""
+        },
+        {
+          "title": "residency art gallery",
+          "url": "https://www.artrabbit.com/organisations/residency-art-gallery",
+          "publisher": "Art Rabbit",
+          "published": ""
+        }
+      ],
+      "evidence": "Rick Garzon founded the Black-owned gallery in 2016 to show artists of color. In 2023 its main space moved to Hollywood Park in Inglewood, and the Queen St. space became a project space. Listings run to mid-2024, so current programming still needs a check.",
+      "action": "No change needed. Confirm current programming before commissioning.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "inglewood-artist-series"
+        ],
+        "calendar": [
+          8,
+          11
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

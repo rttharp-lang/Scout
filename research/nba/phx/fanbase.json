@@ -1,0 +1,406 @@
+{
+  "team": "phx",
+  "lens": "fanbase",
+  "headline": "Suns fans take pride in the near-misses, because they stayed for all of them",
+  "summary": "Suns fandom is a Valley-wide identity built on heartbreak, not banners. The team has never won a title, and its founding stories are near-misses: 1976, 1993, the Nash years, 2021. The mood heading into 2026-27 is guarded realism. The big hope is February 2027, when All-Star Weekend puts the Valley's own identity on a national stage.",
+  "insights": [
+    {
+      "title": "Loyalty forged by heartbreak, not trophies",
+      "detail": "The Suns have made three Finals (1976, 1993, 2021) and won no title. The founding stories are the 1976 triple-overtime loss to Boston and the 1993 Barkley run. Fans take pride in the near-miss and the fast style of the Nash years, not in hardware.",
+      "implication": "Lead with heritage and earned stories, not championship language. Archival graphics from 1976, 1993 and the 2021 run will read as respect, not nostalgia bait."
+    },
+    {
+      "title": "The Valley is the brand, not the city",
+      "detail": "Fans say \"the Valley\" and mean Phoenix, Tempe, Mesa, Scottsdale, Glendale and Chandler together. It is the central word in recent Suns branding and City Edition stories.",
+      "implication": "Use \"The Valley\" and sunrise-over-the-basin language instead of \"Phoenix\" wordmarks. Go to Mesa, Tempe and the West Valley, not only downtown."
+    },
+    {
+      "title": "A big Latino base and almost no merch for it",
+      "detail": "The 2010 \"Los Suns\" jerseys, worn to protest SB1070, and the recurring Noche Latina nights are the club's most emotional cultural moments. Much of the metro's youth is Mexican-American, yet little product is made for them. The fanbase is young and heavily Latino in South Phoenix, Maryvale and the West Valley.",
+      "implication": "A Latino heritage line is a clear gap. Make it with Valley Latino artists and designers, and credit them. Skip the generic \"Spanish-flavored\" look."
+    },
+    {
+      "title": "Booker is the face, Green the new bet",
+      "detail": "Devin Booker is the player kids copy, and the 2026-27 identity is the Booker-Jalen Green backcourt. Dillon Brooks is a love-him-or-hate-him enforcer, now extended through 2029-30.",
+      "implication": "Anchor on Booker's Nike signature line (Book 1 and its successors). Green and Brooks are secondary stories: Green for Gen Z, Brooks for the diehards."
+    },
+    {
+      "title": "Ishbia brought polish and spectacle",
+      "detail": "Mat Ishbia bought the team and Mercury in 2023. In October 2025 the arena became the Mortgage Matchup Center under a UWM naming deal. Diehards are split on the new name, and some still say \"Talking Stick\" or \"the Footprint.\"",
+      "implication": "Keep the arena's corporate name out of fan-facing design. Use the Suns marks and neighborhood language instead."
+    },
+    {
+      "title": "Throwbacks and sun imagery split the closet",
+      "detail": "Fans buy Nash, Barkley, Kevin Johnson and Majerle throwbacks, the 1992-2000 sunburst and \"Sun Rays\" era, and the current purple-orange Association and Statement sets. Booker jerseys lead current wear.",
+      "implication": "Throwback-inspired product, such as the 1990s Barkley-era sunburst, tests well with diehards 35 and older. Booker and City Edition product serve Gen Z."
+    }
+  ],
+  "places": [
+    {
+      "name": "Mortgage Matchup Center",
+      "kind": "arena",
+      "neighborhood": "Downtown Phoenix",
+      "why": "Home arena, formerly Footprint Center and before that Talking Stick Resort Arena. Host of All-Star 2027."
+    },
+    {
+      "name": "Majerle's Sports Grill",
+      "kind": "bar and restaurant",
+      "neighborhood": "Downtown Phoenix",
+      "why": "Dan Majerle's downtown sports bar is where Suns diehards gather before and after games."
+    },
+    {
+      "name": "Roosevelt Row",
+      "kind": "arts district",
+      "neighborhood": "Downtown Phoenix",
+      "why": "Murals and galleries minutes from the arena, where Valley street art and fan identity overlap."
+    },
+    {
+      "name": "Barrio Cafe",
+      "kind": "restaurant",
+      "neighborhood": "Central Phoenix",
+      "why": "A long-standing Mexican restaurant from chef Silvana Salcido Esparza and a local institution tied to Valley Latino pride."
+    },
+    {
+      "name": "Phoenix Suns Legends Ring of Honor and retired-number banners",
+      "kind": "arena feature",
+      "neighborhood": "Downtown Phoenix",
+      "why": "Honors Barkley, Nash, Majerle, Johnson, Adams and Westphal."
+    },
+    {
+      "name": "South Phoenix, Maryvale and Mesa park and school courts",
+      "kind": "courts",
+      "neighborhood": "South Phoenix and Maryvale",
+      "why": "Everyday Valley hooping happens on the park and school courts of South Phoenix, Maryvale and Mesa."
+    }
+  ],
+  "people": [
+    {
+      "name": "Devin Booker",
+      "role": "Suns guard and franchise face",
+      "why": "The Grand Rapids-born, Kentucky-bred scorer is the Valley's adopted son. His 70-point game in 2017 is canon."
+    },
+    {
+      "name": "Charles Barkley",
+      "role": "Hall of Famer and TNT analyst",
+      "why": "The 1992-96 MVP-era icon made Phoenix a Finals team. Fans still love him, and he's still publicly critical."
+    },
+    {
+      "name": "Steve Nash",
+      "role": "Two-time MVP point guard",
+      "why": "He built the Seven-Seconds-or-Less era, and fans link the Suns with fast, joyful basketball because of him."
+    },
+    {
+      "name": "Dan Majerle",
+      "role": "Former Suns guard, restaurateur",
+      "why": "\"Thunder Dan\" is the blue-collar fan hero with a bar that carries his name."
+    },
+    {
+      "name": "Kevin Johnson",
+      "role": "Former point guard and former Sacramento mayor",
+      "why": "The face of the early-90s Suns. His number is retired."
+    },
+    {
+      "name": "Mat Ishbia",
+      "role": "Suns and Mercury owner",
+      "why": "The UWM CEO, whose spending and high-profile style define the post-Sarver era."
+    },
+    {
+      "name": "Jalen Green",
+      "role": "Suns guard",
+      "why": "The new co-star. His growth is the biggest swing factor in 2026-27 optimism."
+    },
+    {
+      "name": "Phoenix Gorilla",
+      "role": "Team mascot",
+      "why": "Suns mascot since 1980 and a fan favorite with kids and in Gen Z content."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Home opener and the new season",
+      "timing": "Late October 2026",
+      "month": 10,
+      "why": "League opening night is Oct 20, and the Suns aren't playing. The Oct 10 Spurs preseason game and the Oct 30 Cup opener give the first read on the Booker-Green-Bridges team."
+    },
+    {
+      "name": "NBA Cup West Group A",
+      "timing": "Fridays Oct 30 to Nov 27",
+      "month": 11,
+      "why": "The Suns open Cup play at home against Denver on Oct 30 and close it at home against Dallas on Nov 27. In between they play at Utah Nov 20 and at Houston Nov 25."
+    },
+    {
+      "name": "Noche Latina / Latino heritage nights",
+      "timing": "Typically around spring",
+      "month": 3,
+      "why": "The club's recurring Latino celebration carries on the \"Los Suns\" lineage."
+    },
+    {
+      "name": "NBA All-Star Weekend 2027",
+      "timing": "Feb 19-21, 2027",
+      "month": 2,
+      "why": "Phoenix's fourth All-Star Weekend after 1975, 1995 and 2009, and the biggest stage for Valley identity."
+    },
+    {
+      "name": "Play-In Tournament",
+      "timing": "Apr 13-16, 2027",
+      "month": 4,
+      "why": "Where the Suns have been living. Fan anxiety and fervor peak here."
+    },
+    {
+      "name": "Preseason vs Spurs",
+      "timing": "Oct 10, 2026",
+      "month": 10,
+      "why": "A national ESPN game and a first read on the crowd for the Western rematch."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Valley",
+      "meaning": "Metro Phoenix as a whole, and the Suns' central identity word."
+    },
+    {
+      "term": "Valley of the Sun",
+      "meaning": "The formal name behind the Suns' name and sunburst."
+    },
+    {
+      "term": "Los Suns",
+      "meaning": "The 2010 Latino-heritage jersey and its tradition of solidarity with Arizona's Latino community."
+    },
+    {
+      "term": "Seven Seconds or Less",
+      "meaning": "Shorthand for the Nash-D'Antoni fast-break era."
+    },
+    {
+      "term": "Book",
+      "meaning": "Devin Booker. Also the \"Book Book Book\" crowd noise when he runs off points."
+    },
+    {
+      "term": "Thunder Dan",
+      "meaning": "Nickname for Dan Majerle."
+    },
+    {
+      "term": "The Gorilla",
+      "meaning": "The mascot and a gameday staple."
+    },
+    {
+      "term": "Play-in szn",
+      "meaning": "Fan shorthand for living on the bubble."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Suns purple, deep and saturated",
+      "type": "color",
+      "hex": "#1D1160",
+      "source": "Team primary identity",
+      "use": "Base color for premium outerwear and Association-adjacent product."
+    },
+    {
+      "cue": "Sunrise orange",
+      "type": "color",
+      "hex": "#E56020",
+      "source": "Team primary identity and desert sunrise",
+      "use": "Accent for graphics, stitching, outsoles and trim."
+    },
+    {
+      "cue": "Sunburst or radiating rays",
+      "type": "motif",
+      "hex": "",
+      "source": "Suns logo heritage and 1990s sun ray graphics",
+      "use": "Chest and sleeve graphics, and sun-ray gradients on tees and hoodies."
+    },
+    {
+      "cue": "Desert-dusk gradient (purple fading to orange to sand)",
+      "type": "pattern",
+      "hex": "",
+      "source": "Valley sunsets as used in recent Valley-themed branding",
+      "use": "Dye-fade and sublimation treatments on fleece and warm-ups."
+    },
+    {
+      "cue": "Sunburnt copper and adobe",
+      "type": "color",
+      "hex": "#B5532A",
+      "source": "Valley adobe, desert rock and Southwest architecture",
+      "use": "Secondary palette for casual lifestyle product."
+    },
+    {
+      "cue": "Heavyweight cotton with sun-faded wash",
+      "type": "texture",
+      "hex": "",
+      "source": "Desert-bleached vintage apparel look",
+      "use": "Throwback tees and hoodies that feel lived-in."
+    },
+    {
+      "cue": "Retro 90s block lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Barkley-era uniform and ticket graphics",
+      "use": "Wordmarks for throwback-style capsules."
+    }
+  ],
+  "productHooks": [
+    "A throwback capsule inspired by the Barkley-era 1992-93 Suns: purple-and-orange sunburst warm-ups, tees and hoodies with licensed team marks.",
+    "A Valley Latino heritage capsule co-designed with Valley artists, credited by name, building on the Los Suns tradition.",
+    "A Booker-led gameday collection that ties his signature shoe to sunrise-gradient apparel.",
+    "An All-Star 2027 Phoenix capsule: a desert-dusk gradient jacket and tee, dropped for Feb 19-21 with local artist collaborators.",
+    "Lightweight gameday fits (breathable mesh, UPF) for fans in 100-plus degree early-fall games."
+  ],
+  "watchouts": [
+    "Make Los Suns and Latino heritage product with Valley Latino creators, credited and paid. No stereotyped imagery.",
+    "Indigenous imagery (Hohokam, Akimel O'odham, Piipaash and other Arizona nations) is off limits unless a tribal-community partner leads.",
+    "Fans are still sensitive about the Robert Sarver era. Avoid nostalgia content tied to his tenure.",
+    "License third-party IP (Barkley, Nash and other player likenesses, the mascot) through the team and NBPA."
+  ],
+  "sources": [
+    {
+      "title": "Phoenix Suns official site",
+      "url": "https://www.nba.com/suns"
+    },
+    {
+      "title": "Phoenix Suns (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Phoenix_Suns"
+    },
+    {
+      "title": "Mortgage Matchup Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mortgage_Matchup_Center"
+    },
+    {
+      "title": "Devin Booker (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Devin_Booker"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "segments": [
+      {
+        "name": "Lifelong diehards",
+        "description": "Valley natives and longtime residents who lived the 1993 and Nash eras.",
+        "share": "small but loud",
+        "wears": "Throwbacks (Barkley, Nash, KJ, Majerle) and sunburst-era caps and tees.",
+        "reach": "Arizona Sports 98.7, Bright Side of the Sun, r/suns, Majerle's."
+      },
+      {
+        "name": "Latino families and Gen Z",
+        "description": "Mexican-American families and young fans across South Phoenix, Maryvale, Mesa and Glendale.",
+        "share": "very large across the metro",
+        "wears": "Booker jerseys, city-specific streetwear, Jordan and Nike sneakers.",
+        "reach": "Noche Latina nights, Instagram and TikTok, school courts and mural districts."
+      },
+      {
+        "name": "Transplants and snowbird-adjacent fans",
+        "description": "Midwest and California transplants who keep their home-team loyalties but adopt the Suns.",
+        "share": "large",
+        "wears": "Mixed caps, Booker jerseys, casual purple and orange.",
+        "reach": "Watch parties and sports bars in Scottsdale and Tempe."
+      },
+      {
+        "name": "Corporate and suite fans",
+        "description": "The downtown business and mortgage crowd under Ishbia.",
+        "share": "medium",
+        "wears": "Premium Statement or Icon polos and quarter-zips.",
+        "reach": "Arena partnerships and corporate events."
+      },
+      {
+        "name": "Rural and regional Arizona fans",
+        "description": "Fans from Tucson, Flagstaff, Yuma and rural Arizona, where the Suns are the only major pro team.",
+        "share": "medium",
+        "wears": "Caps, tees and hoodies.",
+        "reach": "Regional radio and statewide events."
+      }
+    ],
+    "traditions": [
+      {
+        "name": "Gorilla antics and crowd energy",
+        "detail": "The Phoenix Gorilla's stunts and dunks and the \"Suns\" chants anchor every home night."
+      },
+      {
+        "name": "Purple-out playoff nights",
+        "detail": "Fans are asked to wear one color, purple or white, for big games."
+      },
+      {
+        "name": "Pre-game at Majerle's",
+        "detail": "A downtown ritual before heading to the arena."
+      },
+      {
+        "name": "Noche Latina",
+        "detail": "Latino heritage nights tied to the Los Suns tradition."
+      }
+    ],
+    "icons": [
+      {
+        "name": "Charles Barkley",
+        "era": "1992-96",
+        "why": "He made the Suns a Finals team in 1993 and is still adored."
+      },
+      {
+        "name": "Steve Nash",
+        "era": "2004-12",
+        "why": "Two MVPs and the Seven-Seconds-or-Less run."
+      },
+      {
+        "name": "Dan Majerle",
+        "era": "1988-95",
+        "why": "A blue-collar hero and local restaurateur."
+      },
+      {
+        "name": "Kevin Johnson",
+        "era": "1988-2000",
+        "why": "The face of the early-90s Suns."
+      },
+      {
+        "name": "Devin Booker",
+        "era": "2015-present",
+        "why": "The current franchise face."
+      },
+      {
+        "name": "Connie Hawkins and Alvan Adams",
+        "era": "1969-88",
+        "why": "Early franchise legends, and the faces of the 1976 Finals run."
+      }
+    ],
+    "rivalries": [
+      {
+        "opponent": "San Antonio Spurs",
+        "heat": "historic",
+        "why": "Playoff battles with Nash's Suns in the 2000s. The Spurs are also the reigning West finalists."
+      },
+      {
+        "opponent": "Los Angeles Lakers",
+        "heat": "strong",
+        "why": "A long California-Arizona rivalry with many playoff meetings."
+      },
+      {
+        "opponent": "Denver Nuggets",
+        "heat": "strong",
+        "why": "A Western Conference foe and a Cup Group A opponent."
+      },
+      {
+        "opponent": "Golden State Warriors",
+        "heat": "simmering",
+        "why": "Recent play-in clashes and the Durant-Curry storylines."
+      },
+      {
+        "opponent": "Chicago Bulls",
+        "heat": "historic",
+        "why": "The 1993 Finals defeat is still a founding memory."
+      }
+    ],
+    "sentiment": "Guarded and pragmatic. Fans are tired of the 2023-25 Durant-Beal superteam collapse. Last season went 45-37, with a play-in loss to Portland and a 4-0 sweep by OKC. They like that the club re-signed Brooks, Gillespie, Mark Williams and Goodwin and added Miles Bridges, Luke Kennard and rookie Koa Peat. But a 40.5 win total keeps the team on the play-in bubble, so enthusiasm rides on Booker and the February All-Star spotlight.",
+    "gamedayLook": "Booker jersey or purple Statement tee, a Suns cap, sunburst-era throwbacks for older fans and Nike or Jordan sneakers (Book 1 and its successors are the local signature pick). Lightweight fabrics for the desert heat."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Mat Ishbia is still owner, and check current fan sentiment on ownership and the arena name.",
+      "Check the 2026-27 City Edition uniform and whether it carries a Valley or Latino theme.",
+      "Confirm whether Noche Latina and other heritage nights are scheduled for 2026-27, and their dates.",
+      "Confirm Majerle's Sports Grill (downtown) is still operating as of fall 2026.",
+      "Confirm Barrio Cafe is still operating in Central Phoenix.",
+      "Check the Phoenix Gorilla's tenure and the current ring-of-honor and retired-number details.",
+      "Confirm the Suns supporter groups and podcasts (Bright Side of the Sun, Arizona Sports) are still active.",
+      "Check Booker's signature shoe line status with Nike for 2026-27.",
+      "Check where Booker and Green jerseys currently rank in fan sales."
+    ]
+  }
+}

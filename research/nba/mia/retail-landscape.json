@@ -1,0 +1,397 @@
+{
+  "team": "mia",
+  "lens": "retail-landscape",
+  "headline": "No single street owns basketball in Miami. The outlet malls do.",
+  "summary": "South Florida shops by car, so no single street owns basketball. Volume runs through Dolphin Mall, Sawgrass Mills and Aventura Mall, Latin American visitors included. Wynwood, the Design District and Lincoln Road set taste and host the pop-ups. Giannis has made new Heat gear the market's hottest category going into 2026-27. Pair the mall doors with credible, multicultural community pop-ups, and plan around Heat red-black-yellow and White Hot nights.",
+  "insights": [
+    {
+      "title": "Outlet malls move the volume",
+      "detail": "Dolphin Mall in west Miami-Dade and Sawgrass Mills in Sunrise, Broward draw locals and Latin American and Caribbean visitors to Nike Factory and the athletic chains. Value-minded families buy jerseys and shoes there, not at the arena.",
+      "implication": "Launch Giannis-era Heat gear and Icon/Statement restocks at Factory and chain doors first. Design a clean, low-priced Heat tee and shorts line for them."
+    },
+    {
+      "title": "Wynwood, the Design District and Lincoln Road set the taste",
+      "detail": "Wynwood's mural district, the Miami Design District and Lincoln Road host sneaker drops, collabs and brand pop-ups. The busiest stretches are Art Basel week in December and Miami Swim Week in summer.",
+      "implication": "Treat these as limited-run, story-led sites for City Edition and Heat-specific capsules, not as places to chase sales volume."
+    },
+    {
+      "title": "The arena store is a ritual, not the main channel",
+      "detail": "The Heat Store at Kaseya Center in downtown Miami serves gamedays and White Hot playoff crowds. Most casual fans buy through Fanatics, Lids, Dick's and the outlets.",
+      "implication": "Keep exclusive game-night items (White Hot tees, rally gear) at the arena store and online, and tie them to specific nights like the Nov 18 Bucks game."
+    },
+    {
+      "title": "Neighborhood shops carry community credibility",
+      "detail": "Hialeah, Liberty City, Little Haiti, Overtown and Opa-locka shop at local stores, flea markets and neighborhood malls, not on the luxury corridors. Cuban, Haitian and Black American shoppers each buy differently.",
+      "implication": "Partner with neighborhood boutiques and local creators on sized-down capsules and pop-ups. Credit and pay local designers, and don't lift neighborhood imagery."
+    },
+    {
+      "title": "Visitors make Miami a gateway market",
+      "detail": "Aventura Mall, Brickell City Centre and Bal Harbour draw Brazilian, Argentine, Colombian and Venezuelan shoppers. They often buy US-only NBA and Nike product to take home.",
+      "implication": "Signature and Heat product with bilingual hang tags and Spanish and Portuguese story cards can travel well beyond Florida."
+    },
+    {
+      "title": "Giannis has reset the Heat gear cycle",
+      "detail": "The Heat added Giannis Antetokounmpo and Klay Thompson, and lost Tyler Herro, Jaime Jaquez Jr. and Norman Powell. Legacy Herro and Jaquez inventory is aging while demand for Giannis and Bam Adebayo spikes.",
+      "implication": "Shift player-tee and jersey allocations toward Giannis and Bam. Watch sell-through on departed-player stock."
+    }
+  ],
+  "places": [
+    {
+      "name": "Kaseya Center",
+      "kind": "venue",
+      "neighborhood": "Downtown Miami",
+      "why": "Home of the Heat and its team store. The White Hot playoff ritual is the peak retail moment."
+    },
+    {
+      "name": "Dolphin Mall",
+      "kind": "mall",
+      "neighborhood": "Sweetwater / West Miami-Dade",
+      "why": "Miami-Dade's largest outlet-style mall, and a major hub for value and tourist shopping."
+    },
+    {
+      "name": "Sawgrass Mills",
+      "kind": "mall",
+      "neighborhood": "Sunrise, Broward",
+      "why": "Huge outlet mall that anchors Broward volume shopping for Nike Factory and the athletic chains."
+    },
+    {
+      "name": "Aventura Mall",
+      "kind": "mall",
+      "neighborhood": "Aventura",
+      "why": "High-traffic mall with strong Latin American tourist and affluent local sneaker buyers."
+    },
+    {
+      "name": "Lincoln Road",
+      "kind": "district",
+      "neighborhood": "Miami Beach",
+      "why": "Pedestrian shopping street where brands stage pop-ups for visitors and locals."
+    },
+    {
+      "name": "Wynwood Walls and Wynwood arts district",
+      "kind": "district",
+      "neighborhood": "Wynwood",
+      "why": "Mural-driven streetwear and pop-up hub that sets taste."
+    },
+    {
+      "name": "Miami Design District",
+      "kind": "district",
+      "neighborhood": "Design District",
+      "why": "Luxury and collab-forward retail with a busy brand-event calendar."
+    },
+    {
+      "name": "Brickell City Centre",
+      "kind": "mall",
+      "neighborhood": "Brickell",
+      "why": "Downtown finance and condo-dweller shopping, with premium athleisure demand."
+    },
+    {
+      "name": "Calle Ocho",
+      "kind": "district",
+      "neighborhood": "Little Havana",
+      "why": "Cuban cultural main street. Good for community-rooted launches, not sneaker volume."
+    },
+    {
+      "name": "Westland Mall",
+      "kind": "mall",
+      "neighborhood": "Hialeah",
+      "why": "Neighborhood-scale shopping for Hialeah's largely Cuban-American and Latino families."
+    }
+  ],
+  "people": [
+    {
+      "name": "Giannis Antetokounmpo",
+      "role": "Heat forward",
+      "why": "Giannis's arrival is the biggest driver of Heat jersey and apparel demand this season."
+    },
+    {
+      "name": "Bam Adebayo",
+      "role": "Heat center",
+      "why": "Homegrown-feeling star and face of Heat Culture. Confirm his footwear partner before player-led product."
+    },
+    {
+      "name": "Erik Spoelstra",
+      "role": "Heat head coach",
+      "why": "Face of Heat Culture and a recurring brand story across apparel."
+    },
+    {
+      "name": "Klay Thompson",
+      "role": "Heat guard",
+      "why": "Veteran shooter whose signing adds a nationally known name to Heat gear."
+    },
+    {
+      "name": "Udonis Haslem",
+      "role": "Heat legend and executive",
+      "why": "Embodies the undrafted-to-icon Heat Culture ethos. Strong with older fans and local shops."
+    },
+    {
+      "name": "Dwyane Wade",
+      "role": "Heat legend and entrepreneur",
+      "why": "Miami's biggest basketball icon, and a retail-relevant voice for heritage product."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Heat season opener and home opener",
+      "timing": "Late October",
+      "month": 10,
+      "why": "Peak launch window for new Heat gear and Giannis jerseys."
+    },
+    {
+      "name": "Heat vs. Bucks, first meeting after the Giannis trade",
+      "timing": "Nov 18",
+      "month": 11,
+      "why": "Marquee home night, worth a gameday product and pop-up push."
+    },
+    {
+      "name": "Art Basel Miami Beach",
+      "timing": "Early December",
+      "month": 12,
+      "why": "Art-and-fashion crowds make this the biggest taste-setting pop-up week of the year."
+    },
+    {
+      "name": "Christmas Day at Boston",
+      "timing": "Dec 25",
+      "month": 12,
+      "why": "Giannis's first Christmas game with Miami drives holiday gifting demand."
+    },
+    {
+      "name": "Calle Ocho Festival",
+      "timing": "Typically March",
+      "month": 3,
+      "why": "Large Little Havana street festival and a community-rooted window for brands."
+    },
+    {
+      "name": "Haitian Flag Day",
+      "timing": "May 18",
+      "month": 5,
+      "why": "Major Haitian-American pride moment in Little Haiti and North Miami."
+    },
+    {
+      "name": "White Hot playoff nights",
+      "timing": "April to June",
+      "month": 4,
+      "why": "Fans wear white to the arena. This is the strongest team-gear driver of the year."
+    },
+    {
+      "name": "Miami Swim Week",
+      "timing": "Typically summer",
+      "month": 6,
+      "why": "Fashion-heavy week of brand events and pop-ups."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "305",
+      "meaning": "Miami-Dade's area code, used on apparel as local shorthand."
+    },
+    {
+      "term": "Heat Culture",
+      "meaning": "The team's identity: work ethic and undrafted development."
+    },
+    {
+      "term": "White Hot",
+      "meaning": "Fans wear white at home playoff games. It's a Heat tradition."
+    },
+    {
+      "term": "Dade",
+      "meaning": "Locals' short name for Miami-Dade County."
+    },
+    {
+      "term": "Magic City",
+      "meaning": "A long-time nickname for Miami."
+    },
+    {
+      "term": "Vice City",
+      "meaning": "1980s Miami Vice nostalgia, which carries third-party IP issues."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Heat red, a deep crimson",
+      "type": "color",
+      "hex": "#98002E",
+      "source": "Heat primary color",
+      "use": "Anchor team colorway across jerseys, tees and sneakers."
+    },
+    {
+      "cue": "Heat yellow-gold accent",
+      "type": "color",
+      "hex": "#F9A01B",
+      "source": "Heat secondary color",
+      "use": "Use sparingly on trims and branding accents, for contrast."
+    },
+    {
+      "cue": "White Hot out",
+      "type": "color",
+      "hex": "#FFFFFF",
+      "source": "Heat playoff tradition",
+      "use": "Tonal white tees, hoodies and shoes tied to White Hot nights."
+    },
+    {
+      "cue": "Ocean-tide teal",
+      "type": "color",
+      "hex": "#00A6A6",
+      "source": "Biscayne Bay water and Art Deco pastels",
+      "use": "Secondary accent on City Edition or lifestyle pieces."
+    },
+    {
+      "cue": "Art Deco pastels, curved-line type",
+      "type": "typography",
+      "hex": "",
+      "source": "South Beach Art Deco architecture",
+      "use": "Rounded retro lettering for lifestyle and capsule graphics."
+    },
+    {
+      "cue": "305 area-code mark",
+      "type": "graphic",
+      "hex": "",
+      "source": "Local identity",
+      "use": "Small detail on tees, caps and bags."
+    },
+    {
+      "cue": "Lightweight breathable fabrics",
+      "type": "material",
+      "hex": "",
+      "source": "Tropical humidity",
+      "use": "Mesh and light performance cotton for year-round wear."
+    }
+  ],
+  "productHooks": [
+    "Giannis and Bam player tees, plus Icon, Statement and Association jerseys, timed to the home opener, Nov 18 and Christmas.",
+    "White Hot capsule: tonal white tees, hoodies and warm-up pieces for playoff nights, sold at the arena store and online.",
+    "A value tier of Heat tees and shorts for the Dolphin Mall and Sawgrass Factory doors.",
+    "Art Basel week pop-up capsule of lifestyle pieces, made with local Wynwood artists.",
+    "Bilingual English-Spanish and Kreyòl hang tags and story cards for Miami and gateway-market shoppers."
+  ],
+  "watchouts": [
+    "Miami Vice, Scarface and Versace-era imagery involves third-party IP and can read as cliché. Skip it unless it's licensed and locally collaborated.",
+    "Cuban, Haitian and broader Latino and Caribbean communities are distinct. Engage and pay local creators, and don't flatten them into one Latin look.",
+    "Legacy Herro, Jaquez and Powell inventory may be stale after the roster changes. Check sell-through before reordering.",
+    "Some stores listed here may have changed. Confirm each door is open before planning launches."
+  ],
+  "sources": [
+    {
+      "title": "Miami Heat official site",
+      "url": "https://www.nba.com/heat"
+    },
+    {
+      "title": "Kaseya Center",
+      "url": "https://www.kaseyacenter.com"
+    },
+    {
+      "title": "Dolphin Mall",
+      "url": "https://shopdolphinmall.com"
+    },
+    {
+      "title": "Sawgrass Mills (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sawgrass_Mills"
+    },
+    {
+      "title": "Miami Design District (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Miami_Design_District"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "districts": [
+      {
+        "name": "Dolphin Mall corridor",
+        "profile": "Large outlet mall near the Florida Turnpike and 836, with athletic chains and a Nike Factory Store.",
+        "shopper": "Families, value shoppers, Latin American visitors.",
+        "role": "volume"
+      },
+      {
+        "name": "Sawgrass Mills",
+        "profile": "Giant Broward outlet mall with Nike Factory and sporting-goods stores.",
+        "shopper": "Broward families, Caribbean and Latin American tourists.",
+        "role": "volume"
+      },
+      {
+        "name": "Aventura Mall",
+        "profile": "Premium mall with big sneaker and athletic retail.",
+        "shopper": "Affluent locals and international tourists.",
+        "role": "tourist"
+      },
+      {
+        "name": "Wynwood",
+        "profile": "Mural district with boutiques, pop-ups and event spaces.",
+        "shopper": "Young creatives, collectors, visitors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Miami Design District",
+        "profile": "Luxury and design retail with a heavy brand-event calendar.",
+        "shopper": "Fashion-forward and luxury shoppers.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Lincoln Road and South Beach",
+        "profile": "Pedestrian shopping street with flagships and pop-ups.",
+        "shopper": "Tourists and Beach locals.",
+        "role": "tourist"
+      },
+      {
+        "name": "Hialeah and Little Haiti neighborhood retail",
+        "profile": "Local independent shops, malls and flea-market-style retail.",
+        "shopper": "Cuban-American, Haitian-American and Latino neighborhood families.",
+        "role": "community"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Heat Store at Kaseya Center",
+        "type": "team-store",
+        "neighborhood": "Downtown Miami",
+        "why": "Official arena team store and the focal point for gameday and playoff gear."
+      },
+      {
+        "name": "Nike Factory Store at Dolphin Mall",
+        "type": "nike-owned",
+        "neighborhood": "Sweetwater / West Miami-Dade",
+        "why": "Main Nike-owned volume door in Miami-Dade."
+      },
+      {
+        "name": "Nike Factory Store at Sawgrass Mills",
+        "type": "nike-owned",
+        "neighborhood": "Sunrise, Broward",
+        "why": "Main Nike-owned volume door for Broward and tourists."
+      },
+      {
+        "name": "Foot Locker locations (Aventura Mall, Dolphin Mall; House of Hoops presence unconfirmed)",
+        "type": "athletic-chain",
+        "neighborhood": "Aventura / Sweetwater",
+        "why": "Main chain doors for basketball shoes and signature product."
+      },
+      {
+        "name": "Dick's Sporting Goods and Lids/Fanatics locations",
+        "type": "big-box",
+        "neighborhood": "Miami-Dade and Broward",
+        "why": "Where many fans buy jerseys and caps outside the arena."
+      },
+      {
+        "name": "Walt Grace Vintage",
+        "type": "vintage",
+        "neighborhood": "Wynwood / Miami",
+        "why": "Credible vintage and streetwear shop that shapes local taste."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Kaseya Center is still the arena's name, and that the Heat Store is open and where it is.",
+      "Confirm the Nike Factory Stores at Dolphin Mall and Sawgrass Mills are open, and whether Nike runs any Miami-area Well Collective or community door.",
+      "Check Foot Locker and House of Hoops presence at Aventura Mall and Dolphin Mall.",
+      "Confirm Walt Grace Vintage is still open in Wynwood.",
+      "Find current independent sneaker boutiques and local apparel brands with a real following. This dossier doesn't name any.",
+      "Confirm Art Basel Miami Beach December 2026 dates.",
+      "Confirm the Calle Ocho Festival 2027 date.",
+      "Confirm Miami Swim Week 2026-27 timing.",
+      "Confirm the current 2026-27 Heat City Edition uniform and release timing.",
+      "Confirm Westland Mall in Hialeah is operating at its present scale.",
+      "Confirm Udonis Haslem and Dwyane Wade's current roles with the Heat.",
+      "Check whether Dick's operates a House of Sport in the market."
+    ]
+  }
+}

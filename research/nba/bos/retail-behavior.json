@@ -1,0 +1,383 @@
+{
+  "team": "bos",
+  "lens": "retail-behavior",
+  "headline": "Massachusetts spares clothing up to $175 from tax, and New Hampshire spares everything",
+  "summary": "New England is a rich, loyal, multi-team market, and cold winters set the product mix. Fans split between premium downtown and mall buyers and price-conscious neighborhoods that lean on resale and knockoffs. The Jaylen Brown trade broke the Tatum-Brown jersey pairing. Until the team proves itself, expect banners, nostalgia and heritage Specter and Association product to outsell roster hype.",
+  "insights": [
+    {
+      "title": "Clothing under $175 is tax-free in Massachusetts",
+      "detail": "Massachusetts charges 6.25 percent sales tax but exempts clothing priced at or under $175 per item, and taxes only the portion above it. New Hampshire, a short drive north of the Merrimack Valley and the North Shore, has no sales tax at all. Pheasant Lane in Nashua and the Mall at Rockingham Park in Salem are the habitual cross-border stops.",
+      "implication": "Price authentic jerseys and jackets with the $175 line in mind: a Swingman or most hoodies carry no tax penalty in-state. The gap matters mainly for premium outerwear and authentic pieces, so make those easy to buy online."
+    },
+    {
+      "title": "Brown trade resets the jersey calendar",
+      "detail": "Jaylen Brown is now a Sixer and Paul George (age 36) has arrived, so a large installed base of Brown jerseys has lost its player. Tatum remains the clear face. Brown's return dates (Oct 10 preseason, Jan 21, 2027 regular season) will draw boos and a wave of old Brown gear at the Garden.",
+      "implication": "Don't over-invest in George-specific volume. Push Tatum, Queta and team-level product (wordmark, banner, parquet), and treat Brown-era product as a limited sell-through. Time a social and in-arena moment for Jan 21, but put Brown's name on nothing new."
+    },
+    {
+      "title": "Winter sets the mix, and the shoulder season is long",
+      "detail": "Boston runs cold from November through March, with nor'easters in January and February. A raw, damp spring stretches April playoff games into jacket weather. Beanies, quarter-zips, crewnecks and puffers sell far longer than shorts, and the Celtics' April-June runs fall in unpredictable weather.",
+      "implication": "Lead with layering: knit hats, quarter-zips, shell jackets and fleece in team colors. Treat shorts and tees as a May-to-August category. Plan a warm-up or shooting-shirt layer for playoff games."
+    },
+    {
+      "title": "College churn creates two retail rushes",
+      "detail": "Greater Boston has an enormous student population across Boston University, Northeastern, Harvard, MIT, Boston College, Tufts and others. Move-in around Sept 1 (informally Allston Christmas) puts a new cohort of out-of-town buyers on the street each fall. Students buy local-pride gear in the first weeks, then take it home in the spring.",
+      "implication": "Target late August through September with campus-adjacent pop-ups and city-pride product, not only Celtics gear. A student wears Boston before they wear a roster. This is where non-Celtics-fan Boston shows up."
+    },
+    {
+      "title": "Christmas Day is the gifting apex",
+      "detail": "Boston hosts the Heat on Christmas Day at 2:30 p.m. ET, a home game on the biggest NBA retail date. Black Friday and Cyber Monday feed into it. Families gift jerseys, hats and kids' items, and often cross into New Hampshire for no-tax holiday shopping.",
+      "implication": "Land the Specter and Association holiday assortment and gift-ready kids sizes by mid-November. Make a Christmas-Day graphic or warm-up shirt the headline drop. Order deep on kids and youth sizes."
+    },
+    {
+      "title": "Neighborhood price sensitivity and resale",
+      "detail": "Boston is a high-cost city with a wide income spread, from Back Bay, Brookline and Newton buyers to Dorchester, Roxbury, Mattapan and Lynn households. Resale, outlets (Wrentham, Kittery) and knockoffs fill the gap where a $130 Swingman is a stretch.",
+      "implication": "Offer a clear good-better-best ladder with an accessible hat, tee and youth tier. Use outlet and seasonal sale windows rather than discounting core product. Treat neighborhood shops and local-brand retailers as partners."
+    },
+    {
+      "title": "Multi-team loyalty crowds the wallet",
+      "detail": "The Celtics, Red Sox, Bruins and Patriots share the same fans, and the same retail around Fenway and Gillette. Patriots Place is in Foxborough, and Fenway is a stone's throw from the Garden. Celtics spend peaks when the Red Sox and Bruins are quiet, and the Bruins and Celtics often overlap in spring.",
+      "implication": "Don't launch major Celtics product into a Patriots Sunday or a Red Sox home-stand collision. Look for cross-team city-pride themes (Boston wordmark, parquet) that don't make fans pick a side."
+    }
+  ],
+  "places": [
+    {
+      "name": "TD Garden / Celtics Pro Shop",
+      "kind": "venue and team store",
+      "neighborhood": "West End / North Station",
+      "why": "The game-night flagship for jerseys, caps and limited merchandise. Tourists, commuters and season-ticket holders all buy in the concourse."
+    },
+    {
+      "name": "Newbury Street",
+      "kind": "shopping district",
+      "neighborhood": "Back Bay",
+      "why": "The premium, fashion-forward corridor where sneaker and streetwear retail and brand pop-ups cluster."
+    },
+    {
+      "name": "Faneuil Hall Marketplace",
+      "kind": "tourist retail district",
+      "neighborhood": "Downtown",
+      "why": "A major tourist souvenir channel where licensed Celtics and Boston-pride goods sell to visitors."
+    },
+    {
+      "name": "Prudential Center and Copley Place",
+      "kind": "mall",
+      "neighborhood": "Back Bay",
+      "why": "Indoor, weather-proof mall retail for downtown shoppers and convention visitors."
+    },
+    {
+      "name": "Assembly Row",
+      "kind": "outdoor mall",
+      "neighborhood": "Somerville",
+      "why": "A transit-served shopping center with outlets and the athletic stores younger north-of-city shoppers use."
+    },
+    {
+      "name": "Wrentham Village Premium Outlets",
+      "kind": "outlet center",
+      "neighborhood": "Wrentham",
+      "why": "The South Shore and Rhode Island value channel, where price-sensitive suburban families shop."
+    },
+    {
+      "name": "Patriots Place at Gillette Stadium",
+      "kind": "retail and entertainment complex",
+      "neighborhood": "Foxborough",
+      "why": "The suburban sports-fan retail hub that anchors multi-team spend."
+    },
+    {
+      "name": "Pheasant Lane Mall",
+      "kind": "mall",
+      "neighborhood": "Nashua, NH",
+      "why": "The best-known tax-free stop for northern Massachusetts, and a sign of cross-border behavior."
+    },
+    {
+      "name": "Nubian Square",
+      "kind": "neighborhood business district",
+      "neighborhood": "Roxbury",
+      "why": "A historic Black business and cultural center where locally rooted events and independent shops matter."
+    }
+  ],
+  "people": [
+    {
+      "name": "Jayson Tatum",
+      "role": "Celtics forward and face of the franchise",
+      "why": "The center of 2026-27 jersey demand now that Brown is gone."
+    },
+    {
+      "name": "Jaylen Brown",
+      "role": "Former Celtics wing, now a 76er",
+      "why": "His return nights are the year's sharpest emotional and merchandise moment, and his product line is a sensitive legacy."
+    },
+    {
+      "name": "Paul George",
+      "role": "Celtics forward acquired in the trade",
+      "why": "A new name whose jersey demand tests fan acceptance, with his age and contract drawing criticism."
+    },
+    {
+      "name": "Joe Mazzulla",
+      "role": "Celtics head coach",
+      "why": "A cult-figure coach whose catchphrases and hustle are a source of apparel graphics."
+    },
+    {
+      "name": "Brad Stevens",
+      "role": "Celtics president of basketball operations",
+      "why": "The architect of the rebuild, so fan sentiment toward the front office shapes how loud demand is."
+    },
+    {
+      "name": "Bill Chisholm",
+      "role": "Celtics controlling owner (per the 2025 purchase)",
+      "why": "New ownership brings new priorities for merchandising and the arena experience."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Opening night at Detroit",
+      "timing": "Oct 20, 2026",
+      "month": 10,
+      "why": "The season's retail start, with an NBC tripleheader audience watching the Celtics on the road."
+    },
+    {
+      "name": "NBA Cup Group C opener vs Atlanta",
+      "timing": "Oct 30, 2026",
+      "month": 10,
+      "why": "The first home Cup night, and a chance for a Cup-specific colorway."
+    },
+    {
+      "name": "Black Friday and Thanksgiving week",
+      "timing": "Late November",
+      "month": 11,
+      "why": "The first big holiday spend window, and the lead-in to Christmas gifting."
+    },
+    {
+      "name": "Christmas Day vs Miami",
+      "timing": "Dec 25, 2026, 2:30 p.m. ET",
+      "month": 12,
+      "why": "The marquee home date for gifting and a holiday graphic drop."
+    },
+    {
+      "name": "Jaylen Brown's return to TD Garden",
+      "timing": "Jan 21, 2027",
+      "month": 1,
+      "why": "The highest-emotion regular-season night and a flashpoint for jersey behavior."
+    },
+    {
+      "name": "St. Patrick's Day and Evacuation Day",
+      "timing": "Mid-March",
+      "month": 3,
+      "why": "South Boston's parade day, an Irish-heritage green moment where Celtics green already means something."
+    },
+    {
+      "name": "Marathon Monday and the playoffs",
+      "timing": "Third Monday in April; NBA playoffs April-June",
+      "month": 4,
+      "why": "Patriots' Day weekend brings city pride and visitors just as the playoffs start."
+    },
+    {
+      "name": "Boston Caribbean Carnival",
+      "timing": "Late August",
+      "month": 8,
+      "why": "A major community event in Roxbury and Dorchester, and a place for real partnership with Caribbean creators."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Wicked",
+      "meaning": "The all-purpose Boston intensifier. Use it lightly, and never as a gimmick on product."
+    },
+    {
+      "term": "The Pahk / the Gahden",
+      "meaning": "How locals say it, with the dropped r. The Garden is the arena shorthand."
+    },
+    {
+      "term": "Banner 18",
+      "meaning": "The 2024 championship banner, the unifying symbol of the recent era."
+    },
+    {
+      "term": "Allston Christmas",
+      "meaning": "Sept 1 move-out and move-in, when furniture and gear hit the curb."
+    },
+    {
+      "term": "Jimmies",
+      "meaning": "Local word for sprinkles, and a sign of real New England speech."
+    },
+    {
+      "term": "Packie",
+      "meaning": "Local slang for the package (liquor) store. New England shorthand gets hyperlocal."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Celtics kelly green",
+      "type": "color",
+      "hex": "#007A33",
+      "source": "The franchise's signature green, tied to parquet, banners and Irish heritage.",
+      "use": "Make it the hero color on warm-ups, hats and knit goods, and tonal on dark colorways."
+    },
+    {
+      "cue": "Parquet floor pattern",
+      "type": "pattern",
+      "hex": "",
+      "source": "The Garden's parquet court is the franchise's most recognizable visual.",
+      "use": "Use the tile geometry as a subtle knit, lining or sublimation print, not a loud all-over."
+    },
+    {
+      "cue": "Banner cream and gold",
+      "type": "color",
+      "hex": "#BA9653",
+      "source": "The Celtics gold accent and the trim of retired and championship banners.",
+      "use": "Apply to trims, drawcords and heritage patches, paired with cream."
+    },
+    {
+      "cue": "Nor'easter layering",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Boston's long, damp winter and a commuter culture that rides the T.",
+      "use": "Lead with quarter-zips, fleece, reversible shells and beanies built for wet wind."
+    },
+    {
+      "cue": "Brick and harbor neutrals",
+      "type": "color",
+      "hex": "#8C4A3A",
+      "source": "Beacon Hill brick, Fenway and the old waterfront.",
+      "use": "Use as an off-court accent for lifestyle pieces and graphic tees."
+    },
+    {
+      "cue": "Knit and wool heritage",
+      "type": "material",
+      "hex": "",
+      "source": "New England's cold-weather clothing tradition, from fisherman knits to varsity wool.",
+      "use": "Use chunky knits and wool-blend jackets for the holiday and gift assortment."
+    }
+  ],
+  "productHooks": [
+    "Christmas Day capsule built around the Heat game: a gift-boxed kids and youth jersey option and a knit beanie.",
+    "Tatum-led Association and Icon jersey push plus a Specter heritage collection, with authentic and Swingman sizing at a clear price ladder.",
+    "Nor'easter layering line for November through April: Celtics-green quarter-zip, reversible shell and lined knit beanie.",
+    "Parquet-print Boston city-pride tee and hat tier at accessible prices, aimed at students and tourists.",
+    "Limited rivalry-night graphic for the Jan 21 Brown return, with no player names."
+  ],
+  "watchouts": [
+    "Brown-era product is emotionally loaded. Don't mock or trade on his departure, and plan to sell through existing inventory without new Brown designs.",
+    "Boston is a Black community with a deep history on the court and in Roxbury. Partner with local creators and pay them for any Roxbury, Dorchester or Caribbean cues, rather than lifting them.",
+    "Irish heritage cues are strong but easy to caricature. Avoid leprechaun or shamrock clichés beyond what the franchise already owns.",
+    "Celtics marks, Fenway, Bruins and Patriots imagery are separately licensed. Don't blend other teams' IP into product."
+  ],
+  "sources": [
+    {
+      "title": "Boston Celtics official site",
+      "url": "https://www.nba.com/celtics"
+    },
+    {
+      "title": "TD Garden official site",
+      "url": "https://www.tdgarden.com"
+    },
+    {
+      "title": "Massachusetts Department of Revenue: sales tax holiday and clothing exemption",
+      "url": "https://www.mass.gov/orgs/massachusetts-department-of-revenue"
+    },
+    {
+      "title": "Boston Celtics (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Boston_Celtics"
+    },
+    {
+      "title": "Greater Boston (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Greater_Boston"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "mid-Oct to Oct 31",
+        "month": 10,
+        "driver": "Season opener (Oct 20 at Detroit), first home Cup night Oct 30, Halloween and fall weather",
+        "impact": "medium"
+      },
+      {
+        "window": "late Nov",
+        "month": 11,
+        "driver": "Black Friday, Cyber Monday and Cup Nights in Thanksgiving week, as cold weather builds outerwear demand",
+        "impact": "high"
+      },
+      {
+        "window": "Dec 1-25",
+        "month": 12,
+        "driver": "Holiday gifting peaks at the Christmas Day home game vs Miami, with kids and jersey gifts",
+        "impact": "high"
+      },
+      {
+        "window": "Jan 21 and January sales",
+        "month": 1,
+        "driver": "Brown's first return to TD Garden, plus post-holiday sales and gift-card spend",
+        "impact": "medium"
+      },
+      {
+        "window": "mid-March",
+        "month": 3,
+        "driver": "St. Patrick's Day and Evacuation Day in Southie, a green-and-Irish-heritage moment, plus the pre-playoff push",
+        "impact": "medium"
+      },
+      {
+        "window": "mid-April to June",
+        "month": 4,
+        "driver": "Marathon Monday and playoff run, the largest sustained team-spend window if the team advances",
+        "impact": "high"
+      },
+      {
+        "window": "second weekend of August (verify)",
+        "month": 8,
+        "driver": "Massachusetts' annual sales tax holiday weekend (when held), and the lead into back-to-school",
+        "impact": "medium"
+      },
+      {
+        "window": "late Aug to Sept 1",
+        "month": 8,
+        "driver": "Back-to-school and college move-in around Sept 1, plus Boston Caribbean Carnival",
+        "impact": "high"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Arena and tourist retail",
+        "role": "The TD Garden Pro Shop and Faneuil Hall serve game-night buyers and visitors, with high volume on holiday and playoff nights."
+      },
+      {
+        "channel": "Online and Fanatics-style team shops",
+        "role": "The default for gifts, kids and authentic jerseys, boosted by Black Friday and playoff surges."
+      },
+      {
+        "channel": "Mall and outlet",
+        "role": "Prudential, Copley, Assembly Row, Wrentham and Patriots Place carry suburban family buying."
+      },
+      {
+        "channel": "Sneaker and streetwear boutiques",
+        "role": "Newbury Street and Cambridge shops drive hype and limited drops for younger buyers."
+      },
+      {
+        "channel": "Resale and knockoffs",
+        "role": "Lower-income neighborhoods and students rely on secondary markets and unlicensed gear."
+      },
+      {
+        "channel": "New Hampshire cross-border",
+        "role": "Tax-free holiday and big-ticket shopping in Nashua and Salem, mainly for northern suburbs."
+      }
+    ],
+    "priceProfile": "High-income Greater Boston buyers support premium and authentic pricing. But the cost of living and a student-heavy, lower-income urban core mean a real value tier is needed. Clothing at or under $175 is tax-free in Massachusetts, and above that line only the excess is taxed. Build a clear good-better-best ladder with accessible hats, tees and youth.",
+    "jerseyBehavior": "Fans buy Swingman for game days and gifts, authentic for committed collectors, and kids' and youth jerseys at the holidays. Tatum is the safe pick this season, Brown-era jerseys are legacy pieces, and Paul George's uptake is uncertain. Many fans choose the plain wordmark or banner tee or a hat over a name-and-number jersey. Knockoffs and resale fill the price gap."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Check whether Massachusetts is holding a 2026 sales tax holiday weekend and its dates (it has typically been a mid-August weekend)",
+      "Confirm the current Massachusetts sales tax rate (6.25 percent) and the clothing exemption threshold ($175 per item)",
+      "Find the 2026-27 Celtics City Edition design and release date, and which games the Specter uniforms are worn in",
+      "Check the current Celtics Pro Shop and TD Garden retail layout, and any new official-store partner",
+      "Confirm whether Boston Caribbean Carnival is scheduled for late August 2027, and its route and organizers",
+      "Confirm Pheasant Lane Mall, Mall at Rockingham Park and Wrentham Village outlets are still operating",
+      "Check current fan sentiment and jersey sales rankings for Tatum, Paul George and Jaylen Brown",
+      "Check Bill Chisholm ownership group's merchandising or arena plans",
+      "Check which Mazzulla catchphrase and fan graphics are in circulation now",
+      "Confirm whether the vocabulary entries are in current use"
+    ]
+  }
+}

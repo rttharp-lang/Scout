@@ -1,0 +1,673 @@
+{
+  "team": "uta",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Sat Oct 17, after General Conference and before the Oct 20 tip-off",
+      "kind": "launch",
+      "start": "2026-10-17",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Oct 17 is the brief's chosen in-door date and is unchecked. The Oct 20 tip-off is confirmed in league-calendar.json, and the Fri Oct 23 home opener is from claim uta-c2.",
+      "actBy": "2026-10-17",
+      "actNote": "Clear leftover Kessler stock and land the Peterson-Bailey program in the team store and the Murray and Orem doors before the Saturday launch.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Late October to Fri Nov 20",
+      "kind": "action",
+      "start": "2026-10",
+      "end": "2026-11-20",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "uta-cup-dates",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Saturdays from Nov 7",
+      "kind": "event",
+      "start": "2026-11-07",
+      "end": "2026-12",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Nov 7 is the brief's chosen first pop-up Saturday. Stops, sites and the run through the gifting season are unchecked.",
+      "actBy": "2026-11-07",
+      "actNote": "Open the first Saturday pop-up on Historic 25th Street in Ogden.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Mid-to-late November, with resort openings",
+      "kind": "season",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Mid-to-late November resort openings for Alta, Snowbird, Brighton and Park City are unchecked. They are in the verify queue.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Fri Nov 27 (Black Friday): Nuggets at Jazz",
+      "kind": "event",
+      "start": "2026-11-27",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "uta-cup-dates",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Dec 4-5 quarterfinals, Dec 8-9 home semifinals",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-09",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals; Emirates NBA Cup 2026 — semifinals. Whether Utah advances or hosts is unknown.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Dec 1 to Jan 6",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2027-01-06",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Christmas is Dec 25 and Three Kings Day is Jan 6. The Dec 1 start is the brief's own gift-window choice.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "stock-availability",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Fri Jan 15 (Gallery Stroll) and peak ski weeks",
+      "kind": "event",
+      "start": "2027-01-15",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Jan 15, 2027 is the third Friday of January, the brief's Gallery Stroll night. Gallery Stroll's 2027 schedule is unchecked.",
+      "actBy": "2027-01",
+      "actNote": "Start paid commissioning for the West Side Court Collective.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Feb 11 trade deadline to Feb 19-21 All-Star in Phoenix",
+      "kind": "season",
+      "start": "2027-02-11",
+      "end": "2027-02-21",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Trade deadline; NBA All-Star 2027",
+      "actBy": "2027-02",
+      "actNote": "Re-weight player inventory after the Feb 11 deadline.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Late February to Apr 16",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Apr 16 is the last Play-In day in league-calendar.json. Utah high school state tournament dates and April 2027 General Conference dates are unchecked.",
+      "actBy": "2027-03",
+      "actNote": "Green-light a play-in tee in mid-March, only if Utah sits 7-10.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Mid-to-late May",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Mid-to-late May is the brief's estimate. 2027 Living Traditions Festival dates are unchecked and in the verify queue.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Late June draft to July Summer League (2027 dates not yet announced)",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "2027-07",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Mid-August",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Mid-August is the brief's estimate. 2027 dates for Craft Lake City DIY Fest and Bonneville Speed Week are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Mid-September to mid-October",
+      "kind": "season",
+      "start": "2027-09-15",
+      "end": "2027-10-15",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Hispanic Heritage Month runs Sep 15 to Oct 15 every year.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "family-rookie-program",
+      "consumer": "Wasatch Front families buying Jazz gear for several kids at once.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "kids",
+        "fleece"
+      ],
+      "fit": [
+        "youth",
+        "infant and toddler",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-17",
+      "actBy": "2026-10-17",
+      "actNote": "Clear leftover Kessler stock and land the program in the team store and the Murray and Orem doors for the Sat Oct 17 launch.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check Peterson and Bailey youth and toddler stock depth in the team store and the Murray and Orem doors before Oct 17.",
+        "Test good-better-best bundle prices with families of four or five.",
+        "Track the youth share of Jazz units and the multi-unit basket rate from Oct 17 to Jan 6.",
+        "Confirm which West Side doors will carry gift stock through Jan 6."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "partner-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Centro Civico Mexicano"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "inversion-layer-outerwear",
+      "consumer": "Statewide outdoor fans and families who wear ski and canyon layers to games.",
+      "insights": [
+        0,
+        2
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "infant and toddler",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Launch with the mid-to-late November resort openings, or hold to Black Friday if openings slip or a warm November stalls demand.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check what gray-gradient outerwear and fleece in the 2026-27 line can reach doors by November.",
+        "Confirm 2026-27 opening dates for Alta, Snowbird, Brighton and Park City.",
+        "Track City Edition outerwear sell-through by Jan 31 and beanie and vest attach to jersey sales.",
+        "Read salt-crackle print sales as the first Salt Line fan test."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "group-a-cup-nights",
+      "consumer": "Families on their once-a-season Friday trip to the Delta Center, and Gen Z fans.",
+      "insights": [
+        6,
+        1,
+        5
+      ],
+      "categories": [
+        "tee",
+        "jersey",
+        "headwear",
+        "fleece",
+        "event"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-20",
+      "actBy": "2026-11-20",
+      "actNote": "Have the dated Group A tee vs. Phoenix and poster tee No. 1 ready for the Fri Nov 20 home Cup night.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Home Cup nights are confirmed: Nov 20 vs. Phoenix and Nov 27 vs. Denver on Black Friday. Utah has no Oct 30 game.",
+        "Pre-approve the knockout hoodie art and hold blanks that can print within 48 hours.",
+        "Compare units per attendee on both Cup nights with a normal Friday home game."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Kilby Court"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "west-side-court-collective",
+      "consumer": "Pacific Islander and Latino basketball families in Rose Park, Glendale, West Valley and Kearns.",
+      "insights": [
+        4,
+        1
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "kids",
+        "accessory"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2027-01",
+      "actNote": "Start paid commissioning of Tongan, Samoan and Latino designers.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm PIK2AR, Centro Civico Mexicano, Mestizo Institute of Culture and Arts and the Salt Lake Arts Council are active and open to partnership.",
+        "Name and confirm a West Valley or Kearns door, such as Valley Fair Mall.",
+        "Confirm the 2027 Living Traditions Festival dates.",
+        "Run cultural review with each community before sampling."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Pacific Islander Knowledge 2 Action Resources (PIK2AR)",
+        "Centro Civico Mexicano",
+        "Mestizo Institute of Culture and Arts",
+        "Salt Lake Arts Council"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "delta-night-poster-series",
+      "consumer": "Gen Z fans and the Sugar House and Granary District creative crowd.",
+      "insights": [
+        5,
+        6
+      ],
+      "categories": [
+        "tee",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-20",
+      "actBy": "2026-11-20",
+      "actNote": "Commission the first artist and print poster tee No. 1 for the Fri Nov 20 drop at Kilby Court.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm SLUG Magazine and Craft Lake City are operating and willing to curate artists.",
+        "Confirm the Gallery Stroll Friday for each month through April.",
+        "Track sell-out time per monthly run and mentions from local scene accounts.",
+        "Test the land-speed numerals and lake-pink line with fans on the Jan 15 poster."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Craft Lake City",
+        "SLUG Magazine",
+        "Kilby Court"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "note-and-mountain-eras",
+      "consumer": "Heritage diehards, fans in their 20s and parents buying for kids.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Before the December release, confirm which licensee holds Note and Mountain heritage jerseys.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm which licensee holds Note and Mountain heritage jerseys.",
+        "Clear any player names through the NBPA or estates before using them.",
+        "Check the 2026-27 schedule for a legend or throwback night for the second push.",
+        "Track the heritage share of adult apparel revenue and repeat buying."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "i15-saturday-popups",
+      "consumer": "Statewide and rural fans and Utah County families who reach the Delta Center about once a season.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "headwear",
+        "tee",
+        "outerwear",
+        "jersey",
+        "event"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-07",
+      "actBy": "2026-11-07",
+      "actNote": "Open the first Saturday pop-up on Historic 25th Street in Ogden.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm sites and permits for Historic 25th Street, University Place, Provo Towne Centre and Sugar House.",
+        "Confirm the Salt Lake City Stars name, home venue and 2026-27 schedule before planning a table.",
+        "Track revenue per stop and the share of buyers who haven't been to the Delta Center this season."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "retailer-agreement",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Nike retail",
+      "partners": [
+        "Salt Lake City Stars"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "draft-to-summer-league",
+      "consumer": "Diehards and Gen Z fans who track prospects all year.",
+      "insights": [
+        6,
+        5
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "Print the new pick's tee within hours of draft night.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the 2027 draft date and Salt Lake City Summer League dates.",
+        "Confirm whether the 2027-28 City Edition slot is open before calling the August tee a Salt Line preview.",
+        "Track draft-night e-commerce units in the first 48 hours."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Craft Lake City"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "team": "den",
+  "lens": "retail-behavior",
+  "headline": "Denver has no tax holiday, so promotions and playoff runs set the buying calendar",
+  "summary": "Colorado has no tax-free weekends, so Denver buyers wait for promotions, outlets and online sales. Weather decides the product, and quarter-zips, shells and fleece are the natural team-apparel lane. The fan base spans the whole state, and the Ball Arena team store carries the gameday ritual. Playoff results move demand more than any date on the calendar.",
+  "insights": [
+    {
+      "title": "No tax holiday, so promotions set the rhythm",
+      "detail": "Colorado has no sales-tax holiday or back-to-school tax-free weekend. The state rate is low, but city, county and special-district taxes stack on top, so checkout totals vary by suburb. Shoppers wait for brand promotions, Black Friday and outlet events.",
+      "implication": "Plan Colorado launches around Nike-owned promotional windows and drops, not a tax event. Keep pricing clean so tax variance doesn't distort perceived value."
+    },
+    {
+      "title": "Weather decides the product, not the calendar",
+      "detail": "Denver can swing 30 degrees in a day, and go from snow to short sleeves within days. Mountain West fans wear layers to games from October through April. Fleece, shells and knit beanies sell alongside tees for months when a coastal market would stop buying outerwear. The outdoor-shopping season runs from ski opening into spring.",
+      "implication": "Build Nuggets capsules around layering: quarter-zips, Therma-style fleece, packable shells, beanies. Keep shorts and tees as a late-spring and summer lane, tied to a deep playoff run."
+    },
+    {
+      "title": "A statewide fandom shops across many doors",
+      "detail": "Nuggets buyers span Denver, Aurora, Lakewood, Boulder, Fort Collins, Colorado Springs and the ski towns. Large regional malls and outlet centers draw weekend shoppers from across the Front Range, plus visitors from neighboring states. The Ball Arena team store handles gameday but isn't the only destination.",
+      "implication": "Seed product in regional mall and outlet doors and online, not only downtown. Treat mountain-town and Front Range pop-ups as a reach play."
+    },
+    {
+      "title": "Playoff results move demand more than holidays",
+      "detail": "The 2025-26 Nuggets went 54-28 and lost 4-2 to Minnesota in round one, with Jokic still a three-time MVP. That tempers the hype heading into 2026-27, with DeMar DeRozan added. Past deep runs, including the 2023 title, produced the biggest apparel surges the market has seen.",
+      "implication": "Keep inventory flexible. Make modest opening-month buys, with room to chase demand through a spring run. Hold hero graphics for playoff-timed releases."
+    },
+    {
+      "title": "Jersey buying is star-led and generational",
+      "detail": "Jokic and Murray jerseys and tees carry the market, and kids sizes and youth hoops culture (rec leagues, school teams) feed family purchases. Value-tier and fast-fashion knockoffs circulate on gameday. DeRozan, roughly 37 and on a one-year deal, is a short-horizon bet for jersey buyers.",
+      "implication": "Lead with Jokic and Murray in Swingman and kids tiers, and keep the Authentic jersey as the collector tier. Treat DeRozan as tees and limited runs, not deep jersey inventory."
+    },
+    {
+      "title": "Outdoor-brand cross-shopping sets the quality bar",
+      "detail": "Colorado consumers routinely spend on technical outdoor apparel and local outdoor labels. They judge fabric, fit and function harder than shoppers in fashion-only markets. Team apparel competes with trail and ski gear for wardrobe space.",
+      "implication": "Differentiate on materials and utility: weather-resistant finishes, stretch fleece, clean pocket and hood engineering. Consider outdoor-adjacent colorways over loud streetwear graphics."
+    }
+  ],
+  "places": [
+    {
+      "name": "Ball Arena Nuggets Team Store",
+      "kind": "team store",
+      "neighborhood": "Union Station / LoDo",
+      "why": "The gameday ritual, and the main on-site spot for jerseys and tees for Denver and visiting Colorado fans."
+    },
+    {
+      "name": "Cherry Creek Shopping Center",
+      "kind": "mall",
+      "neighborhood": "Cherry Creek",
+      "why": "Denver's premium retail hub, where higher-income shoppers and tourists buy. A plausible lane for premium or lifestyle placement."
+    },
+    {
+      "name": "Park Meadows",
+      "kind": "mall",
+      "neighborhood": "Lone Tree",
+      "why": "A south-metro suburban mall serving Douglas County families, and a stop for kids and family jersey purchases."
+    },
+    {
+      "name": "Colorado Mills",
+      "kind": "mall/outlet",
+      "neighborhood": "Lakewood",
+      "why": "A west-metro value center that draws foothills and mountain-corridor shoppers."
+    },
+    {
+      "name": "Outlets at Castle Rock",
+      "kind": "outlet center",
+      "neighborhood": "Castle Rock",
+      "why": "An I-25 outlet destination that pulls Front Range and Colorado Springs shoppers who trade on price."
+    },
+    {
+      "name": "Larimer Square",
+      "kind": "shopping district",
+      "neighborhood": "LoDo",
+      "why": "A historic block of boutiques, with gameday foot traffic walking toward the arena."
+    },
+    {
+      "name": "Denver Central Market",
+      "kind": "food hall / retail",
+      "neighborhood": "RiNo",
+      "why": "RiNo's crossroads of makers and food, suited to creative pop-ups for a younger, design-literate crowd."
+    }
+  ],
+  "people": [
+    {
+      "name": "Nikola Jokic",
+      "role": "Nuggets center, three-time MVP",
+      "why": "The biggest demand driver. His contract extension news and playoff results shape Colorado apparel demand."
+    },
+    {
+      "name": "Jamal Murray",
+      "role": "Nuggets guard",
+      "why": "The market's second jersey, and a clutch playoff icon with deep local standing."
+    },
+    {
+      "name": "Aaron Gordon",
+      "role": "Nuggets forward",
+      "why": "A longtime Denver starter who anchors the jersey conversation for fans who prize defense and effort."
+    },
+    {
+      "name": "Christian Braun",
+      "role": "Nuggets guard",
+      "why": "A fan favorite from the 2023 title team who feels homegrown, and a jersey for younger fans."
+    },
+    {
+      "name": "DeMar DeRozan",
+      "role": "Nuggets scorer, 2026-27 signing",
+      "why": "The newest star name, with strong national jersey recognition, but on a one-year deal."
+    },
+    {
+      "name": "Josh Kroenke",
+      "role": "Kroenke Sports & Entertainment executive",
+      "why": "The public face of ownership, who backed coach David Adelman. His stance frames fan sentiment."
+    },
+    {
+      "name": "Topo Designs",
+      "role": "Denver outdoor and lifestyle brand",
+      "why": "A local benchmark for Colorado-made technical lifestyle gear, and a credible collaboration reference for the outdoor-meets-city crowd."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Opening week and Oct 22 game vs. OKC",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The first big gameday retail push of the season, against a top West contender on national TV."
+    },
+    {
+      "name": "Ski season opening and holiday gifting",
+      "timing": "Mid-November through December",
+      "month": 11,
+      "why": "Outerwear and layering demand peaks as winter sports start and Black Friday shopping hits."
+    },
+    {
+      "name": "Christmas Day at Golden State",
+      "timing": "December 25",
+      "month": 12,
+      "why": "A nationally televised nightcap where gifted jerseys and tees get worn and photographed."
+    },
+    {
+      "name": "National Western Stock Show",
+      "timing": "Mid-to-late January",
+      "month": 1,
+      "why": "A huge winter event that brings rural and Mountain West visitors to Denver. A lane for western-flavored but non-kitsch product."
+    },
+    {
+      "name": "Playoff push",
+      "timing": "April through June",
+      "month": 4,
+      "why": "Peak fandom if Denver advances. Inventory demand shifts within days."
+    },
+    {
+      "name": "Denver PrideFest and Juneteenth Music Festival",
+      "timing": "June",
+      "month": 6,
+      "why": "At two major community events, credible, community-led presence matters more than logo placement."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Mile High",
+      "meaning": "Denver's altitude nickname, used across local sports and merchandise."
+    },
+    {
+      "term": "The Front Range",
+      "meaning": "The urban corridor along the eastern Rockies from Fort Collins to Pueblo, where most Colorado fans live."
+    },
+    {
+      "term": "Joker",
+      "meaning": "Fan shorthand for Nikola Jokic."
+    },
+    {
+      "term": "Ball Arena",
+      "meaning": "The home venue. The name replaced Pepsi Center in 2020."
+    },
+    {
+      "term": "The 303",
+      "meaning": "The Denver-metro area code, used as local identity shorthand."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Nuggets navy as the base for layering pieces",
+      "type": "color",
+      "hex": "#0E2240",
+      "source": "Nuggets primary team color",
+      "use": "Base for fleece, shells and hoodies so outerwear reads as team gear first."
+    },
+    {
+      "cue": "Sunshine gold accent",
+      "type": "color",
+      "hex": "#FEC524",
+      "source": "Nuggets gold and Colorado aspen season",
+      "use": "Use it for trim, zipper pulls and small graphics. It echoes fall aspen without literal leaves."
+    },
+    {
+      "cue": "Maroon third color from the Nuggets palette",
+      "type": "color",
+      "hex": "#8B2131",
+      "source": "Nuggets secondary team palette and red-rock tones",
+      "use": "Use it for contrast panels and knit beanies that link to Colorado red-rock landscapes."
+    },
+    {
+      "cue": "Skyline-and-peaks silhouette",
+      "type": "motif",
+      "hex": "",
+      "source": "Denver's skyline against the Front Range, a signature of the Nuggets' skyline identity",
+      "use": "Tonal jacquard on knit hats and quarter-zip chests, where a mountain-and-city line works quietly."
+    },
+    {
+      "cue": "Brushed fleece and technical shell",
+      "type": "material",
+      "hex": "",
+      "source": "Colorado outdoor-culture wardrobe",
+      "use": "Lead with fabrics that handle fast weather swings, in clean, low-bulk construction."
+    },
+    {
+      "cue": "Rocky Mountain snow white and sky blue",
+      "type": "color",
+      "hex": "#5BA3D9",
+      "source": "Colorado high-altitude sky",
+      "use": "Light-blue accents on spring and summer tees broaden the palette beyond navy and gold."
+    }
+  ],
+  "productHooks": [
+    "Nuggets layering capsule: navy quarter-zip fleece, packable shell and knit beanie in navy, gold and maroon, timed to October through December.",
+    "Jokic and Murray swingman jerseys and kids tiers as the core gameday offer, with limited-run DeRozan tees instead of deep jersey stock.",
+    "Playoff-ready tee and short drop, held in reserve for April through June and released within days of a series win.",
+    "Outlet and mall value line of tees and hoodies (Castle Rock, Colorado Mills), priced for family buyers.",
+    "Small-batch Colorado outdoor-meets-court collaboration with a credible local maker, such as a Denver outdoor brand."
+  ],
+  "watchouts": [
+    "Don't lean on cannabis imagery. Colorado's market is legal, but the imagery conflicts with youth marketing and league and brand policy.",
+    "Don't reduce Colorado to ski and mountain stereotypes. Denver's Black, Latino and Indigenous communities (Five Points, the Westside) deserve credited community partnerships, not borrowed aesthetics.",
+    "Don't use ceremonial Indigenous patterns or imagery. Colorado has deep Indigenous histories, so if you consider cultural references, engage tribal and urban Native partners directly.",
+    "Any Rockies, Broncos, Avalanche, Rapids or Colorado university marks need licensing, and so do outdoor-brand collaborations."
+  ],
+  "sources": [
+    {
+      "title": "Denver Nuggets (official team site)",
+      "url": "https://www.nba.com/nuggets"
+    },
+    {
+      "title": "Ball Arena (venue site)",
+      "url": "https://www.ballarena.com"
+    },
+    {
+      "title": "Denver Nuggets (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Denver_Nuggets"
+    },
+    {
+      "title": "Colorado Department of Revenue, Taxation",
+      "url": "https://tax.colorado.gov"
+    },
+    {
+      "title": "National Western Stock Show",
+      "url": "https://nationalwestern.com"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "late Oct",
+        "month": 10,
+        "driver": "Season tip-off and Oct 22 game vs. OKC. First layering weather.",
+        "impact": "high"
+      },
+      {
+        "window": "late Nov",
+        "month": 11,
+        "driver": "Black Friday and Thanksgiving-week league-wide Cup nights (Nov 24-25). Ski-season opening.",
+        "impact": "high"
+      },
+      {
+        "window": "Dec",
+        "month": 12,
+        "driver": "Holiday gifting peak and the Christmas Day game at Golden State.",
+        "impact": "high"
+      },
+      {
+        "window": "Jan",
+        "month": 1,
+        "driver": "National Western Stock Show crowds and post-holiday clearance.",
+        "impact": "medium"
+      },
+      {
+        "window": "Feb",
+        "month": 2,
+        "driver": "Trade deadline Feb 11 and All-Star weekend in Phoenix. A mid-winter lull for ski-town sales.",
+        "impact": "low"
+      },
+      {
+        "window": "mid-Apr to Jun",
+        "month": 4,
+        "driver": "Playoff run demand spike. Spring shorts and tee season.",
+        "impact": "high"
+      },
+      {
+        "window": "Jun",
+        "month": 6,
+        "driver": "Pride and Juneteenth events, summer tourism and graduation gifting.",
+        "impact": "medium"
+      },
+      {
+        "window": "early to mid Aug",
+        "month": 8,
+        "driver": "Back-to-school shopping with no state tax-free weekend.",
+        "impact": "medium"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Ball Arena team store",
+        "role": "Gameday ritual and impulse buys of jerseys and tees."
+      },
+      {
+        "channel": "Regional malls and outlets",
+        "role": "Weekend family and value shopping across the Front Range, from Park Meadows to Castle Rock."
+      },
+      {
+        "channel": "Online and app (Nike, NBA Store, Fanatics)",
+        "role": "The main route for mountain-town and statewide fans far from Denver, and for playoff chase demand."
+      },
+      {
+        "channel": "Outdoor and specialty retailers",
+        "role": "Competes for wardrobe share. Relevant for outerwear-adjacent collaborations."
+      },
+      {
+        "channel": "Resale and knockoffs",
+        "role": "Secondhand jerseys and value-tier copies fill gaps for price-sensitive and youth buyers."
+      }
+    ],
+    "priceProfile": "Metro Denver skews high-income and highly educated, especially in Cherry Creek, Boulder and the south suburbs. The statewide fan base also includes rural, mountain-service and student buyers who are price-sensitive. Tier product good-better-best, with outlet value pricing and a premium technical outerwear tier. Colorado state sales tax is low (about 2.9% in my knowledge), with city, county and district taxes on top. Verify combined rates, and note there is no tax-free weekend.",
+    "jerseyBehavior": "Fans buy Jokic and Murray jerseys most. Swingman is the mass tier, the Authentic jersey the collector tier, and kids and youth sizes drive family purchases. Tees, hoodies and caps are the volume items for everyday fans. Price-sensitive buyers often choose knockoffs and secondhand jerseys, and sales spike after playoff wins. In winter, fans commonly wear layered gameday outerwear over the jersey."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm the Colorado state sales tax rate (about 2.9%) and the Denver combined rate, and that Colorado still has no sales-tax holiday weekend.",
+      "Confirm the 2026-27 City Edition uniform and its release date. The live facts say a Nuggets alternate may return, but it is unverified.",
+      "Confirm Ball Arena still hosts a Nuggets team store, and check its current hours and location.",
+      "Confirm Cherry Creek Shopping Center, Park Meadows, Colorado Mills and Outlets at Castle Rock are all open under those names.",
+      "Confirm whether Jokic signed his extension, and the status of Jamal Murray, Aaron Gordon and Christian Braun on the 2026-27 roster.",
+      "Check National Western Stock Show 2027 dates, and the Denver PrideFest and Juneteenth Music Festival dates for June 2027.",
+      "Check ski-resort opening dates for November 2026 and the current snow outlook.",
+      "Confirm Denver Central Market and Topo Designs are still operating as described.",
+      "Find jersey sales rankings and Fanatics, NBA Store or Nike-specific demand data for Nuggets players.",
+      "Confirm Ball Arena's naming rights are unchanged for 2026-27."
+    ]
+  }
+}

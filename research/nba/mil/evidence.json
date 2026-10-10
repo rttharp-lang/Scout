@@ -1,0 +1,158 @@
+{
+  "team": "mil",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "mil-c1",
+      "claim": "Nike Factory Store at Pleasant Prairie Premium Outlets is open and serves as the value door for drive-in fans",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Find a Nike Store",
+          "url": "https://www.nike.com/retail/directory/united-states/wisconsin",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "www.premiumoutlets.com",
+          "url": "https://www.premiumoutlets.com/outlet/pleasant-prairie/stores/print",
+          "publisher": "Simon Premium Outlets",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's Wisconsin directory lists the Nike Factory Store at Pleasant Prairie Premium Outlets, 11211 120th Ave., Suite 80. The outlet center's directory also lists the store by its northwest entrance, off I-94.",
+      "action": "No change needed. Marked the factcheck verdict confirmed.",
+      "supports": {
+        "insights": [
+          3,
+          4
+        ],
+        "opportunities": [
+          "cream-city-cold-layer"
+        ],
+        "calendar": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "id": "mil-c2",
+      "claim": "Sherman Phoenix in Sherman Park is operating and can be a first-sale venue for neighborhood drops",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Reading Time: 5 minutes",
+          "url": "https://wisconsinwatch.org/2026/08/milwaukee-sherman-phoenix-marketplace-business-owners-symbol-of-growth-park-unrest/",
+          "publisher": "Wisconsin Watch",
+          "published": "2026-08"
+        },
+        {
+          "title": "top of page",
+          "url": "https://www.shermanphoenix.com/event-details/blackout-vendor-market-6",
+          "publisher": "Sherman Phoenix",
+          "published": ""
+        }
+      ],
+      "evidence": "Wisconsin Watch, in August 2026, reports the marketplace still runs at 3536 W. Fond du Lac Ave. but now houses about 16 businesses, down from about 60. It hosted a Blackout Vendor Market for Black-owned businesses on Feb 21, 2026.",
+      "action": "No change needed. Marked the factcheck verdict confirmed and noted the smaller tenant count.",
+      "supports": {
+        "insights": [
+          4,
+          5
+        ],
+        "opportunities": [
+          "neighborhood-collab-series"
+        ],
+        "calendar": [
+          0,
+          7
+        ]
+      }
+    },
+    {
+      "id": "mil-c3",
+      "claim": "Bronzeville Center for the Arts is operating and can co-lead artist selection and host Bronzeville drops",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Bronzeville Center for the Arts to begin demolition at future museum site",
+          "url": "https://biztimes.com/bronzeville-center-for-the-arts-to-begin-demolition-at-future-museum-site/",
+          "publisher": "BizTimes",
+          "published": ""
+        },
+        {
+          "title": "Bronzeville Center for the Arts; focus on African American art, history",
+          "url": "https://fox6now.com/news/bronzeville-center-for-the-arts-african-american-art-history",
+          "publisher": "FOX6 News",
+          "published": ""
+        }
+      ],
+      "evidence": "The nonprofit, founded in 2020, is active. It holds 507 W. North Ave. for a gallery, workshop and offices, and bought the former DNR building at 2312 N. King Drive for a planned museum. The museum is not built, and its timeline depends on fundraising. Nothing found confirms a space open for sales.",
+      "action": "No change needed. The brief already marks it \"(confirm)\" as a door. Marked the factcheck verdict confirmed for the organization only.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "neighborhood-collab-series"
+        ],
+        "calendar": [
+          0,
+          7
+        ]
+      }
+    },
+    {
+      "id": "mil-c4",
+      "claim": "The October and January drops and partner visits run on Gallery Night & Day weekends, in mid to late October",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Historic Third Ward Association",
+          "url": "https://urbanmilwaukee.com/pressrelease/fall-gallery-night-mke-returns-october-17-18/",
+          "publisher": "Urban Milwaukee",
+          "published": ""
+        },
+        {
+          "title": "ShowsWhat's Brewing Wisconsin",
+          "url": "https://www.tmj4.com/shows/whats-brewing-wisconsin/50-galleries-two-days-endless-inspiration",
+          "publisher": "TMJ4",
+          "published": ""
+        }
+      ],
+      "evidence": "The event now runs as Gallery Night MKE, produced by the Historic Third Ward Association, with seasonal editions such as summer and fall. The October 2026 edition, the year's last, is Friday Oct 16 and Saturday Oct 17, with more than 50 galleries.",
+      "action": "Renamed Gallery Night & Day to Gallery Night MKE in strategy.json, art.json and critique.json. Set calendar [0] window to Oct 16-17.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "neighborhood-collab-series"
+        ],
+        "calendar": [
+          0,
+          7,
+          10
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "The quarterly gallery weekend is called Gallery Night & Day, and the October one falls mid to late October.",
+      "correction": "It now runs as Gallery Night MKE, produced by the Historic Third Ward Association. The October 2026 edition is Oct 16-17.",
+      "files": [
+        "strategy.json",
+        "art.json",
+        "critique.json"
+      ],
+      "claimId": "mil-c4"
+    }
+  ]
+}

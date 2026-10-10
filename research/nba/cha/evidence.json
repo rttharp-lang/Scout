@@ -1,0 +1,134 @@
+{
+  "team": "cha",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "cha-c1",
+      "claim": "Social Status is a Charlotte-rooted sneaker boutique with an open Charlotte store, used as the first-release door for the Hive recut.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Here’s what a $1,000 pair of sneakers from Social Status looks like",
+          "url": "https://www.axios.com/local/charlotte/2018/05/11/social-status-plaza-midwood-sneakers-126358",
+          "publisher": "Axios Charlotte",
+          "published": "2018-05-11"
+        },
+        {
+          "title": "2020 BOB Awards: Shop",
+          "url": "https://www.charlottemagazine.com/?p=96613",
+          "publisher": "Charlotte Magazine",
+          "published": ""
+        }
+      ],
+      "evidence": "Axios (2018) says Social Status calls its Plaza Midwood store on Central Avenue its flagship and Charlotte its home city. A Charlotte Magazine listing (2020 awards) gives 1519 Central Ave. No result shows the store is open in 2026, and none covers the Nike account.",
+      "action": "No change. Confirm the store is open and the Nike account is active before launch.",
+      "supports": {
+        "insights": [
+          0,
+          5
+        ],
+        "opportunities": [
+          "hive-julian-recut",
+          "sting-summer-runs"
+        ],
+        "calendar": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "id": "cha-c2",
+      "claim": "A Nike Factory Store operates at Concord Mills and serves as a volume door.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "NIKE Factory Store - Concord, North Carolina NC 28027 - Concord Mills",
+          "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/concord--north-carolina--concord-mills",
+          "publisher": "MallsCenters",
+          "published": ""
+        },
+        {
+          "title": "Retail Associate, SEAS - Concord Mills",
+          "url": "https://fashionunited.com/fashion-jobs/retail-associate-seas-concord-mills-concord-1734117",
+          "publisher": "FashionUnited",
+          "published": ""
+        }
+      ],
+      "evidence": "A directory lists a Nike Factory Store at 8111 Concord Mills Blvd, last updated April 2022. A Nike job post and a Nike locator page refer to a Nike clearance store at Concord Mills, at a different address. Nothing current settles which Nike format is open there now.",
+      "action": "No change. Confirm whether the Concord Mills door is a Nike Factory Store or a Nike Clearance Store, and that it is open.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "hive-julian-recut",
+          "hugo-youth-family"
+        ],
+        "calendar": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "cha-c3",
+      "claim": "Leah & Louise is open at Camp North End and can host the West End capsule launch dinner.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [],
+      "evidence": "The search returned nothing on Leah & Louise, Greg Collier or Camp North End's current tenants.",
+      "action": "No change. The verify queue already asks to confirm it.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "west-end-february"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "cha-c4",
+      "claim": "The Hornets played their first game on Nov 4, 1988, the anniversary that opens the Hive recut launch window.",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "1988–89 Charlotte Hornets season",
+          "url": "https://en.wikipedia.org/wiki/1988%E2%80%9389_Charlotte_Hornets_season",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "hornets establish nba charlotte 1988",
+          "url": "https://dncr.nc.gov/blog/2016/11/04/hornets-establish-nba-charlotte-1988",
+          "publisher": "NC Department of Natural and Cultural Resources",
+          "published": "2016-11-04"
+        }
+      ],
+      "evidence": "Both sources say the Hornets' first NBA game was Nov 4, 1988, a home loss to Cleveland at the Charlotte Coliseum. They differ on the score (133-93 vs 113-93), which the brief doesn't use.",
+      "action": "No change needed. The May 20, 2014 name-return date was not checked.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "hive-julian-recut"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

@@ -1,0 +1,1039 @@
+{
+ "league": "nba",
+ "season": "2026-27",
+ "corrections": [
+  {
+   "id": "por-nike-community-store",
+   "market": "por",
+   "found": "2026-10-10",
+   "raisedBy": "Review feedback",
+   "was": "The Nike Community Store on NE Martin Luther King Jr. Blvd was Portland's recommended debut door for every Portland-specific drop. Six opportunities, five calendar entries, the retail playbook, the uniform plan and four dossiers sent launches there.",
+   "now": "The store (2650 NE MLK Jr. Blvd, open since 1984) closed in late 2022 after theft and safety concerns, and Nike confirmed in September 2023 that it won't reopen. It is removed as a door everywhere. Albina launches now go to Albina partner venues. Downtown Nike Portland (638 SW 5th Ave, reopened Nov 13, 2025, running on its main floor) is named only with the condition that it agrees to carry Blazers product, which is unconfirmed.",
+   "why": "The fact-check marked the store 'unverifiable' from model knowledge and the brief kept it as its main launch door. Knowledge-mode research can't see closures.",
+   "evidence": "OPB and KPTV (both Sept 8, 2023) report Nike's statement that the NE Portland store will not reopen. KOIN later reported the building would become a gym. Nike's newsroom and Willamette Week (Nov 12, 2025) report the downtown store reopening Nov 13, 2025.",
+   "sources": [
+    {
+     "title": "Nike permanently closes Northeast Portland factory store",
+     "url": "https://opb.org/article/2023/09/08/nike-permanently-closes-northeast-portland-factory-store",
+     "publisher": "OPB",
+     "published": "2023-09-08"
+    },
+    {
+     "title": "Nike confirms long-shuttered NE Portland Community Store won't reopen",
+     "url": "https://www.kptv.com/2023/09/08/nike-confirms-long-shuttered-ne-portland-community-store-wont-reopen/",
+     "publisher": "KPTV",
+     "published": "2023-09-08"
+    },
+    {
+     "title": "Nike to permanently close MLK store",
+     "url": "https://katu.com/news/local/nike-to-permanently-close-mlk-store",
+     "publisher": "KATU",
+     "published": ""
+    },
+    {
+     "title": "Nike Reopens Downtown Portland Store as an Athlete-Centered Community Sport Hub",
+     "url": "https://about.nike.com/en/newsroom/releases/nike-portland-downtown-store-announcement",
+     "publisher": "Nike, Inc.",
+     "published": ""
+    },
+    {
+     "title": "Nike Portland reopens downtown with a focus on running",
+     "url": "https://www.wweek.com/culture/shop/2025/11/12/nike-portland-reopens-downtown-with-a-focus-on-running/",
+     "publisher": "Willamette Week",
+     "published": "2025-11-12"
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "fanbase.json",
+    "hoops.json",
+    "uniform.json",
+    "critique.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "editor"
+  },
+  {
+   "id": "nyk-1973-clincher",
+   "market": "nyk",
+   "found": "2026-10-10",
+   "raisedBy": "Review feedback",
+   "was": "The Knicks brief said the last ring came on May 10, 1973 'at the Garden', and the culture dossier said 'Game 5 at the Garden'.",
+   "now": "The Knicks clinched the 1973 title with a 102-93 Game 5 win at the Forum in Inglewood on May 10, 1973, taking the series 4-1. The 1970 title, not 1973, was won at the Garden. Corrected in the brief, the culture dossier and the fact-check.",
+   "why": "The original culture dossier had it right. The knowledge-mode fact-checker 'corrected' it to the Garden from model knowledge, and the brief then repeated the error.",
+   "evidence": "Wikipedia's 1973 NBA Finals entry, ESPN's 2026 retrospective and NBA.com's Game 5 video all place the clincher at the Forum. MSG Network's restored tape is described as the May 10, 1973 game played at The Forum.",
+   "sources": [
+    {
+     "title": "1973 NBA Finals",
+     "url": "https://en.wikipedia.org/wiki/1973_NBA_Finals",
+     "publisher": "Wikipedia",
+     "published": ""
+    },
+    {
+     "title": "What was life like when the Knicks won their last NBA championship?",
+     "url": "https://africa.espn.com/nba/story/_/id/49042430/new-york-knicks-2026-nba-finals-champions-1973-san-antonio-spurs",
+     "publisher": "ESPN",
+     "published": "2026"
+    },
+    {
+     "title": "1973 Finals Gm 5: Knicks title triumph",
+     "url": "https://www.nba.com/watch/video/1973-finals-gm-5-knicks-title-triumph",
+     "publisher": "NBA.com",
+     "published": ""
+    },
+    {
+     "title": "MSG Network: That Championship Game Tape",
+     "url": "https://www.nexttv.com/blog/msg-network-championship-game-tape-322962",
+     "publisher": "Next TV",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "culture.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "editor"
+  },
+  {
+   "id": "cle-cle-c1",
+   "market": "cle",
+   "found": "2026-10-10",
+   "was": "The outlet center is 'Aurora Premium Outlets (formerly Aurora Farms)'.",
+   "now": "Nike's store directory and the center's own site still call it Aurora Farms Premium Outlets, and the Nike Factory Store is listed there.",
+   "sources": [
+    {
+     "title": "Find a Nike Store",
+     "url": "https://www.nike.com/retail/directory/united-states/ohio",
+     "publisher": "Nike",
+     "published": ""
+    },
+    {
+     "title": "65°F OPEN 10:00AM - 8:00PM",
+     "url": "https://www.premiumoutlets.com/outlet/aurora-farms/about",
+     "publisher": "Premium Outlets",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "retail-behavior.json",
+    "critique.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "det-det-c10",
+   "market": "det",
+   "found": "2026-10-10",
+   "was": "Fairlane Town Center is a major mall where Dearborn spending power sits, and the door for Dearborn families and the Eid push.",
+   "now": "The mall has been run by a court-appointed receiver since January 2026, with most anchor space empty. It is kept as a door only after its tenants are confirmed, and the Eid push now targets Dearborn and Hamtramck doors.",
+   "sources": [
+    {
+     "title": "Fairlane Town Center",
+     "url": "https://en.wikipedia.org/wiki/Fairlane_Town_Center",
+     "publisher": "Wikipedia",
+     "published": ""
+    },
+    {
+     "title": "fairlanes uncertain future greektowns new gateway and detroit brands head north",
+     "url": "https://www.dailydetroit.com/fairlanes-uncertain-future-greektowns-new-gateway-and-detroit-brands-head-north/",
+     "publisher": "Daily Detroit",
+     "published": ""
+    },
+    {
+     "title": "How Dearborn’s Fairlane Mall is reimagining itself for a new era",
+     "url": "https://metromodemedia.com/?p=9992",
+     "publisher": "Metro Mode",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "retail-behavior.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "det-det-c11",
+   "market": "det",
+   "found": "2026-10-10",
+   "was": "Detroit techno and jit have no formal Pistons tie.",
+   "now": "The Pistons sold a Belleville Three Black History Month collaboration with Sheefy McFly in January 2026. Jit has no known tie.",
+   "sources": [
+    {
+     "title": "techno pioneers belleville three collab with pistons",
+     "url": "https://www.axios.com/local/detroit/2026/01/28/techno-pioneers-belleville-three-collab-with-pistons",
+     "publisher": "Axios Detroit",
+     "published": "2026-01-28"
+    }
+   ],
+   "files": [
+    "strategy.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "det-det-c12",
+   "market": "det",
+   "found": "2026-10-10",
+   "was": "A rolling Detroit maker program would be new ground for the team.",
+   "now": "The team already ran a 2025 Malcolm X estate capsule with Detroit artist Wesley Taylor and DETail Threads.",
+   "sources": [
+    {
+     "title": "detroit pistons malcolm x capsule collection 1234827173",
+     "url": "https://www.sportico.com/business/commerce/2025/detroit-pistons-malcolm-x-capsule-collection-1234827173/",
+     "publisher": "Sportico",
+     "published": "2025"
+    }
+   ],
+   "files": [
+    "strategy.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "ind-ind-c1",
+   "market": "ind",
+   "found": "2026-10-10",
+   "was": "Circle Centre Foot Locker is a downtown launch door, and Circle Centre is an open downtown mall.",
+   "now": "Circle Centre Mall closed on Dec 31, 2025 and is being redeveloped. The door is removed from the plan.",
+   "sources": [
+    {
+     "title": "Circle Centre Mall",
+     "url": "https://en.wikipedia.org/wiki/Circle_Centre_Mall",
+     "publisher": "Wikipedia",
+     "published": ""
+    },
+    {
+     "title": "Hendricks closing part of Circle Centre Mall ahead of $300M first phase of revamp",
+     "url": "https://www.insideindianabusiness.com/?p=183976",
+     "publisher": "Inside Indiana Business",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "retail-behavior.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "ind-ind-c3",
+   "market": "ind",
+   "found": "2026-10-10",
+   "was": "The first home game is unconfirmed, and Oct 30 vs. the 76ers stands in as the return-night anchor.",
+   "now": "The home opener is Fri Oct 23 vs. Dallas, with Haliburton returning.",
+   "sources": [
+    {
+     "title": "pacers announce full 2026 2027 regular season schedule",
+     "url": "https://www.wrtv.com/sports/pacers-announce-full-2026-2027-regular-season-schedule",
+     "publisher": "WRTV",
+     "published": ""
+    },
+    {
+     "title": "The biggest games of the Pacers' 2026-27 season",
+     "url": "https://www.axios.com/local/indianapolis/2026/08/14/indianapolis-pacers-schedule-2026-2027-home-nba",
+     "publisher": "Axios",
+     "published": "2026-08-14"
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "culture.json",
+    "rhythm.json",
+    "fanbase.json",
+    "music.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "mil-mil-c4",
+   "market": "mil",
+   "found": "2026-10-10",
+   "was": "The quarterly gallery weekend is called Gallery Night & Day, and the October one falls mid to late October.",
+   "now": "It now runs as Gallery Night MKE, produced by the Historic Third Ward Association. The October 2026 edition is Oct 16-17.",
+   "sources": [
+    {
+     "title": "Historic Third Ward Association",
+     "url": "https://urbanmilwaukee.com/pressrelease/fall-gallery-night-mke-returns-october-17-18/",
+     "publisher": "Urban Milwaukee",
+     "published": ""
+    },
+    {
+     "title": "ShowsWhat's Brewing Wisconsin",
+     "url": "https://www.tmj4.com/shows/whats-brewing-wisconsin/50-galleries-two-days-endless-inspiration",
+     "publisher": "TMJ4",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "art.json",
+    "critique.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "nyk-nyk-c2",
+   "market": "nyk",
+   "found": "2026-10-10",
+   "was": "Nike SoHo is an open Nike-owned door (strategy Brick outerwear where, retail playbook, retail-landscape doors and places, retail-behavior doors).",
+   "now": "Nike SoHo at 529 Broadway closed Jan 10, 2026. Nike's downtown door is now a new store at 611 Broadway, opened April 16, 2026.",
+   "sources": [
+    {
+     "title": "Loja flagship Nike SoHo em Nova York fecha oficialmente as portas para dar lugar à nova IKEA",
+     "url": "https://hypebeast.com/pt/2026/1/nike-soho-nyc-flagship-store-officially-closed-news",
+     "publisher": "Hypebeast",
+     "published": "2026-01"
+    },
+    {
+     "title": "Nike returns to SoHo with new single-level store",
+     "url": "https://ww.fashionnetwork.com/news/Nike-returns-to-soho-with-new-single-level-store,1823664.html",
+     "publisher": "FashionNetwork",
+     "published": ""
+    },
+    {
+     "title": "Nike Is Back in SoHo With a New Store, Designed to Transform Throughout The year",
+     "url": "https://retailboss.co/nike-soho-noho-store-611-broadway-launch/",
+     "publisher": "RetailBoss",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "retail-behavior.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "phi-phi-c2",
+   "market": "phi",
+   "found": "2026-10-10",
+   "was": "Nike Factory Store at Philadelphia Mills as an operating Nike-owned door",
+   "now": "A directory flags it as probably closed and Nike's list doesn't include it. Nike's listed Philadelphia factory store is Downtown Philadelphia at 901 Market Street.",
+   "sources": [
+    {
+     "title": "NIKE Factory Store - Philadelphia, Pennsylvania PA 19154 - Philadelphia Mills",
+     "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/philadelphia--pennsylvania--philadelphia-mills",
+     "publisher": "MallsCenters",
+     "published": ""
+    },
+    {
+     "title": "www.fashiondistrictphiladelphia.com",
+     "url": "https://www.fashiondistrictphiladelphia.com/Directory/Details/818457",
+     "publisher": "Fashion District Philadelphia",
+     "published": ""
+    }
+   ],
+   "files": [
+    "retail-landscape.json",
+    "strategy.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "phi-phi-c4",
+   "market": "phi",
+   "found": "2026-10-10",
+   "was": "The Spectrum is where Dr. J and Moses won it all in 1983",
+   "now": "The Sixers clinched the 1983 sweep in Game 4 at the Forum in Los Angeles on May 31, 1983. The Spectrum was their home arena.",
+   "sources": [
+    {
+     "title": "1983 NBA Finals",
+     "url": "https://en.wikipedia.org/wiki/1983_NBA_Finals",
+     "publisher": "Wikipedia",
+     "published": ""
+    },
+    {
+     "title": "On This Date | Philadelphia Wins Second Title",
+     "url": "https://www.nba.com/sixers/news/date-philadelphia-wins-second-title",
+     "publisher": "NBA.com / Philadelphia 76ers",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "dal-dal-c3",
+   "market": "dal",
+   "found": "2026-10-10",
+   "was": "Dallas opens Oct 20, and its home opener date is unknown (late October).",
+   "now": "Dallas opens Oct 21 at Houston and plays its home opener Oct 24, 2026 vs. San Antonio at American Airlines Center.",
+   "sources": [
+    {
+     "title": "Dallas Mavericks release 2026-27 season schedule",
+     "url": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+     "publisher": "FOX 4 News Dallas-Fort Worth",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "culture.json",
+    "hoops.json",
+    "fanbase.json",
+    "uniform.json",
+    "retail-landscape.json",
+    "food.json",
+    "art.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "dal-dal-cup",
+   "market": "dal",
+   "found": "2026-10-10",
+   "was": "Dallas opens Cup group play Oct 30 at Phoenix, and its home Cup games are unknown.",
+   "now": "Dallas hosts Houston Oct 30 and Utah Nov 6, then plays at Denver Nov 24 and at Phoenix Nov 27.",
+   "sources": [
+    {
+     "title": "Dallas Mavericks release 2026-27 season schedule",
+     "url": "https://www.fox4news.com/sports/dallas-mavericks-2026-27-season-schedule",
+     "publisher": "FOX 4 Dallas-Fort Worth",
+     "published": ""
+    },
+    {
+     "title": "Mavs draw Jazz, Nuggets, Rockets and Suns in NBA Cup schedule",
+     "url": "https://roundtable.io/sports/nba/mavericks/game-day/mavs-draw-jazz-nuggets-rockets-and-suns-in-nba-cup-schedule",
+     "publisher": "Roundtable",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "plan.json",
+    "hoops.json",
+    "fanbase.json",
+    "rhythm.json",
+    "critique.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "den-den-c5",
+   "market": "den",
+   "found": "2026-10-10",
+   "was": "CRUSH Walls is the RiNo Art District's annual September mural festival, the home of RiNo's walls and a ready 2027 partner (CRUSH Walls / RiNo Art District).",
+   "now": "Westword reports the RiNo Art District cut ties with CRUSH Walls in 2020. Whether CRUSH still runs is unconfirmed, so the September 2027 reveal is now a live RiNo mural and the CRUSH partnership is conditional.",
+   "sources": [
+    {
+     "title": "Visual Arts",
+     "url": "https://www.westword.com/arts/denvers-street-murals-artists-have-painted-the-town-10730921",
+     "publisher": "Westword",
+     "published": ""
+    },
+    {
+     "title": "Visual Arts",
+     "url": "https://www.westword.com/arts/rino-art-district-welcomes-international-mural-fest-denver-walls-this-september-17623146",
+     "publisher": "Westword",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "art.json",
+    "culture.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "den-den-cup",
+   "market": "den",
+   "found": "2026-10-10",
+   "was": "Denver opens Cup group play Oct 30 at Utah, and its home Cup Fridays are unknown.",
+   "now": "Denver opens Oct 30 at Phoenix, hosts Houston Fri Nov 20 and Dallas Tue Nov 24, and plays at Utah on Black Friday, Nov 27.",
+   "sources": [
+    {
+     "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+     "url": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+     "publisher": "azfamily",
+     "published": "2026-08-12"
+    },
+    {
+     "title": "Utah Jazz announce 2026 NBA Cup schedule",
+     "url": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule",
+     "publisher": "Roundtable",
+     "published": ""
+    },
+    {
+     "title": "Mavs draw Jazz, Nuggets, Rockets and Suns in NBA Cup schedule",
+     "url": "https://roundtable.io/sports/nba/mavericks/game-day/mavs-draw-jazz-nuggets-rockets-and-suns-in-nba-cup-schedule",
+     "publisher": "Roundtable",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "plan.json",
+    "hoops.json",
+    "rhythm.json",
+    "critique.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "hou-hou-c2",
+   "market": "hou",
+   "found": "2026-10-10",
+   "was": "Johnny Dang & Co. is in Southwest Houston (Sharpstown/Hillcroft area), and the Candy Paint event is a 'Southwest jeweler event'.",
+   "now": "The flagship opened in 2016 at 6224 Richmond Ave; Sharpstown Mall was his first store, in 1998. Whether the store is open today is still unconfirmed.",
+   "sources": [
+    {
+     "title": "Fashion / Shopping",
+     "url": "https://www.papercitymag.com/fashion/shopping/tv-johnny-rap-legend-paul-wall-houston-cool-rich-people-new-grill-jewelry-store/",
+     "publisher": "PaperCity",
+     "published": "2016"
+    },
+    {
+     "title": "Johnny Dang & Co. Grand Opening",
+     "url": "https://houston.culturemap.com/eventdetail/johnny-dang-co-opening",
+     "publisher": "CultureMap Houston",
+     "published": ""
+    },
+    {
+     "title": "Johnny Dang",
+     "url": "https://en.wikipedia.org/wiki/Johnny_Dang",
+     "publisher": "Wikipedia",
+     "published": ""
+    }
+   ],
+   "files": [
+    "retail-landscape.json",
+    "strategy.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "hou-hou-c4",
+   "market": "hou",
+   "found": "2026-10-10",
+   "was": "A Texas-rivalry Clutch City tee runs on the Mavericks Cup night at Toyota Center in November, and home Cup dates are unconfirmed.",
+   "now": "The Mavericks Cup game is in Dallas on Oct 30. Home Cup games are Nov 13 (Utah) and Nov 25 (Phoenix). The Mavericks visit Toyota Center for the Oct 21 home opener.",
+   "sources": [
+    {
+     "title": "13 Rockets announce 2026 27 schedule",
+     "url": "https://www.thehrr.com/Houston_Rockets/News_and_Info/2026/8/13_Rockets_announce_2026-27_schedule.html",
+     "publisher": "The HRR (thehrr.com)",
+     "published": ""
+    },
+    {
+     "title": "Houston Rockets announce 2026–27 regular season schedule",
+     "url": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+     "publisher": "FOX 26 Houston",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "fanbase.json",
+    "rhythm.json",
+    "retail-landscape.json",
+    "retail-behavior.json",
+    "uniform.json",
+    "critique.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "min-min-c3",
+   "market": "min",
+   "found": "2026-10-10",
+   "was": "Kevin Garnett's jersey retirement date is unannounced; the calendar holds it as a January placeholder.",
+   "now": "The team retires Garnett's No. 21 on Sunday, Feb 28, 2027, at home against Boston on NBC. The date was announced Aug 14, 2026.",
+   "sources": [
+    {
+     "title": "Timberwolves to retire Kevin Garnett’s No. 21 on February 28",
+     "url": "https://www.valleynewslive.com/2026/08/14/timberwolves-retire-kevin-garnetts-no-21-february-28/",
+     "publisher": "Valley News Live",
+     "published": "2026-08-14"
+    },
+    {
+     "title": "kevin garnett jersey retirement feb 28",
+     "url": "https://thegrio.com/2026/08/17/kevin-garnett-jersey-retirement-feb-28/",
+     "publisher": "theGrio",
+     "published": "2026-08-17"
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "factcheck.json",
+    "rhythm.json",
+    "uniform.json",
+    "hoops.json",
+    "art.json",
+    "music.json",
+    "retail-behavior.json",
+    "fanbase.json",
+    "retail-landscape.json",
+    "culture.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "nop-nop-c5",
+   "market": "nop",
+   "found": "2026-10-10",
+   "was": "The Pelicans' own opener date is still to confirm (strategy calendar, hoops and rhythm dossiers).",
+   "now": "The Pelicans open at home against Indiana on Wednesday, Oct 21, 2026, at Smoothie King Center.",
+   "sources": [
+    {
+     "title": "Pelicans announce 2026-27 regular season schedule",
+     "url": "https://crescentcitysports.com/pelicans-announce-2026-27-regular-season-schedule/",
+     "publisher": "Crescent City Sports",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "hoops.json",
+    "rhythm.json",
+    "retail-landscape.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "okc-okc-c2",
+   "market": "okc",
+   "found": "2026-10-10",
+   "was": "Shop Good is on N Broadway in Midtown.",
+   "now": "Shop Good is at 1007 N Broadway in Automobile Alley.",
+   "sources": [
+    {
+     "title": "www.travelok.com",
+     "url": "https://www.travelok.com/de/listings/view.profile/id.18328",
+     "publisher": "TravelOK",
+     "published": ""
+    },
+    {
+     "title": "Shop Good - Service Providers - MetroFamily Magazine",
+     "url": "https://www.metrofamilymagazine.com/?p=57163",
+     "publisher": "MetroFamily Magazine",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "phx-phx-c1",
+   "market": "phx",
+   "found": "2026-10-10",
+   "was": "Nike Factory Store, Arizona Mills is the East Valley Nike-owned volume door.",
+   "now": "Nike lists the Arizona Mills door as a Nike Clearance Store. The Nike Factory Store in Tempe is at Tempe Marketplace, 2000 E Rio Salado Pkwy.",
+   "sources": [
+    {
+     "title": "Find a Nike Store",
+     "url": "https://www.nike.com/ro/retail/directory/united-states/arizona",
+     "publisher": "Nike",
+     "published": ""
+    },
+    {
+     "title": "73°F OPEN 10:00AM - 8:00PM",
+     "url": "https://www.simon.com/mall/arizona-mills/about",
+     "publisher": "Simon",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "retail-landscape.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "phx-phx-c2",
+   "market": "phx",
+   "found": "2026-10-10",
+   "was": "Los Suns was first worn May 5, 2010 against San Antonio.",
+   "now": "Los Suns was made for Noche Latina and worn twice in the 2009-10 regular season. The Suns wore it against SB 1070 in Game 2 against San Antonio on May 5, 2010.",
+   "sources": [
+    {
+     "title": "Viva Los Suns: Phoenix Suns Denounce SB 1070 [VIDEO]",
+     "url": "https://colorlines.com/articles/viva-los-suns-phoenix-suns-denounce-sb-1070-video",
+     "publisher": "Colorlines",
+     "published": "2010-05-05"
+    },
+    {
+     "title": "Wednesday, May 5, 2010",
+     "url": "https://community.tucsonweekly.com/TheRange/archives/2010/05/05/phoenix-suns-use-spanglish-to-protest-immigration-law",
+     "publisher": "Tucson Weekly",
+     "published": "2010-05-05"
+    },
+    {
+     "title": "the nation here come los suns against the bill",
+     "url": "https://www.npr.org/2010/05/06/126551397/the-nation-here-come-los-suns-against-the-bill",
+     "publisher": "NPR",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "uniform.json",
+    "rhythm.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "phx-phx-cup",
+   "market": "phx",
+   "found": "2026-10-10",
+   "was": "The Suns open Cup group play at home against Dallas on Oct 30.",
+   "now": "Denver opens the Suns' Cup group play at Phoenix on Oct 30. Dallas visits Nov 27, Black Friday. Phoenix plays at Utah Nov 20 and at Houston Nov 25.",
+   "sources": [
+    {
+     "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+     "url": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+     "publisher": "azfamily",
+     "published": "2026-08-12"
+    },
+    {
+     "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+     "url": "https://www.kold.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+     "publisher": "KOLD",
+     "published": "2026-08-12"
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "plan.json",
+    "culture.json",
+    "fanbase.json",
+    "food.json",
+    "hoops.json",
+    "music.json",
+    "retail-behavior.json",
+    "retail-landscape.json",
+    "rhythm.json",
+    "underground.json",
+    "uniform.json",
+    "critique.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "sas-sas-c4",
+   "market": "sas",
+   "found": "2026-10-10",
+   "was": "Fiesta San Antonio runs ten days, and the 2027 dates were unconfirmed.",
+   "now": "Fiesta 2027 runs eleven days, April 15-25, 2027.",
+   "sources": [
+    {
+     "title": "Fiesta San Antonio 2027",
+     "url": "https://www.visitsanantonio.com/events/arts-culture-events/fiesta-san-antonio",
+     "publisher": "Visit San Antonio",
+     "published": ""
+    },
+    {
+     "title": "FIESTA® FIESTA presented by TOYOTA",
+     "url": "https://fiestasanantonio.org/fiesta-fiesta-presented-by-toyota/",
+     "publisher": "Fiesta San Antonio Commission",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "rhythm.json",
+    "retail-behavior.json",
+    "music.json",
+    "uniform.json",
+    "underground.json",
+    "food.json",
+    "culture.json",
+    "art.json",
+    "retail-landscape.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "uta-uta-c2",
+   "market": "uta",
+   "found": "2026-10-10",
+   "was": "The Oct 30 home Cup night against Denver is the season's only fixed in-arena stage, and several dossiers call it the Jazz home opener.",
+   "now": "The Jazz home opener is Fri Oct 23 against New Orleans at the Delta Center. Utah has no Oct 30 game. Its home Cup nights are Nov 20 vs. Phoenix and Nov 27 vs. Denver (claim uta-cup).",
+   "sources": [
+    {
+     "title": "Utah Jazz release regular-season schedule, open at Memphis before 5 straight games at home",
+     "url": "https://kutv.com/sports/utah-jazz/utah-jazz-release-regular-season-schedule-open-at-memphis-before-5-straight-games-at-home",
+     "publisher": "KUTV",
+     "published": ""
+    },
+    {
+     "title": "utah jazz 2026 27 schedule best games",
+     "url": "https://www.deseret.com/sports/2026/08/13/utah-jazz-2026-27-schedule-best-games/",
+     "publisher": "Deseret News",
+     "published": ""
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "hoops.json",
+    "fanbase.json",
+    "culture.json",
+    "uniform.json",
+    "music.json",
+    "retail-landscape.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  },
+  {
+   "id": "uta-uta-cup",
+   "market": "uta",
+   "found": "2026-10-10",
+   "was": "Utah hosts Denver on Fri Oct 30 to open Cup play, and its second home Cup date is unknown.",
+   "now": "Utah has no Oct 30 game. It plays at Dallas Nov 6 and at Houston Nov 13, then hosts Phoenix Nov 20 and Denver Nov 27, Black Friday.",
+   "sources": [
+    {
+     "title": "Utah Jazz announce 2026 NBA Cup schedule",
+     "url": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule",
+     "publisher": "Roundtable",
+     "published": ""
+    },
+    {
+     "title": "Utah Jazz 2026-27 schedule: best games",
+     "url": "https://www.deseret.com/sports/2026/08/13/utah-jazz-2026-27-schedule-best-games/",
+     "publisher": "Deseret News",
+     "published": "2026-08-13"
+    }
+   ],
+   "files": [
+    "strategy.json",
+    "plan.json",
+    "art.json",
+    "fanbase.json",
+    "food.json",
+    "hoops.json",
+    "music.json",
+    "retail-behavior.json",
+    "retail-landscape.json",
+    "rhythm.json",
+    "underground.json",
+    "uniform.json",
+    "critique.json",
+    "factcheck.json"
+   ],
+   "status": "applied",
+   "by": "agent"
+  }
+ ],
+ "totals": {
+  "claims": 150,
+  "verified": 88,
+  "contradicted": 25,
+  "unclear": 37,
+  "observations": 30,
+  "references": 21,
+  "searches": 162,
+  "markets": 30,
+  "plans": 30,
+  "checkedSources": 434
+ },
+ "pulse": {
+  "asOf": "2026-10-07",
+  "teams": 30
+ },
+ "leagueCalendar": {
+  "verifiedAt": "2026-10-07",
+  "events": 24,
+  "confirmed": 15,
+  "list": [
+   {
+    "name": "2026 NBA Finals (completed) — reigning champion",
+    "date": "2026-06-03 to 2026-06-13",
+    "status": "confirmed",
+    "source": "https://sny.tv/articles/knicks-spurs-game-5-nba-finals-takeaways"
+   },
+   {
+    "name": "Nike 'Specter' uniforms reveal (End of Ordinary fashion show)",
+    "date": "2026-09-09",
+    "status": "confirmed",
+    "source": "https://www.nbcsportsboston.com/nba/nike-nba-specter-uniforms-new-historic-franchises/802773/"
+   },
+   {
+    "name": "Preseason start",
+    "date": "2026-10-03",
+    "status": "confirmed",
+    "source": "https://www.essentiallysports.com/nba-active-basketball-news-nba-pre-season-schedule-2026-dates-games-teams-times-full-matchups/"
+   },
+   {
+    "name": "Opening night (regular season tips off)",
+    "date": "2026-10-20",
+    "status": "confirmed",
+    "source": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
+   },
+   {
+    "name": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+    "date": "2026-10-30 to 2026-11-27",
+    "status": "confirmed",
+    "source": "https://www.foxnews.com/sports/2026-nba-cup-schedule-group-play-knockout-rounds-championship"
+   },
+   {
+    "name": "Emirates NBA Cup 2026 — quarterfinals",
+    "date": "2026-12-04 to 2026-12-05",
+    "status": "confirmed",
+    "source": "https://www.foxnews.com/sports/2026-nba-cup-schedule-group-play-knockout-rounds-championship"
+   },
+   {
+    "name": "Emirates NBA Cup 2026 — semifinals",
+    "date": "2026-12-08 to 2026-12-09",
+    "status": "confirmed",
+    "source": "https://www.eurohoops.net/en/nba-news/1986361/nba-cup-update-indianapolis-groups/"
+   },
+   {
+    "name": "Emirates NBA Cup 2026 — championship",
+    "date": "2026-12-11",
+    "status": "confirmed",
+    "source": "https://www.foxsports.com/articles/nba/butlers-iconic-hinkle-fieldhouse-will-play-host-to-the-next-nba-cup-final-in-december"
+   },
+   {
+    "name": "Christmas Day games",
+    "date": "2026-12-25",
+    "status": "confirmed",
+    "source": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"
+   },
+   {
+    "name": "MLK Day games",
+    "date": "2027-01-18",
+    "status": "confirmed",
+    "source": "https://www.nbcsports.com/nba/news/nba-mlk-day-presidents-day-slate-of-games-on-nbc-features-lamelo-ball-returning-to-charlotte-much-more"
+   },
+   {
+    "name": "NBA Rivals Week / league themed weeks",
+    "date": "TBA",
+    "status": "not-announced",
+    "source": "https://www.nba.com/news"
+   },
+   {
+    "name": "Trade deadline",
+    "date": "2027-02-11",
+    "status": "confirmed",
+    "source": "https://www.nbcnewyork.com/nba/nba-key-dates-2026-27-opening-night-trade-deadline-finals/6535379/"
+   },
+   {
+    "name": "Presidents' Day games",
+    "date": "2027-02-15",
+    "status": "confirmed",
+    "source": "https://awfulannouncing.com/nba/nbc-schedules-first-ever-presidents-day-quadrupleheader.html"
+   },
+   {
+    "name": "NBA All-Star 2027",
+    "date": "2027-02-19 to 2027-02-21",
+    "status": "confirmed",
+    "source": "https://www.nbcnewyork.com/nba/nba-key-dates-2026-27-opening-night-trade-deadline-finals/6535379/"
+   },
+   {
+    "name": "Regular season ends",
+    "date": "2027-04-11",
+    "status": "confirmed",
+    "source": "https://sportsvideo.org/2026/08/13/espn-abc-nbc-peacock-prime-video-set-national-slates-for-year-2-of-nba-rights-deal/"
+   },
+   {
+    "name": "Play-In Tournament",
+    "date": "2027-04-13 to 2027-04-16",
+    "status": "confirmed",
+    "source": "https://www.dunkest.com/en/nba/news/244243/nba-schedule-opening-night-key-dates"
+   },
+   {
+    "name": "NBA Playoffs begin",
+    "date": "2027-04-17 or 2027-04-18 (exact date not confirmed)",
+    "status": "announced-tentative",
+    "source": "https://www.globalgameguide.com/article/2026-27-nba-ultimate-guide"
+   },
+   {
+    "name": "NBA Finals",
+    "date": "June 2027 (Game 1 date not confirmed)",
+    "status": "announced-tentative",
+    "source": "https://www.nbcnewyork.com/nba/nba-key-dates-2026-27-opening-night-trade-deadline-finals/6535379/"
+   },
+   {
+    "name": "2027 NBA Draft Lottery",
+    "date": "TBA",
+    "status": "not-announced",
+    "source": "https://www.nba.com/draft"
+   },
+   {
+    "name": "2027 NBA Draft Combine",
+    "date": "TBA",
+    "status": "not-announced",
+    "source": "https://www.nba.com/draft"
+   },
+   {
+    "name": "2027 NBA Draft",
+    "date": "TBA",
+    "status": "not-announced",
+    "source": "https://www.nba.com/draft"
+   },
+   {
+    "name": "Free agency negotiating window opens",
+    "date": "2027-06-30",
+    "status": "announced-tentative",
+    "source": "https://nbpa.com/cba"
+   },
+   {
+    "name": "Las Vegas Summer League 2027",
+    "date": "TBA",
+    "status": "not-announced",
+    "source": "https://www.nba.com/summer-league"
+   },
+   {
+    "name": "Nike City Edition 2026-27 unveil",
+    "date": "TBA",
+    "status": "not-announced",
+    "source": "https://www.nba.com/news"
+   }
+  ]
+ }
+}

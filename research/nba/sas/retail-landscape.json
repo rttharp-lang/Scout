@@ -1,0 +1,352 @@
+{
+  "team": "sas",
+  "lens": "retail-landscape",
+  "headline": "Spurs gear sells at the mall, but the West Side decides what's cool",
+  "summary": "After the Finals run, Spurs demand crosses generations and flows through volume doors: mall chains, Academy, Dick's and the arena team store. Taste comes from Chicano and Tejano style, Fiesta and military-family practicality. The Fiesta-stripe City Edition shows local color sells. Pair the big doors with credible community pop-ups, not a flagship this mall-and-Academy city may not need.",
+  "insights": [
+    {
+      "title": "Volume lives in malls and Academy",
+      "detail": "San Antonio shops for gear at North Star Mall, La Cantera, Rolling Oaks, Ingram Park and South Park Mall chains, plus Academy Sports + Outdoors and Dillard's. There is no single downtown flagship.",
+      "implication": "Win with allocation and shop-in-shop quality at Foot Locker, Champs, Academy and Dick's before investing in a destination door."
+    },
+    {
+      "title": "The arena store is a ritual door",
+      "detail": "Families drive in from across South Texas on game nights, and the Frost Bank Center team store is where Spurs-specific and City Edition items launch.",
+      "implication": "Use it for City Edition drops, player-night exclusives and Wemby/Fox/Castle/Harper collections. Plan around Project Marvel's long-term downtown move."
+    },
+    {
+      "title": "West Side and Southtown set taste",
+      "detail": "Credibility comes from West Side Chicano and Tejano style, the Southtown and Blue Star creative scenes, and Market Square. The north-side malls don't set it.",
+      "implication": "Seed product through community pop-ups and local creators in those neighborhoods, credited and paid, before it hits mass doors."
+    },
+    {
+      "title": "Fiesta is the retail season",
+      "detail": "April's Fiesta is a San Antonio-only apparel and accessories moment, with medals, flower-crown colors and papel picado. It overlaps playoff time.",
+      "implication": "Time Fiesta-color capsules and Spurs playoff product together. The Fiesta-stripe City Edition gives you the story."
+    },
+    {
+      "title": "Military and South Texas reach widen the base",
+      "detail": "Joint Base San Antonio families and fans from the Rio Grande Valley, Laredo and Mexico shop on trips to San Antonio. Many buy at outlets and malls along the I-35 corridor.",
+      "implication": "Stock size runs and value tiers for family and military shoppers. Test Spanish-language and cross-border marketing around the outlet corridor."
+    },
+    {
+      "title": "Sneaker credibility is thin and local",
+      "detail": "San Antonio's independent sneaker scene is smaller than Houston's or Dallas's. Credibility spreads across resellers, consignment and pop-up events, with no anchor boutique.",
+      "implication": "Partner with local resellers and event promoters for basketball launches. Verify which independents are active before committing."
+    }
+  ],
+  "places": [
+    {
+      "name": "Frost Bank Center",
+      "kind": "arena",
+      "neighborhood": "East Side",
+      "why": "Home of the Spurs and the arena team store, and the highest-intent door on game nights."
+    },
+    {
+      "name": "North Star Mall",
+      "kind": "mall",
+      "neighborhood": "North Central",
+      "why": "A long-standing mall with athletic chains and department stores, and the north side's main volume door."
+    },
+    {
+      "name": "The Shops at La Cantera",
+      "kind": "mall",
+      "neighborhood": "Northwest",
+      "why": "Upscale open-air center for affluent suburban families."
+    },
+    {
+      "name": "Ingram Park Mall",
+      "kind": "mall",
+      "neighborhood": "West Side",
+      "why": "The West Side's main mall, where Chicano and Tejano style and Spurs fandom shop together."
+    },
+    {
+      "name": "South Park Mall",
+      "kind": "mall",
+      "neighborhood": "South Side",
+      "why": "Serves South Side and military-adjacent shoppers with athletic chains."
+    },
+    {
+      "name": "Market Square (El Mercado)",
+      "kind": "district",
+      "neighborhood": "Downtown West",
+      "why": "A Mexican-American market where Fiesta and Spurs vendor culture mix, and a source of local-print goods."
+    },
+    {
+      "name": "Southtown and Blue Star Arts Complex",
+      "kind": "district",
+      "neighborhood": "Southtown",
+      "why": "A creative scene with independent boutiques, and the likely home of taste-setting pop-ups."
+    },
+    {
+      "name": "The Pearl",
+      "kind": "district",
+      "neighborhood": "Near North",
+      "why": "A farmers market and brand pop-up venue for the design-minded crowd."
+    }
+  ],
+  "people": [
+    {
+      "name": "Victor Wembanyama",
+      "role": "Spurs star",
+      "why": "Drives demand for jerseys and signature product, with a global fan base that reaches Mexico."
+    },
+    {
+      "name": "De'Aaron Fox",
+      "role": "Spurs guard",
+      "why": "Co-star on a max extension, with strong jersey and sneaker pull."
+    },
+    {
+      "name": "Stephon Castle",
+      "role": "Spurs guard",
+      "why": "Young core player who anchors youth gear."
+    },
+    {
+      "name": "Dylan Harper",
+      "role": "Spurs guard",
+      "why": "Young core player with growing retail pull."
+    },
+    {
+      "name": "Tim Duncan",
+      "role": "Spurs legend",
+      "why": "Throwback demand among longtime locals."
+    },
+    {
+      "name": "Manu Ginobili",
+      "role": "Spurs legend",
+      "why": "Beloved by Latino and international fans, so throwback and Hall of Fame product sells."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Spurs home opener",
+      "timing": "Oct 20, 2026 vs OKC",
+      "month": 10,
+      "why": "A West finals rematch and the first big retail weekend of the season."
+    },
+    {
+      "name": "NBA Cup home night vs Lakers",
+      "timing": "Oct 30, 2026",
+      "month": 10,
+      "why": "An early-season home spike for team store and City Edition sales."
+    },
+    {
+      "name": "Holiday gifting and Knicks Christmas game",
+      "timing": "Late Nov to Dec 25",
+      "month": 12,
+      "why": "Peak gift season, plus a Finals rematch, drives jersey and apparel buys."
+    },
+    {
+      "name": "Spurs vs Knicks at home",
+      "timing": "Mar 7, 2027",
+      "month": 3,
+      "why": "A Finals rematch in San Antonio and a high-demand gear moment."
+    },
+    {
+      "name": "Fiesta San Antonio",
+      "timing": "April",
+      "month": 4,
+      "why": "A city-wide celebration and the local-color retail season. It overlaps the playoffs."
+    },
+    {
+      "name": "NBA Playoffs",
+      "timing": "April to June",
+      "month": 4,
+      "why": "Peak team-gear demand, and a chance for pop-up viewing parties."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Spurs Nation",
+      "meaning": "What locals call the fan base. Team and community marketing use it too."
+    },
+    {
+      "term": "Go Spurs Go",
+      "meaning": "The fan chant and rally cry, heard citywide, including at schools and businesses."
+    },
+    {
+      "term": "SA",
+      "meaning": "Local shorthand for San Antonio, printed on local apparel."
+    },
+    {
+      "term": "Fiesta medals",
+      "meaning": "Collectible pins and medals that people trade and wear during Fiesta."
+    },
+    {
+      "term": "Westside",
+      "meaning": "West Side pride shorthand, with deep Chicano and Tejano roots."
+    },
+    {
+      "term": "Alamo City",
+      "meaning": "A common nickname for San Antonio."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Spurs black and silver base",
+      "type": "color",
+      "hex": "#000000",
+      "source": "Spurs identity treated as civic uniform",
+      "use": "Anchor product in black with silver accents to reach core fans."
+    },
+    {
+      "cue": "Fiesta-stripe accent colors",
+      "type": "color",
+      "hex": "#E6007E",
+      "source": "Fiesta-stripe City Edition and Fiesta celebrations",
+      "use": "A chest and sleeve stripe capsule for Fiesta and the playoffs."
+    },
+    {
+      "cue": "Papel picado cut-paper pattern",
+      "type": "pattern",
+      "hex": "",
+      "source": "Fiesta and Mexican-American celebrations",
+      "use": "Print it tone-on-tone on tees and warm-ups, working with local artists who are credited and paid."
+    },
+    {
+      "cue": "Fiesta teal accent",
+      "type": "color",
+      "hex": "#00A6A6",
+      "source": "Tejano and Fiesta color palette",
+      "use": "A secondary accent for youth and women's lines."
+    },
+    {
+      "cue": "Hand-lettered Chicano-style script",
+      "type": "typography",
+      "hex": "",
+      "source": "West Side signage and cultural lettering",
+      "use": "Commission local letterers for SA wordmarks. Don't lift existing work."
+    },
+    {
+      "cue": "Heavyweight cotton and washed black",
+      "type": "texture",
+      "hex": "",
+      "source": "Texas heat and everyday wear",
+      "use": "Breathable fabrics for hot summers, in oversized tees."
+    }
+  ],
+  "productHooks": [
+    "Fiesta-stripe capsule (warm-ups, tees, hoodies) timed to April's Fiesta and the playoffs, extending the City Edition story.",
+    "Arena-exclusive Wembanyama, Fox, Castle and Harper player-night collections, sold at the Frost Bank Center team store.",
+    "West Side community pop-up tee and shoe drop, built with a credited local artist and sold through Ingram Park and Southtown events.",
+    "Military-family value tier: durable basketball footwear and Spurs tees, sized and priced for Academy and Dick's shelves."
+  ],
+  "watchouts": [
+    "Don't lift Chicano, Tejano or Fiesta imagery without partnering with and paying local creators. Fiesta medals and the Fiesta name carry organizational branding that needs licensing.",
+    "Avoid Alamo-as-brand imagery that ignores the site's contested history.",
+    "Spurs and NBA marks and player likenesses need league and union licensing for any collab."
+  ],
+  "sources": [
+    {
+      "title": "San Antonio Spurs official site",
+      "url": "https://www.nba.com/spurs/"
+    },
+    {
+      "title": "Frost Bank Center",
+      "url": "https://www.frostbankcenter.com/"
+    },
+    {
+      "title": "San Antonio (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/San_Antonio"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "districts": [
+      {
+        "name": "North Star Mall and Alamo Heights corridor",
+        "profile": "Established north-central mall and nearby shopping, near Broadway and Loop 410.",
+        "shopper": "Families, Alamo Heights residents and mainstream Spurs fans.",
+        "role": "volume"
+      },
+      {
+        "name": "The Shops at La Cantera and The RIM",
+        "profile": "Northwest open-air and big-box cluster near Fiesta Texas.",
+        "shopper": "Affluent suburban families and visitors.",
+        "role": "volume"
+      },
+      {
+        "name": "Ingram Park Mall and West Side",
+        "profile": "Enclosed mall serving West Side neighborhoods.",
+        "shopper": "Chicano and Tejano families, teens and sneaker shoppers.",
+        "role": "community"
+      },
+      {
+        "name": "Southtown and Blue Star",
+        "profile": "Arts district with independent shops and galleries.",
+        "shopper": "Creatives, young locals and visitors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Market Square and Downtown",
+        "profile": "Mexican-American market plaza near the River Walk.",
+        "shopper": "Tourists, and locals looking for Fiesta and Mexican-American goods.",
+        "role": "tourist"
+      },
+      {
+        "name": "I-35 outlet corridor (San Marcos)",
+        "profile": "Premium outlets, a drive north on I-35.",
+        "shopper": "Value-seeking families from San Antonio and Austin.",
+        "role": "volume"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Spurs Team Store at Frost Bank Center",
+        "type": "team-store",
+        "neighborhood": "East Side",
+        "why": "The official arena store, where City Edition and player-night product launch."
+      },
+      {
+        "name": "Foot Locker at North Star Mall",
+        "type": "athletic-chain",
+        "neighborhood": "North Central",
+        "why": "Core Nike basketball footwear door for north-side shoppers."
+      },
+      {
+        "name": "Champs Sports at Ingram Park Mall",
+        "type": "athletic-chain",
+        "neighborhood": "West Side",
+        "why": "Reaches West Side sneaker and team-gear shoppers."
+      },
+      {
+        "name": "Academy Sports + Outdoors (multiple locations)",
+        "type": "big-box",
+        "neighborhood": "Citywide",
+        "why": "A Texas-born big box and a major Spurs gear and sneaker volume channel."
+      },
+      {
+        "name": "Dick's Sporting Goods (multiple locations)",
+        "type": "big-box",
+        "neighborhood": "Citywide",
+        "why": "A major Nike partner for team apparel and basketball footwear."
+      },
+      {
+        "name": "Dillard's at North Star Mall",
+        "type": "department",
+        "neighborhood": "North Central",
+        "why": "Department-store door for premium and family apparel."
+      },
+      {
+        "name": "Nike Factory Store at San Marcos Premium Outlets",
+        "type": "nike-owned",
+        "neighborhood": "San Marcos",
+        "why": "The nearest Nike-owned door on the I-35 corridor, and a volume channel for value shoppers."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Whether a Nike-owned door (Factory Store, Well Collective or community store) operates in San Antonio proper or only at San Marcos Premium Outlets",
+      "Current Spurs Team Store location(s) and hours, including any shop outside Frost Bank Center",
+      "Which mall tenants (Foot Locker, Champs, Dillard's) are open at North Star, Ingram Park and South Park",
+      "Active independent sneaker boutiques, resellers and consignment shops in San Antonio",
+      "Local apparel brands with large followings and where their pop-ups occur",
+      "Condition and tenant mix of Ingram Park Mall and South Park Mall",
+      "Dick's Sporting Goods and Academy locations in the San Antonio metro",
+      "Any Spurs Fiesta product programming for Fiesta 2027 (Apr 15-25)"
+    ]
+  }
+}

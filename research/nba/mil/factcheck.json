@@ -1,0 +1,287 @@
+{
+  "team": "mil",
+  "checked": 96,
+  "verdicts": [
+    {
+      "lens": "uniform",
+      "claim": "City Edition history: 2019-20 MECCA floor design and 2018-19 cream look",
+      "verdict": "corrected",
+      "note": "Swapped in the dossier. Press coverage shows 2018-19 was the MECCA-floor look and 2019-20 was Cream City. It also turned up 2021-22 franchise history, 2024-25 Wisconsin-outline look and a 2025-26 Cream City return. Rewrote extra.cityEditions.",
+      "source": "https://radiomilwaukee.org/story/arts-culture/2019-bucks-city-edition-jersey-mecca/"
+    },
+    {
+      "lens": "food",
+      "claim": "Justin Carlisle's Ardent is a current fine-dining anchor",
+      "verdict": "removed",
+      "note": "Ardent closed Dec 31, 2024, and the space became Purslane (Mary Kastman). Replaced the person entry and the verify line.",
+      "source": "https://www.milwaukeemag.com/ardent-restaurant-closing"
+    },
+    {
+      "lens": "culture",
+      "claim": "Mitchell Park Domes are a beloved icon (implied visitable)",
+      "verdict": "corrected",
+      "note": "The Domes are still closed for repairs, with renovation groundbreaking targeted for 2027. Kept them as a graphic icon only and updated the culture and underground text.",
+      "source": "https://urbanmilwaukee.com/2026/03/12/mke-county-domes-project-on-track-for-2027-groundbreaking/"
+    },
+    {
+      "lens": "hoops",
+      "claim": "UW-Milwaukee Klotsche Center is the Panthers' basketball home",
+      "verdict": "corrected",
+      "note": "Panthers men play at UWM Panther Arena (the Mecca). Klotsche Center hosts women's basketball. Replaced the place.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "This Is It! is in Walker's Point",
+      "verdict": "corrected",
+      "note": "The bar is on E Wells St downtown, just north of the Walker's Point corridor. Fixed the neighborhood. Triangle Bar is the Walker's Point anchor.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "'The Land (Good Land)' as a Bucks fan nickname",
+      "verdict": "removed",
+      "note": "'The Land' is Cleveland's nickname, and no Bucks usage is known. Replaced it with 'Bucks in Six'.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "1990s Bucks look described as purple-and-teal (fanbase)",
+      "verdict": "corrected",
+      "note": "The 1993-2006 set was purple, green and silver, as the uniform dossier says. Changed fanbase to purple-and-green throughout.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "UWM Panther Arena is 'where the franchise won in 1971'",
+      "verdict": "corrected",
+      "note": "The 1971 champions' home court was the Milwaukee Arena, the Bucks' home through 1988. The title itself was clinched on the road. Reworded.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Fear the Deer originated in the 2019 era",
+      "verdict": "corrected",
+      "note": "The phrase dates to the mid-2010s and was revived in 2019-21. Reworded.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Moncrief and Johnson teams won Central titles",
+      "verdict": "corrected",
+      "note": "Changed to division titles. The 1980s Bucks were in the Midwest division for most of the run.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Var Gallery is an active Walker's Point gallery",
+      "verdict": "removed",
+      "note": "Could not confirm it is still operating. Replaced it with Black Cat Alley and cut it from the insight text.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Sobelman's Pub & Grill sits in Downtown/Walker's Point",
+      "verdict": "corrected",
+      "note": "Recalled as Near West Side (Clybourn St), not Walker's Point. Softened the location. Still needs a live check for the current address.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Fish fry peaks 'Feb to early April'",
+      "verdict": "corrected",
+      "note": "Easter is Mar 28, 2027, so Lenten Fridays run Feb 12 to Mar 26. Changed. Strategy repeats the early-April error.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Ethnic fests rotate 'after Summerfest'; Juneteenth 'in Bronzville'",
+      "verdict": "corrected",
+      "note": "Polish Fest falls before Summerfest. Fixed the typo and placed Juneteenth generally on the North Side.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Cup East Group A 'home Fridays' against all four opponents",
+      "verdict": "corrected",
+      "note": "Each team plays each group rival once, so that is two home and two road games. Group play also includes extra Cup Nights on Nov 24-25. Reworded.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Harley-Davidson Museum source URL",
+      "verdict": "corrected",
+      "note": "Replaced with the museum's own domain, h-dmuseum.com.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Deer District Wikipedia source URL",
+      "verdict": "corrected",
+      "note": "No standalone article is certain, so the source now points to the Fiserv Forum article.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Wisconsin State Fair 'early August'",
+      "verdict": "corrected",
+      "note": "The fair typically opens in the last days of July and runs into mid August. Widened the timing across the dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "1971 title look was 'green-and-cream' (fanFavorites)",
+      "verdict": "corrected",
+      "note": "Not sure cream was on the 1971 uniforms, so reworded to 'green look'. Also cut an unverified 'Deer statue' reference and the 'MECCA/Bradley-era' conflation.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "uniform.avoid cites past cream-base and Mecca City Editions",
+      "verdict": "unverifiable",
+      "note": "The direction is right: both were used (2018-19 MECCA, 2019-20 and 2025-26 Cream City). But 2025-26 was a Cream City return, so 'Fired Here' should also avoid a brick-and-cream story so close to last season. Note that 2024-25 used a Wisconsin outline.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Two Titles theme: '1971 green-red-and-white script era'",
+      "verdict": "unverifiable",
+      "note": "Script lettering belongs to the 1977-93 era. The 1971 team wore the original 1968-77 set. The editor should separate the two.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Lenten Fridays 'Feb to early April'",
+      "verdict": "corrected",
+      "note": "Lent 2027 ends Mar 26 (Easter is Mar 28). The editor must change fish-fry-cup-fridays.when to Feb 12 to Mar 26.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cup Night 'home Cup Fridays' and 'Games against Detroit, Toronto, Orlando and Brooklyn' as Fridays at Fiserv Forum",
+      "verdict": "corrected",
+      "note": "Only two of the four group games are at home, and not all are Fridays (Nov 24-25 are extra Cup Nights). The editor should say 'home Cup games' and pull dates from the schedule.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Cream City Cream appears as #EEE1C6 and #E8D9B0 (Many Milwaukees palette)",
+      "verdict": "corrected",
+      "note": "The same named color carries two hex values. Use #EEE1C6 and rename the other swatch.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Mayfair Mall Foot Locker and suburban Dick's listed as Jan 28 and holiday doors",
+      "verdict": "unverifiable",
+      "note": "Specific stores are unconfirmed. Check for Foot Locker and Dick's at Mayfair, Bayshore and Brookfield Square.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Rochambeau is an open independent boutique and exclusive-drop door",
+      "verdict": "unverifiable",
+      "note": "Name and location are recalled from memory. Needs a live check before it anchors a drop.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nike Factory Store at Pleasant Prairie Premium Outlets is operating",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: Nike's Wisconsin store directory lists the Nike Factory Store at Pleasant Prairie Premium Outlets, 11211 120th Ave., Suite 80.",
+      "source": "https://www.nike.com/retail/directory/united-states/wisconsin"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Bronzeville Center for the Arts is operating and open to partnership",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: The nonprofit is active. It bought the former DNR building on King Drive for a planned museum, but the museum is not built and its construction timeline depends on fundraising. Partnership openness is still unconfirmed.",
+      "source": "https://biztimes.com/bronzeville-center-for-the-arts-to-begin-demolition-at-future-museum-site/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Sherman Phoenix operating",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: An August 2026 Wisconsin Watch story reports the marketplace is open at 3536 W. Fond du Lac Ave. with about 16 businesses, down from a peak near 60. It opened in November 2018, not 2019.",
+      "source": "https://wisconsinwatch.org/2026/08/milwaukee-sherman-phoenix-marketplace-business-owners-symbol-of-growth-park-unrest/"
+    },
+    {
+      "lens": "culture",
+      "claim": "Mayor Cavalier Johnson still in office",
+      "verdict": "unverifiable",
+      "note": "Reportedly running for governor in 2026. Confirm his office and role.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "88Nine Radio Milwaukee and HYFIN operating, Walker's Point location",
+      "verdict": "unverifiable",
+      "note": "The station address and channel lineup need a live check. Check WMSE too.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "WebsterX and Lex Allen active locally",
+      "verdict": "unverifiable",
+      "note": "Artist activity is unverified. Make contact before naming them.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Tia Richardson and Mauricio Ramirez active muralists",
+      "verdict": "unverifiable",
+      "note": "Current projects and availability are unverified.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Mader's, Gilles, Leon's, Kopp's, DanDan and EsterEv open",
+      "verdict": "unverifiable",
+      "note": "Long-standing, but unverified for 2026. Confirm status and seasonal hours.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Shaka Smart is Marquette head coach for 2026-27",
+      "verdict": "unverifiable",
+      "note": "Coaching status not checked.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "WIAA state tournament at Kohl Center in March 2027",
+      "verdict": "unverifiable",
+      "note": "Venue contract not checked.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Cactus Club, Triangle Bar, Black Cat Alley, Riverwest Co-op, Milwaukee Zine Fest operating",
+      "verdict": "unverifiable",
+      "note": "Small-venue survival not checked.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Good City Brewing has a Deer District location",
+      "verdict": "unverifiable",
+      "note": "Neither the Brady Street nor the Deer District location is confirmed.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Milwaukee Brand and similar local makers outsell team product",
+      "verdict": "unverifiable",
+      "note": "Anecdotal claim with no sales data.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Milwaukee city sales tax add-on since 2024 raises in-city total",
+      "verdict": "unverifiable",
+      "note": "Recalled from Act 12 (2% city tax). Confirm the current combined rate.",
+      "source": ""
+    }
+  ],
+  "summary": "The dossiers were mostly sound on long-established Milwaukee history. They also matched the verified 2026 facts on the Giannis trade, Jenkins, the roster and the Cup group. Fixed: the swapped and incomplete City Edition history (checked live). Also fixed the closed Ardent and Mitchell Park Domes, the Panthers' arena, a Cleveland nickname, purple-teal versus purple-green, Lent timing and Cup home-game wording. Strategy still needs fixes on Lent dates, Cup home Fridays, a duplicated cream hex, the 1971 versus script-era mix-up and City Edition avoidance. Most remaining risk sits in small venues, shops, artists and store doors, queued as unverifiable."
+}

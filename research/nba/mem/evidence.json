@@ -1,0 +1,134 @@
+{
+  "team": "mem",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "mem-c1",
+      "claim": "The Grizzlies' first FedExForum home game is in late October (date to confirm), since Memphis isn't on the Oct 20 slate.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "grizzlies 2026 27 full schedule includes jaren jackson jr opener ja morant return",
+          "url": "https://roundtable.io/sports/nba/grizzlies/news/grizzlies-2026-27-full-schedule-includes-jaren-jackson-jr-opener-ja-morant-return",
+          "publisher": "Roundtable",
+          "published": ""
+        }
+      ],
+      "evidence": "The 2026-27 schedule coverage puts the Grizzlies' home opener at FedExForum on Wednesday, Oct 21, against the Utah Jazz, with a 7 p.m. CT tip. The first home Cup game is Nov 6 against Oklahoma City. The search summary says these dates came from different sites and should be confirmed on the NBA or Grizzlies site.",
+      "action": "No change needed. The brief's late-October window holds. The Oct 21 date is logged here for the editor to confirm with the team before it goes in the brief.",
+      "supports": {
+        "insights": [
+          0,
+          5
+        ],
+        "opportunities": [
+          "city-first-901-launch"
+        ],
+        "calendar": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "mem-c2",
+      "claim": "The Jan 18 Rockets-Grizzlies MLK Day nightcap on NBC/Peacock, with FedExForum as host still to confirm.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "grizzlies return to mlk day schedule host rockets in prime time",
+          "url": "https://roundtable.io/sports/nba/grizzlies/news/grizzlies-return-to-mlk-day-schedule-host-rockets-in-prime-time",
+          "publisher": "Roundtable",
+          "published": ""
+        },
+        {
+          "title": "article 77401987 2059 422d a8d8 73098b9002ce",
+          "url": "https://www.fox13memphis.com/news/grizzlies-to-host-rockets-for-2027-mlk-day-matchup/article_77401987-2059-422d-a8d8-73098b9002ce.html",
+          "publisher": "FOX13 Memphis",
+          "published": ""
+        }
+      ],
+      "evidence": "Memphis hosts Houston at FedExForum on Monday, Jan 18, 2027, at 6:30 p.m. CT. It is the last game of NBC's MLK Day quadrupleheader, on Peacock and NBCSN. The coverage also says the National Civil Rights Museum presents its Sports Legacy Award at the Grizzlies' MLK Day game.",
+      "action": "No change needed. The brief's hedges (\"if FedExForum hosts\") can now be settled by the editor: Memphis is the home team.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "mlk-day-partner-program"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "mem-c3",
+      "claim": "Southland Mall (Whitehaven) is an operating mall to use as a launch, volume and pop-up door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Southland Mall (Memphis, Tennessee)",
+          "url": "https://en.wikipedia.org/wiki/Southland_Mall_(Memphis,_Tennessee)",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "Southland Mall Sell Sheet",
+          "url": "https://www.masonam.com/wp-content/uploads/2026/05/Southland-Mall_Sell-Sheet.pdf",
+          "publisher": "Mason Asset Management",
+          "published": ""
+        }
+      ],
+      "evidence": "Southland Mall is a regional mall in Whitehaven, owned and managed by Namdar Realty Group, and a 2026 leasing sheet offers space there. The former Macy's anchor is vacant and the old Sears is now Public Storage. Neighbors have complained about the mall's condition.",
+      "action": "No change needed. The mall is open, but its empty anchor and condition make it a weaker volume door than the brief implies.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "city-first-901-launch",
+          "orange-mound-pilot"
+        ],
+        "calendar": [
+          6,
+          11
+        ]
+      }
+    },
+    {
+      "id": "mem-c4",
+      "claim": "The Grizzlies Team Store at FedExForum is the launch stage for City Edition and every Memphis-only drop.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "top of page",
+          "url": "https://stadiumjourney.com/stadiums/fedexforum-s110",
+          "publisher": "Stadium Journey",
+          "published": ""
+        }
+      ],
+      "evidence": "An undated stadium guide describes a large Grizzlies Den team store in the FedExForum lobby. No current source confirmed the store's name, hours or operator for 2026-27.",
+      "action": "No change. The team store's name and operator stay in the verify queue.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "city-first-901-launch",
+          "penny-city-bridge",
+          "mlk-day-partner-program"
+        ],
+        "calendar": [
+          0,
+          2,
+          4
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

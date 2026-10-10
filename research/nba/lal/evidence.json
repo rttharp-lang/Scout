@@ -1,0 +1,153 @@
+{
+  "team": "lal",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "lal-c1",
+      "claim": "Nike Melrose is an open Nike-owned door in the Melrose taste corridor, used for the opener, Candy Paint Phase 1 and Drew League sell-in.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Nike’s New Store Was Located And Stocked By You, Los Angeles",
+          "url": "https://www.textileworld.com/textile-world/knitting-apparel/2018/07/nikes-new-store-was-located-and-stocked-by-you-los-angeles/",
+          "publisher": "Textile World",
+          "published": ""
+        },
+        {
+          "title": "Nike by Melrose",
+          "url": "https://www.iads.org/other-retail-formats/nike-by-melrose",
+          "publisher": "IADS",
+          "published": ""
+        }
+      ],
+      "evidence": "Results describe Nike by Melrose at 8552 Melrose Ave opening in July 2018 as the first Nike Live concept store. All coverage dates from the launch. No result shows whether it is open in 2026.",
+      "action": "No change needed. Store status stays on the verify list.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "next-chapter-opener",
+          "candy-paint-cortez",
+          "drew-league-co-creation"
+        ],
+        "calendar": [
+          0,
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "id": "lal-c2",
+      "claim": "The Nike Factory Store at Citadel Outlets in Commerce is operating as a volume door for Eastside families.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Black Friday shoppers flock to Citadel Outlets in Commerce",
+          "url": "https://abc7.com/post/black-friday-shoppers-flock-to-citadel-outlets-in-commerce/5725276/",
+          "publisher": "ABC7",
+          "published": "2019"
+        },
+        {
+          "title": "Citadel Outlets Los Angeles Visitor Guide",
+          "url": "https://daytrippen.com/citadel-outlet-mall-los-angeles-discounts-coupons/",
+          "publisher": "Daytrippen",
+          "published": ""
+        }
+      ],
+      "evidence": "A 2019 ABC7 report shows shoppers lining up at the Nike store at Citadel Outlets, and an undated visitor guide lists a Nike Factory Store there. Neither shows the store is open in 2026.",
+      "action": "No change needed. Store status stays on the verify list.",
+      "supports": {
+        "insights": [
+          2,
+          6
+        ],
+        "opportunities": [
+          "los-lakers-serigraph",
+          "christmas-reunion"
+        ],
+        "calendar": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "id": "lal-c3",
+      "claim": "Self Help Graphics & Art operates on E 1st St in Boyle Heights.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "self help graphics print fair exhibition june 24th in east los angeles",
+          "url": "https://lataco.com/self-help-graphics-print-fair-exhibition-june-24th-in-east-los-angeles",
+          "publisher": "L.A. Taco",
+          "published": ""
+        },
+        {
+          "title": "Self Help Graphics & Art",
+          "url": "https://www.timeout.com/los-angeles/art/self-help-graphics-art",
+          "publisher": "Time Out",
+          "published": ""
+        },
+        {
+          "title": "Self Help Graphics %26 Art",
+          "url": "https://en.wikipedia.org/wiki/Self_Help_Graphics_%26_Art",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "L.A. Taco gives the address as 1300 East 1st Street, Boyle Heights. Time Out lists Thursday-Saturday hours but also flags an undated temporary closure for building renovation, so confirm the space is open before booking a December sale.",
+      "action": "No change needed. The brief already makes the sale partner-led and on the artists' timeline.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "los-lakers-serigraph"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lal-c4",
+      "claim": "La Mascota Bakery is a Boyle Heights bakery on Whittier Blvd that sells holiday tamales.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "La Mascota",
+          "url": "https://www.timeout.com/los-angeles/restaurants/la-mascota",
+          "publisher": "Time Out",
+          "published": ""
+        },
+        {
+          "title": "La Mascota Bakery",
+          "url": "https://www.theinfatuation.com/los-angeles/reviews/la-mascota-bakery",
+          "publisher": "The Infatuation",
+          "published": ""
+        }
+      ],
+      "evidence": "Time Out lists La Mascota at 2715 Whittier Blvd with daily hours and calls it a Boyle Heights institution since 1952. The Infatuation reviews its tamales, sold by the dozen with online pre-orders.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "christmas-reunion"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

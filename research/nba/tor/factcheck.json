@@ -1,0 +1,273 @@
+{
+  "team": "tor",
+  "checked": 132,
+  "verdicts": [
+    {
+      "lens": "culture",
+      "claim": "Masai Ujiri left the Raptors front office in 2025",
+      "verdict": "confirmed",
+      "note": "Checked live: MLSE parted ways with Ujiri the day after the 2025 Draft (June 2025), with one year left on his deal. Bobby Webster was extended and considered for the president role.",
+      "source": "https://www.cbssports.com/nba/news/raptors-part-ways-with-president-masai-ujiri-after-12-seasons-with-the-team-and-2019-nba-title"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Ujiri is \"President, Raptors 905 / Giants of Africa founder\" and an icon era of 2013-present",
+      "verdict": "corrected",
+      "note": "Wrong role and out of date. He is a former Raptors president who left in June 2025. Role and era (2013-2025) corrected.",
+      "source": "https://www.cbssports.com/nba/news/raptors-part-ways-with-president-masai-ujiri-after-12-seasons-with-the-team-and-2019-nba-title"
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Ujiri is the current Raptors president",
+      "verdict": "corrected",
+      "note": "Replaced the entry with Bobby Webster (GM). The current president's title is unverified and queued.",
+      "source": "https://www.cbssports.com/nba/news/raptors-part-ways-with-president-masai-ujiri-after-12-seasons-with-the-team-and-2019-nba-title"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Ujiri is Raptors vice chair and president of Basketball Operations",
+      "verdict": "corrected",
+      "note": "Reworded to former president and Giants of Africa founder.",
+      "source": "https://www.cbssports.com/nba/news/raptors-part-ways-with-president-masai-ujiri-after-12-seasons-with-the-team-and-2019-nba-title"
+    },
+    {
+      "lens": "uniform",
+      "claim": "Ujiri is Raptors president (verify current title)",
+      "verdict": "corrected",
+      "note": "Now described as a former president who left in June 2025.",
+      "source": "https://www.cbssports.com/nba/news/raptors-part-ways-with-president-masai-ujiri-after-12-seasons-with-the-team-and-2019-nba-title"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Ujiri is a current Raptors executive",
+      "verdict": "corrected",
+      "note": "Now described as former president and Giants of Africa founder.",
+      "source": "https://www.cbssports.com/nba/news/raptors-part-ways-with-president-masai-ujiri-after-12-seasons-with-the-team-and-2019-nba-title"
+    },
+    {
+      "lens": "uniform",
+      "claim": "2025-26 Toronto City Edition concept not verified; 2018-19 City Edition was OVO black and gold",
+      "verdict": "corrected",
+      "note": "Checked live: the 2025-26 City Edition recolors the 2021-22 design to honour the 2018-19 champions. It is black with a jagged silver pinstripe, red and white replacing gold, the 1995-99 dinosaur and the No. 19 mascot. Entry updated. The 2018-19 OVO claim stays unverifiable.",
+      "source": "https://news.sportslogos.net/2025/11/10/toronto-raptors-new-city-edition-uniforms-include-subtle-nod-to-2018-19-nba-champions/basketball/"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Toronto Tempo is \"new in 2026\" and \"expected\" to play at Coca-Cola Coliseum",
+      "verdict": "confirmed",
+      "note": "Checked live: the Tempo played its first home opener at Coca-Cola Coliseum on May 8, 2026, against Washington. \"Expected\" is now stated as fact.",
+      "source": "https://www.tsn.ca/wnba/article/tempo-set-to-make-wnba-debut-on-may-8-at-home-against-washington/"
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Five Cup group games against Detroit, Orlando, Milwaukee and Brooklyn",
+      "verdict": "corrected",
+      "note": "Each team plays the other four group teams once, so there are four group games. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Oct 30 Cup Night is the Raptors home opener",
+      "verdict": "corrected",
+      "note": "Nets at Raptors is the Cup opening night, but the regular-season home opener date is unverified. Reworded in hoops, fanbase and uniform.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Corporate and arena regulars are about 15% of the fanbase",
+      "verdict": "removed",
+      "note": "No basis for the figure. Replaced with a qualitative descriptor.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Boxing Day is a traditional Raptors home date",
+      "verdict": "removed",
+      "note": "Unsupported, and the 2026-27 schedule is unverified. Reworded.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Dick's has no meaningful Canadian presence and is not a Canadian factor",
+      "verdict": "corrected",
+      "note": "Dick's bought Foot Locker (closed 2025), so Foot Locker Canada is Dick's-owned, though Dick's has no own-brand Canadian stores. Added to the queue. The brief lists Foot Locker Canada as a national channel.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Pacific Mall is a known place for unlicensed apparel",
+      "verdict": "corrected",
+      "note": "Describing a named Chinese-Canadian community hub this way is unsupported and risks stereotype. Softened to a general retail risk.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Houdini (2020) was killed alongside Smoke Dawg (2018)",
+      "verdict": "removed",
+      "note": "Oddly specific and not confidently sourced. Kept only Smoke Dawg, in music and underground.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Drake released The Best in the World Pack two days after the Game 6 clincher",
+      "verdict": "corrected",
+      "note": "The exact day count is uncertain. Softened to \"around the clincher\".",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "\"Caribana\" is a trademark held by the festival's founding committee",
+      "verdict": "corrected",
+      "note": "Ownership of the name is contested and unconfirmed. Softened in music and culture. The brief still repeats the claim.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Honda Indy Toronto runs mid-July at Exhibition Place",
+      "verdict": "unverifiable",
+      "note": "The race may have dropped off the IndyCar calendar. Confirm it runs in 2027 before the tuner capsule leans on it. Wording hedged.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Calendar and opportunities treat Oct 30 as the \"first home Cup Night\" and Kawhi-reunion home window",
+      "verdict": "unverifiable",
+      "note": "Oct 30 Nets at Raptors is confirmed as a Cup game. Kawhi's home debut and the home opener are not, so don't promise a Kawhi launch on that date.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Uniform concept claims the team has never put the city's own streets on a jersey",
+      "verdict": "unverifiable",
+      "note": "Only the 2021-22 and 2025-26 City Editions were checked, and both honour the champions rather than the streets. Other editions are unverified. Soften to \"recent editions have not\".",
+      "source": "https://news.sportslogos.net/2025/11/10/toronto-raptors-new-city-edition-uniforms-include-subtle-nod-to-2018-19-nba-champions/basketball/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Home Stop palette (blue-black, Red Rocket and Raptors red) is distinct from past Raptors looks",
+      "verdict": "unverifiable",
+      "note": "The 2025-26 City Edition is already black with red, white and silver. Differentiate Home Stop from it, and check the 2026-27 City Edition before design lock.",
+      "source": "https://news.sportslogos.net/2025/11/10/toronto-raptors-new-city-edition-uniforms-include-subtle-nod-to-2018-19-nba-champions/basketball/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Foot Locker Canada and Sport Chek as the national volume channels",
+      "verdict": "unverifiable",
+      "note": "Foot Locker Canada is now Dick's-owned. Confirm Nike's assortment and banner plans.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Kawhi is a New Balance athlete who sued Nike over the Klaw and Nike won the 2019-21 fight",
+      "verdict": "unverifiable",
+      "note": "Central to the brief. Case dates, outcome and Kawhi's current sponsor need a live check, and the dossiers disagree on the timeline.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nike Toronto Eaton Centre, Yorkdale and Vaughan Mills factory doors as launch sites",
+      "verdict": "unverifiable",
+      "note": "Store names and Nike-owned status are unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "NOCTA x Raptors Night Game depends on a 2026-27 Drake Night and Drake still being Global Ambassador",
+      "verdict": "unverifiable",
+      "note": "Neither is verified. The opportunity is already conditional.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Partners Livestock, Daniels Spectrum, Nia Centre, Mural Routes, Saldenah Carnival are active and available",
+      "verdict": "unverifiable",
+      "note": "Artscape's 2024 troubles may have changed how Daniels Spectrum operates. The status of the Livestock Toronto store is unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Scottie Barnes and RJ Barrett are PUMA athletes (culture), Quickley unknown",
+      "verdict": "unverifiable",
+      "note": "Footwear deals are unconfirmed, which matters for whom Nike can feature. RJ Barrett's roster status is also unverified in current facts.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Raptors have no Christmas Day game so Boxing Day is the gifting peak",
+      "verdict": "confirmed",
+      "note": "Matches current facts: no opening-night or Christmas game. Whether the Raptors have a Boxing Day home game is unknown.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Nov 1, 1946 first NBA game: Huskies vs Knickerbockers at Maple Leaf Gardens, Knicks 68-66; Nostrand 6-foot-8 promo",
+      "verdict": "confirmed",
+      "note": "Long-established history. Whether the Raptors play or mark Nov 1, 2026 is unverified.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Vince Carter jersey retired Nov 2, 2024 and Raptors won the 2019 title with a June 17 parade",
+      "verdict": "confirmed",
+      "note": "Long-established history.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Nav Bhatia honoured by the Naismith Hall of Fame (2021 in culture, \"contributor honoree\" elsewhere)",
+      "verdict": "unverifiable",
+      "note": "The year and category of the honour differ across dossiers. Check naismith.org.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Artscape Toronto 2024 receivership and Daniels Spectrum, BAND and Nia Centre operating status",
+      "verdict": "unverifiable",
+      "note": "Receivership wording and the current operators of Artscape sites are unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Restored Sam the Record Man neon sign sits above Sankofa Square",
+      "verdict": "unverifiable",
+      "note": "Sign location and lit status are unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Reggae Lane mural by Adrian Hayles painted in 2015",
+      "verdict": "unverifiable",
+      "note": "Date and artist attribution are unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Little Ethiopia on the Danforth, plus Randy's Take-Out, Patty King, Pai, Lahore Tikka House, Alo open at stated locations",
+      "verdict": "unverifiable",
+      "note": "These small businesses and the Little Ethiopia location appear in food, culture and strategy. Confirm each is open.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "OVO Queen West flagship, Peace Collective, Courage My Love open and as described",
+      "verdict": "unverifiable",
+      "note": "Named small businesses. Confirm they are open, and confirm the OVO flagship location.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "History venue (Queen St E) opened 2021 with Drake involvement; DJ 4Kornerz still Raptors DJ",
+      "verdict": "unverifiable",
+      "note": "Both are specific and may have changed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Dates: Nuit Blanche, Caribana Grand Parade (Jul 31 or Aug 1, 2027), Diwali Nov 8, Ramadan Feb 8 to Mar 9, LNY Feb 6",
+      "verdict": "unverifiable",
+      "note": "The calendar math fits the known rules. Confirm the organisers' official 2026-27 dates.",
+      "source": ""
+    }
+  ],
+  "summary": "Mostly sound, with one cross-dossier contradiction and two stale gaps. Masai Ujiri left in June 2025, and fanbase, rhythm, uniform and both retail dossiers now say so. Also corrected: the 2025-26 City Edition recolor, the Tempo's 2026 opening, four Cup group games, Oct 30, Foot Locker Canada's owner and an invented 15% share. Still open in the brief: Oct 30, Kawhi timing, Home Stop and partner status."
+}

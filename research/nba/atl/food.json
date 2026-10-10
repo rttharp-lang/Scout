@@ -1,0 +1,301 @@
+{
+  "team": "atl",
+  "lens": "food",
+  "headline": "Atlanta eats lemon pepper wet at the wing joint and hash browns at 3am.",
+  "summary": "Atlanta's food is Black Southern at the core and global at the edges. Waffle House and Chick-fil-A were born here, and Coca-Cola is the hometown logo. Lemon pepper wet, a wing out of the wing shops and strip-club kitchens, now stands for the city itself. The colors travel too: lemon yellow, hot-sauce red, peach and Waffle House yellow sit easily beside the Hawks' red and volt.",
+  "insights": [
+    {
+      "title": "Lemon pepper wet is the city's signature dish",
+      "detail": "The wet lemon-pepper wing is tossed in lemon pepper seasoning and sauce. It is Atlanta shorthand more than a menu item, and it belongs to wing shops and hip-hop nightlife, not fine dining. Locals spot a fake instantly if it shows up as a generic wing graphic.",
+      "implication": "Build a graphic language from lemon and flat-drum wings, with Atlanta-specific names. Approach local wing shops and hip-hop figures as collaborators. Don't lift their branding."
+    },
+    {
+      "title": "Waffle House is civic infrastructure",
+      "detail": "Waffle House was founded in Avondale Estates in 1955. It is a 24-hour late-night ritual and a hometown icon, and its yellow sign letters are instantly legible. After a game, it is the default stop for fans and players alike.",
+      "implication": "A late-night colorway in Waffle House-adjacent yellow, or sign-style lettering, reads as local. Actual logos and names need a license from the company."
+    },
+    {
+      "title": "Soul food institutions carry Black Atlanta's history",
+      "detail": "Soul food institutions run along Auburn Avenue and the West End. At Mary Mac's Tea Room in Midtown, Paschal's and The Busy Bee Cafe in Vine City, near the Atlanta University Center, movement history and Sunday plates overlap. Paschal's sits in Castleberry Hill today and has Civil Rights-era meeting-place roots at its original MLK Jr. Drive site. That lines up with the Hawks' MLK Day home game and the reported return of the MLK City Edition.",
+      "implication": "Pair MLK Day product with a Black-owned food story, told with permission and credit. A community meal would work. Don't use the history as décor."
+    },
+    {
+      "title": "Buford Highway is where the new Atlanta eats",
+      "detail": "The corridor through Chamblee and Doraville is the city's immigrant food spine. Buford Highway Farmers Market anchors it, with a dense run of Korean, Vietnamese, Mexican, Chinese and Central American restaurants. Clarkston and Decatur extend it with refugee-run restaurants and markets.",
+      "implication": "Launch in Gwinnett, DeKalb and Chamblee with immigrant-owned businesses as partners. Make multilingual packaging or hangtags a real collaboration, not a pattern."
+    },
+    {
+      "title": "Chef-driven Atlanta is Southern, personal and often Black-led",
+      "detail": "Todd Richards, Deborah VanTrece (Twisted Soul) and Kevin Gillespie shape how Atlanta talks about modern Southern food. Ponce City Market and Krog Street Market are the BeltLine-side showcases.",
+      "implication": "Chef partnerships are a credible route to staff apparel, aprons and limited merch. Credit and pay the chefs, and don't squeeze them into sneaker-hype formulas that flatten their work."
+    },
+    {
+      "title": "Hometown food brands are local shorthand",
+      "detail": "Coca-Cola dates to Atlanta in 1886. Chick-fil-A was born at the Dwarf House in Hapeville. With The Varsity near Georgia Tech, they all work as local iconography. The Varsity's call-and-response ordering is a known quirk.",
+      "implication": "These are licensed IP, so use them only through a formal partnership. Otherwise borrow the color and type spirit, such as a red-and-white script or a drive-in tray graphic."
+    }
+  ],
+  "places": [
+    {
+      "name": "Mary Mac's Tea Room",
+      "kind": "restaurant",
+      "neighborhood": "Midtown",
+      "why": "Long-running Southern dining room famous for fried chicken, pot likker and cinnamon rolls. Tourists and locals both claim it."
+    },
+    {
+      "name": "Paschal's",
+      "kind": "restaurant",
+      "neighborhood": "Castleberry Hill",
+      "why": "Historic Black-owned restaurant tied to Civil Rights-era meetings at its original West Hunter Street (now MLK Jr. Drive) site. The current dining room has been on Northside Drive in Castleberry Hill since 2002."
+    },
+    {
+      "name": "The Busy Bee Cafe",
+      "kind": "restaurant",
+      "neighborhood": "Vine City",
+      "why": "Soul food institution near the Atlanta University Center and the arena district, and a classic Black Atlanta Sunday plate."
+    },
+    {
+      "name": "Sweet Auburn Curb Market",
+      "kind": "market",
+      "neighborhood": "Old Fourth Ward / Sweet Auburn",
+      "why": "Historic public market on Auburn Avenue, a short ride from downtown and the arena, with many Black-owned vendors."
+    },
+    {
+      "name": "Buford Highway Farmers Market",
+      "kind": "market",
+      "neighborhood": "Doraville",
+      "why": "Anchor of the Buford Highway immigrant corridor, and a symbol of how global Atlanta eats."
+    },
+    {
+      "name": "Ponce City Market",
+      "kind": "food hall",
+      "neighborhood": "Old Fourth Ward",
+      "why": "Beltline-side food hall in the former Sears building, and the default chef-driven showcase for visitors and locals alike."
+    },
+    {
+      "name": "Krog Street Market",
+      "kind": "food hall",
+      "neighborhood": "Inman Park / Cabbagetown",
+      "why": "Beltline food hall that anchors the chef-driven Atlanta scene."
+    },
+    {
+      "name": "The Varsity",
+      "kind": "drive-in",
+      "neighborhood": "Midtown / Georgia Tech",
+      "why": "Large Atlanta drive-in since the 1920s, with its own order-shouting vocabulary, chili dogs and frosted orange."
+    },
+    {
+      "name": "Waffle House Museum",
+      "kind": "museum",
+      "neighborhood": "Avondale Estates",
+      "why": "The restored original 1955 Waffle House, a pilgrimage point for the hometown chain."
+    },
+    {
+      "name": "State Farm Arena",
+      "kind": "venue",
+      "neighborhood": "Downtown / Vine City",
+      "why": "Hawks home arena. Concession and pre-game traffic spills into Centennial Olympic Park and downtown bars and wing spots."
+    }
+  ],
+  "people": [
+    {
+      "name": "Todd Richards",
+      "role": "chef and restaurateur",
+      "why": "Prominent Atlanta chef known for modern Southern cooking, and a Black chef's voice in the city's restaurant scene."
+    },
+    {
+      "name": "Deborah VanTrece",
+      "role": "chef and restaurateur (Twisted Soul)",
+      "why": "Atlanta chef who blends soul food technique with global influences, and is widely recognized in the city."
+    },
+    {
+      "name": "Kevin Gillespie",
+      "role": "chef and restaurateur",
+      "why": "Atlanta-based chef known for Southern cooking, with a long local profile."
+    },
+    {
+      "name": "Ford Fry",
+      "role": "restaurateur",
+      "why": "Runs a large Atlanta restaurant group that shapes dining around the Beltline and the city's growth areas."
+    },
+    {
+      "name": "Chick-fil-A",
+      "role": "hometown restaurant brand",
+      "why": "Born in the Atlanta area and a constant presence in local life. The brand touches the Hawks' arena and Atlanta events."
+    },
+    {
+      "name": "Magic City",
+      "role": "Atlanta nightlife institution",
+      "why": "Locals and hip-hop tie its Monday-night culture and kitchen to the lemon pepper wet legend."
+    }
+  ],
+  "moments": [
+    {
+      "name": "MLK Day home game",
+      "timing": "Mid-January, Hawks home game",
+      "month": 1,
+      "why": "The Hawks' traditional MLK Day game, and the best moment for a Black Atlanta soul-food story and the MLK City Edition."
+    },
+    {
+      "name": "Every home game",
+      "timing": "Pre- and post-game",
+      "month": 0,
+      "why": "Wings before, Waffle House after is the ritual. It suits late-night retail and pop-up timing."
+    },
+    {
+      "name": "Taste of Atlanta",
+      "timing": "Typically October",
+      "month": 10,
+      "why": "Large annual food festival near the season opener, and a natural place to meet the food community."
+    },
+    {
+      "name": "Thanksgiving week Cup Nights",
+      "timing": "Late November",
+      "month": 11,
+      "why": "Home-cooked food culture peaks and the Hawks play in-season Cup games. Good timing for a family and community meal story."
+    },
+    {
+      "name": "Peach Drop",
+      "timing": "New Year's Eve",
+      "month": 12,
+      "why": "Atlanta's New Year's Eve Georgia peach drop. Locals treat the state-fruit cue as civic ritual."
+    },
+    {
+      "name": "Playoff watch parties",
+      "timing": "April-May",
+      "month": 4,
+      "why": "If the Hawks advance, wing joints, sports bars and rooftop spots become community hubs."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Lemon pepper wet",
+      "meaning": "Wings with lemon pepper dry rub plus sauce, the order that defines Atlanta."
+    },
+    {
+      "term": "Scattered, smothered, covered",
+      "meaning": "Waffle House hash browns ordering shorthand, part of the chain's local speech."
+    },
+    {
+      "term": "What'll ya have",
+      "meaning": "The Varsity's counter greeting, a call-and-response ritual."
+    },
+    {
+      "term": "The A",
+      "meaning": "Local nickname for Atlanta."
+    },
+    {
+      "term": "ATL / Hotlanta",
+      "meaning": "City shorthand. Locals use ATL far more than Hotlanta."
+    },
+    {
+      "term": "Plate",
+      "meaning": "A meat-and-three style Sunday or lunch meal, the term for soul food service."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Lemon-pepper yellow with chili-red accents",
+      "type": "color",
+      "hex": "#F2C230",
+      "source": "Lemon pepper wet wing identity",
+      "use": "A secondary accent beside Hawks red and volt, in a limited colorway with local naming."
+    },
+    {
+      "cue": "Hawks red",
+      "type": "color",
+      "hex": "#E03A3E",
+      "source": "Hawks identity and hot-sauce red",
+      "use": "Ties food-inspired graphics back to team colors."
+    },
+    {
+      "cue": "Volt green as lime and lemon-pepper-herb flash",
+      "type": "color",
+      "hex": "#C1D32F",
+      "source": "Hawks volt identity",
+      "use": "A small accent that keeps food cues in team language."
+    },
+    {
+      "cue": "Peach gradient",
+      "type": "color",
+      "hex": "#F4A261",
+      "source": "Georgia peach and Peach Drop",
+      "use": "A restrained gradient or lining detail. Avoid cartoon peach clichés."
+    },
+    {
+      "cue": "Diner sign and counter lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Waffle House and Varsity signage culture",
+      "use": "Use as inspiration for an original block-letter or marquee typeface. Don't copy trademarked logotypes."
+    },
+    {
+      "cue": "Butcher-paper wing tray and takeout box",
+      "type": "texture",
+      "hex": "",
+      "source": "Wing shop and late-night takeout packaging",
+      "use": "Packaging, tags and lining prints in grease-stain-paper textures."
+    },
+    {
+      "cue": "Sunday plate and church-fan",
+      "type": "story",
+      "hex": "",
+      "source": "Black Atlanta Sunday tradition",
+      "use": "The story for an MLK Day capsule, told with Black-owned partners."
+    }
+  ],
+  "productHooks": [
+    "Late-night capsule: warm-up jacket and tee in diner yellow and Hawks red with an original marquee graphic, sold at late-night pop-ups after home games.",
+    "MLK Day food-story capsule tied to the City Edition, co-developed with a Black-owned Atlanta restaurant or chef and shared with its community.",
+    "Lemon pepper colorway for a signature basketball shoe, with a small lemon-yellow outsole and a wing-tray insole graphic.",
+    "Buford Highway collab apron, hat or bag with an immigrant-owned business, with credit and revenue share."
+  ],
+  "watchouts": [
+    "Waffle House, Chick-fil-A, Coca-Cola and The Varsity are protected brands. Any logos or names need a license or a formal partnership.",
+    "Lemon pepper wet has contested origin stories and strong ties to strip-club culture. Don't caricature it, and don't credit a single business without a partner.",
+    "Soul food and Civil Rights sites are living community places. Pay and credit them rather than using them as set dressing.",
+    "Don't reduce Buford Highway to a flag or an ethnicity-grid pattern. Engage the owners directly."
+  ],
+  "sources": [
+    {
+      "title": "Atlanta Hawks (official)",
+      "url": "https://www.nba.com/hawks"
+    },
+    {
+      "title": "State Farm Arena (official)",
+      "url": "https://www.statefarmarena.com"
+    },
+    {
+      "title": "Waffle House (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Waffle_House"
+    },
+    {
+      "title": "Mary Mac's Tea Room (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mary_Mac%27s_Tea_Room"
+    },
+    {
+      "title": "Buford Highway (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Buford_Highway"
+    },
+    {
+      "title": "Taste of Atlanta (official)",
+      "url": "https://www.tasteofatlanta.com"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm State Farm Arena is still the arena name, and check its concessions and pre-game spots (including wing partners) for 2026-27.",
+      "Confirm which listed Atlanta restaurants (Mary Mac's, Paschal's, The Busy Bee Cafe, The Varsity, Sweet Auburn Curb Market) are open and unchanged.",
+      "Confirm Taste of Atlanta 2026 dates and location, and whether it falls near the season opener.",
+      "Confirm the details of the reported MLK City Edition return and its colors, before tying any food story to it.",
+      "Confirm the named chefs (Todd Richards, Deborah VanTrece, Kevin Gillespie, Ford Fry) are still active in Atlanta with the same restaurants.",
+      "Check the origin credit for lemon pepper wet, and the posture of any wing shops or Magic City partnership, before naming them in any launch.",
+      "Confirm Buford Highway Farmers Market and the corridor's businesses are still operating.",
+      "Confirm Peach Drop and other New Year's Eve programming for 2026.",
+      "Confirm the Waffle House Museum's visiting status."
+    ]
+  }
+}

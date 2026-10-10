@@ -1,0 +1,273 @@
+{
+  "team": "nyk",
+  "checked": 140,
+  "verdicts": [
+    {
+      "lens": "culture",
+      "claim": "The Knicks clinched the 1973 title on May 10, 1973 'at the Forum'",
+      "verdict": "confirmed",
+      "note": "Re-checked live Oct 10, 2026: the original was right. The Knicks won Game 5 102-93 at the Forum in Inglewood on May 10, 1973, to take the series 4-1. An earlier pass of this check wrongly moved the clincher to the Garden, and that error reached the brief. Restored in strategy.json and culture.json.",
+      "source": "https://en.wikipedia.org/wiki/1973_NBA_Finals"
+    },
+    {
+      "lens": "music",
+      "claim": "EBC 2003 final between Terror Squad and Jay-Z's S. Carter team 'derailed by the Northeast blackout'",
+      "verdict": "removed",
+      "note": "Oddly specific and not reliably sourced. Replaced with a generic crowd line.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "NYPD shut down Supreme's Nike Foamposite release on Lafayette Street in April 2014",
+      "verdict": "removed",
+      "note": "Couldn't place this release or shutdown, so it is likely invented. Replaced with police-managed Supreme release lines in underground.json. The Pigeon Dunk 2005 and Kai Cenat Aug 2023 Union Square events stand.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "One Shirt Kings founder went by 'Nike'",
+      "verdict": "removed",
+      "note": "Unsourced and oddly specific, so it is out of the insight. A stale mention remains in underground provenance.verify; ignore it.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Ronnie Fieg is a 'Queens-raised former Dave's Quality Meat employee'",
+      "verdict": "corrected",
+      "note": "Fieg's start is usually tied to the David Z sneaker store, so 'Dave's Quality Meat' looks wrong. Swapped in a neutral description. His Queens upbringing, repeated in art, strategy and underground, is unverified.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Towns was raised by a Dominican mother and a Dominican national-team player",
+      "verdict": "corrected",
+      "note": "Towns himself is the Dominican national-team player. His father isn't documented as one. Fixed in culture.json and hoops.json, and flagged in critique.json.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Towns 'born in New Jersey to a Dominican mother and a Dominican national-team player' (topInsights, Uptown card)",
+      "verdict": "corrected",
+      "note": "Wrong in the brief: Towns is the national-team player, so claim only a Dominican mother. The editor must fix it. This agent didn't edit the brief.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "The Kid Mero is co-creator of 'Bodega Boys'",
+      "verdict": "corrected",
+      "note": "Reworded to the Desus & Mero duo. Podcast and show names churn, so the current platform is unverified.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Modell-style local sports retailers as wholesale partners",
+      "verdict": "corrected",
+      "note": "Modell's collapsed in 2020, so the reference was stale. Now reads 'local sports retailers'.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Pigeon Dunk, 'the Supreme Foamposite shutdown and the Union Square riot taught' (borough-door-network)",
+      "verdict": "corrected",
+      "note": "Pigeon Dunk 2005 and Union Square 2023 are solid. The Supreme Foamposite shutdown is unverified. The editor should drop it or say 'police-managed Supreme drops'.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "'Fence Line' City Edition concept for 2026-27",
+      "verdict": "unverifiable",
+      "note": "The real 2026-27 Knicks City Edition and past editions are unverified, so the concept may collide. The brief should present it as a proposal, not the confirmed uniform. Specter is confirmed for 8 teams including NYK. Game dates are unknown.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Ring night 'thirteen days out' and Oct 13 shelf date",
+      "verdict": "confirmed",
+      "note": "Oct 20 minus Oct 7 is 13 days. Opening night is a Tuesday tripleheader, with Knicks-76ers at 7:00 ET as the second game, per CURRENT FACTS. Recheck the times.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "16-3 playoff run; ATL 4-2, PHI 4-0, CLE 4-0, SAS 4-1; 53-29 record",
+      "verdict": "confirmed",
+      "note": "Matches CURRENT FACTS (16 wins, 3 losses).",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Christmas noon Spurs rematch, MLK Jan 18 5pm vs Minnesota, Cup East Group B, Specter reveal Sept 9 Brooklyn",
+      "verdict": "confirmed",
+      "note": "All match CURRENT FACTS.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "1973 clinch May 10, Kool Herc Aug 11, 1999 Finals Spurs 4-1 at the Garden, Rens 1939, Clifton 1950",
+      "verdict": "confirmed",
+      "note": "Long-established history.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Tyshawn Jones rides adidas and is a two-time Thrasher Skater of the Year",
+      "verdict": "unverifiable",
+      "note": "Appears in strategy, underground and music. Confirm his current sponsor and Skater of the Year count before using him in the argument that Nike can't buy skate.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Dick's owns Foot Locker after the 2025 acquisition; Stadium Goods under the Foot Locker umbrella",
+      "verdict": "unverifiable",
+      "note": "The Dick's deal was announced May 2025 and closed around Sept 2025, and is believed accurate. Stadium Goods' status and the Herald Square flagship need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Dr. Jays and Jimmy Jazz open on 125th Street and in the Bronx",
+      "verdict": "unverifiable",
+      "note": "A search spot-check found only an old listing for Jimmy Jazz's Harlem flagship (239 W 125th) and its founder's obituary, with no closure news. Dr. Jays isn't confirmed. Verify both before naming them as launch doors.",
+      "source": "https://patch.com/new-york/harlem/jimmy-jazz-shoe-store-reopen-host-free-camron-concert"
+    },
+    {
+      "lens": "underground",
+      "claim": "Nowadays (Ridgewood) and Mister Sunday still operating; Basement at Knockdown Center",
+      "verdict": "unverifiable",
+      "note": "The spot-check found only undated venue listings (Nowadays, 56-06 Cooper Ave; Mister Sunday Sundays 3-9pm) and no closure news. The Queens after-dark play in strategy leans on them, so it needs a dated check.",
+      "source": "https://www.technoairlines.com/club/nowadays-new-york-city"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Fifth Avenue flagship ('House of Innovation 000') and Nike SoHo still open under those names",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: Nike SoHo at 529 Broadway closed Jan 10, 2026, and Nike opened a new store at 611 Broadway on April 16, 2026. The Fifth Avenue flagship still runs. Fixed in strategy, retail-landscape and retail-behavior.",
+      "source": "https://hypebeast.com/pt/2026/1/nike-soho-nyc-flagship-store-officially-closed-news"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Kith has a current Knicks partnership; Kith Soho/Lafayette store",
+      "verdict": "unverifiable",
+      "note": "Kith x Knicks existed in past years. Its 2026-27 status and exclusivities are unknown. Strategy's Kith x Knicks title collab depends on it.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Walt Frazier is currently a Knicks/MSG Network broadcaster",
+      "verdict": "unverifiable",
+      "note": "Frazier's current MSG role is uncertain. He is also tied to Puma, which matters for any Clyde-themed product.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Rucker EBC, Dyckman tournament and West 4th league run in 2027 with named operators",
+      "verdict": "unverifiable",
+      "note": "Operators, sponsor exclusivity and dates are unconfirmed. The Dyckman Classic name in uniform.json is unverified.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Eras: 1992-95 pinstripe, 1995-2011 black and silver, 2011 return to traditional",
+      "verdict": "unverifiable",
+      "note": "Broadly right, but the exact years need an archive check. No past City Edition is listed, so the brief can't yet check for repeats.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Bing Bong as a fan rallying cry from 2023-24",
+      "verdict": "unverifiable",
+      "note": "Its origin and Knicks tie aren't established. Check before using it as vocabulary.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Ray Castoldi organist since 1989; Hot 97 and Funkmaster Flex current",
+      "verdict": "unverifiable",
+      "note": "Long-running, but unconfirmed for 2026.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "SOB's, Rough Trade NYC (Rockefeller Center, moved 2022-23), United Palace operating",
+      "verdict": "unverifiable",
+      "note": "Confirm that all three are operating, and the year of the move.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Wu-Tang Clan District co-naming in Staten Island (2019, Targee St and Vanderbilt Ave)",
+      "verdict": "unverifiable",
+      "note": "The exact co-name and intersection are oddly specific. Confirm or soften.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Studio Museum in Harlem new W 125th St building opened Nov 2025",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the new building at 144 W 125th St opened to the public on Saturday, Nov 15, 2025. Hours are Wednesday to Sunday.",
+      "source": "https://www.studiomuseum.org/press/studio-museum-in-harlem-opening-date-and-community-day"
+    },
+    {
+      "lens": "art",
+      "claim": "Kehinde Wiley, Mickalene Thomas and Njideka Akunyili Crosby were Studio Museum artists-in-residence; Dapper Dan Gucci 2017 episode; 5Pointz $6.75M",
+      "verdict": "confirmed",
+      "note": "Long-established facts.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Hajji's (Blue Sky Deli) at First Ave and E 110th still operating under that name",
+      "verdict": "unverifiable",
+      "note": "The origin story is well documented. The address and current operation need a live check. Culture.json repeats it.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Sylvia's, Red Rooster, Melba's, Keens, Katz's, Russ & Daughters, Denino's operating",
+      "verdict": "unverifiable",
+      "note": "All long-standing, but none was checked live this run.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Rubirosa linked to the Joe & Pat's family",
+      "verdict": "unverifiable",
+      "note": "Plausible but loosely sourced. Soften if kept.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Liberty won first WNBA title at Barclays Center in 2024; Liberty owned by Tsai group; Kevin Durant 66 at Rucker 2011; Rucker EBC founded 1982",
+      "verdict": "confirmed",
+      "note": "Well documented.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Roommates Show with Brunson and Hart; Mike Breen as voice; Knicks Film School",
+      "verdict": "unverifiable",
+      "note": "Creator and broadcast roles change. Confirm for 2026-27.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "NYC clothing under $110 exempt from state and city tax; combined rate 8.875%; NJ exempts clothing",
+      "verdict": "confirmed",
+      "note": "The rules are long-standing. Confirm there is no 2026 change.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "NYC school start, Lunar New Year Feb 6 2027, Dominican Independence Day Feb 27, Puerto Rican Day Parade June 13 2027",
+      "verdict": "confirmed",
+      "note": "The dates check out. School start is unverified.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Willis Reed died 2023; first Knicks banner 'Rens' Hall of Fame as a team",
+      "verdict": "confirmed",
+      "note": "Long-established.",
+      "source": ""
+    }
+  ],
+  "summary": "The dossiers match CURRENT FACTS on roster, coach, dates and the Specter reveal, and the strategy's 16-3 run adds up. The 1973 clincher was a Game 5 road win at the Forum in Inglewood. An earlier version of this check wrongly moved it to the Garden; corrected Oct 10, 2026. Karl-Anthony Towns's father was wrongly called a Dominican national-team player, and that is still wrong in strategy.json. Five invented or stale details were removed. The biggest open risks are retail doors, Kith and Frazier's status, the City Edition behind 'Fence Line', park-tournament operators and Tyshawn Jones's sponsor."
+}

@@ -1,0 +1,658 @@
+{
+  "team": "mem",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "First FedExForum home game, late October (date to confirm)",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup group play, Oct 30-Nov 27",
+      "kind": "season",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Tigers home season, November",
+      "kind": "season",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Thanksgiving week",
+      "kind": "event",
+      "start": "2026-11-22",
+      "end": "2026-11-28",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Thanksgiving is the fourth Thursday of November (Nov 26, 2026); the week runs Nov 22-28",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 1-24",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "MLK week, Jan 11-18, 2027",
+      "kind": "event",
+      "start": "2027-01-11",
+      "end": "2027-01-18",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "mem-c2",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "player-or-estate-rights",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Black History Month",
+      "kind": "launch",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February",
+      "actBy": "2027-01",
+      "actNote": "Publish the proceeds share before the first Orange Mound drop.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "March",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Late April, after April 4",
+      "kind": "launch",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "May",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "June",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Late July tax-free weekend to early August",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Sept 15-Oct 15, 2027 (dates to confirm)",
+      "kind": "season",
+      "start": "2027-09-15",
+      "end": "2027-10-15",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "city-first-901-launch",
+      "consumer": "Grit and Grind diehards, Ja-era fans recalibrating and Mid-South regional fans.",
+      "insights": [
+        0,
+        2,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Commission two or three Memphis lettering artists through an open call with Crosstown Arts before the first home night.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Test the $35-$50 tee and $75-$95 hoodie prices with entry buyers.",
+        "Confirm the home opener date and which Cup games are at FedExForum.",
+        "Confirm the team store's name and operator, and Hibbett's format under JD Sports.",
+        "Check how much Ja inventory is still on Memphis shelves and plan a quiet markdown."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Crosstown Arts",
+        "Hibbett Sports"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "penny-city-bridge",
+      "consumer": "Tigers-and-Grizzlies crossover fans, youth and AAU hoopers, and sneakerheads.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "shorts",
+        "footwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Pitch Nike Basketball for a Memphis-exclusive colorway or Memphis-first allocation of an existing Penny silhouette.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Penny Hardaway is still a Nike partner and which Penny silhouettes are on the 2026-28 calendar.",
+        "Get University of Memphis and Grizzlies sign-off and terms for the co-branded tee and warm-up.",
+        "Test the Tigers-plus-Grizzlies basket with Hibbett and Foot Locker buyers after a 13-19 Tigers season.",
+        "Get Memphis East approval before any coaching-legacy tee."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "stock-availability",
+        "retailer-agreement",
+        "third-party-ip"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Penny Hardaway",
+        "University of Memphis athletics",
+        "Memphis East High School",
+        "Memphis high school coaches"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "mlk-day-partner-program",
+      "consumer": "Heritage-minded families, longtime diehards and Black Memphis institutions.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "event",
+        "tee"
+      ],
+      "fit": [
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Fund the National Civil Rights Museum education day and youth tickets for MLK week, Jan 11-18.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the National Civil Rights Museum is open to a funding partnership.",
+        "Have legal confirm the King estate position before any copy mentions Dr. King.",
+        "Line the program up with the league's and Nike's own MLK and Black History Month programs.",
+        "Agree how dollars, program hours and students hosted will be reported."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "brand-safety",
+        "player-or-estate-rights",
+        "production-capacity"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "National Civil Rights Museum at the Lorraine Motel"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "orange-mound-pilot",
+      "consumer": "Neighborhood-proud Orange Mound fans and high school and rec hoopers.",
+      "insights": [
+        6,
+        2,
+        0
+      ],
+      "categories": [
+        "tee",
+        "kids",
+        "other"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-11",
+      "actNote": "Pick a named Orange Mound partner organization so resident design sessions can start in November.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Name an Orange Mound partner organization and agree the proceeds share to publish.",
+        "Find a Memphis screen-printer with capacity to print locally.",
+        "Check Southland Mall's condition and traffic before using it as a drop door.",
+        "Set the go/no-go measures for a 2027-28 expansion before the first drop."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Orange Mound partner organization (not yet chosen)",
+        "Melrose High School community",
+        "Memphis screen-printer (not yet chosen)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "jookin-film-and-research",
+      "consumer": "Young creatives and Ja-era fans who follow Memphis dance and rap.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "pants",
+        "footwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Contract a paid roster of jookin dancers as consultants with an advisory seat.",
+      "routes": [
+        "quick-turn-graphics",
+        "no-product",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm active jookin crews and teachers through local contacts.",
+        "Agree consultant fees, credits and the advisory seat before filming.",
+        "Check that Nike Sport Research will take a 2027-28 glide-outsole brief."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "nike-calendar-approval"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Memphis jookin crews and teachers",
+        "Lil Buck",
+        "Crosstown Arts"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "memphis-in-may-pit-team",
+      "consumer": "Local and Mid-South day-tripper fans first, tourists second.",
+      "insights": [
+        5,
+        2
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "headwear",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-04",
+      "actNote": "License Memphis in May marks and sign paid barbecue partners before the late-April release.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm 2027 Memphis in May dates and a barbecue-contest pop-up site.",
+        "Confirm Payne's, Cozy Corner and The Four Way are operating and open to paid partnership.",
+        "License Memphis in May marks or design without them.",
+        "Set a normal-May sales baseline to measure the capsule against."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "league-or-team-rights",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Memphis in May International Festival",
+        "Payne's",
+        "Cozy Corner",
+        "The Four Way"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "memphis-rap-now",
+      "consumer": "16-30-year-old fans, Ja-era fans recalibrating, and rap and dance culture.",
+      "insights": [
+        3,
+        2
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Sign paid artist deals before any home Cup-night artist tee.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check label status and availability for GloRilla, Moneybagg Yo, Key Glock and BlocBoy JB.",
+        "Find Young Dolph estate contacts and let his family lead that conversation.",
+        "License Three 6 Mafia or label marks, or leave them out.",
+        "Agree the share of revenue paid to Memphis creators."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "GloRilla",
+        "Moneybagg Yo",
+        "CMG",
+        "Key Glock",
+        "Paper Route Empire",
+        "BlocBoy JB",
+        "Memphis flyer artists"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "summer-avenue-hhm-2027",
+      "consumer": "Latino and immigrant Memphis families in Hickory Hill and along Summer Avenue.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "kids",
+        "headwear"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-09",
+      "actBy": "2026-12",
+      "actNote": "Start partner outreach with Latino Memphis and Summer Avenue businesses this winter.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Latino Memphis and named Summer Avenue businesses are active and open to paid co-design.",
+        "Confirm 2027 dates for Hispanic Heritage Month events.",
+        "Write and test the Spanish copy with native speakers from the community.",
+        "Check sell-through potential at Southland and Summer Avenue-area doors with buyers."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Latino Memphis",
+        "Summer Avenue corridor businesses"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "team": "chi",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "chi-c1",
+      "claim": "Nike Chicago, the Nike-owned flagship on Michigan Avenue, is open and can serve as a launch and sales door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "nike eyes flagship move decades after bringing retail theater to chicago",
+          "url": "https://www.costar.com/article/210337478/nike-eyes-flagship-move-decades-after-bringing-retail-theater-to-chicago",
+          "publisher": "CoStar",
+          "published": "2026-04-15"
+        },
+        {
+          "title": "nike chicago",
+          "url": "https://www.timeout.com/chicago/shopping/nike-chicago",
+          "publisher": "Time Out",
+          "published": ""
+        }
+      ],
+      "evidence": "The four-story Nike flagship operates at 669 N. Michigan Ave. A CoStar report from April 15, 2026 says Nike was in advanced talks to move to a two-level space at 540 N. Michigan, a deal not yet done, and the 669 building is up for sale. The door stays on Michigan Avenue either way, but its address could change before the 2027-28 launches.",
+      "action": "No change needed. Recheck the flagship's address before the November 2027 outerwear and 2027-28 home-opener launches.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "lake-wind-outerwear",
+          "madison-street-one-city",
+          "lights-out-basement-stock",
+          "africobra-commission",
+          "born-here-house"
+        ],
+        "calendar": [
+          2,
+          3,
+          8,
+          12,
+          13
+        ]
+      }
+    },
+    {
+      "id": "chi-c2",
+      "claim": "Leaders 1354 is an operating Chicago sneaker and streetwear boutique, used as a boutique-first seeding door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Leaders 1354",
+          "url": "https://www.timeout.com/chicago/shopping/leaders-1354",
+          "publisher": "Time Out",
+          "published": ""
+        },
+        {
+          "title": "Brand profile",
+          "url": "https://www.discobrands.co/brands/leaders-1354",
+          "publisher": "Disco Brands",
+          "published": ""
+        }
+      ],
+      "evidence": "Time Out and a brand profile place the store at 1152 W. Madison St. in the West Loop, stocking Nike and adidas footwear. It was founded in 2002 by Corey Gilkey at 1354 E. 53rd St. in Hyde Park. An older ChooseChicago interview gives 672 N. Wells St., likely a past address.",
+      "action": "retail-landscape.json: set the Leaders 1354 neighborhood to West Loop (1152 W. Madison St).",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "lights-out-basement-stock",
+          "fieldhouse-public-league"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "chi-c3",
+      "claim": "The Rink Fitness Factory on East 87th St is the home floor of JB skating and the launch venue for the Rink Session track suit.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "BLAC — Black Life, Arts & Culture",
+          "url": "https://blac.media/community/south-sides-community-skating-rink-reopens-after-remodel",
+          "publisher": "BLAC",
+          "published": ""
+        },
+        {
+          "title": "Chicago's NPR News Source",
+          "url": "https://www.wbez.org/2019/01/31/the-rink-in-chatham-keeps-roller-skating-alive-in-chicago",
+          "publisher": "WBEZ",
+          "published": "2019-01-31"
+        }
+      ],
+      "evidence": "The Rink is at 1122 E. 87th St. in Chatham and is described as a birthplace of JB skating, with a late Sunday adult JB session. It closed in November 2021 and reopened in 2022 after a renovation. The results are older, so the current JB session schedule was not confirmed.",
+      "action": "No change needed. Confirm the current JB session schedule and the crews to approach before the 2027 launch.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "rink-session-jb"
+        ],
+        "calendar": [
+          0,
+          11
+        ]
+      }
+    },
+    {
+      "id": "chi-c4",
+      "claim": "Calendar entry 0 sets the Bulls 2026-27 home opener as a priority-1 seeding moment, with the date to confirm.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Hunting season begins early on for Bulls with 2026-27 schedule release",
+          "url": "https://chicago.suntimes.com/bulls/2026/08/13/hunting-season-begins-bulls-2026-27-schedule-release",
+          "publisher": "Chicago Sun-Times",
+          "published": "2026-08-13"
+        }
+      ],
+      "evidence": "The Bulls open the season Oct 21 at Toronto. The home opener is Saturday, Oct 24, 2026 against the Washington Wizards at the United Center, per the Sun-Times and Daily Herald.",
+      "action": "strategy.json: calendar[0].window now gives the confirmed date, Sat Oct 24 vs Washington.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "lights-out-basement-stock"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

@@ -1,0 +1,265 @@
+{
+  "team": "den",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "den-c1",
+      "claim": "Nike Factory Store, Outlets at Castle Rock is open and serves as the Mile High Code door",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Finn en Nike-butikk",
+          "url": "https://www.nike.com/no/retail/directory/usa/colorado",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "Outlets at Castle Rock",
+          "url": "https://www.visitcos.com/directory/outlets-at-castle-rock",
+          "publisher": "Visit Colorado Springs",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's Colorado store directory lists a Nike Factory Store at 5050 Factory Shops Blvd #905, Castle Rock, at the Outlets at Castle Rock, with current opening hours. The center sits off I-25 between Denver and Colorado Springs.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "mile-high-code-front-range"
+        ],
+        "calendar": [
+          2,
+          11
+        ]
+      }
+    },
+    {
+      "id": "den-c2",
+      "claim": "Nike Factory Store, Denver Premium Outlets (Thornton) is open",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Finn en Nike-butikk",
+          "url": "https://www.nike.com/no/retail/directory/usa/colorado",
+          "publisher": "Nike",
+          "published": ""
+        }
+      ],
+      "evidence": "The same Nike directory lists a Nike Factory Store at Denver Premium Outlets in Thornton. It also lists Nike doors in Lakewood and Northfield and a Nike Clearance Store in Aurora, so Nike's metro footprint is wider than the two outlets the brief names.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "mile-high-code-front-range"
+        ],
+        "calendar": [
+          2,
+          11
+        ]
+      }
+    },
+    {
+      "id": "den-c3",
+      "claim": "The Nuggets Team Store at Ball Arena operates as the launch door for scarce drops",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "STANDARD TEAM STORE HOURS:",
+          "url": "https://www.ballarena.com/arena-information/team-store",
+          "publisher": "Ball Arena",
+          "published": ""
+        }
+      ],
+      "evidence": "Ball Arena's team store page lists Altitude Authentics off Chopper Circle on the arena's south side, open Monday to Saturday, selling Avalanche, Nuggets and Mammoth merchandise. The page shows no date.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "game-to-trailhead-layers",
+          "skyline-heirloom-platform",
+          "april-tip-off-playoff-chase",
+          "jokic-moments-and-holiday",
+          "cup-nights-artist-pilot",
+          "welton-street-cocreation"
+        ],
+        "calendar": [
+          0,
+          1,
+          4,
+          5,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "id": "den-c4",
+      "claim": "Denver won its 2023 title at home, the anniversary the June Skyline Heirloom drop rests on",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "denver nuggets defeat miami heat to win first nba championship",
+          "url": "https://www.nbcnewyork.com/news/sports/denver-nuggets-defeat-miami-heat-to-win-first-nba-championship/",
+          "publisher": "NBC New York",
+          "published": ""
+        }
+      ],
+      "evidence": "NBC reports Denver beat Miami 94-89 in Game 5 at Ball Arena for the franchise's first title, a 4-1 series. The clincher was a Monday game. The result does not print the June 12 date itself.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "skyline-heirloom-platform"
+        ],
+        "calendar": [
+          10
+        ]
+      }
+    },
+    {
+      "id": "den-c5",
+      "claim": "CRUSH Walls is the RiNo Art District's September mural festival and a 2027 partner for a live Nuggets wall",
+      "topic": "partner",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Visual Arts",
+          "url": "https://www.westword.com/arts/denvers-street-murals-artists-have-painted-the-town-10730921",
+          "publisher": "Westword",
+          "published": ""
+        },
+        {
+          "title": "Visual Arts",
+          "url": "https://www.westword.com/arts/rino-art-district-welcomes-international-mural-fest-denver-walls-this-september-17623146",
+          "publisher": "Westword",
+          "published": ""
+        }
+      ],
+      "evidence": "Westword reports the RiNo Art District severed all ties with CRUSH Walls in 2020. A separate Westword piece covers a different RiNo mural event, Denver Walls. The search found no 2025 or 2026 CRUSH Walls edition.",
+      "action": "Split CRUSH Walls from the RiNo Art District in the strategy partners, made the 2027 wall conditional on CRUSH still running, and reworded the September 2027 reveal and art and culture dossier lines so they don't depend on CRUSH Walls.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "cup-nights-artist-pilot"
+        ],
+        "calendar": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "den-cup",
+      "claim": "Denver opens NBA Cup group play at Utah on Oct 30, and which Cup Fridays are at Ball Arena is unknown.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+          "url": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+          "publisher": "azfamily",
+          "published": "2026-08-12"
+        },
+        {
+          "title": "Utah Jazz announce 2026 NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/jazz/news/utah-jazz-announce-2026-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        },
+        {
+          "title": "Mavs draw Jazz, Nuggets, Rockets and Suns in NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/mavericks/game-day/mavs-draw-jazz-nuggets-rockets-and-suns-in-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        }
+      ],
+      "evidence": "The Suns' group schedule has Denver at Phoenix on Oct 30. The Jazz schedule has no Oct 30 game and puts Denver at Utah on Black Friday, Nov 27. The Mavs' schedule has Dallas at Denver on Tue Nov 24.",
+      "action": "Re-anchored the cup-nights-artist-pilot summary, timing and debut, calendar[1] and the verify list on the home nights, Nov 20 vs. Houston and Nov 24 vs. Dallas. Updated plan.json calendar[1] and the opportunity notes, the hoops and rhythm dossiers and the critique.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "cup-nights-artist-pilot"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "den-cup-dates",
+      "claim": "Denver's Cup group games are Oct 30 at Phoenix, Nov 20 vs. Houston and Nov 24 vs. Dallas at home, and Nov 27 at Utah.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Houston Rockets announce 2026–27 regular season schedule",
+          "url": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+          "publisher": "FOX 26 Houston",
+          "published": ""
+        },
+        {
+          "title": "Mavs draw Jazz, Nuggets, Rockets and Suns in NBA Cup schedule",
+          "url": "https://roundtable.io/sports/nba/mavericks/game-day/mavs-draw-jazz-nuggets-rockets-and-suns-in-nba-cup-schedule",
+          "publisher": "Roundtable",
+          "published": ""
+        },
+        {
+          "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+          "url": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+          "publisher": "azfamily",
+          "published": "2026-08-12"
+        }
+      ],
+      "evidence": "The Rockets' schedule has Houston at Denver Nov 20, the Mavs' Cup schedule has Dallas at Denver Nov 24, and the Suns' has Denver at Phoenix Oct 30. The Nov 27 game at Utah is in the Jazz Cup schedule cited under den-cup, since a claim holds at most three sources.",
+      "action": "Used as the date basis for plan.json calendar[1].",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "cup-nights-artist-pilot"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "CRUSH Walls is the RiNo Art District's annual September mural festival, the home of RiNo's walls and a ready 2027 partner (CRUSH Walls / RiNo Art District).",
+      "correction": "Westword reports the RiNo Art District cut ties with CRUSH Walls in 2020. Whether CRUSH still runs is unconfirmed, so the September 2027 reveal is now a live RiNo mural and the CRUSH partnership is conditional.",
+      "files": [
+        "strategy.json",
+        "art.json",
+        "culture.json",
+        "factcheck.json"
+      ],
+      "claimId": "den-c5"
+    },
+    {
+      "claim": "Denver opens Cup group play Oct 30 at Utah, and its home Cup Fridays are unknown.",
+      "correction": "Denver opens Oct 30 at Phoenix, hosts Houston Fri Nov 20 and Dallas Tue Nov 24, and plays at Utah on Black Friday, Nov 27.",
+      "files": [
+        "strategy.json",
+        "plan.json",
+        "hoops.json",
+        "rhythm.json",
+        "critique.json"
+      ],
+      "claimId": "den-cup"
+    }
+  ]
+}

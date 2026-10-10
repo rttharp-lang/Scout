@@ -1,0 +1,377 @@
+{
+  "team": "chi",
+  "lens": "food",
+  "headline": "Chicago eats standing up, and nobody puts ketchup on the dog.",
+  "summary": "Chicago food is working-class, neighborhood-owned and eaten fast. Italian beef, Chicago dogs and tavern-cut pizza share the city with a Black-owned South Side canon and immigrant corridors that give each side of town its own menu. Game day is a pre-game dinner, not a tailgate. In a rebuild year, food is a low-risk way for Nike to show neighborhood pride, as long as the stands are paid, credited and licensed.",
+  "insights": [
+    {
+      "title": "The Chicago dog already wears Bulls colors",
+      "detail": "A Chicago dog is an all-beef frank on a poppy-seed bun with yellow mustard, neon-green relish, onion, tomato wedges, a pickle spear, sport peppers and celery salt. That's 'dragged through the garden,' and asking for ketchup gets you mocked. Locals defend Superdawg (Norwood Park, 1948) and Gene & Jude's in River Grove, which piles fries on top and has no seats.",
+      "implication": "Tomato red and poppy-seed black are Bulls red and black. A hot-dog accent pack (neon relish, mustard, seed speckle) reads as Chicago without a literal food graphic. 'No ketchup' is the insider joke a hangtag or insole can carry."
+    },
+    {
+      "title": "Italian beef is ordered in code",
+      "detail": "At Al's #1 on Taylor Street (since 1938), Johnnie's in Elmwood Park and Mr. Beef on Orleans, you order 'sweet or hot,' meaning roasted peppers or giardiniera. You also pick 'dry, juicy or dipped,' and 'combo,' which is beef plus sausage. You eat in 'the Italian stance,' leaning over the counter so the jus misses your shirt. FX's The Bear, modeled on Mr. Beef, took that vocabulary national.",
+      "implication": "The order code is a ready-made naming and colorway system (Dipped, Hot, Combo) for a fan pack. Beef-stand workwear cues (aprons, deli paper, order stamps) land right now. Draw from the real stands and pay them. The Bear's names and marks are FX/Disney IP."
+    },
+    {
+      "title": "Locals eat tavern-cut, visitors eat deep dish",
+      "detail": "The everyday Chicago pizza is cracker-thin tavern style, cut into squares (the 'party cut'), from South Side spots like Vito & Nick's in Ashburn. People fight over the crunchy corner pieces. Pequod's caramelized-crust pan pie is the cult exception. Food reporter Steve Dolinsky's book 'Pizza City, USA' argues that tavern style, not deep dish, is the city's real pie.",
+      "implication": "The square-cut grid is the insider pizza cue. Deep-dish graphics read as airport souvenirs. Chicagoans eat tavern pizza during road games, so it suits a watch-party kit."
+    },
+    {
+      "title": "The South Side canon is Black-owned and number-coded",
+      "detail": "Harold's Chicken Shack (founded 1950) goes by location number and serves mild sauce over fries and white bread. On 75th Street, Lem's Bar-B-Q smokes rib tips and hot links in a glass-walled 'aquarium' pit. Brown Sugar Bakery down the block sells caramel cake. Erick Williams of Virtue in Hyde Park is the neighborhood's fine-dining voice.",
+      "implication": "This is the core of a February Black History Month food story. Build it as paid, credited partnerships with these owners. Never borrow their logos or turn chicken and barbecue into a punchline."
+    },
+    {
+      "title": "Immigrant corridors map the city",
+      "detail": "Pilsen's 18th Street (Carnitas Uruapan, since 1975) and Little Village's 26th Street anchor Mexican Chicago. The jibarito, a steak sandwich with fried plantains for bread, was created in Humboldt Park in 1996 and lives along Paseo Boricua. Patel Brothers opened its first store on Devon Avenue in 1974. Polish bakeries line Milwaukee Avenue.",
+      "implication": "Co-design neighborhood capsules corridor by corridor, with local businesses and cultural groups. Time them to heritage nights and summer festivals. Skip the one generic 'Chicago food' print."
+    },
+    {
+      "title": "Game day is a pre-game dinner, not a tailgate",
+      "detail": "The United Center (1901 W. Madison) sits inside a food triangle. Randolph Street and Fulton Market, a mile east, have Au Cheval and Girl & the Goat. Greektown is on Halsted, and Taylor Street is Little Italy. Jim's Original Maxwell Street Polish stand is near UIC. In winter, Bulls fans eat before tip-off instead of tailgating in the lots.",
+      "implication": "Stage launch nights indoors inside that triangle, such as a Fulton Market pop-up or collab wrappers at Al's on City Edition nights. Design for fans commuting in coats over jerseys on the No. 20 Madison bus or the L plus a long walk."
+    },
+    {
+      "title": "The rebuild has a hometown pantry",
+      "detail": "Matas Buzelis is a Chicago-area native of Lithuanian heritage, and greater Chicago has one of the largest Lithuanian communities outside Lithuania. Think cepelinai dumplings and spit-baked sakotis 'tree cake.' Coach Tiago Splitter and EVP Graham are starting over around Josh Giddey, Buzelis and Caleb Wilson. Expectations are low, so homegrown stories carry more than win totals.",
+      "implication": "A Buzelis-fronted community night with Lithuanian-American bakeries and organizations gives local fans a reason to buy in during a rebuild. Confirm his community ties and get their buy-in before concepting."
+    }
+  ],
+  "places": [
+    {
+      "name": "Al's #1 Italian Beef",
+      "kind": "restaurant",
+      "neighborhood": "Little Italy (Taylor Street)",
+      "why": "The 1938 original of the city's signature sandwich, a short ride from the United Center and the natural pre-game beef stop."
+    },
+    {
+      "name": "Mr. Beef on Orleans",
+      "kind": "restaurant",
+      "neighborhood": "River North",
+      "why": "The counter that inspired FX's The Bear, now a pilgrimage stop for out-of-town fans."
+    },
+    {
+      "name": "Superdawg Drive-In",
+      "kind": "restaurant",
+      "neighborhood": "Norwood Park",
+      "why": "A 1948 carhop drive-in with rooftop hot dog figures Maurie and Flaurie, the North Side's best-known stand."
+    },
+    {
+      "name": "Gene & Jude's",
+      "kind": "restaurant",
+      "neighborhood": "River Grove (suburb)",
+      "why": "No seats, no ketchup, fries piled on the dog: the purist's 'depression dog' since 1946."
+    },
+    {
+      "name": "Lem's Bar-B-Q",
+      "kind": "restaurant",
+      "neighborhood": "Chatham (75th Street)",
+      "why": "Rib tips and hot links from an aquarium smoker, the defining South Side barbecue since the 1950s."
+    },
+    {
+      "name": "Vito & Nick's Pizzeria",
+      "kind": "restaurant",
+      "neighborhood": "Ashburn",
+      "why": "A Southwest Side tavern-style institution and the benchmark for thin, square-cut pizza."
+    },
+    {
+      "name": "The Original Rainbow Cone",
+      "kind": "ice cream shop",
+      "neighborhood": "Beverly",
+      "why": "The pink 1926 shop at 92nd and Western, whose five-flavor cone is a South Side summer ritual."
+    },
+    {
+      "name": "Carnitas Uruapan",
+      "kind": "restaurant",
+      "neighborhood": "Pilsen",
+      "why": "Family-run on 18th Street since 1975, it anchors Pilsen's Michoacan-style carnitas tradition."
+    },
+    {
+      "name": "Paseo Boricua",
+      "kind": "district",
+      "neighborhood": "Humboldt Park",
+      "why": "The stretch of Division Street between two steel Puerto Rican flags, home of the jibarito and the center of Puerto Rican Chicago."
+    },
+    {
+      "name": "Balzekas Museum of Lithuanian Culture and Lithuanian Plaza",
+      "kind": "museum and community corridor",
+      "neighborhood": "Chicago Lawn / Marquette Park",
+      "why": "The institutional home of Lithuanian Chicago, and the community around Matas Buzelis's heritage. Cepelinai and sakotis bakeries cater community nights here. Confirm operating status before building a partnership."
+    }
+  ],
+  "people": [
+    {
+      "name": "Harold's Chicken Shack",
+      "role": "Black-owned fried chicken chain founded by Harold Pierce in 1950",
+      "why": "Its numbered locations, mild sauce and hatchet-chef logo are South and West Side shorthand. Any use is a licensing conversation."
+    },
+    {
+      "name": "Erick Williams",
+      "role": "Chef-owner of Virtue in Hyde Park",
+      "why": "A James Beard Best Chef: Great Lakes winner and the South Side's most credible chef voice for Black History Month."
+    },
+    {
+      "name": "Stephanie Izard",
+      "role": "Chef behind Girl & the Goat; first woman to win Top Chef",
+      "why": "The best-known chef on Randolph Street's pre-game row, with national TV reach."
+    },
+    {
+      "name": "Kasama (Tim Flores and Genie Kwon)",
+      "role": "Filipino bakery-restaurant in Ukrainian Village",
+      "why": "The first Filipino restaurant to earn a Michelin star. Its morning pastry lines make it a cult spot for younger fans."
+    },
+    {
+      "name": "Diana Davila",
+      "role": "Chef of Mi Tocaya Antojeria in Logan Square",
+      "why": "A Chicago-raised Mexican-American chef whose regional Mexican cooking speaks for the city's Latino food scene from inside it."
+    },
+    {
+      "name": "Steve Dolinsky",
+      "role": "Food reporter ('The Hungry Hound') and author of 'Pizza City, USA'",
+      "why": "The loudest advocate for tavern style as Chicago's real pizza, and a credible guide for a pizza-themed drop."
+    },
+    {
+      "name": "Dark Matter Coffee",
+      "role": "Chicago coffee roaster",
+      "why": "Its art-forward bags and artist-collab merch are worn around town. A model for a credited co-branded drop."
+    },
+    {
+      "name": "Vienna Beef",
+      "role": "Chicago hot dog maker since the 1893 World's Fair",
+      "why": "Its sign hangs over most of the city's hot dog stands, so its marks define the stand look and require licensing."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Pre-game beef or dog run",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "Fans eat on Taylor Street, in Greektown or on Randolph Street before heading to the United Center."
+    },
+    {
+      "name": "Chicago Restaurant Week",
+      "timing": "Late January to early February",
+      "month": 1,
+      "why": "A citywide prix-fixe run by Choose Chicago, mid-season and leading into Black History Month. It frames a Bulls x chef series."
+    },
+    {
+      "name": "Paczki Day",
+      "timing": "Fat Tuesday (Feb 9, 2027)",
+      "month": 2,
+      "why": "Lines form at Polish bakeries along Milwaukee Avenue and in the suburbs, two days before the trade deadline."
+    },
+    {
+      "name": "Puerto Rican Fest and People's Parade",
+      "timing": "June",
+      "month": 6,
+      "why": "Humboldt Park's biggest weekend, with jibaritos and lechon along Paseo Boricua."
+    },
+    {
+      "name": "Fiesta del Sol",
+      "timing": "Late July",
+      "month": 7,
+      "why": "Pilsen's long-running Mexican street festival, which overlaps Summer League."
+    },
+    {
+      "name": "Bud Billiken Parade and Picnic",
+      "timing": "Second Saturday of August",
+      "month": 8,
+      "why": "A back-to-school South Side parade that ends in Washington Park cookouts, and the biggest Black Chicago gathering of the summer."
+    },
+    {
+      "name": "Taste of Chicago",
+      "timing": "September, Grant Park",
+      "month": 9,
+      "why": "The city's signature food festival now lands just before preseason, a launch window for tip-off product."
+    },
+    {
+      "name": "Chicago Gourmet",
+      "timing": "Late September",
+      "month": 9,
+      "why": "The chef festival in Millennium Park, where the city's restaurant names gather before the season."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Dragged through the garden",
+      "meaning": "A Chicago dog with all seven toppings and celery salt, never ketchup."
+    },
+    {
+      "term": "Dipped, hot",
+      "meaning": "Italian beef order: the whole sandwich dunked in jus, topped with hot giardiniera. 'Juicy' is a lighter dunk. 'Sweet' means roasted green peppers."
+    },
+    {
+      "term": "Combo",
+      "meaning": "Italian beef plus a char-grilled Italian sausage in the same roll."
+    },
+    {
+      "term": "The Italian stance",
+      "meaning": "Leaning over the counter, elbows out, so a dripping beef misses your clothes."
+    },
+    {
+      "term": "Hot giard",
+      "meaning": "Oil-packed hot giardiniera, the city's all-purpose condiment on beef, pizza and eggs."
+    },
+    {
+      "term": "Tavern cut (party cut)",
+      "meaning": "Thin-crust pizza cut into squares instead of wedges. The corner pieces are prized."
+    },
+    {
+      "term": "Mild sauce",
+      "meaning": "The sweet, tangy red sauce poured over wings and fries at South and West Side chicken shacks."
+    },
+    {
+      "term": "Jibarito",
+      "meaning": "A Puerto Rican sandwich that uses flattened fried plantains as the bread. Born in Humboldt Park."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Neon Relish: the electric green of Chicago dog relish as a small, loud accent against Bulls red #CE1141 and black.",
+      "type": "color",
+      "hex": "#5DC12B",
+      "source": "The dyed sweet relish on every Chicago-style hot dog.",
+      "use": "Use on pull tabs, aglets, lining and insoles only, so it reads as an insider wink, not a costume."
+    },
+    {
+      "cue": "Stand Mustard: the bright yellow of the mustard line, paired with Neon Relish for a full hot-dog accent pack.",
+      "type": "color",
+      "hex": "#F9C80E",
+      "source": "Yellow mustard squeezed down the dog at stands from Superdawg to Gene & Jude's.",
+      "use": "Use for a single piping line or 'mustard stripe' on shorts and warm-ups. Keep stand logos off unless licensed."
+    },
+    {
+      "cue": "Poppy-seed speckle: tiny black flecks scattered on a toasted-bun cream base (#EBCF9C).",
+      "type": "pattern",
+      "hex": "",
+      "source": "The poppy-seed bun that makes a Chicago dog recognizable.",
+      "use": "Use as a speckled midsole, fleece heather or tee print. It doubles as Bulls black on cream."
+    },
+    {
+      "cue": "Dipped: a deep jus brown with small confetti flecks of giardiniera orange, green and white.",
+      "type": "color",
+      "hex": "#5A3720",
+      "source": "Italian beef soaked in gravy and topped with hot giardiniera.",
+      "use": "Use as the base for a 'Dipped / Hot / Combo' hoodie or warm-up pack, with the flecks as a subtle all-over print."
+    },
+    {
+      "cue": "Tavern-cut grid: an irregular square grid with the crunchy corner piece highlighted, echoing the city's own street grid.",
+      "type": "graphic",
+      "hex": "",
+      "source": "Square-cut thin-crust pizza at South Side taverns like Vito & Nick's.",
+      "use": "Use as an all-over print or box-mailer graphic for a watch-party kit, with no restaurant name."
+    },
+    {
+      "cue": "Rainbow Cone stack: five horizontal bands of chocolate #5B3A29, strawberry #F6A5B8, Palmer House cream #F3E8CF, pistachio #B9D98A and orange sherbet #FF9F45.",
+      "type": "pattern",
+      "hex": "",
+      "source": "The five-flavor cone sold since 1926 at the pink shop on 92nd and Western in Beverly.",
+      "use": "Use for a licensed summer, kids' or Summer League capsule, crediting the shop on hangtags."
+    },
+    {
+      "cue": "Chicago Mix: caramel gold paired with cheddar orange #F28B22 in a half-and-half split.",
+      "type": "color",
+      "hex": "#C68A3E",
+      "source": "Caramel-and-cheese popcorn, the city's signature snack.",
+      "use": "Use as a split colorway on a sneaker or tee. Avoid any popcorn brand's tins or trade dress, and confirm the name is free to use."
+    },
+    {
+      "cue": "Aquarium smoker: a glass-walled pit with smoke behind it, rendered as a smoked translucent panel.",
+      "type": "material",
+      "hex": "",
+      "source": "The glass-sided smokers at South Side barbecue spots like Lem's on 75th Street.",
+      "use": "Use as smoked-tint TPU windows or overlays on a South Side-inspired shoe, built with and credited to the pitmasters."
+    }
+  ],
+  "productHooks": [
+    "'Dragged Through the Garden' pack in Bulls red and black, with neon-relish and mustard accents, a poppy-seed speckle and a 'No ketchup' hangtag. Launch it during opening week with a paid, licensed Superdawg or Gene & Jude's pop-up.",
+    "'Dipped / Hot / Combo' hoodie and warm-up trio in jus brown with giardiniera flecks. Wrap it in white deli paper with an order-code stamp, and sell it for one night at Al's #1 on Taylor Street on a City Edition home date.",
+    "Tavern-cut watch-party kit: a square-grid tee with the corner piece highlighted, plus a pizza-box mailer. Make it with a South Side tavern-style spot for the Bulls' Emirates NBA Cup group games in November.",
+    "Black History Month chef series during Chicago Restaurant Week 2027. Erick Williams, Lem's and Brown Sugar Bakery each co-design a menu item and a credited, paid patch or tee for a South Side pop-up.",
+    "Rainbow Cone five-stripe summer capsule for kids and Summer League. License it from the Original Rainbow Cone and launch it at the pink shop on 92nd and Western.",
+    "Corridor tees co-designed with businesses on Paseo Boricua, 18th Street in Pilsen and Devon Avenue. Sell them through those businesses, with shared revenue, on Bulls heritage nights."
+  ],
+  "watchouts": [
+    "Vienna Beef, Superdawg's Maurie and Flaurie, Harold's, Portillo's, Garrett, the Original Rainbow Cone and Mr. Beef all own their logos and trade dress. The Bear belongs to FX/Disney. License and pay, or use generic food cues only.",
+    "Keep Malort, Old Style and other alcohol brands off basketball product. It is youth-facing and the NBA restricts alcohol marks, even though 'Malort face' is beloved local humor.",
+    "Deep-dish cliches read as tourist merch, and fried-chicken or barbecue jokes read as racist caricature. Black and Latino food cues should come only through paid, credited partnerships with the owners.",
+    "The Puerto Rican, Mexican and Lithuanian flags are national symbols, not decoration. Co-design with community organizations and don't mash the flags into Bulls marks.",
+    "Neighborhood food spots close or change hands (Hot Doug's shut in 2014). Confirm every partner is open and willing before anything goes on durable product."
+  ],
+  "sources": [
+    {
+      "title": "Chicago Bulls (official site)",
+      "url": "https://www.nba.com/bulls"
+    },
+    {
+      "title": "United Center (official site)",
+      "url": "https://www.unitedcenter.com"
+    },
+    {
+      "title": "Choose Chicago (Chicago Restaurant Week organizer)",
+      "url": "https://www.choosechicago.com"
+    },
+    {
+      "title": "Cuisine of Chicago (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cuisine_of_Chicago"
+    },
+    {
+      "title": "Chicago-style hot dog (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago-style_hot_dog"
+    },
+    {
+      "title": "Italian beef (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Italian_beef"
+    },
+    {
+      "title": "Chicago-style pizza (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chicago-style_pizza"
+    },
+    {
+      "title": "Jibarito (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Jibarito"
+    },
+    {
+      "title": "Harold's Chicken Shack (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Harold%27s_Chicken_Shack"
+    },
+    {
+      "title": "Superdawg (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Superdawg"
+    },
+    {
+      "title": "Taste of Chicago (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Taste_of_Chicago"
+    },
+    {
+      "title": "Paseo Boricua (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Paseo_Boricua"
+    },
+    {
+      "title": "The Bear (TV series) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Bear_(TV_series)"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Check the United Center's 2026-27 concessionaire and local-vendor lineup, and any official Bulls food or beverage sponsors that would conflict with a stand collab.",
+      "Confirm these are open at the named locations in fall 2026: Al's #1 (Taylor St), Mr. Beef (Orleans), Superdawg, Gene & Jude's, Lem's (75th St), Vito & Nick's, the Original Rainbow Cone (Beverly) and Carnitas Uruapan.",
+      "Confirm Chicago Restaurant Week 2027 dates (recent editions ran late January to early February).",
+      "Confirm Matas Buzelis's hometown and ties to Chicago's Lithuanian-American community before any heritage-night concept. Also confirm the Balzekas Museum, Lithuanian Plaza and Lithuanian bakeries are active and willing to host a community night.",
+      "Confirm Virtue (Erick Williams, including his James Beard Best Chef: Great Lakes win) is open with the same chef. Do the same for Kasama (Michelin star in the current guide) and Mi Tocaya (Diana Davila).",
+      "Confirm Taste of Chicago and Chicago Gourmet 2027 dates and locations (Taste has run in September in Grant Park in recent years).",
+      "Check whether 'Chicago Mix' is free to use on product (it has been treated as generic since a 2020 trademark case).",
+      "Check The Bear's current season status and FX/Disney rights limits, and Mr. Beef's ownership and willingness to partner.",
+      "Find the ownership and licensing contact for Harold's Chicken Shack, since numbered locations are independently operated.",
+      "Confirm Puerto Rican Fest, Fiesta del Sol and Bud Billiken Parade 2027 dates.",
+      "Confirm Brown Sugar Bakery and Dark Matter Coffee are still operating and open to collaborations.",
+      "Check whether the Bulls currently run Latino, AAPI or Lithuanian heritage nights that a corridor or Buzelis concept could plug into."
+    ]
+  }
+}

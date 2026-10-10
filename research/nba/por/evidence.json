@@ -1,0 +1,743 @@
+{
+  "team": "por",
+  "checkedOn": "2026-10-10",
+  "searches": 18,
+  "claims": [
+    {
+      "id": "por-c1",
+      "claim": "Nike Portland reopened Nov 2025 at 638 SW 5th Ave with running on its main floor; it is the Nike-run door to use downtown (Blazers range to confirm).",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Nike Reopens Downtown Portland Store as an Athlete-Centered Community Sport Hub",
+          "url": "https://about.nike.com/en/newsroom/releases/nike-portland-downtown-store-announcement",
+          "publisher": "Nike, Inc.",
+          "published": ""
+        },
+        {
+          "title": "nike portland reopens downtown with a focus on running",
+          "url": "https://www.wweek.com/culture/shop/2025/11/12/nike-portland-reopens-downtown-with-a-focus-on-running/",
+          "publisher": "Willamette Week",
+          "published": "2025-11-12"
+        }
+      ],
+      "evidence": "Nike's release and Willamette Week say the store at 638 SW Fifth Ave in the Kress Building reopened Nov 13, 2025 after a renovation begun in late 2023, with a running focus. Neither says whether it carries Blazers product.",
+      "action": "No change needed. The brief's hedge on a Blazers range stays.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "blazermania-50",
+          "whole-roster-jersey-wall",
+          "big-dark-pack",
+          "clinch-kit",
+          "hoop-summit-pil-summer"
+        ],
+        "calendar": [
+          1,
+          2,
+          8
+        ]
+      }
+    },
+    {
+      "id": "por-c2",
+      "claim": "Nike's NE MLK Community Store closed in 2022 and won't reopen, so it is not a door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Nike Community Store closes with no reopening in sight",
+          "url": "https://www.kptv.com/2022/11/16/nike-community-store-closes-with-no-reopening-sight",
+          "publisher": "KPTV",
+          "published": "2022-11-16"
+        },
+        {
+          "title": "Nike confirms long-shuttered NE Portland Community Store won’t reopen",
+          "url": "https://www.kptv.com/2023/09/08/nike-confirms-long-shuttered-ne-portland-community-store-wont-reopen/",
+          "publisher": "KPTV",
+          "published": "2023-09-08"
+        }
+      ],
+      "evidence": "The store at 2650 NE MLK Jr. Blvd closed in fall 2022. In Sept 2023 Nike confirmed it would close the location permanently. A later report says a gym will take the building.",
+      "action": "No change needed. The brief already treats the store as closed.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "albina-co-authored"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "por-c3",
+      "claim": "The Blazers won their only title on June 5, 1977, beating Philadelphia in Game 6 at Memorial Coliseum.",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "1977 Portland Trail Blazers",
+          "url": "https://oregonsportshall.org/?p=1977",
+          "publisher": "Oregon Sports Hall of Fame",
+          "published": ""
+        },
+        {
+          "title": "coliseumfriends.org",
+          "url": "https://coliseumfriends.org/blazers.html",
+          "publisher": "Friends of Memorial Coliseum",
+          "published": ""
+        }
+      ],
+      "evidence": "Results say Portland won Game 6 on June 5, 1977, 109-107 over the 76ers at Memorial Coliseum, taking the series 4-2 after trailing 0-2.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          0,
+          2
+        ],
+        "opportunities": [
+          "blazermania-50",
+          "albina-co-authored"
+        ],
+        "calendar": [
+          10
+        ]
+      }
+    },
+    {
+      "id": "por-c4",
+      "claim": "Rip City Clothing Co. is the Blazers' team store at Moda Center and the jersey-volume door.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "RIP CITY CLOTHING",
+          "url": "https://nba.com/blazers/ripcityclothing",
+          "publisher": "Portland Trail Blazers (NBA.com)",
+          "published": ""
+        }
+      ],
+      "evidence": "The team's site names Rip City Clothing as the official team store at Moda Center's North Entrance, across from the box office, with online sales at ripcityclothing.com. The hours it lists may be dated.",
+      "action": "Set the factcheck.json Rip City Clothing verdict to confirmed.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "blazermania-50",
+          "whole-roster-jersey-wall",
+          "big-dark-pack",
+          "clinch-kit"
+        ],
+        "calendar": [
+          1,
+          2,
+          6,
+          7,
+          10
+        ]
+      }
+    },
+    {
+      "id": "por-c5",
+      "claim": "Woodburn Premium Outlets has a Nike Factory Store, used as the Woodburn door.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Woodburn Premium Outlets",
+          "url": "https://en.wikipedia.org/wiki/Woodburn_Premium_Outlets",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "Wikipedia says Nike became an anchor tenant in a 2005 expansion. No result confirmed that the Nike store is operating there now.",
+      "action": "No change. The brief's verify item on Woodburn stays.",
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "regional-rip-city"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "por-c6",
+      "claim": "After the team said there would be no 2026 playoff shirts, Portland Gear and Hyder Graphics printed 200 'Red Hot Rising' tees in about 48 hours.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Blazers fans line up for 2026 playoffs tees courtesy Portland Gear",
+          "url": "https://www.katu.com/sports/trail-blazers/trail-blazers-fans-line-up-for-2026-playoffs-tees-courtesy-portland-gear-team-portland-oregon-nba",
+          "publisher": "KATU",
+          "published": ""
+        },
+        {
+          "title": "www.koin.com",
+          "url": "https://www.koin.com/sports/red-hot-rising-portland-apparel-brand-unveils-limited-playoff-shirts-for-blazers-fans/amp",
+          "publisher": "KOIN",
+          "published": ""
+        }
+      ],
+      "evidence": "KATU says Portland Gear printed 200 red 'Red Hot Rising' tees within 48 hours and gave them to ticket-holders before Game 3, after the team skipped playoff shirts. KOIN says founder Marcus Harvey credited Hyder Graphics with the printing.",
+      "action": "No change needed. Portland Gear's NBA license status was not checked.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "clinch-kit"
+        ],
+        "calendar": [
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "id": "por-c7",
+      "claim": "In September 2026 the City Council approved development talks with Albina Vision Trust on city land next to the Moda Center.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "council approves development talks with albina vision trust for city property next to moda center",
+          "url": "https://wweek.com/news/city/2026/09/04/council-approves-development-talks-with-albina-vision-trust-for-city-property-next-to-moda-center",
+          "publisher": "Willamette Week",
+          "published": "2026-09-04"
+        },
+        {
+          "title": "Portland City Council considers naming Albina Vision Trust as developer of land near Moda Center",
+          "url": "https://www.opb.org/article/2026/09/03/albina-vision-trust-moda-center-developer/",
+          "publisher": "OPB",
+          "published": "2026-09-03"
+        }
+      ],
+      "evidence": "Willamette Week reports the council unanimously directed the city to negotiate with Albina Vision Trust over city land next to Moda Center, now two parking garages and a green space.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "albina-co-authored"
+        ],
+        "calendar": [
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "id": "por-c8",
+      "claim": "The home opener is reported for Oct 21 vs. Phoenix (to confirm), and Portland's Nov 27 Black Friday game is home or away to confirm.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "NBA announces 2026-27 schedule for the Portland Trail Blazers",
+          "url": "https://katu.com/sports/trail-blazers/nba-announces-2026-27-schedule-for-the-portland-trail-blazers-oregon-portland-nba-national-basketball-association-moda-rose-center-season-2026-27-black-friday-ja-morant-dame-lillard-damian-rip-city",
+          "publisher": "KATU",
+          "published": ""
+        },
+        {
+          "title": "Full schedule: Suns’ 2026-27 slate unveiled with opener at Blazers",
+          "url": "https://arizonasports.com/nba/phoenix-suns/2026-27-regular-season-schedule",
+          "publisher": "Arizona Sports",
+          "published": ""
+        }
+      ],
+      "evidence": "KATU and the Suns' schedule list the Blazers' home opener as Wed Oct 21 vs. Phoenix, with Lillard's return expected. KATU says the Blazers host Golden State on Black Friday, Nov 27, at 6:30 p.m.",
+      "action": "Dropped the 'to confirm' hedge on the opener and stated the Nov 27 home game in strategy calendar[1] and [3] and the verify item. Set two factcheck.json verdicts to confirmed.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "whole-roster-jersey-wall",
+          "regional-rip-city"
+        ],
+        "calendar": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "id": "por-c9",
+      "claim": "Deadstock Coffee (Ian Williams) is now at The Hoxton in Old Town.",
+      "topic": "partner",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "deadstock coffee stepping out of old town",
+          "url": "https://www.wweek.com/drink/2025/12/19/deadstock-coffee-stepping-out-of-old-town/",
+          "publisher": "Willamette Week",
+          "published": "2025-12-19"
+        },
+        {
+          "title": "deadstock coffee is alive in old town",
+          "url": "https://www.wweek.com/drink/2026/01/02/deadstock-coffee-is-alive-in-old-town/",
+          "publisher": "Willamette Week",
+          "published": "2026-01-02"
+        }
+      ],
+      "evidence": "Reports say the Couch Street cafe closed in Dec 2025 and Deadstock planned to reopen in The Hoxton's lobby cafe around March 2026. No result confirmed the Hoxton shop opened or is running now.",
+      "action": "No change. Confirm the Hoxton cafe is open before planning a jersey night there.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "whole-roster-jersey-wall"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "por-c10",
+      "claim": "Matt Dishman Community Center is an open venue for clinics, free runs and Albina launches.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "memorial day open hours",
+          "url": "https://www.portland.gov/parks/events/2026/5/25/memorial-day-open-hours",
+          "publisher": "City of Portland",
+          "published": "2026-05-25"
+        }
+      ],
+      "evidence": "Portland Parks & Recreation's 2026 holiday-hours pages list Matt Dishman Community Center (77 NE Knott St) open 10am-6pm on Memorial Day 2026. No 2026 closure turned up.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "albina-co-authored",
+          "whole-roster-jersey-wall",
+          "hoop-summit-pil-summer"
+        ],
+        "calendar": [
+          11
+        ]
+      }
+    }
+  ],
+  "observations": [
+    {
+      "type": "uniform-reaction",
+      "observation": "A Rose Garden Report writer calls the PDX carpet the design Blazers fans most requested since Nike took over the league's uniforms. The same writer says the City Edition falls short because the carpet covers only part of the jersey.",
+      "audience": "Online Blazers fans and fan-site writers who follow uniform news",
+      "timeframe": "Published around the 2025-26 City Edition reveal; no date shown in the result",
+      "limitations": "One writer's opinion piece, not a survey or sales data. Fans who don't follow fan sites, and anyone shopping in person, are missing.",
+      "source": {
+        "title": "Trail Blazers Unveil PDX Carpet-Themed 'City Edition' Jersey",
+        "url": "https://www.rosegardenreport.com/trail-blazers-unveil-pdx-carpetthemed-city-edition-jersey/",
+        "publisher": "Rose Garden Report",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "commercial-signal",
+      "observation": "The NBA's 2025-26 season-end list puts Stephen Curry first in jersey sales and the Knicks first in team merchandise. Damian Lillard is not in the jersey top 15. The search could not confirm whether Portland made the team top 10.",
+      "audience": "Online buyers on NBAStore.com and Fanatics, league-wide",
+      "timeframe": "2025-26 season, a season Lillard missed injured",
+      "limitations": "Online sales only, with no Portland store data. Lillard did not play that season, so his absence says little about this season's demand.",
+      "source": {
+        "title": "top selling jerseys 2025 26 nba season",
+        "url": "https://www.nba.com/news/top-selling-jerseys-2025-26-nba-season",
+        "publisher": "NBA.com",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "whole-roster-jersey-wall"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "commercial-signal",
+      "observation": "Blazer's Edge reported Lillard among the top 10 in NBA jersey sales in January 2023, his last full season in Portland before the trade request.",
+      "audience": "Online buyers on the NBA's official store, league-wide",
+      "timeframe": "Mid-season 2022-23 list, reported January 2023",
+      "limitations": "Three seasons old and national, not local. It shows past demand for #0, not demand after his return.",
+      "source": {
+        "title": "portland trail blazers damian lillard among top 10 in nba jersey sales",
+        "url": "https://www.blazersedge.com/2023/1/20/23564159/portland-trail-blazers-damian-lillard-among-top-10-in-nba-jersey-sales",
+        "publisher": "Blazer's Edge",
+        "published": "2023-01-20"
+      },
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "whole-roster-jersey-wall"
+        ],
+        "calendar": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "type": "styling",
+      "observation": "A Blazer's Edge post on what fans wear lists current players such as Scoot Henderson, Anfernee Simons and Deni Avdija next to jerseys of past greats like Lillard and Clyde Drexler.",
+      "audience": "Blazers fans who read and comment on Blazer's Edge",
+      "timeframe": "February 2025",
+      "limitations": "Anecdotal fan-site writing, not sales data or a crowd count. Directional only. It says nothing about women, kids or regional fans.",
+      "source": {
+        "title": "portland trail blazers nba jerseys damian lillard clyde drexler bill walton przybilla carmelo",
+        "url": "https://www.blazersedge.com/2025/2/17/24367576/portland-trail-blazers-nba-jerseys-damian-lillard-clyde-drexler-bill-walton-przybilla-carmelo",
+        "publisher": "Blazer's Edge",
+        "published": "2025-02-17"
+      },
+      "supports": {
+        "insights": [
+          1,
+          4
+        ],
+        "opportunities": [
+          "whole-roster-jersey-wall"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "type": "retailer",
+      "observation": "Daily Hive describes Laundry, a vintage shop at 140 NW 4th Ave, stocking Trail Blazers jerseys from the 1980s and 1990s at prices it calls fair for collectibles.",
+      "audience": "Vintage sportswear shoppers in central Portland",
+      "timeframe": "2020 article, per the search excerpt; no date shown on the result",
+      "limitations": "One shop, several years old. Current stock and prices are unchecked. It shows supply, not how many fans buy.",
+      "source": {
+        "title": "Laundry washes up the best nostalgic sports apparel in Portland",
+        "url": "https://dailyhive.com/portland/laundry-portland",
+        "publisher": "Daily Hive",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          10
+        ]
+      }
+    },
+    {
+      "type": "retailer",
+      "observation": "A Portland Mercury guide sends vintage hunters to GOAT Sports & Street Style, Decades of Dope and Laundry, and new Rip City designs to local designer Grafletics. It also points to Mitchell & Ness Hardwood Classics for retro reproductions.",
+      "audience": "Local shoppers buying team gear as gifts or for themselves",
+      "timeframe": "No date shown in the result",
+      "limitations": "An editor's gift guide, not a retailer interview or sales data. The shops may have moved or closed since.",
+      "source": {
+        "title": "shopping local for the sports nut 27443233",
+        "url": "https://www.portlandmercury.com/sports/shopping-local-for-the-sports-nut-27443233/",
+        "publisher": "Portland Mercury",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          4,
+          5
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          4
+        ]
+      }
+    },
+    {
+      "type": "conflict",
+      "observation": "KOIN reports the Blazers asked Portland upcycler Joshua Manus (Bleached by Josh) to make a limited Rip City Made run of hoodies and tees. The team reached out because fans were already wearing his designs. It sold only in store at Moda Center on a Black History Night game.",
+      "audience": "Fans who buy local, upcycled Blazers designs, and Black History Night attendees",
+      "timeframe": "No date shown in the result",
+      "limitations": "One collaboration, with no sales figures. It complicates insight 5: the team has worked with a local maker before, so it isn't only the makers who move fast. Women's sizing was not reported.",
+      "source": {
+        "title": "digital-release.koin.com",
+        "url": "https://digital-release.koin.com/sports/trail-blazers-tap-portland-designer-for-limited-edition-collection/amp/",
+        "publisher": "KOIN",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          5,
+          2
+        ],
+        "opportunities": [
+          "albina-co-authored",
+          "clinch-kit"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "type": "commercial-signal",
+      "observation": "KATU reports a sold-out Moda Center for the first home playoff games in five years, with nearby businesses reporting a boost.",
+      "audience": "Playoff ticket-holders and Rose Quarter bar and restaurant customers",
+      "timeframe": "April 2026 first-round series against San Antonio",
+      "limitations": "A sell-out shows demand for tickets, not merchandise. No apparel sales were reported.",
+      "source": {
+        "title": "Five-year playoff wait ends as sold-out Moda Center fuels a boost for nearby businesses",
+        "url": "https://katu.com/sports/trail-blazers/portland-trail-blazers-five-year-playoff-wait-ends-as-sold-out-moda-center-fuels-a-boost-for-nearby-businesses-garden-tavern-sports-bar",
+        "publisher": "KATU",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "clinch-kit"
+        ],
+        "calendar": [
+          7
+        ]
+      }
+    },
+    {
+      "type": "styling",
+      "observation": "KOIN's weather team told fans to wear their best Rip City sweatshirt with a light rain jacket for a rainy regular-season finale.",
+      "audience": "Fans heading to a home game in the rain",
+      "timeframe": "2025 regular-season finale, per the search excerpt",
+      "limitations": "A forecaster's tip, not an observation of what fans wore. No street-style or game-night photo story was found for insight 3's jersey-over-hoodie look, so that look stays unproven.",
+      "source": {
+        "title": "www.koin.com",
+        "url": "https://www.koin.com/weather/grab-rain-gear-ahead-of-trail-blazers-regular-season-finale-sunday/amp/",
+        "publisher": "KOIN",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "big-dark-pack"
+        ],
+        "calendar": [
+          2
+        ]
+      }
+    },
+    {
+      "type": "segment",
+      "observation": "The NBA Store's Blazers women's range is mostly licensed Fanatics, '47, New Era and G-III pieces: V-neck tees, hoodies, leggings, custom jerseys and some City Edition items. No local designer is credited.",
+      "audience": "Women buying Blazers gear online",
+      "timeframe": "Store listing seen in October 2026; no date shown",
+      "limitations": "An assortment snapshot, not sales data or what women choose to wear. No women's street-style or fan coverage turned up in the searches.",
+      "source": {
+        "title": "t 14146469+ga 02+os 34+z 99362 3870622925",
+        "url": "https://store.nba.com/portland-trail-blazers/women-sale-items/t-14146469+ga-02+os-34+z-99362-3870622925",
+        "publisher": "NBA Store",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          6
+        ],
+        "opportunities": [
+          "rip-city-summer"
+        ],
+        "calendar": [
+          9
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "kind": "historic-uniform",
+      "title": "Blazers home uniform worn from 1977-78 through 1990-91",
+      "note": "Look at the sash and the pinwheel on the shorts leg, the look of the post-title era behind insight 0.",
+      "credit": "SportsLogos.net",
+      "source": {
+        "title": "Portland Trail Blazers Uniform",
+        "url": "https://www.sportslogos.net/logos/view/l2gvfgofstqt46ls48ihgqs5n/Portland-Trail-Blazers-Logo/1978/Home-Uniform",
+        "publisher": "SportsLogos.net",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          0,
+          4
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          10
+        ]
+      }
+    },
+    {
+      "kind": "historic-uniform",
+      "title": "Blazers uniform from the 1990 Finals era",
+      "note": "Check the diagonal slash fans miss before drawing the Drexler-era full-zip in insight 0.",
+      "credit": "SportsLogos.net",
+      "source": {
+        "title": "Portland Trail Blazers Uniform",
+        "url": "https://www.sportslogos.net/logos/view/l2gvfgofstqt46ls48ihgqs5n/Portland_Trail_Blazers/1990/Uniform",
+        "publisher": "SportsLogos.net",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          0,
+          4
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          10
+        ]
+      }
+    },
+    {
+      "kind": "lettering-art-materials",
+      "title": "OPB on the pinwheel logo's design, 50 years on",
+      "note": "Read the five-and-five line logic before redrawing the mark for heritage product (insight 0).",
+      "credit": "OPB",
+      "source": {
+        "title": "portland trail blazers logo graphic design 50 years later",
+        "url": "https://opb.org/news/article/portland-trail-blazers-logo-graphic-design-50-years-later",
+        "publisher": "OPB",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          0,
+          4
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "kind": "lettering-art-materials",
+      "title": "Blazer's Edge on when the pinwheel first appeared",
+      "note": "Shows the debut date is still debated. Settle it before printing any origin date on a hangtag (insight 4).",
+      "credit": "Blazer's Edge",
+      "source": {
+        "title": "the trail blazers pinwheel logo when did it first appear",
+        "url": "https://www.blazersedge.com/2020/1/16/21070055/the-trail-blazers-pinwheel-logo-when-did-it-first-appear",
+        "publisher": "Blazer's Edge",
+        "published": "2020-01-16"
+      },
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "kind": "lettering-art-materials",
+      "title": "The PDX carpet City Edition reveal, 2025-26",
+      "note": "Look at how much of the jersey the carpet print covers. It's the latest City look before this season's re-wear (insight 0).",
+      "credit": "KPTV",
+      "source": {
+        "title": "Trail Blazers unveil PDX carpet-inspired City Edition jerseys",
+        "url": "https://www.kptv.com/2025/11/11/trail-blazers-unveil-pdx-carpet-inspired-city-edition-jerseys/",
+        "publisher": "KPTV",
+        "published": "2025-11-11"
+      },
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "kind": "court-store-space",
+      "title": "Laundry, a Portland vintage shop with 1980s and 1990s Blazers jerseys",
+      "note": "See the vintage racks heritage pieces compete with (insight 4).",
+      "credit": "Daily Hive",
+      "source": {
+        "title": "Laundry washes up the best nostalgic sports apparel in Portland",
+        "url": "https://dailyhive.com/portland/laundry-portland",
+        "publisher": "Daily Hive",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "blazermania-50"
+        ],
+        "calendar": [
+          10
+        ]
+      }
+    },
+    {
+      "kind": "court-store-space",
+      "title": "Rip City Clothing, the Blazers' team store at Moda Center",
+      "note": "The team's own store page: location at the North Entrance and online shop, the door for the jersey wall (insight 1).",
+      "credit": "See source",
+      "source": {
+        "title": "RIP CITY CLOTHING",
+        "url": "https://nba.com/blazers/ripcityclothing",
+        "publisher": "NBA.com",
+        "published": ""
+      },
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "whole-roster-jersey-wall"
+        ],
+        "calendar": [
+          1,
+          4
+        ]
+      }
+    }
+  ],
+  "corrections": []
+}

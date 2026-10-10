@@ -1,0 +1,137 @@
+{
+  "team": "atl",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "atl-c1",
+      "claim": "Paschal's operates today at 180 Northside Dr SW in Castleberry Hill and can host the paid MLK-week community meal.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "paschals restaurant atlanta",
+          "url": "https://www.opentable.com.au/r/paschals-restaurant-atlanta",
+          "publisher": "OpenTable",
+          "published": ""
+        }
+      ],
+      "evidence": "OpenTable lists Paschal's at 180 Northside Drive SW, Atlanta 30313, in Castleberry Hill. It shows diner reviews from May and June 2026, staff replies as late as June 23, 2026, and same-day bookings. Willingness to host a paid partner meal isn't covered.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "mlk-beloved-community-program"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "id": "atl-c2",
+      "claim": "Cascade Skating Rink (Cascade Family Skating, MLK Jr. Dr SW) is open and runs 18+ adult sessions, so it can host the Rink Night launch.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Cascade Skating",
+          "url": "https://exploregeorgia.org/atlanta/food-drink/casual-full-service/cascade-skating",
+          "publisher": "Explore Georgia",
+          "published": ""
+        },
+        {
+          "title": "Find All Groupon Sale Deals",
+          "url": "https://www.groupon.com/biz/atlanta/cascade-family-skating",
+          "publisher": "Groupon",
+          "published": ""
+        }
+      ],
+      "evidence": "Explore Georgia lists the rink at 3335 MLK Jr. Drive, Atlanta 30331, with Friday hours to 2:30am. Groupon lists adult sessions for ages 18 and over on Wednesday, late Friday and Sunday nights. Neither page is dated, so the current schedule and partnership terms still need a direct check.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "rink-night-capsule"
+        ],
+        "calendar": [
+          11
+        ]
+      }
+    },
+    {
+      "id": "atl-c3",
+      "claim": "Little Five Points vintage shops (Garment District, Rag-O-Rama) are open and can make thrift-flipped archive pieces for the Pac-Man heritage drop.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "stay retro stay in style vintage thrifting spots in atlanta",
+          "url": "https://scadconnector.com/2021/09/11/stay-retro-stay-in-style-vintage-thrifting-spots-in-atlanta/",
+          "publisher": "SCAD Connector",
+          "published": "2021-09-11"
+        },
+        {
+          "title": "Art, Vintage Shops, And Bars Galore At What Must Be Georgia's Trendiest Neighborhood",
+          "url": "https://www.islands.com/1706341/art-vintage-shops-bars-galore-georgia-coolest-trendiest-neighborhood-little-five-points",
+          "publisher": "Islands",
+          "published": ""
+        }
+      ],
+      "evidence": "Results place Rag-O-Rama at 1111 Euclid Ave in Little Five Points, with a second store in Sandy Springs, but the newest dated source is from 2021. No result mentioned Garment District. Neither shop's 2026 status is settled.",
+      "action": "No change needed. The brief already lists both shops for an open-status check.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "home-cup-nights-heritage",
+          "area-code-metro-capsule"
+        ],
+        "calendar": []
+      }
+    },
+    {
+      "id": "atl-c4",
+      "claim": "Killer Mike's Swag Shop is reportedly on Edgewood Avenue and inside State Farm Arena, and the Roosevelt Hwy shop closed.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Killer Mike refuses to reopen barbershops despite Georgia governor’s order",
+          "url": "https://thegrio.com/2020/04/22/killer-mike-refuses-open-barbershop-georgia-governor/",
+          "publisher": "TheGrio",
+          "published": "2020-04-22"
+        },
+        {
+          "title": "Rapper Killer Mike Redefines “SWAG” with Barbershop",
+          "url": "https://blackenterprise.com/kille-mike-interview-swag-barbershop-airport-atlanta/",
+          "publisher": "Black Enterprise",
+          "published": ""
+        },
+        {
+          "title": "Killer Mike and the Atlanta Hawks Announce New Swag Shop at Philips Arena",
+          "url": "https://blanknews.com/?p=9872",
+          "publisher": "Blank News",
+          "published": ""
+        }
+      ],
+      "evidence": "Older reports say the first shop opened near the airport in 2011, the Roosevelt Highway shop in South Fulton closed for good after it was shot up, and shops ran on Edgewood Avenue and inside the arena. The arena shop was announced in 2017. Nothing from 2026 confirms any location is open.",
+      "action": "No change needed. The brief already treats Swag Shop as a lead to confirm.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [],
+        "calendar": []
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

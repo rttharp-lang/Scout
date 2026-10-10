@@ -1,0 +1,712 @@
+{
+  "team": "atl",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 2026 homecoming weekends",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Hold paid student-designer sessions, collect alumni stories and start licensing through the schools for the Oct 2027 drop.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Fri Oct 30, 2026",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Confirmed home Cup Fridays (likely two between Nov 6 and Nov 27)",
+      "kind": "event",
+      "start": "2026-11-06",
+      "end": "2026-11-27",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Cup Fridays run Oct 30 to Nov 27 per league-calendar.json, but which Hawks group games are at State Farm Arena is unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Wizards Cup game (Washington is in East Group C; date and site to confirm)",
+      "kind": "event",
+      "start": "2026-11",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Black Friday weekend",
+      "kind": "event",
+      "start": "2026-11-27",
+      "end": "2026-11-29",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after Thanksgiving, the fourth Thursday in November (Nov 26, 2026).",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Dec 1-24 (Cup knockouts Dec 4-9 if qualified)",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Gifting runs to Christmas Eve, the day before Christmas on Dec 25. Cup knockout dates Dec 4-9 are confirmed in league-calendar.json.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Jan 11-18, 2027",
+      "kind": "event",
+      "start": "2027-01-11",
+      "end": "2027-01-18",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "MLK Day games",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Feb 2027 (trade deadline Feb 11, All-Star Feb 19-21 in Phoenix)",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Sun Apr 4, 2027",
+      "kind": "event",
+      "start": "2027-04-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "404 Day falls on April 4 (4/04) every year.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11 season end, Play-In Apr 13-16, playoffs from late April",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-06",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Season end (Apr 11) and Play-In (Apr 13-16) are confirmed in league-calendar.json. The playoff start and June Finals are only announced-tentative, and Hawks qualification is unknown.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "May 2027",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Late June 2027",
+      "kind": "event",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Juneteenth is June 19, but the 2027 Draft date is not announced in league-calendar.json.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Late July to early August",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Georgia's 2027 back-to-school dates are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "retailer-agreement",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Labor Day weekend 2027",
+      "kind": "event",
+      "start": "2027-09-04",
+      "end": "2027-09-06",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Labor Day 2027 is Mon Sep 6, but Atlanta Black Pride's 2027 dates are unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "mlk-beloved-community-program",
+      "consumer": "Longtime Atlanta diehards, AUC alumni and heritage-minded families.",
+      "insights": [
+        1,
+        2
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "jersey",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Name the beneficiary and sign the AUC designers and Paschal's before MLK week opens Jan 11, 2027.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "future-uniform",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm with the Hawks and NBA whether the 2020-21 MLK City Edition returns, with its on-sale date and King estate licensing.",
+        "Name the community beneficiary and agree the meal with Paschal's, with The Busy Bee Cafe as backup.",
+        "Check AUC designer fees, credit and revenue share against existing Nike or Jordan HBCU deals.",
+        "Set an artist-series sell-through target for Jan 31 against the 2025-26 MLK game."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "The King Center",
+        "King estate (licensing, through the Hawks and NBA)",
+        "Atlanta University Center (Morehouse, Spelman, Clark Atlanta)",
+        "Paschal's",
+        "The Busy Bee Cafe (backup)",
+        "Black-owned partner boutiques"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "area-code-metro-capsule",
+      "consumer": "Metro families and Gen Z locals who wear city pride before team pride.",
+      "insights": [
+        0,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Commission a local letterer and open the resident vote on neighborhood names before the first area-code tee lands Oct 30.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Test the sub-$40 area-code tee price with entry and gift buyers.",
+        "Run the resident vote on neighborhood names and screen out gentrification flashpoints.",
+        "Agree area-code allocations with Foot Locker and Dick's by trade area, and track 404 vs. 678/770 units by door.",
+        "Confirm Garment District and Rag-O-Rama are open before naming Little Five Points doors."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "A local letterer (to be named)",
+        "Atlanta DJs and creators for the 404 Day chapter",
+        "Little Five Points and East Atlanta Village partner doors"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "home-cup-nights-heritage",
+      "consumer": "Dominique-era diehards, streetwear collectors and the alt and vintage crowd.",
+      "insights": [
+        3,
+        6,
+        2
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "fleece",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-30",
+      "actBy": "2026-10",
+      "actNote": "Confirm which East Group C games are at State Farm Arena, and on which Fridays, before the Oct 30 drop.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the Hawks' home Cup dates and which games use the Specter uniform.",
+        "Check whether the satin bomber and quarter-zip can reach the November home Cup nights, or move them later.",
+        "Secure Hardwood Classics rights for the Pac-Man hawk, and hold Wilkins and Webb product until signed agreements and NBPA rights are in place.",
+        "Set a per-night arena-store revenue target against a normal November home game."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Dominique Wilkins (only with a signed agreement)",
+        "Spud Webb (only with a signed agreement)",
+        "Little Five Points vintage dealers",
+        "Local DJs and V-103 / Hot 107.9 personalities",
+        "Watch-party bars for away Cup games"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "rink-night-capsule",
+      "consumer": "Southwest Atlanta grown-folks skaters, the R&B and nightlife crowd, and women fans.",
+      "insights": [
+        4,
+        2
+      ],
+      "categories": [
+        "outerwear",
+        "jersey",
+        "pants",
+        "footwear",
+        "accessory",
+        "event"
+      ],
+      "fit": [
+        "women's",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "Sign the skate crews, rink DJs, car club and Cascade before the late-June Draft-night launch.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Reconfirm Cascade's adult-session schedule and its terms for a paid launch night, with a backup rink named.",
+        "Agree fees, credit, revenue share and ownership of visual language with each crew, DJ and the car club.",
+        "Run a reputational review on every named creator, and clear any label name such as So So Def.",
+        "Test satin warm-up and mesh jersey prices and women's-cut demand with rink-session regulars."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Cascade Skating Rink",
+        "Atlanta skate crews",
+        "Rink DJs",
+        "A local car club",
+        "Atlanta Black Pride organizers (organizer-led only)",
+        "Black-owned streetwear partner doors"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "college-park-basketball-family",
+      "consumer": "Women fans, basketball families and youth players in College Park, East Point and South Fulton.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "fleece",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "women's",
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Agree family nights and youth clinics with the Skyhawks before their November start.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the Dream and Skyhawks play at Gateway Center Arena in 2026-27, and get the 2027 Dream schedule.",
+        "Agree the plan with Nike women's basketball and the Dream so the lanes don't compete for the same spend.",
+        "Test women's-cut demand and price for the satin warm-up and quarter-zip with women fans.",
+        "Set youth sell-through targets with southside Foot Locker and Dick's doors."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Atlanta Dream",
+        "College Park Skyhawks"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "buford-highway-770-door",
+      "consumer": "Immigrant and second-generation families across DeKalb and Gwinnett.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "jersey",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Sign community businesses and a paid creator from those communities before the December door launches.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm Plaza Fiesta is operating and which community businesses will host or stock the line.",
+        "Let community partners decide on bilingual or diaspora storytelling before any creative is briefed.",
+        "Get Okongwu's and Ejiofor's consent and a community partner before pitching any Nigerian-diaspora angle.",
+        "Set sell-through and new-member targets by ZIP for Gwinnett and Buford Highway doors."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Buford Highway community businesses",
+        "Plaza Fiesta",
+        "A paid creator and photographer from the Korean, Vietnamese, Latino, Ethiopian and Nigerian communities",
+        "A local community association (for any player-heritage angle)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "defense-first-player-line",
+      "consumer": "Suburban families, Gen Z digital fans, gift buyers and fans who return in April.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "jersey",
+        "accessory",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Set shallow opening buys led by Johnson and Alexander-Walker, and test Flemings and Dort before buying deeper.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Track sell-through by player in the opening weeks before buying Flemings and Dort deeper.",
+        "Size Risacher markdown exposure and keep buys shallow before the Feb 11 deadline.",
+        "Pre-approve series-win tee graphics and test the time from a win to tees in the arena store.",
+        "Clear all playoff copy of 'finally' language."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "auc-homecoming-varsity",
+      "consumer": "AUC students and alumni, and Black Atlanta Gen Z tastemakers.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "tee",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-10",
+      "actBy": "2026-10",
+      "actNote": "Hold paid student-designer listening sessions and start licensing through each school, after checking existing Nike or Jordan HBCU deals.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Check each school's licensing terms and any conflict with existing Nike or Jordan HBCU partnerships.",
+        "Confirm the 2026 and 2027 homecoming dates for Morehouse, Spelman and Clark Atlanta.",
+        "Agree student-designer pay and credit with the schools.",
+        "Test varsity-jacket price and demand with students and alumni at the listening sessions."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Morehouse College",
+        "Spelman College",
+        "Clark Atlanta University",
+        "AUC student and alumni designers"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

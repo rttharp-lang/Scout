@@ -1,0 +1,593 @@
+{
+  "team": "bkn",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Now to Oct 15, then the Oct 20 opener week",
+      "kind": "action",
+      "start": "2026-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off)",
+      "actBy": "2026-10",
+      "actNote": "Open paid listening sessions with UPROSE, El Puente, caribBEING and the Brooklyn Chinese-American Association. Place the quick-turn 112 and Randle graphic orders.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Nov 3 and the nearest home date",
+      "kind": "event",
+      "start": "2026-11-03",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "bkn-c2",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Nov 24-28: Thanksgiving-week Cup Nights, Black Friday, Small Business Saturday",
+      "kind": "event",
+      "start": "2026-11-24",
+      "end": "2026-11-28",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Thanksgiving is the fourth Thursday of November (Nov 26, 2026). Black Friday and Small Business Saturday follow on Nov 27-28.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "December home dates (to confirm)",
+      "kind": "season",
+      "start": "2026-12",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Jan 1 and a January home game",
+      "kind": "event",
+      "start": "2027-01-01",
+      "end": "2027-01-31",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Haitian Independence Day is Jan 1.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "February home stretch, with Lunar New Year around Feb 6 and Ramadan roughly Feb 8 to Mar 9, 2027",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-03-09",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "March 9 (quiet) and March 25, 2027",
+      "kind": "event",
+      "start": "2027-03-09",
+      "end": "2027-03-25",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-11",
+      "actNote": "Lock estate terms with the Wallace estate.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Final home games before Apr 11",
+      "kind": "action",
+      "start": "2027-04",
+      "end": "2027-04-11",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends",
+      "actBy": "2027-04",
+      "actNote": "Lock the Kings County line and the 2027-28 uniform pitch.",
+      "route": "future-uniform",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "production-capacity",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Brooklyn Half (mid-May), May 18, Liberty tip-off",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Early to late June",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Labor Day weekend 2027 and late-September Atlantic Antic",
+      "kind": "launch",
+      "start": "2027-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "still-a-city-112",
+      "consumer": "Style-forward Brooklyn locals and borough diehards buying borough graphics under $110.",
+      "insights": [
+        0,
+        5,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "accessory"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Place the quick-turn 112 and Randle graphic orders.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm with BSE Global and the Nets Shop operator that quick-turn licensed graphics can ship by November.",
+        "Ask the same partners whether on-site ZIP printing is allowed.",
+        "Test the under-$110 price on the 112 tee and crewneck with Fulton Street buyers.",
+        "Set Randle tee depth from the first two weeks of sales."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "BSE Global",
+        "Brooklyn Brigade"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "kings-county-fh27",
+      "consumer": "Style-forward locals, gift buyers and women fans ready to pay premium for a Brooklyn line.",
+      "insights": [
+        1,
+        0,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "women's",
+        "youth"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-09",
+      "actBy": "2027-04",
+      "actNote": "Lock the Kings County line at the spring 2027 design lock. The brief sets no earlier date for sourcing designers this winter.",
+      "routes": [
+        "new-development"
+      ],
+      "validation": [
+        "Read 2026-27 borough-graphics sell-through before setting depth.",
+        "Test premium prices for the varsity and puffer with Fulton Street and Kings Plaza buyers.",
+        "Get BSE Global sign-off on any facade-derived pattern.",
+        "Confirm which Brooklyn taste doors are open and willing to carry it."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "partner-agreement"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Pratt"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "latino-sunset-park-brooklyn",
+      "consumer": "Chinese, Mexican, Dominican and Puerto Rican Brooklyn families in Sunset Park, Bushwick and Southside Williamsburg.",
+      "insights": [
+        0,
+        5
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Open paid listening sessions with UPROSE, El Puente and the Brooklyn Chinese-American Association.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm UPROSE, El Puente and the Brooklyn Chinese-American Association are active and open to paid partnership.",
+        "Confirm the HSS Training Center in Sunset Park is the Nets' practice base and can host open practices.",
+        "Confirm Lunar New Year 2027 falls on Feb 6 and lock the heritage-night dates.",
+        "Ask in listening sessions whether these families will buy Nets product."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "UPROSE",
+        "El Puente",
+        "Brooklyn Chinese-American Association"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "caribbean-brooklyn-listen-first",
+      "consumer": "Caribbean and Haitian Brooklyn fans and diaspora households in Flatbush and Crown Heights.",
+      "insights": [
+        4,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "shorts",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Open paid listening sessions with caribBEING.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Ask in listening sessions whether these households follow the Nets over the Knicks or a home-island favorite.",
+        "Confirm CASYM Steel Orchestra and Despers USA are active and open to paid work.",
+        "Agree a fee and revenue share before any steelpan note-map print.",
+        "Get a go or no-go from partners on the flag-ready hoodie in May 2027."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "caribBEING (Shelley Worrell)",
+        "CASYM Steel Orchestra",
+        "Despers USA"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "brooklyn-firsts-bhm",
+      "consumer": "Black Brooklyn families and culturally invested fans.",
+      "insights": [
+        0,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Have the series ready for the February 2027 home stretch. The brief sets no earlier deadline for licensing or partners.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Weeksville Heritage Center and Restoration Plaza are open to paid co-authorship.",
+        "Clear Jackie Robinson and Shirley Chisholm names and likenesses with the Jackie Robinson Foundation and Chisholm's estate.",
+        "Confirm the Nets' February 2027 home dates and heritage-night schedule."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "production-capacity",
+        "league-or-team-rights",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Weeksville Heritage Center",
+        "Restoration Plaza (Bedford Stuyvesant Restoration Corporation)",
+        "Jackie Robinson Foundation",
+        "Shirley Chisholm's estate"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "biggie-30-life-after-death",
+      "consumer": "Brooklyn's rap generation, Bed-Stuy and Clinton Hill locals, and collectors.",
+      "insights": [
+        5,
+        0
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "pants"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2026-11",
+      "actNote": "Lock estate terms with the Wallace estate.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Check the Wallace estate's own plans and licensing terms for March 2027.",
+        "Clear any lyrics with publishers or leave them off.",
+        "Review the March 9 plan with Restoration Plaza so it stays quiet and community-led.",
+        "Confirm a Nets home game near March 25, 2027."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "brand-safety",
+        "league-or-team-rights",
+        "date-confirmation"
+      ],
+      "owner": "Licensing and legal",
+      "partners": [
+        "Wallace estate",
+        "Restoration Plaza (Bedford Stuyvesant Restoration Corporation)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "liberty-shared-roof",
+      "consumer": "Women fans, queer Brooklyn and summer arena-goers at Nets and Liberty games.",
+      "insights": [
+        0,
+        1
+      ],
+      "categories": [
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "women's"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Put women's cuts into the 2026-27 112 graphics order.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the Liberty play 2027 at Barclays.",
+        "Get the official seafoam spec.",
+        "Confirm Papi Juice and Bushwig artists are open to paid co-design.",
+        "Track women's-cut sell-through on the 112 tee."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Papi Juice",
+        "Bushwig"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "aba-heritage-conditional",
+      "consumer": "Long-memory diehards, collectors and Long Island commuters.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Confirm whether the throwbacks are the City Edition or a Classic set, and their game dates, before any buy. The brief gives no deadline, so this is the first month the run could sell.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm whether the red, white and blue throwbacks are the 2026-27 City Edition or a Classic set, and their game dates.",
+        "Cap the buy and track sell-through against Brooklyn-only product.",
+        "Confirm a Brooklyn venue is available for the uprock or block-party showcase."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "team": "sac",
+  "lens": "art",
+  "headline": "Sacramento's look is a gold bridge, a Capitol dome and Chicano poster art.",
+  "summary": "Sacramento's look comes from two traditions that rarely share a frame. One is civic and agricultural: Tower Bridge gold, the Capitol dome, camellias, Delta light, Farm-to-Fork labels. The other is artist-made: Royal Chicano Air Force posters, Arneson and Thiebaud funk-pop, mural festivals. Kings fans already read purple as a civic flag. Partner with local makers on the Specter and City Edition stories, and credit them by name.",
+  "insights": [
+    {
+      "title": "Tower Bridge gold is the city's one-color logo",
+      "detail": "The gold-painted Tower Bridge lift span over the Sacramento River is the best-known Sacramento image outside the Kings. It shows up on local beer labels, tees and murals. Gold plus Kings purple already reads as home.",
+      "implication": "Purple and Tower Bridge gold, with a vertical-lift-span graphic, is a safe, ownable palette for a City Edition or lifestyle line. Make the bridge geometry the hero, not a skyline cliché."
+    },
+    {
+      "title": "Mural festivals made the walls a calendar event",
+      "detail": "Wide Open Walls, the Sacramento mural festival, has brought dozens of local and international painters to Midtown, Oak Park and Del Paso Boulevard in recent years. Pieces stay up after the event. Second Saturday ArtWalk keeps Midtown's gallery and wall culture in view every month.",
+      "implication": "Stage a live-paint wall at or near a festival. Use local muralists and credit them on product. Don't hire outsiders to paint \"Sacramento\"."
+    },
+    {
+      "title": "Chicano poster art is the deepest tradition",
+      "detail": "The Royal Chicano Air Force formed in Sacramento in the late 1960s, founded by artists including Esteban Villa and José Montoya. It built the region's most important poster, mural and screenprint tradition, rooted in farmworker and barrio organizing. Sol Collective and the Centro de Artistas Chicanos lineage carry it forward.",
+      "implication": "Commission any Latino-informed graphic from Sacramento Chicano artists or institutions. Credit them and share revenue. Never lift RCAF imagery without the estate or collective agreeing."
+    },
+    {
+      "title": "Funk and pop-realist art is a Sacramento export",
+      "detail": "Wayne Thiebaud lived and taught in the area. He painted glossy cakes, pies and gumball machines in thick impasto, with long colored shadows. Robert Arneson and the UC Davis ceramic funk school made irreverent clay portraits. The Crocker Art Museum downtown holds major examples.",
+      "implication": "Thiebaud-style color shadows and candy-bright pastels give a youth-movement drop a graphic language nobody expects. Any direct reference to his paintings needs estate and licensing review."
+    },
+    {
+      "title": "Del Paso Boulevard is the neon and hand-lettered corridor",
+      "detail": "The Del Paso Boulevard arts district, north of downtown, runs on vintage signage, auto-era motel and theater neon, and mural walls. It neighbors Del Paso Heights, one of the city's historically Black and Latino communities. Old Sacramento has a separate, more tourist-facing sign style: Gold Rush wooden-front lettering.",
+      "implication": "Take script, neon-tube and sign-painter letterforms from real Del Paso signs, through local sign painters. Pitch it as Kings-city streetwear, not a Gold Rush theme."
+    },
+    {
+      "title": "The Kings' own visual language is already civic",
+      "detail": "The purple Light the Beam column on top of Golden 1 Center and the sun-and-crown mark's history tie the Kings' purple to the 2013 campaign to keep the team. The \"Specter\" uniforms are rolling out for historic franchises including the Kings. Fans get a fresh jersey conversation in a down year.",
+      "implication": "Pair Specter or lifestyle product with local-artist graphics, so a rebuilding fan base has something to wear with pride. Skip championship-tone copy."
+    }
+  ],
+  "places": [
+    {
+      "name": "Crocker Art Museum",
+      "kind": "museum",
+      "neighborhood": "Downtown",
+      "why": "One of the oldest art museums in the West. It holds Thiebaud, Arneson and California funk art, and anchors the city's institutional art scene."
+    },
+    {
+      "name": "Tower Bridge",
+      "kind": "landmark",
+      "neighborhood": "West Sacramento / Downtown",
+      "why": "The gold vertical-lift bridge is the city's defining graphic and a common mural and merchandise subject."
+    },
+    {
+      "name": "Del Paso Boulevard Arts District",
+      "kind": "district",
+      "neighborhood": "Del Paso / Oak Park-adjacent north side",
+      "why": "Vintage neon, theater signage and murals make it the best place to study the city's sign vernacular."
+    },
+    {
+      "name": "Sol Collective",
+      "kind": "community art space",
+      "neighborhood": "21st Street near Broadway (Oak Park / Curtis Park edge)",
+      "why": "A long-running multicultural arts and music space with a Chicano and Latino organizing lineage and live-art programming."
+    },
+    {
+      "name": "Verge Center for the Arts",
+      "kind": "gallery",
+      "neighborhood": "Midtown / Downtown",
+      "why": "Artist-run space with studios and exhibitions that backs emerging local makers."
+    },
+    {
+      "name": "Second Saturday ArtWalk corridor",
+      "kind": "district",
+      "neighborhood": "Midtown",
+      "why": "A monthly gallery and pop-up night that turns the grid streets into a walking art circuit."
+    },
+    {
+      "name": "Golden 1 Center",
+      "kind": "arena",
+      "neighborhood": "Downtown (Downtown Commons)",
+      "why": "Kings home, with local-art installations and the purple Light the Beam. It is the main stage for team-side events."
+    },
+    {
+      "name": "California State Capitol",
+      "kind": "landmark",
+      "neighborhood": "Capitol Mall",
+      "why": "The neoclassical dome and the Capitol Park palms and camellias around it supply the civic architectural look."
+    }
+  ],
+  "people": [
+    {
+      "name": "Wayne Thiebaud",
+      "role": "Painter (deceased)",
+      "why": "Sacramento-linked pop-realist whose bright, thick-paint food paintings are the city's best-known art export."
+    },
+    {
+      "name": "Robert Arneson",
+      "role": "Ceramic sculptor (deceased)",
+      "why": "Led the UC Davis funk-art ceramics movement, a source for irreverent portraits and puns."
+    },
+    {
+      "name": "Royal Chicano Air Force",
+      "role": "Artist collective",
+      "why": "Sacramento's Chicano art and poster collective. Its screenprint style shaped regional protest and community graphics."
+    },
+    {
+      "name": "Esteban Villa",
+      "role": "Chicano muralist and printmaker",
+      "why": "Co-founder of the RCAF and a longtime UC Davis professor. The person to consult on any Chicano graphic partnership."
+    },
+    {
+      "name": "Wide Open Walls",
+      "role": "Mural festival organization",
+      "why": "The best channel for finding and hiring credible local and visiting muralists for walls and product collaborations."
+    },
+    {
+      "name": "Sol Collective",
+      "role": "Arts and community organization",
+      "why": "A Latino-led partner for community art workshops and fan events in Oak Park."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Kings opening week and Specter debut",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The season tips Oct 20 and the Specter uniform conversation is live while a youth movement debuts. Good timing for local artist drops."
+    },
+    {
+      "name": "Day of the Dead programming",
+      "timing": "Late October to early November",
+      "month": 11,
+      "why": "Sacramento's Latino art spaces hold altars and art shows. It is a window for respectful partnership and a no-go for casual skull graphics."
+    },
+    {
+      "name": "Second Saturday ArtWalk",
+      "timing": "Second Saturday monthly",
+      "month": 0,
+      "why": "Reliable, recurring foot traffic in Midtown for pop-ups and artist meetups."
+    },
+    {
+      "name": "Wide Open Walls mural festival",
+      "timing": "Typically late summer",
+      "month": 8,
+      "why": "New Midtown, Oak Park and Del Paso walls appear every year. Use it to paint walls and scout artists."
+    },
+    {
+      "name": "Farm-to-Fork Festival and Tower Bridge Dinner",
+      "timing": "September",
+      "month": 9,
+      "why": "The city's biggest civic food-and-design moment, with farm-label graphics, linens and table-scape aesthetics."
+    },
+    {
+      "name": "California State Fair",
+      "timing": "Typically July",
+      "month": 7,
+      "why": "Fairground carnival signage, ribbons and livestock graphics offer a regional vernacular."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Sactown",
+      "meaning": "Local nickname for Sacramento, used affectionately and on merchandise."
+    },
+    {
+      "term": "The 916",
+      "meaning": "Sacramento area code, shorthand for the metro on tees and murals."
+    },
+    {
+      "term": "Light the Beam",
+      "meaning": "Kings home-win tradition: the purple light column above Golden 1 Center is lit."
+    },
+    {
+      "term": "Farm-to-Fork Capital",
+      "meaning": "The city's official food identity, tied to Central Valley agriculture."
+    },
+    {
+      "term": "City of Trees",
+      "meaning": "Long-used nickname for the tree-lined city. The camellia is the city flower."
+    },
+    {
+      "term": "Hella",
+      "meaning": "Northern California intensifier, strongly local and widely used in Sacramento."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Tower Bridge gold",
+      "type": "color",
+      "hex": "#D4A52B",
+      "source": "The gold-painted vertical-lift span across the Sacramento River.",
+      "use": "Use it as a metallic or heat-transfer accent against Kings purple. Keep the tone warm, not yellow."
+    },
+    {
+      "cue": "Kings royal purple",
+      "type": "color",
+      "hex": "#5A2D81",
+      "source": "The Kings brand color and the Light the Beam tower.",
+      "use": "Base color for lifestyle and Specter-adjacent product."
+    },
+    {
+      "cue": "Camellia pink",
+      "type": "color",
+      "hex": "#D96A8A",
+      "source": "The camellia, Sacramento's city flower, celebrated at the Camellia Festival in spring.",
+      "use": "Accent for women's and youth drops and inner-lining details. Avoid a floral print cliché."
+    },
+    {
+      "cue": "Thiebaud color shadows",
+      "type": "texture",
+      "hex": "",
+      "source": "Thick impasto frosting and bright halo shadows in Wayne Thiebaud's paintings.",
+      "use": "Inspire a stacked, offset shadow on numerals and chest wordmarks. License direct imagery or avoid it."
+    },
+    {
+      "cue": "Lift-span geometry",
+      "type": "motif",
+      "hex": "",
+      "source": "The twin towers and counterweights of the Tower Bridge.",
+      "use": "Vertical-tower stripes or a tonal jacquard on warm-up and shorts side panels."
+    },
+    {
+      "cue": "Del Paso neon script",
+      "type": "typography",
+      "hex": "",
+      "source": "Mid-century neon and painted signs along Del Paso Boulevard and theater marquees.",
+      "use": "Single-stroke neon script with a glowing outer stroke for graphic tees. Commission a local sign painter."
+    },
+    {
+      "cue": "RCAF-style screenprint layers",
+      "type": "graphic",
+      "hex": "",
+      "source": "Flat-color, bold-outline poster tradition of Sacramento Chicano artists.",
+      "use": "Only through a paid partnership with Sacramento Chicano artists. Credit them on the hangtag."
+    },
+    {
+      "cue": "Delta fog gray",
+      "type": "color",
+      "hex": "#B7BDC4",
+      "source": "Winter tule fog over the Sacramento and Delta river valley.",
+      "use": "Neutral base for hoodies and outerwear, so purple and gold read."
+    }
+  ],
+  "productHooks": [
+    "Tower Bridge gold-and-purple lifestyle capsule with a lift-span jacquard on warm-up jackets and shorts, timed to Specter uniform season.",
+    "A local-artist numeral tee series: three Sacramento muralists each design a Kings-city graphic, credited on the hangtag, sold in Oak Park, Midtown and Golden 1 Center.",
+    "Heavyweight Del Paso neon script tee and hoodie, hand-lettered by a local sign painter, with a glow-in-the-dark outer stroke.",
+    "A camellia and delta-fog youth capsule for the new rebuilding-era Kings fans, in pastel purple, pink and gray."
+  ],
+  "watchouts": [
+    "Don't use RCAF, Chicano mural or Day of the Dead imagery without a paid, credited collaboration with Sacramento Chicano artists or organizations.",
+    "Wayne Thiebaud and Robert Arneson works and estates are protected. Reference style only, and license any direct imagery.",
+    "Avoid Gold Rush or \"gold mining\" kitsch. It flattens a community with a Native and immigrant history. Don't use Native Californian imagery without tribal partnership.",
+    "Mural artwork belongs to its painters. Any wall used in marketing needs the artist's permission and payment.",
+    "Don't frame the product around contention. The fan base is realistic about a rebuild and responds to pride and place."
+  ],
+  "sources": [
+    {
+      "title": "Crocker Art Museum",
+      "url": "https://www.crockerart.org"
+    },
+    {
+      "title": "Sacramento Kings official site",
+      "url": "https://www.nba.com/kings"
+    },
+    {
+      "title": "Wide Open Walls",
+      "url": "https://www.wideopenwalls.org"
+    },
+    {
+      "title": "Tower Bridge (Sacramento) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tower_Bridge_(Sacramento)"
+    },
+    {
+      "title": "Royal Chicano Air Force - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Royal_Chicano_Air_Force"
+    },
+    {
+      "title": "Wayne Thiebaud - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wayne_Thiebaud"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Check Wide Open Walls: 2026 festival dates, current walls and whether it still runs in Midtown, Oak Park and Del Paso Boulevard.",
+      "Confirm the Kings' 2026-27 City Edition design and the dates of Specter uniform games.",
+      "Confirm Golden 1 Center ownership and arena naming, and that the Light the Beam tradition is still active.",
+      "Confirm Sol Collective is still operating in Oak Park, and check its current programming.",
+      "Confirm Verge Center for the Arts' current location and whether it is still open.",
+      "Confirm Second Saturday ArtWalk is still running monthly in Midtown, and check its current format.",
+      "Find the date of the 2026 Farm-to-Fork Festival and Tower Bridge Dinner.",
+      "Check the Crocker Art Museum's current exhibitions and any Thiebaud or Arneson displays.",
+      "Check whether Del Paso Boulevard Arts District signage and neon are still present, and any redevelopment.",
+      "Find the Day of the Dead event hosts in Sacramento for 2026.",
+      "Check the Tower Bridge color and any planned repainting or closure.",
+      "Check Esteban Villa's status and find the Wayne Thiebaud estate contact for any licensing."
+    ]
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "team": "den",
+  "lens": "food",
+  "headline": "Denver eats smothered, and a burrito and a tallboy are the Nuggets' pregame ritual.",
+  "summary": "Denver's food is Hispano and Mexican-American at the base: green chile, the smothered burrito, Pueblo chile. Cattle and game heritage, Front Range farm pride and the country's densest craft-beer culture sit on top. The Nuggets crowd is more working-class, outdoorsy and unpretentious than the city's tourist image. Food cues work best small and a little irreverent, like a chile pepper or a pint glass, not a literal skyline.",
+  "insights": [
+    {
+      "title": "Green chile is the regional language",
+      "detail": "Denver's signature order is a breakfast burrito or Mexican hamburger smothered in pork green chile. Locals argue over Pueblo chile versus Denver-style versus New Mexico style. Red or green, or \"Christmas\" for both, is a shared ritual from Santiago's to the neighborhood taquerias.",
+      "implication": "Pair red and green chile in a two-color system that is Colorado-only and doesn't read as generic Southwest. It works as a subtle detail on a colorway or lining."
+    },
+    {
+      "title": "Western heritage food is pride, not costume",
+      "detail": "The Buckhorn Exchange (1893, holder of Colorado's first liquor license) serves bison, elk and Rocky Mountain oysters. The National Western Stock Show each January keeps ranch and rodeo food on the city calendar.",
+      "implication": "Use leather, brand-iron and stockyard typography sparingly. They fit Denver's cattle-town past but tip into costume fast if overused."
+    },
+    {
+      "title": "Beer is the city's second language",
+      "detail": "Denver hosts the Great American Beer Festival each fall. Coors in Golden and Denver Beer Co. on Platte Street bookend the region. LoDo spots near Ball Arena, like Wynkoop (founded by future governor John Hickenlooper), anchor pregame culture.",
+      "implication": "Tallboy cans, pint glasses, hop cones and can-inspired packaging are native here. They put the brand in the fan's pregame moment."
+    },
+    {
+      "title": "Immigrant corridors are where Denver eats now",
+      "detail": "Locals eat far from the LoDo tourist strip. South Federal Boulevard serves Vietnamese, Mexican and Lao food. East Colfax and Aurora's Havana Street area offer Ethiopian, Korean, Burmese and Salvadoran. Santa Fe Drive is the Chicano arts district.",
+      "implication": "Hold events on these corridors with community partners and local vendors, not at sponsor events near the arena. Credit and pay the originating business or artist for any cue you lift."
+    },
+    {
+      "title": "Casa Bonita is the cult merch story",
+      "detail": "The Lakewood Mexican restaurant with indoor cliff divers, famous through South Park, reopened in 2023 under Trey Parker and Matt Stone, with chef Dana Rodriguez. Its pink-and-sunset graphics and merch are worn well beyond the dining room.",
+      "implication": "Locals wear food-venue merch ironically and proudly. But the imagery is licensed third-party IP, so treat it as inspiration only unless a formal partnership exists."
+    },
+    {
+      "title": "Local chain merch marks the insider",
+      "detail": "Illegal Pete's has a deep local-band poster tradition. Denver Biscuit Company and Little Man Ice Cream, with its giant milk can in the Highlands, also sell shirts and hats. They all read as Denver insider wear.",
+      "implication": "Make collab-style apparel with a local food brand, designed by a local artist. It's credible and mirrors how fans already dress."
+    },
+    {
+      "title": "Farm-stand pride matches Colorado autumn gold",
+      "detail": "Palisade peaches, Olathe sweet corn and Rocky Ford melons are seasonal civic obsessions. The Western Slope harvest runs from summer into the early NBA season.",
+      "implication": "The peach and corn palette of warm golds and oranges sits well with the Nuggets' sunshine gold. It also offers a fruit-label graphic."
+    }
+  ],
+  "places": [
+    {
+      "name": "Buckhorn Exchange",
+      "kind": "restaurant",
+      "neighborhood": "Lincoln Park / Santa Fe Drive area",
+      "why": "Denver's 1893 steakhouse of game meats and Rocky Mountain oysters. Its taxidermy-filled room is the clearest Old West food landmark."
+    },
+    {
+      "name": "Santiago's",
+      "kind": "restaurant / local chain",
+      "neighborhood": "Metro Denver",
+      "why": "Long-running Colorado Mexican chain famous for smothered breakfast burritos and a house green chile many locals defend."
+    },
+    {
+      "name": "El Taco de Mexico",
+      "kind": "restaurant",
+      "neighborhood": "Santa Fe Drive / Lincoln Park",
+      "why": "No-frills taqueria institution on the Santa Fe corridor. Locals and critics regularly name its tacos as the ones to beat."
+    },
+    {
+      "name": "Casa Bonita",
+      "kind": "restaurant / entertainment",
+      "neighborhood": "Lakewood",
+      "why": "The pink-towered, cliff-diving Mexican restaurant, revived in 2023 and now one of the most recognizable local food brands."
+    },
+    {
+      "name": "Wynkoop Brewing Company",
+      "kind": "brewpub",
+      "neighborhood": "LoDo",
+      "why": "Colorado's first brewpub (1988), a short walk from Union Station and Ball Arena and a classic pregame stop."
+    },
+    {
+      "name": "Denver Beer Co.",
+      "kind": "brewery",
+      "neighborhood": "Platte Street / LoHi",
+      "why": "Denver craft brewery with a Platte Street taproom, a pregame stop west of the arena. Great Divide's Ballpark and RiNo taprooms closed in 2025."
+    },
+    {
+      "name": "Illegal Pete's",
+      "kind": "burrito chain",
+      "neighborhood": "Metro Denver and Boulder",
+      "why": "Denver-founded burrito brand known for local-music posters and merch."
+    },
+    {
+      "name": "Pete's Kitchen",
+      "kind": "diner",
+      "neighborhood": "East Colfax",
+      "why": "Long-running Colfax diner with a rooftop neon sign, a late-night staple for locals."
+    },
+    {
+      "name": "Little Man Ice Cream",
+      "kind": "ice cream shop",
+      "neighborhood": "Highlands (LoHi)",
+      "why": "The giant milk-can building is a neighborhood icon and a summer pilgrimage with long lines."
+    },
+    {
+      "name": "Work & Class",
+      "kind": "restaurant",
+      "neighborhood": "RiNo",
+      "why": "Chef Dana Rodriguez's Latin-American-influenced RiNo room, a touchstone of the newer chef-driven scene."
+    }
+  ],
+  "people": [
+    {
+      "name": "Dana Rodriguez",
+      "role": "Chef-owner of Work & Class and Super Mega Bien; executive chef at Casa Bonita",
+      "why": "Mexican-born Denver chef and a leading voice in the city's Latin cooking."
+    },
+    {
+      "name": "Alex Seidel",
+      "role": "Chef and restaurateur, Fruition and Mercantile Dining & Provision",
+      "why": "James Beard award winner (Best Chef Southwest, 2013) who built Denver's farm-to-table identity."
+    },
+    {
+      "name": "Caroline Glover",
+      "role": "Chef-owner of Annette in Aurora",
+      "why": "James Beard Best Chef: Mountain winner (2022), cooking with Colorado produce in Aurora's Stanley Marketplace."
+    },
+    {
+      "name": "Hosea Rosenberg",
+      "role": "Chef, Boulder (Blackbelly)",
+      "why": "Winner of Top Chef season 5. His Colorado-sourced cooking made him a state food ambassador."
+    },
+    {
+      "name": "Trey Parker and Matt Stone",
+      "role": "South Park creators and owners of Casa Bonita",
+      "why": "Colorado natives whose revival of Casa Bonita turned a dying restaurant into a local civic cause."
+    },
+    {
+      "name": "Troy Guard",
+      "role": "Chef and restaurateur, TAG and Guard and Grace",
+      "why": "Visible Denver restaurant-group founder with a long record in LoDo and downtown dining."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Great American Beer Festival",
+      "timing": "Late September (2026 edition already past)",
+      "month": 9,
+      "why": "The Brewers Association's festival fills the Colorado Convention Center and the city's beer bars in late September, just before camp."
+    },
+    {
+      "name": "Nuggets home game pregame",
+      "timing": "Every home game, October to April",
+      "month": 0,
+      "why": "Fans gather around LoDo and Union Station for burritos, brewpub pints and watch-party bars before tip at Ball Arena."
+    },
+    {
+      "name": "National Western Stock Show",
+      "timing": "Mid-January to late January",
+      "month": 1,
+      "why": "Denver's biggest Western heritage food and ranch event, mid-season for the Nuggets."
+    },
+    {
+      "name": "Cinco de Mayo Festival",
+      "timing": "Early May",
+      "month": 5,
+      "why": "A large Civic Center festival of Mexican-American food and culture, in the middle of the playoffs."
+    },
+    {
+      "name": "Pueblo Chile and Frijoles Festival",
+      "timing": "Late September",
+      "month": 9,
+      "why": "Celebrates Pueblo's green chile harvest and its roasting culture, the year's peak chile moment."
+    },
+    {
+      "name": "Palisade Peach Festival",
+      "timing": "Mid-August",
+      "month": 8,
+      "why": "The Western Slope's peach harvest is a statewide food pride moment that sets the summer color story."
+    },
+    {
+      "name": "Christmas Day at Golden State",
+      "timing": "December 25",
+      "month": 12,
+      "why": "The Nuggets' 10:30 p.m. ET nightcap makes Christmas evening a watch-party night, with tamales and holiday food."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Smothered",
+      "meaning": "A burrito or plate covered in green chile, the default Denver way to order."
+    },
+    {
+      "term": "Christmas",
+      "meaning": "Both red and green chile on the same plate."
+    },
+    {
+      "term": "Pueblo chile",
+      "meaning": "Locally grown Mirasol-type chile from Pueblo, a point of regional pride against New Mexico chile."
+    },
+    {
+      "term": "Slopper",
+      "meaning": "A Pueblo open-faced burger smothered in green chile, a Southern Colorado specialty."
+    },
+    {
+      "term": "Rocky Mountain oysters",
+      "meaning": "Fried bull testicles. A tourist-adjacent but long-standing Western dish at spots like the Buckhorn."
+    },
+    {
+      "term": "Front Range",
+      "meaning": "The urban corridor along the eastern edge of the Rockies, from Fort Collins through Denver to Pueblo."
+    },
+    {
+      "term": "Mile High",
+      "meaning": "Denver's elevation nickname, used across local food and drink brands."
+    },
+    {
+      "term": "Tallboy",
+      "meaning": "A 16-ounce can, the standard local pregame and trailhead beer."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Green chile green as a secondary accent beside Nuggets gold",
+      "type": "color",
+      "hex": "#6F8B2F",
+      "source": "Roasted Pueblo green chile",
+      "use": "Use as a lining, drawcord or small graphic accent. Never as a dominant team color."
+    },
+    {
+      "cue": "Dried red chile ristra red",
+      "type": "color",
+      "hex": "#A22A25",
+      "source": "Red chile and hanging ristras",
+      "use": "Pair with the green for a red-and-green \"Christmas\" tab or label detail."
+    },
+    {
+      "cue": "Palisade peach orange",
+      "type": "color",
+      "hex": "#F2A65A",
+      "source": "Western Slope peach harvest",
+      "use": "Run a warm gradient between peach and sunshine gold for a fall-season graphic."
+    },
+    {
+      "cue": "Foil burrito wrapper texture",
+      "type": "texture",
+      "hex": "",
+      "source": "The foil-wrapped breakfast burrito, a Denver morning staple",
+      "use": "Crinkled foil-print lining or a metallic hit for a pregame edition."
+    },
+    {
+      "cue": "Tallboy can and brewery label graphics",
+      "type": "graphic",
+      "hex": "",
+      "source": "Denver craft-beer packaging culture",
+      "use": "Label-style woven tags and tall-can-shaped hangtags that echo local breweries without using their marks."
+    },
+    {
+      "cue": "Diner neon and hand-painted menu lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Colfax diners such as Pete's Kitchen",
+      "use": "A script or sign-painter wordmark for a Colfax-inspired capsule."
+    },
+    {
+      "cue": "Stockyard and brand-iron mark",
+      "type": "motif",
+      "hex": "",
+      "source": "National Western and the Buckhorn heritage",
+      "use": "A simple brand-iron mark on leather or patch details, used with restraint."
+    }
+  ],
+  "productHooks": [
+    "Christmas-chile pregame tee and hat pack, with the red and green accents against Nuggets navy and gold, sold at Ball Arena and local partner shops.",
+    "Foil-wrapper print jacket lining or warm-up piece, with a hidden \"smothered\" graphic inside the collar.",
+    "Tallboy-label collab hangtag and packaging series, released around Great American Beer Festival and the first home games.",
+    "Limited-run collab with a local food brand (for example a Denver burrito or ice cream brand), designed by a Colorado artist and sold at the partner's counter.",
+    "Palisade peach-to-gold gradient colorway for a fall-release shoe or practice jersey."
+  ],
+  "watchouts": [
+    "Casa Bonita and South Park imagery is third-party IP. Don't reproduce it without a licensing agreement.",
+    "Green chile, tamales and Mexican-American food are community-owned traditions. Partner with and credit Chicano and Latino businesses and artists, and avoid sombrero or caricature imagery.",
+    "Rocky Mountain oysters and Old West imagery can slide into costume. Keep Western cues restrained.",
+    "Get written permission before using brewery and restaurant marks (Coors, Denver Beer Co., Illegal Pete's and others) on product.",
+    "Pueblo and New Mexico each claim chile. Don't name a single origin as \"the\" Colorado style."
+  ],
+  "sources": [
+    {
+      "title": "Ball Arena (official)",
+      "url": "https://www.ballarena.com/"
+    },
+    {
+      "title": "Denver Nuggets (official)",
+      "url": "https://www.nba.com/nuggets"
+    },
+    {
+      "title": "Great American Beer Festival (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Great_American_Beer_Festival"
+    },
+    {
+      "title": "Casa Bonita (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Casa_Bonita"
+    },
+    {
+      "title": "Buckhorn Exchange (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Buckhorn_Exchange"
+    },
+    {
+      "title": "National Western Stock Show (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/National_Western_Stock_Show"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Great American Beer Festival 2026 dates and venue (late Sept / early Oct, Colorado Convention Center)",
+      "Confirm Casa Bonita is still open, Dana Rodriguez is still its executive chef, and its merch program is active",
+      "Confirm Wynkoop Brewing, Denver Beer Co. taproom, Buckhorn Exchange, El Taco de Mexico, Pete's Kitchen and Santiago's are all still operating",
+      "Confirm Work & Class and Super Mega Bien remain open and led by Dana Rodriguez",
+      "Confirm Annette (Aurora, Caroline Glover) remains open in the Stanley Marketplace",
+      "Confirm Pueblo Chile and Frijoles Festival 2026 dates",
+      "Confirm National Western Stock Show January 2027 dates",
+      "Confirm Denver Cinco de Mayo Festival is still held at Civic Center in 2027",
+      "Confirm Little Man Ice Cream and Illegal Pete's still carry active merch lines",
+      "Check current Ball Arena concession partners and any local vendors inside the arena for 2026-27",
+      "Check Nuggets official palette hex values (navy, sunshine gold, Flatirons red) against current brand guidelines",
+      "Check whether the 2026-27 City Edition leans on food or regional culture cues"
+    ]
+  }
+}

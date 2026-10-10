@@ -1,0 +1,455 @@
+{
+  "asOf": "2026-10-07",
+  "conference": "West",
+  "teams": [
+    {
+      "team": "dal",
+      "teamMoment": "A full reset. New president Masai Ujiri and first-year coach Dusty May build around Cooper Flagg, with Kyrie Irving back from his ACL tear.",
+      "lastSeason": "26-56, missed the playoffs. Anthony Davis was traded in February 2026. GM Nico Harrison was fired in November 2025. The 2026 title went to the Knicks, who beat the Spurs 4-1.",
+      "headCoach": "Dusty May, in his first season. He won the 2026 NCAA title at Michigan and replaces Jason Kidd.",
+      "stars": ["Cooper Flagg", "Kyrie Irving", "Zaccharie Risacher", "Santi Aldama", "Morez Johnson Jr. (No. 9 pick)"],
+      "keyMoves": [
+        "Hired Masai Ujiri as president and alternate governor (May 2026)",
+        "Parted ways with Jason Kidd and hired Dusty May",
+        "Drafted Morez Johnson Jr. (Michigan) No. 9 and Sergio De Larrea No. 25",
+        "Acquired Zaccharie Risacher for Ryan Nembhard in the three-team Lu Dort trade",
+        "Added Santi Aldama and Marcus Sasser in a six-team trade"
+      ],
+      "expectations": "BetMGM win total: 34.5. Previews expect a better team, but the playoffs look unlikely.",
+      "ownershipArena": "Patrick Dumont is governor. CEO Rick Welts leads new-arena planning. No 2026 arena decision was verified.",
+      "cityEdition": "Not verified for 2026-27.",
+      "marquee": [
+        "NBA Cup West Group A with DEN, HOU, PHX and UTA (group play Fridays Oct 30-Nov 27)",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Dallas Mavericks offseason recap, early 2026-27 season preview (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/49546534/dallas-mavericks-offseason-recap-2026-27-season-preview-stats-roster-depth-chart"},
+        {"title": "Mavericks hire Masai Ujiri as president, alternate governor (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/48676414/sources-mavericks-hire-ujiri-president-alternate-governor"},
+        {"title": "2026 coaching tracker (NBA.com)", "url": "https://www.nba.com/news/2026-coaching-tracker"},
+        {"title": "NBA holds coin flips to finalize pre-lottery draft order (Eurohoops)", "url": "https://www.eurohoops.net/en/nba-news/1958507/nba-2026-draft-tiebreaker-results/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"},
+        {"title": "2026 NBA Cup: Schedule, format, groups (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates"}
+      ]
+    },
+    {
+      "team": "den",
+      "teamMoment": "Denver is betting on continuity around three-time MVP Nikola Jokic after a first-round upset. DeMar DeRozan arrives for scoring. Jokic is eligible for an extension of roughly $290M and has said he aims to sign it.",
+      "lastSeason": "54-28, West No. 3. Lost 4-2 to No. 6 Minnesota in the first round.",
+      "headCoach": "David Adelman. Josh Kroenke has backed him publicly, and Dave Joerger joins as lead assistant.",
+      "stars": ["Nikola Jokic", "Jamal Murray", "Aaron Gordon", "Christian Braun", "Cameron Johnson", "DeMar DeRozan"],
+      "keyMoves": [
+        "Traded Peyton Watson to Cleveland",
+        "Signed DeMar DeRozan (37) to a one-year deal",
+        "Hired Dave Joerger as lead assistant",
+        "Jokic is eligible for a 4-year max extension of up to ~$290M. A signing was not verified"
+      ],
+      "expectations": "BetMGM win total: 49.5, third in the West. Denver sits in the second tier of contenders, behind OKC and San Antonio.",
+      "ownershipArena": "Josh Kroenke backed Adelman publicly after the playoff exit. He also said roster changes were on the table.",
+      "cityEdition": "Not verified. DenverSports reports a leak that a fan-favorite Nuggets alternate is coming back. The 2025-26 City Edition was the returning 'Rainbow Skyline' set.",
+      "marquee": [
+        "Oct 22: vs OKC, ESPN 9:30 p.m. ET",
+        "Dec 25: vs Golden State, 10:30 p.m. ET Christmas nightcap",
+        "NBA Cup West Group A with HOU, PHX, DAL and UTA"
+      ],
+      "sources": [
+        {"title": "Denver Nuggets offseason recap, early 2026-27 season preview (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49639942"},
+        {"title": "Josh Kroenke backs David Adelman; roster changes on table (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/48715563/josh-kroenke-backs-david-adelman-roster-changes-table"},
+        {"title": "2026-27 Nuggets roster, contracts, starting lineup, depth chart (SI)", "url": "https://www.si.com/nba/nuggets/onsi/2026-27-nuggets-roster-contracts-starting-lineup-depth-chart"},
+        {"title": "2026 NBA playoffs: Western Conference first-round takeaways (ABC13)", "url": "https://abc13.com/post/2026-nba-playoffs-western-conference-first-round-takeaways/18915568/"},
+        {"title": "Fan-favorite Nuggets alternate jersey is coming back, per leak (DenverSports)", "url": "https://denversports.com/?p=2133073"},
+        {"title": "NBA announces schedule for 2026-27 regular season (NBA PR)", "url": "https://pr.nba.com/2026-27-nba-regular-season-schedule/"},
+        {"title": "2026-27 opening night, Christmas Day schedule (Awful Announcing)", "url": "https://awfulannouncing.com/nba/2026-27-opening-night-christmas-day-schedule-lebron-sixers.html"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "gsw",
+      "teamMoment": "Stephen Curry's aging core runs it back. The Warriors explored Giannis and Anthony Davis but couldn't land another star. Jimmy Butler and Moses Moody are still recovering from injuries.",
+      "lastSeason": "37-45, 10th. Beat the Clippers 126-121 in the play-in, then lost 111-96 at Phoenix and missed the playoffs.",
+      "headCoach": "Steve Kerr",
+      "stars": ["Stephen Curry", "Draymond Green", "Jimmy Butler (injured; return date not verified)", "Kristaps Porzingis", "Yaxel Lendeborg (No. 11 pick)"],
+      "keyMoves": [
+        "Drafted Yaxel Lendeborg (Michigan) No. 11",
+        "Re-signed Kristaps Porzingis (2 years, $40M), Al Horford, De'Anthony Melton and Gary Payton II",
+        "Signed Georges Niang and Brandon Williams",
+        "Chased Giannis Antetokounmpo, who went to Miami, and Anthony Davis but landed neither"
+      ],
+      "expectations": "BetMGM win total: 40.5. Some previews doubt they make the play-in.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "The 2026-27 City design is not verified. The Warriors are one of eight historic franchises getting Nike's new 'Specter' uniforms.",
+      "marquee": [
+        "Oct 21: at Lakers, ESPN 10 p.m. ET",
+        "Dec 25: Denver vs Golden State, 10:30 p.m. ET Christmas nightcap",
+        "NBA Cup West Group C with SAS, LAL, POR and SAC"
+      ],
+      "sources": [
+        {"title": "Steve Kerr on Warriors roster (NBC Sports Bay Area)", "url": "https://www.nbcbayarea.com/nba/golden-state-warriors/steve-kerr-roster/4142363/"},
+        {"title": "NBA Play-In Tournament 2026: Results, Recap and Playoff Teams (ScoresAndStats)", "url": "https://www.scoresandstats.com/blog/nba-play-in-tournament-odds-predictions/"},
+        {"title": "NBA Free Agency 2026: live NBA offseason tracker (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/trades/242343/nba-free-agency-live-nba-offseason-tracker"},
+        {"title": "2026 NBA Draft Full Results (FadeawayWorld)", "url": "https://fadeawayworld.net/2026-nba-draft-full-results-complete-first-round-selections"},
+        {"title": "Nike NBA Specter uniforms for historic franchises (NBC Bay Area)", "url": "https://www.nbcbayarea.com/nba/nike-nba-specter-uniforms-new-historic-franchises/4143124/"},
+        {"title": "NBA announces schedule for 2026-27 regular season (NBA PR)", "url": "https://pr.nba.com/2026-27-nba-regular-season-schedule/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "hou",
+      "teamMoment": "After a first-round exit, Houston kept Ime Udoka and the Kevin Durant-Alperen Sengun core. It locked up Amen Thompson and Tari Eason, then added veterans Marcus Smart and Bogdan Bogdanovic.",
+      "lastSeason": "52-30, West No. 5. Lost 4-2 to the Lakers in the first round.",
+      "headCoach": "Ime Udoka (staff retained)",
+      "stars": ["Kevin Durant", "Alperen Sengun", "Amen Thompson", "Fred VanVleet", "Jabari Smith Jr.", "Tari Eason"],
+      "keyMoves": [
+        "Amen Thompson 5-year, $208M extension",
+        "Tari Eason 5-year, $81.5M extension",
+        "Signed Marcus Smart and Bogdan Bogdanovic",
+        "Hired shooting coach Chip Engelland from OKC",
+        "Durant trade rumors surfaced, but ESPN's preview still has him on the 2026-27 roster"
+      ],
+      "expectations": "BetMGM win total: 47.5. A playoff team counting on its young core to grow.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Houston revealed a 2026-27 uniform with a 'ketchup and mustard' throwback look, per Secret Houston. Whether it's the City Edition is not verified.",
+      "marquee": [
+        "NBA Cup West Group A with DEN, PHX, DAL and UTA",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Houston Rockets offseason recap, early 2026-27 season preview (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49481941/houston-rockets-2026-27-season-preview-stats-roster-kevin-durant-vanvleet-thompson"},
+        {"title": "Rockets roster preview for 2026-27 season (Fantasy Nerds)", "url": "https://www.fantasynerds.com/news/story/2026/09/10/rockets-roster-preview-veteran-stars-meet-rising-talent-for-2026-27-season-1619329"},
+        {"title": "2026 NBA playoffs: Western Conference first-round takeaways (ABC13)", "url": "https://abc13.com/post/2026-nba-playoffs-western-conference-first-round-takeaways/18915568/"},
+        {"title": "Houston Rockets jerseys 2026-2027 (Secret Houston)", "url": "https://secrethouston.com/houston-rockets-jerseys-2026-2027/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"},
+        {"title": "2026 NBA Cup: Schedule, format, groups (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates"}
+      ]
+    },
+    {
+      "team": "lac",
+      "teamMoment": "A post-Kawhi reset around Darius Garland, Brandon Ingram and No. 5 pick Keaton Wagler. The NBA's Aspiration penalties hang over it all: Steve Ballmer is suspended for a year, and the team forfeits five first-round picks.",
+      "lastSeason": "42-40, 9th. Lost the play-in elimination game to Golden State, 126-121.",
+      "headCoach": "Tyronn Lue",
+      "stars": ["Darius Garland", "Brandon Ingram", "Keaton Wagler (No. 5 pick)"],
+      "keyMoves": [
+        "Traded Kawhi Leonard to Toronto, with Brandon Ingram headlining the return",
+        "Drafted Keaton Wagler (Illinois) No. 5",
+        "Darius Garland, acquired in an earlier blockbuster, leads the roster. Deal details not verified"
+      ],
+      "expectations": "AP calls it a 'starless' rebuild. No BetMGM win total was verified.",
+      "ownershipArena": "On Sept 2, 2026, the NBA suspended owner Steve Ballmer for one year over the Kawhi Leonard-Aspiration cap-circumvention case. It also fined the team $30M and took its 2029-2033 first-round picks. Leonard was fined $700K. Lawrence Frank was banned for six months and Gillian Zucker suspended for a year. The Clippers called it a 'witch hunt.'",
+      "cityEdition": "Not verified for 2026-27.",
+      "marquee": [
+        "NBA Cup West Group B with OKC, MIN, NOP and MEM",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "NBA suspends Clippers owner Ballmer, fines team $30M (Local10/AP)", "url": "https://www.local10.com/sports/2026/09/02/nba-suspends-clippers-owner-ballmer-fines-team-30m-kawhi-leonard-700k-in-cap-circumvention-case/"},
+        {"title": "Clippers face life in limbo after Steve Ballmer ban and five lost picks (TSN)", "url": "https://www.tsn.ca/nba/article/clippers-face-life-in-limbo-after-steve-ballmer-ban-and-five-lost-picks/"},
+        {"title": "LA Clippers 2026-27 Season Preview: Life After Kawhi (Fantasy Alarm)", "url": "https://www.fantasyalarm.com/articles/nba/nba-offseason/la-clippers-2026-27-season-preview/196385"},
+        {"title": "Kawhi Leonard nearing trade to Raptors; Brandon Ingram headlines return (Bleacher Report)", "url": "https://bleacherreport.com/articles/25427481-kawhi-leonard-reportedly-nearing-trade-raptors-brandon-ingram-headlines-clippers-full-return"},
+        {"title": "NBA Play-In Tournament 2026: Results, Recap and Playoff Teams (ScoresAndStats)", "url": "https://www.scoresandstats.com/blog/nba-play-in-tournament-odds-predictions/"},
+        {"title": "2026 NBA Cup: Schedule, format, groups (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates"}
+      ]
+    },
+    {
+      "team": "lal",
+      "teamMoment": "The full Luka Doncic era starts now that LeBron James has left for Philadelphia. The Lakers built around Doncic, max-extended Austin Reaves and put Walker Kessler at center. None of their top five players in playoff minutes returned, a first in NBA history.",
+      "lastSeason": "53-29, West No. 4. Beat Houston 4-2, then OKC swept them 4-0 in the West semifinals.",
+      "headCoach": "JJ Redick (third season)",
+      "stars": ["Luka Doncic", "Austin Reaves", "Walker Kessler", "Quentin Grimes", "Collin Sexton"],
+      "keyMoves": [
+        "LeBron James left in free agency and signed with the 76ers",
+        "Acquired C Walker Kessler from Utah (sign-and-trade) for unprotected 2031 and 2033 firsts plus 2028 and 2030 swaps",
+        "Austin Reaves 4-year, $185M max extension",
+        "Signed Quentin Grimes for 4 years and Collin Sexton for 2 years. Added Matisse Thybulle, Ziaire Williams and Sandro Mamukelashvili",
+        "Traded Deandre Ayton to Washington for Jaden Hardy and 2031 and 2032 second-round picks",
+        "Lost Rui Hachimura, plus Marcus Smart to HOU, Luke Kennard to PHX and Jaxson Hayes to UTA"
+      ],
+      "expectations": "BetMGM win total: 46.5, sixth in the West. Redick says the new pieces fit better than his first two rosters.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Bringing back the 2023-24 City Edition, with a triangle-shaped wordmark that nods to the franchise's move from Minneapolis. The Lakers are also one of eight historic franchises getting Nike's new 'Specter' uniforms.",
+      "marquee": [
+        "Oct 21: vs Golden State, ESPN 10 p.m. ET",
+        "Dec 25: vs Philadelphia, 5 p.m. ET. It's LeBron James' first game back in LA",
+        "NBA Cup West Group C with SAS, POR, GSW and SAC"
+      ],
+      "sources": [
+        {"title": "Los Angeles Lakers 2026 season preview (Newsweek)", "url": "https://www.newsweek.com/sports/nba/los-angeles-lakers-2026-season-preview-12256546"},
+        {"title": "Lakers will make NBA history after LeBron's decision (Bleacher Report)", "url": "https://bleacherreport.com/articles/25481832-how-lakers-will-make-nba-history-wild-stat-revealed-after-lebrons-decision-leave-76ers"},
+        {"title": "Utah Jazz offseason recap, early 2026-27 season preview (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/49591964/utah-jazz-offseason-recap-2026-27-season-preview-stats-roster-depth-chart"},
+        {"title": "Redick endorses Doncic as Lakers' vocal leader (Eurohoops)", "url": "https://www.eurohoops.net/en/nba-news/2015210/jj-redick-talks-luka-doncic-leadership-los-angeles-lakers-nba/"},
+        {"title": "2026 NBA playoffs Western Conference semifinals update (Thunderword)", "url": "https://thunderword.highline.edu/2026/05/14/2026-nba-playoffs-conference-semifinals-update/"},
+        {"title": "2026-27 opening night, Christmas Day schedule (Awful Announcing)", "url": "https://awfulannouncing.com/nba/2026-27-opening-night-christmas-day-schedule-lebron-sixers.html"},
+        {"title": "Nike NBA Specter uniforms for historic franchises (NBC Bay Area)", "url": "https://www.nbcbayarea.com/nba/nike-nba-specter-uniforms-new-historic-franchises/4143124/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "mem",
+      "teamMoment": "A full reset. Ja Morant and Jaren Jackson Jr. are gone, and No. 3 pick Cameron Boozer leads a young core with Zach Edey and Cedric Coward.",
+      "lastSeason": "25-57, missed playoffs.",
+      "headCoach": "Tuomas Iisalo (second full season)",
+      "stars": ["Cameron Boozer (No. 3 pick)", "Zach Edey", "Cedric Coward", "Jaylen Wells", "Ty Jerome"],
+      "keyMoves": [
+        "Traded Ja Morant to Portland for Jerami Grant and Kris Murray (June 29)",
+        "Drafted Cameron Boozer (Duke) No. 3 and Karim Lopez",
+        "Acquired Isaiah Stewart from Detroit and signed Quinten Post",
+        "Kentavious Caldwell-Pope exercised his $21.6M player option",
+        "Jaren Jackson Jr. was dealt to Utah at the February 2026 deadline"
+      ],
+      "expectations": "Likely a lottery team. Boozer is a leading Rookie of the Year candidate. The big question is Edey's health: he has missed 87 games since 2024.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Not verified. Reports say Memphis will revive or recolor its City design from 2018-19, 2020-21 or 2021-22.",
+      "marquee": [
+        "NBA Cup West Group B with OKC, MIN, LAC and NOP",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Report: Grizzlies trade Ja Morant to Trail Blazers (NBC Sports)", "url": "https://www.nbcsports.com/fantasy/basketball/player-news/2026-06-29/report-grizzlies-trade-ja-morant-to-trail-blazers"},
+        {"title": "Tuomas Iisalo faces pivotal season as Grizzlies begin Cameron Boozer era (Roundtable)", "url": "https://roundtable.io/sports/nba/grizzlies/news/tuomas-iisalo-faces-pivotal-season-as-grizzlies-begin-cameron-boozer-era"},
+        {"title": "ESPN isn't sold on the Grizzlies rebuild yet (Roundtable)", "url": "https://roundtable.io/sports/nba/grizzlies/news/espn-isnt-sold-on-the-grizzlies-rebuild-yet-and-zach-edeys-health-is-a-big-reason"},
+        {"title": "Grizzlies Cam Boozer rebuild post-Morant (StatSniper)", "url": "https://statsniper.com/blog/nba/grizzlies-cam-boozer-rebuild-post-morant-nba-2026-outlook/"},
+        {"title": "NBA Free Agency 2026: live NBA offseason tracker (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/trades/242343/nba-free-agency-live-nba-offseason-tracker"},
+        {"title": "City Edition draft: Grit, Grind, Groove (NBA.com)", "url": "https://api-hub.nba.com/news/city-edition-draft-grit-grind-groove"},
+        {"title": "2026 NBA Cup: Schedule, format, groups (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates"}
+      ]
+    },
+    {
+      "team": "min",
+      "teamMoment": "Minnesota went all in on Anthony Edwards, trading for LaMelo Ball to build one of the league's most electric backcourts. The Wolves have 27 national TV games and host OKC on Christmas.",
+      "lastSeason": "49-33, West No. 6. Upset No. 3 Denver 4-2, then lost 4-2 to San Antonio in the West semifinals.",
+      "headCoach": "Chris Finch",
+      "stars": ["Anthony Edwards", "LaMelo Ball", "Rudy Gobert", "Jaden McDaniels", "Ayo Dosunmu"],
+      "keyMoves": [
+        "Acquired LaMelo Ball and Josh Green from Charlotte in a four-team June trade with BKN and CHI",
+        "Sent Naz Reid, an unprotected 2033 first, three pick swaps and three seconds to Charlotte",
+        "Traded Julius Randle to Brooklyn in the same deal",
+        "Re-signed Ayo Dosunmu, 5 years/$112M",
+        "Signed Jonathan Kuminga, 2 years/$12.43M",
+        "Assistant Micah Nori left to become Portland's head coach"
+      ],
+      "expectations": "BetMGM win total: 48.5. The Wolves have championship aspirations with the Edwards-Ball pairing.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Not verified for 2026-27. The 2025-26 City Edition brought back the 'Purple Rain' set.",
+      "marquee": [
+        "Oct 21: at Miami, ESPN 7:30 p.m. ET",
+        "Dec 25: vs OKC, 8 p.m. ET",
+        "January: Naz Reid's return with Charlotte",
+        "Kevin Garnett jersey retirement home game (date not verified)",
+        "NBA Cup West Group B with OKC, LAC, NOP and MEM"
+      ],
+      "sources": [
+        {"title": "Timberwolves 2026-27 NBA preseason preview (Yardbarker)", "url": "https://www.yardbarker.com/nba/articles/minnesota_timberwolves_2026_27_nba_preseason_preview/s1_17659_44373871"},
+        {"title": "Timberwolves LaMelo Ball new era (SI)", "url": "https://www.si.com/nba/timberwolves-lamelo-ball-nba-scout-new-era"},
+        {"title": "Timberwolves President Confirms Anthony Edwards' Buy-In (FadeawayWorld)", "url": "https://fadeawayworld.net/nba/minnesota-timberwolves/timberwolves-president-confirms-anthony-edwards-buy-in-as-team-doubles-down-on-long-term-vision"},
+        {"title": "Timberwolves land 27 national TV games in 2026-27; Naz Reid returns in January (KSTP)", "url": "https://kstp.com/minnesota-sports/timberwolves-land-27-national-tv-games-in-2026-27-regular-season-naz-reid-returns-in-january/"},
+        {"title": "Timberwolves schedule adds Kevin Garnett jersey retirement (KDH News)", "url": "https://kdhnews.com/sports/nba/timberwolves-marquee-filled-schedule-adds-another-key-home-game-kevin-garnett-s-jersey-retirement/article_631774fd-3a67-5c32-8767-ec5db7f5a785.html"},
+        {"title": "2026 NBA playoffs Western Conference semifinals update (Thunderword)", "url": "https://thunderword.highline.edu/2026/05/14/2026-nba-playoffs-conference-semifinals-update/"},
+        {"title": "NBA announces schedule for 2026-27 regular season (NBA PR)", "url": "https://pr.nba.com/2026-27-nba-regular-season-schedule/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "nop",
+      "teamMoment": "New coach Jamahl Mosley inherits Zion Williamson, breakout Trey Murphy III and youngsters Derik Queen and Jeremiah Fears. The offseason was quiet, with no first-round pick.",
+      "lastSeason": "26-56, missed the playoffs. That's two straight seasons under 30 wins.",
+      "headCoach": "Jamahl Mosley, in his first season. Hired from Orlando in May, he replaced Willie Green.",
+      "stars": ["Zion Williamson", "Trey Murphy III", "Derik Queen", "Jeremiah Fears"],
+      "keyMoves": [
+        "Dismissed Willie Green and hired Jamahl Mosley",
+        "No 2026 first-round pick. It went to Atlanta in the Derik Queen trade, and the Hawks took Kingston Flemings at No. 8",
+        "Trey Murphy III drew trade rumors in June but returns after averaging 21.5 ppg",
+        "Otherwise a quiet offseason under Joe Dumars"
+      ],
+      "expectations": "Low, after a quiet summer. No BetMGM win total was verified.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Not verified for 2026-27. The 2025-26 City Edition brought back the 2023-24 fan-favorite design.",
+      "marquee": [
+        "NBA Cup West Group B with OKC, MIN, LAC and MEM",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "New Orleans Pelicans offseason recap, early 2026-27 season preview (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/49537991/new-orleans-pelicans-2026-27-season-preview-stats-roster"},
+        {"title": "Pelicans face critical offseason as Trey Murphy trade rumors test team's direction (WAFB)", "url": "https://www.wafb.com/2026/06/10/pelicans-face-critical-offseason-trey-murphy-trade-rumors-test-teams-direction/"},
+        {"title": "What to make of Pelicans' frustratingly quiet offseason (Yardbarker)", "url": "https://www.yardbarker.com/nba/articles/what_to_make_of_pelicans_frustratingly_quiet_offseason/s1_17412_44019702"},
+        {"title": "2026 coaching tracker (NBA.com)", "url": "https://www.nba.com/news/2026-coaching-tracker"},
+        {"title": "2026 NBA Draft Full Results (FadeawayWorld)", "url": "https://fadeawayworld.net/2026-nba-draft-full-results-complete-first-round-selections"},
+        {"title": "2026 NBA Cup: Schedule, format, groups (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates"}
+      ]
+    },
+    {
+      "team": "okc",
+      "teamMoment": "Back-to-back MVP Shai Gilgeous-Alexander and the Thunder are 2026-27 title co-favorites. San Antonio ended their title defense in a seven-game West finals. Payroll is rising toward about $260M, and Sam Presti says he won't cut to avoid it.",
+      "lastSeason": "64-18, West No. 1, as defending 2025 champions. Swept Phoenix 4-0 and the Lakers 4-0, then lost the West finals 4-3 to San Antonio. The Knicks beat the Spurs 4-1 for the 2026 title.",
+      "headCoach": "Mark Daigneault",
+      "stars": ["Shai Gilgeous-Alexander (back-to-back MVP)", "Jalen Williams", "Chet Holmgren", "Aday Mara (No. 12 pick)"],
+      "keyMoves": [
+        "Traded Luguentz Dort to Atlanta in a three-team deal that sent Zaccharie Risacher to Dallas",
+        "Also traded Isaiah Joe and Aaron Wiggins (destinations not verified)",
+        "Drafted Aday Mara (No. 12), Bennett Stirtz (No. 16) and Otega Oweh (No. 18)",
+        "Payroll projected at ~$260.35M, up more than $60M. No plan to cut under the second apron"
+      ],
+      "expectations": "BetMGM win total: 60.5, the West's highest. Fox Sports odds make OKC and San Antonio co-favorites for the title.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Not verified for 2026-27. The 2025-26 City Edition was a recolored 2018-19 set.",
+      "marquee": [
+        "Oct 20 opening night: at San Antonio, 9:30 p.m. ET (NBC/Peacock), a West finals rematch",
+        "Oct 22: vs Denver, ESPN 9:30 p.m. ET",
+        "Dec 25: at Minnesota, 8 p.m. ET",
+        "NBA Cup West Group B with MIN, LAC, NOP and MEM"
+      ],
+      "sources": [
+        {"title": "Thunder GM: Roster cost rising but no pressure to cut (Deadspin)", "url": "https://deadspin.com/thunder-gm-roster-cost-rising-but-no-pressure-to-cut/"},
+        {"title": "2026-27 OKC Thunder roster, contracts and depth chart (SI)", "url": "https://www.si.com/nba/thunder/onsi/2026-27-okc-thunder-roster-contracts-salaries-options-and-depth-chart"},
+        {"title": "Dort going from Thunder to Hawks, Risacher going to Mavericks in 3-team trade (KSAT)", "url": "https://gmg-ksat-prod.cdn.arcpublishing.com/topic/Kyrie_Irving/"},
+        {"title": "2026 NBA playoffs (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2026_NBA_playoffs"},
+        {"title": "2026 NBA Finals (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2026_NBA_Finals"},
+        {"title": "2026-27 NBA Finals Odds: Spurs, Thunder favored (Fox Sports)", "url": "https://amp.foxsports.com/stories/nba/2026-27-nba-finals-odds"},
+        {"title": "NBA 2026-27 Schedule: Opening Night and Christmas Day (Dunkest)", "url": "https://www.dunkest.com/en/nba/news/244108/nba-schedule-opening-night-and-christmas-day/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "phx",
+      "teamMoment": "The Devin Booker-Jalen Green Suns kept their own and added Miles Bridges. They re-signed Brooks, Gillespie, Mark Williams and Goodwin, aiming to climb out of the West's middle tier.",
+      "lastSeason": "45-37, 7th. Lost the 7-8 play-in to Portland, then beat Golden State for the No. 8 seed. OKC swept them 4-0 in the first round.",
+      "headCoach": "Jordan Ott",
+      "stars": ["Devin Booker", "Jalen Green", "Dillon Brooks", "Mark Williams", "Miles Bridges", "Collin Gillespie"],
+      "keyMoves": [
+        "Added Miles Bridges, Luke Kennard and Koa Peat",
+        "Dillon Brooks 3-year, $73M extension through 2029-30",
+        "Re-signed Collin Gillespie (4 years, $48M), Mark Williams and Jordan Goodwin",
+        "Lost Grayson Allen and Royce O'Neale"
+      ],
+      "expectations": "BetMGM win total: 40.5. That puts Phoenix on the play-in bubble.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Not verified for 2026-27.",
+      "marquee": [
+        "NBA Cup West Group A with DEN, HOU, DAL and UTA",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Phoenix Suns offseason recap, early 2026-27 season preview (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49661800"},
+        {"title": "2026 Phoenix Suns offseason: how moves are viewed so far (Arizona Sports)", "url": "https://arizonasports.com/nba/phoenix-suns/2026-phoenix-suns-offseason-how-moves-viewed-so-far"},
+        {"title": "Updated Phoenix Suns depth chart heading into 2026-27 (Roundtable)", "url": "https://roundtable.io/sports/nba/suns/news/updated-phoenix-suns-depth-chart-heading-into-2026-27-season"},
+        {"title": "NBA Play-In Tournament 2026: Results, Recap and Playoff Teams (ScoresAndStats)", "url": "https://www.scoresandstats.com/blog/nba-play-in-tournament-odds-predictions/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"},
+        {"title": "2026 NBA Cup: Schedule, format, groups (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49577473/2026-nba-season-tournament-cup-format-highlights-updates"}
+      ]
+    },
+    {
+      "team": "por",
+      "teamMoment": "New owner Tom Dundon's Blazers pair Ja Morant with Damian Lillard, back from a torn Achilles, under first-year coach Micah Nori. The Moda Center renovation lease is still being negotiated.",
+      "lastSeason": "42-40. Beat Phoenix 114-110 in the play-in for the No. 7 seed, then lost 4-1 to San Antonio in the first round.",
+      "headCoach": "Micah Nori, in his first season. He came from Minnesota's staff.",
+      "stars": ["Damian Lillard", "Ja Morant", "Deni Avdija", "Shaedon Sharpe", "Donovan Clingan", "Jrue Holiday"],
+      "keyMoves": [
+        "Traded Jerami Grant and Kris Murray to Memphis for Ja Morant (June 29)",
+        "Hired head coach Micah Nori",
+        "Robert Williams III extension, per FadeawayWorld. Terms not verified",
+        "Lillard returns after missing all of 2025-26 with the Achilles tear. Avdija, Clingan, Holiday, Camara and Sharpe are also back"
+      ],
+      "expectations": "BetMGM win total: 43.5. Nori may bring Lillard or Morant off the bench and will decide after the preseason.",
+      "ownershipArena": "Tom Dundon bought the team in March 2026. Oregon, Multnomah County and Portland committed $586M toward roughly $600M in Moda Center upgrades. Oregon's share is $365M, with joint state ownership. Multnomah County committed $101M and Portland $120M. Lease terms are still pending, and Dundon had said he would not pay for the work.",
+      "cityEdition": "Re-wearing the 2019-20 City Edition in 2026-27.",
+      "marquee": [
+        "NBA Cup West Group C with SAS, LAL, GSW and SAC",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Portland Trail Blazers offseason recap, early 2026-27 season preview (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/49591469/portland-trai-blazers-offseason-recap-2026-27-season-preview-stats-roster-depth-chart"},
+        {"title": "Blazers trade for Ja Morant (Willamette Week)", "url": "https://www.wweek.com/sports/2026/06/29/blazers-trade-for-ja-morant/"},
+        {"title": "Grading the Trail Blazers' 2026 NBA offseason (FadeawayWorld)", "url": "https://fadeawayworld.net/?p=193117"},
+        {"title": "Ja Morant, Damian Lillard potential bench role discussed (Bleacher Report)", "url": "https://bleacherreport.com/articles/25505903-ja-morant-damian-lillard-potentially-being-used-bench-role-discussed-hc-ahead-nba-season"},
+        {"title": "NBA Commissioner Silver visits Portland after arena bill passes (OPB)", "url": "https://www.opb.org/article/2026/03/14/nba-commissioner-silver-visits-portland"},
+        {"title": "NBA Play-In Tournament 2026: Results, Recap and Playoff Teams (ScoresAndStats)", "url": "https://www.scoresandstats.com/blog/nba-play-in-tournament-odds-predictions/"},
+        {"title": "Cavaliers 2026-27 City Edition jerseys announced; league selections roundup (Yardbarker)", "url": "https://www.yardbarker.com/nba/articles/cleveland_cavaliers_2026_27_city_edition_jerseys_announced/s1_17132_44237418"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "sac",
+      "teamMoment": "A youth movement led by No. 7 pick Darius Acuff Jr., with holdovers Domantas Sabonis, Zach LaVine and Malik Monk. Sacramento is widely projected near the bottom of the West.",
+      "lastSeason": "22-60, missed the playoffs. Tied Utah's record and lost the lottery tiebreak.",
+      "headCoach": "Doug Christie, in his second full season. The team holds an option on 2027-28.",
+      "stars": ["Domantas Sabonis", "Zach LaVine", "Malik Monk", "Darius Acuff Jr. (No. 7 pick)"],
+      "keyMoves": [
+        "Drafted Darius Acuff Jr. (Arkansas) No. 7. Added Alex Karaban and Emanuel Sharp",
+        "Signed Ben Simmons to a one-year deal",
+        "Retained Precious Achiuwa",
+        "DeMar DeRozan (to Denver) and Russell Westbrook departed"
+      ],
+      "expectations": "Rebuilding. One anonymous scout put it plainly: 'yeah, they're going to be bad.' No BetMGM win total was verified.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "The 2026-27 City design is not verified. The Kings are one of eight historic franchises getting Nike's new 'Specter' uniforms.",
+      "marquee": [
+        "NBA Cup West Group C with SAS, LAL, POR and GSW",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Sacramento Kings offseason recap, early 2026-27 season preview (ESPN)", "url": "https://www.espn.com/nba/story/_/id/49733549"},
+        {"title": "Kings will bring back coach Doug Christie for a second full season (KSAT/AP)", "url": "https://www.ksat.com/sports/2026/04/12/kings-will-bring-back-coach-doug-christie-for-a-second-full-season-ap-source-says/"},
+        {"title": "2026-27 Kings roster, contracts, options and depth chart (SI)", "url": "https://www.si.com/nba/kings/onsi/2026-27-kings-roster-contracts-options-and-depth-chart"},
+        {"title": "Anonymous NBA scout breaks down Kings (SI)", "url": "https://www.si.com/nba/anonymous-nba-scout-breaks-down-kings-yeah-theyre-going-to-be-bad"},
+        {"title": "NBA holds coin flips to finalize pre-lottery draft order (Eurohoops)", "url": "https://www.eurohoops.net/en/nba-news/1958507/nba-2026-draft-tiebreaker-results/"},
+        {"title": "Nike NBA Specter uniforms for historic franchises (NBC Bay Area)", "url": "https://www.nbcbayarea.com/nba/nike-nba-specter-uniforms-new-historic-franchises/4143124/"}
+      ]
+    },
+    {
+      "team": "sas",
+      "teamMoment": "The 2026 West champions and Finals runners-up run it back after locking up Victor Wembanyama and De'Aaron Fox. They're title co-favorites with OKC. Downtown-arena planning for Project Marvel goes on.",
+      "lastSeason": "62-20, West No. 2. Beat Portland 4-1, Minnesota 4-2 and defending champion OKC 4-3 in the West finals. Lost the NBA Finals 4-1 to the Knicks, New York's first title since 1973.",
+      "headCoach": "Mitch Johnson. No 2026 coaching change was reported.",
+      "stars": ["Victor Wembanyama", "De'Aaron Fox", "Stephon Castle", "Dylan Harper", "Devin Vassell", "Tobias Harris"],
+      "keyMoves": [
+        "Wembanyama 5-year, $252M extension, taking less than the $303M max",
+        "Fox 4-year, $229M max extension through 2029-30",
+        "No marquee trade. The Finals group returns with frontcourt depth from the draft and free agency (Tarris Reed Jr. and Jayden Quaintance on the depth chart)"
+      ],
+      "expectations": "BetMGM win total: 59.5. Fox Sports odds make the Spurs title co-favorites with OKC. They have 34 national TV games.",
+      "ownershipArena": "Project Marvel is a planned $1.3B downtown arena inside a ~$4B district. It extends the non-relocation agreement to 2062 but is at least five years away. The team ran a 10-stop community listening tour in summer 2026. It is also seeking amendments to its Frost Bank Center lease.",
+      "cityEdition": "The Fiesta-stripe City Edition returns for 2026-27: a black base with Fiesta-colored stripes on the chest and shorts. It was unveiled in November 2025.",
+      "marquee": [
+        "Oct 20 opening night: vs OKC, 9:30 p.m. ET (NBC/Peacock), a West finals rematch",
+        "Dec 25: at Knicks, noon ET, a Finals rematch",
+        "Mar 7: vs Knicks in San Antonio",
+        "Games scheduled in Austin, Paris and Manchester, England",
+        "NBA Cup West Group C with LAL, POR, GSW and SAC"
+      ],
+      "sources": [
+        {"title": "San Antonio Spurs offseason recap, early 2026-27 season preview (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/49516685/san-antonio-spurs-offseason-recap-2026-27-season-preview-stats-roster-depth-chart"},
+        {"title": "2026 NBA Finals (Wikipedia)", "url": "https://en.wikipedia.org/wiki/2026_NBA_Finals"},
+        {"title": "NBA Western Conference champion Spurs release 2026-2027 schedule (TPR)", "url": "https://www.tpr.org/news/2026-08-13/nba-western-conference-champion-spurs-release-2026-2027-schedule"},
+        {"title": "With fandom at a high, Spurs seek amendments to Frost Bank Center lease (TPR)", "url": "https://www.tpr.org/government-politics/2026-07-04/with-fandom-at-a-high-spurs-seek-amendments-to-frost-bank-center-lease"},
+        {"title": "Spurs bring back fan favorite in new City Edition uniforms (Pounding The Rock)", "url": "https://www.poundingtherock.com/spurs-news/89350/spurs-bring-back-fan-favorite-in-new-city-edition-uniforms"},
+        {"title": "2026-27 NBA Finals Odds: Spurs, Thunder favored (Fox Sports)", "url": "https://amp.foxsports.com/stories/nba/2026-27-nba-finals-odds"},
+        {"title": "2026-27 opening night, Christmas Day schedule (Awful Announcing)", "url": "https://awfulannouncing.com/nba/2026-27-opening-night-christmas-day-schedule-lebron-sixers.html"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    },
+    {
+      "team": "uta",
+      "teamMoment": "Utah's youth movement speeds up. No. 2 pick Darryn Peterson and Ace Bailey play next to veterans Lauri Markkanen and Jaren Jackson Jr., and Will Hardy is under pressure to develop them.",
+      "lastSeason": "22-60, missed playoffs. Acquired Jaren Jackson Jr. from Memphis at the February deadline.",
+      "headCoach": "Will Hardy",
+      "stars": ["Lauri Markkanen", "Jaren Jackson Jr.", "Darryn Peterson (No. 2 pick)", "Ace Bailey"],
+      "keyMoves": [
+        "Drafted Darryn Peterson (Kansas) No. 2",
+        "Sent Walker Kessler to the Lakers (sign-and-trade) for unprotected 2031 and 2033 firsts plus 2028 and 2030 swaps",
+        "Added Jaxson Hayes and Josh Okogie; retained Jusuf Nurkic"
+      ],
+      "expectations": "BetMGM win total: 35.5, about 13 wins better than 2025-26.",
+      "ownershipArena": "Not verified this session.",
+      "cityEdition": "Same as 2025-26: a vertical gray gradient with baby blue trim, announced for both 2025-26 and 2026-27.",
+      "marquee": [
+        "NBA Cup West Group A with DEN, HOU, PHX and DAL",
+        "Not on the opening-night (Oct 20) or Christmas Day slates"
+      ],
+      "sources": [
+        {"title": "Utah Jazz offseason recap, early 2026-27 season preview (ESPN)", "url": "https://africa.espn.com/nba/story/_/id/49591964/utah-jazz-offseason-recap-2026-27-season-preview-stats-roster-depth-chart"},
+        {"title": "Utah Jazz stacked with young talent for the 2026-27 season (FadeawayWorld)", "url": "https://fadeawayworld.net/nba/utah-jazz/utah-jazz-stacked-with-young-talent-for-the-2026-27-nba-season"},
+        {"title": "Is the Utah Jazz win total projection fair (Roundtable)", "url": "https://roundtable.io/sports/nba/jazz/news/is-the-utah-jazz-win-total-projection-fair"},
+        {"title": "Utah Jazz release new gray City uniforms (Salt Lake Tribune)", "url": "https://www.sltrib.com/sports/jazz/2025/10/30/utah-jazz-release-new-gray-city"},
+        {"title": "NBA holds coin flips to finalize pre-lottery draft order (Eurohoops)", "url": "https://www.eurohoops.net/en/nba-news/1958507/nba-2026-draft-tiebreaker-results/"},
+        {"title": "NBA Win Totals 2026-27 (BetMGM)", "url": "https://sports.betmgm.com/en/blog/nba/nba-odds-predictions-season-win-totals-bm23/"}
+      ]
+    }
+  ]
+}

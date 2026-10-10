@@ -1,0 +1,298 @@
+{
+  "team": "dal",
+  "lens": "music",
+  "headline": "Every Dallas neighborhood has a sound. The Mavs still don't have one.",
+  "summary": "Dallas music is layered by neighborhood: Deep Ellum's 1920s blues and its punk and indie rooms, Oak Cliff's neo-soul around Erykah Badu, and rap from South and Southern Dallas. A huge Mexican-American audience listens from Oak Cliff, Pleasant Grove and the suburbs. No Mavs anthem is fixed, so Nike can help local artists write one. Everything here comes from model knowledge, so check venues and artist-team ties live before launch.",
+  "insights": [
+    {
+      "title": "Deep Ellum is the origin story",
+      "detail": "In the 1920s-30s Deep Ellum was a Black-founded blues and jazz district. Blind Lemon Jefferson played there, Lead Belly was active, and Robert Johnson recorded in Dallas in 1937. Today it is a mural-covered strip of rock, punk, hip-hop and indie rooms.",
+      "implication": "A Deep Ellum story gives a City Edition or lifestyle capsule real depth beyond cowboys and skylines. Credit the blues history and work with Deep Ellum artists."
+    },
+    {
+      "title": "Oak Cliff soul is the city's cool-factor export",
+      "detail": "Erykah Badu is Dallas's defining neo-soul voice and a visible local figure. Oak Cliff's Kessler Theater and Bishop Arts scene carry that lineage. Leon Bridges and Norah Jones sit nearby in the DFW soul and singer-songwriter orbit.",
+      "implication": "Warm, lived-in, Afrocentric-adjacent styling suits an off-court lifestyle line. Pay and credit every collaborator. Never borrow."
+    },
+    {
+      "title": "Dallas rap has its own regional identity",
+      "detail": "Dallas hip-hop has long stood apart from Houston and Atlanta. It had local radio hits in the 2000s, and K104 (KKDA) is its commercial voice. Locals cite Dorrough Music, Big Tuck and Erykah-adjacent collaborators.",
+      "implication": "Seed rising Dallas rappers into tunnel fits, content and in-arena moments. Don't lean on national names."
+    },
+    {
+      "title": "Regional Mexican and Tejano listening is a core, under-served audience",
+      "detail": "DFW's large Mexican-American population listens to regional Mexican, norteno, Tejano and cumbia. Spanish-language radio and big venues like Texas Trust CU Theatre and Dos Equis Pavilion program it.",
+      "implication": "Mavs Latino-heritage nights and Spanish-language product make a music-led launch lane. Partner with local Latino designers and promoters."
+    },
+    {
+      "title": "The Mavs have no settled sound right now",
+      "detail": "The franchise is resetting around Cooper Flagg, Kyrie Irving and a first-year coach, and fans are rebuilding trust after a 26-56 season. No single walkout song or anthem defines this roster.",
+      "implication": "A commissioned Dallas-artist mixtape or Flagg-era anthem is a low-risk way to own the story early in the season."
+    },
+    {
+      "title": "The State Fair is Dallas's loudest recurring music moment",
+      "detail": "The State Fair of Texas runs at Fair Park from late September to mid-October, with live stages, Big Tex and the Cotton Bowl-adjacent grounds. It overlaps the NBA preseason and opening weeks.",
+      "implication": "A Fair Park pop-up sits where tradition meets tip-off, though Fair Park imagery belongs to its own institutions."
+    }
+  ],
+  "places": [
+    {
+      "name": "Deep Ellum (Elm and Main corridor)",
+      "kind": "district",
+      "neighborhood": "Deep Ellum",
+      "why": "Historic blues district, now a live-music and mural district."
+    },
+    {
+      "name": "Trees",
+      "kind": "venue",
+      "neighborhood": "Deep Ellum",
+      "why": "Mid-size rock and hip-hop room with deep local-band history."
+    },
+    {
+      "name": "Club Dada",
+      "kind": "venue",
+      "neighborhood": "Deep Ellum",
+      "why": "Long-standing small room for local acts and singer-songwriters."
+    },
+    {
+      "name": "The Kessler Theater",
+      "kind": "venue",
+      "neighborhood": "Oak Cliff",
+      "why": "Restored 1942 theater anchoring Oak Cliff's soul and Americana scene."
+    },
+    {
+      "name": "Granada Theater",
+      "kind": "venue",
+      "neighborhood": "Lower Greenville",
+      "why": "Historic theater and a Dallas indie and soul touchstone."
+    },
+    {
+      "name": "Good Records",
+      "kind": "record store",
+      "neighborhood": "Lower Greenville",
+      "why": "Independent record store known for in-store shows and backing local music."
+    },
+    {
+      "name": "KNON 89.3 FM",
+      "kind": "radio",
+      "neighborhood": "Dallas",
+      "why": "Community radio with long-running blues, hip-hop and Latin shows."
+    },
+    {
+      "name": "KKDA 104.5 (K104)",
+      "kind": "radio",
+      "neighborhood": "Dallas",
+      "why": "The commercial hip-hop and R&B voice of Dallas."
+    },
+    {
+      "name": "Fair Park",
+      "kind": "district",
+      "neighborhood": "South Dallas",
+      "why": "Home of the State Fair of Texas and big music events."
+    },
+    {
+      "name": "Texas Trust CU Theatre",
+      "kind": "venue",
+      "neighborhood": "Grand Prairie",
+      "why": "Large theater that books regional Mexican and Latin touring acts."
+    }
+  ],
+  "people": [
+    {
+      "name": "Erykah Badu",
+      "role": "neo-soul artist and cultural figure",
+      "why": "Dallas's best-known musical ambassador. Negotiate any collaboration with her directly."
+    },
+    {
+      "name": "Leon Bridges",
+      "role": "soul singer",
+      "why": "Fort Worth-based voice of the DFW soul revival."
+    },
+    {
+      "name": "Norah Jones",
+      "role": "singer-songwriter",
+      "why": "Raised in the DFW suburbs, a Texas-music credential."
+    },
+    {
+      "name": "Post Malone",
+      "role": "rapper and singer",
+      "why": "Raised in Grapevine, a national DFW name."
+    },
+    {
+      "name": "Dorrough Music",
+      "role": "rapper",
+      "why": "Dallas rap hit-maker of the late 2000s, still a local radio staple."
+    },
+    {
+      "name": "Big Tuck",
+      "role": "rapper",
+      "why": "South Dallas rap veteran and local radio staple."
+    },
+    {
+      "name": "The Polyphonic Spree",
+      "role": "choral indie band",
+      "why": "Denton-Dallas group known for white robes and a distinct look."
+    },
+    {
+      "name": "Blind Lemon Jefferson",
+      "role": "blues pioneer",
+      "why": "Deep Ellum's foundational blues figure. Tell his story with the estate in mind, and history only."
+    }
+  ],
+  "moments": [
+    {
+      "name": "State Fair of Texas",
+      "timing": "Late September to mid-October",
+      "month": 10,
+      "why": "Dallas's biggest annual gathering, with live stages and Big Tex."
+    },
+    {
+      "name": "Mavericks opening week",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The season tips off Oct 20 league-wide. The Mavs open their NBA Cup run on Oct 30."
+    },
+    {
+      "name": "Deep Ellum Arts Festival",
+      "timing": "Spring",
+      "month": 4,
+      "why": "Long-running outdoor arts and music weekend in Deep Ellum."
+    },
+    {
+      "name": "Day of the Dead events",
+      "timing": "Late October to early November",
+      "month": 11,
+      "why": "Latino-community art and music events across Dallas, notably at Fair Park and Oak Cliff."
+    },
+    {
+      "name": "Every home game",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "In-arena DJ, halftime and walkout culture at American Airlines Center is the natural place for a local-artist takeover."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Big D",
+      "meaning": "Long-used Dallas nickname in rap and local radio."
+    },
+    {
+      "term": "DFW",
+      "meaning": "Dallas-Fort Worth. Locals use it as one shared identity for the metroplex."
+    },
+    {
+      "term": "Oak Cliff",
+      "meaning": "Southwest Dallas neighborhood and cultural heart of soul, Latino and arts communities."
+    },
+    {
+      "term": "Deep Ellum",
+      "meaning": "Historic entertainment district east of downtown."
+    },
+    {
+      "term": "Mavs",
+      "meaning": "The standard team nickname. The fanbase is Mavs Nation."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Mavericks royal blue",
+      "type": "color",
+      "hex": "#00538C",
+      "source": "Mavericks primary brand color",
+      "use": "Anchor color for a music capsule, so it reads as team product."
+    },
+    {
+      "cue": "Deep navy night",
+      "type": "color",
+      "hex": "#002B5E",
+      "source": "Mavericks secondary navy and a Texas night-sky feel",
+      "use": "Dark base for tour-tee graphics."
+    },
+    {
+      "cue": "Silver and chrome",
+      "type": "color",
+      "hex": "#B8C4CA",
+      "source": "Mavericks silver and Dallas glass-skyline reflections",
+      "use": "Metallic trim, heat-transfer logos and reflective details."
+    },
+    {
+      "cue": "Layered flyer-wall collage",
+      "type": "texture",
+      "hex": "",
+      "source": "Deep Ellum postered walls and murals",
+      "use": "Overprinted gig-poster collage on tees and linings, commissioned from Deep Ellum artists."
+    },
+    {
+      "cue": "Blues-era woodtype lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "1920s-30s Deep Ellum handbills and record labels",
+      "use": "Display type for heritage graphics, with historical references credited."
+    },
+    {
+      "cue": "Cowboy-western stitch detailing without costume",
+      "type": "pattern",
+      "hex": "",
+      "source": "Texas dance-hall and venue sign culture",
+      "use": "Subtle yoke stitching and snap details on warm-ups. No literal cowboy costume."
+    },
+    {
+      "cue": "Mavs x local artist story card",
+      "type": "story",
+      "hex": "",
+      "source": "Dallas-artist-led design culture",
+      "use": "Put a short credit tag on each piece naming the Dallas artist behind it."
+    }
+  ],
+  "productHooks": [
+    "Deep Ellum poster-wall capsule: tees, hoodies and shell jackets with overprinted collage graphics by commissioned Deep Ellum artists.",
+    "Flagg-era Dallas mixtape drop: limited tour-tee-style merch tied to a playlist or EP commissioned from local artists.",
+    "Bilingual heritage collection co-designed with Dallas Latino creatives, built on regional Mexican and Tejano music references.",
+    "Blues-roots heritage warm-up jacket with woodtype lettering, plus a donation to a Deep Ellum preservation or music-education group."
+  ],
+  "watchouts": [
+    "Get direct licensing and consent before using Blind Lemon Jefferson's or Erykah Badu's name, likeness or album art, or any other artist's.",
+    "Skip cowboy and western costume tropes. Dallas music is Black, Latino and urban as much as Texas country.",
+    "Get licensing from the institutions before using Big Tex, Fair Park, State Fair or venue logos.",
+    "Several named venues and artist-team ties are from memory. Confirm them before any public mention."
+  ],
+  "sources": [
+    {
+      "title": "Dallas Mavericks (official)",
+      "url": "https://www.nba.com/mavericks"
+    },
+    {
+      "title": "Deep Ellum, Dallas (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Deep_Ellum,_Dallas"
+    },
+    {
+      "title": "Erykah Badu (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Erykah_Badu"
+    },
+    {
+      "title": "State Fair of Texas (official)",
+      "url": "https://bigtex.com"
+    },
+    {
+      "title": "American Airlines Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/American_Airlines_Center"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm American Airlines Center's current in-arena DJ, halftime and walkout-song practice, and any 2026-27 Mavs anthem or artist partnerships.",
+      "Confirm any documented ties between Erykah Badu, Post Malone, Dorrough Music or other named artists and the Mavericks, Cooper Flagg or Kyrie Irving.",
+      "Confirm Trees, Club Dada, Kessler Theater, Granada Theater and Good Records still operate under those names.",
+      "Confirm the current names and operators of Texas Trust CU Theatre and Dos Equis Pavilion, and their 2026-27 bookings.",
+      "Confirm the State Fair of Texas 2026 dates and whether the run overlaps preseason as described.",
+      "Confirm Deep Ellum Arts Festival 2027 timing and whether it still runs in spring.",
+      "Confirm KKDA 104.5 and KNON 89.3 formats and call signs as of 2026.",
+      "Confirm the Mavericks 2026-27 City Edition uniform theme and any music tie-in.",
+      "Confirm the Dia de los Muertos events named still run at Fair Park and Oak Cliff in 2026.",
+      "Confirm current Mavericks brand hex values for blue, navy and silver."
+    ]
+  }
+}

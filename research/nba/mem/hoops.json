@@ -1,0 +1,304 @@
+{
+  "team": "mem",
+  "lens": "hoops",
+  "headline": "Every road in Memphis basketball runs through Penny Hardaway",
+  "summary": "Memphis basketball is neighborhood-first and Black-led. Orange Mound, North Memphis, Whitehaven and Hickory Hill claim their players by block and high school before the NBA gets a look. Penny Hardaway is the through-line: Memphis East alumnus, Nike legend, Tigers head coach. With the Grizzlies in a full reset, local identity is moving from star worship back to grit and place.",
+  "insights": [
+    {
+      "title": "Penny Hardaway anchors the market",
+      "detail": "Hardaway went from Memphis East to Memphis State to the NBA and Nike's Air Penny line, then came home as Tigers coach. Memphis claims him as its own, not as a national icon. Few NBA markets have a signature Nike athlete who also fronts the local college program.",
+      "implication": "Pair Penny heritage product with Tigers and Memphis-specific graphics. Treat it as a Memphis story first and a retro-footwear drop second."
+    },
+    {
+      "title": "Pride runs by neighborhood and high school, not by team",
+      "detail": "Locals introduce a hooper by neighborhood, such as Orange Mound, North Memphis, Whitehaven or Hickory Hill, or by school: Melrose, Manassas, Whitehaven, Memphis East. AAU teams like Team Penny carry that identity to the national circuit. Public-school pride is the frame, with private programs like MUS and Briarcrest as foils.",
+      "implication": "Use neighborhood and school-code graphics (area code, zip, block) to read as local. Generic Memphis marks won't."
+    },
+    {
+      "title": "The Grizzlies reset reopens the grit story",
+      "detail": "With Ja Morant and Jaren Jackson Jr. traded and a young group around Boozer, Edey and Coward, fans are talking about Grit and Grind values again: defense, effort, toughness. Tony Allen, Zach Randolph and Marc Gasol are the benchmark.",
+      "implication": "Lean on work-ethic language and blue-collar materials in team product. Don't build a collection around any one departed star."
+    },
+    {
+      "title": "Morant's Nike line is now a Portland story",
+      "detail": "Ja Morant is a Nike signature athlete and was the face of Memphis product, but he now plays for Portland. Memphis inventory and graphics tied to his number or Ja 1 colorways will age fast here.",
+      "implication": "Tell the Memphis story through place and legacy. Keep Ja product as a national line, not a local anchor."
+    },
+    {
+      "title": "Three stages: the pros, the G League and the Tigers",
+      "detail": "The Memphis Hustle, the Grizzlies' G League affiliate, play across the state line at the Landers Center in Southaven, Mississippi. The Tigers play at FedExForum. Memphis has no WNBA team, so the women's game lives in high school and college.",
+      "implication": "Reach Hustle and Tigers crowds with lower-priced, accessible product. Don't plan WNBA product for this market."
+    },
+    {
+      "title": "Jookin moves onto the court",
+      "detail": "Jookin and gangsta walking are Black Memphis dance forms with their own lineage in Orange Mound and South Memphis. They turn up beside hoops at cookouts, courts and games.",
+      "implication": "Use jookin only through partnerships with credited Memphis dancers and crews. Fluid, footwork-first cues can inform silhouettes and graphics, but don't copy choreography."
+    }
+  ],
+  "places": [
+    {
+      "name": "Orange Mound",
+      "kind": "neighborhood",
+      "neighborhood": "Orange Mound",
+      "why": "One of the country's oldest Black-built neighborhoods, home to Melrose High and a deep pickup and community-center hoops culture."
+    },
+    {
+      "name": "Melrose High School gym",
+      "kind": "high school gym",
+      "neighborhood": "Orange Mound",
+      "why": "Orange Mound's Golden Wildcats carry the neighborhood's basketball pride."
+    },
+    {
+      "name": "FedExForum",
+      "kind": "arena",
+      "neighborhood": "Downtown, near Beale Street",
+      "why": "Shared home of the Grizzlies and the Memphis Tigers, and the center of the pro and college calendar."
+    },
+    {
+      "name": "Mid-South Coliseum",
+      "kind": "historic arena",
+      "neighborhood": "Midtown, Fairgrounds",
+      "why": "The closed, much-loved former home of Memphis State basketball. Older Tigers fans feel nostalgic about it, and locals are still interested in preserving it."
+    },
+    {
+      "name": "Landers Center",
+      "kind": "arena",
+      "neighborhood": "Southaven, MS",
+      "why": "Home court of the Memphis Hustle, the Grizzlies' G League affiliate."
+    },
+    {
+      "name": "Memphis East High School",
+      "kind": "high school",
+      "neighborhood": "East Memphis",
+      "why": "Penny Hardaway's alma mater and a heritage landmark of Memphis basketball."
+    },
+    {
+      "name": "Gaston Community Center",
+      "kind": "community center and court",
+      "neighborhood": "South Memphis",
+      "why": "A long-running neighborhood hoops center on the city's south side."
+    },
+    {
+      "name": "University of Memphis campus",
+      "kind": "college campus",
+      "neighborhood": "University District",
+      "why": "Home of the Tigers program and the Larry Finch-era basketball heritage."
+    }
+  ],
+  "people": [
+    {
+      "name": "Penny Hardaway",
+      "role": "Memphis Tigers head coach, former NBA All-Star, Nike signature athlete",
+      "why": "Memphis East and Memphis State product, the city's central basketball figure and a direct Nike link."
+    },
+    {
+      "name": "Larry Finch",
+      "role": "Late Memphis State legend and coach",
+      "why": "Led Memphis State to the 1973 NCAA title game and is still a foundational figure for Tigers fans."
+    },
+    {
+      "name": "Lorenzen Wright",
+      "role": "Late Memphis native and former NBA player",
+      "why": "A hometown pro, still remembered with strong local affection."
+    },
+    {
+      "name": "Elliot Perry",
+      "role": "Former NBA guard and Memphis State alumnus",
+      "why": "A Memphis State-generation local hero who stayed connected to the city."
+    },
+    {
+      "name": "Zach Randolph",
+      "role": "Grizzlies Grit and Grind icon",
+      "why": "Z-Bo's number and persona define the fan idea of Memphis toughness."
+    },
+    {
+      "name": "Marc Gasol",
+      "role": "Grizzlies Grit and Grind center",
+      "why": "Anchor of the 2010s identity that fans hold up as the benchmark for the current team."
+    },
+    {
+      "name": "Ja Morant",
+      "role": "Former Grizzlies guard, Nike signature athlete, now with Portland",
+      "why": "Defined the last era of Memphis product and is a reference point in the rebuild conversation."
+    },
+    {
+      "name": "Cameron Boozer",
+      "role": "Grizzlies rookie, No. 3 pick",
+      "why": "The face of the new Grizzlies era and a leading Rookie of the Year candidate."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Grizzlies season tip-off and NBA Cup group play",
+      "timing": "Opens Oct 20; Cup Night at Minnesota Oct 30",
+      "month": 10,
+      "why": "First chance to read fan sentiment on the Boozer-led team and the post-Morant identity."
+    },
+    {
+      "name": "Memphis Tigers season",
+      "timing": "November through March",
+      "month": 11,
+      "why": "Hardaway's program sells out the same FedExForum floor and is the city's second basketball home."
+    },
+    {
+      "name": "MLK Day Grizzlies vs. Rockets",
+      "timing": "Jan 18, 2027",
+      "month": 1,
+      "why": "A nationally relevant game in a city with deep civil rights history around the Lorraine Motel and the National Civil Rights Museum."
+    },
+    {
+      "name": "High school district and state tournament run",
+      "timing": "February to March",
+      "month": 2,
+      "why": "Memphis public school rivalries peak, and the Tennessee state tournament brings neighborhood pride."
+    },
+    {
+      "name": "Grizzlies playoff window",
+      "timing": "April to June",
+      "month": 4,
+      "why": "Likely a lottery season, so April may center on the draft lottery and Boozer's rookie year more than a playoff run."
+    },
+    {
+      "name": "Summer AAU and EYBL circuit",
+      "timing": "June to July",
+      "month": 7,
+      "why": "Local programs like Team Penny compete nationally and put Memphis recruits in the spotlight."
+    },
+    {
+      "name": "Memphis in May",
+      "timing": "May",
+      "month": 5,
+      "why": "The city's big cultural month is a chance to pair basketball with Memphis music and food."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Grit and Grind",
+      "meaning": "The Grizzlies identity of the 2010s: defense, rebounding and toughness. Still the fans' benchmark."
+    },
+    {
+      "term": "Z-Bo",
+      "meaning": "Fan nickname for Zach Randolph, shorthand for the Grit and Grind era."
+    },
+    {
+      "term": "Jookin",
+      "meaning": "Memphis street dance rooted in Black Memphis, often associated with gangsta walking."
+    },
+    {
+      "term": "The Mound",
+      "meaning": "Short name for Orange Mound, used by locals with pride."
+    },
+    {
+      "term": "Tiger Blue",
+      "meaning": "The University of Memphis blue-and-gray identity, which fans call by its color."
+    },
+    {
+      "term": "901",
+      "meaning": "The Memphis area code, used on shirts, courts and teams as shorthand for the city."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Beale Street Blue",
+      "type": "color",
+      "hex": "#5D76A9",
+      "source": "Grizzlies secondary blue, tied to Beale Street identity",
+      "use": "A Memphis-only accent on team-linked product."
+    },
+    {
+      "cue": "Tiger Blue",
+      "type": "color",
+      "hex": "#003087",
+      "source": "University of Memphis athletics palette",
+      "use": "Use on Tigers and Penny-linked product. License any marks with the university."
+    },
+    {
+      "cue": "Midnight Blue",
+      "type": "color",
+      "hex": "#12173F",
+      "source": "Grizzlies primary navy",
+      "use": "Base color for premium Memphis outerwear."
+    },
+    {
+      "cue": "901 area-code graphic",
+      "type": "graphic",
+      "hex": "",
+      "source": "Memphis neighborhood and area-code pride",
+      "use": "Chest or back graphic in a custom block, never generic city-name type."
+    },
+    {
+      "cue": "Penny Air silhouettes and Orlando-era cuts",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Hardaway's Nike legacy",
+      "use": "Retro silhouette references and chunky basketball shorts."
+    },
+    {
+      "cue": "Gym-floor wood and chain-link",
+      "type": "texture",
+      "hex": "",
+      "source": "Neighborhood community-center courts",
+      "use": "Print and embossing details on warm-ups and bags."
+    },
+    {
+      "cue": "Neighborhood-forward hand-painted lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Local signage and school-gym lettering",
+      "use": "Commission local letterers and credit them."
+    }
+  ],
+  "productHooks": [
+    "Penny Hardaway x Memphis capsule in Tiger Blue with Memphis East heritage, co-developed with Hardaway's team and the University of Memphis licensing office.",
+    "Neighborhood-pride shooting shirts and warm-ups (Orange Mound, North Memphis, Whitehaven, Hickory Hill), with local artists credited by name.",
+    "Grizzlies City Edition tie-in that revives or recolors an earlier design, built on the Grit and Grind toughness story, not on any one star.",
+    "Memphis Hustle and Tigers court collection at accessible prices, for local AAU, rec and high school players."
+  ],
+  "watchouts": [
+    "Third-party IP needs licensing or partner approval: University of Memphis, Memphis East, school and AAU marks, Three 6 Mafia and other Memphis rap catalog.",
+    "Don't build the local story around Ja Morant, who now plays for Portland. Keep his product separate from Memphis place-based product.",
+    "Jookin and gangsta walking belong to Black Memphis communities. Work only with credited, paid dancers, and never use their moves as decoration.",
+    "Memphis is a majority-Black city with a poverty problem. Skip poverty and violence tropes and lead with creativity, craft and pride."
+  ],
+  "sources": [
+    {
+      "title": "Memphis Grizzlies (official)",
+      "url": "https://www.nba.com/grizzlies"
+    },
+    {
+      "title": "Memphis Hustle (official)",
+      "url": "https://hustle.gleague.nba.com"
+    },
+    {
+      "title": "Memphis Tigers men's basketball (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Memphis_Tigers_men%27s_basketball"
+    },
+    {
+      "title": "Penny Hardaway (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Penny_Hardaway"
+    },
+    {
+      "title": "Orange Mound, Memphis (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Orange_Mound,_Memphis"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Penny Hardaway is still Memphis Tigers head coach for 2026-27",
+      "Confirm the Memphis Hustle still play at the Landers Center in Southaven, MS in 2026-27 and are still the Grizzlies affiliate",
+      "Check Team Penny's current AAU circuit affiliation (Nike EYBL or another circuit)",
+      "Confirm the Grizzlies 2026-27 City Edition design, colors and release date",
+      "Check Mid-South Coliseum preservation and redevelopment status",
+      "Confirm Gaston Community Center is open and hosts pickup basketball",
+      "Check for local summer pro-am or streetball leagues operating in 2026 (none named here)",
+      "Confirm Grizzlies ownership and FedExForum naming-rights status",
+      "Confirm Tennessee high school state tournament dates and the Memphis public-school powers for 2026-27",
+      "Confirm the Grizzlies hex values for Beale Street Blue and Midnight Blue match current brand guidelines",
+      "Confirm Memphis in May 2027 dates",
+      "Check Ja Morant's current Nike status and signature shoe release plans"
+    ]
+  }
+}

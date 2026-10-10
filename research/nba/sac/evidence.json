@@ -1,0 +1,146 @@
+{
+  "team": "sac",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "sac-c1",
+      "claim": "Nike Factory Store, Folsom Premium Outlets is a Nike-owned Valley door for kids, basics and past-season basketball.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "nike factory store",
+          "url": "https://www.simon.com/brands/nike-factory-store",
+          "publisher": "Simon",
+          "published": ""
+        },
+        {
+          "title": "www.premiumoutlets.com",
+          "url": "https://www.premiumoutlets.com/brands/center/folsom",
+          "publisher": "Premium Outlets",
+          "published": ""
+        }
+      ],
+      "evidence": "Simon's Nike Factory Store brand page lists a store at Folsom Premium Outlets in Folsom, CA. The center is at 13000 Folsom Boulevard. Store hours were not shown.",
+      "action": "No change needed",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "valley-gift-ladder",
+          "bridge-gold-long-table"
+        ],
+        "calendar": [
+          5,
+          12
+        ]
+      }
+    },
+    {
+      "id": "sac-c2",
+      "claim": "Nike Factory Store, Vacaville Premium Outlets is a Nike-owned Valley door.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "81°F OPEN 11:00AM - 7:00PM",
+          "url": "https://www.premiumoutlets.com/outlet/vacaville/about",
+          "publisher": "Premium Outlets",
+          "published": ""
+        },
+        {
+          "title": "nike factory store napa",
+          "url": "https://www.nike.com/retail/s/nike-factory-store-napa",
+          "publisher": "Nike",
+          "published": ""
+        }
+      ],
+      "evidence": "The center's About page names Nike among its stores. A Nike.com locator snapshot lists a Nike Factory Store - Vacaville at 262 Nut Tree Rd marked Opening Soon, a different address from the center's 321 Nut Tree Rd. Simon's brand page did not show a Vacaville entry in the excerpt. Current status is not settled.",
+      "action": "No change. Keep the existing verify items for the Vacaville store.",
+      "supports": {
+        "insights": [
+          5
+        ],
+        "opportunities": [
+          "valley-gift-ladder",
+          "bridge-gold-long-table"
+        ],
+        "calendar": [
+          5,
+          12
+        ]
+      }
+    },
+    {
+      "id": "sac-c3",
+      "claim": "The Kings' home opener falls on or after Oct 20 (date to confirm).",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Kings News",
+          "url": "https://www.nbcsportsbayarea.com/nba/sacramento-kings/2026-27-schedule-released-dates-times/1956315/",
+          "publisher": "NBC Sports Bay Area",
+          "published": ""
+        },
+        {
+          "title": "www.nba.com",
+          "url": "https://www.nba.com/team/1610612758/schedule/1000",
+          "publisher": "NBA",
+          "published": ""
+        }
+      ],
+      "evidence": "The released schedule has the Kings opening at the Clippers on Oct 21 at Intuit Dome, then the home opener on Friday Oct 23 against Portland at Golden 1 Center. An earlier sourced report of an Oct 24 home opener against Golden State predates the schedule release.",
+      "action": "strategy.json calendar[1] window now names the Oct 23 home opener against Portland.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "beam-night-drops",
+          "uniform-moments",
+          "many-courts"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "sac-c4",
+      "claim": "Armadillo Music in Davis is an operating independent record shop for community-door drops (to confirm).",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "best downtown shop armadillo music",
+          "url": "https://theaggie.org/2024/04/18/best-downtown-shop-armadillo-music/",
+          "publisher": "The California Aggie",
+          "published": "2024-04-18"
+        },
+        {
+          "title": "theaggie.org",
+          "url": "https://theaggie.org/?p=79512",
+          "publisher": "The California Aggie",
+          "published": ""
+        }
+      ],
+      "evidence": "The Aggie named Armadillo Music, at 207 F Street in downtown Davis, best downtown shop in April 2024. The results show no 2026 coverage that confirms it is open now.",
+      "action": "No change. It stays marked 'to confirm' in the brief.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "sactown-sound-makers"
+        ],
+        "calendar": []
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

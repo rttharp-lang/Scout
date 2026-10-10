@@ -1,0 +1,381 @@
+{
+  "team": "gsw",
+  "lens": "food",
+  "headline": "Chase Center sits where the Bay's food lines cross, and the season runs through crab.",
+  "summary": "Bay food passes any swap test: sourdough with a bacterium named for San Francisco, the foil-wrapped Mission burrito, Dungeness crab at Christmas. Its living edge is immigrant and community kitchens, from Chinatown and Daly City to Fruitvale's taco trucks and Black-owned Oakland barbecue. Take cues from the table, make them with the businesses that own it, and sell in Oakland as well as at Chase Center.",
+  "insights": [
+    {
+      "title": "Chase Center sits on a food line",
+      "detail": "The Central Subway opened in late 2022. Since then the T Third light rail has run from Chinatown–Rose Pak station past the UCSF/Chase Center stop, then down Third Street into Bayview, the city's historically Black neighborhood. 16th Street runs from the arena door straight west to the Mission's taquerías. Thrive City, the plaza wrapped around the arena, is the pregame meeting point and the road-game watch-party site.",
+      "implication": "Plan game-day launches as a route, not a booth. Pay one Chinatown bakery and one Bayview kitchen for collab menu items, and drop product at Thrive City and at both ends of the line."
+    },
+    {
+      "title": "Christmas night is crab night",
+      "detail": "Dungeness crab is the Bay's holiday meal. The commercial season traditionally opens in mid-November, though recent openers have been delayed by whale-entanglement and domoic-acid rules. Christmas Eve means cioppino, the stew North Beach's Ligurian fishermen created. From January to March, 'crab feeds' (all-you-can-eat fundraisers) fill parish halls and school gyms. The Warriors host Denver on Christmas night at 7:30 p.m. PT.",
+      "implication": "A Christmas-game holiday pack in cooked-crab orange on Warriors navy is pure Bay. Tie part of the proceeds to a community crab feed, and don't date-lock product to the crab opener."
+    },
+    {
+      "title": "Bread is the Bay's texture library",
+      "detail": "Sourdough's signature bacterium was named Lactobacillus sanfranciscensis for the city in 1971. Boudin traces its mother dough to 1849, and Tartine's scored country loaf set the modern standard. Dutch crunch, the crackle-topped roll, is the default sandwich bread at Bay delis and almost unknown outside Northern California.",
+      "implication": "No other market owns Dutch crunch crackle or sourdough scoring. Use them as tonal embosses, jacquards or prints on warm-ups, with the bacterium story on an inside label."
+    },
+    {
+      "title": "Oakland feeds the loyalty",
+      "detail": "Oakland, the team's home from 1971 to 2019, has its own table. There's Everett & Jones Barbeque (Black-owned since 1973), the taco trucks along International Boulevard through Fruitvale, Oakland Chinatown, and Ethiopian and Eritrean kitchens on Telegraph. Chefs include Tanya Holland, Nelson German and Reem Assil. Many Oakland fans still cheer the team and still resent the move across the bay.",
+      "implication": "Give Oakland a drop of its own, co-created with Oakland food businesses and sold in Oakland, not a nostalgia graphic sold at Chase Center."
+    },
+    {
+      "title": "Filipino, Vietnamese and Chinese kitchens are the fan base's comfort food",
+      "detail": "Daly City is roughly a third Filipino, and Mitchell's Ice Cream has served ube and buko since long before ube went national. San Jose has the largest Vietnamese population of any U.S. city, and Lee's Sandwiches was founded there in 1983. The An family's garlic noodles at Thanh Long, served since 1971, became a citywide classic. October is Filipino American History Month, and the Warriors hold an annual Filipino Heritage Night.",
+      "implication": "Heritage capsules (ube for Filipino Heritage Night, Lunar New Year and Tết in February) should be co-designed with Filipino-, Vietnamese- and Chinese-American Bay creatives and kitchens. Credit and pay them. Don't build from color swatches."
+    },
+    {
+      "title": "The Mission burrito is the city's edible logo, and a displacement flashpoint",
+      "detail": "The foil-wrapped Mission-style burrito is San Francisco's most recognizable dish. La Taqueria famously leaves out the rice. FiveThirtyEight named it America's best burrito in 2014, and it's a James Beard America's Classic. The 24th Street corridor became the Calle 24 Latino Cultural District in 2014 to protect Latino businesses from tech-boom displacement. La Cocina in the Mission incubates immigrant women food entrepreneurs.",
+      "implication": "Burrito foil and hand-painted taquería lettering work only when Latino businesses and artists are paid partners. Go through Calle 24 or La Cocina, and never frame the burrito as tech-worker fuel."
+    },
+    {
+      "title": "The Currys made food part of the franchise's face",
+      "detail": "Ayesha Curry built a food brand: the cookbooks The Seasoned Life and The Full Plate, Food Network's Ayesha's Home Kitchen, and Sweet July. She and Stephen run the Eat. Learn. Play. Foundation, which funds child nutrition and food access in Oakland. Stephen launched Gentleman's Cut bourbon, and Jimmy Butler owns Bigface Coffee.",
+      "implication": "A food-access night with Eat. Learn. Play. fits Dub Nation. But athlete ventures are separate IP bound up with endorsement deals. Check Curry's and Butler's current footwear and apparel contracts, and keep alcohol off youth product."
+    }
+  ],
+  "places": [
+    {
+      "name": "Thrive City",
+      "kind": "public plaza",
+      "neighborhood": "Mission Bay",
+      "why": "The plaza wrapped around Chase Center is the pregame meeting point and has hosted official watch parties for road playoff games. It's the obvious place for food-collab pop-ups."
+    },
+    {
+      "name": "La Taqueria",
+      "kind": "taqueria",
+      "neighborhood": "Mission",
+      "why": "It serves the canonical Mission burrito, with no rice and an optional 'dorado' crisped tortilla. Every burrito argument in the city starts here."
+    },
+    {
+      "name": "Thanh Long",
+      "kind": "restaurant",
+      "neighborhood": "Outer Sunset",
+      "why": "The An family's roast Dungeness crab and garlic noodles, served since 1971, are the Bay's Vietnamese-American special-occasion meal."
+    },
+    {
+      "name": "Swan Oyster Depot",
+      "kind": "seafood counter",
+      "neighborhood": "Polk Gulch / Nob Hill",
+      "why": "Open since 1912, this counter-only seafood bar sums up the city's crab culture, with its line for Dungeness crab, oysters and 'crab back'."
+    },
+    {
+      "name": "Mister Jiu's",
+      "kind": "restaurant",
+      "neighborhood": "Chinatown",
+      "why": "Brandon Jew's Michelin-starred Chinese-American restaurant on Waverly Place is a short walk from the T line's Chinatown–Rose Pak terminus."
+    },
+    {
+      "name": "Old Skool Cafe",
+      "kind": "youth-run supper club",
+      "neighborhood": "Bayview",
+      "why": "A jazz-era supper club in Bayview, staffed by young people coming out of the justice and foster-care systems."
+    },
+    {
+      "name": "Everett & Jones Barbeque",
+      "kind": "barbecue restaurant",
+      "neighborhood": "Oakland",
+      "why": "Dorothy Everett and her family opened it in 1973. It's Oakland's Black-owned barbecue standard and an Oakland-first partner."
+    },
+    {
+      "name": "International Boulevard taco trucks",
+      "kind": "district",
+      "neighborhood": "Fruitvale / East Oakland",
+      "why": "The Bay's densest run of taco trucks, panaderías and mariscos stands, and the everyday food of Oakland's Mexican and Central American community."
+    },
+    {
+      "name": "Mitchell's Ice Cream",
+      "kind": "ice cream shop",
+      "neighborhood": "Bernal Heights / Mission border",
+      "why": "Open since 1953 and famous for Filipino and tropical flavors (ube, buko, macapuno) that families drive in for from Daly City to Vallejo."
+    },
+    {
+      "name": "La Victoria Taqueria",
+      "kind": "taqueria",
+      "neighborhood": "Downtown San Jose (near SJSU)",
+      "why": "Its cult orange sauce, sold by the bottle, is San Jose's edible signature and a late-night SJSU rite."
+    }
+  ],
+  "people": [
+    {
+      "name": "Ayesha Curry",
+      "role": "Cookbook author, TV host, founder of Sweet July, co-founder with Stephen Curry of the Eat. Learn. Play. Foundation",
+      "why": "The Bay food figure most closely tied to the team. Eat. Learn. Play.'s Oakland food-access work makes a credible, non-commercial partner for a Nike food night."
+    },
+    {
+      "name": "Alice Waters",
+      "role": "Founder of Chez Panisse (Berkeley, 1971) and the Edible Schoolyard",
+      "why": "She defined 'California cuisine' (seasonal, local, farmers-market first), the Bay's food self-image that every chef here still answers to."
+    },
+    {
+      "name": "Brandon Jew",
+      "role": "Chef-owner of Mister Jiu's; author of Mister Jiu's in Chinatown",
+      "why": "The leading voice for modern Chinese-American cooking at the Chinatown end of the T line, and a natural Lunar New Year partner."
+    },
+    {
+      "name": "Tanya Holland",
+      "role": "Oakland chef, founder of Brown Sugar Kitchen, author of Tanya Holland's California Soul",
+      "why": "Oakland's most prominent Black culinary voice, with a national platform through Top Chef and the James Beard Foundation."
+    },
+    {
+      "name": "Nelson German",
+      "role": "Dominican-American Oakland chef (alaMar, Sobre Mesa; confirm both still operate); Top Chef contestant",
+      "why": "His Afro-Latino Oakland cooking pairs naturally with Dominican-born Al Horford for a heritage collab."
+    },
+    {
+      "name": "Reem Assil",
+      "role": "Palestinian-Syrian-American chef, founder of Reem's California, author of Arabiyya",
+      "why": "She built an Arab street bakery in Oakland's Fruitvale around worker-centered values, and she's a leading voice in the East Bay's immigrant food scene."
+    },
+    {
+      "name": "La Cocina",
+      "role": "Mission District nonprofit incubator for low-income, mostly immigrant women food entrepreneurs (founded 2005)",
+      "why": "The most credible pipeline to paid, credited collabs with immigrant-owned food businesses."
+    },
+    {
+      "name": "Señor Sisig",
+      "role": "Filipino-Mexican food truck and restaurant brand founded in 2010 by Evan Kidera and Gil Payumo",
+      "why": "Its sisig burritos and merch are Bay Filipino-American pride, which makes it a natural Filipino Heritage Night partner."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Tip-off meets Filipino American History Month",
+      "timing": "October",
+      "month": 10,
+      "why": "Filipino American History Month lines up with the start of the season, and the Warriors' Filipino Heritage Night is the natural launch for an ube capsule."
+    },
+    {
+      "name": "Dungeness crab season opener",
+      "timing": "Mid-November (traditionally Nov 15, often delayed)",
+      "month": 11,
+      "why": "The Bay's food calendar turns on it, with crab back on menus from Swan Oyster Depot to Thanh Long."
+    },
+    {
+      "name": "Christmas night: Nuggets at Warriors",
+      "timing": "Dec 25, 7:30 p.m. PT",
+      "month": 12,
+      "why": "The national nightcap comes from Chase Center the day after the Bay's Christmas Eve cioppino-and-crab tradition."
+    },
+    {
+      "name": "Crab feed season",
+      "timing": "January to March weekends",
+      "month": 1,
+      "why": "All-you-can-eat Dungeness fundraisers run by schools, parishes and clubs are the Bay's most local winter ritual."
+    },
+    {
+      "name": "Lunar New Year and Tết",
+      "timing": "Feb 6, 2027; SF Chinatown parade and San Jose Tết events follow",
+      "month": 2,
+      "why": "San Francisco's Chinese New Year Parade is one of the largest outside Asia, and San Jose's Vietnamese community celebrates Tết on the same date."
+    },
+    {
+      "name": "Black Joy Parade",
+      "timing": "Late February, downtown Oakland",
+      "month": 2,
+      "why": "This Black History Month celebration brings Black-owned food vendors to downtown Oakland."
+    },
+    {
+      "name": "Carnaval San Francisco",
+      "timing": "Memorial Day weekend",
+      "month": 5,
+      "why": "The Mission's street festival of Latino and Caribbean food and music falls in the conference-finals window."
+    },
+    {
+      "name": "Pregame at Thrive City",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "Fans gather on the arena plaza before tip-off, and return for watch parties during road playoff runs."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Super burrito",
+      "meaning": "A Mission-style burrito 'super'-sized with cheese, sour cream and guacamole. Locals order it 'super' by default."
+    },
+    {
+      "term": "Dutch crunch",
+      "meaning": "The crackle-topped sandwich roll, standard at Bay delis and rare elsewhere. 'On Dutch crunch' is the local order."
+    },
+    {
+      "term": "Crab feed",
+      "meaning": "An all-you-can-eat Dungeness crab fundraiser dinner held by schools, parishes and clubs in winter."
+    },
+    {
+      "term": "Boba",
+      "meaning": "The Bay's word for bubble tea. A 'boba run' is a social ritual, especially for Asian-American youth."
+    },
+    {
+      "term": "Garlic noodles",
+      "meaning": "Butter-and-garlic noodles popularized by Thanh Long, now on menus across the Bay and usually ordered with roast crab."
+    },
+    {
+      "term": "The Town / The City",
+      "meaning": "The Town is Oakland and The City is San Francisco. Call an Oakland food drop 'The City' and it fails."
+    },
+    {
+      "term": "Joe's Special",
+      "meaning": "A scramble of ground beef, spinach, onion and egg, a staple of the city's Italian-American 'Joe's' restaurants, including Original Joe's in North Beach and San Jose."
+    },
+    {
+      "term": "The mother",
+      "meaning": "A sourdough starter kept alive for years. Boudin says its mother dough dates to 1849."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Cooked Dungeness orange: the brick-orange of a boiled crab shell, paired with its shell-cream underside (#F3E3C3) on Warriors navy #1D428A",
+      "type": "color",
+      "hex": "#D4502A",
+      "source": "Dungeness crab season, Christmas Eve cioppino and winter crab feeds",
+      "use": "Use it as a holiday-pack accent on collar tipping, number outlines and a bib-shaped hangtag. Leave off restaurant marks."
+    },
+    {
+      "cue": "Ube halaya purple, the deep violet of Filipino purple-yam jam, set against Warriors gold #FFC72C",
+      "type": "color",
+      "hex": "#5B2C83",
+      "source": "Filipino-American desserts, from Daly City bakeries to Mitchell's ube ice cream",
+      "use": "Use it for the Filipino Heritage Night colorway, co-designed with Filipino-American Bay designers. Keep the Philippine flag's sun and stars off unless partners lead."
+    },
+    {
+      "cue": "Dutch crunch crackle: the irregular cracked-plate pattern of the rice-paste topping, browned darker at the seams",
+      "type": "texture",
+      "hex": "",
+      "source": "The default sandwich roll at Bay delis",
+      "use": "Use it as a tonal emboss on gold fleece or a jacquard on warm-up sleeves. No other market can claim the texture."
+    },
+    {
+      "cue": "'Named for the city': Lactobacillus sanfranciscensis, the sourdough bacterium, plus a single curved scoring 'ear' and a flour-dust bloom",
+      "type": "story",
+      "hex": "",
+      "source": "San Francisco sourdough (Boudin since 1849, Tartine's country loaf)",
+      "use": "Put a tonal scoring-slash graphic on the back yoke and the bacterium story on the inside label. It's science, not a trademark."
+    },
+    {
+      "cue": "Crinkled burrito foil: mirror-silver foil with soft hand-folded creases",
+      "type": "material",
+      "hex": "",
+      "source": "Mission taquerías' foil-wrapped burritos",
+      "use": "Use foil-print packaging and hangtags, or reflective crinkle trim, on a limited Mission drop made with Calle 24 or La Cocina partners."
+    },
+    {
+      "cue": "Hand-painted storefront lettering: brush script and drop-shadow block letters in red, green and yellow",
+      "type": "typography",
+      "hex": "",
+      "source": "Taquería, panadería and produce-market signs on Mission Street, 24th Street and International Boulevard",
+      "use": "Commission working Bay sign painters to letter names and numbers for Mission or Fruitvale drops. Credit and pay them."
+    },
+    {
+      "cue": "La Vic's orange sauce: the bright, creamy chili-orange of San Jose's cult taquería sauce",
+      "type": "color",
+      "hex": "#F28A1E",
+      "source": "La Victoria Taqueria, downtown San Jose",
+      "use": "Use it as a South Bay accent on navy for a San Jose drop. Use the name or bottle only under license from La Victoria."
+    },
+    {
+      "cue": "T Third route line: a single line from Chinatown–Rose Pak through Chase Center to Bayview, with food-stop dots",
+      "type": "graphic",
+      "hex": "",
+      "source": "Muni's T Third line and the Central Subway",
+      "use": "Draw an original route-map graphic for shooting shirts and tees. Don't use the Muni 'worm' logo or SFMTA marks without a license."
+    }
+  ],
+  "productHooks": [
+    "T Line Table capsule: a shooting shirt and tee with an original route graphic from Chinatown–Rose Pak through Chase Center to Bayview's Third Street. Launch it with paid collab menu items from a Chinatown bakery and a Bayview kitchen, and run it from Lunar New Year (Feb 6, 2027) through Black History Month.",
+    "Crab Feed holiday pack for the Dec 25 game against Denver: a navy fleece with cooked-crab orange (#D4502A) and shell-cream accents, a bib-shaped hangtag and butcher-paper-print packaging. Part of the proceeds funds a community crab feed through Eat. Learn. Play. or an Oakland or Bayview nonprofit.",
+    "Dutch Crunch pregame hoodie: a crackle emboss on Warriors gold (#FFC72C), a sourdough-scoring tonal back graphic and the 'named for the city' bacterium story on the inside label.",
+    "Ube and gold Filipino Heritage Night capsule for October, co-designed with Filipino-American Bay artists. Add a Señor Sisig pop-up at Thrive City and retail in Daly City and Vallejo.",
+    "Town Table Oakland drop: released only at a Lake Merritt or Fruitvale pop-up, co-created with Everett & Jones and International Boulevard truck owners, and lettered by Oakland sign painters.",
+    "Foil Pack regional tees: a Mission version in crinkle-foil packaging made with Calle 24 and La Cocina chefs, and a San Jose version with a licensed La Vic's orange accent."
+  ],
+  "watchouts": [
+    "Every business named here (La Taqueria, La Victoria, Mitchell's, Thanh Long, Boudin, Señor Sisig) owns its name and look. License, credit and pay it. Don't use Muni's 'worm' logo or other SFMTA marks without permission.",
+    "The Mission and Bayview have lived through tech-era displacement, and the move to a pricier San Francisco arena is part of that story. Partner through community groups (Calle 24, La Cocina, Bayview organizations) and price for access. Keep Día de los Muertos altar and procession imagery off product.",
+    "Oakland still hurts from the 2019 move. Make Oakland product with Oakland businesses and sell it in Oakland, not as a nostalgia graphic at Chase Center.",
+    "Athlete food ventures (Ayesha Curry's brands, Gentleman's Cut bourbon, Butler's Bigface Coffee) are separate IP tied to endorsement deals. Confirm Stephen Curry's and Jimmy Butler's current footwear and apparel partners, and keep alcohol references off youth product.",
+    "Bay restaurants open and close quickly, and the Dungeness opener moves from year to year. Reconfirm every partner before committing, and never date-lock product to the crab season."
+  ],
+  "sources": [
+    {
+      "title": "Golden State Warriors (official team site)",
+      "url": "https://www.nba.com/warriors"
+    },
+    {
+      "title": "Chase Center (official site)",
+      "url": "https://www.chasecenter.com"
+    },
+    {
+      "title": "Golden State Warriors (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Golden_State_Warriors"
+    },
+    {
+      "title": "Chase Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chase_Center"
+    },
+    {
+      "title": "T Third Street (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/T_Third_Street"
+    },
+    {
+      "title": "Central Subway (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Central_Subway"
+    },
+    {
+      "title": "Mission burrito (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mission_burrito"
+    },
+    {
+      "title": "Sourdough (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sourdough"
+    },
+    {
+      "title": "Tiger bread / Dutch crunch (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Tiger_bread"
+    },
+    {
+      "title": "Dungeness crab (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Dungeness_crab"
+    },
+    {
+      "title": "Cioppino (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cioppino"
+    },
+    {
+      "title": "Daly City, California (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Daly_City,_California"
+    },
+    {
+      "title": "Ayesha Curry (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Ayesha_Curry"
+    },
+    {
+      "title": "Alice Waters (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Alice_Waters"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Check Chase Center's 2026-27 concessions operator and local restaurant lineup, which Thrive City restaurants are open, and whether Thrive City will host road-game watch parties this season.",
+      "Confirm Stephen Curry's current footwear and apparel partner (he ended his Under Armour deal in late 2025; new partner unconfirmed) and Jimmy Butler's current shoe deal, before any athlete-linked food collab.",
+      "Check dates and formats of the Warriors' 2026-27 Filipino Heritage Night, Lunar New Year night and Black History Month games.",
+      "Confirm the opening date of the 2026-27 Dungeness crab commercial season for the San Francisco area (recent openers have been delayed).",
+      "Check whether the 2026-27 City Edition or the Warriors' Specter uniforms already use Chinatown, Lunar New Year or food references, so a capsule doesn't repeat them.",
+      "Lunar New Year 2027 falls on Feb 6. Confirm the dates of the 2027 San Francisco Chinese New Year Parade and San Jose Tết festival.",
+      "Confirm the T Third still runs from Chinatown–Rose Pak to Bayview via the UCSF/Chase Center stop (SFMTA has adjusted service patterns since 2023).",
+      "Confirm Old Skool Cafe (Bayview) is still operating, and which Everett & Jones Barbeque locations in Oakland are open.",
+      "Check the operating status of Señor Sisig, Reem's California, and Nelson German's alaMar and Sobre Mesa, plus Tanya Holland's current ventures.",
+      "Check the current status of the Curry family's food ventures: Sweet July, Eat. Learn. Play. Foundation programs and Gentleman's Cut.",
+      "Confirm dates of the 2027 Black Joy Parade and of Carnaval San Francisco 2027 (Memorial Day weekend).",
+      "Confirm La Taqueria, La Victoria Taqueria, Mitchell's Ice Cream, Thanh Long, Swan Oyster Depot and Mister Jiu's are still operating, and find out who handles licensing for La Victoria's orange-sauce name."
+    ]
+  }
+}

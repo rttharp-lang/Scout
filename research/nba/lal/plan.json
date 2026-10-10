@@ -1,0 +1,692 @@
+{
+  "team": "lal",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 9-21: ESPN preseason home game Oct 16 (Nuggets; the Oct 8 Kings game is past), opener Oct 21 vs Golden State",
+      "kind": "event",
+      "start": "2026-10-09",
+      "end": "2026-10-21",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "The Oct 16 Nuggets preseason home game is in league-calendar.json, but the Oct 21 opener vs Golden State is not checked.",
+      "actBy": "2026-10-16",
+      "actNote": "Seed the lineage tee with Fairfax tastemakers at the Oct 16 preseason home game, a week before the opener.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 30-Nov 27: Emirates NBA Cup Fridays (West Group C), opening at San Antonio",
+      "kind": "season",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "November announcement, early December sale at Self Help Graphics",
+      "kind": "launch",
+      "start": "2026-11",
+      "end": "2026-12",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Black Friday through Cyber Monday",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-11-30",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after U.S. Thanksgiving (fourth Thursday of November): Nov 27, 2026. Cyber Monday follows on Nov 30.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 4-11, only if the Lakers win West Group C",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-11",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals (Dec 4-5), semifinals (Dec 8-9) and championship (Dec 11, Indianapolis)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Dec 1-25, peaking before the Dec 25 2 p.m. PT tip vs Philadelphia",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Jan 18, 2027: MLK Day and the Kingdom Day Parade in South LA",
+      "kind": "event",
+      "start": "2027-01-18",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "MLK Day is the third Monday of January (Jan 18, 2027). The 2027 Kingdom Day Parade date and route are still unchecked.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Feb 15: 76ers vs Lakers on NBC/Peacock (home team to confirm)",
+      "kind": "event",
+      "start": "2027-02-15",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Presidents' Day games",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "February or Cinco de Mayo season, tied to a confirmed Lakers home date",
+      "kind": "launch",
+      "start": "2027-02",
+      "end": "2027-05",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Start contracting Mister Cartoon and Estevan Oriol after checking their other brand deals, and start the gang-code and community review.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11 regular-season finale, Play-In Apr 13-16, playoffs from mid-April",
+      "kind": "season",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11) and Play-In Tournament (Apr 13-16). The playoff start (Apr 17 or 18) is only announced-tentative.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "May-June jacaranda bloom",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "2027-06",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Drew League summer season (dates and gym to confirm)",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "Aug 24, 2027 (Kobe Bryant Day), if it fits Nike Kobe's calendar",
+      "kind": "event",
+      "start": "2027-08-24",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Kobe Bryant Day in Los Angeles is Aug 24 (8/24) every year. Release on it only if Nike Kobe's calendar allows.",
+      "actBy": "2026-10",
+      "actNote": "Open talks with Nike's Kobe team and the Bryant family.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "October 2027: Filipino American History Month and the 2027-28 opener",
+      "kind": "launch",
+      "start": "2027-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Filipino American History Month is October. The 2027-28 opener date is not set.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "next-chapter-opener",
+      "consumer": "Lifelong Lakers diehards resetting their jersey, Gen Z fans arriving through Luka, and opener-week tourists.",
+      "insights": [
+        0,
+        6
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10-16",
+      "actNote": "Seed the lineage tee with Fairfax tastemakers at the Oct 16 preseason home game vs Denver.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm which 2026-27 games the Specter uniforms and the triangle City Edition are worn in before promising on-court tie-ins.",
+        "Check Doncic and Reaves jersey stock and Specter restock depth for the arena store and Nike Melrose.",
+        "Confirm Nike Melrose is open and trading as a launch door.",
+        "Set a 14-day full-price sell-through target for the lineage tee."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "los-lakers-serigraph",
+      "consumer": "Mexican American and Central American Lakers families on the Eastside, in Southeast LA and in the Valley.",
+      "insights": [
+        2,
+        1
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "pants",
+        "kids",
+        "other"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-11",
+      "actNote": "Announce the artist-led Phase 1 run with Self Help Graphics, once the artists have set their timeline.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Self Help Graphics will run and sell Phase 1, with artist fees, royalty and the SHG donation agreed.",
+        "Test Spanish-first copy and family pricing with Eastside Lakers families before Phase 2.",
+        "Confirm the Nike Factory Store at Citadel Outlets is trading as a Phase 2 volume door.",
+        "Set Phase 2 youth-and-family size share targets with Citadel and arena buyers."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Self Help Graphics & Art",
+        "SHG artists (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "christmas-reunion",
+      "consumer": "Holiday gift buyers, Latino and Black LA families, and the national Christmas Day audience.",
+      "insights": [
+        5,
+        6,
+        2
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "kids",
+        "accessory",
+        "event"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12-01",
+      "actNote": "Clear the LeBron thank-you with Nike's LeBron team and licensing, and sign the watch-party hosts, before the Dec 1 gifting window opens.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "no-product"
+      ],
+      "validation": [
+        "Clear LeBron thank-you art and copy with Nike's LeBron team and licensing, and check that no line mocks him.",
+        "Check Doncic jersey and kids' gold Icon stock for gift boxes at the arena store, Citadel and the Nike app.",
+        "Book La Mascota Bakery or a paid Eastside tamalera collective, and Black-led Leimert Park hosts, with fees agreed.",
+        "Set gift-box attach rate and kids' bundle share targets against the December plan."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "La Mascota Bakery (or a paid Eastside tamalera collective)",
+        "Black-led Leimert Park organizers (to be named)",
+        "Destination Crenshaw",
+        "Inclusive Action for the City"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "kobe-824-wall-series",
+      "consumer": "Kobe devotees across every LA community, plus the Mamba buyer who isn't a Lakers fan.",
+      "insights": [
+        3,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-08",
+      "actBy": "2026-10",
+      "actNote": "Open talks with Nike's Kobe team and the Bryant family.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Nike Kobe's 2027 8/24 plans and that the Bryant family approves the Wall Series.",
+        "Confirm the Mamba & Mambacita Sports Foundation will take the proceeds as beneficiary.",
+        "Agree fees, royalties and wall licenses with each of the three muralists.",
+        "Set SNKRS sell-out speed and foundation-dollar targets."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety"
+      ],
+      "owner": "Licensing and legal",
+      "partners": [
+        "Bryant family",
+        "Mamba & Mambacita Sports Foundation",
+        "Mamba Sports Academy",
+        "Three LA muralists who painted Kobe walls (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "candy-paint-cortez",
+      "consumer": "South LA and Eastside style leaders, lowrider families and sneaker collectors.",
+      "insights": [
+        1
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "footwear",
+        "shorts"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Start contracting Mister Cartoon and Estevan Oriol after checking their other brand deals, and start the gang-code and community review.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check Mister Cartoon's and Estevan Oriol's other brand deals before contracting.",
+        "Run a gang-code and community review on all lettering and art before it's final.",
+        "Confirm a Lakers home date in February or May for the Phase 1 drop.",
+        "Find a Black South LA or Compton lowrider club willing to partner, on its own terms."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Mister Cartoon",
+        "Estevan Oriol",
+        "Lauren Halsey (or a South Central sign artist Destination Crenshaw recommends)",
+        "A Black South LA or Compton lowrider club (to be found)",
+        "Eastside pinstripers (to be named)",
+        "Partner shops on Crenshaw, in Compton and on Whittier Boulevard"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "koreatown-after-the-buzzer",
+      "consumer": "Korean American and Latino Koreatown fans and the late-night watch-party crowd.",
+      "insights": [
+        6,
+        4
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "accessory",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Agree the Cup Night watch parties with Roy Choi and a Koreatown venue, and hire a Korean American designer for the Hangul, before Cup Fridays start Oct 30.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm Roy Choi and an established Koreatown venue near Wilshire and Western will host, with revenue share agreed.",
+        "Check Roy Choi's other brand deals.",
+        "Have the paid Korean American designer and native speakers check the Korean and Spanish copy.",
+        "Track watch-party attendance and tee sell-through across Cup Nights before committing to the playoff warm-up."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Roy Choi (Kogi)",
+        "Koreatown venue near Wilshire and Western (to be named)",
+        "Korean American designer (to be named)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "drew-league-co-creation",
+      "consumer": "South LA hoopers, summer pro-am crowds and local high school programs.",
+      "insights": [
+        1
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "shorts",
+        "uniform"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-03",
+      "actNote": "Agree the co-creation with Drew League organizers so the build can start in spring.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the Drew League's 2027 season dates and host gym.",
+        "Agree co-ownership, design credit and revenue paid through the league with Drew organizers.",
+        "Check youth and NIL rules with Compton, Crenshaw and Verbum Dei before any high school promotion.",
+        "Set a units-per-game target for sales at Drew games."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "The Drew League",
+        "Compton High School",
+        "Crenshaw High School",
+        "Verbum Dei High School"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "ube-mango-october",
+      "consumer": "LA County's Filipino American Lakers families.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "kids",
+        "other"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-10",
+      "actBy": "2026-10",
+      "actNote": "Confirm whether the Lakers hold a Filipino Heritage Night this season. Seed a small locally printed tee only if they do.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm whether the Lakers hold a 2026-27 Filipino Heritage Night.",
+        "Agree co-ownership and revenue share with Pilipino Workers Center, and let it choose the artists and the bakery.",
+        "Test ube and mango tones with Filipino American Lakers fans before colors lock.",
+        "Set sell-through targets for Historic Filipinotown and the arena store."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Pilipino Workers Center",
+        "Filipino American LA artists (to be named)",
+        "Community bakery launch partner (to be chosen)"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

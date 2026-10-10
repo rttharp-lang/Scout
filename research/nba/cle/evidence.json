@@ -1,0 +1,149 @@
+{
+  "team": "cle",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "cle-c1",
+      "claim": "The Nike Factory Store at Aurora Premium Outlets (formerly Aurora Farms) is the Nike-owned door between Cleveland and Akron.",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Find a Nike Store",
+          "url": "https://www.nike.com/retail/directory/united-states/ohio",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "65°F OPEN 10:00AM - 8:00PM",
+          "url": "https://www.premiumoutlets.com/outlet/aurora-farms/about",
+          "publisher": "Premium Outlets",
+          "published": ""
+        }
+      ],
+      "evidence": "The store exists and is listed, but the center's name is wrong. Nike's directory lists Nike Factory Store at Aurora Farms Premium Outlets, 549 S. Chillicothe Rd., Aurora, OH 44202. The center's own page, under the aurora-farms address, lists Nike Factory Store as a tenant and says it sits off State Route 43, minutes from Cleveland and Akron. Nothing shows a rename to 'Aurora Premium Outlets'. Directory snapshots disagreed on the day's hours.",
+      "action": "Renamed the center to Aurora Farms Premium Outlets in strategy.json, retail-landscape.json, retail-behavior.json and critique.json. Set both Aurora verdicts in factcheck.json to corrected. The door stays in every list.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "lake-effect-winter",
+          "lebron-returns",
+          "akron-330",
+          "richfield-heritage"
+        ],
+        "calendar": [
+          2,
+          3,
+          7,
+          12
+        ]
+      }
+    },
+    {
+      "id": "cle-c2",
+      "claim": "Cleveland Clothing Co. (CLE Clothing Co.) is a local pride apparel brand with its own doors that can sell the side line.",
+      "topic": "partner",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Cleveland Clothing Co",
+          "url": "https://crockerpark.com/tenant/cleveland-clothing-co/",
+          "publisher": "Crocker Park",
+          "published": ""
+        },
+        {
+          "title": "Credit: CLE Clothing Co., Instagram",
+          "url": "https://www.clevescene.com/?p=231397",
+          "publisher": "Cleveland Scene",
+          "published": ""
+        }
+      ],
+      "evidence": "Crocker Park lists Cleveland Clothing Co. as a tenant at 64 SS Comet Lane, Westlake, with posted hours. A 2025 company post cited in the results names four stores: East 4th Street downtown, Crocker Park, The Van Aken District and Summit Mall. No 2026-dated source turned up, and licensing appetite is untested.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "name-and-nickname"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "cle-c3",
+      "claim": "Ohio Knitting Mills is an operating Cleveland knitwear brand that can make a co-labelled wine-and-gold beanie.",
+      "topic": "partner",
+      "status": "unclear",
+      "sources": [],
+      "evidence": "Results covered the mill's history (founded 1928, later closed) and Steven Tatar's revival of the archive label, but nothing newer than about 2014. Current operating status is not settled.",
+      "action": "No change needed. The brief already marks Ohio Knitting Mills as to confirm.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "name-and-nickname",
+          "lake-effect-winter"
+        ],
+        "calendar": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "cle-c4",
+      "claim": "The Ohio State-Michigan game falls on Saturday, Nov 28, 2026, the day after Black Friday, so the Dec 5 side-line launch clears it.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "OSU football schedule (finally) finalized for 2026 season",
+          "url": "https://cwcolumbus.com/sports/osu-ohio-state-buckeyes-college-football-schedule-finalized-2026-season-ball-texas-kent-indiana-oregon-usc-southern-cal-california-michigan-northwestern-maryland-illinois-nebraska-iowa",
+          "publisher": "CW Columbus",
+          "published": ""
+        },
+        {
+          "title": "ohio state s rivalry game vs michigan officially set for noon kickoff on fox once again",
+          "url": "https://www.elevenwarriors.com/ohio-state-football/2026/05/162511/ohio-state-s-rivalry-game-vs-michigan-officially-set-for-noon-kickoff-on-fox-once-again",
+          "publisher": "Eleven Warriors",
+          "published": ""
+        }
+      ],
+      "evidence": "Ohio State's 2026 schedule lists Michigan at home in Ohio Stadium on Nov. 28. FOX announced in May 2026 that it will carry the game at noon that day.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "name-and-nickname",
+          "lake-effect-winter"
+        ],
+        "calendar": [
+          2,
+          3
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "The outlet center is 'Aurora Premium Outlets (formerly Aurora Farms)'.",
+      "correction": "Nike's store directory and the center's own site still call it Aurora Farms Premium Outlets, and the Nike Factory Store is listed there.",
+      "files": [
+        "strategy.json",
+        "retail-landscape.json",
+        "retail-behavior.json",
+        "critique.json",
+        "factcheck.json"
+      ],
+      "claimId": "cle-c1"
+    }
+  ]
+}

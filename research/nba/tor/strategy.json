@@ -1,0 +1,937 @@
+{
+  "team": "tor",
+  "headline": "Canada's only NBA team lives by borough and dresses for winter. Let Toronto co-author the Kawhi reunion.",
+  "thesis": "The Raptors are the one Toronto institution the rest of Canada wears, and the 2019 title turned two decades of stars snubbing the city into defiant 'North' pride. At home, identity runs by borough and area code (Scarborough, Brampton, Sauga, 416 vs 905) and by a diaspora calendar of Diwali, Lunar New Year, Black History Month and Carnival. The real uniform is a five-month winter blackout. Kawhi Leonard's return beside All-Star Scottie Barnes makes his jersey the season's big seller. The stories Nike can own outright are the crowd's 2019 memory (Jurassic Park, the four bounces) and the purple-dino Vince Carter era in its own archive. After 2025's 'Elbows Up' backlash, a US brand gets in only as a paying co-author with Toronto makers. The product has to be bilingual, priced in CAD and built to travel from Square One to Quebec City.",
+  "archetype": {
+    "name": "The Defiant North",
+    "description": "A diaspora-built, country-sized fanbase that turned being overlooked into identity. It cheers loud, expects heartbreak and rewards brands that let it tell its own story."
+  },
+  "pulse": {
+    "teamMoment": "Kawhi Leonard is back from the Clippers (final year, $50.3M) to pair with All-Star Scottie Barnes. Last season went 46-36 as the 5 seed and ended in a 4-3 first-round loss to Cleveland. Darko Rajakovic is extended through 2028-29.",
+    "sentiment": "Cautiously excited about a real push toward the East's upper tier. The shadows are the 35-year-old Leonard's health and the unprotected 2031 and 2033 firsts that left with Ingram and Dick.",
+    "heat": 74
+  },
+  "topInsights": [
+    {
+      "title": "Two Norths: Toronto-coded and Canada-coded",
+      "insight": "The rest of Canada mocks Toronto as the 'Centre of the Universe' but claims the Raptors, who opened this preseason in Quebec City. Raptors fans booed the US anthem in the 2025 'Elbows Up' backlash. Since then, a US brand reads as legitimate only through Canadian authorship.",
+      "evidence": [
+        "culture",
+        "underground",
+        "fanbase",
+        "hoops",
+        "retail-behavior",
+        "retail-landscape"
+      ],
+      "implication": "Split every collection in two. A GTA tier carries the boroughs, 416/905 and local makers. A national 'North' tier gets equal English and French, Canadian spelling, CAD pricing and named Canadian co-creators on the hangtag. Never sell 'Elbows Up' back to Canadians.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Sell Leonard deep, tell 2019 through the crowd",
+      "insight": "From Scarborough to Saskatoon, the Leonard jersey and return tee will be the season's biggest sellers. NBA player jerseys are league-licensed whatever his own shoe deal, which was New Balance as of 2025, after his Klaw logo dispute with Nike. The emotion Nike can own outright is the crowd's: Jurassic Park, the four rim bounces of the May 12, 2019 Game 7 shot and the June parade.",
+      "evidence": [
+        "culture",
+        "music",
+        "art",
+        "fanbase",
+        "retail-behavior",
+        "hoops"
+      ],
+      "implication": "Buy Leonard name-and-number jerseys and tees deep, kids' sizes included, so bootlegs don't take the spike. Wrap the homecoming in an abstract four-arc bounce graphic by a Toronto muralist. Keep Barnes as the multi-year anchor.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Winter is the real uniform",
+      "insight": "From Scarborough to Brampton, the default fit is a black 'Goose' parka over black Tech Fleece. Hems carry road-salt tide lines from November to April, and fans walk the PATH and Union Station to games. With no Raptors game on Christmas Day, Boxing Day is the gifting peak.",
+      "evidence": [
+        "underground",
+        "rhythm",
+        "retail-behavior",
+        "culture",
+        "hoops",
+        "fanbase"
+      ],
+      "implication": "Make winter the hero category. Build a triple-black Raptors pack with one tonal claw or red hit, and ship it on a fixed late-November date. Let the first -20 windchill trigger the marketing, not the product. Give Boxing Day its own tier so hero product isn't discounted.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Borough and area code beat skyline",
+      "insight": "Toronto places itself by 416 vs 905 and by the boroughs forced into the 1998 Megacity. The food lives in Scarborough, Markham and Brampton strip plazas under stacked tenant pylons. The volume sells at Scarborough Town Centre, Square One and Bramalea City Centre, not downtown. CN Tower, maple leaf and 'The 6ix' graphics already hang on every souvenir rack.",
+      "evidence": [
+        "culture",
+        "art",
+        "food",
+        "retail-landscape",
+        "music",
+        "hoops"
+      ],
+      "implication": "Give each borough drop its own object, not a recoloured shirt: a Scarborough plaza pylon, an Etobicoke Dixon Road balcony grid, a North York Little Manila storefront. Recruit the artists through Mural Routes and name them at launch.",
+      "confidence": "medium"
+    },
+    {
+      "title": "The heritage calendar runs inside the NBA season",
+      "insight": "The big heritage dates all land mid-season. Diwali falls about Nov 8, 2026, Lunar New Year on Feb 6, 2027, and Ramadan runs from about Feb 8 to Mar 9. Black History Month falls in the same stretch. It was created by Toronto MP Jean Augustine's 1995 motion in the Raptors' founding year. Philippine Independence Day, Carnival and Pride fill the dark summer.",
+      "evidence": [
+        "food",
+        "culture",
+        "retail-behavior",
+        "art",
+        "music",
+        "rhythm"
+      ],
+      "implication": "Run heritage as a partner-led program, not a Nike-named product line. Each community partner is paid and picks the object, name and launch date, or declines. Keep religious moments such as Vaisakhi and Ramadan off the marketing calendar.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Restraint, and one gold moment",
+      "insight": "The 2010s 'Toronto sound' of 40 and The Weeknd, the grainy black-and-white 'We The North' spot and the winter blackout all read as night, cold and minimal. For Raptors fans, gold belongs to OVO's black-and-gold owl. Blue belongs to the Leafs, Jays and Argos.",
+      "evidence": [
+        "music",
+        "art",
+        "culture",
+        "uniform",
+        "retail-landscape",
+        "underground"
+      ],
+      "implication": "Default to tonal black, blue-black and concrete grey with a single Raptors red hit. Spend gold only on the 2019 story: Four Bounces and the June 13 anniversary. Everywhere else, use food-derived amber instead.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Purple is Nike's own archive",
+      "insight": "Purple-dino and Carter-era pinstripe vintage is the collector's grail. Toronto retired Carter's #15 on Nov 2, 2024. His 2000 dunk contest and Olympic dunks came in the Shox BB4, a Nike story no other brand can tell. The 1946 Huskies first game (Nov 1) falls the same weekend but has thin fan pull.",
+      "evidence": [
+        "culture",
+        "uniform",
+        "fanbase",
+        "art",
+        "hoops"
+      ],
+      "implication": "Build a Purple Era capsule for Nov 1-2 and All-Star Weekend in exact-spec dino purple and pinstripes. Keep 1946 to a one- or two-piece collector and media note.",
+      "confidence": "medium"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "winter-blackout-north",
+      "title": "Raptors Winter Blackout, sold coast to coast",
+      "summary": "A triple-black winter pack that matches the GTA's 'Goose' uniform, sold as the national 'North' line. Each piece gets one tonal claw or red hit, a road-salt tide-line hem print and a bilingual neck tape.",
+      "where": [
+        "Sport Chek (national volume)",
+        "Nike Toronto Eaton Centre and CF Yorkdale",
+        "Scarborough Town Centre and Square One",
+        "Nike app and nike.com Canada",
+        "Raptors team shop at Scotiabank Arena"
+      ],
+      "when": "Ship on a fixed date in the last week of November, in doors for the first December home weekend. Sell through Family Day and March Break.",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "how": "Buy and allocate outerwear on the normal 9-12 month calendar. When the first -20 windchill is forecast, add a weather-triggered media push: Union Station and PATH out-of-home about the walk to the game. Use equal English and French labels and Canada-only colourways. Price the parka as a halo piece at realistic Nike Canada levels, not at a volume price point.",
+      "products": [
+        "Knee-length courtside parka with tonal claw (halo)",
+        "Raptors Tech Fleece set in triple black",
+        "Pom toque",
+        "Hockey lace-up collar hoodie",
+        "Salt-line triple-black Air Force 1"
+      ],
+      "segment": "Nationwide Canadian fans, Gen Z digital fans and arena regulars",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Full-price sell-through by Jan 31 and share of units sold outside Ontario"
+    },
+    {
+      "id": "crowd-owned-homecoming",
+      "title": "Leonard homecoming and Four Bounces",
+      "summary": "The season's volume driver: deep Leonard and Barnes jersey and tee inventory, wrapped in a crowd-owned 2019 story. That means an abstract four-arc bounce graphic by a Toronto muralist and a Jurassic Park crowd kit for spring.",
+      "where": [
+        "Scotiabank Arena team shop and Maple Leaf Square",
+        "Nike Toronto Eaton Centre",
+        "Sport Chek national",
+        "Suburban playoff watch sites"
+      ],
+      "when": "Launch on Leonard's first Scotiabank Arena game, with Oct 30 (Nets at Raptors, Cup Night) as the fallback. Reload for the playoffs, the May 12 four-bounce anniversary and the June 13 title anniversary.",
+      "months": [
+        10,
+        11,
+        4,
+        5,
+        6
+      ],
+      "how": "Pre-stage the Four Bounces tee, the mural and the shell so the launch can move within 48 hours once the home schedule is confirmed. Add a 'Fun Guy' homecoming tee only through league and players' association licensed assets. Commission Elicser Elliott for the graphic and a mural on a permitted wall: Underpass Park only with City and Waterfront Toronto sign-off, otherwise a Mural Routes site. Use 'Jurassic Park' only as the fans' name for the plaza, with no film imagery. Pre-produce the playoff long-sleeve and release it by drop code on clinch.",
+      "products": [
+        "Leonard name-and-number swingman, adult and kids",
+        "Barnes swingman jersey",
+        "Four Bounces tee",
+        "Packable water-resistant Jurassic Park shell",
+        "Pre-produced playoff crowd long-sleeve"
+      ],
+      "segment": "Diehard core, nationwide fans and diaspora families who lived 2019",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Leonard and Barnes jersey units at full price before Black Friday; playoff long-sleeve sell-through within 72 hours of release"
+    },
+    {
+      "id": "purple-era-carter",
+      "title": "Purple Era: the Vince Carter archive",
+      "summary": "A collector-grade capsule of exact-spec 1990s purple-dino and Carter-era pinstripe pieces, plus a Shox BB4 archive story. A small 1946 Huskies collector note shares the weekend.",
+      "where": [
+        "Scotiabank Arena team shop",
+        "Nike Toronto Eaton Centre",
+        "nike.com Canada and Nike app (draw)",
+        "Mattamy Athletic Centre (former Maple Leaf Gardens) for the 1946 note"
+      ],
+      "when": "Nov 1-2, the 'Firsts weekend': the 1946 first game and the anniversary of Carter's Nov 2 retirement. A second chapter around All-Star Weekend (Feb 19-21) tells the dunk-contest story.",
+      "months": [
+        11,
+        2
+      ],
+      "how": "Clear throwback rights first: Classic Edition through the NBA versus third-party throwback licences, plus Carter's name and likeness and the Huskies marks. Tell the 1998-2004 story with Toronto's 1990s hip-hop pioneers, and pay Maestro Fresh Wes to narrate it. Launch with a Carter appearance if he agrees.",
+      "products": [
+        "Purple-dino Classic swingman (exact spec)",
+        "Carter #15 retirement tee",
+        "Dino purple pinstripe warmup jacket",
+        "Kids' purple dino tee",
+        "Cream 1946 first-game tee (collector run)"
+      ],
+      "segment": "Collectors, millennial fans who grew up with Vince, and the GTA's 'Carter Effect' hooper generation",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Draw entries per unit, full-price sell-through in two weeks, and resale premium versus other throwbacks"
+    },
+    {
+      "id": "ends-borough-series",
+      "title": "416/905 Ends series",
+      "summary": "Shooting shirts, tees and toques for each borough and 905 city: Scarborough, Etobicoke, North York, Brampton, Mississauga and Markham. Each is built on a distinct local object and co-designed with an artist from that community.",
+      "where": [
+        "Scarborough Town Centre",
+        "Square One, Mississauga",
+        "Bramalea City Centre, Brampton",
+        "Raptors 905 at Paramount Fine Foods Centre",
+        "Daniels Spectrum, Regent Park"
+      ],
+      "when": "One drop a month from mid-November to March, each worn in a home-game warmup before sale.",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "how": "Recruit artists through Mural Routes and StreetARToronto, with Clandestinos and Adrian Hayles as named anchors. Give each drop its own object. Scarborough gets a plaza pylon, Etobicoke a tower balcony grid and North York Little Manila storefront lettering. Brampton and Mississauga get Zum and MiWay route numerals. Pay fees plus royalties, and launch at the local mall and court.",
+      "products": [
+        "Borough pregame shooting shirt",
+        "Scarborough plaza-pylon tee",
+        "Balcony-grid concrete-heather crewneck",
+        "Borough toque",
+        "Kids' 416/905 tee"
+      ],
+      "segment": "Diaspora families and youth hoopers in the inner suburbs and 905",
+      "size": "high",
+      "priority": 1,
+      "kpi": "Sell-through in suburban doors vs downtown, and repeat purchase across borough drops"
+    },
+    {
+      "id": "heritage-nights-coauthored",
+      "title": "Partner-led heritage season",
+      "summary": "Capsules made with the communities that fill the arena, where the partner picks the object, name and date. Caribbean Toronto gets Black History Month, South Asian Toronto Diwali gifting, Chinese Toronto Lunar New Year and Filipino Toronto Little Manila. Ramadan watch nights are a free accommodation.",
+      "where": [
+        "Little Jamaica, Eglinton West (paid pop-up)",
+        "Nia Centre for the Arts, Oakwood",
+        "Brampton and Mississauga sweet-shop corridors",
+        "Little Manila, Bathurst and Wilson",
+        "Dixon Road and Thorncliffe Park watch nights"
+      ],
+      "when": "Indicative windows only, set by partners: Diwali around Nov 8, Black History Month and Lunar New Year in February, and Philippine Independence Day on June 12.",
+      "months": [
+        11,
+        2,
+        6
+      ],
+      "how": "Each capsule has a named, paid designer from its community and a proceeds share to a local organization. Little Jamaica gets a fleece named with its partner business. A GTA South Asian designer chooses a gifting object. Little Manila gets a court-and-bakery pop-up with a Filipino-Canadian designer. Ramadan watch nights are a free accommodation with halal food and prayer space, not a campaign. Vaisakhi is never marketed.",
+      "products": [
+        "Little Jamaica fleece (cream with amber lining; name set by partner)",
+        "Diwali gifting set (object set by partner)",
+        "Lunar New Year red-envelope hangtag pack",
+        "Little Manila capsule tee",
+        "Nike Pro Hijab in Raptors colours"
+      ],
+      "segment": "Caribbean, South Asian, Chinese, Filipino, Somali and Muslim GTA families",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Sell-through by capsule, partner renewal rate and dollars returned to partner organizations"
+    },
+    {
+      "id": "offseason-street-summer",
+      "title": "Summer without games: Pride, Canada Day, Carnival",
+      "summary": "Keep Raptors red on the street when the NBA is dark, through community-led drops for Blockorama at Pride, Canada Day and the Toronto Caribbean Carnival.",
+      "where": [
+        "Church-Wellesley Village",
+        "Lake Shore Boulevard parade route and Exhibition Place",
+        "Queen West and Kensington Market",
+        "Nike app Canada"
+      ],
+      "when": "Late June for Pride and Blockorama, July 1 for Canada Day, and the Civic Holiday weekend in early August for the Carnival Grand Parade.",
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "how": "Co-design the Pride capsule with Blackness Yes!, with a proceeds commitment that lasts past June. Build Carnival mesh with Saldenah Carnival under the 'Toronto Caribbean Carnival' name, never 'Caribana'. Keep the Canada Day drop civic and bilingual, with no government marks.",
+      "products": [
+        "Blockorama Pride tee",
+        "Carnival mesh short with steelpan-dimple emboss",
+        "Sequin-flake mesh tank",
+        "Bilingual North civic tee",
+        "Raptors red cap"
+      ],
+      "segment": "Caribbean community, Black queer Toronto and summer civic fans",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Offseason Raptors unit sales vs the prior summer, and partner-reported reach"
+    },
+    {
+      "id": "toronto-hoops-tempo-grassroots",
+      "title": "Tempo and the next Canadian pro",
+      "summary": "A women-first Toronto capsule built with the supporters of the WNBA Toronto Tempo, with the Raptors joining only for a crossover night. Add team kits for the community-centre and prep pipeline that produced Wiggins, Thompson and Barrett.",
+      "where": [
+        "Coca-Cola Coliseum (Tempo)",
+        "MLSE LaunchPad",
+        "Regent Park and Driftwood community centres",
+        "Athlete Institute, Orangeville"
+      ],
+      "when": "Tempo's 2027 home opener (May, to confirm) through the summer pro-am and CEBL season.",
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "how": "The Tempo opened at Coca-Cola Coliseum in May 2026, and its identity is still forming. Co-design with its supporter groups under the Tempo's own licensing. Add one Raptors crossover night instead of a shared mark. Seed warmups to community programs as 'the next Canadian pro starts here'.",
+      "products": [
+        "Tempo supporters' capsule tee (women-first sizing)",
+        "Tempo crewneck",
+        "Community-program warmup top",
+        "Practice short"
+      ],
+      "segment": "Women's-hoops crowd and GTA youth hoopers",
+      "size": "medium",
+      "priority": 2,
+      "kpi": "Tempo-game sell-through and the number of community programs outfitted"
+    },
+    {
+      "id": "nocta-night-game",
+      "title": "NOCTA x Raptors (watch item)",
+      "summary": "A possible premium tonal capsule in '40 murk' blue-black, built on a link no rival market has: the team's Global Ambassador runs a Nike sub-brand. It sits behind a verification gate and carries no hero weight.",
+      "where": [
+        "A Drake Night home game, if scheduled",
+        "Nike app (SNKRS-style draw)"
+      ],
+      "when": "Only if a Drake Night is on the 2026-27 schedule and every gate clears.",
+      "months": [
+        1,
+        2
+      ],
+      "how": "Go ahead only if four things check out: Drake's ambassador role, OVO's rights in Raptors product, NBA and MLSE licensing of a sub-brand, and post-feud sentiment. Run it through the existing Nike-NOCTA relationship in restrained blue-black, with no gold and no OVO owl.",
+      "products": [
+        "Blue-black warmup jacket",
+        "Tonal fleece hoodie",
+        "Black-on-black print tee"
+      ],
+      "segment": "Gen Z and sneaker-resale-minded fans",
+      "size": "low",
+      "priority": 3,
+      "kpi": "Draw entries per unit and resale premium vs other Raptors product"
+    }
+  ],
+  "collection": {
+    "name": "Ends to Arena",
+    "story": "Every Raptors night starts in the ends: a Scarborough plaza, a Brampton court, a Little Jamaica patty counter. It finishes with a cold walk to Union Station, where every TTC and GO line meets. The collection follows that trip. It's winter-first, crowd-owned, drawn by the boroughs and backed by the purple archive of the team's first star.",
+    "themes": [
+      {
+        "name": "Winter Blackout",
+        "story": "The GTA's five-month uniform of black parka, black fleece and salt-streaked sneakers, made official and sold coast to coast.",
+        "segment": "Nationwide fans, Gen Z and arena regulars",
+        "graphics": "Tonal black-on-black claw visible only in raking light, a matte-white road-salt tide-line print at hems, and a bilingual 'North / Nord' neck tape.",
+        "palette": [
+          {
+            "name": "40 Murk Blue-Black",
+            "hex": "#15171C"
+          },
+          {
+            "name": "Black",
+            "hex": "#000000"
+          },
+          {
+            "name": "Winter Silver",
+            "hex": "#A1A1A4"
+          },
+          {
+            "name": "Raptors Red",
+            "hex": "#CE1141"
+          }
+        ],
+        "materials": "Water-resistant nylon shells, synthetic down with no fur ruff, brushed Tech Fleece, reflective silver trim and a heavy rib-knit toque.",
+        "pieces": [
+          {
+            "item": "Courtside parka",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Knee-length halo piece with a deep hood and tonal claw, kept clear of Canada Goose disc-patch trade dress."
+          },
+          {
+            "item": "Raptors Tech Fleece set",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Triple black with a single small Raptors red tab and salt-line hem print."
+          },
+          {
+            "item": "Hockey lace-up hoodie",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Laced V-neck collar borrowed from rink culture, with no Leafs or NHL marks."
+          },
+          {
+            "item": "Pom toque",
+            "category": "headwear",
+            "tier": "entry",
+            "detail": "Cuffed rib knit with a red pom; called a toque on every hangtag."
+          },
+          {
+            "item": "Salt-line Air Force 1",
+            "category": "footwear",
+            "tier": "limited",
+            "detail": "Triple black with a tonal white tide-line on the midsole, Canada-only release."
+          }
+        ]
+      },
+      {
+        "name": "Four Bounces",
+        "story": "The 2019 shot and the Jurassic Park crowd as shared civic memory, carried by the reunion and a Barnes-led team. It's the only place gold appears this season.",
+        "segment": "Diehard core and diaspora families who lived the 2019 run",
+        "graphics": "An abstract four-arc line diagram of the ball's path off the rim, drawn by a Toronto muralist, plus a speaker-stack crowd graphic. No Klaw, no film imagery and no NBAE photography.",
+        "palette": [
+          {
+            "name": "Raptors Red",
+            "hex": "#CE1141"
+          },
+          {
+            "name": "Black",
+            "hex": "#000000"
+          },
+          {
+            "name": "Championship Gold",
+            "hex": "#B4975A"
+          },
+          {
+            "name": "White",
+            "hex": "#FFFFFF"
+          }
+        ],
+        "materials": "Heavyweight cotton jersey, packable ripstop shell, embroidered gold arcs used sparingly.",
+        "pieces": [
+          {
+            "item": "Four Bounces tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Single gold four-arc diagram on black, artist credited on the hangtag."
+          },
+          {
+            "item": "Leonard and Barnes swingman jerseys",
+            "category": "jersey",
+            "tier": "core",
+            "detail": "Icon red, bought deep in adult, youth and kids' sizes."
+          },
+          {
+            "item": "Jurassic Park packable shell",
+            "category": "outerwear",
+            "tier": "core",
+            "detail": "Water-resistant red shell with hand-warmer pockets for cold April watch parties."
+          },
+          {
+            "item": "Playoff crowd long-sleeve",
+            "category": "tee",
+            "tier": "limited",
+            "detail": "Pre-produced and released by drop code when the Raptors clinch."
+          }
+        ]
+      },
+      {
+        "name": "Purple Era",
+        "story": "The Vince Carter years in exact-spec dino purple and pinstripe, told as the moment Toronto basketball and the 'Carter Effect' generation began.",
+        "segment": "Collectors, millennial fans and GTA hoopers who grew up on Vince",
+        "graphics": "Original 1995-99 dinosaur and jagged pinstripe reproduced to spec, subject to throwback rights. Add dunk-sequence line art and 1990s Toronto hip-hop flyer typography, drawn fresh rather than lifted.",
+        "palette": [
+          {
+            "name": "Dino Purple",
+            "hex": "#753BBD"
+          },
+          {
+            "name": "Raptors Red",
+            "hex": "#CE1141"
+          },
+          {
+            "name": "Black",
+            "hex": "#000000"
+          },
+          {
+            "name": "Pinstripe Silver",
+            "hex": "#C4CED4"
+          }
+        ],
+        "materials": "Period-correct mesh and tackle-twill for the reissue, heavyweight cotton tees, satin-lined warmup jacket.",
+        "pieces": [
+          {
+            "item": "Purple-dino Classic swingman",
+            "category": "jersey",
+            "tier": "premium",
+            "detail": "Exact-spec reissue, numbered run, pending Classic Edition and throwback rights."
+          },
+          {
+            "item": "Carter #15 retirement tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Marks the Nov 2, 2024 retirement, subject to Carter's name-and-likeness agreement."
+          },
+          {
+            "item": "Pinstripe warmup jacket",
+            "category": "outerwear",
+            "tier": "core",
+            "detail": "Dino purple with silver jagged pinstripe on the sleeves."
+          },
+          {
+            "item": "Kids' purple dino tee",
+            "category": "kids",
+            "tier": "entry",
+            "detail": "So parents who wore it in 1999 can buy it for their kids."
+          }
+        ]
+      },
+      {
+        "name": "416/905 Ends",
+        "story": "Toronto as its own systems: slab-tower grids, strip-plaza pylon signs and the route numerals of every line that brings fans downtown, each borough drawn by its own artists.",
+        "segment": "Inner-suburb and 905 youth and families",
+        "graphics": "A distinct object per borough (Scarborough plaza pylon, Etobicoke balcony grid, North York storefront lettering, 905 bus-route numerals), in original lettering with paired 416/905 numerals.",
+        "palette": [
+          {
+            "name": "Concrete Heather",
+            "hex": "#8C8C88"
+          },
+          {
+            "name": "Raptors Red",
+            "hex": "#CE1141"
+          },
+          {
+            "name": "Station Tile Cream",
+            "hex": "#EFEAE0"
+          },
+          {
+            "name": "Bluffs Clay",
+            "hex": "#D8CCB4"
+          },
+          {
+            "name": "Lake Ontario Steel",
+            "hex": "#4E5D6C"
+          }
+        ],
+        "materials": "Concrete-heather knits, mesh shooting shirts with tile-grid jacquard panels, screen prints with flat ink.",
+        "pieces": [
+          {
+            "item": "Borough pregame shooting shirt",
+            "category": "jersey",
+            "tier": "core",
+            "detail": "One per borough or 905 city, worn in warmups before sale, designer named on the back neck."
+          },
+          {
+            "item": "Scarborough plaza-pylon tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Back print of stacked tenant panels in plaza-sign style, with no real business names."
+          },
+          {
+            "item": "Balcony-grid crewneck",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Tonal tower-balcony print co-designed with artists from the towers' neighbourhoods."
+          },
+          {
+            "item": "Kids' 416/905 tee",
+            "category": "kids",
+            "tier": "entry",
+            "detail": "Paired city and suburb numerals priced for back-to-school bundles."
+          }
+        ]
+      }
+    ]
+  },
+  "uniform": {
+    "concept": "Home Stop (2027-28 City Edition pitch)",
+    "narrative": "After every home game the crowd pours out of Scotiabank Arena into Union Station. There, TTC Line 1 meets the GO Lakeshore and Kitchener trains and the buses home to Brampton, Mississauga and Markham. Home Stop is that ride home. Recent City Editions (2021-22 and the 2025-26 recolor) looked back at 2019, so the next step is a design built from the city's own transit and tile. It's a 2027-28 pitch. For 2026-27, there are only retail graphics that need no jersey approval.",
+    "palette": [
+      {
+        "name": "Station Tile Cream",
+        "hex": "#EFEAE0",
+        "role": "base"
+      },
+      {
+        "name": "Tunnel Blue-Black",
+        "hex": "#15171C",
+        "role": "number"
+      },
+      {
+        "name": "Raptors Red",
+        "hex": "#CE1141",
+        "role": "trim"
+      },
+      {
+        "name": "Platform Tile Green",
+        "hex": "#2F6B57",
+        "role": "accent"
+      },
+      {
+        "name": "Platform Tile Yellow",
+        "hex": "#E3B23C",
+        "role": "accent"
+      }
+    ],
+    "motifs": [
+      "Squared, wide-countered geometric caps in the spirit of the 1954 Yonge line station lettering, drawn new",
+      "A multi-colour station-tile band down the side panel, sampled from named Line 1 stations: the only multi-colour element",
+      "Area-code numerals 416 and 905 set as a pair",
+      "'Every line ends at Union': a route-map spine joining TTC and GO terminals"
+    ],
+    "typography": "Wordmark 'TORONTO' and numbers in an original face by a Toronto type designer, in the subway lettering's spirit, or a licensed revival. Blue-black numbers with a single Raptors red outline on cream.",
+    "details": [
+      "Waistband: 'every line ends at Union' with terminal names from Scarborough to Brampton and Mississauga, not the 905 as a subway stop",
+      "Jock tag: a blank 'Home Stop' tile for the fan's own station or GO stop on retail versions",
+      "Neck tape: bilingual 'Nous sommes le Nord / We The North', subject to MLSE clearance",
+      "Side panel: tile-grid jacquard that shows only up close",
+      "Court tie-in: a station-tile band along the baseline and subway-caps lettering at centre court"
+    ],
+    "avoid": [
+      "A black base with red and silver, which would echo the 2025-26 City Edition, and any gold-led OVO palette",
+      "A second red such as TTC Red Rocket red, which reads as a misprint beside Raptors red and borrows uncleared TTC identity",
+      "CN Tower, generic maple leaf, skyline or 'The 6ix': souvenir-rack clichés",
+      "TTC, GO or Metrolinx logos, streetcar livery or the City of Toronto logo and flag without licences",
+      "Indigenous 'Tkaronto' imagery unless made with the Mississaugas of the Credit First Nation and paid Indigenous artists"
+    ],
+    "alternates": [
+      {
+        "name": "Megacity Six",
+        "idea": "A six-segment crest for the 1998 amalgamated boroughs, with each borough's segment drawn by an artist from it."
+      },
+      {
+        "name": "Column Murals",
+        "idea": "Wraparound side-panel graphics painted as Underpass Park and Bentway pillar murals by Clandestinos and Elicser Elliott."
+      }
+    ]
+  },
+  "calendar": [
+    {
+      "month": 10,
+      "window": "Leonard's first Scotiabank Arena game (date to confirm); fallback Oct 30, Nets at Raptors Cup Night",
+      "moment": "Kawhi homecoming and the Cup opener",
+      "play": "Launch the Leonard and Barnes jersey push and the Four Bounces tee, pre-staged to move within 48 hours to the confirmed date. Unveil the Elicser Elliott mural on a permitted wall. Hold hero product at full price until Black Friday.",
+      "products": [
+        "Leonard name-and-number swingman",
+        "Barnes swingman jersey",
+        "Four Bounces tee",
+        "Kids' swingman bundle"
+      ],
+      "channel": "Arena team shop, Maple Leaf Square, Nike Toronto Eaton Centre and Sport Chek",
+      "priority": 1
+    },
+    {
+      "month": 11,
+      "window": "Nov 1-2 (1946 first game; Carter's #15 retirement anniversary)",
+      "moment": "Firsts weekend: the NBA's 80th birthday and Vince's night",
+      "play": "Launch Purple Era by draw with a Maestro Fresh Wes-narrated story, plus a small cream 1946 collector tee as a media hook.",
+      "products": [
+        "Purple-dino Classic swingman",
+        "Carter #15 retirement tee",
+        "Pinstripe warmup jacket",
+        "Cream 1946 first-game tee"
+      ],
+      "channel": "Team shop, Nike app draw and nike.com Canada",
+      "priority": 1
+    },
+    {
+      "month": 11,
+      "window": "About Nov 8 (Diwali)",
+      "moment": "Diwali gifting in Brampton, Mississauga and Scarborough",
+      "play": "A paid GTA South Asian designer chooses the gifting set's object and name. Pair it with sweets from a local shop under a paid deal.",
+      "products": [
+        "Diwali gifting set (partner-designed)",
+        "Raptors red hoodie"
+      ],
+      "channel": "Bramalea City Centre, Square One and Sport Chek",
+      "priority": 2
+    },
+    {
+      "month": 11,
+      "window": "Mid-November to March, one drop a month",
+      "moment": "416/905 Ends series begins",
+      "play": "Scarborough plaza-pylon shooting shirt worn in warmups, then sold at Scarborough Town Centre and a local court.",
+      "products": [
+        "Borough pregame shooting shirt",
+        "Scarborough plaza-pylon tee",
+        "Borough toque"
+      ],
+      "channel": "Scarborough Town Centre, Square One and Raptors 905 games",
+      "priority": 1
+    },
+    {
+      "month": 12,
+      "window": "Ship last week of November; first deep freeze through Dec 26 (Boxing Day)",
+      "moment": "Goose season and the Canadian gifting peak",
+      "play": "Put Winter Blackout in doors on a fixed date, and time the out-of-home push to the first -20 windchill. Give Boxing Day a separate sale tier so the parka and jerseys stay at full price.",
+      "products": [
+        "Courtside parka",
+        "Raptors Tech Fleece set",
+        "Pom toque",
+        "Salt-line Air Force 1"
+      ],
+      "channel": "Sport Chek, Nike-owned doors and Nike app Canada",
+      "priority": 1
+    },
+    {
+      "month": 1,
+      "window": "Late January (DesignTO)",
+      "moment": "Toronto's design festival",
+      "play": "Build a window installation on the subway-lettering and station-tile process with the Toronto type designer and borough artists. Sell retail graphics only, no jersey, and use it to seed the 2027-28 Home Stop pitch.",
+      "products": [
+        "Station-tile lettering crewneck",
+        "Home Stop graphic tee"
+      ],
+      "channel": "Downtown windows and social",
+      "priority": 3
+    },
+    {
+      "month": 2,
+      "window": "February (Black History Month; Lunar New Year Feb 6)",
+      "moment": "Black History Month and Lunar New Year",
+      "play": "Launch the Little Jamaica fleece, named with its partner business, at a paid Eglinton West pop-up with Nia Centre artists and the Jean Augustine 1995 story. For Lunar New Year, make a red-envelope hangtag pack with a Chinese-Canadian designer.",
+      "products": [
+        "Little Jamaica fleece",
+        "Lunar New Year red-envelope hangtag pack",
+        "Nia Centre artist tee"
+      ],
+      "channel": "Little Jamaica pop-up, Nia Centre, Spadina Chinatown and Markham retail",
+      "priority": 2
+    },
+    {
+      "month": 2,
+      "window": "All-Star Weekend, Feb 19-21 (Phoenix)",
+      "moment": "Carter's dunk-contest legacy while the league watches the dunks",
+      "play": "The second Purple Era chapter tells the 2000 dunk contest and Shox BB4 archive story from Toronto. Any footwear tie-in depends on Nike's retro calendar.",
+      "products": [
+        "Dunk-sequence tee",
+        "Pinstripe warmup jacket",
+        "Kids' purple dino tee"
+      ],
+      "channel": "Nike app Canada, social and Toronto Nike doors",
+      "priority": 2
+    },
+    {
+      "month": 3,
+      "window": "About Feb 8 to Mar 9 (Ramadan); March",
+      "moment": "Ramadan watch nights and the pre-playoff build",
+      "play": "Host free iftar watch nights in Mississauga and on Dixon Road with halal food and prayer space, run as accommodation, not a campaign. Ship playoff shells and tees to doors by month end.",
+      "products": [
+        "Nike Pro Hijab in Raptors colours",
+        "Jurassic Park packable shell",
+        "Playoff tee"
+      ],
+      "channel": "Community watch nights, team shop and Sport Chek",
+      "priority": 2
+    },
+    {
+      "month": 4,
+      "window": "Apr 11 season end, Play-In Apr 13-16, playoffs from mid-April",
+      "moment": "Jurassic Park reopens",
+      "play": "Have the shell and playoff tees already in place. Release the pre-produced crowd long-sleeve by drop code on clinch, and reorder licensed rapid-print tees mid-series.",
+      "products": [
+        "Jurassic Park packable shell",
+        "Playoff crowd long-sleeve",
+        "Playoff tee",
+        "Rally towel"
+      ],
+      "channel": "Maple Leaf Square, suburban watch sites and the team shop",
+      "priority": 1
+    },
+    {
+      "month": 5,
+      "window": "May 12 anniversary; Tempo home opener in May (to confirm)",
+      "moment": "Four-bounce anniversary and women's hoops",
+      "play": "Reissue the Four Bounces tee on May 12 if the Raptors are still alive; launch the Tempo supporters' capsule at a Tempo home game.",
+      "products": [
+        "Four Bounces tee",
+        "Tempo supporters' capsule tee"
+      ],
+      "channel": "Coca-Cola Coliseum and Nike app",
+      "priority": 2
+    },
+    {
+      "month": 6,
+      "window": "June 12 (Philippine Independence Day), June 13 title anniversary and Pride in late June",
+      "moment": "Little Manila, the 2019 anniversary and Blockorama",
+      "play": "If the partner picks this date, run a Little Manila court-and-bakery pop-up with a Filipino-Canadian designer. Release the season's one gold anniversary tee. Launch the Blockorama Pride capsule with Blackness Yes!",
+      "products": [
+        "Little Manila capsule tee",
+        "2019 anniversary tee",
+        "Blockorama Pride tee"
+      ],
+      "channel": "Bathurst and Wilson, Church-Wellesley Village and nike.com Canada",
+      "priority": 2
+    },
+    {
+      "month": 7,
+      "window": "July 1 (Canada Day)",
+      "moment": "Raptors red as Canada's red",
+      "play": "Bilingual North civic drop sold nationally, with no flag or government marks.",
+      "products": [
+        "Bilingual North civic tee",
+        "Raptors red cap",
+        "Kids' North tee"
+      ],
+      "channel": "Sport Chek national and Nike app Canada",
+      "priority": 2
+    },
+    {
+      "month": 8,
+      "window": "Civic Holiday weekend (Carnival Grand Parade); back to school",
+      "moment": "Toronto Caribbean Carnival and back to school",
+      "play": "Make the Carnival mesh capsule with Saldenah Carnival under the festival's proper name. Sell kids' 416/905 back-to-school bundles in suburban malls.",
+      "products": [
+        "Carnival mesh short",
+        "Sequin-flake mesh tank",
+        "Kids' 416/905 tee"
+      ],
+      "channel": "Lake Shore route pop-up and suburban malls",
+      "priority": 2
+    }
+  ],
+  "partners": [
+    {
+      "name": "Nia Centre for the Arts",
+      "type": "Black arts centre, Oakwood Village",
+      "why": "Dedicated to Black Canadian artists and young creatives, steps from Little Jamaica.",
+      "idea": "Paid co-design studio for the Black History Month collection, with a proceeds share to the centre."
+    },
+    {
+      "name": "Mural Routes",
+      "type": "Scarborough-rooted mural nonprofit",
+      "why": "Trains muralists and produces community murals across the inner suburbs, where most of the fanbase lives.",
+      "idea": "Recruit and pay the artists behind each 416/905 Ends drop and supply permitted walls for launch murals."
+    },
+    {
+      "name": "Elicser Elliott",
+      "type": "Graffiti writer and muralist",
+      "why": "His figures of everyday Black and brown Torontonians cover Graffiti Alley and Kensington.",
+      "idea": "Draw the Four Bounces graphic and paint the homecoming mural on a permitted wall."
+    },
+    {
+      "name": "Clandestinos (Shalak Attack and Bruno Smoky)",
+      "type": "Latin American-rooted muralist duo",
+      "why": "Their large-scale, high-colour murals across the city have the scale to work as wraparound graphics, and they link to Toronto's Latin American communities.",
+      "idea": "Anchor an Ends drop and the Column Murals uniform alternate, credited and paid."
+    },
+    {
+      "name": "Maestro Fresh Wes",
+      "type": "Toronto hip-hop pioneer",
+      "why": "Canada's first hip-hop star bridges 1990s Toronto rap culture and the Carter era the Purple Era capsule celebrates.",
+      "idea": "Paid narrator and co-curator of the Purple Era story and launch."
+    },
+    {
+      "name": "Saldenah Carnival (Louis Saldenah)",
+      "type": "Mas band and costume designer",
+      "why": "The leading name in Toronto Carnival's feather, bead and sequin craft, with many Band of the Year titles.",
+      "idea": "Co-design the Carnival mesh capsule, with credit on the hangtag and royalties."
+    },
+    {
+      "name": "Blackness Yes!",
+      "type": "Black queer and trans collective behind Blockorama",
+      "why": "Has run Pride Toronto's Black queer stage since the late 1990s. It's the right way in, instead of a headline sponsorship.",
+      "idea": "Co-author the Pride capsule with a multi-year proceeds commitment."
+    },
+    {
+      "name": "Esmaa Mohamoud",
+      "type": "Visual artist",
+      "why": "Her concrete basketballs and reworked jerseys make her the most serious basketball artist in the market.",
+      "idea": "An artist-led piece for Black History Month on her terms, with full editorial control."
+    }
+  ],
+  "retailPlaybook": {
+    "where": [
+      "Suburban malls first: Scarborough Town Centre, Square One and Bramalea City Centre carry the diaspora volume",
+      "Sport Chek and Foot Locker Canada (now under Dick's) as the national volume channel, with Nike app Canada for the rest of the country",
+      "Nike Toronto Eaton Centre and CF Yorkdale for premium, draw and drop-day product",
+      "Queen West and Kensington boutiques for seeding taste, not for units",
+      "Scotiabank Arena, Maple Leaf Square and suburban watch sites for game-day and playoff emotion"
+    ],
+    "when": [
+      "Tip-off to Black Friday at full price, led by Leonard's first home game and the Nov 1-2 Purple Era launch",
+      "Outerwear on a fixed late-November ship date, with weather-triggered marketing on top",
+      "Boxing Day on its own sale tier, never discounting hero, jersey or throwback product",
+      "Playoff product pre-produced and released by drop code on clinch, with licensed rapid-print reorders",
+      "Summer via Philippine Independence Day, Pride, Canada Day and Carnival to keep red on the street"
+    ],
+    "how": [
+      "Clean CAD price points for volume: tees, toques and kids' around $40-$60, hoodies and kids' bundles $99-$149. Price the parka and Tech Fleece set at real Nike Canada levels, and treat the parka as a halo, not a volume piece",
+      "Buy Leonard and Barnes jerseys and tees deep, kids' sizes included, so bootlegs don't take the reunion spike",
+      "Equal English and French on labels and hangtags so product sells from Halifax to Quebec City",
+      "Canada-only colourways that cross-border shopping and resale cannot match",
+      "Name and pay every co-creator on the hangtag, and send money back to the neighbourhood the drop draws on"
+    ]
+  },
+  "risks": [
+    {
+      "risk": "Leonard is 35 and on a final-year deal. An injury or a deadline move (Feb 11) would strand player-led inventory, and his own shoe deal sits outside Nike.",
+      "mitigation": "Front-load Leonard units before the deadline and rely on reorders, not deep late buys. Keep Klaw and footwear-linked imagery off product. Anchor multi-year product on Barnes, the crowd and the city."
+    },
+    {
+      "risk": "Anti-US sentiment after the 2025 'Elbows Up' backlash makes a Nike-led Toronto story read as a US brand appropriating Canadian pride.",
+      "mitigation": "Lead with named Canadian co-creators, Canadian spelling, bilingual labels and CAD pricing, and never print 'Elbows Up' or other protest slogans."
+    },
+    {
+      "risk": "Third-party IP is everywhere. Watch 'We The North' (MLSE), throwback and Huskies marks, Carter's likeness, the OVO owl and 'Caribana'. Add TTC, GO and Metrolinx marks, Universal's Jurassic Park film imagery and CN Tower marks.",
+      "mitigation": "Clear each mark before design lock, and draw original faces and graphics where licences are unclear. Use 'Jurassic Park' only as the fans' plaza name, and say 'Toronto Caribbean Carnival', never 'Caribana'."
+    },
+    {
+      "risk": "Diaspora product can tip into appropriation, religion or stereotype. The traps are Nike-set names, marketed holy days and contested flags such as Tamil Eelam or Khalistan banners. So is car-culture or 'gritty' framing of Brampton, Markham, Jane and Finch or Regent Park.",
+      "mitigation": "Partners choose the object, name and date, or decline. Ramadan nights are accommodation, and Vaisakhi is never marketed. Vet flags, keep religious script off product and show neighbourhoods only as paid partners."
+    },
+    {
+      "risk": "Playoff and summer plans depend on results. A short playoff run, a deep Blue Jays October or the Leafs can take the city's attention.",
+      "mitigation": "Keep playoff product to pre-produced, code-released pieces with rapid-print reorders. Weight the plan toward winter, the Purple Era and heritage moments that don't depend on results."
+    }
+  ],
+  "scorecard": {
+    "opportunity": 78,
+    "culture": 88,
+    "retail": 70,
+    "fandom": 80,
+    "rationale": "Culture and fandom score well above average. The fanbase is country-sized and diaspora-majority, the 2019 memory is open again, the Leonard jersey is spiking and Nike owns the Carter archive. The design vocabulary runs unusually deep: transit, winter, borough, heritage. Retail is strong in malls and national chains but held back by CAD pricing, cross-border and resale leakage, and the anti-US mood."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Raptors 2026-27 home opener and Leonard's first Scotiabank Arena game, plus his health heading into the season",
+      "Leonard's current footwear and apparel deal (New Balance as of 2025) and the Klaw dispute history. League and players' association licensing for a Leonard jersey and 'Fun Guy' homecoming tee. Barnes, Barrett and Quickley shoe deals",
+      "Throwback rights: whether Nike can reissue 1995-2003 purple-dino and pinstripe jerseys as Classic Edition versus third-party throwback licences. Also Carter's name-and-likeness terms, Shox BB4 retro availability and NBA Huskies marks",
+      "The 2026-27 Raptors City Edition, Classic Edition rotation and Specter status, and every recent City Edition, before Home Stop goes forward as the 2027-28 pitch",
+      "Licensing and permits: 'We The North' (MLSE), TTC, GO and Metrolinx marks, and the subway typeface revival. Underpass Park mural approval from the City and Waterfront Toronto, and MLSE control of the arena perimeter",
+      "Nike Canada pricing for Tech Fleece and a parka, outerwear lead times, Sport Chek allocation, and Foot Locker Canada's banner plans under Dick's",
+      "Raptors 2026-27 home dates around Nov 1-2, Diwali, Lunar New Year, Black History Month, Drake Night and Boxing Day, and scheduled heritage and Pride nights",
+      "Current status and availability of partners: Nia Centre, Mural Routes, Daniels Spectrum after Artscape's 2024 troubles, and Saldenah Carnival. Also Blackness Yes!, Elicser Elliott, Clandestinos, Adrian Hayles, Esmaa Mohamoud and Maestro Fresh Wes",
+      "2026-27 dates: Diwali (about Nov 8), Ramadan 2027, Philippine Independence Day events in Little Manila, DesignTO, Pride Toronto and Blockorama, and the Toronto Caribbean Carnival Grand Parade",
+      "Drake's Global Ambassador status, OVO's rights in Raptors product and whether NOCTA can carry an NBA-licensed Raptors capsule",
+      "The Toronto Tempo's 2027 home schedule and licensing, and current strength of 'Buy Canadian' and 'Elbows Up' sentiment, tariffs and duties on Nike apparel",
+      "Nike-branded GTA doors (Eaton Centre, Yorkdale; reported to be run by Nike's Canadian licensee, Fox Group) and the arena team-shop operator. The Raptors' current president after Masai Ujiri's June 2025 exit, MLSE ownership after Rogers' 2025 purchase, and the Scotiabank Arena name"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "note": "Corrections made by the editor after review. Market agents log their own corrections in research/nba/<team>/evidence.json; the site shows both. Sources were found by live web search on the date shown. The research environment cannot open the pages directly, so each entry records what the search returned and the links a reviewer should open.",
+  "corrections": [
+    {
+      "id": "por-nike-community-store",
+      "market": "por",
+      "found": "2026-10-10",
+      "raisedBy": "Review feedback",
+      "was": "The Nike Community Store on NE Martin Luther King Jr. Blvd was Portland's recommended debut door for every Portland-specific drop. Six opportunities, five calendar entries, the retail playbook, the uniform plan and four dossiers sent launches there.",
+      "now": "The store (2650 NE MLK Jr. Blvd, open since 1984) closed in late 2022 after theft and safety concerns, and Nike confirmed in September 2023 that it won't reopen. It is removed as a door everywhere. Albina launches now go to Albina partner venues. Downtown Nike Portland (638 SW 5th Ave, reopened Nov 13, 2025, running on its main floor) is named only with the condition that it agrees to carry Blazers product, which is unconfirmed.",
+      "why": "The fact-check marked the store 'unverifiable' from model knowledge and the brief kept it as its main launch door. Knowledge-mode research can't see closures.",
+      "evidence": "OPB and KPTV (both Sept 8, 2023) report Nike's statement that the NE Portland store will not reopen. KOIN later reported the building would become a gym. Nike's newsroom and Willamette Week (Nov 12, 2025) report the downtown store reopening Nov 13, 2025.",
+      "sources": [
+        { "title": "Nike permanently closes Northeast Portland factory store", "url": "https://opb.org/article/2023/09/08/nike-permanently-closes-northeast-portland-factory-store", "publisher": "OPB", "published": "2023-09-08" },
+        { "title": "Nike confirms long-shuttered NE Portland Community Store won't reopen", "url": "https://www.kptv.com/2023/09/08/nike-confirms-long-shuttered-ne-portland-community-store-wont-reopen/", "publisher": "KPTV", "published": "2023-09-08" },
+        { "title": "Nike to permanently close MLK store", "url": "https://katu.com/news/local/nike-to-permanently-close-mlk-store", "publisher": "KATU", "published": "" },
+        { "title": "Nike Reopens Downtown Portland Store as an Athlete-Centered Community Sport Hub", "url": "https://about.nike.com/en/newsroom/releases/nike-portland-downtown-store-announcement", "publisher": "Nike, Inc.", "published": "" },
+        { "title": "Nike Portland reopens downtown with a focus on running", "url": "https://www.wweek.com/culture/shop/2025/11/12/nike-portland-reopens-downtown-with-a-focus-on-running/", "publisher": "Willamette Week", "published": "2025-11-12" }
+      ],
+      "files": ["strategy.json", "retail-landscape.json", "fanbase.json", "hoops.json", "uniform.json", "critique.json", "factcheck.json"],
+      "status": "applied"
+    },
+    {
+      "id": "nyk-1973-clincher",
+      "market": "nyk",
+      "found": "2026-10-10",
+      "raisedBy": "Review feedback",
+      "was": "The Knicks brief said the last ring came on May 10, 1973 'at the Garden', and the culture dossier said 'Game 5 at the Garden'.",
+      "now": "The Knicks clinched the 1973 title with a 102-93 Game 5 win at the Forum in Inglewood on May 10, 1973, taking the series 4-1. The 1970 title, not 1973, was won at the Garden. Corrected in the brief, the culture dossier and the fact-check.",
+      "why": "The original culture dossier had it right. The knowledge-mode fact-checker 'corrected' it to the Garden from model knowledge, and the brief then repeated the error.",
+      "evidence": "Wikipedia's 1973 NBA Finals entry, ESPN's 2026 retrospective and NBA.com's Game 5 video all place the clincher at the Forum. MSG Network's restored tape is described as the May 10, 1973 game played at The Forum.",
+      "sources": [
+        { "title": "1973 NBA Finals", "url": "https://en.wikipedia.org/wiki/1973_NBA_Finals", "publisher": "Wikipedia", "published": "" },
+        { "title": "What was life like when the Knicks won their last NBA championship?", "url": "https://africa.espn.com/nba/story/_/id/49042430/new-york-knicks-2026-nba-finals-champions-1973-san-antonio-spurs", "publisher": "ESPN", "published": "2026" },
+        { "title": "1973 Finals Gm 5: Knicks title triumph", "url": "https://www.nba.com/watch/video/1973-finals-gm-5-knicks-title-triumph", "publisher": "NBA.com", "published": "" },
+        { "title": "MSG Network: That Championship Game Tape", "url": "https://www.nexttv.com/blog/msg-network-championship-game-tape-322962", "publisher": "Next TV", "published": "" }
+      ],
+      "files": ["strategy.json", "culture.json", "factcheck.json"],
+      "status": "applied"
+    }
+  ]
+}

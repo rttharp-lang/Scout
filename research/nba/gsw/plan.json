@@ -1,0 +1,629 @@
+{
+  "team": "gsw",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Now through October",
+      "kind": "action",
+      "start": "2026-10",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Filipino American History Month is October",
+      "actBy": "2026-10",
+      "actNote": "Pay for the DJ set or the SoMa Pilipinas donation, and sign the Bay Bridge pilot letterer, the Christmas poster artist and the Lunar New Year artist this month.",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 21, 7 p.m. PT (ESPN)",
+      "kind": "event",
+      "start": "2026-10-21",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Oct 30 at Portland, then Cup Fridays through Nov 27",
+      "kind": "season",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Thu Nov 12, 2026, with the next Warriors Cup night as the arena tie-in",
+      "kind": "event",
+      "start": "2026-11-12",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "gsw-c4",
+      "actBy": "2026-10",
+      "actNote": "Sign the Bay Bridge pilot letterer this month.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Black Friday (Nov 27) through the Dec 20 ship-by",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-20",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after the fourth Thursday of November (Nov 27, 2026); the Dec 20 ship-by is the brief's own cutoff",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Dec 25, 7:30 p.m. PT",
+      "kind": "event",
+      "start": "2026-12-25",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games",
+      "actBy": "2026-10",
+      "actNote": "Sign the Christmas poster artist this month.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Late January to the SF Chinese New Year Parade (Lunar New Year Feb 6, 2027)",
+      "kind": "event",
+      "start": "2027-01",
+      "end": "2027-02",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Sign the Chinatown-rooted Lunar New Year artist this month, and no later than early November.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Black History Month, peaking at the Black Joy Parade (late Feb)",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Apr 11 season end; Play-In Apr 13-16",
+      "kind": "event",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends; Play-In Tournament",
+      "actBy": "2026-10",
+      "actNote": "Ask the team now whether the We Believe name and Oracle crowd audio can be cleared.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Memorial Day weekend",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "June into summer fog",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Fall 2027 build, briefed now",
+      "kind": "launch",
+      "start": "2027-09",
+      "end": "2027-12",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Brief the fall 2027 line now.",
+      "route": "new-development",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "bay-bridge-90",
+      "consumer": "Oakland and East Bay diehards and San Francisco natives, sold one shared product.",
+      "insights": [
+        0,
+        1,
+        3
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-12",
+      "actBy": "2026-10",
+      "actNote": "Sign the Oakland letterer for the pilot this month.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Get team and NBA lead times and approval for a licensed local screenprint pilot by Nov 12.",
+        "Confirm Oaklandish is open and will carry the pilot on revenue share.",
+        "Check Caltrans and Bay Area Toll Authority rules on bridge imagery.",
+        "Test the numbered tee-and-poster price with Oakland and San Francisco buyers."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "production-capacity",
+        "venue-or-permit",
+        "nike-calendar-approval"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Oaklandish"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "christmas-crab-feed",
+      "consumer": "Holiday gifters, Silicon Valley families and Christmas-night ticket holders.",
+      "insights": [
+        3,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids",
+        "other"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12-25",
+      "actBy": "2026-10",
+      "actNote": "Sign the Christmas poster artist this month.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Get team and NBA lead times and approval for a Dec 25 poster tee.",
+        "Confirm Amoeba Haight is open and will carry the poster.",
+        "Pick a food partner with no Curry link and confirm it will take the proceeds.",
+        "Test whether arena buyers pay a collector price for the numbered pair."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Alameda County Community Food Bank",
+        "Amoeba Music"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "bay-layers",
+      "consumer": "Game-night commuters, season-ticket holders, women fans and families.",
+      "insights": [
+        4,
+        3
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear"
+      ],
+      "fit": [
+        "men's",
+        "women's",
+        "youth"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Bundle in-line royal and gray outerwear as a cold-night kit before the November rains.",
+      "routes": [
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Check stock of in-line royal and gray outerwear across the doors.",
+        "Test bundle pricing with free-shipping thresholds instead of discounts.",
+        "Confirm Sports Basement and Valley Fair will carry the bundle.",
+        "Read women's and youth sales this winter before sizing the 2027-28 buy."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "specter-strength-in-numbers",
+      "consumer": "Long-time collectors, Gen Z vintage buyers, women fans and Bay families.",
+      "insights": [
+        2,
+        6
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "outerwear",
+        "kids"
+      ],
+      "fit": [
+        "women's",
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Get the team to confirm the Specter look and game dates before any drop or copy.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm which games the Warriors wear Specter.",
+        "Clear every pre-Oakland mark with the team and NBA before writing copy.",
+        "Check women's-cut and youth Specter stock for day one.",
+        "Confirm Shoe Palace will carry Specter in San Jose and Oakland."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "stock-availability",
+        "production-capacity",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "we-believe-20",
+      "consumer": "Oakland and East Bay diehards now in their 30s and 40s.",
+      "insights": [
+        6,
+        1
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "accessory",
+        "jersey"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2026-10",
+      "actNote": "Ask the team now whether the We Believe name and Oracle crowd audio can be cleared.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Ask the team to clear the We Believe name and Oracle crowd audio.",
+        "Trace the origin and rights of the 2007 yellow shirts.",
+        "Check E-40's availability and brand conflicts.",
+        "Confirm Oaklandish will carry the capsule first on revenue share."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "production-capacity"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Oaklandish",
+        "E-40"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "heritage-co-creations",
+      "consumer": "Asian American Bay fans across San Francisco, Daly City and San Jose.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Fund the Filipino-American DJ set or the SoMa Pilipinas donation, and sign the Lunar New Year artist.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm the 2027 SF Chinese New Year Parade date and the heritage-night dates.",
+        "Confirm the Chinese Culture Center and the Chinese Historical Society will co-curate for a fee.",
+        "Check DJ Qbert's and P-Lo's availability for the 2027 capsule.",
+        "Size the Goat capsule with the Chinatown and Story Road doors."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "SoMa Pilipinas",
+        "Chinese Culture Center",
+        "Chinese Historical Society of America Museum",
+        "DJ Qbert",
+        "P-Lo"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "scraper-spokes",
+      "consumer": "East Bay sneaker-first youth and families.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "footwear"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "The brief sets no earlier date. Sign the Scraper Bike Team as paid co-designers before any design work.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Scraper Bike Team is active and open to paid co-design.",
+        "Check that the Scraper Royal look does not repeat a past City Edition concept.",
+        "Confirm Shoe Palace will carry the sneaker colorway.",
+        "Hold the lowrider half until a Chicano-led club or painter signs."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "venue-or-permit"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Scraper Bike Team"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "fog-city-skate",
+      "consumer": "San Francisco skaters and sneaker collectors.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "footwear",
+        "fleece",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-06",
+      "actNote": "The brief sets no earlier date. Agree the tie-in with FTC Skateboarding and sign a San Francisco skate artist.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm FTC Skateboarding is open to a paid tie-in.",
+        "Check that an SB royal-and-gold colorway fits the Nike SB calendar.",
+        "Clear any Embarcadero or Muni marks before using them.",
+        "Test with skaters that small team marks still read skate first."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "third-party-ip"
+      ],
+      "owner": "Design",
+      "partners": [
+        "FTC Skateboarding"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "team": "sas",
+  "checked": 97,
+  "verdicts": [
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Factory Store exists at San Marcos Premium Outlets",
+      "verdict": "confirmed",
+      "note": "Checked live: the Nike Factory Store is at 3939 IH-35, San Marcos Premium Outlets. It is the nearest Nike-owned door. No Nike door in San Antonio proper is confirmed.",
+      "source": "https://www.mallscenters.com/brands/stores/nike-factory-store/san-marcos--texas--san-marcos-premium-outlets"
+    },
+    {
+      "lens": "art",
+      "claim": "Southwest School of Art is an independent craft school at the Navarro/Ursuline campus",
+      "verdict": "corrected",
+      "note": "Checked live: it joined UTSA in 2021 (UTSA Southwest campus, 1201 Navarro St). The dossier now says so. Don't pitch it as an independent partner.",
+      "source": "https://sanantonioreport.org/utsa-southwest-school-of-art-merger/"
+    },
+    {
+      "lens": "music",
+      "claim": "Hogwild Records is a long-running independent shop",
+      "verdict": "confirmed",
+      "note": "Checked live: it was operating at 1824 N Main as of an Aug 2025 UTSA oral history. The shop has mentioned financial strain, so call before outreach.",
+      "source": "https://cedish.utsa.edu/sounds/music-memories/steven-alejandro"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Alamodome was the Spurs' first home",
+      "verdict": "corrected",
+      "note": "HemisFair Arena was the first San Antonio home (1973). The Alamodome was home from 1993 to 2002. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Spurs Fan Shop at the Pearl",
+      "verdict": "removed",
+      "note": "Couldn't confirm a Spurs shop at the Pearl. Replaced it with the Frost Bank Center team store.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Brackenridge Park / Woodlawn Lake in Tobin Hill as pickup courts",
+      "verdict": "corrected",
+      "note": "Woodlawn Lake is not in Tobin Hill. Softened the neighborhood and flagged it for local confirmation.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Sunny Ozuna fronted 'the Sunglows'",
+      "verdict": "corrected",
+      "note": "The dossier contradicted itself. The band behind the 1963 hit is Sunny & the Sunliners. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Doug Sahm / Augie Meyers used a Farfisa organ",
+      "verdict": "corrected",
+      "note": "Meyers is associated with a Vox Continental-style combo organ, not a Farfisa. Removed Farfisa in two places.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Tobin Center as home of the San Antonio Symphony",
+      "verdict": "corrected",
+      "note": "The Symphony folded in 2022. The text no longer implies a resident orchestra.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Fiesta stripe era described as 1990s-2000s",
+      "verdict": "corrected",
+      "note": "Changed to 1989-2002, matching the eras block and the brief.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Early 1970s-80s uniform history (red-white-blue giving way to silver and black)",
+      "verdict": "unverifiable",
+      "note": "The switch year and details aren't verified, so the text is softened. Check a uniform history source.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Market Square is the largest Mexican market in the US",
+      "verdict": "corrected",
+      "note": "Softened to \"one of the largest in the US\" in the uniform, underground and retail-behavior dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Spurs play on MLK Day Jan 18",
+      "verdict": "corrected",
+      "note": "The confirmed MLK slate has no Spurs game. Relabeled the entry as league slate.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "'Texas Stock Show and Rodeo'",
+      "verdict": "corrected",
+      "note": "The name is San Antonio Stock Show and Rodeo. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Fiesta-stripe accent hex #E03A3E",
+      "verdict": "corrected",
+      "note": "Red isn't in the Fiesta stripe palette and clashed with other dossiers. Changed to #E6007E.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Fiesta-stripe accent hex #E4002B",
+      "verdict": "corrected",
+      "note": "Same problem, same fix: changed to #E6007E. Teal still varies (#00A19C to #00A9B5) across dossiers. Treat all as approximations.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Last season 62-20, West champion, Finals loss 1-4 to Knicks, Fiesta-stripe CE unveiled Nov 2025 and returning, Oct 20 / Dec 25 / Mar 7 dates, Wemby 5-yr and Fox through 2029-30",
+      "verdict": "confirmed",
+      "note": "Matches the CURRENT FACTS section across all dossiers.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Gregg Popovich is president of basketball operations (not head coach); Mitch Johnson is head coach",
+      "verdict": "unverifiable",
+      "note": "Current facts confirm Johnson as head coach. Popovich's exact title and health-related role need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Rodeo Road Trip occurs in February 2027 and Spurs are away",
+      "verdict": "unverifiable",
+      "note": "The Rodeo Road Trip is traditional, but the 2027 schedule is unconfirmed. The home team for the Feb 15 Presidents' Day Spurs-Heat game isn't captured, so the \"road game\" framing is unproven.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Brief says none of the West Side hand-made vocabulary has carried a Spurs uniform",
+      "verdict": "unverifiable",
+      "note": "This contradicts the uniform dossier's Noche Latina and Los Spurs jerseys and unverified earlier City Editions. The editor should soften it to \"never the lead concept\" unless the archive is checked.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Rodeo capsule: road-game watch-party content for the Feb 15 Spurs-Heat game",
+      "verdict": "unverifiable",
+      "note": "The home team and tip time for that game are unconfirmed. If it's a home game, the \"team is away\" premise breaks.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Next City Edition (Rotulo concept) after the Fiesta stripe's two-season run",
+      "verdict": "unverifiable",
+      "note": "City Editions are set annually. The 2027-28 design window is unknown, and so is whether the Fiesta stripe repeats again.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Military Appreciation game is typically in November; Noche Latina / Los Spurs nights exist",
+      "verdict": "unverifiable",
+      "note": "Check the home schedule for 2026-27 dates and whether both programs still run.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Wembanyama is a Nike athlete; Fox believed outside Nike",
+      "verdict": "unverifiable",
+      "note": "Confirm the footwear deals for Wembanyama, Fox, Castle and Harper with Nike internally before any player-led story.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Wemby gaming/global opportunity months [1, 8] and Paris/Manchester games",
+      "verdict": "unverifiable",
+      "note": "The dates of the Paris, Manchester and Austin games aren't in the current facts. Month 1 is an assumption.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Fiesta name/medal licensing runs through Fiesta San Antonio Commission",
+      "verdict": "unverifiable",
+      "note": "Several organizations hold the medals and marks. Confirm the rights holders before design lock.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Partner idea: Centro de Artes at Market Square as a pop-up venue",
+      "verdict": "unverifiable",
+      "note": "The city-run gallery's operating status in 2026 is unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Cruz Ortiz, Jesse Trevino, Alex Rubio, Adriana Garcia are active San Antonio artists",
+      "verdict": "unverifiable",
+      "note": "These are real, known artists, named from memory. Current activity and openness to brand work are unconfirmed. The brief and art dossier name several as partners.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Ray's Drive Inn, Henry's Puffy Tacos, Los Barrios, Mi Tierra, Friendly Spot are open",
+      "verdict": "unverifiable",
+      "note": "These are long-standing institutions, but none was checked live today. Confirm before naming them in launches. Checked live 2026-10-10: a May 2026 Go City Southtown guide still lists The Friendly Spot Ice House. The other four places are still unchecked.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Bonham Exchange, Paper Tiger, Traders Village, San Japan still operating",
+      "verdict": "unverifiable",
+      "note": "These are long-running venues. Confirm status and 2026-27 dates, especially San Japan's summer dates.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Texas back-to-school tax holiday second weekend of August, under $100, 8.25% rate",
+      "verdict": "unverifiable",
+      "note": "Rules and 2027 dates can change by legislation. Verify with the Texas Comptroller.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Foot Locker/Champs/Dillard's at North Star, Ingram Park, South Park; Rolling Oaks and South Park malls healthy",
+      "verdict": "unverifiable",
+      "note": "Mall tenants and condition weren't checked. South Park and Ingram Park are the riskiest. Checked live 2026-10-10: Champs Sports lists open store pages at Ingram Park (6301 NW Loop 410) and North Star. Foot Locker, Dillard's and South Park are still unchecked.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Mission Marketplace flea market still operating",
+      "verdict": "unverifiable",
+      "note": "Unconfirmed. Traders Village is the better-known channel.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Johnny Hernandez of La Gloria and True Flavors, and Steve McHugh of Cured, still at named restaurants",
+      "verdict": "unverifiable",
+      "note": "Both are well known, but chef and restaurant turnover is common. Confirm.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Piñata Protest and Girl in a Coma are active; Tejano Conjunto Festival in mid-May at Guadalupe",
+      "verdict": "unverifiable",
+      "note": "Activity and 2027 dates weren't checked.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Project Marvel is a $1.3B arena, lease amendments sought, Frost Bank Center remains home in 2026-27",
+      "verdict": "confirmed",
+      "note": "Matches CURRENT FACTS.",
+      "source": "https://www.tpr.org/government-politics/2026-07-04/with-fandom-at-a-high-spurs-seek-amendments-to-frost-bank-center-lease"
+    },
+    {
+      "lens": "hoops",
+      "claim": "UTSA, UIW and Trinity programs and venues (Convocation Center, Alumni Gym, Bell Athletic Center)",
+      "verdict": "unverifiable",
+      "note": "Venue names are from memory. A quick check of UIW's conference and gym status is worthwhile.",
+      "source": ""
+    }
+  ],
+  "summary": "The dossiers largely match the verified current facts (record, Finals loss, extensions, City Edition, dates), so few outright errors turned up. Fixed: the Alamodome \"first home\" error, the Farfisa and Sunglows details, the Southwest School of Art's move to UTSA and the Tobin Center symphony line. Also fixed: a Texas rodeo naming slip, an MLK Day entry implying a Spurs game, inflated \"largest Mexican market\" claims and two off-palette red hex values. Live checks confirmed the San Marcos Nike Factory Store and Hogwild Records, and corrected the art school. The strategy brief needs an editor on three points. One is the claim that no hand-made West Side vocabulary has reached a Spurs uniform. Another is the Feb 15 Spurs-Heat \"road game\" premise. The third is unverified player footwear deals. Most local businesses and artists are long-established but unchecked today."
+}

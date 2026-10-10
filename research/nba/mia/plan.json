@@ -1,0 +1,678 @@
+{
+  "team": "mia",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 20-31 (league tips Oct 20; Heat home opener Oct 21 vs. Minnesota at Kaseya Center)",
+      "kind": "launch",
+      "start": "2026-10-20",
+      "end": "2026-10-31",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup Nights, Oct 30-Nov 27 (Knicks game date and site to confirm)",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Nov 18",
+      "kind": "event",
+      "start": "2026-11-18",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Miami Art Week, early December",
+      "kind": "event",
+      "start": "2026-12",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-11",
+      "actNote": "Commission the artist by early November at the latest.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 18-25",
+      "kind": "event",
+      "start": "2026-12-18",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games",
+      "actBy": "2026-12-18",
+      "actNote": "Noche Buena sets in stores by Dec 18.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Jan 1-6",
+      "kind": "event",
+      "start": "2027-01-01",
+      "end": "2027-01-06",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Haitian Independence Day is Jan 1; Three Kings Day is Jan 6",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Jan 18 and Jan 28",
+      "kind": "event",
+      "start": "2027-01-18",
+      "end": "2027-01-28",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "February",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Feb 15 Spurs-Heat (home team to confirm) and Premio Lo Nuestro week (date and venue to confirm)",
+      "kind": "event",
+      "start": "2027-02",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Mar 5 through Calle Ocho Sunday",
+      "kind": "launch",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Late March",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Apr 11 finale through the Play-In (Apr 13-16) and first round",
+      "kind": "season",
+      "start": "2027-04",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends; Play-In Tournament",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "stock-availability"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "May 18 and late May",
+      "kind": "event",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "August 2027",
+      "kind": "season",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "park-courts-heat-culture",
+      "consumer": "Local hoopers, youth players and Heat Culture diehards in Liberty City, Overtown, Allapattah and Westchester.",
+      "insights": [
+        0,
+        4
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "fleece",
+        "kids",
+        "event"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10-20",
+      "actNote": "Have the Heat Culture training line out for the Oct 20 tip-off, with Haslem and Mourning names cleared by the team and players.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm which department runs each park and the current state of the courts.",
+        "Confirm Haslem's and Mourning's current Heat roles and clear their names and numbers.",
+        "Find the pickup runs and summer leagues already on these courts and who organizes them.",
+        "Test whether the conditioning tee sells at the Heat Store next to standard Heat tees."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "City of Miami Parks and Recreation",
+        "Miami-Dade County Parks",
+        "Udonis Haslem",
+        "Alonzo Mourning",
+        "Miami Heat"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "giannis-305-arrival",
+      "consumer": "Heat Culture diehards, Gen Z sneaker fans and Giannis's international followers.",
+      "insights": [
+        1,
+        5
+      ],
+      "categories": [
+        "footwear",
+        "jersey",
+        "tee",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-18",
+      "actBy": "2026-11-18",
+      "actNote": "Have the existing Freak allocation at Shoe Gallery and deep Giannis jersey restocks in place for Nov 18.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Giannis's Heat jersey number and current Freak status.",
+        "Check how much existing Freak and youth Giannis jersey stock Miami can get by Nov 18.",
+        "Confirm Shoe Gallery is still trading and will host the raffle.",
+        "Map the approval path and lead time for a 2027 Miami Freak colorway with Giannis's team and Nike athlete marketing."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Shoe Gallery",
+        "Foot Locker",
+        "DJ Irie"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "white-hot-linen-playoffs",
+      "consumer": "Fans dressing up for home playoff nights, and lifestyle buyers who want the guayabera without the playoff tie.",
+      "insights": [
+        4,
+        5
+      ],
+      "categories": [
+        "other",
+        "tee",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2027-03",
+      "actNote": "Drop the guayabera lifestyle pieces in March. Agree the White Hot name and marks with the Heat before design lock (no date given).",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the White Hot tradition and giveaway shirt are still team-run, and the terms for Nike using the name.",
+        "Test whether playoff fans will pay for a fashion layer above the free giveaway shirt.",
+        "Check that linen-white blanks can be finished and restocked within hours of results.",
+        "Track pre-sell sell-through each home series before adding volume."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "stock-availability"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Miami Heat",
+        "DJ Irie"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "rep-your-barrio",
+      "consumer": "Cuban, Haitian, Black Miami and Caribbean neighborhood fans.",
+      "insights": [
+        3,
+        6
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01-18",
+      "actBy": "2027-01-18",
+      "actNote": "Liberty City piece ready for MLK Day, co-authored with the African Heritage Cultural Arts Center.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Have native speakers check every line of Spanish and Kreyòl copy.",
+        "Confirm 2027 dates and sites for 305 Day, Calle Ocho and Haitian Flag Day.",
+        "Agree the revenue share with each community institution.",
+        "Test small-run volume and price with neighborhood retail before ordering."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "African Heritage Cultural Arts Center",
+        "Little Haiti Cultural Complex",
+        "Serge Toussaint"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "latin-calendar-khaled",
+      "consumer": "Latin Miami households and the music-industry crowd in Doral, Hialeah and Miami Beach.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Have nation-specific pieces ready for Premio Lo Nuestro week, if it returns to Kaseya Center.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm DJ Khaled's current Jordan Brand status before any pitch.",
+        "Confirm the current name and 2026-27 dates of the Heat's Latin Nights, and the Premio Lo Nuestro 2027 date and venue.",
+        "Test nation-specific tees with Doral and Hialeah fans against a single Latin tee."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "DJ Khaled"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "noche-buena-to-three-kings",
+      "consumer": "Cuban, Haitian, Venezuelan and Nicaraguan families buying gifts for kids.",
+      "insights": [
+        3,
+        5
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "accessory",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12-18",
+      "actBy": "2026-12-18",
+      "actNote": "Holiday sets in stores by Dec 18.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Check the colada crew and domino set can be in stores by Dec 18.",
+        "Test gift-set prices with shoppers at Dadeland and Dolphin Mall.",
+        "Confirm Chef Creole and the Little Haiti partners are operating and willing."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Little Haiti Cultural Complex",
+        "Chef Creole"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "art-week-commission",
+      "consumer": "Creative class, collectors and Art Week visitors.",
+      "insights": [
+        2,
+        6
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-11",
+      "actNote": "Commission the artist by early November at the latest.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Miami Art Week 2026 dates and the Heat's home game that week.",
+        "Confirm the artist's availability and fee by early November.",
+        "Clear every Heat mark through NBA and Fanatics licensing before the reveal.",
+        "Set the numbered edition size and price with gallery and Heat Store input."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Edouard Duval-Carrié",
+        "Tatiana Suarez",
+        "Lebo",
+        "National YoungArts Foundation",
+        "DASH"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "back-to-school-youth",
+      "consumer": "Budget-stretched families in Hialeah, Little Haiti, Liberty City and Miami Gardens.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "tee",
+        "shorts",
+        "jersey",
+        "kids"
+      ],
+      "fit": [
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-08",
+      "actBy": "2027-08",
+      "actNote": "Youth line in the Factory doors and Dadeland for the mid-August school start.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Test whether the line pulls families off flea-market gear, with sell-through and price checks in the Factory doors.",
+        "Confirm Florida's 2027 back-to-school tax holiday rules and per-item clothing cap.",
+        "Check margin with every item under $100."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    }
+  ]
+}

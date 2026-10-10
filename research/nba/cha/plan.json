@@ -1,0 +1,676 @@
+{
+  "team": "cha",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Home opener week, late October (date to confirm)",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Open partner talks for November to May.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Cup Nights: opener at Washington Oct 30, then two home Cup games in November (dates and opponents to confirm)",
+      "kind": "event",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Nov 4 through Black Friday",
+      "kind": "launch",
+      "start": "2026-11-04",
+      "end": "2026-11-27",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "cha-c4",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Dec 1-24",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Christmas is Dec 25, so gifting runs Dec 1-24",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Early January, high-school season",
+      "kind": "season",
+      "start": "2027-01",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Feb 1-9, peaking on the Feb 9 sit-ins anniversary",
+      "kind": "launch",
+      "start": "2027-02-01",
+      "end": "2027-02-09",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Feb 6",
+      "kind": "event",
+      "start": "2027-02-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Feb 10-15",
+      "kind": "event",
+      "start": "2027-02-10",
+      "end": "2027-02-15",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Presidents' Day games",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "March conference-tournament weeks; Mar 26 Niners '77 anniversary",
+      "kind": "season",
+      "start": "2027-03",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 11-16",
+      "kind": "event",
+      "start": "2027-04-11",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends; Play-In Tournament",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Mid-May WNBA tip and May 20",
+      "kind": "launch",
+      "start": "2027-05",
+      "end": "2027-05-20",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June into Peach Jam in mid-July",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "2027-07",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "SC's early-August tax-free weekend (2027 dates to confirm)",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Charlotte Pride weekend, mid-to-late August",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "hive-julian-recut",
+      "consumer": "Heritage diehards aged 35-50 and Gen Z vintage buyers.",
+      "insights": [
+        0,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "pants",
+        "footwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Merchandise existing Hornets Classic and Jordan Brand stock as the Hive story this month.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check Hornets Classic, Statement and Jordan Brand stock for October.",
+        "Agree Alexander Julian's availability and credit terms before any art.",
+        "Confirm Social Status's Charlotte store and its active Nike account.",
+        "Set a sell-through target for fast-turn styles by Dec 24."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Alexander Julian",
+        "Social Status",
+        "Central Avenue vintage dealers",
+        "Muggsy Bogues",
+        "Dell Curry",
+        "Lute"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "hugo-youth-family",
+      "consumer": "Families, kids and high-school players across the Charlotte metro.",
+      "insights": [
+        6,
+        2
+      ],
+      "categories": [
+        "kids",
+        "fleece",
+        "pants",
+        "tee",
+        "jersey",
+        "accessory"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-10",
+      "actNote": "Plan youth Miller and Knueppel name-and-number jerseys now for the post-Ball jersey wall.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm Hugo licensing through the Hornets before commissioning new poses.",
+        "Confirm the boys' programs at West Charlotte, Myers Park, South Mecklenburg and Charlotte Christian.",
+        "Pick schools evenly across West End, public and private programs.",
+        "Set a December youth revenue target against last year."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "West Charlotte High School",
+        "Myers Park High School",
+        "South Mecklenburg High School",
+        "Charlotte Christian School"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "west-end-february",
+      "consumer": "Black Charlotte, HBCU alumni and West End families.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Open partner talks for November to May, as the October play says. Sign the JCSU license and pay designer fees before any art is drawn.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Sign a written JCSU license and agree guaranteed designer fees.",
+        "Confirm the Gantt Center, Leah & Louise and BayHaven are active and open to Nike.",
+        "Check the band-braid jacket can make February, or move it to May 2027 or later.",
+        "Set sell-through targets for West End doors versus Uptown."
+      ],
+      "dependencies": [
+        "third-party-ip",
+        "partner-agreement",
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Johnson C. Smith University",
+        "Harvey B. Gantt Center for African-American Arts + Culture",
+        "Greg and Subrina Collier (Leah & Louise, BayHaven)",
+        "Dammit Wesley"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "feb-15-new-core",
+      "consumer": "Gen Z Buzz City fans and holiday-weekend families.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Plan Miller and Knueppel name-and-number product now for the post-Ball jersey wall.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Miller's and Knueppel's shoe and apparel deals before any player-fronted content.",
+        "Review any Ball piece for trolling risk and keep it small.",
+        "Clear rights for the hype-video score.",
+        "Set an arena revenue-per-attendee target against the season average."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "brand-safety"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Lute",
+        "MAVI"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "may-20-civic-drop",
+      "consumer": "Transplants and natives in both Carolinas who want in on the city's story.",
+      "insights": [
+        1,
+        0
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2026-10",
+      "actNote": "Open partner talks for November to May, as the October play says.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the May 20, 2014 name-return date.",
+        "Check the paper-nest jacquard can make May 20, 2027.",
+        "Test the 704/803 piece with York and Lancaster County shoppers.",
+        "Confirm Camp North End is active and open to Nike."
+      ],
+      "dependencies": [
+        "nike-calendar-approval",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Camp North End",
+        "Goodyear Arts"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "sting-summer-runs",
+      "consumer": "Women hoopers, 1997-2006 Sting fans and summer youth players.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "headwear",
+        "jersey",
+        "shorts"
+      ],
+      "fit": [
+        "women's",
+        "youth"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-05",
+      "actBy": "2026-10",
+      "actNote": "Open partner talks for November to May, as the October play says.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm WNBA licensing for Charlotte Sting marks.",
+        "Agree consent and fees with any former player featured, such as Dawn Staley or Andrea Stinson.",
+        "Check every piece stays clear of South Carolina Gamecocks marks.",
+        "Pick youth and pro-am runs with local organizers."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "nike-calendar-approval",
+        "production-capacity",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "WNBA",
+        "Dawn Staley",
+        "Andrea Stinson",
+        "McCrorey Family YMCA"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "704-neutral",
+      "consumer": "College-first households and youth players in the two-state metro.",
+      "insights": [
+        4
+      ],
+      "categories": [
+        "jersey",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2027-03",
+      "actNote": "Run the limited youth test around conference-tournament weeks (dates to confirm).",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Run a limited youth test and scale only if it sells.",
+        "Confirm Knueppel's, Allen's and White's deals before any player content.",
+        "Check the design uses no school marks and keeps college blues tonal."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "community-nights",
+      "consumer": "Latino, Asian and LGBTQ+ fans and allies along Central Avenue and North Tryon.",
+      "insights": [],
+      "categories": [
+        "tee",
+        "outerwear",
+        "headwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-10",
+      "actNote": "Open partner talks for November to May, as the October play says.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "no-product"
+      ],
+      "validation": [
+        "Confirm the Hornets' 2026-27 Latin and Pride night dates.",
+        "Confirm availability of Rosalia Torres-Weiner, Charlotte Pride and Charlotte Black Pride.",
+        "Agree fees and proceeds with partners before any art.",
+        "Leave any HB2 copy to the partners."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Rosalia Torres-Weiner (Red Calaca Studio)",
+        "Charlotte Pride",
+        "Charlotte Black Pride"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

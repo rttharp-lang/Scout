@@ -2381,6 +2381,7 @@ function NavDrawer({ open, onClose, session, onSignIn, onSignOut, trip, activeDa
         <div style={{ marginTop: 14 }}>
           <button onClick={() => { onNewSearch(); onClose(); }} style={{ ...row, fontWeight: 700 }}><Search size={17} color={NEON} /> New trip</button>
           <button onClick={() => { if (tripsRef.current) tripsRef.current.scrollIntoView({ behavior: "smooth", block: "start" }); }} style={{ ...row, fontWeight: 700 }}><ChevronRight size={17} color={NEON} /> Your trips</button>
+          <a href="/nba/" style={{ ...row, fontWeight: 700, textDecoration: "none" }}><ChevronRight size={17} color={NEON} /> Home Court · NBA markets</a>
         </div>
 
         <div style={sectionLabel}>Account</div>
@@ -2521,6 +2522,13 @@ export default function App() {
           setLocked(!!s.locked);
           setScreen(s.screen && s.screen !== "building" && s.screen !== "builderror" ? s.screen : "review");
         }
+      }
+      // Deep link (e.g. from Home Court: /?city=Portland, OR) starts trip setup
+      // for that city, exactly like picking it on the landing page.
+      const linked = new URLSearchParams(window.location.search).get("city");
+      if (linked) {
+        setCity(linked); setHotel(null); setStartDate(null); setEndDate(null); setScreen("setup");
+        window.history.replaceState(null, "", window.location.pathname);
       }
     } catch {}
     hydrated.current = true;

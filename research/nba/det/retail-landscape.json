@@ -1,0 +1,352 @@
+{
+  "team": "det",
+  "lens": "retail-landscape",
+  "headline": "The city core picks the look, and the suburban malls ring it up",
+  "summary": "Detroit retail splits in two. Midtown, Cass Corridor, Eastern Market and Corktown set taste through local brands that sell the city itself. The volume sits in suburban malls and outlets. After a 60-win season, team gear is a mainstream buy again, and the Specter collection adds a premium moment. Pair a Detroit-credible maker with the big doors, and don't lean on Foot Locker and Dick's alone.",
+  "insights": [
+    {
+      "title": "Detroit-made beats global for city pride",
+      "detail": "Detroit vs. Everybody, Detroit Hustles Harder and Pure Detroit sell the city itself. Wearing them signals loyalty in a way a national logo can't, and the same buyer often wears Pistons gear too.",
+      "implication": "Credit a respected local maker on any Pistons or Detroit-specific Nike drop, or launch it together. Don't ship it as a pure corporate release."
+    },
+    {
+      "title": "The suburbs carry the volume",
+      "detail": "Family and mainstream shopping happens at Somerset Collection in Troy, Twelve Oaks in Novi, Fairlane Town Center in Dearborn and the Great Lakes Crossing outlets in Auburn Hills. Income and geography split the shoppers across Oakland and Wayne counties.",
+      "implication": "Build product depth, kids' sizing and holiday gifting around the suburban doors. Save limited and story-led product for the city core."
+    },
+    {
+      "title": "The arena store is the game-night door",
+      "detail": "The Pistons team store at Little Caesars Arena and arena pop-ups catch the opening-night and rivalry-night crowd, including the Oct 20 home opener against Boston. Fans also buy jerseys from Fanatics, Lids and online.",
+      "implication": "Time Specter and City Edition availability to home-game windows. Make the LCA shop the launch point for new jerseys."
+    },
+    {
+      "title": "Sneaker culture runs through Black Detroit's shops",
+      "detail": "Independent sneaker and streetwear shops anchor the scene, alongside barbershop, high-school and AAU hoops culture. Burn Rubber (Royal Oak) and its Detroit sister store Two18 carry credibility through resale and releases.",
+      "implication": "Seed Nike Basketball product through independent doors first, not just chains. That includes signature-adjacent items for Cade Cunningham and Ausar Thompson."
+    },
+    {
+      "title": "Detroit shops for a deal",
+      "detail": "Auto-industry household budgets and value-minded shoppers make the Nike Factory Store at Great Lakes Crossing and the big-box doors important volume drivers.",
+      "implication": "Give past-season Pistons and Nike Basketball product a clear outlet path. Don't price the core jersey line above the market."
+    },
+    {
+      "title": "Bad Boys and teal eras fill the archive",
+      "detail": "The late-1980s Bad Boys, the 2004 championship and the 1990s teal, horse-head era each have their own buyer. Vintage and throwback shopping is strong.",
+      "implication": "Sell era-specific throwbacks through vintage stores and collectors. Consider a capsule that nods to each era."
+    }
+  ],
+  "places": [
+    {
+      "name": "Little Caesars Arena",
+      "kind": "venue",
+      "neighborhood": "Midtown / Downtown edge",
+      "why": "Home of the Pistons and the main game-night merchandise point."
+    },
+    {
+      "name": "Eastern Market",
+      "kind": "district",
+      "neighborhood": "Eastern Market",
+      "why": "Historic market district with a growing creative and local-brand scene, especially on Saturdays."
+    },
+    {
+      "name": "Shinola Detroit",
+      "kind": "shop",
+      "neighborhood": "Midtown",
+      "why": "Local lifestyle flagship that shapes Detroit made-here pride and gifting."
+    },
+    {
+      "name": "Somerset Collection",
+      "kind": "mall",
+      "neighborhood": "Troy",
+      "why": "Affluent luxury mall in Oakland County."
+    },
+    {
+      "name": "Fairlane Town Center",
+      "kind": "mall",
+      "neighborhood": "Dearborn",
+      "why": "Wayne County mall for Dearborn and the western suburbs, run by a court-appointed receiver since January 2026, with much of its anchor space empty."
+    },
+    {
+      "name": "Great Lakes Crossing Outlets",
+      "kind": "mall",
+      "neighborhood": "Auburn Hills",
+      "why": "Large outlet center and the likely home of a Nike Factory Store."
+    },
+    {
+      "name": "Twelve Oaks Mall",
+      "kind": "mall",
+      "neighborhood": "Novi",
+      "why": "Volume mall in western Oakland County."
+    },
+    {
+      "name": "Fisher Building shops (Pure Detroit)",
+      "kind": "district",
+      "neighborhood": "New Center",
+      "why": "Pure Detroit and other local gift shops rooted in the city's architecture."
+    }
+  ],
+  "people": [
+    {
+      "name": "Cade Cunningham",
+      "role": "Pistons guard, 2025-26 All-NBA First Team",
+      "why": "The franchise face and the main driver of jersey and sneaker demand."
+    },
+    {
+      "name": "Jalen Duren",
+      "role": "Pistons center, re-signed for five years",
+      "why": "A second marquee jersey for local fans after the new contract."
+    },
+    {
+      "name": "Ausar Thompson",
+      "role": "Pistons wing",
+      "why": "A rising fan favorite with strong youth appeal."
+    },
+    {
+      "name": "Tommey Walker",
+      "role": "Founder of Detroit vs. Everybody",
+      "why": "Built one of the city's best-known streetwear brands on Detroit's underdog identity."
+    },
+    {
+      "name": "Detroit Hustles Harder",
+      "role": "Local apparel brand",
+      "why": "A widely worn local brand of city pride and work ethic."
+    },
+    {
+      "name": "Burn Rubber",
+      "role": "Independent sneaker boutique",
+      "why": "Long-running metro Detroit sneaker boutique in Royal Oak. Its sister store, Two18, opened in 2022 across from Eastern Market (current status to verify)."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Home opener vs. Boston",
+      "timing": "Oct 20",
+      "month": 10,
+      "why": "NBC tripleheader opener and the biggest early-season merch moment."
+    },
+    {
+      "name": "Black Friday and holiday shopping",
+      "timing": "Late Nov to Dec",
+      "month": 11,
+      "why": "Peak gifting window across malls and the arena store."
+    },
+    {
+      "name": "Cup group play",
+      "timing": "Fridays, Oct 30 to Nov 27, plus Tue Nov 24 and Wed Nov 25",
+      "month": 11,
+      "why": "East Group A games bring extra home-game traffic and Cup-branded product."
+    },
+    {
+      "name": "MLK Day at Cleveland",
+      "timing": "Jan 18",
+      "month": 1,
+      "why": "A rivalry rematch of the East semifinal that fans will gather to watch."
+    },
+    {
+      "name": "Eastern Market Saturdays",
+      "timing": "Year-round, peak in warm months",
+      "month": 0,
+      "why": "The best foot traffic for a local-maker pop-up."
+    },
+    {
+      "name": "Playoffs",
+      "timing": "April to June",
+      "month": 4,
+      "why": "Playoff runs spike team-gear demand and open pop-up chances."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The D",
+      "meaning": "Common shorthand for Detroit."
+    },
+    {
+      "term": "Deee-troit Basketball",
+      "meaning": "The Pistons' long-running phrase for tough, blue-collar play."
+    },
+    {
+      "term": "Bad Boys",
+      "meaning": "The late-1980s championship Pistons, and a throwback buyer."
+    },
+    {
+      "term": "Detroit vs. Everybody",
+      "meaning": "An underdog attitude, a local brand and a widely shared phrase."
+    },
+    {
+      "term": "Metro Detroit",
+      "meaning": "The city plus the surrounding Oakland, Macomb and Wayne counties."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Pistons royal blue",
+      "type": "color",
+      "hex": "#1D42BA",
+      "source": "Current Pistons primary color",
+      "use": "Anchor team-specific product in the club's blue."
+    },
+    {
+      "cue": "Pistons red",
+      "type": "color",
+      "hex": "#C8102E",
+      "source": "Current Pistons secondary color",
+      "use": "An accent on retail-exclusive colorways."
+    },
+    {
+      "cue": "1990s teal",
+      "type": "color",
+      "hex": "#00778B",
+      "source": "Pistons' late-1990s identity",
+      "use": "Throwback capsule for vintage and collector doors."
+    },
+    {
+      "cue": "Old English or Detroit block lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "Local streetwear lettering and city signage",
+      "use": "Credit local makers if a style echoes their branding."
+    },
+    {
+      "cue": "Industrial workwear utility",
+      "type": "material",
+      "hex": "",
+      "source": "Auto-plant and Detroit workwear heritage",
+      "use": "Heavy canvas and utility details on warm-ups and outerwear."
+    },
+    {
+      "cue": "Detroit winter layering",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Cold-weather climate",
+      "use": "Insulated shells and fleece for the long season."
+    }
+  ],
+  "productHooks": [
+    "A local-maker collaboration sold through Detroit boutiques and the LCA team store ahead of the home opener.",
+    "Retail-exclusive Pistons colorways at accessible prices for the Nike Factory Store and suburban malls.",
+    "A throwback capsule built on the Bad Boys and teal eras, for vintage and collector doors.",
+    "Cold-weather Pistons outerwear, in stores in time for the holidays."
+  ],
+  "watchouts": [
+    "Don't lift branding from Detroit vs. Everybody, Detroit Hustles Harder or other local labels without a formal collaboration and payment.",
+    "Skip generic 'Motor City' car-culture imagery. Use specific Detroit references and credit the makers.",
+    "NBA and Pistons marks, plus Pure Detroit and Shinola trademarks, need licensing.",
+    "Don't imply that suburban malls and the city core serve the same customer."
+  ],
+  "sources": [
+    {
+      "title": "Detroit Pistons official site",
+      "url": "https://www.nba.com/pistons"
+    },
+    {
+      "title": "Little Caesars Arena",
+      "url": "https://en.wikipedia.org/wiki/Little_Caesars_Arena"
+    },
+    {
+      "title": "Eastern Market Partnership",
+      "url": "https://www.easternmarket.org"
+    },
+    {
+      "title": "Great Lakes Crossing Outlets",
+      "url": "https://www.simon.com/mall/great-lakes-crossing-outlets"
+    },
+    {
+      "title": "Somerset Collection",
+      "url": "https://www.somersetcollection.com"
+    }
+  ],
+  "confidence": "low",
+  "extra": {
+    "districts": [
+      {
+        "name": "Eastern Market",
+        "profile": "Historic market district with local shops, murals and pop-up space.",
+        "shopper": "City residents, creatives and weekend visitors.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Midtown and Cass Corridor",
+        "profile": "Dense neighborhood with Shinola and local boutiques near the arena.",
+        "shopper": "Students, young professionals and event-goers.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Somerset Collection, Troy",
+        "profile": "Affluent indoor luxury mall.",
+        "shopper": "Higher-income Oakland County households.",
+        "role": "volume"
+      },
+      {
+        "name": "Fairlane Town Center, Dearborn",
+        "profile": "Regional mall in Wayne County, in receivership since January 2026.",
+        "shopper": "Dearborn and western suburban families.",
+        "role": "volume"
+      },
+      {
+        "name": "Great Lakes Crossing Outlets, Auburn Hills",
+        "profile": "Large outlet destination.",
+        "shopper": "Value-minded families from across metro Detroit.",
+        "role": "volume"
+      }
+    ],
+    "doors": [
+      {
+        "name": "Pistons Team Store at Little Caesars Arena",
+        "type": "team-store",
+        "neighborhood": "Midtown / Downtown edge",
+        "why": "Primary game-night merchandise door."
+      },
+      {
+        "name": "Nike Factory Store, Great Lakes Crossing",
+        "type": "nike-owned",
+        "neighborhood": "Auburn Hills",
+        "why": "Likely Nike-owned volume door in the market, to be verified."
+      },
+      {
+        "name": "Foot Locker (metro Detroit malls)",
+        "type": "athletic-chain",
+        "neighborhood": "Suburban malls",
+        "why": "Core sneaker volume channel across the region."
+      },
+      {
+        "name": "Dick's Sporting Goods (metro Detroit)",
+        "type": "big-box",
+        "neighborhood": "Suburbs",
+        "why": "Mainstream team-gear and basketball volume."
+      },
+      {
+        "name": "Burn Rubber",
+        "type": "sneaker-boutique",
+        "neighborhood": "Royal Oak (sister store Two18 near Eastern Market)",
+        "why": "Independent sneaker community door with local credibility."
+      },
+      {
+        "name": "Detroit vs. Everybody",
+        "type": "local-brand",
+        "neighborhood": "Detroit",
+        "why": "Highly visible local apparel brand and potential collaborator."
+      },
+      {
+        "name": "Shinola Detroit",
+        "type": "other",
+        "neighborhood": "Midtown",
+        "why": "Local lifestyle brand setting Detroit gifting taste."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Whether a Nike Factory Store currently operates at Great Lakes Crossing Outlets and whether any Nike Well Collective or Nike community store exists in metro Detroit.",
+      "Current location, hours and status of the Pistons team store at Little Caesars Arena.",
+      "Confirm whether Burn Rubber (Royal Oak) and Two18 (Detroit) are still open. A Profit Brand store was reported for a former Burn Rubber space.",
+      "Current retail status and locations of Detroit vs. Everybody and Detroit Hustles Harder.",
+      "Whether Shinola still operates its Midtown flagship.",
+      "Current anchor tenants and store lists for Somerset Collection, Fairlane Town Center, Twelve Oaks and Great Lakes Crossing.",
+      "Foot Locker, Dick's and other chain door counts in metro Detroit.",
+      "The 2026-27 Pistons City Edition and Specter game dates.",
+      "Source URLs listed in sources, particularly the 313 Presents arena page."
+    ]
+  }
+}

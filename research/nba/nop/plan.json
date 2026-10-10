@@ -1,0 +1,655 @@
+{
+  "team": "nop",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "League tip-off, Oct 20 to Oct 30, before the Cup opener at the Clippers. The Pelicans open at home against Indiana on Wednesday, Oct 21.",
+      "kind": "season",
+      "start": "2026-10-20",
+      "end": "2026-10-30",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "First confirmed home game after Oct 30, then confirmed Cup Friday home nights through Nov 27",
+      "kind": "launch",
+      "start": "2026-10-31",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Bayou Classic weekend, Nov 27-28 (Thanksgiving weekend)",
+      "kind": "event",
+      "start": "2026-11-27",
+      "end": "2026-11-28",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Black Friday through Dec 24",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after Thanksgiving (fourth Thursday of November), Nov 27 in 2026; Christmas Eve is Dec 24",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Jan 6 (Twelfth Night) to about Jan 26",
+      "kind": "launch",
+      "start": "2027-01-06",
+      "end": "2027-01-26",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Twelfth Night is Jan 6, the start of Carnival; the Jan 26 end is the brief's own cutoff",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Around Feb 6, Tết in New Orleans East",
+      "kind": "event",
+      "start": "2027-02-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Feb 10 to early March: after Mardi Gras, through the trade deadline, All-Star and the LHSAA playoffs",
+      "kind": "season",
+      "start": "2027-02-10",
+      "end": "2027-03",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "partner-agreement",
+        "retailer-agreement",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Late February through Apr 16 (Lent, crawfish, any Play-In)",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "French Quarter Fest through the end of Jazz Fest (mid-April to early May)",
+      "kind": "season",
+      "start": "2027-04",
+      "end": "2027-05",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Essence Festival, July 4 weekend",
+      "kind": "event",
+      "start": "2027-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "White Linen Night, the first Saturday of August. Nothing commercial on Aug 29.",
+      "kind": "event",
+      "start": "2027-08-07",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Labor Day weekend (Southern Decadence) into the first second-line Sundays",
+      "kind": "season",
+      "start": "2027-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Labor Day is the first Monday of September, Sep 6 in 2027, so the weekend runs Sep 4-6",
+      "actBy": "2027-09",
+      "actNote": "Agree terms directly with this season's second-line club partner.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "twelfth-night-drop",
+      "consumer": "Diehard locals, families and Carnival visitors buying from Twelfth Night to Mardi Gras.",
+      "insights": [
+        3,
+        2,
+        0
+      ],
+      "categories": [
+        "outerwear",
+        "shorts",
+        "tee",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01-06",
+      "actBy": "2027-01-06",
+      "actNote": "Land the pack in doors for the Jan 6 launch. Put the King Cake Baby on the waistband tab only once the Pelicans confirm they own it and it's cleared for apparel.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Pelicans own the King Cake Baby and that it's cleared for apparel.",
+        "Confirm which Fleurty Girl doors are open in January 2027, including Lakeside.",
+        "Confirm Pelicans home games around Jan 6 and Feb 8-9 for the arena launch and king cake night.",
+        "Test whether the buy can reach 50% sell-through on entry tees and 35% on premium knits by Feb 1."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Fleurty Girl",
+        "Dirty Coast",
+        "Dong Phuong Bakery"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "ward-call-pack",
+      "consumer": "Neighborhood locals, West Bank and East families, and young hoopers who rep their ward.",
+      "insights": [
+        4,
+        0,
+        6
+      ],
+      "categories": [
+        "tee",
+        "jersey",
+        "kids",
+        "headwear"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Before the first confirmed home game after Oct 30, commission paid artists for the 7th Ward, West Bank and The East, and book the paid bounce lineup.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the Pelicans home dates after Oct 30 for the phase-one arena launch.",
+        "Check current footwear and apparel deals for Katey Red, Sissy Nobby, DJ Jubilee and Big Freedia.",
+        "Confirm the city's tile street-name and water-meter crescent designs are free for commercial use.",
+        "Test whether ward pieces sell outside Orleans Parish core doors, at Oakwood and Lakeside."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Katey Red",
+        "Sissy Nobby",
+        "DJ Jubilee",
+        "Big Freedia",
+        "Dirty Coast"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "holiday-value-core",
+      "consumer": "Families, gift buyers and Gulf South regional fans shopping from the Cup nights to Christmas Eve.",
+      "insights": [
+        5,
+        0,
+        3
+      ],
+      "categories": [
+        "jersey",
+        "kids",
+        "tee",
+        "outerwear",
+        "other"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Have the Friday-night giveaway tee ready for the first confirmed Friday Cup home night. Confirm each player's apparel status before making any player piece.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Zion Williamson's Jordan Brand status and the apparel deals of Trey Murphy III, Derik Queen and Jeremiah Fears.",
+        "Check stock of kids swingman jerseys for confirmed players before pricing the bundle.",
+        "Test the value price of the kids swingman and ward tee bundle with family buyers at Lakeside and Oakwood.",
+        "Confirm which Friday Cup nights are Pelicans home games."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [
+        "Dick's Sporting Goods"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "hbcu-and-school-nights",
+      "consumer": "HBCU alumni and fans, high school families and Bayou Classic visitors.",
+      "insights": [
+        4,
+        6
+      ],
+      "categories": [
+        "jersey",
+        "fleece",
+        "tee",
+        "outerwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "License the HBCU-coded capsule through Southern's and Grambling's own programs in time for Bayou Classic weekend, Nov 27-28.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Bayou Classic Nov 27-28, 2026 at the Superdome and whether the Pelicans are home that weekend.",
+        "Map the licensing paths and existing brand deals at Southern, Grambling, Xavier and Dillard.",
+        "Confirm the 2027 LHSAA basketball playoff dates and find one willing high school program.",
+        "Test whether HBCU alumni will buy a Pelicans co-brand alongside their school's own gear."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensing and legal",
+      "partners": [
+        "Southern",
+        "Grambling",
+        "Xavier",
+        "Dillard"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "brass-series",
+      "consumer": "Music-first locals and band-culture fans.",
+      "insights": [
+        2,
+        6,
+        0
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "pants"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-12",
+      "actBy": "2026-12",
+      "actNote": "Check Rebirth Brass Band members' deals before crediting the band on the first drop at a December home game.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check the footwear and apparel deals of Rebirth Brass Band members.",
+        "Confirm the Tipitina's Foundation and The Roots of Music run active instrument programs.",
+        "Confirm a December Pelicans home game outside Bayou Classic weekend for the launch.",
+        "Set the instruments-per-unit giveback and test it against the hoodie's margin."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Rebirth Brass Band",
+        "Tipitina's Foundation",
+        "The Roots of Music",
+        "St. Augustine Marching 100",
+        "Maple Leaf Bar",
+        "Tipitina's"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "second-line-sunday",
+      "consumer": "Second-line culture and style-led Black New Orleanians.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-10",
+      "actNote": "Agree terms with one Social Aid & Pleasure Club and its brass band, with the club's written consent given directly.",
+      "routes": [
+        "no-product"
+      ],
+      "validation": [
+        "Get one club's written consent directly, and let it choose the Sunday home date.",
+        "Agree the club and band fees up front.",
+        "Confirm the Pelicans' Sunday home dates.",
+        "Confirm the Backstreet Cultural Museum is open and willing to advise for a fee."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Backstreet Cultural Museum",
+        "One Social Aid & Pleasure Club and its brass band (not yet chosen)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "boil-season",
+      "consumer": "Locals in festival season, summer hoopers and spring visitors.",
+      "insights": [
+        3,
+        2
+      ],
+      "categories": [
+        "jersey",
+        "shorts",
+        "footwear",
+        "outerwear",
+        "tee",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Launch Boil Season after Ash Wednesday (Feb 10) on confirmed home dates, clear of the March Super Sundays and St. Joseph's Night (Mar 19).",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the March 2027 Super Sunday dates and keep every launch off those weekends and Mar 19.",
+        "Confirm 2027 dates for French Quarter Fest and Jazz Fest.",
+        "Confirm Joe W. Brown and Behrman courts are open for events.",
+        "Test spring demand against March-to-May 2026 Pelicans apparel revenue before sizing the buy."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "A sno-ball stand (not yet chosen)",
+        "A Black New Orleans artist (not yet chosen)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "claiborne-oaks-essence",
+      "consumer": "The national Black audience at Essence and culture-led locals.",
+      "insights": [
+        2,
+        6,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-07",
+      "actBy": "2027-07",
+      "actNote": "Invite BMike Odums or another Tremé or Seventh Ward artist in time for Essence, July 4 weekend 2027. The brief sets no earlier date.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Studio BE is operating and that BMike Odums wants to take part, with a real option to decline.",
+        "Agree the artist's ownership, credit and choice of Claiborne Corridor beneficiary in writing.",
+        "Confirm the 2027 Essence Festival dates.",
+        "Test the premium hoodie price with out-of-state Essence buyers."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Studio BE (Brandan 'BMike' Odums)"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

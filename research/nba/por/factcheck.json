@@ -1,0 +1,280 @@
+{
+  "team": "por",
+  "checked": 70,
+  "verdicts": [
+    {
+      "lens": "uniform",
+      "claim": "The 1970 pinwheel logo was designed by Frank Cooney",
+      "verdict": "corrected",
+      "note": "The designer was Frank Glickman, a Boston graphic artist and cousin of founder Harry Glickman. The 1990 redraw tilted the logo to 45 degrees. Replaced Cooney throughout uniform.json. The art dossier already had Glickman.",
+      "source": "https://www.blazersedge.com/2020/1/16/21070055/the-trail-blazers-pinwheel-logo-when-did-it-first-appear"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Nike Hoop Summit is held at Moda Center in April",
+      "verdict": "confirmed",
+      "note": "Checked live: the 27th Hoop Summit is Saturday April 11, 2026 at Moda Center, in Portland since 2008. The 2027 date and venue still need a check, given the renovation.",
+      "source": "https://en.wikipedia.org/wiki/Nike_Hoop_Summit"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "The downtown Nike store descends from the first Niketown (1990)",
+      "verdict": "corrected",
+      "note": "Checked live: Nike Portland closed in late 2023 and reopened Nov 13, 2025 at 638 SW 5th Ave as a community sport hub. Reworded in retail-landscape.json.",
+      "source": "https://about.nike.com/en/newsroom/releases/nike-portland-downtown-store-announcement"
+    },
+    {
+      "lens": "food",
+      "claim": "Deadstock Coffee is in Old Town (NW Couch St)",
+      "verdict": "corrected",
+      "note": "The food dossier's sources show the Old Town storefront closed in Dec 2025 and the cafe moved into The Hoxton lobby. Added this to the hoops, uniform, underground and retail-landscape places, and fixed the stale verify note.",
+      "source": "https://www.wweek.com/drink/2026/01/02/deadstock-coffee-is-alive-in-old-town/"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "The Blazers are the only major-league basketball team in the state",
+      "verdict": "corrected",
+      "note": "The WNBA's Portland Fire also play at Moda Center, so the claim was wrong. Changed to only NBA team.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Spirit of 77 sits in Kerns / Central Eastside in the fanbase dossier, but in Lower Albina in the rhythm dossier",
+      "verdict": "corrected",
+      "note": "The food dossier gives 500 NE MLK Jr. Blvd in the Lloyd District / Rose Quarter. Both dossiers now match. The food dossier backs Lillard's co-ownership and the playoff crowds.",
+      "source": "https://en.wikipedia.org/wiki/Spirit_of_77"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Toumani Camara and Jrue Holiday both came in the 2023 Lillard trade",
+      "verdict": "corrected",
+      "note": "Holiday was moved on within weeks and returned to Portland later. Reworded so it no longer reads as Holiday arriving then and staying.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "City Edition history: 2022-23 carpet, 2023-24 Dr. Jack plaid, 2024-25 all-over plaid, 2025-26 carpet return",
+      "verdict": "confirmed",
+      "note": "Matches the art dossier's live sources (KPTV Nov 2025, NBA.com 2023-24 and 2024-25 pages), so the four-seasons-on-two-motifs read holds. The design of the re-worn 2019-20 City Edition is still unconfirmed.",
+      "source": "https://www.nba.com/news/portland-trail-blazers-2024-25-city-edition-uniform"
+    },
+    {
+      "lens": "music",
+      "claim": "Home opener Oct 21, 2026 vs Phoenix with Lillard back",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: KATU's schedule story and the Suns' schedule both list the Blazers' home opener as Wed Oct 21 vs. Phoenix. Lillard's return that night is still reported as expected.",
+      "source": "https://katu.com/sports/trail-blazers/nba-announces-2026-27-schedule-for-the-portland-trail-blazers-oregon-portland-nba-national-basketball-association-moda-rose-center-season-2026-27-black-friday-ja-morant-dame-lillard-damian-rip-city"
+    },
+    {
+      "lens": "strategy",
+      "claim": "The brief says Nov 27 is the day after the White Stag red nose lights up",
+      "verdict": "unverifiable",
+      "note": "The art dossier puts the nose lighting on the day before Thanksgiving (Nov 25), so Nov 27 is two days later. Fix the wording in strategy calendar[3].",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "provenance.verify asks who designed the pinwheel (Cooney vs Glickman)",
+      "verdict": "corrected",
+      "note": "Resolved: Frank Glickman. Drop that verify item and don't repeat Cooney.",
+      "source": "https://www.blazersedge.com/2020/1/16/21070055/the-trail-blazers-pinwheel-logo-when-did-it-first-appear"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nike Portland (downtown) listed as a retail door for Blazermania and clinch drops",
+      "verdict": "unverifiable",
+      "note": "The store exists (reopened Nov 2025) but runs as a running-focused sport hub. Confirm it will carry Blazers product before naming it a channel.",
+      "source": "https://www.wweek.com/culture/shop/2025/11/12/nike-portland-reopens-downtown-with-a-focus-on-running/"
+    },
+    {
+      "lens": "strategy",
+      "claim": "The home opener is described as reported for Oct 21 vs Phoenix, to confirm",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the opener is Wed Oct 21 at home vs. Phoenix, so the hedge is dropped in calendar[1]. The same source has the Blazers hosting Golden State on Nov 27.",
+      "source": "https://katu.com/sports/trail-blazers/nba-announces-2026-27-schedule-for-the-portland-trail-blazers-oregon-portland-nba-national-basketball-association-moda-rose-center-season-2026-27-black-friday-ja-morant-dame-lillard-damian-rip-city"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Strategy proposes a 1976-77 Classic Edition and 1977 anniversary patch",
+      "verdict": "unverifiable",
+      "note": "Nothing in CURRENT FACTS shows a Blazers or NBA 50th-anniversary program. The brief rightly frames this as a proposal and shouldn't imply it's planned.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Troy Douglass, Hyder Graphics and 200 Red Hot Rising tees in about 48 hours",
+      "verdict": "confirmed",
+      "note": "The art dossier sources this to 2026 KATU and Willamette Week pieces, and the brief repeats it faithfully.",
+      "source": "https://www.katu.com/sports/trail-blazers/trail-blazers-fans-line-up-for-2026-playoffs-tees-courtesy-portland-gear-team-portland-oregon-nba"
+    },
+    {
+      "lens": "strategy",
+      "claim": "The brief lists Rip City Clothing Co. as the Moda Center team store and a Blazers retail door",
+      "verdict": "confirmed",
+      "note": "Checked live 2026-10-10: the team's site lists Rip City Clothing as the official team store at Moda Center's North Entrance, with online sales at ripcityclothing.com. Hours shown may be out of date.",
+      "source": "https://nba.com/blazers/ripcityclothing"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Ime Udoka is Rockets head coach and Damon Stoudamire coaches Georgia Tech",
+      "verdict": "unverifiable",
+      "note": "Mid-2026 knowledge. Coaching jobs change every offseason, so check before naming either in copy.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Rip City Remix play at the Chiles Center in 2026-27",
+      "verdict": "unverifiable",
+      "note": "Knowledge only. Confirm the venue, the schedule and the OSAA 6A finals site.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Les Schwab Invitational at Liberty High School, Hillsboro, December 2026",
+      "verdict": "unverifiable",
+      "note": "Recent venue. Confirm the 2026 dates and site.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Ja Morant has a current Nike signature line and Lillard is still adidas",
+      "verdict": "unverifiable",
+      "note": "Both come from knowledge. Morant changing teams doesn't change contracts, but the release calendar and brand-safety status need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "The 2019-20 City Edition (franchise 50th season): design and game count",
+      "verdict": "unverifiable",
+      "note": "CURRENT FACTS confirm the re-wear, but no dossier knows the design. Don't describe it in product copy.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Carpet pattern (Port of Portland), Portland Gear's status and Blazers licensing",
+      "verdict": "unverifiable",
+      "note": "Check who owns the IP on the PDX carpet and whether Portland Gear holds a Blazers license.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Taco Bell Cha-lu-pa coupons ran 1999 to 2013",
+      "verdict": "confirmed",
+      "note": "The food dossier's sources (Willamette Week, Bleacher Report) back Nov 1999 to spring 2013.",
+      "source": "https://bleacherreport.com/articles/1841089-trail-blazers-fans-love-chalupas-make-rap-video-protesting-new-mcdonalds-promo"
+    },
+    {
+      "lens": "fanbase",
+      "claim": "2003 25-point pledge to fans after the Jail Blazers era",
+      "verdict": "unverifiable",
+      "note": "From memory. Confirm the wording and year before using it in copy.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Chauncey Billups arrest in Oct 2025 and Tiago Splitter interim season",
+      "verdict": "unverifiable",
+      "note": "Knowledge-mode. Confirm the details and keep both off product and sensitive copy.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "The Rose Festival Grand Floral Parade falls near June 5, 2027, and Juneteenth in Oregon is June 19",
+      "verdict": "unverifiable",
+      "note": "Dates inferred from usual patterns. Confirm the 2027 festival calendar.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "The Fire's home opener is mid-May 2027, with a Fire schedule at Moda Center",
+      "verdict": "unverifiable",
+      "note": "The Fire's inaugural 2026 season is in CURRENT-era sources, but the 2027 schedule isn't. Check against the Moda renovation timeline.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Draft lottery, draft and Summer League dates for 2027",
+      "verdict": "unverifiable",
+      "note": "Approximate. The league hasn't confirmed its dates.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Compound Gallery, Cal Skate and House of Vintage are open at the stated locations",
+      "verdict": "unverifiable",
+      "note": "Small-business claims from knowledge. Confirm each is operating.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Lloyd Center is largely vacant; Pioneer Place and downtown Nordstrom status",
+      "verdict": "unverifiable",
+      "note": "Retail changes fast. Confirm current tenancy.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "The Nike Community Store on NE MLK has been open since 1984 and hires locally",
+      "verdict": "corrected",
+      "note": "Checked live Oct 10, 2026: wrong. The store at 2650 NE MLK Jr. Blvd, open since 1984, closed in late 2022 after theft and safety concerns, and Nike confirmed in Sept 2023 that it won't reopen. This check had left it unverified, and the brief used it as its main launch door. Removed as a door everywhere; launches moved to Albina partner venues or downtown Nike Portland.",
+      "source": "https://opb.org/article/2023/09/08/nike-permanently-closes-northeast-portland-factory-store"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Foot Locker, Lids and athletic chains at Washington Square and Clackamas",
+      "verdict": "unverifiable",
+      "note": "Chain footprints change. Confirm before naming doors in a plan.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Aminé is a New Balance partner and a Rip City fan",
+      "verdict": "confirmed",
+      "note": "The music dossier's source (Hypebeast 2026) backs the New Balance 992 release.",
+      "source": "https://hypebeast.com/2026/9/amine-new-balance-992-outdoor-school-first-look-revealed-release-info"
+    },
+    {
+      "lens": "culture",
+      "claim": "The Rip City call dates to Feb 1971 vs the Lakers, after a Jim Barnett shot",
+      "verdict": "unverifiable",
+      "note": "Reports disagree. Confirm the date and opponent before putting it on product.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Laika Wildwood release timing",
+      "verdict": "unverifiable",
+      "note": "The art dossier says the U.S. release is Oct 23, 2026. The underground dossier leaves it open. Confirm before pitching a launch film.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Darcelle XV Showplace and Zoobomb still operate on their current schedules",
+      "verdict": "unverifiable",
+      "note": "Check the venue's status after Walter Cole's death in 2023, and the Zoobomb meeting point.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Cascadia Doug flag, Weather Machine and Portlandia statue IP terms",
+      "verdict": "unverifiable",
+      "note": "Confirm the rights holders and terms before any reference.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Portland Fire coach Alex Sarama and the 2027 palette",
+      "verdict": "unverifiable",
+      "note": "Per knowledge, the coach was named in 2025. Confirm.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Albina Vision Trust talks (Sept 2026) and local-art priority in renovation",
+      "verdict": "confirmed",
+      "note": "The music and art dossiers cite Willamette Week and the City engagement report. Lease terms remain pending per CURRENT FACTS.",
+      "source": "https://wweek.com/news/city/2026/09/04/council-approves-development-talks-with-albina-vision-trust-for-city-property-next-to-moda-center"
+    }
+  ],
+  "summary": "The knowledge-mode dossiers are broadly right on roster, coach, owner, arena funding, record, Cup and marquee facts, all of which match CURRENT FACTS. The real errors: the pinwheel designer was Frank Glickman, not Cooney (confirmed live). The downtown Nike store closed in late 2023 and reopened Nov 2025 at 638 SW 5th Ave. Deadstock Coffee moved to The Hoxton. Spirit of 77 had a neighborhood mismatch, the Camara and Holiday trade line was off, and the Blazers are not the only major-league basketball team in the state. The Nike Hoop Summit at Moda Center was confirmed live for April 2026. The brief needs three fixes: the White Stag timing, the Cooney verify item, and hedges on the Nike downtown channel and the 1977 Classic Edition. The remaining risk sits in small-business, date and licensing claims. Correction, Oct 10, 2026: the NE MLK Nike Community Store closed for good in 2023. This check had marked it unverifiable, so the brief kept recommending it. It's now removed as a launch door in every file."
+}

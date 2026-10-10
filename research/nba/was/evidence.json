@@ -1,0 +1,142 @@
+{
+  "team": "was",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "was-c1",
+      "claim": "The Go-Go Museum & Cafe operates in Anacostia and can serve as a first-release door for Wards 7 and 8 tees, the clinic tee and go-go drops.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "‘It’s all about love’: Go-go Museum celebrates grand opening in Anacostia, telling history of official music of DC",
+          "url": "https://wtop.com/dc/2024/11/dcs-go-go-museum-opens-its-doors/",
+          "publisher": "WTOP",
+          "published": "2024-11"
+        },
+        {
+          "title": "Connect with us",
+          "url": "https://thehilltoponline.com/2024/11/25/d-c-go-go-museum-and-cafe-hosts-anacostia-soft-launch-and-ribbon-cutting-ceremony/",
+          "publisher": "The Hilltop",
+          "published": "2024-11-25"
+        }
+      ],
+      "evidence": "The museum held a soft launch and ribbon-cutting in Anacostia on Nov 18, 2024, and opened to the public on Feb 19, 2025, at 1920 Martin Luther King Jr. Ave. SE, with a cafe, exhibits, a recording studio and an outdoor stage. No result dated after early 2025 confirms it is open in October 2026.",
+      "action": "No change. The location in Anacostia holds; current operating status is still to confirm before it is used as a launch door.",
+      "supports": {
+        "insights": [
+          1,
+          2
+        ],
+        "opportunities": [
+          "go-go-partnership",
+          "dybantsa-era-core",
+          "wards-and-codes"
+        ],
+        "calendar": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "id": "was-c2",
+      "claim": "The Howard Theatre in Shaw is open and can host go-go drops and launches.",
+      "topic": "store-or-venue",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Howard Theatre",
+          "url": "https://en.wikipedia.org/wiki/Howard_Theatre",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "The search found no news of a closure or new reopening. Wikipedia lists Blue Note Entertainment Group as operator under a 20-year lease from the 2012 reopening, but nothing dated 2026 confirms it is booking shows now.",
+      "action": "No change.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "go-go-partnership"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "was-c3",
+      "claim": "Go-go became DC's official music in 2020, so February is the anniversary of the official-music law.",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "mayor bowser signs bill designate go go music official music dc",
+          "url": "https://mayor.dc.gov/release/mayor-bowser-signs-bill-designate-go-go-music-official-music-dc",
+          "publisher": "Office of the Mayor, DC",
+          "published": ""
+        },
+        {
+          "title": "go go music washington dc bill",
+          "url": "https://thefader.com/2020/02/20/go-go-music-washington-dc-bill",
+          "publisher": "The FADER",
+          "published": "2020-02-20"
+        }
+      ],
+      "evidence": "The Council passed the Go-Go Music of the District of Columbia Designation Act of 2019 unanimously on Feb 4, 2020, and Mayor Bowser signed it on Feb 19, 2020, with Backyard Band performing at the signing.",
+      "action": "No change needed.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "go-go-partnership"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "was-c4",
+      "claim": "CareFirst Arena in Congress Heights holds the Wizards' practice court, the Capital City Go-Go and the Mystics.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "CareFirst Arena",
+          "url": "https://en.wikipedia.org/wiki/CareFirst_Arena",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "carefirst arena",
+          "url": "https://washington.org/visit-dc/carefirst-arena",
+          "publisher": "Destination DC (washington.org)",
+          "published": ""
+        }
+      ],
+      "evidence": "The arena, renamed CareFirst Arena in 2025, is home to the Mystics and the Capital City Go-Go and houses the Wizards' practice facility, at 1100 Oak Drive SE. The sources are undated, so 2026-27 scheduling and any Mystics games at Capital One Arena are not covered.",
+      "action": "No change to the research. Factcheck verdict updated to confirmed.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "dybantsa-era-core",
+          "ward-8-and-nike-family-hoops"
+        ],
+        "calendar": [
+          3,
+          8
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": []
+}

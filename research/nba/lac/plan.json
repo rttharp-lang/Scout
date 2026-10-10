@@ -1,0 +1,671 @@
+{
+  "team": "lac",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 9-16",
+      "kind": "action",
+      "start": "2026-10-09",
+      "end": "2026-10-16",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10-16",
+      "actNote": "Get 'Inglewood' and the Halo cleared by the Clippers' interim signatory, commission the sign painter and book a decorator for Oct 26.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 17 and all month",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-10",
+      "actNote": "Open talks with SIPA and Gardena's Japanese American leagues about a South Bay heritage night.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2027-28",
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "venue-or-permit",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Oct 30",
+      "kind": "launch",
+      "start": "2026-10-30",
+      "end": "",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Nov 1-2",
+      "kind": "event",
+      "start": "2026-11-01",
+      "end": "2026-11-02",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Día de los Muertos is Nov 1-2",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Early November, confirmed home Cup Nights, Nov 20, Nov 27",
+      "kind": "season",
+      "start": "2026-11-01",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "2026-11",
+      "actNote": "Reorder the leading player's jersey in the first week of November. Lock the Toronto-night roster tee files by Nov 20.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Dec 1-24",
+      "kind": "season",
+      "start": "2026-12-01",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Christmas is Dec 25; holiday gifting runs in the weeks before it",
+      "actBy": "2026-12-10",
+      "actNote": "Run the sell-through check. It's the last holiday restock.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "First Lakers-at-Dome date on the schedule",
+      "kind": "launch",
+      "start": "2027-01",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Feb 1-11, plus the Raptors' Dome visit whenever scheduled",
+      "kind": "event",
+      "start": "2027-02-01",
+      "end": "2027-02-11",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Trade deadline",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "February (Lunar New Year and Tet expected Feb 6)",
+      "kind": "launch",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Mar 10, Mar 23 and a March Rose Bowl Flea Market Sunday",
+      "kind": "launch",
+      "start": "2027-03",
+      "end": "",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "retailer-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Apr 1-16",
+      "kind": "season",
+      "start": "2027-04-01",
+      "end": "2027-04-16",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "Juneteenth and late June (2027 NBA Draft)",
+      "kind": "launch",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "third-party-ip",
+        "partner-agreement",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "July and August weekends",
+      "kind": "season",
+      "start": "2027-07",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "third-party-ip",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 13,
+      "window": "Mid-August to Sep 9",
+      "kind": "season",
+      "start": "2027-08",
+      "end": "2027-09-09",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "retailer-agreement",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "cup-night-inglewood-launch",
+      "consumer": "Lifelong Clippers diehards and Inglewood and South Bay families.",
+      "insights": [
+        0,
+        1,
+        3
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-30",
+      "actBy": "2026-10-16",
+      "actNote": "Get 'Inglewood' and the Halo cleared by the Clippers' interim signatory and the lettering done. Print by Oct 26.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm who signs Clippers licensing approvals during the suspensions, and ask them to clear 'Inglewood' and the Halo by Oct 16.",
+        "Check in-stock navy tee and hoodie blanks and a decorator who can deliver by Oct 26.",
+        "Get space and permission for a heat-press station on the Dome plaza.",
+        "Confirm the second home Cup Night date before opening app pre-orders."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "third-party-ip",
+        "stock-availability",
+        "production-capacity",
+        "venue-or-permit",
+        "partner-agreement",
+        "retailer-agreement",
+        "nike-calendar-approval"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Residency Art Gallery"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "youth-and-player-ladder",
+      "consumer": "Value-minded families in Inglewood, South LA and Southeast LA, and IE buyers.",
+      "insights": [
+        5,
+        6,
+        0
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "kids",
+        "headwear"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Run modest Wagler and Garland swingman buys in youth and adult sizes now.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Track which of Garland, Ingram or Wagler leads early jersey sales before the November reorder.",
+        "Test youth tee, cap and jersey prices against swap-meet prices and LA County's near-10% sales tax.",
+        "Confirm the Citadel factory store and the Foot Locker at Baldwin Hills Crenshaw Plaza are open before seeding them."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "reshuffle-nights",
+      "consumer": "Season-ticket holders and families with Kawhi jerseys in the closet.",
+      "insights": [
+        6,
+        3,
+        5
+      ],
+      "categories": [
+        "tee",
+        "jersey",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-30",
+      "actBy": "2026-10-30",
+      "actNote": "Stock Ingram name-and-number tees and youth jersey depth for the Oct 30 New Orleans game.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm NBPA group-license coverage for the 'Home Team' roster tee.",
+        "Confirm Nike-NBA policy on heat-press name-and-number after a deadline trade.",
+        "Get the Raptors' Dome date from the published schedule.",
+        "Check every Toronto-night piece for any Kawhi name, number, likeness or thank-you copy."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "production-capacity",
+        "stock-availability",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "house-rules-lakers-nights",
+      "consumer": "Season-ticket holders and Wall regulars.",
+      "insights": [
+        0,
+        1,
+        3
+      ],
+      "categories": [
+        "tee",
+        "fleece"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Launch on the first Lakers-at-Dome date. Clear 'House Rules' and the Halo print before then, or run the Wall-row fallback hoodie.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Find the first Lakers-at-Dome date on the published schedule.",
+        "Get 'House Rules' and the Halo print cleared beside team marks, or ready the Wall-row fallback.",
+        "Check that no copy names the Lakers or the ruling.",
+        "Set numbered run sizes the concourse carts can sell in one night."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "production-capacity",
+        "stock-availability",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "area-code-system",
+      "consumer": "Fans across the six-code footprint who pair the Clippers with another LA team.",
+      "insights": [
+        2,
+        1,
+        3
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2026-11",
+      "actNote": "Commission the six artists, with a separate brief for each code.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Check whether 3/10, 3/23 and 9/09 carry local meaning that would read as borrowed holidays.",
+        "Confirm the 2027 dates for POW! WOW! Long Beach and Lunar New Year and Tet.",
+        "Confirm Self Help Graphics & Art, the 626 Night Market and POW! WOW! Long Beach are operating and willing.",
+        "Agree a regional inventory split with each door."
+      ],
+      "dependencies": [
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Self Help Graphics & Art",
+        "POW! WOW! Long Beach",
+        "626 Night Market"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "inglewood-artist-series",
+      "consumer": "Black fans and culture seekers in Inglewood and South LA.",
+      "insights": [
+        1,
+        0
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "outerwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Publish the share going to Inglewood Unified arts and athletics before the first drop.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm Residency Art Gallery and Art + Practice are operating and willing.",
+        "Confirm Inglewood Unified will accept being named as the beneficiary.",
+        "Set the beneficiary share and test the tee price with it built in."
+      ],
+      "dependencies": [
+        "third-party-ip",
+        "partner-agreement",
+        "production-capacity",
+        "league-or-team-rights",
+        "nike-calendar-approval"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Residency Art Gallery",
+        "Art + Practice"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "three-cities-and-rework",
+      "consumer": "Lob City diehards, vintage collectors and owners of old Kawhi jerseys.",
+      "insights": [
+        4,
+        3,
+        6
+      ],
+      "categories": [
+        "accessory",
+        "fleece",
+        "jersey",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2027-03",
+      "actNote": "Open the rework station at the Dome plaza and the Rose Bowl Flea Market with the patch set that needs no team approval.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development",
+        "future-uniform"
+      ],
+      "validation": [
+        "Confirm Classic Edition rights and what Mitchell & Ness and Fanatics hold on Braves and San Diego marks.",
+        "Get NBPA and individual clearance for any Lob City likeness.",
+        "Confirm the Rose Bowl Flea Market's March Sunday and a booth.",
+        "Name a licensing path and an approver for each heritage piece before design starts."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "venue-or-permit",
+        "nike-calendar-approval",
+        "retailer-agreement",
+        "brand-safety"
+      ],
+      "owner": "Licensing and legal",
+      "partners": [
+        "Rose Bowl Flea Market"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "south-bay-heritage-night",
+      "consumer": "Filipino American, Japanese American, Samoan and Tongan hoops families in the South Bay.",
+      "insights": [
+        2
+      ],
+      "categories": [
+        "tee",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2027-28",
+      "firstInMarket": "2027-01",
+      "actBy": "2026-10",
+      "actNote": "Open talks with SIPA and Gardena's Japanese American community leagues during Filipino American History Month.",
+      "routes": [
+        "no-product",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm SIPA and the Gardena Japanese American leagues are operating and open to working together.",
+        "Agree pay and credit terms for every designer.",
+        "Review designs with community leaders to keep sacred or ceremonial imagery off product."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "production-capacity",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "SIPA (Search to Involve Pilipino Americans)",
+        "Gardena Japanese American community leagues"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

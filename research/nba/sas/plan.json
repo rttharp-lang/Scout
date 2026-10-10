@@ -1,0 +1,656 @@
+{
+  "team": "sas",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Oct 9-15, the last week of Hispanic Heritage Month",
+      "kind": "season",
+      "start": "2026-10-09",
+      "end": "2026-10-15",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Hispanic Heritage Month runs Sep 15 to Oct 15 every year",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Oct 20 opener vs OKC and Oct 30 Lakers Cup night at home",
+      "kind": "event",
+      "start": "2026-10-20",
+      "end": "2026-10-30",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Opening night (regular season tips off); Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "2026-10",
+      "actNote": "Shift existing allocation to volume doors now; product for Oct 20 is already built.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "retailer-agreement",
+        "player-or-estate-rights"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Cup Fridays and Thanksgiving week Cup nights (Nov 24-25)",
+      "kind": "season",
+      "start": "2026-10-30",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Military Appreciation home game (date to confirm) and 1st and 15th paydays",
+      "kind": "event",
+      "start": "2026-11",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Military Appreciation game date is still to confirm",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 4-9, if the Spurs host a Cup quarterfinal or semifinal",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-09",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals; Emirates NBA Cup 2026 — semifinals (the Spurs hosting is conditional)",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Gift product in doors by mid-December; Dec 25 11 a.m. local tip at the Knicks",
+      "kind": "season",
+      "start": "2026-12",
+      "end": "2026-12-25",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Christmas Day games (Spurs at Knicks, noon ET)",
+      "actBy": "2026-12",
+      "actNote": "Get gift product into doors by mid-December.",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "retailer-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "MLK week (MLK Day Jan 18) and the city's MLK March on the East Side",
+      "kind": "event",
+      "start": "2027-01-18",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "MLK Day is the third Monday of January (Jan 18, 2027); the city's MLK March date is unchecked",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "partner-agreement",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Black History Month, the Stock Show and Rodeo, and the Rodeo Road Trip",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black History Month is February; Rodeo Road Trip dates are not confirmed",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Contemporary Art Month, the Mar 5 First Friday and the Mar 7 Knicks home game",
+      "kind": "launch",
+      "start": "2027-03-05",
+      "end": "2027-03-07",
+      "recurring": false,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Mar 5 First Friday and Mar 7 Knicks home game come from the brief and are unchecked",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Early April through Fiesta (Apr 15-25, 2027)",
+      "kind": "season",
+      "start": "2027-04",
+      "end": "2027-04-25",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Fiesta Apr 15-25, 2027 is in the brief; evidence claim sas-c4 is marked contradicted, not verified",
+      "actBy": "2026-12",
+      "actNote": "Lock Fiesta rights and maker contracts by December.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Playoff rounds and Tejano Conjunto Festival week",
+      "kind": "season",
+      "start": "2027-05",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Pride Month is June",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "partner-agreement",
+        "league-or-team-rights",
+        "stock-availability"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "August 2027 Texas sales-tax holiday weekend (dates to confirm)",
+      "kind": "event",
+      "start": "2027-08",
+      "end": "",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Texas sales-tax holiday dates are still to confirm",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "retailer-agreement",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "fiesta-playoff-drop",
+      "consumer": "Latino and Tejano families, lifelong diehards and playoff bandwagon buyers who wear Fiesta.",
+      "insights": [
+        0,
+        1,
+        4
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "headwear",
+        "accessory",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2026-12",
+      "actNote": "Lock Fiesta rights and maker contracts by December.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Find out which organizations hold the Fiesta name and each medal design, and clear every one.",
+        "Check that local medal makers can make the four-medal set in volume by early April.",
+        "Set the medal-set price and the share of proceeds for makers and organizations.",
+        "Test whether fans still buy the drop as a city moment if the Spurs go out early."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "partner-agreement",
+        "retailer-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Fiesta San Antonio Commission",
+        "Fiesta member organizations",
+        "Local medal makers"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "city-edition-return-sellthrough",
+      "consumer": "Spurs families and lifelong diehards buying the returning Fiesta-stripe City Edition.",
+      "insights": [
+        1,
+        4,
+        5
+      ],
+      "categories": [
+        "jersey",
+        "shorts",
+        "fleece",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Shift existing stripe allocation to volume doors now, and confirm the first City Edition wear date.",
+      "routes": [
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm the 2026-27 first City Edition wear date.",
+        "Check stripe stock depth in volume doors before the opener.",
+        "Plan staged stripe stock for a home Cup quarterfinal or semifinal.",
+        "Line up counterfeit takedowns on stripe product with the league."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "retailer-agreement",
+        "league-or-team-rights",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Merchandising",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "wemby-youth-ladder",
+      "consumer": "Kids, parents and military families who want most of the basket under $100.",
+      "insights": [
+        5,
+        4
+      ],
+      "categories": [
+        "tee",
+        "jersey",
+        "shorts",
+        "footwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "kids"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Confirm each player's footwear and apparel affiliation, then push the holiday tier from the opener.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Wembanyama's Nike status and the affiliations of Fox, Castle and Harper.",
+        "Test the sub-$100 prices with parents at Academy and Dick's.",
+        "Confirm the 2027 Texas tax-holiday dates and the $100 threshold.",
+        "Check youth-size stock depth in the volume doors."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "partner-agreement",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "San Antonio Parks and Recreation"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "westside-artist-series",
+      "consumer": "Conjunto families and elders, young West Side and Southtown creatives, and scene-literate fans.",
+      "insights": [
+        2,
+        4
+      ],
+      "categories": [
+        "tee",
+        "headwear",
+        "fleece",
+        "other"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-03",
+      "actBy": "2026-10",
+      "actNote": "Set paid commission and royalty terms with Nike legal, then commission named artists now.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm whether Cruz Ortiz, Eva Ybarra, Santiago Jiménez Jr. and Piñata Protest are willing and available.",
+        "Check the Guadalupe's current programs and the 2027 Tejano Conjunto Festival dates.",
+        "Confirm Blue Star First Fridays still run.",
+        "Size each run so it sells out, and track sell-out time."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "third-party-ip",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "venue-or-permit",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Guadalupe Cultural Arts Center",
+        "Cruz Ortiz",
+        "Eva Ybarra",
+        "Santiago Jiménez Jr.",
+        "Piñata Protest",
+        "Blue Star Arts Complex"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "east-side-iceman",
+      "consumer": "Black San Antonio and East Side families, lifelong diehards and throwback collectors.",
+      "insights": [
+        3
+      ],
+      "categories": [
+        "tee",
+        "outerwear",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-01",
+      "actBy": "2027-01",
+      "actNote": "Get George Gervin's agreement and clear throwback licensing before the MLK week introduction.",
+      "routes": [
+        "quick-turn-graphics",
+        "new-development"
+      ],
+      "validation": [
+        "Confirm George Gervin is willing, and check throwback-uniform licensing for a Gervin-era capsule.",
+        "Check current programs at the Carver and St. Philip's, and the 2027 MLK March date.",
+        "Agree how proceeds reach East Side youth programs and how they're reported.",
+        "Review copy and imagery with East Side partners so nothing reads as a farewell."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "George Gervin",
+        "Carver Community Cultural Center",
+        "St. Philip's College"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "spurs-nation-border",
+      "consumer": "South Texas, Rio Grande Valley and northern Mexico fans, plus I-35 fans in Austin, reached in Spanish first.",
+      "insights": [
+        6,
+        5
+      ],
+      "categories": [
+        "tee",
+        "fleece",
+        "headwear",
+        "event"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Set border allocations for Buen Fin after checking the peso and cross-border traffic weeks.",
+      "routes": [
+        "existing-inventory",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the dates of the Spurs' Austin, Paris and Manchester games.",
+        "Check the peso and cross-border shopping weeks before setting allocations.",
+        "Name and check Laredo and Rio Grande Valley retail partners.",
+        "Have local Spanish speakers review every Spanish-first graphic."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "retailer-agreement",
+        "venue-or-permit",
+        "player-or-estate-rights",
+        "league-or-team-rights",
+        "date-confirmation"
+      ],
+      "owner": "Marketing",
+      "partners": [],
+      "status": "hypothesis"
+    },
+    {
+      "id": "military-city-service",
+      "consumer": "Joint Base San Antonio families, the wider military community and veterans.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "outerwear",
+        "headwear",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11",
+      "actBy": "2026-11",
+      "actNote": "Get David Robinson's agreement and sign a military-family nonprofit before Military Appreciation night.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm the 2026-27 Military Appreciation home game date.",
+        "Confirm David Robinson is willing to back 'The Admiral'.",
+        "Check Fisher House Foundation's San Antonio houses and partnership policy.",
+        "Set military pricing and make sure discount redemptions can be counted."
+      ],
+      "dependencies": [
+        "player-or-estate-rights",
+        "partner-agreement",
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "David Robinson",
+        "Fisher House Foundation"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "rodeo-road-trip",
+      "consumer": "South Texas ranch and charro families and lifelong diehards.",
+      "insights": [
+        1
+      ],
+      "categories": [
+        "outerwear",
+        "accessory",
+        "headwear",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Confirm the Rodeo Road Trip and its stops on the schedule before releasing anything.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm a February 2027 Rodeo Road Trip is scheduled, and its stops.",
+        "Ask Paris Hatters and the Asociación de Charros de San Antonio whether they want to work together.",
+        "Test whether fans will collect a trip-city patch set."
+      ],
+      "dependencies": [
+        "date-confirmation",
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "league-or-team-rights",
+        "third-party-ip"
+      ],
+      "owner": "Design",
+      "partners": [
+        "Paris Hatters",
+        "Asociación de Charros de San Antonio"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}

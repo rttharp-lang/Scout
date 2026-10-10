@@ -1,0 +1,369 @@
+{
+  "team": "ind",
+  "lens": "underground",
+  "headline": "Indy's underground runs on methanol, gym wax and dice",
+  "summary": "Indianapolis named its team after a pace car, and its deepest subculture is still motor oil: dirt-track bullrings, sprint cars and drag strips. The second is Hoosier Hysteria's pilgrims, who tour giant high school gyms and hoard sectional tees. Gen Con takes over downtown every summer. Punk, drag and DIY rooms are real but anti-corporate, and the sneaker conversation is split between Puma and Nike.",
+  "insights": [
+    {
+      "title": "Named for a pace car, raised in the bullrings",
+      "detail": "USAC, which sanctions sprint and midget racing, is headquartered in Speedway. Every July, Indiana Sprint Week runs a string of bullrings from Kokomo to Bloomington's red clay. Anderson's Little 500 (33 cars, 500 laps on a quarter-mile) runs the night before the Indy 500. Fans wear sun-faded crew shirts, Hoosier Racing Tire tees and hand-lettered car numbers. Kyle Larson's 2024 Indy 500-Coca-Cola 600 'Double' attempt pulled dirt-track fandom into IMS just as racing jackets went mainstream through F1.",
+      "implication": "Racing is the Pacers' origin story: the 1967 name nods to the Indy 500 pace car and harness-racing pacers. Get ahead of the F1-led racing trend with the bullring version: sign-painted numbers, crew jackets and clay-dust color, with no licensed IMS marks."
+    },
+    {
+      "title": "Gym-hoppers are Hoosier Hysteria's own subculture",
+      "detail": "Indiana's giant high school gyms draw a circuit of gym-hoppers. They include New Castle's roughly 7,300-seat fieldhouse (once about 9,300) and Knightstown's Hoosier Gym, where the film's Hickory played. Hoppers photograph old gyms, thrift sectional-champion tees and letter jackets, and still resent the 1997-98 switch from one open state tournament to class basketball. Milan's 1954 title, the story behind Hoosiers, is their creed.",
+      "implication": "The Dec 11, 2026 NBA Cup final at Hinkle Fieldhouse, where Hoosiers filmed its title game, is the moment for sectional-tee graphics and single-class nostalgia. Keep out IHSAA marks, real school mascots and the film's Hickory branding unless licensed."
+    },
+    {
+      "title": "Gen Con fills downtown in the dead season",
+      "detail": "Gen Con is North America's biggest tabletop-gaming convention. Since 2003 it has packed roughly 70,000 gamers, cosplayers and dice collectors into the Indiana Convention Center, Lucas Oil Stadium and downtown hotels. It runs four days around the start of August, a few blocks from the Fieldhouse. In 2015 it was the first big convention to threaten to leave over Indiana's RFRA law, which helped push lawmakers into the 'fix'.",
+      "implication": "Make a Pacers team-store capsule with generic polyhedral dice and stat-block graphics, with local game artists. It reaches a huge audience Nike never targets. This crowd takes civic politics seriously and knows its IP, so leave out Dungeons & Dragons and Gen Con marks."
+    },
+    {
+      "title": "A mall-bred sneaker scene, split between brands",
+      "detail": "Finish Line was founded in Indianapolis in 1976, so the city's sneaker culture grew up mall-first and retail-literate, not boutique-led. Today the hometown star's signature shoe is Puma (Haliburton's Hali line). Nike's signature athlete in the same building is the Fever's Caitlin Clark, whose 2024 arrival filled the Fieldhouse with girls in No. 22 jerseys.",
+      "implication": "Run Nike's Indy sneaker story through the shared Fieldhouse: Pacers-Fever crossover drops, women's-hoops product and the Pacers' Nike uniforms. Leave Haliburton's feet out of it."
+    },
+    {
+      "title": "Major Taylor, the cyclist Indianapolis pushed out",
+      "detail": "Marshall 'Major' Taylor, born in Indianapolis in 1878, got his nickname doing trick riding in a soldier's uniform outside the Hay & Willits bike shop. After he broke records, Indianapolis tracks barred him because he was Black. He left for Worcester, Massachusetts, and won the 1899 world sprint title. The Major Taylor Velodrome on Cold Spring Road and Marian University's championship cycling program keep track and BMX riding alive.",
+      "implication": "A track-jersey Pacers piece honoring Taylor is a powerful Indianapolis-only story. Make it only if it's co-created with Black cycling clubs and youth programs, names the exclusion plainly and clears his name and likeness first."
+    },
+    {
+      "title": "Small, protective DIY and queer rooms",
+      "detail": "Saturday Punk Rock Night at the Melody Inn, all-ages hardcore at the east side's Emerson Theater, and drag and burlesque at Fountain Square's White Rabbit Cabaret form the city's DIY core. Queer Indy organizes through Indy Pride every June. The 2015 RFRA fight and recent anti-LGBTQ laws keep the community politically alert.",
+      "implication": "Leave the punk rooms unbranded and, at most, commission their flyer artists by name. Build Pride product with Indy Pride and local drag performers, credit and pay them, and keep proceeds local."
+    }
+  ],
+  "places": [
+    {
+      "name": "Indianapolis Motor Speedway infield and Coke Lot",
+      "kind": "speedway infield and campground",
+      "neighborhood": "Speedway",
+      "why": "Race weekend's unofficial underground. Campers fly flags, build party compounds and dress in cutoffs and checkers across the street from the track."
+    },
+    {
+      "name": "Lucas Oil Indianapolis Raceway Park",
+      "kind": "drag strip and oval",
+      "neighborhood": "Brownsburg (Clermont)",
+      "why": "Home of NHRA's U.S. Nationals since 1961, drag racing's biggest weekend."
+    },
+    {
+      "name": "Anderson Speedway",
+      "kind": "quarter-mile oval",
+      "neighborhood": "Anderson (Madison County)",
+      "why": "Hosts the Little 500, run since 1949 on the night before the Indy 500. A rite for Indiana's bullring crowd."
+    },
+    {
+      "name": "Indianapolis Speedrome",
+      "kind": "figure-8 and oval track",
+      "neighborhood": "East side",
+      "why": "Blue-collar figure-8 racing, on the east side for decades. The most Indianapolis-only form of local motorsport."
+    },
+    {
+      "name": "Major Taylor Velodrome",
+      "kind": "velodrome",
+      "neighborhood": "Northwest side (Cold Spring Rd, near Marian University)",
+      "why": "Indy's track-cycling home, named for the Black world champion the city's tracks once barred."
+    },
+    {
+      "name": "Hoosier Gym",
+      "kind": "historic gym",
+      "neighborhood": "Knightstown",
+      "why": "Hickory's home court in Hoosiers, still playable and the shrine of the gym-hopping circuit."
+    },
+    {
+      "name": "New Castle Fieldhouse and Indiana Basketball Hall of Fame",
+      "kind": "high-school fieldhouse and museum",
+      "neighborhood": "New Castle",
+      "why": "Billed as the world's largest high school gym (about 7,300 seats today), beside the state's basketball hall of fame."
+    },
+    {
+      "name": "Indiana Convention Center",
+      "kind": "convention center",
+      "neighborhood": "Downtown",
+      "why": "Gen Con's base each summer, a few blocks from Gainbridge Fieldhouse."
+    },
+    {
+      "name": "Melody Inn",
+      "kind": "punk dive bar",
+      "neighborhood": "Near north side (North Illinois St)",
+      "why": "Its Saturday Punk Rock Night is the long-running heart of the city's punk scene."
+    },
+    {
+      "name": "White Rabbit Cabaret",
+      "kind": "drag, burlesque and variety venue",
+      "neighborhood": "Fountain Square",
+      "why": "A hub for Indy's drag and burlesque performers, in the city's DIY-leaning arts district."
+    }
+  ],
+  "people": [
+    {
+      "name": "Tony Stewart",
+      "role": "Columbus, Indiana-born racer; 1995 USAC Triple Crown winner and three-time NASCAR Cup champion",
+      "why": "The bullring crowd's folk hero. His rise from Indiana dirt tracks is the scene's founding story. Any use of his name or likeness needs his approval."
+    },
+    {
+      "name": "USAC (United States Auto Club)",
+      "role": "Sprint, midget and Silver Crown sanctioning body headquartered in Speedway, Indiana",
+      "why": "Runs Indiana Sprint Week and the bullring calendar, so it gatekeeps any credible grassroots-racing tie-in."
+    },
+    {
+      "name": "Jeff Teague",
+      "role": "Indianapolis-born former Pacer (Pike High School), 2021 NBA champion and host of the Club 520 podcast",
+      "why": "A Naptown voice with national reach in hoops media, and a credible partner for an Indy-born basketball or sneaker collaboration."
+    },
+    {
+      "name": "Gen Con",
+      "role": "Tabletop-gaming convention organizer, in Indianapolis since 2003",
+      "why": "Controls downtown's biggest summer crowd and showed real civic muscle in the 2015 RFRA fight."
+    },
+    {
+      "name": "Major Taylor (Marshall Taylor, 1878-1932)",
+      "role": "Indianapolis-born cyclist and 1899 world sprint champion",
+      "why": "The city's founding Black athlete story, and a reminder of who Indianapolis once shut out."
+    },
+    {
+      "name": "Marian University cycling",
+      "role": "Indianapolis college cycling program and perennial USA Cycling collegiate national champion",
+      "why": "Anchors track and BMX riding at the Major Taylor Velodrome and is a ready partner for youth cycling."
+    },
+    {
+      "name": "Homefield Apparel",
+      "role": "Indianapolis-based brand making vintage-style college sports tees",
+      "why": "Proof that the vintage-graphic appetite Nike wants to reach is homegrown. A possible collaborator on sectional-tee graphics."
+    },
+    {
+      "name": "Indy Pride",
+      "role": "Nonprofit behind the city's June Pride parade and festival",
+      "why": "The credible partner, and the pay-through, for any Pride product in a politically charged state."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Boys' basketball sectionals",
+      "timing": "Late February to early March",
+      "month": 3,
+      "why": "Small towns empty into their sectional gyms. The 'sectional champs' tees printed that week become the vintage gym-hoppers hunt."
+    },
+    {
+      "name": "Little 500 and the Coke Lot, Indy 500 weekend",
+      "timing": "Saturday night before the Indy 500 (late May); Coke Lot campers all weekend",
+      "month": 5,
+      "why": "The grassroots side of race weekend, with the bullring and infield crowds all in town. It often overlaps with a Pacers playoff run."
+    },
+    {
+      "name": "Indy Pride",
+      "timing": "June",
+      "month": 6,
+      "why": "The citywide moment for queer-community product built with Indy Pride and local drag performers."
+    },
+    {
+      "name": "USAC Indiana Sprint Week",
+      "timing": "Late July",
+      "month": 7,
+      "why": "A week of nightly sprint-car races across Indiana bullrings, when crew-shirt and hand-lettered-number culture peaks."
+    },
+    {
+      "name": "Gen Con",
+      "timing": "Four days in late July or early August",
+      "month": 8,
+      "why": "Roughly 70,000 gamers take over downtown in the NBA's quietest weeks, a ready-made window for a team-store capsule."
+    },
+    {
+      "name": "NHRA U.S. Nationals ('the Big Go')",
+      "timing": "Labor Day weekend",
+      "month": 9,
+      "why": "Drag racing's biggest event lands just before Pacers training camp, a natural launch for racing-coded fall product."
+    },
+    {
+      "name": "Emirates NBA Cup championship at Hinkle Fieldhouse",
+      "timing": "Friday, Dec 11, 2026",
+      "month": 12,
+      "why": "The first Cup final outside Las Vegas lands in the gym where Hoosiers filmed its title game. It's the gym-hoppers' Super Bowl and the launch for sectional-tee product."
+    },
+    {
+      "name": "Punk Rock Night at the Melody Inn",
+      "timing": "Every Saturday",
+      "month": 0,
+      "why": "The weekly heartbeat of Indy's DIY scene. Find flyer artists here, don't place product."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Bullring",
+      "meaning": "A short oval, usually a quarter-mile of dirt. Indiana has dozens, and Sprint Week tours them."
+    },
+    {
+      "term": "Sprint Week",
+      "meaning": "USAC's July run of nightly Indiana sprint-car races. 'Doing Sprint Week' means following every stop."
+    },
+    {
+      "term": "The Big Go",
+      "meaning": "Nickname for NHRA's U.S. Nationals at the Brownsburg drag strip over Labor Day weekend."
+    },
+    {
+      "term": "Coke Lot",
+      "meaning": "The IMS campground where race-weekend partying runs nonstop. Shorthand for the 500's rowdy side."
+    },
+    {
+      "term": "Sectionals",
+      "meaning": "The first round of the IHSAA basketball tournament. A 'sectional champs' tee is a gym-hopper's prize."
+    },
+    {
+      "term": "Class basketball",
+      "meaning": "Purists' sneer for the multi-class tournament adopted in 1997-98, which ended the one-tournament era of Milan '54."
+    },
+    {
+      "term": "Milan '54",
+      "meaning": "Tiny Milan High's 1954 state title on Bobby Plump's last shot. It's the true story behind Hoosiers and the creed of single-class nostalgia."
+    },
+    {
+      "term": "The 317",
+      "meaning": "Indianapolis's area code, shorthand for the city on tees, hats and in local hip-hop."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Bloomington red clay",
+      "type": "color",
+      "hex": "#9C4A2F",
+      "source": "Bloomington Speedway's famed red-clay quarter-mile, and the clay roost that coats fans along Sprint Week fences.",
+      "use": "Garment-dye fleece and crew shirts in it, paired with Pacers navy (#002D62) and gold (#FDBB30), with a roost-splatter print at the hem."
+    },
+    {
+      "cue": "Sign-painter race numbers: hand-lettered numerals with drop shadows and outline strokes",
+      "type": "typography",
+      "hex": "",
+      "source": "Hand-lettered numbers on Indiana sprint cars, midgets and Speedrome figure-8 cars.",
+      "use": "Commission Indiana race-car letterers to hand-letter shooting-shirt and jacket numbers. Credit them on the hangtag."
+    },
+    {
+      "cue": "Pit-crew jacket: boxy twill, contrast yoke, snap front and a patch grid on chest and sleeves",
+      "type": "silhouette",
+      "hex": "",
+      "source": "USAC and NHRA crew jackets and shirts worn in the pits and stands.",
+      "use": "A Pacers lifestyle jacket whose patch slots carry team moments and city references, not sponsors."
+    },
+    {
+      "cue": "Metalflake",
+      "type": "texture",
+      "hex": "",
+      "source": "Hot-rod and drag-car flake paint lined up in the pits at the Big Go.",
+      "use": "Gold-flake heat transfer on numbers and logos over navy. Keep it to trims so it reads as paint, not glitter."
+    },
+    {
+      "cue": "Sectional-champs tee template: town name arched over a mascot, 'SECTIONAL CHAMPIONS' and the year in a one-color cracked print",
+      "type": "graphic",
+      "hex": "",
+      "source": "Tees printed by Indiana high schools for decades and hunted in thrift bins by gym-hoppers.",
+      "use": "Use the template for the Hinkle Cup final drop, with Pacers moments in place of towns. Skip real school names and mascots without permission."
+    },
+    {
+      "cue": "1890s wool racing jersey: fitted dark knit, crew neck, chest initial",
+      "type": "material",
+      "hex": "",
+      "source": "Major Taylor's era of track racing, seen in archive photos of him.",
+      "use": "A wool-blend warmup top co-designed with Black cycling partners. Use archive imagery only with rights cleared."
+    },
+    {
+      "cue": "Polyhedral dice and character-sheet stat blocks",
+      "type": "motif",
+      "hex": "",
+      "source": "Gen Con's tabletop gamers, who carry dice bags and stat sheets through downtown every August.",
+      "use": "A generic d20 and a Pacers 'stat block' graphic for a Gen Con-week capsule, with no D&D ampersand or Gen Con logo."
+    }
+  ],
+  "productHooks": [
+    "'Bullring' Pacers crew jacket and red-clay (#9C4A2F) garment-dyed fleece, with numerals hand-lettered by Indiana race-car letterers. Drop it on Labor Day weekend during the Big Go as the first piece of the season, with no IMS, USAC or NHRA marks unless licensed.",
+    "'Sectional' pack for the Dec 11 NBA Cup final at Hinkle: cracked one-color tees in the sectional-champs template, with Indiana's 92 county names as the back print. Sell it at Hinkle and the Fieldhouse.",
+    "Gen Con-week capsule: a Pacers stat-block tee and dice bag, made with Indianapolis game artists. Sell it at the downtown team store the week gamers fill the convention center.",
+    "Major Taylor track warmup: a wool-blend track jersey in Pacers navy, co-created with Black cycling clubs and Marian University's program. Proceeds fund youth cycling at the Major Taylor Velodrome, pending clearance of Taylor's name and likeness.",
+    "'One Building' Pacers x Fever crossover on Nike's women's-hoops product, because Indy's biggest Nike sneaker name is Caitlin Clark, not a Pacer.",
+    "Pride warmup co-designed with Indy Pride and local drag performers, who are credited and paid. Proceeds go to an LGBTQ+ youth organization they choose."
+  ],
+  "watchouts": [
+    "Haliburton is a Puma signature athlete, so don't build a sneaker story around him. Keep player-name product inside standard NBA licensing.",
+    "Indy 500, Brickyard, the IMS wing-and-wheel, the Snake Pit and the Coke Lot belong to Penske Entertainment. NHRA, USAC, Hoosier Racing Tire, IHSAA, the Hoosiers film's Hickory marks, Gen Con and Dungeons & Dragons (Hasbro) all need licensing. Stay generic with clay, numerals, flake and dice.",
+    "Leave street takeovers and drifting alone, since police target them. Don't glorify the Coke Lot's drinking culture.",
+    "Major Taylor's story and Black Expo weekend downtown carry real histories of exclusion and heavy policing. Tell them with Black partners who are credited and paid.",
+    "The punk and drag rooms are anti-corporate, and in a state with the RFRA fight and recent anti-LGBTQ laws, Pride work that looks like marketing will backfire. Co-create with Indy Pride or skip it."
+  ],
+  "sources": [
+    {
+      "title": "United States Auto Club - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/United_States_Auto_Club"
+    },
+    {
+      "title": "USAC Racing - official site",
+      "url": "https://www.usacracing.com"
+    },
+    {
+      "title": "Indianapolis Motor Speedway - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Indianapolis_Motor_Speedway"
+    },
+    {
+      "title": "NHRA - official site",
+      "url": "https://www.nhra.com"
+    },
+    {
+      "title": "Gen Con - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Gen_Con"
+    },
+    {
+      "title": "Gen Con - official site",
+      "url": "https://www.gencon.com"
+    },
+    {
+      "title": "Major Taylor - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Major_Taylor"
+    },
+    {
+      "title": "Major Taylor Velodrome - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Major_Taylor_Velodrome"
+    },
+    {
+      "title": "Indiana High School Athletic Association - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Indiana_High_School_Athletic_Association"
+    },
+    {
+      "title": "Hinkle Fieldhouse - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hinkle_Fieldhouse"
+    },
+    {
+      "title": "Religious Freedom Restoration Act (Indiana) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Religious_Freedom_Restoration_Act_(Indiana)"
+    },
+    {
+      "title": "Tony Stewart - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tony_Stewart"
+    },
+    {
+      "title": "Jeff Teague - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jeff_Teague"
+    },
+    {
+      "title": "Indiana Pacers - official site",
+      "url": "https://www.nba.com/pacers"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Tyrese Haliburton's signature-shoe deal is still with Puma for 2026-27, and check the timing of Caitlin Clark's Nike signature line.",
+      "Confirm Gen Con 2027 dates (late July or early August), that it remains in Indianapolis under its current contract, and current attendance (about 70,000).",
+      "Confirm NHRA U.S. Nationals 2027 is on Labor Day weekend at the Brownsburg drag strip, and check the track's current official name.",
+      "Check USAC Indiana Sprint Week 2027 dates and track list, including Bloomington Speedway's red clay and Kokomo.",
+      "Confirm Anderson Speedway's Little 500 still runs the night before the Indy 500, and IMS still operates the Coke Lot campground.",
+      "Confirm Indianapolis Speedrome is still running a figure-8 racing season.",
+      "Confirm Melody Inn still hosts Saturday Punk Rock Night, and the Emerson Theater still books all-ages shows.",
+      "Confirm White Rabbit Cabaret is still operating in Fountain Square.",
+      "Check Indy Pride 2027 dates, format and partnership contacts.",
+      "Confirm Jeff Teague's Club 520 podcast is still active.",
+      "Confirm Homefield Apparel is still based in Indianapolis, and check its retail presence.",
+      "Check Marian University cycling's current standing, BMX facilities at the Major Taylor Velodrome complex, and who controls Major Taylor's name and likeness."
+    ]
+  }
+}

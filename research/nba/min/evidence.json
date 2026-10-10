@@ -1,0 +1,151 @@
+{
+  "team": "min",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "min-c1",
+      "claim": "A Nike store operates at Mall of America and serves as the launch door for volume and holiday gifts",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Nike Mall of America",
+          "url": "https://www.nike.com/mx/retail/s/nike-mall-of-america",
+          "publisher": "Nike",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's own store locator lists a Nike Mall of America store at 227 West Market, Bloomington, MN 55425, with daily hours. The search did not show whether it is open to local collaborations.",
+      "action": "No change needed. factcheck.json note updated; the Albertville Nike Factory Store is still unchecked.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "skyway-season-layers",
+          "mill-city-christmas",
+          "big-ticket-heritage",
+          "ready-swap-pipeline"
+        ],
+        "calendar": [
+          0,
+          1,
+          3,
+          9
+        ]
+      }
+    },
+    {
+      "id": "min-c2",
+      "claim": "Electric Fetus in Minneapolis is open and runs Record Store Day, so it can carry numbered playoff tees in mid-April",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "photos scenes from record store day 2026",
+          "url": "https://www.thecurrent.org/feature/2026/04/21/photos-scenes-from-record-store-day-2026",
+          "publisher": "The Current",
+          "published": "2026-04-21"
+        },
+        {
+          "title": "Record Store Day 2026 at Electric Fetus",
+          "url": "https://www.minneapolis.org/calendar/record-store-day-2026-at-electric-fetus/",
+          "publisher": "Meet Minneapolis",
+          "published": ""
+        }
+      ],
+      "evidence": "Electric Fetus held Record Store Day on April 18, 2026, at its south Minneapolis store on Fourth Avenue South, with live sets. Its Duluth store closed earlier; the company kept the Minneapolis store.",
+      "action": "No change needed. The brief names only the Minneapolis store.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "ready-swap-pipeline"
+        ],
+        "calendar": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "min-c3",
+      "claim": "Kevin Garnett's jersey retirement date is unannounced, so the brief holds it as a January placeholder",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Timberwolves to retire Kevin Garnett’s No. 21 on February 28",
+          "url": "https://www.valleynewslive.com/2026/08/14/timberwolves-retire-kevin-garnetts-no-21-february-28/",
+          "publisher": "Valley News Live",
+          "published": "2026-08-14"
+        },
+        {
+          "title": "kevin garnett jersey retirement feb 28",
+          "url": "https://thegrio.com/2026/08/17/kevin-garnett-jersey-retirement-feb-28/",
+          "publisher": "theGrio",
+          "published": "2026-08-17"
+        }
+      ],
+      "evidence": "The team announced on Aug 14, 2026 that it will retire Garnett's No. 21 on Sunday, Feb 28, 2027, when it hosts Boston at Target Center in an NBC game. Reports differ on whether the ceremony comes before or after the game.",
+      "action": "Dated calendar[5] to Feb 28, 2027 and moved it to month 2. Updated topInsights[3], the big-ticket-heritage opportunity, the timing, risk and verify lines, the factcheck verdict and the dossier verify lists.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "big-ticket-heritage"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "min-c4",
+      "claim": "The 1989-90 Wolves drew about 1.07 million fans at the Metrodome, an NBA single-season attendance record",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "attendance record 900418",
+          "url": "https://www.nba.com/timberwolves/news/attendance_record_900418.html",
+          "publisher": "NBA.com",
+          "published": "1990-04-18"
+        }
+      ],
+      "evidence": "The team's April 1990 release says the inaugural season drew 1,072,572 fans, an NBA regular-season record that beat Detroit's 1987-88 Silverdome mark. One stats site shows 1,027,572, which looks like a typo. Whether the record still stands was not checked.",
+      "action": "No change to research. factcheck.json verdict moved from unverifiable to confirmed.",
+      "supports": {
+        "insights": [
+          3
+        ],
+        "opportunities": [
+          "big-ticket-heritage"
+        ],
+        "calendar": [
+          5
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Kevin Garnett's jersey retirement date is unannounced; the calendar holds it as a January placeholder.",
+      "correction": "The team retires Garnett's No. 21 on Sunday, Feb 28, 2027, at home against Boston on NBC. The date was announced Aug 14, 2026.",
+      "files": [
+        "strategy.json",
+        "factcheck.json",
+        "rhythm.json",
+        "uniform.json",
+        "hoops.json",
+        "art.json",
+        "music.json",
+        "retail-behavior.json",
+        "fanbase.json",
+        "retail-landscape.json",
+        "culture.json"
+      ],
+      "claimId": "min-c3"
+    }
+  ]
+}

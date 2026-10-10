@@ -1,0 +1,132 @@
+{
+  "team": "lac",
+  "issues": [
+    {
+      "target": "opportunities[0] / calendar Oct 20-30 / retailPlaybook.when",
+      "type": "timing",
+      "severity": "high",
+      "problem": "The launch needs newly commissioned sign-painter lettering, a nylon shell with reflective tape and mesh shorts with a starburst hem. Seeding runs Oct 15-20, with launch Oct 30. Today is Oct 9, and fall 2026 product is already locked, so new graphics and trims on that schedule aren't realistic.",
+      "fix": "Split it. For Oct 30, use only fast-turn decorated blanks: a screen-printed 'Inglewood' tee and a hoodie on existing Clippers navy blanks, with the sign painter credited. Move the jacket, shorts and chrome-accent pieces to a spring/summer 2027 or holiday 2027 slot, and say so in the brief."
+    },
+    {
+      "target": "opportunities[0] / retailPlaybook.when ('restock each Cup Friday')",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "Cup group play is four games in a five-team group (West B: OKC, MIN, NOP, MEM). That puts the Clippers at home for roughly two of the Fridays from Oct 30 to Nov 27, plus any Nov 24-25 Cup Night. Only the Oct 30 home date vs. New Orleans is confirmed. 'Restock every Cup Friday' and 'Thanksgiving-week Cup Nights' assume home games that may not exist. Nov 27 is also Black Friday, so the Cup push and the Black Friday push collide.",
+      "fix": "Tie every drop and restock to the real home schedule once it's released. Treat Oct 30 as the only fixed anchor. The higher seed hosts, so check whether a Dec 4-5 quarterfinal could land at the Dome. Decouple Black Friday from the Cup."
+    },
+    {
+      "target": "topInsights[1] / collection 'Sign Language' / uniform",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "Neon tubes, Googie starbursts, hand-painted taco boards and rooftop donuts describe roadside Southern California, and Randy's and Pann's are LA-wide icons. Swap in Pasadena, Long Beach or Las Vegas and most of the graphic vocabulary survives. The Forum marquee is the Lakers' Showtime house and is MSG/Sphere-controlled, so it's a bad anchor for a Clippers-only story. The 'abstract rooftop ring' beside the Dome 'halo ring' makes two rings that will read as one muddled donut.",
+      "fix": "Anchor the system in things only Inglewood has. That means the Dome's Halo and Wall, the Hollywood Park racetrack signage legacy now under SoFi and the Dome district, and street signage along Century, Manchester and Market Street. Drop the second ring and the Forum marquee. Keep Googie as texture, not as the idea."
+    },
+    {
+      "target": "topInsights[2] / opportunities[2] / collection 'Area Codes'",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The brief counts 'six area codes' in the insight, 'five regions' in the opportunity and four codes (310, 562, 626, 714) in the products. Latino Southeast LA is named as a core fan segment but gets no product, only a Day of the Dead support line. The Inland Empire is missing from the grid, though hometown-summer uses it.",
+      "fix": "Pick one number and make the grid match it. Either add a Southeast LA slot (323/562 edge) and an Inland Empire slot, 909/951, with named Latino artists, or cut the claim to the four codes you can serve. Spanish-language fan content belongs here."
+    },
+    {
+      "target": "opportunities[2] / collection 'Area Codes' (626 and 714 pieces)",
+      "type": "appropriation",
+      "severity": "medium",
+      "problem": "One 'Lunar New Year lantern' shell is asked to cover the SGV, which spans Chinese, Taiwanese and other communities, and Little Saigon, home to Vietnamese Tet. Those are different cultures with different symbols. Lanterns and 'lantern-gold' are a pan-Asian cliché, and no community partner is named. ArtCenter is a school, not a community. Khmer New Year in Cambodia Town runs mid-April, around Apr 13-16. Angkor and temple imagery is sacred.",
+      "fix": "Split 626 and 714 into separate briefs with named, paid designers from each community, and no default lantern. Limit Khmer New Year to community sponsorship, with no temple motifs. Keep the Vietnamese heritage flag off product, since its politics are live in Little Saigon. Let the community designers choose the motif."
+    },
+    {
+      "target": "calendar Apr 1-16 / opportunities (play-in push tee)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "A 'play-in push tee' presumes another 9th-or-10th-place finish and builds product around a stage fans see as a consolation. It also lands in the same week as Khmer New Year and Easter-week family spending. If the team finishes in the top six or misses the postseason, the stock is wrong.",
+      "fix": "Make the April drop a neutral 'finish line' graphic tee that works for the playoffs or a lost season. Prebuild the playoff and play-in ladder as a contingency, not the plan."
+    },
+    {
+      "target": "calendar Jun 19 ('no draft-pick product given the forfeited firsts')",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "The forfeited picks are 2029-2033 first-rounders, so the June 2027 draft isn't obviously affected. The brief treats the penalty as wiping out all draft-night content.",
+      "fix": "Mark the 2027 pick position as unknown and still to check. Keep a quick draft-night social-and-tee option on the shelf in case the team holds a pick."
+    },
+    {
+      "target": "topInsights[0] / retailPlaybook.how (hold player product until December)",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "Waiting for December sales to choose between Garland, Ingram and Wagler means a December reorder lands after Christmas, past the fan-spend peak. The opening weeks bring the most attention. The player-name jersey is also the volume tier for youth, which the brief itself names as its main volume bet.",
+      "fix": "Pre-position a modest Wagler (rookie) and Garland run now, with a rule for chasing the winner by early November. Treat a Dec 10 sell-through check as the last useful moment for holiday restock."
+    },
+    {
+      "target": "opportunities[3] / partners (Born x Raised) / collection 'Three Cities'",
+      "type": "other",
+      "severity": "medium",
+      "problem": "NBA marks on third-party collabs, Braves and San Diego marks, and Lob City player likenesses all need NBA, team and NBPA approvals. The brief names no owner for that. Fanatics, the Clippers' own Pro Shop operation and Mitchell & Ness (Hardwood Classics) also hold ground on throwback and fan-shop product. A 'Classic heritage swingman' may not be Nike's to sell. Approvals are slower still while the team's business side is under suspension.",
+      "fix": "List the licensing path for each piece before design starts, and name who owns the Classic Edition decision. Route heritage through the team's Classic Edition slot or a redrawn, non-licensed story. Don't assume a retail capsule is available."
+    },
+    {
+      "target": "opportunities[5] 'Southland Sound' and collection 'Leimert After Hours'",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Leimert Park jazz and the World Stage are LA-wide Black cultural heritage with no link to the Clippers, so the idea fails the swap test. The claim that the circle 'played on Kendrick's records' is loose and verges on borrowed credibility, which the brief itself says to avoid. The opportunity is rated size low and priority 3, yet it fills a whole collection theme.",
+      "fix": "Cut it as a collection and fold one credited flyer-art tee into the Crenshaw artist series. If it stays, tie it to something real, such as the Dome's own concert calendar and artists who have actually played there."
+    },
+    {
+      "target": "opportunities[6] 'Crenshaw and Leimert artist series' / partners (Art + Practice)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Leimert Park, Crenshaw and Baldwin Hills are City of LA neighborhoods, not Inglewood. The brief uses them as stand-ins for the Dome's neighbors while promising proceeds to 'Inglewood youth programs'. Art + Practice is a foundation with a foster-youth mission, not an artist-commissioning agency. Marathon is rightly avoided, but Crenshaw and Slauson is Nipsey's story, not the Clippers'.",
+      "fix": "Make Inglewood-based artists and institutions the primary partners, and treat Leimert as a secondary, LA-wide layer. Approach Art + Practice for introductions, not as the producer. Address the Dome displacement concerns directly, with a named local beneficiary."
+    },
+    {
+      "target": "opportunities[4] 'Hometown lineage summer' / partners (Drew League)",
+      "type": "weak-link",
+      "severity": "low",
+      "problem": "The Drew League is a citywide institution that the Lakers brief or any LA brand can claim, and the Clippers connection is thin. Pierce, Leslie (a Sparks legend), DeRozan and Westbrook span many teams. Naming living athletes on tees needs their consent, and the Drew League's existing apparel partners are unknown.",
+      "fix": "Lead with Clippers alumni from the neighborhood, such as Pierce (Inglewood) and Westbrook (Hawthorne), and clear each one. Check the Drew League's current sponsor before pitching an apparel deal."
+    },
+    {
+      "target": "uniform (court tie-in, details, timeline)",
+      "type": "other",
+      "severity": "low",
+      "problem": "A neon-outline court and halo center circle are team and arena decisions, not Nike's. Reflective waistbands and bent-tube numbers must clear NBA uniform legibility rules. 2028-29 is probably too conservative for the earliest City Edition, given 12-18 month lead times. The concept's reds (#E8412C vs. #C8102E) and its two navies, #12173F vs. #1D428A, are also unreconciled.",
+      "fix": "Cut the court idea. Pitch the concept for the 2027-28 cycle, with the NBA rulebook check up front. Lock one navy and one red before the pitch."
+    },
+    {
+      "target": "calendar (all) / missed Lakers context",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The brief never plans for Lakers visits to the Dome, though its thesis is that the Dome is the Clippers' house. It also skips Nike's own Sept 9 Specter reveal, which put the Lakers among eight historic franchises and left the Clippers out. Both are the sharpest contrasts the Clippers story has.",
+      "fix": "Add a 'house rules' limited piece for Lakers-at-Dome nights, sold only in the building. Use the Specter gap as a quiet cue for why the Clippers line is local, not nostalgic."
+    },
+    {
+      "target": "topInsights[3] / risks (Kawhi untouchable)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "Kawhi Leonard jerseys are the biggest stock of Clippers product in fans' closets, and fans have nowhere to take them. The brief treats Kawhi only as a risk. Clipper Darrell is named as part of fan lore but never used.",
+      "fix": "Consider a no-name jersey trade-in or customization station (patches, re-embroidery, bleach) at the Dome and Rose Bowl Flea Market that never mentions the trade. Approach a longtime fan figure like Clipper Darrell as a credited fan voice, if he's willing."
+    },
+    {
+      "target": "topInsights (market focus: South Bay, Orange County)",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "The South Bay is in the stated footprint, but the brief has no Filipino American or Pacific Islander segment. Carson, Long Beach and Cerritos hold large Filipino American and Samoan and Tongan communities with deep basketball roots. October is Filipino American History Month, and Hispanic Heritage Month runs to Oct 15. Both fall inside the launch window.",
+      "fix": "Add a South Bay heritage-night partnership with named Filipino American community organizations and basketball leagues, paid and credited and timed to October. Use no sacred or ceremonial imagery."
+    },
+    {
+      "target": "opportunities[0] (Intuit Dome imagery, 'arena line art', 'Inglewood' type)",
+      "type": "other",
+      "severity": "low",
+      "problem": "The Halo, the Wall, the arena silhouette and the Intuit name are Clippers and Intuit IP. The 'Inglewood' wordmark would also compete with the team's own 'LA' identity. The brief doesn't say who approves any of it.",
+      "fix": "Before briefing the sign painters, confirm with the Clippers which Dome marks are free to use and whether 'Inglewood' can sit beside the team mark."
+    }
+  ],
+  "strengths": [
+    "The thesis follows the facts. With no star, no marquee slate and a suspended owner, it sells the building and neighborhoods and keeps the penalties out of the copy.",
+    "The price ladder runs from swap-meet to South Coast Plaza, with a youth tier and a rule to pay and credit every local artist on the hangtag. It's practical and respectful.",
+    "The Three Cities history (Buffalo, San Diego, Inglewood) is a story no other Pacific team can tell. The brief redraws it instead of lifting bootleg art.",
+    "Day of the Dead is handled correctly: community support, with sacred imagery kept off commodity product.",
+    "The brief flags its own unverified inputs, avoids Nipsey and Marathon IP, and stays clear of the Lakers' Chicano-script lane."
+  ],
+  "summary": "The strategy is sound and honest about the Clippers' weak moment. But Sign Language is thinner and more generic than it claims, and the Oct 30 launch can't be made on current lead times. Fix the launch scope and tie restocks to the real home schedule. Then tighten the community pieces before design starts: the 626/714 split, Inglewood vs. Leimert, and the Southeast LA and Filipino American gaps."
+}

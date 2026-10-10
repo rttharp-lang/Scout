@@ -1,0 +1,292 @@
+{
+  "team": "dal",
+  "lens": "art",
+  "headline": "Fair Park Deco by day, red Pegasus neon by night.",
+  "summary": "Dallas has four visual vocabularies: Fair Park's 1936 Art Deco, Deep Ellum's layered walls, Oak Cliff's Mexican-American signs and lowriders, and a skyline crowned by Pegasus and Reunion Tower. The museums are strong, but the street-level collaborators who count are Deep Ellum and Oak Cliff makers. Mavs royal stays locked, so new color comes as accents: Pegasus red, Deco cream, marigold.",
+  "insights": [
+    {
+      "title": "Deep Ellum is a wall that never stops being repainted",
+      "detail": "Murals, the Good-Latimer tunnel and layers of gig posters and stickers give Deep Ellum an overpainted, built-up look. Local muralists like Frank Campagna and the Deep Ellum Community Association's mural program shape it. The look is collage and layering, not one hero mural.",
+      "implication": "Brief graphics as layered, overprinted stacks of poster, stencil, tag and wheatpaste. Commission local muralists. Don't lift existing walls."
+    },
+    {
+      "title": "Fair Park Art Deco is Dallas's most ownable architecture",
+      "detail": "Fair Park's 1936 Centennial Exposition buildings, Hall of State and Cotton Bowl area carry Deco relief, stepped geometry and heroic figures. The State Fair of Texas (Big Tex, the Texas Star Ferris wheel) piles carnival lettering on top. Almost no other NBA market has this as a graphic base.",
+      "implication": "Build a City Edition or lifestyle graphic system on stepped Deco geometry and State Fair carnival type. It beats the skyline and cowboy cliches."
+    },
+    {
+      "title": "Oak Cliff and West Dallas carry the Latino sign-painting and lowrider language",
+      "detail": "Bishop Arts, Jefferson Boulevard and Oak Cliff are full of hand-painted taqueria and panaderia signs, botanica and mercado lettering, lowriders and a big Dia de los Muertos season. Oak Cliff is also home to Dallas's Latino arts organizations and the Texas Theatre, which anchor local identity.",
+      "implication": "Treat Oak Cliff as a partner neighborhood. Hire local Latino painters and letterers for any sign-painting-inspired graphic, and credit them on the product."
+    },
+    {
+      "title": "Red Pegasus neon is the city's single strongest night image",
+      "detail": "The red neon Pegasus atop the Magnolia Building (the old Mobil sign) and the lit Reunion Tower ball define the Dallas night skyline. Deep Ellum's neon storefronts echo them. Red neon on deep blue night already sits next to Mavs blue.",
+      "implication": "Make a neon-red accent and a glow-in-the-dark or reflective print the hero effect. Use a winged-horse abstraction only if the Pegasus mark is cleared, since it is a commercial brand asset."
+    },
+    {
+      "title": "Dallas's big museums are open to collaboration",
+      "detail": "Dallas Contemporary, the Nasher Sculpture Center, the Dallas Museum of Art and the Dallas Art Fair give the city a serious collector and design audience. SMU Meadows, UNT and Booker T. Washington High School for the Performing and Visual Arts feed it a steady supply of artists, Erykah Badu's alma mater among them.",
+      "implication": "Run an exhibition-style product drop or artist-designed colorway through a partner like Dallas Contemporary or the Dallas Art Fair. Credit and pay the artist."
+    },
+    {
+      "title": "Dallas has a deep Black arts lineage tied to South Dallas and Deep Ellum history",
+      "detail": "Deep Ellum was an early Black blues and jazz district where Blind Lemon Jefferson and Lead Belly played. South Dallas holds Black arts institutions and the Dallas Black Dance Theatre tradition. Local artists like Jeremy Biggers work with Black Dallas history in public art.",
+      "implication": "Let Black Dallas artists and institutions lead any Deep Ellum music-history story. Don't use it as ambient texture."
+    }
+  ],
+  "places": [
+    {
+      "name": "Deep Ellum murals and Good-Latimer tunnel",
+      "kind": "mural district",
+      "neighborhood": "Deep Ellum",
+      "why": "The densest, most photographed concentration of Dallas street art, repainted continually."
+    },
+    {
+      "name": "Kettle Art Gallery",
+      "kind": "gallery",
+      "neighborhood": "Deep Ellum",
+      "why": "Long-running, artist-driven gallery and a hub for local street and lowbrow work."
+    },
+    {
+      "name": "Dallas Contemporary",
+      "kind": "contemporary art museum",
+      "neighborhood": "Design District",
+      "why": "Free, non-collecting museum with large-scale shows by emerging and international artists."
+    },
+    {
+      "name": "Nasher Sculpture Center",
+      "kind": "museum",
+      "neighborhood": "Arts District",
+      "why": "A Renzo Piano building, and with the DMA an anchor of the downtown Arts District."
+    },
+    {
+      "name": "Dallas Museum of Art",
+      "kind": "museum",
+      "neighborhood": "Arts District",
+      "why": "The city's encyclopedic museum, with free general admission."
+    },
+    {
+      "name": "Fair Park",
+      "kind": "Art Deco district and fairgrounds",
+      "neighborhood": "South Dallas / Fair Park",
+      "why": "The largest collection of preserved 1930s Art Deco exposition architecture in the US, and home of the State Fair."
+    },
+    {
+      "name": "Bishop Arts District",
+      "kind": "arts district",
+      "neighborhood": "Oak Cliff",
+      "why": "Independent shops, galleries and murals at the center of Oak Cliff's creative retail scene."
+    },
+    {
+      "name": "Texas Theatre",
+      "kind": "historic cinema and venue",
+      "neighborhood": "Oak Cliff",
+      "why": "A restored 1931 neon-marquee movie house and Oak Cliff landmark."
+    },
+    {
+      "name": "Magnolia Building Pegasus sign",
+      "kind": "landmark sign",
+      "neighborhood": "Downtown",
+      "why": "The red neon flying horse is Dallas's defining night-sky graphic."
+    },
+    {
+      "name": "Reunion Tower",
+      "kind": "landmark",
+      "neighborhood": "Downtown",
+      "why": "The lit geodesic ball is the skyline's other icon, and a simple shape that's easy to recognize."
+    }
+  ],
+  "people": [
+    {
+      "name": "Frank Campagna",
+      "role": "Deep Ellum muralist",
+      "why": "One of the longest-working Deep Ellum wall painters, founder of Kettle Art Gallery and a credible neighborhood voice."
+    },
+    {
+      "name": "Jeremy Biggers",
+      "role": "Dallas artist and activist",
+      "why": "Makes public art about Black Dallas history and community."
+    },
+    {
+      "name": "Erykah Badu",
+      "role": "Musician and cultural figure from South Dallas",
+      "why": "A Booker T. Washington alumna whose Dallas identity carries style authority."
+    },
+    {
+      "name": "Deep Ellum Community Association",
+      "role": "Neighborhood nonprofit",
+      "why": "Runs and curates Deep Ellum public art and murals. Call them first for neighborhood work."
+    },
+    {
+      "name": "Dallas Art Fair",
+      "role": "Annual contemporary art fair",
+      "why": "The meeting point for the city's collector, gallery and design audience."
+    },
+    {
+      "name": "Cooper Flagg",
+      "role": "Mavericks star",
+      "why": "The young face of the reset and a natural subject for a new-Dallas visual story."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Dallas Art Fair",
+      "timing": "Typically April",
+      "month": 4,
+      "why": "The year's top art-world gathering, near the start of the playoff window."
+    },
+    {
+      "name": "Deep Ellum Arts Festival",
+      "timing": "Typically spring",
+      "month": 4,
+      "why": "Street art, music and a maker market at neighborhood scale."
+    },
+    {
+      "name": "State Fair of Texas",
+      "timing": "Late September to mid October",
+      "month": 10,
+      "why": "Big Tex, carnival type and Fair Park Deco at their peak, overlapping the season tip-off."
+    },
+    {
+      "name": "Dia de los Muertos in Dallas (Bishop Arts and Latino cultural center events)",
+      "timing": "Late October to early November",
+      "month": 11,
+      "why": "The community's biggest arts moment, landing right at the start of the season."
+    },
+    {
+      "name": "Mavericks home opener window",
+      "timing": "Late October onward (home opener Oct 24; NBA Cup group play Fridays from Oct 30)",
+      "month": 10,
+      "why": "The first chance to debut Flagg-era product to the home crowd."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Big D",
+      "meaning": "Common nickname for Dallas."
+    },
+    {
+      "term": "DFW",
+      "meaning": "The Dallas-Fort Worth metroplex, local shorthand for the whole region."
+    },
+    {
+      "term": "Deep Ellum",
+      "meaning": "The east-of-downtown entertainment and mural district, usually just called Ellum."
+    },
+    {
+      "term": "The Cliff",
+      "meaning": "Oak Cliff, the southwest Dallas neighborhood. Residents use it affectionately."
+    },
+    {
+      "term": "Big Tex",
+      "meaning": "The giant cowboy figure at the State Fair, an icon of the fall season."
+    },
+    {
+      "term": "214 / 972",
+      "meaning": "Dallas area codes, neighborhood-pride shorthand."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Mavs royal blue as the base",
+      "type": "color",
+      "hex": "#00538C",
+      "source": "Dallas Mavericks primary color",
+      "use": "Keep it as the base so an art-led Dallas capsule still reads as the team."
+    },
+    {
+      "cue": "Pegasus neon red",
+      "type": "color",
+      "hex": "#E8202A",
+      "source": "Magnolia Building neon Pegasus against the night sky",
+      "use": "One hot accent, in outlines, stitching and a reflective or glow print."
+    },
+    {
+      "cue": "Fair Park Deco cream and terracotta",
+      "type": "color",
+      "hex": "#E9DDBF",
+      "source": "Limestone and plaster of the 1936 Fair Park buildings",
+      "use": "Warm neutral for Deco-geometry graphics, with terracotta (#B5532F) as the secondary."
+    },
+    {
+      "cue": "Stepped Deco geometry and sunburst",
+      "type": "pattern",
+      "hex": "",
+      "source": "Fair Park relief and Hall of State ornament",
+      "use": "Tonal jacquard or tonal screen print on warm-ups and headwear. Don't copy any building relief literally."
+    },
+    {
+      "cue": "Carnival and State Fair lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "State Fair midway signs and Big Tex-era type",
+      "use": "Bold, slightly chunky hand-painted letterforms for city wordmarks. Commission a local letterer."
+    },
+    {
+      "cue": "Layered poster wall",
+      "type": "texture",
+      "hex": "",
+      "source": "Deep Ellum wheatpaste and sticker walls",
+      "use": "Overprinted, partly peeled graphic texture for lifestyle tees and hoodies."
+    },
+    {
+      "cue": "Marigold papel picado accent",
+      "type": "color",
+      "hex": "#F2A900",
+      "source": "Dia de los Muertos cempasuchil and Oak Cliff Latino celebrations",
+      "use": "Seasonal accent only, made with Oak Cliff artists. Keep it off ceremonial imagery."
+    }
+  ],
+  "productHooks": [
+    "Deep Ellum layered-wall tee and hoodie capsule, made with a Deep Ellum muralist who gets the credit and timed to the October tip-off.",
+    "Fair Park Deco warm-up and headwear set in cream and royal blue, with stepped-geometry tonal jacquard, tied to State Fair season.",
+    "Red-neon reflective night graphic inspired by the Pegasus, on a Flagg-era lifestyle drop, pending IP clearance on the sign.",
+    "Oak Cliff hand-lettered Dia de los Muertos season graphic made with local Latino painters, with revenue shared with a local arts nonprofit."
+  ],
+  "watchouts": [
+    "The Pegasus sign and Reunion Tower are brand and city assets. Clear licensing before using them literally.",
+    "Don't lift existing Deep Ellum murals. Commission and credit the artists.",
+    "Dia de los Muertos imagery is ceremonial. Partner with Oak Cliff artists and skip the skull-as-decoration cliche.",
+    "Avoid the generic Texas cowboy, longhorn and ten-gallon-hat template. It fails the swap test."
+  ],
+  "sources": [
+    {
+      "title": "Dallas Mavericks official site",
+      "url": "https://www.mavs.com"
+    },
+    {
+      "title": "Fair Park (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Fair_Park"
+    },
+    {
+      "title": "Deep Ellum, Dallas (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Deep_Ellum,_Dallas"
+    },
+    {
+      "title": "Dallas Contemporary",
+      "url": "https://www.dallascontemporary.org"
+    },
+    {
+      "title": "Dallas Art Fair",
+      "url": "https://www.dallasartfair.com"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm the Dallas Mavericks 2026-27 City Edition uniform theme and release date (not verified).",
+      "Confirm the Mavericks' primary royal blue #00538C and current brand palette are unchanged for 2026-27.",
+      "Confirm Dallas Art Fair 2027 dates and location.",
+      "Confirm Deep Ellum Arts Festival 2027 timing and whether it still runs.",
+      "Confirm State Fair of Texas 2026 dates and Fair Park programming.",
+      "Confirm Kettle Art Gallery is still operating in Deep Ellum.",
+      "Confirm Frank Campagna and Jeremy Biggers are active and open to brand collaboration.",
+      "Confirm the Deep Ellum Community Association still runs the neighborhood mural program.",
+      "Confirm Dia de los Muertos 2026 event dates and organizers in Oak Cliff and Bishop Arts.",
+      "Confirm Pegasus sign ownership and licensing status."
+    ]
+  }
+}

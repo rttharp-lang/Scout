@@ -1,0 +1,159 @@
+{
+  "team": "ind",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "ind-c1",
+      "claim": "Circle Centre Foot Locker is a launch door for the Home capsule, and Circle Centre catches game-night shoppers downtown.",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Circle Centre Mall",
+          "url": "https://en.wikipedia.org/wiki/Circle_Centre_Mall",
+          "publisher": "Wikipedia",
+          "published": ""
+        },
+        {
+          "title": "Hendricks closing part of Circle Centre Mall ahead of $300M first phase of revamp",
+          "url": "https://www.insideindianabusiness.com/?p=183976",
+          "publisher": "Inside Indiana Business",
+          "published": ""
+        }
+      ],
+      "evidence": "Circle Centre Mall closed on Dec 31, 2025. Hendricks Commercial Properties owns it and is rebuilding it as an open-air district, with the south block finished around 2030. Tenants in the south block have moved out.",
+      "action": "Removed Circle Centre Foot Locker from the Home opportunity doors. Removed or reworded Circle Centre in retail-landscape and retail-behavior places, doors, summary, insights and verify lists. Marked factcheck verdict 31 corrected.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "back-home-again-opener"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "ind-c2",
+      "claim": "A Nike Factory Store operates at the Edinburgh Premium Outlets, about 30 miles south of Indianapolis.",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "67°F OPEN 10:00AM - 7:00PM",
+          "url": "https://www.premiumoutlets.com/outlet/indiana/about",
+          "publisher": "Simon Premium Outlets",
+          "published": ""
+        }
+      ],
+      "evidence": "The official page for Indiana Premium Outlets in Edinburgh lists Nike Factory Store among its shops. The center is about 30 miles south of Indianapolis on I-65 at exit 76B. Its official name is Indiana Premium Outlets; locals call it the Edinburgh outlets.",
+      "action": "No change needed. Factcheck verdict 31 now records the check.",
+      "supports": {
+        "insights": [
+          2
+        ],
+        "opportunities": [
+          "92-counties-hoosier-hysteria"
+        ],
+        "calendar": [
+          6
+        ]
+      }
+    },
+    {
+      "id": "ind-c3",
+      "claim": "Oct 30 vs. the 76ers is the only confirmed home date and the anchor for Haliburton's first home game; the first home game is still to confirm.",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "pacers announce full 2026 2027 regular season schedule",
+          "url": "https://www.wrtv.com/sports/pacers-announce-full-2026-2027-regular-season-schedule",
+          "publisher": "WRTV",
+          "published": ""
+        },
+        {
+          "title": "The biggest games of the Pacers' 2026-27 season",
+          "url": "https://www.axios.com/local/indianapolis/2026/08/14/indianapolis-pacers-schedule-2026-2027-home-nba",
+          "publisher": "Axios",
+          "published": "2026-08-14"
+        }
+      ],
+      "evidence": "The home opener is Friday Oct 23, 2026 vs. the Dallas Mavericks at Gainbridge Fieldhouse, and Haliburton returns there that night. The season opens on the road at New Orleans on Oct 21. One schedule source lists a Philadelphia home game on Wed Oct 28; league-calendar.json has the 76ers Cup Night on Oct 30, so that conflict is left as is.",
+      "action": "Set the Home window to start at the Oct 23 home opener in strategy (opportunity when, calendar 0, retail playbook). Fixed the culture product hook, rhythm key dates and the verify lists. Marked factcheck verdict 20 corrected.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "back-home-again-opener"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "ind-c4",
+      "claim": "Hinkle is the 1928 barn where Milan won in 1954 and the state finals were played through 1971.",
+      "topic": "history",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "stories.butler.edu",
+          "url": "https://stories.butler.edu/HinkleFieldhouseHistory",
+          "publisher": "Butler University",
+          "published": ""
+        },
+        {
+          "title": "home miracle",
+          "url": "https://indianapublicmedia.org/momentofindianahistory/home-miracle",
+          "publisher": "Indiana Public Media",
+          "published": ""
+        }
+      ],
+      "evidence": "Butler Fieldhouse opened in 1928 and hosted the boys' state finals from 1928 to 1971, with a wartime break. Milan beat Muncie Central there on March 20, 1954, on Bobby Plump's last-second shot.",
+      "action": "No change needed. Added the source to factcheck verdict 36.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "hinkle-cup-final-week"
+        ],
+        "calendar": [
+          4
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Circle Centre Foot Locker is a downtown launch door, and Circle Centre is an open downtown mall.",
+      "correction": "Circle Centre Mall closed on Dec 31, 2025 and is being redeveloped. The door is removed from the plan.",
+      "files": [
+        "strategy.json",
+        "retail-landscape.json",
+        "retail-behavior.json",
+        "factcheck.json"
+      ],
+      "claimId": "ind-c1"
+    },
+    {
+      "claim": "The first home game is unconfirmed, and Oct 30 vs. the 76ers stands in as the return-night anchor.",
+      "correction": "The home opener is Fri Oct 23 vs. Dallas, with Haliburton returning.",
+      "files": [
+        "strategy.json",
+        "culture.json",
+        "rhythm.json",
+        "fanbase.json",
+        "music.json",
+        "factcheck.json"
+      ],
+      "claimId": "ind-c3"
+    }
+  ]
+}

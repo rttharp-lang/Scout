@@ -1,0 +1,181 @@
+{
+  "team": "hou",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "hou-c1",
+      "claim": "Nike Factory Store at Houston Premium Outlets, Cypress, is a Nike-owned volume door for the fan tier and the tax-free pack",
+      "topic": "store-or-venue",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Nike Factory Store - Cypress, Texas TX 77433 - Houston Premium Outlets",
+          "url": "https://www.mallscenters.com/brands/stores/nike-factory-store/cypress--texas--houston-premium-outlets",
+          "publisher": "MallsCenters",
+          "published": ""
+        },
+        {
+          "title": "Find a Nike Store",
+          "url": "https://www.nike.com/gb/retail/directory/united-states/texas",
+          "publisher": "Nike",
+          "published": ""
+        }
+      ],
+      "evidence": "Store listings and Nike's own store directory put the Nike Factory Store at 29300 Hempstead Rd, Suite 501, Cypress, inside Houston Premium Outlets, with current opening hours. No closure notice turned up.",
+      "action": "No change needed. Updated the factcheck note with the live check.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "red-and-gold-clutch-heritage",
+          "tax-free-heat-pack"
+        ],
+        "calendar": [
+          2,
+          12
+        ]
+      }
+    },
+    {
+      "id": "hou-c2",
+      "claim": "Johnny Dang & Co. is a Southwest Houston (Sharpstown/Hillcroft area) shop that can host the Candy Paint jeweler event",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Fashion / Shopping",
+          "url": "https://www.papercitymag.com/fashion/shopping/tv-johnny-rap-legend-paul-wall-houston-cool-rich-people-new-grill-jewelry-store/",
+          "publisher": "PaperCity",
+          "published": "2016"
+        },
+        {
+          "title": "Johnny Dang & Co. Grand Opening",
+          "url": "https://houston.culturemap.com/eventdetail/johnny-dang-co-opening",
+          "publisher": "CultureMap Houston",
+          "published": ""
+        },
+        {
+          "title": "Johnny Dang",
+          "url": "https://en.wikipedia.org/wiki/Johnny_Dang",
+          "publisher": "Wikipedia",
+          "published": ""
+        }
+      ],
+      "evidence": "The flagship opened in 2016 at 6224 Richmond Ave. Dang's first store was in Sharpstown Mall in 1998, and he later had storefronts near Greenspoint, the Galleria and Plaza Americas. The sources are from the 2016 opening, so whether the store is open today is not confirmed.",
+      "action": "Changed the location from Sharpstown/Hillcroft to the 6224 Richmond Ave flagship in retail-landscape.json and strategy.json, and kept a 'confirm it's still open' flag on every use.",
+      "supports": {
+        "insights": [
+          0
+        ],
+        "opportunities": [
+          "candy-paint-capsule"
+        ],
+        "calendar": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "hou-c3",
+      "claim": "The Rockets' home opener falls in late October (date to confirm), launching the Clutch Red and Gold line at Toyota Center",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Houston Rockets announce 2026–27 regular season schedule",
+          "url": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+          "publisher": "FOX 26 Houston",
+          "published": ""
+        },
+        {
+          "title": "Houston Rockets launch 2026-27 regular season schedule",
+          "url": "https://abc13.com/post/houston-rockets-unveil-2026-27-nba-regular-season-schedule/19673987/",
+          "publisher": "ABC13",
+          "published": ""
+        },
+        {
+          "title": "13 Rockets announce 2026 27 schedule",
+          "url": "https://www.thehrr.com/Houston_Rockets/News_and_Info/2026/8/13_Rockets_announce_2026-27_schedule.html",
+          "publisher": "The HRR (thehrr.com)",
+          "published": ""
+        }
+      ],
+      "evidence": "The Rockets open the regular season at home on Wednesday, Oct 21, 2026, against the Dallas Mavericks at Toyota Center, with a 7:30 p.m. Central tip. Home games now tip at 7:30 rather than 7.",
+      "action": "Replaced 'date to confirm' with Oct 21 vs. Mavericks in strategy.json, fanbase.json, rhythm.json, retail-behavior.json and uniform.json.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "red-and-gold-clutch-heritage"
+        ],
+        "calendar": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "hou-c4",
+      "claim": "Houston plays a Mavericks Cup night at home in November, alongside other home Cup Fridays for the Candy Paint reveal",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "13 Rockets announce 2026 27 schedule",
+          "url": "https://www.thehrr.com/Houston_Rockets/News_and_Info/2026/8/13_Rockets_announce_2026-27_schedule.html",
+          "publisher": "The HRR (thehrr.com)",
+          "published": ""
+        },
+        {
+          "title": "Houston Rockets announce 2026–27 regular season schedule",
+          "url": "https://www.fox26houston.com/news/houston-rockets-announce-2026-27-regular-season-schedule",
+          "publisher": "FOX 26 Houston",
+          "published": ""
+        }
+      ],
+      "evidence": "Houston's Cup group games are at Dallas on Oct 30, vs. Utah on Nov 13, at Denver on Nov 20 and vs. Phoenix on Nov 25. Only Utah and Phoenix are home games, and the Phoenix game is a Wednesday, not a Friday.",
+      "action": "Set the Candy Paint reveal to Nov 13 vs. Utah or Nov 25 vs. Phoenix. Moved the Texas-rivalry tee from the Mavericks Cup night to the Oct 21 home opener. Fixed Cup dates in strategy.json, fanbase.json, rhythm.json, retail-landscape.json and critique.json.",
+      "supports": {
+        "insights": [
+          4
+        ],
+        "opportunities": [
+          "candy-paint-capsule"
+        ],
+        "calendar": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Johnny Dang & Co. is in Southwest Houston (Sharpstown/Hillcroft area), and the Candy Paint event is a 'Southwest jeweler event'.",
+      "correction": "The flagship opened in 2016 at 6224 Richmond Ave; Sharpstown Mall was his first store, in 1998. Whether the store is open today is still unconfirmed.",
+      "files": [
+        "retail-landscape.json",
+        "strategy.json",
+        "factcheck.json"
+      ],
+      "claimId": "hou-c2"
+    },
+    {
+      "claim": "A Texas-rivalry Clutch City tee runs on the Mavericks Cup night at Toyota Center in November, and home Cup dates are unconfirmed.",
+      "correction": "The Mavericks Cup game is in Dallas on Oct 30. Home Cup games are Nov 13 (Utah) and Nov 25 (Phoenix). The Mavericks visit Toyota Center for the Oct 21 home opener.",
+      "files": [
+        "strategy.json",
+        "fanbase.json",
+        "rhythm.json",
+        "retail-landscape.json",
+        "retail-behavior.json",
+        "uniform.json",
+        "critique.json",
+        "factcheck.json"
+      ],
+      "claimId": "hou-c4"
+    }
+  ]
+}

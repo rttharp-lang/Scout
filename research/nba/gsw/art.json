@@ -1,0 +1,381 @@
+{
+  "team": "gsw",
+  "lens": "art",
+  "headline": "Mission walls and Oakland posters drew the Bay's look long before the logo did.",
+  "summary": "Bay art is collaborative and political. Mission murals, Oakland's Panther-era print graphics, San Francisco's poster lettering and a candy-paint car culture that runs south to San Jose give the team plenty to draw on. Many of those walls push back at the tech money now sitting courtside. Since the 2019 move, every cue has to say which side of the bridge it serves.",
+  "insights": [
+    {
+      "title": "The logo already picked the bridge",
+      "detail": "Since 2010 the Warriors' roundel has shown the Bay Bridge, which joins The City to The Town. The Golden Gate is the tourist bridge, and it leads to Marin. The team played 47 seasons in Oakland (1971-2019, minus 1996-97 in San Jose) before moving to Chase Center.",
+      "implication": "Make Bay Bridge cable lines and paired City/Town graphics the spine of any Warriors art program. Use Golden Gate orange as an accent at most. Give Oakland equal billing and equal commissions."
+    },
+    {
+      "title": "The Town lost its teams but kept its look",
+      "detail": "Oakland lost the Warriors (2019), the Raiders (2020) and the A's (after 2024). Its civic identity now lives in Oaklandish's oak-tree tees, Uptown and KONO murals, and First Fridays on Telegraph Avenue.",
+      "implication": "Co-author Oakland-facing product with Oakland artists and sell it through Oakland doors. A 'The Town' graphic with no Oakland maker's name on it reads as the team cashing in on a place it left."
+    },
+    {
+      "title": "Mission murals are community property with a point of view",
+      "detail": "Balmy Alley's garage-door murals, Precita Eyes' youth and tour programs, the Women's Building's MaestraPeace (1994) and Clarion Alley's rotating walls are all collectively made. Together they make the Mission one of America's densest mural districts. Clarion's recent work often targets tech-driven displacement, the same money that sits courtside at Chase Center.",
+      "implication": "Commission and pay Mission muralists through Precita Eyes. Never use the walls as a campaign backdrop, and never print photographed murals: they're the artists' copyright."
+    },
+    {
+      "title": "San Francisco exported its own letterforms",
+      "detail": "Wes Wilson's 1966-67 Fillmore posters invented the swelling, shape-filling psychedelic letter, and the Fillmore still hands posters to fans at sold-out shows. Walter Landor's 1975 continuous-line Muni worm and the sign-painter lettering of Margaret Kilgallen and Barry McGee are just as local.",
+      "implication": "Draw Warriors wordmarks in these traditions, as originals from living Bay letterers and poster artists, not stock script. License the Muni worm from SFMTA if it appears."
+    },
+    {
+      "title": "Oakland is a print-and-poster city",
+      "detail": "Emory Douglas's graphics for The Black Panther newspaper use bold outlines, flat color and woodcut hatching. With Favianna Rodriguez's screenprints and Creative Growth's studio of artists with disabilities (since 1974), they make Oakland's art political, graphic and print-native.",
+      "implication": "Build February and community product on screenprint texture and Oakland printmakers, with credit and pay. Creative Growth is a strong candidate for an inclusive, artist-credited capsule."
+    },
+    {
+      "title": "Car culture is the shared East Bay and South Bay language",
+      "detail": "Oakland's 'scrapers' are big-rim GM sedans in candy paint. East Oakland's Scraper Bike Team wraps its spokes in foil. San Jose's lowrider scene, where Lowrider Magazine was founded in 1977, shares the candy paint, metal flake and pinstriping.",
+      "implication": "Candy-paint finishes and pinstripe details can link Oakland and San Jose fans in one capsule made with named builders. Celebrate the craft, never the illegal sideshows."
+    },
+    {
+      "title": "The arena's neighbors are galleries",
+      "detail": "Chase Center in Mission Bay sits a short walk from Dogpatch's Minnesota Street Project (2016) and ICA San Francisco (2022). Studios in the Bayview and Hunters Point Shipyard lie just beyond.",
+      "implication": "Stage artist reveals and limited art drops in Dogpatch on game nights, so the art program lives in the arena's own neighborhood and not only inside the team store."
+    }
+  ],
+  "places": [
+    {
+      "name": "Balmy Alley",
+      "kind": "mural alley",
+      "neighborhood": "Mission (24th to 25th St, between Treat Ave and Harrison St)",
+      "why": "Murals since the early 1970s, including the 1984 PLACA project on Central America, make this the root of the Mission's community mural tradition."
+    },
+    {
+      "name": "Precita Eyes Mural Arts & Visitors Center",
+      "kind": "mural nonprofit and studio",
+      "neighborhood": "Mission (24th St at Harrison)",
+      "why": "Susan Kelk Cervantes and Luis Cervantes founded it in 1977. It runs mural tours and youth programs, and it's the most credible door to commissioning Mission muralists."
+    },
+    {
+      "name": "Clarion Alley Mural Project",
+      "kind": "mural alley",
+      "neighborhood": "Mission (between Mission and Valencia, 17th and 18th Streets)",
+      "why": "A rotating, artist-curated alley since 1992, with murals on housing, policing and tech displacement. It shows what the Mission is saying right now."
+    },
+    {
+      "name": "Minnesota Street Project",
+      "kind": "gallery and studio complex",
+      "neighborhood": "Dogpatch",
+      "why": "Opened in 2016 as a cluster of galleries and artist studios a short walk south of Chase Center. ICA San Francisco (2022) is on the same street."
+    },
+    {
+      "name": "African American Art & Culture Complex",
+      "kind": "Black arts center",
+      "neighborhood": "Western Addition / Fillmore (762 Fulton St)",
+      "why": "The long-running home for Black visual and performing artists in a neighborhood once called the Harlem of the West, and a natural partner for San Francisco Black History product."
+    },
+    {
+      "name": "The Fillmore",
+      "kind": "music venue and poster archive",
+      "neighborhood": "Western Addition (Geary Blvd at Fillmore St)",
+      "why": "Its hallways of concert posters and its poster handout at sold-out shows keep San Francisco's psychedelic lettering tradition alive."
+    },
+    {
+      "name": "Oakland Museum of California",
+      "kind": "museum",
+      "neighborhood": "Downtown Oakland, near Lake Merritt",
+      "why": "Oakland's civic museum of California art and history, with major shows on the Black Panthers and on Bay Area art and design."
+    },
+    {
+      "name": "Creative Growth Art Center",
+      "kind": "art studio and gallery for artists with disabilities",
+      "neighborhood": "Uptown / Northgate, Oakland (24th St)",
+      "why": "A working studio and gallery for artists with disabilities since 1974, and a model for credited, paid and inclusive collaboration."
+    },
+    {
+      "name": "MACLA (Movimiento de Arte y Cultura Latino Americana)",
+      "kind": "Latino contemporary art center",
+      "neighborhood": "SoFA District, downtown San Jose (S. First St)",
+      "why": "San Jose's main Latino contemporary art space, and the right door to South Bay Chicano and lowrider-rooted artists."
+    },
+    {
+      "name": "Chinese Culture Center of San Francisco",
+      "kind": "arts center and gallery",
+      "neighborhood": "Chinatown (Kearny St)",
+      "why": "It runs contemporary exhibitions and Chinatown art programs. Go here to find Chinese American artists for Lunar New Year work instead of using stock Chinatown imagery."
+    }
+  ],
+  "people": [
+    {
+      "name": "Emory Douglas",
+      "role": "Graphic artist; Minister of Culture of the Black Panther Party",
+      "why": "A San Francisco-raised artist whose Black Panther newspaper graphics defined Oakland's political visual language. A commission or tribute made with him carries real weight in The Town."
+    },
+    {
+      "name": "Precita Eyes Muralists (Susan Kelk Cervantes)",
+      "role": "Mural collective and nonprofit; Cervantes is founder and a MaestraPeace co-painter",
+      "why": "It has trained and organized generations of Mission muralists, and it's the community-accountable way to commission murals or mural-based product."
+    },
+    {
+      "name": "Barry McGee",
+      "role": "Painter and graffiti writer (Twist); Mission School",
+      "why": "The best-known figure in San Francisco's street-to-gallery lineage, with deep skateboard and streetwear credibility. A top-tier collaborator who needs a top-tier brief."
+    },
+    {
+      "name": "Favianna Rodriguez",
+      "role": "Oakland-born printmaker and cultural organizer (Center for Cultural Power)",
+      "why": "Her bold screenprints, including the 'Migration Is Beautiful' monarch, make her Oakland's best-known Latina graphic voice and a credible partner for Latino heritage product."
+    },
+    {
+      "name": "Jeremy Fish",
+      "role": "San Francisco illustrator and printmaker",
+      "why": "His San Francisco-centric drawings have run through skate and streetwear graphics for two decades, including with Haight Street's Upper Playground. He's a natural fit for a City-side capsule."
+    },
+    {
+      "name": "Scraper Bike Team (Tyrone 'Baybe Champ' Stevenson Jr.)",
+      "role": "East Oakland youth bike-building crew",
+      "why": "They turned Oakland's scraper car style into candy-colored, foil-spoked bikes and a youth program. The best partner for a car-culture capsule."
+    },
+    {
+      "name": "Oaklandish",
+      "role": "Oakland apparel brand",
+      "why": "It started in 2000 as a public art project and became The Town's civic uniform. The benchmark for Oakland-pride product, and a possible partner."
+    },
+    {
+      "name": "FTC Skateboarding",
+      "role": "San Francisco skate shop",
+      "why": "Its multiple Nike SB Dunk collaborations make it San Francisco's most direct sneaker-culture link to Nike."
+    }
+  ],
+  "moments": [
+    {
+      "name": "FOG Design+Art",
+      "timing": "Mid-January, Fort Mason Festival Pavilion",
+      "month": 1,
+      "why": "The fair that benefits SFMOMA draws the city's collectors and design crowd, the same audience as Chase Center's premium seats. Reveal a high-end artist collaboration here."
+    },
+    {
+      "name": "San Francisco Chinese New Year Festival & Parade",
+      "timing": "Lunar New Year is Feb 6, 2027 (Year of the Goat); the Chinatown night parade usually follows within about two weeks",
+      "month": 2,
+      "why": "One of the largest Lunar New Year parades outside Asia, led by its long golden dragon, and the anchor for the Warriors' big Chinese American and Asian American fan base."
+    },
+    {
+      "name": "Black Joy Parade",
+      "timing": "Late February, downtown Oakland",
+      "month": 2,
+      "why": "Oakland's homegrown Black History Month celebration of color, costume and joy, and the right stage for Oakland Black artists' product."
+    },
+    {
+      "name": "Oakland First Fridays",
+      "timing": "First Friday of every month, Telegraph Ave (KONO)",
+      "month": 0,
+      "why": "The Town's monthly street festival of artists and vendors, which grew out of the Art Murmur gallery walks. A standing place to scout and launch Oakland work."
+    },
+    {
+      "name": "Fillmore sold-out show poster handout",
+      "timing": "Every sold-out show",
+      "month": 0,
+      "why": "The ritual that keeps San Francisco poster art collectible, and a ready model for numbered game-night prints."
+    },
+    {
+      "name": "Carnaval San Francisco",
+      "timing": "Memorial Day weekend (May 29-30, 2027), Mission",
+      "month": 5,
+      "why": "The Mission's biggest costume and parade design moment, held during the 2027 playoff window."
+    },
+    {
+      "name": "San Francisco Open Studios (ArtSpan)",
+      "timing": "Weekends from mid-October into November, neighborhood by neighborhood",
+      "month": 10,
+      "why": "A citywide open-studios circuit that has run for decades and lines up with tip-off. It's the most efficient way to scout and sign City-side collaborators."
+    },
+    {
+      "name": "Día de los Muertos procession and Festival of Altars",
+      "timing": "Nov 2 at dusk, Mission (altars in Garfield Square)",
+      "month": 11,
+      "why": "A living community ritual since the early 1980s, where Mission artists build altars. Come to meet and listen to artists, not to sell merchandise."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "The Town",
+      "meaning": "Oakland, said with pride. Past Warriors uniforms have used it as an Oakland tribute."
+    },
+    {
+      "term": "The City",
+      "meaning": "San Francisco, and the wordmark on the 1960s San Francisco Warriors jersey. Locals never call it 'Frisco' or 'San Fran'."
+    },
+    {
+      "term": "The Yay (Yay Area)",
+      "meaning": "Bay Area rap's name for the whole region, and a credible alternative to 'The Bay' on graphics."
+    },
+    {
+      "term": "Hella",
+      "meaning": "The Bay-born intensifier ('hella cold'). It's the real thing but now a souvenir-shop staple, so use it sparingly and only in a local artist's hand."
+    },
+    {
+      "term": "Dub Nation",
+      "meaning": "Warriors fandom. 'The Dubs' is the team's everyday nickname."
+    },
+    {
+      "term": "Scraper",
+      "meaning": "Oakland and East Bay term for a 1970s-80s GM sedan on big rims in candy paint, and the root of East Oakland's scraper bikes."
+    },
+    {
+      "term": "Mission School",
+      "meaning": "The 1990s San Francisco art movement of Barry McGee, Margaret Kilgallen, Chris Johanson and Alicia McCarthy, built on graffiti, folk art and hand-painted signs."
+    },
+    {
+      "term": "Karl (the Fog)",
+      "meaning": "Locals' nickname for San Francisco's summer fog, which has its own social-media persona. Shorthand for the city's cold, gray weather."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Bay Bridge cable geometry: the suspension span's long catenaries and vertical hangers, with a dot-matrix run of white light points down the cables.",
+      "type": "motif",
+      "hex": "",
+      "source": "The Bay Bridge in the Warriors' logo since 2010, and Leo Villareal's The Bay Lights (2013) on the West Span's cables.",
+      "use": "Catenary line graphics on side panels and shorts, with reflective dot-matrix prints. Any direct Bay Lights reference needs a license from the artist and Illuminate."
+    },
+    {
+      "cue": "Candy royal: Warriors royal #1D428A laid over silver metal flake as a candy-paint finish, with Warriors gold #FFC72C hand pinstriping.",
+      "type": "color",
+      "hex": "#1D428A",
+      "source": "Oakland scrapers, East Oakland's foil-spoked scraper bikes and San Jose lowriders.",
+      "use": "Metal-flake prints, high-gloss trims and pinstripe details, co-designed with named Bay car-culture builders who get credit."
+    },
+    {
+      "cue": "Fillmore poster lettering: letters that swell and bend to fill a shape, in vibrating complementary color pairs.",
+      "type": "typography",
+      "hex": "",
+      "source": "Wes Wilson's 1966-67 Fillmore posters, which drew on Vienna Secession lettering, and the Bay's living gig-poster scene.",
+      "use": "Commission a living Bay poster artist to draw an original 'DUBS' or 'THE CITY' lockup. Never trace Wilson, Victor Moscoso or Grateful Dead artwork."
+    },
+    {
+      "cue": "Two-city deco: tall, narrow Art Deco capitals stacked vertically like theater blade signs, with a neon edge glow.",
+      "type": "typography",
+      "hex": "",
+      "source": "Timothy Pflueger's Castro Theatre (San Francisco, 1922) and Paramount Theatre (Oakland, 1931), plus the Fox Oakland and Grand Lake marquees.",
+      "use": "Stack 'THE CITY' and 'THE TOWN' down opposite side seams of one garment. Have a local sign painter draw an original alphabet instead of copying any one sign."
+    },
+    {
+      "cue": "Panther-press graphics: heavy black outlines, flat color fields and woodcut-style hatching, with people drawn at heroic scale.",
+      "type": "graphic",
+      "hex": "",
+      "source": "Emory Douglas's art for The Black Panther newspaper, published in Oakland from 1967.",
+      "use": "Screenprint-textured February product commissioned from Douglas or Oakland printmakers. No weapons, no 'pig' caricatures, and no reuse of archival Panther art without the artist and rights holders."
+    },
+    {
+      "cue": "Karl gray: the cool, slightly blue gray of fog pouring over Twin Peaks (approx. #C4C8CA).",
+      "type": "color",
+      "hex": "#C4C8CA",
+      "source": "San Francisco's summer fog, nicknamed Karl, which makes layering the local uniform.",
+      "use": "A heather base for fleece and layering pieces, with Warriors gold as the only accent. A quiet City-side alternative to Golden Gate orange."
+    },
+    {
+      "cue": "Alley panel quilt: one garment built from separately authored panels, each a different muralist's story, like Balmy Alley's garage doors.",
+      "type": "pattern",
+      "hex": "",
+      "source": "Balmy Alley, painted since the early 1970s, including the 1984 PLACA project.",
+      "use": "A multi-artist warm-up jacket or shooting shirt with each panel credited on the jock tag, commissioned through Precita Eyes. Never print photographs of existing murals."
+    },
+    {
+      "cue": "Necklace of Lights: a scalloped string of round bulbs looping the water and doubled in its reflection.",
+      "type": "motif",
+      "hex": "",
+      "source": "Lake Merritt's lights, first strung in 1925 and later restored, around the lake where Oakland gathers.",
+      "use": "A scalloped bulb-chain trim or all-over print for Oakland-facing product, sold through Oakland shops."
+    }
+  ],
+  "productHooks": [
+    "'The City / The Town' capsule: fog-gray heather base, Bay Bridge catenary graphics, and Pflueger-style blade lettering with 'THE CITY' down one seam and 'THE TOWN' down the other. One San Francisco letterer and one Oakland letterer draw it, and both are credited and paid.",
+    "'Candy Paint' capsule: Warriors royal over metal flake with gold pinstriping and reflective foil-spoke trims. Co-design it with the Scraper Bike Team and San Jose lowrider builders, and launch it in East Oakland and at MACLA.",
+    "Numbered game-night posters: a Bay poster artist draws a Fillmore-style screenprint for select marquee home games. Hand it to fans, sell it with a matching tee, and have the artist sign the run.",
+    "Oakland Black History capsule for February, timed to the Black Joy Parade: screenprint graphics from Emory Douglas or Oakland printmakers, sold through Oaklandish and Black-owned Oakland shops. Proceeds go to an Oakland organization the artist chooses.",
+    "Mission panel jacket for the Warriors' Latino heritage night or Carnaval weekend. A Precita Eyes muralist paints each panel and is credited on the jock tag.",
+    "Lunar New Year 2027 (Year of the Goat) capsule drawn by Chinatown-rooted artists found through the Chinese Culture Center. Use neon blade-sign characters by a local calligrapher, not 'chop suey' type."
+  ],
+  "watchouts": [
+    "Third-party IP is everywhere. The Golden Gate Bridge district licenses the bridge's name and image, The Bay Lights is Leo Villareal's artwork, the Muni worm belongs to SFMTA, and Oaklandish owns its tree logo. Grateful Dead and classic Fillmore poster art need licenses. Murals are protected by copyright and California's Art Preservation Act.",
+    "Oakland is still sore about the 2019 move, and it lost the Raiders and A's too. Oakland cues need Oakland artists, Oakland retail and visible credit, or they read as nostalgia merch from the team that left.",
+    "Clarion Alley and many Mission murals protest tech-driven displacement. A brand shoot against them would be tone-deaf, so go through Precita Eyes and the artists themselves.",
+    "Avoid caricature. No 'chop suey' fonts or generic dragons for Chinatown. No Panther guns. No sugar-skull merchandise from Día de los Muertos. No Old English or placa lettering lifted from Chicano street culture without Chicano artists. Celebrate scrapers and lowriders, never sideshows.",
+    "Stephen Curry ended his Under Armour partnership in late 2025 (Curry Brand is now independent) and is reportedly a sneaker free agent. Confirm his current footwear and apparel deal before commissioning any artist portrait of him for Nike product. Lean on team and city art rather than player likeness."
+  ],
+  "sources": [
+    {
+      "title": "Golden State Warriors (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Golden_State_Warriors"
+    },
+    {
+      "title": "Chase Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Chase_Center"
+    },
+    {
+      "title": "Balmy Alley (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Balmy_Alley"
+    },
+    {
+      "title": "Precita Eyes Muralists",
+      "url": "https://www.precitaeyes.org"
+    },
+    {
+      "title": "Mission School (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Mission_School"
+    },
+    {
+      "title": "Emory Douglas (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Emory_Douglas"
+    },
+    {
+      "title": "Timothy L. Pflueger (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Timothy_L._Pflueger"
+    },
+    {
+      "title": "The Bay Lights (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Bay_Lights"
+    },
+    {
+      "title": "The Fillmore (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/The_Fillmore"
+    },
+    {
+      "title": "Lake Merritt (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Lake_Merritt"
+    },
+    {
+      "title": "Lowrider (magazine) (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Lowrider_(magazine)"
+    },
+    {
+      "title": "Creative Growth Art Center",
+      "url": "https://creativegrowth.org"
+    },
+    {
+      "title": "Minnesota Street Project",
+      "url": "https://minnesotastreetproject.com"
+    },
+    {
+      "title": "ArtSpan (San Francisco Open Studios)",
+      "url": "https://www.artspan.org"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Check the Warriors' City Edition history (including past Oakland 'The Town' tributes) and what the 2026-27 City Edition and Specter uniforms use, so these concepts don't duplicate them.",
+      "Confirm Stephen Curry's current footwear and apparel deal (he left Under Armour in late 2025; a new partner is unconfirmed) before any portrait-based product.",
+      "Check dates for the Warriors' 2026-27 Lunar New Year, Black History and Latino heritage nights. Check the 2027 San Francisco Chinese New Year Parade too (Lunar New Year is Feb 6, 2027).",
+      "Confirm the Black Joy Parade 2027 date and Oakland First Fridays' current schedule and format on Telegraph Ave.",
+      "Check San Francisco Open Studios 2026 weekends (ArtSpan) and FOG Design+Art January 2027 dates.",
+      "Confirm Carnaval San Francisco 2027 dates (expected Memorial Day weekend, May 29-30).",
+      "Confirm FTC Skateboarding, Upper Playground and Oaklandish are still operating, and where their stores are.",
+      "Check the Scraper Bike Team's current activity and leadership.",
+      "Check whether The Bay Lights is currently lit (the original installation went dark in 2023) and who licenses it.",
+      "Check current Golden Gate Bridge district licensing rules for the bridge's name and image, and SFMTA licensing for the Muni worm.",
+      "Check Clarion Alley's current murals and CAMP's position on commercial photo shoots.",
+      "Confirm the Fillmore still hands out commemorative posters at sold-out shows."
+    ]
+  }
+}

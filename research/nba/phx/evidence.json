@@ -1,0 +1,254 @@
+{
+  "team": "phx",
+  "checkedOn": "2026-10-10",
+  "searches": 4,
+  "claims": [
+    {
+      "id": "phx-c1",
+      "claim": "Nike Factory Store, Arizona Mills (Tempe) is an open Nike-owned volume door for the Booker tiers and East Valley hub.",
+      "topic": "store-or-venue",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Find a Nike Store",
+          "url": "https://www.nike.com/ro/retail/directory/united-states/arizona",
+          "publisher": "Nike",
+          "published": ""
+        },
+        {
+          "title": "73°F OPEN 10:00AM - 8:00PM",
+          "url": "https://www.simon.com/mall/arizona-mills/about",
+          "publisher": "Simon",
+          "published": ""
+        }
+      ],
+      "evidence": "Nike's store directory lists the Arizona Mills door as Nike Clearance Store - Tempe (5000 S Arizona Mills Circle), not a Factory Store, and the mall's tenant list also names a Nike Clearance Store. The same directory lists a Nike Factory Store at Tempe Marketplace, 2000 E Rio Salado Pkwy, with posted hours.",
+      "action": "Replaced the Arizona Mills Factory Store with the Nike Factory Store at Tempe Marketplace in the book-valley-tiers where list, the retail playbook, the strategy verify list and the retail-landscape doors and verify list. Arizona Mills stays as a mall hub. Factcheck verdict set to corrected.",
+      "supports": {
+        "insights": [
+          5,
+          6
+        ],
+        "opportunities": [
+          "book-valley-tiers",
+          "avenues-and-streets"
+        ],
+        "calendar": [
+          3,
+          12
+        ]
+      }
+    },
+    {
+      "id": "phx-c2",
+      "claim": "Los Suns was first worn May 5, 2010 against San Antonio as the club's stand against SB 1070.",
+      "topic": "uniform",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Viva Los Suns: Phoenix Suns Denounce SB 1070 [VIDEO]",
+          "url": "https://colorlines.com/articles/viva-los-suns-phoenix-suns-denounce-sb-1070-video",
+          "publisher": "Colorlines",
+          "published": "2010-05-05"
+        },
+        {
+          "title": "Wednesday, May 5, 2010",
+          "url": "https://community.tucsonweekly.com/TheRange/archives/2010/05/05/phoenix-suns-use-spanglish-to-protest-immigration-law",
+          "publisher": "Tucson Weekly",
+          "published": "2010-05-05"
+        },
+        {
+          "title": "the nation here come los suns against the bill",
+          "url": "https://www.npr.org/2010/05/06/126551397/the-nation-here-come-los-suns-against-the-bill",
+          "publisher": "NPR",
+          "published": ""
+        }
+      ],
+      "evidence": "The Suns wore Los Suns for Game 2 of the 2010 West semifinals against the Spurs in Phoenix on Cinco de Mayo to protest SB 1070. But the jerseys were not new: they were made for Noche Latina and had been worn twice that regular season. So May 5, 2010 was the protest game, not the first wearing.",
+      "action": "Reworded topInsights[1], the strategy verify list, uniform.json (insight, vocabulary, City Edition concept) and rhythm.json vocabulary: made for Noche Latina and worn twice in 2009-10, worn against SB 1070 on May 5, 2010. Factcheck verdicts on Los Suns updated, since the earlier fix had introduced the 'first worn May 5' error.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "los-suns-noche-latina"
+        ],
+        "calendar": [
+          8,
+          10,
+          13
+        ]
+      }
+    },
+    {
+      "id": "phx-c3",
+      "claim": "The Arizona Latino Arts and Cultural Center is operating and can co-curate the Los Suns artists and host the Noche Latina showcase.",
+      "topic": "partner",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Many are surprised there's no Latino Cultural Center in Phoenix. Voters can change that on Nov. 7",
+          "url": "https://fronterasdesk.org/node/1861729",
+          "publisher": "Fronteras Desk (KJZZ)",
+          "published": ""
+        }
+      ],
+      "evidence": "The result says the city leases the former Museo Chicano space in the Regency Garage at Adams and Second streets to the nonprofit Arizona Latino Arts and Cultural Center. It is undated and gives no 2026 status. A separate city-run Latino Cultural Center is being planned through a bond.",
+      "action": "No change needed. Still confirm it is open before outreach.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "los-suns-noche-latina"
+        ],
+        "calendar": [
+          1,
+          8,
+          13
+        ]
+      }
+    },
+    {
+      "id": "phx-c4",
+      "claim": "Noche Latina 2026-27 date (to confirm); Los Suns relaunch is timed to it.",
+      "topic": "event-date",
+      "status": "unclear",
+      "sources": [
+        {
+          "title": "Phoenix Suns release 2026-27 regular season schedule",
+          "url": "https://www.azfamily.com/2026/08/13/phoenix-suns-release-2026-27-regular-season-schedule/",
+          "publisher": "azfamily",
+          "published": ""
+        }
+      ],
+      "evidence": "The 2026-27 schedule coverage does not name a Noche Latina date. It does list an Oct 21 opener at Portland and an Oct 24 home opener against Golden State. No 2026-27 Noche Latina date turned up.",
+      "action": "No change needed. The brief already marks the date as to confirm.",
+      "supports": {
+        "insights": [
+          1
+        ],
+        "opportunities": [
+          "los-suns-noche-latina"
+        ],
+        "calendar": [
+          8
+        ]
+      }
+    },
+    {
+      "id": "phx-cup",
+      "claim": "Phoenix opens NBA Cup group play at home against Dallas on Oct 30 (Mavericks at Suns).",
+      "topic": "event-date",
+      "status": "contradicted",
+      "sources": [
+        {
+          "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+          "url": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+          "publisher": "azfamily",
+          "published": "2026-08-12"
+        },
+        {
+          "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+          "url": "https://www.kold.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+          "publisher": "KOLD",
+          "published": "2026-08-12"
+        }
+      ],
+      "evidence": "Denver plays at Phoenix on Oct 30 to open the Suns' Cup group play. Dallas comes to Phoenix on Black Friday, Nov 27, and the Suns play at Utah Nov 20 and at Houston Nov 25.",
+      "action": "Re-anchored the Oct 30 opener on Denver and the Dallas game on Nov 27 in the book-valley-tiers, avenues-and-streets and sun-faded-sunburst timing, calendar[0] and [3] and the verify list. Updated plan.json calendar[0] and the opportunity notes, ten dossiers, the critique and the factcheck verdict.",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "book-valley-tiers",
+          "avenues-and-streets",
+          "sun-faded-sunburst"
+        ],
+        "calendar": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "id": "phx-cup-dates",
+      "claim": "Phoenix's Cup group games are Oct 30 vs Denver and Nov 27 vs Dallas at home, Nov 20 at Utah and Nov 25 at Houston.",
+      "topic": "event-date",
+      "status": "verified",
+      "sources": [
+        {
+          "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+          "url": "https://www.azfamily.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+          "publisher": "azfamily",
+          "published": "2026-08-12"
+        },
+        {
+          "title": "Phoenix Suns reveal group play schedule for NBA Cup 2026",
+          "url": "https://www.kold.com/2026/08/12/phoenix-suns-reveal-group-play-schedule-nba-cup-2026/",
+          "publisher": "KOLD",
+          "published": "2026-08-12"
+        }
+      ],
+      "evidence": "Both reports of the Suns' group play schedule list Denver at Phoenix Oct 30, Phoenix at Utah Nov 20, Phoenix at Houston Nov 25 and Dallas at Phoenix Nov 27.",
+      "action": "Used as the date basis for plan.json calendar[0].",
+      "supports": {
+        "insights": [],
+        "opportunities": [
+          "book-valley-tiers",
+          "avenues-and-streets",
+          "sun-faded-sunburst"
+        ],
+        "calendar": [
+          0,
+          3
+        ]
+      }
+    }
+  ],
+  "observations": [],
+  "references": [],
+  "corrections": [
+    {
+      "claim": "Nike Factory Store, Arizona Mills is the East Valley Nike-owned volume door.",
+      "correction": "Nike lists the Arizona Mills door as a Nike Clearance Store. The Nike Factory Store in Tempe is at Tempe Marketplace, 2000 E Rio Salado Pkwy.",
+      "files": [
+        "strategy.json",
+        "retail-landscape.json",
+        "factcheck.json"
+      ],
+      "claimId": "phx-c1"
+    },
+    {
+      "claim": "Los Suns was first worn May 5, 2010 against San Antonio.",
+      "correction": "Los Suns was made for Noche Latina and worn twice in the 2009-10 regular season. The Suns wore it against SB 1070 in Game 2 against San Antonio on May 5, 2010.",
+      "files": [
+        "strategy.json",
+        "uniform.json",
+        "rhythm.json",
+        "factcheck.json"
+      ],
+      "claimId": "phx-c2"
+    },
+    {
+      "claim": "The Suns open Cup group play at home against Dallas on Oct 30.",
+      "correction": "Denver opens the Suns' Cup group play at Phoenix on Oct 30. Dallas visits Nov 27, Black Friday. Phoenix plays at Utah Nov 20 and at Houston Nov 25.",
+      "files": [
+        "strategy.json",
+        "plan.json",
+        "culture.json",
+        "fanbase.json",
+        "food.json",
+        "hoops.json",
+        "music.json",
+        "retail-behavior.json",
+        "retail-landscape.json",
+        "rhythm.json",
+        "underground.json",
+        "uniform.json",
+        "critique.json",
+        "factcheck.json"
+      ],
+      "claimId": "phx-cup"
+    }
+  ]
+}

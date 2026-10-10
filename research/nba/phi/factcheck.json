@@ -1,0 +1,287 @@
+{
+  "team": "phi",
+  "checked": 78,
+  "verdicts": [
+    {
+      "lens": "underground",
+      "claim": "Ubiq is an operating independent sneaker boutique on Walnut Street",
+      "verdict": "removed",
+      "note": "Checked live: UBIQ at 1509 Walnut became an Atmos USA store in Nov 2020, and Atmos closed all US stores on Jan 31, 2024. In underground.json the place is now a former-site note, and the verify line is gone.",
+      "source": "https://www.inquirer.com/arts/atmos-closes-leaves-void-sneaker-community-20240111.html"
+    },
+    {
+      "lens": "strategy",
+      "claim": "Ubiq (Walnut Street) as first-release door, partner[5], and a where/channel entry in opportunities 0, 1 and 6 and calendar[1] and [10]",
+      "verdict": "removed",
+      "note": "Ubiq is closed. The editor must swap in a verified tastemaker door (a current Philly independent, say) or Sneaker Villa or Nike doors, and drop partners[5] and the Ubiq mention in provenance.verify[6].",
+      "source": "https://www.inquirer.com/arts/atmos-closes-leaves-void-sneaker-community-20240111.html"
+    },
+    {
+      "lens": "culture",
+      "claim": "Jaylen Brown left Nike in 2024",
+      "verdict": "corrected",
+      "note": "Checked live: Brown turned down a reported $50M Nike offer and launched his own 741 brand, with no shoe-company endorsement. Fixed the culture watchout and verify line to match the music, underground and strategy files (741).",
+      "source": "https://www.cbssports.com/nba/news/celtics-jaylen-brown-says-he-wont-sign-with-nike-to-increase-his-chances-of-playing-for-team-usa"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "LeBron and Brown signature shoes and Philly-exclusive colorways for both; Brown as second star-signature driver",
+      "verdict": "corrected",
+      "note": "Brown has no Nike footwear deal, since 741 is his own brand. Now reads LeBron shoes plus James and Brown jerseys and tees.",
+      "source": "https://www.hotnewhiphop.com/1009576-jaylen-brown-50-million-sneaker-brand"
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Embiid has Nike-era signature moments anchoring the apparel story",
+      "verdict": "corrected",
+      "note": "This contradicted the music, culture and underground dossiers, which report Embiid with Skechers since 2024. Now reads as jersey demand, with a flag to verify.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "LeBron and Brown as Nike-led stories",
+      "verdict": "corrected",
+      "note": "Brown is not a Nike footwear athlete. The line is now LeBron-led, with Brown a team-uniform story only.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Wells Fargo Center site as a place name",
+      "verdict": "corrected",
+      "note": "The arena is Xfinity Mobile Arena per current facts. Place renamed.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "2015-present: sleeve-patch era Nike uniforms",
+      "verdict": "corrected",
+      "note": "The 2015 redesign was the Adidas era. Nike has made NBA uniforms since 2017-18.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Tierra Whack is a North Philly rapper",
+      "verdict": "corrected",
+      "note": "She is from Germantown, in Northwest Philly. Fixed the role text.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "South Philly Barbacoa is on 11th Street",
+      "verdict": "corrected",
+      "note": "The restaurant is on South 9th Street in the Italian Market. Fixed the neighborhood.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Nok Suntaranon won James Beard Best Chef: Mid-Atlantic in 2023",
+      "verdict": "corrected",
+      "note": "The year is likely 2024, but this is not confirmed. Removed the year from the insights and people entries. Still needs a live check.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Italian Market Festival includes a greased-pole climb",
+      "verdict": "removed",
+      "note": "No known basis for it. Phrase removed.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Divine Lorraine revived as apartments in 2017; Mummers blackface recurred as recently as 2020",
+      "verdict": "corrected",
+      "note": "The exact years were unconfirmed, so the text now says mid-2010s reopening and \"recurred in recent decades.\"",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Big 5 Classic features Penn, Temple, La Salle, St. Joe's, Villanova and Drexel",
+      "verdict": "corrected",
+      "note": "Drexel is not a Big 5 school, and the Classic fields are uncertain. Now reads the Big 5 plus variable guests.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "The 2026-27 \"Broad Street\" City Edition: partners[2] (\"Broad Street City Edition wordmark\"), calendar[10] (\"the City Edition is named for\"), uniform.avoid[1] and risks[4]",
+      "verdict": "corrected",
+      "note": "Current facts do not verify the 2026-27 City Edition. \"Broad Street\" is only a proposed concept, yet these lines read as if it shipped. Reword as a proposal and note that Specter is the confirmed Nike product for PHI.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Calendar[2]: run a paid open call during October DesignPhiladelphia and Open Studio weekends for Area Code editions",
+      "verdict": "unverifiable",
+      "note": "Today is 2026-10-07, and most October weekends are imminent or past, so the timeline is unrealistic. Retime to 2027 events or a rolling call.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Home opener vs. Cleveland \"late October\" and Knicks first visit to Philadelphia dates",
+      "verdict": "unverifiable",
+      "note": "Current facts confirm a Cleveland home opener but not its date. The Knicks' first Philly visit is also unknown, though a Cup Group B game is possible. Opportunity timing depends on both.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Opening night Oct 20 at Knicks, Christmas Dec 25 5 p.m. ET at Lakers, MLK Jan 18 at Atlanta 2:30, Jan 21 at Boston, Cup Group B, Play-In Apr 13-16, deadline Feb 11",
+      "verdict": "confirmed",
+      "note": "All match the CURRENT FACTS section and league dates.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Brewerytown Beats as launch door in opportunity 5 and calendar[11]",
+      "verdict": "unverifiable",
+      "note": "Written from memory about a small record store. Confirm it exists and is open, or swap in a long-standing door.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Brewerytown Beats is a Philly soul crate-digger shop",
+      "verdict": "unverifiable",
+      "note": "A small business with no well-known basis. Verify it is open.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Nike Center City store and Nike Factory Store at Philadelphia Mills as owned doors",
+      "verdict": "corrected",
+      "note": "Checked live 2026-10-10: a store directory flags the Philadelphia Mills Nike Factory Store as probably closed, and Nike's own list names Downtown Philadelphia (901 Market Street) and Pottstown instead. Swapped the door in retail-landscape.json. The Center City store is still unconfirmed: Nike's Center City doors are the Jordan World of Flight store at 1617 Walnut and the 901 Market factory store.",
+      "source": "https://www.mallscenters.com/brands/stores/nike-factory-store/philadelphia--pennsylvania--philadelphia-mills"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Sneaker Villa is a Philly-founded chain with many neighborhood doors",
+      "verdict": "unverifiable",
+      "note": "Live search found only older items; the chain trades as Villa and moved from the Gallery. Confirm current names and open locations, because it anchors several strategy opportunities.",
+      "source": "https://www.phillymag.com/life-style/2026/01/21/sneaker-shops-philadelphia/"
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Philadelphia Printworks as a local-maker partner",
+      "verdict": "unverifiable",
+      "note": "A small Philly brand known from memory. Confirm it is operating.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Sonny Hill League summer play at Temple McGonigle Hall; Baker League as rival pro-am; Big 5 Classic early December at the arena",
+      "verdict": "unverifiable",
+      "note": "Venues, dates and the Classic format come from memory. Confirm 2027 season details.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Kyle Lowry is still a Sixer or active in 2026-27",
+      "verdict": "unverifiable",
+      "note": "He is not covered in the current-facts roster. Confirm his current role.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Hank Gathers Recreation Center is open and used for league play",
+      "verdict": "unverifiable",
+      "note": "The name and North Philly location are well known. Current condition and programming are unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Front Street Gym, 2300 Arena, Bob & Barbara's, Philly AIDS Thrift @ Giovanni's Room, Underground Arts are operating",
+      "verdict": "unverifiable",
+      "note": "All are long-running, but none is verified for 2026. Confirm each before outreach.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Philly Black Pride runs late April; This Is Hardcore late July; Nike is the WNBA uniform partner",
+      "verdict": "unverifiable",
+      "note": "Dates and the WNBA apparel deal come from memory. Confirm the 2027 dates and the term of Nike's WNBA contract.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Fletcher Street Urban Riding Club current stable site and partnership openness",
+      "verdict": "unverifiable",
+      "note": "The site has been contested for years. Confirm its status before promising any capsule.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Pat's/Geno's, John's Roast Pork, Dalessandro's, Angelo's, Max's, Tony Luke's, Kalaya, Saad's, Federal Donuts all operating",
+      "verdict": "unverifiable",
+      "note": "All are long-standing but unverified for 2026. Federal Donuts has contracted in the past. Confirm each.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "FDR Park Southeast Asian Market and Xfinity Live! still operate near the arena",
+      "verdict": "unverifiable",
+      "note": "The FDR Park redesign and complex development may have moved or closed them. Confirm for 2027.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Ellen Yin 2023 Outstanding Restaurateur; Kurt Evans dinners; Geno's sign removed 2016",
+      "verdict": "unverifiable",
+      "note": "The award year, the sign date and Evans' current projects are not confirmed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Roots Picnic venue (Mann Center vs. Belmont Plateau) and dates; Marshall Allen leads the Arkestra",
+      "verdict": "unverifiable",
+      "note": "Recent venue changes and Allen's status (born 1924) need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Odunde second Sunday of June (June 13, 2027), Penn Relays late April, Broad Street Run early May, Thanksgiving parade, Wawa Welcome America 2027",
+      "verdict": "unverifiable",
+      "note": "The recurring patterns are solid, but the 2027 dates and sponsors are unconfirmed. The 2026 Semiquincentennial peak has passed, so 2027 programming may be smaller.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Wawa Welcome America / July 4 Semiquincentennial-era season as an upcoming moment",
+      "verdict": "unverifiable",
+      "note": "The 250th summer already happened, so treat 2027 as an ordinary year. Left as is, with a flag.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "A Love Letter for You rooftops, Crane Arts, Colored Girls Museum, Taller Puertorriqueno, PAFA degree status",
+      "verdict": "unverifiable",
+      "note": "The murals may have faded. PAFA degree status and the other places need a live check.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Embiid (Skechers 2024), Meek Mill (Puma 2018), Iverson (Reebok), Maxey and Edgecombe deals",
+      "verdict": "unverifiable",
+      "note": "Brown's 741 deal is now confirmed. The Embiid, Maxey and Edgecombe footwear deals are not, and they drive the \"heroes wear other brands\" thesis.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Converse \"Let It Flow\" Dr. J Pro Leather with Erving and Washington estate",
+      "verdict": "unverifiable",
+      "note": "The concept rests on Converse rights and estate permissions. It is unconfirmed that Erving and Converse currently license his name.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Official palette #006BB6, #ED174C, #002B5C; Sixers Training Complex in Camden; Mitchell & Ness Philly-founded 1904, Fanatics-owned",
+      "verdict": "confirmed",
+      "note": "Long-established facts.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Iverson 1996-2006 era, Dr. J 1976-87, Moses 1982-86, Wilt 1967 title, Knicks 2026 sweep, Specter for eight franchises, 2030 arena at Spectrum site",
+      "verdict": "confirmed",
+      "note": "Established history and CURRENT FACTS.",
+      "source": ""
+    }
+  ],
+  "summary": "The PHI dossiers match the live facts on the 2026-27 team story, schedule and arena. The spot-check caught Ubiq, central to the brief but closed since Jan 2024, and a Jaylen Brown mix-up: he declined Nike and runs 741. Ten dossier fixes are made. The brief still needs the Ubiq, \"Broad Street\", open-call and Brewerytown Beats fixes."
+}

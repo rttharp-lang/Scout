@@ -1,0 +1,427 @@
+{
+  "team": "phi",
+  "lens": "fanbase",
+  "headline": "Philly argues with its Sixers like family, and now has LeBron, Brown and a last chance",
+  "summary": "Sixers fans are working-class and wary after the Process years, the Embiid injuries and a string of second-round exits, and they punish anyone who looks soft. This season the mood is giddy but braced. The Knicks, who swept Philly and then won the title, are the open wound. History gets worn as readily as the roster: Dr. J, Iverson, the Process.",
+  "insights": [
+    {
+      "title": "Suspicion is the default setting",
+      "detail": "After the Process, the Embiid injury cycle and the 2026 sweep by the Knicks (who then won the title), fans expect to be let down and say so loudly. Praise is rationed and effort is the currency, so gritty, unglamorous players get adopted fastest. Anything corporate or fake-Philly lands as an insult.",
+      "implication": "Launch with proof and restraint, not hype. Write like fans talking to each other: dry, funny, a little defiant. Never sound like a brand cheering at them."
+    },
+    {
+      "title": "Iverson is the style bible, and he was Reebok",
+      "detail": "Allen Iverson's Philadelphia era set the city's look: 1990s-2000s black-and-red and white-and-blue jerseys, cornrows, sleeves, oversized tees. He is still the most worn player on Broad Street. His shoe legacy is Reebok's, not Nike's.",
+      "implication": "Honor the Iverson-era silhouette and attitude through uniform-adjacent apparel, with no implied shoe connection. Treat any AI-referencing graphic as a licensing and tone risk."
+    },
+    {
+      "title": "The Process is now folk religion",
+      "detail": "Trust the Process began as a joke about tanking. Fans now wear it without irony, with the hashtag, the phrase and Joel Embiid's persona fused into it. It binds the people who stayed through 10-win seasons.",
+      "implication": "Process language and tally-mark graphics can anchor a loyalist capsule, but only if the tone is earned and self-aware. Clear any use that touches individual players or third-party marks."
+    },
+    {
+      "title": "A superstar-stacked, age-anxious roster",
+      "detail": "Embiid, Tyrese Maxey, VJ Edgecombe, Jaylen Brown and LeBron James (turning 42 in December) make Philly a national draw, with title odds near +1000. The same fans know availability decides everything.",
+      "implication": "Expect surging gameday demand, plus Gen Z and visiting-fan traffic, around the LeBron and Brown debuts. Stock Maxey, Embiid and Edgecombe deep, since they carry local loyalty. Make LeBron product a Nike-owned moment."
+    },
+    {
+      "title": "Knicks and Celtics are the grudge matches",
+      "detail": "Opening night is at Madison Square Garden on the Knicks' ring night. Jan 21 is Jaylen Brown's return to TD Garden. Fans also have a fresh folk story: beating Boston from 3-1 down in round one in 2026.",
+      "implication": "Rivalry nights are the windows for scarcity drops and fan-voice graphics. The comeback can inspire a story-driven graphic that uses no team's marks."
+    },
+    {
+      "title": "Specter now, a new arena by 2030",
+      "detail": "The 76ers are one of eight franchises getting Nike's new Specter uniforms in select 2026-27 games. A privately funded South Philly arena on the former Spectrum site was just rendered for 2030. Fans already miss the Spectrum.",
+      "implication": "Spectrum-era references fit Specter and City Edition stories, and limited drops tied to the arena's future. Use the building as a symbol, not its marks."
+    }
+  ],
+  "places": [
+    {
+      "name": "Xfinity Mobile Arena",
+      "kind": "venue",
+      "neighborhood": "South Philadelphia (Sports Complex)",
+      "why": "The Sixers' current home and the center of gameday, with pre-game gathering spots on and around Broad Street."
+    },
+    {
+      "name": "The former Spectrum site",
+      "kind": "district / future arena site",
+      "neighborhood": "South Philadelphia",
+      "why": "The planned site of the new privately funded arena, and a sacred memory spot for Dr. J and Moses Malone-era fans."
+    },
+    {
+      "name": "Philadelphia Museum of Art steps",
+      "kind": "landmark",
+      "neighborhood": "Fairmount / Art Museum",
+      "why": "The Rocky steps are the city's universal victory pose, forever in team photo shoots and fan celebrations."
+    },
+    {
+      "name": "Sonny Hill League",
+      "kind": "summer league",
+      "neighborhood": "Philadelphia (various gyms, historically Temple's area)",
+      "why": "Philly's legendary summer league, deep in the city's Black basketball culture. Fans take it as a test of who is real."
+    },
+    {
+      "name": "Overbrook High School",
+      "kind": "school / basketball landmark",
+      "neighborhood": "West Philadelphia (Overbrook)",
+      "why": "Wilt Chamberlain's alma mater and a pillar of the city's high school hoops pedigree."
+    },
+    {
+      "name": "Pat's King of Steaks and Geno's",
+      "kind": "food landmark",
+      "neighborhood": "South Philadelphia (Passyunk)",
+      "why": "The cheesesteak rivalry is a ritual for visitors. Locals often favor neighborhood spots."
+    },
+    {
+      "name": "Wawa",
+      "kind": "convenience chain",
+      "neighborhood": "Delaware Valley-wide",
+      "why": "The region's fan fuel and an identity brand fans wear. It also signals South Jersey and suburban belonging."
+    }
+  ],
+  "people": [
+    {
+      "name": "Joel Embiid",
+      "role": "Sixers center, franchise star",
+      "why": "The Process embodied, adored and nervously monitored. He carries the city's playoff hopes."
+    },
+    {
+      "name": "Tyrese Maxey",
+      "role": "Sixers guard",
+      "why": "The workhorse who feels homegrown. Fans trust his effort most."
+    },
+    {
+      "name": "VJ Edgecombe",
+      "role": "Sixers guard",
+      "why": "The young, athletic rookie-contract star fans see as the future."
+    },
+    {
+      "name": "Jaylen Brown",
+      "role": "Sixers wing, acquired from Boston",
+      "why": "A former Celtic turned Sixer, which flips the rivalry in an interesting way."
+    },
+    {
+      "name": "LeBron James",
+      "role": "Sixers forward, free-agent signing",
+      "why": "A global draw whose arrival brings national attention and bandwagon interest."
+    },
+    {
+      "name": "Allen Iverson",
+      "role": "Hall of Fame guard, 1996-2006",
+      "why": "The emotional center of Sixers style, and still the player fans wear most."
+    },
+    {
+      "name": "Dr. J (Julius Erving)",
+      "role": "Hall of Fame forward, 1976-87",
+      "why": "The standard of Philadelphia basketball elegance, and the 1983 champion."
+    },
+    {
+      "name": "Nick Nurse",
+      "role": "Head coach",
+      "why": "Facing maximum pressure this season, he is a test of the whole project."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Opening night at the Knicks",
+      "timing": "Oct 20",
+      "month": 10,
+      "why": "The James and Brown Sixers debut, on the Knicks' ring night."
+    },
+    {
+      "name": "Home opener against Cleveland",
+      "timing": "Late October (date to confirm)",
+      "month": 10,
+      "why": "James and Brown's Philly debut, against LeBron's former team."
+    },
+    {
+      "name": "Christmas Day at the Lakers",
+      "timing": "Dec 25, 5 p.m. ET",
+      "month": 12,
+      "why": "LeBron's first game back in Los Angeles, in a national spotlight slot."
+    },
+    {
+      "name": "MLK Day at Atlanta",
+      "timing": "Jan 18",
+      "month": 1,
+      "why": "A national NBC game featuring LeBron."
+    },
+    {
+      "name": "Jaylen Brown at TD Garden",
+      "timing": "Jan 21",
+      "month": 1,
+      "why": "The new Sixers wing returns to Boston."
+    },
+    {
+      "name": "Emirates NBA Cup group play",
+      "timing": "Oct 30 to Nov 27",
+      "month": 11,
+      "why": "East Group B pairs the Sixers with the Knicks, Cavaliers, Heat and Pacers. Friday Cup nights add gameday moments."
+    },
+    {
+      "name": "Playoff run and Play-In",
+      "timing": "April to June",
+      "month": 4,
+      "why": "The city turns out in white or blue shirts, and the Rocky steps become a gathering place."
+    },
+    {
+      "name": "Specter uniform games",
+      "timing": "Select 2026-27 games (dates to confirm)",
+      "month": 0,
+      "why": "Philadelphia is one of eight franchises with the new Specter uniforms, a built-in launch moment."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Trust the Process",
+      "meaning": "The rebuilding-era slogan turned civic creed: patience, pain, payoff."
+    },
+    {
+      "term": "Hoagie",
+      "meaning": "The local word for a sub, and a marker of insiders versus visitors."
+    },
+    {
+      "term": "Jawn",
+      "meaning": "The all-purpose Philadelphia noun for any thing, person or place."
+    },
+    {
+      "term": "Wooder",
+      "meaning": "The local pronunciation of water, used affectionately."
+    },
+    {
+      "term": "Down the shore",
+      "meaning": "The South Jersey shore weekend ritual, tied to the regional fan base."
+    },
+    {
+      "term": "Bleed (for the city)",
+      "meaning": "The standard for earning love: effort, toughness, no loafing."
+    },
+    {
+      "term": "The Linc / Broad Street",
+      "meaning": "Shorthand for the sports complex corridor where all four teams play, which makes Philly one sports family."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Sixers royal blue",
+      "type": "color",
+      "hex": "#006BB6",
+      "source": "The team's primary color, steady across eras",
+      "use": "Anchor colorway for core gameday apparel."
+    },
+    {
+      "cue": "Sixers red",
+      "type": "color",
+      "hex": "#ED174C",
+      "source": "The team's secondary color, the red of the Iverson and Spectrum eras",
+      "use": "Accent and Statement-style product, with red-leaning Iverson-era references."
+    },
+    {
+      "cue": "Navy and liberty-bell gold detail",
+      "type": "color",
+      "hex": "#002B5C",
+      "source": "Deep navy from Sixers trims and the Colonial history story",
+      "use": "Premium trims, heritage fleece and warm-up pieces with restrained gold accents."
+    },
+    {
+      "cue": "Spectrum-era script and arch",
+      "type": "typography",
+      "hex": "",
+      "source": "1980s Philadelphia lettering and the classic 1983 championship look",
+      "use": "Heritage fleece and tees, as an homage rather than a retro copy of official marks."
+    },
+    {
+      "cue": "Rocky steps and gray sweats",
+      "type": "story",
+      "hex": "",
+      "source": "The city's underdog pop-culture symbol",
+      "use": "Gray heavyweight fleece and training tops that nod to the steps without using film IP."
+    },
+    {
+      "cue": "Tally marks and process counting",
+      "type": "motif",
+      "hex": "",
+      "source": "Trust the Process fan culture",
+      "use": "Subtle tally-mark graphics, inside-collar prints and sleeve details."
+    },
+    {
+      "cue": "Heavy fleece and workwear texture",
+      "type": "texture",
+      "hex": "",
+      "source": "Blue-collar identity and cold-weather gameday",
+      "use": "Brushed fleece, canvas and Carhartt-adjacent utility textures for winter drops."
+    },
+    {
+      "cue": "Oversized long tee and arm sleeve silhouette",
+      "type": "silhouette",
+      "hex": "",
+      "source": "Iverson-era street style",
+      "use": "Boxy long tees, shooting shirts and sleeve accessories."
+    }
+  ],
+  "productHooks": [
+    "Specter launch capsule for the first Specter-worn home game: jersey, warm-up and collectors' tee, pitched as the new-era counterpart to the Spectrum.",
+    "Iverson-era gameday collection in black, red and royal (long tees, hoodies, sleeves) that nods to the era without referencing his shoes.",
+    "Process loyalist capsule: tally-mark graphics and 'stayed through it' stories on heavyweight fleece and tees.",
+    "Rivalry-night drops for the Knicks opening night and the Jan 21 Brown return to Boston, built on scarcity and Philly-voice copy.",
+    "Player product for Maxey, Embiid and Edgecombe, the local loyalty carriers. Make LeBron the Nike-led story. Brown is a team-uniform story only, since he has no Nike footwear deal."
+  ],
+  "watchouts": [
+    "Allen Iverson's footwear legacy is Reebok and his image rights are tied to specific agreements. Check licensing before any direct reference.",
+    "The Rocky imagery and the Wawa, Pat's and Geno's marks are third-party IP. Use cues and attitude, not logos, unless licensed.",
+    "Philadelphia fans punish an outsider's cliche, such as cheesesteak and cheese-fry emoji merch. Write in a real local voice.",
+    "Engage the Sonny Hill League and Black Philadelphia basketball culture through partnership and credit. Don't borrow them as aesthetic.",
+    "LeBron and Brown product depends on contracts and a brand-new roster. Don't overcommit inventory to players whose roles or health could change."
+  ],
+  "sources": [
+    {
+      "title": "Philadelphia 76ers (official site)",
+      "url": "https://www.nba.com/sixers"
+    },
+    {
+      "title": "Philadelphia 76ers (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Philadelphia_76ers"
+    },
+    {
+      "title": "Sonny Hill League (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Sonny_Hill_League"
+    },
+    {
+      "title": "Allen Iverson (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Allen_Iverson"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "segments": [
+      {
+        "name": "Lifers and Process loyalists",
+        "description": "Philadelphia and Delaware Valley fans who stayed through the rebuild: skeptical, vocal, extremely well informed.",
+        "share": "Largest core and most influential",
+        "wears": "Iverson-era throwbacks, Embiid and Maxey jerseys, Process tees and gray fleece.",
+        "reach": "Podcasts, Reddit, bars, the Broad Street corridor and local sports radio."
+      },
+      {
+        "name": "Families and suburban fans",
+        "description": "Main Line, Bucks County, Delaware County and South Jersey families who attend a few games a season.",
+        "share": "Large",
+        "wears": "Current-season jerseys and kids' replicas, team hoodies, Association blue.",
+        "reach": "The team store, arena events and youth-hoops programs."
+      },
+      {
+        "name": "Gen Z digital fans",
+        "description": "Social-first fans who follow Maxey, Edgecombe and LeBron content and Philly streetwear.",
+        "share": "Growing fast",
+        "wears": "Statement and City Edition jerseys, Nike tees, vintage pieces from resale.",
+        "reach": "TikTok, Instagram, Reddit and creator-led drops."
+      },
+      {
+        "name": "Corporate and arena regulars",
+        "description": "Center City and South Philly professionals and season-ticket holders.",
+        "share": "Small but high-spend",
+        "wears": "Clean team pullovers, quarter-zips, retro hats.",
+        "reach": "Season-ticket benefits and premium-level events."
+      },
+      {
+        "name": "LeBron and Brown bandwagon and visiting fans",
+        "description": "National fans following the new stars at home and on the road.",
+        "share": "New and volatile",
+        "wears": "LeBron and Brown Sixers jerseys and tees.",
+        "reach": "National broadcasts, e-commerce, and the Christmas Day and MLK Day games."
+      }
+    ],
+    "traditions": [
+      {
+        "name": "Rocky steps photo",
+        "detail": "Fans, players and teams strike the victory pose on the Art Museum steps, especially at playoff time."
+      },
+      {
+        "name": "White-out and blue-out playoff nights",
+        "detail": "Playoff crowds coordinate shirt colors, and signs and towels fill the Broad Street corridor."
+      },
+      {
+        "name": "Process tally signs",
+        "detail": "Handmade signs about the Process, plus chants for Embiid and Maxey, are part of the arena soundtrack."
+      },
+      {
+        "name": "Pre-game Broad Street gathering",
+        "detail": "Before tip-off, fans fill South Philly bars and tailgate areas and treat the sports complex like a shared living room."
+      },
+      {
+        "name": "Booing as love",
+        "detail": "Philadelphia's heavy booing is an accountability ritual. Players who answer with effort get embraced."
+      }
+    ],
+    "icons": [
+      {
+        "name": "Julius Erving (Dr. J)",
+        "era": "1976-1987",
+        "why": "1983 champion and the standard of Philadelphia grace and flair."
+      },
+      {
+        "name": "Moses Malone",
+        "era": "1982-1986",
+        "why": "The anchor of the 1983 title, whose 'fo, fo, fo' call became Sixers lore."
+      },
+      {
+        "name": "Allen Iverson",
+        "era": "1996-2006",
+        "why": "The Answer, 2001 MVP and Finals team, and the emblem of Philly toughness and style."
+      },
+      {
+        "name": "Wilt Chamberlain",
+        "era": "1960s",
+        "why": "Overbrook High's greatest and the 1967 champion."
+      },
+      {
+        "name": "Charles Barkley",
+        "era": "1984-1992",
+        "why": "A beloved, outspoken forward who still embodies the city's bruising identity."
+      },
+      {
+        "name": "Joel Embiid",
+        "era": "2016 to present",
+        "why": "The Process centerpiece and 2023 MVP."
+      }
+    ],
+    "rivalries": [
+      {
+        "opponent": "New York Knicks",
+        "heat": "red-hot",
+        "why": "Swept Philadelphia in the 2026 second round, won the title and host the 2026-27 opener on ring night."
+      },
+      {
+        "opponent": "Boston Celtics",
+        "heat": "historic",
+        "why": "The league's oldest rivalry, now with Jaylen Brown in Philly and a first-round comeback in 2026."
+      },
+      {
+        "opponent": "Toronto Raptors",
+        "heat": "simmering",
+        "why": "The 2019 Kawhi Leonard buzzer-beater in Game 7 still stings."
+      },
+      {
+        "opponent": "Miami Heat",
+        "heat": "simmering",
+        "why": "A recurring playoff and Cup-group opponent in East Group B."
+      }
+    ],
+    "sentiment": "Excited but guarded. LeBron and Brown made this the biggest offseason swing in the league, and title odds jumped. But fans know Embiid's health, the roster's age and Nick Nurse's job security will decide it. The Knicks sweep is still fresh.",
+    "gamedayLook": "A mix of Iverson-era and current jerseys layered over hoodies, plus Process tees, retro Sixers caps and gray fleece. Wawa and Eagles-adjacent gear shows the wider sports-family identity. Blue Association jerseys dominate. Younger fans wear Statement and City Edition."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Xfinity Mobile Arena is still the Sixers' home name and the Sports Complex gathering habits are unchanged.",
+      "Confirm the 2026-27 City Edition identity and the dates of Specter uniform games.",
+      "Confirm the Sixers primary hex colors (#006BB6, #ED174C, #002B5C) match current brand guidelines.",
+      "Check current fan merchandise sentiment: which jerseys (Embiid, Maxey, Edgecombe, Brown, James) sell best.",
+      "Confirm the Sonny Hill League still operates at its current locations and format.",
+      "Confirm the home opener date against Cleveland and any new Sixers fan events announced for 2026-27.",
+      "Check Philadelphia fan reaction to the LeBron and Brown signings and any recent Process-era nostalgia events.",
+      "Confirm the fan podcasts, Reddit communities and watch-party venues named around the Sixers remain active.",
+      "Check Allen Iverson licensing and the status of his Reebok relationship."
+    ]
+  }
+}

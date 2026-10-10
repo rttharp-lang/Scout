@@ -1,0 +1,305 @@
+{
+  "team": "mil",
+  "lens": "retail-behavior",
+  "headline": "Milwaukee spends in bursts, and the weather decides when",
+  "summary": "Fall belongs to the Packers and deer-season layering, and basketball waits its turn. After a decade of Giannis and the 2021 title, the trade splits the market between legacy-jersey nostalgia and a thin new following for Tyler Herro. Lean on accessible tees, hoodies and heavyweight fleece. Treat Authentic and City Edition jerseys as occasion buys.",
+  "insights": [
+    {
+      "title": "The Giannis trade splits the jersey closet",
+      "detail": "A decade of Giannis jerseys, tees and 2021 championship gear sits in Wisconsin closets. The Jan 28, 2027 Miami game at Fiserv Forum will be the loudest retail moment of the season, driven by sentiment, not new-player merchandise.",
+      "implication": "Don't over-invest in Herro-led jersey volume before demand shows. Build a capsule around the 2021 title legacy and the return game, and keep first-wave player product small and reactive."
+    },
+    {
+      "title": "Fall belongs to the Packers and the deer opener",
+      "detail": "From September to the Saturday before Thanksgiving, Wisconsin's apparel dollars go to green and gold, blaze orange and Carhartt-style workwear. The Bucks don't tip off on opening night or Christmas Day this year.",
+      "implication": "Treat late October to mid-November as a layering and outerwear window. Put Bucks green in utilitarian silhouettes instead of competing head-on with Packers colors."
+    },
+    {
+      "title": "Cold drives the mix from October to April",
+      "detail": "Lake Michigan winters make heavyweight fleece, quilted jackets, knit hats and warm-up layers the real volume. Shorts and mesh are a June to August purchase, for Summerfest and the State Fair.",
+      "implication": "Weight the assortment toward hoodies, shacket-style warm-ups, beanies and insulated shells. Treat tees and shorts as a summer category that only pays off with a playoff run."
+    },
+    {
+      "title": "No sales-tax holiday, and the city adds tax",
+      "detail": "Wisconsin has no back-to-school tax-free weekend, so promotions come from retailers, not the state. The state rate is 5 percent. County add-ons and, since 2024, a Milwaukee city add-on put the in-city total above the neighboring suburbs.",
+      "implication": "Suburban and online checkout carries a small price edge over city stores. Keep pricing clean and round, and offer free shipping or pickup instead of tax-holiday deals."
+    },
+    {
+      "title": "Fiserv Forum is a destination, not a neighborhood store",
+      "detail": "Fans drive in for game nights from Madison, Green Bay, the Fox Valley, Racine, Kenosha and northern Illinois. Deer District outside Fiserv Forum is the shared gathering place, as it was during the 2021 title run.",
+      "implication": "Concentrate drops, pop-ups and exclusive releases at the arena and Deer District on game nights. Use online for the rest of Wisconsin."
+    },
+    {
+      "title": "Value-minded, loyal and wary of a rebuild",
+      "detail": "Milwaukee is a mid-income market, with a wide gap between the affluent North Shore and Waukesha suburbs and the lower-income North Side neighborhoods. A down-to-the-studs rebuild cuts willingness to pay for Authentic-tier jerseys.",
+      "implication": "Lead with entry and mid-tier prices and kids and youth sizing. Hold premium Authentic pricing for City Edition and marquee-game releases."
+    }
+  ],
+  "places": [
+    {
+      "name": "Fiserv Forum and the Deer District",
+      "kind": "arena and plaza",
+      "neighborhood": "Downtown",
+      "why": "The main in-person gathering spot and team-store point for Bucks fans, with watch parties in the plaza."
+    },
+    {
+      "name": "Mayfair Mall",
+      "kind": "mall",
+      "neighborhood": "Wauwatosa",
+      "why": "The region's main enclosed shopping destination, and a center of holiday traffic."
+    },
+    {
+      "name": "Third Ward and Historic Third Ward shops",
+      "kind": "shopping district",
+      "neighborhood": "Third Ward",
+      "why": "A boutique and gift district tied to downtown events and visitors."
+    },
+    {
+      "name": "Sherman Phoenix",
+      "kind": "Black-owned marketplace",
+      "neighborhood": "Sherman Park",
+      "why": "A local-business hub, and a respectful partnership route to Black entrepreneurs on the North Side."
+    },
+    {
+      "name": "Pleasant Prairie Premium Outlets",
+      "kind": "outlet center",
+      "neighborhood": "Kenosha County",
+      "why": "A cross-state shopping stop between Milwaukee and Chicago. It matters for price comparison and outlet-driven Nike buying."
+    },
+    {
+      "name": "Henry Maier Festival Park",
+      "kind": "festival grounds",
+      "neighborhood": "Lakefront",
+      "why": "Home of Summerfest and the ethnic festivals, where summer merchandise and vendor culture concentrate."
+    }
+  ],
+  "people": [
+    {
+      "name": "Giannis Antetokounmpo",
+      "role": "Former Bucks star, now with Miami",
+      "why": "His legacy jerseys and the 2021 title are the largest installed base of Bucks apparel in the market."
+    },
+    {
+      "name": "Tyler Herro",
+      "role": "Bucks guard, acquired from Miami",
+      "why": "The new face of the rebuild and the likeliest new-jersey candidate."
+    },
+    {
+      "name": "Taylor Jenkins",
+      "role": "Bucks head coach",
+      "why": "A new coach shaping the post-Giannis identity."
+    },
+    {
+      "name": "Brayden Burries",
+      "role": "Bucks rookie, No. 10 pick",
+      "why": "A young player fans may adopt early through rookie merchandise."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Summerfest",
+      "timing": "Late June to mid July",
+      "month": 6,
+      "why": "A big summer event where tees, shorts and caps move in volume."
+    },
+    {
+      "name": "Wisconsin State Fair",
+      "timing": "Late July to mid August",
+      "month": 8,
+      "why": "A statewide audience, and a back-to-school lead-in for casual apparel."
+    },
+    {
+      "name": "Nine-day gun deer season opener",
+      "timing": "Saturday before Thanksgiving",
+      "month": 11,
+      "why": "A statewide cultural moment when blaze orange and outerwear dominate shopping and attention."
+    },
+    {
+      "name": "Giannis return game vs Miami",
+      "timing": "Jan 28, 2027",
+      "month": 1,
+      "why": "The emotional and retail peak of the season at Fiserv Forum."
+    },
+    {
+      "name": "Black Friday and holiday weekend",
+      "timing": "Late November to Dec 24",
+      "month": 11,
+      "why": "The main gifting window, with Cup Night games in Thanksgiving week."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Fear the Deer",
+      "meaning": "The Bucks fan rallying phrase, tied to the deer mascot and the 2021 title run."
+    },
+    {
+      "term": "Deer District",
+      "meaning": "The entertainment plaza around Fiserv Forum."
+    },
+    {
+      "term": "Cheesehead",
+      "meaning": "Wisconsin fan identity, mostly tied to the Packers."
+    },
+    {
+      "term": "Brew City",
+      "meaning": "Milwaukee's nickname, rooted in its brewing history."
+    },
+    {
+      "term": "Up north",
+      "meaning": "Wisconsin shorthand for lake-cabin getaways."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Good Land green as a workwear base",
+      "type": "color",
+      "hex": "#00471B",
+      "source": "Bucks primary team color",
+      "use": "Put it on heavyweight fleece, shells and beanies for cold-weather layering."
+    },
+    {
+      "cue": "Cream City brick tone",
+      "type": "color",
+      "hex": "#E8D9B0",
+      "source": "Milwaukee's local cream-colored brick architecture",
+      "use": "Use it as a neutral base for tees, hoodies and trim."
+    },
+    {
+      "cue": "Great Lakes blue",
+      "type": "color",
+      "hex": "#0077C0",
+      "source": "Lake Michigan and Bucks accent palette",
+      "use": "Use it as a secondary accent on graphics and linings."
+    },
+    {
+      "cue": "Antler and deer motif",
+      "type": "motif",
+      "hex": "",
+      "source": "Bucks identity and Fear the Deer culture",
+      "use": "Go for tonal embroidery or a woven label detail, not loud logos."
+    },
+    {
+      "cue": "Heavyweight brushed fleece",
+      "type": "material",
+      "hex": "",
+      "source": "Wisconsin winter dressing",
+      "use": "Use it for crews, hoodies and warm-up pants with a utility feel."
+    }
+  ],
+  "productHooks": [
+    "Fiserv Forum game-night capsule for Jan 28: 2021 title legacy graphics in forest green and cream, sold in the arena store and online.",
+    "Heavyweight brushed-fleece Bucks hoodie and warm-up set in #00471B with tonal antler embroidery, priced as the entry-to-mid volume item.",
+    "Youth and kids drop of Herro and Burries tees and jerseys: a small first run, with reorder capacity if the rebuild catches on.",
+    "Insulated beanie and quilted shell pack for the October to November cold window, with a Cream City brick colorway."
+  ],
+  "watchouts": [
+    "Don't use Giannis' name or likeness on new product until current licensing is confirmed. He is now with Miami.",
+    "Packers and Brewers marks are third-party IP. Keep them off Bucks product.",
+    "Milwaukee is one of the most segregated metros in the country. Work with North Side and Bronzeville creators through partnership and payment, not borrowed imagery."
+  ],
+  "sources": [
+    {
+      "title": "Milwaukee Bucks official site",
+      "url": "https://www.nba.com/bucks"
+    },
+    {
+      "title": "Fiserv Forum",
+      "url": "https://www.fiservforum.com"
+    },
+    {
+      "title": "Summerfest",
+      "url": "https://www.summerfest.com"
+    },
+    {
+      "title": "Wisconsin Department of Revenue",
+      "url": "https://www.revenue.wi.gov"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "calendar": [
+      {
+        "window": "Late Jun to mid Jul",
+        "month": 6,
+        "driver": "Summerfest and summer festival season",
+        "impact": "medium"
+      },
+      {
+        "window": "Early Aug",
+        "month": 8,
+        "driver": "State Fair and back-to-school shopping, ahead of the early September school start",
+        "impact": "medium"
+      },
+      {
+        "window": "Late Oct",
+        "month": 10,
+        "driver": "Season opener and first cold snaps, with Cup Night starting Oct 30",
+        "impact": "medium"
+      },
+      {
+        "window": "Saturday before Thanksgiving",
+        "month": 11,
+        "driver": "Gun deer season opener and outerwear demand",
+        "impact": "low"
+      },
+      {
+        "window": "Thanksgiving to Dec 24",
+        "month": 11,
+        "driver": "Black Friday and holiday gifting",
+        "impact": "high"
+      },
+      {
+        "window": "Jan 28",
+        "month": 1,
+        "driver": "Giannis return game at Fiserv Forum",
+        "impact": "high"
+      },
+      {
+        "window": "Apr to Jun",
+        "month": 4,
+        "driver": "Playoff run demand, if the team qualifies",
+        "impact": "low"
+      }
+    ],
+    "channels": [
+      {
+        "channel": "Fiserv Forum team store",
+        "role": "Game-night impulse buying, and the main place for release events."
+      },
+      {
+        "channel": "Mall and big-box retail",
+        "role": "Mayfair and the suburban malls handle holiday and family purchases."
+      },
+      {
+        "channel": "Online and mobile",
+        "role": "Reaches statewide fans outside the Milwaukee area."
+      },
+      {
+        "channel": "Resale and secondhand",
+        "role": "Giannis-era jerseys will likely circulate heavily in resale."
+      },
+      {
+        "channel": "Outlets",
+        "role": "Pleasant Prairie and other outlets draw price-comparing Nike shoppers."
+      }
+    ],
+    "priceProfile": "Milwaukee is mid-income and value-minded, with a wide gap between affluent suburbs and lower-income city neighborhoods. Make accessible tees and hoodies the volume tier, and keep Authentic and City Edition pieces as occasion buys.",
+    "jerseyBehavior": "Fans historically bought Giannis swingman jerseys and tees across all ages, and kids and youth sizes mattered. The trade likely shifts buying toward nostalgia and gifting. New-player jersey adoption is uncertain."
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm the Milwaukee city and county sales tax total (state 5 percent plus county and 2024 city add-ons)",
+      "Confirm Wisconsin has no sales-tax holiday this year",
+      "Find the Bucks 2026-27 City Edition uniform and release date",
+      "Check current Bucks team store locations and hours at Fiserv Forum",
+      "Confirm Fiserv Forum's name and ownership are unchanged",
+      "Find the Summerfest 2027 and Wisconsin State Fair 2027 dates",
+      "Find the gun deer season 2026 opener date",
+      "Confirm Sherman Phoenix and Pleasant Prairie Premium Outlets are still operating",
+      "Check Milwaukee Public Schools and statewide school start dates",
+      "Check Giannis name and likeness licensing status for Bucks product"
+    ]
+  }
+}

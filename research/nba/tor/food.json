@@ -1,0 +1,360 @@
+{
+  "team": "tor",
+  "lens": "food",
+  "headline": "There's no signature dish. Toronto eats by diaspora corridor, and game day ends at a cart.",
+  "summary": "Old Toronto's postcard is peameal bacon on a bun. The city fans actually eat is diasporic: patties in coco bread, Hakka chilli chicken, Tamil kothu, halal shawarma and Punjabi sweets. Game day runs from Real Sports to the Jurassic Park screen to the street-meat carts. Co-create with diaspora food businesses and chefs, and keep pork off the graphics.",
+  "insights": [
+    {
+      "title": "Toronto's real hand food: patty in coco bread",
+      "detail": "The Jamaican beef patty, often folded into sweet coco bread, is sold everywhere. You'll find it at Randy's Take-Out on Eglinton West and Patty King in Kensington Market, and also at pizza counters, corner stores and school cafeterias. Toronto treats it as its own. Little Jamaica, its spiritual home, has spent more than a decade squeezed by Eglinton Crosstown LRT construction and rising rents.",
+      "implication": "This is the most Toronto-specific food cue Nike has. Build a patty-gold and coco-bread-cream palette with a Little Jamaica business as a paid co-creator. Route money back to the strip so the drop doesn't take from it."
+    },
+    {
+      "title": "The food corridors run past downtown",
+      "detail": "The food map runs through Gerrard India Bazaar, Little Ethiopia on the Danforth, Somali Dixon Road in Etobicoke and Little Manila at Bathurst and Wilson. Scarborough's Agincourt and Markham Road plazas hold Hakka and Tamil spots. Markham's Highway 7 has Hong Kong cafés, and Brampton has Punjabi sweet shops and chai counters. Much of the best food sits in strip-mall plazas, not on downtown streets.",
+      "implication": "Product for 'Canada's team' should travel to the plazas. Pop-ups in Scarborough, Mississauga and Brampton reach fans a King West launch misses. The plaza pylon sign also gives designers a ready-made graphic language."
+    },
+    {
+      "title": "Game day ends at the street-meat cart",
+      "detail": "Downtown game nights go through MLSE's Real Sports Apps & Bar and the Jurassic Park screen on Maple Leaf Square. They end with sausages from the street-meat carts outside the arena. In 2019, Jurassic Park satellite screens spread to suburban squares and cities across Canada. Kawhi Leonard's return brings back that title-run memory.",
+      "implication": "Go where the crowd already eats. Pay a licensed street-food vendor to run a Nike-wrapped cart on the Oct 30 home Cup Night against Brooklyn and at the first home playoff game. Treat Jurassic Park sites as retail points."
+    },
+    {
+      "title": "Peameal is pork, and many fans eat halal",
+      "detail": "Peameal bacon on a bun from Carousel Bakery and the old 'Hogtown' nickname recall the city's 19th-century pork packers. Today's GTA staples are different: halal shawarma from Mississauga-born chains like Paramount Fine Foods and Osmow's, beef patties, Hakka chilli chicken and Punjabi vegetarian sweets. Paramount's name is on the Raptors 905's arena.",
+      "implication": "Use peameal and Hogtown sparingly, as heritage nods and never as the lead city graphic. Pork imagery shuts out many of the Muslim, Jewish and Hindu fans who make up the GTA's base. Lead with the diaspora foods everyone shares."
+    },
+    {
+      "title": "The food-festival calendar falls inside the season",
+      "detail": "Diwali (about Nov 8, 2026) fills Brampton and Mississauga sweet shops with mithai boxes. Lunar New Year (Feb 6, 2027) packs dim sum halls in Markham and on Spadina. Ramadan (about Feb 8 to Mar 9, 2027) puts sunset iftar just before 7:30 pm tip-offs. Winterlicious fills downtown with prix-fixe menus in late winter.",
+      "implication": "Plan heritage-night product and packaging around these food moments, made with designers and food businesses from each community. Don't save the city's story for the summer festivals."
+    },
+    {
+      "title": "Chefs, not merch, carry the food story",
+      "detail": "Outside Tim Hortons, few Toronto food brands make merch locals actually wear. The voices are chefs: Nuit Regular (Pai, Kiin), Matty Matheson, Suzanne Barr, Adrian Forte and Roger Mooking. Matheson runs Prime Seafood Palace, plays Neil Fak on The Bear and sells his own merch. The shared food memories are jingles and rituals: Pizza Pizza's '967-11-11' and the Tims double-double.",
+      "implication": "That gap is an opening: a chef-led Raptors capsule could become the city's food merch. Chain marks like Double-Double, Timbits and the Pizza Pizza number need licenses, so build on chefs and dishes, not chains."
+    }
+  ],
+  "places": [
+    {
+      "name": "St. Lawrence Market (Carousel Bakery)",
+      "kind": "market",
+      "neighborhood": "St. Lawrence / Old Town",
+      "why": "Carousel's peameal bacon sandwich is old Toronto's signature, and the market is a short walk from Scotiabank Arena. It closes by early evening, so it works as a pre-game stop only for Saturday daytime games."
+    },
+    {
+      "name": "Real Sports Apps & Bar",
+      "kind": "sports bar",
+      "neighborhood": "Maple Leaf Square / South Core",
+      "why": "MLSE's flagship bar, with a giant screen, faces the Jurassic Park plaza. It's downtown's default room for pre-game drinks and road-game watch parties."
+    },
+    {
+      "name": "Pai Northern Thai Kitchen",
+      "kind": "restaurant",
+      "neighborhood": "Entertainment District",
+      "why": "Nuit Regular's khao soi spot on Duncan Street is walkable to the arena and one of downtown's most reliable pre-game lines."
+    },
+    {
+      "name": "Little Jamaica (Eglinton Avenue West)",
+      "kind": "district",
+      "neighborhood": "Oakwood-Vaughan / York",
+      "why": "Toronto's Caribbean heartland of patties at Randy's Take-Out, jerk, bakeries and record shops. It's under strain from years of LRT construction and rising rents."
+    },
+    {
+      "name": "Kensington Market",
+      "kind": "district",
+      "neighborhood": "Kensington / Spadina",
+      "why": "Downtown's open-air immigrant market, where Patty King, Rasta Pasta and Latin and Caribbean counters sit side by side. Pedestrian Sundays go car-free in warm months."
+    },
+    {
+      "name": "Gerrard India Bazaar",
+      "kind": "district",
+      "neighborhood": "Gerrard East / Leslieville",
+      "why": "Lahore Tikka House's late-night kebabs anchor this east-end South Asian strip. It was Toronto's South Asian food street long before Brampton and Mississauga boomed."
+    },
+    {
+      "name": "Agincourt and Markham Road plazas",
+      "kind": "district",
+      "neighborhood": "Scarborough",
+      "why": "Strip-mall plazas packed with Hakka, Tamil, Hong Kong-café, Filipino and Caribbean spots. This is Scarborough's real food court and its home-court pride."
+    },
+    {
+      "name": "Dixon Road",
+      "kind": "district",
+      "neighborhood": "Kingsview Village, Etobicoke",
+      "why": "The heart of Toronto's Somali community. Halal restaurants around the Dixon Road towers serve bariis iskukaris, suqaar and sweet tea."
+    },
+    {
+      "name": "Little Manila (Bathurst and Wilson)",
+      "kind": "district",
+      "neighborhood": "North York",
+      "why": "A strip of Filipino groceries, bakeries and turo-turo counters, serving one of the GTA's most basketball-obsessed communities."
+    },
+    {
+      "name": "Paramount Fine Foods Centre",
+      "kind": "venue",
+      "neighborhood": "Mississauga",
+      "why": "The Raptors 905's home arena carries the name of the Mississauga-born Lebanese chain that took GTA shawarma national. The 905 already fuses food and hoops."
+    }
+  ],
+  "people": [
+    {
+      "name": "Nuit Regular",
+      "role": "Chef and co-owner of Pai Northern Thai Kitchen and Kiin",
+      "why": "The most celebrated immigrant chef in downtown Toronto. Her restaurant is the pre-game line nearest the arena."
+    },
+    {
+      "name": "Matty Matheson",
+      "role": "Chef, TV personality and actor (Neil Fak on The Bear); behind Prime Seafood Palace and Matty's Patty's",
+      "why": "The Toronto food figure with the biggest streetwear-adjacent audience, and he already sells his own merch."
+    },
+    {
+      "name": "Suzanne Barr",
+      "role": "Chef and author of the memoir My Ackee Tree",
+      "why": "A leading Black Caribbean-Canadian chef voice in Toronto on food, family and community."
+    },
+    {
+      "name": "Adrian Forte",
+      "role": "Jamaican-Canadian chef and author of the cookbook Yawd",
+      "why": "He makes modern Afro-Caribbean food in Toronto, and is a natural co-creator for a Little Jamaica-rooted capsule."
+    },
+    {
+      "name": "Roger Mooking",
+      "role": "Trinidad-born, Toronto-based chef, TV host and Juno-winning musician (Bass Is Base)",
+      "why": "Connects Caribbean food, Canadian hip-hop history and broadcast reach."
+    },
+    {
+      "name": "Mohamad Fakih",
+      "role": "Founder and CEO of Paramount Fine Foods",
+      "why": "He built a Mississauga shawarma chain into a national brand that now names the Raptors 905's arena. He's a prominent Arab-Canadian voice in the 905."
+    },
+    {
+      "name": "Patrick Kriss",
+      "role": "Chef-owner of Alo",
+      "why": "He leads Toronto's Michelin-era fine dining, useful for premium or courtside hospitality events."
+    },
+    {
+      "name": "Pizza Pizza",
+      "role": "Pizza chain founded in Toronto in 1967",
+      "why": "Its '967-11-11' jingle is a memory shared across the GTA, though the number and jingle are its IP."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Post-game street meat",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "Sausages from the carts outside the arena are the Raptors' oldest food ritual, and the easiest way to meet fans as they leave."
+    },
+    {
+      "name": "Diwali",
+      "timing": "About Nov 8, 2026",
+      "month": 11,
+      "why": "Brampton and Mississauga sweet shops sell out mithai boxes. It's a natural fit for a Raptors South Asian heritage night and gifting packaging."
+    },
+    {
+      "name": "Lunar New Year",
+      "timing": "Feb 6, 2027 (Year of the Goat)",
+      "month": 2,
+      "why": "Dim sum halls in Markham, Richmond Hill and Spadina's Chinatown fill up, and red-envelope gifting suits limited product."
+    },
+    {
+      "name": "Ramadan iftar season and Eid al-Fitr",
+      "timing": "About Feb 8 to Mar 9, 2027 (moon-sighting dependent)",
+      "month": 2,
+      "why": "Iftar falls just before 7:30 pm tips, so watch parties in Mississauga, Dixon Road and Thorncliffe Park start with breaking the fast."
+    },
+    {
+      "name": "Winterlicious",
+      "timing": "Late January to mid-February",
+      "month": 2,
+      "why": "The City of Toronto's prix-fixe restaurant program lands in the deep-winter stretch of the season, when downtown restaurants want traffic."
+    },
+    {
+      "name": "Jurassic Park playoff watch parties",
+      "timing": "Home playoff games, mid-April onward",
+      "month": 4,
+      "why": "Maple Leaf Square and the suburban satellite screens are the city's mass game-day meal: street meat, patties and shawarma, eaten standing up."
+    },
+    {
+      "name": "Toronto Caribbean Carnival",
+      "timing": "Grand Parade on the Civic Holiday weekend, early August",
+      "month": 8,
+      "why": "Jerk drums smoking along Lake Shore define the city's biggest food-and-culture weekend."
+    },
+    {
+      "name": "Canadian National Exhibition (CNE)",
+      "timing": "Mid-August to Labour Day",
+      "month": 8,
+      "why": "The CNE Food Building's over-the-top fair food is a GTA family ritual, and a summer stage for back-to-school product."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "Patty and coco",
+      "meaning": "A Jamaican beef patty folded into sweet coco bread. It's the default cheap, filling Toronto lunch."
+    },
+    {
+      "term": "Street meat",
+      "meaning": "Charcoal-grilled sausages and hot dogs from sidewalk carts, dressed from a self-serve toppings bar."
+    },
+    {
+      "term": "Peameal on a bun",
+      "meaning": "Cornmeal-rolled cured pork loin, sliced and griddled on a kaiser. Toronto's heritage sandwich."
+    },
+    {
+      "term": "Hogtown",
+      "meaning": "Toronto's old nickname from its 19th-century pork-packing industry, now used with affectionate irony."
+    },
+    {
+      "term": "Doubles, 'with slight'",
+      "meaning": "Trinidadian street food of curried channa between two pieces of fried bara. 'Slight' means a little pepper sauce."
+    },
+    {
+      "term": "Hakka",
+      "meaning": "In the GTA, Indian-Chinese food (chilli chicken, Manchurian, Hakka noodles) brought by Kolkata's Chinese community. A Scarborough and Brampton staple."
+    },
+    {
+      "term": "Double-double",
+      "meaning": "A Tim Hortons coffee with two creams and two sugars. It's Canadian shorthand, and a Tim Hortons trademark."
+    },
+    {
+      "term": "967-11-11",
+      "meaning": "Pizza Pizza's sung phone number, which every GTA kid knows by heart."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Patty gold: the turmeric-tinted, flaky crust of a Jamaican beef patty.",
+      "type": "color",
+      "hex": "#E0A526",
+      "source": "Little Jamaica patty shops and every GTA corner-store warmer.",
+      "use": "A secondary hit (tipping, Swoosh, inside taping) against Raptors red and black. Don't pair it with green and black in a way that reads as a lifted Jamaican flag, unless Jamaican-Canadian designers co-create it."
+    },
+    {
+      "cue": "Coco-bread cream: the soft, pale, slightly sweet bread folded around the patty.",
+      "type": "color",
+      "hex": "#F2E2C0",
+      "source": "The patty-in-coco-bread lunch from Eglinton West to school cafeterias.",
+      "use": "A base for fleece and tees with patty-gold linings, so the garment layers the way the sandwich does: cream outside, gold inside."
+    },
+    {
+      "cue": "Plaza pylon sign: a tall, backlit roadside sign stacking tenant panels in mismatched fonts and scripts (English, Chinese, Tamil, Gurmukhi).",
+      "type": "graphic",
+      "source": "Strip-mall plazas in Scarborough, Markham, Mississauga and Brampton where the GTA's best food lives.",
+      "use": "A back-print stacking real food corridors as 'tenants', with each script set by a designer from that community. Use no business names without a license.",
+      "hex": ""
+    },
+    {
+      "cue": "Jerk drum: a split oil drum on legs, matte black steel with heat-blued patina and punched vent holes, trailing smoke.",
+      "type": "material",
+      "source": "Jerk pans on Lake Shore at Caribbean Carnival and on Little Jamaica sidewalks.",
+      "use": "Vent-hole perforation on mesh panels and shorts, and heat-blued metal on aglets and zip pulls. Credit and pay Jamaican-Canadian pitmasters in the story.",
+      "hex": ""
+    },
+    {
+      "cue": "Hand-painted Caribbean storefront lettering: drop-shadowed block letters and brush script on patty, roti and bakery signs.",
+      "type": "typography",
+      "source": "Storefronts on Eglinton West, Kensington Market and Scarborough plazas.",
+      "use": "Commission a Toronto Caribbean sign painter for a one-off wordmark. Don't fake it with a stock 'island' font.",
+      "hex": ""
+    },
+    {
+      "cue": "The mithai box: a bright printed cardboard sweet box with gold-foil type that every Brampton and Mississauga family carries at Diwali.",
+      "type": "story",
+      "source": "Punjabi and South Asian sweet shops in Brampton, Mississauga and Gerrard India Bazaar.",
+      "use": "A Diwali-night shoebox sleeve or gift box, co-designed with a GTA South Asian designer. Keep the festive box language. Leave out deities, diyas used in worship and any religious script.",
+      "hex": ""
+    }
+  ],
+  "productHooks": [
+    "'Patty and Coco' Raptors lifestyle pack: a coco-cream fleece with patty-gold lining and tipping, co-created with a Little Jamaica patty shop. Launch it in Black History Month 2027 with a paid pop-up on Eglinton West, and give a share of proceeds to local business groups.",
+    "'416/905 Plaza' tee and hoodie: a back graphic built as a plaza pylon sign stacking food corridors (Gerrard, Dixon, Eglinton West, Agincourt, Spadina, Bramalea). Sell it at Scotiabank Arena and at Raptors 905 games at Paramount Fine Foods Centre.",
+    "Heritage-night packaging: mithai-box shoebox sleeves for Diwali (about Nov 8, 2026) and red-envelope hangtags for Lunar New Year (Feb 6, 2027). Co-design each with a GTA designer from that community, and pair it with sweets from a named local shop under a paid deal.",
+    "'Iftar to Tip-off' Ramadan watch nights (Feb to Mar 2027) in Mississauga and on Dixon Road, with a halal food partner. Nike Pro Hijab and long-line hoodies in Raptors colours are on hand.",
+    "Street-meat cart pop-up on the Oct 30 home Cup Night against Brooklyn, and again at the first home playoff game. A licensed Toronto vendor, who is paid, runs a Nike-wrapped cart selling a limited 'Street Meat' tee."
+  ],
+  "watchouts": [
+    "Kawhi Leonard is a New Balance athlete who fought Nike in court over his 'Klaw' logo. Keep his likeness, nicknames and the Klaw out of any food-tied product, and celebrate his return only through team uniforms and team marks.",
+    "Chain IP is everywhere in this lens. Tim Hortons (Double-Double, Timbits), Pizza Pizza's '967-11-11', Paramount and restaurant names and logos all need licenses. Check MLSE's arena food and beverage sponsor exclusivities before any vendor collab.",
+    "Pork-led city graphics (peameal, Hogtown pigs) can alienate the many Muslim, Jewish and Hindu fans in the GTA base. Keep them as heritage footnotes.",
+    "Caribbean, South Asian, East African and Filipino food cues need paid co-creation with community chefs, businesses and designers. Avoid flag mash-ups, religious imagery or script, and patois or accent jokes in product names. Avoid derogatory nicknames for Brampton or Scarborough.",
+    "Little Jamaica and Kensington are under gentrification pressure. Any drop that borrows their look must also send money and foot traffic back to the strip."
+  ],
+  "sources": [
+    {
+      "title": "Toronto Raptors (official site)",
+      "url": "https://www.nba.com/raptors"
+    },
+    {
+      "title": "Scotiabank Arena (official site)",
+      "url": "https://www.scotiabankarena.com"
+    },
+    {
+      "title": "St. Lawrence Market (official site)",
+      "url": "https://www.stlawrencemarket.com"
+    },
+    {
+      "title": "St. Lawrence Market (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/St._Lawrence_Market"
+    },
+    {
+      "title": "Cuisine of Toronto (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cuisine_of_Toronto"
+    },
+    {
+      "title": "Jamaican patty (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Jamaican_patty"
+    },
+    {
+      "title": "Indian Chinese cuisine (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Indian_Chinese_cuisine"
+    },
+    {
+      "title": "Kensington Market (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Kensington_Market"
+    },
+    {
+      "title": "Maple Leaf Square (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Maple_Leaf_Square"
+    },
+    {
+      "title": "Paramount Fine Foods Centre (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Paramount_Fine_Foods_Centre"
+    },
+    {
+      "title": "Toronto Caribbean Carnival (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Toronto_Caribbean_Carnival"
+    },
+    {
+      "title": "Canadian National Exhibition (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Canadian_National_Exhibition"
+    },
+    {
+      "title": "Pizza Pizza (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Pizza_Pizza"
+    },
+    {
+      "title": "City of Toronto (official site, for Winterlicious)",
+      "url": "https://www.toronto.ca"
+    }
+  ],
+  "confidence": "medium",
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm Kawhi Leonard's current footwear deal (New Balance as of mid-2026) and his 2026-27 home debut date at Scotiabank Arena, before any Kawhi-timed food event.",
+      "Check Scotiabank Arena's 2026-27 concession lineup and MLSE's food, beverage and QSR sponsor exclusivities (pizza, coffee, halal). Check whether street-food carts still work the arena perimeter.",
+      "Confirm Real Sports Apps & Bar is operating, and find MLSE's plans for Jurassic Park and satellite watch parties in 2026-27.",
+      "Confirm Randy's Take-Out, Patty King, Carousel Bakery, Pai Northern Thai Kitchen, Lahore Tikka House and Alo are open in their stated locations.",
+      "Check the Eglinton Crosstown LRT opening status and the current state of Little Jamaica businesses on Eglinton Avenue West.",
+      "Confirm Paramount Fine Foods Centre's naming rights, and that it remains the Raptors 905's home arena for 2026-27.",
+      "Find the Raptors' 2026-27 heritage-night dates (Diwali, Lunar New Year, Black History Month, Ramadan) and whether each night is scheduled.",
+      "Confirm exact 2026-27 festival dates: Diwali (about Nov 8, 2026), Ramadan start and Eid al-Fitr 2027 (moon-sighting), Winterlicious 2027, Toronto Caribbean Carnival and CNE 2027.",
+      "Check the current projects of Nuit Regular, Matty Matheson (Prime Seafood Palace), Suzanne Barr, Adrian Forte, Roger Mooking, Mohamad Fakih and Patrick Kriss.",
+      "Confirm trademark status and licensing paths for Tim Hortons' Double-Double and Timbits and for Pizza Pizza's 967-11-11.",
+      "Check the Kensington Market Pedestrian Sundays schedule for 2027 and whether the program continues."
+    ]
+  }
+}

@@ -1,0 +1,659 @@
+{
+  "team": "det",
+  "calendar": [
+    {
+      "i": 0,
+      "window": "Sat Oct 17 to Tue Oct 20",
+      "kind": "event",
+      "start": "2026-10-17",
+      "end": "2026-10-20",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "checked-live",
+      "basisNote": "det-c4",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "venue-or-permit",
+        "brand-safety"
+      ]
+    },
+    {
+      "i": 1,
+      "window": "Detroit's Specter wear dates, once announced",
+      "kind": "event",
+      "start": "2026-10",
+      "end": "",
+      "recurring": false,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "existing-inventory",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "league-or-team-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 2,
+      "window": "Late October to Nov 27, Cup Nights (Fridays, plus Tue Nov 24 and Wed Nov 25)",
+      "kind": "season",
+      "start": "2026-10",
+      "end": "2026-11-27",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — group play (Cup Nights). The first real cold has no date.",
+      "actBy": "2026-10",
+      "actNote": "Pick a lane now: a licensed Carhartt collaboration or Nike's own codes.",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "retailer-agreement",
+        "partner-agreement"
+      ]
+    },
+    {
+      "i": 3,
+      "window": "Black Friday Nov 27 to Dec 24 (Thanksgiving Day belongs to the Lions)",
+      "kind": "season",
+      "start": "2026-11-27",
+      "end": "2026-12-24",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "fixed-holiday",
+      "basisNote": "Black Friday is the day after Thanksgiving (fourth Thursday in November): Nov 27, 2026. Dec 24 is Christmas Eve.",
+      "actBy": "2026-10",
+      "actNote": "Approach Detroit vs. Everybody and Detroit Hustles Harder now for the first maker-roster drop.",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 4,
+      "window": "Dec 4-5 quarterfinals, Dec 8-9 semifinals",
+      "kind": "event",
+      "start": "2026-12-04",
+      "end": "2026-12-09",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Emirates NBA Cup 2026 — quarterfinals; Emirates NBA Cup 2026 — semifinals",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights"
+      ]
+    },
+    {
+      "i": 5,
+      "window": "Mon Jan 18, noon ET at Cleveland",
+      "kind": "event",
+      "start": "2027-01-18",
+      "end": "",
+      "recurring": true,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "MLK Day games (Pistons at Cavaliers, noon ET)",
+      "actBy": "",
+      "actNote": "",
+      "route": "no-product",
+      "targetSeason": "",
+      "dependencies": [
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 6,
+      "window": "Feb 1-11, before the trade deadline; J Dilla's birthday Feb 7",
+      "kind": "launch",
+      "start": "2027-02-01",
+      "end": "2027-02-11",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Trade deadline (Feb 11, 2027). The Feb 1 launch date is the team's own plan.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "partner-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 7,
+      "window": "Ramadan about Feb 8 to Mar 9; Eid al-Fitr about Mar 9-10 (to confirm)",
+      "kind": "season",
+      "start": "2027-02-08",
+      "end": "2027-03-10",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Projected dates. det-c9 supports the projection only; final dates depend on moon sighting.",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 8,
+      "window": "Late February to March",
+      "kind": "season",
+      "start": "2027-02",
+      "end": "2027-03",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 9,
+      "window": "Apr 5-11 build, live from seeding",
+      "kind": "launch",
+      "start": "2027-04-05",
+      "end": "2027-04-11",
+      "recurring": false,
+      "certainty": "confirmed",
+      "basis": "league-calendar",
+      "basisNote": "Regular season ends (Apr 11, 2027)",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit"
+      ]
+    },
+    {
+      "i": 10,
+      "window": "Memorial Day weekend (expected May 29-31, to confirm)",
+      "kind": "event",
+      "start": "2027-05-29",
+      "end": "2027-05-31",
+      "recurring": true,
+      "certainty": "tentative",
+      "basis": "brief-unchecked",
+      "basisNote": "Movement 2027 dates and site are unconfirmed.",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "production-capacity",
+        "nike-calendar-approval",
+        "date-confirmation"
+      ]
+    },
+    {
+      "i": 11,
+      "window": "June to August",
+      "kind": "season",
+      "start": "2027-06",
+      "end": "2027-08",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "new-development",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "venue-or-permit",
+        "third-party-ip"
+      ]
+    },
+    {
+      "i": 12,
+      "window": "September, Murals in the Market and Detroit Month of Design",
+      "kind": "action",
+      "start": "2027-09",
+      "end": "",
+      "recurring": true,
+      "certainty": "unknown",
+      "basis": "none",
+      "basisNote": "",
+      "actBy": "",
+      "actNote": "",
+      "route": "quick-turn-graphics",
+      "targetSeason": "2026-27",
+      "dependencies": [
+        "production-capacity",
+        "league-or-team-rights",
+        "partner-agreement",
+        "third-party-ip"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "clock-in-opener",
+      "consumer": "The whole Pistons fan base at the Oct 20 opener, led by Gen Z and core season-ticket fans.",
+      "insights": [
+        3,
+        0,
+        2
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10-17",
+      "actBy": "2026-10",
+      "actNote": "Vet the ambassador shortlist, starting with Tee Grizzley, and get Pistons and Nike sign-off before the Oct 17 pop-up.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Check Tee Grizzley's current Pistons ties and vet the full ambassador shortlist.",
+        "Check Cade swingman and Specter stock at the LCA Team Store.",
+        "Confirm the Eastern Market Saturday pop-up for Oct 17.",
+        "Check all copy for Game 7 or Cleveland references."
+      ],
+      "dependencies": [
+        "stock-availability",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "venue-or-permit",
+        "brand-safety"
+      ],
+      "owner": "Marketing",
+      "partners": [
+        "Tee Grizzley",
+        "Jalen Rose"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "shift-change-winter",
+      "consumer": "Suburban families, corporate and downtown fans, and holiday gift buyers across metro Detroit.",
+      "insights": [
+        1,
+        6
+      ],
+      "categories": [
+        "outerwear",
+        "fleece",
+        "headwear",
+        "accessory",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-10",
+      "actBy": "2026-10",
+      "actNote": "Pick a lane now: approach Carhartt for a licensed collaboration, or build in Nike's own codes.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Ask Carhartt whether it is open to a licensed, credited collaboration.",
+        "Get Pistons and NBA approval for brown and safety-yellow accents.",
+        "Check whether a new shell can reach stores by Black Friday, or plan gift sets from current stock.",
+        "Confirm Fairlane Town Center tenants before planning it as a door."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "league-or-team-rights",
+        "partner-agreement",
+        "retailer-agreement",
+        "stock-availability",
+        "third-party-ip"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Carhartt",
+        "College for Creative Studies"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "overtime-playoff-pack",
+      "consumer": "Every Pistons fan segment at playoff time, led by casual and bandwagon buyers.",
+      "insights": [
+        3,
+        2
+      ],
+      "categories": [
+        "jersey",
+        "tee",
+        "fleece",
+        "accessory",
+        "headwear"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2027-04",
+      "actNote": "Pre-produce blanks and stencil graphics for Apr 5-11, so the pack goes live within 24 hours of seeding.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Agree a 24-hour seeding-to-shelf plan with the LCA store, Foot Locker and Dick's.",
+        "Set blank quantities against playoff sell-through targets.",
+        "Clear any Spirit of Detroit product use with the city first.",
+        "Check all copy for opponent-specific lines."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "stock-availability",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "retailer-agreement",
+        "venue-or-permit",
+        "third-party-ip"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Checker Bar"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "detroit-maker-roster",
+      "consumer": "Detroit-first city fans and Gen Z streetwear buyers.",
+      "insights": [
+        0,
+        6
+      ],
+      "categories": [
+        "fleece",
+        "tee",
+        "headwear",
+        "kids"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2026-11-27",
+      "actBy": "2026-10",
+      "actNote": "Approach Detroit vs. Everybody and Detroit Hustles Harder now, with two or three named alternates.",
+      "routes": [
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Detroit vs. Everybody and Detroit Hustles Harder are operating, who owns them, where their doors are, and any Pistons, Nike or rival ties.",
+        "Agree each partner's creative control and standing revenue share in writing.",
+        "Review how the 2025 Malcolm X capsule with Wesley Taylor and DETail Threads sold.",
+        "Confirm Two18 by Burn Rubber will carry the drops."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "league-or-team-rights",
+        "production-capacity",
+        "retailer-agreement"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Detroit vs. Everybody (Tommey Walker)",
+        "Detroit Hustles Harder",
+        "Two18 by Burn Rubber"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "three-eras-heritage",
+      "consumer": "Bad Boys diehards, 1990s teal-era millennials and women fans.",
+      "insights": [
+        2,
+        3
+      ],
+      "categories": [
+        "outerwear",
+        "tee",
+        "headwear",
+        "fleece",
+        "jersey"
+      ],
+      "fit": [
+        "women's",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Launch the first week of February, with marks and player likeness NBA-cleared before then.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Clear Pistons marks and player likeness with the NBA for each lane.",
+        "Confirm whether the Detroit Shock marks can be licensed.",
+        "Have Hamtramck and Eastern Market vintage reworkers vet the heritage story.",
+        "Test teal demand with fans, since some recall the era as divisive."
+      ],
+      "dependencies": [
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "retailer-agreement"
+      ],
+      "owner": "Licensed team apparel",
+      "partners": [
+        "Two18 by Burn Rubber",
+        "Hamtramck and Eastern Market vintage reworkers"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "eid-dearborn-hamtramck",
+      "consumer": "Arab American and Bangladeshi Pistons families in Dearborn and Hamtramck.",
+      "insights": [
+        6
+      ],
+      "categories": [
+        "fleece",
+        "kids",
+        "jersey",
+        "headwear"
+      ],
+      "fit": [
+        "kids",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-02",
+      "actBy": "2027-02",
+      "actNote": "Check Pistons home tip times against iftar before Ramadan starts, about Feb 8.",
+      "routes": [
+        "quick-turn-graphics",
+        "existing-inventory"
+      ],
+      "validation": [
+        "Confirm Ramadan and Eid dates as moon sighting nears, and check home tip times against iftar.",
+        "Confirm Fairlane Town Center tenants, or plan Warren Avenue and Joseph Campau doors instead.",
+        "Review the Eid set with ACCESS and the paid creators: no Arabic script or religious imagery as decoration.",
+        "Test family-set prices with Dearborn and Hamtramck shoppers."
+      ],
+      "dependencies": [
+        "date-confirmation",
+        "partner-agreement",
+        "retailer-agreement",
+        "brand-safety",
+        "production-capacity",
+        "league-or-team-rights",
+        "player-or-estate-rights",
+        "stock-availability"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "ACCESS",
+        "Arab American National Museum"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "floor-test-jit-psl",
+      "consumer": "Detroit youth hoopers, jit dancers, PSL players and alumni, and their families.",
+      "insights": [
+        5,
+        6
+      ],
+      "categories": [
+        "footwear",
+        "tee",
+        "shorts",
+        "kids"
+      ],
+      "fit": [
+        "youth",
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-06",
+      "actBy": "2027-02",
+      "actNote": "Recruit jit and PSL testers during the late-winter PSL championship window.",
+      "routes": [
+        "new-development",
+        "quick-turn-graphics"
+      ],
+      "validation": [
+        "Confirm Detroit PAL will run the PSL side and the court refreshes.",
+        "Agree pay and credit terms with jit crews, choreographers and PSL players.",
+        "Clear school names with each PSL school before printing tees.",
+        "Confirm use of the Belle Isle courts and Calihan Hall."
+      ],
+      "dependencies": [
+        "production-capacity",
+        "nike-calendar-approval",
+        "partner-agreement",
+        "venue-or-permit",
+        "third-party-ip"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Detroit Police Athletic League (PAL)",
+        "Detroit Public School League (Pershing, Cass Tech, Southwestern)"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "id": "machine-lane-movement",
+      "consumer": "Design-literate creatives, Movement festival visitors and Gen Z fans.",
+      "insights": [
+        5
+      ],
+      "categories": [
+        "other",
+        "outerwear",
+        "tee"
+      ],
+      "fit": [
+        "to define"
+      ],
+      "targetSeason": "2026-27",
+      "firstInMarket": "2027-04",
+      "actBy": "2026-12",
+      "actNote": "Hold partner talks with several Detroit techno artists and labels this winter.",
+      "routes": [
+        "no-product",
+        "new-development"
+      ],
+      "validation": [
+        "Ask Underground Resistance and Submerge, on their terms, whether they want to partner at all.",
+        "Review how the January 2026 Belleville Three collaboration sold and landed with fans.",
+        "Confirm Movement 2027 dates and site, given the Hart Plaza renovation.",
+        "If UR is not involved, check every graphic against its visual language."
+      ],
+      "dependencies": [
+        "partner-agreement",
+        "third-party-ip",
+        "brand-safety",
+        "date-confirmation",
+        "production-capacity",
+        "nike-calendar-approval",
+        "venue-or-permit"
+      ],
+      "owner": "Partnerships and community",
+      "partners": [
+        "Underground Resistance",
+        "Submerge"
+      ],
+      "status": "hypothesis"
+    }
+  ]
+}
