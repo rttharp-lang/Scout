@@ -7,6 +7,9 @@ import { TEAM_BY_ID, placeOf, shortLabel } from "../teams.js";
 import { SCORE_LABELS, href, SectionHead } from "../ui.jsx";
 
 const SORTS = [...SCORE_LABELS, ["az", "A–Z"]];
+// Priority titles end with the brief's opportunity id, e.g. "Banner '26 (ring-night-1973-2026)".
+const priorityTitle = (t) => t.replace(/\s*\([a-z0-9]+(?:-[a-z0-9]+)+\)\s*$/, "");
+
 const SECTIONS = [["themes", "Themes"], ["clusters", "Clusters"], ["scores", "Scores"], ["priorities", "Priority board"], ["portland", "Portland playbook"], ["watchlist", "Watchlist"]];
 
 export default function League() {
@@ -68,7 +71,7 @@ export default function League() {
               {league.priorities.map((p, i) => (
                 <li key={i} style={{ display: "grid", gridTemplateColumns: "28px minmax(0, 1fr)", gap: 10 }}>
                   <b className="hc-insight-num" style={{ fontSize: 22 }}>{i + 1}</b>
-                  <span><a href={href("m", p.team)} style={{ fontWeight: 700 }}>{name(p.team)}</a> — {p.title}<div className="hc-small hc-muted">{p.why} · {p.months.map((x) => MONTHS[x - 1]).join(", ")}</div></span>
+                  <span><a href={href("m", p.team)} style={{ fontWeight: 700 }}>{name(p.team)}</a> — {priorityTitle(p.title)}<div className="hc-small hc-muted">{p.why} · {p.months.map((x) => MONTHS[x - 1]).join(", ")}</div></span>
                 </li>
               ))}
             </ol>

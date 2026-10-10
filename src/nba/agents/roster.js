@@ -21,6 +21,7 @@ THE BAR — every claim must pass all of these:
 - RESPECT: no stereotypes or caricature. When a cue comes from a specific community (Black, Latino, Indigenous, Asian, Pacific Islander, LGBTQ+, immigrant communities), say how to engage authentically: partner with, credit and pay its creators; never lift sacred or ceremonial imagery. Flag third-party IP that would need licensing.
 - PEOPLE: name public figures, artists, athletes, chefs, designers, collectives and businesses. Never name private individuals.
 - TIGHT: one to three sentences per field. No filler, no hedging boilerplate. Fewer, stronger items beat padded lists.
+- VOICE: write like a good city guide or magazine, not a strategy deck. Short sentences (aim under 16 words), plain words, active voice, the imperative for advice. No consultant-speak (leverage, unlock, activate against, ecosystem, touchpoint) and no brochure filler (vibrant, nestled, rich history).
 - OWN WORDS: never reproduce song lyrics, poems, slogans beyond a few words, or passages from articles verbatim — describe and name the work instead.
 - SOURCES: list the URLs you actually used.`;
 
@@ -206,7 +207,7 @@ const CUE_TYPES = ["color", "motif", "texture", "typography", "silhouette", "mat
 const LENS_BASE = {
   team: str("Team id, e.g. por"),
   lens: str("Lens agent id"),
-  headline: str("One sharp sentence: the essence of this lens for this market"),
+  headline: str("A magazine headline for this lens in this market, 90 characters at most"),
   summary: str("3-5 sentences of synthesis"),
   insights: arr(obj({ title: str("Short title"), detail: str("1-3 sentences, specific to this market"), implication: str("What it means for Nike Basketball product or activation") }), 4, 7),
   places: arr(obj({ name: str("Real, currently-operating place, venue, court, store, event space"), kind: str("e.g. venue, court, gallery, restaurant, shop, district"), neighborhood: str("Neighborhood or suburb"), why: str("Why it matters, one sentence") }), 0, 10),
@@ -273,7 +274,7 @@ const PRODUCT_CATEGORY = { type: "string", enum: ["jersey", "tee", "fleece", "ou
 // by the editor).
 const STRATEGY_PROPS = {
   team: str("Team id"),
-  headline: str("The market thesis in one line (≤ 120 characters)"),
+  headline: str("The market's story in one line, 120 characters at most"),
   thesis: str("3-5 sentences: what makes this fandom distinct and where Nike wins"),
   archetype: obj({ name: str("Fandom archetype name, e.g. 'The Loyal Underdog'"), description: str("1-2 sentences") }),
   pulse: obj({ teamMoment: str("The team's 2026-27 situation in one or two sentences"), sentiment: str("Fan mood now"), heat: { type: "integer", minimum: 0, maximum: 100, description: "Current fan engagement heat" } }),
