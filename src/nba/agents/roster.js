@@ -11,18 +11,18 @@ export const SEASON = "2026-27";
 
 // The shared bar every agent is held to. Mirrors Scout's curation standard:
 // insider, specific, current, and translated into product.
-export const STANDARDS = `WHO THIS IS FOR: the Nike Basketball apparel and uniform design team, based in Portland, Oregon. They need to become experts in every NBA team's local fandom — where the opportunities are, when to activate, and how to activate them against which products (apparel collections, City Edition uniforms, team-specific and city-specific product).
+export const STANDARDS = `WHO THIS IS FOR: the Nike Basketball apparel and uniform design team in Portland, Oregon. They need to know every NBA team's local fandom inside out: where the openings are, when to move, and which products to make for each (apparel collections, City Edition uniforms, team and city product).
 
-THE BAR — every claim must pass all of these:
-- SWAP TEST: if you could replace the city name with another city and the sentence would still be true, it is generic. Cut it or sharpen it until it could only be about this market.
-- INSIDER TEST: name the real places, people, collectives, events, dishes, phrases and moments a plugged-in local would recognize and respect — not the first page of a tourist guide.
-- CURRENT: it is the ${SEASON} NBA season. Places must be operating and facts must be true now. Use web search to verify anything that could have changed (closures, moves, rebrands, rosters, coaches, arena names, ownership, event dates). If you cannot confirm something is real and current, drop it.
-- PRODUCT LENS: always translate culture into what a designer can use — colors (with hex), motifs, textures, typography, silhouettes, materials, graphics, stories — and into concrete product hooks.
-- RESPECT: no stereotypes or caricature. When a cue comes from a specific community (Black, Latino, Indigenous, Asian, Pacific Islander, LGBTQ+, immigrant communities), say how to engage authentically: partner with, credit and pay its creators; never lift sacred or ceremonial imagery. Flag third-party IP that would need licensing.
+THE BAR: every claim must pass all of these.
+- SWAP TEST: if the sentence would still be true with another city's name in it, it's generic. Sharpen it until it fits only this market, or cut it.
+- INSIDER TEST: name the real places, people, collectives, events, dishes, phrases and moments a plugged-in local would know and respect. Skip the first page of the tourist guide.
+- CURRENT: it's the ${SEASON} NBA season. Places must be open and facts true now. Use web search to check anything that could have changed: closures, moves, rebrands, rosters, coaches, arena names, owners, event dates. If you can't confirm something is real and current, drop it.
+- PRODUCT LENS: turn culture into what a designer can use. Give colors (with hex), motifs, textures, typography, silhouettes, materials, graphics and stories, plus concrete product ideas.
+- RESPECT: no stereotypes or caricature. When a cue comes from a specific community (Black, Latino, Indigenous, Asian, Pacific Islander, LGBTQ+ or immigrant), say how to work with it honestly. Partner with its creators, credit them and pay them. Never lift sacred or ceremonial imagery. Flag third-party IP that would need a license.
 - PEOPLE: name public figures, artists, athletes, chefs, designers, collectives and businesses. Never name private individuals.
-- TIGHT: one to three sentences per field. No filler, no hedging boilerplate. Fewer, stronger items beat padded lists.
-- VOICE: write like a good city guide or magazine, not a strategy deck. Short sentences (aim under 16 words), plain words, active voice, the imperative for advice. No consultant-speak (leverage, unlock, activate against, ecosystem, touchpoint) and no brochure filler (vibrant, nestled, rich history).
-- OWN WORDS: never reproduce song lyrics, poems, slogans beyond a few words, or passages from articles verbatim — describe and name the work instead.
+- TIGHT: one to three sentences per field. No filler and no boilerplate hedging. A few strong items beat a padded list.
+- VOICE: write like a good city guide or magazine, not a strategy deck. Use short sentences (aim for under 16 words), plain words, the active voice and the imperative for advice. No consultant-speak (leverage, unlock, activate against, ecosystem, touchpoint) and no brochure filler (vibrant, nestled, rich history).
+- OWN WORDS: never copy song lyrics, poems or passages from articles, or quote slogans beyond a few words. Describe and name the work instead.
 - SOURCES: list the URLs you actually used.`;
 
 // Swapped in for the CURRENT and SOURCES rules when live web research is
@@ -39,145 +39,145 @@ export const KNOWLEDGE_MODE = `RESEARCH MODE: KNOWLEDGE. Live web research is un
 export const LENS_AGENTS = [
   {
     id: "music", name: "Music Scene", group: "Culture", icon: "music",
-    mission: "Decode the sound of the market and how it shows up around the team.",
+    mission: "Find the city's sound and how it shows up around the team.",
     questions: [
-      "Which genres, sounds and movements were born here or define the city now (historic and current)?",
-      "Who are the established and rising local artists, producers, DJs and collectives that locals rep — and which have real ties to the team or its players?",
+      "Which genres, sounds and movements started here, and which define the city now?",
+      "Which local artists, producers, DJs and collectives do locals rep, old and new? Which have real ties to the team or its players?",
       "Which venues matter: legendary rooms, DIY spaces, club nights, radio stations, record stores?",
-      "Which festivals and recurring music moments happen, and when?",
-      "Where does music meet the team: anthems, arena DJ/halftime culture, walkout songs, lyrics that name-check the team, player-artist relationships?",
-      "What visual language comes from the scene — album art, flyers, gig posters, merch — that a designer could borrow from respectfully?",
+      "Which festivals and regular music nights happen, and when?",
+      "Where does music meet the team: anthems, the arena DJ and halftime shows, walkout songs, lyrics that name the team, players' friendships with artists?",
+      "What visual language comes out of the scene (album art, flyers, gig posters, merch) that a designer could borrow from with respect?",
     ],
   },
   {
     id: "art", name: "Art & Design Scene", group: "Culture", icon: "palette",
-    mission: "Map the visual culture — the walls, studios, signage and makers that give the city its look.",
+    mission: "Map the walls, studios, signs and makers that give the city its look.",
     questions: [
       "Which murals, mural districts and street artists define the city's walls today?",
       "Which galleries, artist-run spaces, design studios and schools drive the scene?",
-      "What is the local graphic and typographic vernacular — signage, neon, hand-painted signs, transit graphics, license plates, flags, architecture?",
-      "Which local illustrators, designers, photographers or tattoo artists have done sports, sneaker or streetwear work (or would be credible collaborators)?",
+      "What does the city's own lettering look like: signage, neon, hand-painted signs, transit graphics, license plates, flags, buildings?",
+      "Which local illustrators, designers, photographers or tattoo artists have done sports, sneaker or streetwear work, or would make credible collaborators?",
       "Which art events, fairs and festivals happen, and when?",
-      "What palettes, patterns, textures and letterforms are unmistakably this city?",
+      "Which palettes, patterns, textures and letterforms could only be this city?",
     ],
   },
   {
     id: "food", name: "Food Scene", group: "Culture", icon: "utensils",
-    mission: "Read the city through what it eats, where it gathers, and what it is proud of.",
+    mission: "Read the city through what it eats, where it gathers and what it's proud of.",
     questions: [
-      "What are the signature dishes and the regional food identity — and the institutions that carry them?",
+      "What are the signature dishes and regional food identity, and which institutions carry them?",
       "Which immigrant food corridors and newer chef-driven spots define the city now?",
-      "What are the game-day food rituals: pre-game spots, tailgates, watch-party bars, local vendors inside the arena?",
-      "Which restaurants or food brands have cult merch or design language that locals wear?",
-      "Which chefs and food figures are cultural voices, and which food festivals happen when?",
-      "What food references could become respectful, insider product details (colorways, graphics, packaging, names)?",
+      "What are the game-day food rituals: pre-game spots, tailgates, watch-party bars, local vendors in the arena?",
+      "Which restaurants or food brands have cult merch or a look that locals wear?",
+      "Which chefs and food figures speak for the city's culture? Which food festivals happen, and when?",
+      "Which food references could become respectful insider details on product: colorways, graphics, packaging, names?",
     ],
   },
   {
     id: "culture", name: "Culture & Heritage", group: "Culture", icon: "landmark",
-    mission: "Capture the civic identity: history, communities, symbols, language and self-image.",
+    mission: "Capture the city's history, communities, symbols, language and self-image.",
     questions: [
-      "How does the city see itself (and how does it think the rest of the country sees it)? What chip on the shoulder or point of pride drives it?",
-      "Which history moments, movements and communities shape local pride today?",
-      "Which neighborhoods have distinct identities that people rep?",
-      "What symbols are used by locals: flags, area codes, skylines, bridges, nicknames, landmarks, state shapes?",
-      "What local slang and phrases do people actually say?",
-      "How do climate and lifestyle shape what people wear, and what civic moments (parades, heritage celebrations) fill the year?",
+      "How does the city see itself, and how does it think the rest of the country sees it? What chip on the shoulder or point of pride drives it?",
+      "Which moments in history, movements and communities shape local pride today?",
+      "Which neighborhoods have their own identity that people rep?",
+      "Which symbols do locals use: flags, area codes, skylines, bridges, nicknames, landmarks, state shapes?",
+      "What slang and phrases do people actually say?",
+      "How do climate and lifestyle shape what people wear? Which civic moments, like parades and heritage celebrations, fill the year?",
     ],
   },
   {
     id: "underground", name: "Subculture & Underground", group: "Culture", icon: "radio",
-    mission: "Find the scenes beneath the surface that set taste before the mainstream catches up.",
+    mission: "Find the scenes that set taste before the mainstream catches on.",
     questions: [
-      "Which subcultures are strongest here: skate, BMX, car culture (lowriders, slab, sideshows, tuners), sneaker and streetwear communities, vintage circles, ballroom and queer nightlife, rave/DIY, zines, gaming/anime, dance styles?",
+      "Which subcultures are strongest here: skate, BMX, car culture (lowriders, slab, sideshows, tuners), sneakers and streetwear, vintage, ballroom and queer nightlife, raves and DIY, zines, gaming and anime, dance styles?",
       "Who are the tastemakers, collectives, crews, shops and spaces at the center of each?",
-      "What is emerging in 2025-26 that the mainstream hasn't caught yet?",
+      "What is coming up in 2025-26 that the mainstream hasn't caught yet?",
       "What do these scenes wear, and how do they customize, thrift or remix sportswear and team gear?",
-      "Which recurring events or gatherings matter, and when?",
-      "Which scenes could Nike engage credibly, and which should be left alone?",
+      "Which regular events or gatherings matter, and when?",
+      "Which scenes could Nike work with credibly, and which should it leave alone?",
     ],
   },
   {
     id: "hoops", name: "Grassroots Hoops", group: "Basketball", icon: "dribbble",
-    mission: "Map the basketball culture outside the arena — the courts, leagues and legends that feed the fandom.",
+    mission: "Map the courts, leagues and legends outside the arena that feed the fandom.",
     questions: [
       "Which outdoor courts, parks and gyms are legendary, and what happens there?",
       "Which pro-am, summer and streetball leagues run, and when?",
-      "Which high schools, AAU/EYBL programs and college programs carry local pride, and what are the rivalries?",
+      "Which high school, AAU/EYBL and college programs carry local pride, and who are their rivals?",
       "Which WNBA, G League or other pro basketball teams share the market?",
-      "Which NBA/WNBA players and streetball legends come from here, and how do locals claim them?",
-      "How do local hoopers dress and what do they wear on court? Which basketball media and creators come from here?",
+      "Which NBA and WNBA players and streetball legends come from here, and how do locals claim them?",
+      "What do local hoopers wear on and off the court? Which basketball media and creators come from here?",
     ],
   },
   {
     id: "fanbase", name: "Fan Base Identity", group: "Fandom", icon: "users",
-    mission: "Profile who the fans are, how they show up, and what they wear.",
+    mission: "Profile who the fans are, how they show up and what they wear.",
     questions: [
-      "What is the fan base's identity and loyalty profile, and what is the current mood heading into the 2026-27 season (roster, ownership, expectations)?",
-      "Which distinct fan segments exist (diehards, families, Gen Z digital fans, regional/rural fans, diaspora/international, corporate, bandwagon) and what does each wear and value?",
-      "What traditions, rituals, chants, signs and gameday habits define them?",
+      "Who is this fan base and how loyal is it? What's the mood heading into the 2026-27 season (roster, ownership, expectations)?",
+      "Which fan groups exist (diehards, families, Gen Z online fans, regional and rural fans, diaspora and international fans, corporate, bandwagon), and what does each wear and value?",
+      "Which traditions, rituals, chants, signs and game-day habits define them?",
       "Which legends and eras do they worship, which current players do they embrace, and who are their rivals?",
-      "What do fans wear on gameday and around town — which jerseys, eras, throwbacks and local brands?",
-      "Where do fans gather — supporter groups, podcasts, Reddit, bars, watch parties — and how do they relate to Nike, Jordan and team merch?",
+      "What do fans wear on game day and around town: which jerseys, eras, throwbacks and local brands?",
+      "Where do fans gather (supporter groups, podcasts, Reddit, bars, watch parties)? How do they feel about Nike, Jordan and team merch?",
     ],
   },
   {
     id: "rhythm", name: "Fan Rhythm", group: "Fandom", icon: "activity",
-    mission: "Map, month by month, how this fan base interacts with its team across a full year — and what the city is doing at the same time.",
+    mission: "Chart, month by month, how fans follow the team across a full year, and what else the city is doing.",
     questions: [
-      "For each month Jan–Dec: how intensely is the fan base engaged (0-100), what phase is it (offseason, draft, free agency, Summer League, media day, preseason, opener, NBA Cup, Christmas, trade deadline, All-Star, playoff push, playoffs)?",
-      "What local rhythms compete or combine in each month — weather, school calendar, other pro and college sports seasons, festivals, holidays, tourism?",
-      "What are the specific 2026-27 key dates for this team where verifiable (home opener, rivalry games, national TV games, heritage nights, City Edition debut)?",
-      "When do fans buy — which months spike for jerseys, gifts, playoff gear — and when do they disengage?",
+      "For each month, January to December, how engaged are fans (0-100), and what phase is it (offseason, draft, free agency, Summer League, media day, preseason, opener, NBA Cup, Christmas, trade deadline, All-Star, playoff push, playoffs)?",
+      "Which local rhythms compete or combine each month: weather, the school calendar, other pro and college seasons, festivals, holidays, tourism?",
+      "What are the team's main 2026-27 dates, where you can verify them (home opener, rivalry games, national TV games, heritage nights, City Edition debut)?",
+      "When do fans buy (which months spike for jerseys, gifts and playoff gear), and when do they tune out?",
     ],
   },
   {
     id: "uniform", name: "Uniform & Merch Archive", group: "Fandom", icon: "shirt",
-    mission: "Know every uniform the team has worn, what fans loved or hated, and what story is still untold.",
+    mission: "Know every uniform the team has worn, how fans took it and what story is still untold.",
     questions: [
-      "What is the team's official color palette (with hex codes) and the typographic/wordmark heritage?",
-      "What are the defining uniform eras and iconic looks?",
-      "What has each City Edition been (as far back as you can verify), what was its concept, and how did fans receive it?",
-      "Which throwbacks/Classic Editions do fans most want or most wear, and what is the current 2026-27 uniform set (if announced)?",
-      "What local brands, bootleg/fan-made merch and creators riff on the team, and what sells best?",
-      "Which local stories have NOT been told on a uniform yet but would resonate?",
+      "What is the team's official color palette (with hex codes), and what are its wordmark and lettering traditions?",
+      "What are the defining uniform eras and most famous looks?",
+      "What has each City Edition been, as far back as you can verify? What was the idea, and how did fans take it?",
+      "Which throwbacks and Classic Editions do fans most want or wear? What is the 2026-27 uniform set, if announced?",
+      "Which local brands, bootlegs and fan-made merch riff on the team, who makes them, and what sells best?",
+      "Which local stories haven't been told on a uniform yet but would land?",
     ],
   },
   {
     id: "retail-landscape", name: "Retail Landscape", group: "Retail", icon: "store",
-    mission: "Map where to shop and where this market actually shops for basketball, sneakers and team gear.",
+    mission: "Map where this market actually shops for basketball, sneakers and team gear.",
     questions: [
-      "Which retail districts, streets and malls matter, and who shops each?",
-      "Where do fans actually buy team gear — arena team store, flagship, big box, Fanatics/Lids, local shops?",
-      "Which Nike-owned doors (Nike Well Collective / community / factory stores) and key partners (Foot Locker, House of Hoops, JD, Dick's, local boutiques) operate here?",
-      "Which independent sneaker boutiques, streetwear shops, consignment and vintage stores have real community credibility?",
+      "Which shopping districts, streets and malls matter, and who shops each?",
+      "Where do fans actually buy team gear: the arena team store, a flagship, big-box stores, Fanatics or Lids, local shops?",
+      "Which Nike-owned stores (Nike Well Collective, community and factory stores) and main partners (Foot Locker, House of Hoops, JD, Dick's, local boutiques) operate here?",
+      "Which independent sneaker boutiques, streetwear shops, consignment and vintage stores have real standing in the community?",
       "Which local apparel brands have big followings, and where do pop-ups happen?",
-      "Which doors are culturally important (set taste) versus volume drivers?",
+      "Which stores set taste, and which move volume?",
     ],
   },
   {
     id: "retail-behavior", name: "Retail Rhythm & Behavior", group: "Retail", icon: "calendar-clock",
-    mission: "Explain when this market shops and how — the calendar, channels, price points and habits.",
+    mission: "Explain when and how this market shops: the calendar, channels, prices and habits.",
     questions: [
-      "What is the local retail calendar: back-to-school dates, sales-tax holidays (or no sales tax), holiday peaks, heritage and religious calendars, tourism seasons, conventions and events?",
-      "How does weather shape what sells and when (outerwear, shorts, layering)?",
-      "What is the channel mix — in-store, online, social commerce, resale, raffles, line culture, drops?",
-      "How price-sensitive is the market, how does income vary across it, and how do fans buy jerseys (authentic, swingman, kids, knockoffs)?",
-      "What gifting moments and local paydays/seasonal economies matter?",
-      "What cross-border, tourist or regional shopper behaviors matter?",
+      "What is the local retail calendar: back-to-school dates, sales-tax holidays (or no sales tax), holiday peaks, heritage and religious calendars, tourist seasons, conventions and events?",
+      "How does weather shape what sells, and when (outerwear, shorts, layers)?",
+      "What is the channel mix: in-store, online, social commerce, resale, raffles, lines, drops?",
+      "How price-sensitive is the market, and how much does income vary across it? How do fans buy jerseys (authentic, swingman, kids, knockoffs)?",
+      "Which gifting moments, local paydays and seasonal economies matter?",
+      "Which cross-border, tourist or regional shoppers matter, and how do they shop?",
     ],
   },
 ];
 
 export const SYNTHESIS_AGENTS = [
   { id: "strategist", name: "Market Strategist", group: "Synthesis", icon: "target",
-    mission: "Turn eleven dossiers into the Nike Basketball brief: insights, opportunities, collection, uniform, activation calendar." },
+    mission: "Turn eleven dossiers into the Nike Basketball brief: insights, opportunities, collection, uniform and calendar of launches." },
   { id: "factcheck", name: "Fact-Check Critic", group: "Verification", icon: "shield-check",
-    mission: "Adversarially verify the highest-risk claims across every dossier and correct or remove what fails." },
+    mission: "Test the riskiest claims in every dossier hard, then fix or cut whatever fails." },
   { id: "authenticity", name: "Authenticity Critic", group: "Verification", icon: "scale",
-    mission: "Attack the brief for generic insights, stereotypes, appropriation risk, weak product links and missed opportunities." },
+    mission: "Go after the brief for generic insights, stereotypes, borrowing without credit, weak product links and missed chances." },
   { id: "editor", name: "Brief Editor", group: "Synthesis", icon: "pen-tool",
-    mission: "Revise the brief against both critiques so every recommendation is specific, verified and actionable." },
+    mission: "Revise the brief against both critiques so every recommendation is specific, verified and ready to act on." },
 ];
 
 export const ALL_AGENTS = [...LENS_AGENTS, ...SYNTHESIS_AGENTS];
