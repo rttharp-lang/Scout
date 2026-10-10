@@ -55,7 +55,7 @@ export function Header({ route }) {
 export function Footer() {
   return (
     <footer className="hc-footer">
-      <span>NBA Fandom by Research · Built for Nike Basketball · <a href="/?app=scout">Scout trip planner ↗</a></span>
+      <span>NBA Fandom by Research · Built for Nike Basketball · <a href="/scout/">Scout trip planner ↗</a></span>
       <span>Updated {fmtDate(markets.map((m) => m.updated).filter(Boolean).sort().pop())} · <a href={href("method")}>How it was researched and checked</a></span>
     </footer>
   );
