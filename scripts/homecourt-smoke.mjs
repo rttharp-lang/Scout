@@ -134,7 +134,9 @@ async function main() {
       const monthText = (await page.locator("section", { hasText: "across the league" }).first().textContent()) || "";
       // The front page carries no research-status counts or internal labels.
       const front = (await page.textContent("#root")) || "";
-      for (const bad of [/claims still unverified/i, /Date confirmed/i, /Research status/i, /Three reads/i, /Home Court/i]) if (bad.test(front)) problems.push(`[${vp.label}] front page still shows ${bad}`);
+      for (const bad of [/claims still unverified/i, /Date (confirmed|tentative|unknown)/i, /\bP[123]\b/, /Research status/i, /Three reads/i, /Home Court/, /Shared reviewed build/i, /\((executable this season|build for 20\d\d-\d\d)\)/i]) if (bad.test(front)) problems.push(`[${vp.label}] front page still shows ${bad}`);
+      const momentTeams = await page.locator(".hc-moment-team").allTextContents();
+      if (momentTeams.length && new Set(momentTeams).size !== momentTeams.length) problems.push(`[${vp.label}] a market appears twice in this month's moments`);
       if ((await page.locator(".hc-wall-tile").count()) !== 30) problems.push(`[${vp.label}] market wall doesn't show 30 tiles`);
       const leaked = later.filter((mo) => monthText.includes(mo));
       if (leaked.length) problems.push(`[${vp.label}] this month shows later-year moments: ${leaked.slice(0, 3).join(" | ")}`);

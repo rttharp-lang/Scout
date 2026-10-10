@@ -8211,9 +8211,9 @@
     "channel": "Community pop-up, arena and digital",
     "timing": {
      "kind": "event",
-     "start": "2026-10-17",
-     "end": "2026-10-20",
-     "recurring": true,
+     "start": "2026-10-20",
+     "end": "",
+     "recurring": false,
      "certainty": "confirmed",
      "basis": "checked-live",
      "basisNote": "det-c4",
@@ -19349,7 +19349,7 @@
    {
     "month": 10,
     "window": "Dallas home opener week: Oct 24, 2026 vs. San Antonio (road opener Oct 21 at Houston)",
-    "moment": "First full Flagg season under Ujiri and May (executable this season)",
+    "moment": "First full Flagg season under Ujiri and May",
     "play": "Stock in-line Flagg replicas with fixed-price personalization and deep youth sizing. No new murals or graphics.",
     "products": [
      "Flagg swingman jersey",
@@ -19383,7 +19383,7 @@
    {
     "month": 11,
     "window": "Oct 30 to Nov 27, 2026 (home nights Oct 30 vs. Houston and Nov 6 vs. Utah)",
-    "moment": "NBA Cup West Group A: HOU and UTA at home, then at DEN Nov 24 and at PHX Nov 27 (executable this season)",
+    "moment": "NBA Cup West Group A: HOU and UTA at home, then at DEN Nov 24 and at PHX Nov 27",
     "play": "Work the two home Cup nights in the arena, Oct 30 and Nov 6. Add one Mavs-Rockets Texas-pride piece for the Oct 30 Houston game, only if rights clear.",
     "products": [
      "Mavs-Rockets Texas-pride tee",
@@ -19415,7 +19415,7 @@
    {
     "month": 11,
     "window": "Noche Latina 2026-27 (date to confirm)",
-    "moment": "Los Mavs night (executable this season)",
+    "moment": "Los Mavs night",
     "play": "Announce the Desde la Cliff artist commission and run a hand-pinstriping pop-up with the painters on Jefferson Boulevard.",
     "products": [
      "Custom pinstriping pop-up",
@@ -19448,7 +19448,7 @@
    {
     "month": 11,
     "window": "Black Friday 2026 to Dec 24, 2026",
-    "moment": "Gift-buying peak, alongside Cowboys Thanksgiving (executable this season)",
+    "moment": "Gift-buying peak, alongside Cowboys Thanksgiving",
     "play": "Heritage-plus-Flagg gift boxes from existing licensed product, with Spanish-first gift cards.",
     "products": [
      "Heritage gift box",
@@ -19576,7 +19576,7 @@
    {
     "month": 4,
     "window": "Spring 2027 (Dallas Art Fair and Deep Ellum Arts Festival)",
-    "moment": "Spring art weekends, as the regular season ends Apr 11 (build for 2027-28)",
+    "moment": "Spring art weekends, as the regular season ends Apr 11",
     "play": "Paint the commissioned Ellum Wall layers with the lead artist and shoot the campaign. No product drop.",
     "products": [
      "Campaign photography",
@@ -19607,7 +19607,7 @@
    {
     "month": 6,
     "window": "June 12, 2027 and the 2027 NBA Draft",
-    "moment": "2011 title anniversary and draft night (build for 2027-28)",
+    "moment": "2011 title anniversary and draft night",
     "play": "Debut the new green-era heritage line on the anniversary; Juneteenth only as invited community partnership, not a drop.",
     "products": [
      "Dirk 41 fadeaway tee",
@@ -19706,7 +19706,7 @@
    {
     "month": 9,
     "window": "Sept 16, 2027",
-    "moment": "Dieciseis de Septiembre in Oak Cliff and Pleasant Grove (build for 2027-28)",
+    "moment": "Dieciseis de Septiembre in Oak Cliff and Pleasant Grove",
     "play": "Community preview of Desde la Cliff with the commissioning painters; product launches at the 2027-28 Noche Latina.",
     "products": [
      "'Los Mavs' sign-painter tee",
@@ -19738,7 +19738,7 @@
    {
     "month": 10,
     "window": "Late Sept to mid-Oct 2027",
-    "moment": "State Fair of Texas season at Fair Park (build for 2027-28)",
+    "moment": "State Fair of Texas season at Fair Park",
     "play": "Fair Park Centennial capsule with the African American Museum, Dallas, only if the partners sign off.",
     "products": [
      "Centennial stepped-geometry tee",

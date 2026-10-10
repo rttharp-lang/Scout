@@ -1,7 +1,7 @@
 // Shared NBA Fandom UI: brand lockup, header/footer, tiny hash router, and the
 // small building blocks (chips, meters, swatches, month strips) every page uses.
 import React, { useEffect, useState } from "react";
-import { MONTHS, SEASON_ORDER } from "./data.js";
+import { MONTHS, SEASON_ORDER, markets } from "./data.js";
 import { SCORE_DEFS, tierOf, moodOf, STRENGTH, EVIDENCE_KIND, KIND_LABEL, CERTAINTY_LABEL, ROUTE_LABEL, fmtSpan, fmtDate } from "./review.js";
 import { STATUSES } from "./agents/review-schema.js";
 
@@ -50,7 +50,7 @@ export function Header({ route }) {
         {link(href("compare"), "Compare", section === "compare")}
         {link(href("method"), "Method", section === "method")}
         {link(href("agents"), "Agents", section === "agents")}
-        <a href="/">Scout ↗</a>
+        <a href="/?app=scout">Scout ↗</a>
       </nav>
     </header>
   );
@@ -59,8 +59,8 @@ export function Header({ route }) {
 export function Footer() {
   return (
     <footer className="hc-footer">
-      <span>Scout · NBA Fandom · Local NBA fandom intelligence for Nike Basketball</span>
-      <span>Shared reviewed build · <a href={href("method")}>How it was researched and checked</a></span>
+      <span>NBA Fandom by Scout · Built for Nike Basketball</span>
+      <span>Updated {fmtDate(markets.map((m) => m.updated).filter(Boolean).sort().pop())} · <a href={href("method")}>How it was researched and checked</a></span>
     </footer>
   );
 }
