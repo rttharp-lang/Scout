@@ -5,114 +5,114 @@
       "target": "headline / topInsights[0] / uniform",
       "type": "generic",
       "severity": "high",
-      "problem": "The 'Deco plus red neon' system fails the swap test. Art Deco and neon read as Miami (South Beach Deco, Heat 'Vice' lineage), Detroit (Fisher and Guardian buildings) or Las Vegas just as easily, and the claim that no other NBA market has a Deco district is an overreach. Neon-red is also not a Mavs color, and royal plus red plus cream reads as Texas Rangers or Texas-flag merch.",
-      "fix": "Anchor the system in what only Fair Park has: the 1936 Texas Centennial Exposition itself, with its specific stepped facades, murals and fairground lettering. Drop neon-red as the signature accent and test cream, mustard or silver instead. Delete the 'no other NBA market' line or replace it with a precise Fair Park fact."
+      "problem": "The \"Deco plus red neon\" system fails the swap test. Art Deco and neon read as Miami (South Beach Deco, Heat \"Vice\" lineage), Detroit (Fisher and Guardian buildings) or Las Vegas just as easily. The claim that no other NBA market has a Deco district overreaches. Neon-red is not a Mavs color, and royal plus red plus cream reads as Texas Rangers or Texas-flag merch.",
+      "fix": "Anchor the system in what only Fair Park has: the 1936 Texas Centennial Exposition, with its stepped facades, murals and fairground lettering. Drop neon-red as the signature accent and test cream, mustard or silver instead. Delete the \"no other NBA market\" line or replace it with a precise Fair Park fact."
     },
     {
       "target": "topInsights[0] / collection[Fair Park Modern] / uniform",
       "type": "appropriation",
       "severity": "high",
-      "problem": "Fair Park is celebrated as Dallas's Deco jewel with no mention of its history. The 1936 Centennial was segregated, and the Hall of Negro Life, the exposition's single Black-themed building, was torn down soon after. Fair Park sits in South Dallas, a majority-Black and Latino area, and the brief routes it only through unnamed 'South Dallas community partners'. Selling Fair Park nostalgia without that history is the extraction risk the brief flags elsewhere.",
-      "fix": "Name the partners and make Black South Dallas a lead voice: the African American Museum, Dallas (inside Fair Park) and the Fair Park operator, plus a Black Dallas letterer or architect-historian. Build the Hall of Negro Life story into the concept, or leave the exposition framing out. Budget a paid advisory role, not a thank-you."
+      "problem": "Fair Park is celebrated as Dallas's Deco jewel with no mention of its history. The 1936 Centennial was segregated, and the Hall of Negro Life, its single Black-themed building, was torn down soon after. Fair Park sits in South Dallas, a majority-Black and Latino area, yet the brief routes it only through unnamed \"South Dallas community partners\". Selling Fair Park nostalgia without that history is the extraction risk the brief flags elsewhere.",
+      "fix": "Name the partners and make Black South Dallas a lead voice: the African American Museum, Dallas (inside Fair Park), the Fair Park operator, and a Black Dallas letterer or architect-historian. Build the Hall of Negro Life story into the concept, or leave the exposition framing out. Budget a paid advisory role, not a thank-you."
     },
     {
       "target": "uniform",
       "type": "other",
       "severity": "high",
-      "problem": "'Centennial Night' is pitched for a future City Edition cycle, but the brief never says what Nike can do with Dallas's 2026-27 City Edition, which is already designed and usually launches in November. It is also not verified whether the NBA and Mavs have used Fair Park, Reunion Tower or green-era ideas before. The uniform section therefore has no 2026-27 action, and the Dallas-specific story is deferred while the opener is days away.",
-      "fix": "Add a 'now' layer: confirm the 2026-27 City Edition story first and build a capsule, content and retail plan around it. Treat Centennial Night as a 2027-28 or 2028-29 pitch. Spell out NBA and team approval for any concept, since City Edition themes are NBA-reviewed and team-owned."
+      "problem": "\"Centennial Night\" is pitched for a future City Edition cycle. The brief never says what Nike can do with the 2026-27 City Edition, which is already designed and usually launches in November. It also doesn't verify whether the NBA and Mavs have used Fair Park, Reunion Tower or green-era ideas before. So the uniform section has no 2026-27 action, and the Dallas story is deferred while the opener is days away.",
+      "fix": "Add a \"now\" layer: confirm the 2026-27 City Edition story first, then build a capsule, content and retail plan around it. Treat Centennial Night as a 2027-28 or 2028-29 pitch. Spell out NBA and team approval for any concept, since City Edition themes are NBA-reviewed and team-owned."
     },
     {
       "target": "opportunities[flagg-cup-fridays] / calendar (Cup Fridays)",
       "type": "inaccurate",
       "severity": "high",
-      "problem": "Dallas plays only four Cup group games across five Fridays (Oct 30 to Nov 27) plus Tuesday and Wednesday Cup Nights Nov 24-25. A 'weekly Cup Friday tee' does not map to the schedule. The opener is Oct 30 at Phoenix, and the brief does not know which games are home. Cup marks belong to the NBA and its sponsor, and graphic tees on a weekly cycle are usually Fanatics quick-turn, not Nike-designed product. A rivalry graphic for a 34.5-win team is also a stretch if the Houston game is on the road.",
-      "fix": "Tie product to the four actual games and the confirmed home dates. Make one Texas-pride Mavs-Rockets piece, not a weekly series. Confirm Cup trademark rights and the Fanatics versus Nike split before committing. Keep the contingency stock for a home semifinal at Dec 8-9 as written."
+      "problem": "Dallas plays only four Cup group games across five Fridays (Oct 30 to Nov 27), plus Tuesday and Wednesday Cup Nights on Nov 24-25. A \"weekly Cup Friday tee\" doesn't map to that schedule. The opener is Oct 30 at Phoenix, and the brief doesn't know which games are home. Cup marks belong to the NBA and its sponsor. Weekly graphic tees are usually Fanatics quick-turn, not Nike-designed. A rivalry graphic for a 34.5-win team is also a stretch if the Houston game is on the road.",
+      "fix": "Tie product to the four actual games and the confirmed home dates. Make one Texas-pride Mavs-Rockets piece, not a weekly series. Confirm Cup trademark rights and the Fanatics versus Nike split before committing. Keep the contingency stock for a home semifinal at Dec 8-9, as written."
     },
     {
       "target": "opportunities[flagg-cup-fridays] / calendar (Oct 20 opener week)",
       "type": "timing",
       "severity": "high",
-      "problem": "Today is Oct 9 and the opener is Oct 20. A 'drop' of Flagg swingmans, fixed-price personalization and Ellum Wall teaser walls in 11 days is not a plan: Association and Icon replicas are already on shelves, and commissioning new murals needs weeks. The calendar mixes 2026-27 actions with 2027 builds (Sept 16 preview, State Fair) without labelling years, so the Sept 16 and Fair Park rows are already past.",
-      "fix": "Split the calendar into 'executable this season' (merchandising, fixed-price personalization, content, retail placement, Cup moments) and 'build for 2027-28' (Desde la Cliff, Ellum Wall, Fair Park, City Edition). Label each row with its year. Cut the Oct 20 teaser walls unless the artists are already contracted."
+      "problem": "Today is Oct 9 and the opener is Oct 20. A \"drop\" of Flagg swingmans, fixed-price personalization and Ellum Wall teaser walls in 11 days is not a plan. Association and Icon replicas are already on shelves, and new murals take weeks to commission. The calendar also mixes 2026-27 actions with 2027 builds (Sept 16 preview, State Fair) without labelling years, so the Sept 16 and Fair Park rows are already past.",
+      "fix": "Split the calendar in two. \"Executable this season\" covers merchandising, fixed-price personalization, content, retail placement and Cup moments. \"Build for 2027-28\" covers Desde la Cliff, Ellum Wall, Fair Park and the City Edition. Label each row with its year. Cut the Oct 20 teaser walls unless the artists are already contracted."
     },
     {
       "target": "opportunities[tax-free-heat-line] / retailPlaybook.where",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The heat line is a strong calendar fact but a weak Dallas insight: Texas's sales tax holiday is statewide, so Houston and San Antonio could run the same line. It also leans on 'Flagg's summer training content', which depends on player rights Nike may not hold (the brief itself says Flagg's and Irving's shoe deals appear to sit outside Nike). Its channels (Allen Premium Outlets, Grapevine Mills) contradict the playbook, which says outlets get prior-season product only and hero items stay out.",
-      "fix": "Brand it as DFW back-to-school with a Dallas hook such as church-league and rec-center gym culture and the Southern Dallas County program. Replace the Flagg content tie with Nike team-sports or DFW athletes Nike can use. Reconcile the channel contradiction: either outlets carry the tax-free line or they do not."
+      "problem": "The heat line is a strong calendar fact but a weak Dallas insight. Texas's sales tax holiday is statewide, so Houston and San Antonio could run the same line. It also leans on \"Flagg's summer training content\", which needs player rights Nike may not hold. The brief itself says Flagg's and Irving's shoe deals appear to sit outside Nike. And its channels, Allen Premium Outlets and Grapevine Mills, contradict the playbook, which says outlets get prior-season product only and hero items stay out.",
+      "fix": "Brand it as DFW back-to-school with a Dallas hook, such as church-league and rec-center gym culture and the Southern Dallas County program. Replace the Flagg content tie with Nike team-sports or DFW athletes Nike can use. Settle the channel contradiction: either outlets carry the tax-free line or they don't."
     },
     {
       "target": "opportunities[desde-la-cliff] / collection[Desde la Cliff]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The calendar runs on Sept 16, Dia de Muertos, Nochebuena and Three Kings, but the main drop is tied to Noche Latina, which usually falls mid-season and whose 2026-27 date is unverified. A Sept-to-Jan story therefore has no confirmed anchor. The 'western-yoke snap warm-up' and pearl snaps also bring in the western cue the brief bans elsewhere, and the Marigold in the palette is the Dia de Muertos flower, which the brief says to keep off product.",
-      "fix": "Pin the capsule to the confirmed Noche Latina date and treat the other holidays as community programming, not drops. Move the snap detail to a Dallas workwear or lowrider-club reference or drop it. Rename the fourth color to a neutral gold unless the partner artists choose marigold themselves."
+      "problem": "The calendar runs on Sept 16, Dia de Muertos, Nochebuena and Three Kings. But the main drop is tied to Noche Latina, which usually falls mid-season and whose 2026-27 date is unverified. A Sept-to-Jan story therefore has no confirmed anchor. The \"western-yoke snap warm-up\" and pearl snaps also bring in the western cue the brief bans elsewhere. The Marigold in the palette is the Dia de Muertos flower, which the brief says to keep off product.",
+      "fix": "Pin the capsule to the confirmed Noche Latina date and treat the other holidays as community programming, not drops. Move the snap detail to a Dallas workwear or lowrider-club reference, or drop it. Rename the fourth color a neutral gold unless the partner artists choose marigold themselves."
     },
     {
       "target": "opportunities[desde-la-cliff].products (Nike team-bank sneaker)",
       "type": "other",
       "severity": "medium",
-      "problem": "'Nike team-bank sneaker in a candy-paint colorway, released first in Oak Cliff' is not realistic. Team-bank shoes are standard team-dealer product, not a one-off collaborator release, and an artist-credited limited sneaker needs Nike footwear collaboration lead times of 12 months or more.",
-      "fix": "Replace it with an achievable footwear idea (a Nike By You or custom pop-up with the painters, or a collaboration pitched for the 2027-28 cycle). Keep the apparel capsule as the 2026-27 product."
+      "problem": "\"Nike team-bank sneaker in a candy-paint colorway, released first in Oak Cliff\" is not realistic. Team-bank shoes are standard team-dealer product, not a one-off collaborator release. An artist-credited limited sneaker needs Nike footwear collaboration lead times of 12 months or more.",
+      "fix": "Replace it with an achievable footwear idea: a Nike By You or custom pop-up with the painters, or a collaboration pitched for the 2027-28 cycle. Keep the apparel capsule as the 2026-27 product."
     },
     {
       "target": "opportunities[ellum-wall] / partners",
       "type": "appropriation",
       "severity": "medium",
-      "problem": "The Black blues origins of Deep Ellum (Central Track, Freedmen's history) are named but not honored. The artists named are an established muralist and one Black public artist, the proceeds recipient is left generic ('a music-education or preservation group'), and the main drop is a spring festival while Mavs interest is at its seasonal low after Apr 11. The brief also asserts that the Deep Ellum Community Association curates the mural program, which is unverified.",
-      "fix": "Name a Black-led recipient and a Black Dallas artist as lead (not co-lead). Pay a flat commission up front rather than rely on revenue share. Re-time the drop for fall, when the teaser walls and the Mavs season align, or tie it to a June lottery or draft moment, and confirm the association's role."
+      "problem": "The Black blues origins of Deep Ellum (Central Track, Freedmen's history) are named but not honored. The named artists are an established muralist and one Black public artist. The proceeds recipient is generic (\"a music-education or preservation group\"). The main drop is a spring festival, when Mavs interest is at its seasonal low after Apr 11. The brief also asserts that the Deep Ellum Community Association curates the mural program, which is unverified.",
+      "fix": "Name a Black-led recipient and make a Black Dallas artist the lead, not co-lead. Pay a flat commission up front rather than rely on revenue share. Re-time the drop for fall, when the teaser walls and the Mavs season align, or tie it to a June lottery or draft moment. Confirm the association's role."
     },
     {
       "target": "partners / retailPlaybook",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The brief ignores the Dallas Wings. The hoops dossier flags them as a distinct product partner and they have Nike-aligned stars (Arike Ogunbowale, Paige Bueckers), a College Park Center home in Arlington and a May-to-September season that fills the Mavs' dead summer window. The Mavs-only calendar leaves a gap from May to September.",
-      "fix": "Add a Wings lane to the summer calendar (practice and fan product with a volt-navy palette) as a cross-franchise DFW story, and note the Texas Legends in Frisco as the stated test ground for youth and family product before wider rollout."
+      "problem": "The brief ignores the Dallas Wings. The hoops dossier flags them as a distinct product partner. They have Nike-aligned stars (Arike Ogunbowale, Paige Bueckers), a College Park Center home in Arlington, and a May-to-September season that fills the Mavs' dead summer window. The Mavs-only calendar leaves a gap from May to September.",
+      "fix": "Add a Wings lane to the summer calendar: practice and fan product with a volt-navy palette, told as a cross-franchise DFW story. Note the Texas Legends in Frisco as the stated test ground for youth and family product before wider rollout."
     },
     {
       "target": "partners / topInsights",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The underground and culture dossiers name Erykah Badu's orbit, Lil Wil and Dallas dance (the Dougie), Post Malone, Kessler Theater, Trees and the Anime Frontier convention, but the partner list has one radio station and no musician, dancer or youth scene. The suburban anime, sneaker and gaming audience is the actual Gen Z volume segment for a Flagg-era push and is mentioned only in passing.",
-      "fix": "Add one Black Dallas music or dance partner (the Dougie's Dallas origin is a credible story, with credit and pay) and one suburban youth lane (Anime Frontier in late November or early December, sneaker-event calendar). Use fans' own words (MFFL, Big D, 214/972/469) in copy tests."
+      "problem": "The underground and culture dossiers name Erykah Badu's orbit, Lil Wil and Dallas dance (the Dougie), Post Malone, Kessler Theater, Trees and the Anime Frontier convention. The partner list has one radio station and no musician, dancer or youth scene. The suburban anime, sneaker and gaming audience is the real Gen Z volume segment for a Flagg-era push, and the brief mentions it only in passing.",
+      "fix": "Add one Black Dallas music or dance partner (the Dougie's Dallas origin is a credible story, with credit and pay). Add one suburban youth lane: Anime Frontier in late November or early December, plus the sneaker-event calendar. Use fans' own words (MFFL, Big D, 214/972/469) in copy tests."
     },
     {
       "target": "topInsights[5] / opportunities[made-in-the-metroplex]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The insight is rated 'low' confidence, yet the program is priority 2 and tied to named schools, an NIL-sensitive story series and a Chris Bosh appearance. Duncanville and other public-school marks need district licensing, and the brief offers no Black-owned or school-community partner beyond the schools themselves.",
-      "fix": "Pitch it as a 2027 pilot at one or two gyms with district sign-off. Name the community side (rec centers, AAU programs and coaches, church leagues) as paid partners, and drop the Bosh tie until approved."
+      "problem": "The insight is rated \"low\" confidence, yet the program is priority 2 and tied to named schools, an NIL-sensitive story series and a Chris Bosh appearance. Duncanville and other public-school marks need district licensing. The brief offers no Black-owned or school-community partner beyond the schools themselves.",
+      "fix": "Pitch it as a 2027 pilot at one or two gyms with district sign-off. Name the community side (rec centers, AAU programs and coaches, church leagues) as paid partners. Drop the Bosh tie until it is approved."
     },
     {
       "target": "opportunities[big-d-heritage-gifts]",
       "type": "weak-link",
       "severity": "low",
-      "problem": "The Dirk and green-era line is the one uncontested emotional asset, yet it is priority 2 and bundled as a gift add-on. It depends on 'archive-matched' green, Dirk's likeness licensing and NBA Classic Edition approvals, none confirmed. The 1990s Triple J green-and-black look is skipped.",
-      "fix": "Raise it to priority 1 for the holiday run, since it requires the least cultural risk. Start the Dirk and Mavs license conversation now and test both green eras (1980s blue-green and 1990s green-black) with fans before choosing."
+      "problem": "The Dirk and green-era line is the one uncontested emotional asset, yet it is priority 2 and bundled as a gift add-on. It depends on \"archive-matched\" green, Dirk's likeness licensing and NBA Classic Edition approvals, none confirmed. The 1990s Triple J green-and-black look is skipped.",
+      "fix": "Raise it to priority 1 for the holiday run, since it carries the least cultural risk. Start the Dirk and Mavs license conversation now. Test both green eras with fans before choosing: the 1980s blue-green and the 1990s green-black."
     },
     {
       "target": "topInsights[3] / risks[0]",
       "type": "other",
       "severity": "low",
-      "problem": "'Never reference Luka' is right for copy, but a blanket silence plus an all-forward Flagg story may read as evasive to fans who still chant about it. The brief gives no guidance on how to acknowledge the wound without naming it.",
-      "fix": "Add a tone test: plain statements of what the team is building (gym, kids, city) with fans' language, reviewed by a local fan panel, and avoid exuberant 'new era' framing."
+      "problem": "\"Never reference Luka\" is right for copy. But blanket silence plus an all-forward Flagg story may read as evasive to fans who still chant about it. The brief gives no guidance on acknowledging the wound without naming it.",
+      "fix": "Add a tone test: plain statements of what the team is building (gym, kids, city), in fans' language, reviewed by a local fan panel. Avoid exuberant \"new era\" framing."
     },
     {
       "target": "scorecard / provenance",
       "type": "other",
       "severity": "low",
-      "problem": "The scorecard gives culture 74 and fandom 54 while the plan leans on community partners nobody has verified (Texas Theatre, Kettle, Trees, KNON, Campagna) and rates insights 'medium' throughout. Pricing guidance ($99.99 ceiling, '$40 entry tee') is treated as settled but is a design-to-cost assumption.",
-      "fix": "Mark every named business as 'confirm open and willing' before the team contacts anyone, and present price points as targets pending Nike costing."
+      "problem": "The scorecard gives culture 74 and fandom 54, yet the plan leans on community partners nobody has verified (Texas Theatre, Kettle, Trees, KNON, Campagna) and rates insights \"medium\" throughout. Pricing guidance ($99.99 ceiling, \"$40 entry tee\") is treated as settled but is a design-to-cost assumption.",
+      "fix": "Mark every named business \"confirm open and willing\" before the team contacts anyone. Present price points as targets pending Nike costing."
     }
   ],
   "strengths": [
-    "It rejects the cowboy template, which Dallas locals file under Fort Worth and tourist Texas, and says so in the uniform 'avoid' list.",
-    "The south/east-sets-taste, north-buys-volume split (Oak Cliff and Deep Ellum for launches, Stonebriar and Grand Prairie for units) is a real retail insight rooted in Dallas geography.",
-    "The Mexican-American core is treated as the market, with a community-credited capsule model (paid painters, name on the tag, Spanish-first copy) rather than a one-night heritage jersey.",
-    "The reset-year read is sound: Dirk is safe emotional ground, Luka and Harrison are off-limits in copy, and demand is anchored on Flagg and value pricing, not on wins.",
-    "The tax-free weekend $99.99 design-to-cost rule and the heat-weighted assortment are concrete designer-usable constraints, and the risks section honestly flags the Flagg footwear gap and third-party IP (Pegasus, Big Tex, State Fair)."
+    "It rejects the cowboy template, which Dallas locals file under Fort Worth and tourist Texas, and says so in the uniform \"avoid\" list.",
+    "The south/east-sets-taste, north-buys-volume split is a real retail insight rooted in Dallas geography. Oak Cliff and Deep Ellum host launches. Stonebriar and Grand Prairie move units.",
+    "The Mexican-American core is treated as the market. The capsule model credits the community: paid painters, names on the tag, Spanish-first copy. It is not a one-night heritage jersey.",
+    "The reset-year read is sound. Dirk is safe emotional ground, Luka and Harrison are off-limits in copy, and demand rests on Flagg and value pricing, not on wins.",
+    "The tax-free weekend $99.99 design-to-cost rule and the heat-weighted assortment are concrete constraints designers can use. The risks section honestly flags the Flagg footwear gap and third-party IP (Pegasus, Big Tex, State Fair)."
   ],
-  "summary": "The strategy is strong on retail geography, tone and community-credit mechanics, but its signature creative idea (Deco plus neon) is less ownable than claimed and skips Fair Park's segregated history, and many actions cannot be executed in 2026-27: the opener is eleven days away, the Cup schedule does not support a weekly tee, and the City Edition and Noche Latina dates are unconfirmed. Re-label the calendar by year, sharpen the Fair Park story with Black South Dallas partners, reconcile the outlet contradiction, and add the Wings and Dallas music and youth lanes. Verdict: sound foundation, medium specificity, needs a feasibility pass before it reaches Portland."
+  "summary": "The strategy is strong on retail geography, tone and community credit. But its signature idea, Deco plus neon, is less ownable than claimed and skips Fair Park's segregated history. Many actions also can't happen in 2026-27. The opener is eleven days away, the Cup schedule doesn't support a weekly tee, and the City Edition and Noche Latina dates are unconfirmed. Re-label the calendar by year, add Black South Dallas partners to the Fair Park story, settle the outlet contradiction, and add the Wings and Dallas music and youth lanes. Verdict: sound foundation, medium specificity, needs a feasibility pass before it reaches Portland."
 }

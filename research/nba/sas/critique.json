@@ -5,136 +5,136 @@
       "target": "uniform",
       "type": "generic",
       "severity": "medium",
-      "problem": "Rotulo passes the swap test only half way. Sign-painter lettering, talavera tile and lowrider pinstripe are shared Mexican-American and border visual language found in Los Angeles, Houston, El Paso and across Mexico. Talavera is Pueblan, and the brief's own dossiers show the SA-only material is conjunto, Fiesta medals and the West Side shop-sign scene. 'Reads as nobody but San Antonio' is overclaimed, and a cream base with cobalt and candy red could be a Houston or Santa Fe jersey.",
-      "fix": "Anchor the concept in San Antonio-only specifics: letterforms drawn from named West Side shop signs by a commissioned local sign painter, the conjunto accordion as the structural pattern, and Fiesta-medal ribbon colors. Drop talavera and the generic pinstripe unless a named SA maker supplies them. Cut the 'nobody but' claim."
+      "problem": "Rotulo only half passes the swap test. Sign-painter lettering, talavera tile and lowrider pinstripe are shared Mexican-American and border imagery, found in Los Angeles, Houston, El Paso and across Mexico. Talavera is Pueblan. The brief's own dossiers show the San Antonio-only material is conjunto, Fiesta medals and the West Side shop-sign scene. \"Reads as nobody but San Antonio\" is overclaimed, and a cream base with cobalt and candy red could be a Houston or Santa Fe jersey.",
+      "fix": "Anchor the concept in San Antonio-only specifics. Draw the letterforms from named West Side shop signs, by a commissioned local sign painter. Use the conjunto accordion as the structural pattern and Fiesta-medal ribbon colors as the palette. Drop talavera and the generic pinstripe unless a named San Antonio maker supplies them. Cut the \"nobody but\" claim."
     },
     {
       "target": "uniform",
       "type": "other",
       "severity": "high",
-      "problem": "Feasibility and sequencing. The Fiesta-stripe City Edition covers 2025-26 and 2026-27, so the next new San Antonio City Edition is 2027-28. Nike and NBA concept lock for that cycle normally happens roughly 12-18 months before the November 2027 reveal, which means mid-to-late 2026. Pitching a ground-up hand-lettered concept now risks arriving after the window closes. NBA and Spurs approval is also required for jersey numeral legibility, wordmark treatment, court changes and a live-painted baseline wordmark.",
-      "fix": "Treat Rotulo as a pitch to start immediately and ask Nike Basketball Apparel and the NBA for the real lock date first. Use Rotulo's pieces that need no uniform approval (warm-up, shooting shirt, cap, tee) as the near-term proof of concept. Hold the court painting idea as optional."
+      "problem": "The sequencing doesn't work. The Fiesta-stripe City Edition covers 2025-26 and 2026-27, so the next new San Antonio City Edition is 2027-28. Nike and NBA concept lock for that cycle normally falls 12-18 months before the November 2027 reveal, which means mid-to-late 2026. A ground-up hand-lettered pitch now risks missing the window. The NBA and Spurs must also approve jersey numeral legibility, wordmark treatment, court changes and a live-painted baseline wordmark.",
+      "fix": "Pitch Rotulo now, and ask Nike Basketball Apparel and the NBA for the real lock date first. Use the Rotulo pieces that need no uniform approval (warm-up, shooting shirt, cap, tee) as the near-term proof of concept. Keep the court painting as an option."
     },
     {
       "target": "uniform.details",
       "type": "inaccurate",
       "severity": "medium",
-      "problem": "A jock tag reading 'Hecho a mano en San Antonio' on a factory-made jersey is a labeling and trust risk. The lettering is hand-drawn, but the garment is not hand-made or made in San Antonio, and a city that prizes real craft will notice. NBA jock-tag layout is also standardized.",
-      "fix": "Credit the artist as design, for example 'Lettering by [name], San Antonio', and reserve 'hecho a mano' for the genuinely hand-pulled screenprint tees. Check tag placement with the NBA."
+      "problem": "A jock tag reading \"Hecho a mano en San Antonio\" on a factory-made jersey is a labeling and trust risk. The lettering is hand-drawn, but the garment is neither hand-made nor made in San Antonio, and a city that prizes real craft will notice. NBA jock-tag layout is also standardized.",
+      "fix": "Credit the artist as designer, for example \"Lettering by [name], San Antonio\". Save \"hecho a mano\" for the hand-pulled screenprint tees. Check tag placement with the NBA."
     },
     {
       "target": "uniform.alternates[0] Misiones",
       "type": "appropriation",
       "severity": "medium",
-      "problem": "Misiones is routed through the National Park Service and the parishes, but the missions sit on Coahuiltecan and other Indigenous ground and were built with Indigenous labor. No Indigenous voice appears anywhere in the brief's partners. The mission rose window and arches are also live sacred architecture. The Plata y Negro 'mission-arch jacquard' has the same issue in softer form.",
-      "fix": "Add a named Indigenous consultation step with the Tap Pilam Coahuiltecan Nation or comparable local Native organizations, with credit and pay, before any mission geometry reaches product. Otherwise drop the mission geometry from core product and keep the alternate on the shelf."
+      "problem": "The brief routes Misiones through the National Park Service and the parishes. But the missions sit on Coahuiltecan and other Indigenous ground and were built with Indigenous labor, and no Indigenous voice appears among the brief's partners. The mission rose window and arches are also live sacred architecture. The Plata y Negro \"mission-arch jacquard\" has the same problem in softer form.",
+      "fix": "Add a named Indigenous consultation step, with credit and pay, before any mission geometry reaches product. Start with the Tap Pilam Coahuiltecan Nation or comparable local Native organizations. Otherwise drop the mission geometry from core product and keep the alternate on the shelf."
     },
     {
       "target": "uniform.alternates[1] HemisFair '68",
       "type": "other",
       "severity": "low",
-      "problem": "Hemisfair and the Tower of the Americas are described as the safest skyline mark, but Hemisfair is also the downtown redevelopment area and the Project Marvel downtown district sits in the same civic conversation, with public-money sensitivities the brief itself flags as a risk. The brief says to keep skyline nostalgia off product, yet it keeps this as an alternate.",
-      "fix": "Verify the Project Marvel site and the Tower of the Americas licensing before this goes further. If the district is adjacent, pair HemisFair with the 1968 fair's typography only and avoid the skyline."
+      "problem": "The brief calls Hemisfair and the Tower of the Americas the safest skyline mark. But Hemisfair is also the downtown redevelopment area. The Project Marvel downtown district sits in the same civic conversation, with the public-money sensitivities the brief itself flags as a risk. The brief says to keep skyline nostalgia off product, yet it keeps this as an alternate.",
+      "fix": "Verify the Project Marvel site and the Tower of the Americas licensing before going further. If the district is adjacent, use the 1968 fair's typography only and avoid the skyline."
     },
     {
       "target": "topInsights / thesis",
       "type": "missed-opportunity",
       "severity": "high",
-      "problem": "Black San Antonio and the East Side are absent from the entire brief. The arena the brief is built around sits on the East Side, George Gervin is the franchise's first star and the Iceman finger-roll era is the root of the Spurs' fan lineage, and Duncan, Elliott and Johnson-era Black fans are part of the one-team city. Project Marvel moving the team off the East Side is the neighborhood-level story most likely to matter there. The brief's partners, artists and cues are almost all Chicano and Tejano.",
-      "fix": "Add an East Side thread: the Gervin-era look in a Classic Edition capsule, a credited Black San Antonio designer or illustrator, and a partnership conversation with East Side institutions such as the Carver Community Cultural Center (verify status). Rewrite the thesis from 'majority-Latino' to the whole city."
+      "problem": "Black San Antonio and the East Side are missing from the whole brief. The arena it is built around sits on the East Side. George Gervin is the franchise's first star, and the Iceman finger-roll era is the root of the Spurs' fan lineage. Duncan, Elliott and Johnson-era Black fans are part of the one-team city. Project Marvel moving the team off the East Side is the neighborhood story most likely to matter there. The brief's partners, artists and cues are almost all Chicano and Tejano.",
+      "fix": "Add an East Side thread. Put a Gervin-era look in a Classic Edition capsule and credit a Black San Antonio designer or illustrator. Start a partnership talk with East Side institutions such as the Carver Community Cultural Center (verify status). Rewrite the thesis from \"majority-Latino\" to the whole city."
     },
     {
       "target": "partners[6] Pinata Protest / opportunities[westside-artist-series]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "Tejano Conjunto Festival is the event of traditional conjunto, and the brief's only musical partner is a punk band that carries accordion to a younger crowd. That misses the community the festival belongs to: Guadalupe-linked conjunto players and families, and the legacy of Flaco Jimenez (died in 2025, verify), the city's most beloved accordionist. A drop on festival week without elders or the estate reads as borrowing. Any Flaco likeness also needs estate licensing.",
-      "fix": "Lead with the Guadalupe Cultural Arts Center and a conjunto musician or ensemble named on the product, and keep Pinata Protest as the younger-scene complement. Treat a Flaco tribute as a licensing conversation with his family, never an image on a tee."
+      "problem": "Tejano Conjunto Festival celebrates traditional conjunto, and the brief's only musical partner is a punk band that brings accordion to a younger crowd. That misses the people the festival belongs to: Guadalupe-linked conjunto players and families, and the legacy of Flaco Jimenez (died in 2025, verify), the city's most beloved accordionist. A festival-week drop without elders or the estate reads as borrowing. Any Flaco likeness also needs estate licensing.",
+      "fix": "Lead with the Guadalupe Cultural Arts Center and a conjunto musician or ensemble named on the product. Keep Pinata Protest as the younger-scene complement. Treat a Flaco tribute as a licensing talk with his family, never an image on a tee."
     },
     {
       "target": "calendar[month 12] / opportunities[city-edition-return-sellthrough]",
       "type": "timing",
       "severity": "medium",
-      "problem": "The Dec 25 game is noon ET, 11 a.m. in San Antonio on Christmas morning, so ice-house watch-party kits tied to it are unrealistic: ice houses and families are at home. Gift product must be in hand by mid-December, not activated on the day. The brief also overlooks that Cup quarterfinals (Dec 4-5) and semifinals (Dec 8-9) are now played at the higher seed's home arena, and the Spurs, in West Group C, could host a knockout game in the exact window the brief spends on gifting.",
-      "fix": "Move watch-party activations to Cup Fridays, Thanksgiving week and Mar 7. Hold Dec 25 for a digital and gifting moment. Add a conditional Cup knockout home-game plan (Dec 4-9) with the stripe family ready."
+      "problem": "The Dec 25 game tips at noon ET, 11 a.m. in San Antonio on Christmas morning. Ice-house watch-party kits tied to it are unrealistic, because ice houses and families are at home. Gift product must be in hand by mid-December, not pushed on the day. The brief also misses that Cup quarterfinals on Dec 4-5 and semifinals on Dec 8-9 are now played at the higher seed's home arena. The Spurs are in West Group C. They could host a knockout game in the exact window the brief spends on gifting.",
+      "fix": "Move watch-party launches to Cup Fridays, Thanksgiving week and Mar 7. Keep Dec 25 for a digital and gifting moment. Add a conditional plan for a Cup knockout home game (Dec 4-9), with the stripe family ready."
     },
     {
       "target": "calendar[month 10] / opportunities[city-edition-return-sellthrough]",
       "type": "timing",
       "severity": "medium",
-      "problem": "The opening-night relaunch assumes the City Edition is on shelf and in use by Oct 20 and Oct 30. Last season it was unveiled in November, and when a repeat City Edition is first worn is unconfirmed. Product for Oct 20 is already built, so the real lever in the next 11 days is allocation, not new design.",
-      "fix": "Verify the 2026-27 City Edition first-wear date. If it is November, make Oct 20 an Association and Icon moment with stripe teaser content and move the stripe push to the first City Edition game."
+      "problem": "The opening-night relaunch assumes the City Edition is on shelf and in use by Oct 20 and Oct 30. Last season it was unveiled in November, and the first-wear date for a repeat City Edition is unconfirmed. Product for Oct 20 is already built, so the real lever in the next 11 days is allocation, not new design.",
+      "fix": "Verify the 2026-27 City Edition first-wear date. If it is November, make Oct 20 an Association and Icon moment with stripe teaser content, and move the stripe push to the first City Edition game."
     },
     {
       "target": "opportunities[fiesta-playoff-drop] / collection numbered playoff medal set",
       "type": "weak-link",
       "severity": "high",
-      "problem": "A numbered medal per playoff round is built on an outcome nobody controls. If the Spurs lose in round one, most of the set never ships, and sets on a one-per-round clock invite sell-through risk and resentment from collectors. The regular season ends Apr 11 and the playoffs start about a week later, so the drop arrives before Fiesta and before round one is set. Fiesta medals also belong to hundreds of local organizations, military units, schools and neighborhoods, and a Nike-made medal could be seen as crowding out the small makers who make real ones.",
-      "fix": "Release the medal set as one pre-announced bundle (for example a four-piece set) at the April drop, not round by round, and commission local medal makers or Fiesta organizations to produce and share proceeds. Lock the Fiesta Commission rights and artist contracts by December."
+      "problem": "A numbered medal per playoff round depends on an outcome nobody controls. If the Spurs lose in round one, most of the set never ships. A one-per-round clock also invites sell-through risk and collector resentment. The regular season ends Apr 11 and the playoffs start about a week later, so the drop lands before Fiesta and before round one is set. Fiesta medals also belong to hundreds of local organizations, military units, schools and neighborhoods. A Nike-made medal could look like it is crowding out the small makers who make the real ones.",
+      "fix": "Release the medal set as one pre-announced bundle (for example, four pieces) at the April drop, not round by round. Commission local medal makers or Fiesta organizations to produce it, and share proceeds. Lock the Fiesta Commission rights and artist contracts by December."
     },
     {
       "target": "opportunities[fiesta-playoff-drop] / risks",
       "type": "timing",
       "severity": "medium",
-      "problem": "The brief puts the 'first week of April' drop ahead of Fiesta, but Fiesta's own dates for 2027 are unverified and may land after the first playoff games. Fiesta events (Battle of Flowers, Flambeau, NIOSA) are also community-run and not primarily a shopping window, and the arena is not where Fiesta fans are that week.",
-      "fix": "Confirm the 2027 Fiesta dates and bracket them against the Apr 11 end of season. Build the drop so it is wearable at Fiesta events (pin-ready caps, lightweight shirts) and sell via Market Square and community partners rather than the arena."
+      "problem": "The brief puts the \"first week of April\" drop ahead of Fiesta, but Fiesta's 2027 dates are unverified and may land after the first playoff games. Fiesta events (Battle of Flowers, Flambeau, NIOSA) are also community-run and not mainly a shopping window. The arena is not where Fiesta fans are that week.",
+      "fix": "Confirm the 2027 Fiesta dates and check them against the Apr 11 end of season. Make the drop wearable at Fiesta events (pin-ready caps, lightweight shirts). Sell through Market Square and community partners, not the arena."
     },
     {
       "target": "calendar[month 9] / calendar[month 8]",
       "type": "timing",
       "severity": "low",
-      "problem": "The calendar opens in the past: the August tax holiday has passed and Hispanic Heritage Month (Sep 15 to Oct 15) is already in progress, so a September 'preview' cannot happen. The Wembanyama youth ladder is rated priority 1 but its next anchor moment is August 2027, ten months out, and it doesn't say what the October-December youth plan is beyond 'refresh'.",
-      "fix": "Start the live calendar at Oct 9 with the remaining Heritage Month days, Oct 20, Oct 30 and Nov. Reframe the youth ladder as an always-on tier with a holiday and Christmas push now and August as the peak."
+      "problem": "The calendar opens in the past. The August tax holiday has passed, and Hispanic Heritage Month (Sep 15 to Oct 15) is already under way, so a September \"preview\" can't happen. The Wembanyama youth ladder is rated priority 1, but its next anchor moment is August 2027, ten months out. Beyond \"refresh\", it says nothing about the October-December youth plan.",
+      "fix": "Start the live calendar at Oct 9 with the remaining Heritage Month days, Oct 20, Oct 30 and Nov. Make the youth ladder an always-on tier: a holiday and Christmas push now, with August as the peak."
     },
     {
       "target": "opportunities[rodeo-road-trip] / collection Plata y Negro",
       "type": "generic",
       "severity": "medium",
-      "problem": "Pearl snaps, western yokes and rope caps are Texas-wide and could belong to Houston (the Rodeo there is bigger) or Fort Worth. The brief's own rule against cowboy cliches is undercut by the product list. The San Antonio-specific part (Stock Show and Rodeo at the Freeman grounds, the Spurs Rodeo Road Trip) is under-used.",
-      "fix": "Make the capsule about the Rodeo Road Trip itself: a road-trip stripe, trip-city patches, and a commissioned San Antonio Western-wear maker or Mexican-American vaquero tradition (charro heritage) credited by name. Otherwise cut it."
+      "problem": "Pearl snaps, western yokes and rope caps are Texas-wide and could belong to Houston (where the Rodeo is bigger) or Fort Worth. The product list undercuts the brief's own rule against cowboy cliches. The San Antonio-specific part, the Stock Show and Rodeo at the Freeman grounds and the Spurs Rodeo Road Trip, is under-used.",
+      "fix": "Build the capsule around the Rodeo Road Trip itself: a road-trip stripe, trip-city patches, and a commissioned San Antonio Western-wear maker or Mexican-American vaquero tradition (charro heritage), credited by name. Otherwise cut it."
     },
     {
       "target": "opportunities[wemby-gaming-global]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "San Japan is a good local signal, but the brief ties a Wembanyama collectible graphic to anime and gaming IP. Licensing third-party IP and aligning with Wembanyama's personal brand needs his team and Nike approval, and it is priority 3 with months 1 and 8 spanning unrelated events. It is not grounded in the San Antonio insight set.",
-      "fix": "Reduce to a single test pop-up at San Japan with original Wembanyama-approved art and no third-party IP, or drop it and fold the Paris and Manchester travel set into the Nike app."
+      "problem": "San Japan is a good local signal, but the brief ties a Wembanyama collectible graphic to anime and gaming IP. Licensing third-party IP and fitting Wembanyama's personal brand both need his team and Nike to approve. The idea is priority 3, with months 1 and 8 spanning unrelated events, and it isn't grounded in the San Antonio insights.",
+      "fix": "Cut it to a single test pop-up at San Japan, with original Wembanyama-approved art and no third-party IP. Or drop it and fold the Paris and Manchester travel set into the Nike app."
     },
     {
       "target": "opportunities[spurs-nation-border] / calendar[month 11]",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The brief says the fan base runs to Monterrey and northern Mexico but gives no Mexico-side plan beyond Buen Fin promotions at Texas malls, and it treats the in-state Austin game as a date to verify rather than a market. Austin is split among Spurs, Rockets and Mavs fans, and I-35 makes it a Spurs pop-up opportunity; Mexico shoppers also arrive on cross-border weekends that don't map neatly to Buen Fin.",
-      "fix": "Add an Austin game-week pop-up plan, and name the specific border-region partners (Laredo and Rio Grande Valley retailers, the Spurs' existing Mexico programming) once verified. Check cross-border shopping weeks and the Mexican peso before setting allocations."
+      "problem": "The brief says the fan base runs to Monterrey and northern Mexico, but offers no Mexico-side plan beyond Buen Fin promotions at Texas malls. It also treats the in-state Austin game as a date to verify, not a market. Austin is split among Spurs, Rockets and Mavs fans, and I-35 makes it a Spurs pop-up opportunity. Mexico shoppers also arrive on cross-border weekends that don't map neatly to Buen Fin.",
+      "fix": "Add an Austin game-week pop-up plan. Once verified, name the border-region partners (Laredo and Rio Grande Valley retailers, the Spurs' existing Mexico programming). Check cross-border shopping weeks and the Mexican peso before setting allocations."
     },
     {
       "target": "partners / opportunities[military-city-service]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The military capsule has no named partner: 'a veteran-owned local partner' and 'the Spurs' program' are placeholders, and Joint Base San Antonio exchange sales (AAFES) require their own approval path that the brief marks 'if approved'. David Robinson's Navy lineage is a strong, specific hook, but it is not turned into a product story.",
-      "fix": "Name a specific partner such as a veteran-owned local brand or an established veterans nonprofit, and use Robinson's story (Naval Academy, the Admiral) as a tonal graphic idea. Treat exchange distribution as a stretch and do not count it in the KPI."
+      "problem": "The military capsule has no named partner. \"A veteran-owned local partner\" and \"the Spurs' program\" are placeholders, and Joint Base San Antonio exchange sales (AAFES) need their own approval path, which the brief marks \"if approved\". David Robinson's Navy lineage is a strong, specific hook, but the brief never turns it into a product story.",
+      "fix": "Name a specific partner, such as a veteran-owned local brand or an established veterans nonprofit. Use Robinson's story (Naval Academy, the Admiral) as a tonal graphic idea. Treat exchange distribution as a stretch and leave it out of the KPI."
     },
     {
       "target": "collection / partners (Nike partners)",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "Cruz Ortiz, Alex Rubio, Adriana Garcia and Pinata Protest are real and credible, but the brief assumes their availability and Nike's standard terms. Murals have rights and property considerations, and 'revenue share' conflicts with how Nike normally commissions artists. A short list of four artists is also thin for a market that the brief describes as hand-made at every level, and none are women printmakers or younger makers.",
-      "fix": "Verify availability, then add a few younger and women artists via the Guadalupe Cultural Arts Center's open call. Set paid commission terms and a royalty structure with Nike legal before any outreach."
+      "problem": "Cruz Ortiz, Alex Rubio, Adriana Garcia and Pinata Protest are real and credible, but the brief assumes their availability and Nike's standard terms. Murals carry rights and property questions, and \"revenue share\" conflicts with how Nike normally commissions artists. Four artists is also thin for a market the brief calls hand-made at every level, and none are women printmakers or younger makers.",
+      "fix": "Verify availability, then add a few younger and women artists through the Guadalupe Cultural Arts Center's open call. Set paid commission terms and a royalty structure with Nike legal before any outreach."
     },
     {
       "target": "risks",
       "type": "other",
       "severity": "low",
-      "problem": "The risk list leaves out the biggest local sentiment risk of all: the Finals loss to the Knicks makes the Dec 25 and Mar 7 product a sore spot, and the brief says only 'avoid commemorating'. It also does not mention counterfeit and bootleg pressure on a returning, popular City Edition or the licensing complexity of the Wembanyama, Fox, Castle and Harper footwear affiliations for any player-led campaign.",
-      "fix": "Add explicit rules: no Knicks-baiting graphics, no title or Finals language, and a player-affiliation check on every named-player SKU before it enters the plan."
+      "problem": "The risk list misses the biggest local sentiment risk. The Finals loss to the Knicks makes the Dec 25 and Mar 7 product a sore spot, and the brief says only \"avoid commemorating\". It also skips counterfeit and bootleg pressure on a returning, popular City Edition. Last, it ignores the licensing complexity of the Wembanyama, Fox, Castle and Harper footwear affiliations for any player-led campaign.",
+      "fix": "Add explicit rules: no Knicks-baiting graphics and no title or Finals language. Check the player's footwear affiliation on every named-player style before it enters the plan."
     }
   ],
   "strengths": [
-    "The central insight is unmistakably San Antonio: silver and black as civic dress with Fiesta as the occasion, backed by the real fan reaction to the Fiesta-stripe City Edition.",
-    "Rules against putting Fiesta on a full-color takeover and against the Alamo, mission interiors, Dia de los Muertos, sombreros and Selena are specific and mostly right.",
-    "The tiering logic (sub-$100 youth ladder at Academy and Dick's, protected top tier, bootleg price floor at Traders Village) is grounded in retail behavior, and the volume-versus-taste split is honest about a thin independent sneaker scene.",
-    "Commissioning, naming and paying named West Side artists on the neck label, with proceeds to the Guadalupe Cultural Arts Center, is the right authenticity model.",
-    "The tone for 2026-27 is forward-looking ('unfinished'), which matches fan sentiment after the Finals loss and avoids premature title product.",
-    "Calendar anchors that only San Antonio has (Contemporary Art Month, the Mar 5 First Friday two days before the Mar 7 Knicks game, Fiesta, the Rodeo Road Trip) are well chosen."
+    "The central insight is unmistakably San Antonio: silver and black as civic dress, with Fiesta as the occasion. Fans' real reaction to the Fiesta-stripe City Edition backs it up.",
+    "The rules against a full-color Fiesta takeover, and against the Alamo, mission interiors, Dia de los Muertos, sombreros and Selena, are specific and mostly right.",
+    "The tiering logic is grounded in retail behavior: a sub-$100 youth ladder at Academy and Dick's, a protected top tier, and a bootleg price floor at Traders Village. The volume-versus-taste split is honest about a thin independent sneaker scene.",
+    "Commissioning, naming and paying West Side artists on the neck label, with proceeds to the Guadalupe Cultural Arts Center, is the right way to be credible.",
+    "The 2026-27 tone is forward-looking (\"unfinished\"). That matches fan sentiment after the Finals loss and avoids premature title product.",
+    "The calendar anchors are well chosen, and only San Antonio has them. They are Contemporary Art Month, the Mar 5 First Friday two days before the Mar 7 Knicks game, Fiesta and the Rodeo Road Trip."
   ],
-  "summary": "A strong, specific, locally literate brief whose Fiesta-and-restraint thesis, tiered retail logic and paid-artist model are credible and could only be San Antonio. Its weak points are an overclaimed Rotulo concept that leans on border-wide visual language and needs a City Edition lock-date reality check, a medal set tied to playoff outcomes, calendar items that are already past or unrealistic on Christmas morning, and a brief that sees only Latino San Antonio: Black San Antonio and the East Side (Gervin, the arena's neighborhood) and Indigenous voices on the missions are missing. Fix the sequencing and add those voices before anything is pitched."
+  "summary": "A strong, locally literate brief. Its Fiesta-and-restraint thesis, tiered retail logic and paid-artist model could only be San Antonio. The weak points: Rotulo overclaims and leans on border-wide visual language, and its City Edition lock date needs checking. The medal set depends on playoff outcomes, and some calendar items are already past or unrealistic on Christmas morning. The brief also sees only Latino San Antonio. Black San Antonio and the East Side (Gervin, the arena's neighborhood) are missing, and so are Indigenous voices on the missions. Fix the sequencing and add those voices before anything is pitched."
 }

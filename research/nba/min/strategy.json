@@ -1,64 +1,107 @@
 {
   "team": "min",
-  "headline": "Nike wins Minnesota in the skyway season: layers, the North Star and community-led product, not the stars' shoes.",
-  "thesis": "Minnesota is a statewide, cold-hardened fan base that waited out a long drought, distrusts hype and now believes, quietly, that the Edwards-Ball backcourt owes it one. Both stars wear rival brands (Edwards with adidas, Ball with PUMA), so Nike's voice here is the jersey it makes, NBA-licensed team product and city stories co-created with the people who own them. The product that moves from the October opener to March is the hoodie, the quarter-zip and the beanie worn on the ramp-to-skyway walk to Target Center, and the season's peaks are Christmas night against OKC, Kevin Garnett's jersey retirement and a spring playoff run. Purple Rain returned to the court in 2025-26, so the next uniform story, pitched for 2027-28, comes from unused vernacular: the riverfront flour mills, the North Star and the skyway winter, while the Northside, Somali, Hmong, Native and Lake Street Latino communities get multi-year partnerships before they get product.",
+  "headline": "In Minnesota, Nike wins on the skyway walk: warm layers, the North Star and the communities, not the stars' shoes.",
+  "thesis": "Minnesota is a statewide, cold-hardened fan base that waited out a long drought and distrusts hype. Now it believes, quietly, that the Edwards-Ball backcourt owes it one. Both stars wear rival brands (Edwards adidas, Ball PUMA), so Nike speaks here through the jersey, NBA-licensed team product and city stories made with the people who own them. From the October opener to March, the hoodie, quarter-zip and beanie sell, worn on the ramp-to-skyway walk to Target Center. The peaks are Christmas night against OKC, Kevin Garnett's jersey retirement and a spring playoff run. Purple Rain returned to the court in 2025-26, so pitch the next uniform for 2027-28 from unused local material: the riverfront flour mills, the North Star and the skyway winter. And give the Northside, Somali, Hmong, Native and Lake Street Latino communities multi-year partnerships before any product.",
   "archetype": {
     "name": "The Patient North",
-    "description": "A polite but stubborn statewide fan base that wears its scars (Garnett's exit, the drought, a West semifinal exit to San Antonio) and wants belief, not victory laps. It dresses for wind chill below zero and reps area codes and neighborhoods before skylines."
+    "description": "A polite, stubborn statewide fan base that wears its scars: Garnett's exit, the drought, a West semifinal exit to San Antonio. It wants belief, not victory laps. It dresses for wind chill below zero and reps area codes and neighborhoods before skylines."
   },
   "pulse": {
-    "teamMoment": "Minnesota doubled down on Anthony Edwards by trading for LaMelo Ball after a 49-33 season, a first-round upset of Denver and a West semifinal loss to San Antonio. The Wolves have 27 national TV games, host OKC on Christmas and carry a 48.5-win total with title aspirations under Chris Finch.",
-    "sentiment": "Optimistic and impatient: thrilled by the Edwards-Ball backcourt, still sore about the price (Naz Reid, Julius Randle and a pile of picks), and carrying extra edge after the Knicks, who host the Wolves on MLK Day, won the 2026 title.",
+    "teamMoment": "After a 49-33 season, a first-round upset of Denver and a West semifinal loss to San Antonio, Minnesota went all in on Anthony Edwards by trading for LaMelo Ball. The Wolves have 27 national TV games, host OKC on Christmas and carry a 48.5-win total. Under Chris Finch, they have title aspirations.",
+    "sentiment": "Optimistic and impatient. Fans are thrilled by the Edwards-Ball backcourt but still sore about the price: Naz Reid, Julius Randle and a pile of picks. The Knicks, who host the Wolves on MLK Day, won the 2026 title, and that adds an edge.",
     "heat": 78
   },
   "topInsights": [
     {
-      "title": "Nike's voice here is the jersey and the city, not the backcourt",
-      "insight": "Edwards is an adidas signature athlete and Ball is with PUMA, so the two faces of the Wolves' most electric era cannot anchor Nike-branded collabs, music or food tie-ins. What Nike uniquely owns is the uniform and NBA-licensed team product, plus the chance to co-create with First Avenue, Juxtaposition Arts and Nordeast printmakers, each under NBA and team approval.",
-      "evidence": ["music", "art", "food", "culture", "fanbase", "uniform"],
-      "implication": "Sell Edwards and Ball only as NBA-licensed name-and-number product; put the brand story into team-approved city capsules and paid local co-designers.",
+      "title": "Nike's voice is the jersey and the city",
+      "insight": "Edwards is an adidas signature athlete and Ball is with PUMA, so the faces of the Wolves' most electric era can't anchor Nike-branded collabs, music or food tie-ins. What Nike owns is the uniform and NBA-licensed team product. It can also co-create with First Avenue, Juxtaposition Arts and Nordeast printmakers, each under NBA and team approval.",
+      "evidence": [
+        "music",
+        "art",
+        "food",
+        "culture",
+        "fanbase",
+        "uniform"
+      ],
+      "implication": "Sell Edwards and Ball only as NBA-licensed name-and-number product. Put the brand story into team-approved city capsules and paid local co-designers.",
       "confidence": "medium"
     },
     {
       "title": "The skyway walk makes the hoodie the jersey",
-      "insight": "From the late-October opener through March, fans park in downtown ramps, cross the skyways and arrive at Target Center in coats, so team gear is worn as a layer over or under outerwear on single-digit nights with wind chill below zero. Fleece, quarter-zips and knit hats outsell tanks and shorts for most of the Wolves calendar.",
-      "evidence": ["culture", "retail-behavior", "rhythm", "fanbase", "hoops"],
-      "implication": "Ship heavyweight fleece, quarter-zips and beanies on existing blanks this season; brief a skyway-to-seat parka and wool accessories now for fall 2027, when bespoke outerwear can actually be made.",
+      "insight": "From the late-October opener through March, fans park in downtown ramps, cross the skyways and reach Target Center in coats. On single-digit nights with wind chill below zero, team gear is a layer over or under outerwear. For most of the Wolves calendar, fleece, quarter-zips and knit hats outsell tanks and shorts.",
+      "evidence": [
+        "culture",
+        "retail-behavior",
+        "rhythm",
+        "fanbase",
+        "hoops"
+      ],
+      "implication": "Ship heavyweight fleece, quarter-zips and beanies on existing blanks this season. Brief a skyway-to-seat parka and wool accessories now for fall 2027, when bespoke outerwear can actually be made.",
       "confidence": "medium"
     },
     {
-      "title": "Purple is spent on court and Prince is not a sales date",
-      "insight": "The Purple Rain City Edition returned in 2025-26, so a third purple set has little new to say, and in Minnesota purple also reads as the Vikings. Prince remains the market's most loved story, but every use runs through the Estate, and April 21 is the anniversary of his death, a day of mourning at Paisley Park rather than a launch.",
-      "evidence": ["uniform", "music", "art", "rhythm", "retail-landscape"],
-      "implication": "Keep purple off the next City Edition, never sell Prince product on April 21, and treat any Estate capsule as a long-lead maybe that never gates the playoff plan.",
+      "title": "Purple is spent, and April 21 is off-limits",
+      "insight": "The Purple Rain City Edition returned in 2025-26, so a third purple set has little new to say. In Minnesota, purple also reads as the Vikings. Prince is still the market's most loved story, but every use runs through the Estate. April 21 is the anniversary of his death, a day of mourning at Paisley Park, not a launch.",
+      "evidence": [
+        "uniform",
+        "music",
+        "art",
+        "rhythm",
+        "retail-landscape"
+      ],
+      "implication": "Keep purple off the next City Edition and never sell Prince product on April 21. Treat any Estate capsule as a long-lead maybe that never holds up the playoff plan.",
       "confidence": "medium"
     },
     {
-      "title": "Heritage is the emotional currency this season",
-      "insight": "Kevin Garnett's jersey retirement closes a long estrangement, and fans' nostalgia points to the 1990s-2000s blue-and-green tree-line era rather than the 2017 rebrand. True local origin stories are unused: the 1986 name-the-team contest, the 1989-90 Metrodome crowds and Minneapolis's Mikan-era Lakers lineage.",
-      "evidence": ["culture", "fanbase", "uniform", "art", "music"],
-      "implication": "Ready heritage-neutral tees and pins that ship on any date, add jersey product only once the team confirms the retirement date and a Classic Edition, and write it as belief and 'finally,' never a victory lap.",
+      "title": "Garnett's return makes heritage the season's story",
+      "insight": "Kevin Garnett's jersey retirement ends a long estrangement. Fans' nostalgia points to the 1990s-2000s blue-and-green tree-line era, not the 2017 rebrand. The real local origin stories are untouched: the 1986 name-the-team contest, the 1989-90 Metrodome crowds and Minneapolis's Mikan-era Lakers lineage.",
+      "evidence": [
+        "culture",
+        "fanbase",
+        "uniform",
+        "art",
+        "music"
+      ],
+      "implication": "Heritage-neutral tees and pins can ship on any date, so have them ready. Add jersey product only once the team confirms the retirement date and a Classic Edition. Write it as belief and 'finally,' never a victory lap.",
       "confidence": "medium"
     },
     {
-      "title": "Two cities, one state: lead with Minnesota, not a Minneapolis skyline",
-      "insight": "St. Paul, the suburbs and outstate fans buy through Mall of America, online and the State Fair, and they rep the state outline and area codes more than skylines. St. Paul carries its own art history in Rondo, Lowertown and the country's largest urban Hmong community, so a number swap does not serve it.",
-      "evidence": ["culture", "art", "retail-landscape", "retail-behavior", "fanbase"],
-      "implication": "Build three meaningful variants (612, 651, 218) on a state outline with the Northwest Angle notch, give 651 to a St. Paul artist, and weight ship-to-home for outstate fans.",
+      "title": "Lead with Minnesota, not a Minneapolis skyline",
+      "insight": "St. Paul, suburban and outstate fans buy through Mall of America, online and at the State Fair. They rep the state outline and area codes more than skylines. St. Paul has its own art history in Rondo, Lowertown and the country's largest urban Hmong community, so a number swap won't do.",
+      "evidence": [
+        "culture",
+        "art",
+        "retail-landscape",
+        "retail-behavior",
+        "fanbase"
+      ],
+      "implication": "Build three real variants (612, 651, 218) on a state outline with the Northwest Angle notch. Give 651 to a St. Paul artist, and weight ship-to-home for outstate fans.",
       "confidence": "medium"
     },
     {
-      "title": "Minnesota's communities run their own hoops scenes, and trust comes before product",
-      "insight": "North High and West Broadway, Cedar-Riverside's Brian Coyle Center, the Hmong July 4th weekend tournaments in St. Paul and reservation basketball at Red Lake, Leech Lake and White Earth all run apart from the AAU circuit. Somali, Latino and Hmong neighborhoods were also hit by the 2025-26 federal immigration enforcement surge, so a brand arriving with a launch date reads as extraction.",
-      "evidence": ["hoops", "food", "culture", "underground", "retail-behavior", "art"],
-      "implication": "Fund courts, leagues and paid design studios on multi-year terms, let each partner decide whether and when product exists, and measure dollars paid and renewals rather than units.",
+      "title": "Community hoops runs on trust, not launch dates",
+      "insight": "North High and West Broadway, Cedar-Riverside's Brian Coyle Center, the Hmong July 4 weekend tournaments in St. Paul and reservation ball at Red Lake, Leech Lake and White Earth all run apart from the AAU circuit. Somali, Latino and Hmong neighborhoods were also hit by the 2025-26 federal immigration enforcement surge. A brand arriving with a launch date reads as extraction.",
+      "evidence": [
+        "hoops",
+        "food",
+        "culture",
+        "underground",
+        "retail-behavior",
+        "art"
+      ],
+      "implication": "Fund courts, leagues and paid design studios on multi-year terms. Let each partner decide whether and when product exists. Measure dollars paid and renewals, not units.",
       "confidence": "medium"
     },
     {
-      "title": "Women's hoops and homegrown names are a second flagship",
-      "insight": "The Lynx's four titles, Lindsay Whalen's Hutchinson-to-Barn-to-Lynx path and Napheesa Collier make women's basketball mainstream Minnesota pride, and locals claim homegrown players like Paige Bueckers, Tyus Jones, Jalen Suggs and Chet Holmgren. The Lynx also fill the summer, when Wolves engagement hits its low.",
-      "evidence": ["hoops", "culture", "rhythm", "retail-behavior"],
-      "implication": "Plan Wolves and Lynx product as one Minnesota story with women's fits and equal casting, and use the Lynx and grassroots courts, not team news, to carry June-September.",
+      "title": "Women's hoops is a second flagship",
+      "insight": "The Lynx's four titles, Lindsay Whalen's Hutchinson-to-Barn-to-Lynx path and Napheesa Collier make women's basketball mainstream Minnesota pride. Locals also claim homegrown players like Paige Bueckers, Tyus Jones, Jalen Suggs and Chet Holmgren. And the Lynx fill the summer, when Wolves interest hits its low.",
+      "evidence": [
+        "hoops",
+        "culture",
+        "rhythm",
+        "retail-behavior"
+      ],
+      "implication": "Plan Wolves and Lynx product as one Minnesota story, with women's fits and equal casting. Let the Lynx and grassroots courts, not team news, carry June-September.",
       "confidence": "medium"
     }
   ],
@@ -66,40 +109,87 @@
     {
       "id": "skyway-season-layers",
       "title": "Skyway Season: the winter layer program",
-      "summary": "Make layering the Wolves' core volume line, shipping what exists now and briefing true cold-weather product for fall 2027.",
-      "where": ["Nike store at Mall of America", "Timberwolves team store at Target Center (via the team's licensed retail)", "Online ship-to-home for outstate Minnesota and neighboring states", "Suburban malls (Rosedale, Southdale) and Dick's"],
+      "summary": "Make layers the Wolves' core volume line. Ship what exists now, and brief real cold-weather product for fall 2027.",
+      "where": [
+        "Nike store at Mall of America",
+        "Timberwolves team store at Target Center (via the team's licensed retail)",
+        "Online ship-to-home for outstate Minnesota and neighboring states",
+        "Suburban malls (Rosedale, Southdale) and Dick's"
+      ],
       "when": "This season: ship fleece and beanies for the October opener and restock at the first hard cold in December. Fall 2027: launch the parka and wool accessories with the 2027-28 opener.",
-      "months": [10, 11, 12, 1, 2],
-      "how": "This season, on existing blanks: Midnight Blue heavyweight fleece with Aurora Green drawcords, quarter-zips and a North Star beanie, with hangtags telling the ramp-to-skyway walk. Brief now for fall 2027: a skyway-to-seat parka with an interior ticket-and-phone pocket and a hidden Molten Core orange lining, plus wool mitts with Faribault Woolen Mill under an NBA- and team-approved co-brand.",
-      "products": ["Heavyweight Midnight Blue fleece hoodie (ships this season)", "Wolves quarter-zip (ships this season)", "North Star knit beanie (ships this season)", "Skyway-to-seat fan parka (fall 2027)", "Faribault Woolen Mill wool mitts (fall 2027, pending license)"],
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "how": "This season, on existing blanks: Midnight Blue heavyweight fleece with Aurora Green drawcords, quarter-zips and a North Star beanie. Hangtags tell the ramp-to-skyway walk. Brief now for fall 2027: a skyway-to-seat parka with an inside ticket-and-phone pocket and a hidden Molten Core orange lining. Add wool mitts with Faribault Woolen Mill under an NBA- and team-approved co-brand.",
+      "products": [
+        "Heavyweight Midnight Blue fleece hoodie (ships this season)",
+        "Wolves quarter-zip (ships this season)",
+        "North Star knit beanie (ships this season)",
+        "Skyway-to-seat fan parka (fall 2027)",
+        "Faribault Woolen Mill wool mitts (fall 2027, pending license)"
+      ],
       "segment": "Downtown game-goers, statewide fans, families and corporate season-ticket holders",
       "size": "high",
       "priority": 1,
-      "kpi": "Fleece and knit share of Wolves apparel sales Nov-Feb versus last season, outstate ship-to-home units, and a signed fall 2027 outerwear brief by spring."
+      "kpi": "Fleece and knit share of Wolves apparel sales Nov-Feb versus last season. Outstate ship-to-home units. A signed fall 2027 outerwear brief by spring."
     },
     {
       "id": "big-ticket-heritage",
       "title": "Big Ticket: Garnett retirement heritage program",
-      "summary": "A conditional heritage drop for Kevin Garnett's jersey retirement, with ready-anytime pieces now and jersey product only once the date and set are confirmed.",
-      "where": ["Timberwolves team store at Target Center", "Online", "First Avenue (screenprint series, if the club and team agree)", "Mall of America"],
-      "when": "Heritage tees and pins ready to ship from November for whatever home date the team announces; Classic Edition jersey product only after the team confirms the date and set; the tree-line jacquard warmup is a 2027-28 item.",
-      "months": [11, 12, 1, 2, 3],
-      "how": "Prepare heritage-neutral product that does not depend on a date: a 'Dome '89' crewneck and a Big Ticket screenprint tee by Rhymesayers- and Doomtree-orbit artists, paid and credited, with hangtags on the 1986 name-the-team contest once those facts are checked. Move #21 jersey product into production only when the team confirms the date and any Classic Edition, and keep Garnett on team product given his adidas and ANTA shoe history.",
-      "products": ["Big Ticket artist screenprint tee (ships anytime)", "Dome '89 heritage crewneck (ships anytime)", "Numbered retirement pin (ships anytime)", "Garnett #21 jersey (conditional on team confirmation)", "Tree-line jacquard warmup (2027-28)"],
+      "summary": "A conditional heritage drop for Kevin Garnett's jersey retirement. Ready-anytime pieces come now; jersey product waits until the date and set are confirmed.",
+      "where": [
+        "Timberwolves team store at Target Center",
+        "Online",
+        "First Avenue (screenprint series, if the club and team agree)",
+        "Mall of America"
+      ],
+      "when": "Heritage tees and pins are ready to ship from November for whatever home date the team announces. Classic Edition jersey product comes only after the team confirms the date and set. The tree-line jacquard warmup is a 2027-28 item.",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "how": "Make heritage-neutral product that doesn't depend on a date: a 'Dome '89' crewneck and a Big Ticket screenprint tee. Use Rhymesayers- and Doomtree-orbit artists, paid and credited. Once the facts are checked, put the 1986 name-the-team contest on the hangtags. Move #21 jersey product into production only when the team confirms the date and any Classic Edition. Given his adidas and ANTA shoe history, keep Garnett on team product.",
+      "products": [
+        "Big Ticket artist screenprint tee (ships anytime)",
+        "Dome '89 heritage crewneck (ships anytime)",
+        "Numbered retirement pin (ships anytime)",
+        "Garnett #21 jersey (conditional on team confirmation)",
+        "Tree-line jacquard warmup (2027-28)"
+      ],
       "segment": "Lifelong diehards, lapsed buyers and older gift-givers",
       "size": "high",
       "priority": 1,
-      "kpi": "Retirement-week team-store revenue versus an average home game, and heritage tee and pin sell-through within 30 days of the date announcement."
+      "kpi": "Retirement-week team-store revenue versus an average home game. Heritage tee and pin sell-through within 30 days of the date announcement."
     },
     {
       "id": "mill-city-christmas",
       "title": "Mill City Christmas for the OKC home game",
-      "summary": "A holiday gift capsule on existing blanks that tells the riverfront flour-mill story, landing for the national-TV Christmas game against OKC in Minnesota's biggest gifting month.",
-      "where": ["Timberwolves team store at Target Center", "Nike store at Mall of America", "Online gift shop", "Mill City Museum event (if the Minnesota Historical Society agrees)"],
-      "when": "In stores by early December on stock crewnecks and tees, peaking on Dec 25; bespoke packaging and the lattice alphabet wait for fall 2027.",
-      "months": [11, 12],
-      "how": "This season: Flour Sack Cream crewnecks and tees with stenciled 'MILL CITY 26-27' lot numbers in generic stencil type, plus a gift-boxed licensed swingman with a Dec 25 tag. Fall 2027: an original sign-painter alphabet and flour-sack-cotton packaging, after a trademark check against General Mills, Pillsbury and Grain Belt sign lettering. Pair the story with an early conversation with Dakota partners about the falls before the mills.",
-      "products": ["Flour Sack Cream crewneck (ships this season)", "Stenciled Mill City tee (ships this season)", "Gift-boxed licensed swingman with Dec 25 tag", "Flour-sack-cotton gift bag (fall 2027)"],
+      "summary": "A holiday gift capsule on existing blanks that tells the riverfront flour-mill story. It lands for the national-TV Christmas game against OKC, in Minnesota's biggest gifting month.",
+      "where": [
+        "Timberwolves team store at Target Center",
+        "Nike store at Mall of America",
+        "Online gift shop",
+        "Mill City Museum event (if the Minnesota Historical Society agrees)"
+      ],
+      "when": "In stores by early December on stock crewnecks and tees, peaking on Dec 25. Bespoke packaging and the lattice alphabet wait for fall 2027.",
+      "months": [
+        11,
+        12
+      ],
+      "how": "This season: Flour Sack Cream crewnecks and tees with stenciled 'MILL CITY 26-27' lot numbers in generic stencil type, plus a gift-boxed licensed swingman with a Dec 25 tag. Fall 2027: an original sign-painter alphabet and flour-sack-cotton packaging. First run a trademark check against General Mills, Pillsbury and Grain Belt sign lettering. Talk early with Dakota partners about the falls before the mills.",
+      "products": [
+        "Flour Sack Cream crewneck (ships this season)",
+        "Stenciled Mill City tee (ships this season)",
+        "Gift-boxed licensed swingman with Dec 25 tag",
+        "Flour-sack-cotton gift bag (fall 2027)"
+      ],
       "segment": "Holiday gift buyers, families and statewide fans",
       "size": "high",
       "priority": 1,
@@ -108,12 +198,27 @@
     {
       "id": "ready-swap-pipeline",
       "title": "Ready-swap pipeline for Cup knockouts and the playoffs",
-      "summary": "Pre-staged graphics that can hit shelves within a day of a Cup advance or a playoff series win, so Minnesota's peaks never wait on production.",
-      "where": ["Target Center team store", "Mall of America", "Online", "Electric Fetus (Record Store Day tees, team-approved art)"],
-      "when": "Cup knockouts Dec 4-11 (a home semifinal is possible on Dec 8-9 under the new format); Play-In Apr 13-16 and playoffs from about Apr 17-18 (date not yet confirmed) into May; Record Store Day in mid-April.",
-      "months": [12, 4, 5],
-      "how": "Hold approved blanks and a modular graphic system with Cup-night, round-by-round and home crowd-color versions, cleared in advance with the league because playoff and Cup marks are NBA-controlled. Keep a Hinkle Fieldhouse hoodie slot ready in case Minnesota reaches the Dec 11 final in Indianapolis. Run numbered tees in 7-inch-sleeve packaging at Electric Fetus using team-approved art only.",
-      "products": ["Cup-night graphic tee", "Home semifinal hoodie (contingent)", "Round-swap playoff tee", "Crowd-color home playoff tee", "7-inch-sleeve packaged Record Store Day tee"],
+      "summary": "Pre-staged graphics that hit shelves within a day of a Cup advance or a playoff series win. Minnesota's peaks never wait on production.",
+      "where": [
+        "Target Center team store",
+        "Mall of America",
+        "Online",
+        "Electric Fetus (Record Store Day tees, team-approved art)"
+      ],
+      "when": "Cup knockouts run Dec 4-11, with a possible home semifinal Dec 8-9 under the new format. The Play-In is Apr 13-16. Playoffs start about Apr 17-18 (date not yet confirmed) and run into May. Record Store Day falls in mid-April.",
+      "months": [
+        12,
+        4,
+        5
+      ],
+      "how": "Hold approved blanks and a modular graphic system with Cup-night, round-by-round and home crowd-color versions. Clear them with the league in advance, since playoff and Cup marks are NBA-controlled. Keep a Hinkle Fieldhouse hoodie slot ready in case Minnesota reaches the Dec 11 final in Indianapolis. At Electric Fetus, run numbered tees in 7-inch-sleeve packaging with team-approved art only.",
+      "products": [
+        "Cup-night graphic tee",
+        "Home semifinal hoodie (contingent)",
+        "Round-swap playoff tee",
+        "Crowd-color home playoff tee",
+        "7-inch-sleeve packaged Record Store Day tee"
+      ],
       "segment": "Every fan, led by Gen Z digital fans and diehards",
       "size": "high",
       "priority": 1,
@@ -121,41 +226,89 @@
     },
     {
       "id": "northside-jxta-standing-studio",
-      "title": "Northside: a standing JXTA studio, not a February moment",
-      "summary": "A multi-year paid design and print studio with Juxtaposition Arts on West Broadway, whose work surfaces in February but whose funding runs all year.",
-      "where": ["Juxtaposition Arts, West Broadway", "North High and North Commons Park courts", "KMOJ 89.9", "Capri Theater", "Appetite for Change"],
-      "when": "Sign a multi-year commitment this fall; JXTA work debuts on West Broadway in February and continues through summer leagues.",
-      "months": [10, 2, 6, 7],
-      "how": "Pay JXTA apprentices as a credited studio and let them tell West Broadway's own story: North High Polars hoops, the North Commons courts and the Northside teen-band scene, with no Prince cues. Fund court upkeep and a summer league alongside the product, with KMOJ as the community voice and team approval for any Wolves marks.",
-      "products": ["JXTA screenprinted tee", "Northside heavyweight crewneck", "Youth hoodie", "Summer league kit"],
+      "title": "Northside: a year-round JXTA studio",
+      "summary": "A multi-year paid design and print studio with Juxtaposition Arts on West Broadway. Its work shows in February, but the funding runs all year.",
+      "where": [
+        "Juxtaposition Arts, West Broadway",
+        "North High and North Commons Park courts",
+        "KMOJ 89.9",
+        "Capri Theater",
+        "Appetite for Change"
+      ],
+      "when": "Sign a multi-year commitment this fall. JXTA work debuts on West Broadway in February and continues through summer leagues.",
+      "months": [
+        10,
+        2,
+        6,
+        7
+      ],
+      "how": "Pay JXTA apprentices as a credited studio and let them tell West Broadway's own story: North High Polars hoops, the North Commons courts and the Northside teen-band scene. No Prince cues. Fund court upkeep and a summer league alongside the product. KMOJ is the community voice, and any Wolves marks need team approval.",
+      "products": [
+        "JXTA screenprinted tee",
+        "Northside heavyweight crewneck",
+        "Youth hoodie",
+        "Summer league kit"
+      ],
       "segment": "Black North Minneapolis, Northside youth hoopers and music-minded fans",
       "size": "medium",
       "priority": 2,
-      "kpi": "Dollars paid to JXTA apprentices and Northside programs, commitments delivered on time and a renewed agreement for 2027-28."
+      "kpi": "Dollars paid to JXTA apprentices and Northside programs, commitments delivered on time, and a renewed agreement for 2027-28."
     },
     {
       "id": "community-led-tracks",
       "title": "Community-led tracks: Somali, Hmong and Native Minnesota",
-      "summary": "Paid, multi-year support for three communities' own hoops scenes, with any product created only when the partner leads it and sets the timing.",
-      "where": ["Brian Coyle Center, Cedar-Riverside", "Hmong American Partnership and Hmong-owned vendors in St. Paul", "Native American Community Development Institute and All My Relations Arts, Franklin Avenue", "Little Earth of United Tribes courts"],
-      "when": "Start listening and funding this fall; no fixed product launch in year one. Natural partner-chosen windows include Ramadan (about Feb 8 to Mar 9, 2027) and the Hmong July 4th weekend tournaments.",
-      "months": [10, 11, 2, 3, 7],
-      "how": "Somali: co-develop modest kit with Coyle Center players and approach Asiya as a partner. Hmong: sponsor youth sports and the community's own New Year vendors with no Nike or Cup branding, and let Hmong designers decide whether a product exists for 2027. Native: fund courts and leagues with a Native-led organization, commission research on Ojibwe and Dakota basketball, and make product only if a Native designer leads it.",
-      "products": ["Wolves-colorway Nike Pro Hijab (if co-developed)", "Long-sleeve shooting shirt", "Community league kit", "Partner-designed capsule (only if partners choose)"],
+      "summary": "Paid, multi-year support for three communities' own hoops scenes. Product happens only when the partner leads it and sets the timing.",
+      "where": [
+        "Brian Coyle Center, Cedar-Riverside",
+        "Hmong American Partnership and Hmong-owned vendors in St. Paul",
+        "Native American Community Development Institute and All My Relations Arts, Franklin Avenue",
+        "Little Earth of United Tribes courts"
+      ],
+      "when": "Start listening and funding this fall, with no fixed product launch in year one. Partners may choose natural windows like Ramadan (about Feb 8 to Mar 9, 2027) and the Hmong July 4 weekend tournaments.",
+      "months": [
+        10,
+        11,
+        2,
+        3,
+        7
+      ],
+      "how": "Somali: co-develop modest kit with Coyle Center players and approach Asiya as a partner. Hmong: sponsor youth sports and the community's own New Year vendors, with no Nike or Cup branding. Let Hmong designers decide whether a product exists for 2027. Native: fund courts and leagues with a Native-led organization and commission research on Ojibwe and Dakota basketball. Make product only if a Native designer leads it.",
+      "products": [
+        "Wolves-colorway Nike Pro Hijab (if co-developed)",
+        "Long-sleeve shooting shirt",
+        "Community league kit",
+        "Partner-designed capsule (only if partners choose)"
+      ],
       "segment": "Somali Minnesotan, Hmong and Native families, girls' and women's hoopers and youth leagues",
       "size": "medium",
       "priority": 2,
-      "kpi": "Dollars paid to partners and designers, commitments kept, partner renewal, and community-league teams outfitted; no sales target in year one."
+      "kpi": "Dollars paid to partners and designers, commitments kept, partner renewal and community-league teams outfitted. No sales target in year one."
     },
     {
       "id": "area-code-statewide",
-      "title": "612, 651, 218: the state outline and Lake Street",
-      "summary": "Three area-code pieces built on the state outline, plus a Lake Street edition led by Latino businesses, so St. Paul, outstate and south Minneapolis each have a Wolves piece with a point of view.",
-      "where": ["Online for outstate fans", "Minnesota State Fairgrounds", "Mercado Central, Lake Street", "St. Paul and Northeast Minneapolis independent shops"],
-      "when": "Area codes ship this season; State Fair (late August to Labor Day) as the first look at next season; Lake Street edition for Hispanic Heritage Month, Sept 15 to Oct 15, 2027.",
-      "months": [11, 8, 9, 10],
-      "how": "Draw one system from the state outline with its Northwest Angle notch and Lake of the Woods: 612, a 651 piece authored by a St. Paul artist, and 218 for the North Shore and Iron Range. Build the Lake Street edition with Mercado Central vendors and CLUES as paid partners, with team approval for any Wolves marks.",
-      "products": ["612 state-outline tee", "651 St. Paul artist tee", "218 tee", "Lake Street edition hoodie", "State Fair-exclusive tee"],
+      "title": "612, 651, 218 and Lake Street",
+      "summary": "Three area-code pieces on the state outline, plus a Lake Street edition led by Latino businesses. St. Paul, outstate and south Minneapolis each get a Wolves piece with a point of view.",
+      "where": [
+        "Online for outstate fans",
+        "Minnesota State Fairgrounds",
+        "Mercado Central, Lake Street",
+        "St. Paul and Northeast Minneapolis independent shops"
+      ],
+      "when": "Area codes ship this season. The State Fair (late August to Labor Day) is the first look at next season. The Lake Street edition lands for Hispanic Heritage Month, Sept 15 to Oct 15, 2027.",
+      "months": [
+        11,
+        8,
+        9,
+        10
+      ],
+      "how": "Draw one system from the state outline, with its Northwest Angle notch and Lake of the Woods. Make 612, a 651 piece by a St. Paul artist, and 218 for the North Shore and Iron Range. Build the Lake Street edition with Mercado Central vendors and CLUES as paid partners. Any Wolves marks need team approval.",
+      "products": [
+        "612 state-outline tee",
+        "651 St. Paul artist tee",
+        "218 tee",
+        "Lake Street edition hoodie",
+        "State Fair-exclusive tee"
+      ],
       "segment": "St. Paul, outstate, suburban and Lake Street Latino fans",
       "size": "medium",
       "priority": 3,
@@ -164,94 +317,240 @@
   ],
   "collection": {
     "name": "Star of the North",
-    "story": "A Wolves line built for the ramp-to-skyway walk to Target Center and the state that grew up around the falls. This season it ships fleece, knits and Mill City gift pieces on existing blanks; the parka, wool and bespoke packaging are briefed now for fall 2027.",
+    "story": "A Wolves line for the ramp-to-skyway walk to Target Center and the state that grew up around the falls. This season it ships fleece, knits and Mill City gift pieces on existing blanks. The parka, wool and bespoke packaging are briefed now for fall 2027.",
     "themes": [
       {
         "name": "Skyway Season",
-        "story": "Winter competence is a Minnesota point of pride, so this is layering gear in Wolves colors, with the hidden orange lining saved for the fall 2027 outerwear.",
+        "story": "Winter competence is a Minnesota point of pride. This is layering gear in Wolves colors, with the hidden orange lining saved for the fall 2027 outerwear.",
         "segment": "Downtown game-goers, statewide fans, families and season-ticket holders",
         "graphics": "Small eight-point North Star chest hit, Aurora Green knit stripes and a Moonlight Grey skyway-glass grid on the hangtag.",
         "palette": [
-          { "name": "Midnight Blue", "hex": "#0C2340" },
-          { "name": "Aurora Green", "hex": "#78BE20" },
-          { "name": "Lake Blue", "hex": "#236192" },
-          { "name": "Molten Core (hidden lining only)", "hex": "#F2A31B" }
+          {
+            "name": "Midnight Blue",
+            "hex": "#0C2340"
+          },
+          {
+            "name": "Aurora Green",
+            "hex": "#78BE20"
+          },
+          {
+            "name": "Lake Blue",
+            "hex": "#236192"
+          },
+          {
+            "name": "Molten Core (hidden lining only)",
+            "hex": "#F2A31B"
+          }
         ],
         "materials": "Heavyweight brushed fleece and knits this season; water-resistant shell and Faribault Woolen Mill wool for fall 2027.",
         "pieces": [
-          { "item": "Heavyweight fleece hoodie", "category": "fleece", "tier": "core", "detail": "Ships this season: cut long to layer under a coat or over a jersey, Aurora Green drawcords." },
-          { "item": "Wolves quarter-zip", "category": "fleece", "tier": "core", "detail": "Ships this season: Midnight Blue with a small North Star at the collar." },
-          { "item": "North Star knit beanie", "category": "headwear", "tier": "entry", "detail": "Ships this season: Midnight Blue knit with an Aurora Green stripe and an eight-point star." },
-          { "item": "Skyway-to-seat fan parka", "category": "outerwear", "tier": "premium", "detail": "Fall 2027: interior ticket-and-phone pocket and a Molten Core lining that shows only when unzipped." },
-          { "item": "Wool mitts", "category": "accessory", "tier": "limited", "detail": "Fall 2027, pending NBA and team approval: made with Faribault Woolen Mill, credited on the cuff." }
+          {
+            "item": "Heavyweight fleece hoodie",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Ships this season: cut long to layer under a coat or over a jersey, with Aurora Green drawcords."
+          },
+          {
+            "item": "Wolves quarter-zip",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Ships this season: Midnight Blue with a small North Star at the collar."
+          },
+          {
+            "item": "North Star knit beanie",
+            "category": "headwear",
+            "tier": "entry",
+            "detail": "Ships this season: Midnight Blue knit with an Aurora Green stripe and an eight-point star."
+          },
+          {
+            "item": "Skyway-to-seat fan parka",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Fall 2027: interior ticket-and-phone pocket and a Molten Core lining that shows only when unzipped."
+          },
+          {
+            "item": "Wool mitts",
+            "category": "accessory",
+            "tier": "limited",
+            "detail": "Fall 2027, pending NBA and team approval: made with Faribault Woolen Mill, credited on the cuff."
+          }
         ]
       },
       {
         "name": "Mill City",
-        "story": "Minneapolis milled the country's flour at the falls, and the riverfront mills still frame the Stone Arch Bridge; this is the holiday story that is neither Prince nor the Vikings.",
+        "story": "Minneapolis milled the country's flour at the falls, and the riverfront mills still frame the Stone Arch Bridge. It's a holiday story that is neither Prince nor the Vikings.",
         "segment": "Holiday gift buyers and design-minded city fans",
         "graphics": "This season: generic stencil lettering and season lot numbers. Fall 2027: an original sign-painter alphabet, cleared by a trademark check before anyone sees it.",
         "palette": [
-          { "name": "Flour Sack Cream", "hex": "#EDE5D0" },
-          { "name": "Midnight Blue", "hex": "#0C2340" },
-          { "name": "Flour-Sign Red", "hex": "#E4002B" },
-          { "name": "Lake Blue", "hex": "#236192" }
+          {
+            "name": "Flour Sack Cream",
+            "hex": "#EDE5D0"
+          },
+          {
+            "name": "Midnight Blue",
+            "hex": "#0C2340"
+          },
+          {
+            "name": "Flour-Sign Red",
+            "hex": "#E4002B"
+          },
+          {
+            "name": "Lake Blue",
+            "hex": "#236192"
+          }
         ],
         "materials": "Cream heavyweight fleece and cotton tees this season; unbleached flour-sack cotton packaging and chain-stitched closures for fall 2027.",
         "pieces": [
-          { "item": "Flour Sack Cream crewneck", "category": "fleece", "tier": "core", "detail": "Ships this season: stenciled 'MILL CITY 26-27' lot number on the hem in Midnight Blue." },
-          { "item": "Stenciled Mill City tee", "category": "tee", "tier": "entry", "detail": "Ships this season: red stencil wordmark over a Stone Arch Bridge arch line." },
-          { "item": "Mill City warmup jacket", "category": "outerwear", "tier": "premium", "detail": "Fall 2027: truss-pattern jacquard yoke and a flour-sack-cotton inner label." },
-          { "item": "Flour-sack gift bag", "category": "accessory", "tier": "entry", "detail": "Fall 2027: drawstring packaging for the holiday game." }
+          {
+            "item": "Flour Sack Cream crewneck",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Ships this season: stenciled 'MILL CITY 26-27' lot number on the hem in Midnight Blue."
+          },
+          {
+            "item": "Stenciled Mill City tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Ships this season: red stencil wordmark over a Stone Arch Bridge arch line."
+          },
+          {
+            "item": "Mill City warmup jacket",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Fall 2027: truss-pattern jacquard yoke and a flour-sack-cotton inner label."
+          },
+          {
+            "item": "Flour-sack gift bag",
+            "category": "accessory",
+            "tier": "entry",
+            "detail": "Fall 2027: drawstring packaging for the holiday game."
+          }
         ]
       },
       {
         "name": "Big Ticket",
-        "story": "Garnett's retirement season, told through the tree-line era fans still wear and the facts of how the state built this team, with ready-anytime pieces first.",
+        "story": "Garnett's retirement season, told through the tree-line era fans still wear and the story of how the state built this team. Ready-anytime pieces come first.",
         "segment": "Lifelong diehards and lapsed buyers",
-        "graphics": "Twin Cities DIY two-color screenprints by paid, credited Rhymesayers- and Doomtree-orbit artists, a pine tree band and hangtags on the 1986 contest and the Dome '89 crowds once checked.",
+        "graphics": "Twin Cities DIY two-color screenprints by paid, credited Rhymesayers- and Doomtree-orbit artists, plus a pine tree band. Once checked, hangtags cover the 1986 contest and the Dome '89 crowds.",
         "palette": [
-          { "name": "Midnight Blue", "hex": "#0C2340" },
-          { "name": "Aurora Green", "hex": "#78BE20" },
-          { "name": "Moonlight Grey", "hex": "#9EA2A2" }
+          {
+            "name": "Midnight Blue",
+            "hex": "#0C2340"
+          },
+          {
+            "name": "Aurora Green",
+            "hex": "#78BE20"
+          },
+          {
+            "name": "Moonlight Grey",
+            "hex": "#9EA2A2"
+          }
         ],
         "materials": "Water-based misregistered screenprints, heavyweight cotton, enamel pin; jacquard knit tree band for 2027-28.",
         "pieces": [
-          { "item": "Big Ticket artist screenprint tee", "category": "tee", "tier": "limited", "detail": "Ships anytime: numbered run with the artist credited on the tag." },
-          { "item": "Dome '89 heritage crewneck", "category": "fleece", "tier": "core", "detail": "Ships anytime: expansion-era wordmark revisited in today's palette." },
-          { "item": "Numbered retirement pin", "category": "accessory", "tier": "limited", "detail": "Ships anytime: dated like a Winter Carnival button and designed by a Minnesota artist." },
-          { "item": "Garnett #21 jersey", "category": "jersey", "tier": "premium", "detail": "Conditional: only once the team confirms the retirement date and a Classic Edition set." }
+          {
+            "item": "Big Ticket artist screenprint tee",
+            "category": "tee",
+            "tier": "limited",
+            "detail": "Ships anytime: numbered run with the artist credited on the tag."
+          },
+          {
+            "item": "Dome '89 heritage crewneck",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Ships anytime: expansion-era wordmark revisited in today's palette."
+          },
+          {
+            "item": "Numbered retirement pin",
+            "category": "accessory",
+            "tier": "limited",
+            "detail": "Ships anytime: dated like a Winter Carnival button and designed by a Minnesota artist."
+          },
+          {
+            "item": "Garnett #21 jersey",
+            "category": "jersey",
+            "tier": "premium",
+            "detail": "Conditional: only once the team confirms the retirement date and a Classic Edition set."
+          }
         ]
       },
       {
         "name": "Area Code",
-        "story": "Minnesotans rep their area code and side of town before any skyline, so three regions and Lake Street get pieces with a real author.",
+        "story": "Minnesotans rep their area code and side of town before any skyline. So three regions and Lake Street each get pieces with a real author.",
         "segment": "St. Paul, outstate and Lake Street fans",
         "graphics": "State outline with the Northwest Angle notch and Lake of the Woods, three area-code numerals (612, 651, 218) and a Lake Street edition authored by local Latino creators.",
         "palette": [
-          { "name": "Lake Blue", "hex": "#236192" },
-          { "name": "Flag Lake Blue", "hex": "#52C9E8" },
-          { "name": "Midnight Blue", "hex": "#0C2340" },
-          { "name": "Aurora Green", "hex": "#78BE20" }
+          {
+            "name": "Lake Blue",
+            "hex": "#236192"
+          },
+          {
+            "name": "Flag Lake Blue",
+            "hex": "#52C9E8"
+          },
+          {
+            "name": "Midnight Blue",
+            "hex": "#0C2340"
+          },
+          {
+            "name": "Aurora Green",
+            "hex": "#78BE20"
+          }
         ],
         "materials": "Heavyweight cotton and fleece on existing blanks, co-designer credit on every hangtag.",
         "pieces": [
-          { "item": "612 state-outline tee", "category": "tee", "tier": "entry", "detail": "Northwest Angle notch called out as the insider detail." },
-          { "item": "651 St. Paul artist tee", "category": "tee", "tier": "limited", "detail": "Authored and credited by a St. Paul artist, not a number swap." },
-          { "item": "218 tee", "category": "tee", "tier": "entry", "detail": "North Shore and Iron Range edition, sold mainly online." },
-          { "item": "Lake Street edition hoodie", "category": "fleece", "tier": "limited", "detail": "Co-designed with Lake Street Latino creators for Hispanic Heritage Month 2027." }
+          {
+            "item": "612 state-outline tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Northwest Angle notch called out as the insider detail."
+          },
+          {
+            "item": "651 St. Paul artist tee",
+            "category": "tee",
+            "tier": "limited",
+            "detail": "Authored and credited by a St. Paul artist, not a number swap."
+          },
+          {
+            "item": "218 tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "North Shore and Iron Range edition, sold mainly online."
+          },
+          {
+            "item": "Lake Street edition hoodie",
+            "category": "fleece",
+            "tier": "limited",
+            "detail": "Co-designed with Lake Street Latino creators for Hispanic Heritage Month 2027."
+          }
         ]
       }
     ]
   },
   "uniform": {
     "concept": "Mill City Lights (2027-28 City Edition pitch)",
-    "narrative": "This is a pitch for 2027-28, not this season: the 2026-27 set is already fixed, so confirm it first and keep Mill City off-court until then. Before the Wolves and before Prince, Minneapolis milled the country's flour at the falls, and the riverfront mills seen from the Stone Arch Bridge at night are a skyline every Minnesotan knows. It reads 'MINNESOTA', not a city name, so St. Paul and outstate fans own it too, and it opens with Dakota partners because the mills sit on Dakota land at the falls.",
+    "narrative": "A pitch for 2027-28, not this season. The 2026-27 set is already fixed, so confirm it first and keep Mill City off the court until then. Before the Wolves and before Prince, Minneapolis milled the country's flour at the falls. The riverfront mills, seen from the Stone Arch Bridge at night, are a skyline every Minnesotan knows. The jersey reads 'MINNESOTA', not a city, so St. Paul and outstate fans own it too. It opens with Dakota partners, because the mills sit on Dakota land at the falls.",
     "palette": [
-      { "name": "Midnight Blue", "hex": "#0C2340", "role": "base" },
-      { "name": "Flour Sack Cream", "hex": "#EDE5D0", "role": "number" },
-      { "name": "Flour-Sign Red", "hex": "#E4002B", "role": "trim" },
-      { "name": "Flag Lake Blue", "hex": "#52C9E8", "role": "accent" }
+      {
+        "name": "Midnight Blue",
+        "hex": "#0C2340",
+        "role": "base"
+      },
+      {
+        "name": "Flour Sack Cream",
+        "hex": "#EDE5D0",
+        "role": "number"
+      },
+      {
+        "name": "Flour-Sign Red",
+        "hex": "#E4002B",
+        "role": "trim"
+      },
+      {
+        "name": "Flag Lake Blue",
+        "hex": "#52C9E8",
+        "role": "accent"
+      }
     ],
     "motifs": [
       "Tall capitals on exposed steel trusswork, seen from below",
@@ -260,7 +559,7 @@
       "Stenciled flour-sack lot numbers",
       "Eight-point North Star"
     ],
-    "typography": "An original condensed 'MINNESOTA' wordmark drawn by a local sign painter, cleared by a trademark check against the Gold Medal, Pillsbury and Grain Belt signs before it is shown. Flour Sack Cream block numbers with a thin red keyline.",
+    "typography": "An original condensed 'MINNESOTA' wordmark drawn by a local sign painter. Before it's shown, clear it by trademark check against the Gold Medal, Pillsbury and Grain Belt signs. Flour Sack Cream block numbers with a thin red keyline.",
     "details": [
       "Jock tag: stenciled lot number 'MILL CITY 27-28' on flour-sack-cotton texture",
       "Waistband: Stone Arch Bridge arch repeat in Lake Blue",
@@ -269,16 +568,25 @@
       "Court tie-in: Flour Sack Cream apron at Target Center with the wordmark along the baseline"
     ],
     "avoid": [
-      "Any purple or Prince reference, since Purple Rain returned in 2025-26 and purple also reads as the Vikings",
+      "Any purple or Prince reference: Purple Rain returned in 2025-26, and purple also reads as the Vikings",
       "General Mills, Gold Medal, Pillsbury, Wheaties or Grain Belt marks and traced sign lettering",
       "Dakota imagery, the falls' Dakota name or wild rice unless named Dakota artists lead and are paid",
       "Lake Street damage, George Floyd Square or 2020 imagery",
       "Edwards or Ball personal branding, nicknames or shoe cues"
     ],
     "alternates": [
-      { "name": "Skyway", "idea": "Moonlight Grey enclosed-bridge glass grid on Midnight Blue, telling the winter city that walks to Target Center indoors." },
-      { "name": "Dome '89", "idea": "Honor the 1986 name-the-team contest and the 1989-90 Metrodome crowds with an expansion-era wordmark in today's palette, once those facts are verified." },
-      { "name": "Mni Sota, by Dakota artists", "idea": "A design led and authored by Dakota artists through Native partners, only if they choose to make it." }
+      {
+        "name": "Skyway",
+        "idea": "A Moonlight Grey grid of enclosed-bridge glass on Midnight Blue, for the winter city that walks to Target Center indoors."
+      },
+      {
+        "name": "Dome '89",
+        "idea": "Once the facts are verified, honor the 1986 name-the-team contest and the 1989-90 Metrodome crowds with an expansion-era wordmark in today's palette."
+      },
+      {
+        "name": "Mni Sota, by Dakota artists",
+        "idea": "A design led and authored by Dakota artists through Native partners, only if they choose to make it."
+      }
     ]
   },
   "calendar": [
@@ -286,8 +594,12 @@
       "month": 10,
       "window": "Oct 21 at Miami through the Oct 30 home Cup opener vs Memphis",
       "moment": "Season opener and first Cup night",
-      "play": "Confirm the announced 2026-27 City Edition first, then launch NBA-licensed Edwards and Ball name-and-number product and the ship-now Skyway Season fleece and beanies.",
-      "products": ["Edwards and Ball swingman jerseys", "Heavyweight fleece hoodie", "North Star knit beanie"],
+      "play": "Confirm the announced 2026-27 City Edition first. Then launch NBA-licensed Edwards and Ball name-and-number product and the ship-now Skyway Season fleece and beanies.",
+      "products": [
+        "Edwards and Ball swingman jerseys",
+        "Heavyweight fleece hoodie",
+        "North Star knit beanie"
+      ],
       "channel": "Mall of America, Target Center team store, online",
       "priority": 1
     },
@@ -295,8 +607,12 @@
       "month": 11,
       "window": "Thanksgiving weekend (Black Friday Nov 27)",
       "moment": "Hmong New Year in St. Paul, plus Black Friday",
-      "play": "Show up for Hmong New Year as a sponsor of youth sports and the community's own vendors, with no Nike or Cup product; open Black Friday at MOA with Mill City gift pieces.",
-      "products": ["Flour Sack Cream crewneck", "Stenciled Mill City tee", "Wolves quarter-zip"],
+      "play": "Show up at Hmong New Year as a sponsor of youth sports and the community's own vendors, with no Nike or Cup product. Open Black Friday at MOA with Mill City gift pieces.",
+      "products": [
+        "Flour Sack Cream crewneck",
+        "Stenciled Mill City tee",
+        "Wolves quarter-zip"
+      ],
       "channel": "Mall of America and online; Hmong New Year as sponsor only",
       "priority": 2
     },
@@ -304,8 +620,12 @@
       "month": 12,
       "window": "Dec 4-11: quarterfinals, possible home semifinal Dec 8-9, final at Hinkle Fieldhouse Dec 11",
       "moment": "NBA Cup knockouts (contingent on advancing from West Group B)",
-      "play": "If Minnesota advances, release pre-cleared Cup-night tees within a day and a home semifinal hoodie for a Target Center Prime Video night.",
-      "products": ["Cup-night graphic tee", "Home semifinal hoodie", "Hinkle final hoodie (contingent)"],
+      "play": "If Minnesota advances, release pre-cleared Cup-night tees within a day, plus a home semifinal hoodie for a Target Center Prime Video night.",
+      "products": [
+        "Cup-night graphic tee",
+        "Home semifinal hoodie",
+        "Hinkle final hoodie (contingent)"
+      ],
       "channel": "Target Center team store and online",
       "priority": 2
     },
@@ -313,8 +633,13 @@
       "month": 12,
       "window": "First hard cold in early December through Dec 25",
       "moment": "Christmas night vs OKC",
-      "play": "Restock winter layers at the first hard cold and sell Mill City gift pieces and gift-boxed licensed jerseys with a Dec 25 tag.",
-      "products": ["Heavyweight fleece hoodie", "Flour Sack Cream crewneck", "Gift-boxed licensed swingman", "North Star knit beanie"],
+      "play": "Restock winter layers at the first hard cold. Sell Mill City gift pieces and gift-boxed licensed jerseys with a Dec 25 tag.",
+      "products": [
+        "Heavyweight fleece hoodie",
+        "Flour Sack Cream crewneck",
+        "Gift-boxed licensed swingman",
+        "North Star knit beanie"
+      ],
       "channel": "Mall of America, Target Center, online",
       "priority": 1
     },
@@ -322,17 +647,26 @@
       "month": 1,
       "window": "Late January",
       "moment": "Saint Paul Winter Carnival and The Current's birthday party at First Avenue",
-      "play": "Release a numbered Wolves winter pin by a Minnesota artist and, if First Avenue and the team approve, a postgame show night with a Big Ticket screenprint tee.",
-      "products": ["Numbered winter pin", "Big Ticket artist screenprint tee", "North Star knit beanie"],
+      "play": "Release a numbered Wolves winter pin by a Minnesota artist. If First Avenue and the team approve, add a postgame show night with a Big Ticket screenprint tee.",
+      "products": [
+        "Numbered winter pin",
+        "Big Ticket artist screenprint tee",
+        "North Star knit beanie"
+      ],
       "channel": "Rice Park and Carnival sites, First Avenue, online",
       "priority": 2
     },
     {
       "month": 1,
-      "window": "Placeholder month: activates whenever the team announces the home date",
+      "window": "Placeholder month: goes live whenever the team announces the home date",
       "moment": "Kevin Garnett jersey retirement",
-      "play": "Push the ready-anytime heritage tees, crewneck and pin on announcement; add #21 jersey product only if the team confirms a Classic Edition and lead time allows.",
-      "products": ["Big Ticket screenprint tee", "Dome '89 heritage crewneck", "Numbered retirement pin", "Garnett #21 jersey (conditional)"],
+      "play": "Push the ready-anytime heritage tees, crewneck and pin on announcement. Add #21 jersey product only if the team confirms a Classic Edition and lead time allows.",
+      "products": [
+        "Big Ticket screenprint tee",
+        "Dome '89 heritage crewneck",
+        "Numbered retirement pin",
+        "Garnett #21 jersey (conditional)"
+      ],
       "channel": "Target Center team store and online",
       "priority": 1
     },
@@ -341,7 +675,11 @@
       "window": "February, with the studio funded year-round",
       "moment": "Black History Month on the Northside",
       "play": "Debut the year's JXTA studio work on West Broadway with KMOJ, alongside court and summer-league funding already in place.",
-      "products": ["JXTA screenprinted tee", "Northside heavyweight crewneck", "Youth hoodie"],
+      "products": [
+        "JXTA screenprinted tee",
+        "Northside heavyweight crewneck",
+        "Youth hoodie"
+      ],
       "channel": "West Broadway community launch and online",
       "priority": 2
     },
@@ -349,8 +687,11 @@
       "month": 2,
       "window": "Ramadan, expected about Feb 8 to Mar 9, if partners choose",
       "moment": "Partner-hosted iftar watch nights",
-      "play": "Support Somali-owned restaurants and the Coyle Center if they choose to host alcohol-free watch nights; any modest kit appears only when co-developed and ready, with no fixed launch.",
-      "products": ["Community league kit", "Long-sleeve shooting shirt"],
+      "play": "If Somali-owned restaurants and the Coyle Center choose to host alcohol-free watch nights, support them. Modest kit appears only when co-developed and ready, with no fixed launch.",
+      "products": [
+        "Community league kit",
+        "Long-sleeve shooting shirt"
+      ],
       "channel": "Cedar-Riverside community partners",
       "priority": 3
     },
@@ -358,17 +699,25 @@
       "month": 3,
       "window": "March",
       "moment": "Minnesota boys' and girls' state high school tournaments",
-      "play": "Outfit community and youth teams and sell layering for the state's biggest amateur stage, featuring North High and outstate programs alike.",
-      "products": ["Wolves quarter-zip", "Youth hoodie", "Long-sleeve shooting shirt"],
+      "play": "Outfit community and youth teams and sell layers for the state's biggest amateur stage. Feature North High and outstate programs alike.",
+      "products": [
+        "Wolves quarter-zip",
+        "Youth hoodie",
+        "Long-sleeve shooting shirt"
+      ],
       "channel": "Youth leagues, suburban doors, online",
       "priority": 3
     },
     {
       "month": 4,
-      "window": "Staged by Apr 11; Record Store Day mid-April; nothing sold on Apr 21",
+      "window": "Staged by Apr 11. Record Store Day in mid-April. Nothing sold on Apr 21",
       "moment": "Playoffs open",
-      "play": "Turn on the ready-swap playoff pipeline and drop team-approved numbered tees at Electric Fetus; treat April 21 as Prince's anniversary, not a sales date.",
-      "products": ["Round-swap playoff tee", "Crowd-color home playoff tee", "7-inch-sleeve packaged Record Store Day tee"],
+      "play": "Turn on the ready-swap playoff pipeline and drop team-approved numbered tees at Electric Fetus. April 21 is Prince's anniversary, not a sales date.",
+      "products": [
+        "Round-swap playoff tee",
+        "Crowd-color home playoff tee",
+        "7-inch-sleeve packaged Record Store Day tee"
+      ],
       "channel": "Target Center, Mall of America, Electric Fetus, online",
       "priority": 1
     },
@@ -376,17 +725,24 @@
       "month": 5,
       "window": "Art-A-Whirl, usually the third weekend of May",
       "moment": "Art-A-Whirl, whatever the playoff status",
-      "play": "Nordeast printmakers pull a Minnesota basketball print series in their studios that works whether the Wolves are still playing or not, using generic or team-approved art only.",
-      "products": ["Studio-pulled Minnesota basketball print tee", "Numbered poster"],
+      "play": "Nordeast printmakers pull a Minnesota basketball print series in their studios. It works whether the Wolves are still playing or not, with generic or team-approved art only.",
+      "products": [
+        "Studio-pulled Minnesota basketball print tee",
+        "Numbered poster"
+      ],
       "channel": "Northrup King Building and Northeast Minneapolis studios",
       "priority": 2
     },
     {
       "month": 7,
       "window": "Around July 1 to mid-July",
-      "moment": "Somali Independence Day, the Hmong July 4th weekend tournaments, Rondo Days and Lynx season",
-      "play": "Fund community courts and leagues with kit, and, where partners have chosen to, debut community-designed pieces; run Wolves-and-Lynx storytelling in the dead zone.",
-      "products": ["Community league kit", "Partner-designed capsule (if chosen)", "Wolves and Lynx tee"],
+      "moment": "Somali Independence Day, the Hmong July 4 weekend tournaments, Rondo Days and Lynx season",
+      "play": "Fund community courts and leagues with kit. Where partners have chosen to, debut community-designed pieces. Tell Wolves-and-Lynx stories through the dead zone.",
+      "products": [
+        "Community league kit",
+        "Partner-designed capsule (if chosen)",
+        "Wolves and Lynx tee"
+      ],
       "channel": "Community courts, Cedar-Riverside, St. Paul, Rondo, Lynx games",
       "priority": 3
     },
@@ -395,7 +751,11 @@
       "window": "Late August to Labor Day",
       "moment": "Minnesota State Fair",
       "play": "Sell a State Fair-exclusive Wolves tee and preview the fall 2027 parka and Mill City pieces to the statewide crowd.",
-      "products": ["State Fair-exclusive tee", "612 state-outline tee", "Skyway-to-seat parka preview"],
+      "products": [
+        "State Fair-exclusive tee",
+        "612 state-outline tee",
+        "Skyway-to-seat parka preview"
+      ],
       "channel": "State Fairgrounds and online",
       "priority": 3
     },
@@ -404,7 +764,10 @@
       "window": "Hispanic Heritage Month, Sept 15 to Oct 15, 2027",
       "moment": "Lake Street Latino Minnesota",
       "play": "Release the Lake Street edition co-designed with Mercado Central vendors and CLUES, sold through their businesses with a revenue share.",
-      "products": ["Lake Street edition hoodie", "Lake Street edition tee"],
+      "products": [
+        "Lake Street edition hoodie",
+        "Lake Street edition tee"
+      ],
       "channel": "Mercado Central and Lake Street businesses, online",
       "priority": 3
     }
@@ -414,7 +777,7 @@
       "name": "Juxtaposition Arts (JXTA)",
       "type": "Youth art and design center, West Broadway",
       "why": "It has trained and paid Northside teens in graphic design and screen printing since 1995, a few blocks from the Capri Theater.",
-      "idea": "A multi-year paid studio for Northside product with apprentices named on the hangtag. Licensing: Wolves marks need team and NBA approval; JXTA owns its art and is paid a fee plus revenue share."
+      "idea": "A multi-year paid studio for Northside product, with apprentices named on the hangtag. Licensing: Wolves marks need team and NBA approval. JXTA owns its art and gets a fee plus revenue share."
     },
     {
       "name": "First Avenue",
@@ -425,83 +788,83 @@
     {
       "name": "Native American Community Development Institute (NACDI) and All My Relations Arts",
       "type": "Native-led community development organization and gallery, Franklin Avenue",
-      "why": "They anchor Minneapolis's American Indian Cultural Corridor and work with Native artists, the right lead for a track that starts with listening.",
-      "idea": "Co-fund courts and leagues with Little Earth and Native youth programs, commission Ojibwe and Dakota basketball research, and let a Native designer decide whether product follows. Licensing: Native artists own their designs."
+      "why": "They anchor Minneapolis's American Indian Cultural Corridor and work with Native artists, so they should lead a track that starts with listening.",
+      "idea": "Co-fund courts and leagues with Little Earth and Native youth programs, and commission Ojibwe and Dakota basketball research. Let a Native designer decide whether product follows. Licensing: Native artists own their designs."
     },
     {
       "name": "Faribault Woolen Mill",
       "type": "Minnesota woolen mill (founded 1865, reopened 2011)",
       "why": "A working Minnesota wool mill gives fall 2027 winter accessories real cold-weather credibility.",
-      "idea": "Wool mitts and scarves for fall 2027, credited on the label. Licensing: a co-brand needs NBA and team approval and its own agreement on revenue."
+      "idea": "Wool mitts and scarves for fall 2027, credited on the label. Licensing: a co-brand needs NBA and team approval and its own revenue agreement."
     },
     {
       "name": "Northeast Minneapolis Arts Association (Art-A-Whirl)",
       "type": "Arts association and open-studio tour",
       "why": "Its Nordeast studio buildings, led by the Northrup King Building, hold the deepest pool of Twin Cities printmakers.",
-      "idea": "A playoff-independent Minnesota basketball print series pulled in studios during Art-A-Whirl. Licensing: generic Minnesota art by default, Wolves marks only if team-approved, playoff marks only if the league clears them."
+      "idea": "A Minnesota basketball print series, pulled in studios during Art-A-Whirl, that doesn't depend on the playoffs. Licensing: generic Minnesota art by default. Wolves marks only if team-approved, playoff marks only if the league clears them."
     },
     {
       "name": "Hmong American Partnership",
       "type": "St. Paul-based Hmong community organization",
-      "why": "A long-standing Hmong-led organization can connect Nike with youth sports, vendors and designers on the community's terms; chef Yia Vang is a natural public voice if he chooses.",
-      "idea": "Sponsor youth sports and the New Year's community vendors this fall, then let Hmong designers decide whether a 2027 product exists. Licensing: designers own their art and are paid fees plus revenue share."
+      "why": "A long-standing Hmong-led group can connect Nike with youth sports, vendors and designers on the community's terms. Chef Yia Vang is a natural public voice, if he chooses.",
+      "idea": "Sponsor youth sports and the New Year's community vendors this fall. Then let Hmong designers decide whether a 2027 product exists. Licensing: designers own their art and get fees plus revenue share."
     },
     {
       "name": "Brian Coyle Center",
       "type": "Cedar-Riverside community center",
-      "why": "It is the root of Somali Minneapolis youth hoops, and the Asiya sport-hijab brand grew from a girls' program there.",
-      "idea": "Co-develop Wolves and Lynx modest kit with its players and coaches, paid and credited, and partner with Asiya rather than compete. Licensing: team and Lynx marks need approval; no sales target in year one."
+      "why": "It's the root of Somali Minneapolis youth hoops, and the Asiya sport-hijab brand grew from a girls' program there.",
+      "idea": "Co-develop Wolves and Lynx modest kit with its players and coaches, paid and credited. Partner with Asiya rather than compete. Licensing: team and Lynx marks need approval, and there's no sales target in year one."
     },
     {
       "name": "Mercado Central and CLUES",
       "type": "Lake Street Latino business cooperative and Latino-serving community organization",
       "why": "Mercado Central's vendors and CLUES anchor Latino Minnesota on Lake Street, which the plan otherwise skips.",
-      "idea": "Co-design the Lake Street edition for Hispanic Heritage Month 2027 and sell through Mercado vendors. Licensing: Wolves marks need team approval; partners share revenue."
+      "idea": "Co-design the Lake Street edition for Hispanic Heritage Month 2027 and sell it through Mercado vendors. Licensing: Wolves marks need team approval, and partners share revenue."
     }
   ],
   "retailPlaybook": {
     "where": [
-      "Mall of America (Nike store, Foot Locker): the launch door for volume and holiday gifts that reaches statewide and Upper Midwest shoppers.",
-      "Target Center team store: first door for game-night, Christmas Day, Garnett-retirement and playoff product, run through the team's licensed retail, so only approved, already-shipped goods.",
+      "Mall of America (Nike store, Foot Locker): the launch door for volume and holiday gifts, reaching statewide and Upper Midwest shoppers.",
+      "Target Center team store: first door for game-night, Christmas Day, Garnett-retirement and playoff product. It runs through the team's licensed retail, so it takes only approved, already-shipped goods.",
       "Taste pockets (Nordeast studios, Uptown and Lake Street, West Broadway): seed limited co-created drops before wide release.",
       "Community markets (Karmel Mall, Hmongtown Marketplace, Hmong Village, Mercado Central): sell through the merchants with a revenue share, never beside them, and only when partners choose.",
       "Online ship-to-home plus Dick's, Target and suburban malls for outstate fans and the kids and value tier."
     ],
     "when": [
       "Late October: the opener and the Oct 30 home Cup night for player-name product.",
-      "Dec 4-11 if the Wolves advance in the Cup, then early December to Dec 25: the first hard cold plus Christmas night against OKC, the biggest regular-season spike.",
-      "Garnett retirement week, whenever it is set, plus national windows at the Knicks on MLK Day (Jan 18) and at Charlotte on Feb 15, Ball's return.",
-      "Playoff gear staged by the Apr 11 season finale, then the Play-In (Apr 13-16) and playoffs (about Apr 17-18 on, not yet confirmed) into May, with Record Store Day and Art-A-Whirl, with nothing sold on April 21.",
-      "July to September is a dead zone: use the Lynx, community leagues, the State Fair and Hispanic Heritage Month, not heavy team pushes."
+      "Dec 4-11 if the Wolves advance in the Cup. Then early December to Dec 25: the first hard cold plus Christmas night against OKC, the biggest regular-season spike.",
+      "Garnett retirement week, whenever it's set. National windows at the Knicks on MLK Day (Jan 18) and at Charlotte on Feb 15, Ball's return.",
+      "Stage playoff gear by the Apr 11 season finale. The Play-In (Apr 13-16) and playoffs run into May, starting about Apr 17-18, not yet confirmed. Record Store Day and Art-A-Whirl fall in the same stretch. Sell nothing on April 21.",
+      "July to September is a dead zone. Use the Lynx, community leagues, the State Fair and Hispanic Heritage Month, not heavy team pushes."
     ],
     "how": [
       "Lead the assortment with fleece and knits and treat the tee as a layer or a gift.",
-      "Label every product as 'ships this season' or 'fall 2027', and never brief bespoke outerwear, wool or packaging inside a ten-week window.",
-      "Price clean to the shelf, since most clothing is untaxed in Minnesota and there is no tax holiday to promote.",
-      "Credit and pay every local co-designer on the hangtag, and clear every co-brand with the team and NBA before announcing it.",
+      "Label every product 'ships this season' or 'fall 2027'. Never brief bespoke outerwear, wool or packaging inside a ten-week window.",
+      "Price clean to the shelf: most clothing is untaxed in Minnesota, and there's no tax holiday to promote.",
+      "Credit and pay every local co-designer on the hangtag. Clear every co-brand with the team and NBA before announcing it.",
       "Keep Edwards and Ball on NBA-licensed team product and build the brand voice through the team and the state."
     ]
   },
   "risks": [
     {
-      "risk": "Edwards (adidas) and Ball (PUMA) dominate demand, and any city or culture collab that leans on them implies a Nike endorsement Nike doesn't have.",
-      "mitigation": "Limit them to NBA-licensed name-and-number product and route storytelling through the team, Garnett, the Lynx and local co-creators."
+      "risk": "Edwards wears adidas and Ball wears PUMA, and they drive demand. Any city or culture collab built on them implies a Nike endorsement Nike doesn't have.",
+      "mitigation": "Limit them to NBA-licensed name-and-number product. Tell the story through the team, Garnett, the Lynx and local co-creators."
     },
     {
-      "risk": "Lead times and licensing: bespoke outerwear, wool and co-brands need 9-14 months, team stores take only approved shipped goods, and Cup and playoff marks are league-controlled.",
-      "mitigation": "Split every item into 'ships this season' and 'fall 2027', pre-clear Cup and playoff graphics with the league, and get team and NBA approval before naming any local co-brand."
+      "risk": "Lead times and licensing: bespoke outerwear, wool and co-brands need 9-14 months. Team stores take only approved, shipped goods, and the league controls Cup and playoff marks.",
+      "mitigation": "Split every item into 'ships this season' and 'fall 2027'. Pre-clear Cup and playoff graphics with the league. Get team and NBA approval before naming any local co-brand."
     },
     {
-      "risk": "Community harm: the 2025-26 federal immigration enforcement surge, 2020 on Lake Street, the April 21 Prince anniversary and 'heritage month' tokenism can all make a launch read as extraction.",
-      "mitigation": "Run community programs partner-led with no fixed launch date or sales KPI in year one, keep civic trauma off product, never sell on April 21, and keep a fallback if a partner says no or asks for a delay."
+      "risk": "Community harm. The 2025-26 federal immigration enforcement surge, 2020 on Lake Street, the April 21 Prince anniversary and 'heritage month' tokenism can all make a launch read as extraction.",
+      "mitigation": "Let partners lead community programs, with no fixed launch date or sales KPI in year one. Keep civic trauma off product and never sell on April 21. Have a fallback if a partner says no or asks for a delay."
     },
     {
-      "risk": "Key dates and designs are unconfirmed: the Garnett retirement date, any Classic Edition, the 2026-27 City Edition and most home dates beyond Oct 30.",
-      "mitigation": "Ship heritage-neutral pieces that work on any date, confirm the announced City Edition before any Mill City product, and treat Mill City Lights as a 2027-28 pitch."
+      "risk": "Big dates and designs are unconfirmed: the Garnett retirement date, any Classic Edition, the 2026-27 City Edition and most home dates beyond Oct 30.",
+      "mitigation": "Ship heritage-neutral pieces that work on any date. Confirm the announced City Edition before any Mill City product, and treat Mill City Lights as a 2027-28 pitch."
     },
     {
       "risk": "Fan grief over Naz Reid's trade and the Knicks' title with a former Wolf can turn hype copy into a backlash.",
-      "mitigation": "Write in the market's deadpan, belief-not-entitlement voice and treat Reid's January return as a fan moment, not a product."
+      "mitigation": "Write in the market's deadpan voice: belief, not entitlement. Treat Reid's January return as a fan moment, not a product."
     }
   ],
   "scorecard": {
@@ -509,24 +872,24 @@
     "culture": 84,
     "retail": 58,
     "fandom": 76,
-    "rationale": "Minnesota has one of the league's deepest design vernaculars (the Minneapolis Sound, Mill City, winter craft and strong Somali, Hmong, Native and Northside scenes) and a newly loud Edwards-Ball fan base. Retail is suburban and mall-led with few taste doors, and both stars' rival shoe deals cap Nike's athlete-led upside."
+    "rationale": "Minnesota has one of the league's deepest design vernaculars: the Minneapolis Sound, Mill City, winter craft and strong Somali, Hmong, Native and Northside scenes. It also has a newly loud Edwards-Ball fan base. Retail is suburban and mall-led with few taste doors, and both stars' rival shoe deals cap Nike's athlete-led upside."
   },
   "provenance": {
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "The announced 2026-27 Timberwolves City Edition and whether a 2027-28 concept slot is open; also confirm the full Purple Rain history, including whether it first ran in 2019-20.",
-      "The Wolves' full 2026-27 home schedule: the true home opener, their remaining Cup group dates, and the Kevin Garnett retirement date and any Classic Edition set.",
-      "Edwards' adidas and Ball's PUMA deals for 2026-27, and the brand ties of Gobert, McDaniels, Dosunmu, Kuminga, Josh Green and Garnett.",
-      "Who operates the Target Center team store and Wolves licensed retail, NBA and team approval paths for local co-brands, and Target Center naming and ownership for 2026-27.",
-      "Community conditions and partner consent in Somali, Latino and Hmong neighborhoods after the 2025-26 federal immigration enforcement surge.",
-      "Karl-Anthony Towns' role on the 2026 champion Knicks and his 2026-27 team before using the former-Wolf grievance in copy.",
-      "Current status and capacity of JXTA, KMOJ, the Capri Theater, Appetite for Change, Brian Coyle Center, Asiya, NACDI, All My Relations Arts, Little Earth, Hmong American Partnership, Mercado Central and CLUES.",
-      "That Faribault Woolen Mill, Electric Fetus, the Northrup King Building, Yia Vang's Vinai and the Nike store at Mall of America are operating and open to collaboration.",
-      "The Prince Estate's licensing contact and Paisley Park's April 2027 plans, so nothing collides with the anniversary.",
-      "2026-27 dates for Hmong New Year in St. Paul, Ramadan 2027 (expected about Feb 8 to Mar 9), the Winter Carnival, Record Store Day, Art-A-Whirl, the Hmong July 4th weekend tournaments and the State Fair.",
-      "The 1986 name-the-team contest details and the 1989-90 Metrodome attendance record before printing them on hangtags.",
-      "That Minnesota's clothing sales-tax exemption covers jerseys and hoodies."
+      "Confirm the announced 2026-27 Timberwolves City Edition and whether a 2027-28 concept slot is open. Confirm the full Purple Rain history, including whether it first ran in 2019-20.",
+      "Confirm the Wolves' full 2026-27 home schedule: the true home opener, their remaining Cup group dates, the Kevin Garnett retirement date and any Classic Edition set.",
+      "Confirm Edwards' adidas and Ball's PUMA deals for 2026-27, and the brand ties of Gobert, McDaniels, Dosunmu, Kuminga, Josh Green and Garnett.",
+      "Confirm who runs the Target Center team store and Wolves licensed retail, the NBA and team approval paths for local co-brands, and Target Center naming and ownership for 2026-27.",
+      "Check community conditions and partner consent in Somali, Latino and Hmong neighborhoods after the 2025-26 federal immigration enforcement surge.",
+      "Confirm Karl-Anthony Towns' role on the 2026 champion Knicks and his 2026-27 team before using the former-Wolf grievance in copy.",
+      "Check the current status and capacity of JXTA, KMOJ, the Capri Theater, Appetite for Change and Brian Coyle Center. Do the same for Asiya, NACDI, All My Relations Arts, Little Earth, Hmong American Partnership, Mercado Central and CLUES.",
+      "Confirm that Faribault Woolen Mill, Electric Fetus, the Northrup King Building, Yia Vang's Vinai and the Nike store at Mall of America are operating and open to collaboration.",
+      "Find the Prince Estate's licensing contact and Paisley Park's April 2027 plans, so nothing collides with the anniversary.",
+      "Confirm 2026-27 dates for Hmong New Year in St. Paul, Ramadan 2027 (expected about Feb 8 to Mar 9), the Winter Carnival, Record Store Day, Art-A-Whirl, the Hmong July 4 weekend tournaments and the State Fair.",
+      "Verify the 1986 name-the-team contest details and the 1989-90 Metrodome attendance record before printing them on hangtags.",
+      "Confirm that Minnesota's clothing sales-tax exemption covers jerseys and hoodies."
     ]
   }
 }

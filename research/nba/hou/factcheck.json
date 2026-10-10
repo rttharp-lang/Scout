@@ -1,287 +1,287 @@
 {
- "team": "hou",
- "checked": 96,
- "verdicts": [
-  {
-   "lens": "fanbase",
-   "claim": "Ketchup-and-mustard red-and-gold was the Yao Ming and Tracy McGrady-era (2003-2020) jersey",
-   "verdict": "corrected",
-   "note": "Wrong era. Yao/McGrady/Harden-era Rockets wore red, silver and black; ketchup and mustard is the 1970s-1995 look worn by the 1994-95 title teams. Fixed the insight, vocabulary, hex source, McGrady entries and a segment name in fanbase.json.",
-   "source": ""
-  },
-  {
-   "lens": "uniform",
-   "claim": "1995-2003 redesign era was the 'Clutch City title years'",
-   "verdict": "corrected",
-   "note": "The 1994 and 1995 titles were won before the 1995-96 redesign. Era legacy and summary rewritten; 1971-1995 era now credits the title teams. Navy usage in 1995-2003 stays queued.",
-   "source": ""
-  },
-  {
-   "lens": "uniform",
-   "claim": "Nike-era uniforms began 2020; 2003-2020 was one era",
-   "verdict": "corrected",
-   "note": "Nike became NBA uniform supplier in 2017-18. Split eras into 2003-2017 and 2017-present.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Leopold Brown is Truth BBQ's pitmaster",
-   "verdict": "corrected",
-   "note": "Truth BBQ is owned and run by Houston native Leonard Botello IV (Brenham original 2015; Heights location at 110 S Heights Blvd). Person and place entries fixed.",
-   "source": "https://www.papercitymag.com/restaurants/truth-bbq-houston-barbecue-hotspot-opening-pitmaster-leonard-botello"
-  },
-  {
-   "lens": "food",
-   "claim": "Justin Yu and Better Luck Tomorrow are current Houston fine-dining voices",
-   "verdict": "removed",
-   "note": "Could not confirm Better Luck Tomorrow is still open under Yu. Replaced with Chris Williams of Lucille's (verify status).",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Chris Shepherd is founder of Underbelly Hospitality",
-   "verdict": "corrected",
-   "note": "Shepherd left Underbelly Hospitality in 2020; role reworded to avoid implying a current title.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "'Taste of Texas / Houston restaurant weeks' as one moment",
-   "verdict": "corrected",
-   "note": "Taste of Texas is a steakhouse; the event is Houston Restaurant Weeks (late summer). Renamed.",
-   "source": ""
-  },
-  {
-   "lens": "music",
-   "claim": "Screwed Up Records & Tapes is in Third Ward (Cullen Blvd.)",
-   "verdict": "corrected",
-   "note": "Original shop is at 7717 Cullen Blvd, South Park; a 2022 source says it still operates, but current status is not confirmed. Fixed neighborhood in music, underground and rhythm dossiers.",
-   "source": "https://exhibits.lib.uh.edu/s/brothers-in-rhyme/item/18135"
-  },
-  {
-   "lens": "music",
-   "claim": "'Candy teal and violet' cue",
-   "verdict": "corrected",
-   "note": "Hex #5B2C83 is violet, not teal; cue renamed Candy violet. Rhythm cue 'purple-to-teal shift' left as a color-shift description.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Rodeo is a six-week event that empties the Toyota Center schedule",
-   "verdict": "corrected",
-   "note": "Rodeo Houston runs about three weeks; the Rockets typically take a road trip during part of it, not the whole window. Headline fixed. Strategy overstates this too.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Opening-month excitement for a 'new-look team with Durant'",
-   "verdict": "corrected",
-   "note": "Durant joined in 2025; the new pieces are Smart and Bogdanovic per current facts. Fixed.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Juneteenth tradition rooted in Freedmen's Town as part of Fifth Ward",
-   "verdict": "corrected",
-   "note": "Freedmen's Town is in the Fourth Ward. Reworded.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Rice Village is in Rice Military",
-   "verdict": "corrected",
-   "note": "Rice Village sits by Rice University / West University; Rice Military is a different neighborhood.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Nike Factory Store at Houston Premium Outlets, Cypress",
-   "verdict": "confirmed",
-   "note": "Listed in Nike's store directory at 29300 Hempstead Rd, Suite 501; one search could not confirm 2026-27 status, so still re-check.",
-   "source": "https://www.premiumoutlets.com/outlet/houston"
-  },
-  {
-   "lens": "hoops",
-   "claim": "Houston Cougars were a national finalist in 2025 and play in the Big 12",
-   "verdict": "confirmed",
-   "note": "Long-established; 2025 title game loss. 2026 season result not checked.",
-   "source": ""
-  },
-  {
-   "lens": "hoops",
-   "claim": "Comets won the first four WNBA titles (1997-2000) and folded in 2008",
-   "verdict": "confirmed",
-   "note": "Long-established history. No current WNBA team is queued for re-check.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Clutch City nickname tied to 1994 title run; titles in 1994 and 1995; Harvey 2017 and 2021 freeze",
-   "verdict": "confirmed",
-   "note": "Long-established history. Exact origin story of the nickname (who coined it) is softened and unverified.",
-   "source": ""
-  },
-  {
-   "lens": "music",
-   "claim": "DJ Screw died November 2000, born July 20; Screwed Up Click membership",
-   "verdict": "confirmed",
-   "note": "Long-established history; supports both the July and November tribute hooks.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Cup group, MLK nightcap vs Memphis, no Christmas slate, Cup knockout dates, trade deadline Feb 11, All-Star Phoenix, season end Apr 11",
-   "verdict": "confirmed",
-   "note": "Matches the verified CURRENT FACTS. Home team and tip time of Rockets-Grizzlies remain unconfirmed.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Lunar New Year 2027 date",
-   "verdict": "confirmed",
-   "note": "Lunar New Year 2027 falls on Feb 6, 2027 (astronomical calendar); dossiers left it undated.",
-   "source": ""
-  },
-  {
-   "lens": "uniform",
-   "claim": "Which set the 1994-95 title teams wore, and the colors/years of the 1995-2003 redesign (red/navy/silver, pinstripes)",
-   "verdict": "unverifiable",
-   "note": "Oddly specific era details from memory; confirm uniform history before any 'accurate proportions' heritage brief.",
-   "source": ""
-  },
-  {
-   "lens": "uniform",
-   "claim": "2026-27 ketchup-and-mustard throwback is the City Edition, and prior Rockets City Edition concepts",
-   "verdict": "unverifiable",
-   "note": "Current facts: revealed, designation unverified. Past City Edition concepts (Space City etc.) are not documented in the dossiers.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Turkey Leg Hut, Breakfast Klub, Frenchy's, Crawfish & Noodles, Killen's, Ninfa's on Navigation, Hugo's/Xochi still open as described",
-   "verdict": "unverifiable",
-   "note": "Long-standing but small-business risk; verify each before partnership outreach. Turkey Leg Hut neighborhood label (Midtown/Third Ward) is loose.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Mahatma Gandhi District along Hillcroft and Bellaire Blvd as the Asian spine",
-   "verdict": "unverifiable",
-   "note": "Real districts; confirm current boundaries and business mix before citing.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Johnny Dang & Co. is a Southwest Houston (Hillcroft/Sharpstown) shop",
-   "verdict": "unverifiable",
-   "note": "Exact location and whether it is still there are unchecked; central to the strategy's Candy Paint launch.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Foot Locker / Champs Sports doors at Galleria, Almeda Mall and suburbs",
-   "verdict": "unverifiable",
-   "note": "Foot Locker's ownership changed (Dick's acquisition 2025); Champs and mall footprints may have shifted. Verify door list.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Almeda Mall, Sharpstown Center, Gulfgate and Willowbrook are operating as retail anchors",
-   "verdict": "unverifiable",
-   "note": "Aging Southside malls; confirm tenants and athletic retailers.",
-   "source": ""
-  },
-  {
-   "lens": "retail-behavior",
-   "claim": "2026 Texas sales-tax holiday: early August, clothing and footwear under $100; Houston rate 8.25%",
-   "verdict": "unverifiable",
-   "note": "Confirm 2027 dates and cap with the Texas Comptroller before building the August pack.",
-   "source": "https://comptroller.texas.gov/taxes/sales/holidays/"
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Rodeo Houston 2027 dates and Rockets rodeo road trip",
-   "verdict": "unverifiable",
-   "note": "Roughly late Feb to mid-March; confirm dates against the Rockets schedule.",
-   "source": ""
-  },
-  {
-   "lens": "art",
-   "claim": "Art Car Parade (April), Juneteenth at Emancipation Park, DJ Screw birthday tributes around July 20",
-   "verdict": "unverifiable",
-   "note": "Dates and organizers recur but 2027 details unconfirmed; July 20 tribute events are especially unverified.",
-   "source": ""
-  },
-  {
-   "lens": "underground",
-   "claim": "Anime Matsuri held in spring in Houston",
-   "verdict": "unverifiable",
-   "note": "Convention timing has moved before; confirm 2027 date or drop.",
-   "source": ""
-  },
-  {
-   "lens": "underground",
-   "claim": "Lee and Joe Jamail Skatepark and Black trail-ride clubs near Prairie View/Hempstead",
-   "verdict": "unverifiable",
-   "note": "Confirm name, access and current club activity.",
-   "source": ""
-  },
-  {
-   "lens": "music",
-   "claim": "Warehouse Live, White Oak Music Hall, Cactus Music, Houston Museum of African American Culture, Beer Can House, Project Row Houses operating as described",
-   "verdict": "unverifiable",
-   "note": "Long-running but venue-level status can change; verify before activation.",
-   "source": ""
-  },
-  {
-   "lens": "art",
-   "claim": "Houston Arts Alliance, GONZO247 and Bun B availability for commissions",
-   "verdict": "unverifiable",
-   "note": "Organization naming/programs and individual availability unchecked.",
-   "source": ""
-  },
-  {
-   "lens": "fanbase",
-   "claim": "Toyota Center name, ownership (Tilman Fertitta) and Rockets Team Shop operator",
-   "verdict": "unverifiable",
-   "note": "Current facts did not verify ownership or arena naming.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Brief verify line says the dossiers disagree on the red-and-gold era (uniform 1971-95 vs fanbase Yao-McGrady)",
-   "verdict": "corrected",
-   "note": "Fanbase is now fixed to the 1970s-1995 era; editor should drop the disagreement note and keep 1971-95 as the framing.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Candy Paint is a City Edition concept alongside a revealed 2026-27 throwback",
-   "verdict": "unverifiable",
-   "note": "2026-27 uniforms are already revealed, so Candy Paint can only be a 2027-28 pitch; month-9 'tease' and 'if adopted' wording should say so explicitly.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Reveal the Candy Paint capsule on a November Cup Friday at Toyota Center; launch at the home opener week",
-   "verdict": "unverifiable",
-   "note": "Which Cup Fridays are home games and the Rockets' home opener date are not confirmed; the MLK Third Ward program also assumes a home game that is unconfirmed.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "RodeoHouston 'empties Toyota Center from late February to mid-March' and Rockets 'rodeo road stretch'",
-   "verdict": "corrected",
-   "note": "Overstated: the road trip covers part of the rodeo, not all three weeks; rewrite the insight and the Trail Ride timing accordingly.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "KPI 'versus the 2025-26 heritage line'; 'do not repeat past Rockets City Editions (Space City or NASA)'",
-   "verdict": "unverifiable",
-   "note": "Assumes a prior heritage line and prior Space City City Edition with no source; remove or verify.",
-   "source": ""
-  }
- ],
- "summary": "Core facts match the verified current facts (coach, roster moves, 52-30, Lakers loss, Cup Group A, MLK slot, no Christmas game) and the long-established history (Hakeem, Clutch City, DJ Screw, Comets) holds up. The real errors were era mix-ups: the fanbase dossier put ketchup and mustard in the Yao/McGrady years and the uniform dossier gave the 1995-2003 redesign the title years; also a fabricated Truth BBQ pitmaster (Leonard Botello IV is correct), a Screwed Up Records neighborhood slip (South Park), a misattributed chef role and several small labels, all fixed in place. Remaining risk is small-business status, Johnny Dang location, Foot Locker/Champs doors, event dates, and the unconfirmed City Edition and MLK home team; the brief overstates the rodeo road trip and assumes a Candy Paint City Edition that can only apply to 2027-28."
+  "team": "hou",
+  "checked": 96,
+  "verdicts": [
+    {
+      "lens": "fanbase",
+      "claim": "Ketchup-and-mustard red-and-gold was the Yao Ming and Tracy McGrady-era (2003-2020) jersey",
+      "verdict": "corrected",
+      "note": "Wrong era. The Yao, McGrady and Harden Rockets wore red, silver and black. Ketchup and mustard is the 1970s-1995 look, worn by the 1994-95 title teams. Fixed the insight, vocabulary, hex source, McGrady entries and a segment name in fanbase.json.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "1995-2003 redesign era was the 'Clutch City title years'",
+      "verdict": "corrected",
+      "note": "The 1994 and 1995 titles came before the 1995-96 redesign. Rewrote the era legacy and summary, and the 1971-1995 era now credits the title teams. Navy usage in 1995-2003 stays queued.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Nike-era uniforms began 2020; 2003-2020 was one era",
+      "verdict": "corrected",
+      "note": "Nike became the NBA's uniform supplier in 2017-18. Split the eras into 2003-2017 and 2017-present.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Leopold Brown is Truth BBQ's pitmaster",
+      "verdict": "corrected",
+      "note": "Houston native Leonard Botello IV owns and runs Truth BBQ (Brenham original, 2015; Heights location at 110 S Heights Blvd). Fixed the person and place entries.",
+      "source": "https://www.papercitymag.com/restaurants/truth-bbq-houston-barbecue-hotspot-opening-pitmaster-leonard-botello"
+    },
+    {
+      "lens": "food",
+      "claim": "Justin Yu and Better Luck Tomorrow are current Houston fine-dining voices",
+      "verdict": "removed",
+      "note": "Could not confirm that Better Luck Tomorrow is still open under Yu. Replaced him with Chris Williams of Lucille's (verify status).",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Chris Shepherd is founder of Underbelly Hospitality",
+      "verdict": "corrected",
+      "note": "Shepherd left Underbelly Hospitality in 2020. Reworded the role so it doesn't imply a current title.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "'Taste of Texas / Houston restaurant weeks' as one moment",
+      "verdict": "corrected",
+      "note": "Taste of Texas is a steakhouse. The event is Houston Restaurant Weeks (late summer). Renamed.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Screwed Up Records & Tapes is in Third Ward (Cullen Blvd.)",
+      "verdict": "corrected",
+      "note": "The original shop is at 7717 Cullen Blvd, South Park. A 2022 source says it still operates, but current status is unconfirmed. Fixed the neighborhood in the music, underground and rhythm dossiers.",
+      "source": "https://exhibits.lib.uh.edu/s/brothers-in-rhyme/item/18135"
+    },
+    {
+      "lens": "music",
+      "claim": "'Candy teal and violet' cue",
+      "verdict": "corrected",
+      "note": "Hex #5B2C83 is violet, not teal, so the cue is now Candy violet. The rhythm cue \"purple-to-teal shift\" stays as a description of a color shift.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Rodeo is a six-week event that empties the Toyota Center schedule",
+      "verdict": "corrected",
+      "note": "Rodeo Houston runs about three weeks, and the Rockets typically travel for part of it, not all of it. Fixed the headline. The strategy overstates this too.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Opening-month excitement for a 'new-look team with Durant'",
+      "verdict": "corrected",
+      "note": "Durant joined in 2025. The new pieces are Smart and Bogdanovic, per current facts. Fixed.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Juneteenth tradition rooted in Freedmen's Town as part of Fifth Ward",
+      "verdict": "corrected",
+      "note": "Freedmen's Town is in the Fourth Ward. Reworded.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Rice Village is in Rice Military",
+      "verdict": "corrected",
+      "note": "Rice Village sits by Rice University and West University. Rice Military is a different neighborhood.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Factory Store at Houston Premium Outlets, Cypress",
+      "verdict": "confirmed",
+      "note": "Nike's store directory lists 29300 Hempstead Rd, Suite 501. One search could not confirm 2026-27 status, so re-check.",
+      "source": "https://www.premiumoutlets.com/outlet/houston"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Houston Cougars were a national finalist in 2025 and play in the Big 12",
+      "verdict": "confirmed",
+      "note": "Long established. The 2025 title game was a loss. The 2026 season result wasn't checked.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Comets won the first four WNBA titles (1997-2000) and folded in 2008",
+      "verdict": "confirmed",
+      "note": "Long-established history. No current WNBA team is queued for re-check.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Clutch City nickname tied to the 1994 title run, titles in 1994 and 1995, Harvey 2017 and 2021 freeze",
+      "verdict": "confirmed",
+      "note": "Long-established history. Who coined the nickname is softened and unverified.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "DJ Screw died November 2000, born July 20; Screwed Up Click membership",
+      "verdict": "confirmed",
+      "note": "Long-established history. It supports both the July and November tribute hooks.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Cup group, MLK nightcap vs Memphis, no Christmas slate, Cup knockout dates, trade deadline Feb 11, All-Star Phoenix, season end Apr 11",
+      "verdict": "confirmed",
+      "note": "Matches the verified CURRENT FACTS. The home team and tip time of Rockets-Grizzlies are still unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Lunar New Year 2027 date",
+      "verdict": "confirmed",
+      "note": "Lunar New Year 2027 falls on Feb 6, 2027 (astronomical calendar). The dossiers leave it undated.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Which set the 1994-95 title teams wore, and the colors/years of the 1995-2003 redesign (red/navy/silver, pinstripes)",
+      "verdict": "unverifiable",
+      "note": "These era details come from memory and are oddly specific. Confirm the uniform history before any \"accurate proportions\" heritage brief.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "2026-27 ketchup-and-mustard throwback is the City Edition, and prior Rockets City Edition concepts",
+      "verdict": "unverifiable",
+      "note": "Current facts say the throwback is revealed but its designation is unverified. The dossiers don't document past City Edition concepts (Space City and others).",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Turkey Leg Hut, Breakfast Klub, Frenchy's, Crawfish & Noodles, Killen's, Ninfa's on Navigation, Hugo's/Xochi still open as described",
+      "verdict": "unverifiable",
+      "note": "Long-standing, but small businesses close. Verify each before partnership outreach. The Turkey Leg Hut neighborhood label (Midtown/Third Ward) is loose.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Mahatma Gandhi District along Hillcroft and Bellaire Blvd as the Asian spine",
+      "verdict": "unverifiable",
+      "note": "Real districts. Confirm current boundaries and business mix before citing.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Johnny Dang & Co. is a Southwest Houston (Hillcroft/Sharpstown) shop",
+      "verdict": "unverifiable",
+      "note": "Exact location, and whether it is still there, are unchecked. The strategy's Candy Paint launch depends on it.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Foot Locker / Champs Sports doors at Galleria, Almeda Mall and suburbs",
+      "verdict": "unverifiable",
+      "note": "Foot Locker's ownership changed (Dick's acquisition, 2025), and Champs and mall footprints may have shifted. Verify the door list.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Almeda Mall, Sharpstown Center, Gulfgate and Willowbrook are operating as retail anchors",
+      "verdict": "unverifiable",
+      "note": "Aging Southside malls. Confirm tenants and athletic retailers.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "2026 Texas sales-tax holiday: early August, clothing and footwear under $100; Houston rate 8.25%",
+      "verdict": "unverifiable",
+      "note": "Confirm 2027 dates and the cap with the Texas Comptroller before building the August pack.",
+      "source": "https://comptroller.texas.gov/taxes/sales/holidays/"
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Rodeo Houston 2027 dates and Rockets rodeo road trip",
+      "verdict": "unverifiable",
+      "note": "Roughly late Feb to mid-March. Confirm dates against the Rockets schedule.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Art Car Parade (April), Juneteenth at Emancipation Park, DJ Screw birthday tributes around July 20",
+      "verdict": "unverifiable",
+      "note": "These events recur, but 2027 dates and organizers are unconfirmed. The July 20 tributes are the least verified.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Anime Matsuri held in spring in Houston",
+      "verdict": "unverifiable",
+      "note": "Convention timing has moved before. Confirm the 2027 date or drop it.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Lee and Joe Jamail Skatepark and Black trail-ride clubs near Prairie View/Hempstead",
+      "verdict": "unverifiable",
+      "note": "Confirm the name, access and current club activity.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Warehouse Live, White Oak Music Hall, Cactus Music, Houston Museum of African American Culture, Beer Can House, Project Row Houses operating as described",
+      "verdict": "unverifiable",
+      "note": "Long-running, but venue status can change. Verify before launch.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Houston Arts Alliance, GONZO247 and Bun B availability for commissions",
+      "verdict": "unverifiable",
+      "note": "Organization names, programs and individual availability are unchecked.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Toyota Center name, ownership (Tilman Fertitta) and Rockets Team Shop operator",
+      "verdict": "unverifiable",
+      "note": "Current facts did not verify ownership or arena naming.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Brief verify line says the dossiers disagree on the red-and-gold era (uniform 1971-95 vs fanbase Yao-McGrady)",
+      "verdict": "corrected",
+      "note": "Fanbase.json now uses the 1970s-1995 era. The editor should drop the disagreement note and keep 1971-95 as the framing.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Candy Paint is a City Edition concept alongside a revealed 2026-27 throwback",
+      "verdict": "unverifiable",
+      "note": "The 2026-27 uniforms are already revealed, so Candy Paint can only be a 2027-28 pitch. Say so explicitly in the month-9 \"tease\" and the \"if adopted\" wording.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Reveal the Candy Paint capsule on a November Cup Friday at Toyota Center; launch at the home opener week",
+      "verdict": "unverifiable",
+      "note": "Which Cup Fridays are home games, and the Rockets' home-opener date, are unconfirmed. The MLK Third Ward program also assumes an unconfirmed home game.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "RodeoHouston 'empties Toyota Center from late February to mid-March' and Rockets 'rodeo road stretch'",
+      "verdict": "corrected",
+      "note": "Overstated. The road trip covers part of the rodeo, not all three weeks. Rewrite the insight and the Trail Ride timing.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "KPI 'versus the 2025-26 heritage line'; 'do not repeat past Rockets City Editions (Space City or NASA)'",
+      "verdict": "unverifiable",
+      "note": "The KPI assumes a prior heritage line and a prior Space City City Edition, with no source. Remove them or verify.",
+      "source": ""
+    }
+  ],
+  "summary": "Core facts match the verified record: coach, roster moves, 52-30, the Lakers loss, Cup Group A, the MLK slot and no Christmas game. The history holds too: Hakeem, Clutch City, DJ Screw, the Comets. The errors were era mix-ups. Fanbase put ketchup and mustard in the Yao/McGrady years, and uniform gave the 1995-2003 redesign the title years. Also fixed: the Truth BBQ pitmaster (Leonard Botello IV), the Screwed Up Records neighborhood, which is South Park, a misattributed chef role and small labels. Still open: small-business status, Johnny Dang's location, Foot Locker/Champs doors, event dates, the City Edition and the MLK home team. The brief overstates the rodeo road trip and assumes a Candy Paint City Edition that can only apply to 2027-28."
 }

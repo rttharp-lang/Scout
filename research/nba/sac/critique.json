@@ -5,121 +5,121 @@
       "target": "calendar / opportunities[valley-gift-ladder] / opportunities[specter-greatest-show]",
       "type": "timing",
       "severity": "high",
-      "problem": "Three priority-1 plays are anchored to 'Cup Fridays' and the 'Nov 24-25 Cup nights' as if all were Kings home dates. Each team plays only four group games, so the Kings have at most two home Cup nights, and the extra Thanksgiving-week Cup nights are not guaranteed to involve Sacramento at all. The 'most depth against Lakers and Warriors' plan also assumes those two are home games.",
-      "fix": "Rebuild the November calendar from the actual Kings schedule once it is read: name the two home Cup nights, and anchor the gifting ladder to Black Friday weekend and the paycheck cycle instead of Cup nights. Treat the visiting-fan purple-out as a home-game-only tactic and put the rest of the gifting push in the malls, outlets and online."
+      "problem": "Three priority-1 plays hang on 'Cup Fridays' and the 'Nov 24-25 Cup nights' as if all were Kings home dates. Each team plays only four group games, so the Kings have at most two home Cup nights. The Thanksgiving-week Cup nights may not involve Sacramento at all. The plan for the 'most depth against Lakers and Warriors' also assumes those two are home games.",
+      "fix": "Rebuild the November calendar from the actual Kings schedule once it is read, and name the two home Cup nights. Anchor the gifting ladder to Black Friday weekend and the paycheck cycle, not Cup nights. Keep the visiting-fan purple-out to home games, and put the rest of the gifting push in the malls, outlets and online."
     },
     {
       "target": "opportunities[beam-night-drops] / collection.themes[Beam Line]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The lead opportunity is triggered only by home wins on a team widely projected near the bottom of the West, so the trigger may fire a dozen times all year, and the sales story depends on losing making wins scarce. Pre-printed 'Beam-night numbered' runs also risk dead stock. The Beam ritual is also fan-sacred: tying it to a numbered, limited tee can read as monetizing the one thing losing has not taken away. The 'glow-ink hoodie that lights up in a dark arena' is also weak, since a lit arena will not make it glow.",
-      "fix": "Keep Beam as the graphic system but decouple the always-on product (stripe tee, heel-tab sock) from the win trigger. Reserve the numbered post-win drop for a small run of 200-500 pieces so the downside is capped, and let a portion fund something local. Drop the 'glows in the arena' claim and sell reflective ink for the walk to the car and the light rail."
+      "problem": "The lead opportunity fires only on home wins, for a team widely projected near the bottom of the West. The trigger may hit a dozen times all year, and the sales story depends on losing making wins scarce. Pre-printed 'Beam-night numbered' runs risk dead stock. The Beam ritual is also fan-sacred, and a numbered, limited tee can read as cashing in on the one thing losing hasn't taken away. The 'glow-ink hoodie that lights up in a dark arena' is weak too: a lit arena won't make it glow.",
+      "fix": "Keep Beam as the graphic system, but separate the always-on product (stripe tee, heel-tab sock) from the win trigger. Limit the numbered post-win drop to 200-500 pieces to cap the downside, and let a portion fund something local. Drop the 'glows in the arena' claim and sell reflective ink for the walk to the car and the light rail."
     },
     {
       "target": "opportunities[beam-night-drops] / retailPlaybook",
       "type": "other",
       "severity": "medium",
-      "problem": "The plan assumes Nike can hold printed blanks at the arena, push post-win unlocks and print on team marks within hours. Fan apparel bearing NBA and team marks moves through league licensing and the team's retail partner, and the Kings Team Store is not a Nike-run door. Only the Oct 8 preseason has passed, and 'place quick-turn orders now' is realistic only for print-on-demand.",
-      "fix": "State who operates each step (Nike supplies blanks and art, the team and its retail partner print and sell). Pre-clear the Beam art and a small library of post-win variants with the NBA and team now, so a win-night unlock needs no new approval."
+      "problem": "The plan assumes Nike can hold printed blanks at the arena, push post-win releases and print on team marks within hours. Fan apparel with NBA and team marks goes through league licensing and the team's retail partner, and the Kings Team Store isn't a Nike-run door. Only the Oct 8 preseason has passed, and 'place quick-turn orders now' works only for print-on-demand.",
+      "fix": "State who runs each step: Nike supplies blanks and art, and the team and its retail partner print and sell. Pre-clear the Beam art and a small library of post-win variants with the NBA and team now, so a win-night release needs no new approval."
     },
     {
       "target": "partners / opportunities[sactown-sound-makers]",
       "type": "weak-link",
       "severity": "high",
-      "problem": "The Sactown Sound and Kept collection promise 'Black, Latino and Southeast Asian Sacramento designers' as authors, but the partner list names no Black-led creative business, no Hmong, Filipino, Punjabi or other Asian-led organization, and no named printer, embroiderer, sign painter or custom painter. The Black cue comes only through St. HOPE, a school network. Sol Collective is the sole community-arts partner and is Latino-led. The credit-and-pay promise is not yet tied to anyone who can say yes.",
-      "fix": "Name real partners before the capsule is pitched: Oak Park and Del Paso Heights makers and Black-owned print or apparel shops, a Hmong and a Filipino design collective, and the Franklin Boulevard car-club or painter community. Run the paid listening phase first and make the authors a pre-condition of design, not a hangtag afterthought."
+      "problem": "The Sactown Sound and Kept collection promise 'Black, Latino and Southeast Asian Sacramento designers' as authors. The partner list names no Black-led creative business, no Hmong, Filipino, Punjabi or other Asian-led organization, and no named printer, embroiderer, sign painter or custom painter. The only Black cue is St. HOPE, a school network. Sol Collective is the sole community-arts partner, and it is Latino-led. The credit-and-pay promise isn't tied to anyone who can say yes.",
+      "fix": "Name real partners before the capsule is pitched. Start with Oak Park and Del Paso Heights makers, Black-owned print or apparel shops, a Hmong and a Filipino design collective, and the Franklin Boulevard car-club or painter community. Run the paid listening phase first. Make the authors a condition of the design, not a hangtag afterthought."
     },
     {
       "target": "opportunities[hometown-hoopers] / partners[St. HOPE Public Schools] / topInsights[0]",
       "type": "other",
       "severity": "high",
-      "problem": "The brief makes Kevin Johnson and the St. HOPE lineage the hero of the 2013 save and the anchor of the youth program, with no mention that Johnson's tenure and St. HOPE have drawn serious public controversy over misconduct allegations. A heritage celebration that credits him by name is a brand-safety risk for Nike and could alienate locals who see the save as the fans' win.",
-      "fix": "Credit the save to the fans, the Think Big Sacramento effort and the community, and vet any use of Johnson's name and any St. HOPE funding relationship with Nike legal and communications before it appears in a pitch. Offer Sacramento High, Hiram Johnson and Grant Union directly, and add Oak Park's other youth basketball programs, so the program does not depend on one institution or person."
+      "problem": "The brief makes Kevin Johnson and the St. HOPE lineage the heroes of the 2013 save and the anchor of the youth program. It never mentions that Johnson's tenure and St. HOPE have drawn serious public controversy over misconduct allegations. Crediting him by name in a heritage celebration is a brand-safety risk for Nike. It could also alienate locals who see the save as the fans' win.",
+      "fix": "Credit the save to the fans, the Think Big Sacramento effort and the community. Vet any use of Johnson's name, and any St. HOPE funding relationship, with Nike legal and communications before it appears in a pitch. Offer Sacramento High, Hiram Johnson and Grant Union directly, and add Oak Park's other youth basketball programs, so the program doesn't hinge on one institution or person."
     },
     {
       "target": "topInsights[1] / collection.themes[Bridge Gold] / uniform.palette",
       "type": "inaccurate",
       "severity": "medium",
-      "problem": "The brief says the gold must be 'warm, bronzed, not yellow' so it will not read as Lakers, but the hex it specifies (#C9A227, hue about 46 degrees) is yellower than Lakers gold (#FDB927, hue about 41 degrees). It is darker, not more bronze. Gold is also the local colour of the A's now playing across the river and of the 49ers that much of the Valley follows, so the Lakers are not the only collision.",
-      "fix": "Test a genuinely bronzed value around #B5832F, or accept the real bridge colour and win the distinction through matte finish, metallic embroidery or foil and a dark slate ground rather than bright flat gold. Keep gold under about 15 percent of any surface and have diehards and Warriors-and-Lakers-night crowds sign off in a colour test."
+      "problem": "The brief says the gold must be 'warm, bronzed, not yellow' so it won't read as Lakers. But its hex (#C9A227, hue about 46 degrees) is yellower than Lakers gold (#FDB927, hue about 41 degrees). It is darker, not more bronze. Gold is also the local color of the A's, now playing across the river, and of the 49ers that much of the Valley follows. The Lakers aren't the only collision.",
+      "fix": "Test a bronzed value around #B5832F. Or accept the real bridge color and win the distinction with a matte finish, metallic embroidery or foil, and a dark slate ground instead of bright flat gold. Keep gold under about 15 percent of any surface, and have diehards and Warriors-and-Lakers-night crowds sign off in a color test."
     },
     {
       "target": "uniform (Here We Stay) / calendar[month 9]",
       "type": "timing",
       "severity": "high",
-      "problem": "A 2027-28 City Edition is a design that, on the league's usual cycle, is mostly locked well before September 2027. Presenting a full concept now is plausible; teasing it through a September 2027 Bridge Gold capsule is not, because City Edition concepts are embargoed by the league and team until the reveal. The brief also never says what the 2026-27 City Edition is or when it launches, even though fans will buy it this holiday season.",
-      "fix": "Confirm the 2026-27 City Edition and plan its launch moment and product first. Treat the 2027-28 concept as a Portland-internal pitch with a go/no-go date, and replace the public 'tease' with a collection that stands alone and carries no uniform hints."
+      "problem": "On the league's usual cycle, a 2027-28 City Edition is mostly locked well before September 2027. Presenting a full concept now is plausible. Teasing it through a September 2027 Bridge Gold capsule is not, because the league and team embargo City Edition concepts until the reveal. The brief also never says what the 2026-27 City Edition is or when it launches, though fans will buy it this holiday season.",
+      "fix": "Confirm the 2026-27 City Edition and plan its launch and product first. Treat the 2027-28 concept as a Portland-internal pitch with a go/no-go date. Replace the public 'tease' with a standalone collection that carries no uniform hints."
     },
     {
       "target": "uniform (Here We Stay)",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "'The lift span rises and comes back down but never leaves' and 'Here We Stay' are an unmistakable answer to Seattle even without the word. The brief says the story must never be a swipe, then builds the entire set on that subtext. If Seattle expansion talk is live in the league, the league and team may not clear it, and Seattle fans will notice. The phrase may also be third-party or team IP already used on past rally merchandise.",
-      "fix": "Keep the story about Sacramento's own staying, and test the neck-tape line and the '2013' jock tag with the team and league early. Lead the pitch with 'The Beam' alternate, which has no clearance or tone risk, and let 'Here We Stay' be the optional story layer."
+      "problem": "'The lift span rises and comes back down but never leaves' and 'Here We Stay' are an unmistakable answer to Seattle, even without the word. The brief says the story must never be a swipe, then builds the whole set on that subtext. If Seattle expansion talk is live in the league, the league and team may not clear it, and Seattle fans will notice. The phrase may also be third-party or team IP already used on past rally merchandise.",
+      "fix": "Keep the story about Sacramento's own staying. Test the neck-tape line and the '2013' jock tag with the team and league early. Lead the pitch with 'The Beam' alternate, which carries no clearance or tone risk, and make 'Here We Stay' the optional story layer."
     },
     {
       "target": "collection.themes[Sactown Sound] / opportunities[sactown-sound-makers]",
       "type": "appropriation",
       "severity": "medium",
-      "problem": "Printing Oak Park, Del Paso, South Sac and Elk Grove as 'tour dates' on a washed-black tee, and a candy-paint warm-up jacket built from Franklin Boulevard lowrider linework, turns Black and Chicano neighbourhood and car-club culture into an aesthetic sold in Roseville. 'Mozzy-era' and 'Del Paso' in particular carry street connotations that a mall shopper may read as a costume. The brief's list of what is off-limits does not cover car-club identities.",
-      "fix": "Make the neighbourhood-name pieces a community-door product first, with a revenue share and named designers. Ask car clubs and painters for consent and pay, no club names or plaques without permission, and keep Mozzy and any artist's name out of marketing unless he chooses to take part."
+      "problem": "Printing Oak Park, Del Paso, South Sac and Elk Grove as 'tour dates' on a washed-black tee, and building a candy-paint warm-up jacket from Franklin Boulevard lowrider linework, turns Black and Chicano neighborhood and car-club culture into an aesthetic sold in Roseville. 'Mozzy-era' and 'Del Paso' carry street connotations a mall shopper may read as costume. The brief's off-limits list doesn't cover car-club identities.",
+      "fix": "Make the neighborhood-name pieces a community-door product first, with a revenue share and named designers. Ask car clubs and painters for consent and pay. Use no club names or plaques without permission, and keep Mozzy and any artist's name out of marketing unless he chooses to take part."
     },
     {
       "target": "opportunities[specter-greatest-show] / topInsights[4]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The second priority-1 opportunity pairs the Specter set with 'early-2000s numerals' and 1994-2008 proportions, but the brief admits it does not know the Specter design, whether the set references the 2002 era, or when it will be worn. The Specter collection has been on sale since Sept 9, so the plan is built on a product it has not seen.",
-      "fix": "Read the actual Specter Kings pieces and wear dates first, then build the heritage layer only where the design leaves room. If the Specter set is not 2002-coded, say so and let the heritage tee carry the story alone."
+      "problem": "The second priority-1 opportunity pairs the Specter set with 'early-2000s numerals' and 1994-2008 proportions. But the brief admits it doesn't know the Specter design, whether the set nods to the 2002 era, or when it will be worn. The Specter collection has been on sale since Sept 9, so the plan rests on a product nobody has seen.",
+      "fix": "Read the actual Specter Kings pieces and wear dates first. Build the heritage layer only where the design leaves room. If the Specter set isn't 2002-coded, say so and let the heritage tee carry the story alone."
     },
     {
       "target": "topInsights[4] / uniform.avoid",
       "type": "missed-opportunity",
       "severity": "low",
-      "problem": "The brief blanket-bans the 2002 Lakers series and any 'Cowtown or cow wink'. The ban on officiating grievances is right for NBA clearance, but it ignores how fans carry the 2002 loss and the Arco Arena cowbell and loudest-building lore as in-group pride. Sacramentans reclaim 'Cowtown' themselves, so a flat ban can read as outsiders being careful.",
-      "fix": "Keep the product clear of referee accusations, but allow a local-voice nod, such as the Arco-era wordmark and the loud-building story, via a licensed Arco-era heritage piece. Verify the cowbell tradition with a local fan panel before drawing anything."
+      "problem": "The brief bans the 2002 Lakers series and any 'Cowtown or cow wink' across the board. Banning officiating grievances is right for NBA clearance. But the ban ignores how fans carry the 2002 loss, the Arco Arena cowbell and the loudest-building lore as in-group pride. Sacramentans reclaim 'Cowtown' themselves, so a flat ban can read as outsiders being careful.",
+      "fix": "Keep the product clear of referee accusations, but allow a local-voice nod, such as the Arco-era wordmark and the loud-building story, through a licensed Arco-era heritage piece. Verify the cowbell tradition with a local fan panel before drawing anything."
     },
     {
       "target": "thesis / topInsights / partners (communities)",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The thesis names a 'Hmong, Latino, Black and Punjabi South Sac and Elk Grove fan base' but the plan reduces Hmong New Year to listening sessions and 'existing Kings tees', and the Punjabi and broader South Asian community, owner Vivek Ranadive's own heritage, Filipino, Slavic and Pacific Islander families get nothing. Sabonis's Lithuanian diaspora appears in the fanbase dossier and is ignored.",
-      "fix": "Give each named community one concrete, community-led move with a named partner and a calendar date, such as youth-hoops days in Elk Grove tied to the Sikh and Punjabi community calendar, a Hmong New Year family night with community-chosen design, and a Lithuanian-heritage Sabonis moment only if the community asks."
+      "problem": "The thesis names a 'Hmong, Latino, Black and Punjabi South Sac and Elk Grove fan base'. The plan reduces Hmong New Year to listening sessions and 'existing Kings tees'. The Punjabi and broader South Asian community (owner Vivek Ranadive's own heritage) and Filipino, Slavic and Pacific Islander families get nothing. Sabonis's Lithuanian diaspora appears in the fanbase dossier and is ignored.",
+      "fix": "Give each named community one concrete, community-led move with a named partner and a calendar date. For example: youth-hoops days in Elk Grove tied to the Sikh and Punjabi community calendar, a Hmong New Year family night with a community-chosen design, and a Lithuanian-heritage Sabonis moment only if the community asks."
     },
     {
       "target": "opportunities[hometown-hoopers] / calendar[month 3]",
       "type": "weak-link",
       "severity": "low",
-      "problem": "The Monarchs lane relies on the legends' participation and a mark whose ownership is unverified, and the women's pro-basketball fan in Northern California now has the Bay Area's Valkyries. A March 'Monarchs tee' plus a camellia-pink accent risks reading as 'pink it and shrink it' for women's fans.",
-      "fix": "Start with the people: ask Yolanda Griffith and Ticha Penicheiro what they would want to make before any product exists. Drop the camellia-pink accent unless a Camellia Festival partner asks for it, and size the lane as a small 2027 pilot."
+      "problem": "The Monarchs lane leans on the legends' participation and on a mark whose ownership is unverified. The Bay Area's Valkyries now give Northern California's women's pro-basketball fans a team. A March 'Monarchs tee' with a camellia-pink accent risks reading as 'pink it and shrink it'.",
+      "fix": "Start with the people: ask Yolanda Griffith and Ticha Penicheiro what they'd want to make before any product exists. Drop the camellia-pink accent unless a Camellia Festival partner asks for it. Size the lane as a small 2027 pilot."
     },
     {
       "target": "opportunities[bridge-gold-long-table] / collection.themes[Bridge Gold]",
       "type": "generic",
       "severity": "low",
-      "problem": "A harvest-colorway basketball shoe, a bucket hat, 'Long Table' gold-on-purple tee and a food-bank donation could belong to any farm-adjacent city's Farm-to-Fork brand; the Sacramento-specific part is only the lift span. The shoe would also need a 2027 release decision that should already be made, and the chef co-sign is one named restaurateur.",
-      "fix": "Tie each piece to a Sacramento-only detail, such as the Tower Bridge lift-span geometry, the tomato-cannery heritage or the Delta levee towns, and cut the shoe unless footwear confirms a 2027 slot. Pair the chef with at least one grower or farmworker-led organization."
+      "problem": "A harvest-colorway basketball shoe, a bucket hat, a 'Long Table' gold-on-purple tee and a food-bank donation could belong to any farm-adjacent city's Farm-to-Fork brand. Only the lift span is Sacramento-specific. The shoe also needs a 2027 release decision that should already be made, and the chef co-sign is a single named restaurateur.",
+      "fix": "Tie each piece to a Sacramento-only detail, such as the Tower Bridge lift-span geometry, the tomato-cannery heritage or the Delta levee towns. Cut the shoe unless footwear confirms a 2027 slot. Pair the chef with at least one grower or farmworker-led organization."
     },
     {
       "target": "opportunities[lottery-hope-capsule] / opportunities[valley-gift-ladder]",
       "type": "generic",
       "severity": "low",
-      "problem": "'Lottery-night tee', 'draft-pick number tee' and a 'good-better-best holiday ladder with a 916 beanie' are standard rebuilding-team plays and would survive swapping Sacramento for Utah or Charlotte. The lottery capsule's one local hook, the lost tiebreak with Utah, is not used.",
-      "fix": "Give the lottery capsule a Sacramento line only locals get, drawn from the lost tiebreak and the 'going to be bad' forecasts fans quote back, in the fans' own voice and without mocking the team. Make the gift ladder's top tier a locally made piece, not another hoodie."
+      "problem": "'Lottery-night tee', 'draft-pick number tee' and a 'good-better-best holiday ladder with a 916 beanie' are standard rebuilding-team plays. They'd survive swapping Sacramento for Utah or Charlotte. The lottery capsule's one local hook, the lost tiebreak with Utah, goes unused.",
+      "fix": "Give the lottery capsule a line only Sacramento locals get, drawn from the lost tiebreak and the 'going to be bad' forecasts fans quote back. Use the fans' own voice and don't mock the team. Make the gift ladder's top tier a locally made piece, not another hoodie."
     },
     {
       "target": "calendar[month 10] / scorecard",
       "type": "other",
       "severity": "low",
-      "problem": "The first calendar row advises placing orders 'now' for the Oct 7-19 window around an Oct 8 game that has already been played, and the opener and Cup home dates remain 'to confirm' in a plan priced as priority 1. The scorecard gives fandom 72 and culture 63 with little evidence on what a loss-heavy season does to attendance and Beam-night frequency.",
-      "fix": "Date every row from the confirmed schedule, mark which rows are live this month and which are 2027-28 planning, and add a downside scenario in which the Kings win fewer than 25 games."
+      "problem": "The first calendar row says to place orders 'now' for the Oct 7-19 window around an Oct 8 game that has already been played. The opener and Cup home dates are still 'to confirm' in a plan priced as priority 1. The scorecard gives fandom 72 and culture 63, with little evidence on what a loss-heavy season does to attendance and Beam-night frequency.",
+      "fix": "Date every row from the confirmed schedule. Mark which rows are live this month and which are 2027-28 planning. Add a downside scenario in which the Kings win fewer than 25 games."
     }
   ],
   "strengths": [
-    "The core read is specific and defensible: a fan base that saved its team treats purple as a civic flag, and the brief builds a rebuild-year strategy on belonging rather than contention.",
-    "It spots the Lakers-gold collision before designers do and pairs bridge gold with fog and slate, rather than putting gold in the hero position.",
-    "The Beam is correctly reduced to a graphic system (one vertical line), not a literal laser illustration, and the 'avoid' lists on the uniform are unusually sharp (no Seattle swipe, no mining kitsch, no lifted Panther, UFW or Hmong imagery).",
-    "The two-speed Valley price ladder and the Folsom, Vacaville, Roseville and DOCO retail roles are grounded in the retail dossiers and are the most actionable part of the plan.",
-    "Credit-and-pay language, licensing flags (Beam art, Tower Records, Deftones, Mozzy, Monarchs, Thiebaud) and the decision to pitch the City Edition for 2027-28 rather than rush this season show real feasibility discipline."
+    "The core read is specific and defensible. A fan base that saved its team treats purple as a civic flag, and the brief builds a rebuild-year strategy on belonging, not contention.",
+    "It spots the Lakers-gold collision before designers do, and pairs bridge gold with fog and slate instead of making gold the hero.",
+    "The Beam is correctly cut down to a graphic system (one vertical line), not a literal laser illustration. The uniform 'avoid' lists are unusually sharp: no Seattle swipe, no mining kitsch, no lifted Panther, UFW or Hmong imagery.",
+    "The two-speed Valley price ladder and the Folsom, Vacaville, Roseville and DOCO retail roles rest on the retail dossiers. They are the most actionable part of the plan.",
+    "Credit-and-pay language and licensing flags (Beam art, Tower Records, Deftones, Mozzy, Monarchs, Thiebaud) show real feasibility discipline. So does the choice to pitch the City Edition for 2027-28 instead of rushing this season."
   ],
-  "summary": "A strong, specific core thesis let down by calendar assumptions and thin follow-through: the plan treats Cup Fridays and Thanksgiving-week Cup nights as Kings home dates, relies on an unseen Specter design and an unconfirmed 2026-27 City Edition, and promises community authorship without naming a single Black, Hmong, Punjabi or Filipino partner. The Kevin Johnson and St. HOPE framing needs vetting before anyone presents it, the 'bronzed' gold is actually yellower than Lakers gold, and the Beam-night scheme should not depend on a bad team winning."
+  "summary": "The core thesis is strong and specific, but the calendar and follow-through are thin. The plan treats Cup Fridays and Thanksgiving-week Cup nights as Kings home dates. It leans on an unseen Specter design and an unconfirmed 2026-27 City Edition. It promises community authorship without naming a single Black, Hmong, Punjabi or Filipino partner. The Kevin Johnson and St. HOPE framing needs vetting before anyone presents it. The 'bronzed' gold is actually yellower than Lakers gold. And the Beam-night scheme shouldn't depend on a bad team winning."
 }

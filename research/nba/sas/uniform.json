@@ -1,129 +1,336 @@
 {
   "team": "sas",
   "lens": "uniform",
-  "headline": "The Spurs are a silver-and-black institution whose most loved color story is the 1989-2002 Fiesta stripe, which is why the 2025 Fiesta City Edition landed and why its return for 2026-27 is the market's live design conversation.",
-  "summary": "San Antonio's official palette is deliberately austere (black, silver, white), a look tied to the Duncan-Popovich dynasty and Wembanyama's arrival. The emotional counterweight is Fiesta: the teal, orange and fuchsia of the late 1980s-2002 era and the papel picado, cascarón and Fiesta medal culture it echoed. The Fiesta-stripe City Edition (black base, Fiesta-colored chest and shorts stripes) was unveiled in November 2025 and returns in 2026-27. Los Spurs and Noche Latina are the other proven bridge to Tejano, Chicano and Mexican fans. With the team coming off a 2026 Finals run, demand is at a peak and the open question is which untold local stories get told next.",
+  "headline": "The Fiesta stripe is back, and the next local story is still up for grabs",
+  "summary": "The official palette is deliberately austere: black, silver and white, the look of the Duncan-Popovich dynasty and now of Wembanyama. Fans' warmest memory is the Fiesta era, the teal, orange and fuchsia of the late 1980s to 2002. The Fiesta-stripe City Edition returns in 2026-27 on a Finals-run high. Which local story comes next is still open.",
   "insights": [
     {
-      "title": "Black and silver is identity, Fiesta is love",
-      "detail": "The core palette is near-monochrome and signals discipline, the Duncan-era brand. Fans' warmest nostalgia attaches to the multi-color Fiesta-stripe era, and a Fiesta-stripe City Edition brought that back.",
-      "implication": "Treat Fiesta color as an accent layer on black and silver bases, not a replacement. Stripes, trims and tonal prints beat full-color takeovers."
+      "title": "Silver and black is the identity, Fiesta the love",
+      "detail": "The core palette is near-monochrome and signals discipline, the Duncan-era brand. Fans' warmest nostalgia belongs to the multi-color Fiesta era, and a Fiesta-stripe City Edition brought it back.",
+      "implication": "Use Fiesta color as an accent layer on silver-and-black bases, not a replacement. Stripes, trims and tonal prints beat full-color takeovers."
     },
     {
       "title": "The Fiesta-stripe City Edition returns for 2026-27",
-      "detail": "Unveiled in November 2025 and repeating this season, it pairs a black base with Fiesta-colored chest and shorts stripes. Repeat City Editions after a Finals run are a built-in sell-through window.",
-      "implication": "Build the 2026-27 merch story around the returning jersey: warm-up, tees, shorts and kids product keyed to the stripe, with Fiesta-timed (April) drops."
+      "detail": "Unveiled in November 2025 and repeating this season, it pairs a black base with Fiesta-colored chest and shorts stripes. A repeat City Edition after a Finals run has a built-in sell-through window.",
+      "implication": "Build the 2026-27 merch story around the returning jersey: warm-up, tees, shorts and kids product keyed to the stripe. Time the drops to Fiesta in April."
     },
     {
       "title": "Los Spurs and Noche Latina are the community-proven lane",
-      "detail": "The team has long run Noche Latina and Los Spurs branding for Latino heritage nights, with a Spanish-language identity that predates the Nike era. It speaks to a Mexican-American majority city.",
-      "implication": "Make the heritage-night product co-created with San Antonio designers and Spanish-first copy, not a template translated in Portland."
+      "detail": "The team has long run Noche Latina and Los Spurs branding for Latino heritage nights. The Spanish-language identity predates the Nike era and suits a majority Mexican-American city.",
+      "implication": "Co-create heritage-night product with San Antonio designers, and write the copy in Spanish first. Don't translate a template made in Portland."
     },
     {
-      "title": "Wembanyama gives the black-and-silver look a global second audience",
-      "detail": "Wembanyama's French and international following, plus games scheduled in Paris and Manchester, make the classic palette travel. The Spurs also sit near the Mexican border with a large fanbase in Monterrey and northern Mexico.",
-      "implication": "Pair a clean Icon/Association story for global buyers with a Spanish-language South Texas and Mexico story for regional product."
+      "title": "Wembanyama gives silver and black a global second audience",
+      "detail": "Wembanyama's French and international following, plus games scheduled in Paris and Manchester, make the classic palette travel. The Spurs also sit near the Mexican border, with a large fanbase in Monterrey and northern Mexico.",
+      "implication": "Pair a clean Icon and Association story for global buyers with a Spanish-language South Texas and Mexico story for regional product."
     },
     {
       "title": "Military San Antonio is a recurring uniform platform",
-      "detail": "Military Appreciation nights are a fixture in a city with Joint Base San Antonio and a deep veteran community. Spurs military looks have been a staple tied to the Popovich-era ethos.",
-      "implication": "Offer a camo-free, tonal approach (silver/black with subtle texture) in partnership with veteran groups, and avoid commercializing service insignia."
+      "detail": "Military Appreciation nights are a fixture in a city with Joint Base San Antonio and a deep veteran community. Military looks have been a Spurs staple, tied to the Popovich-era ethos.",
+      "implication": "Go camo-free and tonal, in silver and black with subtle texture, in partnership with veteran groups. Don't commercialize service insignia."
     },
     {
       "title": "Local bootleg and print culture sets the street standard",
-      "detail": "San Antonio shirt culture favors Spurs-adjacent graphics (the 210 area code, Alamo City, Spurs skyline and Tejano-leaning typography) from local shops and screen printers. Fans reward authenticity and punish corporate gloss.",
-      "implication": "Collaborate with named local brands on limited drops rather than competing with their visual language."
+      "detail": "San Antonio shirt culture favors Spurs-adjacent graphics from local shops and screen printers: the 210 area code, Alamo City, the Spurs skyline and Tejano-leaning typography. Fans reward the real thing and punish corporate gloss.",
+      "implication": "Collaborate with named local brands on limited drops. Don't compete with their visual language."
     }
   ],
   "places": [
-    {"name": "Frost Bank Center", "kind": "arena", "neighborhood": "East Side", "why": "The current home arena, with a lease under negotiation as the team plans Project Marvel downtown."},
-    {"name": "The Alamo and Alamo Plaza", "kind": "landmark", "neighborhood": "Downtown", "why": "The state's most famous shrine and a frequent City Edition symbol; handle with care."},
-    {"name": "Market Square (El Mercado)", "kind": "market", "neighborhood": "West Side / Downtown", "why": "One of the largest Mexican markets in the US, a color and papel picado source and a Fiesta hub."},
-    {"name": "Pearl", "kind": "district", "neighborhood": "Pearl / Northtown", "why": "The old brewery turned dining and retail district, a natural pop-up site."},
-    {"name": "San Antonio River Walk", "kind": "district", "neighborhood": "Downtown", "why": "Fiesta River Parade and the city's postcard setting."},
-    {"name": "La Villita", "kind": "historic district", "neighborhood": "Downtown", "why": "A historic arts village that hosts Fiesta's A Night in Old San Antonio."}
+    {
+      "name": "Frost Bank Center",
+      "kind": "arena",
+      "neighborhood": "East Side",
+      "why": "The current home arena. The lease is under negotiation as the team plans Project Marvel downtown."
+    },
+    {
+      "name": "The Alamo and Alamo Plaza",
+      "kind": "landmark",
+      "neighborhood": "Downtown",
+      "why": "The state's most famous shrine and a frequent City Edition symbol. Handle with care."
+    },
+    {
+      "name": "Market Square (El Mercado)",
+      "kind": "market",
+      "neighborhood": "West Side / Downtown",
+      "why": "One of the largest Mexican markets in the US, a source of color and papel picado, and a Fiesta hub."
+    },
+    {
+      "name": "Pearl",
+      "kind": "district",
+      "neighborhood": "Pearl / Northtown",
+      "why": "The old brewery turned dining and retail district, and a natural pop-up site."
+    },
+    {
+      "name": "San Antonio River Walk",
+      "kind": "district",
+      "neighborhood": "Downtown",
+      "why": "Home of the Fiesta River Parade and the city's postcard setting."
+    },
+    {
+      "name": "La Villita",
+      "kind": "historic district",
+      "neighborhood": "Downtown",
+      "why": "A historic arts village that hosts Fiesta's A Night in Old San Antonio."
+    }
   ],
   "people": [
-    {"name": "Victor Wembanyama", "role": "Spurs center and franchise player", "why": "The face of the 2026 Finals team and of global demand for Spurs product."},
-    {"name": "De'Aaron Fox", "role": "Spurs guard", "why": "Extended through 2029-30; a lead player for local-facing campaigns."},
-    {"name": "Tim Duncan", "role": "Hall of Fame forward", "why": "The icon behind the silver-and-black identity."},
-    {"name": "Manu Ginobili", "role": "Hall of Fame guard", "why": "Beloved across Argentina and Latin America, central to the team's Latino connection."},
-    {"name": "Gregg Popovich", "role": "Hall of Fame coach, team president", "why": "The architect of the dynasty's culture."},
-    {"name": "Tony Parker", "role": "Hall of Fame guard", "why": "French star whose legacy links to Wembanyama's global audience."}
+    {
+      "name": "Victor Wembanyama",
+      "role": "Spurs center and franchise player",
+      "why": "The face of the 2026 Finals team and of global demand for Spurs product."
+    },
+    {
+      "name": "De'Aaron Fox",
+      "role": "Spurs guard",
+      "why": "Extended through 2029-30, and a lead player for local-facing campaigns."
+    },
+    {
+      "name": "Tim Duncan",
+      "role": "Hall of Fame forward",
+      "why": "The icon behind the silver-and-black identity."
+    },
+    {
+      "name": "Manu Ginobili",
+      "role": "Hall of Fame guard",
+      "why": "Beloved across Argentina and Latin America, and central to the team's Latino connection."
+    },
+    {
+      "name": "Gregg Popovich",
+      "role": "Hall of Fame coach, team president",
+      "why": "The architect of the dynasty's culture."
+    },
+    {
+      "name": "Tony Parker",
+      "role": "Hall of Fame guard",
+      "why": "A French star whose legacy links to Wembanyama's global audience."
+    }
   ],
   "moments": [
-    {"name": "Opening night vs OKC", "timing": "Oct 20", "month": 10, "why": "West finals rematch on NBC and the debut window for the City Edition and new season product."},
-    {"name": "Noche Latina / Los Spurs nights", "timing": "Typically during the regular season", "month": 0, "why": "The team's recurring Latino heritage platform."},
-    {"name": "Christmas Day at Knicks", "timing": "Dec 25", "month": 12, "why": "Finals rematch on national TV; a showcase for holiday product."},
-    {"name": "Knicks at San Antonio", "timing": "Mar 7", "month": 3, "why": "The Finals rematch at home."},
-    {"name": "Fiesta San Antonio", "timing": "April", "month": 4, "why": "The city's defining ten-day festival and the core color reference."},
-    {"name": "Playoffs", "timing": "April to June", "month": 4, "why": "Peak city-wide color: black-and-silver everywhere."}
+    {
+      "name": "Opening night vs OKC",
+      "timing": "Oct 20",
+      "month": 10,
+      "why": "A West finals rematch on NBC, and the debut window for the City Edition and new season product."
+    },
+    {
+      "name": "Noche Latina / Los Spurs nights",
+      "timing": "Typically during the regular season",
+      "month": 0,
+      "why": "The team's recurring Latino heritage platform."
+    },
+    {
+      "name": "Christmas Day at Knicks",
+      "timing": "Dec 25",
+      "month": 12,
+      "why": "A Finals rematch on national TV, and a showcase for holiday product."
+    },
+    {
+      "name": "Knicks at San Antonio",
+      "timing": "Mar 7",
+      "month": 3,
+      "why": "The Finals rematch at home."
+    },
+    {
+      "name": "Fiesta San Antonio",
+      "timing": "April",
+      "month": 4,
+      "why": "The city's defining ten-day festival and the core color reference."
+    },
+    {
+      "name": "Playoffs",
+      "timing": "April to June",
+      "month": 4,
+      "why": "Peak city-wide color, with black and silver everywhere."
+    }
   ],
   "vocabulary": [
-    {"term": "Go Spurs Go", "meaning": "The fan rallying cry, also the chant and brand across the market."},
-    {"term": "Spurs Nation", "meaning": "The team's own term for fans across South Texas."},
-    {"term": "210", "meaning": "The local area code, used as local pride shorthand."},
-    {"term": "Alamo City", "meaning": "A common nickname for San Antonio."},
-    {"term": "Fiesta", "meaning": "The April festival and its color palette."},
-    {"term": "Los Spurs", "meaning": "The Spanish-language identity for the team's heritage nights."},
-    {"term": "Tejano", "meaning": "Texas-Mexican culture and music, a design and heritage source."}
+    {
+      "term": "Go Spurs Go",
+      "meaning": "The fans' rallying cry, and a chant and brand across the market."
+    },
+    {
+      "term": "Spurs Nation",
+      "meaning": "The team's own term for fans across South Texas."
+    },
+    {
+      "term": "210",
+      "meaning": "The local area code, used as shorthand for local pride."
+    },
+    {
+      "term": "Alamo City",
+      "meaning": "A common nickname for San Antonio."
+    },
+    {
+      "term": "Fiesta",
+      "meaning": "The April festival and its color palette."
+    },
+    {
+      "term": "Los Spurs",
+      "meaning": "The Spanish-language identity for the team's heritage nights."
+    },
+    {
+      "term": "Tejano",
+      "meaning": "Texas-Mexican culture and music, and a source for design and heritage."
+    }
   ],
   "designCues": [
-    {"cue": "Fiesta stripe on black base: teal, orange, fuchsia accents", "type": "color", "hex": "#00A19C", "source": "1990s-2000s Spurs uniforms and Fiesta color culture", "use": "Use as stripes, trims and lining; keep the black base dominant."},
-    {"cue": "Fiesta orange accent", "type": "color", "hex": "#F58220", "source": "Fiesta-era Spurs color story", "use": "Secondary stripe and small-detail color."},
-    {"cue": "Fiesta fuchsia accent", "type": "color", "hex": "#E6007E", "source": "Fiesta-era Spurs color story and papel picado", "use": "Used sparingly for contrast on black."},
-    {"cue": "Spurs silver", "type": "color", "hex": "#C4CED4", "source": "Official team palette", "use": "Primary metallic and tonal base on Icon and Statement product."},
-    {"cue": "Papel picado cut-paper pattern", "type": "pattern", "hex": "", "source": "Market Square and Fiesta decor", "use": "Tonal jacquard or laser-cut panels; commission San Antonio paper artists."},
-    {"cue": "Spurs spur-and-star mark with the 'Spurs' script wordmark", "type": "graphic", "hex": "", "source": "Franchise logo heritage", "use": "Reserve for Classic Edition and heritage lines."},
-    {"cue": "Alamo-city skyline and mission arch silhouettes", "type": "motif", "hex": "", "source": "San Antonio missions and Tower of the Americas", "use": "Use as subtle graphics and avoid sacred church-interior imagery."}
+    {
+      "cue": "Fiesta stripe on black base: teal, orange, fuchsia accents",
+      "type": "color",
+      "hex": "#00A19C",
+      "source": "1990s-2000s Spurs uniforms and Fiesta color culture",
+      "use": "Use it as stripes, trims and lining. Keep the black base dominant."
+    },
+    {
+      "cue": "Fiesta orange accent",
+      "type": "color",
+      "hex": "#F58220",
+      "source": "The Fiesta-era Spurs color story",
+      "use": "A secondary stripe and small-detail color."
+    },
+    {
+      "cue": "Fiesta fuchsia accent",
+      "type": "color",
+      "hex": "#E6007E",
+      "source": "The Fiesta-era Spurs color story and papel picado",
+      "use": "Use sparingly, for contrast on black."
+    },
+    {
+      "cue": "Spurs silver",
+      "type": "color",
+      "hex": "#C4CED4",
+      "source": "Official team palette",
+      "use": "Primary metallic and tonal base on Icon and Statement product."
+    },
+    {
+      "cue": "Papel picado cut-paper pattern",
+      "type": "pattern",
+      "hex": "",
+      "source": "Market Square and Fiesta decor",
+      "use": "Tonal jacquard or laser-cut panels. Commission San Antonio paper artists."
+    },
+    {
+      "cue": "Spurs spur-and-star mark with the 'Spurs' script wordmark",
+      "type": "graphic",
+      "hex": "",
+      "source": "Franchise logo heritage",
+      "use": "Reserve for Classic Edition and heritage lines."
+    },
+    {
+      "cue": "Alamo-city skyline and mission arch silhouettes",
+      "type": "motif",
+      "hex": "",
+      "source": "San Antonio missions and Tower of the Americas",
+      "use": "Use as subtle graphics, and avoid sacred church-interior imagery."
+    }
   ],
   "productHooks": [
     "2026-27 Fiesta-stripe City Edition capsule: tees, shorts, warm-up and kids sizes keyed to the stripe.",
-    "Noche Latina / Los Spurs co-created heritage collection with named San Antonio designers.",
-    "Fiesta (April) drop with papel picado tonal jacquard pieces.",
-    "Wembanyama global capsule in clean black and silver for Paris and Manchester games.",
-    "Classic Edition throwback of the Fiesta-era uniform with modern fabric."
+    "Noche Latina / Los Spurs heritage collection, co-created with named San Antonio designers.",
+    "Fiesta (April) drop of papel picado tonal jacquard pieces.",
+    "Wembanyama global capsule in clean black and silver for the Paris and Manchester games.",
+    "Classic Edition throwback of the Fiesta-era uniform, in modern fabric."
   ],
   "watchouts": [
-    "Alamo and mission imagery: some are sacred or politically contested; avoid commercial exploitation of religious spaces.",
-    "Papel picado and Tejano/Chicano culture: credit and pay local artists; do not lift existing artwork.",
+    "Alamo and mission imagery is sacred or politically contested in places. Don't exploit religious spaces commercially.",
+    "Papel picado and Tejano/Chicano culture: credit and pay local artists, and never lift existing artwork.",
     "Military insignia and service branding require licensing and sensitivity.",
-    "Fiesta medals, the Fiesta name and other local marks may be licensed; check before use."
+    "Fiesta medals, the Fiesta name and other local marks may be licensed. Check before use."
   ],
   "sources": [
-    {"title": "San Antonio Spurs (Wikipedia)", "url": "https://en.wikipedia.org/wiki/San_Antonio_Spurs"},
-    {"title": "San Antonio Spurs official site", "url": "https://www.nba.com/spurs"},
-    {"title": "Spurs bring back fan favorite in new City Edition uniforms (Pounding The Rock)", "url": "https://www.poundingtherock.com/spurs-news/89350/spurs-bring-back-fan-favorite-in-new-city-edition-uniforms"},
-    {"title": "Fiesta San Antonio (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Fiesta_San_Antonio"}
+    {
+      "title": "San Antonio Spurs (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/San_Antonio_Spurs"
+    },
+    {
+      "title": "San Antonio Spurs official site",
+      "url": "https://www.nba.com/spurs"
+    },
+    {
+      "title": "Spurs bring back fan favorite in new City Edition uniforms (Pounding The Rock)",
+      "url": "https://www.poundingtherock.com/spurs-news/89350/spurs-bring-back-fan-favorite-in-new-city-edition-uniforms"
+    },
+    {
+      "title": "Fiesta San Antonio (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Fiesta_San_Antonio"
+    }
   ],
   "confidence": "low",
   "extra": {
     "palette": [
-      {"name": "Black", "hex": "#000000"},
-      {"name": "Silver", "hex": "#C4CED4"},
-      {"name": "White", "hex": "#FFFFFF"}
+      {
+        "name": "Black",
+        "hex": "#000000"
+      },
+      {
+        "name": "Silver",
+        "hex": "#C4CED4"
+      },
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
     ],
     "eras": [
-      {"era": "1973-1989", "look": "The move to San Antonio in 1973 and the ABA-to-NBA merger years, with the early red-white-blue lineage giving way to silver and black (exact switch year to verify).", "legacy": "Remembered as the pre-dynasty era with the iconic Gervin years."},
-      {"era": "1989-2002", "look": "Teal, orange and fuchsia Fiesta-stripe uniforms with desert-inspired colors.", "legacy": "A fan-beloved look associated with the David Robinson era."},
-      {"era": "2002-present", "look": "Return to black, silver and white with a cleaner modern look.", "legacy": "The dynasty-era identity of Duncan, Ginobili and Parker, and now Wembanyama."}
+      {
+        "era": "1973-1989",
+        "look": "The Spurs moved to San Antonio in 1973 and came through the ABA-to-NBA merger years. The early red-white-blue lineage gave way to silver and black (exact switch year to verify).",
+        "legacy": "Remembered as the pre-dynasty era of the Gervin years."
+      },
+      {
+        "era": "1989-2002",
+        "look": "Teal, orange and fuchsia Fiesta-stripe uniforms in desert-inspired colors.",
+        "legacy": "A fan-beloved look tied to the David Robinson era."
+      },
+      {
+        "era": "2002-present",
+        "look": "A return to black, silver and white, with a cleaner modern look.",
+        "legacy": "The dynasty-era identity of Duncan, Ginobili and Parker, and now Wembanyama."
+      }
     ],
     "cityEditions": [
-      {"season": "2026-27", "concept": "Fiesta-stripe City Edition returns: black base with Fiesta-colored chest and shorts stripes.", "reception": "liked", "note": "Repeat after a strong response and a Finals run; verify the final reception."},
-      {"season": "2025-26", "concept": "Fiesta-stripe City Edition unveiled in November 2025, a bring-back of the fan-favorite Fiesta stripes on black.", "reception": "loved", "note": "Framed by local outlets as a fan-favorite return."},
-      {"season": "Earlier seasons", "concept": "Earlier City Editions, including Los Spurs/Noche Latina nods, not verified individually here.", "reception": "unknown", "note": "A live archive check is needed for each season's concept and reception."}
+      {
+        "season": "2026-27",
+        "concept": "The Fiesta-stripe City Edition returns: a black base with Fiesta-colored chest and shorts stripes.",
+        "reception": "liked",
+        "note": "A repeat after a strong response and a Finals run. Verify the final reception."
+      },
+      {
+        "season": "2025-26",
+        "concept": "The Fiesta-stripe City Edition, unveiled in November 2025, brought back the fan-favorite Fiesta stripes on black.",
+        "reception": "loved",
+        "note": "Local outlets framed it as a fan-favorite return."
+      },
+      {
+        "season": "Earlier seasons",
+        "concept": "Earlier City Editions, including Los Spurs/Noche Latina nods. They are not verified individually here.",
+        "reception": "unknown",
+        "note": "Each season's concept and reception needs a live archive check."
+      }
     ],
     "fanFavorites": [
-      "The 1990s Fiesta-stripe teal, orange and fuchsia throwbacks.",
+      "The 1990s Fiesta-stripe throwbacks in teal, orange and fuchsia.",
       "The silver-and-black Duncan-era Icon and Association looks.",
       "Los Spurs / Noche Latina jerseys.",
       "George Gervin-era retro looks."
     ],
     "untoldStories": [
-      {"story": "The Missions World Heritage story (Mission San Antonio de Valero and four other missions) told through architectural line work.", "why": "The missions are a UNESCO site and a deeper local story than the Alamo alone."},
-      {"story": "A Tejano music and conjunto heritage uniform co-designed with local musicians.", "why": "Tejano and conjunto are the city's sonic identity and rarely honored on a jersey."},
-      {"story": "West Side and Southtown neighborhood stories, including hand-painted shop signs and mural traditions.", "why": "Neighborhood-level pride beyond the tourist core would feel authentic."},
-      {"story": "A Hemisfair and 1968 World's Fair story with Tower of the Americas.", "why": "A distinctive modernist graphic language unique to San Antonio."}
+      {
+        "story": "The Missions World Heritage story (Mission San Antonio de Valero and four other missions), told through architectural line work.",
+        "why": "The missions are a UNESCO site and a deeper local story than the Alamo alone."
+      },
+      {
+        "story": "A Tejano music and conjunto heritage uniform, co-designed with local musicians.",
+        "why": "Tejano and conjunto are the city's sound, and rarely honored on a jersey."
+      },
+      {
+        "story": "West Side and Southtown neighborhood stories, including hand-painted shop signs and mural traditions.",
+        "why": "Neighborhood pride beyond the tourist core would ring true."
+      },
+      {
+        "story": "A Hemisfair and 1968 World's Fair story, with Tower of the Americas.",
+        "why": "A distinctive modernist graphic language that belongs to San Antonio alone."
+      }
     ]
   },
   "provenance": {
@@ -134,7 +341,7 @@
       "The history, concepts and reception of each earlier City Edition (not individually verified here).",
       "Hex values for the Fiesta-era teal, orange and fuchsia are approximations, not official.",
       "Official palette hex codes (silver #C4CED4) against the team style guide.",
-      "Whether Noche Latina / Los Spurs jerseys are still produced and their current schedule.",
+      "Whether Noche Latina / Los Spurs jerseys are still produced, and their current schedule.",
       "Details of 1989-2002 era uniforms and early 1970s-80s looks.",
       "Whether Military Appreciation uniforms and nights continue in 2026-27.",
       "Local brands and bootleg creators active in 2026-27 (none named here)."

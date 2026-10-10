@@ -1,64 +1,103 @@
 {
   "team": "phx",
-  "headline": "All-Star comes home: design Phoenix from the ground (neon, the Avenues-and-Streets grid, Los Suns), not another sunset.",
-  "thesis": "Suns fandom is a heartbreak-forged, transplant-heavy federation that places itself by side of the Valley and wears the team sun-faded, with a large, youth-heavy Latino base (roughly 4 in 10 Phoenix residents and far more in Maryvale and South Phoenix) that the official assortment barely speaks to. Purple-and-orange is a rare owned pairing, but Suns branding keeps reaching for the sunset gradient any desert city could claim. Nike wins by moving the story to street level: Van Buren neon, the Avenues-west, Streets-east mile grid, Los Suns, Eastlake Park and the night courts, each built with credited, paid Valley makers. This season that means a small, honest All-Star Weekend (Feb 19-21, 2027) activation that can clear licensing in time, Los Suns relaunched at Noche Latina, and Booker-led volume, while the neon concept is pitched as the 2027-28 City Edition.",
+  "headline": "All-Star comes home. Design Phoenix from the street up, not from another sunset.",
+  "thesis": "Suns fans are a federation of transplants, forged by heartbreak. They introduce themselves by side of the Valley and wear the team sun-faded. Roughly 4 in 10 Phoenix residents are Latino, far more in Maryvale and South Phoenix, and it's a young base the official assortment barely serves. Purple and orange is a rare pairing the Suns own, yet their branding keeps reaching for a sunset any desert city could claim. Take the story down to street level, with credited, paid Valley makers: Van Buren neon, the mile grid (Avenues west, Streets east), Los Suns, Eastlake Park and the night courts. This season, that means a small, honest All-Star Weekend (Feb 19-21, 2027) that can clear licensing in time, then Los Suns relaunched at Noche Latina, with Booker carrying the volume. Pitch the neon idea as the 2027-28 City Edition.",
   "archetype": {
     "name": "The Sun-Faded Faithful",
-    "description": "A Valley of transplants and barrio families who adopted a team that has never won a title, and show it in thrifted, UV-bleached purple and orange rather than banners. Pride is in having stayed through 1976, 1993 and 2021, and in surviving the heat."
+    "description": "A Valley of transplants and barrio families who adopted a team that has never won a title. They show it in thrifted, UV-bleached purple and orange, not banners. The pride is in having stayed through 1976, 1993 and 2021, and in surviving the heat."
   },
   "pulse": {
-    "teamMoment": "The Booker-Jalen Green Suns re-signed Brooks, Gillespie, Mark Williams and Goodwin and added Miles Bridges, Luke Kennard and Koa Peat under Jordan Ott after a 45-37 year that ended in a 4-0 sweep by OKC; a 40.5 win total puts them on the play-in bubble.",
-    "sentiment": "Guarded and pragmatic: tired after the superteam collapse, glad the club kept its own, loyal to Booker, and more excited about hosting All-Star than about the standings.",
+    "teamMoment": "The Suns went 45-37 last year and were swept 4-0 by OKC. Since then the Booker-Jalen Green team has re-signed Brooks, Gillespie, Mark Williams and Goodwin, and added Miles Bridges, Luke Kennard and Koa Peat under Jordan Ott. A 40.5 win total puts them on the play-in bubble.",
+    "sentiment": "Guarded and pragmatic. Fans are tired after the superteam collapse, glad the club kept its own and loyal to Booker. Hosting All-Star excites them more than the standings.",
     "heat": 58
   },
   "topInsights": [
     {
       "title": "All-Star lands at the end of the Valley's biggest month",
-      "insight": "The first Phoenix All-Star since 2009 (Feb 19-21) follows straight after the early-February WM Phoenix Open in Scottsdale, as snowbirds peak and Cactus League camps open. Visitors buy souvenirs and locals buy identity, and Roosevelt Row's scene is already watching who shows up with local artists versus who parachutes in.",
-      "evidence": ["rhythm", "retail-behavior", "underground", "art", "retail-landscape"],
-      "implication": "With four months to go, run what can actually clear: an artist mural and no-marks screenprint pop-up for locals, existing licensed Suns and All-Star product for visitors, and start the licensing talks now for a bigger 2027-28 artist capsule.",
+      "insight": "Phoenix hosts its first All-Star since 2009 (Feb 19-21), straight after the early-February WM Phoenix Open in Scottsdale. Snowbirds are peaking and Cactus League camps are opening. Visitors buy souvenirs, locals buy identity, and Roosevelt Row is watching who shows up with local artists and who parachutes in.",
+      "evidence": [
+        "rhythm",
+        "retail-behavior",
+        "underground",
+        "art",
+        "retail-landscape"
+      ],
+      "implication": "With four months to go, run what can actually clear. For locals, an artist mural and a no-marks screenprint pop-up. For visitors, existing licensed Suns and All-Star product. Start licensing talks now for a bigger 2027-28 artist capsule.",
       "confidence": "medium"
     },
     {
       "title": "Los Suns is the one jersey story no other city can tell",
-      "insight": "The Los Suns jersey, first worn May 5, 2010 against San Antonio as the club's stand against SB 1070 and carried on through Noche Latina, is the franchise's most emotionally loaded uniform. The Valley's Mexican American families and Gen Z buy Booker jerseys and have little product made for them.",
-      "evidence": ["culture", "fanbase", "uniform", "retail-behavior", "music"],
-      "implication": "Relaunch Los Suns as a bilingual, artist-led line at this season's Noche Latina, with a second drop for Sept 15-16, 2027; tell the 2010 story as community pride, not political messaging.",
+      "insight": "Los Suns is the franchise's most emotionally loaded uniform. It was first worn May 5, 2010 against San Antonio as the club's stand against SB 1070, and it lives on through Noche Latina. The Valley's Mexican American families and Gen Z buy Booker jerseys, but little is made for them.",
+      "evidence": [
+        "culture",
+        "fanbase",
+        "uniform",
+        "retail-behavior",
+        "music"
+      ],
+      "implication": "Relaunch Los Suns as a bilingual, artist-led line at this season's Noche Latina, with a second drop for Sept 15-16, 2027. Tell the 2010 story as community pride, not political messaging.",
       "confidence": "medium"
     },
     {
       "title": "Move from the sky to the ground",
-      "insight": "Every lens reaches for the purple-to-orange sunset, and Suns branding has leaned on it and the word 'Valley' for years. The Phoenix-only visual language sits at street level: Van Buren motel neon, hand-painted taqueria and drive-thru menus, the canal network, and a mile grid where numbered Avenues run west of Central and numbered Streets run east.",
-      "evidence": ["uniform", "art", "underground", "food", "hoops"],
-      "implication": "Retire the gradient as the hero graphic; use hard purple-orange color breaks, original neon tube script and canal-and-grid line work, each drawn by a credited local letterer or sign painter.",
+      "insight": "Every lens reaches for the purple-to-orange sunset, and Suns branding has leaned on it and the word 'Valley' for years. The look only Phoenix has is at street level. Think Van Buren motel neon, hand-painted taqueria and drive-thru menus, the canals, and a mile grid with numbered Avenues west of Central and numbered Streets east.",
+      "evidence": [
+        "uniform",
+        "art",
+        "underground",
+        "food",
+        "hoops"
+      ],
+      "implication": "Retire the gradient as the hero graphic. Use hard purple-orange color breaks, original neon tube script and canal-and-grid line work, each drawn by a credited local letterer or sign painter.",
       "confidence": "medium"
     },
     {
       "title": "Faded is native, pristine reads tourist",
-      "insight": "Suns gear on the street is thrifted and UV-bleached, and the 1968 sunburst and 1993 Barkley-era pieces are a real collecting category in the Melrose District (7th Avenue) vintage strip. Saturated, factory-fresh purple is what a visitor buys at Sky Harbor.",
-      "evidence": ["underground", "retail-landscape", "fanbase", "uniform"],
-      "implication": "Merchandise existing heritage stock through vintage-leaning doors this fall, and develop a garment-dyed Sun-Faded capsule for fall 2027 once the team and NBA approve the faded palette.",
+      "insight": "On the street, Suns gear is thrifted and UV-bleached. The 1968 sunburst and 1993 Barkley-era pieces are a real collecting category in the Melrose District (7th Avenue) vintage strip. Saturated, factory-fresh purple is what a visitor buys at Sky Harbor.",
+      "evidence": [
+        "underground",
+        "retail-landscape",
+        "fanbase",
+        "uniform"
+      ],
+      "implication": "This fall, put existing heritage stock in vintage-leaning doors. For fall 2027, develop a garment-dyed Sun-Faded capsule once the team and NBA approve the faded palette.",
       "confidence": "medium"
     },
     {
       "title": "An inverted calendar: the season is the good weather",
-      "insight": "The NBA season runs exactly through the Valley's outdoor months, schools open in late July in 110-degree heat, and summer hoops moves to dawn and night courts while shopping moves indoors and online. Heat is both a badge of survival and a spec sheet.",
-      "evidence": ["rhythm", "retail-behavior", "hoops", "culture"],
-      "implication": "Ship kids and Booker back-to-school product by early July, keep fleece to November-March, and make UPF, mesh and reflective product the Valley's summer performance story.",
+      "insight": "The NBA season runs exactly through the Valley's outdoor months. Schools open in late July in 110-degree heat. In summer, hoops moves to dawn and night courts, and shopping moves indoors and online. Heat is a badge of survival and a spec sheet.",
+      "evidence": [
+        "rhythm",
+        "retail-behavior",
+        "hoops",
+        "culture"
+      ],
+      "implication": "Ship kids and Booker back-to-school product by early July. Keep fleece to November-March. Make UPF, mesh and reflective product the Valley's summer performance story.",
       "confidence": "high"
     },
     {
       "title": "A federation with communities the Suns rarely reach",
-      "insight": "Fans introduce themselves by side of the Valley, retail volume lives in mall hubs from Desert Sky to Arizona Mills to Chandler, the Vietnamese and broader Asian community centers on Mekong Plaza in Mesa and the Dobson Road corridor, and Black Phoenix history runs through Eastlake Park, the city's long-time Juneteenth gathering place.",
-      "evidence": ["culture", "hoops", "retail-landscape", "food", "fanbase"],
-      "implication": "Plan hub-and-spoke: door-specific product keyed to the grid and its neighborhoods, East Valley watch parties at Mekong Plaza, and a credited, paid Eastlake Park court partnership rather than a single downtown takeover.",
+      "insight": "Fans introduce themselves by side of the Valley. Retail volume lives in mall hubs from Desert Sky to Arizona Mills to Chandler. The Vietnamese and wider Asian community centers on Mekong Plaza in Mesa and the Dobson Road corridor. Black Phoenix history runs through Eastlake Park, the city's long-time Juneteenth gathering place.",
+      "evidence": [
+        "culture",
+        "hoops",
+        "retail-landscape",
+        "food",
+        "fanbase"
+      ],
+      "implication": "Plan hub-and-spoke, not one downtown takeover. Tie door-specific product to the grid and its neighborhoods, host East Valley watch parties at Mekong Plaza, and build a credited, paid court partnership at Eastlake Park.",
       "confidence": "medium"
     },
     {
-      "title": "Booker carries the volume; the Mercury carry the women's game",
-      "insight": "With a 40.5 win total and no opening-night or Christmas slot, Suns jersey demand concentrates on Booker, and casual fans buy tees and hats at Dick's, Fanatics and the team store. The Mercury and the Valley Suns G League team share the same ownership and market, and the Mercury's women's-hoops and LGBTQ+-ally fanbase is a separate, loyal flag.",
-      "evidence": ["fanbase", "retail-behavior", "rhythm", "hoops"],
-      "implication": "Make Booker the evergreen anchor in good-better-best tiers, keep play-in product reactive, and give the Mercury their own product at All-Star and their May tip-off instead of Suns hand-me-downs.",
+      "title": "Booker carries the volume, and the Mercury fly their own flag",
+      "insight": "With a 40.5 win total and no opening-night or Christmas slot, Suns jersey demand runs through Booker. Casual fans buy tees and hats at Dick's, Fanatics and the team store. The Mercury and the Valley Suns G League team share the same ownership and market. The Mercury's fans, women's-hoops loyalists and LGBTQ+ allies, fly a separate, loyal flag.",
+      "evidence": [
+        "fanbase",
+        "retail-behavior",
+        "rhythm",
+        "hoops"
+      ],
+      "implication": "Make Booker the evergreen anchor in good-better-best tiers, and keep play-in product reactive. Give the Mercury their own product at All-Star and their May tip-off, not Suns hand-me-downs.",
       "confidence": "medium"
     }
   ],
@@ -66,12 +105,25 @@
     {
       "id": "all-star-made-on-roosevelt",
       "title": "Made on Roosevelt: the locals-first All-Star pop-up",
-      "summary": "A small-run All-Star Weekend activation that fits a four-month clock: an original mural by a named Valley artist plus a screenprint pop-up with no NBA marks, alongside existing licensed Suns and All-Star product with artist-designed hangtags and patches.",
-      "where": ["Roosevelt Row (Roosevelt St, Central to 7th St)", "Mortgage Matchup Center team store", "Melrose District (7th Avenue) vintage doors", "Nike App (Arizona members)"],
-      "when": "Sign the artist and open NBA and Suns licensing talks in Oct-Nov 2026; Arizona-member pre-sale the week after the WM Phoenix Open; mural unveil and pop-up Fri Feb 19 through All-Star Sunday Feb 21, 2027.",
-      "months": [10, 11, 2],
-      "how": "Commission Lalo Cota or Joe Pagac for a wall and the pop-up art with hangtag credit and a revenue share, working with Artlink and the property owner on the site; new screenprints carry the artist's Phoenix art, not league marks, and anything with Suns or All-Star marks uses existing approved blanks. Use the same talks to scope a full artist capsule for 2027-28.",
-      "products": ["Artist screenprint tee and poster (no NBA marks)", "Existing Suns heavyweight tee and hoodie with artist patch and hangtag", "Booker All-Star-week colorway (only if already in Nike's plan)"],
+      "summary": "A small-run All-Star Weekend pop-up built for a four-month clock. A named Valley artist paints an original mural and designs screenprints with no NBA marks. Existing licensed Suns and All-Star product sells alongside, with artist-designed hangtags and patches.",
+      "where": [
+        "Roosevelt Row (Roosevelt St, Central to 7th St)",
+        "Mortgage Matchup Center team store",
+        "Melrose District (7th Avenue) vintage doors",
+        "Nike App (Arizona members)"
+      ],
+      "when": "Sign the artist and open NBA and Suns licensing talks in Oct-Nov 2026. Open the Arizona-member pre-sale the week after the WM Phoenix Open. Unveil the mural and run the pop-up from Fri Feb 19 through All-Star Sunday, Feb 21, 2027.",
+      "months": [
+        10,
+        11,
+        2
+      ],
+      "how": "Commission Lalo Cota or Joe Pagac for a wall and the pop-up art, with hangtag credit and a revenue share. Work with Artlink and the property owner on the site. New screenprints carry the artist's Phoenix art, not league marks. Anything with Suns or All-Star marks uses existing approved blanks. Use the same talks to scope a full artist capsule for 2027-28.",
+      "products": [
+        "Artist screenprint tee and poster (no NBA marks)",
+        "Existing Suns heavyweight tee and hoodie with artist patch and hangtag",
+        "Booker All-Star-week colorway (only if already in Nike's plan)"
+      ],
       "segment": "Valley locals, downtown creatives and Gen Z first, then All-Star visitors",
       "size": "high",
       "priority": 1,
@@ -80,12 +132,26 @@
     {
       "id": "los-suns-noche-latina",
       "title": "Los Suns, on the community's calendar",
-      "summary": "A bilingual Los Suns line designed with Valley Latino artists and letterers, launched at this season's Noche Latina and returning for Mexican Independence Day 2027.",
-      "where": ["Mortgage Matchup Center on Noche Latina", "Arizona Latino Arts and Cultural Center", "West Valley doors near Desert Sky Mall, Maryvale", "Spanish-language Instagram and TikTok creators"],
-      "when": "Sign artists this fall; launch at Noche Latina (2026-27 date to confirm); second drop Sept 15-16, 2027; May 5 anniversary as a social and community story only, since the Suns may not be playing.",
-      "months": [3, 5, 9],
-      "how": "Brief Chicano artists and a car-club-affiliated letterer found through the Arizona Latino Arts and Cultural Center to own the wordmark and graphics, credit them on hangtags, and keep the spring drop to screenprint and headwear that can clear in time; the club jacket waits for the Sept 2027 drop. Price an entry tee for Maryvale and South Phoenix families.",
-      "products": ["Los Suns bilingual tee (entry)", "Kids Los Suns Booker tee", "Pinstripe-trim snapback", "Los Suns club jacket (Sept 2027)"],
+      "summary": "A bilingual Los Suns line designed with Valley Latino artists and letterers. It launches at this season's Noche Latina and returns for Mexican Independence Day 2027.",
+      "where": [
+        "Mortgage Matchup Center on Noche Latina",
+        "Arizona Latino Arts and Cultural Center",
+        "West Valley doors near Desert Sky Mall, Maryvale",
+        "Spanish-language Instagram and TikTok creators"
+      ],
+      "when": "Sign artists this fall. Launch at Noche Latina (2026-27 date to confirm). Second drop Sept 15-16, 2027. Treat the May 5 anniversary as a social and community story only, since the Suns may not be playing.",
+      "months": [
+        3,
+        5,
+        9
+      ],
+      "how": "Find Chicano artists and a car-club-affiliated letterer through the Arizona Latino Arts and Cultural Center, and let them own the wordmark and graphics. Credit them on hangtags. Keep the spring drop to screenprints and headwear that can clear in time. The club jacket waits for the Sept 2027 drop. Price an entry tee for Maryvale and South Phoenix families.",
+      "products": [
+        "Los Suns bilingual tee (entry)",
+        "Kids Los Suns Booker tee",
+        "Pinstripe-trim snapback",
+        "Los Suns club jacket (Sept 2027)"
+      ],
       "segment": "Mexican American families and Gen Z across Maryvale, South Phoenix, Mesa and Glendale",
       "size": "high",
       "priority": 1,
@@ -94,12 +160,27 @@
     {
       "id": "book-valley-tiers",
       "title": "Book in every tier",
-      "summary": "A Booker-led jersey, signature and tee program priced good-better-best so the franchise face carries volume in a bubble year and beats swap-meet knockoffs on value.",
-      "where": ["Nike Factory Store, Arizona Mills", "Chandler Fashion Center", "Dick's and Foot Locker Valley doors", "Nike.com and Nike App"],
-      "when": "Opener sell-in now through the Oct 30 Cup opener vs Dallas; Black Friday (Nov 27 Cup Friday) through Dec 24; back-to-school ship by early July 2027.",
-      "months": [10, 11, 12, 7],
-      "how": "Pair the current Booker signature shoe with kids and value-tier jerseys and tees, add Green, Brooks and Bridges as secondary names, and lead with member pricing and bundles since Arizona has no tax-free weekend.",
-      "products": ["Booker Swingman and kids jerseys", "Booker signature shoe", "Booker value tee", "Youth practice shorts"],
+      "summary": "A Booker-led jersey, signature and tee program, priced good-better-best. The franchise face carries volume in a bubble year and beats swap-meet knockoffs on value.",
+      "where": [
+        "Nike Factory Store, Arizona Mills",
+        "Chandler Fashion Center",
+        "Dick's and Foot Locker Valley doors",
+        "Nike.com and Nike App"
+      ],
+      "when": "Sell in now through the Oct 30 Cup opener vs Dallas. Push again from Black Friday (Nov 27, a Cup Friday) through Dec 24. Ship back-to-school by early July 2027.",
+      "months": [
+        10,
+        11,
+        12,
+        7
+      ],
+      "how": "Pair the current Booker signature shoe with kids and value-tier jerseys and tees. Add Green, Brooks and Bridges as secondary names. Lead with member pricing and bundles, since Arizona has no tax-free weekend.",
+      "products": [
+        "Booker Swingman and kids jerseys",
+        "Booker signature shoe",
+        "Booker value tee",
+        "Youth practice shorts"
+      ],
       "segment": "Families, kids and casual fans Valley-wide",
       "size": "high",
       "priority": 1,
@@ -108,12 +189,27 @@
     {
       "id": "eastlake-night-court",
       "title": "Eastlake Night Court",
-      "summary": "A UPF, mesh and reflective performance line for a city that hoops at dawn and after dark, launched with a court and lighting project at Eastlake Park built with Black Phoenix partners.",
-      "where": ["Eastlake Park, east of downtown", "George Washington Carver Museum and Cultural Center", "Maryvale and South Phoenix park courts (phase two)", "Nike.com and Nike App (summer)"],
-      "when": "Partner talks this winter; court work spring 2027; launch at the Juneteenth celebration at Eastlake Park (June 19, 2027); product live May through September.",
-      "months": [5, 6, 7, 8],
-      "how": "Fund lighting and resurfacing for after-dark play with the City of Phoenix and a Black community partner such as the Carver Museum leading the story, commission a Black Phoenix artist for the court art and a credited graphic, and commit to multi-year programming rather than a ribbon-cutting.",
-      "products": ["UPF shooting shirt", "Reflective-print night-court tee", "Lightweight mesh shorts", "Reflective sock and headband pack"],
+      "summary": "A UPF, mesh and reflective performance line for a city that hoops at dawn and after dark. It launches with a court and lighting project at Eastlake Park, built with Black Phoenix partners.",
+      "where": [
+        "Eastlake Park, east of downtown",
+        "George Washington Carver Museum and Cultural Center",
+        "Maryvale and South Phoenix park courts (phase two)",
+        "Nike.com and Nike App (summer)"
+      ],
+      "when": "Partner talks this winter. Court work in spring 2027. Launch at the Juneteenth celebration at Eastlake Park (June 19, 2027). Product is live May through September.",
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "how": "Fund lighting and resurfacing for after-dark play with the City of Phoenix. Let a Black community partner, such as the Carver Museum, lead the story. Commission a Black Phoenix artist for the court art and a credited graphic. Commit to multi-year programming, not a ribbon-cutting.",
+      "products": [
+        "UPF shooting shirt",
+        "Reflective-print night-court tee",
+        "Lightweight mesh shorts",
+        "Reflective sock and headband pack"
+      ],
       "segment": "Valley hoopers, youth players and South and Central Phoenix families",
       "size": "medium",
       "priority": 2,
@@ -122,12 +218,27 @@
     {
       "id": "avenues-and-streets",
       "title": "Avenues and Streets: the grid door program",
-      "summary": "Door-specific product keyed to the Phoenix mile grid and its neighborhoods (Maryvale, Laveen, Sunnyslope, Arcadia, Mesa, Chandler), with area codes as a small inside detail rather than the graphic.",
-      "where": ["West Valley doors near Desert Sky Mall (Avenues)", "Arizona Mills and Chandler Fashion Center (East Valley)", "Mortgage Matchup Center team store (Central)", "Mekong Plaza area watch parties, Mesa"],
+      "summary": "Door-specific product keyed to the Phoenix mile grid and its neighborhoods: Maryvale, Laveen, Sunnyslope, Arcadia, Mesa, Chandler. Area codes stay a small inside detail, not the graphic.",
+      "where": [
+        "West Valley doors near Desert Sky Mall (Avenues)",
+        "Arizona Mills and Chandler Fashion Center (East Valley)",
+        "Mortgage Matchup Center team store (Central)",
+        "Mekong Plaza area watch parties, Mesa"
+      ],
       "when": "Cup Fridays from the Oct 30 Dallas opener through Nov 27 (Black Friday), holiday to Dec 24, and back-to-school in July.",
-      "months": [10, 11, 12, 7],
-      "how": "Graphics built on cross-street wayfinding (west-side Avenues, east-side Streets, Central as the spine) and neighborhood names allocated by door, plus East Valley watch parties at Mekong Plaza for Suns Cup home nights with a local Vietnamese or Asian American food partner; keep ASU and other third-party marks out.",
-      "products": ["Grid-coordinate heavyweight tee", "Neighborhood-name fleece hoodie", "Kids neighborhood tee", "Mesh shorts with area-code jock tag"],
+      "months": [
+        10,
+        11,
+        12,
+        7
+      ],
+      "how": "Build graphics on cross-street wayfinding: Avenues on the west side, Streets on the east, Central as the spine. Allocate neighborhood names by door. Host East Valley watch parties at Mekong Plaza on Suns Cup home nights, with a local Vietnamese or Asian American food partner. Keep ASU and other third-party marks out.",
+      "products": [
+        "Grid-coordinate heavyweight tee",
+        "Neighborhood-name fleece hoodie",
+        "Kids neighborhood tee",
+        "Mesh shorts with area-code jock tag"
+      ],
       "segment": "Transplants and locals who identify by side of the Valley, including the East Valley Asian American community",
       "size": "medium",
       "priority": 2,
@@ -136,12 +247,23 @@
     {
       "id": "mercury-womens-all-star",
       "title": "Mercury and the women's line",
-      "summary": "A women's-fit Phoenix hoops line that treats the Mercury as their own flag, previewed at All-Star Weekend and restocked for the Mercury's May tip-off.",
-      "where": ["Mortgage Matchup Center team store", "Scottsdale Fashion Square", "Nike App"],
-      "when": "Existing Mercury product merchandised at All-Star Feb 19-21; new women's-fit pieces for the 2027 WNBA season tip-off in May.",
-      "months": [2, 5],
-      "how": "Build with the Mercury, not as Suns hand-me-downs: women's-cut fits, Mercury colors and a Phoenix women's-hoops story, with LGBTQ+ community partners credited where Pride product is involved.",
-      "products": ["Women's-fit Mercury warm-up tee", "Cropped Phoenix hoops hoodie", "Mercury youth tee"],
+      "summary": "A women's-fit Phoenix hoops line that treats the Mercury as their own flag. It previews at All-Star Weekend and restocks for the Mercury's May tip-off.",
+      "where": [
+        "Mortgage Matchup Center team store",
+        "Scottsdale Fashion Square",
+        "Nike App"
+      ],
+      "when": "Merchandise existing Mercury product at All-Star, Feb 19-21. New women's-fit pieces arrive for the 2027 WNBA season tip-off in May.",
+      "months": [
+        2,
+        5
+      ],
+      "how": "Build with the Mercury, not as Suns hand-me-downs: women's cuts, Mercury colors and a Phoenix women's-hoops story. Credit LGBTQ+ community partners wherever Pride product is involved.",
+      "products": [
+        "Women's-fit Mercury warm-up tee",
+        "Cropped Phoenix hoops hoodie",
+        "Mercury youth tee"
+      ],
       "segment": "Mercury season-ticket holders, women and girls who hoop, LGBTQ+ fans",
       "size": "medium",
       "priority": 2,
@@ -150,12 +272,24 @@
     {
       "id": "sun-faded-sunburst",
       "title": "Sun-Faded Sunburst heritage",
-      "summary": "A pre-faded heritage capsule on the 1968 sunburst and 1992-93 Barkley-era marks that looks like a 20-year Phoenix closet find.",
-      "where": ["Melrose District vintage and resale shops", "Mortgage Matchup Center team store", "Buffalo Exchange, Mill Avenue, Tempe"],
-      "when": "This fall: sell in existing heritage and throwback stock, with a diehard night tied to the Oct 30 Cup opener vs Dallas. The garment-dyed capsule targets the 2027-28 opener.",
-      "months": [10, 11, 12],
-      "how": "Take the faded palette and finish to the team and NBA licensing early, clear vintage marks and any player likeness through the NBA, team and NBPA, and test the near-miss date stack with fans before committing.",
-      "products": ["Garment-dyed sunburst crewneck (2027-28)", "Washed sunburst cap", "1993-inspired warm-up jacket (2027-28)"],
+      "summary": "A pre-faded heritage capsule on the 1968 sunburst and 1992-93 Barkley-era marks. It should look like a 20-year Phoenix closet find.",
+      "where": [
+        "Melrose District vintage and resale shops",
+        "Mortgage Matchup Center team store",
+        "Buffalo Exchange, Mill Avenue, Tempe"
+      ],
+      "when": "This fall, sell in existing heritage and throwback stock, with a diehard night tied to the Oct 30 Cup opener vs Dallas. The garment-dyed capsule targets the 2027-28 opener.",
+      "months": [
+        10,
+        11,
+        12
+      ],
+      "how": "Take the faded palette and finish to the team and NBA licensing early. Clear vintage marks and any player likeness through the NBA, team and NBPA. Test the near-miss date stack with fans before committing.",
+      "products": [
+        "Garment-dyed sunburst crewneck (2027-28)",
+        "Washed sunburst cap",
+        "1993-inspired warm-up jacket (2027-28)"
+      ],
       "segment": "35-plus diehards and vintage-hunting Gen Z",
       "size": "medium",
       "priority": 2,
@@ -164,12 +298,22 @@
     {
       "id": "late-set-music",
       "title": "Late Set: venue and record-store drops",
-      "summary": "Gig-poster and sign-painter graphics made with Valley venues and record stores, giving the music scene a credible Suns-adjacent product moment.",
-      "where": ["Crescent Ballroom", "Zia Records", "The Van Buren"],
+      "summary": "Gig-poster and sign-painter graphics made with Valley venues and record stores. The music scene gets credible product that sits next to the Suns.",
+      "where": [
+        "Crescent Ballroom",
+        "Zia Records",
+        "The Van Buren"
+      ],
       "when": "Develop this winter for the March spring-festival window (M3F and Innings dates to confirm).",
-      "months": [3],
-      "how": "Commission a local poster artist for xerox-texture tour-tee graphics listing Valley venues with their permission, launch with a Valley DJ set at Crescent, and sell a vinyl-sleeve-packaged tee at Zia.",
-      "products": ["Venue tour-list heavyweight tee", "Gig-poster hoodie", "Coach jacket with neon-magenta trim"],
+      "months": [
+        3
+      ],
+      "how": "Commission a local poster artist for xerox-texture tour-tee graphics that list Valley venues, with their permission. Launch with a Valley DJ set at Crescent. Sell the tee at Zia, packaged in a vinyl sleeve.",
+      "products": [
+        "Venue tour-list heavyweight tee",
+        "Gig-poster hoodie",
+        "Coach jacket with neon-magenta trim"
+      ],
       "segment": "Downtown and Tempe creatives, students and music fans",
       "size": "low",
       "priority": 3,
@@ -178,100 +322,238 @@
   ],
   "collection": {
     "name": "After the Heat",
-    "story": "Phoenix comes alive when the sun goes down: neon on Van Buren, families on the Avenues, night courts at Eastlake, First Friday on Roosevelt Row. The collection skips the sunset everyone else paints and dresses the city after it, with the people who own that color and craft. Small pieces start this season; the full collection is a 2027-28 program.",
+    "story": "Phoenix comes alive when the sun goes down: neon on Van Buren, families on the Avenues, night courts at Eastlake, First Friday on Roosevelt Row. The collection skips the sunset everyone else paints and dresses the city after dark, with the people who own that color and craft. Small pieces start this season. The full collection is a 2027-28 program.",
     "themes": [
       {
         "name": "Van Buren Neon",
-        "story": "The mid-century motel and diner signs on Van Buren and Central give Phoenix a tube-lit typography no NBA uniform has used. It is the hero theme for the 2027-28 City Edition pitch.",
+        "story": "The mid-century motel and diner signs on Van Buren and Central give Phoenix a tube-lit typography no NBA uniform has used. It's the hero theme for the 2027-28 City Edition pitch.",
         "segment": "Gen Z, downtown creatives and visitors",
-        "graphics": "Original neon tube-script wordmarks with a soft glow outline, Googie arrow shapes and sign-can panels, drawn by a commissioned Valley sign or mural artist rather than copied from any real sign.",
+        "graphics": "Original neon tube-script wordmarks with a soft glow outline, Googie arrow shapes and sign-can panels. A commissioned Valley sign or mural artist draws them, and nothing is copied from a real sign.",
         "palette": [
-          { "name": "Desert night purple", "hex": "#1D1160" },
-          { "name": "Neon magenta", "hex": "#E6007E" },
-          { "name": "Sonoran orange", "hex": "#E56020" },
-          { "name": "Sodium glow", "hex": "#F4B942" }
+          {
+            "name": "Desert night purple",
+            "hex": "#1D1160"
+          },
+          {
+            "name": "Neon magenta",
+            "hex": "#E6007E"
+          },
+          {
+            "name": "Sonoran orange",
+            "hex": "#E56020"
+          },
+          {
+            "name": "Sodium glow",
+            "hex": "#F4B942"
+          }
         ],
         "materials": "Matte nylon shells, reflective and glow-tone screen inks, chenille tube-script appliques, heavyweight loopback fleece.",
         "pieces": [
-          { "item": "Neon-script warm-up jacket", "category": "outerwear", "tier": "premium", "detail": "Tube-script Suns wordmark in magenta chenille with reflective outline on purple nylon." },
-          { "item": "Sign-can graphic hoodie", "category": "fleece", "tier": "core", "detail": "Back print of a Googie sign panel pointing to a neighborhood, not a slogan." },
-          { "item": "After-dark tee", "category": "tee", "tier": "entry", "detail": "Glow-tone neon wordmark on purple, sized for kids and adults." }
+          {
+            "item": "Neon-script warm-up jacket",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Tube-script Suns wordmark in magenta chenille with reflective outline on purple nylon."
+          },
+          {
+            "item": "Sign-can graphic hoodie",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Back print of a Googie sign panel pointing to a neighborhood, not a slogan."
+          },
+          {
+            "item": "After-dark tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Glow-tone neon wordmark on purple, sized for kids and adults."
+          }
         ]
       },
       {
         "name": "Los Suns Script",
-        "story": "Plaque script, pinstripe and candy paint are a Chicano craft shared across the Southwest; what makes this Phoenix's is the 2010 Los Suns jersey. Every piece names the Valley artist who drew it.",
+        "story": "Plaque script, pinstripe and candy paint are a Chicano craft shared across the Southwest. The 2010 Los Suns jersey is what makes them Phoenix's. Every piece names the Valley artist who drew it.",
         "segment": "Mexican American families and Gen Z across the West Valley and South Phoenix",
-        "graphics": "Fine-line pinstripe borders, club-plaque script and candy-paint fades drawn by a credited Chicano letterer and pinstriper; bilingual copy written by the artist.",
+        "graphics": "Fine-line pinstripe borders, club-plaque script and candy-paint fades by a credited Chicano letterer and pinstriper. The artist writes the bilingual copy.",
         "palette": [
-          { "name": "Suns purple", "hex": "#1D1160" },
-          { "name": "Chile red", "hex": "#9B1B1E" },
-          { "name": "Prickly-pear magenta", "hex": "#B0225E" },
-          { "name": "Masa cream", "hex": "#EFE0BE" }
+          {
+            "name": "Suns purple",
+            "hex": "#1D1160"
+          },
+          {
+            "name": "Chile red",
+            "hex": "#9B1B1E"
+          },
+          {
+            "name": "Prickly-pear magenta",
+            "hex": "#B0225E"
+          },
+          {
+            "name": "Masa cream",
+            "hex": "#EFE0BE"
+          }
         ],
         "materials": "Metallic-flake heat transfers, satin jacket shells with quilted lining, embroidered script, cream heavyweight cotton.",
         "pieces": [
-          { "item": "Los Suns bilingual tee", "category": "tee", "tier": "entry", "detail": "Cream tee with script wordmark and a short bilingual line written by the artist." },
-          { "item": "Pinstripe-trim snapback", "category": "headwear", "tier": "entry", "detail": "Purple crown with hand-drawn pinstripe embroidery around the Los Suns script." },
-          { "item": "Kids Los Suns Booker tee", "category": "kids", "tier": "entry", "detail": "Booker name and number in plaque script on cream." },
-          { "item": "Los Suns club jacket", "category": "outerwear", "tier": "limited", "detail": "Satin shell with plaque-script back hit and pinstripe cuffs, artist and car club named on the hangtag (Sept 2027)." }
+          {
+            "item": "Los Suns bilingual tee",
+            "category": "tee",
+            "tier": "entry",
+            "detail": "Cream tee with script wordmark and a short bilingual line written by the artist."
+          },
+          {
+            "item": "Pinstripe-trim snapback",
+            "category": "headwear",
+            "tier": "entry",
+            "detail": "Purple crown with hand-drawn pinstripe embroidery around the Los Suns script."
+          },
+          {
+            "item": "Kids Los Suns Booker tee",
+            "category": "kids",
+            "tier": "entry",
+            "detail": "Booker name and number in plaque script on cream."
+          },
+          {
+            "item": "Los Suns club jacket",
+            "category": "outerwear",
+            "tier": "limited",
+            "detail": "Satin shell with plaque-script back hit and pinstripe cuffs, artist and car club named on the hangtag (Sept 2027)."
+          }
         ]
       },
       {
         "name": "Sun-Faded Sunburst",
-        "story": "The 1968 sunburst and the 1993 Barkley-era purple, washed as if they spent 20 Arizona summers on a clothesline. Heritage that looks owned, not bought.",
+        "story": "The 1968 sunburst and the 1993 Barkley-era purple, washed as if they'd spent 20 Arizona summers on a clothesline. Heritage that looks owned, not bought.",
         "segment": "35-plus diehards and vintage-hunting Gen Z",
-        "graphics": "Radiating-ray sunburst and retro 90s block lettering; a 1976, 1993 and 2021 date stack only if fan testing reads it as respect rather than rubbing it in.",
+        "graphics": "Radiating-ray sunburst and retro 90s block lettering. Add a 1976, 1993 and 2021 date stack only if fan testing reads it as respect, not rubbing it in.",
         "palette": [
-          { "name": "Sun-bleached purple (needs team approval)", "hex": "#8E7BB0" },
-          { "name": "Faded orange", "hex": "#E56020" },
-          { "name": "Light orange", "hex": "#F9AD1B" },
-          { "name": "Adobe", "hex": "#B5553A" }
+          {
+            "name": "Sun-bleached purple (needs team approval)",
+            "hex": "#8E7BB0"
+          },
+          {
+            "name": "Faded orange",
+            "hex": "#E56020"
+          },
+          {
+            "name": "Light orange",
+            "hex": "#F9AD1B"
+          },
+          {
+            "name": "Adobe",
+            "hex": "#B5553A"
+          }
         ],
         "materials": "Garment-dyed and enzyme-washed heavyweight cotton, cracked plastisol prints, washed twill caps.",
         "pieces": [
-          { "item": "Garment-dyed sunburst crewneck", "category": "fleece", "tier": "core", "detail": "Uneven sun-fade on purple with a cracked sunburst chest print." },
-          { "item": "1993-inspired warm-up jacket", "category": "outerwear", "tier": "premium", "detail": "Period-correct purple with sun-ray sleeve striping, vintage marks cleared through the team." },
-          { "item": "Washed sunburst cap", "category": "headwear", "tier": "entry", "detail": "Faded twill with tonal sunburst embroidery." }
+          {
+            "item": "Garment-dyed sunburst crewneck",
+            "category": "fleece",
+            "tier": "core",
+            "detail": "Uneven sun-fade on purple with a cracked sunburst chest print."
+          },
+          {
+            "item": "1993-inspired warm-up jacket",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Period-correct purple with sun-ray sleeve striping, vintage marks cleared through the team."
+          },
+          {
+            "item": "Washed sunburst cap",
+            "category": "headwear",
+            "tier": "entry",
+            "detail": "Faded twill with tonal sunburst embroidery."
+          }
         ]
       },
       {
         "name": "Night Court",
-        "story": "Valley hoopers play at dawn or after dark because the asphalt is unplayable at noon. Performance gear that admits it, launched from Eastlake Park.",
+        "story": "Valley hoopers play at dawn or after dark because the asphalt is unplayable at noon. This is performance gear that admits it, launched from Eastlake Park.",
         "segment": "Valley hoopers, youth players and summer leagues",
-        "graphics": "Tonal canal-and-grid line prints from the Valley street plan seen from above, reflective hits, mottled asphalt washes, and one credited graphic by the Eastlake court artist.",
+        "graphics": "Tonal canal-and-grid line prints of the Valley street plan seen from above, reflective hits and mottled asphalt washes. One graphic comes from the Eastlake court artist, credited.",
         "palette": [
-          { "name": "Suns purple", "hex": "#1D1160" },
-          { "name": "Sodium glow", "hex": "#F4B942" },
-          { "name": "Saguaro sage", "hex": "#7A8F6B" },
-          { "name": "Desert sand", "hex": "#D9B38C" }
+          {
+            "name": "Suns purple",
+            "hex": "#1D1160"
+          },
+          {
+            "name": "Sodium glow",
+            "hex": "#F4B942"
+          },
+          {
+            "name": "Saguaro sage",
+            "hex": "#7A8F6B"
+          },
+          {
+            "name": "Desert sand",
+            "hex": "#D9B38C"
+          }
         ],
         "materials": "UPF-rated lightweight knits, open mesh, ripstop, reflective print and taping.",
         "pieces": [
-          { "item": "UPF shooting shirt", "category": "tee", "tier": "core", "detail": "Light sand body with tonal canal-grid print and reflective number." },
-          { "item": "Night-court mesh short", "category": "shorts", "tier": "core", "detail": "Purple open mesh with reflective side tape." },
-          { "item": "Ripstop court jacket", "category": "outerwear", "tier": "premium", "detail": "Packable shell for 45-degree desert evenings, reflective grid on the back yoke." },
-          { "item": "Reflective sock and headband pack", "category": "accessory", "tier": "entry", "detail": "Reflective yarn accents for after-dark play." }
+          {
+            "item": "UPF shooting shirt",
+            "category": "tee",
+            "tier": "core",
+            "detail": "Light sand body with tonal canal-grid print and reflective number."
+          },
+          {
+            "item": "Night-court mesh short",
+            "category": "shorts",
+            "tier": "core",
+            "detail": "Purple open mesh with reflective side tape."
+          },
+          {
+            "item": "Ripstop court jacket",
+            "category": "outerwear",
+            "tier": "premium",
+            "detail": "Packable shell for 45-degree desert evenings, reflective grid on the back yoke."
+          },
+          {
+            "item": "Reflective sock and headband pack",
+            "category": "accessory",
+            "tier": "entry",
+            "detail": "Reflective yarn accents for after-dark play."
+          }
         ]
       }
     ]
   },
   "uniform": {
     "concept": "After the Heat (Van Buren Neon) - a 2027-28 City Edition pitch",
-    "narrative": "The 2026-27 City Edition is already locked, so this is the pitch for 2027-28. Suns branding has painted the sunset for years; this jersey picks up where it ends, when the heat breaks and Phoenix comes outside under Van Buren neon, night-court lights and First Friday. Every Phoenician knows the city starts after dark, and the jersey says so in a typography only this city's signs own.",
+    "narrative": "The 2026-27 City Edition is already locked, so this is the pitch for 2027-28. Suns branding has painted the sunset for years. This jersey picks up where the sunset ends, when the heat breaks and Phoenix comes outside under Van Buren neon, night-court lights and First Friday. Every Phoenician knows the city starts after dark. The jersey says so in a typography only this city's signs own.",
     "palette": [
-      { "name": "Desert night purple", "hex": "#1D1160", "role": "base" },
-      { "name": "Neon magenta", "hex": "#E6007E", "role": "accent (tube-glow outline)" },
-      { "name": "Sonoran orange", "hex": "#E56020", "role": "wordmark" },
-      { "name": "Sodium glow", "hex": "#F4B942", "role": "number" },
-      { "name": "Asphalt black", "hex": "#121018", "role": "trim" }
+      {
+        "name": "Desert night purple",
+        "hex": "#1D1160",
+        "role": "base"
+      },
+      {
+        "name": "Neon magenta",
+        "hex": "#E6007E",
+        "role": "accent (tube-glow outline)"
+      },
+      {
+        "name": "Sonoran orange",
+        "hex": "#E56020",
+        "role": "wordmark"
+      },
+      {
+        "name": "Sodium glow",
+        "hex": "#F4B942",
+        "role": "number"
+      },
+      {
+        "name": "Asphalt black",
+        "hex": "#121018",
+        "role": "trim"
+      }
     ],
     "motifs": [
       "Original neon tube-script wordmark drawn in the spirit of mid-century Van Buren sign lettering",
       "Googie sign-can arrow shapes on the side panel",
       "Tonal canal-and-mile-grid lines in the body, with Central Avenue as the spine"
     ],
-    "typography": "Custom single-stroke tube script for 'Suns' with an orange core and magenta glow outline, drawn by a commissioned Valley sign or mural letterer; block numbers in sodium amber with a thin tube outline for contrast.",
+    "typography": "Custom single-stroke tube script for 'Suns', with an orange core and magenta glow outline, drawn by a commissioned Valley sign or mural letterer. Block numbers in sodium amber, with a thin tube outline for contrast.",
     "details": [
       "Jock tag: small 602 / 480 / 623 stack in tube type",
       "Neck tape: tonal canal-grid line in purple",
@@ -281,15 +563,24 @@
     ],
     "avoid": [
       "Another purple-to-orange sunset gradient or the word 'Valley' as the headline graphic",
-      "Las Vegas Strip or casino neon cues; this is motel-row and night-court Phoenix",
+      "Las Vegas Strip or casino neon cues. This is motel-row and night-court Phoenix",
       "Any Indigenous, Hohokam or O'odham pattern, stepped-fret geometry or sacred symbol without a tribal partner leading",
       "Arizona Biltmore or Frank Lloyd Wright block patterns (third-party IP) and any reproduced sign or mural",
       "Dia de los Muertos calaveras, cartoon saguaros or cactus-and-sombrero cliches"
     ],
     "alternates": [
-      { "name": "Los Suns Script", "idea": "A Noche Latina jersey with plaque-script Los Suns and pinstripe trim, lettered and credited by a Valley Chicano letterer and car-club partner once one is signed." },
-      { "name": "Haboob", "idea": "A dust-wall tan-to-storm-purple monsoon jersey with a single lightning strike, the darker side of Valley weather." },
-      { "name": "Classic 1993", "idea": "A period-correct Barkley-era purple Classic Edition anchored in the real 1993 Finals team." }
+      {
+        "name": "Los Suns Script",
+        "idea": "A Noche Latina jersey with plaque-script Los Suns and pinstripe trim, lettered and credited by a Valley Chicano letterer and car-club partner once one is signed."
+      },
+      {
+        "name": "Haboob",
+        "idea": "A dust-wall tan-to-storm-purple monsoon jersey with a single lightning strike, the darker side of Valley weather."
+      },
+      {
+        "name": "Classic 1993",
+        "idea": "A period-correct Barkley-era purple Classic Edition anchored in the real 1993 Finals team."
+      }
     ]
   },
   "calendar": [
@@ -297,8 +588,11 @@
       "month": 10,
       "window": "Now to Oct 30 Cup opener vs Dallas",
       "moment": "Season opens (Spurs preseason on ESPN Oct 10; Suns not on the Oct 20 opening-night slate)",
-      "play": "Sell-in and merchandising only: existing Booker, Green and heritage stock into the arena, malls and vintage-leaning doors, with a diehard night around the Oct 30 Dallas Cup opener.",
-      "products": ["Booker Swingman jersey", "Existing heritage sunburst tee and cap"],
+      "play": "Sell-in and merchandising only. Put existing Booker, Green and heritage stock into the arena, malls and vintage-leaning doors, with a diehard night around the Oct 30 Dallas Cup opener.",
+      "products": [
+        "Booker Swingman jersey",
+        "Existing heritage sunburst tee and cap"
+      ],
       "channel": "Arena team store, Melrose District doors, Valley malls",
       "priority": 1
     },
@@ -306,8 +600,10 @@
       "month": 10,
       "window": "Oct-Nov",
       "moment": "Contracting window",
-      "play": "Sign the All-Star artist, the Los Suns artists and letterer, and an Eastlake Park partner; open NBA and Suns licensing talks for All-Star-week patches and the 2027-28 capsule.",
-      "products": ["Artist agreements and licensing scope (no product)"],
+      "play": "Sign the All-Star artist, the Los Suns artists and letterer, and an Eastlake Park partner. Open NBA and Suns licensing talks for All-Star-week patches and the 2027-28 capsule.",
+      "products": [
+        "Artist agreements and licensing scope (no product)"
+      ],
       "channel": "Partners and league",
       "priority": 1
     },
@@ -315,8 +611,10 @@
       "month": 11,
       "window": "Nov 1-2",
       "moment": "Dia de los Muertos",
-      "play": "No branded product; support community-led events and deepen artist relationships for the Noche Latina drop.",
-      "products": ["Artist-led commission only (no stock imagery)"],
+      "play": "No branded product. Support community-led events and deepen artist relationships for the Noche Latina drop.",
+      "products": [
+        "Artist-led commission only (no stock imagery)"
+      ],
       "channel": "Community",
       "priority": 3
     },
@@ -325,7 +623,11 @@
       "window": "Cup Fridays Oct 30 to Nov 27 (Black Friday)",
       "moment": "NBA Cup West Group A (Denver, Houston, Dallas, Utah) meets Black Friday",
       "play": "Door-specific grid and neighborhood product merchandised by side of the Valley, with Mekong Plaza watch parties for Suns Cup home nights.",
-      "products": ["Grid-coordinate heavyweight tee", "Neighborhood-name fleece hoodie", "Booker value tee"],
+      "products": [
+        "Grid-coordinate heavyweight tee",
+        "Neighborhood-name fleece hoodie",
+        "Booker value tee"
+      ],
       "channel": "Hub malls and East Valley watch parties",
       "priority": 2
     },
@@ -333,8 +635,12 @@
       "month": 12,
       "window": "Dec 1-24",
       "moment": "Holiday gifting and tamale season, with no Suns Christmas Day game",
-      "play": "Booker-led gift sets and kids bundles sold locally rather than leaning on national TV.",
-      "products": ["Booker gift set", "Kids jersey bundle", "Washed sunburst cap"],
+      "play": "Sell Booker-led gift sets and kids bundles locally instead of leaning on national TV.",
+      "products": [
+        "Booker gift set",
+        "Kids jersey bundle",
+        "Washed sunburst cap"
+      ],
       "channel": "Malls, team store and Nike App",
       "priority": 2
     },
@@ -342,8 +648,10 @@
       "month": 1,
       "window": "Mid to late January",
       "moment": "All-Star pre-hype",
-      "play": "Tease the artist and mural site to Arizona Nike members; finalize approved blanks with artist patches and hangtags.",
-      "products": ["Existing Suns heavyweight tee with artist patch"],
+      "play": "Tease the artist and mural site to Arizona Nike members. Finalize approved blanks with artist patches and hangtags.",
+      "products": [
+        "Existing Suns heavyweight tee with artist patch"
+      ],
       "channel": "Nike App members (Arizona) and artist social",
       "priority": 2
     },
@@ -351,8 +659,10 @@
       "month": 2,
       "window": "Early February (WM Phoenix Open weekend; Heard Hoop Dance Contest Feb 6-7)",
       "moment": "Scottsdale golf crowds and the Heard's contest",
-      "play": "No Nike activation that weekend; open the Arizona-member pre-sale the following week and use the Heard only as an introduction to Native artists, not a marketing backdrop.",
-      "products": ["Member pre-sale of the pop-up pieces"],
+      "play": "No Nike event that weekend. Open the Arizona-member pre-sale the following week. Treat the Heard only as an introduction to Native artists, never a marketing backdrop.",
+      "products": [
+        "Member pre-sale of the pop-up pieces"
+      ],
       "channel": "Nike App members (Arizona)",
       "priority": 2
     },
@@ -360,8 +670,12 @@
       "month": 2,
       "window": "Feb 19-21",
       "moment": "NBA All-Star Weekend at Mortgage Matchup Center",
-      "play": "Unveil the mural and run the Made on Roosevelt pop-up from Rising Stars night; visitors get existing licensed Suns, Mercury and All-Star product at the arena.",
-      "products": ["Artist screenprint tee and poster (no NBA marks)", "Suns tee with artist patch", "Existing Mercury and All-Star product"],
+      "play": "Unveil the mural and run the Made on Roosevelt pop-up from Rising Stars night. Visitors get existing licensed Suns, Mercury and All-Star product at the arena.",
+      "products": [
+        "Artist screenprint tee and poster (no NBA marks)",
+        "Suns tee with artist patch",
+        "Existing Mercury and All-Star product"
+      ],
       "channel": "Roosevelt Row pop-up, arena, Scottsdale Fashion Square",
       "priority": 1
     },
@@ -369,8 +683,12 @@
       "month": 3,
       "window": "Noche Latina (date to confirm)",
       "moment": "Los Suns relaunch, plus the Heard Indian Fair and Market and spring festivals",
-      "play": "Launch the Los Suns line in arena with the artists present; Late Set venue drop at Crescent and Zia in the festival window.",
-      "products": ["Los Suns bilingual tee", "Pinstripe-trim snapback", "Venue tour-list heavyweight tee"],
+      "play": "Launch the Los Suns line in the arena with the artists present. Drop Late Set at Crescent and Zia in the festival window.",
+      "products": [
+        "Los Suns bilingual tee",
+        "Pinstripe-trim snapback",
+        "Venue tour-list heavyweight tee"
+      ],
       "channel": "Arena, West Valley doors, venues and record stores",
       "priority": 1
     },
@@ -378,8 +696,11 @@
       "month": 4,
       "window": "Apr 11-16",
       "moment": "Season end and Play-In Tournament",
-      "play": "Hold reactive play-in tees and release only if Phoenix is in; otherwise move to Night Court spring.",
-      "products": ["Play-in reactive tee", "UPF shooting shirt"],
+      "play": "Hold reactive play-in tees and release them only if Phoenix is in. Otherwise, move to Night Court for spring.",
+      "products": [
+        "Play-in reactive tee",
+        "UPF shooting shirt"
+      ],
       "channel": "Arena and Nike App",
       "priority": 3
     },
@@ -387,8 +708,12 @@
       "month": 5,
       "window": "May (around May 5; Mercury tip-off)",
       "moment": "Los Suns anniversary and the Mercury's season start",
-      "play": "Tell the May 2010 story on social with the artists front and center; release the women's-fit Mercury pieces for tip-off.",
-      "products": ["Los Suns bilingual tee", "Women's-fit Mercury warm-up tee", "Cropped Phoenix hoops hoodie"],
+      "play": "Tell the May 2010 story on social, with the artists front and center. Release the women's-fit Mercury pieces for tip-off.",
+      "products": [
+        "Los Suns bilingual tee",
+        "Women's-fit Mercury warm-up tee",
+        "Cropped Phoenix hoops hoodie"
+      ],
       "channel": "Social, West Valley doors, arena team store",
       "priority": 2
     },
@@ -396,8 +721,12 @@
       "month": 6,
       "window": "June 19",
       "moment": "Juneteenth at Eastlake Park",
-      "play": "Open the lit Eastlake court with the Black community partner leading and launch Night Court with the court artist's credited graphic.",
-      "products": ["Reflective-print night-court tee", "UPF shooting shirt", "Night-court mesh short"],
+      "play": "Open the lit Eastlake court with the Black community partner leading. Launch Night Court with the court artist's credited graphic.",
+      "products": [
+        "Reflective-print night-court tee",
+        "UPF shooting shirt",
+        "Night-court mesh short"
+      ],
       "channel": "Eastlake Park and Nike App",
       "priority": 2
     },
@@ -405,8 +734,12 @@
       "month": 7,
       "window": "Early to mid July",
       "moment": "Back-to-school (Valley schools open late July)",
-      "play": "Ship kids and Booker product to air-conditioned mall doors early and push Night Court online.",
-      "products": ["Booker kids jersey", "Kids neighborhood tee", "UPF shooting shirt"],
+      "play": "Ship kids and Booker product early to air-conditioned mall doors, and push Night Court online.",
+      "products": [
+        "Booker kids jersey",
+        "Kids neighborhood tee",
+        "UPF shooting shirt"
+      ],
       "channel": "Malls (Arizona Mills, Desert Sky area, Chandler) and Nike.com",
       "priority": 1
     },
@@ -414,8 +747,11 @@
       "month": 9,
       "window": "Sept 15-16, 2027",
       "moment": "Mexican Independence Day and start of Hispanic Heritage Month",
-      "play": "Second Los Suns drop with the club jacket lettered by the signed car-club artist, ahead of the 2027-28 season.",
-      "products": ["Los Suns club jacket", "Kids Los Suns Booker tee"],
+      "play": "Second Los Suns drop, with the club jacket lettered by the signed car-club artist, ahead of the 2027-28 season.",
+      "products": [
+        "Los Suns club jacket",
+        "Kids Los Suns Booker tee"
+      ],
       "channel": "Community (Arizona Latino Arts and Cultural Center, West Valley doors) and social",
       "priority": 2
     }
@@ -425,13 +761,13 @@
       "name": "Lalo Cota",
       "type": "Chicano muralist and painter",
       "why": "A widely known Valley artist credible in both Roosevelt Row and the barrios.",
-      "idea": "Lead commission for the All-Star mural and pop-up art, with hangtag credit, revenue share and first option on the 2027-28 capsule (Joe Pagac as the alternate)."
+      "idea": "Lead commission for the All-Star mural and pop-up art, with hangtag credit, a revenue share and first option on the 2027-28 capsule. Joe Pagac is the alternate."
     },
     {
       "name": "Artlink",
       "type": "Arts nonprofit that runs First Friday",
-      "why": "Founded and runs the Roosevelt Row art walk, the downtown scene's monthly gathering.",
-      "idea": "Co-produce the All-Star pop-up and mural unveil with Artlink and the wall owner, and confirm who permits murals in the district."
+      "why": "It founded and runs First Friday, the Roosevelt Row art walk where the downtown scene gathers each month.",
+      "idea": "Co-produce the All-Star pop-up and mural unveil with Artlink and the wall owner. Confirm who permits murals in the district."
     },
     {
       "name": "Arizona Latino Arts and Cultural Center",
@@ -443,13 +779,13 @@
       "name": "George Washington Carver Museum and Cultural Center",
       "type": "Black history museum and cultural center",
       "why": "Housed in Phoenix's historic segregation-era Black high school, it holds the history the Eastlake court project should be built on.",
-      "idea": "Lead partner for the Eastlake Night Court story and Juneteenth launch, with a paid role in choosing the court artist and youth programming."
+      "idea": "Lead partner for the Eastlake Night Court story and Juneteenth launch, paid to help choose the court artist and shape youth programming."
     },
     {
       "name": "Salt River Pima-Maricopa Indian Community",
       "type": "Sovereign tribal nation on the Valley's east edge",
       "why": "The nearest sovereign neighbor, with an existing Suns tie: its Talking Stick Resort held the arena naming rights before Footprint.",
-      "idea": "Ask through the team's existing relationship whether the Community wants a long-term, Native-led collaboration on its own terms; Gila River Indian Community is a separate relationship, and no Indigenous imagery appears on product before then."
+      "idea": "Ask, through the team's existing relationship, whether the Community wants a long-term, Native-led collaboration on its own terms. Gila River Indian Community is a separate relationship. No Indigenous imagery appears on product before then."
     },
     {
       "name": "Jared Yazzie (OXDX Clothing)",
@@ -474,19 +810,19 @@
     "where": [
       "Mortgage Matchup Center team store as the emotional flagship and All-Star peak door",
       "Taste doors first: Roosevelt Row pop-ups, Melrose District vintage shops, Mill Avenue in Tempe",
-      "Volume hubs by side of the Valley: West Valley near Desert Sky (Avenues), Arizona Mills Nike Factory Store and Chandler Fashion Center (East Valley), Scottsdale Fashion Square for premium and visitors",
+      "Volume hubs by side of the Valley: Desert Sky in the West Valley (Avenues), plus the Arizona Mills Nike Factory Store and Chandler Fashion Center in the East Valley. Scottsdale Fashion Square for premium and visitors",
       "Community sites with named partners: Eastlake Park, Mekong Plaza, the Arizona Latino Arts and Cultural Center"
     ],
     "when": [
-      "Oct-Dec 2026: sell-in of existing stock around the Oct 30 Cup opener and Black Friday; new product only where the clock allows",
+      "Oct-Dec 2026: sell in existing stock around the Oct 30 Cup opener and Black Friday. New product only where the clock allows",
       "Feb 19-21: small-run artist pop-up plus licensed product, after the WM Phoenix Open weekend",
       "Noche Latina, May and Sept 15-16, 2027 for Los Suns; Juneteenth for Night Court",
       "Early July for back-to-school, a month earlier than most markets",
-      "Outdoor activations October to April; summer stays indoor, digital or after dark"
+      "Outdoor events October to April. Summer stays indoors, digital or after dark"
     ],
     "how": [
       "Separate what clears this season (no-marks artist screenprints, existing approved blanks with artist patches) from the 2027-28 capsule and City Edition",
-      "Good-better-best pricing with strong entry tees and kids tiers to beat swap-meet knockoffs; member pricing and bundles in a state with no tax-free weekend",
+      "Good-better-best pricing, with strong entry tees and kids tiers to beat swap-meet knockoffs. Member pricing and bundles, since the state has no tax-free weekend",
       "Every local graphic carries the maker's name on the hangtag, with pay and revenue share agreed before announcement",
       "Bilingual packaging and copy written by Latino collaborators",
       "Consumer-facing names use streets and neighborhoods, keeping 'Valley' for internal use"
@@ -495,23 +831,23 @@
   "risks": [
     {
       "risk": "League, team and artist licensing does not clear in time for All-Star, leaving nothing local to sell.",
-      "mitigation": "Keep new All-Star product to no-marks artist screenprints and approved existing blanks, open licensing talks in October, and move the full capsule to 2027-28."
+      "mitigation": "Keep new All-Star product to no-marks artist screenprints and approved existing blanks. Open licensing talks in October, and move the full capsule to 2027-28."
     },
     {
       "risk": "The 2026-27 City Edition already uses neon or a street-level idea, or the neon pitch collides with league All-Star branding.",
-      "mitigation": "Confirm the 2026-27 City Edition and its reveal before any outreach, and if it overlaps, lead the 2027-28 pitch with the grid or Los Suns Script instead."
+      "mitigation": "Confirm the 2026-27 City Edition and its reveal before any outreach. If it overlaps, lead the 2027-28 pitch with the grid or Los Suns Script instead."
     },
     {
       "risk": "Los Suns reads as political messaging or a generic Spanish wordmark in a state where immigration is contested.",
-      "mitigation": "Let Valley Latino artists lead the design and voice, keep it celebratory and community-led, and spread drops across the community calendar."
+      "mitigation": "Let Valley Latino artists lead the design and voice. Keep it celebratory and community-led, and spread drops across the community calendar."
     },
     {
-      "risk": "Borrowing Indigenous, Black, Chicano or Dia de los Muertos culture as decoration damages trust, including using the Heard's hoop dance contest as basketball scenery.",
-      "mitigation": "No Indigenous imagery without a tribal or Native-artist lead, no hoop dance in marketing, no stock calaveras, and paid, credited community partners with real control on every culturally sourced project."
+      "risk": "Borrowing Indigenous, Black, Chicano or Dia de los Muertos culture as decoration damages trust. That includes using the Heard's hoop dance contest as basketball scenery.",
+      "mitigation": "No Indigenous imagery without a tribal or Native-artist lead, no hoop dance in marketing and no stock calaveras. Every culturally sourced project gets paid, credited community partners with real control."
     },
     {
       "risk": "The Suns miss the play-in or fade early, cooling team demand into spring.",
-      "mitigation": "Anchor on Booker, the Mercury and local identity rather than results, and keep play-in product reactive."
+      "mitigation": "Anchor on Booker, the Mercury and local identity, not results, and keep play-in product reactive."
     }
   ],
   "scorecard": {
@@ -519,7 +855,7 @@
     "culture": 82,
     "retail": 62,
     "fandom": 64,
-    "rationale": "A home All-Star Weekend, a large youth-heavy Latino base the assortment under-serves and an unused street-level visual language push opportunity and culture well above average, tempered by a short licensing clock this season. Retail is sprawling and mall-led with few taste doors, and fandom is loyal but conditioned by a bubble roster and no title."
+    "rationale": "A home All-Star Weekend, a large, youth-heavy Latino base the assortment under-serves and an unused street-level look push opportunity and culture well above average. A short licensing clock this season holds them back a little. Retail is sprawling and mall-led, with few taste doors. Fandom is loyal but shaped by a bubble roster and no title."
   },
   "provenance": {
     "mode": "knowledge",
@@ -527,14 +863,14 @@
     "verify": [
       "The Suns' 2026-27 City Edition and recent City Edition themes (sunset, 'Valley'), so the 2027-28 'After the Heat' pitch does not repeat or collide with them.",
       "NBA and Suns licensing path and lead times for All-Star-week artist patches and hangtags on Suns blanks, and All-Star 2027 local programming and fan-fest sites.",
-      "Noche Latina 2026-27 date and whether Los Suns jerseys are still worn; confirm the first Los Suns game was May 5, 2010 vs San Antonio.",
+      "Noche Latina 2026-27 date, and whether Los Suns jerseys are still worn. Confirm the first Los Suns game was May 5, 2010 vs San Antonio.",
       "The Suns' Cup home and away dates against Denver, Houston and Utah after the Oct 30 Dallas opener.",
-      "2027 WM Phoenix Open dates and whether a Roosevelt Row art event runs Fri Feb 19, 2027.",
+      "2027 WM Phoenix Open dates, and whether a Roosevelt Row art event runs Fri Feb 19, 2027.",
       "Devin Booker's current Nike signature shoe and any planned Phoenix or All-Star colorway.",
-      "Availability and representation of Lalo Cota, Joe Pagac and Jared Yazzie (OXDX); Arizona Latino Arts and Cultural Center operating; a Valley lowrider car club and pinstriper willing to partner.",
+      "Availability and representation of Lalo Cota, Joe Pagac and Jared Yazzie (OXDX). Whether the Arizona Latino Arts and Cultural Center is operating, and whether a Valley lowrider car club and pinstriper will partner.",
       "George Washington Carver Museum and Cultural Center operating, Eastlake Park court condition, and who organizes the Eastlake Juneteenth celebration.",
       "Phoenix Mercury 2026 status and 2027 tip-off date; Valley Suns G League venue and affiliation.",
-      "Nike Factory Store at Arizona Mills, Desert Sky Mall, Mekong Plaza, Melrose District vintage shops and Majerle's Sports Grill (downtown status unconfirmed) are open and suited to activation.",
+      "Nike Factory Store at Arizona Mills, Desert Sky Mall, Mekong Plaza, Melrose District vintage shops and Majerle's Sports Grill (downtown status unconfirmed) are open and suited to events.",
       "Crescent Ballroom, The Van Buren and Zia Records operating, and M3F and Innings 2027 dates.",
       "Census share of Latino residents in Phoenix and by area for the youth-base claim; Mat Ishbia's ownership and fan sentiment on the Mortgage Matchup Center name."
     ]

@@ -1,140 +1,521 @@
 {
   "team": "gsw",
   "lens": "rhythm",
-  "headline": "The Bay Area's fandom runs on dynasty muscle memory and Steph Curry loyalty, so 2026-27 is a legacy-gear year with a winter-only window: Christmas night, the Cup and the trade deadline decide the spend.",
-  "summary": "Warriors fandom peaks late, in April to June, but the 37-45 finish and the play-in exit mean this year there may be no playoff run to carry it. The real retail spine is therefore October to December: the Oct 21 ESPN game at the Lakers, Cup group play, the Specter heritage collection and the Dec 25 nightcap against Denver at Chase Center. The Bay runs a crowded sports calendar (49ers in the fall, Giants in the summer, Valkyries in the WNBA summer), so Warriors attention is won in the winter dead zone between football and baseball. Curry-era gear is a gift and legacy category as much as a fan category, and Oakland loyalty sits underneath the San Francisco arena identity. Treat Curry's age and Butler's and Moody's injuries as the swing factors on every month's score.",
+  "headline": "Christmas, the Cup and the trade deadline set the Warriors' spend this year.",
+  "summary": "Warriors fandom normally peaks from April to June. After a 37-45 finish and a play-in exit, there may be no playoff run to carry it. So the retail year runs from October to December, between football and baseball. Curry's age and the injuries to Butler and Moody swing every month's score.",
   "insights": [
     {
-      "title": "Winter is the Warriors' season, not spring, this year",
-      "detail": "Last year's 10th-place finish and play-in loss at Phoenix mean the April to June peak is not guaranteed, and previews doubt even a play-in spot against a 40.5 win total. Intensity should be driven by Oct 21 at the Lakers, Cup Fridays, Christmas night and the Feb 11 trade deadline.",
-      "implication": "Front-load the product calendar into Oct to Dec and build playoff gear as a contingent, fast-turn capsule instead of a fixed drop."
+      "title": "Winter is the Warriors' season this year, not spring",
+      "detail": "Last year's 10th-place finish and play-in loss at Phoenix mean the April to June peak isn't guaranteed. Previews doubt even a play-in spot against a 40.5 win total. Winter intensity comes from Oct 21 at the Lakers, Cup Fridays, Christmas night and the Feb 11 trade deadline.",
+      "implication": "Front-load the product calendar into October to December. Treat playoff gear as a fast-turn capsule that only drops if the team qualifies."
     },
     {
-      "title": "Christmas nightcap is the Bay's biggest single retail moment",
+      "title": "Christmas night is the Bay's biggest retail moment",
       "detail": "Denver at Golden State is the 10:30 p.m. ET finale on Dec 25 at Chase Center, after the other four games. Bay fans treat it as gift-opening day for jerseys and Curry gear.",
-      "implication": "Land a Christmas-timed hero product (holiday colorway or Specter-linked piece) in-market by Black Friday and ship-guarantee it before Dec 20."
+      "implication": "Put a Christmas hero piece (a holiday colorway or a Specter-linked item) in stores by Black Friday. Guarantee shipping before Dec 20."
     },
     {
-      "title": "The Specter heritage uniform gives the team a second storytelling lane",
-      "detail": "The Warriors are one of eight historic franchises in Nike's Specter uniforms, revealed Sep 9, with a collection released at the same time. Which games they are worn in was not confirmed, and the 2026-27 City Edition design is also unconfirmed.",
-      "implication": "Plan product around whichever uniform debuts at each home date, and brief a Bay heritage story that does not collide with City Edition."
+      "title": "Specter gives the team a second story",
+      "detail": "The Warriors are one of eight historic franchises in Nike's Specter uniforms, revealed Sep 9 with a collection released at the same time. Which games they wear them in is unconfirmed, and so is the 2026-27 City Edition design.",
+      "implication": "Plan product around whichever uniform debuts at each home date. Brief a Bay heritage story that stays clear of City Edition."
     },
     {
-      "title": "Football and baseball set the competition, not other basketball",
-      "detail": "The 49ers own Sep to Jan Sundays in the Bay, and the Giants own the spring and summer. Warriors attention concentrates Oct to Dec and Feb to Apr, and slumps in the summer when the Giants, the Valkyries and festival season take over.",
-      "implication": "Time Warriors drops away from 49ers Sundays and use cross-sport Bay Area pieces in June to August."
+      "title": "Football and baseball are the competition",
+      "detail": "The 49ers own Sundays in the Bay from September to January, and the Giants own spring and summer. Warriors attention concentrates in Oct to Dec and Feb to Apr. It slumps in summer, when the Giants, the Valkyries and festival season take over.",
+      "implication": "Keep Warriors drops off 49ers Sundays. In June to August, use cross-sport Bay Area pieces."
     },
     {
       "title": "Oakland loyalty and San Francisco commerce are two audiences",
-      "detail": "The team played in Oakland for 47 years before Chase Center opened in San Francisco's Mission Bay in 2019. East Bay fans still hold Oracle-era identity and The Town language, while Chase Center buyers are more premium and corporate.",
-      "implication": "Offer an Oakland-rooted graphic line sold in East Bay retail alongside Chase Center premium product, never blended into one design."
+      "detail": "The team played in Oakland for 47 years before Chase Center opened in San Francisco's Mission Bay in 2019. East Bay fans still hold Oracle-era identity and The Town language. Chase Center buyers are more premium and corporate.",
+      "implication": "Sell an Oakland-rooted graphic line in East Bay retail, next to Chase Center premium product. Never blend them into one design."
     },
     {
-      "title": "Aging core makes every Curry milestone a buying trigger",
-      "detail": "Stephen Curry, Draymond Green and Steve Kerr's era is in its last chapter, with Porzingis, Horford, Lendeborg (No. 11 pick) and a banged-up Butler and Moody around them. Fans buy Curry product as keepsakes, with spikes around milestones and the last-dance narrative.",
-      "implication": "Build Curry and dynasty commemorative product that sells year-round in small batches, with milestone-triggered reruns."
+      "title": "An aging core turns every Curry milestone into a buying trigger",
+      "detail": "Stephen Curry, Draymond Green and Steve Kerr are in their last chapter. Porzingis, Horford, Lendeborg (No. 11 pick) and a banged-up Butler and Moody are around them. Fans buy Curry product as keepsakes and as gifts, with spikes around milestones and the last-dance story. Oakland loyalty sits under the San Francisco arena identity.",
+      "implication": "Make Curry and dynasty commemorative product in small batches that sell year-round. Rerun it on milestone nights."
     }
   ],
   "places": [
-    {"name": "Chase Center", "kind": "venue", "neighborhood": "Mission Bay, San Francisco", "why": "Home arena since 2019 and the site of the Dec 25 nightcap and Cup home games."},
-    {"name": "Thrive City", "kind": "plaza and retail", "neighborhood": "Mission Bay, San Francisco", "why": "The outdoor plaza beside Chase Center where watch parties and pop-ups happen."},
-    {"name": "Oakland Arena (the Coliseum complex)", "kind": "former home arena", "neighborhood": "East Oakland", "why": "The Warriors' home from 1971 to 2019, the emotional base of the pre-dynasty fan identity."},
-    {"name": "Lake Merritt", "kind": "district", "neighborhood": "Oakland", "why": "Gathering point for East Bay fans on title nights and playoff runs."},
-    {"name": "Oracle Park", "kind": "venue", "neighborhood": "SoMa, San Francisco", "why": "Giants home, the competing summer calendar anchor."},
-    {"name": "Levi's Stadium", "kind": "venue", "neighborhood": "Santa Clara", "why": "49ers home that dominates fall Sundays."}
+    {
+      "name": "Chase Center",
+      "kind": "venue",
+      "neighborhood": "Mission Bay, San Francisco",
+      "why": "Home arena since 2019, and the site of the Dec 25 nightcap and Cup home games."
+    },
+    {
+      "name": "Thrive City",
+      "kind": "plaza and retail",
+      "neighborhood": "Mission Bay, San Francisco",
+      "why": "The outdoor plaza beside Chase Center, home to watch parties and pop-ups."
+    },
+    {
+      "name": "Oakland Arena (the Coliseum complex)",
+      "kind": "former home arena",
+      "neighborhood": "East Oakland",
+      "why": "The Warriors' home from 1971 to 2019, and the emotional base of the pre-dynasty fan identity."
+    },
+    {
+      "name": "Lake Merritt",
+      "kind": "district",
+      "neighborhood": "Oakland",
+      "why": "Gathering point for East Bay fans on title nights and playoff runs."
+    },
+    {
+      "name": "Oracle Park",
+      "kind": "venue",
+      "neighborhood": "SoMa, San Francisco",
+      "why": "Giants home, and the anchor of the competing summer calendar."
+    },
+    {
+      "name": "Levi's Stadium",
+      "kind": "venue",
+      "neighborhood": "Santa Clara",
+      "why": "49ers home, which owns fall Sundays."
+    }
   ],
   "people": [
-    {"name": "Stephen Curry", "role": "Warriors guard", "why": "The center of the brand and of every retail spike."},
-    {"name": "Draymond Green", "role": "Warriors forward", "why": "Emotional leader and the voice of the dynasty-era identity."},
-    {"name": "Steve Kerr", "role": "Head coach", "why": "Face of the system and the Strength in Numbers culture."},
-    {"name": "Kristaps Porzingis", "role": "Warriors big", "why": "Re-signed for two years, a new fan interest."},
-    {"name": "Yaxel Lendeborg", "role": "Rookie, No. 11 pick", "why": "Michigan product and the new-generation story."}
+    {
+      "name": "Stephen Curry",
+      "role": "Warriors guard",
+      "why": "The center of the brand and of every retail spike."
+    },
+    {
+      "name": "Draymond Green",
+      "role": "Warriors forward",
+      "why": "The emotional leader and the voice of the dynasty-era identity."
+    },
+    {
+      "name": "Steve Kerr",
+      "role": "Head coach",
+      "why": "The face of the system and the Strength in Numbers culture."
+    },
+    {
+      "name": "Kristaps Porzingis",
+      "role": "Warriors big",
+      "why": "Re-signed for two years, and a new draw for fans."
+    },
+    {
+      "name": "Yaxel Lendeborg",
+      "role": "Rookie, No. 11 pick",
+      "why": "A Michigan product and the new-generation story."
+    }
   ],
   "moments": [
-    {"name": "Warriors at Lakers (ESPN)", "timing": "Oct 21, 2026", "month": 10, "why": "ESPN national window at 10 p.m. ET, the first signal of the season's ceiling."},
-    {"name": "NBA Cup group play", "timing": "Fridays, Oct 30 to Nov 27", "month": 11, "why": "West Group C with the Spurs, Lakers, Trail Blazers and Kings; first game is at Portland on Oct 30."},
-    {"name": "Christmas nightcap", "timing": "Dec 25, 10:30 p.m. ET", "month": 12, "why": "Denver at Golden State, the biggest retail and viewing moment of the Bay's year."},
-    {"name": "Trade deadline", "timing": "Feb 11, 2027", "month": 2, "why": "Sets whether a Curry-era push or a retool narrative drives spring."},
-    {"name": "Play-In Tournament", "timing": "Apr 13 to 16, 2027", "month": 4, "why": "The Warriors' realistic playoff entry point, as it was last season."}
+    {
+      "name": "Warriors at Lakers (ESPN)",
+      "timing": "Oct 21, 2026",
+      "month": 10,
+      "why": "An ESPN national window at 10 p.m. ET, and the first read on the season's ceiling."
+    },
+    {
+      "name": "NBA Cup group play",
+      "timing": "Fridays, Oct 30 to Nov 27",
+      "month": 11,
+      "why": "West Group C with the Spurs, Lakers, Trail Blazers and Kings. The first game is at Portland on Oct 30."
+    },
+    {
+      "name": "Christmas nightcap",
+      "timing": "Dec 25, 10:30 p.m. ET",
+      "month": 12,
+      "why": "Denver at Golden State: the Bay's biggest retail and viewing night of the year."
+    },
+    {
+      "name": "Trade deadline",
+      "timing": "Feb 11, 2027",
+      "month": 2,
+      "why": "Decides whether a Curry-era push or a retool story drives spring."
+    },
+    {
+      "name": "Play-In Tournament",
+      "timing": "Apr 13 to 16, 2027",
+      "month": 4,
+      "why": "The Warriors' realistic way into the playoffs, as it was last season."
+    }
   ],
   "vocabulary": [
-    {"term": "Dub Nation", "meaning": "The Warriors fan community."},
-    {"term": "The Town", "meaning": "Oakland's own name for itself, tied to the team's Oakland-era identity."},
-    {"term": "Strength in Numbers", "meaning": "The team's collective, team-first identity under Kerr."},
-    {"term": "Splash Brothers", "meaning": "Curry and Klay Thompson in their dynasty years, a nostalgia term."},
-    {"term": "Dubs", "meaning": "Common shorthand for the team."}
+    {
+      "term": "Dub Nation",
+      "meaning": "The Warriors fan community."
+    },
+    {
+      "term": "The Town",
+      "meaning": "Oakland's own name for itself, tied to the team's Oakland-era identity."
+    },
+    {
+      "term": "Strength in Numbers",
+      "meaning": "The team-first identity under Kerr."
+    },
+    {
+      "term": "Splash Brothers",
+      "meaning": "Curry and Klay Thompson in their dynasty years. A nostalgia term."
+    },
+    {
+      "term": "Dubs",
+      "meaning": "Common shorthand for the team."
+    }
   ],
   "designCues": [
-    {"cue": "Warriors royal blue", "type": "color", "hex": "#1D428A", "source": "Team primary color used in Association and Statement looks", "use": "Anchor colorway for holiday and Specter-linked product."},
-    {"cue": "Warriors gold", "type": "color", "hex": "#FFC72C", "source": "Team secondary color on the Chase Center era identity", "use": "Accent for Christmas and opener pieces."},
-    {"cue": "Golden Gate bridge-orange accent", "type": "color", "hex": "#C0362C", "source": "Bay Bridge and Golden Gate color associations", "use": "Sparing accent on San Francisco-skewed product."},
-    {"cue": "Bay Bridge line graphic", "type": "graphic", "hex": "", "source": "The bridge that links Oakland and San Francisco, the two halves of the fan base", "use": "Hero graphic on a combined Oakland-SF capsule."},
-    {"cue": "Oakland-era script and retro wordmark", "type": "typography", "hex": "", "source": "Oakland Forever and The Town heritage typography", "use": "Heritage capsule, licensed and credited accurately."},
-    {"cue": "Fog-gray layering", "type": "texture", "hex": "#8A9199", "source": "Bay Area summer fog and cold-night Chase Center arrivals", "use": "Warm-up and outerwear in cool-weather months."}
+    {
+      "cue": "Warriors royal blue",
+      "type": "color",
+      "hex": "#1D428A",
+      "source": "Team primary color, used in Association and Statement looks",
+      "use": "Anchor colorway for holiday and Specter-linked product."
+    },
+    {
+      "cue": "Warriors gold",
+      "type": "color",
+      "hex": "#FFC72C",
+      "source": "Team secondary color in the Chase Center-era identity",
+      "use": "Accent for Christmas and opener pieces."
+    },
+    {
+      "cue": "Golden Gate bridge-orange accent",
+      "type": "color",
+      "hex": "#C0362C",
+      "source": "Color associations of the Bay Bridge and Golden Gate",
+      "use": "A sparing accent on San Francisco-skewed product."
+    },
+    {
+      "cue": "Bay Bridge line graphic",
+      "type": "graphic",
+      "hex": "",
+      "source": "The bridge that links Oakland and San Francisco, the two halves of the fan base",
+      "use": "Hero graphic on a combined Oakland-SF capsule."
+    },
+    {
+      "cue": "Oakland-era script and retro wordmark",
+      "type": "typography",
+      "hex": "",
+      "source": "Oakland Forever and The Town heritage typography",
+      "use": "Heritage capsule, licensed and credited accurately."
+    },
+    {
+      "cue": "Fog-gray layering",
+      "type": "texture",
+      "hex": "#8A9199",
+      "source": "Bay Area summer fog and cold-night arrivals at Chase Center",
+      "use": "Warm-ups and outerwear for the cool months."
+    }
   ],
   "productHooks": [
-    "Christmas-night capsule: royal and gold holiday colorway tied to the Denver game, ship-guaranteed by Dec 20.",
-    "Specter heritage collection restocks timed to home dates in which the uniform is worn.",
+    "Christmas-night capsule: a royal and gold holiday colorway tied to the Denver game, with shipping guaranteed by Dec 20.",
+    "Specter heritage collection restocks, timed to the home dates when the uniform is worn.",
     "Curry legacy milestone tees and warm-ups in small batches, rerun on milestone nights.",
-    "Contingent playoff or play-in capsule ready to turn in 48 hours if the team qualifies.",
-    "Oakland-rooted graphic line sold separately from Chase Center premium product."
+    "A playoff or play-in capsule ready to turn in 48 hours if the team qualifies.",
+    "An Oakland-rooted graphic line, sold separately from Chase Center premium product."
   ],
   "watchouts": [
-    "Do not assume a playoff run: last year ended in the play-in and expectations are modest, so over-ordering spring gear is a risk.",
-    "Oakland identity is sensitive after the team left; credit Oakland-origin artists and designers and avoid using it as a decoration on San Francisco premium product.",
+    "Don't assume a playoff run. Last year ended in the play-in and expectations are modest, so over-ordering spring gear is a risk.",
+    "Oakland identity is sensitive since the team left. Credit Oakland-origin artists and designers, and don't use Oakland as decoration on San Francisco premium product.",
     "Player likeness and Warriors marks need league and team licensing, as do any third-party Bay Area brands."
   ],
   "sources": [
-    {"title": "Golden State Warriors official site", "url": "https://www.nba.com/warriors"},
-    {"title": "Chase Center", "url": "https://www.chasecenter.com"},
-    {"title": "Golden State Warriors (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Golden_State_Warriors"},
-    {"title": "NBA 2026-27 regular season schedule", "url": "https://pr.nba.com/2026-27-nba-regular-season-schedule/"}
+    {
+      "title": "Golden State Warriors official site",
+      "url": "https://www.nba.com/warriors"
+    },
+    {
+      "title": "Chase Center",
+      "url": "https://www.chasecenter.com"
+    },
+    {
+      "title": "Golden State Warriors (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Golden_State_Warriors"
+    },
+    {
+      "title": "NBA 2026-27 regular season schedule",
+      "url": "https://pr.nba.com/2026-27-nba-regular-season-schedule/"
+    }
   ],
   "confidence": "medium",
   "extra": {
     "months": [
-      {"month": 1, "intensity": 68, "phase": "Regular season, MLK Day and the long middle", "team": ["Mid-season form check", "MLK Day games Jan 18 (not a Warriors game)", "Run to the trade deadline"], "local": ["NFL playoff window", "Winter rain", "Post-holiday lull"], "fanBehavior": "Attention depends on the standings and Curry's health; casual fans sit out if the team is under .500.", "retailSignal": "Post-holiday clearance and small gift-card spends."},
-      {"month": 2, "intensity": 74, "phase": "Trade deadline and All-Star", "team": ["Trade deadline Feb 11", "Pacers vs. Warriors on the Presidents' Day card, Feb 15 (home team not confirmed)", "All-Star Weekend Feb 19 to 21 in Phoenix"], "local": ["Lunar New Year festivities and the SF Chinese New Year Parade", "Winter rain"], "fanBehavior": "Deadline anxiety and standings math; All-Star attention for Curry.", "retailSignal": "Lunar New Year capsules and All-Star player product."},
-      {"month": 3, "intensity": 76, "phase": "Playoff push", "team": ["Final stretch of the regular season", "Play-in positioning"], "local": ["Giants spring training", "Bay Area spring weather"], "fanBehavior": "Fans commit in March if the team is in the play-in picture.", "retailSignal": "Playoff positioning product and Bay Area spring layers."},
-      {"month": 4, "intensity": 88, "phase": "Play-In and playoff entry", "team": ["Regular season ends Apr 11", "Play-In Apr 13 to 16", "Playoffs begin if qualified"], "local": ["Giants home opener buzz", "Easter"], "fanBehavior": "Highest-stakes month: play-in elimination games drive the biggest viewing and merch spike.", "retailSignal": "Playoff-gear fast turns and last-minute jersey buys."},
-      {"month": 5, "intensity": 60, "phase": "Playoffs or offseason", "team": ["Conference semifinals if the team advances", "Otherwise early offseason"], "local": ["Bay to Breakers", "Giants and A's baseball"], "fanBehavior": "Intensity depends entirely on a playoff run; without one, fans turn to baseball.", "retailSignal": "Run-dependent: spikes with advancement, near zero without."},
-      {"month": 6, "intensity": 38, "phase": "Finals and draft run-up", "team": ["NBA Finals", "Draft preparation"], "local": ["SF Pride", "Giants summer baseball", "Valkyries WNBA season"], "fanBehavior": "Fans follow draft and free-agency rumors, sampling the Valkyries and Giants.", "retailSignal": "Draft jerseys for the new rookie and Father's Day gifting."},
-      {"month": 7, "intensity": 34, "phase": "Free agency and Summer League", "team": ["Free agency", "Las Vegas Summer League"], "local": ["Giants summer baseball", "Outside Lands run-up", "Tourism peak in SF"], "fanBehavior": "Low engagement, spikes on signings and trade news.", "retailSignal": "New-signing jerseys and tourist purchases at Chase Center."},
-      {"month": 8, "intensity": 32, "phase": "Offseason", "team": ["Schedule release", "Training camp prep"], "local": ["Outside Lands in Golden Gate Park", "Giants and A's baseball", "School restarts"], "fanBehavior": "Quiet; attention goes to music and baseball.", "retailSignal": "Back-to-school and streetwear crossovers."},
-      {"month": 9, "intensity": 48, "phase": "Media day and Specter reveal", "team": ["Media day", "Specter uniform reveal Sep 9", "Preseason schedule"], "local": ["49ers season start", "Giants late-season stretch", "Bay Area heat wave"], "fanBehavior": "Early enthusiasm and heritage-uniform buzz compete with football.", "retailSignal": "Specter collection and new-season essentials."},
-      {"month": 10, "intensity": 70, "phase": "Preseason and opener", "team": ["Preseason from Oct 3", "Opening night Oct 20 (Warriors at Lakers on Oct 21)", "Cup group play begins Oct 30 at Portland"], "local": ["Fleet Week", "49ers Sundays", "Halloween"], "fanBehavior": "Excitement builds around the first look at the roster, with football still dominating Sundays.", "retailSignal": "Opening-night tees, new-roster jerseys and Halloween crossovers."},
-      {"month": 11, "intensity": 74, "phase": "NBA Cup group play", "team": ["Cup Fridays through Nov 27", "Cup extra nights Nov 24 and 25"], "local": ["Thanksgiving", "49ers Sundays", "Thanksgiving travel"], "fanBehavior": "Cup stakes rise with each Friday; Black Friday and gift planning begin.", "retailSignal": "Black Friday jersey and warm-up sales."},
-      {"month": 12, "intensity": 100, "phase": "Cup knockouts and Christmas", "team": ["Cup quarterfinals Dec 4 to 5", "Cup semifinals Dec 8 to 9 in higher seeds' home markets", "Cup final Dec 11 at Hinkle Fieldhouse", "Christmas nightcap vs. Denver Dec 25"], "local": ["Holiday lights and tourism", "Winter rain", "Christmas gifting"], "fanBehavior": "Peak of the Bay's year: Christmas night is both a viewing and a gifting event.", "retailSignal": "Jerseys, Curry product and Specter collection as gifts."}
+      {
+        "month": 1,
+        "intensity": 68,
+        "phase": "Regular season, MLK Day and the long middle",
+        "team": [
+          "Mid-season form check",
+          "MLK Day games Jan 18 (not a Warriors game)",
+          "Run to the trade deadline"
+        ],
+        "local": [
+          "NFL playoff window",
+          "Winter rain",
+          "Post-holiday lull"
+        ],
+        "fanBehavior": "Attention follows the standings and Curry's health. Casual fans sit out if the team is under .500.",
+        "retailSignal": "Post-holiday clearance and small gift-card spends."
+      },
+      {
+        "month": 2,
+        "intensity": 74,
+        "phase": "Trade deadline and All-Star",
+        "team": [
+          "Trade deadline Feb 11",
+          "Pacers vs. Warriors on the Presidents' Day card, Feb 15 (home team not confirmed)",
+          "All-Star Weekend Feb 19 to 21 in Phoenix"
+        ],
+        "local": [
+          "Lunar New Year festivities and the SF Chinese New Year Parade",
+          "Winter rain"
+        ],
+        "fanBehavior": "Deadline anxiety and standings math, plus All-Star attention on Curry.",
+        "retailSignal": "Lunar New Year capsules and All-Star player product."
+      },
+      {
+        "month": 3,
+        "intensity": 76,
+        "phase": "Playoff push",
+        "team": [
+          "Final stretch of the regular season",
+          "Play-in positioning"
+        ],
+        "local": [
+          "Giants spring training",
+          "Bay Area spring weather"
+        ],
+        "fanBehavior": "Fans commit in March if the team is in the play-in picture.",
+        "retailSignal": "Playoff-positioning product and Bay Area spring layers."
+      },
+      {
+        "month": 4,
+        "intensity": 88,
+        "phase": "Play-In and playoff entry",
+        "team": [
+          "Regular season ends Apr 11",
+          "Play-In Apr 13 to 16",
+          "Playoffs begin if qualified"
+        ],
+        "local": [
+          "Giants home opener buzz",
+          "Easter"
+        ],
+        "fanBehavior": "The highest-stakes month. Play-in elimination games bring the biggest viewing and merch spike.",
+        "retailSignal": "Fast-turn playoff gear and last-minute jersey buys."
+      },
+      {
+        "month": 5,
+        "intensity": 60,
+        "phase": "Playoffs or offseason",
+        "team": [
+          "Conference semifinals if the team advances",
+          "Otherwise early offseason"
+        ],
+        "local": [
+          "Bay to Breakers",
+          "Giants and A's baseball"
+        ],
+        "fanBehavior": "A playoff run is everything. Without one, fans turn to baseball.",
+        "retailSignal": "Depends on the run: spikes with each round, near zero without one."
+      },
+      {
+        "month": 6,
+        "intensity": 38,
+        "phase": "Finals and draft run-up",
+        "team": [
+          "NBA Finals",
+          "Draft preparation"
+        ],
+        "local": [
+          "SF Pride",
+          "Giants summer baseball",
+          "Valkyries WNBA season"
+        ],
+        "fanBehavior": "Fans follow draft and free-agency rumors and sample the Valkyries and Giants.",
+        "retailSignal": "Draft jerseys for the new rookie, and Father's Day gifts."
+      },
+      {
+        "month": 7,
+        "intensity": 34,
+        "phase": "Free agency and Summer League",
+        "team": [
+          "Free agency",
+          "Las Vegas Summer League"
+        ],
+        "local": [
+          "Giants summer baseball",
+          "Outside Lands run-up",
+          "Tourism peak in SF"
+        ],
+        "fanBehavior": "Low engagement, with spikes on signings and trade news.",
+        "retailSignal": "New-signing jerseys and tourist purchases at Chase Center."
+      },
+      {
+        "month": 8,
+        "intensity": 32,
+        "phase": "Offseason",
+        "team": [
+          "Schedule release",
+          "Training camp prep"
+        ],
+        "local": [
+          "Outside Lands in Golden Gate Park",
+          "Giants and A's baseball",
+          "School restarts"
+        ],
+        "fanBehavior": "Quiet. Attention goes to music and baseball.",
+        "retailSignal": "Back-to-school and streetwear crossovers."
+      },
+      {
+        "month": 9,
+        "intensity": 48,
+        "phase": "Media day and Specter reveal",
+        "team": [
+          "Media day",
+          "Specter uniform reveal Sep 9",
+          "Preseason schedule"
+        ],
+        "local": [
+          "49ers season start",
+          "Giants late-season stretch",
+          "Bay Area heat wave"
+        ],
+        "fanBehavior": "Early enthusiasm and heritage-uniform buzz compete with football.",
+        "retailSignal": "The Specter collection and new-season essentials."
+      },
+      {
+        "month": 10,
+        "intensity": 70,
+        "phase": "Preseason and opener",
+        "team": [
+          "Preseason from Oct 3",
+          "Opening night Oct 20 (Warriors at Lakers on Oct 21)",
+          "Cup group play begins Oct 30 at Portland"
+        ],
+        "local": [
+          "Fleet Week",
+          "49ers Sundays",
+          "Halloween"
+        ],
+        "fanBehavior": "Excitement builds around the first look at the roster, though football still owns Sundays.",
+        "retailSignal": "Opening-night tees, new-roster jerseys and Halloween crossovers."
+      },
+      {
+        "month": 11,
+        "intensity": 74,
+        "phase": "NBA Cup group play",
+        "team": [
+          "Cup Fridays through Nov 27",
+          "Cup extra nights Nov 24 and 25"
+        ],
+        "local": [
+          "Thanksgiving",
+          "49ers Sundays",
+          "Thanksgiving travel"
+        ],
+        "fanBehavior": "Cup stakes rise with each Friday. Black Friday and gift planning begin.",
+        "retailSignal": "Black Friday jersey and warm-up sales."
+      },
+      {
+        "month": 12,
+        "intensity": 100,
+        "phase": "Cup knockouts and Christmas",
+        "team": [
+          "Cup quarterfinals Dec 4 to 5",
+          "Cup semifinals Dec 8 to 9 in higher seeds' home markets",
+          "Cup final Dec 11 at Hinkle Fieldhouse",
+          "Christmas nightcap vs. Denver Dec 25"
+        ],
+        "local": [
+          "Holiday lights and tourism",
+          "Winter rain",
+          "Christmas gifting"
+        ],
+        "fanBehavior": "The peak of the Bay's year. Christmas night is both a viewing and a gifting event.",
+        "retailSignal": "Jerseys, Curry product and the Specter collection as gifts."
+      }
     ],
     "keyDates": [
-      {"name": "Nike Specter uniform reveal", "date": "Sep 9, 2026", "month": 9, "type": "league", "why": "Started the heritage-uniform season; the Warriors are one of eight historic franchises included."},
-      {"name": "Warriors at Lakers (ESPN)", "date": "Oct 21, 2026, 10 p.m. ET", "month": 10, "type": "team", "why": "National-TV window (ESPN, not league opening night) against the biggest West rivalry draw."},
-      {"name": "NBA Cup opener at Portland", "date": "Oct 30, 2026", "month": 10, "type": "team", "why": "Start of West Group C group play."},
-      {"name": "Denver at Golden State (Christmas)", "date": "Dec 25, 2026, 10:30 p.m. ET", "month": 12, "type": "team", "why": "Peak Bay Area retail and viewing moment."},
-      {"name": "NBA Cup final", "date": "Dec 11, 2026", "month": 12, "type": "league", "why": "At Hinkle Fieldhouse in Indianapolis; relevant only if the Warriors advance."},
-      {"name": "Trade deadline", "date": "Feb 11, 2027", "month": 2, "type": "league", "why": "Sets the spring narrative."},
-      {"name": "Presidents' Day card including Pacers vs. Warriors", "date": "Feb 15, 2027", "month": 2, "type": "team", "why": "National-TV window; home team and tip time not confirmed."},
-      {"name": "NBA All-Star Weekend", "date": "Feb 19 to 21, 2027", "month": 2, "type": "league", "why": "In Phoenix; a Curry visibility moment."},
-      {"name": "Regular season ends", "date": "Apr 11, 2027", "month": 4, "type": "league", "why": "Standings lock for the play-in."},
-      {"name": "Play-In Tournament", "date": "Apr 13 to 16, 2027", "month": 4, "type": "league", "why": "The Warriors' likely playoff entry point."}
+      {
+        "name": "Nike Specter uniform reveal",
+        "date": "Sep 9, 2026",
+        "month": 9,
+        "type": "league",
+        "why": "Opened the heritage-uniform season. The Warriors are one of eight historic franchises included."
+      },
+      {
+        "name": "Warriors at Lakers (ESPN)",
+        "date": "Oct 21, 2026, 10 p.m. ET",
+        "month": 10,
+        "type": "team",
+        "why": "A national-TV window on ESPN, not league opening night, against the biggest West rivalry draw."
+      },
+      {
+        "name": "NBA Cup opener at Portland",
+        "date": "Oct 30, 2026",
+        "month": 10,
+        "type": "team",
+        "why": "The start of West Group C play."
+      },
+      {
+        "name": "Denver at Golden State (Christmas)",
+        "date": "Dec 25, 2026, 10:30 p.m. ET",
+        "month": 12,
+        "type": "team",
+        "why": "The peak Bay Area retail and viewing moment."
+      },
+      {
+        "name": "NBA Cup final",
+        "date": "Dec 11, 2026",
+        "month": 12,
+        "type": "league",
+        "why": "At Hinkle Fieldhouse in Indianapolis. It matters only if the Warriors advance."
+      },
+      {
+        "name": "Trade deadline",
+        "date": "Feb 11, 2027",
+        "month": 2,
+        "type": "league",
+        "why": "Sets the spring story."
+      },
+      {
+        "name": "Presidents' Day card including Pacers vs. Warriors",
+        "date": "Feb 15, 2027",
+        "month": 2,
+        "type": "team",
+        "why": "A national-TV window. Home team and tip time are not confirmed."
+      },
+      {
+        "name": "NBA All-Star Weekend",
+        "date": "Feb 19 to 21, 2027",
+        "month": 2,
+        "type": "league",
+        "why": "In Phoenix, and a moment of Curry visibility."
+      },
+      {
+        "name": "Regular season ends",
+        "date": "Apr 11, 2027",
+        "month": 4,
+        "type": "league",
+        "why": "Standings lock for the play-in."
+      },
+      {
+        "name": "Play-In Tournament",
+        "date": "Apr 13 to 16, 2027",
+        "month": 4,
+        "type": "league",
+        "why": "The Warriors' likely way into the playoffs."
+      }
     ]
   },
   "provenance": {
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "2026-27 City Edition design and debut date",
-      "Which games the Specter uniforms are worn in",
-      "Warriors home opener date and opponent",
-      "Chase Center ownership, arena naming and capacity as of 2026-27",
-      "Jimmy Butler and Moses Moody return timelines",
-      "Home team and tip time for the Pacers vs. Warriors Presidents' Day game",
-      "Heritage and theme nights at Chase Center for 2026-27",
-      "Home-game dates for Cup group play (Warriors home games in West Group C)",
-      "Whether Klay Thompson-era nostalgia and Oakland heritage product has licensing constraints",
-      "Giants, 49ers and Valkyries 2026-27 schedule overlaps with Warriors dates",
-      "SF Chinese New Year Parade and Bay to Breakers 2027 dates",
-      "Outside Lands 2027 dates"
+      "Confirm the 2026-27 City Edition design and debut date.",
+      "Check which games the Specter uniforms are worn in.",
+      "Confirm the Warriors home opener date and opponent.",
+      "Confirm Chase Center ownership, arena naming and capacity as of 2026-27.",
+      "Check return timelines for Jimmy Butler and Moses Moody.",
+      "Confirm the home team and tip time for the Pacers vs. Warriors Presidents' Day game.",
+      "Check heritage and theme nights at Chase Center for 2026-27.",
+      "Find the home-game dates for Cup group play (Warriors home games in West Group C).",
+      "Check whether Klay Thompson-era nostalgia and Oakland heritage product has licensing constraints.",
+      "Check 2026-27 Giants, 49ers and Valkyries schedule overlaps with Warriors dates.",
+      "Confirm the SF Chinese New Year Parade and Bay to Breakers 2027 dates.",
+      "Confirm the Outside Lands 2027 dates."
     ]
   }
 }

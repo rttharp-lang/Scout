@@ -6,261 +6,261 @@
       "lens": "hoops",
       "claim": "Angel Reese is a current Chicago Sky star and Reebok athlete in the city (hoops, underground, strategy)",
       "verdict": "corrected",
-      "note": "Live check: the Sky traded Reese to the Atlanta Dream in April 2026 for 2027 and 2028 first-round picks. Dossier text now says she left; Sky-as-Reese-draw framing is stale.",
+      "note": "Checked live: the Sky traded Reese to the Atlanta Dream in April 2026 for 2027 and 2028 first-round picks. The dossiers now say she left. The Sky-as-Reese-draw framing is stale.",
       "source": "https://www.wnba.com/news/chicago-sky-trade-angel-reese-to-atlanta-dream"
     },
     {
       "lens": "underground",
       "claim": "Saint Alfred is an operating Wicker Park sneaker boutique and release-day anchor",
       "verdict": "removed",
-      "note": "Live check: Saint Alfred announced it was closing its Wicker Park store in April 2026 after about 22 years. Replaced with RSVP Gallery / Don C entries; strategy still lists it.",
+      "note": "Checked live: Saint Alfred announced in April 2026 that it was closing its Wicker Park store after about 22 years. Replaced with RSVP Gallery and Don C entries. Strategy still lists it.",
       "source": "https://chicago.suntimes.com/arts-and-culture/2026/04/23/wicker-park-retailer-saint-alfred-closing"
     },
     {
       "lens": "art",
       "claim": "RSVP Gallery is a 2009 shop in Wicker Park",
       "verdict": "corrected",
-      "note": "Search suggests RSVP Gallery is active but at 170 N Sangamon St (West Loop), not Wicker Park. Dossiers now mark the address as unconfirmed.",
+      "note": "Search suggests RSVP Gallery is active but at 170 N Sangamon St (West Loop), not Wicker Park. The dossiers now mark the address as unconfirmed.",
       "source": "https://www.itsnicethat.com/articles/2485-rsvp-gallery"
     },
     {
       "lens": "fanbase",
       "claim": "Chicago Sports Museum is at Water Tower Place",
       "verdict": "confirmed",
-      "note": "Live check: still open at Water Tower Place, Level 7, 835 N Michigan Ave.",
+      "note": "Checked live: still open at Water Tower Place, Level 7, 835 N Michigan Ave.",
       "source": "https://www.chicagosportsmuseum.com/"
     },
     {
       "lens": "underground",
       "claim": "Notre (West Loop) is operating and a Nike-history partner",
       "verdict": "unverifiable",
-      "note": "Search says Notre is open but had break-ins as recently as Jan 2024 and a dwindling brand catalog; confirm status and Nike ties before it anchors any drop.",
+      "note": "Search says Notre is open, but it had break-ins as recently as Jan 2024 and its brand catalog is dwindling. Confirm its status and Nike ties before it anchors any drop.",
       "source": "https://solefeed.com/store/notre"
     },
     {
       "lens": "strategy",
       "claim": "Strategy lists Saint Alfred as a boutique-first door, home-opener seeding partner and in retailPlaybook/verify",
       "verdict": "removed",
-      "note": "Saint Alfred closed April 2026. Editor must drop it from opportunities[4].where, calendar[2].play and retailPlaybook.where[1].",
+      "note": "Saint Alfred closed in April 2026. The editor must drop it from opportunities[4].where, calendar[2].play and retailPlaybook.where[1].",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Hawk Season stories send fans from the Ashland Green/Pink L stop to the United Center (topInsights[1], opportunities[0].how, collection themes[0].story, calendar[4].play)",
       "verdict": "corrected",
-      "note": "Ashland Green/Pink is on Lake St, well over a mile from the arena. Culture and food dossiers fixed; editor should use the No. 20 Madison bus or L plus a long walk.",
+      "note": "Ashland Green/Pink is on Lake St, well over a mile from the arena. Fixed in the culture and food dossiers. The editor should send fans by the No. 20 Madison bus, or the L plus a long walk.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Calendar sets a Giddey-Buzelis-Wilson mural unveil on Open House weekend (mid-Oct), an Oct 11 marathon layering drop and a first-week-November outerwear drop",
       "verdict": "corrected",
-      "note": "Today is Oct 7: a commissioned mural, a collection and boutique seeding cannot be designed, made and cleared in 4 to 30 days. Reframe as 2027-28 cycle launches or existing-inventory activations.",
+      "note": "Today is Oct 7. A commissioned mural, a collection and boutique seeding can't be designed, made and cleared in 4 to 30 days. Reframe them as 2027-28 cycle launches, or use existing inventory.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Risk/insight says Nike owns Mac Irvin Fire and Notre as local assets",
       "verdict": "corrected",
-      "note": "Both are partners or sponsored relationships, not Nike-owned. Hoops dossier wording softened; editor should say Nike relationships.",
+      "note": "Both are partners or sponsored relationships, not Nike-owned. Softened in the hoops dossier. The editor should say Nike relationships.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Earlier Bulls City Editions leaned on flag-and-skyline cues (uniform.avoid[0], uniform.narrative)",
       "verdict": "unverifiable",
-      "note": "No dossier verified any Bulls City Edition design. 2026-27 City Edition is unannounced in current facts. Live check every prior concept before claiming the grid idea is unused.",
+      "note": "No dossier verified any Bulls City Edition design, and the 2026-27 City Edition is unannounced in current facts. Check every prior concept live before calling the grid idea unused.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Proviso West Holiday Tournament is where Public League, Catholic League and suburban powers meet for the first time",
       "verdict": "unverifiable",
-      "note": "Oddly absolute claim; Public League teams also play other holiday events. Soften to a long-running holiday showcase.",
+      "note": "The claim is oddly absolute, and Public League teams also play other holiday events. Soften it to a long-running holiday showcase.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Candace Parker is an adidas athlete and Rose adidas (risks[3], topInsights[4])",
       "verdict": "unverifiable",
-      "note": "Parker retired in 2023 and her current adidas role is unverified (hoops softened to adidas partner). Rose retirement in 2024 is firmer; confirm any Bulls retirement of No. 1.",
+      "note": "Parker retired in 2023, and her current adidas role is unverified. The hoops dossier now says adidas partner. Rose's 2024 retirement is firmer. Confirm any Bulls retirement of No. 1.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Cup Nights are Fridays only; Bulls early stage is Fridays Oct 30 to Nov 27",
       "verdict": "corrected",
-      "note": "CURRENT FACTS: group play also adds Tue Nov 24 and Wed Nov 25 Cup Nights. Fanbase and rhythm timing text fixed; strategy calendar[3] should add them.",
+      "note": "CURRENT FACTS: group play also adds Tue Nov 24 and Wed Nov 25 Cup Nights. Fixed in the fanbase and rhythm text. Strategy calendar[3] should add them.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Honey Dijon is Chicago-born",
       "verdict": "corrected",
-      "note": "Raised in Chicago but born in Newark, NJ; wording fixed.",
+      "note": "Raised in Chicago but born in Newark, NJ. Wording fixed.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Virgil Abloh is a Chicago-area native",
       "verdict": "corrected",
-      "note": "Born in Rockford, raised there; Chicago-based. Underground dossier already said Rockford-born. Fixed.",
+      "note": "Born and raised in Rockford, and Chicago-based. The underground dossier already said Rockford-born. Fixed.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "'The Jungle (Windy City)' is Chicago vocabulary",
       "verdict": "removed",
-      "note": "No basis as a local term; replaced with The Hawk.",
+      "note": "No basis as a local term. Replaced with The Hawk.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "'Pressure' and 'Shorty' as Chicago slang",
       "verdict": "unverifiable",
-      "note": "'Shorty' fails the swap test (generic). 'Pressure' flagged as unverified; 'Shorty' still present, editor should replace with a verified local term.",
+      "note": "\"Shorty\" fails the swap test because it's generic. \"Pressure\" is unverified. \"Shorty\" is still in the text, so the editor should replace it with a verified local term.",
       "source": ""
     },
     {
       "lens": "retail-behavior",
       "claim": "'Chi-Town' as local vocabulary",
       "verdict": "corrected",
-      "note": "Locals commonly avoid it; reworded as tourist-coded.",
+      "note": "Locals commonly avoid it. Reworded as tourist-coded.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Chicago flag blue is #41B6E6 (vs #B3DDF2 in every other dossier)",
       "verdict": "corrected",
-      "note": "Cross-dossier inconsistency; aligned to #B3DDF2. Official flag Pantone spec still needs a live check.",
+      "note": "The dossiers disagreed. Aligned to #B3DDF2. The official flag Pantone spec still needs a live check.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Madhouse on Madison is the United Center nickname especially in dynasty years",
       "verdict": "corrected",
-      "note": "Nickname originated at Chicago Stadium (dynasty home to 1994); fixed wording.",
+      "note": "The nickname started at Chicago Stadium, the Bulls' dynasty home until 1994. Wording fixed.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Casa Aztlan murals painted over by developers in 2017; Hector Duarte 'Taller Siqueiros-trained' with a Cullerton studio mural",
       "verdict": "removed",
-      "note": "Oddly specific details without a confident basis; both softened.",
+      "note": "Both details were oddly specific with no confident basis. Both softened.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "The Parthenon (Greektown) closed in 2020",
       "verdict": "removed",
-      "note": "Not confident; kept only Hot Dog Doug 2014 closure example.",
+      "note": "Not confident. Kept only the Hot Dog Doug 2014 closure example.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "'March Madness' mark tied to NCAA and IHSA",
       "verdict": "corrected",
-      "note": "NCAA controls the mark since the 2010 buyout of the shared IHSA entity; keep IHSA tie to the H.V. Porter 1939 history only.",
+      "note": "NCAA has controlled the mark since the 2010 buyout of the shared IHSA entity. Keep the IHSA tie only for the H.V. Porter 1939 history.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Specter, opening night, Christmas, Cup group C and MLK facts for the Bulls",
       "verdict": "confirmed",
-      "note": "Consistent with CURRENT FACTS: Bulls in East Group C, no opening-night or Christmas game; Specter eight does not include the Bulls.",
+      "note": "Consistent with CURRENT FACTS: Bulls in East Group C, no opening-night or Christmas game, and the Specter eight does not include the Bulls.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Chicago Marathon is Oct 11, 2026",
       "verdict": "unverifiable",
-      "note": "Second Sunday of October computes to Oct 11, same day as Bulls at Nuggets preseason; confirm official date.",
+      "note": "The second Sunday of October computes to Oct 11, the same day as Bulls at Nuggets preseason. Confirm the official date.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Lil Durk faces pending federal murder-for-hire case",
       "verdict": "unverifiable",
-      "note": "Trial timing slipped into 2026; case may have concluded. Check before any reference.",
+      "note": "Trial timing slipped into 2026, and the case may have concluded. Check before any reference.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Bulls retired or will retire Derrick Rose No. 1; Rose retired 2024 and adidas",
       "verdict": "unverifiable",
-      "note": "Rose retirement (2024) firm; any 2026-27 jersey retirement and adidas status need a live check (also culture and strategy).",
+      "note": "Rose's 2024 retirement is firm. Any 2026-27 jersey retirement and his adidas status need a live check (also in culture and strategy).",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Federal immigration enforcement surge in Pilsen, Little Village and Humboldt Park from fall 2025",
       "verdict": "unverifiable",
-      "note": "Time-sensitive; check current status before any Latino-neighborhood activation.",
+      "note": "Time-sensitive. Check current status before any Latino-neighborhood launch or event.",
       "source": ""
     },
     {
       "lens": "culture",
-      "claim": "Reinsdorf ownership; Jan 2024 Ring of Honor booing; United Center naming",
+      "claim": "Reinsdorf ownership, Jan 2024 Ring of Honor booing, United Center naming",
       "verdict": "unverifiable",
-      "note": "Ownership and arena naming not in CURRENT FACTS; the booing detail is oddly specific.",
+      "note": "Ownership and arena naming aren't in CURRENT FACTS, and the booing detail is oddly specific.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Bulls home opener date and Black Friday weekend home games",
       "verdict": "unverifiable",
-      "note": "Schedule not in facts; only Oct 20 league opening night and Cup dates confirmed.",
+      "note": "The schedule isn't in the facts. Only the Oct 20 league opening night and Cup dates are confirmed.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Buddy Guy January residency at Legends; Smart Bar, Gramaphone, Dusty Groove, Green Mill, WHPK still open",
       "verdict": "unverifiable",
-      "note": "Long-standing but unchecked for 2026-27; confirm operation.",
+      "note": "Long-standing but unchecked for 2026-27. Confirm they still operate.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Al's #1, Mr. Beef, Superdawg, Gene & Jude's, Lem's, Vito & Nick's, Rainbow Cone, Carnitas Uruapan, Virtue, Kasama, Mi Tocaya open",
       "verdict": "unverifiable",
-      "note": "Long-established institutions (1938 to 1975 openings) but confirm open and partner-willing; Kasama Michelin star and Virtue chef status need checking.",
+      "note": "Long-established institutions (opened 1938 to 1975). Confirm each is open and willing to partner. Check the Kasama Michelin star and Virtue's chef status.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Foot Locker, Lids, Mitchell & Ness Chicago store and Leaders 1354 operating as described",
       "verdict": "unverifiable",
-      "note": "Foot Locker is believed to be under Dick's ownership since 2025; Leaders 1354 and M&N Chicago addresses are vague. Confirm each door.",
+      "note": "Foot Locker is believed to be under Dick's ownership since 2025. The Leaders 1354 and M&N Chicago addresses are vague. Confirm each door.",
       "source": ""
     },
     {
       "lens": "underground",
       "claim": "Logan Boulevard Skatepark, Wilson and Grant skateparks, The Rink Fitness Factory, Galloping Ghost, Quimby's, Jeffery Pub",
       "verdict": "unverifiable",
-      "note": "Plausible and long-running, but location and status of Logan Blvd skatepark and JB sessions at The Rink need confirming.",
+      "note": "Plausible and long-running, but the location and status of Logan Blvd skatepark and the JB sessions at The Rink need confirming.",
       "source": ""
     },
     {
       "lens": "art",
-      "claim": "Omri Amrany and Julie Rotblatt-Amrany as living local sculptors; EXPO CHICAGO now under Frieze; Open House dates",
+      "claim": "Omri Amrany and Julie Rotblatt-Amrany as living local sculptors, EXPO CHICAGO now under Frieze, Open House dates",
       "verdict": "unverifiable",
-      "note": "Confirm the sculptors' current studio status, EXPO ownership/dates and Open House Chicago 2026 date.",
+      "note": "Confirm the sculptors' current studio status, EXPO ownership and dates, and the Open House Chicago 2026 date.",
       "source": ""
     },
     {
       "lens": "hoops",
-      "claim": "Public League Red-South and Red-West conference names; Marshall girls coach Dorothy Gaters; St. Sabina peace tournament",
+      "claim": "Public League Red-South and Red-West conference names, Marshall girls coach Dorothy Gaters, St. Sabina peace tournament",
       "verdict": "unverifiable",
-      "note": "CPS realigns conferences; coaching and tournament details oddly specific. Confirm before use in copy.",
+      "note": "CPS realigns conferences, and the coaching and tournament details are oddly specific. Confirm before using in copy.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Pride June 27, river dye Mar 13, Bud Billiken Aug 14 and Lunar New Year Feb 6 2027",
       "verdict": "confirmed",
-      "note": "Date arithmetic checks out (Saturday before Mar 17; second Saturday; last Sunday of June; Lunar New Year Feb 6, 2027).",
+      "note": "Date arithmetic checks out: Saturday before Mar 17, second Saturday, last Sunday of June, Lunar New Year Feb 6, 2027.",
       "source": ""
     }
   ],
-  "summary": "Chicago dossiers are mostly sound on long-established history, and consistent with CURRENT FACTS on coach, roster, Cup group, no opening-night or Christmas game and last season. Three live spot-checks found real errors: Angel Reese was traded from the Sky to Atlanta in April 2026, Saint Alfred closed its Wicker Park store in April 2026, and RSVP Gallery appears to be in the West Loop, not Wicker Park. Fixed in place: the false Ashland L stop as arena access, Honey Dijon and Abloh origins, a bogus 'Jungle' vocab term, the flag-blue hex conflict, Cup Night dates, and several oddly specific details. The strategy brief still needs the editor to drop Saint Alfred, fix Ashland, reconcile impossible near-term timing (mural and drops within days of Oct 7), and stop calling Mac Irvin Fire and Notre Nike-owned."
+  "summary": "Most Chicago dossiers hold up on long-established history and match CURRENT FACTS on coach, roster, Cup group, no opening-night or Christmas game and last season. Three live checks found real errors. The Sky traded Angel Reese to Atlanta in April 2026. Saint Alfred closed its Wicker Park store. RSVP Gallery appears to be in the West Loop. The strategy brief still needs the editor's fixes, listed below."
 }

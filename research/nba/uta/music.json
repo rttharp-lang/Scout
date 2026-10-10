@@ -1,120 +1,303 @@
 {
   "team": "uta",
   "lens": "music",
-  "headline": "Utah's sound is a collision of choir-trained harmony, all-ages basement punk and a team named for a New Orleans art form that never left home.",
-  "summary": "Salt Lake's music identity runs on two parallel engines: a huge institutional tradition (Tabernacle Choir, Utah Symphony, the Osmonds-to-Neon Trees line of clean-cut pop) and a stubborn DIY underground built on all-ages rooms like Kilby Court, KRCL community radio and SLUG Magazine. Utah has produced arena-scale pop-rock exports (Imagine Dragons, Neon Trees) and a Provo-to-Orem emo and pop-punk lineage, while the West Side's Latino and Pacific Islander communities carry the city's rhythm, church choirs and car-and-cumbia culture. The Jazz name itself is a built-in music story: a New Orleans name carried west, now sitting in a market that rarely sings about it. The 2026-27 City Edition, a gray vertical gradient with baby blue trim, reads more like a mountain-smog-to-sky inversion than a stage light, so the scene's flyer and poster language is the natural way to give it a voice.",
+  "headline": "Salt Lake sings in four-part harmony and screams in all-ages basements.",
+  "summary": "Salt Lake music runs on two engines. One is institutional: the Tabernacle Choir, the Utah Symphony and clean-cut pop from the Osmonds to Neon Trees. The other is a stubborn DIY underground of all-ages rooms like Kilby Court, KRCL community radio and SLUG Magazine. That scene's flyer and poster language can give the gray City Edition a voice.",
   "insights": [
     {
-      "title": "The name is the music story nobody has told well",
-      "detail": "The Jazz were named in New Orleans and moved to Utah in 1979, so the franchise carries a genre name with no local jazz roots. Utah has a real if small jazz scene, but the connection is mostly typographic and nostalgic, not sonic.",
-      "implication": "Pair a local jazz-and-improv voice with product so the name is earned rather than ironic; a New Orleans-to-Wasatch story could anchor a capsule."
+      "title": "The name is the story nobody tells",
+      "detail": "The Jazz were named in New Orleans and moved to Utah in 1979, so the franchise carries a genre name with no local jazz roots. Utah has a real if small jazz scene. The link is mostly typographic and nostalgic, not sonic. The name sits in a market that rarely sings about it.",
+      "implication": "Pair a local jazz-and-improv voice with product, so the name is earned rather than ironic. A New Orleans-to-Wasatch story could anchor a capsule."
     },
     {
-      "title": "All-ages DIY is the credibility layer",
-      "detail": "Because of Utah's alcohol laws and the youth-heavy population, all-ages rooms such as Kilby Court in the Granary District became the proving ground for several generations of bands. Gig posters, screen-printed flyers and SLUG Magazine culture are the visual language.",
-      "implication": "Screen-print and flyer aesthetics read as authentic here in a way a polished stadium-rock look would not; use them for tees and hoodies."
+      "title": "Credibility is earned in all-ages rooms",
+      "detail": "Utah's alcohol laws and young population made all-ages rooms like Kilby Court in the Granary District the proving ground for generations of bands. Gig posters, screen-printed flyers and SLUG Magazine culture set the visual language.",
+      "implication": "Screen-print and flyer looks read as real here, and a polished stadium-rock look would not. Use them for tees and hoodies."
     },
     {
       "title": "Choir culture shapes how the city hears harmony",
-      "detail": "The Tabernacle Choir, Utah Symphony at Abravanel Hall and ward and stake music mean many locals grew up singing in parts. Arena moments like the anthem and group singalongs land with unusual unity.",
-      "implication": "Do not lift sacred or church imagery; the opportunity is celebratory, communal sound, such as crowd-sung moments and sound-wave graphics."
+      "detail": "The Tabernacle Choir, the Utah Symphony at Abravanel Hall, and ward and stake music mean many locals grew up singing in parts. The anthem and group singalongs land with unusual unity in an arena.",
+      "implication": "Leave sacred and church imagery alone. Build on celebratory, communal sound instead, such as crowd-sung moments and sound-wave graphics."
     },
     {
-      "title": "Hometown pop-rock exports give the market national swagger",
-      "detail": "Imagine Dragons formed in Provo and Las Vegas with BYU roots, Neon Trees came out of Provo, and the Osmonds out of Ogden defined an earlier era. These acts are quoted as Utah pride even when they live elsewhere.",
-      "implication": "Artist collaborations need licensing and likely run through management; a safer route is crediting local-scene lineage in editorial content, not logos or lyrics."
+      "title": "Hometown exports give the market swagger",
+      "detail": "Imagine Dragons formed in Provo and Las Vegas with BYU roots. Neon Trees came out of Provo, and the Osmonds out of Ogden defined an earlier era. A Provo-to-Orem emo and pop-punk lineage runs beside them. Utah claims these acts as its own even when they live elsewhere.",
+      "implication": "Artist collaborations need licensing and likely run through management. The safer route is crediting local-scene lineage in editorial content, with no logos or lyrics."
     },
     {
-      "title": "The West Side holds the rhythm the city doesn't advertise",
-      "detail": "Rose Park and Glendale are home to Mexican-American and Pacific Islander communities with their own church choirs, quinceanera and family-party music, lowrider and cumbia culture. These sounds are present at community gatherings far more than at downtown venues.",
-      "implication": "Engage through community partners and pay local creators; Polynesian motifs in particular must not be lifted without a collaborator."
+      "title": "The West Side holds the rhythm",
+      "detail": "Rose Park and Glendale are home to Mexican-American and Pacific Islander communities, with their own church choirs, quinceanera and family-party music, and lowrider and cumbia culture. You hear it at community gatherings far more than at downtown venues.",
+      "implication": "Work through community partners and pay local creators. Never lift Polynesian motifs without a collaborator."
     },
     {
-      "title": "A young roster matches a young audience",
-      "detail": "With Darryn Peterson and Ace Bailey beside Lauri Markkanen and Jaren Jackson Jr., the team's story is youth and development, which mirrors Utah's youngest-in-the-nation demographic and its music-making teenagers.",
-      "implication": "Frame drops around emerging local artists, not legacy acts, to rhyme with a rebuild."
+      "title": "A young roster meets a young audience",
+      "detail": "Darryn Peterson and Ace Bailey play beside Lauri Markkanen and Jaren Jackson Jr. The team's story is youth and development, which mirrors Utah's youngest-in-the-nation demographic and its music-making teenagers.",
+      "implication": "Build drops around emerging local artists, not legacy acts, to rhyme with the rebuild."
     }
   ],
   "places": [
-    {"name": "Kilby Court", "kind": "all-ages venue", "neighborhood": "Granary District, Salt Lake City", "why": "A tiny backyard-style all-ages room that launched many Utah indie bands and is the emotional center of the DIY scene."},
-    {"name": "The Depot", "kind": "venue", "neighborhood": "Downtown / Gateway, Salt Lake City", "why": "A converted historic rail depot, a mid-size room for touring and national acts."},
-    {"name": "Urban Lounge", "kind": "club", "neighborhood": "Central City, 500 East", "why": "A long-running indie and punk club east of downtown."},
-    {"name": "The Complex", "kind": "venue", "neighborhood": "Downtown west, near Gateway", "why": "A multi-room venue for hip-hop, EDM and touring shows."},
-    {"name": "Metro Music Hall", "kind": "venue", "neighborhood": "Downtown, Salt Lake City", "why": "A mid-size club room for touring acts and local showcases."},
-    {"name": "Abravanel Hall", "kind": "concert hall", "neighborhood": "Downtown, Salt Lake City", "why": "Home of the Utah Symphony, the city's institutional musical heart, a short walk from the Delta Center."},
-    {"name": "KRCL 90.9 FM", "kind": "community radio", "neighborhood": "Salt Lake City", "why": "Independent community station that champions local artists and world music."},
-    {"name": "Graywhale and Randy's Records", "kind": "record stores", "neighborhood": "Salt Lake City", "why": "Long-standing local record shops where the scene crate-digs."},
-    {"name": "Delta Center", "kind": "arena", "neighborhood": "Downtown, Salt Lake City", "why": "The Jazz home and the largest concert room in the state; game nights are the most reliable mass-music moment."},
-    {"name": "Sugar House", "kind": "district", "neighborhood": "Sugar House, Salt Lake City", "why": "Bar, record and vintage corridor with a younger, creative crowd."}
+    {
+      "name": "Kilby Court",
+      "kind": "all-ages venue",
+      "neighborhood": "Granary District, Salt Lake City",
+      "why": "A tiny backyard-style all-ages room that launched many Utah indie bands. It is the emotional center of the DIY scene."
+    },
+    {
+      "name": "The Depot",
+      "kind": "venue",
+      "neighborhood": "Downtown / Gateway, Salt Lake City",
+      "why": "A converted historic rail depot and a mid-size room for touring and national acts."
+    },
+    {
+      "name": "Urban Lounge",
+      "kind": "club",
+      "neighborhood": "Central City, 500 East",
+      "why": "A long-running indie and punk club east of downtown."
+    },
+    {
+      "name": "The Complex",
+      "kind": "venue",
+      "neighborhood": "Downtown west, near Gateway",
+      "why": "A multi-room venue for hip-hop, EDM and touring shows."
+    },
+    {
+      "name": "Metro Music Hall",
+      "kind": "venue",
+      "neighborhood": "Downtown, Salt Lake City",
+      "why": "A mid-size club for touring acts and local showcases."
+    },
+    {
+      "name": "Abravanel Hall",
+      "kind": "concert hall",
+      "neighborhood": "Downtown, Salt Lake City",
+      "why": "Home of the Utah Symphony and the city's institutional musical heart, a short walk from the Delta Center."
+    },
+    {
+      "name": "KRCL 90.9 FM",
+      "kind": "community radio",
+      "neighborhood": "Salt Lake City",
+      "why": "Independent community station that champions local artists and world music."
+    },
+    {
+      "name": "Graywhale and Randy's Records",
+      "kind": "record stores",
+      "neighborhood": "Salt Lake City",
+      "why": "Long-standing local record shops where the scene crate-digs."
+    },
+    {
+      "name": "Delta Center",
+      "kind": "arena",
+      "neighborhood": "Downtown, Salt Lake City",
+      "why": "The Jazz home and the largest concert room in the state. Game nights are the most reliable mass-music moment."
+    },
+    {
+      "name": "Sugar House",
+      "kind": "district",
+      "neighborhood": "Sugar House, Salt Lake City",
+      "why": "A bar, record and vintage corridor with a younger, creative crowd."
+    }
   ],
   "people": [
-    {"name": "Imagine Dragons", "role": "pop-rock band", "why": "Utah-rooted arena act with BYU and Provo origins; Utah pride, but any collaboration means national-level licensing."},
-    {"name": "Neon Trees", "role": "pop-rock band", "why": "Provo band with a national hit run, a Utah scene touchstone."},
-    {"name": "The Osmonds", "role": "pop family act", "why": "Ogden-linked family that defined Utah's earlier pop moment."},
-    {"name": "Utah Symphony", "role": "orchestra", "why": "Institutional anchor, with a summer home at Deer Valley in Park City."},
-    {"name": "The Tabernacle Choir at Temple Square", "role": "choir", "why": "The state's best-known musical institution; treat as sacred and avoid commercial imagery."},
-    {"name": "SLUG Magazine", "role": "local music and culture publication", "why": "Salt Lake Under Ground has documented the DIY scene for decades and its poster art is a design cue."},
-    {"name": "KRCL DJs and programmers", "role": "radio collective", "why": "Community-radio voices who elevate local and world music."}
+    {
+      "name": "Imagine Dragons",
+      "role": "pop-rock band",
+      "why": "Utah-rooted arena act with BYU and Provo origins. A source of Utah pride, but any collaboration means national-level licensing."
+    },
+    {
+      "name": "Neon Trees",
+      "role": "pop-rock band",
+      "why": "Provo band with a national hit run and a Utah scene touchstone."
+    },
+    {
+      "name": "The Osmonds",
+      "role": "pop family act",
+      "why": "Ogden-linked family that defined Utah's earlier pop moment."
+    },
+    {
+      "name": "Utah Symphony",
+      "role": "orchestra",
+      "why": "Institutional anchor, with a summer home at Deer Valley in Park City."
+    },
+    {
+      "name": "The Tabernacle Choir at Temple Square",
+      "role": "choir",
+      "why": "The state's best-known musical institution. Treat it as sacred and avoid commercial imagery."
+    },
+    {
+      "name": "SLUG Magazine",
+      "role": "local music and culture publication",
+      "why": "Salt Lake Under Ground has documented the DIY scene for decades, and its poster art is a design cue."
+    },
+    {
+      "name": "KRCL DJs and programmers",
+      "role": "radio collective",
+      "why": "Community-radio voices who lift local and world music."
+    }
   ],
   "moments": [
-    {"name": "Utah Arts Festival", "timing": "Late June", "month": 6, "why": "The state's biggest multi-day arts and music festival at Library Square, with a poster-art tradition."},
-    {"name": "Home opener and NBA Cup Nuggets night", "timing": "Oct 30 (Nuggets at Jazz, Cup opener)", "month": 10, "why": "An early Friday-night spotlight for a local artist performance and drop."},
-    {"name": "Home games at Delta Center", "timing": "Every home game", "month": 0, "why": "In-arena music, DJ and halftime culture, the most scalable local music stage."},
-    {"name": "Salt Lake Pride", "timing": "Early June", "month": 6, "why": "A major community and music weekend downtown."},
-    {"name": "Deer Valley Music Festival", "timing": "Summer", "month": 7, "why": "Utah Symphony summer season in Park City."},
-    {"name": "Red Butte Garden summer concerts", "timing": "Summer", "month": 7, "why": "Long-running outdoor amphitheater concert series at the foot of the Wasatch."}
+    {
+      "name": "Utah Arts Festival",
+      "timing": "Late June",
+      "month": 6,
+      "why": "The state's biggest multi-day arts and music festival, at Library Square, with a poster-art tradition."
+    },
+    {
+      "name": "Home opener and NBA Cup Nuggets night",
+      "timing": "Oct 30 (Nuggets at Jazz, Cup opener)",
+      "month": 10,
+      "why": "An early Friday-night spotlight for a local artist performance and drop."
+    },
+    {
+      "name": "Home games at Delta Center",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "In-arena music, DJs and halftime culture make this the most scalable local music stage."
+    },
+    {
+      "name": "Salt Lake Pride",
+      "timing": "Early June",
+      "month": 6,
+      "why": "A major community and music weekend downtown."
+    },
+    {
+      "name": "Deer Valley Music Festival",
+      "timing": "Summer",
+      "month": 7,
+      "why": "The Utah Symphony's summer season in Park City."
+    },
+    {
+      "name": "Red Butte Garden summer concerts",
+      "timing": "Summer",
+      "month": 7,
+      "why": "A long-running outdoor concert series at the foot of the Wasatch."
+    }
   ],
   "vocabulary": [
-    {"term": "Wasatch Front", "meaning": "The urban strip along the mountains from Provo to Ogden, the scene's geography."},
-    {"term": "Granary District", "meaning": "Warehouse neighborhood that houses Kilby Court and creative spaces."},
-    {"term": "Ward / stake", "meaning": "Local congregation structures; many musicians' first stage, so use respectfully."},
-    {"term": "All-ages", "meaning": "The local default for DIY shows given age-restricted bar culture."},
-    {"term": "The Delta", "meaning": "Casual shorthand for the arena."}
+    {
+      "term": "Wasatch Front",
+      "meaning": "The urban strip along the mountains from Provo to Ogden, and the scene's geography."
+    },
+    {
+      "term": "Granary District",
+      "meaning": "Warehouse neighborhood that houses Kilby Court and creative spaces."
+    },
+    {
+      "term": "Ward / stake",
+      "meaning": "Local congregation structures and many musicians' first stage. Use the terms respectfully."
+    },
+    {
+      "term": "All-ages",
+      "meaning": "The local default for DIY shows, given age-restricted bar culture."
+    },
+    {
+      "term": "The Delta",
+      "meaning": "Casual shorthand for the arena."
+    }
   ],
   "designCues": [
-    {"cue": "Baby blue trim", "type": "color", "hex": "#89CFF0", "source": "2026-27 City Edition trim", "use": "Accent on tees and tape, echoing a clear winter-inversion sky."},
-    {"cue": "Vertical smog-to-sky gray gradient", "type": "color", "hex": "#9AA0A6", "source": "City Edition gradient", "use": "Base of capsule graphics, with print-fade treatments."},
-    {"cue": "Jazz purple", "type": "color", "hex": "#4B2E83", "source": "Franchise heritage", "use": "Heritage accent in poster-style graphics."},
-    {"cue": "Screen-printed gig-poster layouts", "type": "graphic", "hex": "", "source": "Kilby Court and SLUG culture", "use": "Limited colors, off-register ink, hand-lettered date blocks on tees."},
-    {"cue": "Cassette and 7-inch sleeve forms", "type": "motif", "hex": "", "source": "Record-store and DIY culture", "use": "Hang tags, packaging and woven labels."},
-    {"cue": "Sound-wave contours that echo the Wasatch skyline", "type": "motif", "hex": "", "source": "Mountains plus music", "use": "A single-line graphic on warm-ups."},
-    {"cue": "Red-rock accent", "type": "color", "hex": "#B5532B", "source": "Southern Utah landscape", "use": "Sparingly, as a contrast to the cool City Edition palette."}
+    {
+      "cue": "Baby blue trim",
+      "type": "color",
+      "hex": "#89CFF0",
+      "source": "2026-27 City Edition trim",
+      "use": "Accent on tees and tape, echoing a clear winter-inversion sky."
+    },
+    {
+      "cue": "Vertical smog-to-sky gray gradient",
+      "type": "color",
+      "hex": "#9AA0A6",
+      "source": "City Edition gradient",
+      "use": "Base of capsule graphics, with print-fade treatments."
+    },
+    {
+      "cue": "Jazz purple",
+      "type": "color",
+      "hex": "#4B2E83",
+      "source": "Franchise heritage",
+      "use": "Heritage accent in poster-style graphics."
+    },
+    {
+      "cue": "Screen-printed gig-poster layouts",
+      "type": "graphic",
+      "hex": "",
+      "source": "Kilby Court and SLUG culture",
+      "use": "Limited colors, off-register ink and hand-lettered date blocks on tees."
+    },
+    {
+      "cue": "Cassette and 7-inch sleeve forms",
+      "type": "motif",
+      "hex": "",
+      "source": "Record-store and DIY culture",
+      "use": "Hang tags, packaging and woven labels."
+    },
+    {
+      "cue": "Sound-wave contours that echo the Wasatch skyline",
+      "type": "motif",
+      "hex": "",
+      "source": "Mountains plus music",
+      "use": "A single-line graphic on warm-ups."
+    },
+    {
+      "cue": "Red-rock accent",
+      "type": "color",
+      "hex": "#B5532B",
+      "source": "Southern Utah landscape",
+      "use": "Use sparingly, as a contrast to the cool City Edition palette."
+    }
   ],
   "productHooks": [
-    "A gig-poster tee series, one design per month of home games, made with local screen printers and poster artists.",
-    "Hang tags and packaging styled as 7-inch sleeves with a local artist playlist QR.",
-    "A New Orleans-to-Wasatch jazz story capsule that connects the name to a real local jazz voice.",
+    "Gig-poster tee series, one design per month of home games, made with local screen printers and poster artists.",
+    "Hang tags and packaging styled as 7-inch sleeves, with a local artist playlist QR.",
+    "A New Orleans-to-Wasatch jazz capsule that ties the name to a real local jazz voice.",
     "Gray-to-blue gradient warm-up jacket with a sound-wave contour liner."
   ],
   "watchouts": [
-    "Do not use Tabernacle Choir, temple or other church imagery or music commercially.",
-    "Artist names and recordings (Imagine Dragons, Neon Trees, the Osmonds) require licensing; never use lyrics.",
-    "Pacific Islander and Latino cultural motifs must come through paid community collaborators, never lifted.",
-    "Alcohol-forward venue imagery is a poor fit for Utah's youth-heavy and family audience."
+    "Never use Tabernacle Choir, temple or other church imagery or music commercially.",
+    "Artist names and recordings (Imagine Dragons, Neon Trees, the Osmonds) require licensing. Never use lyrics.",
+    "Pacific Islander and Latino cultural motifs come only through paid community collaborators. Never lift them.",
+    "Alcohol-forward venue imagery is a poor fit for Utah's youth-heavy, family audience."
   ],
   "sources": [
-    {"title": "Utah Jazz (official)", "url": "https://www.nba.com/jazz"},
-    {"title": "Delta Center", "url": "https://www.deltacenter.com"},
-    {"title": "Music of Utah (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Music_of_Utah"},
-    {"title": "KRCL 90.9", "url": "https://krcl.org"},
-    {"title": "SLUG Magazine", "url": "https://www.slugmag.com"},
-    {"title": "Utah Arts Festival", "url": "https://uaf.org"}
+    {
+      "title": "Utah Jazz (official)",
+      "url": "https://www.nba.com/jazz"
+    },
+    {
+      "title": "Delta Center",
+      "url": "https://www.deltacenter.com"
+    },
+    {
+      "title": "Music of Utah (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Music_of_Utah"
+    },
+    {
+      "title": "KRCL 90.9",
+      "url": "https://krcl.org"
+    },
+    {
+      "title": "SLUG Magazine",
+      "url": "https://www.slugmag.com"
+    },
+    {
+      "title": "Utah Arts Festival",
+      "url": "https://uaf.org"
+    }
   ],
   "confidence": "medium",
   "provenance": {
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Delta Center ownership, arena name and in-arena DJ and halftime programming for 2026-27",
-      "Kilby Court, The Depot, Urban Lounge, The Complex and Metro Music Hall are all still operating and booking",
-      "Graywhale and Randy's Records locations still open",
-      "Utah Arts Festival 2027 dates and Salt Lake Pride 2027 dates",
-      "Deer Valley Music Festival 2027 season dates and Utah Symphony residency",
-      "Red Butte Garden concert series dates for summer 2027",
-      "KRCL 90.9 and SLUG Magazine remain active and independent",
-      "Imagine Dragons and Neon Trees current Utah ties and touring status",
-      "Whether the Jazz have named a local artist or in-arena music partner for 2026-27",
-      "City Edition 2026-27 reveal timing and any music tie-in"
+      "Confirm Delta Center ownership, arena name and in-arena DJ and halftime programming for 2026-27",
+      "Confirm Kilby Court, The Depot, Urban Lounge, The Complex and Metro Music Hall are all still operating and booking",
+      "Confirm Graywhale and Randy's Records locations are still open",
+      "Check Utah Arts Festival 2027 dates and Salt Lake Pride 2027 dates",
+      "Check Deer Valley Music Festival 2027 season dates and the Utah Symphony residency",
+      "Check Red Butte Garden concert series dates for summer 2027",
+      "Confirm KRCL 90.9 and SLUG Magazine remain active and independent",
+      "Check Imagine Dragons and Neon Trees current Utah ties and touring status",
+      "Ask whether the Jazz have named a local artist or in-arena music partner for 2026-27",
+      "Check City Edition 2026-27 reveal timing and any music tie-in"
     ]
   }
 }

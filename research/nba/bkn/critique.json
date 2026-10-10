@@ -5,135 +5,135 @@
       "target": "calendar[0..2], collection, opportunities[0], opportunities[2]",
       "type": "timing",
       "severity": "high",
-      "problem": "Today is Oct 7, 2026, yet the calendar launches new designs (Kings County varsity, banded rust hoodie, Platform Winter puffer, on-site 112 printing) on Oct 20-Nov 27, 2026. Fall/holiday 2026 product and the 2026-27 City Edition were locked many months ago, and nothing in the brief says which items are this season and which are next. Printing at the Nets Shop also depends on the arena operator and the NBA licensing channel, not Nike alone.",
-      "fix": "Split every item into 'this season' (graphic tees, print-on-demand 112 numerals, hangtag stories, partner events, content) and 'Fall/Holiday 2027 build' (varsity, puffer, rust knits, the uniform). Say plainly that the real design windows are Labor Day 2027 and holiday 2027, and add 2026-27 quick-turn graphics only."
+      "problem": "Today is Oct 7, 2026, yet the calendar launches new designs (Kings County varsity, banded rust hoodie, Platform Winter puffer, on-site 112 printing) between Oct 20 and Nov 27, 2026. Fall/holiday 2026 product and the 2026-27 City Edition were locked months ago, and the brief never says which items are this season and which are next. Printing at the Nets Shop also depends on the arena operator and the NBA licensing channel, not Nike alone.",
+      "fix": "Split every item into \"this season\" and \"Fall/Holiday 2027 build\". This season: graphic tees, print-on-demand 112 numerals, hangtag stories, partner events and content. The 2027 build: varsity, puffer, rust knits and the uniform. State plainly that the real design windows are Labor Day 2027 and holiday 2027. Add only 2026-27 quick-turn graphics."
     },
     {
       "target": "uniform (Still a City)",
       "type": "other",
       "severity": "high",
-      "problem": "The uniform concept cannot be a 2026-27 City Edition, and the brief never says which season it targets. It also contradicts the brief's own insight that color needs a reason: the rust, brownstone and gilt palette dilutes the monochrome fashion uniform, and Brownstone (#6B4A3A) and Rust (#7A3B1E) are near-twins that will read as one muddy brown on black under arena lighting. Rust-on-black has weak contrast at broadcast distance. The 'avoid Atlantic Yards triumphalism' rule is broken by the narrative, which is a triumphant 'back on the exact corner in 2012' story.",
-      "fix": "Label the concept as a 2027-28 pitch. Collapse the palette to black, bone and one metal (gilt) and let rust live in texture and tonal trim, not number or chest color. Rewrite the narrative around the civic voice and the Brooklyn Borough Hall era, and treat the corner story as an acknowledged, contested history (displacement included), not a victory lap."
+      "problem": "The uniform concept can't be a 2026-27 City Edition, and the brief never says which season it targets. It also breaks the brief's own rule that color needs a reason: the rust, brownstone and gilt palette dilutes the monochrome fashion uniform. Brownstone (#6B4A3A) and Rust (#7A3B1E) are near-twins. They will read as one muddy brown on black under arena lighting, and rust on black has weak contrast at broadcast distance. The narrative breaks the \"avoid Atlantic Yards triumphalism\" rule too, because it is a triumphant \"back on the exact corner in 2012\" story.",
+      "fix": "Label the concept a 2027-28 pitch. Cut the palette to black, bone and one metal (gilt), and let rust live in texture and tonal trim, not the number or chest color. Rewrite the narrative around the civic voice and the Brooklyn Borough Hall era. Treat the corner story as contested history, displacement included, not a victory lap."
     },
     {
       "target": "uniform.motifs / weathered alternate",
       "type": "other",
       "severity": "medium",
-      "problem": "Claims the Barclays facade lattice needs 'no arena license' if abstracted. The facade and arena trade dress belong to the arena owner and its operator, and the Nets already share a roof with the Liberty, so this assumption is risky. The Eendraght Maeckt Maght motto and the 'City of Brooklyn' civic language are safe, but the Dutch-colonial 1834 framing glosses over the slavery-era history that Weeksville, the brief's own Black history partner, was founded in defiance of.",
-      "fix": "Make arena-owner (BSE Global) sign-off a gate on any facade-derived art. Keep motifs to materials and texture rather than a traceable pattern. Let Weeksville and Restoration review the 'Est. 1834' civic framing before it appears on neck tape or a hangtag."
+      "problem": "The brief says the Barclays facade lattice needs \"no arena license\" if abstracted. But the facade and arena trade dress belong to the arena owner and its operator, and the Nets already share a roof with the Liberty, so the assumption is risky. The Eendraght Maeckt Maght motto and the \"City of Brooklyn\" civic language are safe. The Dutch-colonial 1834 framing, though, glosses over the slavery-era history that Weeksville, the brief's own Black history partner, was founded in defiance of.",
+      "fix": "Make sign-off from the arena owner (BSE Global) a gate on any art taken from the facade. Keep motifs to materials and texture, not a traceable pattern. Have Weeksville and Restoration review the \"Est. 1834\" civic framing before it appears on neck tape or a hangtag."
     },
     {
       "target": "opportunities[1] bring-your-flag-carnival (priority 1, size high)",
       "type": "weak-link",
-      "problem": "A priority-1, high-size bet rests on the claim that Caribbean Brooklyn knots flags over Nets jerseys. The dossiers show flag-customizing as a Brooklyn habit but offer no evidence that these households are Nets fans (fandom score is 40, and many may follow the Knicks, Raptors or Heat). The Carnival it targets (Sept 6, 2027) is eleven months out and the 2026 Carnival has already passed, so it is the thinnest in-season item in the brief while carrying the highest rank. A flag-tie loop is also a hardware gimmick unless the community asks for it.",
-      "fix": "Downgrade to a partner-led test and make validation step one: a listening phase with caribBEING and the bands before any commitment. Add in-season Caribbean touchpoints (Haitian Independence Day on Jan 1, a Caribbean heritage night at a Barclays game) so priority 1 has something to ship in 2026-27.",
+      "problem": "A priority-1, high-size bet rests on the claim that Caribbean Brooklyn knots flags over Nets jerseys. The dossiers show flag-customizing as a Brooklyn habit but give no evidence that these households are Nets fans. The fandom score is 40, and many may follow the Knicks, Raptors or Heat. The Carnival it targets (Sept 6, 2027) is eleven months out and the 2026 Carnival has passed. So the thinnest in-season item in the brief carries the highest rank. A flag-tie loop is also a hardware gimmick unless the community asks for it.",
+      "fix": "Downgrade it to a partner-led test, and make validation step one: a listening phase with caribBEING and the bands before any commitment. Add in-season Caribbean moments, such as Haitian Independence Day on Jan 1 and a Caribbean heritage night at a Barclays game, so priority 1 has something to ship in 2026-27.",
       "severity": "high"
     },
     {
       "target": "collection.themes[Bring Your Flag].pieces (J'Ouvert white tee)",
       "type": "appropriation",
       "severity": "high",
-      "problem": "A white tee 'meant to come home paint-soaked' is product designed to be destroyed at J'Ouvert, an emancipation commemoration with a recent history of violence and heavy policing. That is party-branding of the very thing the brief's own watchouts warn about. It also competes with the mas bands' and J'Ouvert crews' own T-shirts, which are how those groups fund themselves. A hangtag story does not fix that.",
-      "fix": "Drop the tee as a Nike/Nets product. If the bands want a wearable, make it a band-owned design that Nike produces at cost, sold by the band, with no Nets mark. Keep the steelpan note-map and mas credit paid via fee plus revenue share, and confirm the tuners' note layout is theirs to license."
+      "problem": "A white tee \"meant to come home paint-soaked\" is product designed to be destroyed at J'Ouvert, an emancipation commemoration with a recent history of violence and heavy policing. That is party-branding of the very thing the brief's own watchouts warn about. It also competes with the T-shirts the mas bands and J'Ouvert crews sell to fund themselves. A hangtag story doesn't fix that.",
+      "fix": "Drop the tee as a Nike/Nets product. If the bands want a wearable, make it a band-owned design that Nike produces at cost and the band sells, with no Nets mark. Keep the steelpan note-map and the mas credit, paid by fee plus revenue share. Confirm the tuners' note layout is theirs to license."
     },
     {
       "target": "calendar[3] (December counter-programming), sorrel-red fleece",
       "type": "weak-link",
-      "problem": "'Counter-programming' the Knicks' noon Christmas game (Spurs at Knicks) picks a fight with the champions on their biggest day while the brief's own tone guidance says do not fight the Knicks wave. The Nets have no Christmas game and the Nets' December home dates are not known. A sorrel-red fleece turns a Caribbean holiday drink into a color name with no partner on the design, and red is off-palette in a brief that otherwise says color needs a story.",
-      "fix": "Drop the counter-programming language; run a quiet Brooklyn gifting drop on the Nets' actual home dates. If sorrel is used, make it a partner bakery's own collaboration and credit them. Otherwise cut the fleece.",
+      "problem": "\"Counter-programming\" the Knicks' noon Christmas game (Spurs at Knicks) picks a fight with the champions on their biggest day. The brief's own tone guidance says not to fight the Knicks wave. The Nets have no Christmas game, and their December home dates aren't known. The sorrel-red fleece turns a Caribbean holiday drink into a color name with no partner on the design. Red is also off-palette in a brief that says color needs a story.",
+      "fix": "Drop the counter-programming language and run a quiet Brooklyn gifting drop on the Nets' actual home dates. If sorrel stays, make it a partner bakery's own collaboration and credit them. Otherwise cut the fleece.",
       "severity": "medium"
     },
     {
       "target": "opportunities[3] brooklyn-guard-lineage; topInsights[5]",
       "type": "weak-link",
-      "problem": "The 'bridge from the borough's courts to the rookie' links Mikel Brown Jr., Egor Demin and the rest of the roster to Coney Island and Boys High, but none is a verified Brooklyn product, so the lineage is Brooklyn's and not the roster's. The Michael Jordan 1963 Fort Greene birth is a trivia fact more than a story, and in a footwear-led 'guard shoe' the capsule drifts outside an apparel and uniform brief. The lime accent is also the MTA's G-line color.",
+      "problem": "The \"bridge from the borough's courts to the rookie\" links Mikel Brown Jr., Egor Demin and the rest of the roster to Coney Island and Boys High. But none is a verified Brooklyn product. So the lineage belongs to Brooklyn, not the roster. Michael Jordan's 1963 birth in Fort Greene is trivia more than a story. A footwear-led \"guard shoe\" also drifts outside an apparel and uniform brief. The lime accent is the MTA's G-line color too.",
       "fix": "Center the capsule on the schools, parks and PSAL/CHSAA programs, not the rookie. Pay and credit the court restoration partner, and keep the player in youth replica only. Drop the footwear item and the lime, or route lime through an MTA license.",
       "severity": "medium"
     },
     {
       "target": "roster / topInsights",
       "type": "missed-opportunity",
-      "problem": "Julius Randle is ignored as a story. He is a former Knick who is now a Net, a rare tension point in the borough-vs-Manhattan war, and likely the only veteran whose jersey could sell to households split between both teams. The brief limits player product to Brown Jr. and never addresses how an ex-Knick on Fulton Street fits the 'never New York' voice. Keon Ellis and Porter Jr. are not mentioned in product.",
-      "fix": "Add an explicit Randle position (quiet, Brooklyn-first, no 'revenge' framing, no Knicks references) and a small quick-turn run decided by the first two weeks of sales. Keep the player lane subordinate to the borough mark.",
+      "problem": "Julius Randle isn't treated as a story. He is a former Knick now playing for the Nets, a rare tension point in the borough-vs-Manhattan war. He is likely the only veteran whose jersey could sell to households split between both teams. The brief limits player product to Brown Jr. and never says how an ex-Knick on Fulton Street fits the \"never New York\" voice. Keon Ellis and Porter Jr. don't appear in product either.",
+      "fix": "Add an explicit Randle position: quiet, Brooklyn-first, no \"revenge\" framing, no Knicks references. Add a small quick-turn run, decided by the first two weeks of sales. Keep the player lane subordinate to the borough mark.",
       "severity": "medium"
     },
     {
       "target": "opportunities[4] biggie-30-spread-love",
       "type": "timing",
       "severity": "medium",
-      "problem": "The estate approval deadline is December for a capsule that must ship around March 9 (the anniversary of his death), which leaves roughly three months, tight for the commissioned knit cardigan and warm-up pair. The Nets have already done a Biggie City Edition (2019-20), so the third Biggie touchpoint risks fatigue, and a 'launch' timed to the date of a killing needs care. Home game dates near March 9 are unknown.",
-      "fix": "Lock estate terms in November, not December. Lead with the March 25 'Life After Death' anniversary and the May 21 birthday as celebration dates, and treat March 9 as a quiet, community-led moment at Restoration Plaza. Cut the cardigan to protect the timeline."
+      "problem": "The estate approval deadline is December for a capsule that must ship around March 9, the anniversary of his death. That leaves roughly three months, tight for a commissioned knit cardigan and warm-up pair. The Nets already did a Biggie City Edition (2019-20), so a third Biggie moment risks fatigue. A \"launch\" timed to the date of a killing needs care. Home game dates near March 9 are unknown.",
+      "fix": "Lock estate terms in November, not December. Lead with the March 25 \"Life After Death\" anniversary and the May 21 birthday as celebration dates. Treat March 9 as a quiet, community-led moment at Restoration Plaza. Cut the cardigan to protect the timeline."
     },
     {
       "target": "calendar[9] ('Next Year' capsule), uniform.avoid",
       "type": "other",
       "severity": "medium",
-      "problem": "The April 'Next Year' capsule uses Ebbets Field arch bands and the Dodgers-era 'Wait till next year' idea, while the same brief bans Dodgers and Ebbets Field marks. Ebbets Field imagery and the Dodgers' heritage are licensed by MLB and the Dodgers, and selling patience as a tradition after 20-62 can read as a joke at the fans' expense. It is also April clearance.",
-      "fix": "Remove Ebbets bands. If the tone is wanted, use original Brooklyn type and the borough's own self-deprecating humor, written with Brooklyn voices, and keep it small."
+      "problem": "The April \"Next Year\" capsule uses Ebbets Field arch bands and the Dodgers-era \"Wait till next year\" idea, while the same brief bans Dodgers and Ebbets Field marks. MLB and the Dodgers license that imagery and heritage. Selling patience as a tradition after 20-62 can also read as a joke at the fans' expense. And it's April clearance.",
+      "fix": "Remove the Ebbets bands. If the tone is wanted, use original Brooklyn type and the borough's own self-deprecating humor, written with Brooklyn voices, and keep it small."
     },
     {
       "target": "opportunities[1] and partners (Calvin Eng, Lunar New Year)",
       "type": "weak-link",
-      "problem": "Lunar New Year is set 'on Sunset Park's Eighth Avenue' with Calvin Eng as headliner, but his restaurant is in Williamsburg, not Sunset Park, and the community's own organizations are not named. The Nets' practice facility sits in Sunset Park (Industry City), and the brief never uses it. The event is also a priority 3 despite Sunset Park's large Chinese and Latino base.",
-      "fix": "Name a Sunset Park organization and a chef or baker from the neighborhood; keep Eng only if framed as a Brooklyn chef, not a Sunset Park one. Lead with the practice-facility link and raise the priority.",
+      "problem": "Lunar New Year is set \"on Sunset Park's Eighth Avenue\" with Calvin Eng as headliner, but his restaurant is in Williamsburg, not Sunset Park, and no community organization is named. The Nets' practice facility sits in Sunset Park (Industry City), and the brief never uses it. The event is also priority 3, despite Sunset Park's large Chinese and Latino base.",
+      "fix": "Name a Sunset Park organization and a chef or baker from the neighborhood. Keep Eng only as a Brooklyn chef, not a Sunset Park one. Lead with the practice-facility link and raise the priority.",
       "severity": "medium"
     },
     {
       "target": "partners / segments",
       "type": "missed-opportunity",
       "severity": "high",
-      "problem": "Latino Brooklyn (Dominican, Puerto Rican and Mexican households in Bushwick, Sunset Park, Sunset's Fifth Avenue and Cypress Hills) has no partner, no capsule and no heritage night, apart from a Knickerbocker Avenue door. Hispanic Heritage Month is under way right now. Arab and Muslim Brooklyn on Atlantic Avenue and in Bay Ridge is also missing, and the Ramadan evenings of early 2027 overlap the February heritage programming and late-season home games.",
-      "fix": "Add a Latino Brooklyn partner and a paid creator lane (Bushwick and Sunset Park), and a heritage night plan with an iftar-aware schedule. Verify the 2027 Ramadan dates against the Nets' home schedule before setting any February or March game-night program."
+      "problem": "Latino Brooklyn has no partner, capsule or heritage night, apart from a Knickerbocker Avenue door. That means Dominican, Puerto Rican and Mexican households in Bushwick, Sunset Park, Sunset's Fifth Avenue and Cypress Hills. Hispanic Heritage Month is under way right now. Arab and Muslim Brooklyn, on Atlantic Avenue and in Bay Ridge, is missing too. Early 2027's Ramadan evenings of early 2027 overlap the February heritage programming and late-season home games.",
+      "fix": "Add a Latino Brooklyn partner and a paid creator lane (Bushwick and Sunset Park), plus a heritage night with an iftar-aware schedule. Check the 2027 Ramadan dates against the Nets' home schedule before setting any February or March game-night program."
     },
     {
       "target": "opportunities[7] barclays-summer-liberty-pride (priority 3, size low)",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The underground and hoops dossiers call the Liberty's seafoam crowd the freshest scene under the Barclays roof and the market's WNBA champion, and the brief reduces it to a low-priority summer Pride capsule. Women's fit and the Liberty's shared designers are never considered for the core season. It also assumes the Liberty return to Barclays in 2027 and that Pride is the only women's-sports hook.",
-      "fix": "Raise to a core all-year lane: women's cuts across the Kings County line, a shared Nets-Liberty designer roster, and a Liberty in-season moment. Keep Pride as one chapter, not the whole lane."
+      "problem": "The underground and hoops dossiers call the Liberty's seafoam crowd the freshest scene under the Barclays roof, and the market's WNBA champion. The brief reduces it to a low-priority summer Pride capsule. It never considers women's fit or shared Nets-Liberty designers for the core season. It also assumes the Liberty return to Barclays in 2027 and that Pride is the only women's-sports hook.",
+      "fix": "Raise it to a core all-year lane: women's cuts across the Kings County line, a shared Nets-Liberty designer roster and a Liberty in-season moment. Keep Pride as one chapter, not the whole lane."
     },
     {
       "target": "partners / fanbase dossier",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The fanbase dossier's strongest authenticity lever, the Brooklyn Brigade (the loud supporter group), appears nowhere in the brief; neither do Brooklyn Museum First Saturdays, the Brooklyn Half Marathon (a Nike-native running crowd) or the Pratt student pipeline. The marathon appears only as 'no marathon marks'.",
-      "fix": "Add the Brigade as a paid, credited supporter-capsule partner (scarves, bucket hats). Pair the Brooklyn Half and Marathon Sunday with a Nike running lane rather than only a spectator layer, and use First Saturdays and Pratt for local-designer sourcing."
+      "problem": "The fanbase dossier's strongest credibility lever, the Brooklyn Brigade (the loud supporter group), appears nowhere in the brief. Neither do Brooklyn Museum First Saturdays, the Brooklyn Half Marathon (a Nike-native running crowd) or the Pratt student pipeline. The marathon appears only as \"no marathon marks\".",
+      "fix": "Add the Brigade as a paid, credited partner for a supporter capsule (scarves, bucket hats). Pair the Brooklyn Half and Marathon Sunday with a Nike running lane, not just a spectator layer. Use First Saturdays and Pratt to source local designers."
     },
     {
       "target": "retailPlaybook / topInsights[6]",
       "type": "weak-link",
-      "problem": "Sub-$110 pricing for the whole core line conflicts with premium pieces (wool varsity, long puffer) and makes the tax line the whole strategy. The brief treats Kith Brooklyn as Knicks-aligned and routes premium collabs to smaller Brooklyn partners, though Kith is already a Nike partner and sits on Flatbush Avenue near the arena (verify), and Nike cannot assume Brooklyn Circus, Dr. Jays or independents will carry a global allocation. Fanatics and the arena operator control much of NBA team retail.",
-      "fix": "Keep the $110 line for entry and kids only, price premium honestly, and add a Kith plan that avoids a Knicks tie-in (a Brooklyn-only, non-team capsule). Name who controls the Nets Shop and fan-gear channel before promising doors.",
+      "problem": "Sub-$110 pricing for the whole core line conflicts with premium pieces (wool varsity, long puffer) and makes the tax line the whole strategy. The brief treats Kith Brooklyn as Knicks-aligned and routes premium collabs to smaller Brooklyn partners. Yet Kith is already a Nike partner and sits on Flatbush Avenue near the arena (verify). Nike also can't assume Brooklyn Circus, Dr. Jays or independents will carry a global allocation. Fanatics and the arena operator control much of NBA team retail.",
+      "fix": "Keep the $110 line for entry and kids only, and price premium pieces honestly. Add a Kith plan without a Knicks tie-in: a Brooklyn-only, non-team capsule. Name who controls the Nets Shop and fan-gear channel before promising doors.",
       "severity": "medium"
     },
     {
       "target": "partners[Storyboard P / Regg Roc], opportunities[3]",
       "type": "other",
       "severity": "low",
-      "problem": "Flex dancers are named as paid fit testers and flex-battle hosts without noting that Storyboard P has his own Nike or other brand ties, if any, or that flex belongs to Flatbush and East Flatbush as a living scene with many unnamed crews. Naming two famous dancers can crowd out the scene that originated the 'hat trick'.",
-      "fix": "Verify each person's current brand contracts and consent before listing them, and include open calls to the wider flex community with pay for every performer."
+      "problem": "Flex dancers are named as paid fit testers and flex-battle hosts. The brief doesn't say whether Storyboard P has his own Nike or other brand ties. It also overlooks that flex belongs to Flatbush and East Flatbush as a living scene with many unnamed crews. Naming two famous dancers can crowd out the scene that originated the \"hat trick\".",
+      "fix": "Verify each person's current brand contracts and consent before listing them. Add open calls to the wider flex community, with pay for every performer."
     },
     {
       "target": "collection.themes[Brooklyn Guard], uniform.alternates[Crosstown]",
       "type": "other",
       "severity": "low",
-      "problem": "Off-palette accents (Crosstown Lime, sorrel red, seafoam, pan chrome) pile up across themes while the brief's own rule is that color needs a story. The Crosstown alternate also needs an MTA license, and Nets teams have a limited number of uniform slots (Association, Icon, Statement, City Edition), so three alternates are not real options.",
-      "fix": "Pick one accent per theme with a stated reason, cut the alternates to one reserve pitch, and treat the MTA license as a no-go until confirmed."
+      "problem": "Off-palette accents (Crosstown Lime, sorrel red, seafoam, pan chrome) pile up across themes, though the brief's own rule is that color needs a story. The Crosstown alternate needs an MTA license. Nets teams also have a limited number of uniform slots (Association, Icon, Statement, City Edition), so three alternates aren't real options.",
+      "fix": "Pick one accent per theme and give the reason. Cut the alternates to one reserve pitch. Treat the MTA license as a no-go until confirmed."
     },
     {
       "target": "scorecard / pulse.heat",
       "type": "other",
       "severity": "low",
-      "problem": "Culture 93 and retail 78 are asserted from knowledge-mode dossiers, while the fandom 40 and heat 38 are the real constraint on volume; the opportunity score of 72 sits oddly beside a fandom score that low. Several 'Brooklyn-owned' partners are assumed to be open and able to scale, and none has been checked.",
-      "fix": "Lower retail and opportunity scores a few points or state them as conditional, and tie any volume forecast to the borough mark rather than the roster."
+      "problem": "Culture 93 and retail 78 are asserted from knowledge-mode dossiers. The fandom 40 and heat 38 are the real constraint on volume, and the opportunity score of 72 sits oddly beside a fandom score that low. Several \"Brooklyn-owned\" partners are assumed to be open and able to scale, and none has been checked.",
+      "fix": "Lower the retail and opportunity scores a few points, or state them as conditional. Tie any volume forecast to the borough mark, not the roster."
     }
   ],
   "strengths": [
-    "The 'Brooklyn, never New York' spine passes the swap test: the civic voice (City of Brooklyn, Borough Hall, Kings County), 112 ZIP codes and the neighborhood-first loyalty hierarchy could not be written about another market.",
-    "The brief correctly refuses to chase the Knicks' title wave or Christmas sell-through, and leans on the borough's own calendar (Nov 3 anniversary, Cup Fridays, Biggie 30th, Carnival).",
-    "Treatment of the ABA throwback is disciplined: it is held modest until the City Edition vs Classic status is confirmed and paired with a Brooklyn-only story, which is the right call on a single unverified report.",
-    "Community co-authorship is concrete, with named institutions (Weeksville Heritage Center, Restoration Plaza, caribBEING, the steelbands, Papi Juice), pay-and-credit language, and clear off-limits (no vévé, no mashed flags, no Hasidic imagery, no drill signifiers).",
-    "The retail read is local and practical: the $110 tax line, Fulton Street and Atlantic Terminal volume doors, knockoff competition, Sabbath closures and the arena store as a ritual door rather than the main door."
+    "The \"Brooklyn, never New York\" spine passes the swap test. The civic voice (City of Brooklyn, Borough Hall, Kings County), the 112 ZIP codes and the neighborhood-first loyalty hierarchy couldn't be written about another market.",
+    "The brief rightly refuses to chase the Knicks' title wave or Christmas sell-through. It leans on the borough's own calendar: the Nov 3 anniversary, Cup Fridays, Biggie 30th and Carnival.",
+    "The ABA throwback is handled with discipline. It stays modest until the City Edition vs Classic status is confirmed, and it's paired with a Brooklyn-only story. That's the right call on a single unverified report.",
+    "Community co-authorship is concrete. It names institutions (Weeksville Heritage Center, Restoration Plaza, caribBEING, the steelbands, Papi Juice) and promises pay and credit. It also sets clear off-limits: no vévé, no mashed flags, no Hasidic imagery, no drill signifiers.",
+    "The retail read is local and practical. It covers the $110 tax line, Fulton Street and Atlantic Terminal as volume doors, knockoff competition and Sabbath closures. It treats the arena store as a ritual door, not the main one."
   ],
-  "summary": "A strong, genuinely Brooklyn-only strategy whose main weakness is feasibility and sequencing, not authenticity. It launches new product three weeks from now, never states which items are this season versus 2027-28, and its uniform concept is pitched as if it could ship now. The priority-1 Caribbean bet rests on an unproven Nets-fan link, the J'Ouvert tee and sorrel fleece edge into party-branding, and Ebbets and Dodgers cues contradict its own ban. It also under-uses Randle (the ex-Knick), the Liberty, the Brooklyn Brigade, Sunset Park and Latino Brooklyn. Fix the calendar split, drop the J'Ouvert tee and the Ebbets bands, and validate the Caribbean fandom before ranking it first."
+  "summary": "A strong strategy that could only be about Brooklyn. Its weakness is feasibility and sequencing, not credibility. It launches new product three weeks from now and never says which items are this season and which are 2027-28. The uniform concept is pitched as if it could ship now. The priority-1 Caribbean bet rests on an unproven Nets-fan link, and the J'Ouvert tee and sorrel fleece edge into party-branding. Ebbets and Dodgers cues contradict the brief's own ban. It also under-uses Randle (the ex-Knick), the Liberty, the Brooklyn Brigade, Sunset Park and Latino Brooklyn. Split the calendar, drop the J'Ouvert tee and the Ebbets bands, and validate the Caribbean fandom before ranking it first."
 }

@@ -5,120 +5,120 @@
       "target": "uniform (Fence Line City Edition)",
       "type": "other",
       "severity": "high",
-      "problem": "Feasibility and timing: the 2026-27 City Edition is already locked (uniforms are finalized well over a year ahead, and the Knicks' 2026-27 concept was not verified). Presenting Fence Line as the champions' City Edition invents a product that cannot ship this season, and the brief never says which season it targets.",
-      "fix": "Label Fence Line explicitly as a 2027-28 City Edition pitch (or a lifestyle layer for this season), and have the calendar's September 'reveal' beat refer to that. Check the live 2026-27 City Edition and Specter game schedule before borrowing any motif."
+      "problem": "The 2026-27 City Edition is already locked, since uniforms are finalized well over a year ahead, and the Knicks' 2026-27 concept was never verified. Presenting Fence Line as the champions' City Edition invents a product that can't ship this season. The brief also never says which season it targets.",
+      "fix": "Label Fence Line a 2027-28 City Edition pitch, or a lifestyle layer for this season. Point the calendar's September 'reveal' beat at that. Check the live 2026-27 City Edition and the Specter game schedule before borrowing any motif."
     },
     {
       "target": "uniform (palette, motifs)",
       "type": "generic",
       "severity": "medium",
-      "problem": "Chain-link, hex pavers and a green bench accent pass only half the swap test: chain-link courts could be Philadelphia, Chicago or LA, and the Cage is more fence-and-asphalt than any other NYC symbol. A white base also collides with the Association jersey and Specter's heritage white, and the brief's own 'avoid' list says not to echo either. The second blue (#0039A6, the MTA line blue) dilutes Knicks royal blue.",
-      "fix": "Make the New York specificity carry the concept: the arched MC nickname bar, the named park circuit and borough-code neck tape do the work; the fence is texture only. Move the base off white (deep blue or black), drop #0039A6, and keep green to a tag-sized accent."
+      "problem": "Chain-link, hex pavers and a green bench accent only half pass the swap test. Chain-link courts could be Philadelphia, Chicago or LA, and the Cage is more fence-and-asphalt than any other NYC symbol. A white base also collides with the Association jersey and Specter's heritage white, which the brief's own 'avoid' list rules out. The second blue (#0039A6, the MTA line blue) dilutes Knicks royal blue.",
+      "fix": "Let New York specificity carry the concept: the arched MC nickname bar, the named park circuit and the borough-code neck tape. Make the fence texture only. Move the base off white (deep blue or black), drop #0039A6, and keep green to a tag-sized accent."
     },
     {
       "target": "opportunities[ring-night-1973-2026]",
       "type": "weak-link",
       "severity": "high",
-      "problem": "Ring night is 13 days out and the brief hedges on it, but the real conflict is not named: Specter product launched Sept 9 and champions' locker-room product has been in market since June through the NBA's own channels. A 'Banner 26' capsule of tees and hoodies on existing blanks competes with both, and champion marks are league-controlled.",
-      "fix": "Audit what Specter and the June champion line already cover, then position Banner 26 as the 1973 bookend and hangtag story rather than another title tee. Confirm champion-mark clearance this week, and say plainly what ships Oct 20 versus Christmas."
+      "problem": "Ring night is 13 days out and the brief hedges on it. The unnamed conflict is that Specter product launched Sept 9, and champions' locker-room product has been in market since June through the NBA's own channels. A 'Banner 26' capsule of tees and hoodies on existing blanks competes with both. Champion marks are also league-controlled.",
+      "fix": "Audit what Specter and the June champion line already cover. Then position Banner 26 as the 1973 bookend and hangtag story, not another title tee. Confirm champion-mark clearance this week. Say plainly what ships Oct 20 and what waits for Christmas."
     },
     {
       "target": "collection[Fence Line] / opportunities[summer-park-circuit]: 'New York Point Guard' tee",
       "type": "inaccurate",
       "severity": "medium",
-      "problem": "The tee puts Brunson at the end of a roll call of New York-raised guards (Cousy, Archibald, Marbury, Kemba). Brunson was born in New Jersey and raised in Illinois, so the lineage claim is exactly what a New York fan will push back on, and it needs likeness licensing for several living players (including Marbury) through the NBPA or each player.",
-      "fix": "Retitle as an adopted-son story ('the guard New York claimed'), and use the dossier fact that his father Rick played for the Knicks. Limit the roll call to deceased or willing, paid legends, or drop names and show the boroughs and schools only."
+      "problem": "The tee puts Brunson at the end of a roll call of New York-raised guards (Cousy, Archibald, Marbury, Kemba). But Brunson was born in New Jersey and raised in Illinois, and a New York fan will push back on that lineage. Several living players, Marbury included, would also need likeness licensing through the NBPA or each player.",
+      "fix": "Retitle it as an adopted-son story ('the guard New York claimed') and use the dossier fact that his father Rick played for the Knicks. Limit the roll call to deceased or willing, paid legends. Or drop the names and show only the boroughs and schools."
     },
     {
       "target": "topInsights[Uptown is Dominican] / opportunities[summer-park-circuit]",
       "type": "inaccurate",
       "severity": "low",
-      "problem": "The brief describes Towns as born in New Jersey 'to a Dominican mother and a Dominican national-team player'. Towns himself played for the Dominican national team; the sentence reads as if his father did. It also leans on Towns as the Uptown face without checking his footwear affiliation.",
-      "fix": "Say: born in New Jersey to a Dominican mother, played for the Dominican Republic himself. Treat Towns as a hoped-for partner and build the Uptown capsule so it works without him."
+      "problem": "The brief says Towns was born in New Jersey 'to a Dominican mother and a Dominican national-team player'. Towns himself played for the Dominican national team, but the sentence reads as if his father did. It also treats Towns as the Uptown face without checking his footwear affiliation.",
+      "fix": "Say: born in New Jersey to a Dominican mother, played for the Dominican Republic himself. Treat Towns as a hoped-for partner, and build the Uptown capsule so it works without him."
     },
     {
       "target": "opportunities[christmas-finals-rematch]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The story is a reminder of the 1999 Finals the Knicks lost to San Antonio, which is not a gift-giving hook for fans whose headline is now the 2026 win over the same team. The coquito fleece is also a food-as-garment novelty tied to a Puerto Rican tradition but attached to a Spurs game, with no real link between the two.",
-      "fix": "Make the Dec 25 story the 2026 Finals rematch and Game 4 comeback, drop the 1999 framing, and move coquito to a separate El Barrio-led capsule on the Puerto Rican community's own dates, with the artist leading the design."
+      "problem": "The story recalls the 1999 Finals the Knicks lost to San Antonio. That's no gift-giving hook for fans whose headline is now the 2026 win over the same team. The coquito fleece is a food-as-garment novelty tied to a Puerto Rican tradition but attached to a Spurs game, with no real link between them.",
+      "fix": "Make the Dec 25 story the 2026 Finals rematch and the Game 4 comeback, and drop the 1999 framing. Move coquito to a separate El Barrio-led capsule on the Puerto Rican community's own dates, with the artist leading the design."
     },
     {
       "target": "opportunities[playoff-rapid-turn]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The KPI of 'winning back sales from bootleg sellers' with bodega-priced tees contradicts the brief's own insight (and the uniform dossier) that fans read Canal Street and Harlem independent merch as local credibility; Nike also cannot price at bootleg levels. Round-by-round playoff tees are typically Fanatics and league supply chain, so 'hours from result to shelf' may not be Nike's call.",
-      "fix": "Drop the anti-bootleg KPI; instead collaborate with credited independent makers and sell entry tees through Nike's normal ladder. Confirm with the NBA and Fanatics who controls playoff tee turnaround before promising speed."
+      "problem": "The KPI of 'winning back sales from bootleg sellers' with bodega-priced tees contradicts the brief's own insight and the uniform dossier. Fans read Canal Street and Harlem independent merch as local credibility. Nike also can't price at bootleg levels. Round-by-round playoff tees usually run through Fanatics and the league supply chain, so 'hours from result to shelf' may not be Nike's call.",
+      "fix": "Drop the anti-bootleg KPI. Collaborate with credited independent makers instead, and sell entry tees through Nike's normal ladder. Confirm with the NBA and Fanatics who controls playoff tee turnaround before promising speed."
     },
     {
       "target": "collection[Counter Culture]",
       "type": "stereotype",
       "severity": "medium",
-      "problem": "A bodega-cat easter egg, 'Bodega Run' tee sold through partner bodegas at bodega prices and 'Now Serving' tickets risk turning immigrant-owned small business into costume, and the bodega is as much Yemeni-American as Dominican, a community the brief never names or involves.",
-      "fix": "Either drop the bodega-cat and 'Bodega Run' pieces or make them a paid collaboration with named Dominican and Yemeni-American bodega owners and their associations, with revenue shared. Keep the diner ticket motif, which carries less risk."
+      "problem": "The bodega-cat easter egg, the 'Bodega Run' tee sold through partner bodegas at bodega prices and the 'Now Serving' tickets risk turning immigrant-owned small business into costume. The bodega is as much Yemeni-American as Dominican, and the brief never names or involves that community.",
+      "fix": "Drop the bodega-cat and 'Bodega Run' pieces, or make them a paid collaboration with named Dominican and Yemeni-American bodega owners and their associations, with revenue shared. Keep the diner ticket motif, which carries less risk."
     },
     {
       "target": "opportunities[house-led-ballroom]",
       "type": "appropriation",
       "severity": "medium",
-      "problem": "'Category Is: Champions' borrows ballroom's signature phrase for a product name, and the plan is thin on structure: it names houses and a legendary figure to approach but gives no payment mechanism beyond prize money, no ownership of the design, and sits next to an MSG owner some LGBTQ+ fans distrust. The brief's note that other sponsors pulled back from Pride in 2025 is a time-sensitive claim.",
-      "fix": "Lead with the community partners as co-designers with credit and a royalty, not as talent on a corporate ball. Rename the piece so ballroom phrases are used only with the houses' approval, and verify the sponsor-retreat claim before using it."
+      "problem": "'Category Is: Champions' borrows ballroom's signature phrase as a product name. The plan is also thin on structure. It names houses and a legendary figure to approach, but offers no payment beyond prize money and no design ownership. It also sits next to an MSG owner some LGBTQ+ fans distrust. The brief's note that other sponsors pulled back from Pride in 2025 is time-sensitive.",
+      "fix": "Lead with the community partners as co-designers, with credit and a royalty, not as talent at a corporate ball. Rename the piece so ballroom phrases are used only with the houses' approval. Verify the sponsor-retreat claim before using it."
     },
     {
       "target": "opportunities[summer-park-circuit] / partners[EBC]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The park-circuit idea is the strongest insight, but the June to August 2027 summer is 8 months away and the product needs footwear tooling: a hex-paver outsole Asphalt shoe and Knicks-colored SB Dunk in that window is aggressive for the lead times, and the SB Dunk sits with Nike SB, not Basketball.",
-      "fix": "Ship summer 2027 with apparel, reversibles and an existing silhouette in new colors; hold the hex-paver outsole shoe for summer 2028 and get Nike SB involved now for the Dunk."
+      "problem": "The park-circuit idea is the strongest insight, but the June to August 2027 summer is 8 months away and the product needs footwear tooling. A hex-paver outsole Asphalt shoe and a Knicks-colored SB Dunk in that window is aggressive for lead times. The SB Dunk also belongs to Nike SB, not Basketball.",
+      "fix": "Ship summer 2027 with apparel, reversibles and an existing silhouette in new colors. Hold the hex-paver outsole shoe for summer 2028, and get Nike SB involved now for the Dunk."
     },
     {
       "target": "opportunities[borough-door-network] / calendar[month 12]",
       "type": "timing",
       "severity": "low",
-      "problem": "The borough-door network is ranked priority 1 'from ring night through the playoffs', but the calendar slots the Uptowns release at priority 2 for mid-December, a week after the Cup final window, and tells the doors nothing before then. Named doors (Dr. Jays, Jimmy Jazz) were listed from knowledge and may have closed or moved.",
+      "problem": "The borough-door network is ranked priority 1 'from ring night through the playoffs'. But the calendar slots the Uptowns release at priority 2 for mid-December, a week after the Cup final window, and tells the doors nothing before then. The named doors (Dr. Jays, Jimmy Jazz) were listed from memory and may have closed or moved.",
       "fix": "Put one Harlem, Bronx and Queens door into the Oct 20 plan, even with a small run. Verify each named door is open before it appears in a Nike brief."
     },
     {
       "target": "opportunities[brick-commuter-outerwear]",
       "type": "weak-link",
       "severity": "low",
-      "problem": "Strong on commute insight, but 'Brick' bubble-goose puffer in black with orange lining reads as every Northeast city with a cold platform, and the hero price breaks the brief's own under-$110 ladder rule without proof that champion fans will pay it. The area-code neck tape is the only tell that is New York.",
-      "fix": "Make the New York tell visible: area-code tape on the outside, Garden-column orange lining, a Penn-to-Koreatown route print. Test price with a small run and keep the $110 pieces carrying the volume."
+      "problem": "The commute insight is strong. But the 'Brick' bubble-goose puffer in black with orange lining reads as any Northeast city with a cold platform. Its hero price also breaks the brief's own under-$110 ladder rule, with no proof champion fans will pay it. The area-code neck tape is the only New York tell.",
+      "fix": "Make the New York tell visible: area-code tape on the outside, Garden-column orange lining, a Penn-to-Koreatown route print. Test the price with a small run, and let the $110 pieces carry the volume."
     },
     {
       "target": "calendar[month 8] / collection 'Born in 73'",
       "type": "appropriation",
       "severity": "medium",
-      "problem": "A 'Born in 73' flyer tee billed with Kool Herc's 'paid blessing' ties an August offseason moment to hip-hop's origin story. The 1973 coincidence is a great line, but it uses a Bronx community's founding story to sell Knicks product; the brief names only Herc, not the Bronx institutions (Hip Hop museum, Tats Cru, Cedar Playground) who also hold the story.",
-      "fix": "Route it as a Bronx-led collaboration with credited flyer artists and named institutions, share proceeds, and make the Knicks the guest. Use the bookend as a line in the story, not the headline of a tee."
+      "problem": "A 'Born in 73' flyer tee billed with Kool Herc's 'paid blessing' ties an August offseason moment to hip-hop's origin story. The 1973 coincidence is a great line, but it uses a Bronx community's founding story to sell Knicks product. The brief names only Herc, not the Bronx institutions that also hold the story (Hip Hop museum, Tats Cru, Cedar Playground).",
+      "fix": "Make it a Bronx-led collaboration with credited flyer artists and named institutions. Share proceeds, and let the Knicks be the guest. Use the bookend as a line in the story, not as the headline of a tee."
     },
     {
       "target": "partners",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "Spike Lee, who the uniform and fanbase dossiers call the most visible Knicks fan, does not appear in the partner list, and Asian American fandom (Jeremy Lin's Linsanity, Flushing) is reduced to a Lunar New Year tee with no partner or storytelling beyond the zodiac animal.",
-      "fix": "Add Spike Lee and 40 Acres as a named partner conversation (film, courtside, a Brooklyn-born Knicks voice that crosses the Nets line). Replace the stock Year of the Goat tee with a Flushing-led Knicks piece that starts from Linsanity and the local Chinese and Korean American fan base."
+      "problem": "Spike Lee, whom the uniform and fanbase dossiers call the most visible Knicks fan, is missing from the partner list. Asian American fandom (Jeremy Lin's Linsanity, Flushing) shrinks to a Lunar New Year tee, with no partner or story beyond the zodiac animal.",
+      "fix": "Add Spike Lee and 40 Acres as a named partner conversation: film, courtside, a Brooklyn-born Knicks voice that crosses the Nets line. Replace the stock Year of the Goat tee with a Flushing-led Knicks piece that starts from Linsanity and the local Chinese and Korean American fan base."
     },
     {
       "target": "calendar[month 3] 'Nova Knicks' joke",
       "type": "generic",
       "severity": "low",
-      "problem": "A tee joke about Villanova ties and St. John's during Big East week is an in-group gag in a college event where Nike's St. John's and other school partners have their own product, and it dilutes the borough-and-school idea.",
-      "fix": "Cut the joke and keep the PSAL and CHSAA support as the story."
+      "problem": "A tee joke about Villanova ties and St. John's in Big East week is an in-group gag at a college event. Nike's St. John's and other school partners have their own product there, and the joke dilutes the borough-and-school idea.",
+      "fix": "Cut the joke. Keep the PSAL and CHSAA support as the story."
     },
     {
       "target": "pulse / scorecard",
       "type": "other",
       "severity": "low",
-      "problem": "Scores (opportunity 96, culture 97) and heat 95 are asserted without a stated tradeoff against the main constraint: NYC is the most crowded, license-heavy market in the league (MSG, MTA, Yankees, Puma/Clyde, Fanatics, a locked City Edition), and the brief lists those risks without letting them lower any score.",
-      "fix": "Lower retail and opportunity confidence a few points or state which constraints are assumed cleared; name Nike's actual exclusive lanes (AF1 Uptowns, Flax, Specter, Jordan players if relevant)."
+      "problem": "The scores (opportunity 96, culture 97) and heat 95 come with no stated tradeoff against the main constraint. NYC is the league's most crowded, license-heavy market (MSG, MTA, Yankees, Puma/Clyde, Fanatics, a locked City Edition). The brief lists those risks but never lets them lower a score.",
+      "fix": "Lower retail and opportunity confidence a few points, or state which constraints are assumed cleared. Name Nike's actual exclusive lanes (AF1 Uptowns, Flax, Specter, Jordan players if relevant)."
     }
   ],
   "strengths": [
-    "The 1973-to-2026 bookend (title on May 10, 1973, hip-hop's Aug 11 party that summer, 53 ringless seasons) is a story only New York can tell, and the playoff-run hangtag details match the verified series results.",
-    "The brief keeps Association and Icon untouched and aims creative risk at lifestyle layers, which matches fan sentiment and the Specter reality.",
-    "Retail thinking is specific: the $110 clothing tax line, North Jersey tax-free baskets, borough doors as launch partners and reservation drops learned from the Pigeon Dunk and Union Square shutdowns.",
-    "Respect is built in: Dominican and Puerto Rican capsules are separate and Spanish-first, Brooklyn and BK stay with the Nets, and named makers (Tats Cru, Shirt Kings, Schomburg, Studio Museum) are paid and credited."
+    "The 1973-to-2026 bookend is a story only New York can tell: the title on May 10, 1973, hip-hop's Aug 11 party that summer, 53 ringless seasons. The playoff-run hangtag details match the verified series results.",
+    "The brief leaves Association and Icon alone and aims its creative risk at lifestyle layers. That matches fan sentiment and the Specter reality.",
+    "The retail thinking is specific. It has the $110 clothing tax line, North Jersey tax-free baskets and borough doors as launch partners. Reservation drops are learned from the Pigeon Dunk and Union Square shutdowns.",
+    "Respect is built in. Dominican and Puerto Rican capsules are separate and Spanish-first, Brooklyn and BK stay with the Nets, and named makers (Tats Cru, Shirt Kings, Schomburg, Studio Museum) are paid and credited."
   ],
-  "summary": "A culturally literate and well-sourced brief whose best ideas (the 53-year bookend, park circuit, borough doors) are real; its biggest problems are feasibility and sequencing. The City Edition is pitched as if it can still change, Specter and June champion product are underweighted competitors for the ring-night capsule, and a few motifs (chain-link, puffer, bodega, ballroom phrase) either fail the swap test or need partnership structure before they are respectful. Fix the season each product targets, the Brunson lineage framing and the partner gaps (Spike Lee, Linsanity) and it is strong."
+  "summary": "The brief is culturally literate and well sourced, and its best ideas are real: the 53-year bookend, the park circuit, the borough doors. Its problems are feasibility and sequencing. It pitches the City Edition as if it can still change, and underweights Specter and June champion product. Fix product timing, the Brunson lineage framing and the partner gaps (Spike Lee, Linsanity), and it is strong."
 }

@@ -1,144 +1,415 @@
 {
   "team": "lac",
   "lens": "retail-landscape",
-  "headline": "Clippers gear is bought in Inglewood and South LA first, while Melrose and Fairfax set the sneaker taste that Clippers fans copy.",
-  "summary": "LA is a sprawling, car-based market where the Lakers own the volume and the Clippers fan buys through a looser mix of the Intuit Dome team store, Fanatics/Lids, Foot Locker-type doors and neighborhood shops. The sneaker culture that Nike cares about lives at Fairfax, Melrose and Crenshaw, not at the arena. Crenshaw and Slauson have a strong Black-owned retail tradition (Marathon Clothing above all), and the Clippers' post-Kawhi reset with Garland, Ingram and rookie Keaton Wagler leaves an identity gap that local retail can fill. The Aspiration penalties and Ballmer's suspension add noise, so the safest activation is neighborhood-led and player-light rather than owner-led.",
+  "headline": "Clippers fans buy in Inglewood, but they get their sneaker taste from Fairfax and Melrose",
+  "summary": "LA shops by car, and the Lakers own the volume. Clippers fans buy from a looser mix: the Intuit Dome team store, Fanatics and Lids, Foot Locker-type doors and neighborhood shops. The post-Kawhi reset leaves an identity gap that local retail can fill. The safest route is neighborhood-led and light on players.",
   "insights": [
     {
-      "title": "The arena is a volume door, the street is the taste door",
-      "detail": "The Intuit Dome team store in Inglewood moves game-night jerseys and caps, but the sneaker and hoops taste that shapes what Clippers fans want is set at Fairfax, Melrose and Crenshaw. Intuit Dome's own design and Clippers branding make it a branded destination rather than a neighborhood shop.",
-      "implication": "Run launches and seeding in the street doors, then route the volume to the arena store and Fanatics, rather than the other way around."
+      "title": "The arena sells volume, the street sets taste",
+      "detail": "The Intuit Dome team store in Inglewood moves game-night jerseys and caps. But what Clippers fans want in sneakers and hoops gear is set on Fairfax, Melrose and Crenshaw. The Dome's own design and Clippers branding make it a destination, not a neighborhood shop.",
+      "implication": "Launch and seed in the street doors first. Then route the volume to the arena store and Fanatics, not the other way around."
     },
     {
-      "title": "Crenshaw and Slauson are the community anchor",
-      "detail": "Marathon Clothing, the store Nipsey Hussle founded at Crenshaw and Slauson, and the nearby Baldwin Hills Crenshaw Plaza and Leimert Park hold real weight with Black Angelenos and sit a short drive from Inglewood.",
-      "implication": "Partner with, credit and pay local Black-owned retailers and designers for any Clippers or LA-specific drop; do not just borrow the Crenshaw imagery."
+      "title": "Crenshaw and Slauson anchor the community",
+      "detail": "Nipsey Hussle founded Marathon Clothing at Crenshaw and Slauson. It and the nearby Baldwin Hills Crenshaw Plaza and Leimert Park carry real weight with Black Angelenos, a short drive from Inglewood.",
+      "implication": "For any Clippers or LA-specific drop, partner with local Black-owned retailers and designers, credit them and pay them. Don't just borrow the Crenshaw imagery."
     },
     {
-      "title": "Fanatics and Lids dominate the generic team-gear aisle",
-      "detail": "Most Clippers-branded product outside the arena is bought online through Fanatics or in mall kiosks and chain doors. The Clippers' red and blue is an easier visual claim than the Lakers' purple and gold, but the fan is less locked in.",
-      "implication": "Make Nike Clippers product visibly different from the Fanatics standard (fabric, graphics, fit) so it reads as a considered purchase."
+      "title": "Fanatics and Lids own the generic aisle",
+      "detail": "Most Clippers product outside the arena sells online through Fanatics or in mall kiosks and chain doors. Red and blue is an easier visual claim than the Lakers' purple and gold, but the fan is less locked in.",
+      "implication": "Make Nike Clippers product look different from the Fanatics standard in fabric, graphics and fit, so it reads as a considered purchase."
     },
     {
-      "title": "Mall geography splits the fanbase by region",
-      "detail": "The South Bay shops Del Amo Fashion Center, Long Beach has the Pike Outlets and Fourth Street, the San Gabriel Valley uses Westfield Santa Anita and Arcadia, Orange County uses South Coast Plaza. Each is a long drive from Inglewood, and each is a different shopper.",
-      "implication": "Allocate Clippers and LA-specific inventory by region instead of treating LA as one door cluster, and favor chain and Nike doors in the SGV and OC where independents are thinner."
+      "title": "Malls split the fanbase by region",
+      "detail": "The South Bay shops Del Amo Fashion Center. Long Beach has the Pike Outlets and Fourth Street. The San Gabriel Valley goes to Westfield Santa Anita and Arcadia, and Orange County to South Coast Plaza. Each is a long drive from Inglewood, and each shopper is different.",
+      "implication": "Allocate Clippers and LA-specific inventory by region, not as one cluster of doors. In the SGV and OC, where independents are thinner, favor chain and Nike doors."
     },
     {
-      "title": "Resale and vintage keep older Clippers looks alive",
-      "detail": "Melrose and Fairfax vintage and consignment shops (Wasteland, Round Two) trade in retro NBA and LA Clippers-era pieces, including the Buffalo Braves-era and Lob City-era looks that do not exist in current retail.",
-      "implication": "Use archive Clippers graphics for a limited retro capsule and seed it through vintage doors, with NBA licensing clearance."
+      "title": "Vintage keeps the old Clippers alive",
+      "detail": "Melrose and Fairfax vintage and consignment shops (Wasteland, Round Two) trade in retro NBA and LA Clippers-era pieces. That includes Buffalo Braves and Lob City looks that current retail doesn't carry.",
+      "implication": "Build a limited retro capsule from archive Clippers graphics and seed it through vintage doors, with NBA licensing clearance."
     },
     {
-      "title": "Nike's own doors are tourist-heavy on the Westside",
-      "detail": "Nike's Melrose door and the factory-store outlets such as Citadel Outlets in Commerce serve visitors and bargain hunters; Nike-owned doors close to Inglewood and South LA are thin as far as I know.",
-      "implication": "Consider a South LA or Inglewood pop-up or community activation tied to the Intuit Dome so Nike is present where local fans actually are."
+      "title": "Nike's own doors lean tourist on the Westside",
+      "detail": "Nike's Melrose door and factory-store outlets such as Citadel Outlets in Commerce serve visitors and bargain hunters. Nike-owned doors near Inglewood and South LA appear to be thin.",
+      "implication": "A South LA or Inglewood pop-up or community event tied to the Intuit Dome would put Nike where local fans actually are."
     }
   ],
   "places": [
-    {"name": "Intuit Dome", "kind": "venue", "neighborhood": "Inglewood", "why": "The Clippers' home arena and team store, plus the 'Halo Board' spectacle that makes it a destination for gear and photos."},
-    {"name": "Fairfax Avenue", "kind": "district", "neighborhood": "Fairfax / Mid-City", "why": "The long-running streetwear corridor, home to Supreme and Flight Club-adjacent culture, that sets sneaker taste for the whole city."},
-    {"name": "Melrose Avenue", "kind": "district", "neighborhood": "West Hollywood / Fairfax", "why": "Nike, Flight Club and vintage stores in one tourist-and-tastemaker strip."},
-    {"name": "Marathon Clothing", "kind": "shop", "neighborhood": "Hyde Park / Crenshaw", "why": "Nipsey Hussle's store at Crenshaw and Slauson, a cultural landmark for South LA retail and ownership."},
-    {"name": "Baldwin Hills Crenshaw Plaza", "kind": "mall", "neighborhood": "Baldwin Hills / Crenshaw", "why": "The community mall for Black Angelenos with sneaker chains and local shops."},
-    {"name": "Leimert Park", "kind": "district", "neighborhood": "South LA", "why": "A Black arts and culture hub where pop-ups and community events land."},
-    {"name": "Citadel Outlets", "kind": "mall", "neighborhood": "Commerce", "why": "A major outlet destination for Nike factory-store shoppers across the eastside and SGV."},
-    {"name": "Del Amo Fashion Center", "kind": "mall", "neighborhood": "Torrance", "why": "The South Bay's big mall and a volume door for athletic chains."},
-    {"name": "Westfield Santa Anita", "kind": "mall", "neighborhood": "Arcadia", "why": "The San Gabriel Valley's main mall, with a large Asian American shopper base."},
-    {"name": "South Coast Plaza", "kind": "mall", "neighborhood": "Costa Mesa", "why": "Orange County's premium shopping center and the anchor of the OC fan region."}
+    {
+      "name": "Intuit Dome",
+      "kind": "venue",
+      "neighborhood": "Inglewood",
+      "why": "The Clippers' home arena and team store. Its 'Halo Board' makes it a draw for gear and photos."
+    },
+    {
+      "name": "Fairfax Avenue",
+      "kind": "district",
+      "neighborhood": "Fairfax / Mid-City",
+      "why": "The long-running streetwear corridor, home to Supreme and Flight Club-adjacent culture. It sets sneaker taste for the whole city."
+    },
+    {
+      "name": "Melrose Avenue",
+      "kind": "district",
+      "neighborhood": "West Hollywood / Fairfax",
+      "why": "Nike, Flight Club and vintage stores on one strip for tourists and tastemakers."
+    },
+    {
+      "name": "Marathon Clothing",
+      "kind": "shop",
+      "neighborhood": "Hyde Park / Crenshaw",
+      "why": "Nipsey Hussle's store at Crenshaw and Slauson, a landmark of South LA retail and ownership."
+    },
+    {
+      "name": "Baldwin Hills Crenshaw Plaza",
+      "kind": "mall",
+      "neighborhood": "Baldwin Hills / Crenshaw",
+      "why": "The community mall for Black Angelenos, with sneaker chains and local shops."
+    },
+    {
+      "name": "Leimert Park",
+      "kind": "district",
+      "neighborhood": "South LA",
+      "why": "A Black arts and culture hub where pop-ups and community events land."
+    },
+    {
+      "name": "Citadel Outlets",
+      "kind": "mall",
+      "neighborhood": "Commerce",
+      "why": "A major outlet destination for Nike factory-store shoppers across the eastside and SGV."
+    },
+    {
+      "name": "Del Amo Fashion Center",
+      "kind": "mall",
+      "neighborhood": "Torrance",
+      "why": "The South Bay's big mall and a volume door for athletic chains."
+    },
+    {
+      "name": "Westfield Santa Anita",
+      "kind": "mall",
+      "neighborhood": "Arcadia",
+      "why": "The San Gabriel Valley's main mall, with a large Asian American shopper base."
+    },
+    {
+      "name": "South Coast Plaza",
+      "kind": "mall",
+      "neighborhood": "Costa Mesa",
+      "why": "Orange County's premium shopping center and the anchor of the OC fan region."
+    }
   ],
   "people": [
-    {"name": "Nipsey Hussle", "role": "Late rapper and entrepreneur, founder of Marathon Clothing", "why": "The model for ownership-driven South LA retail; any engagement should go through his estate and the Marathon team."},
-    {"name": "Fear of God (Jerry Lorenzo)", "role": "LA designer and brand founder", "why": "The most visible LA luxury-athletic designer; his Nike basketball line ran 2019-22 before he moved to Adidas."},
-    {"name": "The Hundreds", "role": "Streetwear brand", "why": "Orange County and LA streetwear voice with a long-standing following."},
-    {"name": "Stussy", "role": "Streetwear brand", "why": "A California streetwear original with local pull in LA and OC."},
-    {"name": "Born x Raised", "role": "LA streetwear label", "why": "Known for LA sports and neighborhood collaborations, a model for team-and-city collabs."},
-    {"name": "Darius Garland", "role": "Clippers guard", "why": "Leads the post-Kawhi roster and is the marketing face for a lighter, guard-led identity."},
-    {"name": "Brandon Ingram", "role": "Clippers forward", "why": "The headline return for Kawhi Leonard and the likely scoring face."},
-    {"name": "Keaton Wagler", "role": "Clippers rookie, No. 5 pick", "why": "The newest story, useful for rookie-first retail moments."}
+    {
+      "name": "Nipsey Hussle",
+      "role": "Late rapper and entrepreneur, founder of Marathon Clothing",
+      "why": "The model for ownership-driven South LA retail. Go through his estate and the Marathon team."
+    },
+    {
+      "name": "Fear of God (Jerry Lorenzo)",
+      "role": "LA designer and brand founder",
+      "why": "The most visible LA luxury-athletic designer. His Nike basketball line ran 2019-22 before he moved to Adidas."
+    },
+    {
+      "name": "The Hundreds",
+      "role": "Streetwear brand",
+      "why": "An Orange County and LA streetwear voice with a long-standing following."
+    },
+    {
+      "name": "Stussy",
+      "role": "Streetwear brand",
+      "why": "A California streetwear original with local pull in LA and OC."
+    },
+    {
+      "name": "Born x Raised",
+      "role": "LA streetwear label",
+      "why": "Known for LA sports and neighborhood collaborations, a model for team-and-city collabs."
+    },
+    {
+      "name": "Darius Garland",
+      "role": "Clippers guard",
+      "why": "Leads the post-Kawhi roster and is the marketing face for a lighter, guard-led identity."
+    },
+    {
+      "name": "Brandon Ingram",
+      "role": "Clippers forward",
+      "why": "The headline return for Kawhi Leonard and likely the scoring face."
+    },
+    {
+      "name": "Keaton Wagler",
+      "role": "Clippers rookie, No. 5 pick",
+      "why": "The newest story, useful for rookie-first retail moments."
+    }
   ],
   "moments": [
-    {"name": "Clippers home opener at Intuit Dome", "timing": "Late October", "month": 10, "why": "The first big team-store traffic moment of the season."},
-    {"name": "NBA Cup group nights", "timing": "Fridays, Oct 30 to Nov 27", "month": 11, "why": "Clippers are in West Group B and host Pelicans on Oct 30, a built-in Cup-gear hook."},
-    {"name": "Black Friday and holiday gifting", "timing": "Late November to December", "month": 11, "why": "Peak season for Fanatics, mall and arena store sales."},
-    {"name": "Christmas week in LA", "timing": "Late December", "month": 12, "why": "The Lakers own Christmas Day, so Clippers retail needs a counter-programmed local moment."},
-    {"name": "Crenshaw and Leimert Park community events", "timing": "Year-round", "month": 0, "why": "Pop-up and community moments that give Nike a neighborhood presence."},
-    {"name": "NBA All-Star 2027", "timing": "Feb 19 to 21", "month": 2, "why": "Phoenix hosts, but LA retail drives All-Star traffic and sneaker releases."}
+    {
+      "name": "Clippers home opener at Intuit Dome",
+      "timing": "Late October",
+      "month": 10,
+      "why": "The season's first big team-store traffic moment."
+    },
+    {
+      "name": "NBA Cup group nights",
+      "timing": "Fridays, Oct 30 to Nov 27",
+      "month": 11,
+      "why": "The Clippers are in West Group B and host the Pelicans on Oct 30, a built-in Cup-gear hook."
+    },
+    {
+      "name": "Black Friday and holiday gifting",
+      "timing": "Late November to December",
+      "month": 11,
+      "why": "Peak season for Fanatics, mall and arena store sales."
+    },
+    {
+      "name": "Christmas week in LA",
+      "timing": "Late December",
+      "month": 12,
+      "why": "The Lakers own Christmas Day, so Clippers retail needs a local moment of its own."
+    },
+    {
+      "name": "Crenshaw and Leimert Park community events",
+      "timing": "Year-round",
+      "month": 0,
+      "why": "Pop-ups and community moments that give Nike a neighborhood presence."
+    },
+    {
+      "name": "NBA All-Star 2027",
+      "timing": "Feb 19 to 21",
+      "month": 2,
+      "why": "Phoenix hosts, but LA retail drives All-Star traffic and sneaker releases."
+    }
   ],
   "vocabulary": [
-    {"term": "The Dome", "meaning": "Common shorthand for Intuit Dome among Clippers fans."},
-    {"term": "Fairfax", "meaning": "Shorthand for the streetwear and sneaker corridor and its drop culture."},
-    {"term": "The Marathon continues", "meaning": "Phrase tied to Nipsey Hussle and Marathon Clothing; use only with the community's blessing."},
-    {"term": "Westside / Eastside / SGV / South Bay", "meaning": "How locals describe regional shopping and fan territories."},
-    {"term": "Lob City", "meaning": "The Chris Paul and Blake Griffin era, still the most nostalgic Clippers retail hook."}
+    {
+      "term": "The Dome",
+      "meaning": "Clippers fans' shorthand for Intuit Dome."
+    },
+    {
+      "term": "Fairfax",
+      "meaning": "Shorthand for the streetwear and sneaker corridor and its drop culture."
+    },
+    {
+      "term": "The Marathon continues",
+      "meaning": "A phrase tied to Nipsey Hussle and Marathon Clothing. Use it only with the community's blessing."
+    },
+    {
+      "term": "Westside / Eastside / SGV / South Bay",
+      "meaning": "How locals describe regional shopping and fan territories."
+    },
+    {
+      "term": "Lob City",
+      "meaning": "The Chris Paul and Blake Griffin era, still the most nostalgic Clippers retail hook."
+    }
   ],
   "designCues": [
-    {"cue": "Clippers red", "type": "color", "hex": "#C8102E", "source": "Clippers primary color", "use": "Anchor team product and Cup gear; pair with navy for the classic look."},
-    {"cue": "Clippers blue", "type": "color", "hex": "#1D428A", "source": "Clippers secondary color", "use": "Use as a deeper base for retail-exclusive apparel."},
-    {"cue": "Crenshaw and Slauson street-sign graphics", "type": "graphic", "hex": "", "source": "South LA street culture", "use": "Only through partnership with local Black-owned designers and shops, credited and paid."},
-    {"cue": "Lob City-era retro graphics", "type": "graphic", "hex": "", "source": "Clippers nostalgia", "use": "Archive-inspired capsule, with NBA and team licensing."},
-    {"cue": "Intuit Dome halo and curved-arena geometry", "type": "motif", "hex": "", "source": "Intuit Dome architecture", "use": "Abstract line graphics for fresh Clippers apparel."},
-    {"cue": "Vintage-wash fleece and heavyweight cotton", "type": "texture", "hex": "", "source": "Melrose and Fairfax vintage shops", "use": "Make retro-style products feel thrifted but premium."}
+    {
+      "cue": "Clippers red",
+      "type": "color",
+      "hex": "#C8102E",
+      "source": "Clippers primary color",
+      "use": "Anchor team product and Cup gear. Pair with navy for the classic look."
+    },
+    {
+      "cue": "Clippers blue",
+      "type": "color",
+      "hex": "#1D428A",
+      "source": "Clippers secondary color",
+      "use": "A deeper base for retail-exclusive apparel."
+    },
+    {
+      "cue": "Crenshaw and Slauson street-sign graphics",
+      "type": "graphic",
+      "hex": "",
+      "source": "South LA street culture",
+      "use": "Only through partnership with local Black-owned designers and shops, credited and paid."
+    },
+    {
+      "cue": "Lob City-era retro graphics",
+      "type": "graphic",
+      "hex": "",
+      "source": "Clippers nostalgia",
+      "use": "An archive-inspired capsule, with NBA and team licensing."
+    },
+    {
+      "cue": "Intuit Dome halo and curved-arena geometry",
+      "type": "motif",
+      "hex": "",
+      "source": "Intuit Dome architecture",
+      "use": "Abstract line graphics for fresh Clippers apparel."
+    },
+    {
+      "cue": "Vintage-wash fleece and heavyweight cotton",
+      "type": "texture",
+      "hex": "",
+      "source": "Melrose and Fairfax vintage shops",
+      "use": "Makes retro-style products feel thrifted but premium."
+    }
   ],
   "productHooks": [
-    "A Clippers retro capsule pulled from the Lob City and Braves-era archive, seeded first at Melrose and Fairfax vintage and streetwear doors.",
-    "A Garland, Ingram and Wagler player-led collection that is distinct from Fanatics standard jerseys and tees.",
-    "A South LA community collaboration with a local Black-owned label for an Inglewood and Crenshaw release, credited and paid.",
-    "Regional store-pack allocation (South Bay, SGV, OC, Long Beach) built around Cup and Clippers-red staples."
+    "Retro capsule from the Lob City and Braves-era archive, seeded first at Melrose and Fairfax vintage and streetwear doors.",
+    "Player-led collection for Garland, Ingram and Wagler, distinct from Fanatics standard jerseys and tees.",
+    "South LA collaboration with a local Black-owned label for an Inglewood and Crenshaw release, credited and paid.",
+    "Regional store packs for the South Bay, SGV, OC and Long Beach, built around Cup and Clippers-red staples."
   ],
   "watchouts": [
-    "Do not lean on Nipsey Hussle or Marathon imagery without working directly with the estate and the Marathon team.",
-    "Ownership and penalty news around Steve Ballmer and the Aspiration case may sour owner-led retail activations.",
-    "All NBA and team marks require licensing; vintage graphics may involve third-party IP.",
-    "Do not assume Lakers-free territory; many Clippers fans also buy Lakers and Dodgers gear."
+    "Don't lean on Nipsey Hussle or Marathon imagery without working directly with the estate and the Marathon team.",
+    "Steve Ballmer's suspension and the Aspiration penalties may sour owner-led retail events. Keep them neighborhood-led.",
+    "All NBA and team marks require licensing, and vintage graphics may involve third-party IP.",
+    "Don't assume Lakers-free territory. Many Clippers fans also buy Lakers and Dodgers gear."
   ],
   "sources": [
-    {"title": "Intuit Dome official site", "url": "https://www.intuitdome.com"},
-    {"title": "LA Clippers official site", "url": "https://www.nba.com/clippers"},
-    {"title": "Marathon Clothing (Wikipedia: Nipsey Hussle)", "url": "https://en.wikipedia.org/wiki/Nipsey_Hussle"},
-    {"title": "Fairfax Avenue (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Fairfax_Avenue"},
-    {"title": "Melrose Avenue (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Melrose_Avenue"},
-    {"title": "Citadel Outlets (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Citadel_Outlets"}
+    {
+      "title": "Intuit Dome official site",
+      "url": "https://www.intuitdome.com"
+    },
+    {
+      "title": "LA Clippers official site",
+      "url": "https://www.nba.com/clippers"
+    },
+    {
+      "title": "Marathon Clothing (Wikipedia: Nipsey Hussle)",
+      "url": "https://en.wikipedia.org/wiki/Nipsey_Hussle"
+    },
+    {
+      "title": "Fairfax Avenue (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Fairfax_Avenue"
+    },
+    {
+      "title": "Melrose Avenue (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Melrose_Avenue"
+    },
+    {
+      "title": "Citadel Outlets (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Citadel_Outlets"
+    }
   ],
   "confidence": "medium",
   "extra": {
     "districts": [
-      {"name": "Fairfax Avenue", "profile": "Streetwear and sneaker corridor with drop culture.", "shopper": "Sneakerheads, creators and fashion-forward locals.", "role": "tastemaker"},
-      {"name": "Melrose Avenue", "profile": "Boutiques, vintage and Nike's Melrose door.", "shopper": "Tourists, locals and style-conscious shoppers.", "role": "mixed"},
-      {"name": "Crenshaw / Slauson / Leimert Park", "profile": "South LA's Black-owned retail and culture core.", "shopper": "South LA community, Inglewood fans and visiting culture seekers.", "role": "community"},
-      {"name": "Inglewood and Intuit Dome", "profile": "The Clippers' arena district with the team store.", "shopper": "Game-night fans and Clippers loyalists.", "role": "volume"},
-      {"name": "Del Amo Fashion Center", "profile": "Large South Bay mall with athletic chains.", "shopper": "South Bay families and teens.", "role": "volume"},
-      {"name": "Westfield Santa Anita", "profile": "SGV regional mall.", "shopper": "SGV families, many Asian American shoppers.", "role": "volume"},
-      {"name": "South Coast Plaza", "profile": "Orange County's upscale regional mall.", "shopper": "OC shoppers and visitors.", "role": "mixed"},
-      {"name": "Citadel Outlets", "profile": "Eastside outlet center with a Nike factory store.", "shopper": "Bargain hunters across LA County.", "role": "volume"}
+      {
+        "name": "Fairfax Avenue",
+        "profile": "Streetwear and sneaker corridor with drop culture.",
+        "shopper": "Sneakerheads, creators and fashion-forward locals.",
+        "role": "tastemaker"
+      },
+      {
+        "name": "Melrose Avenue",
+        "profile": "Boutiques, vintage and Nike's Melrose door.",
+        "shopper": "Tourists, locals and style-conscious shoppers.",
+        "role": "mixed"
+      },
+      {
+        "name": "Crenshaw / Slauson / Leimert Park",
+        "profile": "South LA's Black-owned retail and culture core.",
+        "shopper": "South LA community, Inglewood fans and visiting culture seekers.",
+        "role": "community"
+      },
+      {
+        "name": "Inglewood and Intuit Dome",
+        "profile": "The Clippers' arena district, with the team store.",
+        "shopper": "Game-night fans and Clippers loyalists.",
+        "role": "volume"
+      },
+      {
+        "name": "Del Amo Fashion Center",
+        "profile": "Large South Bay mall with athletic chains.",
+        "shopper": "South Bay families and teens.",
+        "role": "volume"
+      },
+      {
+        "name": "Westfield Santa Anita",
+        "profile": "SGV regional mall.",
+        "shopper": "SGV families, many of them Asian American shoppers.",
+        "role": "volume"
+      },
+      {
+        "name": "South Coast Plaza",
+        "profile": "Orange County's upscale regional mall.",
+        "shopper": "OC shoppers and visitors.",
+        "role": "mixed"
+      },
+      {
+        "name": "Citadel Outlets",
+        "profile": "Eastside outlet center with a Nike factory store.",
+        "shopper": "Bargain hunters from across LA County.",
+        "role": "volume"
+      }
     ],
     "doors": [
-      {"name": "Intuit Dome team store", "type": "team-store", "neighborhood": "Inglewood", "why": "The official Clippers team-store door with the most direct fan access."},
-      {"name": "Nike Melrose", "type": "nike-owned", "neighborhood": "Melrose / Fairfax", "why": "Nike's most visible local door for basketball and community tests."},
-      {"name": "Nike Factory Store at Citadel Outlets", "type": "nike-owned", "neighborhood": "Commerce", "why": "Volume Nike door for eastside and SGV shoppers."},
-      {"name": "Marathon Clothing", "type": "local-brand", "neighborhood": "Hyde Park / Crenshaw", "why": "The most culturally important South LA door."},
-      {"name": "Flight Club Los Angeles", "type": "resale", "neighborhood": "Melrose / Fairfax", "why": "National sneaker resale reference point with LA taste credibility."},
-      {"name": "Wasteland", "type": "vintage", "neighborhood": "Melrose", "why": "Long-running vintage store that sets retro taste."},
-      {"name": "Round Two", "type": "resale", "neighborhood": "Fairfax / Mid-City", "why": "Consignment door for streetwear and sneakers."},
-      {"name": "Foot Locker", "type": "athletic-chain", "neighborhood": "Malls across LA, including Crenshaw Plaza", "why": "Volume door for Nike basketball footwear."},
-      {"name": "Dick's Sporting Goods", "type": "big-box", "neighborhood": "Suburban LA and OC", "why": "Volume team-gear and basketball door."},
-      {"name": "Lids and Fanatics", "type": "athletic-chain", "neighborhood": "Malls and online", "why": "The default team-gear route for casual fans."}
+      {
+        "name": "Intuit Dome team store",
+        "type": "team-store",
+        "neighborhood": "Inglewood",
+        "why": "The official Clippers team-store door, with the most direct fan access."
+      },
+      {
+        "name": "Nike Melrose",
+        "type": "nike-owned",
+        "neighborhood": "Melrose / Fairfax",
+        "why": "Nike's most visible local door for basketball and community tests."
+      },
+      {
+        "name": "Nike Factory Store at Citadel Outlets",
+        "type": "nike-owned",
+        "neighborhood": "Commerce",
+        "why": "Volume Nike door for eastside and SGV shoppers."
+      },
+      {
+        "name": "Marathon Clothing",
+        "type": "local-brand",
+        "neighborhood": "Hyde Park / Crenshaw",
+        "why": "The most culturally important South LA door."
+      },
+      {
+        "name": "Flight Club Los Angeles",
+        "type": "resale",
+        "neighborhood": "Melrose / Fairfax",
+        "why": "National sneaker resale reference point with LA taste credibility."
+      },
+      {
+        "name": "Wasteland",
+        "type": "vintage",
+        "neighborhood": "Melrose",
+        "why": "Long-running vintage store that sets retro taste."
+      },
+      {
+        "name": "Round Two",
+        "type": "resale",
+        "neighborhood": "Fairfax / Mid-City",
+        "why": "Consignment door for streetwear and sneakers."
+      },
+      {
+        "name": "Foot Locker",
+        "type": "athletic-chain",
+        "neighborhood": "Malls across LA, including Crenshaw Plaza",
+        "why": "Volume door for Nike basketball footwear."
+      },
+      {
+        "name": "Dick's Sporting Goods",
+        "type": "big-box",
+        "neighborhood": "Suburban LA and OC",
+        "why": "Volume door for team gear and basketball."
+      },
+      {
+        "name": "Lids and Fanatics",
+        "type": "athletic-chain",
+        "neighborhood": "Malls and online",
+        "why": "The default team-gear route for casual fans."
+      }
     ]
   },
   "provenance": {
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Intuit Dome team store: current name, location and hours, and whether it is the only Clippers-owned store.",
-      "Nike-owned doors in LA (Nike Melrose, Citadel Outlets factory store) are still open, and whether any Nike community or Well Collective door exists near Inglewood or South LA.",
-      "Marathon Clothing is still open at Crenshaw and Slauson and its current partnership posture.",
-      "Flight Club Los Angeles, Wasteland and Round Two are still operating at their Melrose and Fairfax locations.",
-      "Foot Locker presence at Baldwin Hills Crenshaw Plaza and other malls named.",
-      "Clippers 2026-27 City Edition and any Clippers Specter-style product.",
-      "Whether Fairfax and Melrose retail mix (Supreme and others) is unchanged.",
-      "Del Amo, Santa Anita and South Coast Plaza mall store mixes.",
-      "Local-brand claims for The Hundreds, Stussy and Born x Raised.",
-      "Fan sentiment toward the Clippers after the Ballmer suspension."
+      "Confirm the Intuit Dome team store's current name, location and hours, and whether it is the only Clippers-owned store.",
+      "Confirm the Nike-owned doors in LA (Nike Melrose, Citadel Outlets factory store) are still open. Check whether any Nike community or Well Collective door exists near Inglewood or South LA.",
+      "Confirm Marathon Clothing is still open at Crenshaw and Slauson, and check its current partnership posture.",
+      "Confirm Flight Club Los Angeles, Wasteland and Round Two still operate at their Melrose and Fairfax locations.",
+      "Confirm Foot Locker is at Baldwin Hills Crenshaw Plaza and the other malls named.",
+      "Check the Clippers 2026-27 City Edition and any Clippers Specter-style product.",
+      "Confirm the Fairfax and Melrose retail mix (Supreme and others) is unchanged.",
+      "Check the store mixes at Del Amo, Santa Anita and South Coast Plaza.",
+      "Verify the local-brand claims for The Hundreds, Stussy and Born x Raised.",
+      "Gauge fan sentiment toward the Clippers after the Ballmer suspension."
     ]
   }
 }

@@ -1,38 +1,38 @@
 {
   "team": "dal",
   "lens": "retail-landscape",
-  "headline": "Dallas shops basketball in a sprawl of malls, outlets and suburban big boxes, while taste is set in a handful of Deep Ellum, Oak Cliff and Bishop Arts doors that sit far from the arena.",
-  "summary": "DFW retail is car-driven and spread across suburbs, so volume lives at NorthPark, Stonebriar, Grand Prairie and Allen outlets, plus Dick's and Academy, not on a walkable core. Team gear is bought at the American Airlines Center store, Fanatics and big box, and a rebuilt Mavs roster around Cooper Flagg, with Dusty May and Masai Ujiri arriving, is the freshest reason to buy in years. Taste is set by independent boutiques, vintage and resale in Deep Ellum, Bishop Arts and Oak Cliff, and by a large Mexican-American shopper base that also buys through Texas western-wear and boot culture. Football, with the Cowboys and high school Friday nights, competes for every wallet, so basketball product has to earn shelf space with a Dallas story. Door-level detail here is written from knowledge and needs a live check before any activation.",
+  "headline": "In DFW the jerseys move through malls, outlets and Dick's, not the arena store.",
+  "summary": "Dallas buys basketball gear at suburban malls, outlets and big boxes like Dick's and Academy. Taste gets made elsewhere, in a handful of Deep Ellum, Bishop Arts and Oak Cliff doors far from the arena. A rebuilt Mavs roster around Cooper Flagg is the best reason to buy in years. Door-level detail comes from knowledge and needs a live check before any launch.",
   "insights": [
     {
       "title": "Volume is suburban, taste is urban",
-      "detail": "Mall and outlet traffic in Plano, Frisco, Grand Prairie and Allen moves the units, while credibility is built in Deep Ellum, Bishop Arts and Oak Cliff doors that few suburban families visit.",
-      "implication": "Launch drops and storytelling through urban tastemaker doors, then cascade volume SKUs to suburban Nike partners and Dick's within days."
+      "detail": "Malls and outlets in Plano, Frisco, Grand Prairie and Allen move the units. Credibility gets built in Deep Ellum, Bishop Arts and Oak Cliff, which few suburban families visit.",
+      "implication": "Launch drops and stories through the urban tastemaker doors. Within days, cascade volume styles to suburban Nike partners and Dick's."
     },
     {
       "title": "Flagg reset opens the gear window",
-      "detail": "Cooper Flagg is the face of a full reset under Masai Ujiri and first-year coach Dusty May, with Kyrie Irving back from injury, after a 26-56 season that left jersey demand depressed.",
-      "implication": "Build Flagg-led and Kyrie-led Nike product and merchandising into the arena store, Fanatics and Dick's for opening week, since fresh-start optimism is the buy trigger."
+      "detail": "Cooper Flagg fronts a full reset under Masai Ujiri and first-year coach Dusty May, with Kyrie Irving back from injury. It follows a 26-56 season that left jersey demand low.",
+      "implication": "Put Flagg-led and Kyrie-led Nike product in the arena store, Fanatics and Dick's for opening week. Fresh-start optimism is what gets people buying."
     },
     {
       "title": "Arena store is the ritual door, not the volume door",
-      "detail": "The Mavs team store at American Airlines Center serves game-night impulse and tourists, while most fans buy online or at big box and mall doors near their suburb.",
-      "implication": "Use the arena store for exclusive colorways and City Edition launch moments, and do not rely on it for sell-through."
+      "detail": "The Mavs team store at American Airlines Center serves game-night impulse buyers and tourists. Most fans buy online, or at big box and mall doors near their suburb.",
+      "implication": "Save the arena store for exclusive colorways and City Edition launches. Don't count on it for sell-through."
     },
     {
-      "title": "Mexican-American shoppers are core, not niche",
-      "detail": "Oak Cliff, Pleasant Grove, Garland, Irving and Grand Prairie have large Latino shopper bases that blend sneaker culture with Texas western wear and Spanish-language fandom.",
-      "implication": "Partner with Latino-owned shops and artists for capsules and pop-ups, with Spanish-first marketing, credited and paid, instead of generic heritage graphics."
+      "title": "Mexican-American shoppers are the core",
+      "detail": "Oak Cliff, Pleasant Grove, Garland, Irving and Grand Prairie have large Latino shopper bases. They mix sneaker culture, Texas western wear and Spanish-language fandom.",
+      "implication": "Partner with Latino-owned shops and artists for capsules and pop-ups. Market in Spanish first, and credit and pay everyone. Skip the generic heritage graphics."
     },
     {
       "title": "Outlet and factory stores matter in DFW",
-      "detail": "Grand Prairie Premium Outlets and Allen Premium Outlets pull value-driven families from across the region, and Nike has a factory presence in the outlet circuit.",
-      "implication": "Treat outlets as the sell-through channel for prior-season Mavs and Nike Basketball product, and keep hero Flagg product out of them."
+      "detail": "Grand Prairie Premium Outlets and Allen Premium Outlets draw value-minded families from across the region. Nike also has a factory presence on the outlet circuit.",
+      "implication": "Sell prior-season Mavs and Nike Basketball product through the outlets. Keep hero Flagg product out."
     },
     {
       "title": "Football crowds out basketball at retail",
-      "detail": "Cowboys, TCU and Texas high school football dominate shelf space and wallets across DFW, and the Mavs lose floor space especially after a losing year.",
-      "implication": "Tie basketball drops to Texas hoops moments such as high school and Dallas playground culture so the product reads local rather than competing with football."
+      "detail": "Cowboys, TCU and Texas high school football on Friday nights take the shelf space and the wallets across DFW. The Mavs lose floor space, especially after a losing year.",
+      "implication": "Tie basketball drops to Texas hoops moments, like high school and Dallas playground culture. Then the product reads local instead of competing with football."
     }
   ],
   "places": [
@@ -46,64 +46,64 @@
       "name": "NorthPark Center",
       "kind": "mall",
       "neighborhood": "North Dallas",
-      "why": "Dallas's premier mall and the highest-end athletic and fashion retail, serving affluent and tourist shoppers."
+      "why": "Dallas's top mall, with the city's highest-end athletic and fashion retail for affluent and tourist shoppers."
     },
     {
       "name": "Deep Ellum",
       "kind": "district",
       "neighborhood": "East of Downtown",
-      "why": "Murals, music venues and vintage and streetwear shops make it the city's taste-setting zone for younger shoppers."
+      "why": "Murals, music venues, vintage and streetwear shops: this is where younger shoppers set the city's taste."
     },
     {
       "name": "Bishop Arts District",
       "kind": "district",
       "neighborhood": "Oak Cliff",
-      "why": "Independent boutiques and a strong Latino and Black creative community, ideal for pop-ups."
+      "why": "Independent boutiques and a strong Latino and Black creative community make it a natural pop-up site."
     },
     {
       "name": "Grand Prairie Premium Outlets",
       "kind": "outlet",
       "neighborhood": "Grand Prairie",
-      "why": "Value-oriented regional draw with Nike factory presence, serving families across the Mid-Cities."
+      "why": "A value-minded regional draw with a Nike factory presence, serving families across the Mid-Cities."
     },
     {
       "name": "Stonebriar Centre",
       "kind": "mall",
       "neighborhood": "Frisco",
-      "why": "Suburban volume mall for the fast-growing northern suburbs."
+      "why": "The volume mall for the fast-growing northern suburbs."
     },
     {
       "name": "Victory Park bar and restaurant strip",
       "kind": "district",
       "neighborhood": "Victory Park, Dallas",
-      "why": "Game-night footfall and bars around the arena create a short, concentrated gear window."
+      "why": "Bars around the arena bring game-night footfall and a short, concentrated gear window."
     }
   ],
   "people": [
     {
       "name": "Cooper Flagg",
       "role": "Mavericks forward",
-      "why": "The face of the franchise and the primary driver of jersey and sneaker demand in the market."
+      "why": "Face of the franchise and the main driver of jersey and sneaker demand in the market."
     },
     {
       "name": "Kyrie Irving",
       "role": "Mavericks guard",
-      "why": "A sneaker icon whose signature footwear is with another brand, not Nike, so he moves Nike apparel interest rather than Nike shoes."
+      "why": "A sneaker icon whose signature shoe is with another brand, not Nike. He moves Nike apparel interest, not Nike shoes."
     },
     {
       "name": "Dusty May",
       "role": "Mavericks head coach",
-      "why": "A first-year coach and 2026 NCAA champion at Michigan, giving the reset a story to market."
+      "why": "A first-year coach and 2026 NCAA champion at Michigan, which gives the reset a story to sell."
     },
     {
       "name": "Masai Ujiri",
       "role": "Mavericks president",
-      "why": "Hired in May 2026 and an international-minded executive whose arrival signals a new brand era."
+      "why": "Hired in May 2026, an international-minded executive whose arrival signals a new brand era."
     },
     {
       "name": "Dirk Nowitzki",
       "role": "Mavericks legend",
-      "why": "The franchise's emotional anchor, whose heritage product still sells and whose number is a heritage hook."
+      "why": "The franchise's emotional anchor. His heritage product still sells, and his number is a ready hook."
     }
   ],
   "moments": [
@@ -117,37 +117,37 @@
       "name": "NBA Cup group play",
       "timing": "Fridays, Oct 30 to Nov 27",
       "month": 11,
-      "why": "Cup Nights give a recurring Friday activation hook with Denver, Houston, Phoenix and Utah."
+      "why": "Cup Nights give a recurring Friday hook, with Denver, Houston, Phoenix and Utah."
     },
     {
       "name": "Black Friday and holiday gifting",
       "timing": "Late November to December",
       "month": 11,
-      "why": "The biggest gear-buying window at malls, outlets and Fanatics."
+      "why": "The biggest gear-buying window, at malls, outlets and Fanatics."
     },
     {
       "name": "State Fair of Texas",
       "timing": "Late September to October",
       "month": 10,
-      "why": "Fair Park draws huge crowds and a retail and pop-up moment overlapping with the Mavs preseason."
+      "why": "Fair Park draws huge crowds, and the fair is a retail and pop-up moment that overlaps the Mavs preseason."
     },
     {
       "name": "NBA Draft and offseason jersey cycle",
       "timing": "Late June",
       "month": 6,
-      "why": "New-player jersey and hat demand peaks with rookie arrivals."
+      "why": "Jersey and hat demand for new players peaks as the rookies arrive."
     },
     {
       "name": "Dallas high school football season",
       "timing": "Fall",
       "month": 9,
-      "why": "Competing demand for gear spend, so basketball needs to time around it."
+      "why": "Football competes for gear spend, so time basketball around it."
     }
   ],
   "vocabulary": [
     {
       "term": "DFW",
-      "meaning": "The metroplex shorthand, a signal that the market is regional, not a single city."
+      "meaning": "Metroplex shorthand. It signals a regional market, not a single city."
     },
     {
       "term": "MFFL",
@@ -163,7 +163,7 @@
     },
     {
       "term": "Y'all",
-      "meaning": "Everyday Texas address; usable in warm, human copy but never as a gimmick."
+      "meaning": "Everyday Texas address. Fine in warm, human copy, never as a gimmick."
     }
   ],
   "designCues": [
@@ -172,7 +172,7 @@
       "type": "color",
       "hex": "#00538C",
       "source": "Dallas Mavericks franchise palette",
-      "use": "Anchor team-specific product in the core blue and use silver as a metallic accent."
+      "use": "Anchor team-specific product in the core blue, with silver as a metallic accent."
     },
     {
       "cue": "Texas sky and bluebonnet blue",
@@ -186,7 +186,7 @@
       "type": "silhouette",
       "hex": "",
       "source": "Texas western wear tradition, including Mexican-American vaquero heritage",
-      "use": "Apply yoke seams and snap closures on warm-ups and shacket pieces, credited to local western-wear makers."
+      "use": "Put yoke seams and snap closures on warm-ups and shackets. Credit local western-wear makers."
     },
     {
       "cue": "Deep Ellum mural lettering",
@@ -200,19 +200,19 @@
       "type": "texture",
       "hex": "",
       "source": "Texas boot and saddle craft",
-      "use": "Debossed or embossed leather-pattern panels on heel counters and accessories."
+      "use": "Deboss or emboss leather-pattern panels on heel counters and accessories."
     }
   ],
   "productHooks": [
-    "Flagg and Kyrie opening-week capsule at the arena store and Fanatics with exclusive colorways",
-    "Deep Ellum or Oak Cliff artist-collab pop-up capsule sold first through local independent doors",
-    "Outlet-friendly Dallas heritage tees and warm-ups that carry value pricing for the Grand Prairie and Allen circuit",
-    "Western-inflected warm-up jacket with yoke and snap details, co-created with Latino and Texas makers"
+    "Flagg and Kyrie opening-week capsule with exclusive colorways, at the arena store and Fanatics",
+    "Artist-collab pop-up capsule from Deep Ellum or Oak Cliff, sold first through local independent doors",
+    "Dallas heritage tees and warm-ups at value prices, built for the Grand Prairie and Allen outlet circuit",
+    "Western-style warm-up jacket with yoke and snap details, co-created with Latino and Texas makers"
   ],
   "watchouts": [
-    "Do not use generic cowboy or oil-money caricature; Dallas's Black and Latino communities set most of the sneaker taste.",
-    "Flagg's shoe deal is with New Balance, so Flagg product is jersey and apparel only. Cowboys and Dallas Mavericks marks need separate licensing, and avoid Cowboys-adjacent star imagery on Mavs product.",
-    "Store lists change quickly; confirm every door is open before any partnership or activation."
+    "Skip the generic cowboy or oil-money caricature. Dallas's Black and Latino communities set most of the sneaker taste.",
+    "Flagg's shoe deal is with New Balance, so Flagg product is jersey and apparel only. Cowboys and Dallas Mavericks marks need separate licensing. Avoid Cowboys-adjacent star imagery on Mavs product.",
+    "Store lists change fast. Confirm every door is open before any partnership or launch."
   ],
   "sources": [
     {
@@ -249,19 +249,19 @@
       },
       {
         "name": "Bishop Arts District and Oak Cliff",
-        "profile": "Independent boutique zone in a historically Latino and Black neighborhood.",
+        "profile": "Independent boutiques in a historically Latino and Black neighborhood.",
         "shopper": "Local creatives, families and Latino community shoppers.",
         "role": "community"
       },
       {
         "name": "Grand Prairie and Allen Premium Outlets",
-        "profile": "Regional outlet centers that pull value shoppers across the metroplex.",
+        "profile": "Regional outlet centers that pull value shoppers from across the metroplex.",
         "shopper": "Families and bargain-oriented sneaker shoppers.",
         "role": "volume"
       },
       {
         "name": "Stonebriar Centre, Frisco and Plano",
-        "profile": "Suburban mall and big-box corridor serving the fast-growing northern suburbs.",
+        "profile": "Suburban mall and big-box corridor for the fast-growing northern suburbs.",
         "shopper": "Suburban families and youth sports households.",
         "role": "volume"
       }
@@ -271,13 +271,13 @@
         "name": "Dallas Mavericks Team Store at American Airlines Center",
         "type": "team-store",
         "neighborhood": "Victory Park, Dallas",
-        "why": "The official arena store and the best door for exclusive team product and game-night moments."
+        "why": "The official arena store: the best door for exclusive team product and game-night buying."
       },
       {
         "name": "Nike Factory Store, Grand Prairie Premium Outlets",
         "type": "nike-owned",
         "neighborhood": "Grand Prairie",
-        "why": "Nike-owned value door for prior-season and outlet product with heavy family traffic."
+        "why": "Nike-owned value door for prior-season and outlet product, with heavy family traffic."
       },
       {
         "name": "Foot Locker and Champs Sports at DFW malls",
@@ -289,7 +289,7 @@
         "name": "Dick's Sporting Goods, Stonebriar and suburban locations",
         "type": "big-box",
         "neighborhood": "Frisco and DFW suburbs",
-        "why": "Major suburban team-gear and youth-basketball volume driver."
+        "why": "Big suburban driver of team gear and youth basketball volume."
       },
       {
         "name": "Academy Sports + Outdoors",
@@ -301,7 +301,7 @@
         "name": "Dolly Python",
         "type": "vintage",
         "neighborhood": "Dallas",
-        "why": "Well-known local vintage store that sets taste among creatives; confirm current location before use."
+        "why": "Well-known local vintage store that sets taste among creatives. Confirm its current location before use."
       }
     ]
   },
@@ -309,17 +309,17 @@
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Whether Nike Factory Store is currently open at Grand Prairie Premium Outlets and whether any Nike Well Collective or Nike community store operates in DFW",
-      "Current location and operating status of the Mavs Team Store(s) at American Airlines Center and any off-site Mavs Shop",
-      "Whether Dolly Python is still open and where",
-      "Which independent sneaker boutiques and resale shops in Deep Ellum, Bishop Arts and Oak Cliff are currently open",
-      "Whether Foot Locker, Champs and JD Sports operate at NorthPark and Stonebriar, and any House of Hoops presence",
-      "Whether Nike has a Dallas-area concept store at NorthPark or the Galleria",
-      "Whether Allen Premium Outlets has a Nike Factory Store",
-      "2026-27 Mavs City Edition uniform and its release date",
-      "Arena plans and any move from American Airlines Center",
-      "State Fair of Texas 2026 dates and Fair Park retail activity",
-      "Current Mavs jersey sales and fan sentiment after the 26-56 season"
+      "Confirm whether the Nike Factory Store is open at Grand Prairie Premium Outlets, and whether any Nike Well Collective or Nike community store operates in DFW",
+      "Check the current location and status of the Mavs Team Store(s) at American Airlines Center and any off-site Mavs Shop",
+      "Confirm whether Dolly Python is still open, and where",
+      "Find out which independent sneaker boutiques and resale shops in Deep Ellum, Bishop Arts and Oak Cliff are open now",
+      "Confirm whether Foot Locker, Champs and JD Sports operate at NorthPark and Stonebriar, and whether House of Hoops is present",
+      "Confirm whether Nike has a Dallas-area concept store at NorthPark or the Galleria",
+      "Confirm whether Allen Premium Outlets has a Nike Factory Store",
+      "Get the 2026-27 Mavs City Edition uniform and its release date",
+      "Check arena plans and any move from American Airlines Center",
+      "Get the State Fair of Texas 2026 dates and Fair Park retail activity",
+      "Check current Mavs jersey sales and fan sentiment after the 26-56 season"
     ]
   }
 }

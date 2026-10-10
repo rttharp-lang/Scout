@@ -6,63 +6,63 @@
       "lens": "rhythm",
       "claim": "Game 7 was a 125-94 loss 'at Cleveland'",
       "verdict": "corrected",
-      "note": "Detroit was the No. 1 seed and hosted Game 7, so it was a home loss to Cleveland (fanbase already said home). Fixed; the MLK Day trip to Cleveland is a separate regular-season game.",
+      "note": "Detroit was the No. 1 seed and hosted Game 7, so it was a home loss to Cleveland. The fanbase file already said home. Fixed. The MLK Day trip to Cleveland is a separate regular-season game.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Movement 2027 runs May 28-31",
       "verdict": "corrected",
-      "note": "Memorial Day 2027 is Monday May 31, so the weekend is May 29-31. Still flagged to verify, including whether Hart Plaza's renovation affects the site.",
+      "note": "Memorial Day 2027 is Monday, May 31, so the weekend is May 29-31. Still to verify, including whether Hart Plaza's renovation affects the site.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Practice facility named 'Henry Ford Detroit Pistons Performance Center'",
       "verdict": "corrected",
-      "note": "Official name used elsewhere and in strategy is Henry Ford Health Pistons Performance Center. Fixed.",
+      "note": "The official name, used elsewhere and in the strategy, is Henry Ford Health Pistons Performance Center. Fixed.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Carhartt is 'Dearborn-born'",
       "verdict": "corrected",
-      "note": "Carhartt was founded in Detroit (1889) and is headquartered in Dearborn. Fixed in hoops, culture and retail-behavior; strategy still says 'Dearborn-founded'.",
+      "note": "Carhartt was founded in Detroit (1889) and is headquartered in Dearborn. Fixed in hoops, culture and retail-behavior. The strategy still says \"Dearborn-founded.\"",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Cue named 'Bad Boys-era teal'",
       "verdict": "corrected",
-      "note": "Teal was the 1996-2001 era, after the Bad Boys. Renamed '1990s teal'.",
+      "note": "Teal was the 1996-2001 era, after the Bad Boys. Renamed \"1990s teal.\"",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Jalen Rose 'runs' the Jalen Rose Leadership Academy",
       "verdict": "corrected",
-      "note": "Softened to 'founded' with current status to verify; I am not sure the school is still operating as described.",
+      "note": "Softened to \"founded.\" Its current status is still to verify, since I'm not sure the school operates as described.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "'Detroit vs. Everybody' slogan came out of a 2016 posse cut",
       "verdict": "corrected",
-      "note": "The 2016 posse cut shares the phrase, but the slogan was carried by Tommey Walker's apparel brand earlier. Reworded in insight and vocabulary.",
+      "note": "The 2016 posse cut shares the phrase, but Tommey Walker's apparel brand carried the slogan earlier. Reworded in the insight and vocabulary.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Tee Grizzley and Sada Baby are routinely tied to Pistons fandom courtside",
       "verdict": "corrected",
-      "note": "Only Tee Grizzley's arena presence is a well-known basis; Sada Baby ties are unverified. Softened. Strategy's opening-night plan still names both as ambassadors.",
+      "note": "Only Tee Grizzley's arena presence is well known. Sada Baby's ties are unverified, so the line is softened. The strategy's opening-night plan still names both as ambassadors.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Underground Resistance palette is black and signal red/white",
       "verdict": "corrected",
-      "note": "UR's red accent is not well sourced and art.json says black and hazard yellow. Reduced to black-on-black with a single accent. Strategy's Machine Lane palette still uses Signal Red.",
+      "note": "UR's red accent is poorly sourced, and art.json says black and hazard yellow. Cut to black-on-black with a single accent. The strategy's Machine Lane palette still uses Signal Red.",
       "source": ""
     },
     {
@@ -76,212 +76,212 @@
       "lens": "food",
       "claim": "Taqueria El Rey is a Vernor Highway Mexicantown staple",
       "verdict": "removed",
-      "note": "Could not place or confirm it with confidence; replaced with Mexicantown Bakery (long-running panaderia, status to verify).",
+      "note": "Couldn't place or confirm it. Replaced with Mexicantown Bakery, a long-running panaderia whose status is still to verify.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Takashi Yagihashi as a Detroit chef-driven, community-rooted voice",
       "verdict": "removed",
-      "note": "Chicago-based chef with only a past Detroit-area restaurant; does not fit the Black-led, community-rooted point. Replaced with Dave Mancini (Supino Pizzeria).",
+      "note": "He is a Chicago-based chef whose only Detroit-area link is a past restaurant, so he doesn't fit the Black-led, community-rooted point. Replaced with Dave Mancini (Supino Pizzeria).",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Checker Bar is in Foxtown close to the arena district",
       "verdict": "corrected",
-      "note": "It is a downtown bar, not at the arena; neighborhood and why softened.",
+      "note": "It is a downtown bar, not at the arena. Neighborhood and why-line softened.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Ben Wallace 'teal-era legacy' as the 2004 touchstone",
       "verdict": "corrected",
-      "note": "Wallace is remembered for four Defensive Player of the Year awards and 2004; reworded.",
+      "note": "Wallace is remembered for four Defensive Player of the Year awards and 2004. Reworded.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Detroit Auto Show 'typically fall or winter', month 9",
       "verdict": "corrected",
-      "note": "Recent shows returned to mid-January; moved to month 1 with verify note.",
+      "note": "Recent shows returned to mid-January. Moved to month 1, with a verify note.",
       "source": ""
     },
     {
       "lens": "underground",
       "claim": "New Dodge Lounge is a current Hamtramck DIY venue",
       "verdict": "removed",
-      "note": "Cannot confirm it is still operating; replaced with Small's Bar. Planet Ant Theatre kept as unverifiable.",
+      "note": "Couldn't confirm it still operates. Replaced with Small's Bar. Planet Ant Theatre stays, flagged unverifiable.",
       "source": ""
     },
     {
       "lens": "underground",
       "claim": "Detroit vs. Everybody is a 'global' brand tied to Eminem and Royce",
       "verdict": "corrected",
-      "note": "Overstated; now 'nationally known, worn by Detroit artists'.",
+      "note": "Overstated. Now \"nationally known, worn by Detroit artists.\"",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Burn Rubber is a Detroit sneaker boutique",
       "verdict": "corrected",
-      "note": "Live check: the original Burn Rubber is in Royal Oak; its Detroit sister store Two18 opened Feb 2022 across from Eastern Market. A Profit Brand store was also reported for a former Burn Rubber space. Current status of both unconfirmed.",
+      "note": "Checked live: the original Burn Rubber is in Royal Oak. Its Detroit sister store, Two18, opened in Feb 2022 across from Eastern Market. A Profit Brand store was also reported for a former Burn Rubber space. The current status of both is unconfirmed.",
       "source": "https://metrotimes.com/arts/burn-rubber-sneaker-boutique-expands-into-detroit-with-sister-store-two18-29286775"
     },
     {
       "lens": "retail-landscape",
       "claim": "'Detroit Historical Society and the Fisher Building shops' in New Center",
       "verdict": "corrected",
-      "note": "The Historical Society is in Midtown, not New Center; entry narrowed to Fisher Building shops (Pure Detroit).",
+      "note": "The Historical Society is in Midtown, not New Center. The entry now covers only the Fisher Building shops (Pure Detroit).",
       "source": ""
     },
     {
       "lens": "retail-behavior",
       "claim": "Bad Boys look is 'black-and-teal-era'; 1990s palette is teal and purple",
       "verdict": "corrected",
-      "note": "Bad Boys wore royal blue, red and white; the 1990s set was teal, red and black. Fixed.",
+      "note": "The Bad Boys wore royal blue, red and white. The 1990s set was teal, red and black. Fixed.",
       "source": ""
     },
     {
       "lens": "retail-behavior",
       "claim": "Windsor fans cross by the 'new' Gordie Howe bridge",
       "verdict": "corrected",
-      "note": "Opening status as of fall 2026 is unconfirmed; reworded as 'once open to traffic'.",
+      "note": "Whether the bridge has opened as of fall 2026 is unconfirmed. Reworded to \"once open to traffic.\"",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Hockeytown Cafe is still open near the arenas",
       "verdict": "confirmed",
-      "note": "Live check: no closure reports; a June 2026 review describes dining there before a Tigers game. It is at 2301 Woodward near Comerica Park and Fox Theatre, so 'near the arena' is loose. Strategy watch-party use is plausible.",
+      "note": "Checked live: no closure reports, and a June 2026 review describes dining there before a Tigers game. It is at 2301 Woodward, near Comerica Park and Fox Theatre, so \"near the arena\" is loose. Using it for a strategy watch party is plausible.",
       "source": "https://www.tripadvisor.com/389727"
     },
     {
       "lens": "food",
       "claim": "Lafayette Coney Island is open and a reliable pre-game stop",
       "verdict": "unverifiable",
-      "note": "Live check: closed repeatedly for rat infestations (2022, Jan 2025); no 2026 status found. Do not build an activation on it without confirming; American Coney Island is the safer anchor.",
+      "note": "Checked live: it closed repeatedly over rats (2022, Jan 2025), and no 2026 status turned up. Don't build a launch around it without confirming. American Coney Island is the safer anchor.",
       "source": "https://www.clickondetroit.com/video/news/2025/01/24/iconic-detroit-coney-spot-closed-again-for-rats"
     },
     {
       "lens": "art",
       "claim": "Murals in the Market, Inner State Gallery and Sheefy McFly are active with the stated roles",
       "verdict": "unverifiable",
-      "note": "Long-running, but the 2026 edition, gallery status and McFly's Eastern Market tie need a live check.",
+      "note": "Long-running, but the 2026 edition, the gallery's status and McFly's Eastern Market tie need a live check.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Heidelberg Project and The Alley Project are operating and open to partners",
       "verdict": "unverifiable",
-      "note": "Heidelberg's structure has changed over the years; confirm what remains on site and who grants permissions.",
+      "note": "Heidelberg's structure has changed over the years. Confirm what remains on site and who grants permissions.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Baker's Keyboard Lounge, El Club and Third Man Records Detroit are all open",
       "verdict": "unverifiable",
-      "note": "All established, but small venues; confirm each is operating in fall 2026.",
+      "note": "All are established but small. Confirm each is operating in fall 2026.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Submerge / Underground Resistance HQ is in the 'Eastside industrial corridor' and its Exhibit museum is open",
       "verdict": "unverifiable",
-      "note": "Neighborhood label is loose and visiting hours are unknown; confirm before any outreach.",
+      "note": "The neighborhood label is loose and visiting hours are unknown. Confirm before any outreach.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Movement 2027 is at Hart Plaza",
       "verdict": "unverifiable",
-      "note": "Hart Plaza has been in a multi-year renovation; confirm 2027 site and dates.",
+      "note": "Hart Plaza is in a multi-year renovation. Confirm the 2027 site and dates.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Nike Factory Store at Great Lakes Crossing",
       "verdict": "unverifiable",
-      "note": "Hedged as 'likely' in the dossiers and strategy; confirm it exists and is Nike-owned.",
+      "note": "Hedged as \"likely\" in the dossiers and strategy. Confirm it exists and is Nike-owned.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Shinola Midtown flagship and Pure Detroit stores are open",
       "verdict": "unverifiable",
-      "note": "Both brands have had ownership and footprint changes; confirm locations before naming them as doors or partners.",
+      "note": "Both brands have had ownership and footprint changes. Confirm locations before naming them as doors or partners.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Detroit vs. Everybody and Detroit Hustles Harder are operating with stores",
       "verdict": "unverifiable",
-      "note": "Central to the strategy's top collab; confirm stores, ownership and Nike or Pistons ties.",
+      "note": "The strategy's top collab depends on this. Confirm the stores, ownership and any Nike or Pistons ties.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Past Pistons City Edition concepts were automotive / Motor City shorthand",
       "verdict": "removed",
-      "note": "The dossier admitted it could not reconstruct them; the pattern claim was rewritten as an open audit item.",
+      "note": "The dossier admitted it couldn't reconstruct past concepts, so the pattern claim became an open audit item.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Teal hex values (#00778B, #00A3AD, #00A19C, #00857C) across dossiers",
       "verdict": "unverifiable",
-      "note": "Four different teal hexes for the same 1996-2001 color; official value must be sampled before any colorway is specified.",
+      "note": "Four different teal hexes describe the same 1996-2001 color. Sample the official value before specifying any colorway.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Boston opening night tips at 3:00 p.m. ET Tuesday",
       "verdict": "unverifiable",
-      "note": "Flagged as unusual in the verified facts; re-check before building a Monday/Tuesday daytime takeover.",
+      "note": "The verified facts flag this as unusual. Re-check before building a Monday or Tuesday daytime takeover.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Carhartt described as 'Dearborn-founded' (topInsights)",
       "verdict": "corrected",
-      "note": "Carhartt was founded in Detroit and is headquartered in Dearborn. Editor should change the wording.",
+      "note": "Carhartt was founded in Detroit and is headquartered in Dearborn. The editor should change the wording.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Uniform 'avoid' list says recent Pistons City Editions leaned on chrome-and-engine concepts",
       "verdict": "unverifiable",
-      "note": "Unsupported; the uniform dossier says past concepts are not reliably known. Rewrite as 'audit past City Editions' or drop the claim.",
+      "note": "Unsupported. The uniform dossier says past concepts aren't reliably known. Rewrite as \"audit past City Editions\" or drop the claim.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Burn Rubber is a Detroit door for collabs, Glaze shoe and heritage release",
       "verdict": "corrected",
-      "note": "Burn Rubber is in Royal Oak; the Detroit store is its sister Two18 (opened 2022), and status of both is unconfirmed. Editor should name Two18 and add a confirm-open step.",
+      "note": "Burn Rubber is in Royal Oak. The Detroit store is its sister, Two18 (opened 2022), and the status of both is unconfirmed. The editor should name Two18 and add a confirm-open step.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Opening-night plan names Tee Grizzley and Sada Baby as team-linked ambassadors",
       "verdict": "unverifiable",
-      "note": "Only Tee Grizzley's Pistons tie is reasonably established. Rephrase as 'Detroit artists, starting with Tee Grizzley, after vetting'.",
+      "note": "Only Tee Grizzley's Pistons tie is reasonably established. Rephrase as \"Detroit artists, starting with Tee Grizzley, after vetting.\"",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Pewabic glaze lines People Mover stations and Pewabic will partner",
       "verdict": "unverifiable",
-      "note": "People Mover tile link and Pewabic's openness to a licensed product partnership are unconfirmed; the whole Glaze uniform concept depends on this.",
+      "note": "Unconfirmed: the People Mover tile link, and whether Pewabic would license a product partnership. The whole Glaze uniform concept depends on both.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Machine Lane palette and thesis describe techno as 'black-and-signal-red'",
       "verdict": "unverifiable",
-      "note": "Signal red is not a documented UR code (art.json says black and hazard yellow). Confirm with the collective or drop the red claim.",
+      "note": "Signal red isn't a documented UR code, and art.json says black and hazard yellow. Confirm with the collective or drop the red claim.",
       "source": ""
     }
   ],
-  "summary": "The dossiers hold up on the verified facts (60-22, No. 1 seed, 125-94 Game 7 loss to Cleveland, Duren's $200M, Oct 20 Boston opener, Cup Group A, MLK Day at Cleveland, no Christmas game, Specter) with one real contradiction: rhythm put Game 7 at Cleveland when the top seed hosted it. Most errors were smaller local facts: Carhartt's founding city, Polish Village Cafe's street, the Burn Rubber location (Royal Oak, with Detroit sister store Two18), the Bad Boys and teal-era color palettes, and the claim that the slogan 'Detroit vs. Everybody' began as a 2016 song. Unsupported or unconfirmable items (Taqueria El Rey, New Dodge Lounge, Takashi Yagihashi, a recurring City Edition pattern, Sada Baby's Pistons tie) were removed or softened. Live checks found Hockeytown Cafe apparently operating, Lafayette Coney Island repeatedly closed for health violations in 2022 and 2025, and Burn Rubber's status unconfirmed. The strategy brief needs edits on Carhartt, Burn Rubber/Two18, the Signal Red techno claim, the City Edition avoid line and the ambassador names, and the Pewabic partnership and the Great Lakes Crossing Nike store remain the biggest unverified dependencies."
+  "summary": "The dossiers hold up on the verified facts: 60-22, the No. 1 seed, the 125-94 Game 7 loss to Cleveland, Duren's $200M, the Oct 20 Boston opener, Cup Group A, MLK Day at Cleveland, no Christmas game and Specter. One real contradiction: rhythm put Game 7 at Cleveland, but the top seed hosted it. Most other errors were small local facts: Carhartt's founding city, Polish Village Cafe's street, Burn Rubber's location, the Bad Boys and teal-era palettes and the origin of \"Detroit vs. Everybody.\" The brief needs edits, and its biggest unverified dependencies are the Pewabic partnership and the Great Lakes Crossing Nike store."
 }

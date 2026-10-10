@@ -1,125 +1,330 @@
 {
   "team": "okc",
   "lens": "culture",
-  "headline": "Oklahoma City is a self-made big-league town that spent a century being called flyover country and now wears the NBA's best team as proof, with red dirt, wind and storm sky as its native palette.",
-  "summary": "OKC's identity runs on a productive chip on the shoulder: a prairie capital founded in a single afternoon (the 1889 Land Run), defined nationally by the 1995 bombing and tornadoes, then rebuilt through MAPS civic projects and finally validated by the Thunder, who arrived from Seattle in 2008. Pride is communal rather than flashy: Thunder Up, Loud City, resilience, and the idea that the state's people look after each other. The deeper cultural layers are Native nations (Oklahoma is home to dozens of tribal nations, and the name itself is Choctaw), the Black jazz and civil rights history of Deep Deuce and Northeast OKC, and Route 66 car-and-roadside Americana. The Thunder are now the cultural center of gravity, with back-to-back MVP Shai Gilgeous-Alexander and a team that just lost a seven-game West finals to San Antonio, so the mood is hungry rather than entitled.",
+  "headline": "Oklahoma City spent a century as flyover country. Now it has the NBA's best team.",
+  "summary": "OKC runs on a chip on its shoulder. The prairie capital was founded in an afternoon, known nationally for the 1995 bombing and its tornadoes, and rebuilt through MAPS civic projects. The Thunder, in from Seattle in 2008, made it feel big-league. Now it has a back-to-back MVP in Shai Gilgeous-Alexander and a fresh seven-game West finals loss to San Antonio. The mood is hungry, not entitled.",
   "insights": [
     {
-      "title": "The Seattle origin story is a point of pride, not baggage",
-      "detail": "The Thunder came from Seattle in 2008, and locals tell the story as the town earning a team through hosting the Hornets after Katrina and then being ready when the chance came. The Thunder are the first thing OKC fans cite as proof the city belongs among big-league markets.",
-      "implication": "Lead with OKC-owned symbols, not generic Thunder branding: the city and state are the story, and the product should read as homegrown rather than a relocated brand."
+      "title": "Seattle origin story is a point of pride",
+      "detail": "The Thunder came from Seattle in 2008. Locals tell it as a town that earned a team by hosting the Hornets after Katrina and was ready when the chance came. Fans cite the Thunder first as proof the city belongs among big-league markets.",
+      "implication": "Lead with OKC-owned symbols, not generic Thunder branding. The city and state are the story, so the product should read as homegrown, not relocated."
     },
     {
       "title": "Resilience is the civic religion",
-      "detail": "The 1995 federal building bombing, the repeated May tornado outbreaks and the Oklahoma Standard of neighbors helping neighbors define local self-image. The Oklahoma City National Memorial is treated as sacred ground, not a tourist backdrop.",
-      "implication": "Use storm-sky and sunrise language for toughness and togetherness, but never put tragedy imagery, the memorial's chairs or tornado destruction on product."
+      "detail": "The 1995 federal building bombing, the repeated May tornado outbreaks and the Oklahoma Standard of neighbors helping neighbors define how locals see themselves. Pride here is communal, not flashy. The Oklahoma City National Memorial is sacred ground, not a tourist backdrop.",
+      "implication": "Use storm-sky and sunrise language for toughness and togetherness. Never put tragedy imagery, the memorial's chairs or tornado destruction on product."
     },
     {
-      "title": "Native nations are woven into the state, not a theme",
-      "detail": "Oklahoma's name is Choctaw in origin and the state is home to dozens of tribal nations, including the Chickasaw, Choctaw, Cherokee, Muscogee and Seminole. The First Americans Museum in OKC, opened in 2021, is the main civic institution telling that story.",
-      "implication": "Any Native-informed design must come from a tribal artist or nation through a paid partnership, with no ceremonial or sacred imagery and no mascot-style use."
+      "title": "The state's name is Choctaw",
+      "detail": "Oklahoma's name is Choctaw in origin, and the state is home to dozens of tribal nations, including the Chickasaw, Choctaw, Cherokee, Muscogee and Seminole. The First Americans Museum in OKC, opened in 2021, is the main civic institution telling that story.",
+      "implication": "Native-informed design must come from a tribal artist or nation through a paid partnership. No ceremonial or sacred imagery, and no mascot-style use."
     },
     {
-      "title": "Deep Deuce and Northeast OKC carry a Black cultural legacy",
-      "detail": "Deep Deuce was the hub of Black jazz and commerce (the Oklahoma City Blue Devils, Charlie Christian, Jimmy Rushing, Ralph Ellison's roots), and Clara Luper led the 1958 lunch-counter sit-ins. Northeast OKC remains the heart of that heritage.",
-      "implication": "A jazz-era typography and Luper-inspired story collection is credible only with local Black creators and historians credited and paid, and tied to community reinvestment."
+      "title": "Northeast OKC holds the Black heritage",
+      "detail": "Deep Deuce was the hub of Black jazz and commerce: the Oklahoma City Blue Devils, Charlie Christian, Jimmy Rushing and the roots of Ralph Ellison. Clara Luper led the 1958 lunch-counter sit-ins. Northeast OKC remains the heart of that heritage.",
+      "implication": "A jazz-era type and Luper-inspired story collection works only with local Black creators and historians credited and paid, and tied to community reinvestment."
     },
     {
-      "title": "Two area codes, one state shape, two Oklahomas",
-      "detail": "405 is the metro's shorthand and the state outline (with its panhandle) is a ubiquitous local graphic. Tulsa (918) is the in-state rival city culturally, with its own Greenwood District history, and Sooners versus Cowboys loyalty runs through every family.",
-      "implication": "State-shape and 405 graphics travel across the whole fanbase; keep Tulsa and college rivalries in mind so a Thunder product does not alienate half the state."
+      "title": "405 against 918: two Oklahomas, one outline",
+      "detail": "405 is the metro's shorthand, and the state outline, panhandle included, is everywhere as a local graphic. Tulsa (918) is the in-state rival, with its own Greenwood District history. Sooners versus Cowboys loyalty runs through every family.",
+      "implication": "State-shape and 405 graphics travel across the whole fanbase. Mind the Tulsa and college rivalries so a Thunder product doesn't alienate half the state."
     },
     {
       "title": "Wind and big sky shape dress and mood",
-      "detail": "Hot summers, a famously windy spring, sudden storm fronts and cold snaps make layering practical, and red clay stains everything. Local uniform is jeans, boots or sneakers, college and Thunder gear, and a ball cap.",
-      "implication": "Windbreakers, packable shells and stain-forward earth tones are more native here than loud fashion pieces."
+      "detail": "Hot summers, a famously windy spring, sudden storm fronts and cold snaps make layering practical, and red clay stains everything. The local uniform is jeans, boots or sneakers, college and Thunder gear, and a ball cap.",
+      "implication": "Windbreakers, packable shells and stain-friendly earth tones fit here better than loud fashion pieces."
     }
   ],
   "places": [
-    { "name": "Paycom Center", "kind": "arena", "neighborhood": "Downtown OKC", "why": "The Thunder's home and the center of Loud City game-night ritual; the arena name should be live-checked." },
-    { "name": "Bricktown", "kind": "entertainment district", "neighborhood": "Bricktown", "why": "Restored warehouse district and canal, a MAPS success story and pregame hub." },
-    { "name": "Skydance Bridge", "kind": "landmark", "neighborhood": "Downtown OKC", "why": "The white steel pedestrian bridge over the I-40 crosstown is the modern skyline symbol locals actually photograph." },
-    { "name": "Deep Deuce", "kind": "historic district", "neighborhood": "Deep Deuce", "why": "Historic Black jazz corridor tied to the Blue Devils and Charlie Christian." },
-    { "name": "Plaza District", "kind": "arts district", "neighborhood": "NW 16th and Classen", "why": "Murals, indie shops and the Plaza Walls festival make it the creative-class neighborhood rep." },
-    { "name": "Paseo Arts District", "kind": "arts district", "neighborhood": "Paseo", "why": "Spanish-revival buildings, galleries and the long-running First Friday gallery walks." },
-    { "name": "Asian District", "kind": "cultural district", "neighborhood": "Classen Boulevard", "why": "Vietnamese, Chinese and Korean restaurants and groceries anchor one of the state's most visible immigrant corridors." },
-    { "name": "First Americans Museum", "kind": "museum", "neighborhood": "Southeast OKC near the Oklahoma River", "why": "Tribal-run storytelling of the state's Native nations and the right starting point for any Native-informed partnership." },
-    { "name": "Oklahoma City National Memorial and Museum", "kind": "memorial", "neighborhood": "Downtown OKC", "why": "Sacred civic ground that defines the Oklahoma Standard; observe, never merchandise." },
-    { "name": "Greenwood District", "kind": "historic district", "neighborhood": "Tulsa", "why": "Site of the 1921 Tulsa Race Massacre and the Black Wall Street legacy, central to Black Oklahoman pride and memory." }
+    {
+      "name": "Paycom Center",
+      "kind": "arena",
+      "neighborhood": "Downtown OKC",
+      "why": "The Thunder's home and the center of Loud City game-night ritual. Check the arena name before publishing."
+    },
+    {
+      "name": "Bricktown",
+      "kind": "entertainment district",
+      "neighborhood": "Bricktown",
+      "why": "Restored warehouse district and canal, a MAPS success story and the pregame hub."
+    },
+    {
+      "name": "Skydance Bridge",
+      "kind": "landmark",
+      "neighborhood": "Downtown OKC",
+      "why": "The white steel pedestrian bridge over the I-40 crosstown is the modern skyline symbol locals actually photograph."
+    },
+    {
+      "name": "Deep Deuce",
+      "kind": "historic district",
+      "neighborhood": "Deep Deuce",
+      "why": "Historic Black jazz corridor tied to the Blue Devils and Charlie Christian."
+    },
+    {
+      "name": "Plaza District",
+      "kind": "arts district",
+      "neighborhood": "NW 16th and Classen",
+      "why": "Murals, indie shops and the Plaza Walls festival make it the creative-class neighborhood."
+    },
+    {
+      "name": "Paseo Arts District",
+      "kind": "arts district",
+      "neighborhood": "Paseo",
+      "why": "Spanish-revival buildings, galleries and the long-running First Friday gallery walks."
+    },
+    {
+      "name": "Asian District",
+      "kind": "cultural district",
+      "neighborhood": "Classen Boulevard",
+      "why": "Vietnamese, Chinese and Korean restaurants and groceries anchor one of the state's most visible immigrant corridors."
+    },
+    {
+      "name": "First Americans Museum",
+      "kind": "museum",
+      "neighborhood": "Southeast OKC near the Oklahoma River",
+      "why": "Tribal-run telling of the state's Native nations, and the right starting point for any Native-informed partnership."
+    },
+    {
+      "name": "Oklahoma City National Memorial and Museum",
+      "kind": "memorial",
+      "neighborhood": "Downtown OKC",
+      "why": "Sacred civic ground that defines the Oklahoma Standard. Observe it, never merchandise it."
+    },
+    {
+      "name": "Greenwood District",
+      "kind": "historic district",
+      "neighborhood": "Tulsa",
+      "why": "Site of the 1921 Tulsa Race Massacre and the Black Wall Street legacy, central to Black Oklahoman pride and memory."
+    }
   ],
   "people": [
-    { "name": "Shai Gilgeous-Alexander", "role": "Thunder guard, back-to-back MVP", "why": "The face of the city; his calm, tailored style and Canadian roots shape the current Thunder aesthetic." },
-    { "name": "Chet Holmgren", "role": "Thunder center", "why": "Homegrown-feeling star whose lanky frame is a local icon." },
-    { "name": "Sam Presti", "role": "Thunder general manager", "why": "Architect of the club's patient, small-market-built identity that fans take pride in." },
-    { "name": "Clara Luper", "role": "Civil rights leader and educator (1923-2011)", "why": "Led the 1958 Oklahoma City sit-ins; a foundational figure for Black Oklahoma pride." },
-    { "name": "Ralph Ellison", "role": "Author of Invisible Man, raised in OKC", "why": "Literary icon from Oklahoma City's Black community." },
-    { "name": "The Flaming Lips", "role": "Psychedelic rock band from OKC", "why": "Wayne Coyne's band is the city's weird, joyful cultural export and a visual-language reference." },
-    { "name": "Russell Westbrook", "role": "Former Thunder star", "why": "His OKC era and fashion-forward tunnel looks still define a generation of local fans." }
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "role": "Thunder guard, back-to-back MVP",
+      "why": "The face of the city. His calm, tailored style and Canadian roots shape the current Thunder look."
+    },
+    {
+      "name": "Chet Holmgren",
+      "role": "Thunder center",
+      "why": "Homegrown-feeling star whose lanky frame is a local icon."
+    },
+    {
+      "name": "Sam Presti",
+      "role": "Thunder general manager",
+      "why": "Architect of the club's patient, small-market-built identity that fans take pride in."
+    },
+    {
+      "name": "Clara Luper",
+      "role": "Civil rights leader and educator (1923-2011)",
+      "why": "Led the 1958 Oklahoma City sit-ins and is a foundational figure for Black Oklahoma pride."
+    },
+    {
+      "name": "Ralph Ellison",
+      "role": "Author of Invisible Man, raised in OKC",
+      "why": "Literary icon from Oklahoma City's Black community."
+    },
+    {
+      "name": "The Flaming Lips",
+      "role": "Psychedelic rock band from OKC",
+      "why": "Wayne Coyne's band is the city's weird, joyful cultural export and a visual-language reference."
+    },
+    {
+      "name": "Russell Westbrook",
+      "role": "Former Thunder star",
+      "why": "His OKC era and fashion-forward tunnel looks still define a generation of local fans."
+    }
   ],
   "moments": [
-    { "name": "Thunder opening night at San Antonio (West finals rematch)", "timing": "October 20", "month": 10, "why": "The season's emotional start and a statement game for a fanbase stung by the Spurs series." },
-    { "name": "Red River Rivalry watch season", "timing": "Mid October", "month": 10, "why": "Sooners versus Texas shapes Oklahoma fall identity and often dominates the same weekend." },
-    { "name": "Thunder home games and Loud City nights", "timing": "Every home game", "month": 0, "why": "Blue shirts, towels and noise are the weekly ritual; the best retail and content moments." },
-    { "name": "Oklahoma Statehood Day", "timing": "November 16", "month": 11, "why": "State-pride date (1907) that supports state-shape and Sooner State graphics." },
-    { "name": "Festival of the Arts", "timing": "Late April", "month": 4, "why": "Downtown's big public arts festival with local makers and food." },
-    { "name": "Oklahoma City Memorial Marathon and Remembrance", "timing": "April 19 and last weekend of April", "month": 4, "why": "A solemn civic date; brands should observe respectfully, not activate." },
-    { "name": "Red Earth Festival", "timing": "June", "month": 6, "why": "Major Native arts, dance and market event; a place for paid partnership, not borrowing." },
-    { "name": "Playoffs in Loud City", "timing": "April to June", "month": 4, "why": "The city's peak collective moment, with blue-out watch parties downtown and in Bricktown." }
+    {
+      "name": "Thunder opening night at San Antonio (West finals rematch)",
+      "timing": "October 20",
+      "month": 10,
+      "why": "The season's emotional start, and a statement game for a fanbase stung by the Spurs series."
+    },
+    {
+      "name": "Red River Rivalry watch season",
+      "timing": "Mid October",
+      "month": 10,
+      "why": "Sooners versus Texas shapes Oklahoma's fall identity and often dominates the same weekend."
+    },
+    {
+      "name": "Thunder home games and Loud City nights",
+      "timing": "Every home game",
+      "month": 0,
+      "why": "Blue shirts, towels and noise are the weekly ritual, and the best retail and content moments."
+    },
+    {
+      "name": "Oklahoma Statehood Day",
+      "timing": "November 16",
+      "month": 11,
+      "why": "State-pride date (1907) that supports state-shape and Sooner State graphics."
+    },
+    {
+      "name": "Festival of the Arts",
+      "timing": "Late April",
+      "month": 4,
+      "why": "Downtown's big public arts festival, with local makers and food."
+    },
+    {
+      "name": "Oklahoma City Memorial Marathon and Remembrance",
+      "timing": "April 19 and last weekend of April",
+      "month": 4,
+      "why": "A solemn civic date. Brands should observe respectfully and stay out of the way."
+    },
+    {
+      "name": "Red Earth Festival",
+      "timing": "June",
+      "month": 6,
+      "why": "Major Native arts, dance and market event, and a place for paid partnership, not borrowing."
+    },
+    {
+      "name": "Playoffs in Loud City",
+      "timing": "April to June",
+      "month": 4,
+      "why": "The city's peak collective moment, with blue-out watch parties downtown and in Bricktown."
+    }
   ],
   "vocabulary": [
-    { "term": "Thunder Up", "meaning": "The fan rallying cry and standard greeting among Thunder fans." },
-    { "term": "Loud City", "meaning": "How fans describe the arena atmosphere and the city's fan identity." },
-    { "term": "OKC / the 405", "meaning": "City shorthand and the area code used as a badge." },
-    { "term": "Sooner State", "meaning": "The state nickname, tied to the 1889 Land Run, and also the name of the OU teams." },
-    { "term": "Boomer Sooner", "meaning": "The OU fight song title used as a greeting among Sooners fans." },
-    { "term": "Okie", "meaning": "Once a slur from the Dust Bowl, now often worn with pride; use only as locals do and in moderation." },
-    { "term": "The Standard", "meaning": "Shorthand for the Oklahoma Standard of service and kindness after 1995." },
-    { "term": "Fixin' to", "meaning": "Plains Southern phrase meaning about to do something." }
+    {
+      "term": "Thunder Up",
+      "meaning": "The fan rallying cry and standard greeting among Thunder fans."
+    },
+    {
+      "term": "Loud City",
+      "meaning": "How fans describe the arena atmosphere and the city's fan identity."
+    },
+    {
+      "term": "OKC / the 405",
+      "meaning": "City shorthand, and the area code worn as a badge."
+    },
+    {
+      "term": "Sooner State",
+      "meaning": "The state nickname, tied to the 1889 Land Run and also the name of the OU teams."
+    },
+    {
+      "term": "Boomer Sooner",
+      "meaning": "The OU fight song title, used as a greeting among Sooners fans."
+    },
+    {
+      "term": "Okie",
+      "meaning": "Once a Dust Bowl slur, now often worn with pride. Use it only as locals do, and sparingly."
+    },
+    {
+      "term": "The Standard",
+      "meaning": "Shorthand for the Oklahoma Standard of service and kindness after 1995."
+    },
+    {
+      "term": "Fixin' to",
+      "meaning": "Plains Southern for \"about to.\""
+    }
   ],
   "designCues": [
-    { "cue": "Red-dirt rust, the clay that stains shoes and sidewalks", "type": "color", "hex": "#B5472B", "source": "Oklahoma's red soil and Red Dirt music culture", "use": "Use as an earthy accent or garment-dye shade against Thunder blue." },
-    { "cue": "Thunder blue with sunset orange", "type": "color", "hex": "#007AC1", "source": "Thunder identity", "use": "Keep brand anchors but let orange glow across a gradient horizon." },
-    { "cue": "Wheat gold of the prairie", "type": "color", "hex": "#D9B65C", "source": "Plains wheat fields and state grassland", "use": "Replace default yellow with a softer wheat tone on trims and linings." },
-    { "cue": "Storm-front gray-green sky", "type": "color", "hex": "#5E6B63", "source": "Spring supercell skies", "use": "Base color for shells and layering pieces." },
-    { "cue": "Skydance Bridge sail line", "type": "motif", "hex": "", "source": "The pedestrian bridge over I-40", "use": "Abstract its white arcing lines as a tonal graphic or sleeve stripe." },
-    { "cue": "Oklahoma state outline with 405 and 572", "type": "graphic", "hex": "", "source": "Locals' use of state shape and area codes", "use": "Minimal embroidered tag or hem print, avoiding cliche cowboy art." },
-    { "cue": "Route 66 roadside sign lettering", "type": "typography", "hex": "", "source": "The Mother Road runs through OKC and Tulsa", "use": "Marquee-style numerals for varsity and warm-up graphics." },
-    { "cue": "Wind-ripple and stain textures", "type": "texture", "hex": "", "source": "Plains wind and red clay", "use": "Garment-dye washes, ripstop and nylon that reads as weathered." }
+    {
+      "cue": "Red-dirt rust, the clay that stains shoes and sidewalks",
+      "type": "color",
+      "hex": "#B5472B",
+      "source": "Oklahoma's red soil and Red Dirt music culture",
+      "use": "Use as an earthy accent or garment-dye shade against Thunder blue."
+    },
+    {
+      "cue": "Thunder blue with sunset orange",
+      "type": "color",
+      "hex": "#007AC1",
+      "source": "Thunder identity",
+      "use": "Keep the brand anchors and let orange glow across a gradient horizon."
+    },
+    {
+      "cue": "Wheat gold of the prairie",
+      "type": "color",
+      "hex": "#D9B65C",
+      "source": "Plains wheat fields and state grassland",
+      "use": "Swap default yellow for a softer wheat tone on trims and linings."
+    },
+    {
+      "cue": "Storm-front gray-green sky",
+      "type": "color",
+      "hex": "#5E6B63",
+      "source": "Spring supercell skies",
+      "use": "Base color for shells and layering pieces."
+    },
+    {
+      "cue": "Skydance Bridge sail line",
+      "type": "motif",
+      "hex": "",
+      "source": "The pedestrian bridge over I-40",
+      "use": "Abstract its white arcing lines into a tonal graphic or sleeve stripe."
+    },
+    {
+      "cue": "Oklahoma state outline with 405 and 572",
+      "type": "graphic",
+      "hex": "",
+      "source": "Locals' use of state shape and area codes",
+      "use": "Minimal embroidered tag or hem print. Skip the cliche cowboy art."
+    },
+    {
+      "cue": "Route 66 roadside sign lettering",
+      "type": "typography",
+      "hex": "",
+      "source": "The Mother Road runs through OKC and Tulsa",
+      "use": "Marquee-style numerals for varsity and warm-up graphics, a nod to car-and-roadside Americana."
+    },
+    {
+      "cue": "Wind-ripple and stain textures",
+      "type": "texture",
+      "hex": "",
+      "source": "Plains wind and red clay",
+      "use": "Garment-dye washes, ripstop and nylon that read as weathered."
+    }
   ],
   "productHooks": [
-    "A Thunder windbreaker and packable shell in storm-front gray-green with red-dirt zip pulls, built for plains wind and spring storms.",
-    "A 405 and state-outline capsule tee and hoodie for Loud City nights, with embroidered tags rather than loud graphics.",
-    "A Skydance Bridge tonal graphic on warm-ups and a City Edition sleeve detail.",
-    "A paid collaboration with an Oklahoma Native artist or nation on a limited-run piece, with profits shared and the artist credited.",
-    "A Deep Deuce jazz-era capsule co-created with Northeast OKC makers, tied to local scholarships or youth hoops."
+    "Thunder windbreaker and packable shell in storm-front gray-green with red-dirt zip pulls, built for plains wind and spring storms.",
+    "405 and state-outline capsule tee and hoodie for Loud City nights, with embroidered tags instead of loud graphics.",
+    "Warm-ups with a tonal Skydance Bridge graphic, plus a City Edition sleeve detail.",
+    "Limited-run piece in a paid collaboration with an Oklahoma Native artist or nation, with profits shared and the artist credited.",
+    "Deep Deuce jazz-era capsule co-created with Northeast OKC makers, tied to local scholarships or youth hoops."
   ],
   "watchouts": [
-    "Never use 1995 memorial, tornado damage or Land Run imagery on product; the Land Run's displacement of Native nations is a live sensitivity.",
-    "Native-informed design requires a tribal artist partnership; no headdresses, ceremonial patterns or sacred motifs.",
-    "Okie, cowboy and oil-derrick tropes can read as caricature; ground in real places and local makers.",
-    "Sooners and Cowboys marks are collegiate IP and would need licensing; keep Thunder product separate."
+    "Never put 1995 memorial, tornado damage or Land Run imagery on product. The Land Run's displacement of Native nations is a live sensitivity.",
+    "Native-informed design needs a tribal artist partnership. No headdresses, ceremonial patterns or sacred motifs.",
+    "Okie, cowboy and oil-derrick tropes can read as caricature. Ground the work in real places and local makers.",
+    "Sooners and Cowboys marks are collegiate IP and need licensing. Keep Thunder product separate."
   ],
   "sources": [
-    { "title": "Oklahoma City Thunder (official)", "url": "https://www.nba.com/thunder" },
-    { "title": "Oklahoma City (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Oklahoma_City" },
-    { "title": "Oklahoma City National Memorial and Museum", "url": "https://memorialmuseum.com" },
-    { "title": "First Americans Museum", "url": "https://famok.org" },
-    { "title": "Flag of Oklahoma (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Flag_of_Oklahoma" }
+    {
+      "title": "Oklahoma City Thunder (official)",
+      "url": "https://www.nba.com/thunder"
+    },
+    {
+      "title": "Oklahoma City (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Oklahoma_City"
+    },
+    {
+      "title": "Oklahoma City National Memorial and Museum",
+      "url": "https://memorialmuseum.com"
+    },
+    {
+      "title": "First Americans Museum",
+      "url": "https://famok.org"
+    },
+    {
+      "title": "Flag of Oklahoma (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Flag_of_Oklahoma"
+    }
   ],
   "confidence": "medium",
   "provenance": {
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Paycom Center is still the arena name and the Thunder's ownership group is unchanged (CURRENT FACTS did not verify).",
-      "The 2026-27 City Edition uniform theme and release date, and whether it ties to any local culture cue used here.",
-      "Whether Thunder fans still use Thunder Up and Loud City as primary slogans, and current fan sentiment after the West finals loss.",
-      "The Plaza District, Paseo and Asian District venues and events are operating as described, including Plaza Walls and First Friday.",
-      "First Americans Museum is open and programming as described, and Red Earth Festival's June 2027 dates and format.",
-      "Festival of the Arts and OKC Memorial Marathon 2027 dates.",
-      "Area code 572 as the overlay for 405 is in use in OKC.",
-      "Flaming Lips remain active and based in OKC, and Russell Westbrook's current status with the city.",
-      "Red River Rivalry date for October 2026."
+      "Confirm Paycom Center is still the arena name and the Thunder's ownership group is unchanged (CURRENT FACTS did not verify).",
+      "Confirm the 2026-27 City Edition uniform theme and release date, and whether it ties to any local culture cue used here.",
+      "Check whether Thunder fans still use Thunder Up and Loud City as primary slogans, and current fan sentiment after the West finals loss.",
+      "Confirm the Plaza District, Paseo and Asian District venues and events operate as described, including Plaza Walls and First Friday.",
+      "Confirm First Americans Museum is open and programming as described, and Red Earth Festival's June 2027 dates and format.",
+      "Confirm Festival of the Arts and OKC Memorial Marathon 2027 dates.",
+      "Confirm area code 572 is in use as the overlay for 405 in OKC.",
+      "Confirm the Flaming Lips remain active and based in OKC, and Russell Westbrook's current status with the city.",
+      "Confirm the Red River Rivalry date for October 2026."
     ]
   }
 }

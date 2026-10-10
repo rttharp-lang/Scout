@@ -1,38 +1,38 @@
 {
   "team": "atl",
   "lens": "hoops",
-  "headline": "Atlanta hoops is a Black-Mecca ecosystem where rec-center courts, HBCU gyms and Gwinnett powerhouses feed a fandom that moves at the speed of hip-hop.",
-  "summary": "Atlanta basketball culture runs on three overlapping circuits: city rec centers and neighborhood courts on the Southside and Westside, a deep prep and AAU pipeline that stretches from College Park out through Gwinnett and Cobb, and the Atlanta University Center, where Morehouse and Clark Atlanta carry HBCU pride. The pro layer is unusually dense: the Hawks, the WNBA's Dream, and the Hawks' G League affiliate in College Park all share the metro. Local hoopers dress as they do in the rest of the city's culture: sneaker-literate, trap-era streetwear, with team gear worn as identity rather than fandom. Nike should treat the Southside and the AUC as the authentic centers of gravity, and MLK Day as the city's biggest basketball cultural moment.",
+  "headline": "In Atlanta basketball, the Southside makes the players and the AUC makes the noise.",
+  "summary": "Atlanta basketball runs on three circuits. Rec centers and neighborhood courts anchor the Southside and Westside. A deep prep and AAU pipeline stretches from College Park through Gwinnett and Cobb. The AUC carries HBCU pride through Morehouse and Clark Atlanta. Above it all, the Hawks, the WNBA's Dream and the Hawks' G League team in College Park share one metro, and MLK Day is the city's biggest basketball moment.",
   "insights": [
     {
       "title": "The Southside is the talent engine",
       "detail": "College Park, East Point, South Atlanta and Decatur have produced a long line of NBA players, including Dwight Howard, Josh Smith and Derrick Favors. Locals claim them by neighborhood and high school, not by college or draft team.",
-      "implication": "Tell player stories by zip code and school, and co-brand with neighborhood rec centers and community programs rather than only Hawks-branded moments."
+      "implication": "Tell player stories by zip code and school. Co-brand with neighborhood rec centers and community programs, not only Hawks moments."
     },
     {
       "title": "Hip-hop and hoops are one scene",
-      "detail": "Atlanta's rap artists court-side and in the stands are part of how the Hawks are experienced, and local hoopers treat sneakers and music as a shared language. Artists from the city regularly shape what gets worn on and off court.",
-      "implication": "Collaborate with Atlanta artists and stylists for drops, with credit and payment, and let the music calendar set release timing as much as the NBA calendar."
+      "detail": "Atlanta's rap artists, courtside and in the stands, are part of how the Hawks are experienced. Local hoopers treat sneakers and music as a shared language, and artists from the city regularly shape what gets worn on and off court.",
+      "implication": "Collaborate with Atlanta artists and stylists on drops, with credit and payment. Let the music calendar set release timing as much as the NBA calendar does."
     },
     {
       "title": "HBCU basketball is a cultural anchor",
-      "detail": "Morehouse and Clark Atlanta in the Southern Intercollegiate Athletic Conference, along with Spelman and the wider Atlanta University Center, give the city a basketball identity rooted in Black college life. Homecoming season and campus gym culture matter as much as arena nights.",
-      "implication": "Build HBCU-informed capsules with the schools' licensing offices and student creators, and activate during homecoming and the winter conference season."
+      "detail": "Morehouse and Clark Atlanta play in the Southern Intercollegiate Athletic Conference. With Spelman and the wider Atlanta University Center, they give the city a basketball identity rooted in Black college life. Homecoming season and campus gym culture matter as much as arena nights.",
+      "implication": "Build HBCU-informed capsules with the schools' licensing offices and student creators. Launch them during homecoming and the winter conference season."
     },
     {
       "title": "Gwinnett and the suburbs carry the prep rivalries",
-      "detail": "Metro suburban programs in Gwinnett, Cobb and DeKalb compete in Georgia's big-school classifications, while private programs like Southwest Atlanta Christian and Pace Academy add another tier. High school pride is loud and hyper-local.",
-      "implication": "School-color team and warm-up product tied to named programs, produced under proper licensing, would resonate more than generic city graphics."
+      "detail": "Suburban programs in Gwinnett, Cobb and DeKalb compete in Georgia's big-school classifications. Private programs like Southwest Atlanta Christian and Pace Academy add another tier. High school pride is loud and hyper-local.",
+      "implication": "Make school-color team and warm-up product tied to named programs, under proper licensing. It will land harder than generic city graphics."
     },
     {
       "title": "Three pro teams, one market",
-      "detail": "The Hawks play at State Farm Arena, the WNBA's Atlanta Dream are a real second fandom with a strong Black and women-led base, and the College Park Skyhawks give the Southside its own pro team. Many local fans move between all three.",
-      "implication": "Plan women's and G League storytelling alongside the Hawks calendar, including Dream-specific product, instead of treating them as afterthoughts."
+      "detail": "The Hawks play at State Farm Arena. The WNBA's Atlanta Dream are a real second fandom with a strong Black and women-led base, and the College Park Skyhawks give the Southside its own pro team. Many local fans follow all three.",
+      "implication": "Plan women's and G League stories alongside the Hawks calendar, with Dream-specific product. Don't treat them as afterthoughts."
     },
     {
       "title": "MLK Day is the signature basketball moment",
-      "detail": "The Hawks have a traditional MLK Day home game, and the 2026-27 one is on Jan 18 against the 76ers. A reported return of the 2020-21 MLK-honoring City Edition would tie directly into it.",
-      "implication": "Treat the MLK game as the anchor of the season: community programming, a respectful capsule, and storytelling co-created with King Center-adjacent and local Black-led organizations."
+      "detail": "The Hawks have a traditional MLK Day home game, and the 2026-27 one is on Jan 18 against the 76ers. A reported return of the 2020-21 MLK City Edition would tie straight into it.",
+      "implication": "Make the MLK game the anchor of the season: community programming, a respectful capsule, and stories co-created with King Center-adjacent and local Black-led organizations."
     }
   ],
   "places": [
@@ -40,19 +40,19 @@
       "name": "State Farm Arena",
       "kind": "arena",
       "neighborhood": "Downtown Atlanta",
-      "why": "Home of the Hawks, an occasional Dream venue, and the stage for the MLK Day game."
+      "why": "Home of the Hawks, an occasional Dream venue and the stage for the MLK Day game."
     },
     {
       "name": "Gateway Center Arena",
       "kind": "arena",
       "neighborhood": "College Park",
-      "why": "Primary home of the WNBA's Atlanta Dream and the G League College Park Skyhawks, anchoring the Southside's pro basketball."
+      "why": "Primary home of the WNBA's Atlanta Dream and the G League College Park Skyhawks, and the anchor of the Southside's pro basketball."
     },
     {
       "name": "Hank McCamish Pavilion",
       "kind": "arena",
       "neighborhood": "Georgia Tech, Midtown",
-      "why": "Georgia Tech's home court, a college hoops rallying point inside the city."
+      "why": "Georgia Tech's home court, and a college hoops rallying point inside the city."
     },
     {
       "name": "Forbes Arena at Morehouse College",
@@ -64,7 +64,7 @@
       "name": "Clark Atlanta University gymnasium",
       "kind": "college gym",
       "neighborhood": "Atlanta University Center",
-      "why": "Home court for the Panthers and the Morehouse rivalry across the AUC."
+      "why": "Home court for the Panthers, and the other side of the Morehouse rivalry across the AUC."
     },
     {
       "name": "Georgia State Convocation Center",
@@ -76,30 +76,30 @@
       "name": "Dunbar Recreation Center",
       "kind": "rec center",
       "neighborhood": "Mechanicsville",
-      "why": "A long-standing city rec center on the Southside corridor, the type of gym where neighborhood leagues and pickup shape local hoopers."
+      "why": "A long-standing city rec center on the Southside corridor, the kind of gym where neighborhood leagues and pickup shape local hoopers."
     },
     {
       "name": "Adamsville Recreation Center",
       "kind": "rec center",
       "neighborhood": "Adamsville, Southwest Atlanta",
-      "why": "A Southwest Atlanta city rec site representative of the Westside and Southside youth leagues."
+      "why": "A Southwest Atlanta city rec site, typical of the Westside and Southside youth leagues."
     }
   ],
   "people": [
     {
       "name": "Dwight Howard",
       "role": "NBA champion and former No. 1 pick",
-      "why": "Southwest Atlanta Christian alum, claimed by the city as its biggest prep-to-pro story."
+      "why": "A Southwest Atlanta Christian alum, claimed by the city as its biggest prep-to-pro story."
     },
     {
       "name": "Josh Smith",
       "role": "Former Hawks forward and College Park native",
-      "why": "Homegrown Hawks star of the 2000s, still a streetball and local-media figure."
+      "why": "A homegrown Hawks star of the 2000s, and still a streetball and local-media figure."
     },
     {
       "name": "Derrick Favors",
       "role": "Former NBA big man",
-      "why": "South Atlanta High product who represents the city's Southside pipeline."
+      "why": "A South Atlanta High product who stands for the city's Southside pipeline."
     },
     {
       "name": "Dominique Wilkins",
@@ -114,12 +114,12 @@
     {
       "name": "Atlanta Dream",
       "role": "WNBA franchise",
-      "why": "Second pro fandom in the market, with a loyal base and star players such as Allisha Gray and Rhyne Howard."
+      "why": "The market's second pro fandom, with a loyal base and star players such as Allisha Gray and Rhyne Howard."
     },
     {
       "name": "Quin Snyder",
       "role": "Hawks head coach",
-      "why": "The defense-first system built around him sets the style of Atlanta's current identity."
+      "why": "His defense-first system sets the style of Atlanta's current identity."
     }
   ],
   "moments": [
@@ -127,13 +127,13 @@
       "name": "MLK Day Hawks home game",
       "timing": "Monday, Jan 18, 2027",
       "month": 1,
-      "why": "Atlanta's traditional MLK Day game, scheduled for 2:30 p.m. ET against the 76ers on NBC/Peacock."
+      "why": "Atlanta's traditional MLK Day game is set for 2:30 p.m. ET against the 76ers on NBC/Peacock."
     },
     {
       "name": "Emirates NBA Cup group play",
       "timing": "Fridays, Oct 30 to Nov 27",
       "month": 11,
-      "why": "The Hawks open at Boston on Oct 30 in East Group C, with the Dec 11 final set for Hinkle Fieldhouse."
+      "why": "The Hawks open at Boston on Oct 30 in East Group C. The Dec 11 final is set for Hinkle Fieldhouse."
     },
     {
       "name": "Specter uniform games",
@@ -145,7 +145,7 @@
       "name": "HBCU homecoming and SIAC season",
       "timing": "Fall homecomings, winter conference play",
       "month": 11,
-      "why": "AUC homecoming and the SIAC season bring Black college basketball culture to the foreground."
+      "why": "AUC homecoming and the SIAC season put Black college basketball culture in the foreground."
     },
     {
       "name": "Summer pro-am and AAU circuits",
@@ -165,7 +165,7 @@
     },
     {
       "term": "Black Mecca",
-      "meaning": "A description of Atlanta as a center of Black culture, business and education."
+      "meaning": "Atlanta as a center of Black culture, business and education."
     },
     {
       "term": "Dirty South",
@@ -173,11 +173,11 @@
     },
     {
       "term": "Zone 6",
-      "meaning": "East Atlanta police-zone shorthand made famous by Gucci Mane and used as neighborhood pride."
+      "meaning": "East Atlanta police-zone shorthand, made famous by Gucci Mane and worn as neighborhood pride."
     },
     {
       "term": "The Human Highlight Film",
-      "meaning": "Dominique Wilkins' nickname and a reference point for Hawks dunk culture."
+      "meaning": "Dominique Wilkins' nickname, and a reference point for Hawks dunk culture."
     }
   ],
   "designCues": [
@@ -186,28 +186,28 @@
       "type": "color",
       "hex": "#C1D32F",
       "source": "The Hawks' volt-green accent from recent franchise identity",
-      "use": "Use as a high-visibility accent on warm-ups and footwear rather than a dominant field."
+      "use": "A high-visibility accent on warm-ups and footwear, not a dominant field."
     },
     {
       "cue": "Hawks red",
       "type": "color",
       "hex": "#E03A3E",
-      "source": "Franchise primary red that links back to the Hawks' classic uniforms",
+      "source": "The franchise's primary red, which links back to the Hawks' classic uniforms",
       "use": "Pair with black for team-forward product and nostalgic Wilkins-era references."
     },
     {
       "cue": "Georgia red clay",
       "type": "color",
       "hex": "#B5532F",
-      "source": "The state's iconic clay soil that underlies the metro's landscape",
-      "use": "Use as a earthy accent in apparel colorways to give them a distinctly Georgia feel."
+      "source": "The state's clay soil, which underlies the metro area's ground",
+      "use": "An earthy accent in apparel colorways that gives them a Georgia feel."
     },
     {
       "cue": "Peach and ATL city wordmark",
       "type": "graphic",
       "hex": "",
       "source": "Atlanta's Peach State identity and everyday ATL branding",
-      "use": "Use understated peach motifs and ATL lettering in small details rather than as cliche front graphics."
+      "use": "Keep peach motifs and ATL lettering understated and in small details, not clichéd front graphics."
     },
     {
       "cue": "HBCU-inspired collegiate lettering",
@@ -221,21 +221,21 @@
       "type": "story",
       "hex": "",
       "source": "The MLK Day game and the 2020-21 MLK-honoring City Edition",
-      "use": "Keep tone reverent and developed with Black-led partners, avoiding slogans and decorative use of King's likeness or words."
+      "use": "Keep the tone reverent and develop it with Black-led partners. Skip slogans and decorative use of King's likeness or words."
     }
   ],
   "productHooks": [
-    "An MLK Day capsule timed to the Jan 18 game, co-developed with Atlanta Black-led organizations and designers.",
-    "Specter-uniform lifestyle and warm-up product leaning on Hawks red, black and volt green.",
-    "Southside heritage capsule built around College Park, East Point and South Atlanta school and neighborhood stories.",
-    "Dream and Skyhawks co-branded apparel that sits alongside Hawks lines.",
+    "MLK Day capsule timed to the Jan 18 game, co-developed with Atlanta Black-led organizations and designers.",
+    "Specter-uniform lifestyle and warm-up product in Hawks red, black and volt green.",
+    "Southside heritage capsule built on College Park, East Point and South Atlanta school and neighborhood stories.",
+    "Dream and Skyhawks co-branded apparel that sits alongside the Hawks lines.",
     "Licensed HBCU basketball warm-ups with Morehouse and Clark Atlanta for homecoming and SIAC season."
   ],
   "watchouts": [
-    "Do not lift the MLK name, image or words as decoration; work with the King estate and local Black-led partners on any MLK product.",
-    "College and high school marks require licensing; do not imitate school logos without permission.",
-    "Avoid trap and rap stereotypes; credit and pay Atlanta artists, stylists and photographers for any cultural contribution.",
-    "Do not name or use images of high school players beyond public records and licensing rules around amateur athletes."
+    "Don't use MLK's name, image or words as decoration. Work with the King estate and local Black-led partners on any MLK product.",
+    "College and high school marks need licenses. Don't imitate school logos without permission.",
+    "Avoid trap and rap stereotypes. Credit and pay Atlanta artists, stylists and photographers for any cultural contribution.",
+    "Don't name or show high school players beyond public records and the licensing rules for amateur athletes."
   ],
   "sources": [
     {
@@ -264,16 +264,16 @@
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Reported return of the 2020-21 MLK City Edition: design details and whether it is the 2026-27 City Edition.",
-      "College Park Skyhawks still operate in College Park at Gateway Center Arena with the same name.",
-      "Atlanta Dream home and practice arrangements at State Farm Arena and Gateway Center Arena for 2026-27.",
-      "Atlanta Dream stars Allisha Gray and Rhyne Howard are still on the roster.",
-      "Dunbar and Adamsville recreation centers are open and host active leagues.",
-      "Dominique Wilkins still holds a Hawks ambassador or broadcast role.",
-      "Current summer pro-am and AAU circuits in metro Atlanta, including active programs and dates.",
-      "Georgia State, Georgia Tech and Morehouse home arenas and names are unchanged.",
-      "Hawks volt green remains in current branding.",
-      "Which Hawks games feature Specter uniforms."
+      "Confirm the design details of the reported return of the 2020-21 MLK City Edition, and whether it is the 2026-27 City Edition.",
+      "Confirm the College Park Skyhawks still operate in College Park at Gateway Center Arena under the same name.",
+      "Confirm the Atlanta Dream's home and practice arrangements at State Farm Arena and Gateway Center Arena for 2026-27.",
+      "Confirm Atlanta Dream stars Allisha Gray and Rhyne Howard are still on the roster.",
+      "Confirm Dunbar and Adamsville recreation centers are open and host active leagues.",
+      "Confirm Dominique Wilkins still holds a Hawks ambassador or broadcast role.",
+      "Check current summer pro-am and AAU circuits in metro Atlanta, including active programs and dates.",
+      "Confirm the home arenas and names for Georgia State, Georgia Tech and Morehouse are unchanged.",
+      "Confirm Hawks volt green remains in current branding.",
+      "Find out which Hawks games feature Specter uniforms."
     ]
   }
 }

@@ -1,116 +1,538 @@
 {
-"team":"bkn","lens":"rhythm",
-"headline":"Brooklyn's year is a rebuild-season slow burn spiked by borough pride, with Knicks-champion gravity pulling Nets fandom into a defiant, Brooklyn-first identity.",
-"summary":"The Nets come off a 20-62 season into a development year built around rookie Mikel Brown Jr., Julius Randle, Michael Porter Jr. and an extended Jordi Fernandez, so wins will not drive demand; identity will. The Knicks are defending champions after the first title since 1973, which makes Brooklyn's black-and-white a statement of difference rather than a default. Engagement peaks around the October to December opener and Cup window and again at the Feb-April stretch only if the team is competitive, while the borough's own calendar (Carnival on Labor Day, summer park ball, Coney Island) carries the brand when the team does not. Retail is gift and drop driven (Nov to Dec, City Edition and heritage releases) more than playoff driven. Written from knowledge plus verified current facts; dates beyond those are queued for verification.",
-"insights":[
-{"title":"Brooklyn is the anti-Knicks lane in a Knicks title year","detail":"With the Knicks as 2026 champions, New York basketball attention is at a 50-year high, and Brooklyn fans define themselves by not being Garden fans. The Nets have no opening-night or Christmas game while the Knicks host both a title-defense opener and a noon Christmas game.","implication":"Do not chase title-gear volume; lead with borough-identity product (BK, Barclays, neighborhood names) that reads as a different team from the Knicks, and avoid anything that looks like New York generic."},
-{"title":"The calendar's emotional peak is the Cup, not the opener","detail":"The Nets are in East Group A with Detroit, Toronto, Orlando and Milwaukee, opening Cup play at Toronto on Oct 30 and playing Friday Cup Nights through Nov 27. Those are the first real home-crowd moments and the first gift-season window.","implication":"Time a Cup-night capsule and Thanksgiving-week drop to Nov; Cup court and Cup-night apparel can anchor the first activation instead of waiting for Christmas."},
-{"title":"Revival nostalgia is the likeliest City Edition story","detail":"A single report says the Nets are bringing back the red, white and blue ABA-era New York Nets throwbacks; whether it is the City Edition or a Classic set is unconfirmed. Brooklyn's brand since 2012 has been black and white, so a red-white-blue Nets look speaks to Long Island and old-school fans as much as to Brooklyn.","implication":"Plan for two parallel stories: heritage red-white-blue (Dr. J era, New York Nets) and the Brooklyn black-and-white identity; confirm which is the City Edition before briefing."},
-{"title":"Young roster makes youth and rookie hype the retail driver","detail":"Mikel Brown Jr. at No. 6 and Egor Demin give the team its few jersey-worthy faces, and Randle and Porter bring name recognition. Rookie jersey demand typically spikes at the opener and after standout games.","implication":"Hold player-led product to Brown Jr. and Demin graphic tees and youth sizes; keep team-led product the volume base."},
-{"title":"Summer and Labor Day belong to the borough, not the team","detail":"Brooklyn's biggest cultural weekend is the West Indian American Day Carnival on Eastern Parkway on Labor Day, and summer is park ball, Coney Island and the WNBA Liberty at Barclays. The Nets are quiet from May through September.","implication":"Run a Brooklyn community capsule in summer (courts, Carnival colors with Caribbean-community partners) so the brand stays alive in the offseason and feeds fall demand."},
-{"title":"Barclays is the activation anchor","detail":"Barclays Center at Atlantic Terminal is a transit hub with the Atlantic Terminal LIRR and nine subway lines, so game-night traffic spans Brooklyn, Queens and Long Island.","implication":"Pair home-game pop-ups and giveaways with Atlantic Terminal foot traffic and the Fulton and Flatbush corridors."}
-],
-"places":[
-{"name":"Barclays Center","kind":"venue","neighborhood":"Downtown / Atlantic Terminal","why":"Home arena at Flatbush and Atlantic, its rusted-steel facade is the team's most recognizable visual."},
-{"name":"Atlantic Terminal / Atlantic Avenue-Barclays Center station","kind":"transit hub","neighborhood":"Downtown Brooklyn","why":"Where most fans arrive, so the best pop-up and wayfinding site."},
-{"name":"Eastern Parkway","kind":"street / parade route","neighborhood":"Crown Heights","why":"Route of the West Indian American Day Carnival on Labor Day."},
-{"name":"Coney Island boardwalk","kind":"district","neighborhood":"Coney Island","why":"Summer capital of the borough, including the Mermaid Parade in June and Nathan's July 4 contest."},
-{"name":"Brooklyn Bridge Park","kind":"park","neighborhood":"DUMBO / Brooklyn Heights","why":"Summer gathering place with public courts and the skyline backdrop."},
-{"name":"Fulton Street","kind":"retail corridor","neighborhood":"Bed-Stuy / Fort Greene","why":"The streetwear and community corridor between Barclays and Bed-Stuy."},
-{"name":"Brooklyn Museum","kind":"museum","neighborhood":"Prospect Heights","why":"Hosts First Saturdays, a long-running free community night."}
-],
-"people":[
-{"name":"Jordi Fernandez","role":"Nets head coach","why":"Extended this offseason and the face of the development plan."},
-{"name":"Mikel Brown Jr.","role":"Rookie guard, No. 6 pick","why":"Top draft pick and the likeliest new fan favorite."},
-{"name":"Julius Randle","role":"Forward, acquired from Minnesota","why":"A New York-area name and former Knick who gives rivalry edge."},
-{"name":"Michael Porter Jr.","role":"Forward","why":"Veteran scorer anchoring the roster."},
-{"name":"Jay-Z","role":"Brooklyn-born artist and former Nets minority owner","why":"His 2012 black-and-white rebrand shaped the Brooklyn identity; any use requires respect for his IP and relationship."},
-{"name":"The Notorious B.I.G.","role":"Bed-Stuy rapper","why":"Subject of past Nets uniform tributes, a core Brooklyn symbol; estate licensing applies."}
-],
-"moments":[
-{"name":"Nets opening home night","timing":"Late Oct 2026","month":10,"why":"First home crowd moment; date to be confirmed against the schedule."},
-{"name":"Cup Nights","timing":"Fridays Oct 30 to Nov 27","month":11,"why":"Nets play four group games plus Cup court gear."},
-{"name":"Holiday gifting window","timing":"Late Nov to Dec","month":12,"why":"Peak jersey and apparel purchase period."},
-{"name":"Trade deadline","timing":"Feb 11, 2027","month":2,"why":"Randle or Porter moves could reshape the rebuild narrative."},
-{"name":"Brooklyn Half Marathon","timing":"May","month":5,"why":"Brooklyn running culture and a Nike-friendly crowd."},
-{"name":"Mermaid Parade / Nathan's contest","timing":"June / July 4","month":6,"why":"Coney Island summer culture."},
-{"name":"West Indian American Day Carnival","timing":"Labor Day","month":9,"why":"Borough's biggest cultural day, led by Caribbean communities."}
-],
-"vocabulary":[
-{"term":"BK","meaning":"Shorthand for Brooklyn, used on caps, tees and in everyday talk."},
-{"term":"Brooklyn Never Sleeps","meaning":"A Brooklyn slogan associated with Nets marketing; unverified as a current Nets line, so check before use."},
-{"term":"Barclays","meaning":"What fans call the arena, not the full name."},
-{"term":"Brownstone","meaning":"Shorthand for the borough's rowhouse look and neighborhoods like Bed-Stuy and Crown Heights."},
-{"term":"Nets Daily / Brooklyn Mafia","meaning":"Fan nicknames; verify current usage before using."}
-],
-"designCues":[
-{"cue":"Brooklyn black","type":"color","hex":"#000000","source":"The 2012 move to Barclays and the black-and-white identity","use":"Base color for the Association and Icon-leaning product."},
-{"cue":"ABA-era red","type":"color","hex":"#C8102E","source":"New York Nets ABA throwbacks","use":"Accent for heritage capsules; pair with blue and white if the throwback is confirmed."},
-{"cue":"ABA-era blue","type":"color","hex":"#1D428A","source":"New York Nets ABA throwbacks","use":"Secondary heritage color."},
-{"cue":"Brownstone brown","type":"color","hex":"#7B3F2E","source":"Bed-Stuy and Crown Heights rowhouses","use":"Neighborhood capsule palette."},
-{"cue":"Rusted weathering-steel texture","type":"texture","hex":"","source":"Barclays Center exterior panels","use":"Print or knit texture on outerwear; abstract, do not reproduce the arena."},
-{"cue":"Carnival color burst","type":"pattern","hex":"","source":"West Indian American Day Carnival","use":"Only through a paid partnership with Caribbean designers or mas bands."},
-{"cue":"Subway-sign typography","type":"typography","hex":"","source":"MTA signage tradition","use":"Neighborhood and station-name graphics; MTA marks need licensing."}
-],
-"productHooks":[
-"Cup Night capsule (Oct 30 to Nov 27) with Nets Cup court graphics and a Thanksgiving-week drop.",
-"Rookie and young-core graphic tees and youth jerseys for Mikel Brown Jr. and Egor Demin.",
-"Heritage ABA red-white-blue capsule if the throwback is confirmed, aligned to its release.",
-"Brooklyn neighborhood series (Bed-Stuy, Crown Heights, Flatbush, Coney Island) in black with brownstone accents.",
-"Summer Brooklyn courts capsule tied to Carnival and park-ball season."
-],
-"watchouts":[
-"Do not frame Brooklyn as a Manhattan or Knicks extension; the identity is explicitly separate.",
-"Biggie, Jay-Z and Carnival imagery require licensing or paid, credited partnership with the community and estates.",
-"Which uniform is the City Edition is unconfirmed; do not brief against the ABA throwback until verified.",
-"Rebuild-year sentiment can be sour; avoid triumphant or playoff-bound copy."
-],
-"sources":[
-{"title":"Brooklyn Nets official site","url":"https://www.nba.com/nets"},
-{"title":"Barclays Center","url":"https://www.barclayscenter.com"},
-{"title":"Brooklyn Nets (Wikipedia)","url":"https://en.wikipedia.org/wiki/Brooklyn_Nets"},
-{"title":"Barclays Center (Wikipedia)","url":"https://en.wikipedia.org/wiki/Barclays_Center"},
-{"title":"West Indian American Day Carnival (Wikipedia)","url":"https://en.wikipedia.org/wiki/West_Indian_Day_Parade"}
-],
-"confidence":"medium",
-"extra":{
-"months":[
-{"month":1,"intensity":58,"phase":"Mid-season","team":["MLK Day Jan 18 games league-wide","Nets in the East standings race"],"local":["Cold weather","Post-holiday lull"],"fanBehavior":"Casual fans check in; rebuild results sap engagement.","retailSignal":"Post-holiday sale buyers and gift-card spend."},
-{"month":2,"intensity":60,"phase":"Trade deadline / All-Star","team":["Trade deadline Feb 11","All-Star in Phoenix Feb 19-21"],"local":["Presidents' Day week","Winter break week for NYC schools"],"fanBehavior":"Trade rumors drive talk about Randle and Porter.","retailSignal":"All-Star capsule and Valentine's gifting."},
-{"month":3,"intensity":55,"phase":"Stretch run","team":["Seeding race","College tournament month"],"local":["Brooklyn spring thaw","St. Patrick's Day"],"fanBehavior":"Attention drifts to March Madness unless the team is in contention.","retailSignal":"Spring apparel refresh."},
-{"month":4,"intensity":50,"phase":"Regular season end / Play-In","team":["Season ends Apr 11","Play-In Apr 13-16"],"local":["Baseball season begins","Knicks playoff run dominates"],"fanBehavior":"If out of the playoffs again, disengagement; Knicks' title defense absorbs attention.","retailSignal":"Low; clearance."},
-{"month":5,"intensity":35,"phase":"Playoffs (not for Nets unless they qualify)","team":["Playoff gear for others"],"local":["Brooklyn Half Marathon","Liberty season starts at Barclays"],"fanBehavior":"Fans follow Knicks or Liberty; Nets quiet.","retailSignal":"Low team gear; running apparel higher."},
-{"month":6,"intensity":40,"phase":"Draft / Finals","team":["NBA Draft in late June (verify)","Free agency opens June 30"],"local":["Mermaid Parade","Pride month events"],"fanBehavior":"Draft pick hype for a team with picks.","retailSignal":"Draft-pick jersey pre-orders."},
-{"month":7,"intensity":42,"phase":"Free agency / Summer League","team":["Summer League in Las Vegas"],"local":["Coney Island and Nathan's July 4","Beach season"],"fanBehavior":"Summer League tracking of rookies like Brown Jr.","retailSignal":"Rookie jerseys and summer tees."},
-{"month":8,"intensity":30,"phase":"Offseason","team":["Schedule release (typically mid-August)"],"local":["Summer vacations","Park ball"],"fanBehavior":"Lowest engagement; schedule release is the spike.","retailSignal":"Back-to-school and summer clearance."},
-{"month":9,"intensity":45,"phase":"Media day / training camp","team":["Media day late Sept","Nike uniform reveals around Sept 9"],"local":["Labor Day Carnival","School starts"],"fanBehavior":"Fan interest builds with camp and new-uniform news.","retailSignal":"Early season gear, Specter-adjacent hype for other teams."},
-{"month":10,"intensity":75,"phase":"Preseason / opener","team":["Preseason from Oct 3","Season tips Oct 20","Cup play begins Oct 30"],"local":["Fall weather","Halloween"],"fanBehavior":"Opener excitement; Knicks title banner overshadows.","retailSignal":"City Edition and rookie jerseys."},
-{"month":11,"intensity":88,"phase":"NBA Cup group play","team":["Cup Nights Fridays through Nov 27","Thanksgiving-week Cup games"],"local":["Thanksgiving","Holiday shopping starts"],"fanBehavior":"Family and group game outings, Cup energy.","retailSignal":"Black Friday jersey and apparel peak start."},
-{"month":12,"intensity":100,"phase":"Holiday / Cup knockouts","team":["Cup quarterfinals Dec 4-5 (Nets unlikely)","Christmas Day with no Nets game"],"local":["Rockefeller-area tourists","Holiday markets","Winter break"],"fanBehavior":"Gifts and holiday-week arena visits peak.","retailSignal":"Peak jersey, hoodie and gift purchases."}
-],
-"keyDates":[
-{"name":"Season opener (league)","date":"Oct 20, 2026","month":10,"type":"league","why":"Nets have no opening-night game; the Knicks host Philadelphia."},
-{"name":"Nets open Cup at Toronto","date":"Oct 30, 2026","month":10,"type":"team","why":"First Cup Night and start of East Group A play."},
-{"name":"Cup group play ends","date":"Nov 27, 2026","month":11,"type":"league","why":"Window of Friday and Thanksgiving-week Cup Nights."},
-{"name":"Cup championship","date":"Dec 11, 2026","month":12,"type":"league","why":"Hinkle Fieldhouse final, streaming on Prime Video."},
-{"name":"Christmas Day slate","date":"Dec 25, 2026","month":12,"type":"league","why":"Spurs at Knicks at noon; the Nets are not playing."},
-{"name":"MLK Day","date":"Jan 18, 2027","month":1,"type":"league","why":"NBC/Peacock quadrupleheader, with the Knicks hosting Minnesota."},
-{"name":"Trade deadline","date":"Feb 11, 2027","month":2,"type":"league","why":"Possible Randle or Porter moves."},
-{"name":"All-Star Weekend","date":"Feb 19-21, 2027","month":2,"type":"league","why":"Phoenix; Brooklyn representation depends on the roster."},
-{"name":"Regular season ends","date":"Apr 11, 2027","month":4,"type":"league","why":"Start of the Play-In window."},
-{"name":"West Indian American Day Carnival","date":"Labor Day, Sept 6, 2027","month":9,"type":"local","why":"Borough's biggest cultural day; partner early."}
-]
-},
-"provenance":{"mode":"knowledge","asOf":"Model knowledge, mid-2026","verify":[
-"Which Nets uniform is the 2026-27 City Edition, and whether the red-white-blue ABA throwback is a Classic or City set.",
-"Nets home opener date and the full home schedule, including heritage nights and national TV games.",
-"Whether Brooklyn Nets have any Cup home games beyond the Toronto opener (group schedule) and exact dates.",
-"Barclays Center arena name and ownership status as of 2026-27.",
-"Labor Day 2027 date is Sept 6, and the Carnival date.",
-"Status and current spelling of 'Brooklyn Mafia' and 'Brooklyn Never Sleeps' as live fan terms.",
-"Schedule release timing for 2027-28 and the 2027 NBA Draft date.",
-"Liberty home games at Barclays through 2026 season and current status.",
-"Current rights status for Biggie and Jay-Z imagery in Nets product.",
-"Nike's existing Nets product partnerships and team shop status."
-]}
+  "team": "bkn",
+  "lens": "rhythm",
+  "headline": "The Nets' year peaks with November's Cup Nights, then hands off to the borough.",
+  "summary": "After 20-62, identity sells the Nets, not wins. The Knicks' first title since 1973 makes Brooklyn's black and white a statement. Fans peak from the October opener to the Cup window in December, and again from February to April if the team competes. Otherwise the borough's calendar carries the brand, and retail follows gifts and drops. Dates beyond the verified facts are still to confirm.",
+  "insights": [
+    {
+      "title": "Brooklyn is the other choice in a Knicks title year",
+      "detail": "With the Knicks as 2026 champions, New York basketball attention is at a 50-year high. Brooklyn fans define themselves by not being Garden fans. The Nets have no opening-night or Christmas game. The Knicks host both a title-defense opener and a noon Christmas game.",
+      "implication": "Don't chase title-gear volume. Lead with borough-identity product (BK, Barclays, neighborhood names) that reads as a different team from the Knicks. Avoid anything that looks like generic New York."
+    },
+    {
+      "title": "The calendar's emotional peak is the Cup, not the opener",
+      "detail": "The Nets are in East Group A with Detroit, Toronto, Orlando and Milwaukee. They open Cup play at Toronto on Oct 30, then play Friday Cup Nights through Nov 27. Those are the first real home-crowd moments and the first gift-season window.",
+      "implication": "Time a Cup-night capsule and a Thanksgiving-week drop for November. Cup court and Cup-night apparel can anchor the first launch, so don't wait for Christmas."
+    },
+    {
+      "title": "Revival nostalgia is the likeliest City Edition story",
+      "detail": "A single report says the Nets are bringing back the red, white and blue ABA-era New York Nets throwbacks. Whether they are the City Edition or a Classic set is unconfirmed. Brooklyn's brand since 2012 has been black and white, so a red, white and blue look appeals to Long Island and old-school fans as much as to Brooklyn.",
+      "implication": "Plan two parallel stories: heritage red, white and blue (Dr. J era, New York Nets) and the Brooklyn black-and-white identity. Confirm which is the City Edition before briefing."
+    },
+    {
+      "title": "Brown Jr. and Demin are the jersey faces",
+      "detail": "Mikel Brown Jr. at No. 6 and Egor Demin are the team's few jersey-worthy faces. Randle and Porter bring name recognition. Rookie jersey demand typically spikes at the opener and after standout games.",
+      "implication": "Keep player-led product to Brown Jr. and Demin graphic tees and youth sizes. Team-led product stays the volume base."
+    },
+    {
+      "title": "Summer and Labor Day belong to the borough, not the team",
+      "detail": "Brooklyn's biggest cultural weekend is the West Indian American Day Carnival on Eastern Parkway on Labor Day. Summer is park ball, Coney Island and the WNBA Liberty at Barclays. The Nets are quiet from May through September.",
+      "implication": "Run a Brooklyn community capsule in summer, with courts and Carnival colors made with Caribbean-community partners. It keeps the brand alive in the offseason and feeds fall demand."
+    },
+    {
+      "title": "Barclays is the launch anchor",
+      "detail": "Barclays Center sits on the Atlantic Terminal transit hub, with the LIRR and nine subway lines. Game-night traffic spans Brooklyn, Queens and Long Island.",
+      "implication": "Pair home-game pop-ups and giveaways with Atlantic Terminal foot traffic and the Fulton and Flatbush corridors."
+    }
+  ],
+  "places": [
+    {
+      "name": "Barclays Center",
+      "kind": "venue",
+      "neighborhood": "Downtown / Atlantic Terminal",
+      "why": "The home arena at Flatbush and Atlantic. Its rusted-steel facade is the team's most recognizable image."
+    },
+    {
+      "name": "Atlantic Terminal / Atlantic Avenue-Barclays Center station",
+      "kind": "transit hub",
+      "neighborhood": "Downtown Brooklyn",
+      "why": "Where most fans arrive, so the best site for pop-ups and wayfinding."
+    },
+    {
+      "name": "Eastern Parkway",
+      "kind": "street / parade route",
+      "neighborhood": "Crown Heights",
+      "why": "Route of the West Indian American Day Carnival on Labor Day."
+    },
+    {
+      "name": "Coney Island boardwalk",
+      "kind": "district",
+      "neighborhood": "Coney Island",
+      "why": "The borough's summer capital, home to the Mermaid Parade in June and Nathan's contest on July 4."
+    },
+    {
+      "name": "Brooklyn Bridge Park",
+      "kind": "park",
+      "neighborhood": "DUMBO / Brooklyn Heights",
+      "why": "A summer gathering place with public courts and a skyline backdrop."
+    },
+    {
+      "name": "Fulton Street",
+      "kind": "retail corridor",
+      "neighborhood": "Bed-Stuy / Fort Greene",
+      "why": "The streetwear and community corridor between Barclays and Bed-Stuy."
+    },
+    {
+      "name": "Brooklyn Museum",
+      "kind": "museum",
+      "neighborhood": "Prospect Heights",
+      "why": "Hosts First Saturdays, a long-running free community night."
+    }
+  ],
+  "people": [
+    {
+      "name": "Jordi Fernandez",
+      "role": "Nets head coach",
+      "why": "Extended this offseason, and the face of the development plan."
+    },
+    {
+      "name": "Mikel Brown Jr.",
+      "role": "Rookie guard, No. 6 pick",
+      "why": "The top draft pick and the likeliest new fan favorite."
+    },
+    {
+      "name": "Julius Randle",
+      "role": "Forward, acquired from Minnesota",
+      "why": "A New York-area name and former Knick who adds rivalry edge."
+    },
+    {
+      "name": "Michael Porter Jr.",
+      "role": "Forward",
+      "why": "A veteran scorer who anchors the roster."
+    },
+    {
+      "name": "Jay-Z",
+      "role": "Brooklyn-born artist and former Nets minority owner",
+      "why": "His 2012 black-and-white rebrand shaped the Brooklyn identity. Any use requires respect for his IP and relationship."
+    },
+    {
+      "name": "The Notorious B.I.G.",
+      "role": "Bed-Stuy rapper",
+      "why": "Subject of past Nets uniform tributes and a core Brooklyn symbol. Estate licensing applies."
+    }
+  ],
+  "moments": [
+    {
+      "name": "Nets opening home night",
+      "timing": "Late Oct 2026",
+      "month": 10,
+      "why": "The first home crowd moment. Confirm the date against the schedule."
+    },
+    {
+      "name": "Cup Nights",
+      "timing": "Fridays Oct 30 to Nov 27",
+      "month": 11,
+      "why": "The Nets play four group games, with Cup court gear."
+    },
+    {
+      "name": "Holiday gifting window",
+      "timing": "Late Nov to Dec",
+      "month": 12,
+      "why": "The peak period for jersey and apparel purchases."
+    },
+    {
+      "name": "Trade deadline",
+      "timing": "Feb 11, 2027",
+      "month": 2,
+      "why": "Randle or Porter moves could reshape the rebuild narrative."
+    },
+    {
+      "name": "Brooklyn Half Marathon",
+      "timing": "May",
+      "month": 5,
+      "why": "Brooklyn running culture, and a Nike-friendly crowd."
+    },
+    {
+      "name": "Mermaid Parade / Nathan's contest",
+      "timing": "June / July 4",
+      "month": 6,
+      "why": "Coney Island summer culture."
+    },
+    {
+      "name": "West Indian American Day Carnival",
+      "timing": "Labor Day",
+      "month": 9,
+      "why": "The borough's biggest cultural day, led by Caribbean communities."
+    }
+  ],
+  "vocabulary": [
+    {
+      "term": "BK",
+      "meaning": "Shorthand for Brooklyn, used on caps, tees and in everyday talk."
+    },
+    {
+      "term": "Brooklyn Never Sleeps",
+      "meaning": "A Brooklyn slogan associated with Nets marketing. It's unverified as a current Nets line, so check before use."
+    },
+    {
+      "term": "Barclays",
+      "meaning": "What fans call the arena, instead of the full name."
+    },
+    {
+      "term": "Brownstone",
+      "meaning": "Shorthand for the borough's rowhouse look and neighborhoods like Bed-Stuy and Crown Heights."
+    },
+    {
+      "term": "Nets Daily / Brooklyn Mafia",
+      "meaning": "Fan nicknames. Verify current usage before using."
+    }
+  ],
+  "designCues": [
+    {
+      "cue": "Brooklyn black",
+      "type": "color",
+      "hex": "#000000",
+      "source": "The 2012 move to Barclays and the black-and-white identity.",
+      "use": "Base color for Association and Icon-leaning product."
+    },
+    {
+      "cue": "ABA-era red",
+      "type": "color",
+      "hex": "#C8102E",
+      "source": "New York Nets ABA throwbacks.",
+      "use": "Accent for heritage capsules. Pair with blue and white if the throwback is confirmed."
+    },
+    {
+      "cue": "ABA-era blue",
+      "type": "color",
+      "hex": "#1D428A",
+      "source": "New York Nets ABA throwbacks.",
+      "use": "Secondary heritage color."
+    },
+    {
+      "cue": "Brownstone brown",
+      "type": "color",
+      "hex": "#7B3F2E",
+      "source": "Bed-Stuy and Crown Heights rowhouses.",
+      "use": "Palette for a neighborhood capsule."
+    },
+    {
+      "cue": "Rusted weathering-steel texture",
+      "type": "texture",
+      "hex": "",
+      "source": "Barclays Center exterior panels.",
+      "use": "Print or knit texture on outerwear. Abstract it, and don't reproduce the arena."
+    },
+    {
+      "cue": "Carnival color burst",
+      "type": "pattern",
+      "hex": "",
+      "source": "West Indian American Day Carnival.",
+      "use": "Only through a paid partnership with Caribbean designers or mas bands."
+    },
+    {
+      "cue": "Subway-sign typography",
+      "type": "typography",
+      "hex": "",
+      "source": "MTA signage tradition.",
+      "use": "Neighborhood and station-name graphics. MTA marks need licensing."
+    }
+  ],
+  "productHooks": [
+    "Cup Night capsule (Oct 30 to Nov 27) with Nets Cup court graphics, plus a Thanksgiving-week drop.",
+    "Graphic tees and youth jerseys for the young core, Mikel Brown Jr. and Egor Demin.",
+    "Heritage ABA red, white and blue capsule, released to match the throwback if it's confirmed.",
+    "Brooklyn neighborhood series (Bed-Stuy, Crown Heights, Flatbush, Coney Island) in black with brownstone accents.",
+    "Summer Brooklyn courts capsule tied to Carnival and park-ball season."
+  ],
+  "watchouts": [
+    "Brooklyn is not a Manhattan or Knicks extension. Keep the identity explicitly separate.",
+    "Biggie, Jay-Z and Carnival imagery need a license, or a paid, credited partnership with the community and estates.",
+    "The City Edition uniform is unconfirmed. Don't brief against the ABA throwback until it's verified.",
+    "Rebuild-year sentiment can turn sour. Avoid triumphant or playoff-bound copy."
+  ],
+  "sources": [
+    {
+      "title": "Brooklyn Nets official site",
+      "url": "https://www.nba.com/nets"
+    },
+    {
+      "title": "Barclays Center",
+      "url": "https://www.barclayscenter.com"
+    },
+    {
+      "title": "Brooklyn Nets (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Brooklyn_Nets"
+    },
+    {
+      "title": "Barclays Center (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Barclays_Center"
+    },
+    {
+      "title": "West Indian American Day Carnival (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/West_Indian_Day_Parade"
+    }
+  ],
+  "confidence": "medium",
+  "extra": {
+    "months": [
+      {
+        "month": 1,
+        "intensity": 58,
+        "phase": "Mid-season",
+        "team": [
+          "MLK Day Jan 18 games league-wide",
+          "Nets in the East standings race"
+        ],
+        "local": [
+          "Cold weather",
+          "Post-holiday lull"
+        ],
+        "fanBehavior": "Casual fans check in, and rebuild results sap engagement.",
+        "retailSignal": "Post-holiday sales and gift-card spending."
+      },
+      {
+        "month": 2,
+        "intensity": 60,
+        "phase": "Trade deadline / All-Star",
+        "team": [
+          "Trade deadline Feb 11",
+          "All-Star in Phoenix Feb 19-21"
+        ],
+        "local": [
+          "Presidents' Day week",
+          "Winter break week for NYC schools"
+        ],
+        "fanBehavior": "Trade rumors put Randle and Porter in the conversation.",
+        "retailSignal": "All-Star capsule and Valentine's gifts."
+      },
+      {
+        "month": 3,
+        "intensity": 55,
+        "phase": "Stretch run",
+        "team": [
+          "Seeding race",
+          "College tournament month"
+        ],
+        "local": [
+          "Brooklyn spring thaw",
+          "St. Patrick's Day"
+        ],
+        "fanBehavior": "Attention drifts to March Madness unless the team is in contention.",
+        "retailSignal": "Spring apparel refresh."
+      },
+      {
+        "month": 4,
+        "intensity": 50,
+        "phase": "Regular season end / Play-In",
+        "team": [
+          "Season ends Apr 11",
+          "Play-In Apr 13-16"
+        ],
+        "local": [
+          "Baseball season begins",
+          "Knicks playoff run dominates"
+        ],
+        "fanBehavior": "If the Nets miss the playoffs again, fans disengage. The Knicks' title defense soaks up attention.",
+        "retailSignal": "Low. Clearance."
+      },
+      {
+        "month": 5,
+        "intensity": 35,
+        "phase": "Playoffs (not for Nets unless they qualify)",
+        "team": [
+          "Playoff gear for others"
+        ],
+        "local": [
+          "Brooklyn Half Marathon",
+          "Liberty season starts at Barclays"
+        ],
+        "fanBehavior": "Fans follow the Knicks or the Liberty. The Nets go quiet.",
+        "retailSignal": "Low on team gear, higher on running apparel."
+      },
+      {
+        "month": 6,
+        "intensity": 40,
+        "phase": "Draft / Finals",
+        "team": [
+          "NBA Draft in late June (verify)",
+          "Free agency opens June 30"
+        ],
+        "local": [
+          "Mermaid Parade",
+          "Pride month events"
+        ],
+        "fanBehavior": "Draft-pick hype, for a team with picks.",
+        "retailSignal": "Draft-pick jersey pre-orders."
+      },
+      {
+        "month": 7,
+        "intensity": 42,
+        "phase": "Free agency / Summer League",
+        "team": [
+          "Summer League in Las Vegas"
+        ],
+        "local": [
+          "Coney Island and Nathan's July 4",
+          "Beach season"
+        ],
+        "fanBehavior": "Fans track rookies like Brown Jr. at Summer League.",
+        "retailSignal": "Rookie jerseys and summer tees."
+      },
+      {
+        "month": 8,
+        "intensity": 30,
+        "phase": "Offseason",
+        "team": [
+          "Schedule release (typically mid-August)"
+        ],
+        "local": [
+          "Summer vacations",
+          "Park ball"
+        ],
+        "fanBehavior": "The lowest engagement of the year. The schedule release is the spike.",
+        "retailSignal": "Back-to-school and summer clearance."
+      },
+      {
+        "month": 9,
+        "intensity": 45,
+        "phase": "Media day / training camp",
+        "team": [
+          "Media day late Sept",
+          "Nike uniform reveals around Sept 9"
+        ],
+        "local": [
+          "Labor Day Carnival",
+          "School starts"
+        ],
+        "fanBehavior": "Interest builds with camp and new-uniform news.",
+        "retailSignal": "Early season gear. Specter-adjacent hype for other teams."
+      },
+      {
+        "month": 10,
+        "intensity": 75,
+        "phase": "Preseason / opener",
+        "team": [
+          "Preseason from Oct 3",
+          "Season tips Oct 20",
+          "Cup play begins Oct 30"
+        ],
+        "local": [
+          "Fall weather",
+          "Halloween"
+        ],
+        "fanBehavior": "Opener excitement, with the Knicks' title banner overshadowing it.",
+        "retailSignal": "City Edition and rookie jerseys."
+      },
+      {
+        "month": 11,
+        "intensity": 88,
+        "phase": "NBA Cup group play",
+        "team": [
+          "Cup Nights Fridays through Nov 27",
+          "Thanksgiving-week Cup games"
+        ],
+        "local": [
+          "Thanksgiving",
+          "Holiday shopping starts"
+        ],
+        "fanBehavior": "Family and group outings, with Cup energy.",
+        "retailSignal": "Black Friday sends jersey and apparel sales to their peak."
+      },
+      {
+        "month": 12,
+        "intensity": 100,
+        "phase": "Holiday / Cup knockouts",
+        "team": [
+          "Cup quarterfinals Dec 4-5 (Nets unlikely)",
+          "Christmas Day with no Nets game"
+        ],
+        "local": [
+          "Rockefeller-area tourists",
+          "Holiday markets",
+          "Winter break"
+        ],
+        "fanBehavior": "Gifts and holiday-week arena visits peak.",
+        "retailSignal": "Peak jersey, hoodie and gift sales."
+      }
+    ],
+    "keyDates": [
+      {
+        "name": "Season opener (league)",
+        "date": "Oct 20, 2026",
+        "month": 10,
+        "type": "league",
+        "why": "The Nets have no opening-night game. The Knicks host Philadelphia."
+      },
+      {
+        "name": "Nets open Cup at Toronto",
+        "date": "Oct 30, 2026",
+        "month": 10,
+        "type": "team",
+        "why": "The first Cup Night, and the start of East Group A play."
+      },
+      {
+        "name": "Cup group play ends",
+        "date": "Nov 27, 2026",
+        "month": 11,
+        "type": "league",
+        "why": "The end of the Friday and Thanksgiving-week Cup Nights."
+      },
+      {
+        "name": "Cup championship",
+        "date": "Dec 11, 2026",
+        "month": 12,
+        "type": "league",
+        "why": "The final is at Hinkle Fieldhouse, streaming on Prime Video."
+      },
+      {
+        "name": "Christmas Day slate",
+        "date": "Dec 25, 2026",
+        "month": 12,
+        "type": "league",
+        "why": "Spurs at Knicks at noon. The Nets aren't playing."
+      },
+      {
+        "name": "MLK Day",
+        "date": "Jan 18, 2027",
+        "month": 1,
+        "type": "league",
+        "why": "NBC/Peacock quadrupleheader, with the Knicks hosting Minnesota."
+      },
+      {
+        "name": "Trade deadline",
+        "date": "Feb 11, 2027",
+        "month": 2,
+        "type": "league",
+        "why": "Possible Randle or Porter moves."
+      },
+      {
+        "name": "All-Star Weekend",
+        "date": "Feb 19-21, 2027",
+        "month": 2,
+        "type": "league",
+        "why": "In Phoenix. Brooklyn representation depends on the roster."
+      },
+      {
+        "name": "Regular season ends",
+        "date": "Apr 11, 2027",
+        "month": 4,
+        "type": "league",
+        "why": "The Play-In window starts."
+      },
+      {
+        "name": "West Indian American Day Carnival",
+        "date": "Labor Day, Sept 6, 2027",
+        "month": 9,
+        "type": "local",
+        "why": "The borough's biggest cultural day. Partner early."
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "knowledge",
+    "asOf": "Model knowledge, mid-2026",
+    "verify": [
+      "Confirm which Nets uniform is the 2026-27 City Edition, and whether the red, white and blue ABA throwback is a Classic or City set.",
+      "Confirm the Nets home opener date and the full home schedule, including heritage nights and national TV games.",
+      "Check whether the Nets have any Cup home games beyond the Toronto opener (group schedule), and the exact dates.",
+      "Confirm Barclays Center's arena name and ownership status as of 2026-27.",
+      "Confirm Labor Day 2027 is Sept 6, and the Carnival date.",
+      "Check the status and current spelling of 'Brooklyn Mafia' and 'Brooklyn Never Sleeps' as live fan terms.",
+      "Check the schedule release timing for 2027-28 and the 2027 NBA Draft date.",
+      "Check Liberty home games at Barclays through the 2026 season, and their current status.",
+      "Check the current rights status for Biggie and Jay-Z imagery in Nets product.",
+      "Check Nike's existing Nets product partnerships and team shop status."
+    ]
+  }
 }

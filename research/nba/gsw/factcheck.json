@@ -1,287 +1,287 @@
 {
- "team": "gsw",
- "checked": 120,
- "verdicts": [
-  {
-   "lens": "strategy",
-   "claim": "Curry is under Under Armour's Curry Brand, so he is not Nike's and Nike wins on team product only (strategy thesis, top insight 3, risks)",
-   "verdict": "corrected",
-   "note": "Live check: Curry and Under Armour ended their partnership (reported Nov 2025); Curry Brand is independent, the Curry 13 and UA apparel ship through Oct 2026, and he is reportedly a sneaker free agent with Nike among interested brands. A search headline also mentions a Li-Ning deal, unconfirmed. The Curry-is-a-rival-shelf premise is stale. The editor must reframe: Curry's next partner is the single biggest swing factor, and the Nike-wins-on-team lane stays safe only until confirmed.",
-   "source": "https://africa.espn.com/nba/story/_/id/46958115/warriors-stephen-curry-ending-partnership-armour"
-  },
-  {
-   "lens": "hoops",
-   "claim": "Curry partners with Under Armour through Curry Brand",
-   "verdict": "corrected",
-   "note": "Rewritten across hoops, fanbase, art, culture, music, food, retail-landscape and retail-behavior to say the UA partnership ended in late 2025 and the next partner is unconfirmed.",
-   "source": "https://africa.espn.com/nba/story/_/id/46958115/warriors-stephen-curry-ending-partnership-armour"
-  },
-  {
-   "lens": "culture",
-   "claim": "Curry has not been a Nike athlete since he signed with Under Armour in 2013",
-   "verdict": "corrected",
-   "note": "The 2013 move is right; added that the UA partnership ended late 2025 so brand affiliation must be confirmed.",
-   "source": "https://africa.espn.com/nba/story/_/id/46958115/warriors-stephen-curry-ending-partnership-armour"
-  },
-  {
-   "lens": "food",
-   "claim": "Curry's UA deal was reported to be ending in late 2025",
-   "verdict": "confirmed",
-   "note": "Reporting is correct (ESPN, SF Standard); wording updated to say it ended.",
-   "source": "https://sfstandard.com/2025/11/13/steph-curry-becomes-sneaker-free-agent-armour-breakup/"
-  },
-  {
-   "lens": "hoops",
-   "claim": "Saint Mary's has a fierce WCC rivalry with Gonzaga",
-   "verdict": "corrected",
-   "note": "Gonzaga is slated to leave the WCC for the Pac-12 in 2026; text reworded and verify item added. Not live-checked.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Oct 21 at the Lakers is 'Opening night'",
-   "verdict": "corrected",
-   "note": "League opening night is Oct 20 (BOS-DET, PHI-NYK, OKC-SAS). Renamed to 'Warriors at Lakers (ESPN)'. Whether it is the Warriors' first game is plausible but unconfirmed.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Pacers at Warriors on Presidents' Day, Feb 15",
-   "verdict": "corrected",
-   "note": "Facts list Pacers vs. Warriors with home team not captured; removed the implied home/away order.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Dreamforce-season travel in November; 49ers playoff window; Giants playoff push",
-   "verdict": "corrected",
-   "note": "Dreamforce is not reliably in November and team playoff claims are speculative; generalized the wording.",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Christmas nightcap comes after the NFL and four other games",
-   "verdict": "corrected",
-   "note": "Only the NBA games are in the confirmed facts (five ESPN/ABC games); NFL reference removed.",
-   "source": ""
-  },
-  {
-   "lens": "hoops",
-   "claim": "Specter debuts in a game context at the opener",
-   "verdict": "corrected",
-   "note": "Facts say which games Specter is worn in was not captured; reworded to unconfirmed.",
-   "source": ""
-  },
-  {
-   "lens": "fanbase",
-   "claim": "The 2017-18 City Edition jersey carried 'The Town'",
-   "verdict": "corrected",
-   "note": "Season-to-concept mapping is unreliable from memory; softened to 'a past City Edition'. Verify the full City Edition history live.",
-   "source": ""
-  },
-  {
-   "lens": "retail-behavior",
-   "claim": "Oakland-era 'The City' wordmark lineage",
-   "verdict": "corrected",
-   "note": "'The City' script is the 1960s San Francisco jersey, not Oakland-era; rewritten in insight, designCue and source.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Nike 90s Warriors 'Slam Dunk' era references and Nike 90s team pieces",
-   "verdict": "corrected",
-   "note": "Nike did not make 1990s Warriors uniforms (Champion and Starter era); likely hallucination, replaced.",
-   "source": ""
-  },
-  {
-   "lens": "underground",
-   "claim": "Lillard is a natural Oakland-pride voice for Nike",
-   "verdict": "corrected",
-   "note": "Lillard has long been an Adidas athlete; recast as a cultural reference, not a Nike partner (consistent with hoops dossier).",
-   "source": ""
-  },
-  {
-   "lens": "underground",
-   "claim": "Scraper bikes documented in Mistah F.A.B.'s videos",
-   "verdict": "corrected",
-   "note": "Documented origin is the Trunk Boiz' 'Scraper Bike' video and the Scraper Bike Team (matches music dossier); Mistah F.A.B. link removed.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Old Skool Cafe sits at the Third Street end of the T line",
-   "verdict": "corrected",
-   "note": "Location claim unsupported (venue has moved before); reduced to 'in Bayview'. Status still needs a live check.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Nelson German's alaMar and Sobre Mesa operating",
-   "verdict": "corrected",
-   "note": "Possible closures; role reworded with a confirm-operating caveat.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Joe Lacob's 2016 'light-years ahead' quote",
-   "verdict": "corrected",
-   "note": "Year is likely wrong (quote dates to about 2013); year removed.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Cow Palace hosted the home games of the 1975 Finals sweep",
-   "verdict": "corrected",
-   "note": "Exact games uncertain; softened to home playoff games during the 1975 title run.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Philadelphia-era logos used Native American caricature",
-   "verdict": "corrected",
-   "note": "Not confidently sourced; reframed as a conditional guardrail to check with the team archive. The strategy brief repeats the specific claim.",
-   "source": ""
-  },
-  {
-   "lens": "art",
-   "claim": "Lake Merritt Necklace of Lights relit in 1987; FTC founded 1986",
-   "verdict": "corrected",
-   "note": "Specific years unsure; softened to 'later restored' and removed the founding year.",
-   "source": ""
-  },
-  {
-   "lens": "music",
-   "claim": "Bob Weir's death reported January 2026",
-   "verdict": "removed",
-   "note": "Oddly specific and unverified; removed from the verify note.",
-   "source": ""
-  },
-  {
-   "lens": "music",
-   "claim": "Hiero Day ran on Labor Day 2026",
-   "verdict": "corrected",
-   "note": "Presented as fact without a source; reworded as a check item.",
-   "source": ""
-  },
-  {
-   "lens": "underground",
-   "claim": "Embarcadero Plaza is an active skate pilgrimage spot",
-   "verdict": "corrected",
-   "note": "Skating there is heavily policed and the plaza may be redesigned; softened.",
-   "source": ""
-  },
-  {
-   "lens": "uniform",
-   "claim": "Golden Gate bridge orange #C0362C; royal #1D428A; gold #FFC72C; Bay Bridge logo 1988-97 and 2010; navy-orange 1997-2010; Wilt 100 points 1962; 1946/47 founding",
-   "verdict": "confirmed",
-   "note": "Long-established franchise history and palette, consistent with my knowledge.",
-   "source": ""
-  },
-  {
-   "lens": "hoops",
-   "claim": "McClymonds/Russell, Skyline/Payton, SJNO/Kidd, Oakland High/Lillard; USF titles 1955-56; Valkyries began 2025",
-   "verdict": "confirmed",
-   "note": "Long-established facts.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Black Panther Party founded Oct 15 1966; Bay Bridge opened Nov 12 1936; Golden Gate 90 on May 27 2027; Lunar New Year Feb 6 2027",
-   "verdict": "confirmed",
-   "note": "Established dates; arithmetic checks against today (2026-10-07).",
-   "source": ""
-  },
-  {
-   "lens": "rhythm",
-   "claim": "Cup group, Dec 25 Denver at Golden State, Oct 30 at Portland, Feb 11 deadline, Apr 13-16 play-in",
-   "verdict": "confirmed",
-   "note": "Match the CURRENT FACTS section.",
-   "source": ""
-  },
-  {
-   "lens": "fanbase",
-   "claim": "Warriors home opener date and heritage nights (Lunar New Year, Filipino, Black History, Latino)",
-   "verdict": "unverifiable",
-   "note": "Home opener and 2026-27 theme-night dates are not in the verified facts; confirm on the team schedule.",
-   "source": ""
-  },
-  {
-   "lens": "fanbase",
-   "claim": "Joe Lacob and Peter Guber own the team and Chase Center keeps its name",
-   "verdict": "unverifiable",
-   "note": "Ownership and arena naming were not verified this session.",
-   "source": ""
-  },
-  {
-   "lens": "uniform",
-   "claim": "Past City Edition seasons and concepts (Oakland tribute lineage, later Bay Bridge/gray looks, reception)",
-   "verdict": "unverifiable",
-   "note": "Season mapping is vague; the 2026-27 City design is unverified. Candy Royal cannot be locked until checked.",
-   "source": ""
-  },
-  {
-   "lens": "food",
-   "claim": "Dungeness opener mid-November; Thrive City, Old Skool Cafe, Se\u00f1or Sisig, Reem's, Everett & Jones, Swan, Mister Jiu's, Thanh Long, Mitchell's, La Victoria operating",
-   "verdict": "unverifiable",
-   "note": "Small businesses can close fast; every named venue needs a live open-status check before use.",
-   "source": ""
-  },
-  {
-   "lens": "art",
-   "claim": "Upper Playground, FTC, Oaklandish, Scraper Bike Team (and named founder) active; The Bay Lights status",
-   "verdict": "unverifiable",
-   "note": "Store addresses and activity unconfirmed; Bay Lights went dark in 2023 and may have been rebuilt.",
-   "source": ""
-  },
-  {
-   "lens": "music",
-   "claim": "DJ D-Sharp still Warriors DJ; E-40 and MC Hammer courtside; Warriors Grateful Dead nights recurring; KMEL format; KPOO on air",
-   "verdict": "unverifiable",
-   "note": "Plausible and well known to mid-2026, but not live-checked.",
-   "source": ""
-  },
-  {
-   "lens": "retail-landscape",
-   "claim": "Nike Union Square, Gilroy and Livermore factory stores, Shoe Palace, Town Business, Upper Playground Fillmore, Sports Basement Presidio, Valley Fair/Santana Row",
-   "verdict": "unverifiable",
-   "note": "Door list is knowledge-mode; retail closures are frequent. Confirm each before planning pop-ups.",
-   "source": ""
-  },
-  {
-   "lens": "culture",
-   "claim": "Cesar Chavez Day as a clean civic touchstone; Aaron Gordon on Nuggets for Dec 25",
-   "verdict": "unverifiable",
-   "note": "Chavez's legacy and observances may have shifted after 2026 reporting (unconfirmed memory); Gordon's roster status needs a check. The strategy uses Chavez Day as a Candy Paint timing hook.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Oct 21 at the Lakers is both the opener and the home opener, and 'the first Specter games'",
-   "verdict": "corrected",
-   "note": "Warriors home opener date is unknown and the facts say Specter game dates are not captured. Editor should drop 'home opener' and 'first Specter games' or caveat them.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Bay Bridge 90 capsule launches Nov 12, 2026 after commissioning two letterers in October",
-   "verdict": "unverifiable",
-   "note": "Feasibility risk: about five weeks from commission to retail for a Nike product is unrealistic; also requires team/NBA approval of the bridge-logo reference. Editor should reframe as a small-batch or Oakland-pop-up-first drop.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Lendeborg 'year-two story' in June 2027",
-   "verdict": "corrected",
-   "note": "He is a 2026 rookie; June 2027 closes his first season. Fix wording.",
-   "source": ""
-  },
-  {
-   "lens": "strategy",
-   "claim": "Eat. Learn. Play. (Curry foundation) as Crab Feed beneficiary while avoiding Curry",
-   "verdict": "unverifiable",
-   "note": "Brand-conflict risk if Curry's next partner is a rival; confirm before naming it in any Nike campaign.",
-   "source": ""
-  }
- ],
- "summary": "Dossiers were largely sound on long-established Bay history, dates and figures, and all schedule facts match the verified section. The one live spot-check found the biggest error: Curry and Under Armour ended their partnership in late 2025 and Curry is reportedly a sneaker free agent, so every dossier's Curry-is-Under-Armour framing and the strategy's central premise are stale and were reworded or logged. Other fixes were an 'opening night' mislabel, an implied Pacers-at-Warriors home order, Nike-90s and Oakland-era 'The City' errors, a stale Gonzaga WCC rivalry, a misattributed scraper-bike source, Adidas-signed Lillard pitched as a Nike voice, and over-specific years and venue details. Small-business status, City Edition history, theme-night dates and strategy timing and feasibility remain queued as unverifiable."
+  "team": "gsw",
+  "checked": 120,
+  "verdicts": [
+    {
+      "lens": "strategy",
+      "claim": "Curry is under Under Armour's Curry Brand, so he is not Nike's and Nike wins on team product only (strategy thesis, top insight 3, risks)",
+      "verdict": "corrected",
+      "note": "Checked live: Curry and Under Armour ended their partnership (reported Nov 2025). Curry Brand is independent, and the Curry 13 and UA apparel ship through Oct 2026. He is reportedly a sneaker free agent, with Nike among the interested brands. A search headline also mentions a Li-Ning deal, unconfirmed. The Curry-is-a-rival-shelf premise is stale. Reframe: his next partner is the biggest swing factor, and the Nike-wins-on-team lane is safe only until that's confirmed.",
+      "source": "https://africa.espn.com/nba/story/_/id/46958115/warriors-stephen-curry-ending-partnership-armour"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Curry partners with Under Armour through Curry Brand",
+      "verdict": "corrected",
+      "note": "Rewritten in hoops, fanbase, art, culture, music, food, retail-landscape and retail-behavior: the UA partnership ended in late 2025 and the next partner is unconfirmed.",
+      "source": "https://africa.espn.com/nba/story/_/id/46958115/warriors-stephen-curry-ending-partnership-armour"
+    },
+    {
+      "lens": "culture",
+      "claim": "Curry has not been a Nike athlete since he signed with Under Armour in 2013",
+      "verdict": "corrected",
+      "note": "The 2013 move is right. Added that the UA partnership ended in late 2025, so his brand affiliation needs confirming.",
+      "source": "https://africa.espn.com/nba/story/_/id/46958115/warriors-stephen-curry-ending-partnership-armour"
+    },
+    {
+      "lens": "food",
+      "claim": "Curry's UA deal was reported to be ending in late 2025",
+      "verdict": "confirmed",
+      "note": "The reporting is correct (ESPN, SF Standard). Wording now says the deal ended.",
+      "source": "https://sfstandard.com/2025/11/13/steph-curry-becomes-sneaker-free-agent-armour-breakup/"
+    },
+    {
+      "lens": "hoops",
+      "claim": "Saint Mary's has a fierce WCC rivalry with Gonzaga",
+      "verdict": "corrected",
+      "note": "Gonzaga is slated to leave the WCC for the Pac-12 in 2026. Reworded the text and added a verify item. Not checked live.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Oct 21 at the Lakers is 'Opening night'",
+      "verdict": "corrected",
+      "note": "League opening night is Oct 20 (BOS-DET, PHI-NYK, OKC-SAS). Renamed the game 'Warriors at Lakers (ESPN)'. It's plausibly the Warriors' first game, but that's unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Pacers at Warriors on Presidents' Day, Feb 15",
+      "verdict": "corrected",
+      "note": "The facts list Pacers vs. Warriors without saying who hosts. Removed the implied home/away order.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Dreamforce-season travel in November; 49ers playoff window; Giants playoff push",
+      "verdict": "corrected",
+      "note": "Dreamforce isn't reliably in November, and the team playoff claims are speculative. Generalized the wording.",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Christmas nightcap comes after the NFL and four other games",
+      "verdict": "corrected",
+      "note": "Only the NBA games are in the confirmed facts (five ESPN/ABC games). Removed the NFL reference.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "Specter debuts in a game context at the opener",
+      "verdict": "corrected",
+      "note": "The facts don't say which games Specter is worn in. Reworded as unconfirmed.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "The 2017-18 City Edition jersey carried 'The Town'",
+      "verdict": "corrected",
+      "note": "Matching seasons to City Edition concepts from memory is unreliable. Softened to 'a past City Edition'. Verify the full City Edition history live.",
+      "source": ""
+    },
+    {
+      "lens": "retail-behavior",
+      "claim": "Oakland-era 'The City' wordmark lineage",
+      "verdict": "corrected",
+      "note": "'The City' script comes from the 1960s San Francisco jersey, not the Oakland era. Fixed in the insight, designCue and source.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike 90s Warriors 'Slam Dunk' era references and Nike 90s team pieces",
+      "verdict": "corrected",
+      "note": "Nike did not make 1990s Warriors uniforms (the Champion and Starter era). Likely a hallucination, so replaced.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Lillard is a natural Oakland-pride voice for Nike",
+      "verdict": "corrected",
+      "note": "Lillard has long been an Adidas athlete. Recast him as a cultural reference, not a Nike partner, to match the hoops dossier.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Scraper bikes documented in Mistah F.A.B.'s videos",
+      "verdict": "corrected",
+      "note": "The documented origin is the Trunk Boiz' 'Scraper Bike' video and the Scraper Bike Team, which matches the music dossier. Removed the Mistah F.A.B. link.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Old Skool Cafe sits at the Third Street end of the T line",
+      "verdict": "corrected",
+      "note": "The location claim is unsupported, and the venue has moved before. Cut to 'in Bayview'. Its status still needs a live check.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Nelson German's alaMar and Sobre Mesa operating",
+      "verdict": "corrected",
+      "note": "Both may have closed. Reworded the role with a caveat to confirm they're operating.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Joe Lacob's 2016 'light-years ahead' quote",
+      "verdict": "corrected",
+      "note": "The year is probably wrong, since the quote dates to about 2013. Removed the year.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Cow Palace hosted the home games of the 1975 Finals sweep",
+      "verdict": "corrected",
+      "note": "The exact games are uncertain. Softened to home playoff games during the 1975 title run.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Philadelphia-era logos used Native American caricature",
+      "verdict": "corrected",
+      "note": "Not confidently sourced. Reframed as a conditional guardrail to check with the team archive. The strategy brief still repeats the specific claim.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Lake Merritt Necklace of Lights relit in 1987; FTC founded 1986",
+      "verdict": "corrected",
+      "note": "The specific years are uncertain. Softened to 'later restored' and dropped the founding year.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Bob Weir's death reported January 2026",
+      "verdict": "removed",
+      "note": "Oddly specific and unverified. Removed from the verify note.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "Hiero Day ran on Labor Day 2026",
+      "verdict": "corrected",
+      "note": "Stated as fact with no source. Reworded as a check item.",
+      "source": ""
+    },
+    {
+      "lens": "underground",
+      "claim": "Embarcadero Plaza is an active skate pilgrimage spot",
+      "verdict": "corrected",
+      "note": "Skating there is heavily policed, and the plaza may be redesigned. Softened.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Golden Gate bridge orange #C0362C; royal #1D428A; gold #FFC72C; Bay Bridge logo 1988-97 and 2010; navy-orange 1997-2010; Wilt 100 points 1962; 1946/47 founding",
+      "verdict": "confirmed",
+      "note": "Long-established franchise history and palette, consistent with my knowledge.",
+      "source": ""
+    },
+    {
+      "lens": "hoops",
+      "claim": "McClymonds/Russell, Skyline/Payton, SJNO/Kidd, Oakland High/Lillard; USF titles 1955-56; Valkyries began 2025",
+      "verdict": "confirmed",
+      "note": "Long-established facts.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Black Panther Party founded Oct 15 1966; Bay Bridge opened Nov 12 1936; Golden Gate 90 on May 27 2027; Lunar New Year Feb 6 2027",
+      "verdict": "confirmed",
+      "note": "Established dates. The arithmetic checks against today (2026-10-07).",
+      "source": ""
+    },
+    {
+      "lens": "rhythm",
+      "claim": "Cup group, Dec 25 Denver at Golden State, Oct 30 at Portland, Feb 11 deadline, Apr 13-16 play-in",
+      "verdict": "confirmed",
+      "note": "These match the CURRENT FACTS section.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Warriors home opener date and heritage nights (Lunar New Year, Filipino, Black History, Latino)",
+      "verdict": "unverifiable",
+      "note": "The home opener and 2026-27 theme-night dates aren't in the verified facts. Confirm on the team schedule.",
+      "source": ""
+    },
+    {
+      "lens": "fanbase",
+      "claim": "Joe Lacob and Peter Guber own the team and Chase Center keeps its name",
+      "verdict": "unverifiable",
+      "note": "Not verified this session.",
+      "source": ""
+    },
+    {
+      "lens": "uniform",
+      "claim": "Past City Edition seasons and concepts (Oakland tribute lineage, later Bay Bridge/gray looks, reception)",
+      "verdict": "unverifiable",
+      "note": "The season mapping is vague, and the 2026-27 City design is unverified. Candy Royal can't be locked until it's checked.",
+      "source": ""
+    },
+    {
+      "lens": "food",
+      "claim": "Dungeness opener mid-November; Thrive City, Old Skool Cafe, Señor Sisig, Reem's, Everett & Jones, Swan, Mister Jiu's, Thanh Long, Mitchell's, La Victoria operating",
+      "verdict": "unverifiable",
+      "note": "Small businesses can close fast. Check that every named venue is open before using it.",
+      "source": ""
+    },
+    {
+      "lens": "art",
+      "claim": "Upper Playground, FTC, Oaklandish, Scraper Bike Team (and named founder) active; The Bay Lights status",
+      "verdict": "unverifiable",
+      "note": "Store addresses and activity are unconfirmed. Bay Lights went dark in 2023 and may have been rebuilt.",
+      "source": ""
+    },
+    {
+      "lens": "music",
+      "claim": "DJ D-Sharp still Warriors DJ; E-40 and MC Hammer courtside; Warriors Grateful Dead nights recurring; KMEL format; KPOO on air",
+      "verdict": "unverifiable",
+      "note": "Plausible and well known to mid-2026, but not checked live.",
+      "source": ""
+    },
+    {
+      "lens": "retail-landscape",
+      "claim": "Nike Union Square, Gilroy and Livermore factory stores, Shoe Palace, Town Business, Upper Playground Fillmore, Sports Basement Presidio, Valley Fair/Santana Row",
+      "verdict": "unverifiable",
+      "note": "The door list comes from model knowledge, and retail closures are frequent. Confirm each door before planning pop-ups.",
+      "source": ""
+    },
+    {
+      "lens": "culture",
+      "claim": "Cesar Chavez Day as a clean civic touchstone; Aaron Gordon on Nuggets for Dec 25",
+      "verdict": "unverifiable",
+      "note": "Chavez's legacy and observances may have shifted after 2026 reporting (unconfirmed memory), and Gordon's roster status needs a check. The strategy uses Chavez Day as a Candy Paint timing hook.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Oct 21 at the Lakers is both the opener and the home opener, and 'the first Specter games'",
+      "verdict": "corrected",
+      "note": "The Warriors' home opener date is unknown, and the facts say Specter game dates weren't captured. Drop 'home opener' and 'first Specter games' or caveat them.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Bay Bridge 90 capsule launches Nov 12, 2026 after commissioning two letterers in October",
+      "verdict": "unverifiable",
+      "note": "Feasibility risk: about five weeks from commission to retail is unrealistic for a Nike product. It also needs team and NBA approval of the bridge-logo reference. Reframe as a small-batch or Oakland-pop-up-first drop.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Lendeborg 'year-two story' in June 2027",
+      "verdict": "corrected",
+      "note": "He's a 2026 rookie, and June 2027 closes his first season. Fix the wording.",
+      "source": ""
+    },
+    {
+      "lens": "strategy",
+      "claim": "Eat. Learn. Play. (Curry foundation) as Crab Feed beneficiary while avoiding Curry",
+      "verdict": "unverifiable",
+      "note": "Brand-conflict risk if Curry's next partner is a rival. Confirm before naming the foundation in any Nike campaign.",
+      "source": ""
+    }
+  ],
+  "summary": "Most dossiers held up on Bay history, dates and figures, and every schedule fact matches the verified section. The one live check found the big error: Curry and Under Armour split in late 2025, and he is reportedly a sneaker free agent. Every Curry-is-Under-Armour line, including the strategy's central premise, was reworded or logged. Smaller fixes and the items still unverified are listed below."
 }

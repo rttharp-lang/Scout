@@ -6,168 +6,168 @@
       "lens": "fanbase",
       "claim": "Current Association/Icon identity is navy and yellow (also in uniform, rhythm, retail-behavior, hoops)",
       "verdict": "corrected",
-      "note": "Live check: 2025-26 rotation is white Association with purple gradient mountain, purple Icon, black Statement; palette is Mountain Purple, Midnight Black, Sky Blue; highlighter yellow retired after 2023-24. Replaced navy/yellow cues and hexes in fanbase, uniform, retail-behavior, rhythm. Strategy risk about palette confusion is resolved this way.",
+      "note": "Checked live: the 2025-26 rotation is a white Association with a purple gradient mountain, a purple Icon and a black Statement. The palette is Mountain Purple, Midnight Black and Sky Blue, and highlighter yellow was retired after 2023-24. Navy and yellow cues and hexes replaced in fanbase, uniform, retail-behavior and rhythm. That also settles the strategy risk about palette confusion.",
       "source": "https://news.sportslogos.net/2025/04/23/highlighter-yellow-era-officially-over-for-utah-jazz/basketball/"
     },
     {
       "lens": "strategy",
       "claim": "Strategy risk and verify list treat the Association/Icon/Statement palette as unresolved navy/yellow versus purple",
       "verdict": "corrected",
-      "note": "Editor should state the palette as purple, black and sky blue (team record #4E008E agrees) and drop navy/yellow; youth and core product should ship in purple/black, not navy/yellow.",
+      "note": "The editor should state the palette as purple, black and sky blue (the team record's #4E008E agrees) and drop navy and yellow. Youth and core product should ship in purple and black.",
       "source": "https://www.nba.com/jazz/mountain-basketball/uniforms"
     },
     {
       "lens": "fanbase",
       "claim": "Jazz Note logo is from the 1990s purple-and-teal era",
       "verdict": "corrected",
-      "note": "The Note is the 1979-96 purple/gold/green logo; the 1996-2004 look is the Mountain logo. Fixed in fanbase and underground; strategy already has this right.",
+      "note": "The Note is the 1979-96 purple, gold and green logo. The 1996-2004 look is the Mountain logo. Fixed in fanbase and underground; strategy already had it right.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Utah plays in the 'Pac-12 lineage' conference",
       "verdict": "corrected",
-      "note": "Utah and BYU are both in the Big 12 after 2023-24 realignment.",
+      "note": "Utah and BYU are both in the Big 12 after the 2023-24 realignment.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Twilight outdoor concert series is a current summer tradition",
       "verdict": "removed",
-      "note": "Twilight Concert Series ended years ago; replaced with Red Butte Garden summer concerts (long-running, still to be date-checked).",
+      "note": "The Twilight Concert Series ended years ago. Replaced with Red Butte Garden summer concerts, which are long-running but still need a date check.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Central 9th and 9th and 9th are the same place",
       "verdict": "corrected",
-      "note": "Central 9th is around 900 South/200 West; 9th and 9th is 900 South/900 East. Split in art.json. Culture and strategy use 'Central 9th' loosely; the brief's focus line also conflates them.",
+      "note": "Central 9th is around 900 South/200 West. 9th and 9th is 900 South/900 East. Split in art.json. Culture and strategy use \"Central 9th\" loosely, and the brief's focus line also conflates the two.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Sun Tunnels is salt-flats work alongside Smithson",
       "verdict": "corrected",
-      "note": "Sun Tunnels (1976) is Nancy Holt's, in the Great Basin desert, not on the salt flats.",
+      "note": "Sun Tunnels (1976) is Nancy Holt's work in the Great Basin desert, not on the salt flats.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Red Iguana is on Poplar Street",
       "verdict": "corrected",
-      "note": "The original is on North Temple in Poplar Grove; fixed neighborhood and mentions.",
+      "note": "The original is on North Temple in Poplar Grove. Neighborhood and mentions fixed.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Beer Bar is in the Gateway area",
       "verdict": "corrected",
-      "note": "It is downtown on 200 South east of the arena, not at Gateway.",
+      "note": "It's downtown on 200 South, east of the arena, not at Gateway.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Craft Lake City DIY Fest is early August at Gateway",
       "verdict": "corrected",
-      "note": "It is mid-August at the Utah State Fairpark, matching art and underground dossiers.",
+      "note": "It's mid-August at the Utah State Fairpark, matching the art and underground dossiers.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Thanksgiving-week Cup nights (Nov 24-25) involve Utah",
       "verdict": "unverifiable",
-      "note": "League facts confirm extra Cup nights Nov 24-25 but each team plays only four group games; Utah's schedule unknown. Strategy calendar assumes Utah plays Nov 24-27 and should be hedged.",
+      "note": "League facts confirm extra Cup nights on Nov 24-25, but each team plays only four group games and Utah's schedule is unknown. The strategy calendar assumes Utah plays Nov 24-27 and should hedge.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "The Complex and Urban Lounge are in Central 9th",
       "verdict": "corrected",
-      "note": "Urban Lounge is on 500 East in Central City; The Complex is west of downtown near Gateway. Neighborhoods fixed.",
+      "note": "Urban Lounge is on 500 East in Central City. The Complex is west of downtown near Gateway. Neighborhoods fixed.",
       "source": ""
     },
     {
       "lens": "underground",
       "claim": "Sugar Space Arts Warehouse is in the Central 9th area",
       "verdict": "corrected",
-      "note": "Live check: it opened in Sugar House (Wilmington Ave, 2007) and a 2025 listing shows 132 S 800 W downtown west. Operating status beyond that listing is unconfirmed.",
+      "note": "Checked live: it opened in Sugar House (Wilmington Ave, 2007), and a 2025 listing shows 132 S 800 W, downtown west. Whether it still operates is unconfirmed.",
       "source": "https://www.uniquevenues.com/venue/sugar-space-arts-warehouse/"
     },
     {
       "lens": "food",
       "claim": "Takashi (Takashi Gibo) is operating downtown",
       "verdict": "unverifiable",
-      "note": "Live check found no closure reports but no recent dated confirmation. Verify before naming him as a partner.",
+      "note": "Checked live: no closure reports, but no recent dated confirmation either. Verify before naming him as a partner.",
       "source": "https://sunset.com/travel/northwest/five-great-sushi-bars-in-salt-lake-city"
     },
     {
       "lens": "underground",
       "claim": "Skip beehives as tourist kitsch",
       "verdict": "corrected",
-      "note": "Contradicted culture, uniform and retail dossiers, which use beehive geometry; softened to say literal kitsch only.",
+      "note": "This contradicted the culture, uniform and retail dossiers, which use beehive geometry. Softened to skip literal kitsch only.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Ogden Union Station area is a Jazz watch-party gathering spot",
       "verdict": "removed",
-      "note": "No known basis; replaced with Historic 25th Street, Ogden, hedged.",
+      "note": "No known basis. Replaced with Historic 25th Street, Ogden, hedged.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "'The Mountain' is common fan shorthand (also retail-behavior, uniform)",
       "verdict": "unverifiable",
-      "note": "Plausible for the 1996 logo but unsourced; softened wording. Do not use as a slogan.",
+      "note": "Plausible for the 1996 logo but unsourced. Wording softened. Don't use it as a slogan.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "'Utah Jazz Beehive' marks in recent branding; 'Jazz Nation'",
       "verdict": "removed",
-      "note": "Beehive mark claim has no known basis and was replaced with Jazz Bear; Jazz Nation flagged as unconfirmed usage.",
+      "note": "The Beehive mark claim has no known basis, so it was replaced with Jazz Bear. \"Jazz Nation\" is flagged as unconfirmed usage.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Delta Center URL delta-center.com",
       "verdict": "corrected",
-      "note": "Official site is deltacenter.com; fixed in retail-landscape and retail-behavior.",
+      "note": "The official site is deltacenter.com. Fixed in retail-landscape and retail-behavior.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Craft Lake City site craftlakecity.org",
       "verdict": "corrected",
-      "note": "Domain is craftlakecity.com.",
+      "note": "The domain is craftlakecity.com.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Gail Miller chairs the Larry H. Miller Company",
       "verdict": "corrected",
-      "note": "Company is now branded as a Miller family business; role softened.",
+      "note": "The company is now branded as a Miller family business, so the role was softened.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Poor Yorick Studio is operating in the Granary area",
       "verdict": "unverifiable",
-      "note": "No confirmation; location removed and status hedged. Do not list as a partner without a check.",
+      "note": "Unconfirmed. Location removed and status hedged. Don't list as a partner without a check.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Trent Call, Sri Whipple and Ben Wiemeyer are active Utah artists open to commissions",
       "verdict": "unverifiable",
-      "note": "Real Utah artists as best recalled; availability and current work need a live check before the strategy names them as partners.",
+      "note": "These are real Utah artists as best recalled. Check availability and current work live before the strategy names them as partners.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Kilby Court, The Depot, Urban Lounge, The Complex, Metro Music Hall all still operating",
       "verdict": "unverifiable",
-      "note": "Long-standing but venue churn is high; check each.",
+      "note": "Long-standing, but venue churn is high. Check each.",
       "source": ""
     },
     {
@@ -181,42 +181,42 @@
       "lens": "uniform",
       "claim": "Era table 1996-2004 mountain, 2004-2016 navy, 2016-present navy/yellow",
       "verdict": "unverifiable",
-      "note": "Early eras (1974-96 Note, 1996 Mountain purple/turquoise/copper) are solid; 2004-2022 palettes and dates need a live check. Past City Editions 2017-25 are unlisted.",
+      "note": "The early eras (1974-96 Note, 1996 Mountain in purple, turquoise and copper) are solid. The 2004-2022 palettes and dates need a live check. Past City Editions 2017-25 are unlisted.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Ryan Smith drove the 2022-23 brand refresh",
       "verdict": "unverifiable",
-      "note": "Plausible; confirm date and credit.",
+      "note": "Plausible. Confirm the date and credit.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Black Diamond, Kuhl, Voile and Skullcandy are headquartered in or near Salt Lake",
       "verdict": "unverifiable",
-      "note": "Kuhl and Voile are Salt Lake firms; Black Diamond changed owners in 2025 and Skullcandy is Park City. Confirm HQs before co-brand outreach.",
+      "note": "Kuhl and Voile are Salt Lake firms. Black Diamond changed owners in 2025, and Skullcandy is in Park City. Confirm HQs before co-brand outreach.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Nike Factory Stores in Lehi and Park City and Foot Locker at City Creek/Fashion Place",
       "verdict": "unverifiable",
-      "note": "Door list is from memory; confirm which Nike-owned and athletic-chain doors exist.",
+      "note": "The door list is from memory. Confirm which Nike-owned and athletic-chain doors exist.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "General Conference weekends are first weekend of April and October",
       "verdict": "confirmed",
-      "note": "Long-established pattern; Oct 3-4, 2026 has passed. Confirm April 2027 dates (Easter is Apr 4, 2027).",
+      "note": "A long-established pattern. Oct 3-4, 2026 has passed. Confirm the April 2027 dates (Easter is Apr 4, 2027).",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Delta Center name returned 2023; Smith Entertainment Group owns Jazz and the Utah Mammoth shares the arena",
       "verdict": "confirmed",
-      "note": "Long-established as of 2025; CURRENT FACTS did not verify 2026-27 ownership or arena, so keep in verify.",
+      "note": "Long-established as of 2025, but CURRENT FACTS did not verify 2026-27 ownership or arena, so keep it in verify.",
       "source": ""
     },
     {
@@ -230,21 +230,21 @@
       "lens": "hoops",
       "claim": "Utah's home opener is Oct 30",
       "verdict": "unverifiable",
-      "note": "Oct 30 is confirmed as the first Cup home game, but the Jazz home opener could be earlier; dossiers and strategy use 'home opener' and 'Cup Night' interchangeably.",
+      "note": "Oct 30 is confirmed as the first Cup home game, but the Jazz home opener could be earlier. Dossiers and strategy use \"home opener\" and \"Cup Night\" interchangeably.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Saturday Oct 31 I-15 pop-up after the Oct 30 Cup Night",
       "verdict": "unverifiable",
-      "note": "Oct 31 is Halloween; family traffic and pop-up viability need rethinking.",
+      "note": "Oct 31 is Halloween. Rethink family traffic and whether a pop-up works.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Salt Lake City Stars are the G League affiliate under that name",
       "verdict": "unverifiable",
-      "note": "Name varies across dossiers (Stars, Salt Lake Stars); confirm current branding.",
+      "note": "The name varies across dossiers (Stars, Salt Lake Stars). Confirm current branding.",
       "source": ""
     },
     {
@@ -265,16 +265,16 @@
       "lens": "strategy",
       "claim": "Living Traditions Festival in mid-to-late May is the reveal venue",
       "verdict": "unverifiable",
-      "note": "Festival timing and format have shifted before; confirm 2027 dates and that it still runs.",
+      "note": "Festival timing and format have shifted before. Confirm the 2027 dates and that it still runs.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "Utah Pride Festival early June and Utah Arts Festival late June at Library Square",
       "verdict": "unverifiable",
-      "note": "Recurring but dates for 2027 unconfirmed.",
+      "note": "Recurring, but 2027 dates are unconfirmed.",
       "source": ""
     }
   ],
-  "summary": "The Utah dossiers were mostly sound on history, geography and league dates (all CURRENT FACTS dates match). The biggest error, found with a live check, was the claim that the current Jazz identity is navy and yellow: it is Mountain Purple, Midnight Black and Sky Blue with highlighter yellow retired, which affected fanbase, uniform, retail-behavior and rhythm (fixed) and the strategy risk note (for the editor). Other fixes: Jazz Note era, Big 12 alignment, Twilight series, Central 9th versus 9th and 9th, Sun Tunnels credit, Red Iguana, Beer Bar, Craft Lake City details, Sugar Space location, URLs. Remaining risk sits in small venues, named artists, Nike and athletic doors, the 2004-2022 uniform eras, and whether Utah plays the Nov 24-25 Cup nights."
+  "summary": "Utah's dossiers held up on history, geography and league dates; every date matches CURRENT FACTS. The big miss, caught in a live check, was a navy-and-yellow Jazz identity. It is Mountain Purple, Midnight Black and Sky Blue, with highlighter yellow retired. Fanbase, uniform, retail-behavior and rhythm are fixed, and the strategy risk note is the editor's to change. Still open: small venues, named artists, Nike and athletic doors, the 2004-2022 uniform eras, and whether Utah plays the Nov 24-25 Cup nights."
 }

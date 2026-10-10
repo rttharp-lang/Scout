@@ -6,140 +6,140 @@
       "lens": "fanbase",
       "claim": "Blake Street Tavern is a long-running game-day bar near Ball Arena",
       "verdict": "corrected",
-      "note": "Spot-check: the original closed in 2023 and its 2301 Blake St space reopened in June 2026 as Tavern on Blake Street under new owners. Renamed and re-described.",
+      "note": "Checked live: the original closed in 2023. Its 2301 Blake St space reopened in June 2026 as Tavern on Blake Street, under new owners. Renamed and re-described.",
       "source": "https://hoodline.com/2026/04/lodo-s-blake-street-staple-roars-back-as-tavern-on-blake-street/"
     },
     {
       "lens": "food",
       "claim": "Great Divide Brewing has a RiNo / Ballpark taproom near the arena",
       "verdict": "corrected",
-      "note": "Spot-check: Great Divide closed its Ballpark taproom and RiNo Barrel Bar in June 2025 (new owner Wilding Brands); a return at 3040 Blake St was reported but unconfirmed. Swapped the place for Denver Beer Co. and fixed the beer insight.",
+      "note": "Checked live: Great Divide closed its Ballpark taproom and RiNo Barrel Bar in June 2025 (new owner Wilding Brands). A return at 3040 Blake St was reported but is unconfirmed. Swapped in Denver Beer Co. and fixed the beer insight.",
       "source": "https://www.brewbound.com/news/great-divide-to-shutter-2-denver-taprooms-new-location-teased-for-later-in-2025"
     },
     {
       "lens": "hoops",
       "claim": "Chauncey Billups is a coach and Hall of Famer whose name is safe to feature in a Colorado hoopers capsule",
       "verdict": "corrected",
-      "note": "Spot-check: Billups is a defendant in the federal rigged-poker case (pleaded not guilty; trial set for Nov 2026 with a delay requested). Removed him from the product hook, dropped 'coach', added a do-not-build warning, and replaced him with Fat Lever in the fanbase icons.",
+      "note": "Checked live: Billups is a defendant in the federal rigged-poker case. He pleaded not guilty, and trial is set for Nov 2026 with a delay requested. Cut him from the product hook, dropped 'coach', added a do-not-build warning and put Fat Lever in his place among the fanbase icons.",
       "source": "https://igamingbusiness.com/legal-compliance/legal/billups-return-to-the-nba-becomes-cloudier-june-2026/"
     },
     {
       "lens": "hoops",
       "claim": "Colorado State and Denver are part of a Mountain West / Big 12 college map",
       "verdict": "corrected",
-      "note": "Colorado State joins the rebuilt Pac-12 in 2026-27, Denver plays in the Summit League, and only Air Force and Wyoming are Mountain West. Conference references rewritten (from model knowledge; confirm the CSU move).",
+      "note": "Colorado State joins the rebuilt Pac-12 in 2026-27. Denver plays in the Summit League. Only Air Force and Wyoming are Mountain West. Conference references rewritten, from model knowledge, so confirm the CSU move.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "'Mile High Magic' is common fan shorthand for late-game home runs",
       "verdict": "removed",
-      "note": "No known basis as a real local phrase; removed from vocabulary.",
+      "note": "No known basis as a real local phrase. Removed from the vocabulary.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Nuggets navy hex is #0D2240",
       "verdict": "corrected",
-      "note": "Every other dossier and the brief use #0E2240; unified to #0E2240 in rhythm and music.",
+      "note": "Every other dossier and the brief use #0E2240. Rhythm and music now match.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Skyline Blue #1D428A in the palette",
       "verdict": "corrected",
-      "note": "That is the generic NBA blue, not a Nuggets color; replaced with an approximate powder blue (#85B9E3, matching fanbase and strategy).",
+      "note": "That is the generic NBA blue, not a Nuggets color. Replaced with an approximate powder blue (#85B9E3, matching fanbase and strategy).",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Mutombo-era 1990s look was 'teal-and-pickaxe'",
       "verdict": "corrected",
-      "note": "The 1993-2003 set was navy, red and green with a pickaxe logo (as the uniform eras list says); fixed the contradiction.",
+      "note": "The 1993-2003 set was navy, red and green with a pickaxe logo, as the uniform eras list says. Fixed the contradiction.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Tattered Cover sits in 'Colfax / LoHi'",
       "verdict": "corrected",
-      "note": "Its Colfax store is on East Colfax in the former Lowenstein Theater; neighborhood fixed and footprint queued for verification.",
+      "note": "Its Colfax store is on East Colfax, in the former Lowenstein Theater. Neighborhood fixed; footprint queued for verification.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "The Lumineers are a Denver-formed band",
       "verdict": "corrected",
-      "note": "The band formed in New Jersey and launched in Denver; wording fixed.",
+      "note": "The band formed in New Jersey and launched in Denver. Wording fixed.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Denver's flag is red and gold with a gold disc",
       "verdict": "corrected",
-      "note": "Not confident of the Denver city flag's design; restricted the claim to the Colorado state flag's gold disc and red C.",
+      "note": "The design of Denver's city flag is unconfirmed. The claim now covers only the Colorado state flag's gold disc and red C.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "Rocky Mountain College of Art and Design (now in the CSU system) feeds the design pipeline",
       "verdict": "removed",
-      "note": "Status uncertain after ownership changes; replaced with RedLine Contemporary Art Center. Also dropped the 'Chicano Humanities and Arts Council' mention as possibly defunct.",
+      "note": "Status unclear after ownership changes. Replaced with RedLine Contemporary Art Center. Also dropped the 'Chicano Humanities and Arts Council', which may be defunct.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Caroline Glover won James Beard Best Chef Southwest (2022)",
       "verdict": "corrected",
-      "note": "Colorado sits in the Mountain region, so Glover's 2022 award is Best Chef: Mountain (Alex Seidel's 2013 award was under the older Southwest region).",
+      "note": "Colorado sits in the Mountain region, so Glover's 2022 award is Best Chef: Mountain. Alex Seidel's 2013 award came under the older Southwest region.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Great American Beer Festival lands right at preseason",
       "verdict": "corrected",
-      "note": "GABF is late September, already past as of Oct 9; month set to 9 and wording fixed.",
+      "note": "GABF is in late September, already past as of Oct 9. Month set to 9 and wording fixed.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "The rainbow skyline had a '2018 revival'",
       "verdict": "corrected",
-      "note": "Unsupported date; changed to 'later throwback returns'. Brief current facts only confirm the 2025-26 City Edition return.",
+      "note": "The date is unsupported. Changed to 'later throwback returns', since the brief's current facts confirm only the 2025-26 City Edition return.",
       "source": ""
     },
     {
       "lens": "culture",
       "claim": "MLK Marade runs through Five Points and downtown",
       "verdict": "corrected",
-      "note": "Route not confirmed; softened to a march ending at Civic Center. The strategy brief repeats 'MLK Marade through Five Points' and should be fixed too.",
+      "note": "Route unconfirmed. Softened to a march ending at Civic Center. The strategy brief repeats 'MLK Marade through Five Points' and needs the same fix.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Ball Arena playoff 'white-out' tradition",
       "verdict": "removed",
-      "note": "No known Nuggets white-out tradition; removed.",
+      "note": "No known Nuggets white-out tradition. Removed.",
       "source": ""
     },
     {
       "lens": "retail-behavior",
       "claim": "Nuggets came off 'a Jokic MVP season'",
       "verdict": "corrected",
-      "note": "Current facts list Jokic as a three-time MVP and do not credit a 2026 award; reworded.",
+      "note": "Current facts list Jokic as a three-time MVP and credit no 2026 award. Reworded.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Christmas has historically been a national showcase for Jokic",
       "verdict": "corrected",
-      "note": "Unverified history; reworded to this year's Dec 25 game at Golden State, which the current facts confirm.",
+      "note": "The history is unverified. Reworded to this year's Dec 25 game at Golden State, which the current facts confirm.",
       "source": ""
     },
     {
       "lens": "fanbase",
       "claim": "Jokic three-time MVP, Mutombo died 2024, 2024 R2 Game 7 loss to Minnesota, 2023 title and 2020 loss to the Lakers",
       "verdict": "confirmed",
-      "note": "Long-established history consistent with the current facts.",
+      "note": "Long-established history, consistent with the current facts.",
       "source": ""
     },
     {
@@ -153,98 +153,98 @@
       "lens": "strategy",
       "claim": "Cup-night artist print is 'revealed at CRUSH Walls in September' (opportunity rino-cup-night, calendar month 9 and month 10 rows)",
       "verdict": "unverifiable",
-      "note": "Today is Oct 9, so September 2026 CRUSH Walls has passed; the Oct 30 to Nov 27 Cup window cannot be preceded by a live reveal this year. Editor should re-time to a 2027 cycle or drop the reveal. Also confirm CRUSH Walls still runs.",
+      "note": "Today is Oct 9, so the September 2026 CRUSH Walls has passed. A live reveal can't come before the Oct 30 to Nov 27 Cup window this year. Re-time it to a 2027 cycle or drop the reveal, and confirm CRUSH Walls still runs.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Oct 22 launch of Game to Trailhead and Skyline Heirloom core drop (calendar October row)",
       "verdict": "unverifiable",
-      "note": "Thirteen days from today is not enough lead time for new product; editor should frame as showcase of existing product or push to a later window.",
+      "note": "Thirteen days is not enough lead time for new product. Frame it as a showcase of existing product, or push it to a later window.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "'Home opener' framing for Oct 22 vs OKC (also in culture, rhythm, art, music, uniform)",
       "verdict": "unverifiable",
-      "note": "Current facts give only 'Oct 22: vs OKC'; whether it is the first game or the home opener is not confirmed. Check the NBA schedule.",
+      "note": "Current facts give only 'Oct 22: vs OKC'. Whether it is the first game or the home opener is unconfirmed. Check the NBA schedule.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "MLK Marade through Five Points (calendar January row)",
       "verdict": "unverifiable",
-      "note": "Marade route and 2027 date unconfirmed; do not tie the Welton Street announcement to the route.",
+      "note": "The Marade route and 2027 date are unconfirmed. Don't tie the Welton Street announcement to the route.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Dick's and Foot Locker at Park Meadows and Cherry Creek (opportunity 1 'where')",
       "verdict": "unverifiable",
-      "note": "A Dick's at Cherry Creek is doubtful; confirm each door's presence.",
+      "note": "A Dick's at Cherry Creek is doubtful. Confirm each door.",
       "source": ""
     },
     {
       "lens": "strategy",
       "claim": "Contour City Edition: 'Denver is the only NBA city defined by a number'",
       "verdict": "unverifiable",
-      "note": "Overclaim that fails the editor's tone test; soften. Brief also says 'unsigned Jokic extension' while current facts only say signing was not verified.",
+      "note": "Overclaim that fails the editor's tone test. Soften it. The brief also says 'unsigned Jokic extension', while current facts say only that signing was not verified.",
       "source": ""
     },
     {
       "lens": "uniform",
       "claim": "Nuggets Team Store at Ball Arena and Nike Factory Stores at Castle Rock and Thornton are open",
       "verdict": "unverifiable",
-      "note": "Core retail premise of the brief; live check of both factory stores, Colorado Mills Nike door, and whether Nike has any other Denver door.",
+      "note": "This is the brief's core retail premise. Check both factory stores live, plus the Colorado Mills Nike door and whether Nike has any other Denver door.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Foot Locker at Cherry Creek and Park Meadows; Buffalo Exchange on South Broadway; Patagonia in LoDo; REI flagship on Platte St",
       "verdict": "unverifiable",
-      "note": "Named doors from memory; confirm each is open at that location.",
+      "note": "Named doors come from memory. Confirm each is open at that location.",
       "source": ""
     },
     {
       "lens": "retail-landscape",
       "claim": "Denver Central Market, Rockmount Ranch Wear (LoDo) and Topo Designs still operating; Denver Comic Con still a June event",
       "verdict": "unverifiable",
-      "note": "Rockmount and Topo are long-standing but confirm addresses and collab availability.",
+      "note": "Rockmount and Topo are long-standing, but confirm addresses and collab availability.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Dazzle, Cervantes', Larimer Lounge, Twist & Shout, KGNU, Fillmore, Ogden, Bluebird operating as described",
       "verdict": "unverifiable",
-      "note": "Dazzle's current address in particular should be checked; verify all are open for 2026-27.",
+      "note": "Check Dazzle's current address in particular, and verify all are open for 2026-27.",
       "source": ""
     },
     {
       "lens": "music",
       "claim": "Five Points Jazz Festival (May), UMS (late July), Telluride Bluegrass (mid-June) dates",
       "verdict": "unverifiable",
-      "note": "Recurring but 2027 dates unconfirmed.",
+      "note": "The festivals recur, but 2027 dates are unconfirmed.",
       "source": ""
     },
     {
       "lens": "underground",
       "claim": "Charlie's (E Colfax) and Mutiny Information Cafe (Broadway) still open",
       "verdict": "unverifiable",
-      "note": "Long-running but small venues; confirm both before naming them.",
+      "note": "Both are long-running but small venues. Confirm both before naming them.",
       "source": ""
     },
     {
       "lens": "underground",
       "claim": "Wheelchair Sports Camp and Flobots currently active",
       "verdict": "unverifiable",
-      "note": "Confirm activity before partnering or citing as current.",
+      "note": "Confirm both are active before partnering or citing them as current.",
       "source": ""
     },
     {
       "lens": "art",
       "claim": "CRUSH Walls still runs in September; Detour, Pat Milbery and Sandra Fettingis available and conflict-free",
       "verdict": "unverifiable",
-      "note": "Festival status after 2025 and artist deals not confirmed.",
+      "note": "Festival status after 2025 and the artist deals are unconfirmed.",
       "source": ""
     },
     {
@@ -258,30 +258,30 @@
       "lens": "food",
       "claim": "Casa Bonita open with Dana Rodriguez as executive chef; Annette (Stanley Marketplace), Work & Class, Super Mega Bien open",
       "verdict": "unverifiable",
-      "note": "Chef and restaurant status shifts quickly; confirm all.",
+      "note": "Chef and restaurant status shifts quickly. Confirm all.",
       "source": ""
     },
     {
       "lens": "food",
       "claim": "Santiago's, El Taco de Mexico, Pete's Kitchen, Illegal Pete's, Little Man Ice Cream, Wynkoop open",
       "verdict": "unverifiable",
-      "note": "Long-standing but confirm; merch programs also unverified.",
+      "note": "Long-standing, but confirm. The merch programs are also unverified.",
       "source": ""
     },
     {
       "lens": "hoops",
       "claim": "Hiawatha Davis Jr., Glenarm and Montbello rec centers run open gym and youth programs; Grand Rapids Gold is the G League affiliate",
       "verdict": "unverifiable",
-      "note": "The brief routes proceeds to Glenarm and Hiawatha Davis Jr., so confirm programs and willingness to partner.",
+      "note": "The brief routes proceeds to Glenarm and Hiawatha Davis Jr. Confirm the programs and their willingness to partner.",
       "source": ""
     },
     {
       "lens": "rhythm",
       "claim": "Nuggets uniform hex values, Rainbow Skyline 2025-26 City Edition details, and the 2026-27 alternate",
       "verdict": "unverifiable",
-      "note": "Current facts only confirm the 2025-26 set and a leak; hex values and powder blue (#85B9E3 vs #8DA9D4 earlier) need the brand guide.",
+      "note": "Current facts confirm only the 2025-26 set and a leak. The hex values and powder blue (#85B9E3 vs #8DA9D4 earlier) need the brand guide.",
       "source": ""
     }
   ],
-  "summary": "Eleven dossiers and the brief were audited against the CURRENT FACTS, which they matched on roster, coach, record, DeRozan, Oct 22, Dec 25 and the Cup group. Three live spot-checks found real errors: Blake Street Tavern closed in 2023 and reopened under a new name, Great Divide closed its Denver taprooms in 2025, and Chauncey Billups faces a pending federal case, so he was removed from product ideas. Other fixes covered college conferences (Colorado State to the Pac-12), the navy hex mismatch, a wrong palette entry, the 1990s uniform colors, a James Beard award category, and unsupported claims (white-out, Mile High Magic, 2018 revival). The brief has timing problems: the CRUSH Walls reveal in September has passed, an Oct 22 launch lacks lead time, and the Marade route and Oct 22 home-opener framing are unconfirmed. About 20 named businesses, festival dates and partners remain queued as unverifiable."
+  "summary": "Eleven dossiers and the brief were audited against the CURRENT FACTS and matched on roster, coach, record, DeRozan, Oct 22, Dec 25 and the Cup group. Three live spot-checks found real errors. Blake Street Tavern closed in 2023 and reopened under a new name. Great Divide closed its Denver taprooms in 2025. Chauncey Billups faces a pending federal case, so he came out of the product ideas. Other fixes: college conferences (Colorado State to the Pac-12), the navy hex, a wrong palette entry, the 1990s uniform colors, a James Beard category, and unsupported claims (white-out, Mile High Magic, 2018 revival). The brief has timing problems. The September CRUSH Walls reveal has passed, an Oct 22 launch lacks lead time, and the Marade route and Oct 22 home-opener framing are unconfirmed. About 20 named businesses, festival dates and partners stay queued as unverifiable."
 }

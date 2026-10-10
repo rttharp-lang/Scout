@@ -5,150 +5,150 @@
       "target": "opportunities[hinkle-cup-final-week] / calendar[Nov 27]",
       "type": "other",
       "severity": "high",
-      "problem": "Lead time is unrealistic. The reveal is Black Friday (Nov 27) for a Dec 11 game, with the pop-up open Dec 1-11. Butler, NBA and Cup clearances are still open on Oct 7, and the capsule also depends on Fanatics-style licensed production. Two weeks of selling is not a capsule. 'Hinkle' is also a Butler mark, and the Cup logo and NBA marks belong to the league, so the 'draw it generically' fallback may remove the whole hook.",
-      "fix": "Treat Hinkle as a stretch goal with a go/no-go on clearance by mid-October. Build the base capsule from Pacers-licensed product (navy, maple, truss-arch geometry, 92-county graphics) that sells without any Hinkle or Cup mark. Add the Hinkle-named layer only if Butler and the NBA sign off, and tease it from Nov 1 so the sell window is four weeks or more."
+      "problem": "The lead time is unrealistic. The reveal is Black Friday (Nov 27) for a Dec 11 game, with the pop-up open Dec 1-11. Butler, NBA and Cup clearances are still open on Oct 7, and the capsule also depends on Fanatics-style licensed production. Two weeks of selling is not a capsule. 'Hinkle' is a Butler mark, and the Cup logo and NBA marks belong to the league, so the 'draw it generically' fallback may remove the whole hook.",
+      "fix": "Make Hinkle a stretch goal, with a go/no-go on clearance by mid-October. Build the base capsule from Pacers-licensed product (navy, maple, truss-arch geometry, 92-county graphics) that sells without any Hinkle or Cup mark. Add the Hinkle-named layer only if Butler and the NBA sign off. Tease it from Nov 1 so the sell window is four weeks or more."
     },
     {
       "target": "opportunities[hinkle-cup-final-week].where / calendar[Dec]",
       "type": "other",
       "severity": "medium",
-      "problem": "A Butler-Tarkington pop-up sits on a university campus and neighborhood that the NBA, Butler and the city will likely lock down as a ticketed or clean zone for the final. The brief assumes Nike can retail beside a league event it does not control. Selling the 'Indiana's night, not the Pacers' angle also means a Hinkle-first capsule is partly a Butler and NBA product, not a Pacers one.",
-      "fix": "Make the Fieldhouse team store and Lids/Finish Line the core doors, and treat any Butler-adjacent presence as an NBA- and Butler-approved activation, or a community partnership with a Butler-Tarkington business. Do not put the pop-up in the critical path."
+      "problem": "A Butler-Tarkington pop-up sits on a campus and in a neighborhood. The NBA, Butler and the city will likely lock both down as a ticketed or clean zone for the final. The brief assumes Nike can retail beside a league event it doesn't control. The 'Indiana's night, not the Pacers' angle also makes a Hinkle-first capsule partly a Butler and NBA product, not a Pacers one.",
+      "fix": "Make the Fieldhouse team store and Lids/Finish Line the core doors. Treat any Butler-adjacent presence as an NBA- and Butler-approved event, or as a community partnership with a Butler-Tarkington business. Don't let the plan depend on the pop-up."
     },
     {
       "target": "thesis / topInsights[1] / risks[0]",
       "type": "inaccurate",
       "severity": "medium",
-      "problem": "The headline and thesis state as fact that Haliburton's shoe 'sits with Puma', but the brief's own provenance says one dossier queried Adidas. The whole 'not Haliburton's shoes' framing hangs on an unverified claim. It also leads with a negative about the franchise's biggest story, and the same collection later sells Haliburton and Nembhard swingman and youth jerseys. Player jerseys are NBA-licensed regardless of who holds his shoe deal, so the premise is less decisive than it sounds.",
-      "fix": "Verify his footwear deal before the headline ships. Reword to 'team-first because the comeback is the fans' story', which holds either way. Keep jerseys and youth replicas as the entry point and drop the shoe-contract talk from the lead."
+      "problem": "The headline and thesis state as fact that Haliburton's shoe 'sits with Puma', but the brief's own provenance says one dossier queried Adidas. The whole 'not Haliburton's shoes' framing hangs on an unverified claim. It also leads with a negative about the franchise's biggest story, while the same collection later sells Haliburton and Nembhard swingman and youth jerseys. Player jerseys are NBA-licensed whoever holds his shoe deal, so the premise is less decisive than it sounds.",
+      "fix": "Verify his footwear deal before the headline ships. Reword to 'team-first because the comeback is the fans' story', which holds either way. Keep jerseys and youth replicas as the entry point, and drop the shoe contract from the lead."
     },
     {
       "target": "topInsights[1] / opportunities[back-home-again-opener]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "'Back Home Again' is the song title tied to the Indy 500 ritual, and the 'return-season' lockup is Haliburton's injury story in disguise, which is what the brief says fans will punish. The launch is also pinned to a return that is only 'expected on opening night' (the Pacers' first home date is not confirmed). If he sits or re-injures, a shirt built on his comeback is stale at launch.",
-      "fix": "Reframe the lockup as the whole 2025 Finals core coming home (Siakam, Nembhard, Nesmith, McConnell and Zubac, plus Carlisle) and the Fieldhouse itself. Keep Haliburton's name off the graphic and hold the units back until he plays a home game. Keep the song title off the IMS pre-race association by using a plain 'Home' treatment."
+      "problem": "'Back Home Again' is the song title tied to the Indy 500 ritual. The 'return-season' lockup is Haliburton's injury story in disguise, which the brief says fans will punish. The launch is also pinned to a return that is only 'expected on opening night', and the Pacers' first home date isn't confirmed. If he sits or re-injures, a shirt built on his comeback is stale at launch.",
+      "fix": "Reframe the lockup as the whole 2025 Finals core coming home (Siakam, Nembhard, Nesmith, McConnell and Zubac, plus Carlisle) and the Fieldhouse itself. Keep Haliburton's name off the graphic, and hold the units back until he plays a home game. Use a plain 'Home' treatment to stay clear of the IMS pre-race association."
     },
     {
       "target": "opportunities[92-counties-hoosier-hysteria]",
       "type": "other",
       "severity": "high",
-      "problem": "Chenille block 'INDIANA' on varsity jackets and county roundels is not Pacers product. It collides with Indiana University's own apparel language and trademark at the same Lids and Finish Line doors, and in-store customization of NBA-licensed team goods is not something Nike can promise. The brief also has no Pacers or NBA mark anywhere in the offer, so it is unclear which license covers it.",
-      "fix": "Make the Pacers mark the anchor (Pacers wordmark or Fieldhouse number under a county roundel) and run customization as an embroidery or patch bar at the Fieldhouse store and a few Lids doors, not a statewide Nike By You promise. Confirm with the Pacers and NBA what 'Indiana' wordmarking they will allow and what IU will tolerate."
+      "problem": "Chenille block 'INDIANA' on varsity jackets and county roundels isn't Pacers product. It collides with Indiana University's own apparel language and trademark at the same Lids and Finish Line doors. Nike can't promise in-store customization of NBA-licensed team goods. The offer also carries no Pacers or NBA mark, so it's unclear which license covers it.",
+      "fix": "Make the Pacers mark the anchor: a Pacers wordmark or Fieldhouse number under a county roundel. Run customization as an embroidery or patch bar at the Fieldhouse store and a few Lids doors, not a statewide Nike By You promise. Ask the Pacers and NBA what 'Indiana' wordmarking they'll allow, and what IU will tolerate."
     },
     {
       "target": "thesis / uniform / topInsights[2]",
       "type": "inaccurate",
       "severity": "medium",
-      "problem": "'Navy and gold double as the state's basketball default' is overstated. The brief's own insight says IU vs Purdue divides every household (crimson and cream vs old gold and black), and Notre Dame owns navy and gold. The line that the torch-on-blue flag is 'the state flag's colors' is true and strong, but it is a civic claim, not a claim about what people wear to a gym.",
-      "fix": "Say navy and gold read as the state flag (a civic cue) and Pacers colors, and drop 'basketball default'. Add Notre Dame navy and gold to the 'keep off product' list alongside Butler blue, IU crimson and Purdue old gold, and test statewide sell-in in the 765 and 812 where college loyalty beats the Pacers."
+      "problem": "'Navy and gold double as the state's basketball default' is overstated. The brief's own insight says IU vs Purdue divides every household (crimson and cream vs old gold and black), and Notre Dame owns navy and gold. The torch-on-blue flag really is 'the state flag's colors', but that's a civic claim, not a claim about what people wear to a gym.",
+      "fix": "Say navy and gold read as the state flag (a civic cue) and as Pacers colors, and drop 'basketball default'. Add Notre Dame navy and gold to the 'keep off product' list beside Butler blue, IU crimson and Purdue old gold. Test statewide sell-in in the 765 and 812, where college loyalty beats the Pacers."
     },
     {
       "target": "uniform.palette / uniform.typography",
       "type": "other",
       "severity": "high",
-      "problem": "The Attucks '55 uniform drops the Pacers' navy and gold as the base for terra cotta (#B5552E) with brass (#B08D3C) numbers. Brass on terra cotta has weak contrast, which is a problem under NBA numeral-legibility rules for a jersey seen on TV. It also abandons the one thing the brief credits as the state's identity. The concept is proposed for 2027-28, but City Edition concepts for that year are being briefed to the league well before then.",
-      "fix": "Test numeral contrast early and use navy or white numerals with a brass outline on the terra-cotta field. Keep navy or gold as a clear carrier on shorts and trim so it still reads Pacers. Ask now whether the 2027-28 City Edition slot is open, and keep the concept a Classic or heritage lane as a fallback."
+      "problem": "The Attucks '55 uniform drops the Pacers' navy and gold as the base for terra cotta (#B5552E) with brass (#B08D3C) numbers. Brass on terra cotta has weak contrast, a problem under NBA numeral-legibility rules for a jersey seen on TV. It also gives up the one thing the brief credits as the state's identity. The concept is proposed for 2027-28, but City Edition concepts for that year go to the league well before then.",
+      "fix": "Test numeral contrast early. Use navy or white numerals with a brass outline on the terra-cotta field. Keep navy or gold as a clear carrier on shorts and trim so it still reads Pacers. Ask now whether the 2027-28 City Edition slot is open, and keep a Classic or heritage lane as the fallback."
     },
     {
       "target": "opportunities[attucks-55-avenue] / calendar[Feb]",
       "type": "timing",
       "severity": "medium",
-      "problem": "The Avenue collection is dropped in February for Black History Month, which risks reading as a calendar-driven tribute. The authentic anchor is March: Attucks won the 1955 state title in the state-finals window that the brief already owns for 92 Counties. February is also crowded: Devour Indy, the Presidents' Day Pacers-Warriors game, the trade deadline and All-Star weekend (Phoenix, Feb 19-21), plus the 92 Counties lead-in.",
-      "fix": "Move the heritage launch to the March state-finals week (the anniversary of the 1955 title), with a February teaser tied to the Walker Center and the Museum. Do not stack it on the 92 Counties drop. Add the Circle City Classic (early October) and Indiana Black Expo (July) as the community-owned moments, not Black History Month."
+      "problem": "The Avenue collection drops in February for Black History Month, which risks reading as a calendar-driven tribute. The real anchor is March: Attucks won the 1955 state title in the state-finals window the brief already owns for 92 Counties. February is also crowded: Devour Indy, the Presidents' Day Pacers-Warriors game, the trade deadline, All-Star weekend (Phoenix, Feb 19-21) and the 92 Counties lead-in.",
+      "fix": "Move the heritage launch to the March state-finals week, the anniversary of the 1955 title. Tease it in February with the Walker Center and the Museum. Don't stack it on the 92 Counties drop. Add the Circle City Classic (early October) and Indiana Black Expo (July) as the community-owned moments, not Black History Month."
     },
     {
       "target": "opportunities[attucks-55-avenue] / partners / uniform",
       "type": "appropriation",
       "severity": "medium",
-      "problem": "The plan names the right institutions and promises credit and revenue share, but it is still a brand-led story about a Black school and an Avenue that Indianapolis displaced, and it assumes the Walker Legacy Center, the Museum and Oscar Robertson will say yes on Nike's timeline. 'Satin Naptown Soul bomber', the octave stripe and the terra-cotta geometry are three borrowed cues with no named lead designer. Using a living icon's school story while 'inviting' him in is a courtesy, not a license.",
-      "fix": "Make the partners the authors from the first brief: name a Black Indianapolis design lead and fee schedule before any art, put a written consent gate on the Walker building ornament and the 'Attucks' name, and plan the ship around a no. Keep Wes Montgomery as an abstract nod only and check the estate's position on 'Octave'-style naming."
+      "problem": "The plan names the right institutions and promises credit and revenue share. It is still a brand-led story about a Black school and an Avenue that Indianapolis displaced. It assumes the Walker Legacy Center, the Museum and Oscar Robertson will say yes on Nike's timeline. 'Satin Naptown Soul bomber', the octave stripe and the terra-cotta geometry are three borrowed cues with no named lead designer. 'Inviting' a living icon into his own school's story is a courtesy, not a license.",
+      "fix": "Make the partners the authors from the first brief. Name a Black Indianapolis design lead and a fee schedule before any art. Put a written consent gate on the Walker building ornament and the 'Attucks' name, and plan the ship around a no. Keep Wes Montgomery as an abstract nod only, and check the estate's position on 'Octave'-style naming."
     },
     {
       "target": "calendar[Nov Knicks] / opportunities[knicks-8-9]",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The Knicks angle is under-built. The brief mentions the 2025 choke gesture but not that the Pacers beat New York in the 2025 East finals, and New York are now the defending champions. That makes this a 'we are still the ones who beat them' story, and the date of the Group B Knicks game is unknown. Reggie Miller's name and likeness need a license the brief admits it does not have, so the lead product is the one it cannot sell.",
-      "fix": "Lead with the date-and-numeral graphics ('8.9', '5.7.95', and the 2025 series date) that need no likeness. Pin the Group B Knicks date and the Friday-only Cup calendar before building the drop. Keep a taunt-free tone and avoid any 'choke' sign graphic."
+      "problem": "The Knicks angle is under-built. The brief mentions the 2025 choke gesture but not that the Pacers beat New York in the 2025 East finals, and New York are now the defending champions. That makes this a 'we're still the ones who beat them' story. The date of the Group B Knicks game is unknown. Reggie Miller's name and likeness need a license the brief admits it doesn't have, so the lead product is the one it can't sell.",
+      "fix": "Lead with date-and-numeral graphics ('8.9', '5.7.95' and the 2025 series date) that need no likeness. Pin down the Group B Knicks date and the Friday-only Cup calendar before building the drop. Keep the tone taunt-free, with no 'choke' sign graphic."
     },
     {
       "target": "collection[Side B] / opportunities[drumline-side-b]",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "Side B is built on a repeat jersey, a brass sousaphone hardware idea and a marching-band warmup, but the link from marching arts to a Pacers buyer is thin. Dossiers show a value-led, cold-weather buyer who wants hoodies and tees, and the marching calendar (ISSMA, BOA Grand Nationals, PASIC) mostly brings band families who are not the Pacers core. The mixtape cassette cue is also the one national, not Indianapolis-specific, idea in the plan, and a swap test passes it to any city.",
-      "fix": "Cut Side B to the pieces that tie to something Indianapolis-only: the Music for All night and the drumline warmup, with Luna Music as a small numbered run. Drop the cassette J-card as a lead and keep it as a hangtag. Confirm the actual jersey details before anything is matched to it."
+      "problem": "Side B is built on a repeat jersey, a brass sousaphone hardware idea and a marching-band warmup, but the link from marching arts to a Pacers buyer is thin. The dossiers show a value-led, cold-weather buyer who wants hoodies and tees. The marching calendar (ISSMA, BOA Grand Nationals, PASIC) mostly brings band families, not the Pacers core. The mixtape cassette cue is also the one national idea in the plan, not an Indianapolis-specific one. A swap test hands it to any city.",
+      "fix": "Cut Side B to the pieces tied to something Indianapolis-only: the Music for All night and the drumline warmup, with Luna Music as a small numbered run. Drop the cassette J-card as a lead and keep it as a hangtag. Confirm the actual jersey details before matching anything to it."
     },
     {
       "target": "collection[Pace Line] / calendar[Sep] / topInsights[4]",
       "type": "timing",
       "severity": "medium",
-      "problem": "The calendar opens in July, August and September with no year. If those are 2026, then Black Expo, Gen Con, DCI and the Labor Day Pace Line drop have already passed (it is Oct 7), and the Pace Line launch cannot happen as written. 'Bloomington red clay' also reads as an unverified cue: Bloomington is known for limestone, and the dirt-track clay codes are better placed at named bullrings such as Anderson Speedway or the Speedrome in the underground dossier.",
-      "fix": "Label every calendar row with its year and move Pace Line to a real window (Race Month, May 2027, is already planned as the bridge). Replace 'Bloomington red clay' with a color sourced to a named track or confirm it, and keep the Indy 500 an adjacent, not co-branded, story."
+      "problem": "The calendar opens in July, August and September with no year. If those are 2026, Black Expo, Gen Con, DCI and the Labor Day Pace Line drop have already passed, since it's Oct 7. The Pace Line launch can't happen as written. 'Bloomington red clay' also reads as an unverified cue. Bloomington is known for limestone, and dirt-track clay codes fit better at named bullrings such as Anderson Speedway or the Speedrome in the underground dossier.",
+      "fix": "Label every calendar row with its year, and move Pace Line to a real window. Race Month, May 2027, is already planned as the bridge. Replace 'Bloomington red clay' with a color sourced to a named track, or confirm it. Keep the Indy 500 an adjacent story, not a co-branded one."
     },
     {
       "target": "collection[Pace Line]",
       "type": "inaccurate",
       "severity": "low",
-      "problem": "The Pacers were named for the Indy 500 pace car and for harness-racing pacers, and the brief handles that correctly. But the 'racing is the origin of the name' line in the thesis drops the harness-racing half, which matters to State Fair and horse-country fans. Calling the checkered flag a cliche is also an assertion from one dossier, not a tested local view, and the fan dossiers list it as a design cue.",
-      "fix": "Mention both origins in a hangtag or caption. Treat the checkered flag as a rule for Nike's drawing (avoid the literal flag) rather than as something locals have said they dislike."
+      "problem": "The Pacers were named for the Indy 500 pace car and for harness-racing pacers, and the brief handles that correctly. But the thesis line 'racing is the origin of the name' drops the harness-racing half, which matters to State Fair and horse-country fans. Calling the checkered flag a cliche is also one dossier's assertion, not a tested local view, and the fan dossiers list it as a design cue.",
+      "fix": "Mention both origins in a hangtag or caption. Treat the checkered flag as a rule for Nike's drawing (avoid the literal flag), not as something locals have said they dislike."
     },
     {
       "target": "topInsights[2] / retailPlaybook / partners[Homefield Apparel]",
       "type": "other",
       "severity": "medium",
-      "problem": "The plan treats Lids and Finish Line as 'homegrown' chains. Finish Line was founded in Indianapolis, but Lids was founded in Boston, and both have changed ownership and brand status (JD Sports owns Finish Line). The Homefield Apparel collaboration also asks a small, Indiana-rooted retro-apparel brand that sells college-licensed vintage to co-design a Nike capsule, which brings its own licensing and brand-conflict risk.",
-      "fix": "Verify the ownership and local presence of both chains before using 'homegrown' in any copy, and drop the claim from the retail pitch. For Homefield, check whether a Nike collaboration is allowed under its college licenses, or use it only as a sourcing reference and hire an Indiana sign-painter or a graphic artist instead."
+      "problem": "The plan treats Lids and Finish Line as 'homegrown' chains. Finish Line was founded in Indianapolis, but Lids was founded in Boston, and both have changed ownership and brand status (JD Sports owns Finish Line). The Homefield Apparel collaboration also asks a small, Indiana-rooted retro-apparel brand that sells college-licensed vintage to co-design a Nike capsule. That brings its own licensing and brand-conflict risk.",
+      "fix": "Verify both chains' ownership and local presence before using 'homegrown' in any copy, and drop the claim from the retail pitch. For Homefield, check whether a Nike collaboration is allowed under its college licenses. Otherwise use it only as a sourcing reference and hire an Indiana sign-painter or graphic artist instead."
     },
     {
       "target": "opportunities[one-building-fever] / calendar",
       "type": "weak-link",
       "severity": "medium",
-      "problem": "The 'One Building' idea uses the Fever and Caitlin Clark to tell Nike's sneaker story, but the Fever are off-season from October to May and are licensed separately by the WNBA. It sits in a brief about the Pacers, and the product list (women's-fit shorts, youth footwear, a map tee) has no link to a specific Fever insight. The brief also hedges its own source on Clark's signature-line timing.",
-      "fix": "Move this to a separate Fever brief for May to September and keep only the shared-building graphics (19-star neck tape, circle-and-diagonals) in the Pacers plan. Name a Fever or Indiana women's-hoops partner (for example Tamika Catchings' foundation or an Indiana girls' hoops program) rather than leaning on Clark."
+      "problem": "The 'One Building' idea uses the Fever and Caitlin Clark to tell Nike's sneaker story. But the Fever are off-season from October to May and are licensed separately by the WNBA. It sits in a Pacers brief, and the product list (women's-fit shorts, youth footwear, a map tee) has no link to a specific Fever insight. The brief also hedges its own source on Clark's signature-line timing.",
+      "fix": "Move this to a separate Fever brief for May to September. Keep only the shared-building graphics (19-star neck tape, circle-and-diagonals) in the Pacers plan. Name a Fever or Indiana women's-hoops partner, such as Tamika Catchings' foundation or an Indiana girls' hoops program, rather than leaning on Clark."
     },
     {
       "target": "topInsights / opportunities",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "Braden Smith, the Purdue point guard the Pacers took in the second round on a two-way deal, is in three dossiers (fanbase, rhythm, retail) and nowhere in the brief. He is the one player who bridges the 'IU vs Purdue' split the brief calls central. He signed a two-way, so he may be in the G League, but the Purdue-Pacers crossover is a real conversation in West Lafayette.",
-      "fix": "Add a short West Lafayette and 765 play: a Pacers-licensed product moment tied to his debut or his first home appearance, with no Purdue marks and nothing made without his and the NBA's licensing approval. Keep it small and reactive, not a drop."
+      "problem": "Braden Smith, the Purdue point guard the Pacers took in the second round on a two-way deal, is in three dossiers (fanbase, rhythm, retail) and nowhere in the brief. He's the one player who bridges the 'IU vs Purdue' split the brief calls central. On a two-way deal he may be in the G League, but the Purdue-Pacers crossover is a real conversation in West Lafayette.",
+      "fix": "Add a short West Lafayette and 765 play: a Pacers-licensed product moment tied to his debut or first home appearance. Use no Purdue marks, and make nothing without his and the NBA's licensing approval. Keep it small and reactive, not a drop."
     },
     {
       "target": "opportunities / collection",
       "type": "missed-opportunity",
       "severity": "medium",
-      "problem": "The Pacers' own history is almost absent. 'Boom Baby!' (Bobby 'Slick' Leonard's call), the ABA titles of 1970, 1972 and 1973, and Roger Brown and Mel Daniels appear in the music and uniform dossiers, but the brief uses ABA once and never 'Boom Baby'. The uniform dossier calls the ABA a deeper, less mined vein than the 1990s. The brief reaches for the high school gym and Attucks instead of the franchise's own archive.",
-      "fix": "Add an ABA-heritage thread (red, white and blue ABA ball cues, Slick Leonard's 'Boom Baby' as a few-word callout, credited to the estate and the Pacers). Check the full archive first so the 2027-28 uniform brief does not repeat one."
+      "problem": "The Pacers' own history is almost absent. 'Boom Baby!' (Bobby 'Slick' Leonard's call), the ABA titles of 1970, 1972 and 1973, and Roger Brown and Mel Daniels all appear in the music and uniform dossiers. The brief uses ABA once and never uses 'Boom Baby'. The uniform dossier calls the ABA a deeper, less mined vein than the 1990s. The brief reaches for the high school gym and Attucks instead of the franchise's own archive.",
+      "fix": "Add an ABA-heritage thread: red, white and blue ABA ball cues, and Slick Leonard's 'Boom Baby' as a few-word callout, credited to the estate and the Pacers. Check the full archive first so the 2027-28 uniform brief doesn't repeat one."
     },
     {
       "target": "calendar[Aug Gen Con] / calendar[Jun Pride]",
       "type": "weak-link",
       "severity": "low",
-      "problem": "Two calendar rows have no Pacers link. Gen Con (dice bag, stat-block tee) is a downtown crowd, not a Pacers buyer, and D&D-style stat blocks touch another company's IP. Pride in June falls after the Pacers' season (unless the playoffs run late), and the NBA runs its own Pride program, so a Pacers Pride tee has no game night and needs league approval.",
-      "fix": "Cut Gen Con to a small team-store window with a generic graphic or drop it. Keep Pride as a skip-by-default row: only act with Indy Pride and a named local artist, and run it through the NBA and Pacers community team, not as a Nike drop."
+      "problem": "Two calendar rows have no Pacers link. Gen Con (dice bag, stat-block tee) is a downtown crowd, not a Pacers buyer, and D&D-style stat blocks touch another company's IP. Pride in June falls after the Pacers' season (unless the playoffs run late), and the NBA runs its own Pride program. A Pacers Pride tee has no game night and needs league approval.",
+      "fix": "Cut Gen Con to a small team-store window with a generic graphic, or drop it. Keep Pride as a skip-by-default row. Act only with Indy Pride and a named local artist, and run it through the NBA and Pacers community team, not as a Nike drop."
     },
     {
       "target": "calendar[Jan Devour Indy]",
       "type": "generic",
       "severity": "low",
-      "problem": "A sugar-cream colorway with 'nutmeg-speckle details' is a food-literal gimmick that adds color for color's sake, and the dossier it comes from is about a restaurant event rather than a Pacers moment. A designer can use sugar cream as a neutral (#F2E3C6), but the speckle detail adds cost for little local meaning.",
-      "fix": "Keep sugar cream as a quiet base color for winter fleece and cut the speckle and the Devour Indy tie. If a food story is wanted, anchor it to the Fieldhouse-corridor pregame rituals (St. Elmo, Mass Ave) with paid, credited partners."
+      "problem": "A sugar-cream colorway with 'nutmeg-speckle details' is a food-literal gimmick that adds color for color's sake. The dossier it comes from is about a restaurant event, not a Pacers moment. A designer can use sugar cream as a neutral (#F2E3C6), but the speckle adds cost for little local meaning.",
+      "fix": "Keep sugar cream as a quiet base color for winter fleece, and cut the speckle and the Devour Indy tie. If you want a food story, anchor it to the Fieldhouse-corridor pregame rituals (St. Elmo, Mass Ave) with paid, credited partners."
     },
     {
       "target": "archetype / topInsights[0]",
       "type": "stereotype",
       "severity": "low",
-      "problem": "'Resent being called flyover country' is a trope that appears in many Midwest briefs, and the swap test passes it to Ohio, Iowa or Kansas. It also sets a defensive tone for the Hinkle story ('vindication'). The strongest local proof (Naismith's 1925 remark, the single-class tournament, 92 county names) is more specific than the defensive framing.",
-      "fix": "Open on the specific proofs (Hinkle's 1928 barrel vault, the single-class bracket, county license-plate numbers like 49 for Marion) and drop the grievance language from the archetype and the headline. Hold the Naismith quote as a hangtag only after the exact wording is confirmed."
+      "problem": "'Resent being called flyover country' is a trope from many Midwest briefs, and the swap test hands it to Ohio, Iowa or Kansas. It also sets a defensive tone for the Hinkle story ('vindication'). The strongest local proof (Naismith's 1925 remark, the single-class tournament, 92 county names) is more specific than the defensive framing.",
+      "fix": "Open on the specific proofs: Hinkle's 1928 barrel vault, the single-class bracket, and county license-plate numbers like 49 for Marion. Drop the grievance language from the archetype and the headline. Hold the Naismith quote for a hangtag, and only once the exact wording is confirmed."
     }
   ],
   "strengths": [
-    "The 92-county number idea (49 for Marion, 765, 812, 219) is genuinely local and passes the swap test; no other market can use it, and it ties directly to the statewide fan base.",
-    "Names the NBA Cup final at Hinkle Fieldhouse on Dec 11 as the season's standout local moment and builds the sell around it not depending on a Pacers result, which is a smart hedge.",
-    "Clear and honest IP discipline: Butler, IMS, IHSAA, the Hoosiers film, Robert Indiana and college colors are named as clearance risks, and public-domain assets are chosen where possible.",
-    "The Attucks '55 and Indiana Avenue story is the right deep, respectful cultural find, and the plan correctly names the Walker Legacy Center and the Crispus Attucks Museum as co-authors with credit and revenue return.",
-    "Product is built for how the buyer actually shops: heavyweight layers, entry pricing, a youth step-down below Swingman, and statewide mall doors over a downtown flagship.",
-    "Handles the current facts correctly (Haliburton's return, Zubac, Carlisle, Moments Mixtape repeat, no opening-night or Christmas game) and keeps a verify list of the claims that matter."
+    "The 92-county number idea (49 for Marion, 765, 812, 219) is local to Indiana and passes the swap test. No other market can use it, and it ties straight to the statewide fan base.",
+    "It names the NBA Cup final at Hinkle Fieldhouse on Dec 11 as the season's standout local moment. The sell doesn't depend on a Pacers result, which is a smart hedge.",
+    "The IP discipline is clear and honest. Butler, IMS, IHSAA, the Hoosiers film, Robert Indiana and college colors are named as clearance risks, and public-domain assets are chosen where possible.",
+    "The Attucks '55 and Indiana Avenue story is the right deep, respectful cultural find. The plan correctly names the Walker Legacy Center and the Crispus Attucks Museum as co-authors, with credit and revenue return.",
+    "The product fits how the buyer shops: heavyweight layers, entry pricing, a youth step-down below Swingman, and statewide mall doors over a downtown flagship.",
+    "It gets the current facts right (Haliburton's return, Zubac, Carlisle, the Moments Mixtape repeat, no opening-night or Christmas game) and keeps a verify list of the claims that matter."
   ],
-  "summary": "This is a strong, specific brief: the Hinkle week, 92-county numbers and Attucks '55 stories could only be about Indiana. Its weak points are feasibility and timing, not taste. The Hinkle capsule has about two weeks to sell and open clearances, the 'INDIANA' chenille line is not clearly Pacers product, and the Attucks uniform trades away Pacers navy and gold with a low-contrast number plan. The Haliburton-and-Puma framing rests on an unverified claim, and the calendar has undated past windows. It also skips Braden Smith, the Pacers' ABA and 'Boom Baby' archive, and the Pacers' win over the Knicks in 2025. Fix the Hinkle go/no-go, the Pacers anchor and the partner-authorship plan first. Reviewer's own knowledge is mid-2026, so Lids, Finish Line, Butler, Plump's Last Shot and Walker Center status should be checked live."
+  "summary": "A strong, specific brief: the Hinkle week, the 92-county numbers and the Attucks '55 stories could only be about Indiana. Its weak points are feasibility and timing, not taste. Fix the Hinkle go/no-go, the Pacers anchor and the partner-authorship plan first. The reviewer's knowledge runs to mid-2026, so check Lids, Finish Line, Butler, Plump's Last Shot and Walker Center status live."
 }

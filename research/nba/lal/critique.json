@@ -1,139 +1,139 @@
 {
- "team": "lal",
- "issues": [
-  {
-   "target": "calendar / opportunities[los-lakers-serigraph, tamalada-christmas]",
-   "type": "other",
-   "severity": "high",
-   "problem": "Feasibility: today is Oct 7, yet the plan ships a commissioned Chicano alphabet, hand-pulled signed serigraphs, a scored film, a Spanish-first collection and a Tamalada fleece by mid-November and Dec 1. Nike footwear and apparel lines are locked 9-12 months out; a partner-led commissioning cycle cannot finish in 5-8 weeks without rushing paid artists, which is the opposite of the respect story.",
-   "fix": "Split each into a 2026-27 Phase 1 that can really happen (a small, artist-led, partner-sold print run and screen-printed tees made locally or via Nike By You, announced in November) and a Phase 2 full collection for holiday 2027 with a real commissioning calendar. Say plainly in the brief which items are in-season and which are 2027-28 builds."
-  },
-  {
-   "target": "uniform (Candy Paint City Edition)",
-   "type": "other",
-   "severity": "high",
-   "problem": "The 2026-27 City Edition is already the revived 2023-24 triangle set, and NBA uniforms are designed roughly 18-24 months ahead, so Candy Paint cannot be a City Edition before 2028-29 at the earliest. Metal-flake fields, gold-leaf numerals, a continuous side-panel pinstripe, and creator names on the neck tape and jock tag collide with NBA uniform, patch and manufacturing standards, and a purple field at #5B2A86 sits beside the sacred #552583 purple the brief itself says fans police.",
-   "fix": "Label it a 2028-29 City Edition pitch and test it now as retail-only product (Cortez, warm-up, tee). On-court, keep the official purple and put the candy shift in a gloss or iridescent print inside the NBA's allowed finishes, and credit makers on hangtags and packaging rather than the game jersey."
-  },
-  {
-   "target": "topInsights[0] / opportunities[next-chapter-opener]",
-   "type": "inaccurate",
-   "severity": "medium",
-   "problem": "The brief says both 2026-27 uniforms 'look backward' and builds a Specter heritage warm-up jacket for the opener, but the Specter design details and wear dates were not captured, and the Specter collection was released at the Sept 9 reveal, so it is not an opener launch.",
-   "fix": "Drop the claim about how Specter looks until the product is seen. Position the opener around Doncic and Reaves jerseys and a restocked Specter assortment, and confirm which games Specter and the triangle City Edition are worn in before promising on-court timing."
-  },
-  {
-   "target": "thesis / headline ('before Santee Alley does')",
-   "type": "stereotype",
-   "severity": "medium",
-   "problem": "Casting Santee Alley as the rival to beat and pricing 'to show real product apart from knockoffs' frames a district of mostly immigrant Latino vendors as the enemy, while the partner list also pays vendors via Inclusive Action for the City. The headline contradicts the respect plan and would read badly if it leaked.",
-   "fix": "Reword to say Nike should draw the era first, with LA makers. Treat bootleg demand as a signal of unmet price and design demand, and give Alley-adjacent family-priced product and vendor partnerships a place in the retail playbook rather than a competitor label."
-  },
-  {
-   "target": "thesis / partners (Black LA)",
-   "type": "missed-opportunity",
-   "severity": "high",
-   "problem": "The thesis names Black and Brown LA as one story, but the Black half is thin: the only named Black-led partners are the Drew League (summer, priority 2) and Marathon Clothing ('only on terms set by its stewards'), and Candy Paint's letterer and photographer are both Chicano-lineage. Black Lakers fans are likely to be the group most grieved by LeBron's exit and the Kobe-era core, and they get no fall product or named creator.",
-   "fix": "Name a Black LA design partner for each hero concept (Crenshaw and Leimert Park muralists, a Compton or Inglewood letterer or stylist, Black-owned print shops) and give Candy Paint a genuinely paired credit. Add a Black-led fall or Dec 25 moment (a Leimert or Crenshaw activation tied to Dec 25) instead of waiting for the Drew in June."
-  },
-  {
-   "target": "opportunities[tamalada-christmas]",
-   "type": "stereotype",
-   "severity": "medium",
-   "problem": "Turning the tamalada, a family ritual largely run by Mexican and Central American women, into a fleece, socks and a husk-wrapped gift box risks reading as food-as-costume, and the Hoja Husk and Consomé Red palette drifts off the purple-and-gold identity the brief calls sacred. The 'LA-first celebration instead of rivalry' framing also dodges the single biggest Dec 25 story.",
-   "fix": "Lead with an actual tamalada (a paid Eastside panadería or tamalera collective hosting families, content shot there) and keep product in purple, gold and cream with husk only as a texture or packaging cue. Pay and credit the cooks; skip the tamale-printed product."
-  },
-  {
-   "target": "calendar[Dec 25 / Feb 15]",
-   "type": "missed-opportunity",
-   "severity": "medium",
-   "problem": "LeBron's return Dec 25 (5 p.m. ET, 2 p.m. PT) and a second Lakers-76ers meeting on Feb 15 are the season's two biggest emotional beats, yet the brief mostly steers around them, and Feb 15 appears only as a Tamalada restock, which makes no sense for a Christmas pack.",
-   "fix": "Give the LeBron return a real, licensed-safe moment (a thank-you tribute built from Lakers-era history, with Nike's LeBron team consulted since he is a lifetime Nike athlete) and keep the Doncic gift box. Use Feb 15 for a Doncic or Reaves restock and check the home team before planning an arena presence."
-  },
-  {
-   "target": "opportunities[candy-paint-cortez] / calendar[Grammy week]",
-   "type": "timing",
-   "severity": "medium",
-   "problem": "The drop is pinned to a Grammy-week road trip that the brief itself says is unconfirmed, and early February also holds Lunar New Year (Feb 6), the Feb 11 trade deadline and All-Star in Phoenix (Feb 19-21), so the Lakers' real schedule is unknown. Mister Cartoon and Estevan Oriol also work with other brands, and Old English lettering and lowrider cues need a gang-code review that starts well before a February ship date.",
-   "fix": "Confirm the Grammy date and Lakers schedule before locking the window, and give the Cortez a fallback launch (All-Star week, or Cinco de Mayo season with Eastside shops) that does not depend on arena activation. Start the Cartoon and Oriol contracting and the community review now."
-  },
-  {
-   "target": "opportunities[candy-paint-cortez, partners] (Crenshaw leg)",
-   "type": "weak-link",
-   "severity": "medium",
-   "problem": "The brief depends on Marathon Clothing 'only on terms set by its stewards' and bars Nipsey imagery, but it never names a Crenshaw creator who is actually attached to the candy-paint story, so the claimed Black-and-Chicano pairing rests on one side only.",
-   "fix": "Name a real South LA lowrider or custom-paint partner (a Crenshaw or Compton car club or shop, approached on their terms) and a Black photographer or stylist, and make Marathon a venue question to be put to its stewards, not a counted door."
-  },
-  {
-   "target": "calendar[Lunar New Year] / opportunities",
-   "type": "generic",
-   "severity": "medium",
-   "problem": "A red-and-gold accent tee and cap for Lunar New Year, seeded at Far East Plaza shops, passes the swap test: every NBA team's Nike line has the same capsule and the brief names no Chinese, Taiwanese or Vietnamese American LA creator or story.",
-   "fix": "Cut it or tie it to something LA-only (a named SGV or Chinatown artist, the Lakers' own Asian American fan history, a Chinese American or Taiwanese American partner paid to design), and drop red unless the partner wants it."
-  },
-  {
-   "target": "opportunities[playoff-chase-jacaranda] / Koreatown",
-   "type": "weak-link",
-   "severity": "medium",
-   "problem": "Koreatown, one of the Lakers' most distinctive fan districts, only gets a playoff-conditional pop-up, a second-tier priority, and the Jacaranda pack is released only if the Lakers advance, which no apparel supply chain can do in weeks. Roy Choi is the only named Korean American partner and is a chef, not a designer or a Koreatown merchant.",
-   "fix": "Move Koreatown up to a fall or winter community moment (watch parties at an established Ktown venue, a paid Korean American designer for the Hangul), and pre-order jacaranda as a small chase run now with a hold-or-release decision on inventory, not on production."
-  },
-  {
-   "target": "opportunities[kobe-824-wall-series]",
-   "type": "timing",
-   "severity": "medium",
-   "problem": "Lead time is the issue: 'lock estate approvals by spring' for an Aug 24, 2027 release leaves little room for three muralists' art, tags and a Protro colorway, and 8/24 product probably already sits in Nike Kobe's own calendar. The living-muralist credit and wall licensing is good, but the brief assumes a Kobe-Nike partnership status it lists only as a verify item.",
-   "fix": "Open the conversation with Nike Kobe and the Bryant family now, not in spring, and scope this as a muralist-art tee and print run that can follow the Kobe team's calendar. Keep Jan 26 silent, as the brief does."
-  },
-  {
-   "target": "opportunities[ube-mango-october] / calendar",
-   "type": "timing",
-   "severity": "low",
-   "problem": "Filipino American History Month is October, but the brief schedules the capsule for October 2027, a year out, while this October already includes the opener and Filipino Heritage Night is only a maybe. Priority is also inconsistent (3 in opportunities, 2 in calendar).",
-   "fix": "Do a small 2026 seed with Kuya Lord and Filipino American artists now if any Heritage Night is confirmed, with the full capsule in 2027, and set one priority. Ube purple and mango gold work as a design idea; the partner should own the story and share revenue."
-  },
-  {
-   "target": "topInsights[0] / opportunities[first walls]",
-   "type": "other",
-   "severity": "medium",
-   "problem": "First Walls Doncic-era murals and the Luka-led canon need NBPA and Nike or Jordan Brand licensing for living players' likenesses, and a mural of a 27-year-old star is a different artistic proposition from commemorating Kobe. The brief asks SPARC to curate them without saying who owns the image rights or who pays the muralists.",
-   "fix": "Pair each wall with an agreed rights path (NBPA group licensing, Jordan Brand sign-off on Luka) and have SPARC and the artists set the commission terms. Consider murals of the neighborhood-and-team story that do not rely on a player portrait."
-  },
-  {
-   "target": "uniform.alternates[Purple Line / Gold Line]",
-   "type": "inaccurate",
-   "severity": "medium",
-   "problem": "Metro's D Line (formerly Purple) runs through Koreatown, but the rail line near the arena and out to East LA is the E Line, which is light blue after Metro's 2020-2023 renaming; the old Gold Line gold is gone. The purple-and-gold route-map story therefore no longer matches Metro's current colors.",
-   "fix": "Check the current Metro line colors before using the map concept. Use the D Line's purple only if Metro licenses it, or frame the concept as a historic Gold Line piece and credit it as nostalgia."
-  },
-  {
-   "target": "collection / partners (SHG, SPARC, serigraph)",
-   "type": "appropriation",
-   "severity": "low",
-   "problem": "The brief commits revenue to Self Help Graphics and SPARC but not the form: an in-kind print run, a flat fee, or a percentage. Without it, the 'paid and credited' promise is a statement of intent that a skeptical local audience would judge by the amount.",
-   "fix": "State the terms (artist fees up front, royalty on units, a fixed donation) in the partner section, and show them on the tag or packaging."
-  },
-  {
-   "target": "provenance.verify / dossiers (carry-over)",
-   "type": "inaccurate",
-   "severity": "low",
-   "problem": "The uniform dossier says a Reaves capsule should be built on an 'Oregon-to-LA' story; Reaves is an Arkansas native who played at Wichita State and Oklahoma, so the Portland hook is false. It also lists Fear of God's Jerry Lorenzo as an obvious collaborator though his Athletics line sits with a Nike competitor.",
-   "fix": "Strike the Oregon line from any Reaves content and verify his bio, and do not include Fear of God in a partner short-list."
-  },
-  {
-   "target": "calendar[Cup]",
-   "type": "missed-opportunity",
-   "severity": "low",
-   "problem": "The Cup is treated as a small Friday digital drop, but semifinals move for the first time to the higher seed's home arena (Dec 8-9) and the final is Dec 11 at Hinkle Fieldhouse, so a Lakers group win could mean a home Cup semifinal at Crypto.com Arena in Dec that the plan ignores.",
-   "fix": "Add a contingent Dec 4-11 Cup plan (a Cup tee and Doncic content) triggered only if the Lakers win West Group C, and keep it small."
-  }
- ],
- "strengths": [
-  "The thesis is specific and could only be about Los Angeles: lineage-based fandom, hand-made design languages (rótulo lettering, serigraph, candy paint), and a post-LeBron jersey wall.",
-  "Partner choices are real, rooted institutions (Self Help Graphics, the Drew League, SPARC, Inclusive Action for the City, Kuya Lord) with payment and credit stated, which carries the respect bar.",
-  "The risk section is unusually honest: Kobe and Nipsey estate approvals, Jan 26 silence, gang-code review, no Nike storefront in Boyle Heights, and keeping jabs at LeBron out of copy.",
-  "Facts are tied to the verified present: Doncic and Reaves, 46.5 wins, the Dec 25 5 p.m. ET tip, the triangle City Edition and Specter, and the Reaves and Rigorer footwear limit.",
-  "Weighting retail by tier (arena store, Citadel, Nike Melrose, Fairfax seeding) and conditioning playoff inventory on results shows real commercial sense."
- ],
- "summary": "Strong and unmistakably LA, but it overreaches on calendar and feasibility: it is Oct 7 and the plan promises hand-made, partner-built product for mid-November and December, and pitches Candy Paint as a uniform that the already-set 2026-27 City Edition and NBA lead times rule out until about 2028. The sharpest fixes are to separate in-season product from 2027-28 builds, name Black LA partners to match the Black-and-Brown thesis, drop the Santee Alley framing, stop leaning on an unverified Specter look, and use the LeBron return on Dec 25 and Feb 15 deliberately."
+  "team": "lal",
+  "issues": [
+    {
+      "target": "calendar / opportunities[los-lakers-serigraph, tamalada-christmas]",
+      "type": "other",
+      "severity": "high",
+      "problem": "Today is Oct 7, yet the plan ships a commissioned Chicano alphabet, hand-pulled signed serigraphs, a scored film, a Spanish-first collection and a Tamalada fleece by mid-November and Dec 1. Nike footwear and apparel lines lock 9-12 months out. A partner-led commissioning cycle can't finish in 5-8 weeks without rushing paid artists, which undercuts the respect story.",
+      "fix": "Split each into two phases. Phase 1 is what can happen in 2026-27: a small, artist-led, partner-sold print run and screen-printed tees, made locally or via Nike By You and announced in November. Phase 2 is the full collection for holiday 2027, with a real commissioning calendar. Say plainly in the brief which items are in-season and which are 2027-28 builds."
+    },
+    {
+      "target": "uniform (Candy Paint City Edition)",
+      "type": "other",
+      "severity": "high",
+      "problem": "The 2026-27 City Edition is already the revived 2023-24 triangle set. NBA uniforms are designed roughly 18-24 months ahead, so Candy Paint can't be a City Edition before 2028-29 at the earliest. Metal-flake fields, gold-leaf numerals, a continuous side-panel pinstripe and creator names on the neck tape and jock tag collide with NBA uniform, patch and manufacturing standards. The purple field at #5B2A86 also sits beside the #552583 purple the brief itself calls sacred and fans police.",
+      "fix": "Label it a 2028-29 City Edition pitch and test it now as retail-only product (Cortez, warm-up, tee). On court, keep the official purple. Put the candy shift in a gloss or iridescent print within the NBA's allowed finishes, and credit makers on hangtags and packaging, not the game jersey."
+    },
+    {
+      "target": "topInsights[0] / opportunities[next-chapter-opener]",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "The brief says both 2026-27 uniforms \"look backward\" and builds a Specter heritage warm-up jacket for the opener. But the Specter design details and wear dates were not captured, and the Specter collection was released at the Sept 9 reveal. It is not an opener launch.",
+      "fix": "Drop the claim about how Specter looks until the product is seen. Build the opener around Doncic and Reaves jerseys and a restocked Specter assortment. Confirm which games Specter and the triangle City Edition are worn in before promising on-court timing."
+    },
+    {
+      "target": "thesis / headline ('before Santee Alley does')",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "Casting Santee Alley as the rival to beat, and pricing \"to show real product apart from knockoffs\", frames a district of mostly immigrant Latino vendors as the enemy. Yet the partner list also pays vendors via Inclusive Action for the City. The headline contradicts the respect plan and would read badly if it leaked.",
+      "fix": "Reword so the headline says to draw the era first, with LA makers. Read bootleg demand as a sign of unmet demand for price and design. In the retail playbook, give Alley-adjacent family-priced product and vendor partnerships a place, not a competitor label."
+    },
+    {
+      "target": "thesis / partners (Black LA)",
+      "type": "missed-opportunity",
+      "severity": "high",
+      "problem": "The thesis names Black and Brown LA as one story, but the Black half is thin. The only named Black-led partners are the Drew League (summer, priority 2) and Marathon Clothing (\"only on terms set by its stewards\"). Candy Paint's letterer and photographer are both Chicano-lineage. Black Lakers fans are likely the group most grieved by LeBron's exit and the Kobe-era core, and they get no fall product or named creator.",
+      "fix": "Name a Black LA design partner for each hero concept: Crenshaw and Leimert Park muralists, a Compton or Inglewood letterer or stylist, Black-owned print shops. Give Candy Paint a paired credit. Add a Black-led fall or Dec 25 moment, such as a Leimert or Crenshaw event tied to Dec 25, instead of waiting for the Drew in June."
+    },
+    {
+      "target": "opportunities[tamalada-christmas]",
+      "type": "stereotype",
+      "severity": "medium",
+      "problem": "Turning the tamalada into a fleece, socks and a husk-wrapped gift box risks reading as food-as-costume. It is a family ritual largely run by Mexican and Central American women. The Hoja Husk and Consomé Red palette also drifts off the purple-and-gold identity the brief calls sacred. And the \"LA-first celebration instead of rivalry\" framing dodges the biggest Dec 25 story.",
+      "fix": "Lead with an actual tamalada: a paid Eastside panadería or tamalera collective hosting families, with content shot there. Keep product in purple, gold and cream, with husk only as a texture or packaging cue. Pay and credit the cooks, and skip tamale-printed product."
+    },
+    {
+      "target": "calendar[Dec 25 / Feb 15]",
+      "type": "missed-opportunity",
+      "severity": "medium",
+      "problem": "LeBron's return on Dec 25 (5 p.m. ET, 2 p.m. PT) and a second Lakers-76ers meeting on Feb 15 are the season's two biggest emotional beats. The brief mostly steers around them. Feb 15 appears only as a Tamalada restock, which makes no sense for a Christmas pack.",
+      "fix": "Give the LeBron return a real, licensed-safe moment: a thank-you tribute built from Lakers-era history, with Nike's LeBron team consulted since he is a lifetime Nike athlete. Keep the Doncic gift box. Use Feb 15 for a Doncic or Reaves restock, and check the home team before planning an arena presence."
+    },
+    {
+      "target": "opportunities[candy-paint-cortez] / calendar[Grammy week]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The drop is pinned to a Grammy-week road trip that the brief itself calls unconfirmed. Early February also holds Lunar New Year (Feb 6), the Feb 11 trade deadline and All-Star in Phoenix (Feb 19-21), so the Lakers' real schedule is unknown. Mister Cartoon and Estevan Oriol also work with other brands. Old English lettering and lowrider cues need a gang-code review, and it must start well before a February ship date.",
+      "fix": "Confirm the Grammy date and the Lakers schedule before locking the window. Give the Cortez a fallback launch that doesn't depend on an arena event: All-Star week, or Cinco de Mayo season with Eastside shops. Start the Cartoon and Oriol contracting and the community review now."
+    },
+    {
+      "target": "opportunities[candy-paint-cortez, partners] (Crenshaw leg)",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "The brief depends on Marathon Clothing \"only on terms set by its stewards\" and bars Nipsey imagery. But it never names a Crenshaw creator attached to the candy-paint story, so the claimed Black-and-Chicano pairing rests on one side only.",
+      "fix": "Name a real South LA lowrider or custom-paint partner (a Crenshaw or Compton car club or shop, approached on their terms) and a Black photographer or stylist. Make Marathon a venue question for its stewards, not a counted door."
+    },
+    {
+      "target": "calendar[Lunar New Year] / opportunities",
+      "type": "generic",
+      "severity": "medium",
+      "problem": "A red-and-gold accent tee and cap for Lunar New Year, seeded at Far East Plaza shops, fails the swap test. Every NBA team's Nike line has the same capsule, and the brief names no Chinese, Taiwanese or Vietnamese American LA creator or story.",
+      "fix": "Cut it, or tie it to something only LA has: a named SGV or Chinatown artist, or the Lakers' own Asian American fan history. Or pay a Chinese American or Taiwanese American partner to design it. Drop red unless the partner wants it."
+    },
+    {
+      "target": "opportunities[playoff-chase-jacaranda] / Koreatown",
+      "type": "weak-link",
+      "severity": "medium",
+      "problem": "Koreatown, one of the Lakers' most distinctive fan districts, gets only a playoff-conditional pop-up and a second-tier priority. The Jacaranda pack is released only if the Lakers advance, which no apparel supply chain can do in weeks. Roy Choi is the only named Korean American partner, and he is a chef, not a designer or a Koreatown merchant.",
+      "fix": "Move Koreatown up to a fall or winter community moment: watch parties at an established Ktown venue and a paid Korean American designer for the Hangul. Pre-order jacaranda now as a small chase run, with the hold-or-release decision on inventory, not production."
+    },
+    {
+      "target": "opportunities[kobe-824-wall-series]",
+      "type": "timing",
+      "severity": "medium",
+      "problem": "The issue is lead time. \"Lock estate approvals by spring\" for an Aug 24, 2027 release leaves little room for three muralists' art, tags and a Protro colorway. 8/24 product probably already sits in Nike Kobe's own calendar. The living-muralist credit and wall licensing are good. But the brief assumes a Kobe-Nike partnership status that it lists only as a verify item.",
+      "fix": "Open the conversation with Nike Kobe and the Bryant family now, not in spring. Scope this as a muralist-art tee and print run that can follow the Kobe team's calendar. Keep Jan 26 silent, as the brief does."
+    },
+    {
+      "target": "opportunities[ube-mango-october] / calendar",
+      "type": "timing",
+      "severity": "low",
+      "problem": "Filipino American History Month is October, but the brief schedules the capsule for October 2027, a year out. This October already includes the opener, and Filipino Heritage Night is only a maybe. Priority is also inconsistent (3 in opportunities, 2 in calendar).",
+      "fix": "If any Heritage Night is confirmed, run a small 2026 seed now with Kuya Lord and Filipino American artists, and save the full capsule for 2027. Set one priority. Ube purple and mango gold work as a design idea. The partner should own the story and share revenue."
+    },
+    {
+      "target": "topInsights[0] / opportunities[first walls]",
+      "type": "other",
+      "severity": "medium",
+      "problem": "First Walls Doncic-era murals and the Luka-led canon need NBPA and Nike or Jordan Brand licensing for living players' likenesses. A mural of a 27-year-old star is also a different artistic proposition from commemorating Kobe. The brief asks SPARC to curate them without saying who owns the image rights or who pays the muralists.",
+      "fix": "Pair each wall with an agreed rights path (NBPA group licensing, Jordan Brand sign-off on Luka). Have SPARC and the artists set the commission terms. Consider murals of the neighborhood-and-team story that don't rely on a player portrait."
+    },
+    {
+      "target": "uniform.alternates[Purple Line / Gold Line]",
+      "type": "inaccurate",
+      "severity": "medium",
+      "problem": "Metro's D Line (formerly Purple) runs through Koreatown. But the rail line near the arena and out to East LA is the E Line, light blue after Metro's 2020-2023 renaming, and the old Gold Line gold is gone. The purple-and-gold route-map story no longer matches Metro's current colors.",
+      "fix": "Check the current Metro line colors before using the map concept. Use the D Line's purple only if Metro licenses it, or frame the concept as a historic Gold Line piece and credit it as nostalgia."
+    },
+    {
+      "target": "collection / partners (SHG, SPARC, serigraph)",
+      "type": "appropriation",
+      "severity": "low",
+      "problem": "The brief commits revenue to Self Help Graphics and SPARC but not the form: an in-kind print run, a flat fee or a percentage. Without it, \"paid and credited\" is a statement of intent, and a skeptical local audience will judge it by the amount.",
+      "fix": "State the terms (artist fees up front, royalty on units, a fixed donation) in the partner section, and show them on the tag or packaging."
+    },
+    {
+      "target": "provenance.verify / dossiers (carry-over)",
+      "type": "inaccurate",
+      "severity": "low",
+      "problem": "The uniform dossier says a Reaves capsule should be built on an \"Oregon-to-LA\" story. Reaves is an Arkansas native who played at Wichita State and Oklahoma, so the Portland hook is false. The dossier also lists Fear of God's Jerry Lorenzo as an obvious collaborator, though his Athletics line sits with a Nike competitor.",
+      "fix": "Strike the Oregon line from any Reaves content and verify his bio. Keep Fear of God off any partner short-list."
+    },
+    {
+      "target": "calendar[Cup]",
+      "type": "missed-opportunity",
+      "severity": "low",
+      "problem": "The Cup is treated as a small Friday digital drop. But semifinals move for the first time to the higher seed's home arena (Dec 8-9), and the final is Dec 11 at Hinkle Fieldhouse. A Lakers group win could mean a home Cup semifinal at Crypto.com Arena in Dec, which the plan ignores.",
+      "fix": "Add a contingent Dec 4-11 Cup plan (a Cup tee and Doncic content), triggered only if the Lakers win West Group C. Keep it small."
+    }
+  ],
+  "strengths": [
+    "The thesis is specific and could only be about Los Angeles: lineage-based fandom, hand-made design languages (rótulo lettering, serigraph, candy paint) and a post-LeBron jersey wall.",
+    "The partners are real, rooted institutions (Self Help Graphics, the Drew League, SPARC, Inclusive Action for the City, Kuya Lord), with payment and credit stated. That meets the respect bar.",
+    "The risk section is unusually honest: Kobe and Nipsey estate approvals, Jan 26 silence, gang-code review, no Nike storefront in Boyle Heights, and no jabs at LeBron in copy.",
+    "Facts are tied to the verified present: Doncic and Reaves, 46.5 wins, the Dec 25 5 p.m. ET tip, the triangle City Edition and Specter, and the Reaves and Rigorer footwear limit.",
+    "Weighting retail by tier (arena store, Citadel, Nike Melrose, Fairfax seeding) and tying playoff inventory to results shows real commercial sense."
+  ],
+  "summary": "Strong and unmistakably LA, but the calendar is unrealistic. It is Oct 7, and the plan promises hand-made, partner-built product for mid-November and December. It also pitches Candy Paint as a uniform, which the set 2026-27 City Edition and NBA lead times rule out until about 2028. Separate in-season product from 2027-28 builds. Name Black LA partners to match the Black-and-Brown thesis, and drop the Santee Alley framing. Stop relying on an unverified Specter look, and plan the LeBron return on Dec 25 and Feb 15 deliberately."
 }
