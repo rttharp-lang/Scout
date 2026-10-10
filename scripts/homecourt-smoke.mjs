@@ -164,17 +164,35 @@ async function main() {
       await wait(700);
       const seasons = await page.locator("[aria-label=Season] button").count();
       if (seasons < 1) problems.push(`[${vp.label}] calendar has no season selector`);
-      // Pick a team: its year chart with peaks; then the month view.
+      // The year chart picks a month in place; the panel follows.
+      const cols = await page.locator(".hc-chart [role=button]").count();
+      if (cols !== 12) problems.push(`[${vp.label}] calendar chart has ${cols} month buttons, expected 12`);
+      const mname = async () => ((await page.locator(".hc-cal-mname").textContent()) || "").trim();
+      await page.locator(".hc-chart [aria-label^='December']").click();
+      await wait(300);
+      const decLabel = (await page.locator(".hc-chart [aria-label^='December']").getAttribute("aria-label")) || "";
+      const decPeaks = Number((decLabel.match(/(\d+) team/) || [])[1]);
+      const decChips = await page.locator(".hc-cal-panel .hc-team-chip").count();
+      if ((await mname()) !== "December" || !/#\/calendar\/all\/12$/.test(page.url())) problems.push(`[${vp.label}] tapping December showed "${await mname()}" at ${page.url()}`);
+      if (decPeaks && decChips !== decPeaks) problems.push(`[${vp.label}] December says ${decPeaks} teams at peak but shows ${decChips}`);
+      // Pick a team: same month, its own chart; step to the next month; open a moment.
       await page.getByLabel("Team", { exact: true }).selectOption("mem");
-      await wait(600);
-      if (!/#\/calendar\/mem\/year/.test(page.url()) || !(await page.getByText("The peaks: where to focus").count())) problems.push(`[${vp.label}] picking Memphis didn't open its year (${page.url()})`);
-      await page.getByRole("group", { name: "View" }).getByRole("button", { name: "Month" }).click();
-      await wait(400);
-      if (!(await page.getByText(/Memphis in /).count())) problems.push(`[${vp.label}] Memphis month view didn't render`);
-      await page.goto(BASE + "#/calendar/all/month/12", { waitUntil: "load" });
+      await wait(700);
+      if (!/#\/calendar\/mem\/12$/.test(page.url()) || (await mname()) !== "December") problems.push(`[${vp.label}] picking Memphis didn't keep December (${page.url()}, "${await mname()}")`);
+      await page.getByRole("button", { name: /^Next month/ }).click();
+      await wait(300);
+      if ((await mname()) !== "January") problems.push(`[${vp.label}] next month went to "${await mname()}"`);
+      const titles = await page.locator(".hc-mo-title").allTextContents();
+      const long = titles.filter((t) => t.replace(" (key moment)", "").length > 57);
+      if (long.length) problems.push(`[${vp.label}] calendar headlines too long: ${long.join(" | ")}`);
+      if (titles.length) {
+        await page.locator(".hc-mo summary").first().click();
+        await wait(200);
+        if (!(await page.locator(".hc-mo[open] .hc-mo-more").isVisible())) problems.push(`[${vp.label}] tapping a moment didn't open its play`);
+      }
+      await page.goto(BASE + "#/calendar/mem/month/7", { waitUntil: "load" });
       await wait(500);
-      const ranked = await page.locator(".hc-cal-rank li").count();
-      if (ranked !== published.length) problems.push(`[${vp.label}] December across the league ranks ${ranked} teams, expected ${published.length}`);
+      if ((await mname()) !== "July") problems.push(`[${vp.label}] old month link opened "${await mname()}"`);
       // Board: the full view filters by route and target season.
       await page.goto(BASE + "#/opportunities", { waitUntil: "load" });
       await wait(700);
