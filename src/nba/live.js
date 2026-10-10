@@ -21,7 +21,7 @@ async function call(body, signal) {
   let data = null;
   try { data = await r.json(); } catch {}
   if (!r.ok) {
-    const err = new Error((data && data.error) || `HTTP ${r.status}`);
+    const err = new Error((data && data.error) || `the server returned an error (HTTP ${r.status})`);
     err.status = r.status;
     throw err;
   }
@@ -37,7 +37,7 @@ export async function runAgent(agent, team, inputs, { signal, onStage } = {}) {
       onStage && onStage("researching");
       notes = (await call({ agent, team, stage: "research", inputs }, signal)).notes;
     }
-    onStage && onStage("composing");
+    onStage && onStage("writing");
     return call({ agent, team, stage: "compose", notes, inputs }, signal);
   };
   try { return await attempt(); } catch (e) {
@@ -77,7 +77,7 @@ export async function runMarket(team, onUpdate, { signal } = {}) {
   const lensResults = await pool(LENS_IDS, LENS_CONCURRENCY, (id) => one(id).catch((e) => { if (e.status === 503 || e.name === "AbortError") throw e; return null; }));
   LENS_IDS.forEach((id, i) => { if (lensResults[i]) run.dossiers[id] = lensResults[i]; });
   saveLiveRun(team, run);
-  if (Object.keys(run.dossiers).length < LENS_IDS.length) throw new Error(`${LENS_IDS.length - Object.keys(run.dossiers).length} lens agent(s) failed — strategist needs all eleven dossiers`);
+  if (Object.keys(run.dossiers).length < LENS_IDS.length) throw new Error(`${LENS_IDS.length - Object.keys(run.dossiers).length} of the ${LENS_IDS.length} research agents failed, and the strategist needs every dossier`);
 
   run.strategy = await one("strategist", { dossiers: run.dossiers });
   saveLiveRun(team, run);

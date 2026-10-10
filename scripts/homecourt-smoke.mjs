@@ -31,13 +31,13 @@ async function main() {
     const market = published.includes("por") ? "por" : published[0];
     const routes = [
       ["overview", "#/", /Home\s*Court/i],
-      ["league", "#/league", hasLeague ? /Themes[\s\S]*Clusters[\s\S]*Scores[\s\S]*priority board/i : /league stage hasn/i],
+      ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top plays/i : /league stage hasn/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
       ["compare", "#/compare", /Compare\s*markets/i],
       ["agents", "#/agents", /Fifteen agents/i],
-      ...(market ? [["market", `#/m/${market}`, /Opportunities[\s\S]*Product[\s\S]*Agent review/i]] : []),
-      ["pending-or-unknown", "#/m/zzz", /Unknown market/i],
+      ...(market ? [["market", `#/m/${market}`, /Opportunities[\s\S]*Product[\s\S]*How we checked/i]] : []),
+      ["pending-or-unknown", "#/m/zzz", /can.t find that market/i],
     ];
     for (const vp of [{ width: 390, height: 844, label: "phone" }, { width: 1280, height: 900, label: "desktop" }]) {
       const page = await browser.newPage({ viewport: { width: vp.width, height: vp.height } });

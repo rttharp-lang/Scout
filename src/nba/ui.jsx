@@ -35,7 +35,7 @@ export function Header({ route }) {
   const link = (to, label, active) => <a href={to} aria-current={active ? "page" : undefined}>{label}</a>;
   return (
     <header className="hc-header">
-      <a className="hc-brand" href={href()} aria-label="Home Court — all markets">
+      <a className="hc-brand" href={href()} aria-label="Home Court: all markets">
         <ScoutMark />
         <span className="hc-brand-divider" />
         <span className="hc-brand-name">Home Court</span>
@@ -56,8 +56,8 @@ export function Header({ route }) {
 export function Footer() {
   return (
     <footer className="hc-footer">
-      <span>Home Court · Local fandom intelligence for Nike Basketball, Portland OR</span>
-      <span>Researched by Home Court agents · Powered by Anthropic</span>
+      <span>Home Court · Nike Basketball's guide to local NBA fandom · Portland, Oregon</span>
+      <span>Researched by the Home Court agents · Powered by Anthropic</span>
     </footer>
   );
 }
@@ -100,7 +100,7 @@ export const PaletteRow = ({ palette }) => (
 export function MonthStrip({ months }) {
   const on = new Set(months || []);
   return (
-    <div className="hc-months" aria-label={`Active months: ${SEASON_ORDER.filter((m) => on.has(m)).map((m) => MONTHS[m - 1]).join(", ") || "none"}`}>
+    <div className="hc-months" aria-label={`Runs in: ${SEASON_ORDER.filter((m) => on.has(m)).map((m) => MONTHS[m - 1]).join(", ") || "none"}`}>
       {SEASON_ORDER.map((m) => <span key={m} className={on.has(m) ? "on" : ""}>{MONTHS[m - 1][0]}</span>)}
     </div>
   );
@@ -108,17 +108,17 @@ export function MonthStrip({ months }) {
 
 export const Priority = ({ p }) => <span className="hc-priority" data-p={p}>P{p}</span>;
 
-// Live-verified vs written from agent knowledge (see agents/provenance.js).
+// Checked live vs written from agent knowledge (see agents/provenance.js).
 export function Provenance({ of }) {
   const knowledge = of && of.provenance && of.provenance.mode === "knowledge";
   return knowledge
-    ? <Chip tone="line" title="Written from agent knowledge (to mid-2026) — verify time-sensitive claims before acting">Knowledge draft</Chip>
-    : <Chip tone="pop" title="Researched and verified on the live web">Live-verified</Chip>;
+    ? <Chip tone="line" title="Written from the agents' own knowledge, current to mid-2026. Check anything dated before you act on it.">Knowledge draft</Chip>
+    : <Chip tone="pop" title="Researched and checked on the live web">Checked live</Chip>;
 }
 
 export function Confidence({ level }) {
   const tone = { high: "ink", medium: "line", low: "line" }[level] || "line";
-  return <Chip tone={tone} title="Agent confidence">{level} confidence</Chip>;
+  return <Chip tone={tone} title="How sure the agent is">{level} confidence</Chip>;
 }
 
 export function SectionHead({ id, eyebrow, title, children }) {

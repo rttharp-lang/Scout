@@ -10,10 +10,10 @@ import { Chip, SectionHead, href } from "../ui.jsx";
 // The cross-market pass (scripts/nba/workflows/home-court-league.js and
 // home-court-strengthen.js), run after every market has a brief.
 const LEAGUE_STAGE = [
-  ["1 · Audit — six in parallel", "Division auditors", "One per division. Each checks every market file against the live-verified league calendar and League Pulse, fixes date and fact drift, and makes sure every partner a brief names appears in its dossiers."],
-  ["2 · Synthesize", "League Strategist", "Reads all 30 briefs and writes the league read: themes, fandom clusters, tentpoles, the priority board, the Portland playbook and scores calibrated so markets compare (50 = league average)."],
-  ["3 · Critique", "Completeness Critic", "Attacks the league read for inconsistent scores, generic themes, wrong dates and missing markets, and names the weakest briefs."],
-  ["4 · Edit and strengthen", "League Editor + strategists", "The editor resolves every high and medium issue. The weakest briefs then go back to their strategists, and a reviewer checks each revision."],
+  ["1 · Audit, six at once", "Division auditors", "One per division. Each checks every market file against the league calendar and League Pulse, both checked live. It fixes dates and facts that have drifted, and makes sure every partner a brief names turns up in its dossiers."],
+  ["2 · Pull it together", "League Strategist", "Reads all 30 briefs and writes the league read: themes, fan types, big dates, the top plays and the Portland playbook. It also puts every market on one scale, with 50 as league average."],
+  ["3 · Critique", "Completeness Critic", "Goes after the league read for scores that don't line up, generic themes, wrong dates and missing markets. Then it names the weakest briefs."],
+  ["4 · Edit and strengthen", "League Editor + strategists", "The editor fixes every high and medium issue. The weakest briefs go back to their strategists, and a reviewer checks each rewrite."],
 ];
 
 const GROUPS = ["Culture", "Basketball", "Fandom", "Retail"];
@@ -32,10 +32,10 @@ export default function Agents({ preselect }) {
     ctrl.current = new AbortController();
     try {
       await runMarket(team, (id, patch) => setState((s) => ({ ...s, [id]: { ...s[id], ...patch } })), { signal: ctrl.current.signal });
-      setMessage({ ok: true, text: "Run complete — saved in this browser." });
+      setMessage({ ok: true, text: "Done. The run is saved in this browser." });
     } catch (e) {
       const text = e.status === 503
-        ? "Live agents aren't configured on this deployment (the server needs ANTHROPIC_API_KEY). The published research is unaffected."
+        ? "Live runs aren't set up on this server yet. It needs an ANTHROPIC_API_KEY. The published research is unaffected."
         : e.name === "AbortError" ? "Run stopped." : `Run stopped: ${e.message}`;
       setMessage({ ok: false, text });
     } finally {
@@ -59,32 +59,32 @@ export default function Agents({ preselect }) {
 
   return (
     <div>
-      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>The agent system</div>
+      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>How it's made</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Fifteen agents<br />per market</h1>
       <p className="hc-lede" style={{ marginTop: 18 }}>
-        Eleven specialist agents each research one slice of a market on the live web and write a dossier. A strategist turns the dossiers into the Nike Basketball brief, two critics attack it — one fact-checks the dossiers and corrects them in place, one hunts for generic, stereotyped or unfounded recommendations — and an editor resolves every issue. {publishedCount} of 30 markets are published.
+        Eleven specialist agents each research one slice of a market on the live web and write a dossier. A strategist turns the dossiers into a brief for Nike Basketball. Then two critics go after it. One fact-checks the dossiers and fixes them in place. The other hunts for advice that's generic, stereotyped or unfounded. An editor settles every issue. {publishedCount} of 30 markets are published.
       </p>
       <p className="hc-small hc-muted" style={{ marginTop: 12, maxWidth: "70ch" }}>
-        Two research modes, always labeled: <b style={{ color: "var(--text)" }}>Live-verified</b> dossiers were researched and checked on the web. <b style={{ color: "var(--text)" }}>Knowledge drafts</b> were written from the agents' own knowledge (current to mid-2026) when live search was unavailable; their time-sensitive claims sit in a verification queue on each market page until a live run confirms them.
+        Every dossier carries one of two labels. <b style={{ color: "var(--text)" }}>Checked live</b> means it was researched and checked on the web. <b style={{ color: "var(--text)" }}>Knowledge draft</b> means the agents wrote it from their own knowledge, current to mid-2026, because live search wasn't available. Its dated claims wait on a "still to check" list on the market page until a live run confirms them.
       </p>
 
       {/* Pipeline */}
       <section className="hc-section">
-        <SectionHead eyebrow="The workflow" title="How a market gets researched" />
+        <SectionHead eyebrow="Step by step" title="How a market gets made" />
         <div className="hc-card">
           <div className="hc-pipeline">
             <div>
-              <div className="hc-kv-label">1 · Research — in parallel</div>
+              <div className="hc-kv-label">1 · Research, all at once</div>
               <div className="hc-grid hc-grid-2" style={{ gap: 8 }}>{LENS_AGENTS.map(tile)}</div>
             </div>
             <div className="hc-pipe-arrow" aria-hidden="true">→</div>
             <div>
-              <div className="hc-kv-label">2 · Synthesize</div>
+              <div className="hc-kv-label">2 · Write the brief</div>
               {tile(AGENT_BY_ID.strategist)}
             </div>
             <div className="hc-pipe-arrow" aria-hidden="true">→</div>
             <div>
-              <div className="hc-kv-label">3 · Verify — in parallel</div>
+              <div className="hc-kv-label">3 · Check, both at once</div>
               <div style={{ display: "grid", gap: 8 }}>{tile(AGENT_BY_ID.factcheck)}{tile(AGENT_BY_ID.authenticity)}</div>
             </div>
             <div className="hc-pipe-arrow" aria-hidden="true">→</div>
@@ -101,17 +101,17 @@ export default function Agents({ preselect }) {
               {TEAMS.map((t) => <option key={t.id} value={t.id}>{teamLabel(t)}</option>)}
             </select>
             {!running ? <button className="hc-btn" onClick={start}>Run all 15 agents</button> : <button className="hc-btn hc-btn-ghost" onClick={stop}>Stop</button>}
-            {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>View the live brief →</a>}
+            {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>See the live brief →</a>}
           </div>
           {message && <p className="hc-small" role="status" style={{ marginTop: 10, color: message.ok ? "var(--good)" : "var(--text)" }}>{message.text}</p>}
-          <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}>Live runs use the Claude API with web search, take a few minutes, and are saved only in this browser; the published research doesn't change.</p>
+          <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}>Live runs use the Claude API with web search and take a few minutes. They're saved only in this browser, and the published research stays as it is.</p>
         </div>
       </section>
 
       {/* League stage */}
       <section className="hc-section">
         <SectionHead eyebrow="Once all 30 markets are in" title="The league stage">
-          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("league")}>Open the league read →</a>
+          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("league")}>Go to the league read →</a>
         </SectionHead>
         <div className="hc-grid hc-grid-4">
           {LEAGUE_STAGE.map(([step, name, what]) => (
@@ -135,7 +135,7 @@ export default function Agents({ preselect }) {
             </div>
           </div>
         ))}
-        <h3 className="hc-h2" style={{ marginBottom: 12 }}>Synthesis & verification</h3>
+        <h3 className="hc-h2" style={{ marginBottom: 12 }}>Writing and checking</h3>
         <div className="hc-grid hc-grid-4">
           {SYNTHESIS_AGENTS.map((a) => (
             <div key={a.id} className="hc-card-invert hc-stack">
@@ -148,7 +148,7 @@ export default function Agents({ preselect }) {
       </section>
 
       <section className="hc-section">
-        <SectionHead eyebrow="Every agent is held to" title="The bar" />
+        <SectionHead eyebrow="The rules every agent follows" title="The standard" />
         <div className="hc-card">
           <ul className="hc-list">
             {STANDARDS.split("\n").filter((l) => l.startsWith("- ")).map((l, i) => {

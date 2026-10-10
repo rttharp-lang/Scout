@@ -30,7 +30,7 @@ function colPath(x, y, w, h, r = 4) {
   return `M${x},${y + h} L${x},${y + rr} Q${x},${y} ${x + rr},${y} L${x + w - rr},${y} Q${x + w},${y} ${x + w},${y + rr} L${x + w},${y + h} Z`;
 }
 
-// ── Fan rhythm: 12 columns (season order), activation dots underneath ──────
+// ── Fan rhythm: 12 columns (season order), play dots underneath ──────
 export function RhythmChart({ months, calendar = [], now }) {
   const [ref, W] = useWidth();
   const [hover, setHover] = useState(null);
@@ -47,7 +47,7 @@ export function RhythmChart({ months, calendar = [], now }) {
 
   return (
     <div className="hc-chart" ref={ref}>
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Fan engagement intensity by month, October to September">
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Fan heat by month, October to September">
         {[0, 50, 100].map((g) => (
           <g key={g}>
             <line x1={padL} x2={W - padR} y1={y(g)} y2={y(g)} stroke="var(--border)" strokeWidth="1" />
@@ -70,7 +70,7 @@ export function RhythmChart({ months, calendar = [], now }) {
                 <circle key={k} cx={x + barW / 2 + (k - (Math.min(a.length, 3) - 1) / 2) * 10} cy={padT + plotH + 33} r="4" fill={k < p1 ? "var(--pop)" : "var(--text)"} stroke="var(--bg)" strokeWidth="2" />
               ))}
               <rect x={padL + band * i} y={0} width={band} height={H} fill="transparent" tabIndex={0}
-                aria-label={`${MONTHS_LONG[m - 1]}: intensity ${v}${d ? `, ${d.phase}` : ""}${a.length ? `, ${a.length} activation${a.length > 1 ? "s" : ""}` : ""}`}
+                aria-label={`${MONTHS_LONG[m - 1]}: fan heat ${v}${d ? `, ${d.phase}` : ""}${a.length ? `, ${a.length} play${a.length > 1 ? "s" : ""}` : ""}`}
                 onMouseEnter={() => setHover(m)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(m)} onBlur={() => setHover(null)} />
             </g>
           );
@@ -81,15 +81,15 @@ export function RhythmChart({ months, calendar = [], now }) {
           <div><strong>{tip.intensity}</strong> <span className="hc-muted">· {MONTHS_LONG[tip.month - 1]}</span></div>
           <div style={{ fontWeight: 600, marginTop: 2 }}>{tip.phase}</div>
           {tip.team.length > 0 && <div className="hc-muted" style={{ marginTop: 4 }}>{tip.team.join(" · ")}</div>}
-          {tip.local.length > 0 && <div style={{ marginTop: 4 }}>City: {tip.local.join(" · ")}</div>}
-          {tip.retailSignal && <div style={{ marginTop: 4 }}>Buying: {tip.retailSignal}</div>}
+          {tip.local.length > 0 && <div style={{ marginTop: 4 }}>In town: {tip.local.join(" · ")}</div>}
+          {tip.retailSignal && <div style={{ marginTop: 4 }}>Shopping: {tip.retailSignal}</div>}
           {acts(tip.month).length > 0 && <div style={{ marginTop: 6, borderTop: "1px solid var(--border)", paddingTop: 6 }}>{acts(tip.month).map((c, k) => <div key={k}>● {c.moment}</div>)}</div>}
         </div>
       )}
       <div className="hc-legend" style={{ marginTop: 6 }}>
-        <span><svg width="10" height="10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="var(--accent)" /></svg> Fan engagement (0–100, this fan base's own peak = 100)</span>
-        <span><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="var(--pop)" /></svg> Priority-1 activation</span>
-        <span><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="var(--text)" /></svg> Other activation</span>
+        <span><svg width="10" height="10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="var(--accent)" /></svg> Fan heat, 0 to 100. This fan base's own peak is 100.</span>
+        <span><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="var(--pop)" /></svg> Top-priority play</span>
+        <span><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="var(--text)" /></svg> Other play</span>
       </div>
     </div>
   );
@@ -137,10 +137,10 @@ export function LeagueHeatmap({ rows, mode = "intensity", now, onSelect }) {
                 {SEASON_ORDER.map((m) => {
                   const v = valueOf(r, m);
                   const p1 = (r.calendar || []).some((c) => c.month === m && c.priority === 1);
-                  if (v == null) return <td key={m} style={{ background: "var(--surface)" }} aria-label={`${placeOf(r.team)}: not yet researched`} />;
+                  if (v == null) return <td key={m} style={{ background: "var(--surface)" }} aria-label={`${placeOf(r.team)}: not researched yet`} />;
                   return (
                     <td key={m} tabIndex={0} style={{ background: rampFor(v) }}
-                      aria-label={`${placeOf(r.team)} ${r.team.name}, ${MONTHS_LONG[m - 1]}: ${mode === "intensity" ? `fan intensity ${v}` : `activation load ${v}`}${p1 ? ", priority-1 activation" : ""}`}
+                      aria-label={`${placeOf(r.team)} ${r.team.name}, ${MONTHS_LONG[m - 1]}: ${mode === "intensity" ? `fan heat ${v}` : `plays planned ${v}`}${p1 ? ", top-priority play" : ""}`}
                       onMouseEnter={(e) => show(e, r, m)} onMouseLeave={() => setTip(null)} onFocus={(e) => show(e, r, m)} onBlur={() => setTip(null)}
                       onClick={() => onSelect && onSelect(m)}>
                       {p1 && <span className="hc-heat-dot" />}
@@ -153,10 +153,10 @@ export function LeagueHeatmap({ rows, mode = "intensity", now, onSelect }) {
         </table>
       </div>
       <div className="hc-legend" style={{ marginTop: 10 }}>
-        <span>{mode === "intensity" ? "Fan engagement" : "Activation load"}: low</span>
+        <span>{mode === "intensity" ? "Fan heat" : "Plays planned"}: low</span>
         <span className="hc-legend-ramp">{RAMP.map((c, i) => <i key={i} style={{ background: c }} />)}</span>
         <span>high</span>
-        <span style={{ marginLeft: 8, display: "inline-flex", alignItems: "center", gap: 6 }}><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="var(--pop)" stroke="#0A0A0A" strokeWidth="1.5" /></svg> Priority-1 activation</span>
+        <span style={{ marginLeft: 8, display: "inline-flex", alignItems: "center", gap: 6 }}><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="var(--pop)" stroke="#0A0A0A" strokeWidth="1.5" /></svg> Top-priority play</span>
       </div>
       {tip && (() => {
         const { r, m } = tip;

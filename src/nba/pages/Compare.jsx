@@ -37,10 +37,10 @@ export default function Compare({ ids }) {
                 <select className="hc-select" value={id} onChange={(e) => setAt(i, e.target.value)} aria-label={`Market ${i + 1}`}>
                   {published.map((m) => <option key={m.id} value={m.id} disabled={m.id !== id && sel.includes(m.id)}>{placeOf(m.team)} {m.team.name}</option>)}
                 </select>
-                {sel.length > 1 && <button className="hc-pill-btn" onClick={() => remove(i)} aria-label={`Remove ${id}`}>×</button>}
+                {sel.length > 1 && <button className="hc-pill-btn" onClick={() => remove(i)} aria-label={`Remove market ${i + 1}`}>×</button>}
               </span>
             ))}
-            {sel.length < MAX && <button className="hc-pill-btn" onClick={() => setSel((s) => [...s, published.find((m) => !s.includes(m.id)).id])}>+ Add market</button>}
+            {sel.length < MAX && <button className="hc-pill-btn" onClick={() => setSel((s) => [...s, published.find((m) => !s.includes(m.id)).id])}>+ Add a market</button>}
           </div>
 
           <div className="hc-grid" style={{ gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, 300px), 1fr))` }}>
@@ -55,10 +55,10 @@ export default function Compare({ ids }) {
                   <MiniRhythm rhythm={m.rhythm} />
                   {!d ? <p className="hc-muted hc-small">Loading…</p> : (
                     <>
-                      <div><div className="hc-kv-label">Top insights</div><ol className="hc-bullets hc-small">{d.strategy.topInsights.slice(0, 3).map((t, i) => <li key={i}><b>{t.title}.</b> {t.insight}</li>)}</ol></div>
-                      <div><div className="hc-kv-label">Opportunities</div><ul className="hc-list">{[...d.strategy.opportunities].sort((a, b) => a.priority - b.priority).slice(0, 4).map((o) => <li key={o.id} className="hc-small"><span className="hc-row"><Priority p={o.priority} /><b>{o.title}</b></span><div className="hc-muted" style={{ marginTop: 4 }}>{o.when} · {o.products.slice(0, 3).join(", ")}</div></li>)}</ul></div>
-                      <div><div className="hc-kv-label">City Edition direction</div><b>{d.strategy.uniform.concept}</b><p className="hc-small" style={{ margin: "4px 0 10px" }}>{d.strategy.uniform.narrative}</p><PaletteRow palette={d.strategy.uniform.palette} /></div>
-                      <div><div className="hc-kv-label">Gameday look</div><p className="hc-small">{d.dossiers.fanbase.extra.gamedayLook}</p></div>
+                      <div><div className="hc-kv-label">What to know</div><ol className="hc-bullets hc-small">{d.strategy.topInsights.slice(0, 3).map((t, i) => <li key={i}><b>{t.title}.</b> {t.insight}</li>)}</ol></div>
+                      <div><div className="hc-kv-label">Top plays</div><ul className="hc-list">{[...d.strategy.opportunities].sort((a, b) => a.priority - b.priority).slice(0, 4).map((o) => <li key={o.id} className="hc-small"><span className="hc-row"><Priority p={o.priority} /><b>{o.title}</b></span><div className="hc-muted" style={{ marginTop: 4 }}>{o.when} · {o.products.slice(0, 3).join(", ")}</div></li>)}</ul></div>
+                      <div><div className="hc-kv-label">The City Edition idea</div><b>{d.strategy.uniform.concept}</b><p className="hc-small" style={{ margin: "4px 0 10px" }}>{d.strategy.uniform.narrative}</p><PaletteRow palette={d.strategy.uniform.palette} /></div>
+                      <div><div className="hc-kv-label">The gameday look</div><p className="hc-small">{d.dossiers.fanbase.extra.gamedayLook}</p></div>
                     </>
                   )}
                 </div>
@@ -76,8 +76,8 @@ function MiniRhythm({ rhythm }) {
   const W = 240, H = 64, band = W / 12, bw = Math.min(12, band * 0.6);
   return (
     <div>
-      <div className="hc-kv-label">Fan rhythm (Oct → Sep)</div>
-      <svg width="100%" viewBox={`0 0 ${W} ${H + 14}`} role="img" aria-label={`Fan engagement by month: ${SEASON_ORDER.map((m) => `${MONTHS[m - 1]} ${rhythm[m - 1].intensity}`).join(", ")}`}>
+      <div className="hc-kv-label">The fan year, Oct to Sep</div>
+      <svg width="100%" viewBox={`0 0 ${W} ${H + 14}`} role="img" aria-label={`Fan heat by month: ${SEASON_ORDER.map((m) => `${MONTHS[m - 1]} ${rhythm[m - 1].intensity}`).join(", ")}`}>
         <line x1="0" x2={W} y1={H} y2={H} stroke="var(--border)" />
         {SEASON_ORDER.map((m, i) => {
           const v = rhythm[m - 1].intensity, h = (H - 4) * v / 100, x = band * i + (band - bw) / 2;

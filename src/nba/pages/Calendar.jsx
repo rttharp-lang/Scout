@@ -1,5 +1,5 @@
-// League activation calendar: every market's fan rhythm on one heatmap, the
-// league tentpoles, and a month drill-down of every planned activation.
+// League calendar: every market's fan rhythm on one heatmap, the league's
+// big dates, and a month-by-month list of every planned play.
 import React, { useMemo, useState } from "react";
 import { markets, league, currentMonth, MONTHS_LONG, SEASON_ORDER, MONTHS } from "../data.js";
 import { LeagueHeatmap } from "../charts.jsx";
@@ -24,14 +24,14 @@ export default function Calendar() {
 
   return (
     <div>
-      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>When to activate</div>
+      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>When to show up</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>League<br />calendar</h1>
-      <p className="hc-lede" style={{ marginTop: 18 }}>Each row is one fan base's year, scored by its own Fan Rhythm agent (100 = that market's peak). Lime dots mark priority-1 activations from the market's brief. Pick a month to see every play.</p>
+      <p className="hc-lede" style={{ marginTop: 18 }}>Each row is one city's fan year, scored by its own Fan Rhythm agent. 100 is that city's peak. Lime dots mark the top-priority plays in each brief. Pick a month to see them all.</p>
 
       <div className="hc-row" style={{ marginTop: 26, marginBottom: 14, gap: 10 }}>
-        <span className="hc-row" role="group" aria-label="Color by">
-          <button className="hc-pill-btn" aria-pressed={mode === "intensity"} onClick={() => setMode("intensity")}>Fan engagement</button>
-          <button className="hc-pill-btn" aria-pressed={mode === "load"} onClick={() => setMode("load")}>Activation load</button>
+        <span className="hc-row" role="group" aria-label="Shade by">
+          <button className="hc-pill-btn" aria-pressed={mode === "intensity"} onClick={() => setMode("intensity")}>Fan heat</button>
+          <button className="hc-pill-btn" aria-pressed={mode === "load"} onClick={() => setMode("load")}>Plays planned</button>
         </span>
         <span className="hc-row" role="group" aria-label="Order rows">
           <button className="hc-pill-btn" aria-pressed={order === "peak"} onClick={() => setOrder("peak")}>Hottest in {MONTHS[month - 1]}</button>
@@ -41,12 +41,12 @@ export default function Calendar() {
 
       <div className="hc-card">
         {rows.length ? <LeagueHeatmap rows={rows} mode={mode} now={now} onSelect={setMonth} /> : <div className="hc-empty">No markets published yet.</div>}
-        {pending > 0 && <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}>{pending} market{pending > 1 ? "s" : ""} still being researched — not shown.</p>}
+        {pending > 0 && <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}>{pending} market{pending > 1 ? "s" : ""} still being researched, so not shown.</p>}
       </div>
 
       {league && (
         <section className="hc-section">
-          <SectionHead eyebrow="Cross-market moments" title="League tentpoles" />
+          <SectionHead eyebrow="Nights across the league" title="The big dates" />
           <div className="hc-grid hc-grid-3">
             {[...league.tentpoles].sort((a, b) => SEASON_ORDER.indexOf(a.month) - SEASON_ORDER.indexOf(b.month)).map((t, i) => (
               <article key={i} className={t.month === now ? "hc-card-invert hc-stack" : "hc-card hc-stack"}>
@@ -63,7 +63,7 @@ export default function Calendar() {
       )}
 
       <section className="hc-section">
-        <SectionHead eyebrow="Month drill-down" title={MONTHS_LONG[month - 1]}>
+        <SectionHead eyebrow="Month by month" title={MONTHS_LONG[month - 1]}>
           <div className="hc-tabs" style={{ marginBottom: 0 }} role="group" aria-label="Month">
             {SEASON_ORDER.map((m) => <button key={m} className="hc-pill-btn" aria-pressed={m === month} onClick={() => setMonth(m)}>{MONTHS[m - 1]}</button>)}
           </div>
@@ -83,7 +83,7 @@ export default function Calendar() {
               </a>
             ))}
           </div>
-        ) : <div className="hc-card hc-muted">No activations planned for {MONTHS_LONG[month - 1]}.</div>}
+        ) : <div className="hc-card hc-muted">Nothing planned for {MONTHS_LONG[month - 1]}.</div>}
       </section>
     </div>
   );

@@ -10,11 +10,11 @@ const SORTS = [...SCORE_LABELS, ["az", "A–Z"]];
 // Priority titles end with the brief's opportunity id, e.g. "Banner '26 (ring-night-1973-2026)".
 const priorityTitle = (t) => t.replace(/\s*\([a-z0-9]+(?:-[a-z0-9]+)+\)\s*$/, "");
 
-const SECTIONS = [["themes", "Themes"], ["clusters", "Clusters"], ["scores", "Scores"], ["priorities", "Priority board"], ["portland", "Portland playbook"], ["watchlist", "Watchlist"]];
+const SECTIONS = [["themes", "Themes"], ["clusters", "Fan types"], ["scores", "Scores"], ["priorities", "Top plays"], ["portland", "For Portland"], ["watchlist", "Watchlist"]];
 
 export default function League() {
   if (!league) {
-    return <div className="hc-empty">The league stage hasn't run yet: it needs all 30 markets researched first.</div>;
+    return <div className="hc-empty">The league stage hasn't run yet. It starts once all 30 markets are researched.</div>;
   }
   const name = (id) => (TEAM_BY_ID[id] ? shortLabel(TEAM_BY_ID[id]) : id);
 
@@ -28,12 +28,12 @@ export default function League() {
           {SECTIONS.filter(([id]) => id !== "watchlist" || league.watchlist.length).map(([id, label]) => (
             <a key={id} className="hc-pill-btn" style={{ textDecoration: "none" }} href={`#${id}`} onClick={(e) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); }}>{label}</a>
           ))}
-          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>Tentpoles →</a>
+          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>Big dates →</a>
         </nav>
       </section>
 
       <section className="hc-section">
-        <SectionHead id="themes" eyebrow={`${league.themes.length} patterns across the briefs`} title="Themes" />
+        <SectionHead id="themes" eyebrow={`${league.themes.length} patterns across the briefs`} title="What the cities share" />
         <div className="hc-grid hc-grid-2">
           {league.themes.map((t, i) => (
             <article key={i} className="hc-card hc-stack">
@@ -47,7 +47,7 @@ export default function League() {
       </section>
 
       <section className="hc-section">
-        <SectionHead id="clusters" eyebrow="Every market in one fandom archetype" title="Clusters" />
+        <SectionHead id="clusters" eyebrow="Every market, sorted by the kind of fan base it has" title="Fan types" />
         <div className="hc-grid hc-grid-3">
           {league.clusters.map((c, i) => (
             <article key={i} className="hc-card-invert hc-stack">
@@ -65,8 +65,8 @@ export default function League() {
       <section className="hc-section">
         <div className="hc-grid hc-grid-2">
           <div className="hc-card" id="priorities">
-            <h2 className="hc-h2">League priority board</h2>
-            <p className="hc-small hc-muted" style={{ marginTop: 6 }}>The highest-value opportunities across all 30 briefs, ranked.</p>
+            <h2 className="hc-h2">The top plays</h2>
+            <p className="hc-small hc-muted" style={{ marginTop: 6 }}>The best opportunities in all 30 briefs, in order.</p>
             <ol className="hc-list" style={{ marginTop: 12 }}>
               {league.priorities.map((p, i) => (
                 <li key={i} style={{ display: "grid", gridTemplateColumns: "28px minmax(0, 1fr)", gap: 10 }}>
@@ -77,7 +77,7 @@ export default function League() {
             </ol>
           </div>
           <div className="hc-card-invert" id="portland">
-            <h2 className="hc-h2">Playbook for the Portland team</h2>
+            <h2 className="hc-h2">For the team in Portland</h2>
             <ul className="hc-list" style={{ marginTop: 12 }}>{league.portland.map((p, i) => <li key={i}><b>{p.title}</b><div className="hc-small hc-muted" style={{ marginTop: 4 }}>{p.detail}</div></li>)}</ul>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function League() {
 
       {league.watchlist.length > 0 && (
         <section className="hc-section">
-          <SectionHead id="watchlist" eyebrow="Expansion and markets in flux" title="Watchlist" />
+          <SectionHead id="watchlist" eyebrow="Expansion, and markets in flux" title="Ones to watch" />
           <div className="hc-grid hc-grid-2">
             {league.watchlist.map((w, i) => (
               <article key={i} className="hc-card hc-stack">
@@ -110,12 +110,12 @@ function Scores() {
   }, [sort]);
   return (
     <section className="hc-section">
-      <SectionHead id="scores" eyebrow="Calibrated across all 30 markets · 50 = league average" title="Scores">
+      <SectionHead id="scores" eyebrow="All 30 markets on one scale · 50 is league average" title="The scores">
         <span className="hc-row" role="group" aria-label="Sort by">
           {SORTS.map(([k, l]) => <button key={k} className="hc-pill-btn" aria-pressed={sort === k} onClick={() => setSort(k)}>{l}</button>)}
         </span>
       </SectionHead>
-      <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 14 }}>Open a market for the League Strategist's note on why it sits there, with the brief's own scores for comparison.</p>
+      <p className="hc-small hc-muted" style={{ marginTop: -8, marginBottom: 14 }}>Open a market to read the League Strategist's note on why it sits there. The note sets it against the brief's own scores.</p>
       <div className="hc-card hc-scores">
         <div className="hc-scores-row hc-scores-head" aria-hidden="true">
           <span>Market</span>
@@ -132,7 +132,7 @@ function Scores() {
                 </span>
               ))}
             </summary>
-            <p className="hc-small hc-scores-note">{s.note} <a href={href("m", s.team.id)}>Open the market →</a></p>
+            <p className="hc-small hc-scores-note">{s.note} <a href={href("m", s.team.id)}>Go to the market →</a></p>
           </details>
         ))}
       </div>

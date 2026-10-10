@@ -1,4 +1,4 @@
-// League overview: what Home Court is, what to activate this month across all
+// League overview: what Home Court is, the top plays this month across all
 // markets, a teaser of the league read (full read on #/league), and every market as a card.
 import React, { useMemo, useState } from "react";
 import { markets, league, publishedCount, currentMonth, MONTHS_LONG, MONTHS } from "../data.js";
@@ -32,10 +32,10 @@ export default function Overview() {
     <div>
       <section className="hc-home-hero">
         <div>
-          <div className="hc-eyebrow" style={{ marginBottom: 14 }}>Nike Basketball · Local fandom intelligence</div>
+          <div className="hc-eyebrow" style={{ marginBottom: 14 }}>Nike Basketball · A guide to local NBA fandom</div>
           <h1 className="hc-display" style={{ fontSize: "clamp(3.6rem, 12vw, 10rem)" }}>Home<br />Court</h1>
           <p className="hc-lede" style={{ marginTop: 22 }}>
-            {league ? league.headline : "Every NBA market, researched by a team of agents — music, art, food, culture, the underground, grassroots hoops, the fan base and its yearly rhythm, uniforms, and retail — then synthesized into where to play, when to activate, and which products to make."}
+            {league ? league.headline : "Every NBA city, researched by a team of agents: its music, art, food and underground, its courts and its fans, its uniforms and its shops. Each city gets a brief on where to show up, when, and what to make."}
           </p>
         </div>
         <div className="hc-card-invert">
@@ -43,9 +43,9 @@ export default function Overview() {
             <div className="hc-stat"><b>{publishedCount}<span className="hc-muted" style={{ fontSize: "0.5em" }}>/30</span></b><span className="hc-small hc-muted">markets published</span></div>
             <div className="hc-stat"><b>{ALL_AGENTS.length}</b><span className="hc-small hc-muted">agents per market</span></div>
             <div className="hc-stat"><b>{sources.toLocaleString()}</b><span className="hc-small hc-muted">sources cited</span></div>
-            <div className="hc-stat"><b>{checks.toLocaleString()}</b><span className="hc-small hc-muted">claims audited by critics</span></div>
-            <div className="hc-stat"><b>{queued.toLocaleString()}</b><span className="hc-small hc-muted">claims queued to verify live</span></div>
-            <div className="hc-stat"><b>{markets.filter((m) => m.verification && m.verification.knowledge === 0).length}</b><span className="hc-small hc-muted">markets fully live-verified</span></div>
+            <div className="hc-stat"><b>{checks.toLocaleString()}</b><span className="hc-small hc-muted">claims checked by critics</span></div>
+            <div className="hc-stat"><b>{queued.toLocaleString()}</b><span className="hc-small hc-muted">claims still to check live</span></div>
+            <div className="hc-stat"><b>{markets.filter((m) => m.verification && m.verification.knowledge === 0).length}</b><span className="hc-small hc-muted">markets fully checked live</span></div>
           </div>
           <a href={href("agents")} className="hc-btn" style={{ display: "inline-block", marginTop: 22, textDecoration: "none" }}>How the agents work</a>
         </div>
@@ -53,8 +53,8 @@ export default function Overview() {
 
       {/* This month */}
       <section className="hc-section">
-        <SectionHead eyebrow={`Activate now · ${MONTHS_LONG[now - 1]}`} title="This month's priority plays">
-          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>Full league calendar →</a>
+        <SectionHead eyebrow={`On now · ${MONTHS_LONG[now - 1]}`} title="This month's top plays">
+          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>The full calendar →</a>
         </SectionHead>
         {thisMonth.length ? (
           <div className="hc-grid hc-grid-3">
@@ -71,16 +71,16 @@ export default function Overview() {
               </a>
             ))}
           </div>
-        ) : <div className="hc-card hc-muted">No priority-1 activations published for {MONTHS_LONG[now - 1]} yet.</div>}
+        ) : <div className="hc-card hc-muted">No top-priority plays for {MONTHS_LONG[now - 1]} yet.</div>}
       </section>
 
       {league && <LeagueTeaser />}
 
       {/* Markets */}
       <section className="hc-section">
-        <SectionHead eyebrow="30 markets" title="Markets" />
+        <SectionHead eyebrow="All 30" title="The markets" />
         <div className="hc-row" style={{ marginBottom: 18, gap: 10 }}>
-          <input className="hc-input" placeholder="Search a city, team or archetype…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search markets" style={{ flex: "1 1 220px", maxWidth: 320 }} />
+          <input className="hc-input" placeholder="Search a city, team or fan type" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search markets" style={{ flex: "1 1 220px", maxWidth: 320 }} />
           <select className="hc-select" value={conf} onChange={(e) => { setConf(e.target.value); setDivision("All"); }} aria-label="Conference">
             {["All", "East", "West"].map((c) => <option key={c} value={c}>{c === "All" ? "Both conferences" : `${c}ern Conference`}</option>)}
           </select>
@@ -95,7 +95,7 @@ export default function Overview() {
         <div className="hc-grid hc-grid-3">
           {rows.map((m) => <MarketCard key={m.id} m={m} />)}
         </div>
-        {!rows.length && <div className="hc-empty">No markets match.</div>}
+        {!rows.length && <div className="hc-empty">Nothing matches that search.</div>}
       </section>
     </div>
   );
@@ -110,10 +110,10 @@ function MarketCard({ m }) {
       <div className="hc-market-body">
         <div className="hc-row" style={{ justifyContent: "space-between" }}>
           <span className="hc-eyebrow">{t.abbr} · {t.division}</span>
-          {m.status !== "complete" ? <Chip tone="line">Research pending</Chip>
-            : m.verification && m.verification.knowledge === 0 ? <Chip tone="pop">Live-verified</Chip>
-            : m.verification && m.verification.live > 0 ? <Chip tone="line" title={`${m.verification.live} of 11 dossiers verified on the live web`}>Partly verified</Chip>
-            : <Chip tone="line" title="Written from agent knowledge (to mid-2026) — verify before acting">Knowledge draft</Chip>}
+          {m.status !== "complete" ? <Chip tone="line">Not researched yet</Chip>
+            : m.verification && m.verification.knowledge === 0 ? <Chip tone="pop">Checked live</Chip>
+            : m.verification && m.verification.live > 0 ? <Chip tone="line" title={`${m.verification.live} of 11 dossiers checked on the live web`}>Partly checked</Chip>
+            : <Chip tone="line" title="Written from the agents' own knowledge, current to mid-2026. Check before you act.">Knowledge draft</Chip>}
         </div>
         <div>
           <h3 className="hc-market-city">{placeOf(t)}</h3>
@@ -129,7 +129,7 @@ function MarketCard({ m }) {
               <Meter label="Culture" value={m.scorecard.culture} />
               <Meter label="Retail" value={m.scorecard.retail} />
             </div>
-            {top && <div className="hc-small" style={{ borderTop: "1px solid var(--border)", paddingTop: 10 }}><span className="hc-muted">Top play · </span><b>{top.title}</b> <span className="hc-muted">({top.months.map((x) => MONTHS[x - 1]).slice(0, 3).join(", ")}{top.months.length > 3 ? "…" : ""})</span></div>}
+            {top && <div className="hc-small" style={{ borderTop: "1px solid var(--border)", paddingTop: 10 }}><span className="hc-muted">Top play: </span><b>{top.title}</b> <span className="hc-muted">({top.months.map((x) => MONTHS[x - 1]).slice(0, 3).join(", ")}{top.months.length > 3 ? "…" : ""})</span></div>}
           </>
         ) : <p className="hc-small hc-muted" style={{ marginTop: "auto" }}>{t.focus}</p>}
       </div>
@@ -143,7 +143,7 @@ function LeagueTeaser() {
   return (
     <section className="hc-section">
       <SectionHead eyebrow="The league read" title="Across the league">
-        <a className="hc-btn" style={{ textDecoration: "none" }} href={href("league")}>Open the league read →</a>
+        <a className="hc-btn" style={{ textDecoration: "none" }} href={href("league")}>Read the whole thing →</a>
       </SectionHead>
       <div className="hc-grid hc-grid-2">
         <div className="hc-card">
@@ -158,7 +158,7 @@ function LeagueTeaser() {
           </ol>
         </div>
         <div className="hc-card-invert">
-          <div className="hc-eyebrow">{league.clusters.length} fandom clusters</div>
+          <div className="hc-eyebrow">{league.clusters.length} kinds of fan base</div>
           <ul className="hc-list" style={{ marginTop: 10 }}>
             {league.clusters.map((c, i) => (
               <li key={i}>

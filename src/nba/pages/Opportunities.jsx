@@ -1,5 +1,5 @@
-// Every opportunity across all published markets on one board — filter by
-// activation month, priority, upside, conference and product to plan a
+// Every opportunity across all published markets on one board. Filter by
+// month, priority, upside, conference and product to plan a
 // league-wide line or a travel calendar.
 import React, { useMemo, useState } from "react";
 import { markets, currentMonth, MONTHS, MONTHS_LONG, SEASON_ORDER } from "../data.js";
@@ -40,13 +40,13 @@ export default function Opportunities() {
 
   return (
     <div>
-      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Where · when · how · which products</div>
+      <div className="hc-eyebrow" style={{ marginBottom: 12 }}>Every play, every market</div>
       <h1 className="hc-display" style={{ fontSize: "clamp(3rem, 9vw, 7rem)" }}>Opportunity<br />board</h1>
-      <p className="hc-lede" style={{ marginTop: 18 }}>All {all.length} opportunities from {new Set(all.map((o) => o.m.id)).size} market briefs. Filter to the window you're planning for, the product family you own, or the size of the bet.</p>
+      <p className="hc-lede" style={{ marginTop: 18 }}>All {all.length} opportunities from {new Set(all.map((o) => o.m.id)).size} market briefs, in one place. Filter by the month you're planning for, the product you own or the size of the bet.</p>
 
       <div className="hc-row" style={{ marginTop: 26, gap: 10 }}>
-        <input className="hc-input" placeholder="Search opportunities, products, places…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search opportunities" style={{ flex: "1 1 240px", maxWidth: 340 }} />
-        <select className="hc-select" value={month} onChange={(e) => setMonth(Number(e.target.value))} aria-label="Activation month">
+        <input className="hc-input" placeholder="Search plays, products, places" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search opportunities" style={{ flex: "1 1 240px", maxWidth: 340 }} />
+        <select className="hc-select" value={month} onChange={(e) => setMonth(Number(e.target.value))} aria-label="Month">
           <option value={0}>Any month</option>
           {SEASON_ORDER.map((m) => <option key={m} value={m}>{MONTHS_LONG[m - 1]}{m === now ? " (now)" : ""}</option>)}
         </select>
@@ -80,11 +80,11 @@ export default function Opportunities() {
             </div>
             <KV label="How"><p className="hc-small">{o.how}</p></KV>
             <div className="hc-row">{o.products.map((p, i) => <Chip key={i}>{p}</Chip>)}</div>
-            <div className="hc-tiny hc-muted">For: {o.segment} · Active {o.months.map((x) => MONTHS[x - 1]).join(", ")}</div>
+            <div className="hc-tiny hc-muted">For {o.segment} · Runs {o.months.map((x) => MONTHS[x - 1]).join(", ")}</div>
           </article>
         ))}
       </div>
-      {!rows.length && <div className="hc-empty">No opportunities match these filters.</div>}
+      {!rows.length && <div className="hc-empty">Nothing matches these filters.</div>}
     </div>
   );
 }
