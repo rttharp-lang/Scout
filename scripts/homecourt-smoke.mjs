@@ -73,7 +73,7 @@ async function main() {
       ["league", "#/league", hasLeague ? /Themes[\s\S]*Fan types[\s\S]*Scores[\s\S]*Top opportunities/i : /league read isn/i],
       ["calendar", "#/calendar", /League\s*calendar/i],
       ["opportunities", "#/opportunities", /Opportunity\s*board/i],
-      ["compare", "#/compare", hasLeague ? /Compare\s*markets[\s\S]*Themes[\s\S]*Fan types/i : /Compare\s*markets/i],
+      ["compare", "#/compare", /Opportunity\s*board[\s\S]*Compare ideas[\s\S]*The pick/i],
       ["agents", "#/agents", /Fifteen agents[\s\S]*Method[\s\S]*Known gaps/i],
       ["method", "#/method", /Method[\s\S]*Evidence[\s\S]*Scores[\s\S]*Corrections[\s\S]*Known gaps/i],
       ...(market ? [["market", `#/m/${market}`, /What to know[\s\S]*Opportunities[\s\S]*Product[\s\S]*Evidence/i]] : []),
@@ -148,12 +148,12 @@ async function main() {
       const navHidden = await page.locator(".hc-nav a").evaluateAll((as) => as.filter((x) => x.getBoundingClientRect().right > innerWidth + 1).map((x) => x.textContent));
       if (navHidden.length) problems.push(`[${vp.label}] nav items off screen: ${navHidden.join(", ")}`);
       const navItems = (await page.locator(".hc-nav a").allTextContents()).join(" | ");
-      if (navItems !== "Markets | Opportunities | Calendar | Compare | Agents") problems.push(`[${vp.label}] nav is "${navItems}"`);
+      if (navItems !== "Markets | Opportunities | Calendar | Agents") problems.push(`[${vp.label}] nav is "${navItems}"`);
       await page.locator('.hc-wall-tile[href="#/m/det"]').click();
       await wait(700);
       if (!/#\/m\/det/.test(page.url())) problems.push(`[${vp.label}] Detroit tile went to ${page.url()}`);
       // Old links still land: #/league on Compare's league read, #/method/<x> on Agents' method.
-      for (const [hash, id] of [["#/league", "league"], ["#/method/evidence", "evidence"]]) {
+      for (const [hash, id] of [["#/compare", "compare-ideas"], ["#/method/evidence", "evidence"]]) {
         await page.goto(BASE + hash, { waitUntil: "load" });
         await wait(1200);
         const top = await page.evaluate((x) => document.getElementById(x)?.getBoundingClientRect().top, id);
@@ -174,12 +174,17 @@ async function main() {
       await wait(300);
       const after = (await page.locator("[role=status]").textContent()) || "";
       if (before === after && summary.some((m) => (m.opportunities || []).some((o) => o.handoff))) problems.push(`[${vp.label}] target-season filter didn't change the board (${before})`);
-      // Compare two named markets.
-      if (published.includes("nyk")) {
-        await page.goto(BASE + "#/compare/por,nyk", { waitUntil: "load" });
-        await wait(1200);
-        const ct = (await page.textContent("#root")) || "";
-        if (!/Portland[\s\S]*New York/.test(ct)) problems.push(`[${vp.label}] compare didn't show Portland and New York`);
+      // Compare ideas: add a third idea from the board, then weigh by a goal.
+      {
+        const add = page.getByRole("button", { name: "+ Compare" }).first();
+        await add.click();
+        await wait(300);
+        const cards = await page.locator("#compare-ideas article").count();
+        if (cards !== 3) problems.push(`[${vp.label}] compare ideas shows ${cards} ideas after adding a third`);
+        await page.locator("#compare-ideas").getByRole("button", { name: "Biggest result" }).click();
+        await wait(200);
+        const pickText = (await page.locator("#compare-ideas .hc-card-invert").textContent()) || "";
+        if (!/Biggest result · the pick/i.test(pickText)) problems.push(`[${vp.label}] compare ideas didn't name a pick for Biggest result`);
       }
       if (errors.length) problems.push(`[${vp.label}] page errors: ${errors.join("; ")}`);
       await page.close();

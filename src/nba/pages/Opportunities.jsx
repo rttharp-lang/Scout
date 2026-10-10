@@ -1,13 +1,15 @@
 // Every opportunity across all published markets. Two views: a shortlist of
 // the best-supported ideas per planning window, and the full board with
-// filters for season, decision date, route, evidence, owner and product.
+// filters for season, decision date, route, evidence, owner and product. At
+// the bottom, Compare ideas weighs up to three of them side by side.
 // Every idea is a hypothesis; nothing here is approved.
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { markets, today, ymLabel, nextYM } from "../data.js";
 import { OWNERS, STATUSES, SEASONS } from "../agents/review-schema.js";
 import { STRENGTH, STRENGTH_RANK, ROUTE_LABEL, ymOf } from "../review.js";
 import { SectionHead, href } from "../ui.jsx";
 import { Opportunity } from "./parts.jsx";
+import CompareIdeas, { ideaKey, MAX_IDEAS } from "./CompareIdeas.jsx";
 
 // Product families matched against the free-text product names agents wrote.
 const FAMILIES = [
@@ -25,7 +27,7 @@ const SIZE_RANK = { high: 0, medium: 1, low: 2 };
 // Best-supported first, then the brief's priority, then its size estimate.
 const credible = (a, b) => STRENGTH_RANK[a.support.strength] - STRENGTH_RANK[b.support.strength] || a.priority - b.priority || SIZE_RANK[a.size] - SIZE_RANK[b.size] || a.m.team.city.localeCompare(b.m.team.city);
 
-export default function Opportunities() {
+export default function Opportunities({ anchor }) {
   const now = today();
   const [view, setView] = useState("shortlist");
   const [season, setSeason] = useState("all");
@@ -60,6 +62,25 @@ export default function Opportunities() {
       .sort(credible);
   }, [all, season, due, route, strength, owner, status, priority, size, conf, family, q]);
 
+  // Ideas picked for Compare ideas; starts with the two best-supported.
+  const [sel, setSel] = useState(() => [...all].sort(credible).slice(0, 2).map(ideaKey));
+  const cmp = (o) => ({ on: sel.includes(ideaKey(o)), full: sel.length >= MAX_IDEAS, toggle: () => setSel((s) => (s.includes(ideaKey(o)) ? s.filter((x) => x !== ideaKey(o)) : s.length < MAX_IDEAS ? [...s, ideaKey(o)] : s)) });
+  const card = (o) => <Opportunity key={`${o.m.id}-${o.id}`} o={o} market={o.m} compare={cmp(o)} />;
+  // The floating "Compare" button hides once the compare section is on screen.
+  const [compareInView, setCompareInView] = useState(false);
+  useEffect(() => {
+    const el = document.getElementById("compare-ideas");
+    if (!el || !("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver(([e]) => setCompareInView(e.isIntersecting), { threshold: 0.05 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!anchor) return;
+    const t = setTimeout(() => document.getElementById(anchor)?.scrollIntoView(), 60);
+    return () => clearTimeout(t);
+  }, [anchor]);
+
   const windows = SEASONS.filter((x) => all.some((o) => seasonOfOpp(o) === x));
   const reviewed = all.filter((o) => o.handoff).length;
 
@@ -85,7 +106,7 @@ export default function Opportunities() {
                 <SectionHead eyebrow={`${all.filter((o) => seasonOfOpp(o) === w).length} ideas target this season`} title={`Season ${w}`}>
                   <button className="hc-pill-btn" onClick={() => { setView("board"); setSeason(w); }}>See all for {w} →</button>
                 </SectionHead>
-                <div className="hc-grid hc-grid-2">{pick.map((o) => <Opportunity key={`${o.m.id}-${o.id}`} o={o} market={o.m} />)}</div>
+                <div className="hc-grid hc-grid-2">{pick.map(card)}</div>
               </section>
             );
           })}
@@ -134,11 +155,14 @@ export default function Opportunities() {
           </div>
           <p className="hc-small hc-muted" style={{ margin: "14px 0 18px" }} role="status">{rows.length} match{rows.length === 1 ? "" : "es"}, best-supported first</p>
           <div className="hc-grid hc-grid-2">
-            {rows.map((o) => <Opportunity key={`${o.m.id}-${o.id}`} o={o} market={o.m} />)}
+            {rows.map(card)}
           </div>
           {!rows.length && <div className="hc-empty">Nothing matches these filters.</div>}
         </>
       )}
+
+      <CompareIdeas all={all} sel={sel} setSel={setSel} />
+      {sel.length > 0 && !compareInView && <a className="hc-btn hc-compare-jump" href="#compare-ideas" onClick={(e) => { e.preventDefault(); document.getElementById("compare-ideas")?.scrollIntoView({ behavior: "smooth" }); }}>Compare {sel.length} ↓</a>}
     </div>
   );
 }
