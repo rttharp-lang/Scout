@@ -38,9 +38,9 @@ export default function Method({ anchor }) {
             <p className="hc-small hc-muted">Covers the {LEAGUE.name} only, season {LEAGUE.season}. Last automated review: {fmtDate(pub.map((m) => m.updated).sort().pop())}.</p>
           </div>
           <div className="hc-card-invert hc-stack">
-            <h3 className="hc-h3">Experimental runs stay in your browser</h3>
-            <p>The Agents page can run the research agents live. Those runs are saved only in the browser that ran them. They aren't reviewed, teammates can't see them, and a market page labels them clearly when you switch to one.</p>
-            <a className="hc-btn" style={{ display: "inline-block", textDecoration: "none" }} href={href("agents")}>The agents and the live console</a>
+            <h3 className="hc-h3">Updated offline, not from the site</h3>
+            <p>The research agents run offline in the project's research workflow. Nothing on this site runs them or calls a paid service, so browsing or clicking can't run up a bill. New research reaches the site only when it's added to those files and the site is rebuilt.</p>
+            <a className="hc-btn" style={{ display: "inline-block", textDecoration: "none" }} href={href("agents")}>Meet the agents</a>
           </div>
         </div>
       </section>

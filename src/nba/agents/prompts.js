@@ -1,9 +1,7 @@
-// Builds each agent's brief from the roster. Two modes share the same mission
-// text so offline research and live runs ask the same questions:
-//   mode "workflow" → a Claude Code agent with web search + file tools that
-//                     writes research/nba/<team>/<agent>.json and validates it
-//   mode "api"      → a Claude API call with the web_search server tool that
-//                     returns the same JSON via structured outputs
+// Builds each agent's brief from the roster for the offline research
+// workflow: a Claude Code agent with web search + file tools that writes
+// research/nba/<team>/<agent>.json and validates it. (mode "api" is kept for
+// a future server-side runner; nothing on the site calls one.)
 import { STANDARDS, KNOWLEDGE_MODE, SEASON, AGENT_BY_ID, LENS_AGENTS, LENS_IDS, schemaFor } from "./roster.js";
 
 const teamLine = (t) => `${t.place || t.city} ${t.name} (${t.abbr}; home city ${t.city}) — ${t.conference}ern Conference, ${t.division} Division. Home arena: ${t.arena}.`;
@@ -156,65 +154,6 @@ export function buildBrief(agentId, team, { mode = "workflow", today, knowledge 
     ? `\n\nPROVENANCE: the brief carries provenance (mode "knowledge") whose verify list holds the claims the brief depends on that a live check must confirm before Nike acts on them.`
     : "";
   return `${header(agent, team, day, knowledge)}\n\n${task}${prov}\n\n${io}\n`;
-}
-
-// ── Planner (live runs only) ──────────────────────────────────────
-// Offline, the review workflow writes plan.json against evidence.json. A live
-// run has no evidence file, so its planner can only confirm a date from the
-// verified league calendar or a fixed holiday. Same contract (PLAN_SCHEMA),
-// same validator (validate-core.js).
-export function planBrief(team, today) {
-  const day = today || new Date().toISOString().slice(0, 10);
-  const ym = day.slice(0, 7);
-  return `You are the Planner on NBA Fandom, Nike Basketball's local-fandom intelligence system.
-
-MARKET: ${teamLine(team)}
-TODAY: ${day}. Seasons run October to September: Oct 2026 to Sep 2027 is "2026-27".
-
-YOUR JOB: write the plan for this market's brief (INPUTS.strategy): when each calendar moment happens, when the team must act, how a product would get made, and who would own each opportunity. Use only what the brief says plus INPUTS.leagueCalendar (league dates checked live). No web search.
-
-calendar[]: one entry per strategy.calendar entry, same order, i = its index, window copied exactly.
-- YEAR: the brief lists moments in time order from ${day.slice(0, 4)}. Use a year written in the window or moment first; otherwise infer it from the order (later months run into the next year; a return to October or November means next season).
-- kind: event (a game, festival, holiday or anniversary on a date), action (work the team must do: sign partners, open rights talks, brief a product), launch (a product drop or release), season (a stretch of weeks with its own mood).
-- start / end: YYYY-MM-DD when the brief gives a day, else YYYY-MM. end is "" for a single day or month. The entry's month must fall within start..end.
-- certainty and basis:
-  confirmed + league-calendar: INPUTS.leagueCalendar lists it with status "confirmed" (basisNote = the event name).
-  confirmed + fixed-holiday: the calendar fixes it, e.g. Juneteenth is June 19, Christmas is Dec 25, Black History Month is February (basisNote = the rule).
-  tentative + brief-unchecked: the brief gives a date or narrow window nobody has checked, or says expected, around or to confirm.
-  unknown + none: no date beyond a month, a season or "spring".
-  Never use checked-live (this run has no evidence file) and never call a date confirmed for any other reason.
-- recurring: true when it comes round every year, false for one-offs.
-- actBy / actNote: only when the brief says when the work must happen ("now" or "this month" = ${ym}). Otherwise "" and "". Don't invent lead times.
-- route, the most demanding route the entry needs: existing-inventory, quick-turn-graphics (new prints on existing blanks), new-development (a new style, fabric or fit), future-uniform (City Edition or other uniform concepts), no-product (deals, funds, events without product).
-- targetSeason: the season product from this entry sells in; "" for no-product.
-- dependencies, only those the entry implies: stock-availability, production-capacity, nike-calendar-approval, league-or-team-rights, player-or-estate-rights, third-party-ip, partner-agreement, retailer-agreement, venue-or-permit, brand-safety, and date-confirmation whenever certainty isn't confirmed.
-
-opportunities[]: one per strategy.opportunities entry, same ids, same order.
-- consumer: who it's for, one line from the brief's segment. insights: up to three topInsights indexes it builds on.
-- categories from its products; fit: the sizing audiences the brief names, or "to define".
-- targetSeason, firstInMarket (YYYY-MM), actBy / actNote: the first step and when the brief says it's due.
-- routes: every route it uses, the gating one first. validation: 1-4 short tasks to run before anyone briefs it (consumer, commercial, operational).
-- dependencies as above. owner: the function that would most naturally lead it (a proposal; nobody is assigned). partners: external organizations or people it names; all are prospects.
-- status: "hypothesis". Always.
-
-Return only the JSON object described by the output schema.
-`;
-}
-
-// The research file each agent's output becomes: research/nba/<team>/<name>.json.
-export function outputNameFor(agentId) {
-  if (LENS_IDS.includes(agentId)) return agentId;
-  return { strategist: "strategy", editor: "strategy", factcheck: "factcheck", authenticity: "critique", planner: "plan" }[agentId] || null;
-}
-
-// API mode: which schema an agent returns.
-export function apiSchemaFor(agentId) {
-  if (LENS_IDS.includes(agentId)) return schemaFor(agentId);
-  if (agentId === "strategist" || agentId === "editor") return schemaFor("strategy");
-  if (agentId === "factcheck") return schemaFor("factcheck");
-  if (agentId === "authenticity") return schemaFor("critique");
-  if (agentId === "planner") return schemaFor("plan");
-  return null;
 }
 
 export { LENS_AGENTS };

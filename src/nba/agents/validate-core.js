@@ -1,12 +1,11 @@
-// The rules a research file has to meet beyond its JSON schema. Pure, so the
-// build (scripts/nba/validate.mjs, reading files) and the publish endpoint
-// (api/homecourt-publish.js, checking a live run in memory) apply exactly the
-// same checks. plan and evidence are checked against the brief they annotate,
+// The rules a research file has to meet beyond its JSON schema. Pure (no file
+// access), so scripts/nba/validate.mjs and anything that checks research in
+// memory apply exactly the same checks. plan and evidence are checked against the brief they annotate,
 // passed in as ctx.strategy (and ctx.evidence for plan).
 import { check } from "./jsonschema.js";
 import { schemaFor, LENS_IDS } from "./roster.js";
 
-// research/nba/<team>/published.json: written when a live run is published.
+// research/nba/<team>/published.json: metadata for research published from a live run (none yet).
 export const PUBLISHED_SCHEMA = {
   type: "object", additionalProperties: false,
   required: ["team", "mode", "ranAt", "publishedAt", "files", "replaced"],

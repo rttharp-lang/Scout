@@ -4,7 +4,7 @@
 // disclosures: opportunities, the fan year, product, fans, city, shopping,
 // partners and the evidence log.
 import React, { useEffect, useMemo, useState } from "react";
-import { loadMarket, loadLiveRun, clearLiveRun, inkOn, heroColor, MONTHS, review as siteReview, today } from "../data.js";
+import { loadMarket, inkOn, heroColor, MONTHS, review as siteReview, today } from "../data.js";
 import { TEAM_BY_ID, placeOf } from "../teams.js";
 import { AGENT_BY_ID, LENS_AGENTS } from "../agents/roster.js";
 import { DEPENDENCIES, EVIDENCE_TYPES, REFERENCE_KINDS, CLAIM_STATUS } from "../agents/review-schema.js";
@@ -12,7 +12,7 @@ import { Chip, Scorecard, PaletteRow, Priority, Provenance, SectionHead, KV, hre
 import { verificationOf } from "../agents/provenance.js";
 import { RhythmChart } from "../charts.jsx";
 import { LensView, Jersey, Opportunity } from "./parts.jsx";
-import { inferTiming, seasonOf, endedBefore, ymOf, fmtDate, STRENGTH_RANK, SCORE_DEFS, ymLabel, nextYM } from "../review.js";
+import { seasonOf, endedBefore, ymOf, fmtDate, STRENGTH_RANK, SCORE_DEFS, ymLabel, nextYM } from "../review.js";
 
 const SECTIONS = [
   ["brief", "Brief"], ["opportunities", "Opportunities"], ["calendar", "Calendar"], ["product", "Product"],
@@ -23,15 +23,11 @@ const CULTURE_LENSES = ["music", "art", "food", "culture", "underground", "hoops
 export default function Market({ id }) {
   const team = TEAM_BY_ID[id];
   const [published, setPublished] = useState(undefined);
-  const [live, setLive] = useState(() => loadLiveRun(id));
-  const [useLive, setUseLive] = useState(false);
   const [active, setActive] = useState("brief");
 
   useEffect(() => {
     let alive = true;
     setPublished(undefined);
-    setLive(loadLiveRun(id));
-    setUseLive(false);
     loadMarket(id).then((m) => { if (alive) setPublished(m); });
     window.scrollTo(0, 0);
     return () => { alive = false; };
@@ -47,10 +43,9 @@ export default function Market({ id }) {
     }, { rootMargin: "-80px 0px -60% 0px" });
     els.forEach((e) => io.observe(e));
     return () => io.disconnect();
-  }, [published, useLive]);
+  }, [published]);
 
-  const liveComplete = live && live.strategy && live.dossiers && LENS_AGENTS.every((a) => live.dossiers[a.id]);
-  const data = useLive && liveComplete ? asLive(live) : published;
+  const data = published;
 
   if (!team) return <div className="hc-empty">We can't find that market.</div>;
   if (published === undefined) return <div className="hc-empty">Loading {placeOf(team)}…</div>;
@@ -62,22 +57,10 @@ export default function Market({ id }) {
       </div>
     );
   }
-  return <MarketView team={team} data={data} live={liveComplete ? live : null} useLive={useLive && liveComplete} setUseLive={setUseLive} active={active}
-    onDiscardLive={() => { clearLiveRun(id); setLive(null); setUseLive(false); }} />;
+  return <MarketView team={team} data={data} active={active} />;
 }
 
-// A browser-local run has no review layer: give its calendar inferred,
-// unreviewed timing and no evidence, so nothing in it reads as checked.
-function asLive(run) {
-  const strategy = JSON.parse(JSON.stringify(run.strategy));
-  const t = inferTiming(strategy.calendar);
-  strategy.calendar.forEach((c, i) => { c.timing = t[i]; });
-  strategy.topInsights.forEach((x) => { x.support = { verified: 0, corrected: 0, observed: 0, conflicting: 0, ids: [], strength: "unchecked" }; });
-  strategy.opportunities.forEach((o) => { o.handoff = null; o.support = { verified: 0, corrected: 0, observed: 0, conflicting: 0, ids: [], strength: "unchecked" }; });
-  return { ...run, strategy, evidence: null, stewardship: null, updated: run.ranAt ? run.ranAt.slice(0, 10) : null, isLive: true };
-}
-
-function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLive }) {
+function MarketView({ team, data, active }) {
   const s = data.strategy;
   const d = data.dossiers;
   const now = today();
@@ -127,21 +110,8 @@ function MarketView({ team, data, live, useLive, setUseLive, active, onDiscardLi
         </div>
       </section>
 
-      {live && (
-        <div className={`hc-banner hc-no-print${useLive ? " hc-live-warning" : ""}`} role="status">
-          <span>{useLive
-            ? <><b>You're looking at an experimental run saved in this browser only.</b> It hasn't been reviewed, teammates can't see it, and nothing in it has been checked.</>
-            : <>This browser also holds an experimental run from {new Date(live.ranAt).toLocaleString()}. It isn't shared or reviewed.</>}</span>
-          <span className="hc-row">
-            <button className="hc-pill-btn" aria-pressed={!useLive} onClick={() => setUseLive(false)}>Reviewed version</button>
-            <button className="hc-pill-btn" aria-pressed={useLive} onClick={() => setUseLive(true)}>Experimental run</button>
-            <button className="hc-pill-btn" onClick={onDiscardLive}>Discard it</button>
-          </span>
-        </div>
-      )}
-
       <div className="hc-statusbar" role="note">
-        {data.isLive ? <b>Experimental run · not reviewed</b> : <b>Shared reviewed build</b>}
+        <b>Shared reviewed build</b>
         <span>Last reviewed {data.updated ? fmtDate(data.updated) : "not yet"} (automated check)</span>
         <span>Owner: {data.stewardship?.owner || "unassigned"}</span>
         <span>Human sign-off: {data.stewardship?.signedOff || "none yet"}</span>

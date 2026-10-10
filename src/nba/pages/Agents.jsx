@@ -1,10 +1,9 @@
-// The agent system: who the agents are, how the workflow fits together, and a
-// console to run the whole workflow live for any market.
-import React, { useRef, useState } from "react";
+// The agent system: who the agents are and how the workflow fits together.
+// The agents run offline in the research workflow; nothing on the site runs
+// them or calls a paid API.
+import React, { useState } from "react";
 import { LENS_AGENTS, SYNTHESIS_AGENTS, AGENT_BY_ID, STANDARDS } from "../agents/roster.js";
-import { TEAMS, TEAM_BY_ID, teamLabel } from "../teams.js";
 import { publishedCount } from "../data.js";
-import { runMarket } from "../live.js";
 import { Chip, SectionHead, href } from "../ui.jsx";
 import Method from "./Method.jsx";
 
@@ -19,44 +18,13 @@ const LEAGUE_STAGE = [
 
 const GROUPS = ["Culture", "Basketball", "Fandom", "Retail"];
 
-export default function Agents({ preselect, methodAnchor }) {
-  const [team, setTeam] = useState(preselect && TEAM_BY_ID[preselect] ? preselect : "por");
-  const [state, setState] = useState({});
-  const [running, setRunning] = useState(false);
-  const [message, setMessage] = useState(null);
-  const ctrl = useRef(null);
-
-  const start = async () => {
-    setState({});
-    setMessage(null);
-    setRunning(true);
-    ctrl.current = new AbortController();
-    try {
-      await runMarket(team, (id, patch) => setState((s) => ({ ...s, [id]: { ...s[id], ...patch } })), { signal: ctrl.current.signal });
-      setMessage({ ok: true, text: "Done. The run is saved in this browser only, as an unreviewed experiment." });
-    } catch (e) {
-      const text = e.status === 503
-        ? "Live runs aren't set up on this server yet. It needs an ANTHROPIC_API_KEY. The published research is unaffected."
-        : e.name === "AbortError" ? "Run stopped." : `Run stopped: ${e.message}`;
-      setMessage({ ok: false, text });
-    } finally {
-      setRunning(false);
-    }
-  };
-  const stop = () => ctrl.current && ctrl.current.abort();
-
-  const tile = (a) => {
-    const st = state[a.id];
-    return (
-      <div key={a.id} className="hc-agent-tile" title={a.mission}>
-        <span className="hc-status" data-s={st ? st.status : "idle"} />
-        <span style={{ flex: 1 }}>{a.name}</span>
-        {st && st.status === "running" && <span className="hc-tiny hc-muted">{st.stage}</span>}
-        {st && st.status === "done" && <span className="hc-tiny hc-muted">{Math.round(st.ms / 1000)}s</span>}
-        {st && st.status === "failed" && <span className="hc-tiny" style={{ color: "var(--bad)" }}>failed</span>}
-      </div>
-    );
-  };
+export default function Agents({ methodAnchor }) {
+  const tile = (a) => (
+    <div key={a.id} className="hc-agent-tile" title={a.mission}>
+      <span className="hc-status" data-s="idle" />
+      <span style={{ flex: 1 }}>{a.name}</span>
+    </div>
+  );
 
   return (
     <div>
@@ -95,17 +63,6 @@ export default function Agents({ preselect, methodAnchor }) {
             </div>
           </div>
 
-          <hr className="hc-divider" />
-          <div className="hc-row hc-no-print" style={{ gap: 10 }}>
-            <label className="hc-small" htmlFor="hc-run-team" style={{ fontWeight: 600 }}>Run live for</label>
-            <select id="hc-run-team" className="hc-select" value={team} onChange={(e) => setTeam(e.target.value)} disabled={running}>
-              {TEAMS.map((t) => <option key={t.id} value={t.id}>{teamLabel(t)}</option>)}
-            </select>
-            {!running ? <button className="hc-btn" onClick={start}>Run all 15 agents</button> : <button className="hc-btn hc-btn-ghost" onClick={stop}>Stop</button>}
-            {message && message.ok && <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("m", team)}>See the experimental run →</a>}
-          </div>
-          {message && <p className="hc-small" role="status" style={{ marginTop: 10, color: message.ok ? "var(--good)" : "var(--text)" }}>{message.text}</p>}
-          <p className="hc-tiny hc-muted" style={{ marginTop: 8 }}><b>Experimental.</b> Live runs use the Claude API with web search and take a few minutes. They're saved only in this browser: not reviewed, not shared with teammates and not part of the published build, which stays as it is.</p>
         </div>
       </section>
 
