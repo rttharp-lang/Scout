@@ -1,6 +1,6 @@
 // The league read: the League Strategist's cross-market synthesis — thesis,
 // themes, fandom clusters, calibrated scores, the priority board, the Portland
-// playbook and the watchlist. Tentpoles live on the Calendar page.
+// playbook and the watchlist. Tentpoles show month by month on the Calendar page.
 import React, { useMemo, useState } from "react";
 import { markets, league, MONTHS } from "../data.js";
 import { TEAM_BY_ID, placeOf, shortLabel } from "../teams.js";
@@ -29,7 +29,7 @@ export default function League() {
           {SECTIONS.filter(([id]) => id !== "watchlist" || league.watchlist.length).map(([id, label]) => (
             <a key={id} className="hc-pill-btn" style={{ textDecoration: "none" }} href={`#${id}`} onClick={(e) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); }}>{label}</a>
           ))}
-          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>Big dates →</a>
+          <a className="hc-pill-btn" style={{ textDecoration: "none" }} href={href("calendar")}>League calendar →</a>
         </nav>
       </section>
 

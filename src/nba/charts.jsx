@@ -5,7 +5,6 @@
 // on hover.
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { MONTHS, MONTHS_LONG, SEASON_ORDER } from "./data.js";
-import { placeOf } from "./teams.js";
 
 
 function useWidth() {
@@ -92,34 +91,35 @@ export function RhythmChart({ months, calendar = [], now }) {
   );
 }
 
-// ── Year map: how many teams peak in each month, October to September ──
-// One column per month; the tallest columns are where the league is most
-// saturated. Tap a month to open it.
-export function PeakMap({ counts, now, onSelect }) {
+// ── Month pickers: twelve columns, October to September ────────────────
+// Tap a column (or focus it and press Enter) to pick its month. The picked
+// month sits on a white band with its value above it. No axis or tooltip:
+// the panel under the chart carries the detail.
+function MonthColumns({ label, values, max, fillFor, markFor, selected, now, onSelect, describe }) {
   const [ref, W] = useWidth();
-  const [hover, setHover] = useState(null);
-  const H = 200, padL = 6, padR = 6, padT = 24, axisH = 26;
+  const H = 190, padX = 2, padT = 36, axisH = 30;
   const plotH = H - padT - axisH;
-  const band = (W - padL - padR) / 12;
-  const barW = Math.min(30, band * 0.62);
-  const max = Math.max(1, ...SEASON_ORDER.map((m) => counts[m] || 0));
-  const top = Math.max(...SEASON_ORDER.map((m) => counts[m] || 0));
-  const y = (v) => padT + plotH - (plotH * v) / max;
+  const band = (W - padX * 2) / 12;
+  const barW = Math.min(34, band * 0.6);
+  const top = Math.max(1, max);
+  const y = (v) => padT + plotH - (plotH * v) / top;
   return (
     <div className="hc-chart" ref={ref}>
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Teams at their peak by month: ${SEASON_ORDER.map((m) => `${MONTHS[m - 1]} ${counts[m] || 0}`).join(", ")}`}>
-        <line x1={padL} x2={W - padR} y1={padT + plotH} y2={padT + plotH} stroke="var(--border)" />
+      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="group" aria-label={label}>
+        <line x1={padX} x2={W - padX} y1={padT + plotH + 0.5} y2={padT + plotH + 0.5} stroke="var(--border)" />
         {SEASON_ORDER.map((m, i) => {
-          const v = counts[m] || 0, x = padL + band * i + (band - barW) / 2, isTop = v === top && v > 0;
+          const v = values[m] || 0, x0 = padX + band * i, x = x0 + (band - barW) / 2, sel = m === selected, mark = markFor && markFor(m);
           return (
             <g key={m}>
-              <path d={colPath(x, y(v), barW, padT + plotH - y(v))} fill={isTop ? "var(--accent)" : hover === m ? "var(--seq-6)" : "var(--seq-4)"} />
-              {v > 0 && <text x={x + barW / 2} y={y(v) - 6} textAnchor="middle" fontSize="11.5" fontWeight="700" fill="var(--text)" style={{ fontVariantNumeric: "tabular-nums" }}>{v}</text>}
-              <text x={x + barW / 2} y={H - 8} textAnchor="middle" fontSize="11" fontWeight={m === now ? 700 : 500} fill={m === now ? "var(--text)" : "var(--text-muted)"}>{band < 34 ? MONTHS[m - 1][0] : MONTHS[m - 1]}</text>
-              <rect x={padL + band * i} y={0} width={band} height={H} fill="transparent" tabIndex={0} role="button" style={{ cursor: "pointer" }}
-                aria-label={`${MONTHS_LONG[m - 1]}: ${v} team${v === 1 ? "" : "s"} at their peak. Open the month.`}
-                onClick={() => onSelect && onSelect(m)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect && onSelect(m); } }}
-                onMouseEnter={() => setHover(m)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(m)} onBlur={() => setHover(null)} />
+              {sel && <rect x={x0 + 1} y={1} width={band - 2} height={H - 2} rx={Math.min(12, band / 3)} fill="var(--hc-card)" />}
+              {v > 0 && <path d={colPath(x, y(v), barW, padT + plotH - y(v))} fill={fillFor(m, v)} />}
+              {mark && <path d={`M${x + barW / 2},${y(v) - 5} l-5,-8 h10 z`} fill="var(--pop)" stroke="var(--text)" strokeWidth="1" />}
+              {sel && <text x={x + barW / 2} y={y(v) - (mark ? 18 : 8)} textAnchor="middle" fontSize="12.5" fontWeight="700" fill="var(--text)" style={{ fontVariantNumeric: "tabular-nums" }}>{v}</text>}
+              <text x={x + barW / 2} y={H - 12} textAnchor="middle" fontSize="11.5" fontWeight={sel ? 700 : 500} fill={sel ? "var(--text)" : "var(--text-muted)"}>{band < 36 ? MONTHS[m - 1][0] : MONTHS[m - 1]}</text>
+              {m === now && <circle cx={x + barW / 2} cy={H - 4} r="2.5" fill={sel ? "var(--text)" : "var(--text-muted)"} />}
+              <rect className="hc-col-hit" x={x0} y={0} width={band} height={H} fill="transparent" tabIndex={0} role="button" aria-pressed={sel}
+                aria-label={`${describe(m, v)}${m === now ? " (this month)" : ""}`}
+                onClick={() => onSelect(m)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect(m); } }} />
             </g>
           );
         })}
@@ -128,56 +128,30 @@ export function PeakMap({ counts, now, onSelect }) {
   );
 }
 
-// ── One team's year: fan heat by month with its peaks and quiet months ──
-// Peaks in the accent color with a marker above; quiet months pale. Tap a
-// month to open it.
-export function PeakChart({ rhythm, peaks, quiet, moments = {}, now, onSelect }) {
-  const [ref, W] = useWidth();
-  const [hover, setHover] = useState(null);
-  const H = 250, padL = 30, padR = 6, padT = 30, axisH = 30;
-  const plotH = H - padT - axisH;
-  const band = (W - padL - padR) / 12;
-  const barW = Math.min(30, band * 0.62);
-  const y = (v) => padT + plotH - (plotH * v) / 100;
-  const tip = hover != null ? rhythm[hover - 1] : null;
-  const hx = hover != null ? padL + band * SEASON_ORDER.indexOf(hover) + band / 2 : 0;
+// The league's year: how many teams are at their own peak each month.
+export function PeakMap({ counts, selected, now, onSelect }) {
+  const max = Math.max(0, ...SEASON_ORDER.map((m) => counts[m] || 0));
   return (
-    <div className="hc-chart" ref={ref}>
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Fan heat by month, October to September: ${SEASON_ORDER.map((m) => `${MONTHS[m - 1]} ${rhythm[m - 1].intensity}${peaks.has(m) ? " peak" : quiet.has(m) ? " quiet" : ""}`).join(", ")}`}>
-        {[0, 50, 100].map((g) => (
-          <g key={g}>
-            <line x1={padL} x2={W - padR} y1={y(g)} y2={y(g)} stroke="var(--border)" />
-            <text x={padL - 8} y={y(g) + 4} textAnchor="end" fontSize="11" fill="var(--text-muted)">{g}</text>
-          </g>
-        ))}
-        {SEASON_ORDER.map((m, i) => {
-          const v = rhythm[m - 1].intensity, x = padL + band * i + (band - barW) / 2;
-          const fill = peaks.has(m) ? "var(--accent)" : quiet.has(m) ? "var(--seq-2)" : hover === m ? "var(--seq-6)" : "var(--seq-4)";
-          return (
-            <g key={m}>
-              <path d={colPath(x, y(v), barW, padT + plotH - y(v))} fill={fill} />
-              {peaks.has(m) && <path d={`M${x + barW / 2},${y(v) - 6} l-5,-9 h10 z`} fill="var(--pop)" stroke="var(--text)" strokeWidth="1" />}
-              <text x={x + barW / 2} y={H - 10} textAnchor="middle" fontSize="11" fontWeight={peaks.has(m) || m === now ? 700 : 500} fill={peaks.has(m) || m === now ? "var(--text)" : "var(--text-muted)"}>{band < 34 ? MONTHS[m - 1][0] : MONTHS[m - 1]}</text>
-              <rect x={padL + band * i} y={0} width={band} height={H} fill="transparent" tabIndex={0} role="button" style={{ cursor: "pointer" }}
-                aria-label={`${MONTHS_LONG[m - 1]}: fan heat ${v}${peaks.has(m) ? ", a peak" : quiet.has(m) ? ", a quiet month" : ""}. Open the month.`}
-                onClick={() => onSelect && onSelect(m)} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onSelect && onSelect(m); } }}
-                onMouseEnter={() => setHover(m)} onMouseLeave={() => setHover(null)} onFocus={() => setHover(m)} onBlur={() => setHover(null)} />
-            </g>
-          );
-        })}
-      </svg>
-      {tip && (
-        <div className="hc-tooltip" style={{ left: Math.max(130, Math.min(W - 130, hx)), top: Math.max(70, y(tip.intensity)) }}>
-          <div><strong>{tip.intensity}</strong> <span className="hc-muted">of this team's peak · {MONTHS_LONG[hover - 1]}</span></div>
-          <div style={{ fontWeight: 600, marginTop: 2 }}>{tip.phase}</div>
-          {(moments[hover] || []).slice(0, 3).map((t, k) => <div key={k} style={{ marginTop: 4 }}>● {t}</div>)}
-        </div>
-      )}
-      <div className="hc-legend" style={{ marginTop: 6 }}>
-        <span><svg width="10" height="10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="var(--accent)" /></svg> Peak</span>
-        <span><svg width="10" height="10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="var(--seq-4)" /></svg> Steady</span>
-        <span><svg width="10" height="10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="var(--seq-2)" /></svg> Quiet: focus elsewhere</span>
-        <span>Heat is a share of this team's own peak month (100), an editorial estimate.</span>
+    <MonthColumns label="Teams at their peak by month. Pick a month." values={counts} max={max} selected={selected} now={now} onSelect={onSelect}
+      fillFor={(m, v) => (v === max ? "var(--accent)" : "var(--seq-4)")}
+      describe={(m, v) => `${MONTHS_LONG[m - 1]}: ${v} team${v === 1 ? "" : "s"} at their peak`} />
+  );
+}
+
+// One team's year: fan heat by month, peaks in the accent with a marker,
+// quiet months pale.
+export function PeakChart({ rhythm, peaks, quiet, selected, now, onSelect }) {
+  const values = Object.fromEntries(SEASON_ORDER.map((m) => [m, rhythm[m - 1].intensity]));
+  return (
+    <div>
+      <MonthColumns label="Fan heat by month. Pick a month." values={values} max={100} selected={selected} now={now} onSelect={onSelect}
+        fillFor={(m) => (peaks.has(m) ? "var(--accent)" : quiet.has(m) ? "var(--seq-2)" : "var(--seq-4)")}
+        markFor={(m) => peaks.has(m)}
+        describe={(m, v) => `${MONTHS_LONG[m - 1]}: fan heat ${v}${peaks.has(m) ? ", a peak" : quiet.has(m) ? ", a quiet month" : ""}`} />
+      <div className="hc-legend hc-cal-legend">
+        <span><svg width="10" height="10" aria-hidden="true"><path d="M5,9 L0,1 H10 Z" fill="var(--pop)" stroke="var(--text)" strokeWidth="1" /></svg> Peak</span>
+        <span><svg width="10" height="10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="var(--seq-2)" /></svg> Quiet</span>
+        <span className="hc-muted">Heat is a share of this team's own best month</span>
       </div>
     </div>
   );

@@ -354,27 +354,47 @@
 .hc-compare-jump { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 20; text-decoration: none; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); }
 @media print { .hc-compare-jump { display: none !important; } }
 
-/* League calendar */
+/* League calendar: one chart of the year, the picked month underneath */
 .hc-cal-controls { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 18px; margin-top: 26px; }
 .hc-cal-team { display: grid; gap: 6px; flex: 1 1 240px; max-width: 360px; }
 .hc-cal-team .hc-select { width: 100%; }
-.hc-cal-months { flex-wrap: wrap; overflow: visible; margin: 16px 0 0; }
-@media (max-width: 560px) { .hc-cal-months { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; } .hc-cal-months .hc-pill-btn { padding: 8px 0; font-size: 13px; } }
-.hc-team-chip { font: inherit; font-family: var(--font-display); font-weight: 900; font-size: 14px; letter-spacing: 0.02em; border: none; border-radius: 8px; padding: 6px 9px; cursor: pointer; min-width: 46px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08); }
+.hc-cal-summary { font-size: 17px; font-weight: 600; margin: -6px 0 14px; }
+.hc-cal-card { padding-bottom: clamp(14px, 2vw, 22px); }
+.hc-col-hit { cursor: pointer; outline: none; }
+.hc-col-hit:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.hc-cal-legend { margin-top: 2px; gap: 14px; }
+.hc-cal-panel { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 16px; }
+.hc-cal-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+.hc-cal-head-text { min-width: 0; }
+.hc-cal-mname { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 0.95; letter-spacing: 0.005em; margin: 0; }
+.hc-cal-sub { color: var(--text-muted); font-size: 15px; margin-top: 6px; }
+.hc-cal-step { font: inherit; font-size: 22px; line-height: 1; width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--hc-card); color: var(--text); cursor: pointer; display: grid; place-items: center; padding-bottom: 3px; }
+.hc-cal-step:hover { background: var(--hc-surface-2); }
+.hc-cal-step:disabled { opacity: 0.3; cursor: default; background: var(--hc-card); }
+.hc-team-chip { font: inherit; font-family: var(--font-display); font-weight: 900; font-size: 14px; letter-spacing: 0.02em; border: none; border-radius: 8px; padding: 7px 10px; cursor: pointer; min-width: 48px; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08); }
 .hc-team-chip:hover, .hc-team-chip:focus-visible { transform: translateY(-1px); box-shadow: inset 0 0 0 2px var(--text); }
 .hc-cal-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.hc-cal-journey { list-style: none; margin: 18px 0 0; padding: 0; display: grid; }
-.hc-cal-journey li { display: grid; grid-template-columns: minmax(110px, 160px) minmax(0, 1fr); gap: 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--border); }
-.hc-cal-journey li.is-now .hc-cal-month b { color: var(--accent); }
-.hc-cal-month { font: inherit; background: none; border: none; padding: 0; text-align: left; cursor: pointer; display: grid; gap: 2px; color: var(--text); }
-.hc-cal-month b { font-size: 16px; }
-.hc-cal-month span { font-size: 12.5px; color: var(--text-muted); }
-@media (max-width: 520px) { .hc-cal-journey li { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
-.hc-cal-rank { list-style: none; margin: 0; padding: 0; display: grid; }
-.hc-cal-rank li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; padding: 12px 0; border-top: 1px solid var(--border); }
-.hc-cal-rank-body { display: grid; gap: 6px; min-width: 0; }
-.hc-cal-bar { height: 8px; border-radius: 4px; background: var(--hc-surface-2, var(--surface)); overflow: hidden; }
-.hc-cal-bar i { display: block; height: 100%; border-radius: 4px; }
-.hc-cal-months .is-now { box-shadow: inset 0 0 0 2px var(--accent); }
-.hc-cal-open { color: var(--pop); font-weight: 700; font-size: 14px; text-decoration: none; margin-top: 4px; }
-.hc-cal-open:hover { text-decoration: underline; }
+.hc-mo-list { list-style: none; margin: 0; padding: 0; }
+.hc-mo-list > li + li { border-top: 1px solid var(--border); }
+.hc-mo summary { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 12px 0; cursor: pointer; list-style: none; }
+.hc-mo summary::-webkit-details-marker { display: none; }
+.hc-mo summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.hc-mo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--seq-3); align-self: center; }
+.hc-mo-dot.is-key { background: var(--pop); box-shadow: 0 0 0 1.5px var(--text); }
+.hc-mo-title { font-size: 16px; font-weight: 600; line-height: 1.3; }
+.hc-mo summary:hover .hc-mo-title { text-decoration: underline; text-underline-offset: 3px; }
+.hc-mo-when { font-size: 13px; color: var(--text-muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hc-mo[open] .hc-mo-title { color: var(--accent); }
+.hc-mo-more { padding: 0 0 14px 24px; display: grid; gap: 8px; }
+.hc-mo-full { font-size: 14px; font-weight: 600; margin: 0; }
+.hc-mo-more p { margin: 0; }
+@media (max-width: 520px) {
+  .hc-mo summary { grid-template-columns: 12px minmax(0, 1fr); row-gap: 2px; }
+  .hc-mo-when { grid-column: 2; }
+  .hc-cal-step { width: 36px; height: 36px; }
+}
+.hc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hc-cal-dates { margin-top: 18px; }
+.hc-cal-dates > summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+.hc-cal-date-row { display: grid; grid-template-columns: minmax(110px, 200px) minmax(0, 1fr) auto; gap: 12px; align-items: start; }
+@media (max-width: 520px) { .hc-cal-date-row { grid-template-columns: minmax(0, 1fr) auto; } .hc-cal-date-row > :nth-child(2) { grid-column: 1 / -1; grid-row: 2; } }

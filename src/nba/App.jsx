@@ -1,5 +1,5 @@
 // NBA Fandom — local NBA fandom intelligence for Nike Basketball.
-// Routes: #/ (markets), #/m/<team> (one market), #/opportunities, #/calendar[/<team|all>[/year|month[/<1-12>]]], #/agents[/<team>], #/league.
+// Routes: #/ (markets), #/m/<team> (one market), #/opportunities, #/calendar[/<team|all>[/<1-12>]], #/agents[/<team>], #/league.
 // #/compare opens Opportunities at Compare ideas; #/method[/<section>] opens Agents at the method.
 import React, { useEffect } from "react";
 import { useRoute, Header, Footer } from "./ui.jsx";
@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     const t = section === "m" && TEAM_BY_ID[arg];
     document.title = t ? `${teamLabel(t)} · NBA Fandom` : section === "league" ? "League read · NBA Fandom" : section === "calendar" ? "League calendar · NBA Fandom" : section === "opportunities" ? "Opportunity board · NBA Fandom" : section === "compare" ? "Compare ideas · NBA Fandom" : section === "method" ? "Agents and method · NBA Fandom" : section === "agents" ? "Agents · NBA Fandom" : "NBA Fandom · Research";
-    if (section !== "m" && section !== "method" && section !== "compare") window.scrollTo(0, 0);
+    if (section !== "m" && section !== "method" && section !== "compare" && !(section === "calendar" && arg)) window.scrollTo(0, 0);
   }, [section, arg]);
 
   let page;
