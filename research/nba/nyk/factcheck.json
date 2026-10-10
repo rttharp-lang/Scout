@@ -5,9 +5,9 @@
     {
       "lens": "culture",
       "claim": "The Knicks clinched the 1973 title on May 10, 1973 'at the Forum'",
-      "verdict": "corrected",
-      "note": "Game 5 clinched at Madison Square Garden, not the Forum. Fixed in culture.json.",
-      "source": ""
+      "verdict": "confirmed",
+      "note": "Re-checked live Oct 10, 2026: the original was right. The Knicks won Game 5 102-93 at the Forum in Inglewood on May 10, 1973, to take the series 4-1. An earlier pass of this check wrongly moved the clincher to the Garden, and that error reached the brief. Restored in strategy.json and culture.json.",
+      "source": "https://en.wikipedia.org/wiki/1973_NBA_Finals"
     },
     {
       "lens": "music",
@@ -269,5 +269,5 @@
       "source": ""
     }
   ],
-  "summary": "The dossiers match CURRENT FACTS on roster, coach, dates and the Specter reveal, and the strategy's 16-3 run adds up. Fixed: the 1973 clincher was at the Garden, not the Forum. Karl-Anthony Towns's father was wrongly called a Dominican national-team player, and that is still wrong in strategy.json. Five invented or stale details were removed. The biggest open risks are retail doors, Kith and Frazier's status, the City Edition behind 'Fence Line', park-tournament operators and Tyshawn Jones's sponsor."
+  "summary": "The dossiers match CURRENT FACTS on roster, coach, dates and the Specter reveal, and the strategy's 16-3 run adds up. The 1973 clincher was a Game 5 road win at the Forum in Inglewood. An earlier version of this check wrongly moved it to the Garden; corrected Oct 10, 2026. Karl-Anthony Towns's father was wrongly called a Dominican national-team player, and that is still wrong in strategy.json. Five invented or stale details were removed. The biggest open risks are retail doors, Kith and Frazier's status, the City Edition behind 'Fence Line', park-tournament operators and Tyshawn Jones's sponsor."
 }

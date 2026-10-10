@@ -7,6 +7,8 @@
 // Each LENS agent owns one slice of a market and writes a dossier. The
 // SYNTHESIS agents turn eleven dossiers into the Nike Basketball brief.
 
+import { PLAN_SCHEMA, EVIDENCE_SCHEMA } from "./review-schema.js";
+
 export const SEASON = "2026-27";
 
 // The shared bar every agent is held to. Mirrors Scout's curation standard:
@@ -409,6 +411,8 @@ export const PULSE_SCHEMA = obj({
 });
 
 export const SCHEMAS = {
+  plan: PLAN_SCHEMA,
+  evidence: EVIDENCE_SCHEMA,
   pulse: PULSE_SCHEMA,
   strategy: STRATEGY_SCHEMA,
   factcheck: FACTCHECK_SCHEMA,

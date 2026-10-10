@@ -215,9 +215,9 @@
     {
       "lens": "retail-landscape",
       "claim": "The Nike Community Store on NE MLK has been open since 1984 and hires locally",
-      "verdict": "unverifiable",
-      "note": "Long-standing and widely repeated, but the 1984 date and current hours need a live check.",
-      "source": ""
+      "verdict": "corrected",
+      "note": "Checked live Oct 10, 2026: wrong. The store at 2650 NE MLK Jr. Blvd, open since 1984, closed in late 2022 after theft and safety concerns, and Nike confirmed in Sept 2023 that it won't reopen. This check had left it unverified, and the brief used it as its main launch door. Removed as a door everywhere; launches moved to Albina partner venues or downtown Nike Portland.",
+      "source": "https://opb.org/article/2023/09/08/nike-permanently-closes-northeast-portland-factory-store"
     },
     {
       "lens": "retail-behavior",
@@ -276,5 +276,5 @@
       "source": "https://wweek.com/news/city/2026/09/04/council-approves-development-talks-with-albina-vision-trust-for-city-property-next-to-moda-center"
     }
   ],
-  "summary": "The knowledge-mode dossiers are broadly right on roster, coach, owner, arena funding, record, Cup and marquee facts, all of which match CURRENT FACTS. The real errors: the pinwheel designer was Frank Glickman, not Cooney (confirmed live). The downtown Nike store closed in late 2023 and reopened Nov 2025 at 638 SW 5th Ave. Deadstock Coffee moved to The Hoxton. Spirit of 77 had a neighborhood mismatch, the Camara and Holiday trade line was off, and the Blazers are not the only major-league basketball team in the state. The Nike Hoop Summit at Moda Center was confirmed live for April 2026. The brief needs three fixes: the White Stag timing, the Cooney verify item, and hedges on the Nike downtown channel and the 1977 Classic Edition. The remaining risk sits in small-business, date and licensing claims."
+  "summary": "The knowledge-mode dossiers are broadly right on roster, coach, owner, arena funding, record, Cup and marquee facts, all of which match CURRENT FACTS. The real errors: the pinwheel designer was Frank Glickman, not Cooney (confirmed live). The downtown Nike store closed in late 2023 and reopened Nov 2025 at 638 SW 5th Ave. Deadstock Coffee moved to The Hoxton. Spirit of 77 had a neighborhood mismatch, the Camara and Holiday trade line was off, and the Blazers are not the only major-league basketball team in the state. The Nike Hoop Summit at Moda Center was confirmed live for April 2026. The brief needs three fixes: the White Stag timing, the Cooney verify item, and hedges on the Nike downtown channel and the 1977 Classic Edition. The remaining risk sits in small-business, date and licensing claims. Correction, Oct 10, 2026: the NE MLK Nike Community Store closed for good in 2023. This check had marked it unverifiable, so the brief kept recommending it. It's now removed as a launch door in every file."
 }

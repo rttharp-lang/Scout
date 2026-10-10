@@ -32,6 +32,57 @@ function semantic(team, name, data) {
     (data.topInsights || []).forEach((t, i) => t.evidence.forEach((e) => { if (!LENS_IDS.includes(e)) errs.push(`$.topInsights[${i}].evidence: unknown lens "${e}"`); }));
     if ((data.headline || "").length > 140) errs.push(`$.headline: keep it under ~120 characters`);
   }
+  if (name === "plan" || name === "evidence") errs.push(...reviewChecks(team, name, data));
+  return errs;
+}
+
+// The review layer has to line up with the brief it annotates, and a date or
+// claim can only be called confirmed when a verified source sits behind it.
+function reviewChecks(team, name, data) {
+  const errs = [];
+  const read = (n) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, team, `${n}.json`), "utf8")); } catch { return null; } };
+  const strategy = read("strategy");
+  if (!strategy) return ["strategy.json is missing or unreadable"];
+  const evidence = name === "evidence" ? data : read("evidence");
+  const verified = new Set((evidence?.claims || []).filter((c) => c.status === "verified" && c.sources.length).map((c) => c.id));
+  if (name === "evidence") {
+    const ids = data.claims.map((c) => c.id);
+    if (new Set(ids).size !== ids.length) errs.push("$.claims: duplicate ids");
+    data.claims.forEach((c, i) => {
+      if (c.status !== "unclear" && !c.sources.length) errs.push(`$.claims[${i}]: a ${c.status} claim needs at least one source`);
+    });
+    const oppIds = new Set(strategy.opportunities.map((o) => o.id));
+    const supports = [...data.claims, ...data.observations, ...data.references].map((x) => x.supports);
+    supports.forEach((s, i) => {
+      s.insights.filter((k) => k >= strategy.topInsights.length).forEach((k) => errs.push(`supports[${i}]: no topInsights[${k}]`));
+      s.opportunities.filter((id) => !oppIds.has(id)).forEach((id) => errs.push(`supports[${i}]: unknown opportunity "${id}"`));
+      s.calendar.filter((k) => k >= strategy.calendar.length).forEach((k) => errs.push(`supports[${i}]: no calendar[${k}]`));
+    });
+    data.corrections.forEach((c, i) => { if (!ids.includes(c.claimId)) errs.push(`$.corrections[${i}].claimId: no claim "${c.claimId}"`); });
+    return errs;
+  }
+  const cal = strategy.calendar;
+  if (data.calendar.length !== cal.length) errs.push(`$.calendar: ${data.calendar.length} entries for ${cal.length} in strategy.json`);
+  data.calendar.forEach((t, k) => {
+    const at = `$.calendar[${k}]`;
+    if (t.i !== k) errs.push(`${at}.i: expected ${k}`);
+    const c = cal[t.i];
+    if (!c) return;
+    if (c.window !== t.window) errs.push(`${at}.window: does not match strategy.json`);
+    if (Number(t.start.slice(5, 7)) !== c.month) errs.push(`${at}.start: month ${t.start.slice(5, 7)} but the entry is month ${c.month}`);
+    if (t.end && t.end < t.start) errs.push(`${at}.end: before start`);
+    if (t.certainty === "confirmed" && !["checked-live", "league-calendar", "fixed-holiday"].includes(t.basis)) errs.push(`${at}: confirmed needs basis checked-live, league-calendar or fixed-holiday`);
+    if (t.basis === "checked-live" && !verified.has(t.basisNote)) errs.push(`${at}.basisNote: "${t.basisNote}" is not a verified claim in evidence.json`);
+    if (t.certainty !== "confirmed" && ["checked-live", "league-calendar", "fixed-holiday"].includes(t.basis)) errs.push(`${at}: basis ${t.basis} should be confirmed`);
+    if (t.actNote && !t.actBy) errs.push(`${at}.actNote: set actBy or leave the note empty`);
+  });
+  const opps = strategy.opportunities.map((o) => o.id);
+  const got = data.opportunities.map((o) => o.id);
+  if (got.join() !== opps.join()) errs.push(`$.opportunities: ids must match strategy.json in order (${opps.join(", ")})`);
+  data.opportunities.forEach((o, k) => {
+    o.insights.filter((n) => n >= strategy.topInsights.length).forEach((n) => errs.push(`$.opportunities[${k}].insights: no topInsights[${n}]`));
+    if (o.status !== "hypothesis") errs.push(`$.opportunities[${k}].status: only a named person can move an idea past "hypothesis"`);
+  });
   return errs;
 }
 

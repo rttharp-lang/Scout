@@ -6,8 +6,8 @@
   "insights": [
     {
       "title": "Nike's hometown has few Nike doors",
-      "detail": "Nike has three public doors in the metro. Nike Portland reopened in Nov 2025 at 638 SW 5th Ave, after closing in late 2023. The Nike Community Store on NE Martin Luther King Jr. Blvd has been open since 1984 and is staffed largely from the surrounding Albina neighborhoods. The factory store sits at Woodburn Premium Outlets, 30 miles south. A fourth, the employee store at World Headquarters in Beaverton, is closed to the public. Guest passes still feed the city's resale and thrift supply.",
-      "implication": "Debut Blazers-specific Nike product at the NE MLK Community Store first, not just downtown. Keep the design credit and some of the proceeds in Albina."
+      "detail": "Nike Portland reopened Nov 13, 2025 at 638 SW 5th Ave after closing in late 2023, with running on its main floor. The factory store sits at Woodburn Premium Outlets, 30 miles south. The Nike Community Store on NE Martin Luther King Jr. Blvd, open since 1984 and staffed largely from Albina, closed in late 2022, and Nike said in 2023 it won't reopen. The employee store at World Headquarters in Beaverton is closed to the public. Guest passes still feed the city's resale and thrift supply.",
+      "implication": "Albina has had no Nike door since the NE MLK store closed. Launch Blazers-specific product with Albina partners at their venues, and use Nike Portland downtown as the Nike-run door only once it agrees to carry Blazers product. Keep the design credit and some of the proceeds in Albina."
     },
     {
       "title": "Tax-free Oregon pulls in Washington",
@@ -46,12 +46,6 @@
       "kind": "team store",
       "neighborhood": "Rose Quarter",
       "why": "The Blazers' own retail brand, and the metro's biggest single door for jerseys and authentic product on game nights."
-    },
-    {
-      "name": "Nike Community Store",
-      "kind": "shop",
-      "neighborhood": "NE Martin Luther King Jr. Blvd, King/Albina",
-      "why": "Nike's longest-running Portland community door, hiring and giving back locally since 1984. It's the credible place to launch Rip City product."
     },
     {
       "name": "Pioneer Courthouse Square",
@@ -185,7 +179,7 @@
       "name": "Good in the Hood",
       "timing": "Late June",
       "month": 6,
-      "why": "A long-running multicultural festival in NE Portland's King neighborhood, near the Nike Community Store. It's a natural Albina pop-up moment."
+      "why": "A long-running multicultural festival in NE Portland's King neighborhood. It's a natural Albina pop-up moment."
     },
     {
       "name": "1977 championship 50th anniversary",
@@ -273,7 +267,7 @@
     }
   ],
   "productHooks": [
-    "Community Store First: a Blazers x Nike capsule co-designed with credited, paid Albina artists. It launches at the NE MLK Nike Community Store a week before wide release, with part of the proceeds going to local youth basketball.",
+    "Albina First: a Blazers x Nike capsule co-designed with credited, paid Albina artists. It launches at an Albina partner venue a week before wide release, with part of the proceeds going to local youth basketball.",
     "'SALES TAX $0.00' Rip City tee and hoodie, sold at Moda Center, Nike Portland and the Woodburn factory store and marketed to the Couv and SW Washington.",
     "A Portland colorway of Morant's Nike signature shoe in Blazers red and black, raffled through Old Town doors and Nike Portland. Add a Deadstock Coffee launch night, after brand-safety sign-off.",
     "1977 50th-anniversary archive reissue (warm-up and shooting shirt), dropped June 5, 2027 by raffle at Rip City Clothing Co. and Nike Portland. Build it to the original specs.",
@@ -349,7 +343,7 @@
       },
       {
         "name": "Albina corridors (NE MLK Jr. Blvd, N Williams, NE Alberta, N Mississippi)",
-        "profile": "Historic Black Portland, now heavily gentrified. For basketball it's anchored by the Nike Community Store on MLK, and it's lined with independent shops, Alberta's Last Thursday street fair and Good in the Hood.",
+        "profile": "Historic Black Portland, now heavily gentrified. It lost its Nike door when the Community Store on MLK closed in 2022. It's lined with independent shops, Alberta's Last Thursday street fair and Good in the Hood.",
         "shopper": "Long-time Black families and youth hoopers alongside newer, more affluent residents.",
         "role": "community"
       },
@@ -392,16 +386,10 @@
         "why": "The Blazers' own retail brand and highest-volume jersey door. It anchors Lillard, Morant and City Edition sales, and it's the place to push for a year-round store in the renovation."
       },
       {
-        "name": "Nike Community Store (NE Martin Luther King Jr. Blvd)",
-        "type": "nike-owned",
-        "neighborhood": "King / Albina, Northeast Portland",
-        "why": "Nike's Portland community door since 1984, hiring locally and funding neighborhood groups. It's the most credible place to launch Blazers product."
-      },
-      {
         "name": "Nike Portland (downtown)",
         "type": "nike-owned",
         "neighborhood": "Downtown, near Pioneer Courthouse Square",
-        "why": "Reopened in November 2025 at 638 SW 5th Ave after a two-year closure. It's the visitor-facing showcase for Blazers and Nike Basketball product."
+        "why": "Reopened Nov 13, 2025 at 638 SW 5th Ave after a two-year closure, with running on its main floor. Whether it carries Blazers or Nike Basketball product is unconfirmed."
       },
       {
         "name": "Nike Factory Store, Woodburn Premium Outlets",
@@ -475,7 +463,7 @@
     "mode": "knowledge",
     "asOf": "Model knowledge, mid-2026",
     "verify": [
-      "Confirm the NE MLK Nike Community Store, the downtown Nike Portland store (location and format) and the Woodburn Nike Factory Store are open. Check whether any Nike Well Collective, Nike Unite or Nike Rise door has opened in the metro.",
+      "Confirm what basketball and Blazers product the downtown Nike Portland store carries, and that the Woodburn Nike Factory Store is open. Check whether any Nike Well Collective, Nike Unite or Nike Rise door has opened in the metro.",
       "Confirm Compound Gallery is still operating in Old Town and still carries limited Nike releases. Confirm Cal Skate Skateboards, Deadstock Coffee and House of Vintage are open at the stated locations. Deadstock reportedly moved into The Hoxton lobby, Old Town, after its storefront closed in Dec 2025.",
       "Confirm Rip City Clothing Co. is still the Blazers' team-store brand. Check its Moda Center non-game-day hours, any satellite stores (PDX, malls), and whether it stocks Portland Fire product.",
       "Check Ja Morant's current Nike signature model, its 2026-27 release calendar and any planned Blazers PE. Check Damian Lillard's current adidas deal and Dame line status.",
